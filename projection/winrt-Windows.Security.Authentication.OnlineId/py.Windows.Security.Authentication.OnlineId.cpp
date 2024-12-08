@@ -66,7 +66,11 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
                 auto param0 = py::convert_to<winrt::Windows::Security::Authentication::OnlineId::OnlineIdServiceTicketRequest>(args, 0);
 
-                return py::convert(self->obj.AuthenticateUserAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.AuthenticateUserAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -105,7 +109,11 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Security::Authentication::OnlineId::OnlineIdServiceTicketRequest>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Security::Authentication::OnlineId::CredentialPromptType>(args, 1);
 
-                return py::convert(self->obj.AuthenticateUserAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.AuthenticateUserAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -141,7 +149,11 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
                     return nullptr;
                 }
 
-                return py::convert(self->obj.SignOutUserAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SignOutUserAsync();
+                }());
             }
             catch (...)
             {
@@ -173,7 +185,11 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
                 return nullptr;
             }
 
-            return py::convert(self->obj.ApplicationId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ApplicationId();
+            }());
         }
         catch (...)
         {
@@ -207,7 +223,11 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
             auto param0 = py::convert_to<winrt::guid>(arg);
 
-            self->obj.ApplicationId(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ApplicationId(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -234,7 +254,11 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
                 return nullptr;
             }
 
-            return py::convert(self->obj.AuthenticatedSafeCustomerId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AuthenticatedSafeCustomerId();
+            }());
         }
         catch (...)
         {
@@ -260,7 +284,11 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
                 return nullptr;
             }
 
-            return py::convert(self->obj.CanSignOut());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CanSignOut();
+            }());
         }
         catch (...)
         {
@@ -358,7 +386,11 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
                 return nullptr;
             }
 
-            return py::convert(self->obj.ErrorCode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ErrorCode();
+            }());
         }
         catch (...)
         {
@@ -384,7 +416,11 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
                 return nullptr;
             }
 
-            return py::convert(self->obj.Request());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Request();
+            }());
         }
         catch (...)
         {
@@ -410,7 +446,11 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
                 return nullptr;
             }
 
-            return py::convert(self->obj.Value());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Value();
+            }());
         }
         catch (...)
         {
@@ -545,7 +585,11 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
                 return nullptr;
             }
 
-            return py::convert(self->obj.Policy());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Policy();
+            }());
         }
         catch (...)
         {
@@ -571,7 +615,11 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
                 return nullptr;
             }
 
-            return py::convert(self->obj.Service());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Service();
+            }());
         }
         catch (...)
         {
@@ -663,7 +711,11 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
 
-                return py::convert(winrt::Windows::Security::Authentication::OnlineId::OnlineIdSystemAuthenticator::GetForUser(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Authentication::OnlineId::OnlineIdSystemAuthenticator::GetForUser(param0);
+                }());
             }
             catch (...)
             {
@@ -695,7 +747,11 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Authentication::OnlineId::OnlineIdSystemAuthenticator::Default());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Authentication::OnlineId::OnlineIdSystemAuthenticator::Default();
+            }());
         }
         catch (...)
         {
@@ -793,7 +849,11 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
                 auto param0 = py::convert_to<winrt::Windows::Security::Authentication::OnlineId::OnlineIdServiceTicketRequest>(args, 0);
 
-                return py::convert(self->obj.GetTicketAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetTicketAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -825,7 +885,11 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
                 return nullptr;
             }
 
-            return py::convert(self->obj.ApplicationId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ApplicationId();
+            }());
         }
         catch (...)
         {
@@ -859,7 +923,11 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
             auto param0 = py::convert_to<winrt::guid>(arg);
 
-            self->obj.ApplicationId(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ApplicationId(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -886,7 +954,11 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
                 return nullptr;
             }
 
-            return py::convert(self->obj.User());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.User();
+            }());
         }
         catch (...)
         {
@@ -981,7 +1053,11 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -1007,7 +1083,11 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
                 return nullptr;
             }
 
-            return py::convert(self->obj.Ticket());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Ticket();
+            }());
         }
         catch (...)
         {
@@ -1101,7 +1181,11 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExtendedError());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExtendedError();
+            }());
         }
         catch (...)
         {
@@ -1127,7 +1211,11 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
                 return nullptr;
             }
 
-            return py::convert(self->obj.Identity());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Identity();
+            }());
         }
         catch (...)
         {
@@ -1153,7 +1241,11 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -1252,7 +1344,11 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
                     return nullptr;
                 }
 
-                self->obj.Cancel();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Cancel();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1289,7 +1385,11 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1326,7 +1426,11 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
                     return nullptr;
                 }
 
-                self->obj.GetResults();
+                {
+                    auto _gil = release_gil();
+                    self->obj.GetResults();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1359,7 +1463,11 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
                 return nullptr;
             }
 
-            return py::convert(self->obj.ErrorCode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ErrorCode();
+            }());
         }
         catch (...)
         {
@@ -1385,7 +1493,11 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -1411,7 +1523,11 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -1437,7 +1553,11 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
                 return nullptr;
             }
 
-            return py::convert(self->obj.Completed());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Completed();
+            }());
         }
         catch (...)
         {
@@ -1471,7 +1591,11 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::AsyncActionCompletedHandler>(arg);
 
-            self->obj.Completed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Completed(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1581,7 +1705,11 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
                     return nullptr;
                 }
 
-                self->obj.Cancel();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Cancel();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1618,7 +1746,11 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1655,7 +1787,11 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetResults());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetResults();
+                }());
             }
             catch (...)
             {
@@ -1687,7 +1823,11 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
                 return nullptr;
             }
 
-            return py::convert(self->obj.ErrorCode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ErrorCode();
+            }());
         }
         catch (...)
         {
@@ -1713,7 +1853,11 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -1739,7 +1883,11 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -1765,7 +1913,11 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
                 return nullptr;
             }
 
-            return py::convert(self->obj.Completed());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Completed();
+            }());
         }
         catch (...)
         {
@@ -1799,7 +1951,11 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::AsyncOperationCompletedHandler<winrt::Windows::Security::Authentication::OnlineId::UserIdentity>>(arg);
 
-            self->obj.Completed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Completed(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1905,7 +2061,11 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
                 return nullptr;
             }
 
-            return py::convert(self->obj.FirstName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FirstName();
+            }());
         }
         catch (...)
         {
@@ -1931,7 +2091,11 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -1957,7 +2121,11 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsBetaAccount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsBetaAccount();
+            }());
         }
         catch (...)
         {
@@ -1983,7 +2151,11 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsConfirmedPC());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsConfirmedPC();
+            }());
         }
         catch (...)
         {
@@ -2009,7 +2181,11 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
                 return nullptr;
             }
 
-            return py::convert(self->obj.LastName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LastName();
+            }());
         }
         catch (...)
         {
@@ -2035,7 +2211,11 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
                 return nullptr;
             }
 
-            return py::convert(self->obj.SafeCustomerId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SafeCustomerId();
+            }());
         }
         catch (...)
         {
@@ -2061,7 +2241,11 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
                 return nullptr;
             }
 
-            return py::convert(self->obj.SignInName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SignInName();
+            }());
         }
         catch (...)
         {
@@ -2087,7 +2271,11 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
                 return nullptr;
             }
 
-            return py::convert(self->obj.Tickets());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Tickets();
+            }());
         }
         catch (...)
         {

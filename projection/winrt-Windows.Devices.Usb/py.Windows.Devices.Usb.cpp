@@ -38,7 +38,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.EndpointNumber());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EndpointNumber();
+            }());
         }
         catch (...)
         {
@@ -64,7 +68,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxPacketSize());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxPacketSize();
+            }());
         }
         catch (...)
         {
@@ -90,7 +98,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.Pipe());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Pipe();
+            }());
         }
         catch (...)
         {
@@ -189,7 +201,11 @@ namespace py::cpp::Windows::Devices::Usb
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ClearStallAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ClearStallAsync();
+                }());
             }
             catch (...)
             {
@@ -225,7 +241,11 @@ namespace py::cpp::Windows::Devices::Usb
                     return nullptr;
                 }
 
-                self->obj.FlushBuffer();
+                {
+                    auto _gil = release_gil();
+                    self->obj.FlushBuffer();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -258,7 +278,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReadOptions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReadOptions();
+            }());
         }
         catch (...)
         {
@@ -292,7 +316,11 @@ namespace py::cpp::Windows::Devices::Usb
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Usb::UsbReadOptions>(arg);
 
-            self->obj.ReadOptions(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReadOptions(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -319,7 +347,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.EndpointDescriptor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EndpointDescriptor();
+            }());
         }
         catch (...)
         {
@@ -345,7 +377,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.InputStream());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InputStream();
+            }());
         }
         catch (...)
         {
@@ -371,7 +407,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxTransferSizeBytes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxTransferSizeBytes();
+            }());
         }
         catch (...)
         {
@@ -469,7 +509,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.EndpointNumber());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EndpointNumber();
+            }());
         }
         catch (...)
         {
@@ -495,7 +539,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxPacketSize());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxPacketSize();
+            }());
         }
         catch (...)
         {
@@ -521,7 +569,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.Pipe());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Pipe();
+            }());
         }
         catch (...)
         {
@@ -620,7 +672,11 @@ namespace py::cpp::Windows::Devices::Usb
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ClearStallAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ClearStallAsync();
+                }());
             }
             catch (...)
             {
@@ -652,7 +708,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.WriteOptions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WriteOptions();
+            }());
         }
         catch (...)
         {
@@ -686,7 +746,11 @@ namespace py::cpp::Windows::Devices::Usb
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Usb::UsbWriteOptions>(arg);
 
-            self->obj.WriteOptions(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.WriteOptions(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -713,7 +777,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.EndpointDescriptor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EndpointDescriptor();
+            }());
         }
         catch (...)
         {
@@ -739,7 +807,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.OutputStream());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OutputStream();
+            }());
         }
         catch (...)
         {
@@ -835,7 +907,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.ConfigurationDescriptor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ConfigurationDescriptor();
+            }());
         }
         catch (...)
         {
@@ -861,7 +937,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.Descriptors());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Descriptors();
+            }());
         }
         catch (...)
         {
@@ -887,7 +967,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.UsbInterfaces());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UsbInterfaces();
+            }());
         }
         catch (...)
         {
@@ -988,7 +1072,11 @@ namespace py::cpp::Windows::Devices::Usb
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Usb::UsbDescriptor>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Usb::UsbConfigurationDescriptor::Parse(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Usb::UsbConfigurationDescriptor::Parse(param0);
+                }());
             }
             catch (...)
             {
@@ -1027,7 +1115,11 @@ namespace py::cpp::Windows::Devices::Usb
                 auto param0 = py::convert_to<winrt::Windows::Devices::Usb::UsbDescriptor>(args, 0);
                 winrt::Windows::Devices::Usb::UsbConfigurationDescriptor param1{nullptr};
 
-                auto return_value = winrt::Windows::Devices::Usb::UsbConfigurationDescriptor::TryParse(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Usb::UsbConfigurationDescriptor::TryParse(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -1039,6 +1131,7 @@ namespace py::cpp::Windows::Devices::Usb
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -1071,7 +1164,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.ConfigurationValue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ConfigurationValue();
+            }());
         }
         catch (...)
         {
@@ -1097,7 +1194,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxPowerMilliamps());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxPowerMilliamps();
+            }());
         }
         catch (...)
         {
@@ -1123,7 +1224,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.RemoteWakeup());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RemoteWakeup();
+            }());
         }
         catch (...)
         {
@@ -1149,7 +1254,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelfPowered());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SelfPowered();
+            }());
         }
         catch (...)
         {
@@ -1294,7 +1403,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.Recipient());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Recipient();
+            }());
         }
         catch (...)
         {
@@ -1328,7 +1441,11 @@ namespace py::cpp::Windows::Devices::Usb
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Usb::UsbControlRecipient>(arg);
 
-            self->obj.Recipient(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Recipient(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1355,7 +1472,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.Direction());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Direction();
+            }());
         }
         catch (...)
         {
@@ -1389,7 +1510,11 @@ namespace py::cpp::Windows::Devices::Usb
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Usb::UsbTransferDirection>(arg);
 
-            self->obj.Direction(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Direction(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1416,7 +1541,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.ControlTransferType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ControlTransferType();
+            }());
         }
         catch (...)
         {
@@ -1450,7 +1579,11 @@ namespace py::cpp::Windows::Devices::Usb
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Usb::UsbControlTransferType>(arg);
 
-            self->obj.ControlTransferType(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ControlTransferType(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1477,7 +1610,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.AsByte());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AsByte();
+            }());
         }
         catch (...)
         {
@@ -1511,7 +1648,11 @@ namespace py::cpp::Windows::Devices::Usb
 
             auto param0 = py::convert_to<uint8_t>(arg);
 
-            self->obj.AsByte(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AsByte(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1614,7 +1755,11 @@ namespace py::cpp::Windows::Devices::Usb
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
-                self->obj.ReadDescriptorBuffer(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ReadDescriptorBuffer(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1647,7 +1792,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.DescriptorType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DescriptorType();
+            }());
         }
         catch (...)
         {
@@ -1673,7 +1822,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.Length());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Length();
+            }());
         }
         catch (...)
         {
@@ -1772,7 +1925,11 @@ namespace py::cpp::Windows::Devices::Usb
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1811,7 +1968,11 @@ namespace py::cpp::Windows::Devices::Usb
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Usb::UsbDevice::FromIdAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Usb::UsbDevice::FromIdAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1849,7 +2010,11 @@ namespace py::cpp::Windows::Devices::Usb
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Usb::UsbDeviceClass>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Usb::UsbDevice::GetDeviceClassSelector(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Usb::UsbDevice::GetDeviceClassSelector(param0);
+                }());
             }
             catch (...)
             {
@@ -1889,7 +2054,11 @@ namespace py::cpp::Windows::Devices::Usb
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::guid>(args, 2);
 
-                return py::convert(winrt::Windows::Devices::Usb::UsbDevice::GetDeviceSelector(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Usb::UsbDevice::GetDeviceSelector(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -1927,7 +2096,11 @@ namespace py::cpp::Windows::Devices::Usb
 
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Usb::UsbDevice::GetDeviceSelector(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Usb::UsbDevice::GetDeviceSelector(param0);
+                }());
             }
             catch (...)
             {
@@ -1966,7 +2139,11 @@ namespace py::cpp::Windows::Devices::Usb
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
-                return py::convert(winrt::Windows::Devices::Usb::UsbDevice::GetDeviceSelector(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Usb::UsbDevice::GetDeviceSelector(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2005,7 +2182,11 @@ namespace py::cpp::Windows::Devices::Usb
                 auto param0 = py::convert_to<winrt::Windows::Devices::Usb::UsbSetupPacket>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
-                return py::convert(self->obj.SendControlInTransferAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SendControlInTransferAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2043,7 +2224,11 @@ namespace py::cpp::Windows::Devices::Usb
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Usb::UsbSetupPacket>(args, 0);
 
-                return py::convert(self->obj.SendControlInTransferAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SendControlInTransferAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -2082,7 +2267,11 @@ namespace py::cpp::Windows::Devices::Usb
                 auto param0 = py::convert_to<winrt::Windows::Devices::Usb::UsbSetupPacket>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
-                return py::convert(self->obj.SendControlOutTransferAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SendControlOutTransferAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2120,7 +2309,11 @@ namespace py::cpp::Windows::Devices::Usb
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Usb::UsbSetupPacket>(args, 0);
 
-                return py::convert(self->obj.SendControlOutTransferAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SendControlOutTransferAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -2152,7 +2345,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.Configuration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Configuration();
+            }());
         }
         catch (...)
         {
@@ -2178,7 +2375,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.DefaultInterface());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DefaultInterface();
+            }());
         }
         catch (...)
         {
@@ -2204,7 +2405,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceDescriptor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceDescriptor();
+            }());
         }
         catch (...)
         {
@@ -2246,7 +2451,11 @@ namespace py::cpp::Windows::Devices::Usb
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -2377,7 +2586,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.SubclassCode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SubclassCode();
+            }());
         }
         catch (...)
         {
@@ -2411,7 +2624,11 @@ namespace py::cpp::Windows::Devices::Usb
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<uint8_t>>(arg);
 
-            self->obj.SubclassCode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SubclassCode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2438,7 +2655,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProtocolCode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProtocolCode();
+            }());
         }
         catch (...)
         {
@@ -2472,7 +2693,11 @@ namespace py::cpp::Windows::Devices::Usb
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<uint8_t>>(arg);
 
-            self->obj.ProtocolCode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ProtocolCode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2499,7 +2724,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.ClassCode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ClassCode();
+            }());
         }
         catch (...)
         {
@@ -2533,7 +2762,11 @@ namespace py::cpp::Windows::Devices::Usb
 
             auto param0 = py::convert_to<uint8_t>(arg);
 
-            self->obj.ClassCode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ClassCode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2629,7 +2862,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Usb::UsbDeviceClasses::ActiveSync());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Usb::UsbDeviceClasses::ActiveSync();
+            }());
         }
         catch (...)
         {
@@ -2655,7 +2892,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Usb::UsbDeviceClasses::CdcControl());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Usb::UsbDeviceClasses::CdcControl();
+            }());
         }
         catch (...)
         {
@@ -2681,7 +2922,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Usb::UsbDeviceClasses::DeviceFirmwareUpdate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Usb::UsbDeviceClasses::DeviceFirmwareUpdate();
+            }());
         }
         catch (...)
         {
@@ -2707,7 +2952,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Usb::UsbDeviceClasses::Irda());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Usb::UsbDeviceClasses::Irda();
+            }());
         }
         catch (...)
         {
@@ -2733,7 +2982,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Usb::UsbDeviceClasses::Measurement());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Usb::UsbDeviceClasses::Measurement();
+            }());
         }
         catch (...)
         {
@@ -2759,7 +3012,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Usb::UsbDeviceClasses::PalmSync());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Usb::UsbDeviceClasses::PalmSync();
+            }());
         }
         catch (...)
         {
@@ -2785,7 +3042,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Usb::UsbDeviceClasses::PersonalHealthcare());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Usb::UsbDeviceClasses::PersonalHealthcare();
+            }());
         }
         catch (...)
         {
@@ -2811,7 +3072,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Usb::UsbDeviceClasses::Physical());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Usb::UsbDeviceClasses::Physical();
+            }());
         }
         catch (...)
         {
@@ -2837,7 +3102,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Usb::UsbDeviceClasses::VendorSpecific());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Usb::UsbDeviceClasses::VendorSpecific();
+            }());
         }
         catch (...)
         {
@@ -2963,7 +3232,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.BcdDeviceRevision());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BcdDeviceRevision();
+            }());
         }
         catch (...)
         {
@@ -2989,7 +3262,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.BcdUsb());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BcdUsb();
+            }());
         }
         catch (...)
         {
@@ -3015,7 +3292,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxPacketSize0());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxPacketSize0();
+            }());
         }
         catch (...)
         {
@@ -3041,7 +3322,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.NumberOfConfigurations());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NumberOfConfigurations();
+            }());
         }
         catch (...)
         {
@@ -3067,7 +3352,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProductId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProductId();
+            }());
         }
         catch (...)
         {
@@ -3093,7 +3382,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.VendorId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.VendorId();
+            }());
         }
         catch (...)
         {
@@ -3197,7 +3490,11 @@ namespace py::cpp::Windows::Devices::Usb
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Usb::UsbDescriptor>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Usb::UsbEndpointDescriptor::Parse(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Usb::UsbEndpointDescriptor::Parse(param0);
+                }());
             }
             catch (...)
             {
@@ -3236,7 +3533,11 @@ namespace py::cpp::Windows::Devices::Usb
                 auto param0 = py::convert_to<winrt::Windows::Devices::Usb::UsbDescriptor>(args, 0);
                 winrt::Windows::Devices::Usb::UsbEndpointDescriptor param1{nullptr};
 
-                auto return_value = winrt::Windows::Devices::Usb::UsbEndpointDescriptor::TryParse(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Usb::UsbEndpointDescriptor::TryParse(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -3248,6 +3549,7 @@ namespace py::cpp::Windows::Devices::Usb
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -3280,7 +3582,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.AsBulkInEndpointDescriptor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AsBulkInEndpointDescriptor();
+            }());
         }
         catch (...)
         {
@@ -3306,7 +3612,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.AsBulkOutEndpointDescriptor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AsBulkOutEndpointDescriptor();
+            }());
         }
         catch (...)
         {
@@ -3332,7 +3642,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.AsInterruptInEndpointDescriptor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AsInterruptInEndpointDescriptor();
+            }());
         }
         catch (...)
         {
@@ -3358,7 +3672,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.AsInterruptOutEndpointDescriptor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AsInterruptOutEndpointDescriptor();
+            }());
         }
         catch (...)
         {
@@ -3384,7 +3702,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.Direction());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Direction();
+            }());
         }
         catch (...)
         {
@@ -3410,7 +3732,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.EndpointNumber());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EndpointNumber();
+            }());
         }
         catch (...)
         {
@@ -3436,7 +3762,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.EndpointType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EndpointType();
+            }());
         }
         catch (...)
         {
@@ -3562,7 +3892,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.BulkInPipes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BulkInPipes();
+            }());
         }
         catch (...)
         {
@@ -3588,7 +3922,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.BulkOutPipes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BulkOutPipes();
+            }());
         }
         catch (...)
         {
@@ -3614,7 +3952,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.Descriptors());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Descriptors();
+            }());
         }
         catch (...)
         {
@@ -3640,7 +3982,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.InterfaceNumber());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InterfaceNumber();
+            }());
         }
         catch (...)
         {
@@ -3666,7 +4012,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.InterfaceSettings());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InterfaceSettings();
+            }());
         }
         catch (...)
         {
@@ -3692,7 +4042,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.InterruptInPipes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InterruptInPipes();
+            }());
         }
         catch (...)
         {
@@ -3718,7 +4072,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.InterruptOutPipes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InterruptOutPipes();
+            }());
         }
         catch (...)
         {
@@ -3823,7 +4181,11 @@ namespace py::cpp::Windows::Devices::Usb
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Usb::UsbDescriptor>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Usb::UsbInterfaceDescriptor::Parse(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Usb::UsbInterfaceDescriptor::Parse(param0);
+                }());
             }
             catch (...)
             {
@@ -3862,7 +4224,11 @@ namespace py::cpp::Windows::Devices::Usb
                 auto param0 = py::convert_to<winrt::Windows::Devices::Usb::UsbDescriptor>(args, 0);
                 winrt::Windows::Devices::Usb::UsbInterfaceDescriptor param1{nullptr};
 
-                auto return_value = winrt::Windows::Devices::Usb::UsbInterfaceDescriptor::TryParse(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Usb::UsbInterfaceDescriptor::TryParse(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -3874,6 +4240,7 @@ namespace py::cpp::Windows::Devices::Usb
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -3906,7 +4273,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.AlternateSettingNumber());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AlternateSettingNumber();
+            }());
         }
         catch (...)
         {
@@ -3932,7 +4303,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.ClassCode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ClassCode();
+            }());
         }
         catch (...)
         {
@@ -3958,7 +4333,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.InterfaceNumber());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InterfaceNumber();
+            }());
         }
         catch (...)
         {
@@ -3984,7 +4363,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProtocolCode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProtocolCode();
+            }());
         }
         catch (...)
         {
@@ -4010,7 +4393,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.SubclassCode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SubclassCode();
+            }());
         }
         catch (...)
         {
@@ -4138,7 +4525,11 @@ namespace py::cpp::Windows::Devices::Usb
                     return nullptr;
                 }
 
-                return py::convert(self->obj.SelectSettingAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectSettingAsync();
+                }());
             }
             catch (...)
             {
@@ -4170,7 +4561,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.BulkInEndpoints());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BulkInEndpoints();
+            }());
         }
         catch (...)
         {
@@ -4196,7 +4591,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.BulkOutEndpoints());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BulkOutEndpoints();
+            }());
         }
         catch (...)
         {
@@ -4222,7 +4621,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.Descriptors());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Descriptors();
+            }());
         }
         catch (...)
         {
@@ -4248,7 +4651,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.InterfaceDescriptor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InterfaceDescriptor();
+            }());
         }
         catch (...)
         {
@@ -4274,7 +4681,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.InterruptInEndpoints());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InterruptInEndpoints();
+            }());
         }
         catch (...)
         {
@@ -4300,7 +4711,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.InterruptOutEndpoints());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InterruptOutEndpoints();
+            }());
         }
         catch (...)
         {
@@ -4326,7 +4741,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.Selected());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Selected();
+            }());
         }
         catch (...)
         {
@@ -4426,7 +4845,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.EndpointNumber());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EndpointNumber();
+            }());
         }
         catch (...)
         {
@@ -4452,7 +4875,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.Interval());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Interval();
+            }());
         }
         catch (...)
         {
@@ -4478,7 +4905,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxPacketSize());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxPacketSize();
+            }());
         }
         catch (...)
         {
@@ -4504,7 +4935,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.Pipe());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Pipe();
+            }());
         }
         catch (...)
         {
@@ -4600,7 +5035,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.InterruptData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InterruptData();
+            }());
         }
         catch (...)
         {
@@ -4697,7 +5136,11 @@ namespace py::cpp::Windows::Devices::Usb
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ClearStallAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ClearStallAsync();
+                }());
             }
             catch (...)
             {
@@ -4729,7 +5172,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.EndpointDescriptor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EndpointDescriptor();
+            }());
         }
         catch (...)
         {
@@ -4757,7 +5204,11 @@ namespace py::cpp::Windows::Devices::Usb
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Usb::UsbInterruptInPipe, winrt::Windows::Devices::Usb::UsbInterruptInEventArgs>>(arg);
 
-            return py::convert(self->obj.DataReceived(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DataReceived(param0);
+            }());
         }
         catch (...)
         {
@@ -4785,7 +5236,11 @@ namespace py::cpp::Windows::Devices::Usb
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.DataReceived(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DataReceived(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -4882,7 +5337,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.EndpointNumber());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EndpointNumber();
+            }());
         }
         catch (...)
         {
@@ -4908,7 +5367,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.Interval());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Interval();
+            }());
         }
         catch (...)
         {
@@ -4934,7 +5397,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxPacketSize());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxPacketSize();
+            }());
         }
         catch (...)
         {
@@ -4960,7 +5427,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.Pipe());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Pipe();
+            }());
         }
         catch (...)
         {
@@ -5060,7 +5531,11 @@ namespace py::cpp::Windows::Devices::Usb
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ClearStallAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ClearStallAsync();
+                }());
             }
             catch (...)
             {
@@ -5092,7 +5567,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.WriteOptions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WriteOptions();
+            }());
         }
         catch (...)
         {
@@ -5126,7 +5605,11 @@ namespace py::cpp::Windows::Devices::Usb
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Usb::UsbWriteOptions>(arg);
 
-            self->obj.WriteOptions(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.WriteOptions(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5153,7 +5636,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.EndpointDescriptor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EndpointDescriptor();
+            }());
         }
         catch (...)
         {
@@ -5179,7 +5666,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.OutputStream());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OutputStream();
+            }());
         }
         catch (...)
         {
@@ -5312,7 +5803,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.Value());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Value();
+            }());
         }
         catch (...)
         {
@@ -5346,7 +5841,11 @@ namespace py::cpp::Windows::Devices::Usb
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.Value(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Value(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5373,7 +5872,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.RequestType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RequestType();
+            }());
         }
         catch (...)
         {
@@ -5407,7 +5910,11 @@ namespace py::cpp::Windows::Devices::Usb
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Usb::UsbControlRequestType>(arg);
 
-            self->obj.RequestType(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RequestType(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5434,7 +5941,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.Request());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Request();
+            }());
         }
         catch (...)
         {
@@ -5468,7 +5979,11 @@ namespace py::cpp::Windows::Devices::Usb
 
             auto param0 = py::convert_to<uint8_t>(arg);
 
-            self->obj.Request(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Request(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5495,7 +6010,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.Length());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Length();
+            }());
         }
         catch (...)
         {
@@ -5529,7 +6048,11 @@ namespace py::cpp::Windows::Devices::Usb
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.Length(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Length(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5556,7 +6079,11 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
 
-            return py::convert(self->obj.Index());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Index();
+            }());
         }
         catch (...)
         {
@@ -5590,7 +6117,11 @@ namespace py::cpp::Windows::Devices::Usb
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.Index(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Index(param0);
+            }
+
             return 0;
         }
         catch (...)

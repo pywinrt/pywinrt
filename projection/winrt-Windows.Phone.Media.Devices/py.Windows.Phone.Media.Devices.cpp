@@ -42,7 +42,11 @@ namespace py::cpp::Windows::Phone::Media::Devices
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetAudioEndpoint());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAudioEndpoint();
+                }());
             }
             catch (...)
             {
@@ -78,7 +82,11 @@ namespace py::cpp::Windows::Phone::Media::Devices
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Phone::Media::Devices::AudioRoutingManager::GetDefault());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Phone::Media::Devices::AudioRoutingManager::GetDefault();
+                }());
             }
             catch (...)
             {
@@ -116,7 +124,11 @@ namespace py::cpp::Windows::Phone::Media::Devices
 
                 auto param0 = py::convert_to<winrt::Windows::Phone::Media::Devices::AudioRoutingEndpoint>(args, 0);
 
-                self->obj.SetAudioEndpoint(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetAudioEndpoint(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -149,7 +161,11 @@ namespace py::cpp::Windows::Phone::Media::Devices
                 return nullptr;
             }
 
-            return py::convert(self->obj.AvailableAudioEndpoints());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AvailableAudioEndpoints();
+            }());
         }
         catch (...)
         {
@@ -177,7 +193,11 @@ namespace py::cpp::Windows::Phone::Media::Devices
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Phone::Media::Devices::AudioRoutingManager, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.AudioEndpointChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AudioEndpointChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -205,7 +225,11 @@ namespace py::cpp::Windows::Phone::Media::Devices
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.AudioEndpointChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AudioEndpointChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)

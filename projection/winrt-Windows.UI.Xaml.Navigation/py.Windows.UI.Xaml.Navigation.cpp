@@ -120,7 +120,11 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Navigation::FrameNavigationOptions>().TransitionInfoOverride());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Navigation::FrameNavigationOptions>().TransitionInfoOverride();
+            }());
         }
         catch (...)
         {
@@ -154,7 +158,11 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::NavigationTransitionInfo>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Navigation::FrameNavigationOptions>().TransitionInfoOverride(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Navigation::FrameNavigationOptions>().TransitionInfoOverride(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -181,7 +189,11 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Navigation::FrameNavigationOptions>().IsNavigationStackEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Navigation::FrameNavigationOptions>().IsNavigationStackEnabled();
+            }());
         }
         catch (...)
         {
@@ -215,7 +227,11 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Navigation::FrameNavigationOptions>().IsNavigationStackEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Navigation::FrameNavigationOptions>().IsNavigationStackEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -335,7 +351,11 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
                 return nullptr;
             }
 
-            return py::convert(self->obj.Cancel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Cancel();
+            }());
         }
         catch (...)
         {
@@ -369,7 +389,11 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Cancel(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Cancel(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -396,7 +420,11 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
                 return nullptr;
             }
 
-            return py::convert(self->obj.NavigationMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NavigationMode();
+            }());
         }
         catch (...)
         {
@@ -422,7 +450,11 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
                 return nullptr;
             }
 
-            return py::convert(self->obj.SourcePageType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SourcePageType();
+            }());
         }
         catch (...)
         {
@@ -448,7 +480,11 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
                 return nullptr;
             }
 
-            return py::convert(self->obj.NavigationTransitionInfo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NavigationTransitionInfo();
+            }());
         }
         catch (...)
         {
@@ -474,7 +510,11 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
                 return nullptr;
             }
 
-            return py::convert(self->obj.Parameter());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Parameter();
+            }());
         }
         catch (...)
         {
@@ -571,7 +611,11 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
                 return nullptr;
             }
 
-            return py::convert(self->obj.Uri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Uri();
+            }());
         }
         catch (...)
         {
@@ -605,7 +649,11 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.Uri(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Uri(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -632,7 +680,11 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
                 return nullptr;
             }
 
-            return py::convert(self->obj.Content());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Content();
+            }());
         }
         catch (...)
         {
@@ -658,7 +710,11 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
                 return nullptr;
             }
 
-            return py::convert(self->obj.NavigationMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NavigationMode();
+            }());
         }
         catch (...)
         {
@@ -684,7 +740,11 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
                 return nullptr;
             }
 
-            return py::convert(self->obj.Parameter());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Parameter();
+            }());
         }
         catch (...)
         {
@@ -710,7 +770,11 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
                 return nullptr;
             }
 
-            return py::convert(self->obj.SourcePageType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SourcePageType();
+            }());
         }
         catch (...)
         {
@@ -736,7 +800,11 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
                 return nullptr;
             }
 
-            return py::convert(self->obj.NavigationTransitionInfo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NavigationTransitionInfo();
+            }());
         }
         catch (...)
         {
@@ -834,7 +902,11 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
                 return nullptr;
             }
 
-            return py::convert(self->obj.Handled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Handled();
+            }());
         }
         catch (...)
         {
@@ -868,7 +940,11 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Handled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Handled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -895,7 +971,11 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
                 return nullptr;
             }
 
-            return py::convert(self->obj.Exception());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Exception();
+            }());
         }
         catch (...)
         {
@@ -921,7 +1001,11 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
                 return nullptr;
             }
 
-            return py::convert(self->obj.SourcePageType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SourcePageType();
+            }());
         }
         catch (...)
         {
@@ -1042,7 +1126,11 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
                 return nullptr;
             }
 
-            return py::convert(self->obj.NavigationTransitionInfo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NavigationTransitionInfo();
+            }());
         }
         catch (...)
         {
@@ -1068,7 +1156,11 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
                 return nullptr;
             }
 
-            return py::convert(self->obj.Parameter());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Parameter();
+            }());
         }
         catch (...)
         {
@@ -1094,7 +1186,11 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
                 return nullptr;
             }
 
-            return py::convert(self->obj.SourcePageType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SourcePageType();
+            }());
         }
         catch (...)
         {
@@ -1120,7 +1216,11 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Navigation::PageStackEntry::SourcePageTypeProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Navigation::PageStackEntry::SourcePageTypeProperty();
+            }());
         }
         catch (...)
         {

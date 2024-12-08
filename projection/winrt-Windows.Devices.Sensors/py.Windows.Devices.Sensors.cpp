@@ -44,7 +44,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Sensors::Accelerometer::FromIdAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sensors::Accelerometer::FromIdAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -80,7 +84,11 @@ namespace py::cpp::Windows::Devices::Sensors
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetCurrentReading());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetCurrentReading();
+                }());
             }
             catch (...)
             {
@@ -116,7 +124,11 @@ namespace py::cpp::Windows::Devices::Sensors
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Sensors::Accelerometer::GetDefault());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sensors::Accelerometer::GetDefault();
+                }());
             }
             catch (...)
             {
@@ -154,7 +166,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Sensors::AccelerometerReadingType>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Sensors::Accelerometer::GetDefault(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sensors::Accelerometer::GetDefault(param0);
+                }());
             }
             catch (...)
             {
@@ -192,7 +208,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Sensors::AccelerometerReadingType>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Sensors::Accelerometer::GetDeviceSelector(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sensors::Accelerometer::GetDeviceSelector(param0);
+                }());
             }
             catch (...)
             {
@@ -224,7 +244,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReportInterval());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReportInterval();
+            }());
         }
         catch (...)
         {
@@ -258,7 +282,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.ReportInterval(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReportInterval(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -285,7 +313,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.MinimumReportInterval());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MinimumReportInterval();
+            }());
         }
         catch (...)
         {
@@ -311,7 +343,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReadingTransform());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReadingTransform();
+            }());
         }
         catch (...)
         {
@@ -345,7 +381,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Display::DisplayOrientations>(arg);
 
-            self->obj.ReadingTransform(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReadingTransform(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -372,7 +412,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReportLatency());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReportLatency();
+            }());
         }
         catch (...)
         {
@@ -406,7 +450,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.ReportLatency(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReportLatency(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -433,7 +481,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxBatchSize());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxBatchSize();
+            }());
         }
         catch (...)
         {
@@ -459,7 +511,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReadingType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReadingType();
+            }());
         }
         catch (...)
         {
@@ -485,7 +541,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReportThreshold());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReportThreshold();
+            }());
         }
         catch (...)
         {
@@ -511,7 +571,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceId();
+            }());
         }
         catch (...)
         {
@@ -539,7 +603,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Sensors::Accelerometer, winrt::Windows::Devices::Sensors::AccelerometerReadingChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.ReadingChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReadingChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -567,7 +635,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ReadingChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReadingChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -596,7 +668,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Sensors::Accelerometer, winrt::Windows::Devices::Sensors::AccelerometerShakenEventArgs>>(arg);
 
-            return py::convert(self->obj.Shaken(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Shaken(param0);
+            }());
         }
         catch (...)
         {
@@ -624,7 +700,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Shaken(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Shaken(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -759,7 +839,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.ZAxisInGForce());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ZAxisInGForce();
+            }());
         }
         catch (...)
         {
@@ -793,7 +877,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.ZAxisInGForce(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ZAxisInGForce(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -820,7 +908,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.YAxisInGForce());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.YAxisInGForce();
+            }());
         }
         catch (...)
         {
@@ -854,7 +946,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.YAxisInGForce(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.YAxisInGForce(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -881,7 +977,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.XAxisInGForce());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.XAxisInGForce();
+            }());
         }
         catch (...)
         {
@@ -915,7 +1015,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.XAxisInGForce(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.XAxisInGForce(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1011,7 +1115,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.AccelerationX());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AccelerationX();
+            }());
         }
         catch (...)
         {
@@ -1037,7 +1145,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.AccelerationY());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AccelerationY();
+            }());
         }
         catch (...)
         {
@@ -1063,7 +1175,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.AccelerationZ());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AccelerationZ();
+            }());
         }
         catch (...)
         {
@@ -1089,7 +1205,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -1115,7 +1235,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.PerformanceCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PerformanceCount();
+            }());
         }
         catch (...)
         {
@@ -1141,7 +1265,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.Properties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Properties();
+            }());
         }
         catch (...)
         {
@@ -1239,7 +1367,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.Reading());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Reading();
+            }());
         }
         catch (...)
         {
@@ -1332,7 +1464,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -1431,7 +1567,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Sensors::ActivitySensor::FromIdAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sensors::ActivitySensor::FromIdAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1467,7 +1607,11 @@ namespace py::cpp::Windows::Devices::Sensors
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetCurrentReadingAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetCurrentReadingAsync();
+                }());
             }
             catch (...)
             {
@@ -1503,7 +1647,11 @@ namespace py::cpp::Windows::Devices::Sensors
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Sensors::ActivitySensor::GetDefaultAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sensors::ActivitySensor::GetDefaultAsync();
+                }());
             }
             catch (...)
             {
@@ -1539,7 +1687,11 @@ namespace py::cpp::Windows::Devices::Sensors
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Sensors::ActivitySensor::GetDeviceSelector());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sensors::ActivitySensor::GetDeviceSelector();
+                }());
             }
             catch (...)
             {
@@ -1577,7 +1729,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Sensors::ActivitySensor::GetSystemHistoryAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sensors::ActivitySensor::GetSystemHistoryAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1616,7 +1772,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 1);
 
-                return py::convert(winrt::Windows::Devices::Sensors::ActivitySensor::GetSystemHistoryAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sensors::ActivitySensor::GetSystemHistoryAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1648,7 +1808,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceId();
+            }());
         }
         catch (...)
         {
@@ -1674,7 +1838,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.MinimumReportInterval());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MinimumReportInterval();
+            }());
         }
         catch (...)
         {
@@ -1700,7 +1868,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.PowerInMilliwatts());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PowerInMilliwatts();
+            }());
         }
         catch (...)
         {
@@ -1726,7 +1898,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.SubscribedActivities());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SubscribedActivities();
+            }());
         }
         catch (...)
         {
@@ -1752,7 +1928,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.SupportedActivities());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SupportedActivities();
+            }());
         }
         catch (...)
         {
@@ -1780,7 +1960,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Sensors::ActivitySensor, winrt::Windows::Devices::Sensors::ActivitySensorReadingChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.ReadingChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReadingChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -1808,7 +1992,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ReadingChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReadingChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1939,7 +2127,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.Activity());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Activity();
+            }());
         }
         catch (...)
         {
@@ -1965,7 +2157,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.Confidence());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Confidence();
+            }());
         }
         catch (...)
         {
@@ -1991,7 +2187,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -2086,7 +2286,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.Reading());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Reading();
+            }());
         }
         catch (...)
         {
@@ -2179,7 +2383,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.Reading());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Reading();
+            }());
         }
         catch (...)
         {
@@ -2276,7 +2484,11 @@ namespace py::cpp::Windows::Devices::Sensors
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReadReports());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReadReports();
+                }());
             }
             catch (...)
             {
@@ -2375,7 +2587,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.AllowWhenExternalDisplayConnected());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AllowWhenExternalDisplayConnected();
+            }());
         }
         catch (...)
         {
@@ -2409,7 +2625,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.AllowWhenExternalDisplayConnected(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AllowWhenExternalDisplayConnected(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2507,7 +2727,11 @@ namespace py::cpp::Windows::Devices::Sensors
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetCurrentReading());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetCurrentReading();
+                }());
             }
             catch (...)
             {
@@ -2543,7 +2767,11 @@ namespace py::cpp::Windows::Devices::Sensors
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Sensors::Altimeter::GetDefault());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sensors::Altimeter::GetDefault();
+                }());
             }
             catch (...)
             {
@@ -2575,7 +2803,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReportInterval());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReportInterval();
+            }());
         }
         catch (...)
         {
@@ -2609,7 +2841,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.ReportInterval(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReportInterval(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2636,7 +2872,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceId();
+            }());
         }
         catch (...)
         {
@@ -2662,7 +2902,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.MinimumReportInterval());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MinimumReportInterval();
+            }());
         }
         catch (...)
         {
@@ -2688,7 +2932,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReportLatency());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReportLatency();
+            }());
         }
         catch (...)
         {
@@ -2722,7 +2970,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.ReportLatency(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReportLatency(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2749,7 +3001,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxBatchSize());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxBatchSize();
+            }());
         }
         catch (...)
         {
@@ -2777,7 +3033,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Sensors::Altimeter, winrt::Windows::Devices::Sensors::AltimeterReadingChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.ReadingChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReadingChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -2805,7 +3065,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ReadingChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReadingChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2932,7 +3196,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.AltitudeChangeInMeters());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AltitudeChangeInMeters();
+            }());
         }
         catch (...)
         {
@@ -2958,7 +3226,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -2984,7 +3256,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.PerformanceCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PerformanceCount();
+            }());
         }
         catch (...)
         {
@@ -3010,7 +3286,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.Properties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Properties();
+            }());
         }
         catch (...)
         {
@@ -3106,7 +3386,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.Reading());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Reading();
+            }());
         }
         catch (...)
         {
@@ -3205,7 +3489,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Sensors::Barometer::FromIdAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sensors::Barometer::FromIdAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -3241,7 +3529,11 @@ namespace py::cpp::Windows::Devices::Sensors
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetCurrentReading());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetCurrentReading();
+                }());
             }
             catch (...)
             {
@@ -3277,7 +3569,11 @@ namespace py::cpp::Windows::Devices::Sensors
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Sensors::Barometer::GetDefault());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sensors::Barometer::GetDefault();
+                }());
             }
             catch (...)
             {
@@ -3313,7 +3609,11 @@ namespace py::cpp::Windows::Devices::Sensors
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Sensors::Barometer::GetDeviceSelector());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sensors::Barometer::GetDeviceSelector();
+                }());
             }
             catch (...)
             {
@@ -3345,7 +3645,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReportInterval());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReportInterval();
+            }());
         }
         catch (...)
         {
@@ -3379,7 +3683,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.ReportInterval(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReportInterval(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3406,7 +3714,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceId();
+            }());
         }
         catch (...)
         {
@@ -3432,7 +3744,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.MinimumReportInterval());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MinimumReportInterval();
+            }());
         }
         catch (...)
         {
@@ -3458,7 +3774,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReportLatency());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReportLatency();
+            }());
         }
         catch (...)
         {
@@ -3492,7 +3812,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.ReportLatency(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReportLatency(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3519,7 +3843,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxBatchSize());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxBatchSize();
+            }());
         }
         catch (...)
         {
@@ -3545,7 +3873,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReportThreshold());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReportThreshold();
+            }());
         }
         catch (...)
         {
@@ -3573,7 +3905,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Sensors::Barometer, winrt::Windows::Devices::Sensors::BarometerReadingChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.ReadingChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReadingChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -3601,7 +3937,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ReadingChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReadingChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3731,7 +4071,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.Hectopascals());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Hectopascals();
+            }());
         }
         catch (...)
         {
@@ -3765,7 +4109,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.Hectopascals(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Hectopascals(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3859,7 +4207,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.StationPressureInHectopascals());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StationPressureInHectopascals();
+            }());
         }
         catch (...)
         {
@@ -3885,7 +4237,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -3911,7 +4267,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.PerformanceCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PerformanceCount();
+            }());
         }
         catch (...)
         {
@@ -3937,7 +4297,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.Properties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Properties();
+            }());
         }
         catch (...)
         {
@@ -4033,7 +4397,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.Reading());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Reading();
+            }());
         }
         catch (...)
         {
@@ -4132,7 +4500,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Sensors::Compass::FromIdAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sensors::Compass::FromIdAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -4168,7 +4540,11 @@ namespace py::cpp::Windows::Devices::Sensors
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetCurrentReading());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetCurrentReading();
+                }());
             }
             catch (...)
             {
@@ -4204,7 +4580,11 @@ namespace py::cpp::Windows::Devices::Sensors
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Sensors::Compass::GetDefault());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sensors::Compass::GetDefault();
+                }());
             }
             catch (...)
             {
@@ -4240,7 +4620,11 @@ namespace py::cpp::Windows::Devices::Sensors
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Sensors::Compass::GetDeviceSelector());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sensors::Compass::GetDeviceSelector();
+                }());
             }
             catch (...)
             {
@@ -4272,7 +4656,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReportInterval());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReportInterval();
+            }());
         }
         catch (...)
         {
@@ -4306,7 +4694,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.ReportInterval(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReportInterval(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4333,7 +4725,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.MinimumReportInterval());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MinimumReportInterval();
+            }());
         }
         catch (...)
         {
@@ -4359,7 +4755,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReadingTransform());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReadingTransform();
+            }());
         }
         catch (...)
         {
@@ -4393,7 +4793,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Display::DisplayOrientations>(arg);
 
-            self->obj.ReadingTransform(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReadingTransform(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4420,7 +4824,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReportLatency());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReportLatency();
+            }());
         }
         catch (...)
         {
@@ -4454,7 +4862,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.ReportLatency(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReportLatency(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4481,7 +4893,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxBatchSize());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxBatchSize();
+            }());
         }
         catch (...)
         {
@@ -4507,7 +4923,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReportThreshold());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReportThreshold();
+            }());
         }
         catch (...)
         {
@@ -4533,7 +4953,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceId();
+            }());
         }
         catch (...)
         {
@@ -4561,7 +4985,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Sensors::Compass, winrt::Windows::Devices::Sensors::CompassReadingChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.ReadingChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReadingChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -4589,7 +5017,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ReadingChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReadingChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -4720,7 +5152,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.Degrees());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Degrees();
+            }());
         }
         catch (...)
         {
@@ -4754,7 +5190,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.Degrees(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Degrees(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4848,7 +5288,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.HeadingMagneticNorth());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HeadingMagneticNorth();
+            }());
         }
         catch (...)
         {
@@ -4874,7 +5318,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.HeadingTrueNorth());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HeadingTrueNorth();
+            }());
         }
         catch (...)
         {
@@ -4900,7 +5348,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -4926,7 +5378,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.PerformanceCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PerformanceCount();
+            }());
         }
         catch (...)
         {
@@ -4952,7 +5408,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.Properties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Properties();
+            }());
         }
         catch (...)
         {
@@ -4978,7 +5438,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.HeadingAccuracy());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HeadingAccuracy();
+            }());
         }
         catch (...)
         {
@@ -5076,7 +5540,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.Reading());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Reading();
+            }());
         }
         catch (...)
         {
@@ -5169,7 +5637,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.DistanceInMillimeters());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DistanceInMillimeters();
+            }());
         }
         catch (...)
         {
@@ -5195,7 +5667,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.Engagement());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Engagement();
+            }());
         }
         catch (...)
         {
@@ -5221,7 +5697,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.HeadOrientation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HeadOrientation();
+            }());
         }
         catch (...)
         {
@@ -5247,7 +5727,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.HeadPosition());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HeadPosition();
+            }());
         }
         catch (...)
         {
@@ -5273,7 +5757,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.PersonId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PersonId();
+            }());
         }
         catch (...)
         {
@@ -5376,7 +5864,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Sensors::Gyrometer::FromIdAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sensors::Gyrometer::FromIdAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -5412,7 +5904,11 @@ namespace py::cpp::Windows::Devices::Sensors
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetCurrentReading());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetCurrentReading();
+                }());
             }
             catch (...)
             {
@@ -5448,7 +5944,11 @@ namespace py::cpp::Windows::Devices::Sensors
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Sensors::Gyrometer::GetDefault());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sensors::Gyrometer::GetDefault();
+                }());
             }
             catch (...)
             {
@@ -5484,7 +5984,11 @@ namespace py::cpp::Windows::Devices::Sensors
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Sensors::Gyrometer::GetDeviceSelector());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sensors::Gyrometer::GetDeviceSelector();
+                }());
             }
             catch (...)
             {
@@ -5516,7 +6020,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReportInterval());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReportInterval();
+            }());
         }
         catch (...)
         {
@@ -5550,7 +6058,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.ReportInterval(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReportInterval(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5577,7 +6089,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.MinimumReportInterval());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MinimumReportInterval();
+            }());
         }
         catch (...)
         {
@@ -5603,7 +6119,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReadingTransform());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReadingTransform();
+            }());
         }
         catch (...)
         {
@@ -5637,7 +6157,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Display::DisplayOrientations>(arg);
 
-            self->obj.ReadingTransform(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReadingTransform(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5664,7 +6188,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReportLatency());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReportLatency();
+            }());
         }
         catch (...)
         {
@@ -5698,7 +6226,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.ReportLatency(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReportLatency(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5725,7 +6257,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxBatchSize());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxBatchSize();
+            }());
         }
         catch (...)
         {
@@ -5751,7 +6287,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReportThreshold());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReportThreshold();
+            }());
         }
         catch (...)
         {
@@ -5777,7 +6317,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceId();
+            }());
         }
         catch (...)
         {
@@ -5805,7 +6349,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Sensors::Gyrometer, winrt::Windows::Devices::Sensors::GyrometerReadingChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.ReadingChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReadingChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -5833,7 +6381,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ReadingChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReadingChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -5964,7 +6516,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.ZAxisInDegreesPerSecond());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ZAxisInDegreesPerSecond();
+            }());
         }
         catch (...)
         {
@@ -5998,7 +6554,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.ZAxisInDegreesPerSecond(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ZAxisInDegreesPerSecond(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6025,7 +6585,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.YAxisInDegreesPerSecond());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.YAxisInDegreesPerSecond();
+            }());
         }
         catch (...)
         {
@@ -6059,7 +6623,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.YAxisInDegreesPerSecond(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.YAxisInDegreesPerSecond(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6086,7 +6654,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.XAxisInDegreesPerSecond());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.XAxisInDegreesPerSecond();
+            }());
         }
         catch (...)
         {
@@ -6120,7 +6692,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.XAxisInDegreesPerSecond(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.XAxisInDegreesPerSecond(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6216,7 +6792,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.AngularVelocityX());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AngularVelocityX();
+            }());
         }
         catch (...)
         {
@@ -6242,7 +6822,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.AngularVelocityY());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AngularVelocityY();
+            }());
         }
         catch (...)
         {
@@ -6268,7 +6852,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.AngularVelocityZ());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AngularVelocityZ();
+            }());
         }
         catch (...)
         {
@@ -6294,7 +6882,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -6320,7 +6912,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.PerformanceCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PerformanceCount();
+            }());
         }
         catch (...)
         {
@@ -6346,7 +6942,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.Properties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Properties();
+            }());
         }
         catch (...)
         {
@@ -6444,7 +7044,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.Reading());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Reading();
+            }());
         }
         catch (...)
         {
@@ -6537,7 +7141,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.PitchInDegrees());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PitchInDegrees();
+            }());
         }
         catch (...)
         {
@@ -6563,7 +7171,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.RollInDegrees());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RollInDegrees();
+            }());
         }
         catch (...)
         {
@@ -6589,7 +7201,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.YawInDegrees());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.YawInDegrees();
+            }());
         }
         catch (...)
         {
@@ -6684,7 +7300,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.AltitudeInDegrees());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AltitudeInDegrees();
+            }());
         }
         catch (...)
         {
@@ -6710,7 +7330,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.AzimuthInDegrees());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AzimuthInDegrees();
+            }());
         }
         catch (...)
         {
@@ -6804,7 +7428,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.AngleInDegrees());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AngleInDegrees();
+            }());
         }
         catch (...)
         {
@@ -6830,7 +7458,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.Properties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Properties();
+            }());
         }
         catch (...)
         {
@@ -6856,7 +7488,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -6957,7 +7593,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Sensors::HingeAngleSensor::FromIdAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sensors::HingeAngleSensor::FromIdAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -6993,7 +7633,11 @@ namespace py::cpp::Windows::Devices::Sensors
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetCurrentReadingAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetCurrentReadingAsync();
+                }());
             }
             catch (...)
             {
@@ -7029,7 +7673,11 @@ namespace py::cpp::Windows::Devices::Sensors
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Sensors::HingeAngleSensor::GetDefaultAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sensors::HingeAngleSensor::GetDefaultAsync();
+                }());
             }
             catch (...)
             {
@@ -7065,7 +7713,11 @@ namespace py::cpp::Windows::Devices::Sensors
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Sensors::HingeAngleSensor::GetDeviceSelector());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sensors::HingeAngleSensor::GetDeviceSelector();
+                }());
             }
             catch (...)
             {
@@ -7104,7 +7756,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(winrt::Windows::Devices::Sensors::HingeAngleSensor::GetRelatedToAdjacentPanelsAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sensors::HingeAngleSensor::GetRelatedToAdjacentPanelsAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -7136,7 +7792,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReportThresholdInDegrees());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReportThresholdInDegrees();
+            }());
         }
         catch (...)
         {
@@ -7170,7 +7830,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.ReportThresholdInDegrees(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReportThresholdInDegrees(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7197,7 +7861,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceId();
+            }());
         }
         catch (...)
         {
@@ -7223,7 +7891,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.MinReportThresholdInDegrees());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MinReportThresholdInDegrees();
+            }());
         }
         catch (...)
         {
@@ -7251,7 +7923,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Sensors::HingeAngleSensor, winrt::Windows::Devices::Sensors::HingeAngleSensorReadingChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.ReadingChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReadingChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -7279,7 +7955,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ReadingChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReadingChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -7407,7 +8087,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.Reading());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Reading();
+            }());
         }
         catch (...)
         {
@@ -7500,7 +8184,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsAttentionAwareDimmingSupported());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsAttentionAwareDimmingSupported();
+            }());
         }
         catch (...)
         {
@@ -7526,7 +8214,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsLockOnLeaveSupported());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsLockOnLeaveSupported();
+            }());
         }
         catch (...)
         {
@@ -7552,7 +8244,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsWakeOnApproachSupported());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsWakeOnApproachSupported();
+            }());
         }
         catch (...)
         {
@@ -7578,7 +8274,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.SensorId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SensorId();
+            }());
         }
         catch (...)
         {
@@ -7604,7 +8304,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.SupportedWakeOrLockDistancesInMillimeters());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SupportedWakeOrLockDistancesInMillimeters();
+            }());
         }
         catch (...)
         {
@@ -7630,7 +8334,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsAdaptiveDimmingSupported());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsAdaptiveDimmingSupported();
+            }());
         }
         catch (...)
         {
@@ -7734,7 +8442,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Sensors::HumanPresenceSensor::FromId(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sensors::HumanPresenceSensor::FromId(param0);
+                }());
             }
             catch (...)
             {
@@ -7772,7 +8484,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Sensors::HumanPresenceSensor::FromIdAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sensors::HumanPresenceSensor::FromIdAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -7808,7 +8524,11 @@ namespace py::cpp::Windows::Devices::Sensors
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetCurrentReading());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetCurrentReading();
+                }());
             }
             catch (...)
             {
@@ -7844,7 +8564,11 @@ namespace py::cpp::Windows::Devices::Sensors
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Sensors::HumanPresenceSensor::GetDefault());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sensors::HumanPresenceSensor::GetDefault();
+                }());
             }
             catch (...)
             {
@@ -7880,7 +8604,11 @@ namespace py::cpp::Windows::Devices::Sensors
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Sensors::HumanPresenceSensor::GetDefaultAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sensors::HumanPresenceSensor::GetDefaultAsync();
+                }());
             }
             catch (...)
             {
@@ -7916,7 +8644,11 @@ namespace py::cpp::Windows::Devices::Sensors
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Sensors::HumanPresenceSensor::GetDeviceSelector());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sensors::HumanPresenceSensor::GetDeviceSelector();
+                }());
             }
             catch (...)
             {
@@ -7948,7 +8680,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceId();
+            }());
         }
         catch (...)
         {
@@ -7974,7 +8710,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxDetectableDistanceInMillimeters());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxDetectableDistanceInMillimeters();
+            }());
         }
         catch (...)
         {
@@ -8000,7 +8740,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.MinDetectableDistanceInMillimeters());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MinDetectableDistanceInMillimeters();
+            }());
         }
         catch (...)
         {
@@ -8026,7 +8770,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsEngagementSupported());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsEngagementSupported();
+            }());
         }
         catch (...)
         {
@@ -8052,7 +8800,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsPresenceSupported());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsPresenceSupported();
+            }());
         }
         catch (...)
         {
@@ -8078,7 +8830,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxDetectableAltitudeInDegrees());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxDetectableAltitudeInDegrees();
+            }());
         }
         catch (...)
         {
@@ -8104,7 +8860,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxDetectableAzimuthInDegrees());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxDetectableAzimuthInDegrees();
+            }());
         }
         catch (...)
         {
@@ -8130,7 +8890,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxDetectablePersons());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxDetectablePersons();
+            }());
         }
         catch (...)
         {
@@ -8156,7 +8920,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.MinDetectableAltitudeInDegrees());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MinDetectableAltitudeInDegrees();
+            }());
         }
         catch (...)
         {
@@ -8182,7 +8950,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.MinDetectableAzimuthInDegrees());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MinDetectableAzimuthInDegrees();
+            }());
         }
         catch (...)
         {
@@ -8210,7 +8982,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Sensors::HumanPresenceSensor, winrt::Windows::Devices::Sensors::HumanPresenceSensorReadingChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.ReadingChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReadingChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -8238,7 +9014,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ReadingChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReadingChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -8374,7 +9154,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.DistanceInMillimeters());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DistanceInMillimeters();
+            }());
         }
         catch (...)
         {
@@ -8400,7 +9184,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.Engagement());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Engagement();
+            }());
         }
         catch (...)
         {
@@ -8426,7 +9214,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.Presence());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Presence();
+            }());
         }
         catch (...)
         {
@@ -8452,7 +9244,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -8478,7 +9274,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.Properties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Properties();
+            }());
         }
         catch (...)
         {
@@ -8504,7 +9304,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.DetectedPersons());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DetectedPersons();
+            }());
         }
         catch (...)
         {
@@ -8530,7 +9334,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.OnlookerPresence());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OnlookerPresence();
+            }());
         }
         catch (...)
         {
@@ -8629,7 +9437,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.Reading());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Reading();
+            }());
         }
         catch (...)
         {
@@ -8744,7 +9556,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -8778,7 +9594,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
-            self->obj.Timestamp(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Timestamp(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8805,7 +9625,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.Presence());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Presence();
+            }());
         }
         catch (...)
         {
@@ -8839,7 +9663,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Devices::Sensors::HumanPresence>>(arg);
 
-            self->obj.Presence(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Presence(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8866,7 +9694,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.Engagement());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Engagement();
+            }());
         }
         catch (...)
         {
@@ -8900,7 +9732,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Devices::Sensors::HumanEngagement>>(arg);
 
-            self->obj.Engagement(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Engagement(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8927,7 +9763,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.DistanceInMillimeters());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DistanceInMillimeters();
+            }());
         }
         catch (...)
         {
@@ -8961,7 +9801,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<uint32_t>>(arg);
 
-            self->obj.DistanceInMillimeters(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DistanceInMillimeters(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -9062,7 +9906,11 @@ namespace py::cpp::Windows::Devices::Sensors
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Sensors::HumanPresenceSettings::GetCurrentSettings());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sensors::HumanPresenceSettings::GetCurrentSettings();
+                }());
             }
             catch (...)
             {
@@ -9098,7 +9946,11 @@ namespace py::cpp::Windows::Devices::Sensors
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Sensors::HumanPresenceSettings::GetCurrentSettingsAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sensors::HumanPresenceSettings::GetCurrentSettingsAsync();
+                }());
             }
             catch (...)
             {
@@ -9136,7 +9988,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Sensors::HumanPresenceSettings::GetSupportedFeaturesForSensorId(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sensors::HumanPresenceSettings::GetSupportedFeaturesForSensorId(param0);
+                }());
             }
             catch (...)
             {
@@ -9174,7 +10030,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Sensors::HumanPresenceSettings::GetSupportedFeaturesForSensorIdAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sensors::HumanPresenceSettings::GetSupportedFeaturesForSensorIdAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -9210,7 +10070,11 @@ namespace py::cpp::Windows::Devices::Sensors
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Sensors::HumanPresenceSettings::GetSupportedLockOnLeaveTimeouts());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sensors::HumanPresenceSettings::GetSupportedLockOnLeaveTimeouts();
+                }());
             }
             catch (...)
             {
@@ -9248,7 +10112,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Sensors::HumanPresenceSettings>(args, 0);
 
-                winrt::Windows::Devices::Sensors::HumanPresenceSettings::UpdateSettings(param0);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Devices::Sensors::HumanPresenceSettings::UpdateSettings(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -9287,7 +10155,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Sensors::HumanPresenceSettings>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Sensors::HumanPresenceSettings::UpdateSettingsAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sensors::HumanPresenceSettings::UpdateSettingsAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -9319,7 +10191,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.WakeOnApproachDistanceInMillimeters());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WakeOnApproachDistanceInMillimeters();
+            }());
         }
         catch (...)
         {
@@ -9353,7 +10229,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<uint32_t>>(arg);
 
-            self->obj.WakeOnApproachDistanceInMillimeters(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.WakeOnApproachDistanceInMillimeters(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -9380,7 +10260,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.SensorId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SensorId();
+            }());
         }
         catch (...)
         {
@@ -9414,7 +10298,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.SensorId(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SensorId(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -9441,7 +10329,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.LockOnLeaveTimeout());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LockOnLeaveTimeout();
+            }());
         }
         catch (...)
         {
@@ -9475,7 +10367,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
-            self->obj.LockOnLeaveTimeout(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.LockOnLeaveTimeout(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -9502,7 +10398,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.LockOnLeaveDistanceInMillimeters());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LockOnLeaveDistanceInMillimeters();
+            }());
         }
         catch (...)
         {
@@ -9536,7 +10436,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<uint32_t>>(arg);
 
-            self->obj.LockOnLeaveDistanceInMillimeters(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.LockOnLeaveDistanceInMillimeters(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -9563,7 +10467,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsWakeOnApproachEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsWakeOnApproachEnabled();
+            }());
         }
         catch (...)
         {
@@ -9597,7 +10505,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsWakeOnApproachEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsWakeOnApproachEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -9624,7 +10536,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsLockOnLeaveEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsLockOnLeaveEnabled();
+            }());
         }
         catch (...)
         {
@@ -9658,7 +10574,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsLockOnLeaveEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsLockOnLeaveEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -9685,7 +10605,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsAttentionAwareDimmingEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsAttentionAwareDimmingEnabled();
+            }());
         }
         catch (...)
         {
@@ -9719,7 +10643,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsAttentionAwareDimmingEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsAttentionAwareDimmingEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -9746,7 +10674,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsAdaptiveDimmingEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsAdaptiveDimmingEnabled();
+            }());
         }
         catch (...)
         {
@@ -9780,7 +10712,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsAdaptiveDimmingEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsAdaptiveDimmingEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -9807,7 +10743,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.DimmingOptions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DimmingOptions();
+            }());
         }
         catch (...)
         {
@@ -9833,7 +10773,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.LockOptions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LockOptions();
+            }());
         }
         catch (...)
         {
@@ -9859,7 +10803,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.WakeOptions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WakeOptions();
+            }());
         }
         catch (...)
         {
@@ -9887,7 +10835,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(winrt::Windows::Devices::Sensors::HumanPresenceSettings::SettingsChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Sensors::HumanPresenceSettings::SettingsChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -9915,7 +10867,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Windows::Devices::Sensors::HumanPresenceSettings::SettingsChanged(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::Devices::Sensors::HumanPresenceSettings::SettingsChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -10059,7 +11015,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Sensors::Inclinometer::FromIdAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sensors::Inclinometer::FromIdAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -10095,7 +11055,11 @@ namespace py::cpp::Windows::Devices::Sensors
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetCurrentReading());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetCurrentReading();
+                }());
             }
             catch (...)
             {
@@ -10131,7 +11095,11 @@ namespace py::cpp::Windows::Devices::Sensors
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Sensors::Inclinometer::GetDefault());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sensors::Inclinometer::GetDefault();
+                }());
             }
             catch (...)
             {
@@ -10167,7 +11135,11 @@ namespace py::cpp::Windows::Devices::Sensors
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Sensors::Inclinometer::GetDefaultForRelativeReadings());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sensors::Inclinometer::GetDefaultForRelativeReadings();
+                }());
             }
             catch (...)
             {
@@ -10205,7 +11177,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Sensors::SensorReadingType>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Sensors::Inclinometer::GetDefault(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sensors::Inclinometer::GetDefault(param0);
+                }());
             }
             catch (...)
             {
@@ -10243,7 +11219,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Sensors::SensorReadingType>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Sensors::Inclinometer::GetDeviceSelector(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sensors::Inclinometer::GetDeviceSelector(param0);
+                }());
             }
             catch (...)
             {
@@ -10275,7 +11255,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReportInterval());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReportInterval();
+            }());
         }
         catch (...)
         {
@@ -10309,7 +11293,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.ReportInterval(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReportInterval(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -10336,7 +11324,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.MinimumReportInterval());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MinimumReportInterval();
+            }());
         }
         catch (...)
         {
@@ -10362,7 +11354,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReadingTransform());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReadingTransform();
+            }());
         }
         catch (...)
         {
@@ -10396,7 +11392,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Display::DisplayOrientations>(arg);
 
-            self->obj.ReadingTransform(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReadingTransform(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -10423,7 +11423,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReadingType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReadingType();
+            }());
         }
         catch (...)
         {
@@ -10449,7 +11453,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReportLatency());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReportLatency();
+            }());
         }
         catch (...)
         {
@@ -10483,7 +11491,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.ReportLatency(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReportLatency(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -10510,7 +11522,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxBatchSize());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxBatchSize();
+            }());
         }
         catch (...)
         {
@@ -10536,7 +11552,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReportThreshold());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReportThreshold();
+            }());
         }
         catch (...)
         {
@@ -10562,7 +11582,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceId();
+            }());
         }
         catch (...)
         {
@@ -10590,7 +11614,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Sensors::Inclinometer, winrt::Windows::Devices::Sensors::InclinometerReadingChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.ReadingChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReadingChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -10618,7 +11646,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ReadingChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReadingChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -10752,7 +11784,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.YawInDegrees());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.YawInDegrees();
+            }());
         }
         catch (...)
         {
@@ -10786,7 +11822,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.YawInDegrees(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.YawInDegrees(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -10813,7 +11853,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.RollInDegrees());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RollInDegrees();
+            }());
         }
         catch (...)
         {
@@ -10847,7 +11891,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.RollInDegrees(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RollInDegrees(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -10874,7 +11922,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.PitchInDegrees());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PitchInDegrees();
+            }());
         }
         catch (...)
         {
@@ -10908,7 +11960,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.PitchInDegrees(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PitchInDegrees(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -11004,7 +12060,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.PitchDegrees());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PitchDegrees();
+            }());
         }
         catch (...)
         {
@@ -11030,7 +12090,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.RollDegrees());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RollDegrees();
+            }());
         }
         catch (...)
         {
@@ -11056,7 +12120,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -11082,7 +12150,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.YawDegrees());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.YawDegrees();
+            }());
         }
         catch (...)
         {
@@ -11108,7 +12180,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.PerformanceCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PerformanceCount();
+            }());
         }
         catch (...)
         {
@@ -11134,7 +12210,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.Properties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Properties();
+            }());
         }
         catch (...)
         {
@@ -11160,7 +12240,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.YawAccuracy());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.YawAccuracy();
+            }());
         }
         catch (...)
         {
@@ -11259,7 +12343,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.Reading());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Reading();
+            }());
         }
         catch (...)
         {
@@ -11358,7 +12446,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Sensors::LightSensor::FromIdAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sensors::LightSensor::FromIdAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -11394,7 +12486,11 @@ namespace py::cpp::Windows::Devices::Sensors
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetCurrentReading());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetCurrentReading();
+                }());
             }
             catch (...)
             {
@@ -11430,7 +12526,11 @@ namespace py::cpp::Windows::Devices::Sensors
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Sensors::LightSensor::GetDefault());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sensors::LightSensor::GetDefault();
+                }());
             }
             catch (...)
             {
@@ -11466,7 +12566,11 @@ namespace py::cpp::Windows::Devices::Sensors
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Sensors::LightSensor::GetDeviceSelector());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sensors::LightSensor::GetDeviceSelector();
+                }());
             }
             catch (...)
             {
@@ -11498,7 +12602,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReportInterval());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReportInterval();
+            }());
         }
         catch (...)
         {
@@ -11532,7 +12640,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.ReportInterval(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReportInterval(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -11559,7 +12671,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.MinimumReportInterval());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MinimumReportInterval();
+            }());
         }
         catch (...)
         {
@@ -11585,7 +12701,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReportLatency());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReportLatency();
+            }());
         }
         catch (...)
         {
@@ -11619,7 +12739,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.ReportLatency(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReportLatency(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -11646,7 +12770,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxBatchSize());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxBatchSize();
+            }());
         }
         catch (...)
         {
@@ -11672,7 +12800,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReportThreshold());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReportThreshold();
+            }());
         }
         catch (...)
         {
@@ -11698,7 +12830,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceId();
+            }());
         }
         catch (...)
         {
@@ -11726,7 +12862,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Sensors::LightSensor, winrt::Windows::Devices::Sensors::LightSensorReadingChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.ReadingChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReadingChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -11754,7 +12894,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ReadingChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReadingChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -11884,7 +13028,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.LuxPercentage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LuxPercentage();
+            }());
         }
         catch (...)
         {
@@ -11918,7 +13066,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.LuxPercentage(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.LuxPercentage(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -11945,7 +13097,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.AbsoluteLux());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AbsoluteLux();
+            }());
         }
         catch (...)
         {
@@ -11979,7 +13135,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.AbsoluteLux(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AbsoluteLux(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -12074,7 +13234,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.IlluminanceInLux());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IlluminanceInLux();
+            }());
         }
         catch (...)
         {
@@ -12100,7 +13264,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -12126,7 +13294,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.PerformanceCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PerformanceCount();
+            }());
         }
         catch (...)
         {
@@ -12152,7 +13324,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.Properties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Properties();
+            }());
         }
         catch (...)
         {
@@ -12248,7 +13424,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.Reading());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Reading();
+            }());
         }
         catch (...)
         {
@@ -12341,7 +13521,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.AllowWhenExternalDisplayConnected());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AllowWhenExternalDisplayConnected();
+            }());
         }
         catch (...)
         {
@@ -12375,7 +13559,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.AllowWhenExternalDisplayConnected(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AllowWhenExternalDisplayConnected(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -12475,7 +13663,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Sensors::Magnetometer::FromIdAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sensors::Magnetometer::FromIdAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -12511,7 +13703,11 @@ namespace py::cpp::Windows::Devices::Sensors
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetCurrentReading());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetCurrentReading();
+                }());
             }
             catch (...)
             {
@@ -12547,7 +13743,11 @@ namespace py::cpp::Windows::Devices::Sensors
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Sensors::Magnetometer::GetDefault());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sensors::Magnetometer::GetDefault();
+                }());
             }
             catch (...)
             {
@@ -12583,7 +13783,11 @@ namespace py::cpp::Windows::Devices::Sensors
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Sensors::Magnetometer::GetDeviceSelector());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sensors::Magnetometer::GetDeviceSelector();
+                }());
             }
             catch (...)
             {
@@ -12615,7 +13819,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReportInterval());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReportInterval();
+            }());
         }
         catch (...)
         {
@@ -12649,7 +13857,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.ReportInterval(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReportInterval(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -12676,7 +13888,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.MinimumReportInterval());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MinimumReportInterval();
+            }());
         }
         catch (...)
         {
@@ -12702,7 +13918,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReadingTransform());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReadingTransform();
+            }());
         }
         catch (...)
         {
@@ -12736,7 +13956,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Display::DisplayOrientations>(arg);
 
-            self->obj.ReadingTransform(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReadingTransform(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -12763,7 +13987,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReportLatency());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReportLatency();
+            }());
         }
         catch (...)
         {
@@ -12797,7 +14025,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.ReportLatency(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReportLatency(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -12824,7 +14056,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxBatchSize());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxBatchSize();
+            }());
         }
         catch (...)
         {
@@ -12850,7 +14086,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReportThreshold());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReportThreshold();
+            }());
         }
         catch (...)
         {
@@ -12876,7 +14116,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceId();
+            }());
         }
         catch (...)
         {
@@ -12904,7 +14148,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Sensors::Magnetometer, winrt::Windows::Devices::Sensors::MagnetometerReadingChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.ReadingChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReadingChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -12932,7 +14180,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ReadingChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReadingChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -13063,7 +14315,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.ZAxisMicroteslas());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ZAxisMicroteslas();
+            }());
         }
         catch (...)
         {
@@ -13097,7 +14353,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.ZAxisMicroteslas(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ZAxisMicroteslas(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -13124,7 +14384,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.YAxisMicroteslas());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.YAxisMicroteslas();
+            }());
         }
         catch (...)
         {
@@ -13158,7 +14422,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.YAxisMicroteslas(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.YAxisMicroteslas(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -13185,7 +14453,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.XAxisMicroteslas());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.XAxisMicroteslas();
+            }());
         }
         catch (...)
         {
@@ -13219,7 +14491,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.XAxisMicroteslas(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.XAxisMicroteslas(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -13315,7 +14591,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.DirectionalAccuracy());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DirectionalAccuracy();
+            }());
         }
         catch (...)
         {
@@ -13341,7 +14621,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.MagneticFieldX());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MagneticFieldX();
+            }());
         }
         catch (...)
         {
@@ -13367,7 +14651,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.MagneticFieldY());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MagneticFieldY();
+            }());
         }
         catch (...)
         {
@@ -13393,7 +14681,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.MagneticFieldZ());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MagneticFieldZ();
+            }());
         }
         catch (...)
         {
@@ -13419,7 +14711,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -13445,7 +14741,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.PerformanceCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PerformanceCount();
+            }());
         }
         catch (...)
         {
@@ -13471,7 +14771,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.Properties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Properties();
+            }());
         }
         catch (...)
         {
@@ -13570,7 +14874,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.Reading());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Reading();
+            }());
         }
         catch (...)
         {
@@ -13669,7 +14977,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Sensors::OrientationSensor::FromIdAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sensors::OrientationSensor::FromIdAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -13705,7 +15017,11 @@ namespace py::cpp::Windows::Devices::Sensors
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetCurrentReading());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetCurrentReading();
+                }());
             }
             catch (...)
             {
@@ -13741,7 +15057,11 @@ namespace py::cpp::Windows::Devices::Sensors
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Sensors::OrientationSensor::GetDefault());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sensors::OrientationSensor::GetDefault();
+                }());
             }
             catch (...)
             {
@@ -13777,7 +15097,11 @@ namespace py::cpp::Windows::Devices::Sensors
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Sensors::OrientationSensor::GetDefaultForRelativeReadings());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sensors::OrientationSensor::GetDefaultForRelativeReadings();
+                }());
             }
             catch (...)
             {
@@ -13815,7 +15139,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Sensors::SensorReadingType>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Sensors::OrientationSensor::GetDefault(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sensors::OrientationSensor::GetDefault(param0);
+                }());
             }
             catch (...)
             {
@@ -13854,7 +15182,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 auto param0 = py::convert_to<winrt::Windows::Devices::Sensors::SensorReadingType>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Sensors::SensorOptimizationGoal>(args, 1);
 
-                return py::convert(winrt::Windows::Devices::Sensors::OrientationSensor::GetDefault(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sensors::OrientationSensor::GetDefault(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -13892,7 +15224,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Sensors::SensorReadingType>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Sensors::OrientationSensor::GetDeviceSelector(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sensors::OrientationSensor::GetDeviceSelector(param0);
+                }());
             }
             catch (...)
             {
@@ -13931,7 +15267,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 auto param0 = py::convert_to<winrt::Windows::Devices::Sensors::SensorReadingType>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Sensors::SensorOptimizationGoal>(args, 1);
 
-                return py::convert(winrt::Windows::Devices::Sensors::OrientationSensor::GetDeviceSelector(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sensors::OrientationSensor::GetDeviceSelector(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -13963,7 +15303,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReportInterval());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReportInterval();
+            }());
         }
         catch (...)
         {
@@ -13997,7 +15341,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.ReportInterval(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReportInterval(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -14024,7 +15372,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.MinimumReportInterval());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MinimumReportInterval();
+            }());
         }
         catch (...)
         {
@@ -14050,7 +15402,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReadingTransform());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReadingTransform();
+            }());
         }
         catch (...)
         {
@@ -14084,7 +15440,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Display::DisplayOrientations>(arg);
 
-            self->obj.ReadingTransform(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReadingTransform(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -14111,7 +15471,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReadingType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReadingType();
+            }());
         }
         catch (...)
         {
@@ -14137,7 +15501,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReportLatency());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReportLatency();
+            }());
         }
         catch (...)
         {
@@ -14171,7 +15539,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.ReportLatency(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReportLatency(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -14198,7 +15570,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxBatchSize());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxBatchSize();
+            }());
         }
         catch (...)
         {
@@ -14224,7 +15600,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceId();
+            }());
         }
         catch (...)
         {
@@ -14252,7 +15632,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Sensors::OrientationSensor, winrt::Windows::Devices::Sensors::OrientationSensorReadingChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.ReadingChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReadingChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -14280,7 +15664,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ReadingChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReadingChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -14415,7 +15803,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.Quaternion());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Quaternion();
+            }());
         }
         catch (...)
         {
@@ -14441,7 +15833,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.RotationMatrix());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RotationMatrix();
+            }());
         }
         catch (...)
         {
@@ -14467,7 +15863,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -14493,7 +15893,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.PerformanceCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PerformanceCount();
+            }());
         }
         catch (...)
         {
@@ -14519,7 +15923,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.Properties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Properties();
+            }());
         }
         catch (...)
         {
@@ -14545,7 +15953,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.YawAccuracy());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.YawAccuracy();
+            }());
         }
         catch (...)
         {
@@ -14643,7 +16055,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.Reading());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Reading();
+            }());
         }
         catch (...)
         {
@@ -14742,7 +16158,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Sensors::Pedometer::FromIdAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sensors::Pedometer::FromIdAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -14778,7 +16198,11 @@ namespace py::cpp::Windows::Devices::Sensors
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetCurrentReadings());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetCurrentReadings();
+                }());
             }
             catch (...)
             {
@@ -14814,7 +16238,11 @@ namespace py::cpp::Windows::Devices::Sensors
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Sensors::Pedometer::GetDefaultAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sensors::Pedometer::GetDefaultAsync();
+                }());
             }
             catch (...)
             {
@@ -14850,7 +16278,11 @@ namespace py::cpp::Windows::Devices::Sensors
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Sensors::Pedometer::GetDeviceSelector());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sensors::Pedometer::GetDeviceSelector();
+                }());
             }
             catch (...)
             {
@@ -14888,7 +16320,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Sensors::SensorDataThresholdTriggerDetails>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Sensors::Pedometer::GetReadingsFromTriggerDetails(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sensors::Pedometer::GetReadingsFromTriggerDetails(param0);
+                }());
             }
             catch (...)
             {
@@ -14926,7 +16362,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Sensors::Pedometer::GetSystemHistoryAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sensors::Pedometer::GetSystemHistoryAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -14965,7 +16405,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 1);
 
-                return py::convert(winrt::Windows::Devices::Sensors::Pedometer::GetSystemHistoryAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sensors::Pedometer::GetSystemHistoryAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -14997,7 +16441,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReportInterval());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReportInterval();
+            }());
         }
         catch (...)
         {
@@ -15031,7 +16479,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.ReportInterval(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReportInterval(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -15058,7 +16510,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceId();
+            }());
         }
         catch (...)
         {
@@ -15084,7 +16540,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.MinimumReportInterval());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MinimumReportInterval();
+            }());
         }
         catch (...)
         {
@@ -15110,7 +16570,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.PowerInMilliwatts());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PowerInMilliwatts();
+            }());
         }
         catch (...)
         {
@@ -15138,7 +16602,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Sensors::Pedometer, winrt::Windows::Devices::Sensors::PedometerReadingChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.ReadingChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReadingChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -15166,7 +16634,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ReadingChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReadingChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -15388,7 +16860,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.CumulativeSteps());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CumulativeSteps();
+            }());
         }
         catch (...)
         {
@@ -15414,7 +16890,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.CumulativeStepsDuration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CumulativeStepsDuration();
+            }());
         }
         catch (...)
         {
@@ -15440,7 +16920,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.StepKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StepKind();
+            }());
         }
         catch (...)
         {
@@ -15466,7 +16950,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -15562,7 +17050,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.Reading());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Reading();
+            }());
         }
         catch (...)
         {
@@ -15659,7 +17151,11 @@ namespace py::cpp::Windows::Devices::Sensors
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CreateDisplayOnOffController());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateDisplayOnOffController();
+                }());
             }
             catch (...)
             {
@@ -15697,7 +17193,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Sensors::ProximitySensor::FromId(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sensors::ProximitySensor::FromId(param0);
+                }());
             }
             catch (...)
             {
@@ -15733,7 +17233,11 @@ namespace py::cpp::Windows::Devices::Sensors
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetCurrentReading());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetCurrentReading();
+                }());
             }
             catch (...)
             {
@@ -15769,7 +17273,11 @@ namespace py::cpp::Windows::Devices::Sensors
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Sensors::ProximitySensor::GetDeviceSelector());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sensors::ProximitySensor::GetDeviceSelector();
+                }());
             }
             catch (...)
             {
@@ -15807,7 +17315,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Sensors::SensorDataThresholdTriggerDetails>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Sensors::ProximitySensor::GetReadingsFromTriggerDetails(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sensors::ProximitySensor::GetReadingsFromTriggerDetails(param0);
+                }());
             }
             catch (...)
             {
@@ -15839,7 +17351,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceId();
+            }());
         }
         catch (...)
         {
@@ -15865,7 +17381,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxDistanceInMillimeters());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxDistanceInMillimeters();
+            }());
         }
         catch (...)
         {
@@ -15891,7 +17411,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.MinDistanceInMillimeters());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MinDistanceInMillimeters();
+            }());
         }
         catch (...)
         {
@@ -15919,7 +17443,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Sensors::ProximitySensor, winrt::Windows::Devices::Sensors::ProximitySensorReadingChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.ReadingChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReadingChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -15947,7 +17475,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ReadingChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReadingChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -16169,7 +17701,11 @@ namespace py::cpp::Windows::Devices::Sensors
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -16218,7 +17754,11 @@ namespace py::cpp::Windows::Devices::Sensors
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -16290,7 +17830,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.DistanceInMillimeters());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DistanceInMillimeters();
+            }());
         }
         catch (...)
         {
@@ -16316,7 +17860,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsDetected());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsDetected();
+            }());
         }
         catch (...)
         {
@@ -16342,7 +17890,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -16437,7 +17989,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.Reading());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Reading();
+            }());
         }
         catch (...)
         {
@@ -16530,7 +18086,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceId();
+            }());
         }
         catch (...)
         {
@@ -16556,7 +18116,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.SensorType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SensorType();
+            }());
         }
         catch (...)
         {
@@ -16650,7 +18214,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.W());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.W();
+            }());
         }
         catch (...)
         {
@@ -16676,7 +18244,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.X());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.X();
+            }());
         }
         catch (...)
         {
@@ -16702,7 +18274,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.Y());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Y();
+            }());
         }
         catch (...)
         {
@@ -16728,7 +18304,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.Z());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Z();
+            }());
         }
         catch (...)
         {
@@ -16824,7 +18404,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.M11());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.M11();
+            }());
         }
         catch (...)
         {
@@ -16850,7 +18434,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.M12());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.M12();
+            }());
         }
         catch (...)
         {
@@ -16876,7 +18464,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.M13());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.M13();
+            }());
         }
         catch (...)
         {
@@ -16902,7 +18494,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.M21());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.M21();
+            }());
         }
         catch (...)
         {
@@ -16928,7 +18524,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.M22());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.M22();
+            }());
         }
         catch (...)
         {
@@ -16954,7 +18554,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.M23());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.M23();
+            }());
         }
         catch (...)
         {
@@ -16980,7 +18584,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.M31());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.M31();
+            }());
         }
         catch (...)
         {
@@ -17006,7 +18614,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.M32());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.M32();
+            }());
         }
         catch (...)
         {
@@ -17032,7 +18644,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.M33());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.M33();
+            }());
         }
         catch (...)
         {
@@ -17139,7 +18755,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Sensors::SimpleOrientationSensor::FromIdAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sensors::SimpleOrientationSensor::FromIdAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -17175,7 +18795,11 @@ namespace py::cpp::Windows::Devices::Sensors
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetCurrentOrientation());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetCurrentOrientation();
+                }());
             }
             catch (...)
             {
@@ -17211,7 +18835,11 @@ namespace py::cpp::Windows::Devices::Sensors
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Sensors::SimpleOrientationSensor::GetDefault());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sensors::SimpleOrientationSensor::GetDefault();
+                }());
             }
             catch (...)
             {
@@ -17247,7 +18875,11 @@ namespace py::cpp::Windows::Devices::Sensors
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Sensors::SimpleOrientationSensor::GetDeviceSelector());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Sensors::SimpleOrientationSensor::GetDeviceSelector();
+                }());
             }
             catch (...)
             {
@@ -17279,7 +18911,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReadingTransform());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReadingTransform();
+            }());
         }
         catch (...)
         {
@@ -17313,7 +18949,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Display::DisplayOrientations>(arg);
 
-            self->obj.ReadingTransform(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReadingTransform(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -17340,7 +18980,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceId();
+            }());
         }
         catch (...)
         {
@@ -17368,7 +19012,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Sensors::SimpleOrientationSensor, winrt::Windows::Devices::Sensors::SimpleOrientationSensorOrientationChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.OrientationChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OrientationChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -17396,7 +19044,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.OrientationChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.OrientationChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -17522,7 +19174,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.Orientation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Orientation();
+            }());
         }
         catch (...)
         {
@@ -17548,7 +19204,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -17642,7 +19302,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisableWhenBatterySaverOn());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisableWhenBatterySaverOn();
+            }());
         }
         catch (...)
         {
@@ -17676,7 +19340,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.DisableWhenBatterySaverOn(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DisableWhenBatterySaverOn(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -17703,7 +19371,11 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
 
-            return py::convert(self->obj.AllowWhenExternalDisplayConnected());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AllowWhenExternalDisplayConnected();
+            }());
         }
         catch (...)
         {
@@ -17737,7 +19409,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.AllowWhenExternalDisplayConnected(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AllowWhenExternalDisplayConnected(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -17838,7 +19514,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.Initialize(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Initialize(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -17877,7 +19557,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Sensors::HumanPresenceSensorReading>(args, 0);
 
-                return py::convert(self->obj.ProcessReading(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ProcessReading(param0);
+                }());
             }
             catch (...)
             {
@@ -17915,7 +19599,11 @@ namespace py::cpp::Windows::Devices::Sensors
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Sensors::HumanPresenceSensorReading>(args, 0);
 
-                self->obj.ProcessReadingTimeoutExpired(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ProcessReadingTimeoutExpired(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -17952,7 +19640,11 @@ namespace py::cpp::Windows::Devices::Sensors
                     return nullptr;
                 }
 
-                self->obj.Reset();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Reset();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -17989,7 +19681,11 @@ namespace py::cpp::Windows::Devices::Sensors
                     return nullptr;
                 }
 
-                self->obj.Start();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Start();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -18026,7 +19722,11 @@ namespace py::cpp::Windows::Devices::Sensors
                     return nullptr;
                 }
 
-                self->obj.Stop();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Stop();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -18063,7 +19763,11 @@ namespace py::cpp::Windows::Devices::Sensors
                     return nullptr;
                 }
 
-                self->obj.Uninitialize();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Uninitialize();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)

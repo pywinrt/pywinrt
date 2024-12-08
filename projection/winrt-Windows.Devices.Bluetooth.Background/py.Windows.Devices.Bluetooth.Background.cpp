@@ -38,7 +38,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.Error());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Error();
+            }());
         }
         catch (...)
         {
@@ -64,7 +68,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -90,7 +98,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectedTransmitPowerLevelInDBm());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SelectedTransmitPowerLevelInDBm();
+            }());
         }
         catch (...)
         {
@@ -185,7 +197,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.Advertisements());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Advertisements();
+            }());
         }
         catch (...)
         {
@@ -211,7 +227,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.Error());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Error();
+            }());
         }
         catch (...)
         {
@@ -237,7 +257,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.SignalStrengthFilter());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SignalStrengthFilter();
+            }());
         }
         catch (...)
         {
@@ -332,7 +356,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.Characteristic());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Characteristic();
+            }());
         }
         catch (...)
         {
@@ -358,7 +386,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.Value());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Value();
+            }());
         }
         catch (...)
         {
@@ -384,7 +416,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.Error());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Error();
+            }());
         }
         catch (...)
         {
@@ -410,7 +446,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.EventTriggeringMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EventTriggeringMode();
+            }());
         }
         catch (...)
         {
@@ -436,7 +476,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.ValueChangedEvents());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ValueChangedEvents();
+            }());
         }
         catch (...)
         {
@@ -537,7 +581,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
                     return nullptr;
                 }
 
-                self->obj.Start();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Start();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -570,7 +618,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.Service());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Service();
+            }());
         }
         catch (...)
         {
@@ -596,7 +648,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.TriggerId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TriggerId();
+            }());
         }
         catch (...)
         {
@@ -622,7 +678,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::Background::GattServiceProviderConnection::AllServices());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::Background::GattServiceProviderConnection::AllServices();
+            }());
         }
         catch (...)
         {
@@ -743,7 +803,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.Connection());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Connection();
+            }());
         }
         catch (...)
         {
@@ -836,7 +900,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.Incoming());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Incoming();
+            }());
         }
         catch (...)
         {
@@ -862,7 +930,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.RemoteDevice());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RemoteDevice();
+            }());
         }
         catch (...)
         {
@@ -888,7 +960,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.Socket());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Socket();
+            }());
         }
         catch (...)
         {
@@ -983,7 +1059,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.ServiceCapabilities());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServiceCapabilities();
+            }());
         }
         catch (...)
         {
@@ -1017,7 +1097,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothServiceCapabilities>(arg);
 
-            self->obj.ServiceCapabilities(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ServiceCapabilities(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1044,7 +1128,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.SdpRecord());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SdpRecord();
+            }());
         }
         catch (...)
         {
@@ -1078,7 +1166,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
 
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(arg);
 
-            self->obj.SdpRecord(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SdpRecord(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1105,7 +1197,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.LocalServiceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LocalServiceId();
+            }());
         }
         catch (...)
         {
@@ -1139,7 +1235,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId>(arg);
 
-            self->obj.LocalServiceId(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.LocalServiceId(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1235,7 +1335,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.RemoteServiceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RemoteServiceId();
+            }());
         }
         catch (...)
         {
@@ -1269,7 +1373,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId>(arg);
 
-            self->obj.RemoteServiceId(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RemoteServiceId(param0);
+            }
+
             return 0;
         }
         catch (...)

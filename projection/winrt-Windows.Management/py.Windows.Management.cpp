@@ -60,7 +60,11 @@ namespace py::cpp::Windows::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.Type());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Type();
+            }());
         }
         catch (...)
         {
@@ -94,7 +98,11 @@ namespace py::cpp::Windows::Management
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Type(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Type(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -121,7 +129,11 @@ namespace py::cpp::Windows::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.Target());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Target();
+            }());
         }
         catch (...)
         {
@@ -155,7 +167,11 @@ namespace py::cpp::Windows::Management
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Target(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Target(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -182,7 +198,11 @@ namespace py::cpp::Windows::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.Source());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Source();
+            }());
         }
         catch (...)
         {
@@ -216,7 +236,11 @@ namespace py::cpp::Windows::Management
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Source(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Source(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -243,7 +267,11 @@ namespace py::cpp::Windows::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.Mark());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Mark();
+            }());
         }
         catch (...)
         {
@@ -277,7 +305,11 @@ namespace py::cpp::Windows::Management
 
             auto param0 = py::convert_to<winrt::Windows::Management::MdmAlertMark>(arg);
 
-            self->obj.Mark(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Mark(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -304,7 +336,11 @@ namespace py::cpp::Windows::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.Format());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Format();
+            }());
         }
         catch (...)
         {
@@ -338,7 +374,11 @@ namespace py::cpp::Windows::Management
 
             auto param0 = py::convert_to<winrt::Windows::Management::MdmAlertDataType>(arg);
 
-            self->obj.Format(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Format(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -365,7 +405,11 @@ namespace py::cpp::Windows::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.Data());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Data();
+            }());
         }
         catch (...)
         {
@@ -399,7 +443,11 @@ namespace py::cpp::Windows::Management
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Data(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Data(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -426,7 +474,11 @@ namespace py::cpp::Windows::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -529,7 +581,11 @@ namespace py::cpp::Windows::Management
                     return nullptr;
                 }
 
-                return py::convert(self->obj.AttachAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.AttachAsync();
+                }());
             }
             catch (...)
             {
@@ -565,7 +621,11 @@ namespace py::cpp::Windows::Management
                     return nullptr;
                 }
 
-                self->obj.Delete();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Delete();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -602,7 +662,11 @@ namespace py::cpp::Windows::Management
                     return nullptr;
                 }
 
-                return py::convert(self->obj.StartAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.StartAsync();
+                }());
             }
             catch (...)
             {
@@ -640,7 +704,11 @@ namespace py::cpp::Windows::Management
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Management::MdmAlert>>(args, 0);
 
-                return py::convert(self->obj.StartAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.StartAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -672,7 +740,11 @@ namespace py::cpp::Windows::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.Alerts());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Alerts();
+            }());
         }
         catch (...)
         {
@@ -698,7 +770,11 @@ namespace py::cpp::Windows::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExtendedError());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExtendedError();
+            }());
         }
         catch (...)
         {
@@ -724,7 +800,11 @@ namespace py::cpp::Windows::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -750,7 +830,11 @@ namespace py::cpp::Windows::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.State());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.State();
+            }());
         }
         catch (...)
         {
@@ -848,7 +932,11 @@ namespace py::cpp::Windows::Management
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Management::MdmSessionManager::DeleteSessionById(param0);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Management::MdmSessionManager::DeleteSessionById(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -887,7 +975,11 @@ namespace py::cpp::Windows::Management
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Management::MdmSessionManager::GetSessionById(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Management::MdmSessionManager::GetSessionById(param0);
+                }());
             }
             catch (...)
             {
@@ -923,7 +1015,11 @@ namespace py::cpp::Windows::Management
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Management::MdmSessionManager::TryCreateSession());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Management::MdmSessionManager::TryCreateSession();
+                }());
             }
             catch (...)
             {
@@ -955,7 +1051,11 @@ namespace py::cpp::Windows::Management
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Management::MdmSessionManager::SessionIds());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Management::MdmSessionManager::SessionIds();
+            }());
         }
         catch (...)
         {

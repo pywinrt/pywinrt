@@ -30,7 +30,11 @@ namespace py::cpp::Windows::Media::ClosedCaptioning
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::ClosedCaptioning::ClosedCaptionProperties::BackgroundColor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::ClosedCaptioning::ClosedCaptionProperties::BackgroundColor();
+            }());
         }
         catch (...)
         {
@@ -56,7 +60,11 @@ namespace py::cpp::Windows::Media::ClosedCaptioning
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::ClosedCaptioning::ClosedCaptionProperties::BackgroundOpacity());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::ClosedCaptioning::ClosedCaptionProperties::BackgroundOpacity();
+            }());
         }
         catch (...)
         {
@@ -82,7 +90,11 @@ namespace py::cpp::Windows::Media::ClosedCaptioning
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::ClosedCaptioning::ClosedCaptionProperties::ComputedBackgroundColor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::ClosedCaptioning::ClosedCaptionProperties::ComputedBackgroundColor();
+            }());
         }
         catch (...)
         {
@@ -108,7 +120,11 @@ namespace py::cpp::Windows::Media::ClosedCaptioning
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::ClosedCaptioning::ClosedCaptionProperties::ComputedFontColor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::ClosedCaptioning::ClosedCaptionProperties::ComputedFontColor();
+            }());
         }
         catch (...)
         {
@@ -134,7 +150,11 @@ namespace py::cpp::Windows::Media::ClosedCaptioning
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::ClosedCaptioning::ClosedCaptionProperties::ComputedRegionColor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::ClosedCaptioning::ClosedCaptionProperties::ComputedRegionColor();
+            }());
         }
         catch (...)
         {
@@ -160,7 +180,11 @@ namespace py::cpp::Windows::Media::ClosedCaptioning
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::ClosedCaptioning::ClosedCaptionProperties::FontColor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::ClosedCaptioning::ClosedCaptionProperties::FontColor();
+            }());
         }
         catch (...)
         {
@@ -186,7 +210,11 @@ namespace py::cpp::Windows::Media::ClosedCaptioning
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::ClosedCaptioning::ClosedCaptionProperties::FontEffect());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::ClosedCaptioning::ClosedCaptionProperties::FontEffect();
+            }());
         }
         catch (...)
         {
@@ -212,7 +240,11 @@ namespace py::cpp::Windows::Media::ClosedCaptioning
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::ClosedCaptioning::ClosedCaptionProperties::FontOpacity());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::ClosedCaptioning::ClosedCaptionProperties::FontOpacity();
+            }());
         }
         catch (...)
         {
@@ -238,7 +270,11 @@ namespace py::cpp::Windows::Media::ClosedCaptioning
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::ClosedCaptioning::ClosedCaptionProperties::FontSize());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::ClosedCaptioning::ClosedCaptionProperties::FontSize();
+            }());
         }
         catch (...)
         {
@@ -264,7 +300,11 @@ namespace py::cpp::Windows::Media::ClosedCaptioning
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::ClosedCaptioning::ClosedCaptionProperties::FontStyle());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::ClosedCaptioning::ClosedCaptionProperties::FontStyle();
+            }());
         }
         catch (...)
         {
@@ -290,7 +330,11 @@ namespace py::cpp::Windows::Media::ClosedCaptioning
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::ClosedCaptioning::ClosedCaptionProperties::RegionColor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::ClosedCaptioning::ClosedCaptionProperties::RegionColor();
+            }());
         }
         catch (...)
         {
@@ -316,7 +360,11 @@ namespace py::cpp::Windows::Media::ClosedCaptioning
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::ClosedCaptioning::ClosedCaptionProperties::RegionOpacity());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::ClosedCaptioning::ClosedCaptionProperties::RegionOpacity();
+            }());
         }
         catch (...)
         {
@@ -344,7 +392,11 @@ namespace py::cpp::Windows::Media::ClosedCaptioning
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(winrt::Windows::Media::ClosedCaptioning::ClosedCaptionProperties::PropertiesChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::ClosedCaptioning::ClosedCaptionProperties::PropertiesChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -372,7 +424,11 @@ namespace py::cpp::Windows::Media::ClosedCaptioning
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Windows::Media::ClosedCaptioning::ClosedCaptionProperties::PropertiesChanged(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::Media::ClosedCaptioning::ClosedCaptionProperties::PropertiesChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)

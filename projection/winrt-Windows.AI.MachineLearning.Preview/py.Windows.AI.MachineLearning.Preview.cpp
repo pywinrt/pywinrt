@@ -38,7 +38,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.BitmapPixelFormat());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BitmapPixelFormat();
+            }());
         }
         catch (...)
         {
@@ -64,7 +68,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.Height());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Height();
+            }());
         }
         catch (...)
         {
@@ -90,7 +98,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.Width());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Width();
+            }());
         }
         catch (...)
         {
@@ -116,7 +128,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.Description());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Description();
+            }());
         }
         catch (...)
         {
@@ -142,7 +158,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsRequired());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsRequired();
+            }());
         }
         catch (...)
         {
@@ -168,7 +188,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.ModelFeatureKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ModelFeatureKind();
+            }());
         }
         catch (...)
         {
@@ -194,7 +218,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -293,7 +321,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReclaimMemoryAfterEvaluation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReclaimMemoryAfterEvaluation();
+            }());
         }
         catch (...)
         {
@@ -327,7 +359,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.ReclaimMemoryAfterEvaluation(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReclaimMemoryAfterEvaluation(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -354,7 +390,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.PreferredDeviceKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PreferredDeviceKind();
+            }());
         }
         catch (...)
         {
@@ -388,7 +428,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
             auto param0 = py::convert_to<winrt::Windows::AI::MachineLearning::Preview::LearningModelDeviceKindPreview>(arg);
 
-            self->obj.PreferredDeviceKind(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PreferredDeviceKind(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -415,7 +459,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.MinimizeMemoryAllocation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MinimizeMemoryAllocation();
+            }());
         }
         catch (...)
         {
@@ -449,7 +497,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.MinimizeMemoryAllocation(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MinimizeMemoryAllocation(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -476,7 +528,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxBatchSize());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxBatchSize();
+            }());
         }
         catch (...)
         {
@@ -510,7 +566,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.MaxBatchSize(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MaxBatchSize(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -537,7 +597,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsTracingEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsTracingEnabled();
+            }());
         }
         catch (...)
         {
@@ -571,7 +635,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsTracingEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsTracingEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -700,7 +768,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                self->obj.Bind(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Bind(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -741,7 +813,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Collections::IPropertySet>(args, 2);
 
-                self->obj.Bind(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Bind(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -778,7 +854,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
                     return nullptr;
                 }
 
-                self->obj.Clear();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Clear();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -815,7 +895,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
                     return nullptr;
                 }
 
-                return py::convert(self->obj.First());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.First();
+                }());
             }
             catch (...)
             {
@@ -853,7 +937,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.HasKey(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.HasKey(param0);
+                }());
             }
             catch (...)
             {
@@ -891,7 +979,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.Lookup(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Lookup(param0);
+                }());
             }
             catch (...)
             {
@@ -930,7 +1022,10 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
                 winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::Foundation::IInspectable> param0{nullptr};
                 winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::Foundation::IInspectable> param1{nullptr};
 
-                self->obj.Split(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Split(param0, param1);
+                }
 
                 py::pyobj_handle out0{ py::convert(param0) };
                 if (!out0)
@@ -942,6 +1037,7 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out0.get(), out1.get());
             }
             catch (...)
@@ -974,7 +1070,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -1011,7 +1111,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
     {
         try
         {
-            py::pyobj_handle iter{py::convert(self->obj.First())};
+            py::pyobj_handle iter{py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.First();
+            }())};
 
             if (!iter)
             {
@@ -1031,7 +1135,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
     {
         try
         {
-            return static_cast<int>(self->obj.HasKey(py::convert_to<winrt::hstring>(key)));
+            auto _key = py::convert_to<winrt::hstring>(key);
+            {
+                auto _gil = py::release_gil();
+                return static_cast<int>(self->obj.HasKey(_key));
+            }
         }
         catch (...)
         {
@@ -1044,6 +1152,7 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
     {
         try
         {
+            auto _gil = py::release_gil();
             return static_cast<Py_ssize_t>(self->obj.Size());
         }
         catch (...)
@@ -1058,12 +1167,22 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
         try
         {
             auto _key = py::convert_to<winrt::hstring>(key);
-            auto value = self->obj.TryLookup(_key);
+            auto value = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.TryLookup(_key);
+            }();
 
             if (!value) {
                 if constexpr (std::is_base_of_v<winrt::Windows::Foundation::IUnknown, decltype(value)>)
                 {
-                    if (self->obj.HasKey(_key))
+                    auto has_key = [&]()
+                    {
+                        auto _gil = py::release_gil();
+                        return self->obj.HasKey(_key);
+                    }();
+
+                    if (has_key)
                     {
                         Py_RETURN_NONE;
                     }
@@ -1153,7 +1272,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.Author());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Author();
+            }());
         }
         catch (...)
         {
@@ -1179,7 +1302,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.Description());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Description();
+            }());
         }
         catch (...)
         {
@@ -1205,7 +1332,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.Domain());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Domain();
+            }());
         }
         catch (...)
         {
@@ -1231,7 +1362,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.InputFeatures());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InputFeatures();
+            }());
         }
         catch (...)
         {
@@ -1257,7 +1392,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.Metadata());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Metadata();
+            }());
         }
         catch (...)
         {
@@ -1283,7 +1422,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -1309,7 +1452,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.OutputFeatures());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OutputFeatures();
+            }());
         }
         catch (...)
         {
@@ -1335,7 +1482,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.Version());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Version();
+            }());
         }
         catch (...)
         {
@@ -1435,7 +1586,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.CorrelationId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CorrelationId();
+            }());
         }
         catch (...)
         {
@@ -1461,7 +1616,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.Outputs());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Outputs();
+            }());
         }
         catch (...)
         {
@@ -1562,7 +1721,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
                 auto param0 = py::convert_to<winrt::Windows::AI::MachineLearning::Preview::LearningModelBindingPreview>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.EvaluateAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.EvaluateAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1601,7 +1764,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.EvaluateFeaturesAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.EvaluateFeaturesAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1639,7 +1806,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::Preview::LearningModelPreview::LoadModelFromStorageFileAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::Preview::LearningModelPreview::LoadModelFromStorageFileAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1677,7 +1848,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(args, 0);
 
-                return py::convert(winrt::Windows::AI::MachineLearning::Preview::LearningModelPreview::LoadModelFromStreamAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::AI::MachineLearning::Preview::LearningModelPreview::LoadModelFromStreamAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1709,7 +1884,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.InferencingOptions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InferencingOptions();
+            }());
         }
         catch (...)
         {
@@ -1743,7 +1922,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
             auto param0 = py::convert_to<winrt::Windows::AI::MachineLearning::Preview::InferencingOptionsPreview>(arg);
 
-            self->obj.InferencingOptions(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.InferencingOptions(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1770,7 +1953,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.Description());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Description();
+            }());
         }
         catch (...)
         {
@@ -1893,7 +2080,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.Description());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Description();
+            }());
         }
         catch (...)
         {
@@ -1919,7 +2110,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsRequired());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsRequired();
+            }());
         }
         catch (...)
         {
@@ -1945,7 +2140,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.ModelFeatureKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ModelFeatureKind();
+            }());
         }
         catch (...)
         {
@@ -1971,7 +2170,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -2067,7 +2270,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.Description());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Description();
+            }());
         }
         catch (...)
         {
@@ -2093,7 +2300,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsRequired());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsRequired();
+            }());
         }
         catch (...)
         {
@@ -2119,7 +2330,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.ModelFeatureKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ModelFeatureKind();
+            }());
         }
         catch (...)
         {
@@ -2145,7 +2360,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -2171,7 +2390,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.Fields());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Fields();
+            }());
         }
         catch (...)
         {
@@ -2197,7 +2420,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.KeyKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.KeyKind();
+            }());
         }
         catch (...)
         {
@@ -2223,7 +2450,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.ValidIntegerKeys());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ValidIntegerKeys();
+            }());
         }
         catch (...)
         {
@@ -2249,7 +2480,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.ValidStringKeys());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ValidStringKeys();
+            }());
         }
         catch (...)
         {
@@ -2349,7 +2584,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.Description());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Description();
+            }());
         }
         catch (...)
         {
@@ -2375,7 +2614,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsRequired());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsRequired();
+            }());
         }
         catch (...)
         {
@@ -2401,7 +2644,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.ModelFeatureKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ModelFeatureKind();
+            }());
         }
         catch (...)
         {
@@ -2427,7 +2674,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -2453,7 +2704,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.ElementType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ElementType();
+            }());
         }
         catch (...)
         {
@@ -2550,7 +2805,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.Description());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Description();
+            }());
         }
         catch (...)
         {
@@ -2576,7 +2835,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsRequired());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsRequired();
+            }());
         }
         catch (...)
         {
@@ -2602,7 +2865,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.ModelFeatureKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ModelFeatureKind();
+            }());
         }
         catch (...)
         {
@@ -2628,7 +2895,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -2654,7 +2925,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.DataType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DataType();
+            }());
         }
         catch (...)
         {
@@ -2680,7 +2955,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.Shape());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Shape();
+            }());
         }
         catch (...)
         {
@@ -2778,7 +3057,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.Description());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Description();
+            }());
         }
         catch (...)
         {
@@ -2804,7 +3087,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsRequired());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsRequired();
+            }());
         }
         catch (...)
         {
@@ -2830,7 +3117,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.ModelFeatureKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ModelFeatureKind();
+            }());
         }
         catch (...)
         {
@@ -2856,7 +3147,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {

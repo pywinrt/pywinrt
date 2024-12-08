@@ -42,7 +42,11 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetPrintModelPackage());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetPrintModelPackage();
+                }());
             }
             catch (...)
             {
@@ -74,7 +78,11 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsPrintReady());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsPrintReady();
+            }());
         }
         catch (...)
         {
@@ -108,7 +116,11 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsPrintReady(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsPrintReady(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -135,7 +147,11 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceID());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceID();
+            }());
         }
         catch (...)
         {
@@ -163,7 +179,11 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Printers::Extensions::Print3DWorkflow, winrt::Windows::Devices::Printers::Extensions::Print3DWorkflowPrintRequestedEventArgs>>(arg);
 
-            return py::convert(self->obj.PrintRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PrintRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -191,7 +211,11 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.PrintRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PrintRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -220,7 +244,11 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Printers::Extensions::Print3DWorkflow, winrt::Windows::Devices::Printers::Extensions::Print3DWorkflowPrinterChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.PrinterChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PrinterChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -248,7 +276,11 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.PrinterChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PrinterChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -354,7 +386,11 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Printers::Extensions::Print3DWorkflowDetail>(args, 0);
 
-                self->obj.SetExtendedStatus(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetExtendedStatus(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -393,7 +429,11 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
-                self->obj.SetSource(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetSource(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -432,7 +472,11 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
                 auto param0 = py::convert_to<bool>(args, 0);
 
-                self->obj.SetSourceChanged(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetSourceChanged(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -465,7 +509,11 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -561,7 +609,11 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
                 return nullptr;
             }
 
-            return py::convert(self->obj.NewDeviceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NewDeviceId();
+            }());
         }
         catch (...)
         {
@@ -652,7 +704,11 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Printers::Extensions::PrintExtensionContext::FromDeviceId(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Printers::Extensions::PrintExtensionContext::FromDeviceId(param0);
+                }());
             }
             catch (...)
             {
@@ -749,7 +805,11 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
                 return nullptr;
             }
 
-            return py::convert(self->obj.EventData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EventData();
+            }());
         }
         catch (...)
         {
@@ -783,7 +843,11 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.EventData(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.EventData(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -810,7 +874,11 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
                 return nullptr;
             }
 
-            return py::convert(self->obj.PrinterName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PrinterName();
+            }());
         }
         catch (...)
         {
@@ -904,7 +972,11 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
                 return nullptr;
             }
 
-            return py::convert(self->obj.PrinterExtensionContext());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PrinterExtensionContext();
+            }());
         }
         catch (...)
         {
@@ -932,7 +1004,11 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Printers::Extensions::PrintTaskConfiguration, winrt::Windows::Devices::Printers::Extensions::PrintTaskConfigurationSaveRequestedEventArgs>>(arg);
 
-            return py::convert(self->obj.SaveRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SaveRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -960,7 +1036,11 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.SaveRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SaveRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1060,7 +1140,11 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
                     return nullptr;
                 }
 
-                self->obj.Cancel();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Cancel();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1097,7 +1181,11 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -1135,7 +1223,11 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
-                self->obj.Save(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Save(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1168,7 +1260,11 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
                 return nullptr;
             }
 
-            return py::convert(self->obj.Deadline());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Deadline();
+            }());
         }
         catch (...)
         {
@@ -1268,7 +1364,11 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
                     return nullptr;
                 }
 
-                self->obj.Complete();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Complete();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1368,7 +1468,11 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
                 return nullptr;
             }
 
-            return py::convert(self->obj.Request());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Request();
+            }());
         }
         catch (...)
         {

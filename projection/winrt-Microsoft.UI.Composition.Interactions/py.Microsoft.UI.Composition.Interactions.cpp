@@ -44,7 +44,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Compositor>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Composition::Interactions::CompositionConditionalValue::Create(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Composition::Interactions::CompositionConditionalValue::Create(param0);
+                }());
             }
             catch (...)
             {
@@ -76,7 +80,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.Value());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Value();
+            }());
         }
         catch (...)
         {
@@ -110,7 +118,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ExpressionAnimation>(arg);
 
-            self->obj.Value(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Value(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -137,7 +149,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.Condition());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Condition();
+            }());
         }
         catch (...)
         {
@@ -171,7 +187,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ExpressionAnimation>(arg);
 
-            self->obj.Condition(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Condition(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -298,7 +318,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::ICompositionInteractionSource>(args, 0);
 
-                self->obj.Add(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Add(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -335,7 +359,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                     return nullptr;
                 }
 
-                return py::convert(self->obj.First());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.First();
+                }());
             }
             catch (...)
             {
@@ -373,7 +401,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::ICompositionInteractionSource>(args, 0);
 
-                self->obj.Remove(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Remove(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -410,7 +442,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                     return nullptr;
                 }
 
-                self->obj.RemoveAll();
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveAll();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -443,7 +479,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.Count());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Count();
+            }());
         }
         catch (...)
         {
@@ -480,7 +520,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     {
         try
         {
-            return py::convert(self->obj.First());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.First();
+            }());
         }
         catch (...)
         {
@@ -554,7 +598,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.ScaleSourceMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ScaleSourceMode();
+            }());
         }
         catch (...)
         {
@@ -588,7 +636,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionSourceRedirectionMode>(arg);
 
-            self->obj.ScaleSourceMode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ScaleSourceMode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -615,7 +667,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.PositionYSourceMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PositionYSourceMode();
+            }());
         }
         catch (...)
         {
@@ -649,7 +705,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionSourceRedirectionMode>(arg);
 
-            self->obj.PositionYSourceMode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PositionYSourceMode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -676,7 +736,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.PositionXSourceMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PositionXSourceMode();
+            }());
         }
         catch (...)
         {
@@ -710,7 +774,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionSourceRedirectionMode>(arg);
 
-            self->obj.PositionXSourceMode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PositionXSourceMode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -813,7 +881,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 auto param0 = py::convert_to<float>(args, 0);
                 auto param1 = py::convert_to<float>(args, 1);
 
-                self->obj.AdjustPositionXIfGreaterThanThreshold(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AdjustPositionXIfGreaterThanThreshold(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -853,7 +925,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 auto param0 = py::convert_to<float>(args, 0);
                 auto param1 = py::convert_to<float>(args, 1);
 
-                self->obj.AdjustPositionYIfGreaterThanThreshold(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AdjustPositionYIfGreaterThanThreshold(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -892,7 +968,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Microsoft::UI::Composition::Interactions::CompositionConditionalValue>>(args, 0);
 
-                self->obj.ConfigureCenterPointXInertiaModifiers(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ConfigureCenterPointXInertiaModifiers(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -931,7 +1011,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Microsoft::UI::Composition::Interactions::CompositionConditionalValue>>(args, 0);
 
-                self->obj.ConfigureCenterPointYInertiaModifiers(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ConfigureCenterPointYInertiaModifiers(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -970,7 +1054,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Microsoft::UI::Composition::Interactions::InteractionTrackerInertiaModifier>>(args, 0);
 
-                self->obj.ConfigurePositionXInertiaModifiers(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ConfigurePositionXInertiaModifiers(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1009,7 +1097,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Microsoft::UI::Composition::Interactions::InteractionTrackerInertiaModifier>>(args, 0);
 
-                self->obj.ConfigurePositionYInertiaModifiers(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ConfigurePositionYInertiaModifiers(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1048,7 +1140,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Microsoft::UI::Composition::Interactions::InteractionTrackerInertiaModifier>>(args, 0);
 
-                self->obj.ConfigureScaleInertiaModifiers(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ConfigureScaleInertiaModifiers(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1087,7 +1183,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Microsoft::UI::Composition::Interactions::InteractionTrackerVector2InertiaModifier>>(args, 0);
 
-                self->obj.ConfigureVector2PositionInertiaModifiers(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ConfigureVector2PositionInertiaModifiers(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1126,7 +1226,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Compositor>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Composition::Interactions::InteractionTracker::Create(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Composition::Interactions::InteractionTracker::Create(param0);
+                }());
             }
             catch (...)
             {
@@ -1165,7 +1269,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Compositor>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::IInteractionTrackerOwner>(args, 1);
 
-                return py::convert(winrt::Microsoft::UI::Composition::Interactions::InteractionTracker::CreateWithOwner(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Composition::Interactions::InteractionTracker::CreateWithOwner(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1204,7 +1312,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionTracker>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionTracker>(args, 1);
 
-                return py::convert(winrt::Microsoft::UI::Composition::Interactions::InteractionTracker::GetBindingMode(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Composition::Interactions::InteractionTracker::GetBindingMode(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1244,7 +1356,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionTracker>(args, 1);
                 auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionBindingAxisModes>(args, 2);
 
-                winrt::Microsoft::UI::Composition::Interactions::InteractionTracker::SetBindingMode(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Composition::Interactions::InteractionTracker::SetBindingMode(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1283,7 +1399,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 0);
 
-                return py::convert(self->obj.TryUpdatePosition(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryUpdatePosition(param0);
+                }());
             }
             catch (...)
             {
@@ -1321,7 +1441,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 0);
 
-                return py::convert(self->obj.TryUpdatePositionBy(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryUpdatePositionBy(param0);
+                }());
             }
             catch (...)
             {
@@ -1360,7 +1484,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionTrackerClampingOption>(args, 1);
 
-                return py::convert(self->obj.TryUpdatePositionBy(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryUpdatePositionBy(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1398,7 +1526,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 0);
 
-                return py::convert(self->obj.TryUpdatePositionWithAdditionalVelocity(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryUpdatePositionWithAdditionalVelocity(param0);
+                }());
             }
             catch (...)
             {
@@ -1436,7 +1568,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 0);
 
-                return py::convert(self->obj.TryUpdatePositionWithAnimation(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryUpdatePositionWithAnimation(param0);
+                }());
             }
             catch (...)
             {
@@ -1475,7 +1611,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionTrackerClampingOption>(args, 1);
 
-                return py::convert(self->obj.TryUpdatePosition(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryUpdatePosition(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1504,7 +1644,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionTrackerClampingOption>(args, 1);
                 auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionTrackerPositionUpdateOption>(args, 2);
 
-                return py::convert(self->obj.TryUpdatePosition(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryUpdatePosition(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -1543,7 +1687,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 auto param0 = py::convert_to<float>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 1);
 
-                return py::convert(self->obj.TryUpdateScale(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryUpdateScale(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1582,7 +1730,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 auto param0 = py::convert_to<float>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 1);
 
-                return py::convert(self->obj.TryUpdateScaleWithAdditionalVelocity(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryUpdateScaleWithAdditionalVelocity(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1621,7 +1773,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 1);
 
-                return py::convert(self->obj.TryUpdateScaleWithAnimation(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryUpdateScaleWithAnimation(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1653,7 +1809,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.ScaleInertiaDecayRate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ScaleInertiaDecayRate();
+            }());
         }
         catch (...)
         {
@@ -1687,7 +1847,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<float>>(arg);
 
-            self->obj.ScaleInertiaDecayRate(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ScaleInertiaDecayRate(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1714,7 +1878,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.PositionInertiaDecayRate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PositionInertiaDecayRate();
+            }());
         }
         catch (...)
         {
@@ -1748,7 +1916,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::Numerics::float3>>(arg);
 
-            self->obj.PositionInertiaDecayRate(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PositionInertiaDecayRate(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1775,7 +1947,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.MinScale());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MinScale();
+            }());
         }
         catch (...)
         {
@@ -1809,7 +1985,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.MinScale(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MinScale(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1836,7 +2016,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.MinPosition());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MinPosition();
+            }());
         }
         catch (...)
         {
@@ -1870,7 +2054,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
 
-            self->obj.MinPosition(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MinPosition(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1897,7 +2085,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxScale());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxScale();
+            }());
         }
         catch (...)
         {
@@ -1931,7 +2123,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.MaxScale(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MaxScale(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1958,7 +2154,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxPosition());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxPosition();
+            }());
         }
         catch (...)
         {
@@ -1992,7 +2192,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
 
-            self->obj.MaxPosition(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MaxPosition(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2019,7 +2223,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.InteractionSources());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InteractionSources();
+            }());
         }
         catch (...)
         {
@@ -2045,7 +2253,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsPositionRoundingSuggested());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsPositionRoundingSuggested();
+            }());
         }
         catch (...)
         {
@@ -2071,7 +2283,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.NaturalRestingPosition());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NaturalRestingPosition();
+            }());
         }
         catch (...)
         {
@@ -2097,7 +2313,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.NaturalRestingScale());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NaturalRestingScale();
+            }());
         }
         catch (...)
         {
@@ -2123,7 +2343,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.Owner());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Owner();
+            }());
         }
         catch (...)
         {
@@ -2149,7 +2373,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.Position());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Position();
+            }());
         }
         catch (...)
         {
@@ -2175,7 +2403,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.PositionVelocityInPixelsPerSecond());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PositionVelocityInPixelsPerSecond();
+            }());
         }
         catch (...)
         {
@@ -2201,7 +2433,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.Scale());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Scale();
+            }());
         }
         catch (...)
         {
@@ -2227,7 +2463,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.ScaleVelocityInPercentPerSecond());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ScaleVelocityInPercentPerSecond();
+            }());
         }
         catch (...)
         {
@@ -2253,7 +2493,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsInertiaFromImpulse());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsInertiaFromImpulse();
+            }());
         }
         catch (...)
         {
@@ -2407,7 +2651,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.RequestId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RequestId();
+            }());
         }
         catch (...)
         {
@@ -2433,7 +2681,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsFromBinding());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsFromBinding();
+            }());
         }
         catch (...)
         {
@@ -2527,7 +2779,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.RequestId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RequestId();
+            }());
         }
         catch (...)
         {
@@ -2553,7 +2809,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsFromBinding());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsFromBinding();
+            }());
         }
         catch (...)
         {
@@ -2744,7 +3004,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Compositor>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Composition::Interactions::InteractionTrackerInertiaMotion::Create(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Composition::Interactions::InteractionTrackerInertiaMotion::Create(param0);
+                }());
             }
             catch (...)
             {
@@ -2776,7 +3040,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.Motion());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Motion();
+            }());
         }
         catch (...)
         {
@@ -2810,7 +3078,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ExpressionAnimation>(arg);
 
-            self->obj.Motion(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Motion(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2837,7 +3109,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.Condition());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Condition();
+            }());
         }
         catch (...)
         {
@@ -2871,7 +3147,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ExpressionAnimation>(arg);
 
-            self->obj.Condition(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Condition(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2998,7 +3278,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Compositor>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Composition::Interactions::InteractionTrackerInertiaNaturalMotion::Create(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Composition::Interactions::InteractionTrackerInertiaNaturalMotion::Create(param0);
+                }());
             }
             catch (...)
             {
@@ -3030,7 +3314,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.NaturalMotion());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NaturalMotion();
+            }());
         }
         catch (...)
         {
@@ -3064,7 +3352,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ScalarNaturalMotionAnimation>(arg);
 
-            self->obj.NaturalMotion(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NaturalMotion(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3091,7 +3383,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.Condition());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Condition();
+            }());
         }
         catch (...)
         {
@@ -3125,7 +3421,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ExpressionAnimation>(arg);
 
-            self->obj.Condition(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Condition(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3252,7 +3552,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Compositor>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Composition::Interactions::InteractionTrackerInertiaRestingValue::Create(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Composition::Interactions::InteractionTrackerInertiaRestingValue::Create(param0);
+                }());
             }
             catch (...)
             {
@@ -3284,7 +3588,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.RestingValue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RestingValue();
+            }());
         }
         catch (...)
         {
@@ -3318,7 +3626,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ExpressionAnimation>(arg);
 
-            self->obj.RestingValue(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RestingValue(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3345,7 +3657,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.Condition());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Condition();
+            }());
         }
         catch (...)
         {
@@ -3379,7 +3695,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ExpressionAnimation>(arg);
 
-            self->obj.Condition(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Condition(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3500,7 +3820,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.ModifiedRestingPosition());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ModifiedRestingPosition();
+            }());
         }
         catch (...)
         {
@@ -3526,7 +3850,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.ModifiedRestingScale());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ModifiedRestingScale();
+            }());
         }
         catch (...)
         {
@@ -3552,7 +3880,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.NaturalRestingPosition());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NaturalRestingPosition();
+            }());
         }
         catch (...)
         {
@@ -3578,7 +3910,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.NaturalRestingScale());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NaturalRestingScale();
+            }());
         }
         catch (...)
         {
@@ -3604,7 +3940,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.PositionVelocityInPixelsPerSecond());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PositionVelocityInPixelsPerSecond();
+            }());
         }
         catch (...)
         {
@@ -3630,7 +3970,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.RequestId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RequestId();
+            }());
         }
         catch (...)
         {
@@ -3656,7 +4000,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.ScaleVelocityInPercentPerSecond());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ScaleVelocityInPercentPerSecond();
+            }());
         }
         catch (...)
         {
@@ -3682,7 +4030,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsInertiaFromImpulse());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsInertiaFromImpulse();
+            }());
         }
         catch (...)
         {
@@ -3708,7 +4060,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsFromBinding());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsFromBinding();
+            }());
         }
         catch (...)
         {
@@ -3809,7 +4165,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.RequestId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RequestId();
+            }());
         }
         catch (...)
         {
@@ -3835,7 +4195,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsFromBinding());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsFromBinding();
+            }());
         }
         catch (...)
         {
@@ -3929,7 +4293,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.RequestId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RequestId();
+            }());
         }
         catch (...)
         {
@@ -4022,7 +4390,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.Position());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Position();
+            }());
         }
         catch (...)
         {
@@ -4048,7 +4420,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.RequestId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RequestId();
+            }());
         }
         catch (...)
         {
@@ -4074,7 +4450,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.Scale());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Scale();
+            }());
         }
         catch (...)
         {
@@ -4266,7 +4646,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Compositor>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Composition::Interactions::InteractionTrackerVector2InertiaNaturalMotion::Create(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Composition::Interactions::InteractionTrackerVector2InertiaNaturalMotion::Create(param0);
+                }());
             }
             catch (...)
             {
@@ -4298,7 +4682,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.NaturalMotion());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NaturalMotion();
+            }());
         }
         catch (...)
         {
@@ -4332,7 +4720,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Vector2NaturalMotionAnimation>(arg);
 
-            self->obj.NaturalMotion(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NaturalMotion(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4359,7 +4751,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.Condition());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Condition();
+            }());
         }
         catch (...)
         {
@@ -4393,7 +4789,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ExpressionAnimation>(arg);
 
-            self->obj.Condition(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Condition(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4520,7 +4920,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Microsoft::UI::Composition::Interactions::CompositionConditionalValue>>(args, 0);
 
-                self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().ConfigureCenterPointXModifiers(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().ConfigureCenterPointXModifiers(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4559,7 +4963,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Microsoft::UI::Composition::Interactions::CompositionConditionalValue>>(args, 0);
 
-                self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().ConfigureCenterPointYModifiers(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().ConfigureCenterPointYModifiers(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4598,7 +5006,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Microsoft::UI::Composition::Interactions::CompositionConditionalValue>>(args, 0);
 
-                self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().ConfigureDeltaPositionXModifiers(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().ConfigureDeltaPositionXModifiers(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4637,7 +5049,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Microsoft::UI::Composition::Interactions::CompositionConditionalValue>>(args, 0);
 
-                self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().ConfigureDeltaPositionYModifiers(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().ConfigureDeltaPositionYModifiers(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4676,7 +5092,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Microsoft::UI::Composition::Interactions::CompositionConditionalValue>>(args, 0);
 
-                self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().ConfigureDeltaScaleModifiers(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().ConfigureDeltaScaleModifiers(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4715,7 +5135,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Visual>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource::Create(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource::Create(param0);
+                }());
             }
             catch (...)
             {
@@ -4753,7 +5177,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::IVisualElement>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource::CreateFromIVisualElement(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource::CreateFromIVisualElement(param0);
+                }());
             }
             catch (...)
             {
@@ -4791,7 +5219,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Input::PointerPoint>(args, 0);
 
-                self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().TryRedirectForManipulation(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().TryRedirectForManipulation(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4824,7 +5256,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().ScaleSourceMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().ScaleSourceMode();
+            }());
         }
         catch (...)
         {
@@ -4858,7 +5294,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionSourceMode>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().ScaleSourceMode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().ScaleSourceMode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4885,7 +5325,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().ScaleChainingMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().ScaleChainingMode();
+            }());
         }
         catch (...)
         {
@@ -4919,7 +5363,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionChainingMode>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().ScaleChainingMode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().ScaleChainingMode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4946,7 +5394,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().PositionYSourceMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().PositionYSourceMode();
+            }());
         }
         catch (...)
         {
@@ -4980,7 +5432,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionSourceMode>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().PositionYSourceMode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().PositionYSourceMode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5007,7 +5463,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().PositionYChainingMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().PositionYChainingMode();
+            }());
         }
         catch (...)
         {
@@ -5041,7 +5501,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionChainingMode>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().PositionYChainingMode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().PositionYChainingMode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5068,7 +5532,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().PositionXSourceMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().PositionXSourceMode();
+            }());
         }
         catch (...)
         {
@@ -5102,7 +5570,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionSourceMode>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().PositionXSourceMode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().PositionXSourceMode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5129,7 +5601,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().PositionXChainingMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().PositionXChainingMode();
+            }());
         }
         catch (...)
         {
@@ -5163,7 +5639,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionChainingMode>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().PositionXChainingMode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().PositionXChainingMode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5190,7 +5670,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().ManipulationRedirectionMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().ManipulationRedirectionMode();
+            }());
         }
         catch (...)
         {
@@ -5224,7 +5708,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSourceRedirectionMode>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().ManipulationRedirectionMode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().ManipulationRedirectionMode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5251,7 +5739,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().IsPositionYRailsEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().IsPositionYRailsEnabled();
+            }());
         }
         catch (...)
         {
@@ -5285,7 +5777,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().IsPositionYRailsEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().IsPositionYRailsEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5312,7 +5808,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().IsPositionXRailsEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().IsPositionXRailsEnabled();
+            }());
         }
         catch (...)
         {
@@ -5346,7 +5846,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().IsPositionXRailsEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().IsPositionXRailsEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5373,7 +5877,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().Source());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().Source();
+            }());
         }
         catch (...)
         {
@@ -5399,7 +5907,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().DeltaPosition());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().DeltaPosition();
+            }());
         }
         catch (...)
         {
@@ -5425,7 +5937,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().DeltaScale());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().DeltaScale();
+            }());
         }
         catch (...)
         {
@@ -5451,7 +5967,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().Position());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().Position();
+            }());
         }
         catch (...)
         {
@@ -5477,7 +5997,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().PositionVelocity());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().PositionVelocity();
+            }());
         }
         catch (...)
         {
@@ -5503,7 +6027,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().Scale());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().Scale();
+            }());
         }
         catch (...)
         {
@@ -5529,7 +6057,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().ScaleVelocity());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().ScaleVelocity();
+            }());
         }
         catch (...)
         {
@@ -5555,7 +6087,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().PointerWheelConfig());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().PointerWheelConfig();
+            }());
         }
         catch (...)
         {
@@ -5832,7 +6368,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionTracker>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionTrackerCustomAnimationStateEnteredArgs>(args, 1);
 
-                self->obj.CustomAnimationStateEntered(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.CustomAnimationStateEntered(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5872,7 +6412,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionTracker>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionTrackerIdleStateEnteredArgs>(args, 1);
 
-                self->obj.IdleStateEntered(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.IdleStateEntered(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5912,7 +6456,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionTracker>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionTrackerInertiaStateEnteredArgs>(args, 1);
 
-                self->obj.InertiaStateEntered(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.InertiaStateEntered(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5952,7 +6500,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionTracker>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionTrackerInteractingStateEnteredArgs>(args, 1);
 
-                self->obj.InteractingStateEntered(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.InteractingStateEntered(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5992,7 +6544,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionTracker>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionTrackerRequestIgnoredArgs>(args, 1);
 
-                self->obj.RequestIgnored(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RequestIgnored(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6032,7 +6588,11 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionTracker>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionTrackerValuesChangedArgs>(args, 1);
 
-                self->obj.ValuesChanged(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ValuesChanged(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)

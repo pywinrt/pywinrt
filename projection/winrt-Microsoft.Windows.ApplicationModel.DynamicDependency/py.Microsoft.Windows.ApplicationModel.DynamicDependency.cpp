@@ -60,7 +60,11 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
                 return nullptr;
             }
 
-            return py::convert(self->obj.Rank());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Rank();
+            }());
         }
         catch (...)
         {
@@ -94,7 +98,11 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.Rank(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Rank(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -121,7 +129,11 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
                 return nullptr;
             }
 
-            return py::convert(self->obj.PrependIfRankCollision());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PrependIfRankCollision();
+            }());
         }
         catch (...)
         {
@@ -155,7 +167,11 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.PrependIfRankCollision(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PrependIfRankCollision(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -272,7 +288,11 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
                 return nullptr;
             }
 
-            return py::convert(self->obj.VerifyDependencyResolution());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.VerifyDependencyResolution();
+            }());
         }
         catch (...)
         {
@@ -306,7 +326,11 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.VerifyDependencyResolution(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.VerifyDependencyResolution(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -333,7 +357,11 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
                 return nullptr;
             }
 
-            return py::convert(self->obj.LifetimeArtifactKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LifetimeArtifactKind();
+            }());
         }
         catch (...)
         {
@@ -367,7 +395,11 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
 
             auto param0 = py::convert_to<winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependencyLifetimeArtifactKind>(arg);
 
-            self->obj.LifetimeArtifactKind(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.LifetimeArtifactKind(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -394,7 +426,11 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
                 return nullptr;
             }
 
-            return py::convert(self->obj.LifetimeArtifact());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LifetimeArtifact();
+            }());
         }
         catch (...)
         {
@@ -428,7 +464,11 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.LifetimeArtifact(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.LifetimeArtifact(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -455,7 +495,11 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
                 return nullptr;
             }
 
-            return py::convert(self->obj.Architectures());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Architectures();
+            }());
         }
         catch (...)
         {
@@ -489,7 +533,11 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
 
             auto param0 = py::convert_to<winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependencyProcessorArchitectures>(arg);
 
-            self->obj.Architectures(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Architectures(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -590,7 +638,11 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
                     return nullptr;
                 }
 
-                return py::convert(self->obj.Add());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Add();
+                }());
             }
             catch (...)
             {
@@ -628,7 +680,11 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
 
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::AddPackageDependencyOptions>(args, 0);
 
-                return py::convert(self->obj.Add(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Add(param0);
+                }());
             }
             catch (...)
             {
@@ -667,7 +723,11 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::PackageVersion>(args, 1);
 
-                return py::convert(winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependency::Create(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependency::Create(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -707,7 +767,11 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::PackageVersion>(args, 1);
                 auto param2 = py::convert_to<winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::CreatePackageDependencyOptions>(args, 2);
 
-                return py::convert(winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependency::Create(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependency::Create(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -747,7 +811,11 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::PackageVersion>(args, 1);
                 auto param2 = py::convert_to<winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::CreatePackageDependencyOptions>(args, 2);
 
-                return py::convert(winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependency::CreateForSystem(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependency::CreateForSystem(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -783,7 +851,11 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
                     return nullptr;
                 }
 
-                self->obj.Delete();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Delete();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -822,7 +894,11 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependency::GetFromId(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependency::GetFromId(param0);
+                }());
             }
             catch (...)
             {
@@ -860,7 +936,11 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependency::GetFromIdForSystem(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependency::GetFromIdForSystem(param0);
+                }());
             }
             catch (...)
             {
@@ -892,7 +972,11 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -918,7 +1002,11 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependency::GenerationId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependency::GenerationId();
+            }());
         }
         catch (...)
         {
@@ -944,7 +1032,11 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependency::PackageGraphRevisionId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependency::PackageGraphRevisionId();
+            }());
         }
         catch (...)
         {
@@ -1100,7 +1192,11 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
                     return nullptr;
                 }
 
-                self->obj.Remove();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Remove();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1133,7 +1229,11 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContextId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContextId();
+            }());
         }
         catch (...)
         {
@@ -1159,7 +1259,11 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
                 return nullptr;
             }
 
-            return py::convert(self->obj.PackageDependencyId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PackageDependencyId();
+            }());
         }
         catch (...)
         {
@@ -1185,7 +1289,11 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
                 return nullptr;
             }
 
-            return py::convert(self->obj.PackageFullName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PackageFullName();
+            }());
         }
         catch (...)
         {
@@ -1273,7 +1381,11 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependencyRank::Default());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependencyRank::Default();
+            }());
         }
         catch (...)
         {

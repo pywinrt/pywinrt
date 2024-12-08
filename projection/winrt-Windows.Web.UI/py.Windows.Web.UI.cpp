@@ -38,7 +38,11 @@ namespace py::cpp::Windows::Web::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.Uri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Uri();
+            }());
         }
         catch (...)
         {
@@ -131,7 +135,11 @@ namespace py::cpp::Windows::Web::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.Uri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Uri();
+            }());
         }
         catch (...)
         {
@@ -228,7 +236,11 @@ namespace py::cpp::Windows::Web::UI
                     return nullptr;
                 }
 
-                self->obj.Allow();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Allow();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -265,7 +277,11 @@ namespace py::cpp::Windows::Web::UI
                     return nullptr;
                 }
 
-                self->obj.Deny();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Deny();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -298,7 +314,11 @@ namespace py::cpp::Windows::Web::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -324,7 +344,11 @@ namespace py::cpp::Windows::Web::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.PermissionType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PermissionType();
+            }());
         }
         catch (...)
         {
@@ -350,7 +374,11 @@ namespace py::cpp::Windows::Web::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.Uri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Uri();
+            }());
         }
         catch (...)
         {
@@ -447,7 +475,11 @@ namespace py::cpp::Windows::Web::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.StopPageScriptExecution());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StopPageScriptExecution();
+            }());
         }
         catch (...)
         {
@@ -481,7 +513,11 @@ namespace py::cpp::Windows::Web::UI
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.StopPageScriptExecution(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StopPageScriptExecution(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -508,7 +544,11 @@ namespace py::cpp::Windows::Web::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExecutionTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExecutionTime();
+            }());
         }
         catch (...)
         {
@@ -602,7 +642,11 @@ namespace py::cpp::Windows::Web::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsSuccess());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsSuccess();
+            }());
         }
         catch (...)
         {
@@ -628,7 +672,11 @@ namespace py::cpp::Windows::Web::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.Uri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Uri();
+            }());
         }
         catch (...)
         {
@@ -654,7 +702,11 @@ namespace py::cpp::Windows::Web::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.WebErrorStatus());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WebErrorStatus();
+            }());
         }
         catch (...)
         {
@@ -749,7 +801,11 @@ namespace py::cpp::Windows::Web::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.Cancel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Cancel();
+            }());
         }
         catch (...)
         {
@@ -783,7 +839,11 @@ namespace py::cpp::Windows::Web::UI
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Cancel(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Cancel(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -810,7 +870,11 @@ namespace py::cpp::Windows::Web::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.Uri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Uri();
+            }());
         }
         catch (...)
         {
@@ -908,7 +972,11 @@ namespace py::cpp::Windows::Web::UI
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -940,7 +1008,11 @@ namespace py::cpp::Windows::Web::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.Handled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Handled();
+            }());
         }
         catch (...)
         {
@@ -974,7 +1046,11 @@ namespace py::cpp::Windows::Web::UI
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Handled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Handled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1001,7 +1077,11 @@ namespace py::cpp::Windows::Web::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.Referrer());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Referrer();
+            }());
         }
         catch (...)
         {
@@ -1027,7 +1107,11 @@ namespace py::cpp::Windows::Web::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.Uri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Uri();
+            }());
         }
         catch (...)
         {
@@ -1053,7 +1137,11 @@ namespace py::cpp::Windows::Web::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.NewWindow());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NewWindow();
+            }());
         }
         catch (...)
         {
@@ -1087,7 +1175,11 @@ namespace py::cpp::Windows::Web::UI
 
             auto param0 = py::convert_to<winrt::Windows::Web::UI::IWebViewControl>(arg);
 
-            self->obj.NewWindow(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NewWindow(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1189,7 +1281,11 @@ namespace py::cpp::Windows::Web::UI
                     return nullptr;
                 }
 
-                self->obj.Allow();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Allow();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1226,7 +1322,11 @@ namespace py::cpp::Windows::Web::UI
                     return nullptr;
                 }
 
-                self->obj.Defer();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Defer();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1263,7 +1363,11 @@ namespace py::cpp::Windows::Web::UI
                     return nullptr;
                 }
 
-                self->obj.Deny();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Deny();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1296,7 +1400,11 @@ namespace py::cpp::Windows::Web::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -1322,7 +1430,11 @@ namespace py::cpp::Windows::Web::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.PermissionType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PermissionType();
+            }());
         }
         catch (...)
         {
@@ -1348,7 +1460,11 @@ namespace py::cpp::Windows::Web::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.State());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.State();
+            }());
         }
         catch (...)
         {
@@ -1374,7 +1490,11 @@ namespace py::cpp::Windows::Web::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.Uri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Uri();
+            }());
         }
         catch (...)
         {
@@ -1473,7 +1593,11 @@ namespace py::cpp::Windows::Web::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.PermissionRequest());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PermissionRequest();
+            }());
         }
         catch (...)
         {
@@ -1566,7 +1690,11 @@ namespace py::cpp::Windows::Web::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.Uri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Uri();
+            }());
         }
         catch (...)
         {
@@ -1592,7 +1720,11 @@ namespace py::cpp::Windows::Web::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.Value());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Value();
+            }());
         }
         catch (...)
         {
@@ -1686,7 +1818,11 @@ namespace py::cpp::Windows::Web::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsScriptNotifyAllowed());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsScriptNotifyAllowed();
+            }());
         }
         catch (...)
         {
@@ -1720,7 +1856,11 @@ namespace py::cpp::Windows::Web::UI
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsScriptNotifyAllowed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsScriptNotifyAllowed(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1747,7 +1887,11 @@ namespace py::cpp::Windows::Web::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsJavaScriptEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsJavaScriptEnabled();
+            }());
         }
         catch (...)
         {
@@ -1781,7 +1925,11 @@ namespace py::cpp::Windows::Web::UI
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsJavaScriptEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsJavaScriptEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1808,7 +1956,11 @@ namespace py::cpp::Windows::Web::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsIndexedDBEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsIndexedDBEnabled();
+            }());
         }
         catch (...)
         {
@@ -1842,7 +1994,11 @@ namespace py::cpp::Windows::Web::UI
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsIndexedDBEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsIndexedDBEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1938,7 +2094,11 @@ namespace py::cpp::Windows::Web::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.Handled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Handled();
+            }());
         }
         catch (...)
         {
@@ -1972,7 +2132,11 @@ namespace py::cpp::Windows::Web::UI
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Handled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Handled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1999,7 +2163,11 @@ namespace py::cpp::Windows::Web::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.Uri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Uri();
+            }());
         }
         catch (...)
         {
@@ -2093,7 +2261,11 @@ namespace py::cpp::Windows::Web::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.MediaType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MediaType();
+            }());
         }
         catch (...)
         {
@@ -2119,7 +2291,11 @@ namespace py::cpp::Windows::Web::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.Referrer());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Referrer();
+            }());
         }
         catch (...)
         {
@@ -2145,7 +2321,11 @@ namespace py::cpp::Windows::Web::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.Uri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Uri();
+            }());
         }
         catch (...)
         {
@@ -2244,7 +2424,11 @@ namespace py::cpp::Windows::Web::UI
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -2276,7 +2460,11 @@ namespace py::cpp::Windows::Web::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.Response());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Response();
+            }());
         }
         catch (...)
         {
@@ -2310,7 +2498,11 @@ namespace py::cpp::Windows::Web::UI
 
             auto param0 = py::convert_to<winrt::Windows::Web::Http::HttpResponseMessage>(arg);
 
-            self->obj.Response(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Response(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2337,7 +2529,11 @@ namespace py::cpp::Windows::Web::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.Request());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Request();
+            }());
         }
         catch (...)
         {
@@ -2439,7 +2635,11 @@ namespace py::cpp::Windows::Web::UI
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.BuildLocalStreamUri(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.BuildLocalStreamUri(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2477,7 +2677,11 @@ namespace py::cpp::Windows::Web::UI
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 0);
 
-                return py::convert(self->obj.CapturePreviewToStreamAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CapturePreviewToStreamAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -2513,7 +2717,11 @@ namespace py::cpp::Windows::Web::UI
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CaptureSelectedContentToDataPackageAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CaptureSelectedContentToDataPackageAsync();
+                }());
             }
             catch (...)
             {
@@ -2552,13 +2760,17 @@ namespace py::cpp::Windows::Web::UI
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 winrt::Windows::Web::UI::WebViewControlDeferredPermissionRequest param1{nullptr};
 
-                self->obj.GetDeferredPermissionRequestById(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.GetDeferredPermissionRequestById(param0, param1);
+                }
 
                 py::pyobj_handle out1{ py::convert(param1) };
                 if (!out1)
                 {
                     return nullptr;
                 }
+
                 return out1.detach();
             }
             catch (...)
@@ -2595,7 +2807,11 @@ namespace py::cpp::Windows::Web::UI
                     return nullptr;
                 }
 
-                self->obj.GoBack();
+                {
+                    auto _gil = release_gil();
+                    self->obj.GoBack();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2632,7 +2848,11 @@ namespace py::cpp::Windows::Web::UI
                     return nullptr;
                 }
 
-                self->obj.GoForward();
+                {
+                    auto _gil = release_gil();
+                    self->obj.GoForward();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2672,7 +2892,11 @@ namespace py::cpp::Windows::Web::UI
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 1);
 
-                return py::convert(self->obj.InvokeScriptAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.InvokeScriptAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2710,7 +2934,11 @@ namespace py::cpp::Windows::Web::UI
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
-                self->obj.Navigate(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Navigate(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2750,7 +2978,11 @@ namespace py::cpp::Windows::Web::UI
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::IUriToStreamResolver>(args, 1);
 
-                self->obj.NavigateToLocalStreamUri(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.NavigateToLocalStreamUri(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2789,7 +3021,11 @@ namespace py::cpp::Windows::Web::UI
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.NavigateToString(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.NavigateToString(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2828,7 +3064,11 @@ namespace py::cpp::Windows::Web::UI
 
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::HttpRequestMessage>(args, 0);
 
-                self->obj.NavigateWithHttpRequestMessage(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.NavigateWithHttpRequestMessage(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2865,7 +3105,11 @@ namespace py::cpp::Windows::Web::UI
                     return nullptr;
                 }
 
-                self->obj.Refresh();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Refresh();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2902,7 +3146,11 @@ namespace py::cpp::Windows::Web::UI
                     return nullptr;
                 }
 
-                self->obj.Stop();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Stop();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2935,7 +3183,11 @@ namespace py::cpp::Windows::Web::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.CanGoBack());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CanGoBack();
+            }());
         }
         catch (...)
         {
@@ -2961,7 +3213,11 @@ namespace py::cpp::Windows::Web::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.CanGoForward());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CanGoForward();
+            }());
         }
         catch (...)
         {
@@ -2987,7 +3243,11 @@ namespace py::cpp::Windows::Web::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContainsFullScreenElement());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContainsFullScreenElement();
+            }());
         }
         catch (...)
         {
@@ -3013,7 +3273,11 @@ namespace py::cpp::Windows::Web::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.DefaultBackgroundColor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DefaultBackgroundColor();
+            }());
         }
         catch (...)
         {
@@ -3047,7 +3311,11 @@ namespace py::cpp::Windows::Web::UI
 
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
-            self->obj.DefaultBackgroundColor(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DefaultBackgroundColor(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3074,7 +3342,11 @@ namespace py::cpp::Windows::Web::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeferredPermissionRequests());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeferredPermissionRequests();
+            }());
         }
         catch (...)
         {
@@ -3100,7 +3372,11 @@ namespace py::cpp::Windows::Web::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.DocumentTitle());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DocumentTitle();
+            }());
         }
         catch (...)
         {
@@ -3126,7 +3402,11 @@ namespace py::cpp::Windows::Web::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.Settings());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Settings();
+            }());
         }
         catch (...)
         {
@@ -3152,7 +3432,11 @@ namespace py::cpp::Windows::Web::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.Source());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Source();
+            }());
         }
         catch (...)
         {
@@ -3186,7 +3470,11 @@ namespace py::cpp::Windows::Web::UI
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.Source(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Source(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3215,7 +3503,11 @@ namespace py::cpp::Windows::Web::UI
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.ContainsFullScreenElementChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContainsFullScreenElementChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -3243,7 +3535,11 @@ namespace py::cpp::Windows::Web::UI
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ContainsFullScreenElementChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ContainsFullScreenElementChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3272,7 +3568,11 @@ namespace py::cpp::Windows::Web::UI
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Web::UI::WebViewControlContentLoadingEventArgs>>(arg);
 
-            return py::convert(self->obj.ContentLoading(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContentLoading(param0);
+            }());
         }
         catch (...)
         {
@@ -3300,7 +3600,11 @@ namespace py::cpp::Windows::Web::UI
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ContentLoading(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ContentLoading(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3329,7 +3633,11 @@ namespace py::cpp::Windows::Web::UI
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Web::UI::WebViewControlDOMContentLoadedEventArgs>>(arg);
 
-            return py::convert(self->obj.DOMContentLoaded(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DOMContentLoaded(param0);
+            }());
         }
         catch (...)
         {
@@ -3357,7 +3665,11 @@ namespace py::cpp::Windows::Web::UI
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.DOMContentLoaded(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DOMContentLoaded(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3386,7 +3698,11 @@ namespace py::cpp::Windows::Web::UI
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Web::UI::WebViewControlContentLoadingEventArgs>>(arg);
 
-            return py::convert(self->obj.FrameContentLoading(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FrameContentLoading(param0);
+            }());
         }
         catch (...)
         {
@@ -3414,7 +3730,11 @@ namespace py::cpp::Windows::Web::UI
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.FrameContentLoading(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.FrameContentLoading(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3443,7 +3763,11 @@ namespace py::cpp::Windows::Web::UI
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Web::UI::WebViewControlDOMContentLoadedEventArgs>>(arg);
 
-            return py::convert(self->obj.FrameDOMContentLoaded(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FrameDOMContentLoaded(param0);
+            }());
         }
         catch (...)
         {
@@ -3471,7 +3795,11 @@ namespace py::cpp::Windows::Web::UI
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.FrameDOMContentLoaded(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.FrameDOMContentLoaded(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3500,7 +3828,11 @@ namespace py::cpp::Windows::Web::UI
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Web::UI::WebViewControlNavigationCompletedEventArgs>>(arg);
 
-            return py::convert(self->obj.FrameNavigationCompleted(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FrameNavigationCompleted(param0);
+            }());
         }
         catch (...)
         {
@@ -3528,7 +3860,11 @@ namespace py::cpp::Windows::Web::UI
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.FrameNavigationCompleted(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.FrameNavigationCompleted(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3557,7 +3893,11 @@ namespace py::cpp::Windows::Web::UI
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Web::UI::WebViewControlNavigationStartingEventArgs>>(arg);
 
-            return py::convert(self->obj.FrameNavigationStarting(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FrameNavigationStarting(param0);
+            }());
         }
         catch (...)
         {
@@ -3585,7 +3925,11 @@ namespace py::cpp::Windows::Web::UI
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.FrameNavigationStarting(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.FrameNavigationStarting(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3614,7 +3958,11 @@ namespace py::cpp::Windows::Web::UI
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Web::UI::WebViewControlLongRunningScriptDetectedEventArgs>>(arg);
 
-            return py::convert(self->obj.LongRunningScriptDetected(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LongRunningScriptDetected(param0);
+            }());
         }
         catch (...)
         {
@@ -3642,7 +3990,11 @@ namespace py::cpp::Windows::Web::UI
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.LongRunningScriptDetected(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.LongRunningScriptDetected(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3671,7 +4023,11 @@ namespace py::cpp::Windows::Web::UI
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Web::UI::WebViewControlNavigationCompletedEventArgs>>(arg);
 
-            return py::convert(self->obj.NavigationCompleted(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NavigationCompleted(param0);
+            }());
         }
         catch (...)
         {
@@ -3699,7 +4055,11 @@ namespace py::cpp::Windows::Web::UI
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.NavigationCompleted(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NavigationCompleted(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3728,7 +4088,11 @@ namespace py::cpp::Windows::Web::UI
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Web::UI::WebViewControlNavigationStartingEventArgs>>(arg);
 
-            return py::convert(self->obj.NavigationStarting(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NavigationStarting(param0);
+            }());
         }
         catch (...)
         {
@@ -3756,7 +4120,11 @@ namespace py::cpp::Windows::Web::UI
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.NavigationStarting(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NavigationStarting(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3785,7 +4153,11 @@ namespace py::cpp::Windows::Web::UI
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Web::UI::WebViewControlNewWindowRequestedEventArgs>>(arg);
 
-            return py::convert(self->obj.NewWindowRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NewWindowRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -3813,7 +4185,11 @@ namespace py::cpp::Windows::Web::UI
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.NewWindowRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NewWindowRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3842,7 +4218,11 @@ namespace py::cpp::Windows::Web::UI
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Web::UI::WebViewControlPermissionRequestedEventArgs>>(arg);
 
-            return py::convert(self->obj.PermissionRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PermissionRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -3870,7 +4250,11 @@ namespace py::cpp::Windows::Web::UI
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.PermissionRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PermissionRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3899,7 +4283,11 @@ namespace py::cpp::Windows::Web::UI
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Web::UI::WebViewControlScriptNotifyEventArgs>>(arg);
 
-            return py::convert(self->obj.ScriptNotify(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ScriptNotify(param0);
+            }());
         }
         catch (...)
         {
@@ -3927,7 +4315,11 @@ namespace py::cpp::Windows::Web::UI
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ScriptNotify(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ScriptNotify(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3956,7 +4348,11 @@ namespace py::cpp::Windows::Web::UI
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.UnsafeContentWarningDisplaying(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UnsafeContentWarningDisplaying(param0);
+            }());
         }
         catch (...)
         {
@@ -3984,7 +4380,11 @@ namespace py::cpp::Windows::Web::UI
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.UnsafeContentWarningDisplaying(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.UnsafeContentWarningDisplaying(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -4013,7 +4413,11 @@ namespace py::cpp::Windows::Web::UI
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Web::UI::WebViewControlUnsupportedUriSchemeIdentifiedEventArgs>>(arg);
 
-            return py::convert(self->obj.UnsupportedUriSchemeIdentified(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UnsupportedUriSchemeIdentified(param0);
+            }());
         }
         catch (...)
         {
@@ -4041,7 +4445,11 @@ namespace py::cpp::Windows::Web::UI
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.UnsupportedUriSchemeIdentified(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.UnsupportedUriSchemeIdentified(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -4070,7 +4478,11 @@ namespace py::cpp::Windows::Web::UI
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Web::UI::WebViewControlUnviewableContentIdentifiedEventArgs>>(arg);
 
-            return py::convert(self->obj.UnviewableContentIdentified(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UnviewableContentIdentified(param0);
+            }());
         }
         catch (...)
         {
@@ -4098,7 +4510,11 @@ namespace py::cpp::Windows::Web::UI
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.UnviewableContentIdentified(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.UnviewableContentIdentified(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -4127,7 +4543,11 @@ namespace py::cpp::Windows::Web::UI
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Web::UI::WebViewControlWebResourceRequestedEventArgs>>(arg);
 
-            return py::convert(self->obj.WebResourceRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WebResourceRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -4155,7 +4575,11 @@ namespace py::cpp::Windows::Web::UI
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.WebResourceRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.WebResourceRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -6037,7 +6461,11 @@ namespace py::cpp::Windows::Web::UI
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.AddInitializeScript(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddInitializeScript(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)

@@ -62,7 +62,11 @@ namespace py::cpp::Windows::Devices::Spi::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.SharingMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SharingMode();
+            }());
         }
         catch (...)
         {
@@ -96,7 +100,11 @@ namespace py::cpp::Windows::Devices::Spi::Provider
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Spi::Provider::ProviderSpiSharingMode>(arg);
 
-            self->obj.SharingMode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SharingMode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -123,7 +131,11 @@ namespace py::cpp::Windows::Devices::Spi::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Mode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Mode();
+            }());
         }
         catch (...)
         {
@@ -157,7 +169,11 @@ namespace py::cpp::Windows::Devices::Spi::Provider
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Spi::Provider::ProviderSpiMode>(arg);
 
-            self->obj.Mode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Mode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -184,7 +200,11 @@ namespace py::cpp::Windows::Devices::Spi::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.DataBitLength());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DataBitLength();
+            }());
         }
         catch (...)
         {
@@ -218,7 +238,11 @@ namespace py::cpp::Windows::Devices::Spi::Provider
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.DataBitLength(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DataBitLength(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -245,7 +269,11 @@ namespace py::cpp::Windows::Devices::Spi::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.ClockFrequency());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ClockFrequency();
+            }());
         }
         catch (...)
         {
@@ -279,7 +307,11 @@ namespace py::cpp::Windows::Devices::Spi::Provider
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.ClockFrequency(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ClockFrequency(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -306,7 +338,11 @@ namespace py::cpp::Windows::Devices::Spi::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.ChipSelectLine());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ChipSelectLine();
+            }());
         }
         catch (...)
         {
@@ -340,7 +376,11 @@ namespace py::cpp::Windows::Devices::Spi::Provider
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.ChipSelectLine(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ChipSelectLine(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -444,7 +484,11 @@ namespace py::cpp::Windows::Devices::Spi::Provider
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Spi::Provider::ProviderSpiConnectionSettings>(args, 0);
 
-                return py::convert(self->obj.GetDeviceProvider(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeviceProvider(param0);
+                }());
             }
             catch (...)
             {
@@ -641,7 +685,11 @@ namespace py::cpp::Windows::Devices::Spi::Provider
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -680,7 +728,11 @@ namespace py::cpp::Windows::Devices::Spi::Provider
 
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, true>>(args, 0);
 
-                self->obj.Read(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Read(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -720,7 +772,11 @@ namespace py::cpp::Windows::Devices::Spi::Provider
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint8_t, true>>(args, 1);
 
-                self->obj.TransferFullDuplex(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.TransferFullDuplex(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -760,7 +816,11 @@ namespace py::cpp::Windows::Devices::Spi::Provider
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint8_t, true>>(args, 1);
 
-                self->obj.TransferSequential(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.TransferSequential(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -799,7 +859,11 @@ namespace py::cpp::Windows::Devices::Spi::Provider
 
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
-                self->obj.Write(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Write(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -832,7 +896,11 @@ namespace py::cpp::Windows::Devices::Spi::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.ConnectionSettings());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ConnectionSettings();
+            }());
         }
         catch (...)
         {
@@ -858,7 +926,11 @@ namespace py::cpp::Windows::Devices::Spi::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceId();
+            }());
         }
         catch (...)
         {
@@ -900,7 +972,11 @@ namespace py::cpp::Windows::Devices::Spi::Provider
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -1252,7 +1328,11 @@ namespace py::cpp::Windows::Devices::Spi::Provider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetControllersAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetControllersAsync();
+                }());
             }
             catch (...)
             {

@@ -42,7 +42,11 @@ namespace py::cpp::Windows::Media::DialProtocol
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetAppStateAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAppStateAsync();
+                }());
             }
             catch (...)
             {
@@ -80,7 +84,11 @@ namespace py::cpp::Windows::Media::DialProtocol
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.RequestLaunchAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestLaunchAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -116,7 +124,11 @@ namespace py::cpp::Windows::Media::DialProtocol
                     return nullptr;
                 }
 
-                return py::convert(self->obj.StopAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.StopAsync();
+                }());
             }
             catch (...)
             {
@@ -148,7 +160,11 @@ namespace py::cpp::Windows::Media::DialProtocol
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppName();
+            }());
         }
         catch (...)
         {
@@ -244,7 +260,11 @@ namespace py::cpp::Windows::Media::DialProtocol
                 return nullptr;
             }
 
-            return py::convert(self->obj.FullXml());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FullXml();
+            }());
         }
         catch (...)
         {
@@ -270,7 +290,11 @@ namespace py::cpp::Windows::Media::DialProtocol
                 return nullptr;
             }
 
-            return py::convert(self->obj.State());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.State();
+            }());
         }
         catch (...)
         {
@@ -370,7 +394,11 @@ namespace py::cpp::Windows::Media::DialProtocol
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Enumeration::DeviceInformation>(args, 0);
 
-                return py::convert(winrt::Windows::Media::DialProtocol::DialDevice::DeviceInfoSupportsDialAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::DialProtocol::DialDevice::DeviceInfoSupportsDialAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -408,7 +436,11 @@ namespace py::cpp::Windows::Media::DialProtocol
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Media::DialProtocol::DialDevice::FromIdAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::DialProtocol::DialDevice::FromIdAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -446,7 +478,11 @@ namespace py::cpp::Windows::Media::DialProtocol
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Media::DialProtocol::DialDevice::GetDeviceSelector(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::DialProtocol::DialDevice::GetDeviceSelector(param0);
+                }());
             }
             catch (...)
             {
@@ -484,7 +520,11 @@ namespace py::cpp::Windows::Media::DialProtocol
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetDialApp(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDialApp(param0);
+                }());
             }
             catch (...)
             {
@@ -516,7 +556,11 @@ namespace py::cpp::Windows::Media::DialProtocol
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -542,7 +586,11 @@ namespace py::cpp::Windows::Media::DialProtocol
                 return nullptr;
             }
 
-            return py::convert(self->obj.FriendlyName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FriendlyName();
+            }());
         }
         catch (...)
         {
@@ -568,7 +616,11 @@ namespace py::cpp::Windows::Media::DialProtocol
                 return nullptr;
             }
 
-            return py::convert(self->obj.Thumbnail());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Thumbnail();
+            }());
         }
         catch (...)
         {
@@ -718,7 +770,11 @@ namespace py::cpp::Windows::Media::DialProtocol
                     return nullptr;
                 }
 
-                self->obj.Hide();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Hide();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -757,7 +813,11 @@ namespace py::cpp::Windows::Media::DialProtocol
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
 
-                return py::convert(self->obj.PickSingleDialDeviceAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.PickSingleDialDeviceAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -796,7 +856,11 @@ namespace py::cpp::Windows::Media::DialProtocol
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Popups::Placement>(args, 1);
 
-                return py::convert(self->obj.PickSingleDialDeviceAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.PickSingleDialDeviceAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -835,7 +899,11 @@ namespace py::cpp::Windows::Media::DialProtocol
                 auto param0 = py::convert_to<winrt::Windows::Media::DialProtocol::DialDevice>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Media::DialProtocol::DialDeviceDisplayStatus>(args, 1);
 
-                self->obj.SetDisplayStatus(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetDisplayStatus(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -874,7 +942,11 @@ namespace py::cpp::Windows::Media::DialProtocol
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
 
-                self->obj.Show(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Show(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -914,7 +986,11 @@ namespace py::cpp::Windows::Media::DialProtocol
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Popups::Placement>(args, 1);
 
-                self->obj.Show(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Show(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -947,7 +1023,11 @@ namespace py::cpp::Windows::Media::DialProtocol
                 return nullptr;
             }
 
-            return py::convert(self->obj.Appearance());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Appearance();
+            }());
         }
         catch (...)
         {
@@ -973,7 +1053,11 @@ namespace py::cpp::Windows::Media::DialProtocol
                 return nullptr;
             }
 
-            return py::convert(self->obj.Filter());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Filter();
+            }());
         }
         catch (...)
         {
@@ -1001,7 +1085,11 @@ namespace py::cpp::Windows::Media::DialProtocol
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::DialProtocol::DialDevicePicker, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.DialDevicePickerDismissed(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DialDevicePickerDismissed(param0);
+            }());
         }
         catch (...)
         {
@@ -1029,7 +1117,11 @@ namespace py::cpp::Windows::Media::DialProtocol
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.DialDevicePickerDismissed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DialDevicePickerDismissed(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1058,7 +1150,11 @@ namespace py::cpp::Windows::Media::DialProtocol
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::DialProtocol::DialDevicePicker, winrt::Windows::Media::DialProtocol::DialDeviceSelectedEventArgs>>(arg);
 
-            return py::convert(self->obj.DialDeviceSelected(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DialDeviceSelected(param0);
+            }());
         }
         catch (...)
         {
@@ -1086,7 +1182,11 @@ namespace py::cpp::Windows::Media::DialProtocol
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.DialDeviceSelected(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DialDeviceSelected(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1115,7 +1215,11 @@ namespace py::cpp::Windows::Media::DialProtocol
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::DialProtocol::DialDevicePicker, winrt::Windows::Media::DialProtocol::DialDisconnectButtonClickedEventArgs>>(arg);
 
-            return py::convert(self->obj.DisconnectButtonClicked(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisconnectButtonClicked(param0);
+            }());
         }
         catch (...)
         {
@@ -1143,7 +1247,11 @@ namespace py::cpp::Windows::Media::DialProtocol
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.DisconnectButtonClicked(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DisconnectButtonClicked(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1250,7 +1358,11 @@ namespace py::cpp::Windows::Media::DialProtocol
                 return nullptr;
             }
 
-            return py::convert(self->obj.SupportedAppNames());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SupportedAppNames();
+            }());
         }
         catch (...)
         {
@@ -1343,7 +1455,11 @@ namespace py::cpp::Windows::Media::DialProtocol
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectedDialDevice());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SelectedDialDevice();
+            }());
         }
         catch (...)
         {
@@ -1436,7 +1552,11 @@ namespace py::cpp::Windows::Media::DialProtocol
                 return nullptr;
             }
 
-            return py::convert(self->obj.Device());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Device();
+            }());
         }
         catch (...)
         {
@@ -1533,7 +1653,11 @@ namespace py::cpp::Windows::Media::DialProtocol
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetAdditionalDataAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAdditionalDataAsync();
+                }());
             }
             catch (...)
             {
@@ -1569,7 +1693,11 @@ namespace py::cpp::Windows::Media::DialProtocol
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetUniqueDeviceNameAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetUniqueDeviceNameAsync();
+                }());
             }
             catch (...)
             {
@@ -1607,7 +1735,11 @@ namespace py::cpp::Windows::Media::DialProtocol
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::hstring>>>(args, 0);
 
-                return py::convert(self->obj.SetAdditionalDataAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SetAdditionalDataAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1639,7 +1771,11 @@ namespace py::cpp::Windows::Media::DialProtocol
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::DialProtocol::DialReceiverApp::Current());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::DialProtocol::DialReceiverApp::Current();
+            }());
         }
         catch (...)
         {

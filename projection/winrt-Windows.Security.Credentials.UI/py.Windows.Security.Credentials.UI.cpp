@@ -38,7 +38,11 @@ namespace py::cpp::Windows::Security::Credentials::UI
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
-                return py::convert(winrt::Windows::Security::Credentials::UI::CredentialPicker::PickAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Credentials::UI::CredentialPicker::PickAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -77,7 +81,11 @@ namespace py::cpp::Windows::Security::Credentials::UI
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(winrt::Windows::Security::Credentials::UI::CredentialPicker::PickAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Credentials::UI::CredentialPicker::PickAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -115,7 +123,11 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
                 auto param0 = py::convert_to<winrt::Windows::Security::Credentials::UI::CredentialPickerOptions>(args, 0);
 
-                return py::convert(winrt::Windows::Security::Credentials::UI::CredentialPicker::PickAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Credentials::UI::CredentialPicker::PickAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -236,7 +248,11 @@ namespace py::cpp::Windows::Security::Credentials::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.TargetName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TargetName();
+            }());
         }
         catch (...)
         {
@@ -270,7 +286,11 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.TargetName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TargetName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -297,7 +317,11 @@ namespace py::cpp::Windows::Security::Credentials::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.PreviousCredential());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PreviousCredential();
+            }());
         }
         catch (...)
         {
@@ -331,7 +355,11 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(arg);
 
-            self->obj.PreviousCredential(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PreviousCredential(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -358,7 +386,11 @@ namespace py::cpp::Windows::Security::Credentials::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.Message());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Message();
+            }());
         }
         catch (...)
         {
@@ -392,7 +424,11 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Message(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Message(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -419,7 +455,11 @@ namespace py::cpp::Windows::Security::Credentials::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.ErrorCode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ErrorCode();
+            }());
         }
         catch (...)
         {
@@ -453,7 +493,11 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.ErrorCode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ErrorCode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -480,7 +524,11 @@ namespace py::cpp::Windows::Security::Credentials::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.CustomAuthenticationProtocol());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CustomAuthenticationProtocol();
+            }());
         }
         catch (...)
         {
@@ -514,7 +562,11 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.CustomAuthenticationProtocol(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CustomAuthenticationProtocol(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -541,7 +593,11 @@ namespace py::cpp::Windows::Security::Credentials::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.CredentialSaveOption());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CredentialSaveOption();
+            }());
         }
         catch (...)
         {
@@ -575,7 +631,11 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
             auto param0 = py::convert_to<winrt::Windows::Security::Credentials::UI::CredentialSaveOption>(arg);
 
-            self->obj.CredentialSaveOption(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CredentialSaveOption(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -602,7 +662,11 @@ namespace py::cpp::Windows::Security::Credentials::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.Caption());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Caption();
+            }());
         }
         catch (...)
         {
@@ -636,7 +700,11 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Caption(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Caption(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -663,7 +731,11 @@ namespace py::cpp::Windows::Security::Credentials::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.CallerSavesCredential());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CallerSavesCredential();
+            }());
         }
         catch (...)
         {
@@ -697,7 +769,11 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.CallerSavesCredential(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CallerSavesCredential(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -724,7 +800,11 @@ namespace py::cpp::Windows::Security::Credentials::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.AuthenticationProtocol());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AuthenticationProtocol();
+            }());
         }
         catch (...)
         {
@@ -758,7 +838,11 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
             auto param0 = py::convert_to<winrt::Windows::Security::Credentials::UI::AuthenticationProtocol>(arg);
 
-            self->obj.AuthenticationProtocol(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AuthenticationProtocol(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -785,7 +869,11 @@ namespace py::cpp::Windows::Security::Credentials::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.AlwaysDisplayDialog());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AlwaysDisplayDialog();
+            }());
         }
         catch (...)
         {
@@ -819,7 +907,11 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.AlwaysDisplayDialog(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AlwaysDisplayDialog(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -922,7 +1014,11 @@ namespace py::cpp::Windows::Security::Credentials::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.Credential());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Credential();
+            }());
         }
         catch (...)
         {
@@ -948,7 +1044,11 @@ namespace py::cpp::Windows::Security::Credentials::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.CredentialDomainName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CredentialDomainName();
+            }());
         }
         catch (...)
         {
@@ -974,7 +1074,11 @@ namespace py::cpp::Windows::Security::Credentials::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.CredentialPassword());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CredentialPassword();
+            }());
         }
         catch (...)
         {
@@ -1000,7 +1104,11 @@ namespace py::cpp::Windows::Security::Credentials::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.CredentialSaveOption());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CredentialSaveOption();
+            }());
         }
         catch (...)
         {
@@ -1026,7 +1134,11 @@ namespace py::cpp::Windows::Security::Credentials::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.CredentialSaved());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CredentialSaved();
+            }());
         }
         catch (...)
         {
@@ -1052,7 +1164,11 @@ namespace py::cpp::Windows::Security::Credentials::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.CredentialUserName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CredentialUserName();
+            }());
         }
         catch (...)
         {
@@ -1078,7 +1194,11 @@ namespace py::cpp::Windows::Security::Credentials::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.ErrorCode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ErrorCode();
+            }());
         }
         catch (...)
         {
@@ -1173,7 +1293,11 @@ namespace py::cpp::Windows::Security::Credentials::UI
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Security::Credentials::UI::UserConsentVerifier::CheckAvailabilityAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Credentials::UI::UserConsentVerifier::CheckAvailabilityAsync();
+                }());
             }
             catch (...)
             {
@@ -1211,7 +1335,11 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Security::Credentials::UI::UserConsentVerifier::RequestVerificationAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Credentials::UI::UserConsentVerifier::RequestVerificationAsync(param0);
+                }());
             }
             catch (...)
             {

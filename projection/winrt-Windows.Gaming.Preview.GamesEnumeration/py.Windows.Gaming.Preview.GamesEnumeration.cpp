@@ -34,7 +34,11 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Gaming::Preview::GamesEnumeration::GameList::FindAllAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Gaming::Preview::GamesEnumeration::GameList::FindAllAsync();
+                }());
             }
             catch (...)
             {
@@ -72,7 +76,11 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Gaming::Preview::GamesEnumeration::GameList::FindAllAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Gaming::Preview::GamesEnumeration::GameList::FindAllAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -111,7 +119,11 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Preview::GamesEnumeration::GameListEntry>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Gaming::Preview::GamesEnumeration::GameListEntry>(args, 1);
 
-                return py::convert(winrt::Windows::Gaming::Preview::GamesEnumeration::GameList::MergeEntriesAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Gaming::Preview::GamesEnumeration::GameList::MergeEntriesAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -149,7 +161,11 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Preview::GamesEnumeration::GameListEntry>(args, 0);
 
-                return py::convert(winrt::Windows::Gaming::Preview::GamesEnumeration::GameList::UnmergeEntryAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Gaming::Preview::GamesEnumeration::GameList::UnmergeEntryAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -183,7 +199,11 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
             auto param0 = py::convert_to<winrt::Windows::Gaming::Preview::GamesEnumeration::GameListChangedEventHandler>(arg);
 
-            return py::convert(winrt::Windows::Gaming::Preview::GamesEnumeration::GameList::GameAdded(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Gaming::Preview::GamesEnumeration::GameList::GameAdded(param0);
+            }());
         }
         catch (...)
         {
@@ -211,7 +231,11 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Windows::Gaming::Preview::GamesEnumeration::GameList::GameAdded(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::Gaming::Preview::GamesEnumeration::GameList::GameAdded(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -240,7 +264,11 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
             auto param0 = py::convert_to<winrt::Windows::Gaming::Preview::GamesEnumeration::GameListRemovedEventHandler>(arg);
 
-            return py::convert(winrt::Windows::Gaming::Preview::GamesEnumeration::GameList::GameRemoved(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Gaming::Preview::GamesEnumeration::GameList::GameRemoved(param0);
+            }());
         }
         catch (...)
         {
@@ -268,7 +296,11 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Windows::Gaming::Preview::GamesEnumeration::GameList::GameRemoved(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::Gaming::Preview::GamesEnumeration::GameList::GameRemoved(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -297,7 +329,11 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
             auto param0 = py::convert_to<winrt::Windows::Gaming::Preview::GamesEnumeration::GameListChangedEventHandler>(arg);
 
-            return py::convert(winrt::Windows::Gaming::Preview::GamesEnumeration::GameList::GameUpdated(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Gaming::Preview::GamesEnumeration::GameList::GameUpdated(param0);
+            }());
         }
         catch (...)
         {
@@ -325,7 +361,11 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Windows::Gaming::Preview::GamesEnumeration::GameList::GameUpdated(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::Gaming::Preview::GamesEnumeration::GameList::GameUpdated(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -430,7 +470,11 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
                     return nullptr;
                 }
 
-                return py::convert(self->obj.LaunchAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.LaunchAsync();
+                }());
             }
             catch (...)
             {
@@ -468,7 +512,11 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Preview::GamesEnumeration::GameListCategory>(args, 0);
 
-                return py::convert(self->obj.SetCategoryAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SetCategoryAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -506,7 +554,11 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
 
-                return py::convert(self->obj.SetLauncherExecutableFileAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SetLauncherExecutableFileAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -545,7 +597,11 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.SetLauncherExecutableFileAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SetLauncherExecutableFileAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -583,7 +639,11 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.SetTitleIdAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SetTitleIdAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -615,7 +675,11 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.Category());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Category();
+            }());
         }
         catch (...)
         {
@@ -641,7 +705,11 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayInfo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayInfo();
+            }());
         }
         catch (...)
         {
@@ -667,7 +735,11 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.Properties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Properties();
+            }());
         }
         catch (...)
         {
@@ -693,7 +765,11 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.GameModeConfiguration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.GameModeConfiguration();
+            }());
         }
         catch (...)
         {
@@ -719,7 +795,11 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.LaunchParameters());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LaunchParameters();
+            }());
         }
         catch (...)
         {
@@ -745,7 +825,11 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.LaunchableState());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LaunchableState();
+            }());
         }
         catch (...)
         {
@@ -771,7 +855,11 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.LauncherExecutable());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LauncherExecutable();
+            }());
         }
         catch (...)
         {
@@ -797,7 +885,11 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.TitleId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TitleId();
+            }());
         }
         catch (...)
         {
@@ -906,7 +998,11 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
                     return nullptr;
                 }
 
-                return py::convert(self->obj.SaveAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SaveAsync();
+                }());
             }
             catch (...)
             {
@@ -938,7 +1034,11 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.PercentGpuTimeAllocatedToGame());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PercentGpuTimeAllocatedToGame();
+            }());
         }
         catch (...)
         {
@@ -972,7 +1072,11 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
-            self->obj.PercentGpuTimeAllocatedToGame(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PercentGpuTimeAllocatedToGame(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -999,7 +1103,11 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.PercentGpuMemoryAllocatedToSystemCompositor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PercentGpuMemoryAllocatedToSystemCompositor();
+            }());
         }
         catch (...)
         {
@@ -1033,7 +1141,11 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
-            self->obj.PercentGpuMemoryAllocatedToSystemCompositor(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PercentGpuMemoryAllocatedToSystemCompositor(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1060,7 +1172,11 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.PercentGpuMemoryAllocatedToGame());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PercentGpuMemoryAllocatedToGame();
+            }());
         }
         catch (...)
         {
@@ -1094,7 +1210,11 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
-            self->obj.PercentGpuMemoryAllocatedToGame(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PercentGpuMemoryAllocatedToGame(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1121,7 +1241,11 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxCpuCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxCpuCount();
+            }());
         }
         catch (...)
         {
@@ -1155,7 +1279,11 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
-            self->obj.MaxCpuCount(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MaxCpuCount(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1182,7 +1310,11 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsEnabled();
+            }());
         }
         catch (...)
         {
@@ -1216,7 +1348,11 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1243,7 +1379,11 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.CpuExclusivityMaskLow());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CpuExclusivityMaskLow();
+            }());
         }
         catch (...)
         {
@@ -1277,7 +1417,11 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
-            self->obj.CpuExclusivityMaskLow(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CpuExclusivityMaskLow(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1304,7 +1448,11 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.CpuExclusivityMaskHigh());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CpuExclusivityMaskHigh();
+            }());
         }
         catch (...)
         {
@@ -1338,7 +1486,11 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
-            self->obj.CpuExclusivityMaskHigh(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CpuExclusivityMaskHigh(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1365,7 +1517,11 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.AffinitizeToExclusiveCpus());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AffinitizeToExclusiveCpus();
+            }());
         }
         catch (...)
         {
@@ -1399,7 +1555,11 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.AffinitizeToExclusiveCpus(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AffinitizeToExclusiveCpus(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1426,7 +1586,11 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.RelatedProcessNames());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RelatedProcessNames();
+            }());
         }
         catch (...)
         {
@@ -1532,7 +1696,11 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Gaming::Preview::GamesEnumeration::GameModeUserConfiguration::GetDefault());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Gaming::Preview::GamesEnumeration::GameModeUserConfiguration::GetDefault();
+                }());
             }
             catch (...)
             {
@@ -1568,7 +1736,11 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
                     return nullptr;
                 }
 
-                return py::convert(self->obj.SaveAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SaveAsync();
+                }());
             }
             catch (...)
             {
@@ -1600,7 +1772,11 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.GamingRelatedProcessNames());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.GamingRelatedProcessNames();
+            }());
         }
         catch (...)
         {
@@ -1724,7 +1900,11 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
                     return nullptr;
                 }
 
-                return py::convert(self->obj.LaunchAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.LaunchAsync();
+                }());
             }
             catch (...)
             {
@@ -1762,7 +1942,11 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Preview::GamesEnumeration::GameListCategory>(args, 0);
 
-                return py::convert(self->obj.SetCategoryAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SetCategoryAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1794,7 +1978,11 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.Category());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Category();
+            }());
         }
         catch (...)
         {
@@ -1820,7 +2008,11 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayInfo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayInfo();
+            }());
         }
         catch (...)
         {
@@ -1846,7 +2038,11 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
                 return nullptr;
             }
 
-            return py::convert(self->obj.Properties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Properties();
+            }());
         }
         catch (...)
         {

@@ -60,7 +60,11 @@ namespace py::cpp::Windows::UI::Composition::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -94,7 +98,11 @@ namespace py::cpp::Windows::UI::Composition::Effects
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Name(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Name(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -121,7 +129,11 @@ namespace py::cpp::Windows::UI::Composition::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.SpecularShine());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SpecularShine();
+            }());
         }
         catch (...)
         {
@@ -155,7 +167,11 @@ namespace py::cpp::Windows::UI::Composition::Effects
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.SpecularShine(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SpecularShine(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -182,7 +198,11 @@ namespace py::cpp::Windows::UI::Composition::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.SpecularAmount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SpecularAmount();
+            }());
         }
         catch (...)
         {
@@ -216,7 +236,11 @@ namespace py::cpp::Windows::UI::Composition::Effects
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.SpecularAmount(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SpecularAmount(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -243,7 +267,11 @@ namespace py::cpp::Windows::UI::Composition::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.NormalMapSource());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NormalMapSource();
+            }());
         }
         catch (...)
         {
@@ -277,7 +305,11 @@ namespace py::cpp::Windows::UI::Composition::Effects
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Effects::IGraphicsEffectSource>(arg);
 
-            self->obj.NormalMapSource(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NormalMapSource(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -304,7 +336,11 @@ namespace py::cpp::Windows::UI::Composition::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.DiffuseAmount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DiffuseAmount();
+            }());
         }
         catch (...)
         {
@@ -338,7 +374,11 @@ namespace py::cpp::Windows::UI::Composition::Effects
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.DiffuseAmount(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DiffuseAmount(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -365,7 +405,11 @@ namespace py::cpp::Windows::UI::Composition::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.AmbientAmount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AmbientAmount();
+            }());
         }
         catch (...)
         {
@@ -399,7 +443,11 @@ namespace py::cpp::Windows::UI::Composition::Effects
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.AmbientAmount(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AmbientAmount(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -426,7 +474,11 @@ namespace py::cpp::Windows::UI::Composition::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReflectanceModel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReflectanceModel();
+            }());
         }
         catch (...)
         {
@@ -460,7 +512,11 @@ namespace py::cpp::Windows::UI::Composition::Effects
 
             auto param0 = py::convert_to<winrt::Windows::UI::Composition::Effects::SceneLightingEffectReflectanceModel>(arg);
 
-            self->obj.ReflectanceModel(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReflectanceModel(param0);
+            }
+
             return 0;
         }
         catch (...)

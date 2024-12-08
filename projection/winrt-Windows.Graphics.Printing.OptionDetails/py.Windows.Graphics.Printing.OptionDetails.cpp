@@ -44,7 +44,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
-                return py::convert(self->obj.TrySetValue(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TrySetValue(param0);
+                }());
             }
             catch (...)
             {
@@ -76,7 +80,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.WarningText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WarningText();
+            }());
         }
         catch (...)
         {
@@ -110,7 +118,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.WarningText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.WarningText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -137,7 +149,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.Description());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Description();
+            }());
         }
         catch (...)
         {
@@ -171,7 +187,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Description(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Description(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -198,7 +218,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.Items());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Items();
+            }());
         }
         catch (...)
         {
@@ -224,7 +248,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.State());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.State();
+            }());
         }
         catch (...)
         {
@@ -258,7 +286,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::OptionDetails::PrintOptionStates>(arg);
 
-            self->obj.State(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.State(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -285,7 +317,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.ErrorText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ErrorText();
+            }());
         }
         catch (...)
         {
@@ -319,7 +355,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ErrorText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ErrorText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -346,7 +386,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.OptionId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OptionId();
+            }());
         }
         catch (...)
         {
@@ -372,7 +416,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.OptionType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OptionType();
+            }());
         }
         catch (...)
         {
@@ -398,7 +446,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.Value());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Value();
+            }());
         }
         catch (...)
         {
@@ -505,7 +557,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
-                return py::convert(self->obj.TrySetValue(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TrySetValue(param0);
+                }());
             }
             catch (...)
             {
@@ -537,7 +593,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.WarningText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WarningText();
+            }());
         }
         catch (...)
         {
@@ -571,7 +631,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.WarningText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.WarningText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -598,7 +662,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.Description());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Description();
+            }());
         }
         catch (...)
         {
@@ -632,7 +700,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Description(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Description(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -659,7 +731,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.Items());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Items();
+            }());
         }
         catch (...)
         {
@@ -685,7 +761,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.State());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.State();
+            }());
         }
         catch (...)
         {
@@ -719,7 +799,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::OptionDetails::PrintOptionStates>(arg);
 
-            self->obj.State(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.State(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -746,7 +830,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.ErrorText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ErrorText();
+            }());
         }
         catch (...)
         {
@@ -780,7 +868,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ErrorText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ErrorText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -807,7 +899,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.OptionId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OptionId();
+            }());
         }
         catch (...)
         {
@@ -833,7 +929,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.OptionType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OptionType();
+            }());
         }
         catch (...)
         {
@@ -859,7 +959,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.Value());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Value();
+            }());
         }
         catch (...)
         {
@@ -966,7 +1070,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
-                return py::convert(self->obj.TrySetValue(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TrySetValue(param0);
+                }());
             }
             catch (...)
             {
@@ -998,7 +1106,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.WarningText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WarningText();
+            }());
         }
         catch (...)
         {
@@ -1032,7 +1144,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.WarningText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.WarningText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1059,7 +1175,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.Description());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Description();
+            }());
         }
         catch (...)
         {
@@ -1093,7 +1213,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Description(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Description(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1120,7 +1244,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.Items());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Items();
+            }());
         }
         catch (...)
         {
@@ -1146,7 +1274,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.State());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.State();
+            }());
         }
         catch (...)
         {
@@ -1180,7 +1312,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::OptionDetails::PrintOptionStates>(arg);
 
-            self->obj.State(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.State(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1207,7 +1343,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.ErrorText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ErrorText();
+            }());
         }
         catch (...)
         {
@@ -1241,7 +1381,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ErrorText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ErrorText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1268,7 +1412,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.OptionId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OptionId();
+            }());
         }
         catch (...)
         {
@@ -1294,7 +1442,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.OptionType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OptionType();
+            }());
         }
         catch (...)
         {
@@ -1320,7 +1472,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.Value());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Value();
+            }());
         }
         catch (...)
         {
@@ -1427,7 +1583,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
-                return py::convert(self->obj.TrySetValue(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TrySetValue(param0);
+                }());
             }
             catch (...)
             {
@@ -1459,7 +1619,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.WarningText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WarningText();
+            }());
         }
         catch (...)
         {
@@ -1493,7 +1657,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.WarningText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.WarningText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1520,7 +1688,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.Description());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Description();
+            }());
         }
         catch (...)
         {
@@ -1554,7 +1726,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Description(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Description(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1581,7 +1757,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.Items());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Items();
+            }());
         }
         catch (...)
         {
@@ -1607,7 +1787,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.State());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.State();
+            }());
         }
         catch (...)
         {
@@ -1641,7 +1825,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::OptionDetails::PrintOptionStates>(arg);
 
-            self->obj.State(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.State(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1668,7 +1856,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.ErrorText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ErrorText();
+            }());
         }
         catch (...)
         {
@@ -1702,7 +1894,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ErrorText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ErrorText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1729,7 +1925,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.OptionId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OptionId();
+            }());
         }
         catch (...)
         {
@@ -1755,7 +1955,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.OptionType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OptionType();
+            }());
         }
         catch (...)
         {
@@ -1781,7 +1985,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.Value());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Value();
+            }());
         }
         catch (...)
         {
@@ -1888,7 +2096,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
-                return py::convert(self->obj.TrySetValue(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TrySetValue(param0);
+                }());
             }
             catch (...)
             {
@@ -1920,7 +2132,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.WarningText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WarningText();
+            }());
         }
         catch (...)
         {
@@ -1954,7 +2170,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.WarningText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.WarningText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1981,7 +2201,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.Description());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Description();
+            }());
         }
         catch (...)
         {
@@ -2015,7 +2239,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Description(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Description(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2042,7 +2270,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxValue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxValue();
+            }());
         }
         catch (...)
         {
@@ -2068,7 +2300,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.MinValue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MinValue();
+            }());
         }
         catch (...)
         {
@@ -2094,7 +2330,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.State());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.State();
+            }());
         }
         catch (...)
         {
@@ -2128,7 +2368,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::OptionDetails::PrintOptionStates>(arg);
 
-            self->obj.State(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.State(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2155,7 +2399,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.ErrorText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ErrorText();
+            }());
         }
         catch (...)
         {
@@ -2189,7 +2437,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ErrorText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ErrorText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2216,7 +2468,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.OptionId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OptionId();
+            }());
         }
         catch (...)
         {
@@ -2242,7 +2498,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.OptionType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OptionType();
+            }());
         }
         catch (...)
         {
@@ -2268,7 +2528,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.Value());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Value();
+            }());
         }
         catch (...)
         {
@@ -2370,7 +2634,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.ItemDisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ItemDisplayName();
+            }());
         }
         catch (...)
         {
@@ -2404,7 +2672,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ItemDisplayName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ItemDisplayName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2431,7 +2703,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.ItemId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ItemId();
+            }());
         }
         catch (...)
         {
@@ -2532,7 +2808,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                self->obj.AddItem(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddItem(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2563,7 +2843,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
                 auto param3 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamWithContentType>(args, 3);
 
-                self->obj.AddItem(param0, param1, param2, param3);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddItem(param0, param1, param2, param3);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2602,7 +2886,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
-                return py::convert(self->obj.TrySetValue(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TrySetValue(param0);
+                }());
             }
             catch (...)
             {
@@ -2634,7 +2922,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.WarningText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WarningText();
+            }());
         }
         catch (...)
         {
@@ -2668,7 +2960,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.WarningText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.WarningText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2695,7 +2991,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.Description());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Description();
+            }());
         }
         catch (...)
         {
@@ -2729,7 +3029,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Description(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Description(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2756,7 +3060,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayName();
+            }());
         }
         catch (...)
         {
@@ -2790,7 +3098,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.DisplayName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DisplayName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2817,7 +3129,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.Items());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Items();
+            }());
         }
         catch (...)
         {
@@ -2843,7 +3159,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.State());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.State();
+            }());
         }
         catch (...)
         {
@@ -2877,7 +3197,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::OptionDetails::PrintOptionStates>(arg);
 
-            self->obj.State(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.State(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2904,7 +3228,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.ErrorText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ErrorText();
+            }());
         }
         catch (...)
         {
@@ -2938,7 +3266,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ErrorText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ErrorText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2965,7 +3297,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.OptionId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OptionId();
+            }());
         }
         catch (...)
         {
@@ -2991,7 +3327,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.OptionType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OptionType();
+            }());
         }
         catch (...)
         {
@@ -3017,7 +3357,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.Value());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Value();
+            }());
         }
         catch (...)
         {
@@ -3126,7 +3470,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
-                return py::convert(self->obj.TrySetValue(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TrySetValue(param0);
+                }());
             }
             catch (...)
             {
@@ -3158,7 +3506,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayName();
+            }());
         }
         catch (...)
         {
@@ -3192,7 +3544,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.DisplayName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DisplayName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3219,7 +3575,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxCharacters());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxCharacters();
+            }());
         }
         catch (...)
         {
@@ -3253,7 +3613,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.MaxCharacters(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MaxCharacters(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3280,7 +3644,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.WarningText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WarningText();
+            }());
         }
         catch (...)
         {
@@ -3314,7 +3682,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.WarningText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.WarningText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3341,7 +3713,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.Description());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Description();
+            }());
         }
         catch (...)
         {
@@ -3375,7 +3751,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Description(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Description(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3402,7 +3782,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.State());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.State();
+            }());
         }
         catch (...)
         {
@@ -3436,7 +3820,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::OptionDetails::PrintOptionStates>(arg);
 
-            self->obj.State(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.State(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3463,7 +3851,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.ErrorText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ErrorText();
+            }());
         }
         catch (...)
         {
@@ -3497,7 +3889,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ErrorText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ErrorText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3524,7 +3920,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.OptionId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OptionId();
+            }());
         }
         catch (...)
         {
@@ -3550,7 +3950,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.OptionType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OptionType();
+            }());
         }
         catch (...)
         {
@@ -3576,7 +3980,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.Value());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Value();
+            }());
         }
         catch (...)
         {
@@ -3684,7 +4092,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
-                return py::convert(self->obj.TrySetValue(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TrySetValue(param0);
+                }());
             }
             catch (...)
             {
@@ -3716,7 +4128,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayName();
+            }());
         }
         catch (...)
         {
@@ -3750,7 +4166,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.DisplayName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DisplayName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3777,7 +4197,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.WarningText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WarningText();
+            }());
         }
         catch (...)
         {
@@ -3811,7 +4235,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.WarningText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.WarningText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3838,7 +4266,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.Description());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Description();
+            }());
         }
         catch (...)
         {
@@ -3872,7 +4304,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Description(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Description(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3899,7 +4335,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.State());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.State();
+            }());
         }
         catch (...)
         {
@@ -3933,7 +4373,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::OptionDetails::PrintOptionStates>(arg);
 
-            self->obj.State(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.State(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3960,7 +4404,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.ErrorText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ErrorText();
+            }());
         }
         catch (...)
         {
@@ -3994,7 +4442,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ErrorText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ErrorText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4021,7 +4473,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.OptionId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OptionId();
+            }());
         }
         catch (...)
         {
@@ -4047,7 +4503,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.OptionType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OptionType();
+            }());
         }
         catch (...)
         {
@@ -4073,7 +4533,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.Value());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Value();
+            }());
         }
         catch (...)
         {
@@ -4180,7 +4644,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
-                return py::convert(self->obj.TrySetValue(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TrySetValue(param0);
+                }());
             }
             catch (...)
             {
@@ -4212,7 +4680,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.WarningText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WarningText();
+            }());
         }
         catch (...)
         {
@@ -4246,7 +4718,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.WarningText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.WarningText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4273,7 +4749,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.Description());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Description();
+            }());
         }
         catch (...)
         {
@@ -4307,7 +4787,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Description(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Description(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4334,7 +4818,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.Items());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Items();
+            }());
         }
         catch (...)
         {
@@ -4360,7 +4848,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.State());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.State();
+            }());
         }
         catch (...)
         {
@@ -4394,7 +4886,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::OptionDetails::PrintOptionStates>(arg);
 
-            self->obj.State(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.State(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4421,7 +4917,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.ErrorText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ErrorText();
+            }());
         }
         catch (...)
         {
@@ -4455,7 +4955,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ErrorText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ErrorText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4482,7 +4986,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.OptionId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OptionId();
+            }());
         }
         catch (...)
         {
@@ -4508,7 +5016,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.OptionType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OptionType();
+            }());
         }
         catch (...)
         {
@@ -4534,7 +5046,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.Value());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Value();
+            }());
         }
         catch (...)
         {
@@ -4641,7 +5157,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
-                return py::convert(self->obj.TrySetValue(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TrySetValue(param0);
+                }());
             }
             catch (...)
             {
@@ -4673,7 +5193,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.WarningText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WarningText();
+            }());
         }
         catch (...)
         {
@@ -4707,7 +5231,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.WarningText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.WarningText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4734,7 +5262,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.Description());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Description();
+            }());
         }
         catch (...)
         {
@@ -4768,7 +5300,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Description(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Description(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4795,7 +5331,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.Items());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Items();
+            }());
         }
         catch (...)
         {
@@ -4821,7 +5361,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.State());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.State();
+            }());
         }
         catch (...)
         {
@@ -4855,7 +5399,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::OptionDetails::PrintOptionStates>(arg);
 
-            self->obj.State(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.State(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4882,7 +5430,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.ErrorText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ErrorText();
+            }());
         }
         catch (...)
         {
@@ -4916,7 +5468,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ErrorText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ErrorText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4943,7 +5499,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.OptionId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OptionId();
+            }());
         }
         catch (...)
         {
@@ -4969,7 +5529,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.OptionType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OptionType();
+            }());
         }
         catch (...)
         {
@@ -4995,7 +5559,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.Value());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Value();
+            }());
         }
         catch (...)
         {
@@ -5102,7 +5670,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
-                return py::convert(self->obj.TrySetValue(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TrySetValue(param0);
+                }());
             }
             catch (...)
             {
@@ -5134,7 +5706,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.Items());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Items();
+            }());
         }
         catch (...)
         {
@@ -5160,7 +5736,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.WarningText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WarningText();
+            }());
         }
         catch (...)
         {
@@ -5194,7 +5774,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.WarningText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.WarningText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5221,7 +5805,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.Description());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Description();
+            }());
         }
         catch (...)
         {
@@ -5255,7 +5843,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Description(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Description(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5282,7 +5874,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.State());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.State();
+            }());
         }
         catch (...)
         {
@@ -5316,7 +5912,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::OptionDetails::PrintOptionStates>(arg);
 
-            self->obj.State(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.State(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5343,7 +5943,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.ErrorText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ErrorText();
+            }());
         }
         catch (...)
         {
@@ -5377,7 +5981,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ErrorText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ErrorText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5404,7 +6012,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.OptionId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OptionId();
+            }());
         }
         catch (...)
         {
@@ -5430,7 +6042,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.OptionType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OptionType();
+            }());
         }
         catch (...)
         {
@@ -5456,7 +6072,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.Value());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Value();
+            }());
         }
         catch (...)
         {
@@ -5563,7 +6183,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
-                return py::convert(self->obj.TrySetValue(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TrySetValue(param0);
+                }());
             }
             catch (...)
             {
@@ -5595,7 +6219,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.Items());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Items();
+            }());
         }
         catch (...)
         {
@@ -5621,7 +6249,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.WarningText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WarningText();
+            }());
         }
         catch (...)
         {
@@ -5655,7 +6287,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.WarningText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.WarningText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5682,7 +6318,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.Description());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Description();
+            }());
         }
         catch (...)
         {
@@ -5716,7 +6356,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Description(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Description(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5743,7 +6387,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.State());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.State();
+            }());
         }
         catch (...)
         {
@@ -5777,7 +6425,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::OptionDetails::PrintOptionStates>(arg);
 
-            self->obj.State(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.State(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5804,7 +6456,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.ErrorText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ErrorText();
+            }());
         }
         catch (...)
         {
@@ -5838,7 +6494,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ErrorText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ErrorText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5865,7 +6525,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.OptionId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OptionId();
+            }());
         }
         catch (...)
         {
@@ -5891,7 +6555,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.OptionType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OptionType();
+            }());
         }
         catch (...)
         {
@@ -5917,7 +6585,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.Value());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Value();
+            }());
         }
         catch (...)
         {
@@ -6024,7 +6696,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
-                return py::convert(self->obj.TrySetValue(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TrySetValue(param0);
+                }());
             }
             catch (...)
             {
@@ -6056,7 +6732,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.Items());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Items();
+            }());
         }
         catch (...)
         {
@@ -6082,7 +6762,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.State());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.State();
+            }());
         }
         catch (...)
         {
@@ -6116,7 +6800,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::OptionDetails::PrintOptionStates>(arg);
 
-            self->obj.State(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.State(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6143,7 +6831,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.ErrorText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ErrorText();
+            }());
         }
         catch (...)
         {
@@ -6177,7 +6869,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ErrorText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ErrorText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6204,7 +6900,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.OptionId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OptionId();
+            }());
         }
         catch (...)
         {
@@ -6230,7 +6930,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.OptionType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OptionType();
+            }());
         }
         catch (...)
         {
@@ -6256,7 +6960,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.Value());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Value();
+            }());
         }
         catch (...)
         {
@@ -6282,7 +6990,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.WarningText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WarningText();
+            }());
         }
         catch (...)
         {
@@ -6316,7 +7028,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.WarningText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.WarningText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6343,7 +7059,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.Description());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Description();
+            }());
         }
         catch (...)
         {
@@ -6377,7 +7097,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Description(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Description(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6485,7 +7209,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
-                return py::convert(self->obj.TrySetValue(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TrySetValue(param0);
+                }());
             }
             catch (...)
             {
@@ -6517,7 +7245,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.State());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.State();
+            }());
         }
         catch (...)
         {
@@ -6551,7 +7283,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::OptionDetails::PrintOptionStates>(arg);
 
-            self->obj.State(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.State(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6578,7 +7314,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.ErrorText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ErrorText();
+            }());
         }
         catch (...)
         {
@@ -6612,7 +7352,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ErrorText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ErrorText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6639,7 +7383,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.OptionId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OptionId();
+            }());
         }
         catch (...)
         {
@@ -6665,7 +7413,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.OptionType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OptionType();
+            }());
         }
         catch (...)
         {
@@ -6691,7 +7443,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.Value());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Value();
+            }());
         }
         catch (...)
         {
@@ -6717,7 +7473,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.WarningText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WarningText();
+            }());
         }
         catch (...)
         {
@@ -6751,7 +7511,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.WarningText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.WarningText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6778,7 +7542,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.Description());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Description();
+            }());
         }
         catch (...)
         {
@@ -6812,7 +7580,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Description(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Description(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6919,7 +7691,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
-                return py::convert(self->obj.TrySetValue(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TrySetValue(param0);
+                }());
             }
             catch (...)
             {
@@ -6951,7 +7727,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.Items());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Items();
+            }());
         }
         catch (...)
         {
@@ -6977,7 +7757,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.State());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.State();
+            }());
         }
         catch (...)
         {
@@ -7011,7 +7795,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::OptionDetails::PrintOptionStates>(arg);
 
-            self->obj.State(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.State(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7038,7 +7826,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.ErrorText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ErrorText();
+            }());
         }
         catch (...)
         {
@@ -7072,7 +7864,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ErrorText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ErrorText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7099,7 +7895,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.OptionId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OptionId();
+            }());
         }
         catch (...)
         {
@@ -7125,7 +7925,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.OptionType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OptionType();
+            }());
         }
         catch (...)
         {
@@ -7151,7 +7955,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.Value());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Value();
+            }());
         }
         catch (...)
         {
@@ -7177,7 +7985,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.WarningText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WarningText();
+            }());
         }
         catch (...)
         {
@@ -7211,7 +8023,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.WarningText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.WarningText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7238,7 +8054,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.Description());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Description();
+            }());
         }
         catch (...)
         {
@@ -7272,7 +8092,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Description(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Description(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7380,7 +8204,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
-                return py::convert(self->obj.TrySetValue(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TrySetValue(param0);
+                }());
             }
             catch (...)
             {
@@ -7412,7 +8240,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.Items());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Items();
+            }());
         }
         catch (...)
         {
@@ -7438,7 +8270,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.State());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.State();
+            }());
         }
         catch (...)
         {
@@ -7472,7 +8308,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::OptionDetails::PrintOptionStates>(arg);
 
-            self->obj.State(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.State(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7499,7 +8339,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.ErrorText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ErrorText();
+            }());
         }
         catch (...)
         {
@@ -7533,7 +8377,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ErrorText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ErrorText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7560,7 +8408,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.OptionId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OptionId();
+            }());
         }
         catch (...)
         {
@@ -7586,7 +8438,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.OptionType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OptionType();
+            }());
         }
         catch (...)
         {
@@ -7612,7 +8468,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.Value());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Value();
+            }());
         }
         catch (...)
         {
@@ -7638,7 +8498,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.WarningText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WarningText();
+            }());
         }
         catch (...)
         {
@@ -7672,7 +8536,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.WarningText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.WarningText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7699,7 +8567,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.Description());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Description();
+            }());
         }
         catch (...)
         {
@@ -7733,7 +8605,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Description(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Description(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7835,7 +8711,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.OptionId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OptionId();
+            }());
         }
         catch (...)
         {
@@ -7935,7 +8815,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.CreateItemListOption(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateItemListOption(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -7974,7 +8858,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.CreateTextOption(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateTextOption(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -8013,7 +8901,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.CreateToggleOption(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateToggleOption(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -8051,7 +8943,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::PrintTaskOptions>(args, 0);
 
-                return py::convert(winrt::Windows::Graphics::Printing::OptionDetails::PrintTaskOptionDetails::GetFromPrintTaskOptions(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Graphics::Printing::OptionDetails::PrintTaskOptionDetails::GetFromPrintTaskOptions(param0);
+                }());
             }
             catch (...)
             {
@@ -8089,7 +8985,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(self->obj.GetPageDescription(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetPageDescription(param0);
+                }());
             }
             catch (...)
             {
@@ -8121,7 +9021,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayedOptions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayedOptions();
+            }());
         }
         catch (...)
         {
@@ -8147,7 +9051,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.Options());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Options();
+            }());
         }
         catch (...)
         {
@@ -8175,7 +9083,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Printing::OptionDetails::PrintTaskOptionDetails, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.BeginValidation(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BeginValidation(param0);
+            }());
         }
         catch (...)
         {
@@ -8203,7 +9115,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.BeginValidation(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.BeginValidation(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -8232,7 +9148,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Printing::OptionDetails::PrintTaskOptionDetails, winrt::Windows::Graphics::Printing::OptionDetails::PrintTaskOptionChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.OptionChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OptionChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -8260,7 +9180,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.OptionChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.OptionChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -8395,7 +9319,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
-                return py::convert(self->obj.TrySetValue(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TrySetValue(param0);
+                }());
             }
             catch (...)
             {
@@ -8427,7 +9355,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayName();
+            }());
         }
         catch (...)
         {
@@ -8461,7 +9393,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.DisplayName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DisplayName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8488,7 +9424,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.ErrorText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ErrorText();
+            }());
         }
         catch (...)
         {
@@ -8522,7 +9462,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ErrorText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ErrorText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8549,7 +9493,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.OptionId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OptionId();
+            }());
         }
         catch (...)
         {
@@ -8575,7 +9523,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.OptionType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OptionType();
+            }());
         }
         catch (...)
         {
@@ -8601,7 +9553,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.State());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.State();
+            }());
         }
         catch (...)
         {
@@ -8635,7 +9591,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::OptionDetails::PrintOptionStates>(arg);
 
-            self->obj.State(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.State(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8662,7 +9622,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.Value());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Value();
+            }());
         }
         catch (...)
         {
@@ -9050,7 +10014,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
-                return py::convert(self->obj.TrySetValue(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TrySetValue(param0);
+                }());
             }
             catch (...)
             {
@@ -9082,7 +10050,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.Items());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Items();
+            }());
         }
         catch (...)
         {
@@ -9108,7 +10080,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.ErrorText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ErrorText();
+            }());
         }
         catch (...)
         {
@@ -9142,7 +10118,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ErrorText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ErrorText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -9169,7 +10149,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.OptionId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OptionId();
+            }());
         }
         catch (...)
         {
@@ -9195,7 +10179,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.OptionType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OptionType();
+            }());
         }
         catch (...)
         {
@@ -9221,7 +10209,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.State());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.State();
+            }());
         }
         catch (...)
         {
@@ -9255,7 +10247,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::OptionDetails::PrintOptionStates>(arg);
 
-            self->obj.State(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.State(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -9282,7 +10278,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.Value());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Value();
+            }());
         }
         catch (...)
         {
@@ -9647,7 +10647,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
-                return py::convert(self->obj.TrySetValue(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TrySetValue(param0);
+                }());
             }
             catch (...)
             {
@@ -9679,7 +10683,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxValue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxValue();
+            }());
         }
         catch (...)
         {
@@ -9705,7 +10713,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.MinValue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MinValue();
+            }());
         }
         catch (...)
         {
@@ -9731,7 +10743,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.ErrorText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ErrorText();
+            }());
         }
         catch (...)
         {
@@ -9765,7 +10781,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ErrorText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ErrorText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -9792,7 +10812,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.OptionId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OptionId();
+            }());
         }
         catch (...)
         {
@@ -9818,7 +10842,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.OptionType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OptionType();
+            }());
         }
         catch (...)
         {
@@ -9844,7 +10872,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.State());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.State();
+            }());
         }
         catch (...)
         {
@@ -9878,7 +10910,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::OptionDetails::PrintOptionStates>(arg);
 
-            self->obj.State(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.State(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -9905,7 +10941,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.Value());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Value();
+            }());
         }
         catch (...)
         {
@@ -10291,7 +11331,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
-                return py::convert(self->obj.TrySetValue(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TrySetValue(param0);
+                }());
             }
             catch (...)
             {
@@ -10323,7 +11367,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.ErrorText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ErrorText();
+            }());
         }
         catch (...)
         {
@@ -10357,7 +11405,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ErrorText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ErrorText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -10384,7 +11436,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.OptionId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OptionId();
+            }());
         }
         catch (...)
         {
@@ -10410,7 +11466,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.OptionType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OptionType();
+            }());
         }
         catch (...)
         {
@@ -10436,7 +11496,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.State());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.State();
+            }());
         }
         catch (...)
         {
@@ -10470,7 +11534,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::OptionDetails::PrintOptionStates>(arg);
 
-            self->obj.State(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.State(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -10497,7 +11565,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.Value());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Value();
+            }());
         }
         catch (...)
         {
@@ -10841,7 +11913,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
-                return py::convert(self->obj.TrySetValue(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TrySetValue(param0);
+                }());
             }
             catch (...)
             {
@@ -10873,7 +11949,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxCharacters());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxCharacters();
+            }());
         }
         catch (...)
         {
@@ -10899,7 +11979,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.ErrorText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ErrorText();
+            }());
         }
         catch (...)
         {
@@ -10933,7 +12017,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ErrorText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ErrorText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -10960,7 +12048,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.OptionId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OptionId();
+            }());
         }
         catch (...)
         {
@@ -10986,7 +12078,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.OptionType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OptionType();
+            }());
         }
         catch (...)
         {
@@ -11012,7 +12108,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.State());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.State();
+            }());
         }
         catch (...)
         {
@@ -11046,7 +12146,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::OptionDetails::PrintOptionStates>(arg);
 
-            self->obj.State(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.State(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -11073,7 +12177,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
                 return nullptr;
             }
 
-            return py::convert(self->obj.Value());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Value();
+            }());
         }
         catch (...)
         {

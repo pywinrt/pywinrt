@@ -30,7 +30,11 @@ namespace py::cpp::Windows::Gaming::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Gaming::UI::GameBar::IsInputRedirected());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Gaming::UI::GameBar::IsInputRedirected();
+            }());
         }
         catch (...)
         {
@@ -56,7 +60,11 @@ namespace py::cpp::Windows::Gaming::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Gaming::UI::GameBar::Visible());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Gaming::UI::GameBar::Visible();
+            }());
         }
         catch (...)
         {
@@ -84,7 +92,11 @@ namespace py::cpp::Windows::Gaming::UI
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(winrt::Windows::Gaming::UI::GameBar::IsInputRedirectedChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Gaming::UI::GameBar::IsInputRedirectedChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -112,7 +124,11 @@ namespace py::cpp::Windows::Gaming::UI
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Windows::Gaming::UI::GameBar::IsInputRedirectedChanged(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::Gaming::UI::GameBar::IsInputRedirectedChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -141,7 +157,11 @@ namespace py::cpp::Windows::Gaming::UI
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(winrt::Windows::Gaming::UI::GameBar::VisibilityChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Gaming::UI::GameBar::VisibilityChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -169,7 +189,11 @@ namespace py::cpp::Windows::Gaming::UI
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Windows::Gaming::UI::GameBar::VisibilityChanged(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::Gaming::UI::GameBar::VisibilityChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -266,7 +290,11 @@ namespace py::cpp::Windows::Gaming::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppDisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppDisplayName();
+            }());
         }
         catch (...)
         {
@@ -292,7 +320,11 @@ namespace py::cpp::Windows::Gaming::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppId();
+            }());
         }
         catch (...)
         {
@@ -318,7 +350,11 @@ namespace py::cpp::Windows::Gaming::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.Message());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Message();
+            }());
         }
         catch (...)
         {
@@ -344,7 +380,11 @@ namespace py::cpp::Windows::Gaming::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.Origin());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Origin();
+            }());
         }
         catch (...)
         {
@@ -370,7 +410,11 @@ namespace py::cpp::Windows::Gaming::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.SenderName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SenderName();
+            }());
         }
         catch (...)
         {
@@ -475,7 +519,11 @@ namespace py::cpp::Windows::Gaming::UI
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Gaming::UI::GameChatMessageOrigin>(args, 2);
 
-                self->obj.AddMessage(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddMessage(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -512,7 +560,11 @@ namespace py::cpp::Windows::Gaming::UI
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Gaming::UI::GameChatOverlay::GetDefault());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Gaming::UI::GameChatOverlay::GetDefault();
+                }());
             }
             catch (...)
             {
@@ -544,7 +596,11 @@ namespace py::cpp::Windows::Gaming::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.DesiredPosition());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DesiredPosition();
+            }());
         }
         catch (...)
         {
@@ -578,7 +634,11 @@ namespace py::cpp::Windows::Gaming::UI
 
             auto param0 = py::convert_to<winrt::Windows::Gaming::UI::GameChatOverlayPosition>(arg);
 
-            self->obj.DesiredPosition(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DesiredPosition(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -727,7 +787,11 @@ namespace py::cpp::Windows::Gaming::UI
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 0);
 
-                self->obj.SetDelayBeforeClosingAfterMessageReceived(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetDelayBeforeClosingAfterMessageReceived(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -762,7 +826,11 @@ namespace py::cpp::Windows::Gaming::UI
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Gaming::UI::GameChatOverlayMessageSource, winrt::Windows::Gaming::UI::GameChatMessageReceivedEventArgs>>(arg);
 
-            return py::convert(self->obj.MessageReceived(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MessageReceived(param0);
+            }());
         }
         catch (...)
         {
@@ -790,7 +858,11 @@ namespace py::cpp::Windows::Gaming::UI
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.MessageReceived(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MessageReceived(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -892,7 +964,11 @@ namespace py::cpp::Windows::Gaming::UI
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::ValueSet>(args, 0);
 
-                self->obj.ReportCompleted(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ReportCompleted(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -925,7 +1001,11 @@ namespace py::cpp::Windows::Gaming::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -951,7 +1031,11 @@ namespace py::cpp::Windows::Gaming::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.PreviousExecutionState());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PreviousExecutionState();
+            }());
         }
         catch (...)
         {
@@ -977,7 +1061,11 @@ namespace py::cpp::Windows::Gaming::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.SplashScreen());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SplashScreen();
+            }());
         }
         catch (...)
         {
@@ -1003,7 +1091,11 @@ namespace py::cpp::Windows::Gaming::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.GameUIArgs());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.GameUIArgs();
+            }());
         }
         catch (...)
         {

@@ -38,7 +38,11 @@ namespace py::cpp::Windows::Devices::WiFiDirect
                 return nullptr;
             }
 
-            return py::convert(self->obj.ListenStateDiscoverability());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ListenStateDiscoverability();
+            }());
         }
         catch (...)
         {
@@ -72,7 +76,11 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
             auto param0 = py::convert_to<winrt::Windows::Devices::WiFiDirect::WiFiDirectAdvertisementListenStateDiscoverability>(arg);
 
-            self->obj.ListenStateDiscoverability(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ListenStateDiscoverability(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -99,7 +107,11 @@ namespace py::cpp::Windows::Devices::WiFiDirect
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsAutonomousGroupOwnerEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsAutonomousGroupOwnerEnabled();
+            }());
         }
         catch (...)
         {
@@ -133,7 +145,11 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsAutonomousGroupOwnerEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsAutonomousGroupOwnerEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -160,7 +176,11 @@ namespace py::cpp::Windows::Devices::WiFiDirect
                 return nullptr;
             }
 
-            return py::convert(self->obj.InformationElements());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InformationElements();
+            }());
         }
         catch (...)
         {
@@ -194,7 +214,11 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Devices::WiFiDirect::WiFiDirectInformationElement>>(arg);
 
-            self->obj.InformationElements(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.InformationElements(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -221,7 +245,11 @@ namespace py::cpp::Windows::Devices::WiFiDirect
                 return nullptr;
             }
 
-            return py::convert(self->obj.LegacySettings());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LegacySettings();
+            }());
         }
         catch (...)
         {
@@ -247,7 +275,11 @@ namespace py::cpp::Windows::Devices::WiFiDirect
                 return nullptr;
             }
 
-            return py::convert(self->obj.SupportedConfigurationMethods());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SupportedConfigurationMethods();
+            }());
         }
         catch (...)
         {
@@ -370,7 +402,11 @@ namespace py::cpp::Windows::Devices::WiFiDirect
                     return nullptr;
                 }
 
-                self->obj.Start();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Start();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -407,7 +443,11 @@ namespace py::cpp::Windows::Devices::WiFiDirect
                     return nullptr;
                 }
 
-                self->obj.Stop();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Stop();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -440,7 +480,11 @@ namespace py::cpp::Windows::Devices::WiFiDirect
                 return nullptr;
             }
 
-            return py::convert(self->obj.Advertisement());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Advertisement();
+            }());
         }
         catch (...)
         {
@@ -466,7 +510,11 @@ namespace py::cpp::Windows::Devices::WiFiDirect
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -494,7 +542,11 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisher, winrt::Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisherStatusChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.StatusChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StatusChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -522,7 +574,11 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.StatusChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StatusChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -621,7 +677,11 @@ namespace py::cpp::Windows::Devices::WiFiDirect
                 return nullptr;
             }
 
-            return py::convert(self->obj.Error());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Error();
+            }());
         }
         catch (...)
         {
@@ -647,7 +707,11 @@ namespace py::cpp::Windows::Devices::WiFiDirect
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -765,7 +829,11 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::WiFiDirect::WiFiDirectConnectionListener, winrt::Windows::Devices::WiFiDirect::WiFiDirectConnectionRequestedEventArgs>>(arg);
 
-            return py::convert(self->obj.ConnectionRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ConnectionRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -793,7 +861,11 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ConnectionRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ConnectionRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -916,7 +988,11 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::WiFiDirect::WiFiDirectConfigurationMethod>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::WiFiDirect::WiFiDirectConnectionParameters::GetDevicePairingKinds(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::WiFiDirect::WiFiDirectConnectionParameters::GetDevicePairingKinds(param0);
+                }());
             }
             catch (...)
             {
@@ -948,7 +1024,11 @@ namespace py::cpp::Windows::Devices::WiFiDirect
                 return nullptr;
             }
 
-            return py::convert(self->obj.GroupOwnerIntent());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.GroupOwnerIntent();
+            }());
         }
         catch (...)
         {
@@ -982,7 +1062,11 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
             auto param0 = py::convert_to<int16_t>(arg);
 
-            self->obj.GroupOwnerIntent(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.GroupOwnerIntent(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1009,7 +1093,11 @@ namespace py::cpp::Windows::Devices::WiFiDirect
                 return nullptr;
             }
 
-            return py::convert(self->obj.PreferredPairingProcedure());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PreferredPairingProcedure();
+            }());
         }
         catch (...)
         {
@@ -1043,7 +1131,11 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
             auto param0 = py::convert_to<winrt::Windows::Devices::WiFiDirect::WiFiDirectPairingProcedure>(arg);
 
-            self->obj.PreferredPairingProcedure(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PreferredPairingProcedure(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1070,7 +1162,11 @@ namespace py::cpp::Windows::Devices::WiFiDirect
                 return nullptr;
             }
 
-            return py::convert(self->obj.PreferenceOrderedConfigurationMethods());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PreferenceOrderedConfigurationMethods();
+            }());
         }
         catch (...)
         {
@@ -1195,7 +1291,11 @@ namespace py::cpp::Windows::Devices::WiFiDirect
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1228,7 +1328,11 @@ namespace py::cpp::Windows::Devices::WiFiDirect
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceInformation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceInformation();
+            }());
         }
         catch (...)
         {
@@ -1270,7 +1374,11 @@ namespace py::cpp::Windows::Devices::WiFiDirect
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -1347,7 +1455,11 @@ namespace py::cpp::Windows::Devices::WiFiDirect
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetConnectionRequest());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetConnectionRequest();
+                }());
             }
             catch (...)
             {
@@ -1450,7 +1562,11 @@ namespace py::cpp::Windows::Devices::WiFiDirect
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1489,7 +1605,11 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::WiFiDirect::WiFiDirectDevice::FromIdAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::WiFiDirect::WiFiDirectDevice::FromIdAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1517,7 +1637,11 @@ namespace py::cpp::Windows::Devices::WiFiDirect
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::WiFiDirect::WiFiDirectConnectionParameters>(args, 1);
 
-                return py::convert(winrt::Windows::Devices::WiFiDirect::WiFiDirectDevice::FromIdAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::WiFiDirect::WiFiDirectDevice::FromIdAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1553,7 +1677,11 @@ namespace py::cpp::Windows::Devices::WiFiDirect
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetConnectionEndpointPairs());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetConnectionEndpointPairs();
+                }());
             }
             catch (...)
             {
@@ -1589,7 +1717,11 @@ namespace py::cpp::Windows::Devices::WiFiDirect
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::WiFiDirect::WiFiDirectDevice::GetDeviceSelector());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::WiFiDirect::WiFiDirectDevice::GetDeviceSelector();
+                }());
             }
             catch (...)
             {
@@ -1616,7 +1748,11 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::WiFiDirect::WiFiDirectDeviceSelectorType>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::WiFiDirect::WiFiDirectDevice::GetDeviceSelector(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::WiFiDirect::WiFiDirectDevice::GetDeviceSelector(param0);
+                }());
             }
             catch (...)
             {
@@ -1648,7 +1784,11 @@ namespace py::cpp::Windows::Devices::WiFiDirect
                 return nullptr;
             }
 
-            return py::convert(self->obj.ConnectionStatus());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ConnectionStatus();
+            }());
         }
         catch (...)
         {
@@ -1674,7 +1814,11 @@ namespace py::cpp::Windows::Devices::WiFiDirect
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceId();
+            }());
         }
         catch (...)
         {
@@ -1702,7 +1846,11 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::WiFiDirect::WiFiDirectDevice, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.ConnectionStatusChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ConnectionStatusChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -1730,7 +1878,11 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ConnectionStatusChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ConnectionStatusChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1773,7 +1925,11 @@ namespace py::cpp::Windows::Devices::WiFiDirect
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -1905,7 +2061,11 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::WiFiDirect::WiFiDirectInformationElement::CreateFromBuffer(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::WiFiDirect::WiFiDirectInformationElement::CreateFromBuffer(param0);
+                }());
             }
             catch (...)
             {
@@ -1943,7 +2103,11 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Enumeration::DeviceInformation>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::WiFiDirect::WiFiDirectInformationElement::CreateFromDeviceInformation(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::WiFiDirect::WiFiDirectInformationElement::CreateFromDeviceInformation(param0);
+                }());
             }
             catch (...)
             {
@@ -1975,7 +2139,11 @@ namespace py::cpp::Windows::Devices::WiFiDirect
                 return nullptr;
             }
 
-            return py::convert(self->obj.Value());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Value();
+            }());
         }
         catch (...)
         {
@@ -2009,7 +2177,11 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(arg);
 
-            self->obj.Value(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Value(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2036,7 +2208,11 @@ namespace py::cpp::Windows::Devices::WiFiDirect
                 return nullptr;
             }
 
-            return py::convert(self->obj.OuiType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OuiType();
+            }());
         }
         catch (...)
         {
@@ -2070,7 +2246,11 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
             auto param0 = py::convert_to<uint8_t>(arg);
 
-            self->obj.OuiType(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.OuiType(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2097,7 +2277,11 @@ namespace py::cpp::Windows::Devices::WiFiDirect
                 return nullptr;
             }
 
-            return py::convert(self->obj.Oui());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Oui();
+            }());
         }
         catch (...)
         {
@@ -2131,7 +2315,11 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(arg);
 
-            self->obj.Oui(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Oui(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2254,7 +2442,11 @@ namespace py::cpp::Windows::Devices::WiFiDirect
                 return nullptr;
             }
 
-            return py::convert(self->obj.Ssid());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Ssid();
+            }());
         }
         catch (...)
         {
@@ -2288,7 +2480,11 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Ssid(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Ssid(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2315,7 +2511,11 @@ namespace py::cpp::Windows::Devices::WiFiDirect
                 return nullptr;
             }
 
-            return py::convert(self->obj.Passphrase());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Passphrase();
+            }());
         }
         catch (...)
         {
@@ -2349,7 +2549,11 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
             auto param0 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(arg);
 
-            self->obj.Passphrase(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Passphrase(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2376,7 +2580,11 @@ namespace py::cpp::Windows::Devices::WiFiDirect
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsEnabled();
+            }());
         }
         catch (...)
         {
@@ -2410,7 +2618,11 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)

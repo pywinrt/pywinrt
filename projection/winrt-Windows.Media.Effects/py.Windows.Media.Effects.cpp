@@ -44,7 +44,11 @@ namespace py::cpp::Windows::Media::Effects
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.SetEchoCancellationRenderEndpoint(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetEchoCancellationRenderEndpoint(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -148,7 +152,11 @@ namespace py::cpp::Windows::Media::Effects
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetAudioCaptureEffects());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAudioCaptureEffects();
+                }());
             }
             catch (...)
             {
@@ -182,7 +190,11 @@ namespace py::cpp::Windows::Media::Effects
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Effects::AudioCaptureEffectsManager, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.AudioCaptureEffectsChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AudioCaptureEffectsChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -210,7 +222,11 @@ namespace py::cpp::Windows::Media::Effects
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.AudioCaptureEffectsChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AudioCaptureEffectsChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -312,7 +328,11 @@ namespace py::cpp::Windows::Media::Effects
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::AudioEffectState>(args, 0);
 
-                self->obj.SetState(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetState(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -345,7 +365,11 @@ namespace py::cpp::Windows::Media::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.AudioEffectType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AudioEffectType();
+            }());
         }
         catch (...)
         {
@@ -371,7 +395,11 @@ namespace py::cpp::Windows::Media::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.AcousticEchoCancellationConfiguration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AcousticEchoCancellationConfiguration();
+            }());
         }
         catch (...)
         {
@@ -397,7 +425,11 @@ namespace py::cpp::Windows::Media::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.CanSetState());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CanSetState();
+            }());
         }
         catch (...)
         {
@@ -423,7 +455,11 @@ namespace py::cpp::Windows::Media::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.State());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.State();
+            }());
         }
         catch (...)
         {
@@ -560,7 +596,11 @@ namespace py::cpp::Windows::Media::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.ActivatableClassId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ActivatableClassId();
+            }());
         }
         catch (...)
         {
@@ -586,7 +626,11 @@ namespace py::cpp::Windows::Media::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.Properties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Properties();
+            }());
         }
         catch (...)
         {
@@ -679,7 +723,11 @@ namespace py::cpp::Windows::Media::Effects
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Media::Capture::MediaCategory>(args, 1);
 
-                return py::convert(winrt::Windows::Media::Effects::AudioEffectsManager::CreateAudioCaptureEffectsManager(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::Effects::AudioEffectsManager::CreateAudioCaptureEffectsManager(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -719,7 +767,11 @@ namespace py::cpp::Windows::Media::Effects
                 auto param1 = py::convert_to<winrt::Windows::Media::Capture::MediaCategory>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Media::AudioProcessing>(args, 2);
 
-                return py::convert(winrt::Windows::Media::Effects::AudioEffectsManager::CreateAudioCaptureEffectsManager(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::Effects::AudioEffectsManager::CreateAudioCaptureEffectsManager(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -758,7 +810,11 @@ namespace py::cpp::Windows::Media::Effects
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Media::Render::AudioRenderCategory>(args, 1);
 
-                return py::convert(winrt::Windows::Media::Effects::AudioEffectsManager::CreateAudioRenderEffectsManager(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::Effects::AudioEffectsManager::CreateAudioRenderEffectsManager(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -798,7 +854,11 @@ namespace py::cpp::Windows::Media::Effects
                 auto param1 = py::convert_to<winrt::Windows::Media::Render::AudioRenderCategory>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Media::AudioProcessing>(args, 2);
 
-                return py::convert(winrt::Windows::Media::Effects::AudioEffectsManager::CreateAudioRenderEffectsManager(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::Effects::AudioEffectsManager::CreateAudioRenderEffectsManager(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -902,7 +962,11 @@ namespace py::cpp::Windows::Media::Effects
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetAudioRenderEffects());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAudioRenderEffects();
+                }());
             }
             catch (...)
             {
@@ -938,7 +1002,11 @@ namespace py::cpp::Windows::Media::Effects
                     return nullptr;
                 }
 
-                self->obj.ShowSettingsUI();
+                {
+                    auto _gil = release_gil();
+                    self->obj.ShowSettingsUI();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -971,7 +1039,11 @@ namespace py::cpp::Windows::Media::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.EffectsProviderSettingsLabel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EffectsProviderSettingsLabel();
+            }());
         }
         catch (...)
         {
@@ -997,7 +1069,11 @@ namespace py::cpp::Windows::Media::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.EffectsProviderThumbnail());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EffectsProviderThumbnail();
+            }());
         }
         catch (...)
         {
@@ -1025,7 +1101,11 @@ namespace py::cpp::Windows::Media::Effects
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Effects::AudioRenderEffectsManager, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.AudioRenderEffectsChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AudioRenderEffectsChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -1053,7 +1133,11 @@ namespace py::cpp::Windows::Media::Effects
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.AudioRenderEffectsChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AudioRenderEffectsChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1158,7 +1242,11 @@ namespace py::cpp::Windows::Media::Effects
 
                 auto param0 = py::convert_to<winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface>(args, 0);
 
-                return py::convert(self->obj.GetOverlayForSurface(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetOverlayForSurface(param0);
+                }());
             }
             catch (...)
             {
@@ -1190,7 +1278,11 @@ namespace py::cpp::Windows::Media::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.BackgroundFrame());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BackgroundFrame();
+            }());
         }
         catch (...)
         {
@@ -1216,7 +1308,11 @@ namespace py::cpp::Windows::Media::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.OutputFrame());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OutputFrame();
+            }());
         }
         catch (...)
         {
@@ -1242,7 +1338,11 @@ namespace py::cpp::Windows::Media::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.SurfacesToOverlay());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SurfacesToOverlay();
+            }());
         }
         catch (...)
         {
@@ -1338,7 +1438,11 @@ namespace py::cpp::Windows::Media::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.InputFrame());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InputFrame();
+            }());
         }
         catch (...)
         {
@@ -1364,7 +1468,11 @@ namespace py::cpp::Windows::Media::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.OutputFrame());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OutputFrame();
+            }());
         }
         catch (...)
         {
@@ -1458,7 +1566,11 @@ namespace py::cpp::Windows::Media::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.InputFrame());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InputFrame();
+            }());
         }
         catch (...)
         {
@@ -1484,7 +1596,11 @@ namespace py::cpp::Windows::Media::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.OutputFrame());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OutputFrame();
+            }());
         }
         catch (...)
         {
@@ -1600,7 +1716,11 @@ namespace py::cpp::Windows::Media::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.TimeStretchRate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TimeStretchRate();
+            }());
         }
         catch (...)
         {
@@ -1634,7 +1754,11 @@ namespace py::cpp::Windows::Media::Effects
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.TimeStretchRate(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TimeStretchRate(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1661,7 +1785,11 @@ namespace py::cpp::Windows::Media::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.ActivatableClassId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ActivatableClassId();
+            }());
         }
         catch (...)
         {
@@ -1687,7 +1815,11 @@ namespace py::cpp::Windows::Media::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.Properties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Properties();
+            }());
         }
         catch (...)
         {
@@ -1822,7 +1954,11 @@ namespace py::cpp::Windows::Media::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.ActivatableClassId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ActivatableClassId();
+            }());
         }
         catch (...)
         {
@@ -1848,7 +1984,11 @@ namespace py::cpp::Windows::Media::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.Properties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Properties();
+            }());
         }
         catch (...)
         {
@@ -1982,7 +2122,11 @@ namespace py::cpp::Windows::Media::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.ActivatableClassId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ActivatableClassId();
+            }());
         }
         catch (...)
         {
@@ -2008,7 +2152,11 @@ namespace py::cpp::Windows::Media::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.Properties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Properties();
+            }());
         }
         catch (...)
         {
@@ -2124,7 +2272,11 @@ namespace py::cpp::Windows::Media::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.ActivatableClassId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ActivatableClassId();
+            }());
         }
         catch (...)
         {
@@ -2150,7 +2302,11 @@ namespace py::cpp::Windows::Media::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.Properties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Properties();
+            }());
         }
         catch (...)
         {
@@ -2176,7 +2332,11 @@ namespace py::cpp::Windows::Media::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.Rotation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Rotation();
+            }());
         }
         catch (...)
         {
@@ -2210,7 +2370,11 @@ namespace py::cpp::Windows::Media::Effects
 
             auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::MediaRotation>(arg);
 
-            self->obj.Rotation(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Rotation(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2237,7 +2401,11 @@ namespace py::cpp::Windows::Media::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProcessingAlgorithm());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProcessingAlgorithm();
+            }());
         }
         catch (...)
         {
@@ -2271,7 +2439,11 @@ namespace py::cpp::Windows::Media::Effects
 
             auto param0 = py::convert_to<winrt::Windows::Media::Transcoding::MediaVideoProcessingAlgorithm>(arg);
 
-            self->obj.ProcessingAlgorithm(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ProcessingAlgorithm(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2298,7 +2470,11 @@ namespace py::cpp::Windows::Media::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.PaddingColor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PaddingColor();
+            }());
         }
         catch (...)
         {
@@ -2332,7 +2508,11 @@ namespace py::cpp::Windows::Media::Effects
 
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
-            self->obj.PaddingColor(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PaddingColor(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2359,7 +2539,11 @@ namespace py::cpp::Windows::Media::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.OutputSize());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OutputSize();
+            }());
         }
         catch (...)
         {
@@ -2393,7 +2577,11 @@ namespace py::cpp::Windows::Media::Effects
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Size>(arg);
 
-            self->obj.OutputSize(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.OutputSize(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2420,7 +2608,11 @@ namespace py::cpp::Windows::Media::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.Mirror());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Mirror();
+            }());
         }
         catch (...)
         {
@@ -2454,7 +2646,11 @@ namespace py::cpp::Windows::Media::Effects
 
             auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::MediaMirroringOptions>(arg);
 
-            self->obj.Mirror(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Mirror(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2481,7 +2677,11 @@ namespace py::cpp::Windows::Media::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.CropRectangle());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CropRectangle();
+            }());
         }
         catch (...)
         {
@@ -2515,7 +2715,11 @@ namespace py::cpp::Windows::Media::Effects
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(arg);
 
-            self->obj.CropRectangle(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CropRectangle(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2542,7 +2746,11 @@ namespace py::cpp::Windows::Media::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.SphericalProjection());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SphericalProjection();
+            }());
         }
         catch (...)
         {
@@ -2643,7 +2851,11 @@ namespace py::cpp::Windows::Media::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.ViewOrientation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ViewOrientation();
+            }());
         }
         catch (...)
         {
@@ -2677,7 +2889,11 @@ namespace py::cpp::Windows::Media::Effects
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(arg);
 
-            self->obj.ViewOrientation(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ViewOrientation(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2704,7 +2920,11 @@ namespace py::cpp::Windows::Media::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProjectionMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProjectionMode();
+            }());
         }
         catch (...)
         {
@@ -2738,7 +2958,11 @@ namespace py::cpp::Windows::Media::Effects
 
             auto param0 = py::convert_to<winrt::Windows::Media::Playback::SphericalVideoProjectionMode>(arg);
 
-            self->obj.ProjectionMode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ProjectionMode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2765,7 +2989,11 @@ namespace py::cpp::Windows::Media::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsEnabled();
+            }());
         }
         catch (...)
         {
@@ -2799,7 +3027,11 @@ namespace py::cpp::Windows::Media::Effects
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2826,7 +3058,11 @@ namespace py::cpp::Windows::Media::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.HorizontalFieldOfViewInDegrees());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HorizontalFieldOfViewInDegrees();
+            }());
         }
         catch (...)
         {
@@ -2860,7 +3096,11 @@ namespace py::cpp::Windows::Media::Effects
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.HorizontalFieldOfViewInDegrees(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.HorizontalFieldOfViewInDegrees(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2887,7 +3127,11 @@ namespace py::cpp::Windows::Media::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.FrameFormat());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FrameFormat();
+            }());
         }
         catch (...)
         {
@@ -2921,7 +3165,11 @@ namespace py::cpp::Windows::Media::Effects
 
             auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::SphericalVideoFrameFormat>(arg);
 
-            self->obj.FrameFormat(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.FrameFormat(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3019,7 +3267,11 @@ namespace py::cpp::Windows::Media::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.ActivatableClassId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ActivatableClassId();
+            }());
         }
         catch (...)
         {
@@ -3045,7 +3297,11 @@ namespace py::cpp::Windows::Media::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.Properties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Properties();
+            }());
         }
         catch (...)
         {
@@ -3247,7 +3503,11 @@ namespace py::cpp::Windows::Media::Effects
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::MediaEffectClosedReason>(args, 0);
 
-                self->obj.Close(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3284,7 +3544,11 @@ namespace py::cpp::Windows::Media::Effects
                     return nullptr;
                 }
 
-                self->obj.DiscardQueuedFrames();
+                {
+                    auto _gil = release_gil();
+                    self->obj.DiscardQueuedFrames();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3323,7 +3587,11 @@ namespace py::cpp::Windows::Media::Effects
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::ProcessAudioFrameContext>(args, 0);
 
-                self->obj.ProcessFrame(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ProcessFrame(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3362,7 +3630,11 @@ namespace py::cpp::Windows::Media::Effects
 
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::AudioEncodingProperties>(args, 0);
 
-                self->obj.SetEncodingProperties(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetEncodingProperties(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3401,7 +3673,11 @@ namespace py::cpp::Windows::Media::Effects
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IPropertySet>(args, 0);
 
-                self->obj.SetProperties(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetProperties(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3434,7 +3710,11 @@ namespace py::cpp::Windows::Media::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.SupportedEncodingProperties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SupportedEncodingProperties();
+            }());
         }
         catch (...)
         {
@@ -3460,7 +3740,11 @@ namespace py::cpp::Windows::Media::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.UseInputFrameForOutput());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UseInputFrameForOutput();
+            }());
         }
         catch (...)
         {
@@ -3811,7 +4095,11 @@ namespace py::cpp::Windows::Media::Effects
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::MediaEffectClosedReason>(args, 0);
 
-                self->obj.Close(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3848,7 +4136,11 @@ namespace py::cpp::Windows::Media::Effects
                     return nullptr;
                 }
 
-                self->obj.DiscardQueuedFrames();
+                {
+                    auto _gil = release_gil();
+                    self->obj.DiscardQueuedFrames();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3887,7 +4179,11 @@ namespace py::cpp::Windows::Media::Effects
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::ProcessVideoFrameContext>(args, 0);
 
-                self->obj.ProcessFrame(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ProcessFrame(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3927,7 +4223,11 @@ namespace py::cpp::Windows::Media::Effects
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::VideoEncodingProperties>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DDevice>(args, 1);
 
-                self->obj.SetEncodingProperties(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetEncodingProperties(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3966,7 +4266,11 @@ namespace py::cpp::Windows::Media::Effects
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IPropertySet>(args, 0);
 
-                self->obj.SetProperties(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetProperties(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3999,7 +4303,11 @@ namespace py::cpp::Windows::Media::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsReadOnly());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsReadOnly();
+            }());
         }
         catch (...)
         {
@@ -4025,7 +4333,11 @@ namespace py::cpp::Windows::Media::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.SupportedEncodingProperties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SupportedEncodingProperties();
+            }());
         }
         catch (...)
         {
@@ -4051,7 +4363,11 @@ namespace py::cpp::Windows::Media::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.SupportedMemoryTypes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SupportedMemoryTypes();
+            }());
         }
         catch (...)
         {
@@ -4077,7 +4393,11 @@ namespace py::cpp::Windows::Media::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.TimeIndependent());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TimeIndependent();
+            }());
         }
         catch (...)
         {
@@ -4482,7 +4802,11 @@ namespace py::cpp::Windows::Media::Effects
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::MediaEffectClosedReason>(args, 0);
 
-                self->obj.Close(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4521,7 +4845,11 @@ namespace py::cpp::Windows::Media::Effects
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::CompositeVideoFrameContext>(args, 0);
 
-                self->obj.CompositeFrame(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.CompositeFrame(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4558,7 +4886,11 @@ namespace py::cpp::Windows::Media::Effects
                     return nullptr;
                 }
 
-                self->obj.DiscardQueuedFrames();
+                {
+                    auto _gil = release_gil();
+                    self->obj.DiscardQueuedFrames();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4598,7 +4930,11 @@ namespace py::cpp::Windows::Media::Effects
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::VideoEncodingProperties>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DDevice>(args, 1);
 
-                self->obj.SetEncodingProperties(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetEncodingProperties(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4637,7 +4973,11 @@ namespace py::cpp::Windows::Media::Effects
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IPropertySet>(args, 0);
 
-                self->obj.SetProperties(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetProperties(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4670,7 +5010,11 @@ namespace py::cpp::Windows::Media::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.TimeIndependent());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TimeIndependent();
+            }());
         }
         catch (...)
         {
@@ -5006,7 +5350,11 @@ namespace py::cpp::Windows::Media::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.ActivatableClassId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ActivatableClassId();
+            }());
         }
         catch (...)
         {
@@ -5032,7 +5380,11 @@ namespace py::cpp::Windows::Media::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.Properties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Properties();
+            }());
         }
         catch (...)
         {
@@ -5228,7 +5580,11 @@ namespace py::cpp::Windows::Media::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.ActivatableClassId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ActivatableClassId();
+            }());
         }
         catch (...)
         {
@@ -5254,7 +5610,11 @@ namespace py::cpp::Windows::Media::Effects
                 return nullptr;
             }
 
-            return py::convert(self->obj.Properties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Properties();
+            }());
         }
         catch (...)
         {

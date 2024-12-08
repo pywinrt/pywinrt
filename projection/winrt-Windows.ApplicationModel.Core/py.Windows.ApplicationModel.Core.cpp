@@ -42,7 +42,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
                     return nullptr;
                 }
 
-                return py::convert(self->obj.LaunchAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.LaunchAsync();
+                }());
             }
             catch (...)
             {
@@ -80,7 +84,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
 
-                return py::convert(self->obj.LaunchForUserAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.LaunchForUserAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -112,7 +120,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayInfo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayInfo();
+            }());
         }
         catch (...)
         {
@@ -138,7 +150,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppUserModelId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppUserModelId();
+            }());
         }
         catch (...)
         {
@@ -164,7 +180,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppInfo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppInfo();
+            }());
         }
         catch (...)
         {
@@ -260,7 +280,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(winrt::Windows::ApplicationModel::Core::CoreApplication::CreateNewView(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Core::CoreApplication::CreateNewView(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -296,7 +320,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::ApplicationModel::Core::CoreApplication::CreateNewView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Core::CoreApplication::CreateNewView();
+                }());
             }
             catch (...)
             {
@@ -334,7 +362,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Core::IFrameworkViewSource>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::Core::CoreApplication::CreateNewView(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Core::CoreApplication::CreateNewView(param0);
+                }());
             }
             catch (...)
             {
@@ -370,7 +402,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
                     return nullptr;
                 }
 
-                winrt::Windows::ApplicationModel::Core::CoreApplication::DecrementApplicationUseCount();
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::ApplicationModel::Core::CoreApplication::DecrementApplicationUseCount();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -409,7 +445,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
                 auto param0 = py::convert_to<bool>(args, 0);
 
-                winrt::Windows::ApplicationModel::Core::CoreApplication::EnablePrelaunch(param0);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::ApplicationModel::Core::CoreApplication::EnablePrelaunch(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -446,7 +486,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
                     return nullptr;
                 }
 
-                winrt::Windows::ApplicationModel::Core::CoreApplication::Exit();
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::ApplicationModel::Core::CoreApplication::Exit();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -483,7 +527,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::ApplicationModel::Core::CoreApplication::GetCurrentView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Core::CoreApplication::GetCurrentView();
+                }());
             }
             catch (...)
             {
@@ -519,7 +567,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
                     return nullptr;
                 }
 
-                winrt::Windows::ApplicationModel::Core::CoreApplication::IncrementApplicationUseCount();
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::ApplicationModel::Core::CoreApplication::IncrementApplicationUseCount();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -558,7 +610,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::Core::CoreApplication::RequestRestartAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Core::CoreApplication::RequestRestartAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -597,7 +653,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(winrt::Windows::ApplicationModel::Core::CoreApplication::RequestRestartForUserAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Core::CoreApplication::RequestRestartForUserAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -635,7 +695,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Core::IFrameworkViewSource>(args, 0);
 
-                winrt::Windows::ApplicationModel::Core::CoreApplication::Run(param0);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::ApplicationModel::Core::CoreApplication::Run(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -674,7 +738,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IGetActivationFactory>(args, 0);
 
-                winrt::Windows::ApplicationModel::Core::CoreApplication::RunWithActivationFactories(param0);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::ApplicationModel::Core::CoreApplication::RunWithActivationFactories(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -707,7 +775,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::ApplicationModel::Core::CoreApplication::Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::Core::CoreApplication::Id();
+            }());
         }
         catch (...)
         {
@@ -733,7 +805,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::ApplicationModel::Core::CoreApplication::Properties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::Core::CoreApplication::Properties();
+            }());
         }
         catch (...)
         {
@@ -759,7 +835,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::ApplicationModel::Core::CoreApplication::MainView());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::Core::CoreApplication::MainView();
+            }());
         }
         catch (...)
         {
@@ -785,7 +865,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::ApplicationModel::Core::CoreApplication::Views());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::Core::CoreApplication::Views();
+            }());
         }
         catch (...)
         {
@@ -813,7 +897,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::ApplicationModel::Core::UnhandledErrorDetectedEventArgs>>(arg);
 
-            return py::convert(winrt::Windows::ApplicationModel::Core::CoreApplication::UnhandledErrorDetected(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::Core::CoreApplication::UnhandledErrorDetected(param0);
+            }());
         }
         catch (...)
         {
@@ -841,7 +929,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Windows::ApplicationModel::Core::CoreApplication::UnhandledErrorDetected(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::ApplicationModel::Core::CoreApplication::UnhandledErrorDetected(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -870,7 +962,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(winrt::Windows::ApplicationModel::Core::CoreApplication::Exiting(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::Core::CoreApplication::Exiting(param0);
+            }());
         }
         catch (...)
         {
@@ -898,7 +994,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Windows::ApplicationModel::Core::CoreApplication::Exiting(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::ApplicationModel::Core::CoreApplication::Exiting(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -927,7 +1027,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::ApplicationModel::Activation::BackgroundActivatedEventArgs>>(arg);
 
-            return py::convert(winrt::Windows::ApplicationModel::Core::CoreApplication::BackgroundActivated(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::Core::CoreApplication::BackgroundActivated(param0);
+            }());
         }
         catch (...)
         {
@@ -955,7 +1059,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Windows::ApplicationModel::Core::CoreApplication::BackgroundActivated(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::ApplicationModel::Core::CoreApplication::BackgroundActivated(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -984,7 +1092,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::ApplicationModel::EnteredBackgroundEventArgs>>(arg);
 
-            return py::convert(winrt::Windows::ApplicationModel::Core::CoreApplication::EnteredBackground(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::Core::CoreApplication::EnteredBackground(param0);
+            }());
         }
         catch (...)
         {
@@ -1012,7 +1124,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Windows::ApplicationModel::Core::CoreApplication::EnteredBackground(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::ApplicationModel::Core::CoreApplication::EnteredBackground(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1041,7 +1157,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::ApplicationModel::LeavingBackgroundEventArgs>>(arg);
 
-            return py::convert(winrt::Windows::ApplicationModel::Core::CoreApplication::LeavingBackground(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::Core::CoreApplication::LeavingBackground(param0);
+            }());
         }
         catch (...)
         {
@@ -1069,7 +1189,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Windows::ApplicationModel::Core::CoreApplication::LeavingBackground(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::ApplicationModel::Core::CoreApplication::LeavingBackground(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1098,7 +1222,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(winrt::Windows::ApplicationModel::Core::CoreApplication::Resuming(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::Core::CoreApplication::Resuming(param0);
+            }());
         }
         catch (...)
         {
@@ -1126,7 +1254,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Windows::ApplicationModel::Core::CoreApplication::Resuming(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::ApplicationModel::Core::CoreApplication::Resuming(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1155,7 +1287,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::ApplicationModel::SuspendingEventArgs>>(arg);
 
-            return py::convert(winrt::Windows::ApplicationModel::Core::CoreApplication::Suspending(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::Core::CoreApplication::Suspending(param0);
+            }());
         }
         catch (...)
         {
@@ -1183,7 +1319,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Windows::ApplicationModel::Core::CoreApplication::Suspending(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::ApplicationModel::Core::CoreApplication::Suspending(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1304,7 +1444,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.CoreWindow());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CoreWindow();
+            }());
         }
         catch (...)
         {
@@ -1330,7 +1474,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsHosted());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsHosted();
+            }());
         }
         catch (...)
         {
@@ -1356,7 +1504,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsMain());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsMain();
+            }());
         }
         catch (...)
         {
@@ -1382,7 +1534,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Dispatcher());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Dispatcher();
+            }());
         }
         catch (...)
         {
@@ -1408,7 +1564,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsComponent());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsComponent();
+            }());
         }
         catch (...)
         {
@@ -1434,7 +1594,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.TitleBar());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TitleBar();
+            }());
         }
         catch (...)
         {
@@ -1460,7 +1624,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Properties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Properties();
+            }());
         }
         catch (...)
         {
@@ -1486,7 +1654,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.DispatcherQueue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DispatcherQueue();
+            }());
         }
         catch (...)
         {
@@ -1514,7 +1686,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Core::CoreApplicationView, winrt::Windows::ApplicationModel::Activation::IActivatedEventArgs>>(arg);
 
-            return py::convert(self->obj.Activated(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Activated(param0);
+            }());
         }
         catch (...)
         {
@@ -1542,7 +1718,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Activated(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Activated(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1571,7 +1751,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Core::CoreApplicationView, winrt::Windows::ApplicationModel::Core::HostedViewClosingEventArgs>>(arg);
 
-            return py::convert(self->obj.HostedViewClosing(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HostedViewClosing(param0);
+            }());
         }
         catch (...)
         {
@@ -1599,7 +1783,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.HostedViewClosing(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.HostedViewClosing(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1704,7 +1892,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExtendViewIntoTitleBar());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExtendViewIntoTitleBar();
+            }());
         }
         catch (...)
         {
@@ -1738,7 +1930,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.ExtendViewIntoTitleBar(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ExtendViewIntoTitleBar(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1765,7 +1961,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Height());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Height();
+            }());
         }
         catch (...)
         {
@@ -1791,7 +1991,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsVisible());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsVisible();
+            }());
         }
         catch (...)
         {
@@ -1817,7 +2021,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.SystemOverlayLeftInset());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SystemOverlayLeftInset();
+            }());
         }
         catch (...)
         {
@@ -1843,7 +2051,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.SystemOverlayRightInset());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SystemOverlayRightInset();
+            }());
         }
         catch (...)
         {
@@ -1871,7 +2083,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Core::CoreApplicationViewTitleBar, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.IsVisibleChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsVisibleChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -1899,7 +2115,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.IsVisibleChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsVisibleChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1928,7 +2148,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Core::CoreApplicationViewTitleBar, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.LayoutMetricsChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LayoutMetricsChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -1956,7 +2180,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.LayoutMetricsChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.LayoutMetricsChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2062,7 +2290,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -2165,7 +2397,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
                     return nullptr;
                 }
 
-                self->obj.Propagate();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Propagate();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2198,7 +2434,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Handled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Handled();
+            }());
         }
         catch (...)
         {
@@ -2292,7 +2532,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.UnhandledError());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UnhandledError();
+            }());
         }
         catch (...)
         {
@@ -2387,7 +2631,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::ApplicationModel::Core::UnhandledErrorDetectedEventArgs>>(arg);
 
-            return py::convert(self->obj.UnhandledErrorDetected(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UnhandledErrorDetected(param0);
+            }());
         }
         catch (...)
         {
@@ -2415,7 +2663,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.UnhandledErrorDetected(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.UnhandledErrorDetected(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2640,7 +2892,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Core::CoreApplicationView>(args, 0);
 
-                self->obj.Initialize(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Initialize(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2679,7 +2935,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.Load(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Load(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2716,7 +2976,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
                     return nullptr;
                 }
 
-                self->obj.Run();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Run();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2755,7 +3019,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Core::CoreWindow>(args, 0);
 
-                self->obj.SetWindow(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetWindow(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2792,7 +3060,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
                     return nullptr;
                 }
 
-                self->obj.Uninitialize();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Uninitialize();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3100,7 +3372,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CreateView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateView();
+                }());
             }
             catch (...)
             {

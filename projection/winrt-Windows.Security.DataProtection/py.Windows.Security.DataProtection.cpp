@@ -42,7 +42,11 @@ namespace py::cpp::Windows::Security::DataProtection
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -141,7 +145,11 @@ namespace py::cpp::Windows::Security::DataProtection
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -167,7 +175,11 @@ namespace py::cpp::Windows::Security::DataProtection
                 return nullptr;
             }
 
-            return py::convert(self->obj.UnprotectedBuffer());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UnprotectedBuffer();
+            }());
         }
         catch (...)
         {
@@ -267,7 +279,11 @@ namespace py::cpp::Windows::Security::DataProtection
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 0);
 
-                return py::convert(self->obj.GetStorageItemProtectionInfoAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetStorageItemProtectionInfoAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -305,7 +321,11 @@ namespace py::cpp::Windows::Security::DataProtection
 
                 auto param0 = py::convert_to<winrt::Windows::Security::DataProtection::UserDataAvailability>(args, 0);
 
-                return py::convert(self->obj.IsContinuedDataAvailabilityExpected(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsContinuedDataAvailabilityExpected(param0);
+                }());
             }
             catch (...)
             {
@@ -344,7 +364,11 @@ namespace py::cpp::Windows::Security::DataProtection
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Security::DataProtection::UserDataAvailability>(args, 1);
 
-                return py::convert(self->obj.ProtectBufferAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ProtectBufferAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -383,7 +407,11 @@ namespace py::cpp::Windows::Security::DataProtection
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Security::DataProtection::UserDataAvailability>(args, 1);
 
-                return py::convert(self->obj.ProtectStorageItemAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ProtectStorageItemAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -419,7 +447,11 @@ namespace py::cpp::Windows::Security::DataProtection
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Security::DataProtection::UserDataProtectionManager::TryGetDefault());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::DataProtection::UserDataProtectionManager::TryGetDefault();
+                }());
             }
             catch (...)
             {
@@ -457,7 +489,11 @@ namespace py::cpp::Windows::Security::DataProtection
 
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
 
-                return py::convert(winrt::Windows::Security::DataProtection::UserDataProtectionManager::TryGetForUser(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::DataProtection::UserDataProtectionManager::TryGetForUser(param0);
+                }());
             }
             catch (...)
             {
@@ -495,7 +531,11 @@ namespace py::cpp::Windows::Security::DataProtection
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
-                return py::convert(self->obj.UnprotectBufferAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.UnprotectBufferAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -529,7 +569,11 @@ namespace py::cpp::Windows::Security::DataProtection
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Security::DataProtection::UserDataProtectionManager, winrt::Windows::Security::DataProtection::UserDataAvailabilityStateChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.DataAvailabilityStateChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DataAvailabilityStateChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -557,7 +601,11 @@ namespace py::cpp::Windows::Security::DataProtection
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.DataAvailabilityStateChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DataAvailabilityStateChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -684,7 +732,11 @@ namespace py::cpp::Windows::Security::DataProtection
                 return nullptr;
             }
 
-            return py::convert(self->obj.Availability());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Availability();
+            }());
         }
         catch (...)
         {

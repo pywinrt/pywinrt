@@ -38,7 +38,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExitCode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExitCode();
+            }());
         }
         catch (...)
         {
@@ -159,7 +163,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -199,7 +207,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Hosting::DesignerAppViewState>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Size>(args, 1);
 
-                return py::convert(self->obj.CreateNewViewAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateNewViewAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -239,7 +251,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
                 auto param1 = py::convert_to<winrt::guid>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
-                return py::convert(self->obj.LoadObjectIntoAppAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.LoadObjectIntoAppAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -271,7 +287,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppUserModelId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppUserModelId();
+            }());
         }
         catch (...)
         {
@@ -299,7 +319,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Hosting::DesignerAppManager, winrt::Windows::UI::Xaml::Hosting::DesignerAppExitedEventArgs>>(arg);
 
-            return py::convert(self->obj.DesignerAppExited(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DesignerAppExited(param0);
+            }());
         }
         catch (...)
         {
@@ -327,7 +351,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.DesignerAppExited(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DesignerAppExited(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -370,7 +398,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -451,7 +483,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -491,7 +527,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Hosting::DesignerAppViewState>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Size>(args, 1);
 
-                return py::convert(self->obj.UpdateViewAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.UpdateViewAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -523,7 +563,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppUserModelId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppUserModelId();
+            }());
         }
         catch (...)
         {
@@ -549,7 +593,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
                 return nullptr;
             }
 
-            return py::convert(self->obj.ApplicationViewId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ApplicationViewId();
+            }());
         }
         catch (...)
         {
@@ -575,7 +623,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
                 return nullptr;
             }
 
-            return py::convert(self->obj.ViewSize());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ViewSize();
+            }());
         }
         catch (...)
         {
@@ -601,7 +653,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
                 return nullptr;
             }
 
-            return py::convert(self->obj.ViewState());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ViewState();
+            }());
         }
         catch (...)
         {
@@ -643,7 +699,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -806,7 +866,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
                     return nullptr;
                 }
 
-                self->obj.try_as<winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSource>().Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.try_as<winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSource>().Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -845,7 +909,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Hosting::XamlSourceFocusNavigationRequest>(args, 0);
 
-                return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSource>().NavigateFocus(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.try_as<winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSource>().NavigateFocus(param0);
+                }());
             }
             catch (...)
             {
@@ -877,7 +945,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSource>().Content());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSource>().Content();
+            }());
         }
         catch (...)
         {
@@ -911,7 +983,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::UIElement>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSource>().Content(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSource>().Content(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -938,7 +1014,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSource>().HasFocus());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSource>().HasFocus();
+            }());
         }
         catch (...)
         {
@@ -966,7 +1046,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSource, winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSourceGotFocusEventArgs>>(arg);
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSource>().GotFocus(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSource>().GotFocus(param0);
+            }());
         }
         catch (...)
         {
@@ -994,7 +1078,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSource>().GotFocus(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSource>().GotFocus(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1023,7 +1111,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSource, winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSourceTakeFocusRequestedEventArgs>>(arg);
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSource>().TakeFocusRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSource>().TakeFocusRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -1051,7 +1143,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSource>().TakeFocusRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSource>().TakeFocusRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1094,7 +1190,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
     {
         try
         {
-            self->obj.try_as<winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSource>().Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSource>().Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -1198,7 +1298,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
                 return nullptr;
             }
 
-            return py::convert(self->obj.Request());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Request();
+            }());
         }
         catch (...)
         {
@@ -1291,7 +1395,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
                 return nullptr;
             }
 
-            return py::convert(self->obj.Request());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Request();
+            }());
         }
         catch (...)
         {
@@ -1390,7 +1498,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
                 auto param0 = py::convert_to<winrt::Windows::UI::WindowManagement::AppWindow>(args, 0);
 
-                return py::convert(winrt::Windows::UI::Xaml::Hosting::ElementCompositionPreview::GetAppWindowContent(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::Xaml::Hosting::ElementCompositionPreview::GetAppWindowContent(param0);
+                }());
             }
             catch (...)
             {
@@ -1428,7 +1540,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::UIElement>(args, 0);
 
-                return py::convert(winrt::Windows::UI::Xaml::Hosting::ElementCompositionPreview::GetElementChildVisual(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::Xaml::Hosting::ElementCompositionPreview::GetElementChildVisual(param0);
+                }());
             }
             catch (...)
             {
@@ -1466,7 +1582,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::UIElement>(args, 0);
 
-                return py::convert(winrt::Windows::UI::Xaml::Hosting::ElementCompositionPreview::GetElementVisual(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::Xaml::Hosting::ElementCompositionPreview::GetElementVisual(param0);
+                }());
             }
             catch (...)
             {
@@ -1504,7 +1624,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::UIElement>(args, 0);
 
-                return py::convert(winrt::Windows::UI::Xaml::Hosting::ElementCompositionPreview::GetPointerPositionPropertySet(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::Xaml::Hosting::ElementCompositionPreview::GetPointerPositionPropertySet(param0);
+                }());
             }
             catch (...)
             {
@@ -1542,7 +1666,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::ScrollViewer>(args, 0);
 
-                return py::convert(winrt::Windows::UI::Xaml::Hosting::ElementCompositionPreview::GetScrollViewerManipulationPropertySet(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::Xaml::Hosting::ElementCompositionPreview::GetScrollViewerManipulationPropertySet(param0);
+                }());
             }
             catch (...)
             {
@@ -1581,7 +1709,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
                 auto param0 = py::convert_to<winrt::Windows::UI::WindowManagement::AppWindow>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::UIElement>(args, 1);
 
-                winrt::Windows::UI::Xaml::Hosting::ElementCompositionPreview::SetAppWindowContent(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::UI::Xaml::Hosting::ElementCompositionPreview::SetAppWindowContent(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1621,7 +1753,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::UIElement>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Composition::Visual>(args, 1);
 
-                winrt::Windows::UI::Xaml::Hosting::ElementCompositionPreview::SetElementChildVisual(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::UI::Xaml::Hosting::ElementCompositionPreview::SetElementChildVisual(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1661,7 +1797,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::UIElement>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Composition::ICompositionAnimationBase>(args, 1);
 
-                winrt::Windows::UI::Xaml::Hosting::ElementCompositionPreview::SetImplicitHideAnimation(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::UI::Xaml::Hosting::ElementCompositionPreview::SetImplicitHideAnimation(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1701,7 +1841,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::UIElement>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Composition::ICompositionAnimationBase>(args, 1);
 
-                winrt::Windows::UI::Xaml::Hosting::ElementCompositionPreview::SetImplicitShowAnimation(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::UI::Xaml::Hosting::ElementCompositionPreview::SetImplicitShowAnimation(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1741,7 +1885,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::UIElement>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                winrt::Windows::UI::Xaml::Hosting::ElementCompositionPreview::SetIsTranslationEnabled(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::UI::Xaml::Hosting::ElementCompositionPreview::SetIsTranslationEnabled(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1879,7 +2027,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1916,7 +2068,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::UI::Xaml::Hosting::WindowsXamlManager::InitializeForCurrentThread());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::Xaml::Hosting::WindowsXamlManager::InitializeForCurrentThread();
+                }());
             }
             catch (...)
             {
@@ -1964,7 +2120,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -2119,7 +2279,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
                 return nullptr;
             }
 
-            return py::convert(self->obj.CorrelationId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CorrelationId();
+            }());
         }
         catch (...)
         {
@@ -2145,7 +2309,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
                 return nullptr;
             }
 
-            return py::convert(self->obj.HintRect());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HintRect();
+            }());
         }
         catch (...)
         {
@@ -2171,7 +2339,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
                 return nullptr;
             }
 
-            return py::convert(self->obj.Reason());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Reason();
+            }());
         }
         catch (...)
         {
@@ -2290,7 +2462,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
                 return nullptr;
             }
 
-            return py::convert(self->obj.WasFocusMoved());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WasFocusMoved();
+            }());
         }
         catch (...)
         {
@@ -2395,7 +2571,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
                 auto param5 = py::convert_to<bool>(args, 5);
                 winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutPlacementMode param6{};
 
-                auto return_value = winrt::Windows::UI::Xaml::Hosting::XamlUIPresenter::GetFlyoutPlacement(param0, param1, param2, param3, param4, param5, param6);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::Xaml::Hosting::XamlUIPresenter::GetFlyoutPlacement(param0, param1, param2, param3, param4, param5, param6);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -2407,6 +2587,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out6.get());
             }
             catch (...)
@@ -2448,7 +2629,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
                 winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutPlacementMode param2{};
                 bool param3{};
 
-                auto return_value = winrt::Windows::UI::Xaml::Hosting::XamlUIPresenter::GetFlyoutPlacementTargetInfo(param0, param1, param2, param3);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::Xaml::Hosting::XamlUIPresenter::GetFlyoutPlacementTargetInfo(param0, param1, param2, param3);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -2465,6 +2650,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(3, out_return_value.get(), out2.get(), out3.get());
             }
             catch (...)
@@ -2501,7 +2687,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
                     return nullptr;
                 }
 
-                winrt::Windows::UI::Xaml::Hosting::XamlUIPresenter::NotifyWindowSizeChanged();
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::UI::Xaml::Hosting::XamlUIPresenter::NotifyWindowSizeChanged();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2538,7 +2728,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
                     return nullptr;
                 }
 
-                self->obj.Present();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Present();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2575,7 +2769,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
                     return nullptr;
                 }
 
-                self->obj.Render();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Render();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2614,7 +2812,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost>(args, 0);
 
-                winrt::Windows::UI::Xaml::Hosting::XamlUIPresenter::SetHost(param0);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::UI::Xaml::Hosting::XamlUIPresenter::SetHost(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2654,7 +2856,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
-                self->obj.SetSize(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetSize(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2687,7 +2893,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
                 return nullptr;
             }
 
-            return py::convert(self->obj.ThemeResourcesXaml());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ThemeResourcesXaml();
+            }());
         }
         catch (...)
         {
@@ -2721,7 +2931,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ThemeResourcesXaml(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ThemeResourcesXaml(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2748,7 +2962,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
                 return nullptr;
             }
 
-            return py::convert(self->obj.ThemeKey());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ThemeKey();
+            }());
         }
         catch (...)
         {
@@ -2782,7 +3000,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ThemeKey(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ThemeKey(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2809,7 +3031,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
                 return nullptr;
             }
 
-            return py::convert(self->obj.RootElement());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RootElement();
+            }());
         }
         catch (...)
         {
@@ -2843,7 +3069,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::UIElement>(arg);
 
-            self->obj.RootElement(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RootElement(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2870,7 +3100,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Hosting::XamlUIPresenter::CompleteTimelinesAutomatically());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Hosting::XamlUIPresenter::CompleteTimelinesAutomatically();
+            }());
         }
         catch (...)
         {
@@ -2904,7 +3138,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
             auto param0 = py::convert_to<bool>(arg);
 
-            winrt::Windows::UI::Xaml::Hosting::XamlUIPresenter::CompleteTimelinesAutomatically(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::UI::Xaml::Hosting::XamlUIPresenter::CompleteTimelinesAutomatically(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3039,7 +3277,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.ResolveFileResource(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ResolveFileResource(param0);
+                }());
             }
             catch (...)
             {
@@ -3236,7 +3478,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetGenericXamlFilePath());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetGenericXamlFilePath();
+                }());
             }
             catch (...)
             {
@@ -3431,7 +3677,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 2);
 
-                return py::convert(self->obj.ResolveDictionaryResource(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ResolveDictionaryResource(param0, param1, param2);
+                }());
             }
             catch (...)
             {

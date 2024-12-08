@@ -44,7 +44,11 @@ namespace py::cpp::Windows::Devices::Scanners
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Scanners::ImageScanner::FromIdAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Scanners::ImageScanner::FromIdAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -80,7 +84,11 @@ namespace py::cpp::Windows::Devices::Scanners
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Scanners::ImageScanner::GetDeviceSelector());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Scanners::ImageScanner::GetDeviceSelector();
+                }());
             }
             catch (...)
             {
@@ -118,7 +126,11 @@ namespace py::cpp::Windows::Devices::Scanners
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Scanners::ImageScannerScanSource>(args, 0);
 
-                return py::convert(self->obj.IsPreviewSupported(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsPreviewSupported(param0);
+                }());
             }
             catch (...)
             {
@@ -156,7 +168,11 @@ namespace py::cpp::Windows::Devices::Scanners
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Scanners::ImageScannerScanSource>(args, 0);
 
-                return py::convert(self->obj.IsScanSourceSupported(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsScanSourceSupported(param0);
+                }());
             }
             catch (...)
             {
@@ -195,7 +211,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 auto param0 = py::convert_to<winrt::Windows::Devices::Scanners::ImageScannerScanSource>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::StorageFolder>(args, 1);
 
-                return py::convert(self->obj.ScanFilesToFolderAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ScanFilesToFolderAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -234,7 +254,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 auto param0 = py::convert_to<winrt::Windows::Devices::Scanners::ImageScannerScanSource>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 1);
 
-                return py::convert(self->obj.ScanPreviewToStreamAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ScanPreviewToStreamAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -266,7 +290,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.AutoConfiguration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AutoConfiguration();
+            }());
         }
         catch (...)
         {
@@ -292,7 +320,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.DefaultScanSource());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DefaultScanSource();
+            }());
         }
         catch (...)
         {
@@ -318,7 +350,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceId();
+            }());
         }
         catch (...)
         {
@@ -344,7 +380,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.FeederConfiguration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FeederConfiguration();
+            }());
         }
         catch (...)
         {
@@ -370,7 +410,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.FlatbedConfiguration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FlatbedConfiguration();
+            }());
         }
         catch (...)
         {
@@ -504,7 +548,11 @@ namespace py::cpp::Windows::Devices::Scanners
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Scanners::ImageScannerFormat>(args, 0);
 
-                return py::convert(self->obj.IsFormatSupported(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsFormatSupported(param0);
+                }());
             }
             catch (...)
             {
@@ -536,7 +584,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.Format());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Format();
+            }());
         }
         catch (...)
         {
@@ -570,7 +622,11 @@ namespace py::cpp::Windows::Devices::Scanners
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Scanners::ImageScannerFormat>(arg);
 
-            self->obj.Format(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Format(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -597,7 +653,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.DefaultFormat());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DefaultFormat();
+            }());
         }
         catch (...)
         {
@@ -698,7 +758,11 @@ namespace py::cpp::Windows::Devices::Scanners
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Scanners::ImageScannerAutoCroppingMode>(args, 0);
 
-                return py::convert(self->obj.IsAutoCroppingModeSupported(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsAutoCroppingModeSupported(param0);
+                }());
             }
             catch (...)
             {
@@ -736,7 +800,11 @@ namespace py::cpp::Windows::Devices::Scanners
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Scanners::ImageScannerColorMode>(args, 0);
 
-                return py::convert(self->obj.IsColorModeSupported(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsColorModeSupported(param0);
+                }());
             }
             catch (...)
             {
@@ -774,7 +842,11 @@ namespace py::cpp::Windows::Devices::Scanners
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Scanners::ImageScannerFormat>(args, 0);
 
-                return py::convert(self->obj.IsFormatSupported(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsFormatSupported(param0);
+                }());
             }
             catch (...)
             {
@@ -813,7 +885,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::PrintMediaSize>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::Printing::PrintOrientation>(args, 1);
 
-                return py::convert(self->obj.IsPageSizeSupported(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsPageSizeSupported(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -845,7 +921,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.ScanAhead());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ScanAhead();
+            }());
         }
         catch (...)
         {
@@ -879,7 +959,11 @@ namespace py::cpp::Windows::Devices::Scanners
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.ScanAhead(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ScanAhead(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -906,7 +990,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.AutoDetectPageSize());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AutoDetectPageSize();
+            }());
         }
         catch (...)
         {
@@ -940,7 +1028,11 @@ namespace py::cpp::Windows::Devices::Scanners
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.AutoDetectPageSize(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AutoDetectPageSize(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -967,7 +1059,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.Duplex());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Duplex();
+            }());
         }
         catch (...)
         {
@@ -1001,7 +1097,11 @@ namespace py::cpp::Windows::Devices::Scanners
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Duplex(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Duplex(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1028,7 +1128,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxNumberOfPages());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxNumberOfPages();
+            }());
         }
         catch (...)
         {
@@ -1062,7 +1166,11 @@ namespace py::cpp::Windows::Devices::Scanners
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.MaxNumberOfPages(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MaxNumberOfPages(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1089,7 +1197,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.PageOrientation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PageOrientation();
+            }());
         }
         catch (...)
         {
@@ -1123,7 +1235,11 @@ namespace py::cpp::Windows::Devices::Scanners
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::PrintOrientation>(arg);
 
-            self->obj.PageOrientation(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PageOrientation(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1150,7 +1266,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.PageSize());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PageSize();
+            }());
         }
         catch (...)
         {
@@ -1184,7 +1304,11 @@ namespace py::cpp::Windows::Devices::Scanners
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::PrintMediaSize>(arg);
 
-            self->obj.PageSize(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PageSize(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1211,7 +1335,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.PageSizeDimensions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PageSizeDimensions();
+            }());
         }
         catch (...)
         {
@@ -1237,7 +1365,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.CanScanDuplex());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CanScanDuplex();
+            }());
         }
         catch (...)
         {
@@ -1263,7 +1395,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.CanScanAhead());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CanScanAhead();
+            }());
         }
         catch (...)
         {
@@ -1289,7 +1425,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.CanAutoDetectPageSize());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CanAutoDetectPageSize();
+            }());
         }
         catch (...)
         {
@@ -1315,7 +1455,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.Format());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Format();
+            }());
         }
         catch (...)
         {
@@ -1349,7 +1493,11 @@ namespace py::cpp::Windows::Devices::Scanners
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Scanners::ImageScannerFormat>(arg);
 
-            self->obj.Format(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Format(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1376,7 +1524,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.DefaultFormat());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DefaultFormat();
+            }());
         }
         catch (...)
         {
@@ -1402,7 +1554,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.DesiredResolution());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DesiredResolution();
+            }());
         }
         catch (...)
         {
@@ -1436,7 +1592,11 @@ namespace py::cpp::Windows::Devices::Scanners
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Scanners::ImageScannerResolution>(arg);
 
-            self->obj.DesiredResolution(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DesiredResolution(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1463,7 +1623,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.Contrast());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Contrast();
+            }());
         }
         catch (...)
         {
@@ -1497,7 +1661,11 @@ namespace py::cpp::Windows::Devices::Scanners
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.Contrast(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Contrast(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1524,7 +1692,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.ColorMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ColorMode();
+            }());
         }
         catch (...)
         {
@@ -1558,7 +1730,11 @@ namespace py::cpp::Windows::Devices::Scanners
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Scanners::ImageScannerColorMode>(arg);
 
-            self->obj.ColorMode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ColorMode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1585,7 +1761,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.AutoCroppingMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AutoCroppingMode();
+            }());
         }
         catch (...)
         {
@@ -1619,7 +1799,11 @@ namespace py::cpp::Windows::Devices::Scanners
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Scanners::ImageScannerAutoCroppingMode>(arg);
 
-            self->obj.AutoCroppingMode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AutoCroppingMode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1646,7 +1830,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.Brightness());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Brightness();
+            }());
         }
         catch (...)
         {
@@ -1680,7 +1868,11 @@ namespace py::cpp::Windows::Devices::Scanners
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.Brightness(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Brightness(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1707,7 +1899,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectedScanRegion());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SelectedScanRegion();
+            }());
         }
         catch (...)
         {
@@ -1741,7 +1937,11 @@ namespace py::cpp::Windows::Devices::Scanners
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(arg);
 
-            self->obj.SelectedScanRegion(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SelectedScanRegion(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1768,7 +1968,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.MinBrightness());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MinBrightness();
+            }());
         }
         catch (...)
         {
@@ -1794,7 +1998,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.MinContrast());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MinContrast();
+            }());
         }
         catch (...)
         {
@@ -1820,7 +2028,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.MinResolution());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MinResolution();
+            }());
         }
         catch (...)
         {
@@ -1846,7 +2058,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.MinScanArea());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MinScanArea();
+            }());
         }
         catch (...)
         {
@@ -1872,7 +2088,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.OpticalResolution());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OpticalResolution();
+            }());
         }
         catch (...)
         {
@@ -1898,7 +2118,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxScanArea());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxScanArea();
+            }());
         }
         catch (...)
         {
@@ -1924,7 +2148,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxResolution());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxResolution();
+            }());
         }
         catch (...)
         {
@@ -1950,7 +2178,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxContrast());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxContrast();
+            }());
         }
         catch (...)
         {
@@ -1976,7 +2208,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxBrightness());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxBrightness();
+            }());
         }
         catch (...)
         {
@@ -2002,7 +2238,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.DefaultContrast());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DefaultContrast();
+            }());
         }
         catch (...)
         {
@@ -2028,7 +2268,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.DefaultColorMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DefaultColorMode();
+            }());
         }
         catch (...)
         {
@@ -2054,7 +2298,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.DefaultBrightness());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DefaultBrightness();
+            }());
         }
         catch (...)
         {
@@ -2080,7 +2328,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContrastStep());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContrastStep();
+            }());
         }
         catch (...)
         {
@@ -2106,7 +2358,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.BrightnessStep());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BrightnessStep();
+            }());
         }
         catch (...)
         {
@@ -2132,7 +2388,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.ActualResolution());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ActualResolution();
+            }());
         }
         catch (...)
         {
@@ -2267,7 +2527,11 @@ namespace py::cpp::Windows::Devices::Scanners
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Scanners::ImageScannerAutoCroppingMode>(args, 0);
 
-                return py::convert(self->obj.IsAutoCroppingModeSupported(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsAutoCroppingModeSupported(param0);
+                }());
             }
             catch (...)
             {
@@ -2305,7 +2569,11 @@ namespace py::cpp::Windows::Devices::Scanners
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Scanners::ImageScannerColorMode>(args, 0);
 
-                return py::convert(self->obj.IsColorModeSupported(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsColorModeSupported(param0);
+                }());
             }
             catch (...)
             {
@@ -2343,7 +2611,11 @@ namespace py::cpp::Windows::Devices::Scanners
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Scanners::ImageScannerFormat>(args, 0);
 
-                return py::convert(self->obj.IsFormatSupported(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsFormatSupported(param0);
+                }());
             }
             catch (...)
             {
@@ -2375,7 +2647,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.Format());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Format();
+            }());
         }
         catch (...)
         {
@@ -2409,7 +2685,11 @@ namespace py::cpp::Windows::Devices::Scanners
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Scanners::ImageScannerFormat>(arg);
 
-            self->obj.Format(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Format(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2436,7 +2716,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.DefaultFormat());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DefaultFormat();
+            }());
         }
         catch (...)
         {
@@ -2462,7 +2746,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectedScanRegion());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SelectedScanRegion();
+            }());
         }
         catch (...)
         {
@@ -2496,7 +2784,11 @@ namespace py::cpp::Windows::Devices::Scanners
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(arg);
 
-            self->obj.SelectedScanRegion(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SelectedScanRegion(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2523,7 +2815,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.DesiredResolution());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DesiredResolution();
+            }());
         }
         catch (...)
         {
@@ -2557,7 +2853,11 @@ namespace py::cpp::Windows::Devices::Scanners
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Scanners::ImageScannerResolution>(arg);
 
-            self->obj.DesiredResolution(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DesiredResolution(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2584,7 +2884,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.Contrast());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Contrast();
+            }());
         }
         catch (...)
         {
@@ -2618,7 +2922,11 @@ namespace py::cpp::Windows::Devices::Scanners
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.Contrast(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Contrast(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2645,7 +2953,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.Brightness());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Brightness();
+            }());
         }
         catch (...)
         {
@@ -2679,7 +2991,11 @@ namespace py::cpp::Windows::Devices::Scanners
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.Brightness(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Brightness(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2706,7 +3022,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.AutoCroppingMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AutoCroppingMode();
+            }());
         }
         catch (...)
         {
@@ -2740,7 +3060,11 @@ namespace py::cpp::Windows::Devices::Scanners
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Scanners::ImageScannerAutoCroppingMode>(arg);
 
-            self->obj.AutoCroppingMode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AutoCroppingMode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2767,7 +3091,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.ColorMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ColorMode();
+            }());
         }
         catch (...)
         {
@@ -2801,7 +3129,11 @@ namespace py::cpp::Windows::Devices::Scanners
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Scanners::ImageScannerColorMode>(arg);
 
-            self->obj.ColorMode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ColorMode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2828,7 +3160,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContrastStep());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContrastStep();
+            }());
         }
         catch (...)
         {
@@ -2854,7 +3190,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.DefaultBrightness());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DefaultBrightness();
+            }());
         }
         catch (...)
         {
@@ -2880,7 +3220,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.DefaultColorMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DefaultColorMode();
+            }());
         }
         catch (...)
         {
@@ -2906,7 +3250,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.DefaultContrast());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DefaultContrast();
+            }());
         }
         catch (...)
         {
@@ -2932,7 +3280,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.ActualResolution());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ActualResolution();
+            }());
         }
         catch (...)
         {
@@ -2958,7 +3310,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxBrightness());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxBrightness();
+            }());
         }
         catch (...)
         {
@@ -2984,7 +3340,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxContrast());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxContrast();
+            }());
         }
         catch (...)
         {
@@ -3010,7 +3370,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxResolution());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxResolution();
+            }());
         }
         catch (...)
         {
@@ -3036,7 +3400,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxScanArea());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxScanArea();
+            }());
         }
         catch (...)
         {
@@ -3062,7 +3430,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.MinBrightness());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MinBrightness();
+            }());
         }
         catch (...)
         {
@@ -3088,7 +3460,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.BrightnessStep());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BrightnessStep();
+            }());
         }
         catch (...)
         {
@@ -3114,7 +3490,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.MinContrast());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MinContrast();
+            }());
         }
         catch (...)
         {
@@ -3140,7 +3520,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.MinResolution());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MinResolution();
+            }());
         }
         catch (...)
         {
@@ -3166,7 +3550,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.OpticalResolution());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OpticalResolution();
+            }());
         }
         catch (...)
         {
@@ -3192,7 +3580,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.MinScanArea());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MinScanArea();
+            }());
         }
         catch (...)
         {
@@ -3310,7 +3702,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.Format());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Format();
+            }());
         }
         catch (...)
         {
@@ -3336,7 +3732,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.Succeeded());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Succeeded();
+            }());
         }
         catch (...)
         {
@@ -3430,7 +3830,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.ScannedFiles());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ScannedFiles();
+            }());
         }
         catch (...)
         {
@@ -3529,7 +3933,11 @@ namespace py::cpp::Windows::Devices::Scanners
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Scanners::ImageScannerFormat>(args, 0);
 
-                return py::convert(self->obj.IsFormatSupported(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsFormatSupported(param0);
+                }());
             }
             catch (...)
             {
@@ -3561,7 +3969,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.DefaultFormat());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DefaultFormat();
+            }());
         }
         catch (...)
         {
@@ -3587,7 +3999,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.Format());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Format();
+            }());
         }
         catch (...)
         {
@@ -3621,7 +4037,11 @@ namespace py::cpp::Windows::Devices::Scanners
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Scanners::ImageScannerFormat>(arg);
 
-            self->obj.Format(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Format(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3880,7 +4300,11 @@ namespace py::cpp::Windows::Devices::Scanners
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Scanners::ImageScannerAutoCroppingMode>(args, 0);
 
-                return py::convert(self->obj.IsAutoCroppingModeSupported(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsAutoCroppingModeSupported(param0);
+                }());
             }
             catch (...)
             {
@@ -3918,7 +4342,11 @@ namespace py::cpp::Windows::Devices::Scanners
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Scanners::ImageScannerColorMode>(args, 0);
 
-                return py::convert(self->obj.IsColorModeSupported(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsColorModeSupported(param0);
+                }());
             }
             catch (...)
             {
@@ -3956,7 +4384,11 @@ namespace py::cpp::Windows::Devices::Scanners
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Scanners::ImageScannerFormat>(args, 0);
 
-                return py::convert(self->obj.IsFormatSupported(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsFormatSupported(param0);
+                }());
             }
             catch (...)
             {
@@ -3988,7 +4420,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.ActualResolution());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ActualResolution();
+            }());
         }
         catch (...)
         {
@@ -4014,7 +4450,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.AutoCroppingMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AutoCroppingMode();
+            }());
         }
         catch (...)
         {
@@ -4048,7 +4488,11 @@ namespace py::cpp::Windows::Devices::Scanners
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Scanners::ImageScannerAutoCroppingMode>(arg);
 
-            self->obj.AutoCroppingMode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AutoCroppingMode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4075,7 +4519,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.Brightness());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Brightness();
+            }());
         }
         catch (...)
         {
@@ -4109,7 +4557,11 @@ namespace py::cpp::Windows::Devices::Scanners
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.Brightness(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Brightness(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4136,7 +4588,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.BrightnessStep());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BrightnessStep();
+            }());
         }
         catch (...)
         {
@@ -4162,7 +4618,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.ColorMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ColorMode();
+            }());
         }
         catch (...)
         {
@@ -4196,7 +4656,11 @@ namespace py::cpp::Windows::Devices::Scanners
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Scanners::ImageScannerColorMode>(arg);
 
-            self->obj.ColorMode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ColorMode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4223,7 +4687,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.Contrast());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Contrast();
+            }());
         }
         catch (...)
         {
@@ -4257,7 +4725,11 @@ namespace py::cpp::Windows::Devices::Scanners
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.Contrast(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Contrast(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4284,7 +4756,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContrastStep());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContrastStep();
+            }());
         }
         catch (...)
         {
@@ -4310,7 +4786,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.DefaultBrightness());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DefaultBrightness();
+            }());
         }
         catch (...)
         {
@@ -4336,7 +4816,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.DefaultColorMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DefaultColorMode();
+            }());
         }
         catch (...)
         {
@@ -4362,7 +4846,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.DefaultContrast());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DefaultContrast();
+            }());
         }
         catch (...)
         {
@@ -4388,7 +4876,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.DesiredResolution());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DesiredResolution();
+            }());
         }
         catch (...)
         {
@@ -4422,7 +4914,11 @@ namespace py::cpp::Windows::Devices::Scanners
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Scanners::ImageScannerResolution>(arg);
 
-            self->obj.DesiredResolution(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DesiredResolution(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4449,7 +4945,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxBrightness());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxBrightness();
+            }());
         }
         catch (...)
         {
@@ -4475,7 +4975,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxContrast());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxContrast();
+            }());
         }
         catch (...)
         {
@@ -4501,7 +5005,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxResolution());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxResolution();
+            }());
         }
         catch (...)
         {
@@ -4527,7 +5035,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxScanArea());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxScanArea();
+            }());
         }
         catch (...)
         {
@@ -4553,7 +5065,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.MinBrightness());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MinBrightness();
+            }());
         }
         catch (...)
         {
@@ -4579,7 +5095,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.MinContrast());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MinContrast();
+            }());
         }
         catch (...)
         {
@@ -4605,7 +5125,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.MinResolution());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MinResolution();
+            }());
         }
         catch (...)
         {
@@ -4631,7 +5155,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.MinScanArea());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MinScanArea();
+            }());
         }
         catch (...)
         {
@@ -4657,7 +5185,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.OpticalResolution());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OpticalResolution();
+            }());
         }
         catch (...)
         {
@@ -4683,7 +5215,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectedScanRegion());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SelectedScanRegion();
+            }());
         }
         catch (...)
         {
@@ -4717,7 +5253,11 @@ namespace py::cpp::Windows::Devices::Scanners
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(arg);
 
-            self->obj.SelectedScanRegion(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SelectedScanRegion(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4744,7 +5284,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.DefaultFormat());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DefaultFormat();
+            }());
         }
         catch (...)
         {
@@ -4770,7 +5314,11 @@ namespace py::cpp::Windows::Devices::Scanners
                 return nullptr;
             }
 
-            return py::convert(self->obj.Format());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Format();
+            }());
         }
         catch (...)
         {
@@ -4804,7 +5352,11 @@ namespace py::cpp::Windows::Devices::Scanners
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Scanners::ImageScannerFormat>(arg);
 
-            self->obj.Format(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Format(param0);
+            }
+
             return 0;
         }
         catch (...)

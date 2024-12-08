@@ -44,7 +44,11 @@ namespace py::cpp::Windows::Media::Ocr
 
                 auto param0 = py::convert_to<winrt::Windows::Globalization::Language>(args, 0);
 
-                return py::convert(winrt::Windows::Media::Ocr::OcrEngine::IsLanguageSupported(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::Ocr::OcrEngine::IsLanguageSupported(param0);
+                }());
             }
             catch (...)
             {
@@ -82,7 +86,11 @@ namespace py::cpp::Windows::Media::Ocr
 
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::SoftwareBitmap>(args, 0);
 
-                return py::convert(self->obj.RecognizeAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RecognizeAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -120,7 +128,11 @@ namespace py::cpp::Windows::Media::Ocr
 
                 auto param0 = py::convert_to<winrt::Windows::Globalization::Language>(args, 0);
 
-                return py::convert(winrt::Windows::Media::Ocr::OcrEngine::TryCreateFromLanguage(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::Ocr::OcrEngine::TryCreateFromLanguage(param0);
+                }());
             }
             catch (...)
             {
@@ -156,7 +168,11 @@ namespace py::cpp::Windows::Media::Ocr
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Media::Ocr::OcrEngine::TryCreateFromUserProfileLanguages());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::Ocr::OcrEngine::TryCreateFromUserProfileLanguages();
+                }());
             }
             catch (...)
             {
@@ -188,7 +204,11 @@ namespace py::cpp::Windows::Media::Ocr
                 return nullptr;
             }
 
-            return py::convert(self->obj.RecognizerLanguage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RecognizerLanguage();
+            }());
         }
         catch (...)
         {
@@ -214,7 +234,11 @@ namespace py::cpp::Windows::Media::Ocr
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::Ocr::OcrEngine::AvailableRecognizerLanguages());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::Ocr::OcrEngine::AvailableRecognizerLanguages();
+            }());
         }
         catch (...)
         {
@@ -240,7 +264,11 @@ namespace py::cpp::Windows::Media::Ocr
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::Ocr::OcrEngine::MaxImageDimension());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::Ocr::OcrEngine::MaxImageDimension();
+            }());
         }
         catch (...)
         {
@@ -364,7 +392,11 @@ namespace py::cpp::Windows::Media::Ocr
                 return nullptr;
             }
 
-            return py::convert(self->obj.Text());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Text();
+            }());
         }
         catch (...)
         {
@@ -390,7 +422,11 @@ namespace py::cpp::Windows::Media::Ocr
                 return nullptr;
             }
 
-            return py::convert(self->obj.Words());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Words();
+            }());
         }
         catch (...)
         {
@@ -484,7 +520,11 @@ namespace py::cpp::Windows::Media::Ocr
                 return nullptr;
             }
 
-            return py::convert(self->obj.Lines());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Lines();
+            }());
         }
         catch (...)
         {
@@ -510,7 +550,11 @@ namespace py::cpp::Windows::Media::Ocr
                 return nullptr;
             }
 
-            return py::convert(self->obj.Text());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Text();
+            }());
         }
         catch (...)
         {
@@ -536,7 +580,11 @@ namespace py::cpp::Windows::Media::Ocr
                 return nullptr;
             }
 
-            return py::convert(self->obj.TextAngle());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TextAngle();
+            }());
         }
         catch (...)
         {
@@ -631,7 +679,11 @@ namespace py::cpp::Windows::Media::Ocr
                 return nullptr;
             }
 
-            return py::convert(self->obj.BoundingRect());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BoundingRect();
+            }());
         }
         catch (...)
         {
@@ -657,7 +709,11 @@ namespace py::cpp::Windows::Media::Ocr
                 return nullptr;
             }
 
-            return py::convert(self->obj.Text());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Text();
+            }());
         }
         catch (...)
         {

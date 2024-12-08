@@ -36,7 +36,11 @@ namespace py::cpp::Windows::System::Diagnostics::Telemetry
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::System::Diagnostics::Telemetry::PlatformTelemetryClient::Register(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::System::Diagnostics::Telemetry::PlatformTelemetryClient::Register(param0);
+                }());
             }
             catch (...)
             {
@@ -75,7 +79,11 @@ namespace py::cpp::Windows::System::Diagnostics::Telemetry
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::System::Diagnostics::Telemetry::PlatformTelemetryRegistrationSettings>(args, 1);
 
-                return py::convert(winrt::Windows::System::Diagnostics::Telemetry::PlatformTelemetryClient::Register(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::System::Diagnostics::Telemetry::PlatformTelemetryClient::Register(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -173,7 +181,11 @@ namespace py::cpp::Windows::System::Diagnostics::Telemetry
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -288,7 +300,11 @@ namespace py::cpp::Windows::System::Diagnostics::Telemetry
                 return nullptr;
             }
 
-            return py::convert(self->obj.UploadQuotaSize());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UploadQuotaSize();
+            }());
         }
         catch (...)
         {
@@ -322,7 +338,11 @@ namespace py::cpp::Windows::System::Diagnostics::Telemetry
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.UploadQuotaSize(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.UploadQuotaSize(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -349,7 +369,11 @@ namespace py::cpp::Windows::System::Diagnostics::Telemetry
                 return nullptr;
             }
 
-            return py::convert(self->obj.StorageSize());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StorageSize();
+            }());
         }
         catch (...)
         {
@@ -383,7 +407,11 @@ namespace py::cpp::Windows::System::Diagnostics::Telemetry
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.StorageSize(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StorageSize(param0);
+            }
+
             return 0;
         }
         catch (...)

@@ -30,7 +30,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::System::RemoteSystems::KnownRemoteSystemCapabilities::AppService());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::System::RemoteSystems::KnownRemoteSystemCapabilities::AppService();
+            }());
         }
         catch (...)
         {
@@ -56,7 +60,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::System::RemoteSystems::KnownRemoteSystemCapabilities::LaunchUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::System::RemoteSystems::KnownRemoteSystemCapabilities::LaunchUri();
+            }());
         }
         catch (...)
         {
@@ -82,7 +90,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::System::RemoteSystems::KnownRemoteSystemCapabilities::RemoteSession());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::System::RemoteSystems::KnownRemoteSystemCapabilities::RemoteSession();
+            }());
         }
         catch (...)
         {
@@ -108,7 +120,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::System::RemoteSystems::KnownRemoteSystemCapabilities::SpatialEntity());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::System::RemoteSystems::KnownRemoteSystemCapabilities::SpatialEntity();
+            }());
         }
         catch (...)
         {
@@ -206,7 +222,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::System::RemoteSystems::RemoteSystem::CreateWatcher());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::System::RemoteSystems::RemoteSystem::CreateWatcher();
+                }());
             }
             catch (...)
             {
@@ -244,7 +264,11 @@ namespace py::cpp::Windows::System::RemoteSystems
 
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
 
-                return py::convert(winrt::Windows::System::RemoteSystems::RemoteSystem::CreateWatcherForUser(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::System::RemoteSystems::RemoteSystem::CreateWatcherForUser(param0);
+                }());
             }
             catch (...)
             {
@@ -282,7 +306,11 @@ namespace py::cpp::Windows::System::RemoteSystems
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::System::RemoteSystems::IRemoteSystemFilter>>(args, 0);
 
-                return py::convert(winrt::Windows::System::RemoteSystems::RemoteSystem::CreateWatcher(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::System::RemoteSystems::RemoteSystem::CreateWatcher(param0);
+                }());
             }
             catch (...)
             {
@@ -321,7 +349,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::System::RemoteSystems::IRemoteSystemFilter>>(args, 1);
 
-                return py::convert(winrt::Windows::System::RemoteSystems::RemoteSystem::CreateWatcherForUser(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::System::RemoteSystems::RemoteSystem::CreateWatcherForUser(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -359,7 +391,11 @@ namespace py::cpp::Windows::System::RemoteSystems
 
                 auto param0 = py::convert_to<winrt::Windows::Networking::HostName>(args, 0);
 
-                return py::convert(winrt::Windows::System::RemoteSystems::RemoteSystem::FindByHostNameAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::System::RemoteSystems::RemoteSystem::FindByHostNameAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -397,7 +433,11 @@ namespace py::cpp::Windows::System::RemoteSystems
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetCapabilitySupportedAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetCapabilitySupportedAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -435,7 +475,11 @@ namespace py::cpp::Windows::System::RemoteSystems
 
                 auto param0 = py::convert_to<winrt::Windows::System::RemoteSystems::RemoteSystemAuthorizationKind>(args, 0);
 
-                return py::convert(winrt::Windows::System::RemoteSystems::RemoteSystem::IsAuthorizationKindEnabled(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::System::RemoteSystems::RemoteSystem::IsAuthorizationKindEnabled(param0);
+                }());
             }
             catch (...)
             {
@@ -471,7 +515,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::System::RemoteSystems::RemoteSystem::RequestAccessAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::System::RemoteSystems::RemoteSystem::RequestAccessAsync();
+                }());
             }
             catch (...)
             {
@@ -503,7 +551,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayName();
+            }());
         }
         catch (...)
         {
@@ -529,7 +581,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -555,7 +611,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsAvailableByProximity());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsAvailableByProximity();
+            }());
         }
         catch (...)
         {
@@ -581,7 +641,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -607,7 +671,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -633,7 +701,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsAvailableBySpatialProximity());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsAvailableBySpatialProximity();
+            }());
         }
         catch (...)
         {
@@ -659,7 +731,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(self->obj.ManufacturerDisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ManufacturerDisplayName();
+            }());
         }
         catch (...)
         {
@@ -685,7 +761,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(self->obj.ModelDisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ModelDisplayName();
+            }());
         }
         catch (...)
         {
@@ -711,7 +791,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(self->obj.Platform());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Platform();
+            }());
         }
         catch (...)
         {
@@ -737,7 +821,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(self->obj.Apps());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Apps();
+            }());
         }
         catch (...)
         {
@@ -763,7 +851,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(self->obj.User());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.User();
+            }());
         }
         catch (...)
         {
@@ -899,7 +991,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(self->obj.RemoteSystem());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RemoteSystem();
+            }());
         }
         catch (...)
         {
@@ -992,7 +1088,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(self->obj.Attributes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Attributes();
+            }());
         }
         catch (...)
         {
@@ -1018,7 +1118,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayName();
+            }());
         }
         catch (...)
         {
@@ -1044,7 +1148,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -1070,7 +1178,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsAvailableByProximity());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsAvailableByProximity();
+            }());
         }
         catch (...)
         {
@@ -1096,7 +1208,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsAvailableBySpatialProximity());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsAvailableBySpatialProximity();
+            }());
         }
         catch (...)
         {
@@ -1122,7 +1238,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(self->obj.ConnectionToken());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ConnectionToken();
+            }());
         }
         catch (...)
         {
@@ -1148,7 +1268,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(self->obj.User());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.User();
+            }());
         }
         catch (...)
         {
@@ -1251,7 +1375,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::System::RemoteSystems::RemoteSystemAppRegistration::GetDefault());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::System::RemoteSystems::RemoteSystemAppRegistration::GetDefault();
+                }());
             }
             catch (...)
             {
@@ -1289,7 +1417,11 @@ namespace py::cpp::Windows::System::RemoteSystems
 
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
 
-                return py::convert(winrt::Windows::System::RemoteSystems::RemoteSystemAppRegistration::GetForUser(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::System::RemoteSystems::RemoteSystemAppRegistration::GetForUser(param0);
+                }());
             }
             catch (...)
             {
@@ -1325,7 +1457,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                     return nullptr;
                 }
 
-                return py::convert(self->obj.SaveAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SaveAsync();
+                }());
             }
             catch (...)
             {
@@ -1357,7 +1493,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(self->obj.Attributes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Attributes();
+            }());
         }
         catch (...)
         {
@@ -1383,7 +1523,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(self->obj.User());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.User();
+            }());
         }
         catch (...)
         {
@@ -1529,7 +1673,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(self->obj.RemoteSystemAuthorizationKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RemoteSystemAuthorizationKind();
+            }());
         }
         catch (...)
         {
@@ -1628,7 +1776,11 @@ namespace py::cpp::Windows::System::RemoteSystems
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::AppService::AppServiceConnection>(args, 0);
 
-                return py::convert(winrt::Windows::System::RemoteSystems::RemoteSystemConnectionInfo::TryCreateFromAppServiceConnection(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::System::RemoteSystems::RemoteSystemConnectionInfo::TryCreateFromAppServiceConnection(param0);
+                }());
             }
             catch (...)
             {
@@ -1660,7 +1812,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsProximal());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsProximal();
+            }());
         }
         catch (...)
         {
@@ -1809,7 +1965,11 @@ namespace py::cpp::Windows::System::RemoteSystems
 
                 auto param0 = py::convert_to<winrt::Windows::System::RemoteSystems::RemoteSystemApp>(args, 0);
 
-                return py::convert(winrt::Windows::System::RemoteSystems::RemoteSystemConnectionRequest::CreateForApp(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::System::RemoteSystems::RemoteSystemConnectionRequest::CreateForApp(param0);
+                }());
             }
             catch (...)
             {
@@ -1847,7 +2007,11 @@ namespace py::cpp::Windows::System::RemoteSystems
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::System::RemoteSystems::RemoteSystemConnectionRequest::CreateFromConnectionToken(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::System::RemoteSystems::RemoteSystemConnectionRequest::CreateFromConnectionToken(param0);
+                }());
             }
             catch (...)
             {
@@ -1886,7 +2050,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(winrt::Windows::System::RemoteSystems::RemoteSystemConnectionRequest::CreateFromConnectionTokenForUser(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::System::RemoteSystems::RemoteSystemConnectionRequest::CreateFromConnectionTokenForUser(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1918,7 +2086,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(self->obj.RemoteSystem());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RemoteSystem();
+            }());
         }
         catch (...)
         {
@@ -1944,7 +2116,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(self->obj.RemoteSystemApp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RemoteSystemApp();
+            }());
         }
         catch (...)
         {
@@ -1970,7 +2146,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(self->obj.ConnectionToken());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ConnectionToken();
+            }());
         }
         catch (...)
         {
@@ -2117,7 +2297,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(self->obj.RemoteSystemDiscoveryType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RemoteSystemDiscoveryType();
+            }());
         }
         catch (...)
         {
@@ -2300,7 +2484,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(self->obj.RemoteSystemKinds());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RemoteSystemKinds();
+            }());
         }
         catch (...)
         {
@@ -2385,7 +2573,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::System::RemoteSystems::RemoteSystemKinds::Desktop());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::System::RemoteSystems::RemoteSystemKinds::Desktop();
+            }());
         }
         catch (...)
         {
@@ -2411,7 +2603,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::System::RemoteSystems::RemoteSystemKinds::Holographic());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::System::RemoteSystems::RemoteSystemKinds::Holographic();
+            }());
         }
         catch (...)
         {
@@ -2437,7 +2633,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::System::RemoteSystems::RemoteSystemKinds::Hub());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::System::RemoteSystems::RemoteSystemKinds::Hub();
+            }());
         }
         catch (...)
         {
@@ -2463,7 +2663,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::System::RemoteSystems::RemoteSystemKinds::Phone());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::System::RemoteSystems::RemoteSystemKinds::Phone();
+            }());
         }
         catch (...)
         {
@@ -2489,7 +2693,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::System::RemoteSystems::RemoteSystemKinds::Xbox());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::System::RemoteSystems::RemoteSystemKinds::Xbox();
+            }());
         }
         catch (...)
         {
@@ -2515,7 +2723,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::System::RemoteSystems::RemoteSystemKinds::Iot());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::System::RemoteSystems::RemoteSystemKinds::Iot();
+            }());
         }
         catch (...)
         {
@@ -2541,7 +2753,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::System::RemoteSystems::RemoteSystemKinds::Laptop());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::System::RemoteSystems::RemoteSystemKinds::Laptop();
+            }());
         }
         catch (...)
         {
@@ -2567,7 +2783,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::System::RemoteSystems::RemoteSystemKinds::Tablet());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::System::RemoteSystems::RemoteSystemKinds::Tablet();
+            }());
         }
         catch (...)
         {
@@ -2665,7 +2885,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(self->obj.RemoteSystemId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RemoteSystemId();
+            }());
         }
         catch (...)
         {
@@ -2762,7 +2986,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2799,7 +3027,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CreateParticipantWatcher());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateParticipantWatcher();
+                }());
             }
             catch (...)
             {
@@ -2835,7 +3067,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::System::RemoteSystems::RemoteSystemSession::CreateWatcher());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::System::RemoteSystems::RemoteSystemSession::CreateWatcher();
+                }());
             }
             catch (...)
             {
@@ -2873,7 +3109,11 @@ namespace py::cpp::Windows::System::RemoteSystems
 
                 auto param0 = py::convert_to<winrt::Windows::System::RemoteSystems::RemoteSystem>(args, 0);
 
-                return py::convert(self->obj.SendInvitationAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SendInvitationAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -2905,7 +3145,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(self->obj.ControllerDisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ControllerDisplayName();
+            }());
         }
         catch (...)
         {
@@ -2931,7 +3175,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayName();
+            }());
         }
         catch (...)
         {
@@ -2957,7 +3205,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -2985,7 +3237,11 @@ namespace py::cpp::Windows::System::RemoteSystems
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemSession, winrt::Windows::System::RemoteSystems::RemoteSystemSessionDisconnectedEventArgs>>(arg);
 
-            return py::convert(self->obj.Disconnected(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Disconnected(param0);
+            }());
         }
         catch (...)
         {
@@ -3013,7 +3269,11 @@ namespace py::cpp::Windows::System::RemoteSystems
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Disconnected(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Disconnected(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3056,7 +3316,11 @@ namespace py::cpp::Windows::System::RemoteSystems
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -3161,7 +3425,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(self->obj.SessionInfo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SessionInfo();
+            }());
         }
         catch (...)
         {
@@ -3298,7 +3566,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CreateSessionAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateSessionAsync();
+                }());
             }
             catch (...)
             {
@@ -3336,7 +3608,11 @@ namespace py::cpp::Windows::System::RemoteSystems
 
                 auto param0 = py::convert_to<winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipant>(args, 0);
 
-                return py::convert(self->obj.RemoveParticipantAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RemoveParticipantAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -3370,7 +3646,11 @@ namespace py::cpp::Windows::System::RemoteSystems
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemSessionController, winrt::Windows::System::RemoteSystems::RemoteSystemSessionJoinRequestedEventArgs>>(arg);
 
-            return py::convert(self->obj.JoinRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.JoinRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -3398,7 +3678,11 @@ namespace py::cpp::Windows::System::RemoteSystems
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.JoinRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.JoinRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3495,7 +3779,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(self->obj.Session());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Session();
+            }());
         }
         catch (...)
         {
@@ -3521,7 +3809,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -3615,7 +3907,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(self->obj.Reason());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Reason();
+            }());
         }
         catch (...)
         {
@@ -3712,7 +4008,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                     return nullptr;
                 }
 
-                return py::convert(self->obj.JoinAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.JoinAsync();
+                }());
             }
             catch (...)
             {
@@ -3744,7 +4044,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(self->obj.ControllerDisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ControllerDisplayName();
+            }());
         }
         catch (...)
         {
@@ -3770,7 +4074,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayName();
+            }());
         }
         catch (...)
         {
@@ -3865,7 +4173,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(self->obj.Sender());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Sender();
+            }());
         }
         catch (...)
         {
@@ -3891,7 +4203,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(self->obj.SessionInfo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SessionInfo();
+            }());
         }
         catch (...)
         {
@@ -4009,7 +4325,11 @@ namespace py::cpp::Windows::System::RemoteSystems
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemSessionInvitationListener, winrt::Windows::System::RemoteSystems::RemoteSystemSessionInvitationReceivedEventArgs>>(arg);
 
-            return py::convert(self->obj.InvitationReceived(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InvitationReceived(param0);
+            }());
         }
         catch (...)
         {
@@ -4037,7 +4357,11 @@ namespace py::cpp::Windows::System::RemoteSystems
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.InvitationReceived(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.InvitationReceived(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -4132,7 +4456,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(self->obj.Invitation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Invitation();
+            }());
         }
         catch (...)
         {
@@ -4229,7 +4557,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                     return nullptr;
                 }
 
-                self->obj.Accept();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Accept();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4262,7 +4594,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(self->obj.Participant());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Participant();
+            }());
         }
         catch (...)
         {
@@ -4360,7 +4696,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -4392,7 +4732,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(self->obj.JoinRequest());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.JoinRequest();
+            }());
         }
         catch (...)
         {
@@ -4486,7 +4830,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(self->obj.Session());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Session();
+            }());
         }
         catch (...)
         {
@@ -4512,7 +4860,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -4654,7 +5006,11 @@ namespace py::cpp::Windows::System::RemoteSystems
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::ValueSet>(args, 0);
 
-                return py::convert(self->obj.BroadcastValueSetAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.BroadcastValueSetAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -4693,7 +5049,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::ValueSet>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipant>(args, 1);
 
-                return py::convert(self->obj.SendValueSetAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SendValueSetAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -4732,7 +5092,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::ValueSet>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipant>>(args, 1);
 
-                return py::convert(self->obj.SendValueSetToParticipantsAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SendValueSetToParticipantsAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -4764,7 +5128,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(self->obj.Session());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Session();
+            }());
         }
         catch (...)
         {
@@ -4792,7 +5160,11 @@ namespace py::cpp::Windows::System::RemoteSystems
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemSessionMessageChannel, winrt::Windows::System::RemoteSystems::RemoteSystemSessionValueSetReceivedEventArgs>>(arg);
 
-            return py::convert(self->obj.ValueSetReceived(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ValueSetReceived(param0);
+            }());
         }
         catch (...)
         {
@@ -4820,7 +5192,11 @@ namespace py::cpp::Windows::System::RemoteSystems
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ValueSetReceived(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ValueSetReceived(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -4941,7 +5317,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsInviteOnly());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsInviteOnly();
+            }());
         }
         catch (...)
         {
@@ -4975,7 +5355,11 @@ namespace py::cpp::Windows::System::RemoteSystems
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsInviteOnly(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsInviteOnly(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5073,7 +5457,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetHostNames());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetHostNames();
+                }());
             }
             catch (...)
             {
@@ -5105,7 +5493,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(self->obj.RemoteSystem());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RemoteSystem();
+            }());
         }
         catch (...)
         {
@@ -5199,7 +5591,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(self->obj.Participant());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Participant();
+            }());
         }
         catch (...)
         {
@@ -5292,7 +5688,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(self->obj.Participant());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Participant();
+            }());
         }
         catch (...)
         {
@@ -5389,7 +5789,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                     return nullptr;
                 }
 
-                self->obj.Start();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Start();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5426,7 +5830,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                     return nullptr;
                 }
 
-                self->obj.Stop();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Stop();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5459,7 +5867,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -5487,7 +5899,11 @@ namespace py::cpp::Windows::System::RemoteSystems
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipantWatcher, winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipantAddedEventArgs>>(arg);
 
-            return py::convert(self->obj.Added(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Added(param0);
+            }());
         }
         catch (...)
         {
@@ -5515,7 +5931,11 @@ namespace py::cpp::Windows::System::RemoteSystems
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Added(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Added(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -5544,7 +5964,11 @@ namespace py::cpp::Windows::System::RemoteSystems
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipantWatcher, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.EnumerationCompleted(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EnumerationCompleted(param0);
+            }());
         }
         catch (...)
         {
@@ -5572,7 +5996,11 @@ namespace py::cpp::Windows::System::RemoteSystems
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.EnumerationCompleted(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.EnumerationCompleted(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -5601,7 +6029,11 @@ namespace py::cpp::Windows::System::RemoteSystems
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipantWatcher, winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipantRemovedEventArgs>>(arg);
 
-            return py::convert(self->obj.Removed(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Removed(param0);
+            }());
         }
         catch (...)
         {
@@ -5629,7 +6061,11 @@ namespace py::cpp::Windows::System::RemoteSystems
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Removed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Removed(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -5731,7 +6167,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(self->obj.SessionInfo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SessionInfo();
+            }());
         }
         catch (...)
         {
@@ -5824,7 +6264,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(self->obj.SessionInfo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SessionInfo();
+            }());
         }
         catch (...)
         {
@@ -5917,7 +6361,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(self->obj.Message());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Message();
+            }());
         }
         catch (...)
         {
@@ -5943,7 +6391,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(self->obj.Sender());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Sender();
+            }());
         }
         catch (...)
         {
@@ -6041,7 +6493,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                     return nullptr;
                 }
 
-                self->obj.Start();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Start();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6078,7 +6534,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                     return nullptr;
                 }
 
-                self->obj.Stop();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Stop();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6111,7 +6571,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -6139,7 +6603,11 @@ namespace py::cpp::Windows::System::RemoteSystems
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemSessionWatcher, winrt::Windows::System::RemoteSystems::RemoteSystemSessionAddedEventArgs>>(arg);
 
-            return py::convert(self->obj.Added(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Added(param0);
+            }());
         }
         catch (...)
         {
@@ -6167,7 +6635,11 @@ namespace py::cpp::Windows::System::RemoteSystems
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Added(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Added(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -6196,7 +6668,11 @@ namespace py::cpp::Windows::System::RemoteSystems
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemSessionWatcher, winrt::Windows::System::RemoteSystems::RemoteSystemSessionRemovedEventArgs>>(arg);
 
-            return py::convert(self->obj.Removed(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Removed(param0);
+            }());
         }
         catch (...)
         {
@@ -6224,7 +6700,11 @@ namespace py::cpp::Windows::System::RemoteSystems
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Removed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Removed(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -6253,7 +6733,11 @@ namespace py::cpp::Windows::System::RemoteSystems
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemSessionWatcher, winrt::Windows::System::RemoteSystems::RemoteSystemSessionUpdatedEventArgs>>(arg);
 
-            return py::convert(self->obj.Updated(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Updated(param0);
+            }());
         }
         catch (...)
         {
@@ -6281,7 +6765,11 @@ namespace py::cpp::Windows::System::RemoteSystems
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Updated(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Updated(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -6407,7 +6895,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(self->obj.RemoteSystemStatusType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RemoteSystemStatusType();
+            }());
         }
         catch (...)
         {
@@ -6500,7 +6992,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(self->obj.RemoteSystem());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RemoteSystem();
+            }());
         }
         catch (...)
         {
@@ -6597,7 +7093,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                     return nullptr;
                 }
 
-                self->obj.Start();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Start();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6634,7 +7134,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                     return nullptr;
                 }
 
-                self->obj.Stop();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Stop();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6667,7 +7171,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(self->obj.User());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.User();
+            }());
         }
         catch (...)
         {
@@ -6695,7 +7203,11 @@ namespace py::cpp::Windows::System::RemoteSystems
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemWatcher, winrt::Windows::System::RemoteSystems::RemoteSystemAddedEventArgs>>(arg);
 
-            return py::convert(self->obj.RemoteSystemAdded(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RemoteSystemAdded(param0);
+            }());
         }
         catch (...)
         {
@@ -6723,7 +7235,11 @@ namespace py::cpp::Windows::System::RemoteSystems
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.RemoteSystemAdded(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RemoteSystemAdded(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -6752,7 +7268,11 @@ namespace py::cpp::Windows::System::RemoteSystems
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemWatcher, winrt::Windows::System::RemoteSystems::RemoteSystemRemovedEventArgs>>(arg);
 
-            return py::convert(self->obj.RemoteSystemRemoved(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RemoteSystemRemoved(param0);
+            }());
         }
         catch (...)
         {
@@ -6780,7 +7300,11 @@ namespace py::cpp::Windows::System::RemoteSystems
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.RemoteSystemRemoved(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RemoteSystemRemoved(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -6809,7 +7333,11 @@ namespace py::cpp::Windows::System::RemoteSystems
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemWatcher, winrt::Windows::System::RemoteSystems::RemoteSystemUpdatedEventArgs>>(arg);
 
-            return py::convert(self->obj.RemoteSystemUpdated(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RemoteSystemUpdated(param0);
+            }());
         }
         catch (...)
         {
@@ -6837,7 +7365,11 @@ namespace py::cpp::Windows::System::RemoteSystems
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.RemoteSystemUpdated(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RemoteSystemUpdated(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -6866,7 +7398,11 @@ namespace py::cpp::Windows::System::RemoteSystems
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemWatcher, winrt::Windows::System::RemoteSystems::RemoteSystemEnumerationCompletedEventArgs>>(arg);
 
-            return py::convert(self->obj.EnumerationCompleted(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EnumerationCompleted(param0);
+            }());
         }
         catch (...)
         {
@@ -6894,7 +7430,11 @@ namespace py::cpp::Windows::System::RemoteSystems
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.EnumerationCompleted(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.EnumerationCompleted(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -6923,7 +7463,11 @@ namespace py::cpp::Windows::System::RemoteSystems
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemWatcher, winrt::Windows::System::RemoteSystems::RemoteSystemWatcherErrorOccurredEventArgs>>(arg);
 
-            return py::convert(self->obj.ErrorOccurred(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ErrorOccurred(param0);
+            }());
         }
         catch (...)
         {
@@ -6951,7 +7495,11 @@ namespace py::cpp::Windows::System::RemoteSystems
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ErrorOccurred(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ErrorOccurred(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -7057,7 +7605,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(self->obj.Error());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Error();
+            }());
         }
         catch (...)
         {
@@ -7174,7 +7726,11 @@ namespace py::cpp::Windows::System::RemoteSystems
                 return nullptr;
             }
 
-            return py::convert(self->obj.Account());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Account();
+            }());
         }
         catch (...)
         {

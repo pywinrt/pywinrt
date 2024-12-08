@@ -81,7 +81,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::Resources::ResourceLoader::GetDefaultPriPath(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Resources::ResourceLoader::GetDefaultPriPath(param0);
+                }());
             }
             catch (...)
             {
@@ -117,7 +121,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::ApplicationModel::Resources::ResourceLoader::GetForCurrentView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Resources::ResourceLoader::GetForCurrentView();
+                }());
             }
             catch (...)
             {
@@ -155,7 +163,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::Resources::ResourceLoader::GetForCurrentView(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Resources::ResourceLoader::GetForCurrentView(param0);
+                }());
             }
             catch (...)
             {
@@ -193,7 +205,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources
 
                 auto param0 = py::convert_to<winrt::Windows::UI::UIContext>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::Resources::ResourceLoader::GetForUIContext(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Resources::ResourceLoader::GetForUIContext(param0);
+                }());
             }
             catch (...)
             {
@@ -229,7 +245,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::ApplicationModel::Resources::ResourceLoader::GetForViewIndependentUse());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Resources::ResourceLoader::GetForViewIndependentUse();
+                }());
             }
             catch (...)
             {
@@ -267,7 +287,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::Resources::ResourceLoader::GetForViewIndependentUse(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Resources::ResourceLoader::GetForViewIndependentUse(param0);
+                }());
             }
             catch (...)
             {
@@ -305,7 +329,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetString(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetString(param0);
+                }());
             }
             catch (...)
             {
@@ -343,7 +371,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::Resources::ResourceLoader::GetStringForReference(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Resources::ResourceLoader::GetStringForReference(param0);
+                }());
             }
             catch (...)
             {
@@ -381,7 +413,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
-                return py::convert(self->obj.GetStringForUri(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetStringForUri(param0);
+                }());
             }
             catch (...)
             {

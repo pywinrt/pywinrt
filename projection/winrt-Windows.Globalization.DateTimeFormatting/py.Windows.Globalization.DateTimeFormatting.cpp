@@ -185,7 +185,11 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 0);
 
-                return py::convert(self->obj.Format(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Format(param0);
+                }());
             }
             catch (...)
             {
@@ -224,7 +228,11 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
                 auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.Format(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Format(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -256,7 +264,11 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.NumeralSystem());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NumeralSystem();
+            }());
         }
         catch (...)
         {
@@ -290,7 +302,11 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.NumeralSystem(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NumeralSystem(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -317,7 +333,11 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.Clock());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Clock();
+            }());
         }
         catch (...)
         {
@@ -343,7 +363,11 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.GeographicRegion());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.GeographicRegion();
+            }());
         }
         catch (...)
         {
@@ -369,7 +393,11 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.IncludeDay());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IncludeDay();
+            }());
         }
         catch (...)
         {
@@ -395,7 +423,11 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.IncludeDayOfWeek());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IncludeDayOfWeek();
+            }());
         }
         catch (...)
         {
@@ -421,7 +453,11 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.IncludeHour());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IncludeHour();
+            }());
         }
         catch (...)
         {
@@ -447,7 +483,11 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.IncludeMinute());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IncludeMinute();
+            }());
         }
         catch (...)
         {
@@ -473,7 +513,11 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.IncludeMonth());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IncludeMonth();
+            }());
         }
         catch (...)
         {
@@ -499,7 +543,11 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.IncludeSecond());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IncludeSecond();
+            }());
         }
         catch (...)
         {
@@ -525,7 +573,11 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.IncludeYear());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IncludeYear();
+            }());
         }
         catch (...)
         {
@@ -551,7 +603,11 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.Languages());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Languages();
+            }());
         }
         catch (...)
         {
@@ -577,7 +633,11 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.Calendar());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Calendar();
+            }());
         }
         catch (...)
         {
@@ -603,7 +663,11 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.Patterns());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Patterns();
+            }());
         }
         catch (...)
         {
@@ -629,7 +693,11 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResolvedGeographicRegion());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResolvedGeographicRegion();
+            }());
         }
         catch (...)
         {
@@ -655,7 +723,11 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResolvedLanguage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResolvedLanguage();
+            }());
         }
         catch (...)
         {
@@ -681,7 +753,11 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.Template());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Template();
+            }());
         }
         catch (...)
         {
@@ -707,7 +783,11 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::DateTimeFormatting::DateTimeFormatter::LongDate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::DateTimeFormatting::DateTimeFormatter::LongDate();
+            }());
         }
         catch (...)
         {
@@ -733,7 +813,11 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::DateTimeFormatting::DateTimeFormatter::LongTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::DateTimeFormatting::DateTimeFormatter::LongTime();
+            }());
         }
         catch (...)
         {
@@ -759,7 +843,11 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::DateTimeFormatting::DateTimeFormatter::ShortDate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::DateTimeFormatting::DateTimeFormatter::ShortDate();
+            }());
         }
         catch (...)
         {
@@ -785,7 +873,11 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Globalization::DateTimeFormatting::DateTimeFormatter::ShortTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Globalization::DateTimeFormatting::DateTimeFormatter::ShortTime();
+            }());
         }
         catch (...)
         {

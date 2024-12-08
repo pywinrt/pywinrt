@@ -120,7 +120,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ColorPickerSlider>().ColorChannel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ColorPickerSlider>().ColorChannel();
+            }());
         }
         catch (...)
         {
@@ -154,7 +158,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::ColorPickerHsvChannel>(arg);
 
-            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ColorPickerSlider>().ColorChannel(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ColorPickerSlider>().ColorChannel(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -181,7 +189,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ColorPickerSlider::ColorChannelProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Xaml::Controls::Primitives::ColorPickerSlider::ColorChannelProperty();
+            }());
         }
         catch (...)
         {

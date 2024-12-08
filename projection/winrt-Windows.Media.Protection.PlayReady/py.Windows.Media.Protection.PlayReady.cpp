@@ -68,7 +68,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -107,7 +111,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Protection::PlayReady::INDLicenseFetchDescriptor>(args, 0);
 
-                return py::convert(self->obj.LicenseFetchAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.LicenseFetchAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -145,7 +153,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Protection::PlayReady::INDCustomData>(args, 0);
 
-                return py::convert(self->obj.ReRegistrationAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReRegistrationAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -186,7 +198,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 auto param2 = py::convert_to<winrt::Windows::Media::Protection::PlayReady::INDCustomData>(args, 2);
                 auto param3 = py::convert_to<winrt::Windows::Media::Protection::PlayReady::INDLicenseFetchDescriptor>(args, 3);
 
-                return py::convert(self->obj.StartAsync(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.StartAsync(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -220,7 +236,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Protection::PlayReady::NDClient, winrt::Windows::Media::Protection::PlayReady::INDClosedCaptionDataReceivedEventArgs>>(arg);
 
-            return py::convert(self->obj.ClosedCaptionDataReceived(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ClosedCaptionDataReceived(param0);
+            }());
         }
         catch (...)
         {
@@ -248,7 +268,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ClosedCaptionDataReceived(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ClosedCaptionDataReceived(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -277,7 +301,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Protection::PlayReady::NDClient, winrt::Windows::Media::Protection::PlayReady::INDLicenseFetchCompletedEventArgs>>(arg);
 
-            return py::convert(self->obj.LicenseFetchCompleted(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LicenseFetchCompleted(param0);
+            }());
         }
         catch (...)
         {
@@ -305,7 +333,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.LicenseFetchCompleted(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.LicenseFetchCompleted(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -334,7 +366,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Protection::PlayReady::NDClient, winrt::Windows::Media::Protection::PlayReady::INDProximityDetectionCompletedEventArgs>>(arg);
 
-            return py::convert(self->obj.ProximityDetectionCompleted(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProximityDetectionCompleted(param0);
+            }());
         }
         catch (...)
         {
@@ -362,7 +398,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ProximityDetectionCompleted(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ProximityDetectionCompleted(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -391,7 +431,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Protection::PlayReady::NDClient, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.ReRegistrationNeeded(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReRegistrationNeeded(param0);
+            }());
         }
         catch (...)
         {
@@ -419,7 +463,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ReRegistrationNeeded(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReRegistrationNeeded(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -448,7 +496,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Protection::PlayReady::NDClient, winrt::Windows::Media::Protection::PlayReady::INDRegistrationCompletedEventArgs>>(arg);
 
-            return py::convert(self->obj.RegistrationCompleted(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RegistrationCompleted(param0);
+            }());
         }
         catch (...)
         {
@@ -476,7 +528,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.RegistrationCompleted(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RegistrationCompleted(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -608,7 +664,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.CustomData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CustomData();
+            }());
         }
         catch (...)
         {
@@ -634,7 +694,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.CustomDataTypeID());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CustomDataTypeID();
+            }());
         }
         catch (...)
         {
@@ -756,7 +820,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Protection::PlayReady::INDLicenseFetchDescriptor>(args, 0);
 
-                self->obj.OnContentIDReceived(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.OnContentIDReceived(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -796,7 +864,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
-                self->obj.OnDataReceived(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.OnDataReceived(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -833,7 +905,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                     return nullptr;
                 }
 
-                self->obj.OnEndOfStream();
+                {
+                    auto _gil = release_gil();
+                    self->obj.OnEndOfStream();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -870,7 +946,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                     return nullptr;
                 }
 
-                self->obj.OnNetworkError();
+                {
+                    auto _gil = release_gil();
+                    self->obj.OnNetworkError();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -909,7 +989,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
-                self->obj.OnPlayReadyObjectReceived(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.OnPlayReadyObjectReceived(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -946,7 +1030,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                     return nullptr;
                 }
 
-                self->obj.OnStreamOpened();
+                {
+                    auto _gil = release_gil();
+                    self->obj.OnStreamOpened();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1077,7 +1165,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.LicenseFetchChallengeCustomData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LicenseFetchChallengeCustomData();
+            }());
         }
         catch (...)
         {
@@ -1111,7 +1203,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
             auto param0 = py::convert_to<winrt::Windows::Media::Protection::PlayReady::INDCustomData>(arg);
 
-            self->obj.LicenseFetchChallengeCustomData(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.LicenseFetchChallengeCustomData(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1138,7 +1234,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContentID());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContentID();
+            }());
         }
         catch (...)
         {
@@ -1164,7 +1264,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContentIDType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContentIDType();
+            }());
         }
         catch (...)
         {
@@ -1287,7 +1391,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
 
-                return py::convert(self->obj.GetFileURLs(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetFileURLs(param0);
+                }());
             }
             catch (...)
             {
@@ -1416,7 +1524,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 auto param1 = py::convert_to<winrt::guid>(args, 1);
                 auto param2 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 2);
 
-                self->obj.OnBeginSetupDecryptor(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.OnBeginSetupDecryptor(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1455,7 +1567,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Protection::PlayReady::INDLicenseFetchDescriptor>(args, 0);
 
-                self->obj.OnContentIDReceived(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.OnContentIDReceived(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1495,7 +1611,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Media::Core::AudioStreamDescriptor>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Media::Core::VideoStreamDescriptor>>(args, 1);
 
-                self->obj.OnMediaStreamDescriptorCreated(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.OnMediaStreamDescriptorCreated(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1539,7 +1659,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 auto param4 = py::convert_to<winrt::Windows::Media::Protection::PlayReady::NDClosedCaptionFormat>(args, 4);
                 auto param5 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 5);
 
-                self->obj.OnSampleParsed(param0, param1, param2, param3, param4, param5);
+                {
+                    auto _gil = release_gil();
+                    self->obj.OnSampleParsed(param0, param1, param2, param3, param4, param5);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1674,7 +1798,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 1);
 
-                return py::convert(self->obj.SendLicenseFetchRequestAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SendLicenseFetchRequestAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1715,7 +1843,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 auto param2 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 2);
                 auto param3 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 3);
 
-                return py::convert(self->obj.SendProximityDetectionResponseAsync(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SendProximityDetectionResponseAsync(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -1756,7 +1888,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 auto param2 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 2);
                 auto param3 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 3);
 
-                return py::convert(self->obj.SendProximityDetectionStartAsync(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SendProximityDetectionStartAsync(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -1795,7 +1931,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 1);
 
-                return py::convert(self->obj.SendRegistrationRequestAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SendRegistrationRequestAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1987,7 +2127,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetSerializedHeader());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetSerializedHeader();
+                }());
             }
             catch (...)
             {
@@ -2019,7 +2163,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.CustomAttributes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CustomAttributes();
+            }());
         }
         catch (...)
         {
@@ -2045,7 +2193,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.DecryptorSetup());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DecryptorSetup();
+            }());
         }
         catch (...)
         {
@@ -2071,7 +2223,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.DomainServiceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DomainServiceId();
+            }());
         }
         catch (...)
         {
@@ -2097,7 +2253,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.EncryptionType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EncryptionType();
+            }());
         }
         catch (...)
         {
@@ -2123,7 +2283,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.HeaderWithEmbeddedUpdates());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HeaderWithEmbeddedUpdates();
+            }());
         }
         catch (...)
         {
@@ -2149,7 +2313,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.KeyId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.KeyId();
+            }());
         }
         catch (...)
         {
@@ -2175,7 +2343,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.KeyIdString());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.KeyIdString();
+            }());
         }
         catch (...)
         {
@@ -2201,7 +2373,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.LicenseAcquisitionUrl());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LicenseAcquisitionUrl();
+            }());
         }
         catch (...)
         {
@@ -2227,7 +2403,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.LicenseAcquisitionUserInterfaceUrl());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LicenseAcquisitionUserInterfaceUrl();
+            }());
         }
         catch (...)
         {
@@ -2253,7 +2433,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.KeyIdStrings());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.KeyIdStrings();
+            }());
         }
         catch (...)
         {
@@ -2279,7 +2463,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.KeyIds());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.KeyIds();
+            }());
         }
         catch (...)
         {
@@ -2381,7 +2569,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Protection::PlayReady::PlayReadyContentHeader>(args, 0);
 
-                return py::convert(winrt::Windows::Media::Protection::PlayReady::PlayReadyContentResolver::ServiceRequest(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::Protection::PlayReady::PlayReadyContentResolver::ServiceRequest(param0);
+                }());
             }
             catch (...)
             {
@@ -2478,7 +2670,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.AccountId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AccountId();
+            }());
         }
         catch (...)
         {
@@ -2504,7 +2700,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.DomainJoinUrl());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DomainJoinUrl();
+            }());
         }
         catch (...)
         {
@@ -2530,7 +2730,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.FriendlyName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FriendlyName();
+            }());
         }
         catch (...)
         {
@@ -2556,7 +2760,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.Revision());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Revision();
+            }());
         }
         catch (...)
         {
@@ -2582,7 +2790,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.ServiceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServiceId();
+            }());
         }
         catch (...)
         {
@@ -2707,7 +2919,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                     return nullptr;
                 }
 
-                return py::convert(self->obj.First());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.First();
+                }());
             }
             catch (...)
             {
@@ -2750,7 +2966,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            return py::convert(self->obj.First());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.First();
+            }());
         }
         catch (...)
         {
@@ -2826,7 +3046,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Media::Protection::PlayReady::IPlayReadyDomain, true>>(args, 0);
 
-                return py::convert(self->obj.GetMany(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetMany(param0);
+                }());
             }
             catch (...)
             {
@@ -2862,7 +3086,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                     return nullptr;
                 }
 
-                return py::convert(self->obj.MoveNext());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.MoveNext();
+                }());
             }
             catch (...)
             {
@@ -2894,7 +3122,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.Current());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Current();
+            }());
         }
         catch (...)
         {
@@ -2920,7 +3152,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.HasCurrent());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HasCurrent();
+            }());
         }
         catch (...)
         {
@@ -2964,9 +3200,13 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             if (self->obj.HasCurrent())
             {
-                auto cur = self->obj.Current();
-                self->obj.MoveNext();
-                return py::convert(cur);
+                return py::convert([&]()
+                {
+                    auto _gil = py::release_gil();
+                    auto cur = self->obj.Current();
+                    self->obj.MoveNext();
+                    return cur;
+                }());
             }
             else
             {
@@ -3071,7 +3311,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                     return nullptr;
                 }
 
-                return py::convert(self->obj.BeginServiceRequest());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.BeginServiceRequest();
+                }());
             }
             catch (...)
             {
@@ -3107,7 +3351,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GenerateManualEnablingChallenge());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GenerateManualEnablingChallenge();
+                }());
             }
             catch (...)
             {
@@ -3143,7 +3391,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                     return nullptr;
                 }
 
-                return py::convert(self->obj.NextServiceRequest());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.NextServiceRequest();
+                }());
             }
             catch (...)
             {
@@ -3181,7 +3433,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
-                return py::convert(self->obj.ProcessManualEnablingResponse(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ProcessManualEnablingResponse(param0);
+                }());
             }
             catch (...)
             {
@@ -3213,7 +3469,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProtectionSystem());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProtectionSystem();
+            }());
         }
         catch (...)
         {
@@ -3239,7 +3499,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.Type());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Type();
+            }());
         }
         catch (...)
         {
@@ -3265,7 +3529,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.DomainServiceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DomainServiceId();
+            }());
         }
         catch (...)
         {
@@ -3299,7 +3567,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
             auto param0 = py::convert_to<winrt::guid>(arg);
 
-            self->obj.DomainServiceId(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DomainServiceId(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3326,7 +3598,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.DomainFriendlyName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DomainFriendlyName();
+            }());
         }
         catch (...)
         {
@@ -3360,7 +3636,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.DomainFriendlyName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DomainFriendlyName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3387,7 +3667,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.DomainAccountId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DomainAccountId();
+            }());
         }
         catch (...)
         {
@@ -3421,7 +3705,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
             auto param0 = py::convert_to<winrt::guid>(arg);
 
-            self->obj.DomainAccountId(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DomainAccountId(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3448,7 +3736,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.Uri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Uri();
+            }());
         }
         catch (...)
         {
@@ -3482,7 +3774,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.Uri(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Uri(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3509,7 +3805,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.ChallengeCustomData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ChallengeCustomData();
+            }());
         }
         catch (...)
         {
@@ -3543,7 +3843,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ChallengeCustomData(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ChallengeCustomData(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3570,7 +3874,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResponseCustomData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResponseCustomData();
+            }());
         }
         catch (...)
         {
@@ -3700,7 +4008,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                     return nullptr;
                 }
 
-                return py::convert(self->obj.BeginServiceRequest());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.BeginServiceRequest();
+                }());
             }
             catch (...)
             {
@@ -3736,7 +4048,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GenerateManualEnablingChallenge());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GenerateManualEnablingChallenge();
+                }());
             }
             catch (...)
             {
@@ -3772,7 +4088,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                     return nullptr;
                 }
 
-                return py::convert(self->obj.NextServiceRequest());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.NextServiceRequest();
+                }());
             }
             catch (...)
             {
@@ -3810,7 +4130,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
-                return py::convert(self->obj.ProcessManualEnablingResponse(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ProcessManualEnablingResponse(param0);
+                }());
             }
             catch (...)
             {
@@ -3842,7 +4166,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProtectionSystem());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProtectionSystem();
+            }());
         }
         catch (...)
         {
@@ -3868,7 +4196,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.Type());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Type();
+            }());
         }
         catch (...)
         {
@@ -3894,7 +4226,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.DomainServiceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DomainServiceId();
+            }());
         }
         catch (...)
         {
@@ -3928,7 +4264,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
             auto param0 = py::convert_to<winrt::guid>(arg);
 
-            self->obj.DomainServiceId(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DomainServiceId(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3955,7 +4295,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.DomainAccountId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DomainAccountId();
+            }());
         }
         catch (...)
         {
@@ -3989,7 +4333,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
             auto param0 = py::convert_to<winrt::guid>(arg);
 
-            self->obj.DomainAccountId(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DomainAccountId(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4016,7 +4364,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.Uri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Uri();
+            }());
         }
         catch (...)
         {
@@ -4050,7 +4402,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.Uri(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Uri(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4077,7 +4433,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.ChallengeCustomData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ChallengeCustomData();
+            }());
         }
         catch (...)
         {
@@ -4111,7 +4471,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ChallengeCustomData(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ChallengeCustomData(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4138,7 +4502,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResponseCustomData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResponseCustomData();
+            }());
         }
         catch (...)
         {
@@ -4272,7 +4640,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Collections::IPropertySet>(args, 2);
                 auto param3 = py::convert_to<winrt::Windows::Media::Protection::PlayReady::PlayReadyITADataFormat>(args, 3);
 
-                return py::convert(self->obj.GenerateData(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GenerateData(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -4397,7 +4769,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                     return nullptr;
                 }
 
-                return py::convert(self->obj.BeginServiceRequest());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.BeginServiceRequest();
+                }());
             }
             catch (...)
             {
@@ -4433,7 +4809,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GenerateManualEnablingChallenge());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GenerateManualEnablingChallenge();
+                }());
             }
             catch (...)
             {
@@ -4469,7 +4849,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                     return nullptr;
                 }
 
-                return py::convert(self->obj.NextServiceRequest());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.NextServiceRequest();
+                }());
             }
             catch (...)
             {
@@ -4507,7 +4891,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
-                return py::convert(self->obj.ProcessManualEnablingResponse(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ProcessManualEnablingResponse(param0);
+                }());
             }
             catch (...)
             {
@@ -4539,7 +4927,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProtectionSystem());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProtectionSystem();
+            }());
         }
         catch (...)
         {
@@ -4565,7 +4957,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.Type());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Type();
+            }());
         }
         catch (...)
         {
@@ -4591,7 +4987,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.Uri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Uri();
+            }());
         }
         catch (...)
         {
@@ -4625,7 +5025,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.Uri(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Uri(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4652,7 +5056,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.ChallengeCustomData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ChallengeCustomData();
+            }());
         }
         catch (...)
         {
@@ -4686,7 +5094,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ChallengeCustomData(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ChallengeCustomData(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4713,7 +5125,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResponseCustomData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResponseCustomData();
+            }());
         }
         catch (...)
         {
@@ -4820,7 +5236,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(self->obj.GetKIDAtChainDepth(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetKIDAtChainDepth(param0);
+                }());
             }
             catch (...)
             {
@@ -4852,7 +5272,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.ChainDepth());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ChainDepth();
+            }());
         }
         catch (...)
         {
@@ -4878,7 +5302,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.DomainAccountID());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DomainAccountID();
+            }());
         }
         catch (...)
         {
@@ -4904,7 +5332,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExpirationDate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExpirationDate();
+            }());
         }
         catch (...)
         {
@@ -4930,7 +5362,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExpireAfterFirstPlay());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExpireAfterFirstPlay();
+            }());
         }
         catch (...)
         {
@@ -4956,7 +5392,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.FullyEvaluated());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FullyEvaluated();
+            }());
         }
         catch (...)
         {
@@ -4982,7 +5422,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.UsableForPlay());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UsableForPlay();
+            }());
         }
         catch (...)
         {
@@ -5008,7 +5452,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExpiresInRealTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExpiresInRealTime();
+            }());
         }
         catch (...)
         {
@@ -5034,7 +5482,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.InMemoryOnly());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InMemoryOnly();
+            }());
         }
         catch (...)
         {
@@ -5060,7 +5512,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.SecureStopId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SecureStopId();
+            }());
         }
         catch (...)
         {
@@ -5086,7 +5542,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.SecurityLevel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SecurityLevel();
+            }());
         }
         catch (...)
         {
@@ -5215,7 +5675,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                     return nullptr;
                 }
 
-                return py::convert(self->obj.BeginServiceRequest());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.BeginServiceRequest();
+                }());
             }
             catch (...)
             {
@@ -5254,7 +5718,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 auto param0 = py::convert_to<winrt::Windows::Media::Protection::PlayReady::PlayReadyContentHeader>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                return py::convert(self->obj.CreateLicenseIterable(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateLicenseIterable(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -5290,7 +5758,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GenerateManualEnablingChallenge());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GenerateManualEnablingChallenge();
+                }());
             }
             catch (...)
             {
@@ -5326,7 +5798,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                     return nullptr;
                 }
 
-                return py::convert(self->obj.NextServiceRequest());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.NextServiceRequest();
+                }());
             }
             catch (...)
             {
@@ -5364,7 +5840,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
-                return py::convert(self->obj.ProcessManualEnablingResponse(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ProcessManualEnablingResponse(param0);
+                }());
             }
             catch (...)
             {
@@ -5396,7 +5876,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProtectionSystem());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProtectionSystem();
+            }());
         }
         catch (...)
         {
@@ -5422,7 +5906,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.Type());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Type();
+            }());
         }
         catch (...)
         {
@@ -5448,7 +5936,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.DomainServiceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DomainServiceId();
+            }());
         }
         catch (...)
         {
@@ -5482,7 +5974,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
             auto param0 = py::convert_to<winrt::guid>(arg);
 
-            self->obj.DomainServiceId(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DomainServiceId(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5509,7 +6005,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContentHeader());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContentHeader();
+            }());
         }
         catch (...)
         {
@@ -5543,7 +6043,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
             auto param0 = py::convert_to<winrt::Windows::Media::Protection::PlayReady::PlayReadyContentHeader>(arg);
 
-            self->obj.ContentHeader(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ContentHeader(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5570,7 +6074,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.SessionId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SessionId();
+            }());
         }
         catch (...)
         {
@@ -5596,7 +6104,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.Uri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Uri();
+            }());
         }
         catch (...)
         {
@@ -5630,7 +6142,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.Uri(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Uri(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5657,7 +6173,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.ChallengeCustomData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ChallengeCustomData();
+            }());
         }
         catch (...)
         {
@@ -5691,7 +6211,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ChallengeCustomData(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ChallengeCustomData(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5718,7 +6242,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResponseCustomData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResponseCustomData();
+            }());
         }
         catch (...)
         {
@@ -5865,7 +6393,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                     return nullptr;
                 }
 
-                return py::convert(self->obj.First());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.First();
+                }());
             }
             catch (...)
             {
@@ -5908,7 +6440,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            return py::convert(self->obj.First());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.First();
+            }());
         }
         catch (...)
         {
@@ -5984,7 +6520,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicense, true>>(args, 0);
 
-                return py::convert(self->obj.GetMany(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetMany(param0);
+                }());
             }
             catch (...)
             {
@@ -6020,7 +6560,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                     return nullptr;
                 }
 
-                return py::convert(self->obj.MoveNext());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.MoveNext();
+                }());
             }
             catch (...)
             {
@@ -6052,7 +6596,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.Current());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Current();
+            }());
         }
         catch (...)
         {
@@ -6078,7 +6626,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.HasCurrent());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HasCurrent();
+            }());
         }
         catch (...)
         {
@@ -6122,9 +6674,13 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             if (self->obj.HasCurrent())
             {
-                auto cur = self->obj.Current();
-                self->obj.MoveNext();
-                return py::convert(cur);
+                return py::convert([&]()
+                {
+                    auto _gil = py::release_gil();
+                    auto cur = self->obj.Current();
+                    self->obj.MoveNext();
+                    return cur;
+                }());
             }
             else
             {
@@ -6201,7 +6757,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Protection::PlayReady::PlayReadyContentHeader>(args, 0);
 
-                return py::convert(winrt::Windows::Media::Protection::PlayReady::PlayReadyLicenseManagement::DeleteLicenses(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::Protection::PlayReady::PlayReadyLicenseManagement::DeleteLicenses(param0);
+                }());
             }
             catch (...)
             {
@@ -6328,7 +6888,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Protection::MediaProtectionManager>(args, 0);
 
-                self->obj.ConfigureMediaProtectionManager(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ConfigureMediaProtectionManager(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6365,7 +6929,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CreateLAServiceRequest());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateLAServiceRequest();
+                }());
             }
             catch (...)
             {
@@ -6404,7 +6972,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 auto param0 = py::convert_to<winrt::Windows::Media::Protection::PlayReady::PlayReadyContentHeader>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                return py::convert(self->obj.CreateLicenseIterable(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateLicenseIterable(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -6531,7 +7103,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                     return nullptr;
                 }
 
-                return py::convert(self->obj.BeginServiceRequest());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.BeginServiceRequest();
+                }());
             }
             catch (...)
             {
@@ -6567,7 +7143,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GenerateManualEnablingChallenge());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GenerateManualEnablingChallenge();
+                }());
             }
             catch (...)
             {
@@ -6603,7 +7183,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                     return nullptr;
                 }
 
-                return py::convert(self->obj.NextServiceRequest());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.NextServiceRequest();
+                }());
             }
             catch (...)
             {
@@ -6641,7 +7225,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
-                return py::convert(self->obj.ProcessManualEnablingResponse(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ProcessManualEnablingResponse(param0);
+                }());
             }
             catch (...)
             {
@@ -6673,7 +7261,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProtectionSystem());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProtectionSystem();
+            }());
         }
         catch (...)
         {
@@ -6699,7 +7291,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.Type());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Type();
+            }());
         }
         catch (...)
         {
@@ -6725,7 +7321,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.MeteringCertificate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MeteringCertificate();
+            }());
         }
         catch (...)
         {
@@ -6759,7 +7359,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
             auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(arg);
 
-            self->obj.MeteringCertificate(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MeteringCertificate(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6786,7 +7390,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.Uri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Uri();
+            }());
         }
         catch (...)
         {
@@ -6820,7 +7428,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.Uri(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Uri(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6847,7 +7459,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.ChallengeCustomData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ChallengeCustomData();
+            }());
         }
         catch (...)
         {
@@ -6881,7 +7497,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ChallengeCustomData(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ChallengeCustomData(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6908,7 +7528,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResponseCustomData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResponseCustomData();
+            }());
         }
         catch (...)
         {
@@ -7036,7 +7660,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                     return nullptr;
                 }
 
-                return py::convert(self->obj.BeginServiceRequest());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.BeginServiceRequest();
+                }());
             }
             catch (...)
             {
@@ -7072,7 +7700,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GenerateManualEnablingChallenge());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GenerateManualEnablingChallenge();
+                }());
             }
             catch (...)
             {
@@ -7108,7 +7740,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                     return nullptr;
                 }
 
-                return py::convert(self->obj.NextServiceRequest());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.NextServiceRequest();
+                }());
             }
             catch (...)
             {
@@ -7146,7 +7782,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
-                return py::convert(self->obj.ProcessManualEnablingResponse(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ProcessManualEnablingResponse(param0);
+                }());
             }
             catch (...)
             {
@@ -7178,7 +7818,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProtectionSystem());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProtectionSystem();
+            }());
         }
         catch (...)
         {
@@ -7204,7 +7848,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.Type());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Type();
+            }());
         }
         catch (...)
         {
@@ -7230,7 +7878,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.Uri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Uri();
+            }());
         }
         catch (...)
         {
@@ -7264,7 +7916,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.Uri(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Uri(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7291,7 +7947,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.ChallengeCustomData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ChallengeCustomData();
+            }());
         }
         catch (...)
         {
@@ -7325,7 +7985,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ChallengeCustomData(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ChallengeCustomData(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7352,7 +8016,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResponseCustomData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResponseCustomData();
+            }());
         }
         catch (...)
         {
@@ -7481,7 +8149,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                     return nullptr;
                 }
 
-                return py::convert(self->obj.First());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.First();
+                }());
             }
             catch (...)
             {
@@ -7524,7 +8196,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     {
         try
         {
-            return py::convert(self->obj.First());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.First();
+            }());
         }
         catch (...)
         {
@@ -7600,7 +8276,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Media::Protection::PlayReady::IPlayReadySecureStopServiceRequest, true>>(args, 0);
 
-                return py::convert(self->obj.GetMany(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetMany(param0);
+                }());
             }
             catch (...)
             {
@@ -7636,7 +8316,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                     return nullptr;
                 }
 
-                return py::convert(self->obj.MoveNext());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.MoveNext();
+                }());
             }
             catch (...)
             {
@@ -7668,7 +8352,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.Current());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Current();
+            }());
         }
         catch (...)
         {
@@ -7694,7 +8382,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.HasCurrent());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HasCurrent();
+            }());
         }
         catch (...)
         {
@@ -7738,9 +8430,13 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             if (self->obj.HasCurrent())
             {
-                auto cur = self->obj.Current();
-                self->obj.MoveNext();
-                return py::convert(cur);
+                return py::convert([&]()
+                {
+                    auto _gil = py::release_gil();
+                    auto cur = self->obj.Current();
+                    self->obj.MoveNext();
+                    return cur;
+                }());
             }
             else
             {
@@ -7863,7 +8559,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                     return nullptr;
                 }
 
-                return py::convert(self->obj.BeginServiceRequest());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.BeginServiceRequest();
+                }());
             }
             catch (...)
             {
@@ -7899,7 +8599,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GenerateManualEnablingChallenge());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GenerateManualEnablingChallenge();
+                }());
             }
             catch (...)
             {
@@ -7935,7 +8639,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                     return nullptr;
                 }
 
-                return py::convert(self->obj.NextServiceRequest());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.NextServiceRequest();
+                }());
             }
             catch (...)
             {
@@ -7973,7 +8681,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
-                return py::convert(self->obj.ProcessManualEnablingResponse(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ProcessManualEnablingResponse(param0);
+                }());
             }
             catch (...)
             {
@@ -8005,7 +8717,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProtectionSystem());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProtectionSystem();
+            }());
         }
         catch (...)
         {
@@ -8031,7 +8747,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.Type());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Type();
+            }());
         }
         catch (...)
         {
@@ -8057,7 +8777,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.PublisherCertificate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PublisherCertificate();
+            }());
         }
         catch (...)
         {
@@ -8083,7 +8807,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.SessionID());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SessionID();
+            }());
         }
         catch (...)
         {
@@ -8109,7 +8837,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.StartTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StartTime();
+            }());
         }
         catch (...)
         {
@@ -8135,7 +8867,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.Stopped());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Stopped();
+            }());
         }
         catch (...)
         {
@@ -8161,7 +8897,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.UpdateTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UpdateTime();
+            }());
         }
         catch (...)
         {
@@ -8187,7 +8927,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.Uri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Uri();
+            }());
         }
         catch (...)
         {
@@ -8221,7 +8965,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.Uri(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Uri(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8248,7 +8996,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.ChallengeCustomData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ChallengeCustomData();
+            }());
         }
         catch (...)
         {
@@ -8282,7 +9034,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ChallengeCustomData(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ChallengeCustomData(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8309,7 +9065,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResponseCustomData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResponseCustomData();
+            }());
         }
         catch (...)
         {
@@ -8419,7 +9179,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetMessageBody());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetMessageBody();
+                }());
             }
             catch (...)
             {
@@ -8451,7 +9215,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.MessageHeaders());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MessageHeaders();
+            }());
         }
         catch (...)
         {
@@ -8477,7 +9245,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.Uri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Uri();
+            }());
         }
         catch (...)
         {
@@ -8570,7 +9342,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Protection::PlayReady::PlayReadyHardwareDRMFeatures>(args, 0);
 
-                return py::convert(winrt::Windows::Media::Protection::PlayReady::PlayReadyStatics::CheckSupportedHardware(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::Protection::PlayReady::PlayReadyStatics::CheckSupportedHardware(param0);
+                }());
             }
             catch (...)
             {
@@ -8606,7 +9382,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                     return nullptr;
                 }
 
-                winrt::Windows::Media::Protection::PlayReady::PlayReadyStatics::ResetHardwareDRMDisabled();
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Media::Protection::PlayReady::PlayReadyStatics::ResetHardwareDRMDisabled();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -8639,7 +9419,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::Protection::PlayReady::PlayReadyStatics::DomainJoinServiceRequestType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::Protection::PlayReady::PlayReadyStatics::DomainJoinServiceRequestType();
+            }());
         }
         catch (...)
         {
@@ -8665,7 +9449,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::Protection::PlayReady::PlayReadyStatics::DomainLeaveServiceRequestType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::Protection::PlayReady::PlayReadyStatics::DomainLeaveServiceRequestType();
+            }());
         }
         catch (...)
         {
@@ -8691,7 +9479,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::Protection::PlayReady::PlayReadyStatics::IndividualizationServiceRequestType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::Protection::PlayReady::PlayReadyStatics::IndividualizationServiceRequestType();
+            }());
         }
         catch (...)
         {
@@ -8717,7 +9509,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::Protection::PlayReady::PlayReadyStatics::LicenseAcquirerServiceRequestType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::Protection::PlayReady::PlayReadyStatics::LicenseAcquirerServiceRequestType();
+            }());
         }
         catch (...)
         {
@@ -8743,7 +9539,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::Protection::PlayReady::PlayReadyStatics::MediaProtectionSystemId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::Protection::PlayReady::PlayReadyStatics::MediaProtectionSystemId();
+            }());
         }
         catch (...)
         {
@@ -8769,7 +9569,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::Protection::PlayReady::PlayReadyStatics::MeteringReportServiceRequestType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::Protection::PlayReady::PlayReadyStatics::MeteringReportServiceRequestType();
+            }());
         }
         catch (...)
         {
@@ -8795,7 +9599,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::Protection::PlayReady::PlayReadyStatics::PlayReadySecurityVersion());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::Protection::PlayReady::PlayReadyStatics::PlayReadySecurityVersion();
+            }());
         }
         catch (...)
         {
@@ -8821,7 +9629,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::Protection::PlayReady::PlayReadyStatics::RevocationServiceRequestType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::Protection::PlayReady::PlayReadyStatics::RevocationServiceRequestType();
+            }());
         }
         catch (...)
         {
@@ -8847,7 +9659,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::Protection::PlayReady::PlayReadyStatics::PlayReadyCertificateSecurityLevel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::Protection::PlayReady::PlayReadyStatics::PlayReadyCertificateSecurityLevel();
+            }());
         }
         catch (...)
         {
@@ -8873,7 +9689,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::Protection::PlayReady::PlayReadyStatics::SecureStopServiceRequestType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::Protection::PlayReady::PlayReadyStatics::SecureStopServiceRequestType();
+            }());
         }
         catch (...)
         {
@@ -8899,7 +9719,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::Protection::PlayReady::PlayReadyStatics::ProtectionSystemId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::Protection::PlayReady::PlayReadyStatics::ProtectionSystemId();
+            }());
         }
         catch (...)
         {
@@ -8925,7 +9749,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::Protection::PlayReady::PlayReadyStatics::InputTrustAuthorityToCreate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::Protection::PlayReady::PlayReadyStatics::InputTrustAuthorityToCreate();
+            }());
         }
         catch (...)
         {
@@ -8951,7 +9779,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::Protection::PlayReady::PlayReadyStatics::HardwareDRMDisabledUntilTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::Protection::PlayReady::PlayReadyStatics::HardwareDRMDisabledUntilTime();
+            }());
         }
         catch (...)
         {
@@ -8977,7 +9809,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::Protection::PlayReady::PlayReadyStatics::HardwareDRMDisabledAtTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::Protection::PlayReady::PlayReadyStatics::HardwareDRMDisabledAtTime();
+            }());
         }
         catch (...)
         {
@@ -9083,7 +9919,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.ClosedCaptionData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ClosedCaptionData();
+            }());
         }
         catch (...)
         {
@@ -9109,7 +9949,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.ClosedCaptionDataFormat());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ClosedCaptionDataFormat();
+            }());
         }
         catch (...)
         {
@@ -9135,7 +9979,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.PresentationTimestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PresentationTimestamp();
+            }());
         }
         catch (...)
         {
@@ -9353,7 +10201,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.CustomData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CustomData();
+            }());
         }
         catch (...)
         {
@@ -9379,7 +10231,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.CustomDataTypeID());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CustomDataTypeID();
+            }());
         }
         catch (...)
         {
@@ -9581,7 +10437,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -9621,7 +10481,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 1);
 
-                self->obj.Open(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Open(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -9658,7 +10522,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                     return nullptr;
                 }
 
-                self->obj.Pause();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Pause();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -9695,7 +10563,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                     return nullptr;
                 }
 
-                self->obj.Resume();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Resume();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -9734,7 +10606,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 0);
 
-                self->obj.Seek(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Seek(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -9767,7 +10643,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.BufferFullMaxThresholdInSamples());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BufferFullMaxThresholdInSamples();
+            }());
         }
         catch (...)
         {
@@ -9793,7 +10673,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.BufferFullMinThresholdInSamples());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BufferFullMinThresholdInSamples();
+            }());
         }
         catch (...)
         {
@@ -9819,7 +10703,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.CanSeek());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CanSeek();
+            }());
         }
         catch (...)
         {
@@ -9845,7 +10733,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.Notifier());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Notifier();
+            }());
         }
         catch (...)
         {
@@ -10238,7 +11130,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Protection::PlayReady::INDLicenseFetchDescriptor>(args, 0);
 
-                self->obj.OnContentIDReceived(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.OnContentIDReceived(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10278,7 +11174,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
-                self->obj.OnDataReceived(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.OnDataReceived(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10315,7 +11215,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                     return nullptr;
                 }
 
-                self->obj.OnEndOfStream();
+                {
+                    auto _gil = release_gil();
+                    self->obj.OnEndOfStream();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10352,7 +11256,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                     return nullptr;
                 }
 
-                self->obj.OnNetworkError();
+                {
+                    auto _gil = release_gil();
+                    self->obj.OnNetworkError();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10391,7 +11299,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
-                self->obj.OnPlayReadyObjectReceived(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.OnPlayReadyObjectReceived(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10428,7 +11340,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                     return nullptr;
                 }
 
-                self->obj.OnStreamOpened();
+                {
+                    auto _gil = release_gil();
+                    self->obj.OnStreamOpened();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10769,7 +11685,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResponseCustomData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResponseCustomData();
+            }());
         }
         catch (...)
         {
@@ -10944,7 +11864,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContentID());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContentID();
+            }());
         }
         catch (...)
         {
@@ -10970,7 +11894,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContentIDType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContentIDType();
+            }());
         }
         catch (...)
         {
@@ -10996,7 +11924,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.LicenseFetchChallengeCustomData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LicenseFetchChallengeCustomData();
+            }());
         }
         catch (...)
         {
@@ -11030,7 +11962,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
             auto param0 = py::convert_to<winrt::Windows::Media::Protection::PlayReady::INDCustomData>(arg);
 
-            self->obj.LicenseFetchChallengeCustomData(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.LicenseFetchChallengeCustomData(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -11272,7 +12208,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResponseCustomData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResponseCustomData();
+            }());
         }
         catch (...)
         {
@@ -11454,7 +12394,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 1);
 
-                return py::convert(self->obj.SendLicenseFetchRequestAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SendLicenseFetchRequestAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -11495,7 +12439,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 auto param2 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 2);
                 auto param3 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 3);
 
-                return py::convert(self->obj.SendProximityDetectionResponseAsync(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SendProximityDetectionResponseAsync(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -11536,7 +12484,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 auto param2 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 2);
                 auto param3 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 3);
 
-                return py::convert(self->obj.SendProximityDetectionStartAsync(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SendProximityDetectionStartAsync(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -11575,7 +12527,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 1);
 
-                return py::convert(self->obj.SendRegistrationRequestAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SendRegistrationRequestAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -11939,7 +12895,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProximityDetectionRetryCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProximityDetectionRetryCount();
+            }());
         }
         catch (...)
         {
@@ -12114,7 +13074,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResponseCustomData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResponseCustomData();
+            }());
         }
         catch (...)
         {
@@ -12140,7 +13104,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.TransmitterCertificateAccepted());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TransmitterCertificateAccepted();
+            }());
         }
         catch (...)
         {
@@ -12174,7 +13142,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.TransmitterCertificateAccepted(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TransmitterCertificateAccepted(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -12201,7 +13173,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.TransmitterProperties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TransmitterProperties();
+            }());
         }
         catch (...)
         {
@@ -12441,7 +13417,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.Response());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Response();
+            }());
         }
         catch (...)
         {
@@ -12617,7 +13597,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.MediaStreamSource());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MediaStreamSource();
+            }());
         }
         catch (...)
         {
@@ -12798,7 +13782,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
 
-                return py::convert(self->obj.GetFileURLs(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetFileURLs(param0);
+                }());
             }
             catch (...)
             {
@@ -12995,7 +13983,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                     return nullptr;
                 }
 
-                self->obj.BeginOfStream();
+                {
+                    auto _gil = release_gil();
+                    self->obj.BeginOfStream();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -13032,7 +14024,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                     return nullptr;
                 }
 
-                self->obj.EndOfStream();
+                {
+                    auto _gil = release_gil();
+                    self->obj.EndOfStream();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -13072,7 +14068,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 auto param0 = py::convert_to<winrt::Windows::Media::Core::IMediaStreamDescriptor>(args, 0);
                 winrt::Windows::Media::Protection::PlayReady::NDMediaStreamType param1{};
 
-                auto return_value = self->obj.GetStreamInformation(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetStreamInformation(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -13084,6 +14084,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -13122,7 +14123,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
-                self->obj.ParseData(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ParseData(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -13155,7 +14160,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.Notifier());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Notifier();
+            }());
         }
         catch (...)
         {
@@ -13454,7 +14463,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 auto param1 = py::convert_to<winrt::guid>(args, 1);
                 auto param2 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 2);
 
-                self->obj.OnBeginSetupDecryptor(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.OnBeginSetupDecryptor(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -13493,7 +14506,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Protection::PlayReady::INDLicenseFetchDescriptor>(args, 0);
 
-                self->obj.OnContentIDReceived(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.OnContentIDReceived(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -13533,7 +14550,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Media::Core::AudioStreamDescriptor>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Media::Core::VideoStreamDescriptor>>(args, 1);
 
-                self->obj.OnMediaStreamDescriptorCreated(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.OnMediaStreamDescriptorCreated(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -13577,7 +14598,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 auto param4 = py::convert_to<winrt::Windows::Media::Protection::PlayReady::NDClosedCaptionFormat>(args, 4);
                 auto param5 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 5);
 
-                self->obj.OnSampleParsed(param0, param1, param2, param3, param4, param5);
+                {
+                    auto _gil = release_gil();
+                    self->obj.OnSampleParsed(param0, param1, param2, param3, param4, param5);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -13928,7 +14953,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.CertificateType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CertificateType();
+            }());
         }
         catch (...)
         {
@@ -13954,7 +14983,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.ClientID());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ClientID();
+            }());
         }
         catch (...)
         {
@@ -13980,7 +15013,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExpirationDate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExpirationDate();
+            }());
         }
         catch (...)
         {
@@ -14006,7 +15043,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.ModelDigest());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ModelDigest();
+            }());
         }
         catch (...)
         {
@@ -14032,7 +15073,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.ModelManufacturerName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ModelManufacturerName();
+            }());
         }
         catch (...)
         {
@@ -14058,7 +15103,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.ModelName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ModelName();
+            }());
         }
         catch (...)
         {
@@ -14084,7 +15133,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.ModelNumber());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ModelNumber();
+            }());
         }
         catch (...)
         {
@@ -14110,7 +15163,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.PlatformIdentifier());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PlatformIdentifier();
+            }());
         }
         catch (...)
         {
@@ -14136,7 +15193,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.SecurityLevel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SecurityLevel();
+            }());
         }
         catch (...)
         {
@@ -14162,7 +15223,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.SecurityVersion());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SecurityVersion();
+            }());
         }
         catch (...)
         {
@@ -14188,7 +15253,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.SupportedFeatures());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SupportedFeatures();
+            }());
         }
         catch (...)
         {
@@ -14576,7 +15645,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.AccountId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AccountId();
+            }());
         }
         catch (...)
         {
@@ -14602,7 +15675,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.DomainJoinUrl());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DomainJoinUrl();
+            }());
         }
         catch (...)
         {
@@ -14628,7 +15705,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.FriendlyName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FriendlyName();
+            }());
         }
         catch (...)
         {
@@ -14654,7 +15735,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.Revision());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Revision();
+            }());
         }
         catch (...)
         {
@@ -14680,7 +15765,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.ServiceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServiceId();
+            }());
         }
         catch (...)
         {
@@ -14945,7 +16034,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(self->obj.GetKIDAtChainDepth(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetKIDAtChainDepth(param0);
+                }());
             }
             catch (...)
             {
@@ -14977,7 +16070,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.ChainDepth());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ChainDepth();
+            }());
         }
         catch (...)
         {
@@ -15003,7 +16100,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.DomainAccountID());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DomainAccountID();
+            }());
         }
         catch (...)
         {
@@ -15029,7 +16130,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExpirationDate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExpirationDate();
+            }());
         }
         catch (...)
         {
@@ -15055,7 +16160,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExpireAfterFirstPlay());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExpireAfterFirstPlay();
+            }());
         }
         catch (...)
         {
@@ -15081,7 +16190,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.FullyEvaluated());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FullyEvaluated();
+            }());
         }
         catch (...)
         {
@@ -15107,7 +16220,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.UsableForPlay());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UsableForPlay();
+            }());
         }
         catch (...)
         {
@@ -15424,7 +16541,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                     return nullptr;
                 }
 
-                return py::convert(self->obj.BeginServiceRequest());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.BeginServiceRequest();
+                }());
             }
             catch (...)
             {
@@ -15460,7 +16581,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GenerateManualEnablingChallenge());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GenerateManualEnablingChallenge();
+                }());
             }
             catch (...)
             {
@@ -15496,7 +16621,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                     return nullptr;
                 }
 
-                return py::convert(self->obj.NextServiceRequest());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.NextServiceRequest();
+                }());
             }
             catch (...)
             {
@@ -15534,7 +16663,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
-                return py::convert(self->obj.ProcessManualEnablingResponse(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ProcessManualEnablingResponse(param0);
+                }());
             }
             catch (...)
             {
@@ -15566,7 +16699,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContentHeader());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContentHeader();
+            }());
         }
         catch (...)
         {
@@ -15600,7 +16737,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
             auto param0 = py::convert_to<winrt::Windows::Media::Protection::PlayReady::PlayReadyContentHeader>(arg);
 
-            self->obj.ContentHeader(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ContentHeader(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -15627,7 +16768,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.DomainServiceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DomainServiceId();
+            }());
         }
         catch (...)
         {
@@ -15661,7 +16806,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
             auto param0 = py::convert_to<winrt::guid>(arg);
 
-            self->obj.DomainServiceId(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DomainServiceId(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -15688,7 +16837,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.ChallengeCustomData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ChallengeCustomData();
+            }());
         }
         catch (...)
         {
@@ -15722,7 +16875,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ChallengeCustomData(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ChallengeCustomData(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -15749,7 +16906,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResponseCustomData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResponseCustomData();
+            }());
         }
         catch (...)
         {
@@ -15775,7 +16936,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.Uri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Uri();
+            }());
         }
         catch (...)
         {
@@ -15809,7 +16974,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.Uri(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Uri(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -15836,7 +17005,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProtectionSystem());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProtectionSystem();
+            }());
         }
         catch (...)
         {
@@ -15862,7 +17035,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.Type());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Type();
+            }());
         }
         catch (...)
         {
@@ -16375,7 +17552,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Protection::MediaProtectionManager>(args, 0);
 
-                self->obj.ConfigureMediaProtectionManager(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ConfigureMediaProtectionManager(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -16412,7 +17593,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CreateLAServiceRequest());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateLAServiceRequest();
+                }());
             }
             catch (...)
             {
@@ -16636,7 +17821,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Protection::MediaProtectionManager>(args, 0);
 
-                self->obj.ConfigureMediaProtectionManager(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ConfigureMediaProtectionManager(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -16673,7 +17862,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CreateLAServiceRequest());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateLAServiceRequest();
+                }());
             }
             catch (...)
             {
@@ -16712,7 +17905,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 auto param0 = py::convert_to<winrt::Windows::Media::Protection::PlayReady::PlayReadyContentHeader>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                return py::convert(self->obj.CreateLicenseIterable(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateLicenseIterable(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -16979,7 +18176,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                     return nullptr;
                 }
 
-                return py::convert(self->obj.BeginServiceRequest());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.BeginServiceRequest();
+                }());
             }
             catch (...)
             {
@@ -17015,7 +18216,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GenerateManualEnablingChallenge());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GenerateManualEnablingChallenge();
+                }());
             }
             catch (...)
             {
@@ -17051,7 +18256,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                     return nullptr;
                 }
 
-                return py::convert(self->obj.NextServiceRequest());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.NextServiceRequest();
+                }());
             }
             catch (...)
             {
@@ -17089,7 +18298,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
-                return py::convert(self->obj.ProcessManualEnablingResponse(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ProcessManualEnablingResponse(param0);
+                }());
             }
             catch (...)
             {
@@ -17121,7 +18334,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.PublisherCertificate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PublisherCertificate();
+            }());
         }
         catch (...)
         {
@@ -17147,7 +18364,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.SessionID());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SessionID();
+            }());
         }
         catch (...)
         {
@@ -17173,7 +18394,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.StartTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StartTime();
+            }());
         }
         catch (...)
         {
@@ -17199,7 +18424,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.Stopped());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Stopped();
+            }());
         }
         catch (...)
         {
@@ -17225,7 +18454,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.UpdateTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UpdateTime();
+            }());
         }
         catch (...)
         {
@@ -17251,7 +18484,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.ChallengeCustomData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ChallengeCustomData();
+            }());
         }
         catch (...)
         {
@@ -17285,7 +18522,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ChallengeCustomData(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ChallengeCustomData(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -17312,7 +18553,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResponseCustomData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResponseCustomData();
+            }());
         }
         catch (...)
         {
@@ -17338,7 +18583,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.Uri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Uri();
+            }());
         }
         catch (...)
         {
@@ -17372,7 +18621,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.Uri(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Uri(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -17399,7 +18652,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProtectionSystem());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProtectionSystem();
+            }());
         }
         catch (...)
         {
@@ -17425,7 +18682,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.Type());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Type();
+            }());
         }
         catch (...)
         {
@@ -17954,7 +19215,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                     return nullptr;
                 }
 
-                return py::convert(self->obj.BeginServiceRequest());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.BeginServiceRequest();
+                }());
             }
             catch (...)
             {
@@ -17990,7 +19255,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GenerateManualEnablingChallenge());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GenerateManualEnablingChallenge();
+                }());
             }
             catch (...)
             {
@@ -18026,7 +19295,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                     return nullptr;
                 }
 
-                return py::convert(self->obj.NextServiceRequest());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.NextServiceRequest();
+                }());
             }
             catch (...)
             {
@@ -18064,7 +19337,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
-                return py::convert(self->obj.ProcessManualEnablingResponse(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ProcessManualEnablingResponse(param0);
+                }());
             }
             catch (...)
             {
@@ -18096,7 +19373,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.ChallengeCustomData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ChallengeCustomData();
+            }());
         }
         catch (...)
         {
@@ -18130,7 +19411,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ChallengeCustomData(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ChallengeCustomData(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -18157,7 +19442,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResponseCustomData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResponseCustomData();
+            }());
         }
         catch (...)
         {
@@ -18183,7 +19472,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.Uri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Uri();
+            }());
         }
         catch (...)
         {
@@ -18217,7 +19510,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.Uri(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Uri(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -18244,7 +19541,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProtectionSystem());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProtectionSystem();
+            }());
         }
         catch (...)
         {
@@ -18270,7 +19571,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 return nullptr;
             }
 
-            return py::convert(self->obj.Type());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Type();
+            }());
         }
         catch (...)
         {

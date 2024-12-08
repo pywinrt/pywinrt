@@ -30,7 +30,11 @@ namespace py::cpp::Windows::Phone::System::Profile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Phone::System::Profile::RetailMode::RetailModeEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Phone::System::Profile::RetailMode::RetailModeEnabled();
+            }());
         }
         catch (...)
         {

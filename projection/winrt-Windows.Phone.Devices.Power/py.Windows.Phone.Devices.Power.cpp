@@ -42,7 +42,11 @@ namespace py::cpp::Windows::Phone::Devices::Power
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Phone::Devices::Power::Battery::GetDefault());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Phone::Devices::Power::Battery::GetDefault();
+                }());
             }
             catch (...)
             {
@@ -74,7 +78,11 @@ namespace py::cpp::Windows::Phone::Devices::Power
                 return nullptr;
             }
 
-            return py::convert(self->obj.RemainingChargePercent());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RemainingChargePercent();
+            }());
         }
         catch (...)
         {
@@ -100,7 +108,11 @@ namespace py::cpp::Windows::Phone::Devices::Power
                 return nullptr;
             }
 
-            return py::convert(self->obj.RemainingDischargeTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RemainingDischargeTime();
+            }());
         }
         catch (...)
         {
@@ -128,7 +140,11 @@ namespace py::cpp::Windows::Phone::Devices::Power
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.RemainingChargePercentChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RemainingChargePercentChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -156,7 +172,11 @@ namespace py::cpp::Windows::Phone::Devices::Power
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.RemainingChargePercentChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RemainingChargePercentChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)

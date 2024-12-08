@@ -36,7 +36,11 @@ namespace py::cpp::Windows::Data::Html
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Data::Html::HtmlUtilities::ConvertToText(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Data::Html::HtmlUtilities::ConvertToText(param0);
+                }());
             }
             catch (...)
             {

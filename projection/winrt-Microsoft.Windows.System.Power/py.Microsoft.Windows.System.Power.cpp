@@ -30,7 +30,11 @@ namespace py::cpp::Microsoft::Windows::System::Power
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::Windows::System::Power::PowerManager::BatteryStatus());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::Windows::System::Power::PowerManager::BatteryStatus();
+            }());
         }
         catch (...)
         {
@@ -56,7 +60,11 @@ namespace py::cpp::Microsoft::Windows::System::Power
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::Windows::System::Power::PowerManager::DisplayStatus());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::Windows::System::Power::PowerManager::DisplayStatus();
+            }());
         }
         catch (...)
         {
@@ -82,7 +90,11 @@ namespace py::cpp::Microsoft::Windows::System::Power
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::Windows::System::Power::PowerManager::EffectivePowerMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::Windows::System::Power::PowerManager::EffectivePowerMode();
+            }());
         }
         catch (...)
         {
@@ -108,7 +120,11 @@ namespace py::cpp::Microsoft::Windows::System::Power
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::Windows::System::Power::PowerManager::EnergySaverStatus());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::Windows::System::Power::PowerManager::EnergySaverStatus();
+            }());
         }
         catch (...)
         {
@@ -134,7 +150,11 @@ namespace py::cpp::Microsoft::Windows::System::Power
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::Windows::System::Power::PowerManager::PowerSourceKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::Windows::System::Power::PowerManager::PowerSourceKind();
+            }());
         }
         catch (...)
         {
@@ -160,7 +180,11 @@ namespace py::cpp::Microsoft::Windows::System::Power
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::Windows::System::Power::PowerManager::PowerSupplyStatus());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::Windows::System::Power::PowerManager::PowerSupplyStatus();
+            }());
         }
         catch (...)
         {
@@ -186,7 +210,11 @@ namespace py::cpp::Microsoft::Windows::System::Power
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::Windows::System::Power::PowerManager::RemainingChargePercent());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::Windows::System::Power::PowerManager::RemainingChargePercent();
+            }());
         }
         catch (...)
         {
@@ -212,7 +240,11 @@ namespace py::cpp::Microsoft::Windows::System::Power
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::Windows::System::Power::PowerManager::RemainingDischargeTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::Windows::System::Power::PowerManager::RemainingDischargeTime();
+            }());
         }
         catch (...)
         {
@@ -238,7 +270,11 @@ namespace py::cpp::Microsoft::Windows::System::Power
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::Windows::System::Power::PowerManager::SystemSuspendStatus());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::Windows::System::Power::PowerManager::SystemSuspendStatus();
+            }());
         }
         catch (...)
         {
@@ -264,7 +300,11 @@ namespace py::cpp::Microsoft::Windows::System::Power
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::Windows::System::Power::PowerManager::UserPresenceStatus());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::Windows::System::Power::PowerManager::UserPresenceStatus();
+            }());
         }
         catch (...)
         {
@@ -290,7 +330,11 @@ namespace py::cpp::Microsoft::Windows::System::Power
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::Windows::System::Power::PowerManager::EffectivePowerMode2());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::Windows::System::Power::PowerManager::EffectivePowerMode2();
+            }());
         }
         catch (...)
         {
@@ -318,7 +362,11 @@ namespace py::cpp::Microsoft::Windows::System::Power
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(winrt::Microsoft::Windows::System::Power::PowerManager::BatteryStatusChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::Windows::System::Power::PowerManager::BatteryStatusChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -346,7 +394,11 @@ namespace py::cpp::Microsoft::Windows::System::Power
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Microsoft::Windows::System::Power::PowerManager::BatteryStatusChanged(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Microsoft::Windows::System::Power::PowerManager::BatteryStatusChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -375,7 +427,11 @@ namespace py::cpp::Microsoft::Windows::System::Power
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(winrt::Microsoft::Windows::System::Power::PowerManager::DisplayStatusChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::Windows::System::Power::PowerManager::DisplayStatusChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -403,7 +459,11 @@ namespace py::cpp::Microsoft::Windows::System::Power
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Microsoft::Windows::System::Power::PowerManager::DisplayStatusChanged(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Microsoft::Windows::System::Power::PowerManager::DisplayStatusChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -432,7 +492,11 @@ namespace py::cpp::Microsoft::Windows::System::Power
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(winrt::Microsoft::Windows::System::Power::PowerManager::EffectivePowerModeChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::Windows::System::Power::PowerManager::EffectivePowerModeChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -460,7 +524,11 @@ namespace py::cpp::Microsoft::Windows::System::Power
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Microsoft::Windows::System::Power::PowerManager::EffectivePowerModeChanged(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Microsoft::Windows::System::Power::PowerManager::EffectivePowerModeChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -489,7 +557,11 @@ namespace py::cpp::Microsoft::Windows::System::Power
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(winrt::Microsoft::Windows::System::Power::PowerManager::EnergySaverStatusChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::Windows::System::Power::PowerManager::EnergySaverStatusChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -517,7 +589,11 @@ namespace py::cpp::Microsoft::Windows::System::Power
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Microsoft::Windows::System::Power::PowerManager::EnergySaverStatusChanged(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Microsoft::Windows::System::Power::PowerManager::EnergySaverStatusChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -546,7 +622,11 @@ namespace py::cpp::Microsoft::Windows::System::Power
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(winrt::Microsoft::Windows::System::Power::PowerManager::PowerSourceKindChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::Windows::System::Power::PowerManager::PowerSourceKindChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -574,7 +654,11 @@ namespace py::cpp::Microsoft::Windows::System::Power
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Microsoft::Windows::System::Power::PowerManager::PowerSourceKindChanged(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Microsoft::Windows::System::Power::PowerManager::PowerSourceKindChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -603,7 +687,11 @@ namespace py::cpp::Microsoft::Windows::System::Power
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(winrt::Microsoft::Windows::System::Power::PowerManager::PowerSupplyStatusChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::Windows::System::Power::PowerManager::PowerSupplyStatusChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -631,7 +719,11 @@ namespace py::cpp::Microsoft::Windows::System::Power
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Microsoft::Windows::System::Power::PowerManager::PowerSupplyStatusChanged(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Microsoft::Windows::System::Power::PowerManager::PowerSupplyStatusChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -660,7 +752,11 @@ namespace py::cpp::Microsoft::Windows::System::Power
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(winrt::Microsoft::Windows::System::Power::PowerManager::RemainingChargePercentChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::Windows::System::Power::PowerManager::RemainingChargePercentChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -688,7 +784,11 @@ namespace py::cpp::Microsoft::Windows::System::Power
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Microsoft::Windows::System::Power::PowerManager::RemainingChargePercentChanged(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Microsoft::Windows::System::Power::PowerManager::RemainingChargePercentChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -717,7 +817,11 @@ namespace py::cpp::Microsoft::Windows::System::Power
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(winrt::Microsoft::Windows::System::Power::PowerManager::RemainingDischargeTimeChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::Windows::System::Power::PowerManager::RemainingDischargeTimeChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -745,7 +849,11 @@ namespace py::cpp::Microsoft::Windows::System::Power
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Microsoft::Windows::System::Power::PowerManager::RemainingDischargeTimeChanged(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Microsoft::Windows::System::Power::PowerManager::RemainingDischargeTimeChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -774,7 +882,11 @@ namespace py::cpp::Microsoft::Windows::System::Power
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(winrt::Microsoft::Windows::System::Power::PowerManager::SystemIdleStatusChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::Windows::System::Power::PowerManager::SystemIdleStatusChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -802,7 +914,11 @@ namespace py::cpp::Microsoft::Windows::System::Power
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Microsoft::Windows::System::Power::PowerManager::SystemIdleStatusChanged(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Microsoft::Windows::System::Power::PowerManager::SystemIdleStatusChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -831,7 +947,11 @@ namespace py::cpp::Microsoft::Windows::System::Power
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(winrt::Microsoft::Windows::System::Power::PowerManager::SystemSuspendStatusChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::Windows::System::Power::PowerManager::SystemSuspendStatusChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -859,7 +979,11 @@ namespace py::cpp::Microsoft::Windows::System::Power
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Microsoft::Windows::System::Power::PowerManager::SystemSuspendStatusChanged(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Microsoft::Windows::System::Power::PowerManager::SystemSuspendStatusChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -888,7 +1012,11 @@ namespace py::cpp::Microsoft::Windows::System::Power
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(winrt::Microsoft::Windows::System::Power::PowerManager::UserPresenceStatusChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::Windows::System::Power::PowerManager::UserPresenceStatusChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -916,7 +1044,11 @@ namespace py::cpp::Microsoft::Windows::System::Power
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Microsoft::Windows::System::Power::PowerManager::UserPresenceStatusChanged(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Microsoft::Windows::System::Power::PowerManager::UserPresenceStatusChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)

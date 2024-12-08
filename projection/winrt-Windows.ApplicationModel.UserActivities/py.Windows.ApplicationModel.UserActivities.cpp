@@ -66,7 +66,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CreateSession());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateSession();
+                }());
             }
             catch (...)
             {
@@ -102,7 +106,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
                     return nullptr;
                 }
 
-                return py::convert(self->obj.SaveAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SaveAsync();
+                }());
             }
             catch (...)
             {
@@ -138,7 +146,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ToJson());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ToJson();
+                }());
             }
             catch (...)
             {
@@ -176,7 +188,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::ApplicationModel::UserActivities::UserActivity>>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::UserActivities::UserActivity::ToJsonArray(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::UserActivities::UserActivity::ToJsonArray(param0);
+                }());
             }
             catch (...)
             {
@@ -214,7 +230,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::UserActivities::UserActivity::TryParseFromJson(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::UserActivities::UserActivity::TryParseFromJson(param0);
+                }());
             }
             catch (...)
             {
@@ -252,7 +272,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::UserActivities::UserActivity::TryParseFromJsonArray(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::UserActivities::UserActivity::TryParseFromJsonArray(param0);
+                }());
             }
             catch (...)
             {
@@ -284,7 +308,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
                 return nullptr;
             }
 
-            return py::convert(self->obj.FallbackUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FallbackUri();
+            }());
         }
         catch (...)
         {
@@ -318,7 +346,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.FallbackUri(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.FallbackUri(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -345,7 +377,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContentUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContentUri();
+            }());
         }
         catch (...)
         {
@@ -379,7 +415,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.ContentUri(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ContentUri(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -406,7 +446,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContentType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContentType();
+            }());
         }
         catch (...)
         {
@@ -440,7 +484,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ContentType(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ContentType(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -467,7 +515,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContentInfo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContentInfo();
+            }());
         }
         catch (...)
         {
@@ -501,7 +553,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::UserActivities::IUserActivityContentInfo>(arg);
 
-            self->obj.ContentInfo(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ContentInfo(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -528,7 +584,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
                 return nullptr;
             }
 
-            return py::convert(self->obj.ActivationUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ActivationUri();
+            }());
         }
         catch (...)
         {
@@ -562,7 +622,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.ActivationUri(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ActivationUri(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -589,7 +653,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
                 return nullptr;
             }
 
-            return py::convert(self->obj.ActivityId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ActivityId();
+            }());
         }
         catch (...)
         {
@@ -615,7 +683,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
                 return nullptr;
             }
 
-            return py::convert(self->obj.State());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.State();
+            }());
         }
         catch (...)
         {
@@ -641,7 +713,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
                 return nullptr;
             }
 
-            return py::convert(self->obj.VisualElements());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.VisualElements();
+            }());
         }
         catch (...)
         {
@@ -667,7 +743,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsRoamable());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsRoamable();
+            }());
         }
         catch (...)
         {
@@ -701,7 +781,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsRoamable(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsRoamable(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -871,7 +955,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
                 return nullptr;
             }
 
-            return py::convert(self->obj.IconUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IconUri();
+            }());
         }
         catch (...)
         {
@@ -905,7 +993,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.IconUri(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IconUri(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -932,7 +1024,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
                 return nullptr;
             }
 
-            return py::convert(self->obj.AlternateText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AlternateText();
+            }());
         }
         catch (...)
         {
@@ -966,7 +1062,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.AlternateText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AlternateText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -993,7 +1093,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
                 return nullptr;
             }
 
-            return py::convert(self->obj.AddImageQuery());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AddImageQuery();
+            }());
         }
         catch (...)
         {
@@ -1027,7 +1131,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.AddImageQuery(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AddImageQuery(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1129,7 +1237,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.DeleteActivityAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.DeleteActivityAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1165,7 +1277,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
                     return nullptr;
                 }
 
-                return py::convert(self->obj.DeleteAllActivitiesAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.DeleteAllActivitiesAsync();
+                }());
             }
             catch (...)
             {
@@ -1201,7 +1317,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
                     return nullptr;
                 }
 
-                winrt::Windows::ApplicationModel::UserActivities::UserActivityChannel::DisableAutoSessionCreation();
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::ApplicationModel::UserActivities::UserActivityChannel::DisableAutoSessionCreation();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1238,7 +1358,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::ApplicationModel::UserActivities::UserActivityChannel::GetDefault());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::UserActivities::UserActivityChannel::GetDefault();
+                }());
             }
             catch (...)
             {
@@ -1276,7 +1400,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::UserActivities::UserActivityChannel::GetForUser(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::UserActivities::UserActivityChannel::GetForUser(param0);
+                }());
             }
             catch (...)
             {
@@ -1314,7 +1442,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetOrCreateUserActivityAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetOrCreateUserActivityAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1352,7 +1484,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                return py::convert(self->obj.GetRecentUserActivitiesAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetRecentUserActivitiesAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1391,7 +1527,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 1);
 
-                return py::convert(self->obj.GetSessionHistoryItemsForUserActivityAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetSessionHistoryItemsForUserActivityAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1429,7 +1569,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
                 auto param0 = py::convert_to<winrt::Windows::Security::Credentials::WebAccount>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::UserActivities::UserActivityChannel::TryGetForWebAccount(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::UserActivities::UserActivityChannel::TryGetForWebAccount(param0);
+                }());
             }
             catch (...)
             {
@@ -1567,7 +1711,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::UserActivities::UserActivityContentInfo::FromJson(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::UserActivities::UserActivityContentInfo::FromJson(param0);
+                }());
             }
             catch (...)
             {
@@ -1603,7 +1751,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ToJson());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ToJson();
+                }());
             }
             catch (...)
             {
@@ -1734,7 +1886,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::UserActivities::UserActivity>(args, 0);
 
-                self->obj.SetUserActivity(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetUserActivity(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1838,7 +1994,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::ApplicationModel::UserActivities::UserActivityRequestManager::GetForCurrentView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::UserActivities::UserActivityRequestManager::GetForCurrentView();
+                }());
             }
             catch (...)
             {
@@ -1872,7 +2032,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::UserActivities::UserActivityRequestManager, winrt::Windows::ApplicationModel::UserActivities::UserActivityRequestedEventArgs>>(arg);
 
-            return py::convert(self->obj.UserActivityRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UserActivityRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -1900,7 +2064,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.UserActivityRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.UserActivityRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2025,7 +2193,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -2057,7 +2229,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
                 return nullptr;
             }
 
-            return py::convert(self->obj.Request());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Request();
+            }());
         }
         catch (...)
         {
@@ -2155,7 +2331,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2188,7 +2368,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
                 return nullptr;
             }
 
-            return py::convert(self->obj.ActivityId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ActivityId();
+            }());
         }
         catch (...)
         {
@@ -2230,7 +2414,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -2303,7 +2491,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
                 return nullptr;
             }
 
-            return py::convert(self->obj.EndTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EndTime();
+            }());
         }
         catch (...)
         {
@@ -2329,7 +2521,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
                 return nullptr;
             }
 
-            return py::convert(self->obj.StartTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StartTime();
+            }());
         }
         catch (...)
         {
@@ -2355,7 +2551,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
                 return nullptr;
             }
 
-            return py::convert(self->obj.UserActivity());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UserActivity();
+            }());
         }
         catch (...)
         {
@@ -2450,7 +2650,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayText();
+            }());
         }
         catch (...)
         {
@@ -2484,7 +2688,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.DisplayText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DisplayText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2511,7 +2719,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
                 return nullptr;
             }
 
-            return py::convert(self->obj.Description());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Description();
+            }());
         }
         catch (...)
         {
@@ -2545,7 +2757,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Description(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Description(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2572,7 +2788,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
                 return nullptr;
             }
 
-            return py::convert(self->obj.Content());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Content();
+            }());
         }
         catch (...)
         {
@@ -2606,7 +2826,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
             auto param0 = py::convert_to<winrt::Windows::UI::Shell::IAdaptiveCard>(arg);
 
-            self->obj.Content(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Content(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2633,7 +2857,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
                 return nullptr;
             }
 
-            return py::convert(self->obj.BackgroundColor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BackgroundColor();
+            }());
         }
         catch (...)
         {
@@ -2667,7 +2895,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
-            self->obj.BackgroundColor(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.BackgroundColor(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2694,7 +2926,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
                 return nullptr;
             }
 
-            return py::convert(self->obj.Attribution());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Attribution();
+            }());
         }
         catch (...)
         {
@@ -2728,7 +2964,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::UserActivities::UserActivityAttribution>(arg);
 
-            self->obj.Attribution(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Attribution(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2755,7 +2995,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
                 return nullptr;
             }
 
-            return py::convert(self->obj.AttributionDisplayText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AttributionDisplayText();
+            }());
         }
         catch (...)
         {
@@ -2789,7 +3033,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.AttributionDisplayText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AttributionDisplayText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2892,7 +3140,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ToJson());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ToJson();
+                }());
             }
             catch (...)
             {

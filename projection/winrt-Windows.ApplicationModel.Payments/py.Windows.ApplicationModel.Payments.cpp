@@ -60,7 +60,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 return nullptr;
             }
 
-            return py::convert(self->obj.SortingCode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SortingCode();
+            }());
         }
         catch (...)
         {
@@ -94,7 +98,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.SortingCode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SortingCode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -121,7 +129,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 return nullptr;
             }
 
-            return py::convert(self->obj.Region());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Region();
+            }());
         }
         catch (...)
         {
@@ -155,7 +167,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Region(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Region(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -182,7 +198,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 return nullptr;
             }
 
-            return py::convert(self->obj.Recipient());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Recipient();
+            }());
         }
         catch (...)
         {
@@ -216,7 +236,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Recipient(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Recipient(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -243,7 +267,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 return nullptr;
             }
 
-            return py::convert(self->obj.PostalCode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PostalCode();
+            }());
         }
         catch (...)
         {
@@ -277,7 +305,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.PostalCode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PostalCode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -304,7 +336,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 return nullptr;
             }
 
-            return py::convert(self->obj.PhoneNumber());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PhoneNumber();
+            }());
         }
         catch (...)
         {
@@ -338,7 +374,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.PhoneNumber(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PhoneNumber(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -365,7 +405,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 return nullptr;
             }
 
-            return py::convert(self->obj.Organization());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Organization();
+            }());
         }
         catch (...)
         {
@@ -399,7 +443,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Organization(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Organization(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -426,7 +474,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 return nullptr;
             }
 
-            return py::convert(self->obj.LanguageCode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LanguageCode();
+            }());
         }
         catch (...)
         {
@@ -460,7 +512,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.LanguageCode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.LanguageCode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -487,7 +543,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 return nullptr;
             }
 
-            return py::convert(self->obj.DependentLocality());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DependentLocality();
+            }());
         }
         catch (...)
         {
@@ -521,7 +581,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.DependentLocality(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DependentLocality(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -548,7 +612,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 return nullptr;
             }
 
-            return py::convert(self->obj.Country());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Country();
+            }());
         }
         catch (...)
         {
@@ -582,7 +650,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Country(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Country(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -609,7 +681,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 return nullptr;
             }
 
-            return py::convert(self->obj.City());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.City();
+            }());
         }
         catch (...)
         {
@@ -643,7 +719,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.City(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.City(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -670,7 +750,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 return nullptr;
             }
 
-            return py::convert(self->obj.AddressLines());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AddressLines();
+            }());
         }
         catch (...)
         {
@@ -704,7 +788,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::hstring>>(arg);
 
-            self->obj.AddressLines(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AddressLines(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -731,7 +819,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 return nullptr;
             }
 
-            return py::convert(self->obj.Properties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Properties();
+            }());
         }
         catch (...)
         {
@@ -859,7 +951,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -994,7 +1090,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 return nullptr;
             }
 
-            return py::convert(self->obj.Value());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Value();
+            }());
         }
         catch (...)
         {
@@ -1028,7 +1128,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Value(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Value(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1055,7 +1159,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 return nullptr;
             }
 
-            return py::convert(self->obj.CurrencySystem());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CurrencySystem();
+            }());
         }
         catch (...)
         {
@@ -1089,7 +1197,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.CurrencySystem(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CurrencySystem(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1116,7 +1228,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 return nullptr;
             }
 
-            return py::convert(self->obj.Currency());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Currency();
+            }());
         }
         catch (...)
         {
@@ -1150,7 +1266,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Currency(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Currency(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1299,7 +1419,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 return nullptr;
             }
 
-            return py::convert(self->obj.Total());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Total();
+            }());
         }
         catch (...)
         {
@@ -1333,7 +1457,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Payments::PaymentItem>(arg);
 
-            self->obj.Total(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Total(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1360,7 +1488,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 return nullptr;
             }
 
-            return py::convert(self->obj.ShippingOptions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ShippingOptions();
+            }());
         }
         catch (...)
         {
@@ -1394,7 +1526,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Payments::PaymentShippingOption>>(arg);
 
-            self->obj.ShippingOptions(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ShippingOptions(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1421,7 +1557,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 return nullptr;
             }
 
-            return py::convert(self->obj.Modifiers());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Modifiers();
+            }());
         }
         catch (...)
         {
@@ -1455,7 +1595,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Payments::PaymentDetailsModifier>>(arg);
 
-            self->obj.Modifiers(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Modifiers(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1482,7 +1626,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayItems());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayItems();
+            }());
         }
         catch (...)
         {
@@ -1516,7 +1664,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Payments::PaymentItem>>(arg);
 
-            self->obj.DisplayItems(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DisplayItems(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1673,7 +1825,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 return nullptr;
             }
 
-            return py::convert(self->obj.AdditionalDisplayItems());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AdditionalDisplayItems();
+            }());
         }
         catch (...)
         {
@@ -1699,7 +1855,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 return nullptr;
             }
 
-            return py::convert(self->obj.JsonData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.JsonData();
+            }());
         }
         catch (...)
         {
@@ -1725,7 +1885,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 return nullptr;
             }
 
-            return py::convert(self->obj.SupportedMethodIds());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SupportedMethodIds();
+            }());
         }
         catch (...)
         {
@@ -1751,7 +1915,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 return nullptr;
             }
 
-            return py::convert(self->obj.Total());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Total();
+            }());
         }
         catch (...)
         {
@@ -1872,7 +2040,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 return nullptr;
             }
 
-            return py::convert(self->obj.Pending());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Pending();
+            }());
         }
         catch (...)
         {
@@ -1906,7 +2078,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Pending(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Pending(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1933,7 +2109,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 return nullptr;
             }
 
-            return py::convert(self->obj.Label());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Label();
+            }());
         }
         catch (...)
         {
@@ -1967,7 +2147,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Label(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Label(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1994,7 +2178,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 return nullptr;
             }
 
-            return py::convert(self->obj.Amount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Amount();
+            }());
         }
         catch (...)
         {
@@ -2028,7 +2216,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Payments::PaymentCurrencyAmount>(arg);
 
-            self->obj.Amount(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Amount(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2152,7 +2344,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Payments::PaymentRequest>(args, 0);
 
-                return py::convert(self->obj.CanMakePaymentAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CanMakePaymentAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -2188,7 +2384,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetSupportedMethodIdsAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetSupportedMethodIdsAsync();
+                }());
             }
             catch (...)
             {
@@ -2226,7 +2426,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Payments::PaymentRequest>(args, 0);
 
-                return py::convert(self->obj.SubmitPaymentRequestAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SubmitPaymentRequestAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -2265,7 +2469,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Payments::PaymentRequest>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Payments::PaymentRequestChangedHandler>(args, 1);
 
-                return py::convert(self->obj.SubmitPaymentRequestAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SubmitPaymentRequestAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2404,7 +2612,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 return nullptr;
             }
 
-            return py::convert(self->obj.PackageFullName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PackageFullName();
+            }());
         }
         catch (...)
         {
@@ -2430,7 +2642,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 return nullptr;
             }
 
-            return py::convert(self->obj.Uri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Uri();
+            }());
         }
         catch (...)
         {
@@ -2564,7 +2780,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 return nullptr;
             }
 
-            return py::convert(self->obj.JsonData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.JsonData();
+            }());
         }
         catch (...)
         {
@@ -2590,7 +2810,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 return nullptr;
             }
 
-            return py::convert(self->obj.SupportedMethodIds());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SupportedMethodIds();
+            }());
         }
         catch (...)
         {
@@ -2706,7 +2930,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 return nullptr;
             }
 
-            return py::convert(self->obj.ShippingType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ShippingType();
+            }());
         }
         catch (...)
         {
@@ -2740,7 +2968,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Payments::PaymentShippingType>(arg);
 
-            self->obj.ShippingType(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ShippingType(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2767,7 +2999,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 return nullptr;
             }
 
-            return py::convert(self->obj.RequestShipping());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RequestShipping();
+            }());
         }
         catch (...)
         {
@@ -2801,7 +3037,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.RequestShipping(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RequestShipping(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2828,7 +3068,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 return nullptr;
             }
 
-            return py::convert(self->obj.RequestPayerPhoneNumber());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RequestPayerPhoneNumber();
+            }());
         }
         catch (...)
         {
@@ -2862,7 +3106,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Payments::PaymentOptionPresence>(arg);
 
-            self->obj.RequestPayerPhoneNumber(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RequestPayerPhoneNumber(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2889,7 +3137,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 return nullptr;
             }
 
-            return py::convert(self->obj.RequestPayerName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RequestPayerName();
+            }());
         }
         catch (...)
         {
@@ -2923,7 +3175,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Payments::PaymentOptionPresence>(arg);
 
-            self->obj.RequestPayerName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RequestPayerName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2950,7 +3206,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 return nullptr;
             }
 
-            return py::convert(self->obj.RequestPayerEmail());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RequestPayerEmail();
+            }());
         }
         catch (...)
         {
@@ -2984,7 +3244,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Payments::PaymentOptionPresence>(arg);
 
-            self->obj.RequestPayerEmail(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RequestPayerEmail(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3161,7 +3425,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 return nullptr;
             }
 
-            return py::convert(self->obj.Details());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Details();
+            }());
         }
         catch (...)
         {
@@ -3187,7 +3455,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 return nullptr;
             }
 
-            return py::convert(self->obj.MerchantInfo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MerchantInfo();
+            }());
         }
         catch (...)
         {
@@ -3213,7 +3485,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 return nullptr;
             }
 
-            return py::convert(self->obj.MethodData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MethodData();
+            }());
         }
         catch (...)
         {
@@ -3239,7 +3515,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 return nullptr;
             }
 
-            return py::convert(self->obj.Options());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Options();
+            }());
         }
         catch (...)
         {
@@ -3265,7 +3545,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -3368,7 +3652,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Payments::PaymentRequestChangedResult>(args, 0);
 
-                self->obj.Acknowledge(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Acknowledge(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3401,7 +3689,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 return nullptr;
             }
 
-            return py::convert(self->obj.ChangeKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ChangeKind();
+            }());
         }
         catch (...)
         {
@@ -3427,7 +3719,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectedShippingOption());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SelectedShippingOption();
+            }());
         }
         catch (...)
         {
@@ -3453,7 +3749,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 return nullptr;
             }
 
-            return py::convert(self->obj.ShippingAddress());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ShippingAddress();
+            }());
         }
         catch (...)
         {
@@ -3589,7 +3889,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 return nullptr;
             }
 
-            return py::convert(self->obj.UpdatedPaymentDetails());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UpdatedPaymentDetails();
+            }());
         }
         catch (...)
         {
@@ -3623,7 +3927,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Payments::PaymentDetails>(arg);
 
-            self->obj.UpdatedPaymentDetails(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.UpdatedPaymentDetails(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3650,7 +3958,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 return nullptr;
             }
 
-            return py::convert(self->obj.Message());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Message();
+            }());
         }
         catch (...)
         {
@@ -3684,7 +3996,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Message(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Message(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3711,7 +4027,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 return nullptr;
             }
 
-            return py::convert(self->obj.ChangeAcceptedByMerchant());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ChangeAcceptedByMerchant();
+            }());
         }
         catch (...)
         {
@@ -3745,7 +4065,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.ChangeAcceptedByMerchant(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ChangeAcceptedByMerchant(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3841,7 +4165,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 return nullptr;
             }
 
-            return py::convert(self->obj.Response());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Response();
+            }());
         }
         catch (...)
         {
@@ -3867,7 +4195,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -3967,7 +4299,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Payments::PaymentRequestCompletionStatus>(args, 0);
 
-                return py::convert(self->obj.CompleteAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CompleteAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -3999,7 +4335,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 return nullptr;
             }
 
-            return py::convert(self->obj.PayerEmail());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PayerEmail();
+            }());
         }
         catch (...)
         {
@@ -4025,7 +4365,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 return nullptr;
             }
 
-            return py::convert(self->obj.PayerName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PayerName();
+            }());
         }
         catch (...)
         {
@@ -4051,7 +4395,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 return nullptr;
             }
 
-            return py::convert(self->obj.PayerPhoneNumber());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PayerPhoneNumber();
+            }());
         }
         catch (...)
         {
@@ -4077,7 +4425,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 return nullptr;
             }
 
-            return py::convert(self->obj.PaymentToken());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PaymentToken();
+            }());
         }
         catch (...)
         {
@@ -4103,7 +4455,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 return nullptr;
             }
 
-            return py::convert(self->obj.ShippingAddress());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ShippingAddress();
+            }());
         }
         catch (...)
         {
@@ -4129,7 +4485,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 return nullptr;
             }
 
-            return py::convert(self->obj.ShippingOption());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ShippingOption();
+            }());
         }
         catch (...)
         {
@@ -4288,7 +4648,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 return nullptr;
             }
 
-            return py::convert(self->obj.Tag());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Tag();
+            }());
         }
         catch (...)
         {
@@ -4322,7 +4686,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Tag(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Tag(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4349,7 +4717,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 return nullptr;
             }
 
-            return py::convert(self->obj.Label());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Label();
+            }());
         }
         catch (...)
         {
@@ -4383,7 +4755,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Label(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Label(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4410,7 +4786,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsSelected());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsSelected();
+            }());
         }
         catch (...)
         {
@@ -4444,7 +4824,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsSelected(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsSelected(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4471,7 +4855,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 return nullptr;
             }
 
-            return py::convert(self->obj.Amount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Amount();
+            }());
         }
         catch (...)
         {
@@ -4505,7 +4893,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Payments::PaymentCurrencyAmount>(arg);
 
-            self->obj.Amount(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Amount(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4642,7 +5034,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 return nullptr;
             }
 
-            return py::convert(self->obj.JsonDetails());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.JsonDetails();
+            }());
         }
         catch (...)
         {
@@ -4668,7 +5064,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 return nullptr;
             }
 
-            return py::convert(self->obj.PaymentMethodId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PaymentMethodId();
+            }());
         }
         catch (...)
         {

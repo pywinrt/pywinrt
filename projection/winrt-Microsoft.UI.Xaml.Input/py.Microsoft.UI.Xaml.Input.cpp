@@ -148,7 +148,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.PressedKeys());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PressedKeys();
+            }());
         }
         catch (...)
         {
@@ -263,7 +267,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Handled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Handled();
+            }());
         }
         catch (...)
         {
@@ -297,7 +305,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Handled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Handled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -397,7 +409,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::XamlRoot>(args, 0);
 
-                winrt::Microsoft::UI::Xaml::Input::AccessKeyManager::EnterDisplayMode(param0);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Input::AccessKeyManager::EnterDisplayMode(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -434,7 +450,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                     return nullptr;
                 }
 
-                winrt::Microsoft::UI::Xaml::Input::AccessKeyManager::ExitDisplayMode();
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Input::AccessKeyManager::ExitDisplayMode();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -467,7 +487,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Input::AccessKeyManager::AreKeyTipsEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Input::AccessKeyManager::AreKeyTipsEnabled();
+            }());
         }
         catch (...)
         {
@@ -501,7 +525,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<bool>(arg);
 
-            winrt::Microsoft::UI::Xaml::Input::AccessKeyManager::AreKeyTipsEnabled(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Microsoft::UI::Xaml::Input::AccessKeyManager::AreKeyTipsEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -528,7 +556,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Input::AccessKeyManager::IsDisplayModeEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Input::AccessKeyManager::IsDisplayModeEnabled();
+            }());
         }
         catch (...)
         {
@@ -556,7 +588,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::IInspectable, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Input::AccessKeyManager::IsDisplayModeEnabledChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Input::AccessKeyManager::IsDisplayModeEnabledChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -584,7 +620,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Microsoft::UI::Xaml::Input::AccessKeyManager::IsDisplayModeEnabledChanged(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Microsoft::UI::Xaml::Input::AccessKeyManager::IsDisplayModeEnabledChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -708,7 +748,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.CanExecute());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CanExecute();
+            }());
         }
         catch (...)
         {
@@ -742,7 +786,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.CanExecute(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CanExecute(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -769,7 +817,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Parameter());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Parameter();
+            }());
         }
         catch (...)
         {
@@ -863,7 +915,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Handled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Handled();
+            }());
         }
         catch (...)
         {
@@ -897,7 +953,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Handled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Handled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -924,7 +984,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Character());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Character();
+            }());
         }
         catch (...)
         {
@@ -950,7 +1014,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.KeyStatus());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.KeyStatus();
+            }());
         }
         catch (...)
         {
@@ -1074,7 +1142,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::UIElement>(args, 0);
                 winrt::Windows::Foundation::Point param1{};
 
-                auto return_value = self->obj.TryGetPosition(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryGetPosition(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -1086,6 +1158,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -1118,7 +1191,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Handled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Handled();
+            }());
         }
         catch (...)
         {
@@ -1152,7 +1229,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Handled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Handled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1275,7 +1356,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::UIElement>(args, 0);
 
-                return py::convert(self->obj.GetPosition(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetPosition(param0);
+                }());
             }
             catch (...)
             {
@@ -1307,7 +1392,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Handled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Handled();
+            }());
         }
         catch (...)
         {
@@ -1341,7 +1430,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Handled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Handled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1368,7 +1461,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.PointerDeviceType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PointerDeviceType();
+            }());
         }
         catch (...)
         {
@@ -1463,7 +1560,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Parameter());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Parameter();
+            }());
         }
         catch (...)
         {
@@ -1578,7 +1679,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.XYFocusNavigationStrategyOverride());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.XYFocusNavigationStrategyOverride();
+            }());
         }
         catch (...)
         {
@@ -1612,7 +1717,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::XYFocusNavigationStrategyOverride>(arg);
 
-            self->obj.XYFocusNavigationStrategyOverride(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.XYFocusNavigationStrategyOverride(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1639,7 +1748,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.SearchRoot());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SearchRoot();
+            }());
         }
         catch (...)
         {
@@ -1673,7 +1786,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(arg);
 
-            self->obj.SearchRoot(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SearchRoot(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1700,7 +1817,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.HintRect());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HintRect();
+            }());
         }
         catch (...)
         {
@@ -1734,7 +1855,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(arg);
 
-            self->obj.HintRect(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.HintRect(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1761,7 +1886,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExclusionRect());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExclusionRect();
+            }());
         }
         catch (...)
         {
@@ -1795,7 +1924,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(arg);
 
-            self->obj.ExclusionRect(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ExclusionRect(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1898,7 +2031,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Input::FocusManager::FindFirstFocusableElement(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Input::FocusManager::FindFirstFocusableElement(param0);
+                }());
             }
             catch (...)
             {
@@ -1936,7 +2073,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Input::FocusManager::FindLastFocusableElement(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Input::FocusManager::FindLastFocusableElement(param0);
+                }());
             }
             catch (...)
             {
@@ -1974,7 +2115,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::FocusNavigationDirection>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Input::FocusManager::FindNextElement(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Input::FocusManager::FindNextElement(param0);
+                }());
             }
             catch (...)
             {
@@ -2013,7 +2158,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::FocusNavigationDirection>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::FindNextElementOptions>(args, 1);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Input::FocusManager::FindNextElement(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Input::FocusManager::FindNextElement(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2051,7 +2200,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::FocusNavigationDirection>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Input::FocusManager::FindNextFocusableElement(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Input::FocusManager::FindNextFocusableElement(param0);
+                }());
             }
             catch (...)
             {
@@ -2090,7 +2243,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::FocusNavigationDirection>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 1);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Input::FocusManager::FindNextFocusableElement(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Input::FocusManager::FindNextFocusableElement(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2126,7 +2283,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                     return nullptr;
                 }
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Input::FocusManager::GetFocusedElement());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Input::FocusManager::GetFocusedElement();
+                }());
             }
             catch (...)
             {
@@ -2164,7 +2325,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::XamlRoot>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Input::FocusManager::GetFocusedElement(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Input::FocusManager::GetFocusedElement(param0);
+                }());
             }
             catch (...)
             {
@@ -2203,7 +2368,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::FocusState>(args, 1);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Input::FocusManager::TryFocusAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Input::FocusManager::TryFocusAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2241,7 +2410,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::FocusNavigationDirection>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Input::FocusManager::TryMoveFocus(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Input::FocusManager::TryMoveFocus(param0);
+                }());
             }
             catch (...)
             {
@@ -2279,7 +2452,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::FocusNavigationDirection>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Input::FocusManager::TryMoveFocusAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Input::FocusManager::TryMoveFocusAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -2318,7 +2495,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::FocusNavigationDirection>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::FindNextElementOptions>(args, 1);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Input::FocusManager::TryMoveFocus(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Input::FocusManager::TryMoveFocus(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2357,7 +2538,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::FocusNavigationDirection>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::FindNextElementOptions>(args, 1);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Input::FocusManager::TryMoveFocusAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Input::FocusManager::TryMoveFocusAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2391,7 +2576,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Microsoft::UI::Xaml::Input::GettingFocusEventArgs>>(arg);
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Input::FocusManager::GettingFocus(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Input::FocusManager::GettingFocus(param0);
+            }());
         }
         catch (...)
         {
@@ -2419,7 +2608,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Microsoft::UI::Xaml::Input::FocusManager::GettingFocus(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Microsoft::UI::Xaml::Input::FocusManager::GettingFocus(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2448,7 +2641,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Microsoft::UI::Xaml::Input::FocusManagerGotFocusEventArgs>>(arg);
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Input::FocusManager::GotFocus(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Input::FocusManager::GotFocus(param0);
+            }());
         }
         catch (...)
         {
@@ -2476,7 +2673,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Microsoft::UI::Xaml::Input::FocusManager::GotFocus(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Microsoft::UI::Xaml::Input::FocusManager::GotFocus(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2505,7 +2706,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Microsoft::UI::Xaml::Input::LosingFocusEventArgs>>(arg);
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Input::FocusManager::LosingFocus(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Input::FocusManager::LosingFocus(param0);
+            }());
         }
         catch (...)
         {
@@ -2533,7 +2738,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Microsoft::UI::Xaml::Input::FocusManager::LosingFocus(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Microsoft::UI::Xaml::Input::FocusManager::LosingFocus(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2562,7 +2771,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Microsoft::UI::Xaml::Input::FocusManagerLostFocusEventArgs>>(arg);
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Input::FocusManager::LostFocus(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Input::FocusManager::LostFocus(param0);
+            }());
         }
         catch (...)
         {
@@ -2590,7 +2803,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Microsoft::UI::Xaml::Input::FocusManager::LostFocus(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Microsoft::UI::Xaml::Input::FocusManager::LostFocus(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2729,7 +2946,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.CorrelationId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CorrelationId();
+            }());
         }
         catch (...)
         {
@@ -2755,7 +2976,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.NewFocusedElement());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NewFocusedElement();
+            }());
         }
         catch (...)
         {
@@ -2849,7 +3074,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.CorrelationId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CorrelationId();
+            }());
         }
         catch (...)
         {
@@ -2875,7 +3104,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.OldFocusedElement());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OldFocusedElement();
+            }());
         }
         catch (...)
         {
@@ -2969,7 +3202,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Succeeded());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Succeeded();
+            }());
         }
         catch (...)
         {
@@ -3066,7 +3303,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                     return nullptr;
                 }
 
-                return py::convert(self->obj.TryCancel());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryCancel();
+                }());
             }
             catch (...)
             {
@@ -3104,7 +3345,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(self->obj.TrySetNewFocusedElement(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TrySetNewFocusedElement(param0);
+                }());
             }
             catch (...)
             {
@@ -3136,7 +3381,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.NewFocusedElement());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NewFocusedElement();
+            }());
         }
         catch (...)
         {
@@ -3170,7 +3419,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(arg);
 
-            self->obj.NewFocusedElement(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NewFocusedElement(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3197,7 +3450,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Handled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Handled();
+            }());
         }
         catch (...)
         {
@@ -3231,7 +3488,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Handled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Handled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3258,7 +3519,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Cancel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Cancel();
+            }());
         }
         catch (...)
         {
@@ -3292,7 +3557,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Cancel(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Cancel(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3319,7 +3588,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.CorrelationId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CorrelationId();
+            }());
         }
         catch (...)
         {
@@ -3345,7 +3618,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Direction());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Direction();
+            }());
         }
         catch (...)
         {
@@ -3371,7 +3648,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.FocusState());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FocusState();
+            }());
         }
         catch (...)
         {
@@ -3397,7 +3678,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.InputDevice());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InputDevice();
+            }());
         }
         catch (...)
         {
@@ -3423,7 +3708,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.OldFocusedElement());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OldFocusedElement();
+            }());
         }
         catch (...)
         {
@@ -3553,7 +3842,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::UIElement>(args, 0);
 
-                return py::convert(self->obj.GetPosition(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetPosition(param0);
+                }());
             }
             catch (...)
             {
@@ -3585,7 +3878,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Handled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Handled();
+            }());
         }
         catch (...)
         {
@@ -3619,7 +3916,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Handled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Handled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3646,7 +3947,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.HoldingState());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HoldingState();
+            }());
         }
         catch (...)
         {
@@ -3672,7 +3977,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.PointerDeviceType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PointerDeviceType();
+            }());
         }
         catch (...)
         {
@@ -3768,7 +4077,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.DesiredExpansion());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DesiredExpansion();
+            }());
         }
         catch (...)
         {
@@ -3802,7 +4115,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.DesiredExpansion(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DesiredExpansion(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3829,7 +4146,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.DesiredDeceleration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DesiredDeceleration();
+            }());
         }
         catch (...)
         {
@@ -3863,7 +4184,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.DesiredDeceleration(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DesiredDeceleration(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3958,7 +4283,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.DesiredRotation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DesiredRotation();
+            }());
         }
         catch (...)
         {
@@ -3992,7 +4321,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.DesiredRotation(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DesiredRotation(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4019,7 +4352,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.DesiredDeceleration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DesiredDeceleration();
+            }());
         }
         catch (...)
         {
@@ -4053,7 +4390,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.DesiredDeceleration(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DesiredDeceleration(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4148,7 +4489,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.DesiredDisplacement());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DesiredDisplacement();
+            }());
         }
         catch (...)
         {
@@ -4182,7 +4527,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.DesiredDisplacement(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DesiredDisplacement(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4209,7 +4558,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.DesiredDeceleration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DesiredDeceleration();
+            }());
         }
         catch (...)
         {
@@ -4243,7 +4596,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.DesiredDeceleration(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DesiredDeceleration(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4360,7 +4717,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Names());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Names();
+            }());
         }
         catch (...)
         {
@@ -4490,7 +4851,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.NameValue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NameValue();
+            }());
         }
         catch (...)
         {
@@ -4524,7 +4889,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::InputScopeNameValue>(arg);
 
-            self->obj.NameValue(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NameValue(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4618,7 +4987,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Handled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Handled();
+            }());
         }
         catch (...)
         {
@@ -4652,7 +5025,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Handled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Handled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4679,7 +5056,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceId();
+            }());
         }
         catch (...)
         {
@@ -4705,7 +5086,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Key());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Key();
+            }());
         }
         catch (...)
         {
@@ -4731,7 +5116,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.KeyStatus());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.KeyStatus();
+            }());
         }
         catch (...)
         {
@@ -4757,7 +5146,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.OriginalKey());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OriginalKey();
+            }());
         }
         catch (...)
         {
@@ -4936,7 +5329,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::KeyboardAccelerator>().ScopeOwner());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::KeyboardAccelerator>().ScopeOwner();
+            }());
         }
         catch (...)
         {
@@ -4970,7 +5367,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::KeyboardAccelerator>().ScopeOwner(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::KeyboardAccelerator>().ScopeOwner(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4997,7 +5398,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::KeyboardAccelerator>().Modifiers());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::KeyboardAccelerator>().Modifiers();
+            }());
         }
         catch (...)
         {
@@ -5031,7 +5436,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<winrt::Windows::System::VirtualKeyModifiers>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::KeyboardAccelerator>().Modifiers(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::KeyboardAccelerator>().Modifiers(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5058,7 +5467,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::KeyboardAccelerator>().Key());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::KeyboardAccelerator>().Key();
+            }());
         }
         catch (...)
         {
@@ -5092,7 +5505,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<winrt::Windows::System::VirtualKey>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::KeyboardAccelerator>().Key(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::KeyboardAccelerator>().Key(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5119,7 +5536,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::KeyboardAccelerator>().IsEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::KeyboardAccelerator>().IsEnabled();
+            }());
         }
         catch (...)
         {
@@ -5153,7 +5574,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::KeyboardAccelerator>().IsEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::KeyboardAccelerator>().IsEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5180,7 +5605,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Input::KeyboardAccelerator::IsEnabledProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Input::KeyboardAccelerator::IsEnabledProperty();
+            }());
         }
         catch (...)
         {
@@ -5206,7 +5635,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Input::KeyboardAccelerator::KeyProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Input::KeyboardAccelerator::KeyProperty();
+            }());
         }
         catch (...)
         {
@@ -5232,7 +5665,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Input::KeyboardAccelerator::ModifiersProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Input::KeyboardAccelerator::ModifiersProperty();
+            }());
         }
         catch (...)
         {
@@ -5258,7 +5695,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Input::KeyboardAccelerator::ScopeOwnerProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Input::KeyboardAccelerator::ScopeOwnerProperty();
+            }());
         }
         catch (...)
         {
@@ -5286,7 +5727,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Input::KeyboardAccelerator, winrt::Microsoft::UI::Xaml::Input::KeyboardAcceleratorInvokedEventArgs>>(arg);
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::KeyboardAccelerator>().Invoked(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::KeyboardAccelerator>().Invoked(param0);
+            }());
         }
         catch (...)
         {
@@ -5314,7 +5759,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::KeyboardAccelerator>().Invoked(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::KeyboardAccelerator>().Invoked(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -5442,7 +5891,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Handled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Handled();
+            }());
         }
         catch (...)
         {
@@ -5476,7 +5929,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Handled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Handled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5503,7 +5960,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Element());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Element();
+            }());
         }
         catch (...)
         {
@@ -5529,7 +5990,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.KeyboardAccelerator());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.KeyboardAccelerator();
+            }());
         }
         catch (...)
         {
@@ -5628,7 +6093,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                     return nullptr;
                 }
 
-                return py::convert(self->obj.TryCancel());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryCancel();
+                }());
             }
             catch (...)
             {
@@ -5666,7 +6135,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(self->obj.TrySetNewFocusedElement(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TrySetNewFocusedElement(param0);
+                }());
             }
             catch (...)
             {
@@ -5698,7 +6171,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.NewFocusedElement());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NewFocusedElement();
+            }());
         }
         catch (...)
         {
@@ -5732,7 +6209,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(arg);
 
-            self->obj.NewFocusedElement(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NewFocusedElement(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5759,7 +6240,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Handled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Handled();
+            }());
         }
         catch (...)
         {
@@ -5793,7 +6278,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Handled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Handled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5820,7 +6309,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Cancel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Cancel();
+            }());
         }
         catch (...)
         {
@@ -5854,7 +6347,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Cancel(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Cancel(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5881,7 +6378,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.CorrelationId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CorrelationId();
+            }());
         }
         catch (...)
         {
@@ -5907,7 +6408,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Direction());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Direction();
+            }());
         }
         catch (...)
         {
@@ -5933,7 +6438,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.FocusState());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FocusState();
+            }());
         }
         catch (...)
         {
@@ -5959,7 +6468,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.InputDevice());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InputDevice();
+            }());
         }
         catch (...)
         {
@@ -5985,7 +6498,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.OldFocusedElement());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OldFocusedElement();
+            }());
         }
         catch (...)
         {
@@ -6109,7 +6626,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Handled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Handled();
+            }());
         }
         catch (...)
         {
@@ -6143,7 +6664,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Handled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Handled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6170,7 +6695,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Container());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Container();
+            }());
         }
         catch (...)
         {
@@ -6196,7 +6725,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Cumulative());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Cumulative();
+            }());
         }
         catch (...)
         {
@@ -6222,7 +6755,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsInertial());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsInertial();
+            }());
         }
         catch (...)
         {
@@ -6248,7 +6785,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.PointerDeviceType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PointerDeviceType();
+            }());
         }
         catch (...)
         {
@@ -6274,7 +6815,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Position());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Position();
+            }());
         }
         catch (...)
         {
@@ -6300,7 +6845,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Velocities());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Velocities();
+            }());
         }
         catch (...)
         {
@@ -6425,7 +6974,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                     return nullptr;
                 }
 
-                self->obj.Complete();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Complete();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6458,7 +7011,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Handled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Handled();
+            }());
         }
         catch (...)
         {
@@ -6492,7 +7049,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Handled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Handled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6519,7 +7080,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Container());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Container();
+            }());
         }
         catch (...)
         {
@@ -6545,7 +7110,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Cumulative());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Cumulative();
+            }());
         }
         catch (...)
         {
@@ -6571,7 +7140,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Delta());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Delta();
+            }());
         }
         catch (...)
         {
@@ -6597,7 +7170,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsInertial());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsInertial();
+            }());
         }
         catch (...)
         {
@@ -6623,7 +7200,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.PointerDeviceType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PointerDeviceType();
+            }());
         }
         catch (...)
         {
@@ -6649,7 +7230,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Position());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Position();
+            }());
         }
         catch (...)
         {
@@ -6675,7 +7260,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Velocities());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Velocities();
+            }());
         }
         catch (...)
         {
@@ -6798,7 +7387,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.TranslationBehavior());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TranslationBehavior();
+            }());
         }
         catch (...)
         {
@@ -6832,7 +7425,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::InertiaTranslationBehavior>(arg);
 
-            self->obj.TranslationBehavior(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TranslationBehavior(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6859,7 +7456,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.RotationBehavior());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RotationBehavior();
+            }());
         }
         catch (...)
         {
@@ -6893,7 +7494,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::InertiaRotationBehavior>(arg);
 
-            self->obj.RotationBehavior(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RotationBehavior(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6920,7 +7525,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Handled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Handled();
+            }());
         }
         catch (...)
         {
@@ -6954,7 +7563,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Handled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Handled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6981,7 +7594,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExpansionBehavior());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExpansionBehavior();
+            }());
         }
         catch (...)
         {
@@ -7015,7 +7632,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::InertiaExpansionBehavior>(arg);
 
-            self->obj.ExpansionBehavior(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ExpansionBehavior(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7042,7 +7663,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Container());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Container();
+            }());
         }
         catch (...)
         {
@@ -7068,7 +7693,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Cumulative());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Cumulative();
+            }());
         }
         catch (...)
         {
@@ -7094,7 +7723,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Delta());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Delta();
+            }());
         }
         catch (...)
         {
@@ -7120,7 +7753,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.PointerDeviceType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PointerDeviceType();
+            }());
         }
         catch (...)
         {
@@ -7146,7 +7783,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Velocities());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Velocities();
+            }());
         }
         catch (...)
         {
@@ -7285,7 +7926,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Radius());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Radius();
+            }());
         }
         catch (...)
         {
@@ -7319,7 +7964,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.Radius(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Radius(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7346,7 +7995,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Center());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Center();
+            }());
         }
         catch (...)
         {
@@ -7380,7 +8033,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(arg);
 
-            self->obj.Center(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Center(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7561,7 +8218,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                     return nullptr;
                 }
 
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::ManipulationStartedRoutedEventArgs>().Complete();
+                {
+                    auto _gil = release_gil();
+                    self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::ManipulationStartedRoutedEventArgs>().Complete();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -7594,7 +8255,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::ManipulationStartedRoutedEventArgs>().Handled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::ManipulationStartedRoutedEventArgs>().Handled();
+            }());
         }
         catch (...)
         {
@@ -7628,7 +8293,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::ManipulationStartedRoutedEventArgs>().Handled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::ManipulationStartedRoutedEventArgs>().Handled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7655,7 +8324,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::ManipulationStartedRoutedEventArgs>().Container());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::ManipulationStartedRoutedEventArgs>().Container();
+            }());
         }
         catch (...)
         {
@@ -7681,7 +8354,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::ManipulationStartedRoutedEventArgs>().Cumulative());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::ManipulationStartedRoutedEventArgs>().Cumulative();
+            }());
         }
         catch (...)
         {
@@ -7707,7 +8384,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::ManipulationStartedRoutedEventArgs>().PointerDeviceType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::ManipulationStartedRoutedEventArgs>().PointerDeviceType();
+            }());
         }
         catch (...)
         {
@@ -7733,7 +8414,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::ManipulationStartedRoutedEventArgs>().Position());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::ManipulationStartedRoutedEventArgs>().Position();
+            }());
         }
         catch (...)
         {
@@ -7878,7 +8563,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Pivot());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Pivot();
+            }());
         }
         catch (...)
         {
@@ -7912,7 +8601,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::ManipulationPivot>(arg);
 
-            self->obj.Pivot(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Pivot(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7939,7 +8632,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Mode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Mode();
+            }());
         }
         catch (...)
         {
@@ -7973,7 +8670,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::ManipulationModes>(arg);
 
-            self->obj.Mode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Mode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8000,7 +8701,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Handled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Handled();
+            }());
         }
         catch (...)
         {
@@ -8034,7 +8739,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Handled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Handled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8061,7 +8770,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Container());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Container();
+            }());
         }
         catch (...)
         {
@@ -8095,7 +8808,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::UIElement>(arg);
 
-            self->obj.Container(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Container(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8192,7 +8909,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Handled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Handled();
+            }());
         }
         catch (...)
         {
@@ -8226,7 +8947,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Handled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Handled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8253,7 +8978,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Direction());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Direction();
+            }());
         }
         catch (...)
         {
@@ -8279,7 +9008,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.InputDevice());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InputDevice();
+            }());
         }
         catch (...)
         {
@@ -8374,7 +9107,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsInContact());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsInContact();
+            }());
         }
         catch (...)
         {
@@ -8400,7 +9137,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsInRange());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsInRange();
+            }());
         }
         catch (...)
         {
@@ -8426,7 +9167,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.PointerDeviceType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PointerDeviceType();
+            }());
         }
         catch (...)
         {
@@ -8452,7 +9197,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.PointerId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PointerId();
+            }());
         }
         catch (...)
         {
@@ -8554,7 +9303,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::UIElement>(args, 0);
 
-                return py::convert(self->obj.GetCurrentPoint(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetCurrentPoint(param0);
+                }());
             }
             catch (...)
             {
@@ -8592,7 +9345,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::UIElement>(args, 0);
 
-                return py::convert(self->obj.GetIntermediatePoints(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetIntermediatePoints(param0);
+                }());
             }
             catch (...)
             {
@@ -8624,7 +9381,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Handled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Handled();
+            }());
         }
         catch (...)
         {
@@ -8658,7 +9419,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Handled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Handled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8685,7 +9450,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsGenerated());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsGenerated();
+            }());
         }
         catch (...)
         {
@@ -8711,7 +9480,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.KeyModifiers());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.KeyModifiers();
+            }());
         }
         catch (...)
         {
@@ -8737,7 +9510,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Pointer());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Pointer();
+            }());
         }
         catch (...)
         {
@@ -8835,7 +9612,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Handled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Handled();
+            }());
         }
         catch (...)
         {
@@ -8869,7 +9650,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Handled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Handled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8896,7 +9681,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Key());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Key();
+            }());
         }
         catch (...)
         {
@@ -8922,7 +9711,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Modifiers());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Modifiers();
+            }());
         }
         catch (...)
         {
@@ -9045,7 +9838,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::UIElement>(args, 0);
 
-                return py::convert(self->obj.GetPosition(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetPosition(param0);
+                }());
             }
             catch (...)
             {
@@ -9077,7 +9874,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Handled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Handled();
+            }());
         }
         catch (...)
         {
@@ -9111,7 +9912,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Handled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Handled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -9138,7 +9943,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.PointerDeviceType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PointerDeviceType();
+            }());
         }
         catch (...)
         {
@@ -9354,7 +10163,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::StandardUICommand>().Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::StandardUICommand>().Kind();
+            }());
         }
         catch (...)
         {
@@ -9388,7 +10201,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::StandardUICommandKind>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::StandardUICommand>().Kind(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::StandardUICommand>().Kind(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -9415,7 +10232,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Input::StandardUICommand::KindProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Input::StandardUICommand::KindProperty();
+            }());
         }
         catch (...)
         {
@@ -9562,7 +10383,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::UIElement>(args, 0);
 
-                return py::convert(self->obj.GetPosition(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetPosition(param0);
+                }());
             }
             catch (...)
             {
@@ -9594,7 +10419,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Handled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Handled();
+            }());
         }
         catch (...)
         {
@@ -9628,7 +10457,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Handled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Handled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -9655,7 +10488,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.PointerDeviceType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PointerDeviceType();
+            }());
         }
         catch (...)
         {
@@ -9838,7 +10675,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
-                return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::XamlUICommand>().CanExecute(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::XamlUICommand>().CanExecute(param0);
+                }());
             }
             catch (...)
             {
@@ -9876,7 +10717,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::XamlUICommand>().Execute(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::XamlUICommand>().Execute(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -9913,7 +10758,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                     return nullptr;
                 }
 
-                self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::XamlUICommand>().NotifyCanExecuteChanged();
+                {
+                    auto _gil = release_gil();
+                    self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::XamlUICommand>().NotifyCanExecuteChanged();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -9946,7 +10795,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::XamlUICommand>().Label());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::XamlUICommand>().Label();
+            }());
         }
         catch (...)
         {
@@ -9980,7 +10833,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::XamlUICommand>().Label(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::XamlUICommand>().Label(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -10007,7 +10864,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::XamlUICommand>().IconSource());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::XamlUICommand>().IconSource();
+            }());
         }
         catch (...)
         {
@@ -10041,7 +10902,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::IconSource>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::XamlUICommand>().IconSource(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::XamlUICommand>().IconSource(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -10068,7 +10933,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::XamlUICommand>().Description());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::XamlUICommand>().Description();
+            }());
         }
         catch (...)
         {
@@ -10102,7 +10971,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::XamlUICommand>().Description(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::XamlUICommand>().Description(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -10129,7 +11002,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::XamlUICommand>().Command());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::XamlUICommand>().Command();
+            }());
         }
         catch (...)
         {
@@ -10163,7 +11040,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::ICommand>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::XamlUICommand>().Command(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::XamlUICommand>().Command(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -10190,7 +11071,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::XamlUICommand>().AccessKey());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::XamlUICommand>().AccessKey();
+            }());
         }
         catch (...)
         {
@@ -10224,7 +11109,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::XamlUICommand>().AccessKey(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::XamlUICommand>().AccessKey(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -10251,7 +11140,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::XamlUICommand>().KeyboardAccelerators());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::XamlUICommand>().KeyboardAccelerators();
+            }());
         }
         catch (...)
         {
@@ -10277,7 +11170,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Input::XamlUICommand::AccessKeyProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Input::XamlUICommand::AccessKeyProperty();
+            }());
         }
         catch (...)
         {
@@ -10303,7 +11200,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Input::XamlUICommand::CommandProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Input::XamlUICommand::CommandProperty();
+            }());
         }
         catch (...)
         {
@@ -10329,7 +11230,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Input::XamlUICommand::DescriptionProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Input::XamlUICommand::DescriptionProperty();
+            }());
         }
         catch (...)
         {
@@ -10355,7 +11260,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Input::XamlUICommand::IconSourceProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Input::XamlUICommand::IconSourceProperty();
+            }());
         }
         catch (...)
         {
@@ -10381,7 +11290,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Input::XamlUICommand::KeyboardAcceleratorsProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Input::XamlUICommand::KeyboardAcceleratorsProperty();
+            }());
         }
         catch (...)
         {
@@ -10407,7 +11320,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Input::XamlUICommand::LabelProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Input::XamlUICommand::LabelProperty();
+            }());
         }
         catch (...)
         {
@@ -10435,7 +11352,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Input::XamlUICommand, winrt::Microsoft::UI::Xaml::Input::CanExecuteRequestedEventArgs>>(arg);
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::XamlUICommand>().CanExecuteRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::XamlUICommand>().CanExecuteRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -10463,7 +11384,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::XamlUICommand>().CanExecuteRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::XamlUICommand>().CanExecuteRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -10492,7 +11417,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Input::XamlUICommand, winrt::Microsoft::UI::Xaml::Input::ExecuteRequestedEventArgs>>(arg);
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::XamlUICommand>().ExecuteRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::XamlUICommand>().ExecuteRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -10520,7 +11449,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::XamlUICommand>().ExecuteRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::XamlUICommand>().ExecuteRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -10549,7 +11482,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::XamlUICommand>().CanExecuteChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::XamlUICommand>().CanExecuteChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -10577,7 +11514,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::XamlUICommand>().CanExecuteChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Input::XamlUICommand>().CanExecuteChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -10722,7 +11663,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
-                return py::convert(self->obj.CanExecute(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CanExecute(param0);
+                }());
             }
             catch (...)
             {
@@ -10760,7 +11705,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
-                self->obj.Execute(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Execute(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10795,7 +11744,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.CanExecuteChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CanExecuteChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -10823,7 +11776,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.CanExecuteChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CanExecuteChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)

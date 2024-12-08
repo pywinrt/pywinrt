@@ -77,7 +77,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.Value());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Value();
+            }());
         }
         catch (...)
         {
@@ -111,7 +115,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Value(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Value(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -138,7 +146,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.Namespace());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Namespace();
+            }());
         }
         catch (...)
         {
@@ -172,7 +184,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Namespace(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Namespace(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -199,7 +215,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -233,7 +253,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Name(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Name(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -389,7 +413,11 @@ namespace py::cpp::Windows::Web::Syndication
 
                 auto param0 = py::convert_to<winrt::Windows::Web::Syndication::SyndicationFormat>(args, 0);
 
-                return py::convert(self->obj.GetXmlDocument(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetXmlDocument(param0);
+                }());
             }
             catch (...)
             {
@@ -421,7 +449,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.Term());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Term();
+            }());
         }
         catch (...)
         {
@@ -455,7 +487,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Term(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Term(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -482,7 +518,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.Scheme());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Scheme();
+            }());
         }
         catch (...)
         {
@@ -516,7 +556,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Scheme(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Scheme(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -543,7 +587,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.Label());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Label();
+            }());
         }
         catch (...)
         {
@@ -577,7 +625,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Label(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Label(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -604,7 +656,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeValue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeValue();
+            }());
         }
         catch (...)
         {
@@ -638,7 +694,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.NodeValue(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NodeValue(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -665,7 +725,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeNamespace());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeNamespace();
+            }());
         }
         catch (...)
         {
@@ -699,7 +763,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.NodeNamespace(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NodeNamespace(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -726,7 +794,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeName();
+            }());
         }
         catch (...)
         {
@@ -760,7 +832,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.NodeName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NodeName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -787,7 +863,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.Language());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Language();
+            }());
         }
         catch (...)
         {
@@ -821,7 +901,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Language(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Language(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -848,7 +932,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.BaseUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BaseUri();
+            }());
         }
         catch (...)
         {
@@ -882,7 +970,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.BaseUri(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.BaseUri(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -909,7 +1001,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.AttributeExtensions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AttributeExtensions();
+            }());
         }
         catch (...)
         {
@@ -935,7 +1031,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.ElementExtensions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ElementExtensions();
+            }());
         }
         catch (...)
         {
@@ -1081,7 +1181,11 @@ namespace py::cpp::Windows::Web::Syndication
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
-                return py::convert(self->obj.RetrieveFeedAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RetrieveFeedAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1120,7 +1224,11 @@ namespace py::cpp::Windows::Web::Syndication
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                self->obj.SetRequestHeader(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetRequestHeader(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1153,7 +1261,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timeout());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timeout();
+            }());
         }
         catch (...)
         {
@@ -1187,7 +1299,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.Timeout(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Timeout(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1214,7 +1330,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.ServerCredential());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServerCredential();
+            }());
         }
         catch (...)
         {
@@ -1248,7 +1368,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(arg);
 
-            self->obj.ServerCredential(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ServerCredential(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1275,7 +1399,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProxyCredential());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProxyCredential();
+            }());
         }
         catch (...)
         {
@@ -1309,7 +1437,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(arg);
 
-            self->obj.ProxyCredential(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ProxyCredential(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1336,7 +1468,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxResponseBufferSize());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxResponseBufferSize();
+            }());
         }
         catch (...)
         {
@@ -1370,7 +1506,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.MaxResponseBufferSize(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MaxResponseBufferSize(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1397,7 +1537,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.BypassCacheOnRetrieve());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BypassCacheOnRetrieve();
+            }());
         }
         catch (...)
         {
@@ -1431,7 +1575,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.BypassCacheOnRetrieve(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.BypassCacheOnRetrieve(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1590,7 +1738,11 @@ namespace py::cpp::Windows::Web::Syndication
 
                 auto param0 = py::convert_to<winrt::Windows::Web::Syndication::SyndicationFormat>(args, 0);
 
-                return py::convert(self->obj.GetXmlDocument(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetXmlDocument(param0);
+                }());
             }
             catch (...)
             {
@@ -1622,7 +1774,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.SourceUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SourceUri();
+            }());
         }
         catch (...)
         {
@@ -1656,7 +1812,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.SourceUri(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SourceUri(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1683,7 +1843,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeValue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeValue();
+            }());
         }
         catch (...)
         {
@@ -1717,7 +1881,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.NodeValue(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NodeValue(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1744,7 +1912,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.BaseUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BaseUri();
+            }());
         }
         catch (...)
         {
@@ -1778,7 +1950,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.BaseUri(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.BaseUri(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1805,7 +1981,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.Language());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Language();
+            }());
         }
         catch (...)
         {
@@ -1839,7 +2019,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Language(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Language(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1866,7 +2050,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeName();
+            }());
         }
         catch (...)
         {
@@ -1900,7 +2088,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.NodeName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NodeName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1927,7 +2119,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeNamespace());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeNamespace();
+            }());
         }
         catch (...)
         {
@@ -1961,7 +2157,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.NodeNamespace(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NodeNamespace(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1988,7 +2188,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.AttributeExtensions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AttributeExtensions();
+            }());
         }
         catch (...)
         {
@@ -2014,7 +2218,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.ElementExtensions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ElementExtensions();
+            }());
         }
         catch (...)
         {
@@ -2040,7 +2248,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.Text());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Text();
+            }());
         }
         catch (...)
         {
@@ -2074,7 +2286,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Text(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Text(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2101,7 +2317,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.Type());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Type();
+            }());
         }
         catch (...)
         {
@@ -2135,7 +2355,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Type(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Type(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2162,7 +2386,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.Xml());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Xml();
+            }());
         }
         catch (...)
         {
@@ -2196,7 +2424,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::XmlDocument>(arg);
 
-            self->obj.Xml(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Xml(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2299,7 +2531,11 @@ namespace py::cpp::Windows::Web::Syndication
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                return py::convert(winrt::Windows::Web::Syndication::SyndicationError::GetStatus(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Web::Syndication::SyndicationError::GetStatus(param0);
+                }());
             }
             catch (...)
             {
@@ -2441,7 +2677,11 @@ namespace py::cpp::Windows::Web::Syndication
 
                 auto param0 = py::convert_to<winrt::Windows::Web::Syndication::SyndicationFormat>(args, 0);
 
-                return py::convert(self->obj.GetXmlDocument(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetXmlDocument(param0);
+                }());
             }
             catch (...)
             {
@@ -2479,7 +2719,11 @@ namespace py::cpp::Windows::Web::Syndication
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.Load(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Load(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2518,7 +2762,11 @@ namespace py::cpp::Windows::Web::Syndication
 
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::XmlDocument>(args, 0);
 
-                self->obj.LoadFromXml(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.LoadFromXml(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2551,7 +2799,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.Title());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Title();
+            }());
         }
         catch (...)
         {
@@ -2585,7 +2837,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::Windows::Web::Syndication::ISyndicationText>(arg);
 
-            self->obj.Title(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Title(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2612,7 +2868,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.Subtitle());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Subtitle();
+            }());
         }
         catch (...)
         {
@@ -2646,7 +2906,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::Windows::Web::Syndication::ISyndicationText>(arg);
 
-            self->obj.Subtitle(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Subtitle(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2673,7 +2937,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.Rights());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Rights();
+            }());
         }
         catch (...)
         {
@@ -2707,7 +2975,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::Windows::Web::Syndication::ISyndicationText>(arg);
 
-            self->obj.Rights(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Rights(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2734,7 +3006,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.Generator());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Generator();
+            }());
         }
         catch (...)
         {
@@ -2768,7 +3044,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::Windows::Web::Syndication::SyndicationGenerator>(arg);
 
-            self->obj.Generator(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Generator(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2795,7 +3075,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.LastUpdatedTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LastUpdatedTime();
+            }());
         }
         catch (...)
         {
@@ -2829,7 +3113,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(arg);
 
-            self->obj.LastUpdatedTime(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.LastUpdatedTime(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2856,7 +3144,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.ImageUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ImageUri();
+            }());
         }
         catch (...)
         {
@@ -2890,7 +3182,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.ImageUri(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ImageUri(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2917,7 +3213,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.IconUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IconUri();
+            }());
         }
         catch (...)
         {
@@ -2951,7 +3251,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.IconUri(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IconUri(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2978,7 +3282,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -3012,7 +3320,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Id(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Id(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3039,7 +3351,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.FirstUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FirstUri();
+            }());
         }
         catch (...)
         {
@@ -3065,7 +3381,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.Items());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Items();
+            }());
         }
         catch (...)
         {
@@ -3091,7 +3411,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.LastUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LastUri();
+            }());
         }
         catch (...)
         {
@@ -3117,7 +3441,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.Links());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Links();
+            }());
         }
         catch (...)
         {
@@ -3143,7 +3471,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.NextUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NextUri();
+            }());
         }
         catch (...)
         {
@@ -3169,7 +3501,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.PreviousUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PreviousUri();
+            }());
         }
         catch (...)
         {
@@ -3195,7 +3531,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.Categories());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Categories();
+            }());
         }
         catch (...)
         {
@@ -3221,7 +3561,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.SourceFormat());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SourceFormat();
+            }());
         }
         catch (...)
         {
@@ -3247,7 +3591,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.Contributors());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Contributors();
+            }());
         }
         catch (...)
         {
@@ -3273,7 +3621,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.Authors());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Authors();
+            }());
         }
         catch (...)
         {
@@ -3299,7 +3651,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeValue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeValue();
+            }());
         }
         catch (...)
         {
@@ -3333,7 +3689,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.NodeValue(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NodeValue(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3360,7 +3720,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeNamespace());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeNamespace();
+            }());
         }
         catch (...)
         {
@@ -3394,7 +3758,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.NodeNamespace(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NodeNamespace(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3421,7 +3789,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeName();
+            }());
         }
         catch (...)
         {
@@ -3455,7 +3827,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.NodeName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NodeName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3482,7 +3858,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.Language());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Language();
+            }());
         }
         catch (...)
         {
@@ -3516,7 +3896,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Language(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Language(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3543,7 +3927,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.BaseUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BaseUri();
+            }());
         }
         catch (...)
         {
@@ -3577,7 +3965,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.BaseUri(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.BaseUri(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3604,7 +3996,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.AttributeExtensions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AttributeExtensions();
+            }());
         }
         catch (...)
         {
@@ -3630,7 +4026,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.ElementExtensions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ElementExtensions();
+            }());
         }
         catch (...)
         {
@@ -3793,7 +4193,11 @@ namespace py::cpp::Windows::Web::Syndication
 
                 auto param0 = py::convert_to<winrt::Windows::Web::Syndication::SyndicationFormat>(args, 0);
 
-                return py::convert(self->obj.GetXmlDocument(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetXmlDocument(param0);
+                }());
             }
             catch (...)
             {
@@ -3825,7 +4229,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.Version());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Version();
+            }());
         }
         catch (...)
         {
@@ -3859,7 +4267,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Version(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Version(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3886,7 +4298,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.Uri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Uri();
+            }());
         }
         catch (...)
         {
@@ -3920,7 +4336,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.Uri(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Uri(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3947,7 +4367,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.Text());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Text();
+            }());
         }
         catch (...)
         {
@@ -3981,7 +4405,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Text(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Text(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4008,7 +4436,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeValue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeValue();
+            }());
         }
         catch (...)
         {
@@ -4042,7 +4474,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.NodeValue(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NodeValue(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4069,7 +4505,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeNamespace());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeNamespace();
+            }());
         }
         catch (...)
         {
@@ -4103,7 +4543,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.NodeNamespace(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NodeNamespace(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4130,7 +4574,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeName();
+            }());
         }
         catch (...)
         {
@@ -4164,7 +4612,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.NodeName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NodeName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4191,7 +4643,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.Language());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Language();
+            }());
         }
         catch (...)
         {
@@ -4225,7 +4681,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Language(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Language(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4252,7 +4712,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.BaseUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BaseUri();
+            }());
         }
         catch (...)
         {
@@ -4286,7 +4750,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.BaseUri(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.BaseUri(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4313,7 +4781,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.AttributeExtensions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AttributeExtensions();
+            }());
         }
         catch (...)
         {
@@ -4339,7 +4811,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.ElementExtensions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ElementExtensions();
+            }());
         }
         catch (...)
         {
@@ -4487,7 +4963,11 @@ namespace py::cpp::Windows::Web::Syndication
 
                 auto param0 = py::convert_to<winrt::Windows::Web::Syndication::SyndicationFormat>(args, 0);
 
-                return py::convert(self->obj.GetXmlDocument(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetXmlDocument(param0);
+                }());
             }
             catch (...)
             {
@@ -4525,7 +5005,11 @@ namespace py::cpp::Windows::Web::Syndication
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.Load(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Load(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4564,7 +5048,11 @@ namespace py::cpp::Windows::Web::Syndication
 
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::XmlDocument>(args, 0);
 
-                self->obj.LoadFromXml(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.LoadFromXml(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4597,7 +5085,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.Title());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Title();
+            }());
         }
         catch (...)
         {
@@ -4631,7 +5123,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::Windows::Web::Syndication::ISyndicationText>(arg);
 
-            self->obj.Title(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Title(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4658,7 +5154,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.Source());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Source();
+            }());
         }
         catch (...)
         {
@@ -4692,7 +5192,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::Windows::Web::Syndication::SyndicationFeed>(arg);
 
-            self->obj.Source(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Source(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4719,7 +5223,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.Rights());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Rights();
+            }());
         }
         catch (...)
         {
@@ -4753,7 +5261,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::Windows::Web::Syndication::ISyndicationText>(arg);
 
-            self->obj.Rights(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Rights(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4780,7 +5292,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.Summary());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Summary();
+            }());
         }
         catch (...)
         {
@@ -4814,7 +5330,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::Windows::Web::Syndication::ISyndicationText>(arg);
 
-            self->obj.Summary(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Summary(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4841,7 +5361,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.PublishedDate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PublishedDate();
+            }());
         }
         catch (...)
         {
@@ -4875,7 +5399,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(arg);
 
-            self->obj.PublishedDate(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PublishedDate(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4902,7 +5430,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.CommentsUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CommentsUri();
+            }());
         }
         catch (...)
         {
@@ -4936,7 +5468,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.CommentsUri(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CommentsUri(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4963,7 +5499,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -4997,7 +5537,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Id(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Id(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5024,7 +5568,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.LastUpdatedTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LastUpdatedTime();
+            }());
         }
         catch (...)
         {
@@ -5058,7 +5606,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(arg);
 
-            self->obj.LastUpdatedTime(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.LastUpdatedTime(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5085,7 +5637,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.Content());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Content();
+            }());
         }
         catch (...)
         {
@@ -5119,7 +5675,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::Windows::Web::Syndication::SyndicationContent>(arg);
 
-            self->obj.Content(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Content(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5146,7 +5706,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.EditUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EditUri();
+            }());
         }
         catch (...)
         {
@@ -5172,7 +5736,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.Links());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Links();
+            }());
         }
         catch (...)
         {
@@ -5198,7 +5766,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.Authors());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Authors();
+            }());
         }
         catch (...)
         {
@@ -5224,7 +5796,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.Categories());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Categories();
+            }());
         }
         catch (...)
         {
@@ -5250,7 +5826,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.Contributors());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Contributors();
+            }());
         }
         catch (...)
         {
@@ -5276,7 +5856,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.ItemUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ItemUri();
+            }());
         }
         catch (...)
         {
@@ -5302,7 +5886,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.ETag());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ETag();
+            }());
         }
         catch (...)
         {
@@ -5328,7 +5916,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.EditMediaUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EditMediaUri();
+            }());
         }
         catch (...)
         {
@@ -5354,7 +5946,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeValue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeValue();
+            }());
         }
         catch (...)
         {
@@ -5388,7 +5984,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.NodeValue(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NodeValue(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5415,7 +6015,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeNamespace());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeNamespace();
+            }());
         }
         catch (...)
         {
@@ -5449,7 +6053,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.NodeNamespace(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NodeNamespace(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5476,7 +6084,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeName();
+            }());
         }
         catch (...)
         {
@@ -5510,7 +6122,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.NodeName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NodeName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5537,7 +6153,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.Language());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Language();
+            }());
         }
         catch (...)
         {
@@ -5571,7 +6191,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Language(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Language(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5598,7 +6222,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.BaseUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BaseUri();
+            }());
         }
         catch (...)
         {
@@ -5632,7 +6260,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.BaseUri(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.BaseUri(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5659,7 +6291,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.AttributeExtensions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AttributeExtensions();
+            }());
         }
         catch (...)
         {
@@ -5685,7 +6321,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.ElementExtensions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ElementExtensions();
+            }());
         }
         catch (...)
         {
@@ -5866,7 +6506,11 @@ namespace py::cpp::Windows::Web::Syndication
 
                 auto param0 = py::convert_to<winrt::Windows::Web::Syndication::SyndicationFormat>(args, 0);
 
-                return py::convert(self->obj.GetXmlDocument(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetXmlDocument(param0);
+                }());
             }
             catch (...)
             {
@@ -5898,7 +6542,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.Uri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Uri();
+            }());
         }
         catch (...)
         {
@@ -5932,7 +6580,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.Uri(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Uri(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5959,7 +6611,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.Title());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Title();
+            }());
         }
         catch (...)
         {
@@ -5993,7 +6649,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Title(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Title(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6020,7 +6680,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResourceLanguage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResourceLanguage();
+            }());
         }
         catch (...)
         {
@@ -6054,7 +6718,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ResourceLanguage(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ResourceLanguage(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6081,7 +6749,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.Relationship());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Relationship();
+            }());
         }
         catch (...)
         {
@@ -6115,7 +6787,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Relationship(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Relationship(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6142,7 +6818,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.MediaType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MediaType();
+            }());
         }
         catch (...)
         {
@@ -6176,7 +6856,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.MediaType(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MediaType(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6203,7 +6887,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.Length());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Length();
+            }());
         }
         catch (...)
         {
@@ -6237,7 +6925,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.Length(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Length(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6264,7 +6956,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeValue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeValue();
+            }());
         }
         catch (...)
         {
@@ -6298,7 +6994,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.NodeValue(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NodeValue(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6325,7 +7025,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeNamespace());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeNamespace();
+            }());
         }
         catch (...)
         {
@@ -6359,7 +7063,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.NodeNamespace(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NodeNamespace(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6386,7 +7094,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeName();
+            }());
         }
         catch (...)
         {
@@ -6420,7 +7132,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.NodeName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NodeName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6447,7 +7163,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.Language());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Language();
+            }());
         }
         catch (...)
         {
@@ -6481,7 +7201,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Language(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Language(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6508,7 +7232,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.BaseUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BaseUri();
+            }());
         }
         catch (...)
         {
@@ -6542,7 +7270,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.BaseUri(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.BaseUri(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6569,7 +7301,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.AttributeExtensions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AttributeExtensions();
+            }());
         }
         catch (...)
         {
@@ -6595,7 +7331,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.ElementExtensions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ElementExtensions();
+            }());
         }
         catch (...)
         {
@@ -6746,7 +7486,11 @@ namespace py::cpp::Windows::Web::Syndication
 
                 auto param0 = py::convert_to<winrt::Windows::Web::Syndication::SyndicationFormat>(args, 0);
 
-                return py::convert(self->obj.GetXmlDocument(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetXmlDocument(param0);
+                }());
             }
             catch (...)
             {
@@ -6778,7 +7522,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeValue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeValue();
+            }());
         }
         catch (...)
         {
@@ -6812,7 +7560,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.NodeValue(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NodeValue(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6839,7 +7591,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeNamespace());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeNamespace();
+            }());
         }
         catch (...)
         {
@@ -6873,7 +7629,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.NodeNamespace(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NodeNamespace(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6900,7 +7660,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeName();
+            }());
         }
         catch (...)
         {
@@ -6934,7 +7698,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.NodeName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NodeName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6961,7 +7729,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.Language());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Language();
+            }());
         }
         catch (...)
         {
@@ -6995,7 +7767,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Language(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Language(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7022,7 +7798,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.BaseUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BaseUri();
+            }());
         }
         catch (...)
         {
@@ -7056,7 +7836,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.BaseUri(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.BaseUri(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7083,7 +7867,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.AttributeExtensions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AttributeExtensions();
+            }());
         }
         catch (...)
         {
@@ -7109,7 +7897,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.ElementExtensions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ElementExtensions();
+            }());
         }
         catch (...)
         {
@@ -7269,7 +8061,11 @@ namespace py::cpp::Windows::Web::Syndication
 
                 auto param0 = py::convert_to<winrt::Windows::Web::Syndication::SyndicationFormat>(args, 0);
 
-                return py::convert(self->obj.GetXmlDocument(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetXmlDocument(param0);
+                }());
             }
             catch (...)
             {
@@ -7301,7 +8097,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeValue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeValue();
+            }());
         }
         catch (...)
         {
@@ -7335,7 +8135,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.NodeValue(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NodeValue(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7362,7 +8166,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeNamespace());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeNamespace();
+            }());
         }
         catch (...)
         {
@@ -7396,7 +8204,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.NodeNamespace(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NodeNamespace(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7423,7 +8235,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeName();
+            }());
         }
         catch (...)
         {
@@ -7457,7 +8273,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.NodeName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NodeName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7484,7 +8304,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.Language());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Language();
+            }());
         }
         catch (...)
         {
@@ -7518,7 +8342,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Language(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Language(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7545,7 +8373,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.BaseUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BaseUri();
+            }());
         }
         catch (...)
         {
@@ -7579,7 +8411,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.BaseUri(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.BaseUri(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7606,7 +8442,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.AttributeExtensions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AttributeExtensions();
+            }());
         }
         catch (...)
         {
@@ -7632,7 +8472,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.ElementExtensions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ElementExtensions();
+            }());
         }
         catch (...)
         {
@@ -7658,7 +8502,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.Uri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Uri();
+            }());
         }
         catch (...)
         {
@@ -7692,7 +8540,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.Uri(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Uri(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7719,7 +8571,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -7753,7 +8609,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Name(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Name(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7780,7 +8640,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.Email());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Email();
+            }());
         }
         catch (...)
         {
@@ -7814,7 +8678,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Email(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Email(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7977,7 +8845,11 @@ namespace py::cpp::Windows::Web::Syndication
 
                 auto param0 = py::convert_to<winrt::Windows::Web::Syndication::SyndicationFormat>(args, 0);
 
-                return py::convert(self->obj.GetXmlDocument(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetXmlDocument(param0);
+                }());
             }
             catch (...)
             {
@@ -8009,7 +8881,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeValue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeValue();
+            }());
         }
         catch (...)
         {
@@ -8043,7 +8919,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.NodeValue(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NodeValue(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8070,7 +8950,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeNamespace());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeNamespace();
+            }());
         }
         catch (...)
         {
@@ -8104,7 +8988,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.NodeNamespace(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NodeNamespace(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8131,7 +9019,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeName();
+            }());
         }
         catch (...)
         {
@@ -8165,7 +9057,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.NodeName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NodeName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8192,7 +9088,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.Language());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Language();
+            }());
         }
         catch (...)
         {
@@ -8226,7 +9126,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Language(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Language(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8253,7 +9157,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.BaseUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BaseUri();
+            }());
         }
         catch (...)
         {
@@ -8287,7 +9195,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.BaseUri(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.BaseUri(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8314,7 +9226,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.AttributeExtensions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AttributeExtensions();
+            }());
         }
         catch (...)
         {
@@ -8340,7 +9256,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.ElementExtensions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ElementExtensions();
+            }());
         }
         catch (...)
         {
@@ -8366,7 +9286,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.Xml());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Xml();
+            }());
         }
         catch (...)
         {
@@ -8400,7 +9324,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::XmlDocument>(arg);
 
-            self->obj.Xml(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Xml(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8427,7 +9355,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.Type());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Type();
+            }());
         }
         catch (...)
         {
@@ -8461,7 +9393,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Type(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Type(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8488,7 +9424,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.Text());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Text();
+            }());
         }
         catch (...)
         {
@@ -8522,7 +9462,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Text(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Text(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8632,7 +9576,11 @@ namespace py::cpp::Windows::Web::Syndication
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
-                return py::convert(self->obj.RetrieveFeedAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RetrieveFeedAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -8671,7 +9619,11 @@ namespace py::cpp::Windows::Web::Syndication
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                self->obj.SetRequestHeader(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetRequestHeader(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -8704,7 +9656,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.BypassCacheOnRetrieve());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BypassCacheOnRetrieve();
+            }());
         }
         catch (...)
         {
@@ -8738,7 +9694,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.BypassCacheOnRetrieve(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.BypassCacheOnRetrieve(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8765,7 +9725,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxResponseBufferSize());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxResponseBufferSize();
+            }());
         }
         catch (...)
         {
@@ -8799,7 +9763,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.MaxResponseBufferSize(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MaxResponseBufferSize(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8826,7 +9794,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProxyCredential());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProxyCredential();
+            }());
         }
         catch (...)
         {
@@ -8860,7 +9832,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(arg);
 
-            self->obj.ProxyCredential(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ProxyCredential(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8887,7 +9863,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.ServerCredential());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServerCredential();
+            }());
         }
         catch (...)
         {
@@ -8921,7 +9901,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(arg);
 
-            self->obj.ServerCredential(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ServerCredential(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8948,7 +9932,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timeout());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timeout();
+            }());
         }
         catch (...)
         {
@@ -8982,7 +9970,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.Timeout(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Timeout(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -9439,7 +10431,11 @@ namespace py::cpp::Windows::Web::Syndication
 
                 auto param0 = py::convert_to<winrt::Windows::Web::Syndication::SyndicationFormat>(args, 0);
 
-                return py::convert(self->obj.GetXmlDocument(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetXmlDocument(param0);
+                }());
             }
             catch (...)
             {
@@ -9471,7 +10467,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.AttributeExtensions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AttributeExtensions();
+            }());
         }
         catch (...)
         {
@@ -9497,7 +10497,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.BaseUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BaseUri();
+            }());
         }
         catch (...)
         {
@@ -9531,7 +10535,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.BaseUri(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.BaseUri(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -9558,7 +10566,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.ElementExtensions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ElementExtensions();
+            }());
         }
         catch (...)
         {
@@ -9584,7 +10596,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.Language());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Language();
+            }());
         }
         catch (...)
         {
@@ -9618,7 +10634,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Language(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Language(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -9645,7 +10665,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeName();
+            }());
         }
         catch (...)
         {
@@ -9679,7 +10703,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.NodeName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NodeName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -9706,7 +10734,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeNamespace());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeNamespace();
+            }());
         }
         catch (...)
         {
@@ -9740,7 +10772,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.NodeNamespace(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NodeNamespace(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -9767,7 +10803,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeValue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeValue();
+            }());
         }
         catch (...)
         {
@@ -9801,7 +10841,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.NodeValue(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NodeValue(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -10257,7 +11301,11 @@ namespace py::cpp::Windows::Web::Syndication
 
                 auto param0 = py::convert_to<winrt::Windows::Web::Syndication::SyndicationFormat>(args, 0);
 
-                return py::convert(self->obj.GetXmlDocument(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetXmlDocument(param0);
+                }());
             }
             catch (...)
             {
@@ -10289,7 +11337,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.Text());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Text();
+            }());
         }
         catch (...)
         {
@@ -10323,7 +11375,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Text(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Text(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -10350,7 +11406,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.Type());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Type();
+            }());
         }
         catch (...)
         {
@@ -10384,7 +11444,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Type(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Type(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -10411,7 +11475,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.Xml());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Xml();
+            }());
         }
         catch (...)
         {
@@ -10445,7 +11513,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::XmlDocument>(arg);
 
-            self->obj.Xml(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Xml(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -10472,7 +11544,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.AttributeExtensions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AttributeExtensions();
+            }());
         }
         catch (...)
         {
@@ -10498,7 +11574,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.BaseUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BaseUri();
+            }());
         }
         catch (...)
         {
@@ -10532,7 +11612,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.BaseUri(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.BaseUri(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -10559,7 +11643,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.ElementExtensions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ElementExtensions();
+            }());
         }
         catch (...)
         {
@@ -10585,7 +11673,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.Language());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Language();
+            }());
         }
         catch (...)
         {
@@ -10619,7 +11711,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Language(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Language(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -10646,7 +11742,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeName();
+            }());
         }
         catch (...)
         {
@@ -10680,7 +11780,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.NodeName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NodeName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -10707,7 +11811,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeNamespace());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeNamespace();
+            }());
         }
         catch (...)
         {
@@ -10741,7 +11849,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.NodeNamespace(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NodeNamespace(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -10768,7 +11880,11 @@ namespace py::cpp::Windows::Web::Syndication
                 return nullptr;
             }
 
-            return py::convert(self->obj.NodeValue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NodeValue();
+            }());
         }
         catch (...)
         {
@@ -10802,7 +11918,11 @@ namespace py::cpp::Windows::Web::Syndication
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.NodeValue(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NodeValue(param0);
+            }
+
             return 0;
         }
         catch (...)

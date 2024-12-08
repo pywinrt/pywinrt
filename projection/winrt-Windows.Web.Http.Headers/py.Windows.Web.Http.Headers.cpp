@@ -44,7 +44,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue>(args, 0);
 
-                self->obj.Append(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Append(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -81,7 +85,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                self->obj.Clear();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Clear();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -118,7 +126,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.First());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.First();
+                }());
             }
             catch (...)
             {
@@ -156,7 +168,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(self->obj.GetAt(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAt(param0);
+                }());
             }
             catch (...)
             {
@@ -195,7 +211,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue, true>>(args, 1);
 
-                return py::convert(self->obj.GetMany(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetMany(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -231,7 +251,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetView();
+                }());
             }
             catch (...)
             {
@@ -270,7 +294,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue>(args, 0);
                 uint32_t param1{};
 
-                auto return_value = self->obj.IndexOf(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IndexOf(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -282,6 +310,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -321,7 +350,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue>(args, 1);
 
-                self->obj.InsertAt(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.InsertAt(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -360,7 +393,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.ParseAdd(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ParseAdd(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -399,7 +436,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                self->obj.RemoveAt(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveAt(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -436,7 +477,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                self->obj.RemoveAtEnd();
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveAtEnd();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -475,7 +520,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue, false>>(args, 0);
 
-                self->obj.ReplaceAll(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ReplaceAll(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -515,7 +564,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue>(args, 1);
 
-                self->obj.SetAt(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetAt(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -552,7 +605,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ToString());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ToString();
+                }());
             }
             catch (...)
             {
@@ -590,7 +647,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.TryParseAdd(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryParseAdd(param0);
+                }());
             }
             catch (...)
             {
@@ -622,7 +683,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -648,7 +713,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.SharedMaxAge());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SharedMaxAge();
+            }());
         }
         catch (...)
         {
@@ -682,7 +751,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>>(arg);
 
-            self->obj.SharedMaxAge(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SharedMaxAge(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -709,7 +782,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.MinFresh());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MinFresh();
+            }());
         }
         catch (...)
         {
@@ -743,7 +820,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>>(arg);
 
-            self->obj.MinFresh(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MinFresh(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -770,7 +851,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxStale());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxStale();
+            }());
         }
         catch (...)
         {
@@ -804,7 +889,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>>(arg);
 
-            self->obj.MaxStale(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MaxStale(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -831,7 +920,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxAge());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxAge();
+            }());
         }
         catch (...)
         {
@@ -865,7 +958,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>>(arg);
 
-            self->obj.MaxAge(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MaxAge(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -903,7 +1000,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            return py::convert(self->obj.ToString());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.ToString();
+            }());
         }
         catch (...)
         {
@@ -916,7 +1017,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            return py::convert(self->obj.First());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.First();
+            }());
         }
         catch (...)
         {
@@ -929,6 +1034,7 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
+            auto _gil = py::release_gil();
             return static_cast<Py_ssize_t>(self->obj.Size());
         }
         catch (...)
@@ -942,7 +1048,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            return py::convert(self->obj.GetAt(static_cast<uint32_t>(i)));
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.GetAt(static_cast<uint32_t>(i));
+            }());
         }
         catch (...)
         {
@@ -981,7 +1091,12 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             Py_ssize_t start, stop, step, length;
 
-            if (PySlice_GetIndicesEx(slice, self->obj.Size(), &start, &stop, &step, &length) < 0)
+            auto size = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.Size();
+            }();
+            if (PySlice_GetIndicesEx(slice, size, &start, &stop, &step, &length) < 0)
             {
                 return nullptr;
             }
@@ -994,7 +1109,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             winrt::com_array<winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue>::get());
 
-            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
+            auto count = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.GetMany(static_cast<uint32_t>(start), items);
+            }();
 
             if (count != static_cast<uint32_t>(length))
             {
@@ -1017,11 +1136,16 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             if (!value)
             {
+                auto _gil = py::release_gil();
                 self->obj.RemoveAt(static_cast<uint32_t>(i));
             }
             else
             {
-                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue>(value));
+                auto _value = py::convert_to<winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue>(value);
+                {
+                    auto _gil = py::release_gil();
+                    self->obj.SetAt(static_cast<uint32_t>(i), _value);
+                }
             }
 
             return 0;
@@ -1164,7 +1288,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue::Parse(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue::Parse(param0);
+                }());
             }
             catch (...)
             {
@@ -1200,7 +1328,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ToString());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ToString();
+                }());
             }
             catch (...)
             {
@@ -1239,7 +1371,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue param1{nullptr};
 
-                auto return_value = winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue::TryParse(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue::TryParse(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -1251,6 +1387,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -1283,7 +1420,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Parameters());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Parameters();
+            }());
         }
         catch (...)
         {
@@ -1309,7 +1450,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Scheme());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Scheme();
+            }());
         }
         catch (...)
         {
@@ -1335,7 +1480,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Token());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Token();
+            }());
         }
         catch (...)
         {
@@ -1372,7 +1521,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            return py::convert(self->obj.ToString());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.ToString();
+            }());
         }
         catch (...)
         {
@@ -1478,7 +1631,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue>(args, 0);
 
-                self->obj.Append(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Append(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1515,7 +1672,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                self->obj.Clear();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Clear();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1552,7 +1713,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.First());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.First();
+                }());
             }
             catch (...)
             {
@@ -1590,7 +1755,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(self->obj.GetAt(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAt(param0);
+                }());
             }
             catch (...)
             {
@@ -1629,7 +1798,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue, true>>(args, 1);
 
-                return py::convert(self->obj.GetMany(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetMany(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1665,7 +1838,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetView();
+                }());
             }
             catch (...)
             {
@@ -1704,7 +1881,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue>(args, 0);
                 uint32_t param1{};
 
-                auto return_value = self->obj.IndexOf(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IndexOf(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -1716,6 +1897,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -1755,7 +1937,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue>(args, 1);
 
-                self->obj.InsertAt(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.InsertAt(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1794,7 +1980,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.ParseAdd(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ParseAdd(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1833,7 +2023,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                self->obj.RemoveAt(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveAt(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1870,7 +2064,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                self->obj.RemoveAtEnd();
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveAtEnd();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1909,7 +2107,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue, false>>(args, 0);
 
-                self->obj.ReplaceAll(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ReplaceAll(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1949,7 +2151,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue>(args, 1);
 
-                self->obj.SetAt(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetAt(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1986,7 +2192,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ToString());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ToString();
+                }());
             }
             catch (...)
             {
@@ -2024,7 +2234,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.TryParseAdd(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryParseAdd(param0);
+                }());
             }
             catch (...)
             {
@@ -2056,7 +2270,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -2093,7 +2311,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            return py::convert(self->obj.ToString());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.ToString();
+            }());
         }
         catch (...)
         {
@@ -2106,7 +2328,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            return py::convert(self->obj.First());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.First();
+            }());
         }
         catch (...)
         {
@@ -2119,6 +2345,7 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
+            auto _gil = py::release_gil();
             return static_cast<Py_ssize_t>(self->obj.Size());
         }
         catch (...)
@@ -2132,7 +2359,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            return py::convert(self->obj.GetAt(static_cast<uint32_t>(i)));
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.GetAt(static_cast<uint32_t>(i));
+            }());
         }
         catch (...)
         {
@@ -2171,7 +2402,12 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             Py_ssize_t start, stop, step, length;
 
-            if (PySlice_GetIndicesEx(slice, self->obj.Size(), &start, &stop, &step, &length) < 0)
+            auto size = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.Size();
+            }();
+            if (PySlice_GetIndicesEx(slice, size, &start, &stop, &step, &length) < 0)
             {
                 return nullptr;
             }
@@ -2184,7 +2420,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             winrt::com_array<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue>::get());
 
-            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
+            auto count = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.GetMany(static_cast<uint32_t>(start), items);
+            }();
 
             if (count != static_cast<uint32_t>(length))
             {
@@ -2207,11 +2447,16 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             if (!value)
             {
+                auto _gil = py::release_gil();
                 self->obj.RemoveAt(static_cast<uint32_t>(i));
             }
             else
             {
-                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue>(value));
+                auto _value = py::convert_to<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue>(value);
+                {
+                    auto _gil = py::release_gil();
+                    self->obj.SetAt(static_cast<uint32_t>(i), _value);
+                }
             }
 
             return 0;
@@ -2334,7 +2579,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue::Parse(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue::Parse(param0);
+                }());
             }
             catch (...)
             {
@@ -2370,7 +2619,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ToString());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ToString();
+                }());
             }
             catch (...)
             {
@@ -2409,7 +2662,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue param1{nullptr};
 
-                auto return_value = winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue::TryParse(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue::TryParse(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -2421,6 +2678,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -2453,7 +2711,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Token());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Token();
+            }());
         }
         catch (...)
         {
@@ -2490,7 +2752,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            return py::convert(self->obj.ToString());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.ToString();
+            }());
         }
         catch (...)
         {
@@ -2594,7 +2860,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue>(args, 0);
 
-                self->obj.Append(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Append(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2631,7 +2901,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                self->obj.Clear();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Clear();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2668,7 +2942,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.First());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.First();
+                }());
             }
             catch (...)
             {
@@ -2706,7 +2984,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(self->obj.GetAt(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAt(param0);
+                }());
             }
             catch (...)
             {
@@ -2745,7 +3027,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue, true>>(args, 1);
 
-                return py::convert(self->obj.GetMany(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetMany(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2781,7 +3067,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetView();
+                }());
             }
             catch (...)
             {
@@ -2820,7 +3110,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue>(args, 0);
                 uint32_t param1{};
 
-                auto return_value = self->obj.IndexOf(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IndexOf(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -2832,6 +3126,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -2871,7 +3166,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue>(args, 1);
 
-                self->obj.InsertAt(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.InsertAt(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2910,7 +3209,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.ParseAdd(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ParseAdd(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2949,7 +3252,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                self->obj.RemoveAt(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveAt(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2986,7 +3293,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                self->obj.RemoveAtEnd();
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveAtEnd();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3025,7 +3336,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue, false>>(args, 0);
 
-                self->obj.ReplaceAll(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ReplaceAll(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3065,7 +3380,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue>(args, 1);
 
-                self->obj.SetAt(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetAt(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3102,7 +3421,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ToString());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ToString();
+                }());
             }
             catch (...)
             {
@@ -3140,7 +3463,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.TryParseAdd(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryParseAdd(param0);
+                }());
             }
             catch (...)
             {
@@ -3172,7 +3499,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -3209,7 +3540,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            return py::convert(self->obj.ToString());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.ToString();
+            }());
         }
         catch (...)
         {
@@ -3222,7 +3557,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            return py::convert(self->obj.First());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.First();
+            }());
         }
         catch (...)
         {
@@ -3235,6 +3574,7 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
+            auto _gil = py::release_gil();
             return static_cast<Py_ssize_t>(self->obj.Size());
         }
         catch (...)
@@ -3248,7 +3588,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            return py::convert(self->obj.GetAt(static_cast<uint32_t>(i)));
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.GetAt(static_cast<uint32_t>(i));
+            }());
         }
         catch (...)
         {
@@ -3287,7 +3631,12 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             Py_ssize_t start, stop, step, length;
 
-            if (PySlice_GetIndicesEx(slice, self->obj.Size(), &start, &stop, &step, &length) < 0)
+            auto size = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.Size();
+            }();
+            if (PySlice_GetIndicesEx(slice, size, &start, &stop, &step, &length) < 0)
             {
                 return nullptr;
             }
@@ -3300,7 +3649,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             winrt::com_array<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue>::get());
 
-            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
+            auto count = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.GetMany(static_cast<uint32_t>(start), items);
+            }();
 
             if (count != static_cast<uint32_t>(length))
             {
@@ -3323,11 +3676,16 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             if (!value)
             {
+                auto _gil = py::release_gil();
                 self->obj.RemoveAt(static_cast<uint32_t>(i));
             }
             else
             {
-                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue>(value));
+                auto _value = py::convert_to<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue>(value);
+                {
+                    auto _gil = py::release_gil();
+                    self->obj.SetAt(static_cast<uint32_t>(i), _value);
+                }
             }
 
             return 0;
@@ -3450,7 +3808,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue::Parse(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue::Parse(param0);
+                }());
             }
             catch (...)
             {
@@ -3486,7 +3848,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ToString());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ToString();
+                }());
             }
             catch (...)
             {
@@ -3525,7 +3891,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue param1{nullptr};
 
-                auto return_value = winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue::TryParse(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue::TryParse(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -3537,6 +3907,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -3569,7 +3940,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContentCoding());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContentCoding();
+            }());
         }
         catch (...)
         {
@@ -3606,7 +3981,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            return py::convert(self->obj.ToString());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.ToString();
+            }());
         }
         catch (...)
         {
@@ -3710,7 +4089,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue>(args, 0);
 
-                self->obj.Append(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Append(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3747,7 +4130,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                self->obj.Clear();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Clear();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3784,7 +4171,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.First());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.First();
+                }());
             }
             catch (...)
             {
@@ -3822,7 +4213,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(self->obj.GetAt(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAt(param0);
+                }());
             }
             catch (...)
             {
@@ -3861,7 +4256,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue, true>>(args, 1);
 
-                return py::convert(self->obj.GetMany(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetMany(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -3897,7 +4296,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetView();
+                }());
             }
             catch (...)
             {
@@ -3936,7 +4339,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue>(args, 0);
                 uint32_t param1{};
 
-                auto return_value = self->obj.IndexOf(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IndexOf(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -3948,6 +4355,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -3987,7 +4395,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue>(args, 1);
 
-                self->obj.InsertAt(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.InsertAt(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4026,7 +4438,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.ParseAdd(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ParseAdd(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4065,7 +4481,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                self->obj.RemoveAt(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveAt(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4102,7 +4522,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                self->obj.RemoveAtEnd();
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveAtEnd();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4141,7 +4565,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue, false>>(args, 0);
 
-                self->obj.ReplaceAll(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ReplaceAll(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4181,7 +4609,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue>(args, 1);
 
-                self->obj.SetAt(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetAt(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4218,7 +4650,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ToString());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ToString();
+                }());
             }
             catch (...)
             {
@@ -4256,7 +4692,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.TryParseAdd(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryParseAdd(param0);
+                }());
             }
             catch (...)
             {
@@ -4288,7 +4728,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -4325,7 +4769,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            return py::convert(self->obj.ToString());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.ToString();
+            }());
         }
         catch (...)
         {
@@ -4338,7 +4786,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            return py::convert(self->obj.First());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.First();
+            }());
         }
         catch (...)
         {
@@ -4351,6 +4803,7 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
+            auto _gil = py::release_gil();
             return static_cast<Py_ssize_t>(self->obj.Size());
         }
         catch (...)
@@ -4364,7 +4817,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            return py::convert(self->obj.GetAt(static_cast<uint32_t>(i)));
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.GetAt(static_cast<uint32_t>(i));
+            }());
         }
         catch (...)
         {
@@ -4403,7 +4860,12 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             Py_ssize_t start, stop, step, length;
 
-            if (PySlice_GetIndicesEx(slice, self->obj.Size(), &start, &stop, &step, &length) < 0)
+            auto size = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.Size();
+            }();
+            if (PySlice_GetIndicesEx(slice, size, &start, &stop, &step, &length) < 0)
             {
                 return nullptr;
             }
@@ -4416,7 +4878,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             winrt::com_array<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue>::get());
 
-            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
+            auto count = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.GetMany(static_cast<uint32_t>(start), items);
+            }();
 
             if (count != static_cast<uint32_t>(length))
             {
@@ -4439,11 +4905,16 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             if (!value)
             {
+                auto _gil = py::release_gil();
                 self->obj.RemoveAt(static_cast<uint32_t>(i));
             }
             else
             {
-                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue>(value));
+                auto _value = py::convert_to<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue>(value);
+                {
+                    auto _gil = py::release_gil();
+                    self->obj.SetAt(static_cast<uint32_t>(i), _value);
+                }
             }
 
             return 0;
@@ -4582,7 +5053,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue::Parse(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue::Parse(param0);
+                }());
             }
             catch (...)
             {
@@ -4618,7 +5093,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ToString());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ToString();
+                }());
             }
             catch (...)
             {
@@ -4657,7 +5136,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue param1{nullptr};
 
-                auto return_value = winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue::TryParse(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue::TryParse(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -4669,6 +5152,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -4701,7 +5185,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContentCoding());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContentCoding();
+            }());
         }
         catch (...)
         {
@@ -4727,7 +5215,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Quality());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Quality();
+            }());
         }
         catch (...)
         {
@@ -4764,7 +5256,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            return py::convert(self->obj.ToString());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.ToString();
+            }());
         }
         catch (...)
         {
@@ -4869,7 +5365,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue>(args, 0);
 
-                self->obj.Append(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Append(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4906,7 +5406,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                self->obj.Clear();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Clear();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4943,7 +5447,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.First());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.First();
+                }());
             }
             catch (...)
             {
@@ -4981,7 +5489,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(self->obj.GetAt(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAt(param0);
+                }());
             }
             catch (...)
             {
@@ -5020,7 +5532,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue, true>>(args, 1);
 
-                return py::convert(self->obj.GetMany(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetMany(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -5056,7 +5572,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetView();
+                }());
             }
             catch (...)
             {
@@ -5095,7 +5615,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue>(args, 0);
                 uint32_t param1{};
 
-                auto return_value = self->obj.IndexOf(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IndexOf(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -5107,6 +5631,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -5146,7 +5671,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue>(args, 1);
 
-                self->obj.InsertAt(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.InsertAt(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5185,7 +5714,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.ParseAdd(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ParseAdd(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5224,7 +5757,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                self->obj.RemoveAt(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveAt(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5261,7 +5798,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                self->obj.RemoveAtEnd();
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveAtEnd();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5300,7 +5841,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue, false>>(args, 0);
 
-                self->obj.ReplaceAll(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ReplaceAll(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5340,7 +5885,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue>(args, 1);
 
-                self->obj.SetAt(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetAt(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5377,7 +5926,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ToString());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ToString();
+                }());
             }
             catch (...)
             {
@@ -5415,7 +5968,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.TryParseAdd(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryParseAdd(param0);
+                }());
             }
             catch (...)
             {
@@ -5447,7 +6004,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -5484,7 +6045,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            return py::convert(self->obj.ToString());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.ToString();
+            }());
         }
         catch (...)
         {
@@ -5497,7 +6062,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            return py::convert(self->obj.First());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.First();
+            }());
         }
         catch (...)
         {
@@ -5510,6 +6079,7 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
+            auto _gil = py::release_gil();
             return static_cast<Py_ssize_t>(self->obj.Size());
         }
         catch (...)
@@ -5523,7 +6093,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            return py::convert(self->obj.GetAt(static_cast<uint32_t>(i)));
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.GetAt(static_cast<uint32_t>(i));
+            }());
         }
         catch (...)
         {
@@ -5562,7 +6136,12 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             Py_ssize_t start, stop, step, length;
 
-            if (PySlice_GetIndicesEx(slice, self->obj.Size(), &start, &stop, &step, &length) < 0)
+            auto size = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.Size();
+            }();
+            if (PySlice_GetIndicesEx(slice, size, &start, &stop, &step, &length) < 0)
             {
                 return nullptr;
             }
@@ -5575,7 +6154,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             winrt::com_array<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue>::get());
 
-            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
+            auto count = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.GetMany(static_cast<uint32_t>(start), items);
+            }();
 
             if (count != static_cast<uint32_t>(length))
             {
@@ -5598,11 +6181,16 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             if (!value)
             {
+                auto _gil = py::release_gil();
                 self->obj.RemoveAt(static_cast<uint32_t>(i));
             }
             else
             {
-                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue>(value));
+                auto _value = py::convert_to<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue>(value);
+                {
+                    auto _gil = py::release_gil();
+                    self->obj.SetAt(static_cast<uint32_t>(i), _value);
+                }
             }
 
             return 0;
@@ -5725,7 +6313,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Web::Http::Headers::HttpContentDispositionHeaderValue::Parse(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Web::Http::Headers::HttpContentDispositionHeaderValue::Parse(param0);
+                }());
             }
             catch (...)
             {
@@ -5761,7 +6353,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ToString());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ToString();
+                }());
             }
             catch (...)
             {
@@ -5800,7 +6396,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 winrt::Windows::Web::Http::Headers::HttpContentDispositionHeaderValue param1{nullptr};
 
-                auto return_value = winrt::Windows::Web::Http::Headers::HttpContentDispositionHeaderValue::TryParse(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Web::Http::Headers::HttpContentDispositionHeaderValue::TryParse(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -5812,6 +6412,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -5844,7 +6445,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -5878,7 +6483,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<uint64_t>>(arg);
 
-            self->obj.Size(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Size(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5905,7 +6514,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -5939,7 +6552,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Name(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Name(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5966,7 +6583,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.FileNameStar());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FileNameStar();
+            }());
         }
         catch (...)
         {
@@ -6000,7 +6621,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.FileNameStar(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.FileNameStar(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6027,7 +6652,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.FileName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FileName();
+            }());
         }
         catch (...)
         {
@@ -6061,7 +6690,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.FileName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.FileName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6088,7 +6721,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.DispositionType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DispositionType();
+            }());
         }
         catch (...)
         {
@@ -6122,7 +6759,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.DispositionType(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DispositionType(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6149,7 +6790,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Parameters());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Parameters();
+            }());
         }
         catch (...)
         {
@@ -6186,7 +6831,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            return py::convert(self->obj.ToString());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.ToString();
+            }());
         }
         catch (...)
         {
@@ -6318,7 +6967,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                self->obj.Append(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Append(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6355,7 +7008,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                self->obj.Clear();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Clear();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6392,7 +7049,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.First());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.First();
+                }());
             }
             catch (...)
             {
@@ -6428,7 +7089,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetView();
+                }());
             }
             catch (...)
             {
@@ -6466,7 +7131,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.HasKey(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.HasKey(param0);
+                }());
             }
             catch (...)
             {
@@ -6505,7 +7174,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.Insert(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Insert(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -6543,7 +7216,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.Lookup(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Lookup(param0);
+                }());
             }
             catch (...)
             {
@@ -6581,7 +7258,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.Remove(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Remove(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6618,7 +7299,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ToString());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ToString();
+                }());
             }
             catch (...)
             {
@@ -6657,7 +7342,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.TryAppendWithoutValidation(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryAppendWithoutValidation(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -6689,7 +7378,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -6715,7 +7408,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.LastModified());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LastModified();
+            }());
         }
         catch (...)
         {
@@ -6749,7 +7446,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
-            self->obj.LastModified(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.LastModified(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6776,7 +7477,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Expires());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Expires();
+            }());
         }
         catch (...)
         {
@@ -6810,7 +7515,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
-            self->obj.Expires(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Expires(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6837,7 +7546,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContentType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContentType();
+            }());
         }
         catch (...)
         {
@@ -6871,7 +7584,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpMediaTypeHeaderValue>(arg);
 
-            self->obj.ContentType(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ContentType(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6898,7 +7615,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContentRange());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContentRange();
+            }());
         }
         catch (...)
         {
@@ -6932,7 +7653,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpContentRangeHeaderValue>(arg);
 
-            self->obj.ContentRange(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ContentRange(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6959,7 +7684,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContentMD5());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContentMD5();
+            }());
         }
         catch (...)
         {
@@ -6993,7 +7722,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(arg);
 
-            self->obj.ContentMD5(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ContentMD5(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7020,7 +7753,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContentLocation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContentLocation();
+            }());
         }
         catch (...)
         {
@@ -7054,7 +7791,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.ContentLocation(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ContentLocation(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7081,7 +7822,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContentLength());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContentLength();
+            }());
         }
         catch (...)
         {
@@ -7115,7 +7860,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<uint64_t>>(arg);
 
-            self->obj.ContentLength(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ContentLength(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7142,7 +7891,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContentDisposition());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContentDisposition();
+            }());
         }
         catch (...)
         {
@@ -7176,7 +7929,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpContentDispositionHeaderValue>(arg);
 
-            self->obj.ContentDisposition(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ContentDisposition(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7203,7 +7960,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContentEncoding());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContentEncoding();
+            }());
         }
         catch (...)
         {
@@ -7229,7 +7990,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContentLanguage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContentLanguage();
+            }());
         }
         catch (...)
         {
@@ -7266,7 +8031,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            return py::convert(self->obj.ToString());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.ToString();
+            }());
         }
         catch (...)
         {
@@ -7279,7 +8048,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            py::pyobj_handle iter{py::convert(self->obj.First())};
+            py::pyobj_handle iter{py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.First();
+            }())};
 
             if (!iter)
             {
@@ -7299,7 +8072,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            return static_cast<int>(self->obj.HasKey(py::convert_to<winrt::hstring>(key)));
+            auto _key = py::convert_to<winrt::hstring>(key);
+            {
+                auto _gil = py::release_gil();
+                return static_cast<int>(self->obj.HasKey(_key));
+            }
         }
         catch (...)
         {
@@ -7312,6 +8089,7 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
+            auto _gil = py::release_gil();
             return static_cast<Py_ssize_t>(self->obj.Size());
         }
         catch (...)
@@ -7326,12 +8104,22 @@ namespace py::cpp::Windows::Web::Http::Headers
         try
         {
             auto _key = py::convert_to<winrt::hstring>(key);
-            auto value = self->obj.TryLookup(_key);
+            auto value = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.TryLookup(_key);
+            }();
 
             if (!value) {
                 if constexpr (std::is_base_of_v<winrt::Windows::Foundation::IUnknown, decltype(value)>)
                 {
-                    if (self->obj.HasKey(_key))
+                    auto has_key = [&]()
+                    {
+                        auto _gil = py::release_gil();
+                        return self->obj.HasKey(_key);
+                    }();
+
+                    if (has_key)
                     {
                         Py_RETURN_NONE;
                     }
@@ -7357,7 +8145,12 @@ namespace py::cpp::Windows::Web::Http::Headers
             auto _key = py::convert_to<winrt::hstring>(key);
 
             if (value == nullptr) {
-                if (!self->obj.TryRemove(_key)) {
+                bool did_remove;
+                {
+                    auto _gil = py::release_gil();
+                    did_remove = self->obj.TryRemove(_key);
+                }
+                if (!did_remove) {
                     PyErr_SetObject(PyExc_KeyError, key);
                     return -1;
                 }
@@ -7365,7 +8158,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return 0;
             }
 
-            self->obj.Insert(_key, py::convert_to<winrt::hstring>(value));
+            auto _value = py::convert_to<winrt::hstring>(value);
+            {
+                auto _gil = py::release_gil();
+                self->obj.Insert(_key, _value);
+            }
 
             return 0;
         }
@@ -7525,7 +8322,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Web::Http::Headers::HttpContentRangeHeaderValue::Parse(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Web::Http::Headers::HttpContentRangeHeaderValue::Parse(param0);
+                }());
             }
             catch (...)
             {
@@ -7561,7 +8362,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ToString());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ToString();
+                }());
             }
             catch (...)
             {
@@ -7600,7 +8405,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 winrt::Windows::Web::Http::Headers::HttpContentRangeHeaderValue param1{nullptr};
 
-                auto return_value = winrt::Windows::Web::Http::Headers::HttpContentRangeHeaderValue::TryParse(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Web::Http::Headers::HttpContentRangeHeaderValue::TryParse(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -7612,6 +8421,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -7644,7 +8454,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Unit());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Unit();
+            }());
         }
         catch (...)
         {
@@ -7678,7 +8492,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Unit(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Unit(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7705,7 +8523,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.FirstBytePosition());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FirstBytePosition();
+            }());
         }
         catch (...)
         {
@@ -7731,7 +8553,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.LastBytePosition());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LastBytePosition();
+            }());
         }
         catch (...)
         {
@@ -7757,7 +8583,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Length());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Length();
+            }());
         }
         catch (...)
         {
@@ -7794,7 +8624,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            return py::convert(self->obj.ToString());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.ToString();
+            }());
         }
         catch (...)
         {
@@ -7941,7 +8775,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue::Parse(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue::Parse(param0);
+                }());
             }
             catch (...)
             {
@@ -7977,7 +8815,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ToString());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ToString();
+                }());
             }
             catch (...)
             {
@@ -8016,7 +8858,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue param1{nullptr};
 
-                auto return_value = winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue::TryParse(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue::TryParse(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -8028,6 +8874,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -8060,7 +8907,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Value());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Value();
+            }());
         }
         catch (...)
         {
@@ -8094,7 +8945,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Value(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Value(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8121,7 +8976,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -8158,7 +9017,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            return py::convert(self->obj.ToString());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.ToString();
+            }());
         }
         catch (...)
         {
@@ -8263,7 +9126,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue>(args, 0);
 
-                self->obj.Append(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Append(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -8300,7 +9167,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                self->obj.Clear();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Clear();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -8337,7 +9208,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.First());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.First();
+                }());
             }
             catch (...)
             {
@@ -8375,7 +9250,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(self->obj.GetAt(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAt(param0);
+                }());
             }
             catch (...)
             {
@@ -8414,7 +9293,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue, true>>(args, 1);
 
-                return py::convert(self->obj.GetMany(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetMany(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -8450,7 +9333,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetView();
+                }());
             }
             catch (...)
             {
@@ -8489,7 +9376,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue>(args, 0);
                 uint32_t param1{};
 
-                auto return_value = self->obj.IndexOf(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IndexOf(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -8501,6 +9392,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -8540,7 +9432,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue>(args, 1);
 
-                self->obj.InsertAt(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.InsertAt(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -8579,7 +9475,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.ParseAdd(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ParseAdd(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -8618,7 +9518,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                self->obj.RemoveAt(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveAt(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -8655,7 +9559,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                self->obj.RemoveAtEnd();
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveAtEnd();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -8694,7 +9602,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue, false>>(args, 0);
 
-                self->obj.ReplaceAll(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ReplaceAll(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -8734,7 +9646,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue>(args, 1);
 
-                self->obj.SetAt(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetAt(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -8771,7 +9687,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ToString());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ToString();
+                }());
             }
             catch (...)
             {
@@ -8809,7 +9729,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.TryParseAdd(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryParseAdd(param0);
+                }());
             }
             catch (...)
             {
@@ -8841,7 +9765,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -8878,7 +9806,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            return py::convert(self->obj.ToString());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.ToString();
+            }());
         }
         catch (...)
         {
@@ -8891,7 +9823,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            return py::convert(self->obj.First());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.First();
+            }());
         }
         catch (...)
         {
@@ -8904,6 +9840,7 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
+            auto _gil = py::release_gil();
             return static_cast<Py_ssize_t>(self->obj.Size());
         }
         catch (...)
@@ -8917,7 +9854,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            return py::convert(self->obj.GetAt(static_cast<uint32_t>(i)));
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.GetAt(static_cast<uint32_t>(i));
+            }());
         }
         catch (...)
         {
@@ -8956,7 +9897,12 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             Py_ssize_t start, stop, step, length;
 
-            if (PySlice_GetIndicesEx(slice, self->obj.Size(), &start, &stop, &step, &length) < 0)
+            auto size = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.Size();
+            }();
+            if (PySlice_GetIndicesEx(slice, size, &start, &stop, &step, &length) < 0)
             {
                 return nullptr;
             }
@@ -8969,7 +9915,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             winrt::com_array<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue>::get());
 
-            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
+            auto count = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.GetMany(static_cast<uint32_t>(start), items);
+            }();
 
             if (count != static_cast<uint32_t>(length))
             {
@@ -8992,11 +9942,16 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             if (!value)
             {
+                auto _gil = py::release_gil();
                 self->obj.RemoveAt(static_cast<uint32_t>(i));
             }
             else
             {
-                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue>(value));
+                auto _value = py::convert_to<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue>(value);
+                {
+                    auto _gil = py::release_gil();
+                    self->obj.SetAt(static_cast<uint32_t>(i), _value);
+                }
             }
 
             return 0;
@@ -9135,7 +10090,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Web::Http::Headers::HttpCredentialsHeaderValue::Parse(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Web::Http::Headers::HttpCredentialsHeaderValue::Parse(param0);
+                }());
             }
             catch (...)
             {
@@ -9171,7 +10130,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ToString());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ToString();
+                }());
             }
             catch (...)
             {
@@ -9210,7 +10173,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 winrt::Windows::Web::Http::Headers::HttpCredentialsHeaderValue param1{nullptr};
 
-                auto return_value = winrt::Windows::Web::Http::Headers::HttpCredentialsHeaderValue::TryParse(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Web::Http::Headers::HttpCredentialsHeaderValue::TryParse(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -9222,6 +10189,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -9254,7 +10222,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Parameters());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Parameters();
+            }());
         }
         catch (...)
         {
@@ -9280,7 +10252,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Scheme());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Scheme();
+            }());
         }
         catch (...)
         {
@@ -9306,7 +10282,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Token());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Token();
+            }());
         }
         catch (...)
         {
@@ -9343,7 +10323,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            return py::convert(self->obj.ToString());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.ToString();
+            }());
         }
         catch (...)
         {
@@ -9449,7 +10433,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Web::Http::Headers::HttpDateOrDeltaHeaderValue::Parse(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Web::Http::Headers::HttpDateOrDeltaHeaderValue::Parse(param0);
+                }());
             }
             catch (...)
             {
@@ -9485,7 +10473,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ToString());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ToString();
+                }());
             }
             catch (...)
             {
@@ -9524,7 +10516,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 winrt::Windows::Web::Http::Headers::HttpDateOrDeltaHeaderValue param1{nullptr};
 
-                auto return_value = winrt::Windows::Web::Http::Headers::HttpDateOrDeltaHeaderValue::TryParse(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Web::Http::Headers::HttpDateOrDeltaHeaderValue::TryParse(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -9536,6 +10532,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -9568,7 +10565,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Date());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Date();
+            }());
         }
         catch (...)
         {
@@ -9594,7 +10595,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Delta());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Delta();
+            }());
         }
         catch (...)
         {
@@ -9631,7 +10636,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            return py::convert(self->obj.ToString());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.ToString();
+            }());
         }
         catch (...)
         {
@@ -9776,7 +10785,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue::Parse(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue::Parse(param0);
+                }());
             }
             catch (...)
             {
@@ -9812,7 +10825,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ToString());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ToString();
+                }());
             }
             catch (...)
             {
@@ -9851,7 +10868,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue param1{nullptr};
 
-                auto return_value = winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue::TryParse(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue::TryParse(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -9863,6 +10884,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -9895,7 +10917,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Value());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Value();
+            }());
         }
         catch (...)
         {
@@ -9929,7 +10955,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Value(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Value(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -9956,7 +10986,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -9982,7 +11016,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Parameters());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Parameters();
+            }());
         }
         catch (...)
         {
@@ -10019,7 +11057,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            return py::convert(self->obj.ToString());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.ToString();
+            }());
         }
         catch (...)
         {
@@ -10125,7 +11167,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue>(args, 0);
 
-                self->obj.Append(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Append(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10162,7 +11208,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                self->obj.Clear();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Clear();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10199,7 +11249,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.First());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.First();
+                }());
             }
             catch (...)
             {
@@ -10237,7 +11291,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(self->obj.GetAt(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAt(param0);
+                }());
             }
             catch (...)
             {
@@ -10276,7 +11334,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue, true>>(args, 1);
 
-                return py::convert(self->obj.GetMany(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetMany(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -10312,7 +11374,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetView();
+                }());
             }
             catch (...)
             {
@@ -10351,7 +11417,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue>(args, 0);
                 uint32_t param1{};
 
-                auto return_value = self->obj.IndexOf(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IndexOf(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -10363,6 +11433,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -10402,7 +11473,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue>(args, 1);
 
-                self->obj.InsertAt(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.InsertAt(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10441,7 +11516,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.ParseAdd(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ParseAdd(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10480,7 +11559,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                self->obj.RemoveAt(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveAt(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10517,7 +11600,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                self->obj.RemoveAtEnd();
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveAtEnd();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10556,7 +11643,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue, false>>(args, 0);
 
-                self->obj.ReplaceAll(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ReplaceAll(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10596,7 +11687,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue>(args, 1);
 
-                self->obj.SetAt(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetAt(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10633,7 +11728,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ToString());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ToString();
+                }());
             }
             catch (...)
             {
@@ -10671,7 +11770,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.TryParseAdd(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryParseAdd(param0);
+                }());
             }
             catch (...)
             {
@@ -10703,7 +11806,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -10740,7 +11847,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            return py::convert(self->obj.ToString());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.ToString();
+            }());
         }
         catch (...)
         {
@@ -10753,7 +11864,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            return py::convert(self->obj.First());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.First();
+            }());
         }
         catch (...)
         {
@@ -10766,6 +11881,7 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
+            auto _gil = py::release_gil();
             return static_cast<Py_ssize_t>(self->obj.Size());
         }
         catch (...)
@@ -10779,7 +11895,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            return py::convert(self->obj.GetAt(static_cast<uint32_t>(i)));
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.GetAt(static_cast<uint32_t>(i));
+            }());
         }
         catch (...)
         {
@@ -10818,7 +11938,12 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             Py_ssize_t start, stop, step, length;
 
-            if (PySlice_GetIndicesEx(slice, self->obj.Size(), &start, &stop, &step, &length) < 0)
+            auto size = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.Size();
+            }();
+            if (PySlice_GetIndicesEx(slice, size, &start, &stop, &step, &length) < 0)
             {
                 return nullptr;
             }
@@ -10831,7 +11956,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             winrt::com_array<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue>::get());
 
-            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
+            auto count = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.GetMany(static_cast<uint32_t>(start), items);
+            }();
 
             if (count != static_cast<uint32_t>(length))
             {
@@ -10854,11 +11983,16 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             if (!value)
             {
+                auto _gil = py::release_gil();
                 self->obj.RemoveAt(static_cast<uint32_t>(i));
             }
             else
             {
-                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue>(value));
+                auto _value = py::convert_to<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue>(value);
+                {
+                    auto _gil = py::release_gil();
+                    self->obj.SetAt(static_cast<uint32_t>(i), _value);
+                }
             }
 
             return 0;
@@ -10957,7 +12091,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::Windows::Globalization::Language>(args, 0);
 
-                self->obj.Append(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Append(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10994,7 +12132,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                self->obj.Clear();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Clear();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -11031,7 +12173,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.First());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.First();
+                }());
             }
             catch (...)
             {
@@ -11069,7 +12215,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(self->obj.GetAt(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAt(param0);
+                }());
             }
             catch (...)
             {
@@ -11108,7 +12258,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Globalization::Language, true>>(args, 1);
 
-                return py::convert(self->obj.GetMany(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetMany(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -11144,7 +12298,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetView();
+                }());
             }
             catch (...)
             {
@@ -11183,7 +12341,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<winrt::Windows::Globalization::Language>(args, 0);
                 uint32_t param1{};
 
-                auto return_value = self->obj.IndexOf(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IndexOf(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -11195,6 +12357,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -11234,7 +12397,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Globalization::Language>(args, 1);
 
-                self->obj.InsertAt(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.InsertAt(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -11273,7 +12440,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.ParseAdd(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ParseAdd(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -11312,7 +12483,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                self->obj.RemoveAt(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveAt(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -11349,7 +12524,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                self->obj.RemoveAtEnd();
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveAtEnd();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -11388,7 +12567,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Globalization::Language, false>>(args, 0);
 
-                self->obj.ReplaceAll(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ReplaceAll(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -11428,7 +12611,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Globalization::Language>(args, 1);
 
-                self->obj.SetAt(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetAt(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -11465,7 +12652,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ToString());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ToString();
+                }());
             }
             catch (...)
             {
@@ -11503,7 +12694,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.TryParseAdd(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryParseAdd(param0);
+                }());
             }
             catch (...)
             {
@@ -11535,7 +12730,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -11572,7 +12771,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            return py::convert(self->obj.ToString());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.ToString();
+            }());
         }
         catch (...)
         {
@@ -11585,7 +12788,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            return py::convert(self->obj.First());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.First();
+            }());
         }
         catch (...)
         {
@@ -11598,6 +12805,7 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
+            auto _gil = py::release_gil();
             return static_cast<Py_ssize_t>(self->obj.Size());
         }
         catch (...)
@@ -11611,7 +12819,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            return py::convert(self->obj.GetAt(static_cast<uint32_t>(i)));
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.GetAt(static_cast<uint32_t>(i));
+            }());
         }
         catch (...)
         {
@@ -11650,7 +12862,12 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             Py_ssize_t start, stop, step, length;
 
-            if (PySlice_GetIndicesEx(slice, self->obj.Size(), &start, &stop, &step, &length) < 0)
+            auto size = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.Size();
+            }();
+            if (PySlice_GetIndicesEx(slice, size, &start, &stop, &step, &length) < 0)
             {
                 return nullptr;
             }
@@ -11663,7 +12880,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             winrt::com_array<winrt::Windows::Globalization::Language> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::Globalization::Language>::get());
 
-            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
+            auto count = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.GetMany(static_cast<uint32_t>(start), items);
+            }();
 
             if (count != static_cast<uint32_t>(length))
             {
@@ -11686,11 +12907,16 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             if (!value)
             {
+                auto _gil = py::release_gil();
                 self->obj.RemoveAt(static_cast<uint32_t>(i));
             }
             else
             {
-                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::Globalization::Language>(value));
+                auto _value = py::convert_to<winrt::Windows::Globalization::Language>(value);
+                {
+                    auto _gil = py::release_gil();
+                    self->obj.SetAt(static_cast<uint32_t>(i), _value);
+                }
             }
 
             return 0;
@@ -11829,7 +13055,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue::Parse(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue::Parse(param0);
+                }());
             }
             catch (...)
             {
@@ -11865,7 +13095,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ToString());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ToString();
+                }());
             }
             catch (...)
             {
@@ -11904,7 +13138,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue param1{nullptr};
 
-                auto return_value = winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue::TryParse(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue::TryParse(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -11916,6 +13154,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -11948,7 +13187,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.LanguageRange());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LanguageRange();
+            }());
         }
         catch (...)
         {
@@ -11974,7 +13217,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Quality());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Quality();
+            }());
         }
         catch (...)
         {
@@ -12011,7 +13258,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            return py::convert(self->obj.ToString());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.ToString();
+            }());
         }
         catch (...)
         {
@@ -12116,7 +13367,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue>(args, 0);
 
-                self->obj.Append(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Append(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -12153,7 +13408,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                self->obj.Clear();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Clear();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -12190,7 +13449,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.First());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.First();
+                }());
             }
             catch (...)
             {
@@ -12228,7 +13491,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(self->obj.GetAt(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAt(param0);
+                }());
             }
             catch (...)
             {
@@ -12267,7 +13534,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue, true>>(args, 1);
 
-                return py::convert(self->obj.GetMany(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetMany(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -12303,7 +13574,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetView();
+                }());
             }
             catch (...)
             {
@@ -12342,7 +13617,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue>(args, 0);
                 uint32_t param1{};
 
-                auto return_value = self->obj.IndexOf(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IndexOf(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -12354,6 +13633,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -12393,7 +13673,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue>(args, 1);
 
-                self->obj.InsertAt(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.InsertAt(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -12432,7 +13716,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.ParseAdd(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ParseAdd(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -12471,7 +13759,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                self->obj.RemoveAt(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveAt(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -12508,7 +13800,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                self->obj.RemoveAtEnd();
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveAtEnd();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -12547,7 +13843,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue, false>>(args, 0);
 
-                self->obj.ReplaceAll(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ReplaceAll(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -12587,7 +13887,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue>(args, 1);
 
-                self->obj.SetAt(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetAt(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -12624,7 +13928,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ToString());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ToString();
+                }());
             }
             catch (...)
             {
@@ -12662,7 +13970,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.TryParseAdd(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryParseAdd(param0);
+                }());
             }
             catch (...)
             {
@@ -12694,7 +14006,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -12731,7 +14047,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            return py::convert(self->obj.ToString());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.ToString();
+            }());
         }
         catch (...)
         {
@@ -12744,7 +14064,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            return py::convert(self->obj.First());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.First();
+            }());
         }
         catch (...)
         {
@@ -12757,6 +14081,7 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
+            auto _gil = py::release_gil();
             return static_cast<Py_ssize_t>(self->obj.Size());
         }
         catch (...)
@@ -12770,7 +14095,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            return py::convert(self->obj.GetAt(static_cast<uint32_t>(i)));
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.GetAt(static_cast<uint32_t>(i));
+            }());
         }
         catch (...)
         {
@@ -12809,7 +14138,12 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             Py_ssize_t start, stop, step, length;
 
-            if (PySlice_GetIndicesEx(slice, self->obj.Size(), &start, &stop, &step, &length) < 0)
+            auto size = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.Size();
+            }();
+            if (PySlice_GetIndicesEx(slice, size, &start, &stop, &step, &length) < 0)
             {
                 return nullptr;
             }
@@ -12822,7 +14156,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             winrt::com_array<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue>::get());
 
-            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
+            auto count = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.GetMany(static_cast<uint32_t>(start), items);
+            }();
 
             if (count != static_cast<uint32_t>(length))
             {
@@ -12845,11 +14183,16 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             if (!value)
             {
+                auto _gil = py::release_gil();
                 self->obj.RemoveAt(static_cast<uint32_t>(i));
             }
             else
             {
-                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue>(value));
+                auto _value = py::convert_to<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue>(value);
+                {
+                    auto _gil = py::release_gil();
+                    self->obj.SetAt(static_cast<uint32_t>(i), _value);
+                }
             }
 
             return 0;
@@ -12972,7 +14315,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Web::Http::Headers::HttpMediaTypeHeaderValue::Parse(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Web::Http::Headers::HttpMediaTypeHeaderValue::Parse(param0);
+                }());
             }
             catch (...)
             {
@@ -13008,7 +14355,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ToString());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ToString();
+                }());
             }
             catch (...)
             {
@@ -13047,7 +14398,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 winrt::Windows::Web::Http::Headers::HttpMediaTypeHeaderValue param1{nullptr};
 
-                auto return_value = winrt::Windows::Web::Http::Headers::HttpMediaTypeHeaderValue::TryParse(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Web::Http::Headers::HttpMediaTypeHeaderValue::TryParse(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -13059,6 +14414,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -13091,7 +14447,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.MediaType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MediaType();
+            }());
         }
         catch (...)
         {
@@ -13125,7 +14485,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.MediaType(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MediaType(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -13152,7 +14516,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.CharSet());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CharSet();
+            }());
         }
         catch (...)
         {
@@ -13186,7 +14554,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.CharSet(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CharSet(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -13213,7 +14585,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Parameters());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Parameters();
+            }());
         }
         catch (...)
         {
@@ -13250,7 +14626,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            return py::convert(self->obj.ToString());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.ToString();
+            }());
         }
         catch (...)
         {
@@ -13396,7 +14776,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue::Parse(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue::Parse(param0);
+                }());
             }
             catch (...)
             {
@@ -13432,7 +14816,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ToString());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ToString();
+                }());
             }
             catch (...)
             {
@@ -13471,7 +14859,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue param1{nullptr};
 
-                auto return_value = winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue::TryParse(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue::TryParse(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -13483,6 +14875,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -13515,7 +14908,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Quality());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Quality();
+            }());
         }
         catch (...)
         {
@@ -13549,7 +14946,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<double>>(arg);
 
-            self->obj.Quality(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Quality(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -13576,7 +14977,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.MediaType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MediaType();
+            }());
         }
         catch (...)
         {
@@ -13610,7 +15015,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.MediaType(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MediaType(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -13637,7 +15046,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.CharSet());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CharSet();
+            }());
         }
         catch (...)
         {
@@ -13671,7 +15084,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.CharSet(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CharSet(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -13698,7 +15115,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Parameters());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Parameters();
+            }());
         }
         catch (...)
         {
@@ -13735,7 +15156,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            return py::convert(self->obj.ToString());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.ToString();
+            }());
         }
         catch (...)
         {
@@ -13842,7 +15267,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue>(args, 0);
 
-                self->obj.Append(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Append(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -13879,7 +15308,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                self->obj.Clear();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Clear();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -13916,7 +15349,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.First());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.First();
+                }());
             }
             catch (...)
             {
@@ -13954,7 +15391,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(self->obj.GetAt(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAt(param0);
+                }());
             }
             catch (...)
             {
@@ -13993,7 +15434,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue, true>>(args, 1);
 
-                return py::convert(self->obj.GetMany(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetMany(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -14029,7 +15474,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetView();
+                }());
             }
             catch (...)
             {
@@ -14068,7 +15517,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue>(args, 0);
                 uint32_t param1{};
 
-                auto return_value = self->obj.IndexOf(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IndexOf(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -14080,6 +15533,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -14119,7 +15573,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue>(args, 1);
 
-                self->obj.InsertAt(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.InsertAt(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -14158,7 +15616,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.ParseAdd(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ParseAdd(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -14197,7 +15659,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                self->obj.RemoveAt(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveAt(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -14234,7 +15700,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                self->obj.RemoveAtEnd();
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveAtEnd();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -14273,7 +15743,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue, false>>(args, 0);
 
-                self->obj.ReplaceAll(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ReplaceAll(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -14313,7 +15787,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue>(args, 1);
 
-                self->obj.SetAt(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetAt(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -14350,7 +15828,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ToString());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ToString();
+                }());
             }
             catch (...)
             {
@@ -14388,7 +15870,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.TryParseAdd(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryParseAdd(param0);
+                }());
             }
             catch (...)
             {
@@ -14420,7 +15906,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -14457,7 +15947,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            return py::convert(self->obj.ToString());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.ToString();
+            }());
         }
         catch (...)
         {
@@ -14470,7 +15964,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            return py::convert(self->obj.First());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.First();
+            }());
         }
         catch (...)
         {
@@ -14483,6 +15981,7 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
+            auto _gil = py::release_gil();
             return static_cast<Py_ssize_t>(self->obj.Size());
         }
         catch (...)
@@ -14496,7 +15995,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            return py::convert(self->obj.GetAt(static_cast<uint32_t>(i)));
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.GetAt(static_cast<uint32_t>(i));
+            }());
         }
         catch (...)
         {
@@ -14535,7 +16038,12 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             Py_ssize_t start, stop, step, length;
 
-            if (PySlice_GetIndicesEx(slice, self->obj.Size(), &start, &stop, &step, &length) < 0)
+            auto size = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.Size();
+            }();
+            if (PySlice_GetIndicesEx(slice, size, &start, &stop, &step, &length) < 0)
             {
                 return nullptr;
             }
@@ -14548,7 +16056,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             winrt::com_array<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue>::get());
 
-            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
+            auto count = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.GetMany(static_cast<uint32_t>(start), items);
+            }();
 
             if (count != static_cast<uint32_t>(length))
             {
@@ -14571,11 +16083,16 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             if (!value)
             {
+                auto _gil = py::release_gil();
                 self->obj.RemoveAt(static_cast<uint32_t>(i));
             }
             else
             {
-                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue>(value));
+                auto _value = py::convert_to<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue>(value);
+                {
+                    auto _gil = py::release_gil();
+                    self->obj.SetAt(static_cast<uint32_t>(i), _value);
+                }
             }
 
             return 0;
@@ -14674,7 +16191,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::HttpMethod>(args, 0);
 
-                self->obj.Append(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Append(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -14711,7 +16232,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                self->obj.Clear();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Clear();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -14748,7 +16273,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.First());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.First();
+                }());
             }
             catch (...)
             {
@@ -14786,7 +16315,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(self->obj.GetAt(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAt(param0);
+                }());
             }
             catch (...)
             {
@@ -14825,7 +16358,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::HttpMethod, true>>(args, 1);
 
-                return py::convert(self->obj.GetMany(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetMany(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -14861,7 +16398,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetView();
+                }());
             }
             catch (...)
             {
@@ -14900,7 +16441,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::HttpMethod>(args, 0);
                 uint32_t param1{};
 
-                auto return_value = self->obj.IndexOf(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IndexOf(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -14912,6 +16457,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -14951,7 +16497,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::HttpMethod>(args, 1);
 
-                self->obj.InsertAt(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.InsertAt(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -14990,7 +16540,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.ParseAdd(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ParseAdd(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -15029,7 +16583,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                self->obj.RemoveAt(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveAt(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -15066,7 +16624,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                self->obj.RemoveAtEnd();
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveAtEnd();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -15105,7 +16667,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::HttpMethod, false>>(args, 0);
 
-                self->obj.ReplaceAll(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ReplaceAll(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -15145,7 +16711,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::HttpMethod>(args, 1);
 
-                self->obj.SetAt(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetAt(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -15182,7 +16752,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ToString());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ToString();
+                }());
             }
             catch (...)
             {
@@ -15220,7 +16794,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.TryParseAdd(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryParseAdd(param0);
+                }());
             }
             catch (...)
             {
@@ -15252,7 +16830,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -15289,7 +16871,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            return py::convert(self->obj.ToString());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.ToString();
+            }());
         }
         catch (...)
         {
@@ -15302,7 +16888,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            return py::convert(self->obj.First());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.First();
+            }());
         }
         catch (...)
         {
@@ -15315,6 +16905,7 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
+            auto _gil = py::release_gil();
             return static_cast<Py_ssize_t>(self->obj.Size());
         }
         catch (...)
@@ -15328,7 +16919,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            return py::convert(self->obj.GetAt(static_cast<uint32_t>(i)));
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.GetAt(static_cast<uint32_t>(i));
+            }());
         }
         catch (...)
         {
@@ -15367,7 +16962,12 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             Py_ssize_t start, stop, step, length;
 
-            if (PySlice_GetIndicesEx(slice, self->obj.Size(), &start, &stop, &step, &length) < 0)
+            auto size = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.Size();
+            }();
+            if (PySlice_GetIndicesEx(slice, size, &start, &stop, &step, &length) < 0)
             {
                 return nullptr;
             }
@@ -15380,7 +16980,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             winrt::com_array<winrt::Windows::Web::Http::HttpMethod> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::Web::Http::HttpMethod>::get());
 
-            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
+            auto count = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.GetMany(static_cast<uint32_t>(start), items);
+            }();
 
             if (count != static_cast<uint32_t>(length))
             {
@@ -15403,11 +17007,16 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             if (!value)
             {
+                auto _gil = py::release_gil();
                 self->obj.RemoveAt(static_cast<uint32_t>(i));
             }
             else
             {
-                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::Web::Http::HttpMethod>(value));
+                auto _value = py::convert_to<winrt::Windows::Web::Http::HttpMethod>(value);
+                {
+                    auto _gil = py::release_gil();
+                    self->obj.SetAt(static_cast<uint32_t>(i), _value);
+                }
             }
 
             return 0;
@@ -15546,7 +17155,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue::Parse(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue::Parse(param0);
+                }());
             }
             catch (...)
             {
@@ -15582,7 +17195,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ToString());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ToString();
+                }());
             }
             catch (...)
             {
@@ -15621,7 +17238,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue param1{nullptr};
 
-                auto return_value = winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue::TryParse(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue::TryParse(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -15633,6 +17254,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -15665,7 +17287,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Value());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Value();
+            }());
         }
         catch (...)
         {
@@ -15699,7 +17325,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Value(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Value(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -15726,7 +17356,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -15763,7 +17397,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            return py::convert(self->obj.ToString());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.ToString();
+            }());
         }
         catch (...)
         {
@@ -15908,7 +17546,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Web::Http::Headers::HttpProductHeaderValue::Parse(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Web::Http::Headers::HttpProductHeaderValue::Parse(param0);
+                }());
             }
             catch (...)
             {
@@ -15944,7 +17586,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ToString());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ToString();
+                }());
             }
             catch (...)
             {
@@ -15983,7 +17629,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 winrt::Windows::Web::Http::Headers::HttpProductHeaderValue param1{nullptr};
 
-                auto return_value = winrt::Windows::Web::Http::Headers::HttpProductHeaderValue::TryParse(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Web::Http::Headers::HttpProductHeaderValue::TryParse(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -15995,6 +17645,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -16027,7 +17678,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -16053,7 +17708,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Version());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Version();
+            }());
         }
         catch (...)
         {
@@ -16090,7 +17749,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            return py::convert(self->obj.ToString());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.ToString();
+            }());
         }
         catch (...)
         {
@@ -16235,7 +17898,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue::Parse(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue::Parse(param0);
+                }());
             }
             catch (...)
             {
@@ -16271,7 +17938,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ToString());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ToString();
+                }());
             }
             catch (...)
             {
@@ -16310,7 +17981,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue param1{nullptr};
 
-                auto return_value = winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue::TryParse(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue::TryParse(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -16322,6 +17997,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -16354,7 +18030,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Comment());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Comment();
+            }());
         }
         catch (...)
         {
@@ -16380,7 +18060,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Product());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Product();
+            }());
         }
         catch (...)
         {
@@ -16417,7 +18101,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            return py::convert(self->obj.ToString());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.ToString();
+            }());
         }
         catch (...)
         {
@@ -16522,7 +18210,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue>(args, 0);
 
-                self->obj.Append(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Append(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -16559,7 +18251,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                self->obj.Clear();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Clear();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -16596,7 +18292,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.First());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.First();
+                }());
             }
             catch (...)
             {
@@ -16634,7 +18334,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(self->obj.GetAt(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAt(param0);
+                }());
             }
             catch (...)
             {
@@ -16673,7 +18377,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue, true>>(args, 1);
 
-                return py::convert(self->obj.GetMany(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetMany(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -16709,7 +18417,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetView();
+                }());
             }
             catch (...)
             {
@@ -16748,7 +18460,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue>(args, 0);
                 uint32_t param1{};
 
-                auto return_value = self->obj.IndexOf(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IndexOf(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -16760,6 +18476,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -16799,7 +18516,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue>(args, 1);
 
-                self->obj.InsertAt(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.InsertAt(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -16838,7 +18559,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.ParseAdd(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ParseAdd(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -16877,7 +18602,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                self->obj.RemoveAt(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveAt(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -16914,7 +18643,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                self->obj.RemoveAtEnd();
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveAtEnd();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -16953,7 +18686,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue, false>>(args, 0);
 
-                self->obj.ReplaceAll(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ReplaceAll(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -16993,7 +18730,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue>(args, 1);
 
-                self->obj.SetAt(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetAt(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -17030,7 +18771,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ToString());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ToString();
+                }());
             }
             catch (...)
             {
@@ -17068,7 +18813,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.TryParseAdd(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryParseAdd(param0);
+                }());
             }
             catch (...)
             {
@@ -17100,7 +18849,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -17137,7 +18890,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            return py::convert(self->obj.ToString());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.ToString();
+            }());
         }
         catch (...)
         {
@@ -17150,7 +18907,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            return py::convert(self->obj.First());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.First();
+            }());
         }
         catch (...)
         {
@@ -17163,6 +18924,7 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
+            auto _gil = py::release_gil();
             return static_cast<Py_ssize_t>(self->obj.Size());
         }
         catch (...)
@@ -17176,7 +18938,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            return py::convert(self->obj.GetAt(static_cast<uint32_t>(i)));
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.GetAt(static_cast<uint32_t>(i));
+            }());
         }
         catch (...)
         {
@@ -17215,7 +18981,12 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             Py_ssize_t start, stop, step, length;
 
-            if (PySlice_GetIndicesEx(slice, self->obj.Size(), &start, &stop, &step, &length) < 0)
+            auto size = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.Size();
+            }();
+            if (PySlice_GetIndicesEx(slice, size, &start, &stop, &step, &length) < 0)
             {
                 return nullptr;
             }
@@ -17228,7 +18999,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             winrt::com_array<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue>::get());
 
-            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
+            auto count = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.GetMany(static_cast<uint32_t>(start), items);
+            }();
 
             if (count != static_cast<uint32_t>(length))
             {
@@ -17251,11 +19026,16 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             if (!value)
             {
+                auto _gil = py::release_gil();
                 self->obj.RemoveAt(static_cast<uint32_t>(i));
             }
             else
             {
-                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue>(value));
+                auto _value = py::convert_to<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue>(value);
+                {
+                    auto _gil = py::release_gil();
+                    self->obj.SetAt(static_cast<uint32_t>(i), _value);
+                }
             }
 
             return 0;
@@ -17355,7 +19135,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                self->obj.Append(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Append(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -17392,7 +19176,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                self->obj.Clear();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Clear();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -17429,7 +19217,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.First());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.First();
+                }());
             }
             catch (...)
             {
@@ -17465,7 +19257,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetView();
+                }());
             }
             catch (...)
             {
@@ -17503,7 +19299,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.HasKey(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.HasKey(param0);
+                }());
             }
             catch (...)
             {
@@ -17542,7 +19342,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.Insert(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Insert(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -17580,7 +19384,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.Lookup(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Lookup(param0);
+                }());
             }
             catch (...)
             {
@@ -17618,7 +19426,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.Remove(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Remove(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -17655,7 +19467,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ToString());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ToString();
+                }());
             }
             catch (...)
             {
@@ -17694,7 +19510,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.TryAppendWithoutValidation(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryAppendWithoutValidation(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -17726,7 +19546,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -17752,7 +19576,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Referer());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Referer();
+            }());
         }
         catch (...)
         {
@@ -17786,7 +19614,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.Referer(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Referer(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -17813,7 +19645,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProxyAuthorization());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProxyAuthorization();
+            }());
         }
         catch (...)
         {
@@ -17847,7 +19683,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpCredentialsHeaderValue>(arg);
 
-            self->obj.ProxyAuthorization(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ProxyAuthorization(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -17874,7 +19714,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxForwards());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxForwards();
+            }());
         }
         catch (...)
         {
@@ -17908,7 +19752,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<uint32_t>>(arg);
 
-            self->obj.MaxForwards(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MaxForwards(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -17935,7 +19783,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.IfUnmodifiedSince());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IfUnmodifiedSince();
+            }());
         }
         catch (...)
         {
@@ -17969,7 +19821,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
-            self->obj.IfUnmodifiedSince(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IfUnmodifiedSince(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -17996,7 +19852,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.IfModifiedSince());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IfModifiedSince();
+            }());
         }
         catch (...)
         {
@@ -18030,7 +19890,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
-            self->obj.IfModifiedSince(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IfModifiedSince(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -18057,7 +19921,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Host());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Host();
+            }());
         }
         catch (...)
         {
@@ -18091,7 +19959,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             auto param0 = py::convert_to<winrt::Windows::Networking::HostName>(arg);
 
-            self->obj.Host(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Host(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -18118,7 +19990,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.From());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.From();
+            }());
         }
         catch (...)
         {
@@ -18152,7 +20028,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.From(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.From(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -18179,7 +20059,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Date());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Date();
+            }());
         }
         catch (...)
         {
@@ -18213,7 +20097,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
-            self->obj.Date(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Date(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -18240,7 +20128,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Authorization());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Authorization();
+            }());
         }
         catch (...)
         {
@@ -18274,7 +20166,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpCredentialsHeaderValue>(arg);
 
-            self->obj.Authorization(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Authorization(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -18301,7 +20197,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Accept());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Accept();
+            }());
         }
         catch (...)
         {
@@ -18327,7 +20227,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.AcceptEncoding());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AcceptEncoding();
+            }());
         }
         catch (...)
         {
@@ -18353,7 +20257,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.AcceptLanguage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AcceptLanguage();
+            }());
         }
         catch (...)
         {
@@ -18379,7 +20287,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.CacheControl());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CacheControl();
+            }());
         }
         catch (...)
         {
@@ -18405,7 +20317,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Connection());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Connection();
+            }());
         }
         catch (...)
         {
@@ -18431,7 +20347,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Cookie());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Cookie();
+            }());
         }
         catch (...)
         {
@@ -18457,7 +20377,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Expect());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Expect();
+            }());
         }
         catch (...)
         {
@@ -18483,7 +20407,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.TransferEncoding());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TransferEncoding();
+            }());
         }
         catch (...)
         {
@@ -18509,7 +20437,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.UserAgent());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UserAgent();
+            }());
         }
         catch (...)
         {
@@ -18546,7 +20478,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            return py::convert(self->obj.ToString());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.ToString();
+            }());
         }
         catch (...)
         {
@@ -18559,7 +20495,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            py::pyobj_handle iter{py::convert(self->obj.First())};
+            py::pyobj_handle iter{py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.First();
+            }())};
 
             if (!iter)
             {
@@ -18579,7 +20519,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            return static_cast<int>(self->obj.HasKey(py::convert_to<winrt::hstring>(key)));
+            auto _key = py::convert_to<winrt::hstring>(key);
+            {
+                auto _gil = py::release_gil();
+                return static_cast<int>(self->obj.HasKey(_key));
+            }
         }
         catch (...)
         {
@@ -18592,6 +20536,7 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
+            auto _gil = py::release_gil();
             return static_cast<Py_ssize_t>(self->obj.Size());
         }
         catch (...)
@@ -18606,12 +20551,22 @@ namespace py::cpp::Windows::Web::Http::Headers
         try
         {
             auto _key = py::convert_to<winrt::hstring>(key);
-            auto value = self->obj.TryLookup(_key);
+            auto value = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.TryLookup(_key);
+            }();
 
             if (!value) {
                 if constexpr (std::is_base_of_v<winrt::Windows::Foundation::IUnknown, decltype(value)>)
                 {
-                    if (self->obj.HasKey(_key))
+                    auto has_key = [&]()
+                    {
+                        auto _gil = py::release_gil();
+                        return self->obj.HasKey(_key);
+                    }();
+
+                    if (has_key)
                     {
                         Py_RETURN_NONE;
                     }
@@ -18637,7 +20592,12 @@ namespace py::cpp::Windows::Web::Http::Headers
             auto _key = py::convert_to<winrt::hstring>(key);
 
             if (value == nullptr) {
-                if (!self->obj.TryRemove(_key)) {
+                bool did_remove;
+                {
+                    auto _gil = py::release_gil();
+                    did_remove = self->obj.TryRemove(_key);
+                }
+                if (!did_remove) {
                     PyErr_SetObject(PyExc_KeyError, key);
                     return -1;
                 }
@@ -18645,7 +20605,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return 0;
             }
 
-            self->obj.Insert(_key, py::convert_to<winrt::hstring>(value));
+            auto _value = py::convert_to<winrt::hstring>(value);
+            {
+                auto _gil = py::release_gil();
+                self->obj.Insert(_key, _value);
+            }
 
             return 0;
         }
@@ -18757,7 +20721,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                self->obj.Append(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Append(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -18794,7 +20762,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                self->obj.Clear();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Clear();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -18831,7 +20803,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.First());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.First();
+                }());
             }
             catch (...)
             {
@@ -18867,7 +20843,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetView();
+                }());
             }
             catch (...)
             {
@@ -18905,7 +20885,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.HasKey(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.HasKey(param0);
+                }());
             }
             catch (...)
             {
@@ -18944,7 +20928,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.Insert(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Insert(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -18982,7 +20970,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.Lookup(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Lookup(param0);
+                }());
             }
             catch (...)
             {
@@ -19020,7 +21012,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.Remove(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Remove(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -19057,7 +21053,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ToString());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ToString();
+                }());
             }
             catch (...)
             {
@@ -19096,7 +21096,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.TryAppendWithoutValidation(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryAppendWithoutValidation(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -19128,7 +21132,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -19154,7 +21162,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.RetryAfter());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RetryAfter();
+            }());
         }
         catch (...)
         {
@@ -19188,7 +21200,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpDateOrDeltaHeaderValue>(arg);
 
-            self->obj.RetryAfter(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RetryAfter(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -19215,7 +21231,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Location());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Location();
+            }());
         }
         catch (...)
         {
@@ -19249,7 +21269,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.Location(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Location(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -19276,7 +21300,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Date());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Date();
+            }());
         }
         catch (...)
         {
@@ -19310,7 +21338,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
-            self->obj.Date(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Date(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -19337,7 +21369,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Age());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Age();
+            }());
         }
         catch (...)
         {
@@ -19371,7 +21407,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>>(arg);
 
-            self->obj.Age(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Age(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -19398,7 +21438,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Allow());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Allow();
+            }());
         }
         catch (...)
         {
@@ -19424,7 +21468,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.CacheControl());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CacheControl();
+            }());
         }
         catch (...)
         {
@@ -19450,7 +21498,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Connection());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Connection();
+            }());
         }
         catch (...)
         {
@@ -19476,7 +21528,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProxyAuthenticate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProxyAuthenticate();
+            }());
         }
         catch (...)
         {
@@ -19502,7 +21558,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.TransferEncoding());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TransferEncoding();
+            }());
         }
         catch (...)
         {
@@ -19528,7 +21588,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.WwwAuthenticate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WwwAuthenticate();
+            }());
         }
         catch (...)
         {
@@ -19565,7 +21629,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            return py::convert(self->obj.ToString());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.ToString();
+            }());
         }
         catch (...)
         {
@@ -19578,7 +21646,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            py::pyobj_handle iter{py::convert(self->obj.First())};
+            py::pyobj_handle iter{py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.First();
+            }())};
 
             if (!iter)
             {
@@ -19598,7 +21670,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            return static_cast<int>(self->obj.HasKey(py::convert_to<winrt::hstring>(key)));
+            auto _key = py::convert_to<winrt::hstring>(key);
+            {
+                auto _gil = py::release_gil();
+                return static_cast<int>(self->obj.HasKey(_key));
+            }
         }
         catch (...)
         {
@@ -19611,6 +21687,7 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
+            auto _gil = py::release_gil();
             return static_cast<Py_ssize_t>(self->obj.Size());
         }
         catch (...)
@@ -19625,12 +21702,22 @@ namespace py::cpp::Windows::Web::Http::Headers
         try
         {
             auto _key = py::convert_to<winrt::hstring>(key);
-            auto value = self->obj.TryLookup(_key);
+            auto value = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.TryLookup(_key);
+            }();
 
             if (!value) {
                 if constexpr (std::is_base_of_v<winrt::Windows::Foundation::IUnknown, decltype(value)>)
                 {
-                    if (self->obj.HasKey(_key))
+                    auto has_key = [&]()
+                    {
+                        auto _gil = py::release_gil();
+                        return self->obj.HasKey(_key);
+                    }();
+
+                    if (has_key)
                     {
                         Py_RETURN_NONE;
                     }
@@ -19656,7 +21743,12 @@ namespace py::cpp::Windows::Web::Http::Headers
             auto _key = py::convert_to<winrt::hstring>(key);
 
             if (value == nullptr) {
-                if (!self->obj.TryRemove(_key)) {
+                bool did_remove;
+                {
+                    auto _gil = py::release_gil();
+                    did_remove = self->obj.TryRemove(_key);
+                }
+                if (!did_remove) {
                     PyErr_SetObject(PyExc_KeyError, key);
                     return -1;
                 }
@@ -19664,7 +21756,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return 0;
             }
 
-            self->obj.Insert(_key, py::convert_to<winrt::hstring>(value));
+            auto _value = py::convert_to<winrt::hstring>(value);
+            {
+                auto _gil = py::release_gil();
+                self->obj.Insert(_key, _value);
+            }
 
             return 0;
         }
@@ -19791,7 +21887,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue::Parse(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue::Parse(param0);
+                }());
             }
             catch (...)
             {
@@ -19827,7 +21927,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ToString());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ToString();
+                }());
             }
             catch (...)
             {
@@ -19866,7 +21970,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue param1{nullptr};
 
-                auto return_value = winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue::TryParse(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue::TryParse(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -19878,6 +21986,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -19910,7 +22019,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Parameters());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Parameters();
+            }());
         }
         catch (...)
         {
@@ -19936,7 +22049,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Value());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Value();
+            }());
         }
         catch (...)
         {
@@ -19973,7 +22090,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            return py::convert(self->obj.ToString());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.ToString();
+            }());
         }
         catch (...)
         {
@@ -20078,7 +22199,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue>(args, 0);
 
-                self->obj.Append(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Append(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -20115,7 +22240,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                self->obj.Clear();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Clear();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -20152,7 +22281,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.First());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.First();
+                }());
             }
             catch (...)
             {
@@ -20190,7 +22323,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(self->obj.GetAt(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAt(param0);
+                }());
             }
             catch (...)
             {
@@ -20229,7 +22366,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue, true>>(args, 1);
 
-                return py::convert(self->obj.GetMany(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetMany(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -20265,7 +22406,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetView();
+                }());
             }
             catch (...)
             {
@@ -20304,7 +22449,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue>(args, 0);
                 uint32_t param1{};
 
-                auto return_value = self->obj.IndexOf(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IndexOf(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -20316,6 +22465,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -20355,7 +22505,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue>(args, 1);
 
-                self->obj.InsertAt(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.InsertAt(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -20394,7 +22548,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.ParseAdd(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ParseAdd(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -20433,7 +22591,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                self->obj.RemoveAt(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveAt(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -20470,7 +22632,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                self->obj.RemoveAtEnd();
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveAtEnd();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -20509,7 +22675,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue, false>>(args, 0);
 
-                self->obj.ReplaceAll(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ReplaceAll(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -20549,7 +22719,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue>(args, 1);
 
-                self->obj.SetAt(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetAt(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -20586,7 +22760,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ToString());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ToString();
+                }());
             }
             catch (...)
             {
@@ -20624,7 +22802,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.TryParseAdd(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryParseAdd(param0);
+                }());
             }
             catch (...)
             {
@@ -20656,7 +22838,11 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -20693,7 +22879,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            return py::convert(self->obj.ToString());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.ToString();
+            }());
         }
         catch (...)
         {
@@ -20706,7 +22896,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            return py::convert(self->obj.First());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.First();
+            }());
         }
         catch (...)
         {
@@ -20719,6 +22913,7 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
+            auto _gil = py::release_gil();
             return static_cast<Py_ssize_t>(self->obj.Size());
         }
         catch (...)
@@ -20732,7 +22927,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            return py::convert(self->obj.GetAt(static_cast<uint32_t>(i)));
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.GetAt(static_cast<uint32_t>(i));
+            }());
         }
         catch (...)
         {
@@ -20771,7 +22970,12 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             Py_ssize_t start, stop, step, length;
 
-            if (PySlice_GetIndicesEx(slice, self->obj.Size(), &start, &stop, &step, &length) < 0)
+            auto size = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.Size();
+            }();
+            if (PySlice_GetIndicesEx(slice, size, &start, &stop, &step, &length) < 0)
             {
                 return nullptr;
             }
@@ -20784,7 +22988,11 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             winrt::com_array<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue>::get());
 
-            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
+            auto count = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.GetMany(static_cast<uint32_t>(start), items);
+            }();
 
             if (count != static_cast<uint32_t>(length))
             {
@@ -20807,11 +23015,16 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             if (!value)
             {
+                auto _gil = py::release_gil();
                 self->obj.RemoveAt(static_cast<uint32_t>(i));
             }
             else
             {
-                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue>(value));
+                auto _value = py::convert_to<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue>(value);
+                {
+                    auto _gil = py::release_gil();
+                    self->obj.SetAt(static_cast<uint32_t>(i), _value);
+                }
             }
 
             return 0;

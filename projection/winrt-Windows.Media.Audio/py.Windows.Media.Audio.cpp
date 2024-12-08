@@ -44,7 +44,11 @@ namespace py::cpp::Windows::Media::Audio
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::IAudioNode>(args, 0);
 
-                self->obj.AddOutgoingConnection(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddOutgoingConnection(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -84,7 +88,11 @@ namespace py::cpp::Windows::Media::Audio
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::IAudioNode>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
-                self->obj.AddOutgoingConnection(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddOutgoingConnection(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -121,7 +129,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -160,7 +172,11 @@ namespace py::cpp::Windows::Media::Audio
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
-                self->obj.DisableEffectsByDefinition(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.DisableEffectsByDefinition(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -199,7 +215,11 @@ namespace py::cpp::Windows::Media::Audio
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
-                self->obj.EnableEffectsByDefinition(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.EnableEffectsByDefinition(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -238,7 +258,11 @@ namespace py::cpp::Windows::Media::Audio
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::IAudioNode>(args, 0);
 
-                self->obj.RemoveOutgoingConnection(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveOutgoingConnection(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -275,7 +299,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                self->obj.Reset();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Reset();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -312,7 +340,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                self->obj.Start();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Start();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -349,7 +381,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                self->obj.Stop();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Stop();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -382,7 +418,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.Device());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Device();
+            }());
         }
         catch (...)
         {
@@ -408,7 +448,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.OutgoingConnections());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OutgoingConnections();
+            }());
         }
         catch (...)
         {
@@ -434,7 +478,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.Emitter());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Emitter();
+            }());
         }
         catch (...)
         {
@@ -460,7 +508,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.OutgoingGain());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OutgoingGain();
+            }());
         }
         catch (...)
         {
@@ -494,7 +546,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.OutgoingGain(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.OutgoingGain(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -521,7 +577,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.ConsumeInput());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ConsumeInput();
+            }());
         }
         catch (...)
         {
@@ -555,7 +615,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.ConsumeInput(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ConsumeInput(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -582,7 +646,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.EffectDefinitions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EffectDefinitions();
+            }());
         }
         catch (...)
         {
@@ -608,7 +676,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.EncodingProperties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EncodingProperties();
+            }());
         }
         catch (...)
         {
@@ -650,7 +722,11 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -741,7 +817,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -780,7 +860,11 @@ namespace py::cpp::Windows::Media::Audio
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
-                self->obj.DisableEffectsByDefinition(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.DisableEffectsByDefinition(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -819,7 +903,11 @@ namespace py::cpp::Windows::Media::Audio
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
-                self->obj.EnableEffectsByDefinition(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.EnableEffectsByDefinition(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -856,7 +944,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                self->obj.Reset();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Reset();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -893,7 +985,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                self->obj.Start();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Start();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -930,7 +1026,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                self->obj.Stop();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Stop();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -963,7 +1063,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.Device());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Device();
+            }());
         }
         catch (...)
         {
@@ -989,7 +1093,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.OutgoingGain());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OutgoingGain();
+            }());
         }
         catch (...)
         {
@@ -1023,7 +1131,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.OutgoingGain(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.OutgoingGain(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1050,7 +1162,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.ConsumeInput());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ConsumeInput();
+            }());
         }
         catch (...)
         {
@@ -1084,7 +1200,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.ConsumeInput(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ConsumeInput(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1111,7 +1231,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.EffectDefinitions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EffectDefinitions();
+            }());
         }
         catch (...)
         {
@@ -1137,7 +1261,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.EncodingProperties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EncodingProperties();
+            }());
         }
         catch (...)
         {
@@ -1163,7 +1291,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.Listener());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Listener();
+            }());
         }
         catch (...)
         {
@@ -1197,7 +1329,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<winrt::Windows::Media::Audio::AudioNodeListener>(arg);
 
-            self->obj.Listener(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Listener(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1240,7 +1376,11 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -1330,7 +1470,11 @@ namespace py::cpp::Windows::Media::Audio
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(winrt::Windows::Media::Audio::AudioEffectsPackConfiguration::GetForDeviceId(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::Audio::AudioEffectsPackConfiguration::GetForDeviceId(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1369,7 +1513,11 @@ namespace py::cpp::Windows::Media::Audio
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(winrt::Windows::Media::Audio::AudioEffectsPackConfiguration::IsDeviceIdSupported(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::Audio::AudioEffectsPackConfiguration::IsDeviceIdSupported(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1401,7 +1549,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceId();
+            }());
         }
         catch (...)
         {
@@ -1427,7 +1579,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.EffectsPackId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EffectsPackId();
+            }());
         }
         catch (...)
         {
@@ -1453,7 +1609,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -1481,7 +1641,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Audio::AudioEffectsPackConfiguration, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.StatusChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StatusChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -1509,7 +1673,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.StatusChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StatusChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1640,7 +1808,11 @@ namespace py::cpp::Windows::Media::Audio
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::IAudioNode>(args, 0);
 
-                self->obj.AddOutgoingConnection(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddOutgoingConnection(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1680,7 +1852,11 @@ namespace py::cpp::Windows::Media::Audio
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::IAudioNode>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
-                self->obj.AddOutgoingConnection(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddOutgoingConnection(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1717,7 +1893,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1756,7 +1936,11 @@ namespace py::cpp::Windows::Media::Audio
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
-                self->obj.DisableEffectsByDefinition(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.DisableEffectsByDefinition(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1795,7 +1979,11 @@ namespace py::cpp::Windows::Media::Audio
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
-                self->obj.EnableEffectsByDefinition(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.EnableEffectsByDefinition(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1834,7 +2022,11 @@ namespace py::cpp::Windows::Media::Audio
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::IAudioNode>(args, 0);
 
-                self->obj.RemoveOutgoingConnection(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveOutgoingConnection(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1871,7 +2063,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                self->obj.Reset();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Reset();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1910,7 +2106,11 @@ namespace py::cpp::Windows::Media::Audio
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 0);
 
-                self->obj.Seek(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Seek(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1947,7 +2147,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                self->obj.Start();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Start();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1984,7 +2188,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                self->obj.Stop();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Stop();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2017,7 +2225,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.PlaybackSpeedFactor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PlaybackSpeedFactor();
+            }());
         }
         catch (...)
         {
@@ -2051,7 +2263,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.PlaybackSpeedFactor(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PlaybackSpeedFactor(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2078,7 +2294,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.LoopCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LoopCount();
+            }());
         }
         catch (...)
         {
@@ -2112,7 +2332,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
-            self->obj.LoopCount(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.LoopCount(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2139,7 +2363,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.EndTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EndTime();
+            }());
         }
         catch (...)
         {
@@ -2173,7 +2401,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>>(arg);
 
-            self->obj.EndTime(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.EndTime(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2200,7 +2432,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.StartTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StartTime();
+            }());
         }
         catch (...)
         {
@@ -2234,7 +2470,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>>(arg);
 
-            self->obj.StartTime(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StartTime(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2261,7 +2501,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.Position());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Position();
+            }());
         }
         catch (...)
         {
@@ -2287,7 +2531,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.SourceFile());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SourceFile();
+            }());
         }
         catch (...)
         {
@@ -2313,7 +2561,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.Duration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Duration();
+            }());
         }
         catch (...)
         {
@@ -2339,7 +2591,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.OutgoingConnections());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OutgoingConnections();
+            }());
         }
         catch (...)
         {
@@ -2365,7 +2621,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.Emitter());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Emitter();
+            }());
         }
         catch (...)
         {
@@ -2391,7 +2651,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.OutgoingGain());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OutgoingGain();
+            }());
         }
         catch (...)
         {
@@ -2425,7 +2689,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.OutgoingGain(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.OutgoingGain(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2452,7 +2720,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.ConsumeInput());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ConsumeInput();
+            }());
         }
         catch (...)
         {
@@ -2486,7 +2758,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.ConsumeInput(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ConsumeInput(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2513,7 +2789,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.EffectDefinitions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EffectDefinitions();
+            }());
         }
         catch (...)
         {
@@ -2539,7 +2819,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.EncodingProperties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EncodingProperties();
+            }());
         }
         catch (...)
         {
@@ -2567,7 +2851,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Audio::AudioFileInputNode, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.FileCompleted(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FileCompleted(param0);
+            }());
         }
         catch (...)
         {
@@ -2595,7 +2883,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.FileCompleted(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.FileCompleted(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2638,7 +2930,11 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -2738,7 +3034,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2777,7 +3077,11 @@ namespace py::cpp::Windows::Media::Audio
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
-                self->obj.DisableEffectsByDefinition(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.DisableEffectsByDefinition(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2816,7 +3120,11 @@ namespace py::cpp::Windows::Media::Audio
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
-                self->obj.EnableEffectsByDefinition(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.EnableEffectsByDefinition(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2853,7 +3161,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                return py::convert(self->obj.FinalizeAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.FinalizeAsync();
+                }());
             }
             catch (...)
             {
@@ -2889,7 +3201,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                self->obj.Reset();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Reset();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2926,7 +3242,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                self->obj.Start();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Start();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2963,7 +3283,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                self->obj.Stop();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Stop();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2996,7 +3320,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.File());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.File();
+            }());
         }
         catch (...)
         {
@@ -3022,7 +3350,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.FileEncodingProfile());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FileEncodingProfile();
+            }());
         }
         catch (...)
         {
@@ -3048,7 +3380,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.OutgoingGain());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OutgoingGain();
+            }());
         }
         catch (...)
         {
@@ -3082,7 +3418,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.OutgoingGain(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.OutgoingGain(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3109,7 +3449,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.ConsumeInput());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ConsumeInput();
+            }());
         }
         catch (...)
         {
@@ -3143,7 +3487,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.ConsumeInput(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ConsumeInput(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3170,7 +3518,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.EffectDefinitions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EffectDefinitions();
+            }());
         }
         catch (...)
         {
@@ -3196,7 +3548,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.EncodingProperties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EncodingProperties();
+            }());
         }
         catch (...)
         {
@@ -3238,7 +3594,11 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -3322,7 +3682,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.Frame());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Frame();
+            }());
         }
         catch (...)
         {
@@ -3421,7 +3785,11 @@ namespace py::cpp::Windows::Media::Audio
 
                 auto param0 = py::convert_to<winrt::Windows::Media::AudioFrame>(args, 0);
 
-                self->obj.AddFrame(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddFrame(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3460,7 +3828,11 @@ namespace py::cpp::Windows::Media::Audio
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::IAudioNode>(args, 0);
 
-                self->obj.AddOutgoingConnection(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddOutgoingConnection(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3500,7 +3872,11 @@ namespace py::cpp::Windows::Media::Audio
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::IAudioNode>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
-                self->obj.AddOutgoingConnection(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddOutgoingConnection(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3537,7 +3913,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3576,7 +3956,11 @@ namespace py::cpp::Windows::Media::Audio
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
-                self->obj.DisableEffectsByDefinition(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.DisableEffectsByDefinition(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3613,7 +3997,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                self->obj.DiscardQueuedFrames();
+                {
+                    auto _gil = release_gil();
+                    self->obj.DiscardQueuedFrames();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3652,7 +4040,11 @@ namespace py::cpp::Windows::Media::Audio
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
-                self->obj.EnableEffectsByDefinition(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.EnableEffectsByDefinition(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3691,7 +4083,11 @@ namespace py::cpp::Windows::Media::Audio
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::IAudioNode>(args, 0);
 
-                self->obj.RemoveOutgoingConnection(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveOutgoingConnection(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3728,7 +4124,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                self->obj.Reset();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Reset();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3765,7 +4165,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                self->obj.Start();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Start();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3802,7 +4206,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                self->obj.Stop();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Stop();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3835,7 +4243,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.PlaybackSpeedFactor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PlaybackSpeedFactor();
+            }());
         }
         catch (...)
         {
@@ -3869,7 +4281,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.PlaybackSpeedFactor(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PlaybackSpeedFactor(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3896,7 +4312,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.QueuedSampleCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.QueuedSampleCount();
+            }());
         }
         catch (...)
         {
@@ -3922,7 +4342,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.OutgoingConnections());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OutgoingConnections();
+            }());
         }
         catch (...)
         {
@@ -3948,7 +4372,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.Emitter());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Emitter();
+            }());
         }
         catch (...)
         {
@@ -3974,7 +4402,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.OutgoingGain());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OutgoingGain();
+            }());
         }
         catch (...)
         {
@@ -4008,7 +4440,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.OutgoingGain(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.OutgoingGain(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4035,7 +4471,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.ConsumeInput());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ConsumeInput();
+            }());
         }
         catch (...)
         {
@@ -4069,7 +4509,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.ConsumeInput(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ConsumeInput(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4096,7 +4540,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.EffectDefinitions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EffectDefinitions();
+            }());
         }
         catch (...)
         {
@@ -4122,7 +4570,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.EncodingProperties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EncodingProperties();
+            }());
         }
         catch (...)
         {
@@ -4150,7 +4602,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Audio::AudioFrameInputNode, winrt::Windows::Media::Audio::AudioFrameCompletedEventArgs>>(arg);
 
-            return py::convert(self->obj.AudioFrameCompleted(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AudioFrameCompleted(param0);
+            }());
         }
         catch (...)
         {
@@ -4178,7 +4634,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.AudioFrameCompleted(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AudioFrameCompleted(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -4207,7 +4667,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Audio::AudioFrameInputNode, winrt::Windows::Media::Audio::FrameInputNodeQuantumStartedEventArgs>>(arg);
 
-            return py::convert(self->obj.QuantumStarted(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.QuantumStarted(param0);
+            }());
         }
         catch (...)
         {
@@ -4235,7 +4699,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.QuantumStarted(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.QuantumStarted(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -4278,7 +4746,11 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -4376,7 +4848,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4415,7 +4891,11 @@ namespace py::cpp::Windows::Media::Audio
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
-                self->obj.DisableEffectsByDefinition(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.DisableEffectsByDefinition(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4454,7 +4934,11 @@ namespace py::cpp::Windows::Media::Audio
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
-                self->obj.EnableEffectsByDefinition(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.EnableEffectsByDefinition(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4491,7 +4975,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetFrame());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetFrame();
+                }());
             }
             catch (...)
             {
@@ -4527,7 +5015,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                self->obj.Reset();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Reset();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4564,7 +5056,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                self->obj.Start();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Start();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4601,7 +5097,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                self->obj.Stop();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Stop();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4634,7 +5134,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.OutgoingGain());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OutgoingGain();
+            }());
         }
         catch (...)
         {
@@ -4668,7 +5172,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.OutgoingGain(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.OutgoingGain(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4695,7 +5203,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.ConsumeInput());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ConsumeInput();
+            }());
         }
         catch (...)
         {
@@ -4729,7 +5241,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.ConsumeInput(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ConsumeInput(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4756,7 +5272,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.EffectDefinitions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EffectDefinitions();
+            }());
         }
         catch (...)
         {
@@ -4782,7 +5302,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.EncodingProperties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EncodingProperties();
+            }());
         }
         catch (...)
         {
@@ -4824,7 +5348,11 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -4910,7 +5438,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4949,7 +5481,11 @@ namespace py::cpp::Windows::Media::Audio
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::AudioGraphSettings>(args, 0);
 
-                return py::convert(winrt::Windows::Media::Audio::AudioGraph::CreateAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::Audio::AudioGraph::CreateAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -4985,7 +5521,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CreateBatchUpdater());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateBatchUpdater();
+                }());
             }
             catch (...)
             {
@@ -5023,7 +5563,11 @@ namespace py::cpp::Windows::Media::Audio
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Capture::MediaCategory>(args, 0);
 
-                return py::convert(self->obj.CreateDeviceInputNodeAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateDeviceInputNodeAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -5064,7 +5608,11 @@ namespace py::cpp::Windows::Media::Audio
                 auto param2 = py::convert_to<winrt::Windows::Devices::Enumeration::DeviceInformation>(args, 2);
                 auto param3 = py::convert_to<winrt::Windows::Media::Audio::AudioNodeEmitter>(args, 3);
 
-                return py::convert(self->obj.CreateDeviceInputNodeAsync(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateDeviceInputNodeAsync(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -5103,7 +5651,11 @@ namespace py::cpp::Windows::Media::Audio
                 auto param0 = py::convert_to<winrt::Windows::Media::Capture::MediaCategory>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Media::MediaProperties::AudioEncodingProperties>(args, 1);
 
-                return py::convert(self->obj.CreateDeviceInputNodeAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateDeviceInputNodeAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -5143,7 +5695,11 @@ namespace py::cpp::Windows::Media::Audio
                 auto param1 = py::convert_to<winrt::Windows::Media::MediaProperties::AudioEncodingProperties>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Devices::Enumeration::DeviceInformation>(args, 2);
 
-                return py::convert(self->obj.CreateDeviceInputNodeAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateDeviceInputNodeAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -5179,7 +5735,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CreateDeviceOutputNodeAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateDeviceOutputNodeAsync();
+                }());
             }
             catch (...)
             {
@@ -5217,7 +5777,11 @@ namespace py::cpp::Windows::Media::Audio
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
 
-                return py::convert(self->obj.CreateFileInputNodeAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateFileInputNodeAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -5256,7 +5820,11 @@ namespace py::cpp::Windows::Media::Audio
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Media::Audio::AudioNodeEmitter>(args, 1);
 
-                return py::convert(self->obj.CreateFileInputNodeAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateFileInputNodeAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -5294,7 +5862,11 @@ namespace py::cpp::Windows::Media::Audio
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
 
-                return py::convert(self->obj.CreateFileOutputNodeAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateFileOutputNodeAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -5333,7 +5905,11 @@ namespace py::cpp::Windows::Media::Audio
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Media::MediaProperties::MediaEncodingProfile>(args, 1);
 
-                return py::convert(self->obj.CreateFileOutputNodeAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateFileOutputNodeAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -5369,7 +5945,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CreateFrameInputNode());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateFrameInputNode();
+                }());
             }
             catch (...)
             {
@@ -5407,7 +5987,11 @@ namespace py::cpp::Windows::Media::Audio
 
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::AudioEncodingProperties>(args, 0);
 
-                return py::convert(self->obj.CreateFrameInputNode(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateFrameInputNode(param0);
+                }());
             }
             catch (...)
             {
@@ -5446,7 +6030,11 @@ namespace py::cpp::Windows::Media::Audio
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::AudioEncodingProperties>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Media::Audio::AudioNodeEmitter>(args, 1);
 
-                return py::convert(self->obj.CreateFrameInputNode(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateFrameInputNode(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -5482,7 +6070,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CreateFrameOutputNode());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateFrameOutputNode();
+                }());
             }
             catch (...)
             {
@@ -5520,7 +6112,11 @@ namespace py::cpp::Windows::Media::Audio
 
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::AudioEncodingProperties>(args, 0);
 
-                return py::convert(self->obj.CreateFrameOutputNode(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateFrameOutputNode(param0);
+                }());
             }
             catch (...)
             {
@@ -5558,7 +6154,11 @@ namespace py::cpp::Windows::Media::Audio
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Core::MediaSource>(args, 0);
 
-                return py::convert(self->obj.CreateMediaSourceAudioInputNodeAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateMediaSourceAudioInputNodeAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -5597,7 +6197,11 @@ namespace py::cpp::Windows::Media::Audio
                 auto param0 = py::convert_to<winrt::Windows::Media::Core::MediaSource>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Media::Audio::AudioNodeEmitter>(args, 1);
 
-                return py::convert(self->obj.CreateMediaSourceAudioInputNodeAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateMediaSourceAudioInputNodeAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -5633,7 +6237,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CreateSubmixNode());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateSubmixNode();
+                }());
             }
             catch (...)
             {
@@ -5671,7 +6279,11 @@ namespace py::cpp::Windows::Media::Audio
 
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::AudioEncodingProperties>(args, 0);
 
-                return py::convert(self->obj.CreateSubmixNode(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateSubmixNode(param0);
+                }());
             }
             catch (...)
             {
@@ -5710,7 +6322,11 @@ namespace py::cpp::Windows::Media::Audio
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::AudioEncodingProperties>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Media::Audio::AudioNodeEmitter>(args, 1);
 
-                return py::convert(self->obj.CreateSubmixNode(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateSubmixNode(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -5746,7 +6362,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                self->obj.ResetAllNodes();
+                {
+                    auto _gil = release_gil();
+                    self->obj.ResetAllNodes();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5783,7 +6403,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                self->obj.Start();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Start();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5820,7 +6444,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                self->obj.Stop();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Stop();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5853,7 +6481,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.CompletedQuantumCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CompletedQuantumCount();
+            }());
         }
         catch (...)
         {
@@ -5879,7 +6511,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.EncodingProperties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EncodingProperties();
+            }());
         }
         catch (...)
         {
@@ -5905,7 +6541,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.LatencyInSamples());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LatencyInSamples();
+            }());
         }
         catch (...)
         {
@@ -5931,7 +6571,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.PrimaryRenderDevice());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PrimaryRenderDevice();
+            }());
         }
         catch (...)
         {
@@ -5957,7 +6601,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.RenderDeviceAudioProcessing());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RenderDeviceAudioProcessing();
+            }());
         }
         catch (...)
         {
@@ -5983,7 +6631,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.SamplesPerQuantum());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SamplesPerQuantum();
+            }());
         }
         catch (...)
         {
@@ -6011,7 +6663,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Audio::AudioGraph, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.QuantumProcessed(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.QuantumProcessed(param0);
+            }());
         }
         catch (...)
         {
@@ -6039,7 +6695,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.QuantumProcessed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.QuantumProcessed(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -6068,7 +6728,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Audio::AudioGraph, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.QuantumStarted(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.QuantumStarted(param0);
+            }());
         }
         catch (...)
         {
@@ -6096,7 +6760,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.QuantumStarted(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.QuantumStarted(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -6125,7 +6793,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Audio::AudioGraph, winrt::Windows::Media::Audio::AudioGraphUnrecoverableErrorOccurredEventArgs>>(arg);
 
-            return py::convert(self->obj.UnrecoverableErrorOccurred(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UnrecoverableErrorOccurred(param0);
+            }());
         }
         catch (...)
         {
@@ -6153,7 +6825,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.UnrecoverableErrorOccurred(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.UnrecoverableErrorOccurred(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -6196,7 +6872,11 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -6333,7 +7013,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6382,7 +7066,11 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -6454,7 +7142,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.Gain());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Gain();
+            }());
         }
         catch (...)
         {
@@ -6488,7 +7180,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.Gain(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Gain(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6515,7 +7211,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.Destination());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Destination();
+            }());
         }
         catch (...)
         {
@@ -6633,7 +7333,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.QuantumSizeSelectionMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.QuantumSizeSelectionMode();
+            }());
         }
         catch (...)
         {
@@ -6667,7 +7371,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<winrt::Windows::Media::Audio::QuantumSizeSelectionMode>(arg);
 
-            self->obj.QuantumSizeSelectionMode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.QuantumSizeSelectionMode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6694,7 +7402,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.PrimaryRenderDevice());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PrimaryRenderDevice();
+            }());
         }
         catch (...)
         {
@@ -6728,7 +7440,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Enumeration::DeviceInformation>(arg);
 
-            self->obj.PrimaryRenderDevice(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PrimaryRenderDevice(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6755,7 +7471,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.EncodingProperties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EncodingProperties();
+            }());
         }
         catch (...)
         {
@@ -6789,7 +7509,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::AudioEncodingProperties>(arg);
 
-            self->obj.EncodingProperties(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.EncodingProperties(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6816,7 +7540,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.DesiredSamplesPerQuantum());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DesiredSamplesPerQuantum();
+            }());
         }
         catch (...)
         {
@@ -6850,7 +7578,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.DesiredSamplesPerQuantum(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DesiredSamplesPerQuantum(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6877,7 +7609,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.DesiredRenderDeviceAudioProcessing());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DesiredRenderDeviceAudioProcessing();
+            }());
         }
         catch (...)
         {
@@ -6911,7 +7647,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<winrt::Windows::Media::AudioProcessing>(arg);
 
-            self->obj.DesiredRenderDeviceAudioProcessing(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DesiredRenderDeviceAudioProcessing(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6938,7 +7678,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.AudioRenderCategory());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AudioRenderCategory();
+            }());
         }
         catch (...)
         {
@@ -6972,7 +7716,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<winrt::Windows::Media::Render::AudioRenderCategory>(arg);
 
-            self->obj.AudioRenderCategory(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AudioRenderCategory(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6999,7 +7747,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxPlaybackSpeedFactor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxPlaybackSpeedFactor();
+            }());
         }
         catch (...)
         {
@@ -7033,7 +7785,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.MaxPlaybackSpeedFactor(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MaxPlaybackSpeedFactor(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7133,7 +7889,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.Error());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Error();
+            }());
         }
         catch (...)
         {
@@ -7265,7 +8025,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.Position());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Position();
+            }());
         }
         catch (...)
         {
@@ -7299,7 +8063,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
 
-            self->obj.Position(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Position(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7326,7 +8094,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.Gain());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Gain();
+            }());
         }
         catch (...)
         {
@@ -7360,7 +8132,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.Gain(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Gain(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7387,7 +8163,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.DopplerVelocity());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DopplerVelocity();
+            }());
         }
         catch (...)
         {
@@ -7421,7 +8201,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
 
-            self->obj.DopplerVelocity(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DopplerVelocity(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7448,7 +8232,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.DopplerScale());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DopplerScale();
+            }());
         }
         catch (...)
         {
@@ -7482,7 +8270,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.DopplerScale(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DopplerScale(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7509,7 +8301,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.DistanceScale());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DistanceScale();
+            }());
         }
         catch (...)
         {
@@ -7543,7 +8339,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.DistanceScale(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DistanceScale(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7570,7 +8370,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.Direction());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Direction();
+            }());
         }
         catch (...)
         {
@@ -7604,7 +8408,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
 
-            self->obj.Direction(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Direction(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7631,7 +8439,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.DecayModel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DecayModel();
+            }());
         }
         catch (...)
         {
@@ -7657,7 +8469,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsDopplerDisabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsDopplerDisabled();
+            }());
         }
         catch (...)
         {
@@ -7683,7 +8499,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.Shape());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Shape();
+            }());
         }
         catch (...)
         {
@@ -7709,7 +8529,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.SpatialAudioModel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SpatialAudioModel();
+            }());
         }
         catch (...)
         {
@@ -7743,7 +8567,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<winrt::Windows::Media::Audio::SpatialAudioModel>(arg);
 
-            self->obj.SpatialAudioModel(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SpatialAudioModel(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7846,7 +8674,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.InnerAngle());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InnerAngle();
+            }());
         }
         catch (...)
         {
@@ -7872,7 +8704,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.OuterAngle());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OuterAngle();
+            }());
         }
         catch (...)
         {
@@ -7898,7 +8734,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.OuterAngleGain());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OuterAngleGain();
+            }());
         }
         catch (...)
         {
@@ -8000,7 +8840,11 @@ namespace py::cpp::Windows::Media::Audio
                 auto param0 = py::convert_to<double>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
-                return py::convert(winrt::Windows::Media::Audio::AudioNodeEmitterDecayModel::CreateCustom(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::Audio::AudioNodeEmitterDecayModel::CreateCustom(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -8041,7 +8885,11 @@ namespace py::cpp::Windows::Media::Audio
                 auto param2 = py::convert_to<double>(args, 2);
                 auto param3 = py::convert_to<double>(args, 3);
 
-                return py::convert(winrt::Windows::Media::Audio::AudioNodeEmitterDecayModel::CreateNatural(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::Audio::AudioNodeEmitterDecayModel::CreateNatural(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -8073,7 +8921,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -8099,7 +8951,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxGain());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxGain();
+            }());
         }
         catch (...)
         {
@@ -8125,7 +8981,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.MinGain());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MinGain();
+            }());
         }
         catch (...)
         {
@@ -8151,7 +9011,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.NaturalProperties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NaturalProperties();
+            }());
         }
         catch (...)
         {
@@ -8274,7 +9138,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.CutoffDistance());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CutoffDistance();
+            }());
         }
         catch (...)
         {
@@ -8300,7 +9168,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.UnityGainDistance());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UnityGainDistance();
+            }());
         }
         catch (...)
         {
@@ -8402,7 +9274,11 @@ namespace py::cpp::Windows::Media::Audio
                 auto param1 = py::convert_to<double>(args, 1);
                 auto param2 = py::convert_to<double>(args, 2);
 
-                return py::convert(winrt::Windows::Media::Audio::AudioNodeEmitterShape::CreateCone(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::Audio::AudioNodeEmitterShape::CreateCone(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -8438,7 +9314,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Media::Audio::AudioNodeEmitterShape::CreateOmnidirectional());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::Audio::AudioNodeEmitterShape::CreateOmnidirectional();
+                }());
             }
             catch (...)
             {
@@ -8470,7 +9350,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.ConeProperties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ConeProperties();
+            }());
         }
         catch (...)
         {
@@ -8496,7 +9380,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -8639,7 +9527,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.SpeedOfSound());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SpeedOfSound();
+            }());
         }
         catch (...)
         {
@@ -8673,7 +9565,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.SpeedOfSound(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SpeedOfSound(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8700,7 +9596,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.Position());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Position();
+            }());
         }
         catch (...)
         {
@@ -8734,7 +9634,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
 
-            self->obj.Position(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Position(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8761,7 +9665,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.Orientation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Orientation();
+            }());
         }
         catch (...)
         {
@@ -8795,7 +9703,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(arg);
 
-            self->obj.Orientation(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Orientation(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8822,7 +9734,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.DopplerVelocity());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DopplerVelocity();
+            }());
         }
         catch (...)
         {
@@ -8856,7 +9772,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
 
-            self->obj.DopplerVelocity(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DopplerVelocity(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8957,7 +9877,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -8994,7 +9918,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Media::Audio::AudioPlaybackConnection::GetDeviceSelector());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::Audio::AudioPlaybackConnection::GetDeviceSelector();
+                }());
             }
             catch (...)
             {
@@ -9030,7 +9958,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                return py::convert(self->obj.Open());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Open();
+                }());
             }
             catch (...)
             {
@@ -9066,7 +9998,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                return py::convert(self->obj.OpenAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.OpenAsync();
+                }());
             }
             catch (...)
             {
@@ -9102,7 +10038,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                self->obj.Start();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Start();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -9139,7 +10079,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                return py::convert(self->obj.StartAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.StartAsync();
+                }());
             }
             catch (...)
             {
@@ -9177,7 +10121,11 @@ namespace py::cpp::Windows::Media::Audio
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Media::Audio::AudioPlaybackConnection::TryCreateFromId(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::Audio::AudioPlaybackConnection::TryCreateFromId(param0);
+                }());
             }
             catch (...)
             {
@@ -9209,7 +10157,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceId();
+            }());
         }
         catch (...)
         {
@@ -9235,7 +10187,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.State());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.State();
+            }());
         }
         catch (...)
         {
@@ -9263,7 +10219,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Audio::AudioPlaybackConnection, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.StateChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StateChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -9291,7 +10251,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.StateChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StateChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -9334,7 +10298,11 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -9441,7 +10409,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExtendedError());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExtendedError();
+            }());
         }
         catch (...)
         {
@@ -9467,7 +10439,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -9565,7 +10541,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Media::Audio::AudioStateMonitor::CreateForCaptureMonitoring());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::Audio::AudioStateMonitor::CreateForCaptureMonitoring();
+                }());
             }
             catch (...)
             {
@@ -9603,7 +10583,11 @@ namespace py::cpp::Windows::Media::Audio
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Capture::MediaCategory>(args, 0);
 
-                return py::convert(winrt::Windows::Media::Audio::AudioStateMonitor::CreateForCaptureMonitoring(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::Audio::AudioStateMonitor::CreateForCaptureMonitoring(param0);
+                }());
             }
             catch (...)
             {
@@ -9642,7 +10626,11 @@ namespace py::cpp::Windows::Media::Audio
                 auto param0 = py::convert_to<winrt::Windows::Media::Capture::MediaCategory>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(winrt::Windows::Media::Audio::AudioStateMonitor::CreateForCaptureMonitoringWithCategoryAndDeviceId(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::Audio::AudioStateMonitor::CreateForCaptureMonitoringWithCategoryAndDeviceId(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -9681,7 +10669,11 @@ namespace py::cpp::Windows::Media::Audio
                 auto param0 = py::convert_to<winrt::Windows::Media::Capture::MediaCategory>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Media::Devices::AudioDeviceRole>(args, 1);
 
-                return py::convert(winrt::Windows::Media::Audio::AudioStateMonitor::CreateForCaptureMonitoring(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::Audio::AudioStateMonitor::CreateForCaptureMonitoring(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -9717,7 +10709,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Media::Audio::AudioStateMonitor::CreateForRenderMonitoring());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::Audio::AudioStateMonitor::CreateForRenderMonitoring();
+                }());
             }
             catch (...)
             {
@@ -9755,7 +10751,11 @@ namespace py::cpp::Windows::Media::Audio
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Render::AudioRenderCategory>(args, 0);
 
-                return py::convert(winrt::Windows::Media::Audio::AudioStateMonitor::CreateForRenderMonitoring(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::Audio::AudioStateMonitor::CreateForRenderMonitoring(param0);
+                }());
             }
             catch (...)
             {
@@ -9794,7 +10794,11 @@ namespace py::cpp::Windows::Media::Audio
                 auto param0 = py::convert_to<winrt::Windows::Media::Render::AudioRenderCategory>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(winrt::Windows::Media::Audio::AudioStateMonitor::CreateForRenderMonitoringWithCategoryAndDeviceId(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::Audio::AudioStateMonitor::CreateForRenderMonitoringWithCategoryAndDeviceId(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -9833,7 +10837,11 @@ namespace py::cpp::Windows::Media::Audio
                 auto param0 = py::convert_to<winrt::Windows::Media::Render::AudioRenderCategory>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Media::Devices::AudioDeviceRole>(args, 1);
 
-                return py::convert(winrt::Windows::Media::Audio::AudioStateMonitor::CreateForRenderMonitoring(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::Audio::AudioStateMonitor::CreateForRenderMonitoring(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -9865,7 +10873,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.SoundLevel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SoundLevel();
+            }());
         }
         catch (...)
         {
@@ -9893,7 +10905,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Audio::AudioStateMonitor, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.SoundLevelChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SoundLevelChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -9921,7 +10937,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.SoundLevelChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SoundLevelChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -10056,7 +11076,11 @@ namespace py::cpp::Windows::Media::Audio
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::IAudioNode>(args, 0);
 
-                self->obj.AddOutgoingConnection(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddOutgoingConnection(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10096,7 +11120,11 @@ namespace py::cpp::Windows::Media::Audio
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::IAudioNode>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
-                self->obj.AddOutgoingConnection(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddOutgoingConnection(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10133,7 +11161,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10172,7 +11204,11 @@ namespace py::cpp::Windows::Media::Audio
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
-                self->obj.DisableEffectsByDefinition(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.DisableEffectsByDefinition(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10211,7 +11247,11 @@ namespace py::cpp::Windows::Media::Audio
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
-                self->obj.EnableEffectsByDefinition(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.EnableEffectsByDefinition(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10250,7 +11290,11 @@ namespace py::cpp::Windows::Media::Audio
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::IAudioNode>(args, 0);
 
-                self->obj.RemoveOutgoingConnection(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveOutgoingConnection(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10287,7 +11331,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                self->obj.Reset();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Reset();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10324,7 +11372,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                self->obj.Start();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Start();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10361,7 +11413,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                self->obj.Stop();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Stop();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10394,7 +11450,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.OutgoingConnections());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OutgoingConnections();
+            }());
         }
         catch (...)
         {
@@ -10420,7 +11480,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.Emitter());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Emitter();
+            }());
         }
         catch (...)
         {
@@ -10446,7 +11510,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.OutgoingGain());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OutgoingGain();
+            }());
         }
         catch (...)
         {
@@ -10480,7 +11548,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.OutgoingGain(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.OutgoingGain(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -10507,7 +11579,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.ConsumeInput());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ConsumeInput();
+            }());
         }
         catch (...)
         {
@@ -10541,7 +11617,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.ConsumeInput(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ConsumeInput(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -10568,7 +11648,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.EffectDefinitions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EffectDefinitions();
+            }());
         }
         catch (...)
         {
@@ -10594,7 +11678,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.EncodingProperties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EncodingProperties();
+            }());
         }
         catch (...)
         {
@@ -10636,7 +11724,11 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -10722,7 +11814,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceInputNode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceInputNode();
+            }());
         }
         catch (...)
         {
@@ -10748,7 +11844,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -10774,7 +11874,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExtendedError());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExtendedError();
+            }());
         }
         catch (...)
         {
@@ -10869,7 +11973,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceOutputNode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceOutputNode();
+            }());
         }
         catch (...)
         {
@@ -10895,7 +12003,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -10921,7 +12033,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExtendedError());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExtendedError();
+            }());
         }
         catch (...)
         {
@@ -11016,7 +12132,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.FileInputNode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FileInputNode();
+            }());
         }
         catch (...)
         {
@@ -11042,7 +12162,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -11068,7 +12192,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExtendedError());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExtendedError();
+            }());
         }
         catch (...)
         {
@@ -11163,7 +12291,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.FileOutputNode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FileOutputNode();
+            }());
         }
         catch (...)
         {
@@ -11189,7 +12321,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -11215,7 +12351,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExtendedError());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExtendedError();
+            }());
         }
         catch (...)
         {
@@ -11310,7 +12450,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.Graph());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Graph();
+            }());
         }
         catch (...)
         {
@@ -11336,7 +12480,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -11362,7 +12510,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExtendedError());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExtendedError();
+            }());
         }
         catch (...)
         {
@@ -11457,7 +12609,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.Node());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Node();
+            }());
         }
         catch (...)
         {
@@ -11483,7 +12639,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -11509,7 +12669,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExtendedError());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExtendedError();
+            }());
         }
         catch (...)
         {
@@ -11628,7 +12792,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.WetDryMix());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WetDryMix();
+            }());
         }
         catch (...)
         {
@@ -11662,7 +12830,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.WetDryMix(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.WetDryMix(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -11689,7 +12861,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.Feedback());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Feedback();
+            }());
         }
         catch (...)
         {
@@ -11723,7 +12899,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.Feedback(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Feedback(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -11750,7 +12930,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.Delay());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Delay();
+            }());
         }
         catch (...)
         {
@@ -11784,7 +12968,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.Delay(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Delay(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -11811,7 +12999,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.ActivatableClassId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ActivatableClassId();
+            }());
         }
         catch (...)
         {
@@ -11837,7 +13029,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.Properties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Properties();
+            }());
         }
         catch (...)
         {
@@ -11934,7 +13130,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.Gain());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Gain();
+            }());
         }
         catch (...)
         {
@@ -11968,7 +13168,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.Gain(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Gain(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -11995,7 +13199,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.FrequencyCenter());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FrequencyCenter();
+            }());
         }
         catch (...)
         {
@@ -12029,7 +13237,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.FrequencyCenter(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.FrequencyCenter(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -12056,7 +13268,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.Bandwidth());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Bandwidth();
+            }());
         }
         catch (...)
         {
@@ -12090,7 +13306,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.Bandwidth(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Bandwidth(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -12210,7 +13430,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.Bands());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Bands();
+            }());
         }
         catch (...)
         {
@@ -12236,7 +13460,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.ActivatableClassId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ActivatableClassId();
+            }());
         }
         catch (...)
         {
@@ -12262,7 +13490,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.Properties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Properties();
+            }());
         }
         catch (...)
         {
@@ -12357,7 +13589,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.RequiredSamples());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RequiredSamples();
+            }());
         }
         catch (...)
         {
@@ -12474,7 +13710,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.Release());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Release();
+            }());
         }
         catch (...)
         {
@@ -12508,7 +13748,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.Release(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Release(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -12535,7 +13779,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.Loudness());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Loudness();
+            }());
         }
         catch (...)
         {
@@ -12569,7 +13817,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.Loudness(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Loudness(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -12596,7 +13848,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.ActivatableClassId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ActivatableClassId();
+            }());
         }
         catch (...)
         {
@@ -12622,7 +13878,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.Properties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Properties();
+            }());
         }
         catch (...)
         {
@@ -12724,7 +13984,11 @@ namespace py::cpp::Windows::Media::Audio
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::IAudioNode>(args, 0);
 
-                self->obj.AddOutgoingConnection(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddOutgoingConnection(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -12764,7 +14028,11 @@ namespace py::cpp::Windows::Media::Audio
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::IAudioNode>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
-                self->obj.AddOutgoingConnection(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddOutgoingConnection(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -12801,7 +14069,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -12840,7 +14112,11 @@ namespace py::cpp::Windows::Media::Audio
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
-                self->obj.DisableEffectsByDefinition(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.DisableEffectsByDefinition(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -12879,7 +14155,11 @@ namespace py::cpp::Windows::Media::Audio
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
-                self->obj.EnableEffectsByDefinition(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.EnableEffectsByDefinition(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -12918,7 +14198,11 @@ namespace py::cpp::Windows::Media::Audio
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::IAudioNode>(args, 0);
 
-                self->obj.RemoveOutgoingConnection(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveOutgoingConnection(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -12955,7 +14239,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                self->obj.Reset();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Reset();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -12994,7 +14282,11 @@ namespace py::cpp::Windows::Media::Audio
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 0);
 
-                self->obj.Seek(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Seek(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -13031,7 +14323,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                self->obj.Start();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Start();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -13068,7 +14364,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                self->obj.Stop();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Stop();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -13101,7 +14401,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.OutgoingConnections());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OutgoingConnections();
+            }());
         }
         catch (...)
         {
@@ -13127,7 +14431,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.Emitter());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Emitter();
+            }());
         }
         catch (...)
         {
@@ -13153,7 +14461,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.OutgoingGain());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OutgoingGain();
+            }());
         }
         catch (...)
         {
@@ -13187,7 +14499,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.OutgoingGain(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.OutgoingGain(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -13214,7 +14530,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.ConsumeInput());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ConsumeInput();
+            }());
         }
         catch (...)
         {
@@ -13248,7 +14568,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.ConsumeInput(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ConsumeInput(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -13275,7 +14599,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.EffectDefinitions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EffectDefinitions();
+            }());
         }
         catch (...)
         {
@@ -13301,7 +14629,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.EncodingProperties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EncodingProperties();
+            }());
         }
         catch (...)
         {
@@ -13327,7 +14659,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.StartTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StartTime();
+            }());
         }
         catch (...)
         {
@@ -13361,7 +14697,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>>(arg);
 
-            self->obj.StartTime(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StartTime(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -13388,7 +14728,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.PlaybackSpeedFactor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PlaybackSpeedFactor();
+            }());
         }
         catch (...)
         {
@@ -13422,7 +14766,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.PlaybackSpeedFactor(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PlaybackSpeedFactor(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -13449,7 +14797,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.LoopCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LoopCount();
+            }());
         }
         catch (...)
         {
@@ -13483,7 +14835,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
-            self->obj.LoopCount(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.LoopCount(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -13510,7 +14866,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.EndTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EndTime();
+            }());
         }
         catch (...)
         {
@@ -13544,7 +14904,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>>(arg);
 
-            self->obj.EndTime(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.EndTime(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -13571,7 +14935,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.Duration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Duration();
+            }());
         }
         catch (...)
         {
@@ -13597,7 +14965,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.MediaSource());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MediaSource();
+            }());
         }
         catch (...)
         {
@@ -13623,7 +14995,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.Position());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Position();
+            }());
         }
         catch (...)
         {
@@ -13651,7 +15027,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Audio::MediaSourceAudioInputNode, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.MediaSourceCompleted(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MediaSourceCompleted(param0);
+            }());
         }
         catch (...)
         {
@@ -13679,7 +15059,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.MediaSourceCompleted(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MediaSourceCompleted(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -13722,7 +15106,11 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -13842,7 +15230,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.HighEQGain());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HighEQGain();
+            }());
         }
         catch (...)
         {
@@ -13876,7 +15268,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<uint8_t>(arg);
 
-            self->obj.HighEQGain(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.HighEQGain(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -13903,7 +15299,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.HighEQCutoff());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HighEQCutoff();
+            }());
         }
         catch (...)
         {
@@ -13937,7 +15337,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<uint8_t>(arg);
 
-            self->obj.HighEQCutoff(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.HighEQCutoff(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -13964,7 +15368,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisableLateField());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisableLateField();
+            }());
         }
         catch (...)
         {
@@ -13998,7 +15406,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.DisableLateField(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DisableLateField(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -14025,7 +15437,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.Density());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Density();
+            }());
         }
         catch (...)
         {
@@ -14059,7 +15475,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.Density(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Density(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -14086,7 +15506,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.PositionRight());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PositionRight();
+            }());
         }
         catch (...)
         {
@@ -14120,7 +15544,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<uint8_t>(arg);
 
-            self->obj.PositionRight(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PositionRight(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -14147,7 +15575,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.DecayTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DecayTime();
+            }());
         }
         catch (...)
         {
@@ -14181,7 +15613,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.DecayTime(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DecayTime(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -14208,7 +15644,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.LateDiffusion());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LateDiffusion();
+            }());
         }
         catch (...)
         {
@@ -14242,7 +15682,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<uint8_t>(arg);
 
-            self->obj.LateDiffusion(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.LateDiffusion(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -14269,7 +15713,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.PositionMatrixRight());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PositionMatrixRight();
+            }());
         }
         catch (...)
         {
@@ -14303,7 +15751,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<uint8_t>(arg);
 
-            self->obj.PositionMatrixRight(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PositionMatrixRight(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -14330,7 +15782,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.PositionMatrixLeft());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PositionMatrixLeft();
+            }());
         }
         catch (...)
         {
@@ -14364,7 +15820,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<uint8_t>(arg);
 
-            self->obj.PositionMatrixLeft(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PositionMatrixLeft(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -14391,7 +15851,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.PositionLeft());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PositionLeft();
+            }());
         }
         catch (...)
         {
@@ -14425,7 +15889,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<uint8_t>(arg);
 
-            self->obj.PositionLeft(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PositionLeft(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -14452,7 +15920,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.LowEQGain());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LowEQGain();
+            }());
         }
         catch (...)
         {
@@ -14486,7 +15958,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<uint8_t>(arg);
 
-            self->obj.LowEQGain(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.LowEQGain(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -14513,7 +15989,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.LowEQCutoff());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LowEQCutoff();
+            }());
         }
         catch (...)
         {
@@ -14547,7 +16027,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<uint8_t>(arg);
 
-            self->obj.LowEQCutoff(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.LowEQCutoff(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -14574,7 +16058,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.RoomFilterFreq());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RoomFilterFreq();
+            }());
         }
         catch (...)
         {
@@ -14608,7 +16096,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.RoomFilterFreq(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RoomFilterFreq(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -14635,7 +16127,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReverbGain());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReverbGain();
+            }());
         }
         catch (...)
         {
@@ -14669,7 +16165,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.ReverbGain(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReverbGain(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -14696,7 +16196,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReverbDelay());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReverbDelay();
+            }());
         }
         catch (...)
         {
@@ -14730,7 +16234,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<uint8_t>(arg);
 
-            self->obj.ReverbDelay(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReverbDelay(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -14757,7 +16265,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReflectionsGain());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReflectionsGain();
+            }());
         }
         catch (...)
         {
@@ -14791,7 +16303,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.ReflectionsGain(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReflectionsGain(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -14818,7 +16334,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReflectionsDelay());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReflectionsDelay();
+            }());
         }
         catch (...)
         {
@@ -14852,7 +16372,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.ReflectionsDelay(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReflectionsDelay(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -14879,7 +16403,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.RearDelay());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RearDelay();
+            }());
         }
         catch (...)
         {
@@ -14913,7 +16441,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<uint8_t>(arg);
 
-            self->obj.RearDelay(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RearDelay(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -14940,7 +16472,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.WetDryMix());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WetDryMix();
+            }());
         }
         catch (...)
         {
@@ -14974,7 +16510,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.WetDryMix(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.WetDryMix(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -15001,7 +16541,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.EarlyDiffusion());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EarlyDiffusion();
+            }());
         }
         catch (...)
         {
@@ -15035,7 +16579,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<uint8_t>(arg);
 
-            self->obj.EarlyDiffusion(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.EarlyDiffusion(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -15062,7 +16610,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.RoomSize());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RoomSize();
+            }());
         }
         catch (...)
         {
@@ -15096,7 +16648,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.RoomSize(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RoomSize(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -15123,7 +16679,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.RoomFilterMain());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RoomFilterMain();
+            }());
         }
         catch (...)
         {
@@ -15157,7 +16717,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.RoomFilterMain(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RoomFilterMain(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -15184,7 +16748,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.RoomFilterHF());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RoomFilterHF();
+            }());
         }
         catch (...)
         {
@@ -15218,7 +16786,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.RoomFilterHF(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RoomFilterHF(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -15245,7 +16817,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.ActivatableClassId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ActivatableClassId();
+            }());
         }
         catch (...)
         {
@@ -15271,7 +16847,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.Properties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Properties();
+            }());
         }
         catch (...)
         {
@@ -15388,7 +16968,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -15487,7 +17071,11 @@ namespace py::cpp::Windows::Media::Audio
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Media::Audio::SpatialAudioDeviceConfiguration::GetForDeviceId(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::Audio::SpatialAudioDeviceConfiguration::GetForDeviceId(param0);
+                }());
             }
             catch (...)
             {
@@ -15525,7 +17113,11 @@ namespace py::cpp::Windows::Media::Audio
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.IsSpatialAudioFormatSupported(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsSpatialAudioFormatSupported(param0);
+                }());
             }
             catch (...)
             {
@@ -15563,7 +17155,11 @@ namespace py::cpp::Windows::Media::Audio
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.SetDefaultSpatialAudioFormatAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SetDefaultSpatialAudioFormatAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -15595,7 +17191,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.ActiveSpatialAudioFormat());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ActiveSpatialAudioFormat();
+            }());
         }
         catch (...)
         {
@@ -15621,7 +17221,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.DefaultSpatialAudioFormat());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DefaultSpatialAudioFormat();
+            }());
         }
         catch (...)
         {
@@ -15647,7 +17251,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceId();
+            }());
         }
         catch (...)
         {
@@ -15673,7 +17281,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsSpatialAudioSupported());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsSpatialAudioSupported();
+            }());
         }
         catch (...)
         {
@@ -15701,7 +17313,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Audio::SpatialAudioDeviceConfiguration, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.ConfigurationChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ConfigurationChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -15729,7 +17345,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ConfigurationChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ConfigurationChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -15860,7 +17480,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Media::Audio::SpatialAudioFormatConfiguration::GetDefault());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::Audio::SpatialAudioFormatConfiguration::GetDefault();
+                }());
             }
             catch (...)
             {
@@ -15898,7 +17522,11 @@ namespace py::cpp::Windows::Media::Audio
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.ReportConfigurationChangedAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportConfigurationChangedAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -15936,7 +17564,11 @@ namespace py::cpp::Windows::Media::Audio
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.ReportLicenseChangedAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportLicenseChangedAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -15968,7 +17600,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.MixedRealityExclusiveModePolicy());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MixedRealityExclusiveModePolicy();
+            }());
         }
         catch (...)
         {
@@ -16002,7 +17638,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<winrt::Windows::Media::Audio::MixedRealitySpatialAudioFormatPolicy>(arg);
 
-            self->obj.MixedRealityExclusiveModePolicy(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MixedRealityExclusiveModePolicy(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -16116,7 +17756,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::Audio::SpatialAudioFormatSubtype::DTSHeadphoneX());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::Audio::SpatialAudioFormatSubtype::DTSHeadphoneX();
+            }());
         }
         catch (...)
         {
@@ -16142,7 +17786,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::Audio::SpatialAudioFormatSubtype::DTSXUltra());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::Audio::SpatialAudioFormatSubtype::DTSXUltra();
+            }());
         }
         catch (...)
         {
@@ -16168,7 +17816,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::Audio::SpatialAudioFormatSubtype::DolbyAtmosForHeadphones());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::Audio::SpatialAudioFormatSubtype::DolbyAtmosForHeadphones();
+            }());
         }
         catch (...)
         {
@@ -16194,7 +17846,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::Audio::SpatialAudioFormatSubtype::DolbyAtmosForHomeTheater());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::Audio::SpatialAudioFormatSubtype::DolbyAtmosForHomeTheater();
+            }());
         }
         catch (...)
         {
@@ -16220,7 +17876,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::Audio::SpatialAudioFormatSubtype::DolbyAtmosForSpeakers());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::Audio::SpatialAudioFormatSubtype::DolbyAtmosForSpeakers();
+            }());
         }
         catch (...)
         {
@@ -16246,7 +17906,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::Audio::SpatialAudioFormatSubtype::WindowsSonic());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::Audio::SpatialAudioFormatSubtype::WindowsSonic();
+            }());
         }
         catch (...)
         {
@@ -16272,7 +17936,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::Audio::SpatialAudioFormatSubtype::DTSXForHomeTheater());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::Audio::SpatialAudioFormatSubtype::DTSXForHomeTheater();
+            }());
         }
         catch (...)
         {
@@ -16375,7 +18043,11 @@ namespace py::cpp::Windows::Media::Audio
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::IAudioNode>(args, 0);
 
-                self->obj.AddOutgoingConnection(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddOutgoingConnection(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -16415,7 +18087,11 @@ namespace py::cpp::Windows::Media::Audio
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::IAudioNode>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
-                self->obj.AddOutgoingConnection(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddOutgoingConnection(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -16452,7 +18128,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -16491,7 +18171,11 @@ namespace py::cpp::Windows::Media::Audio
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
-                self->obj.DisableEffectsByDefinition(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.DisableEffectsByDefinition(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -16530,7 +18214,11 @@ namespace py::cpp::Windows::Media::Audio
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
-                self->obj.EnableEffectsByDefinition(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.EnableEffectsByDefinition(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -16569,7 +18257,11 @@ namespace py::cpp::Windows::Media::Audio
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::IAudioNode>(args, 0);
 
-                self->obj.RemoveOutgoingConnection(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveOutgoingConnection(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -16606,7 +18298,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                self->obj.Reset();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Reset();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -16643,7 +18339,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                self->obj.Start();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Start();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -16680,7 +18380,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                self->obj.Stop();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Stop();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -16713,7 +18417,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.OutgoingConnections());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OutgoingConnections();
+            }());
         }
         catch (...)
         {
@@ -16739,7 +18447,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.ConsumeInput());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ConsumeInput();
+            }());
         }
         catch (...)
         {
@@ -16773,7 +18485,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.ConsumeInput(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ConsumeInput(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -16800,7 +18516,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.EffectDefinitions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EffectDefinitions();
+            }());
         }
         catch (...)
         {
@@ -16826,7 +18546,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.EncodingProperties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EncodingProperties();
+            }());
         }
         catch (...)
         {
@@ -16852,7 +18576,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.OutgoingGain());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OutgoingGain();
+            }());
         }
         catch (...)
         {
@@ -16886,7 +18614,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.OutgoingGain(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.OutgoingGain(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -16929,7 +18661,11 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -17486,7 +19222,11 @@ namespace py::cpp::Windows::Media::Audio
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::IAudioNode>(args, 0);
 
-                self->obj.AddOutgoingConnection(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddOutgoingConnection(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -17526,7 +19266,11 @@ namespace py::cpp::Windows::Media::Audio
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::IAudioNode>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
-                self->obj.AddOutgoingConnection(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddOutgoingConnection(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -17563,7 +19307,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -17602,7 +19350,11 @@ namespace py::cpp::Windows::Media::Audio
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
-                self->obj.DisableEffectsByDefinition(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.DisableEffectsByDefinition(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -17641,7 +19393,11 @@ namespace py::cpp::Windows::Media::Audio
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
-                self->obj.EnableEffectsByDefinition(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.EnableEffectsByDefinition(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -17680,7 +19436,11 @@ namespace py::cpp::Windows::Media::Audio
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::IAudioNode>(args, 0);
 
-                self->obj.RemoveOutgoingConnection(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveOutgoingConnection(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -17717,7 +19477,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                self->obj.Reset();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Reset();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -17754,7 +19518,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                self->obj.Start();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Start();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -17791,7 +19559,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                self->obj.Stop();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Stop();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -17824,7 +19596,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.Emitter());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Emitter();
+            }());
         }
         catch (...)
         {
@@ -17850,7 +19626,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.ConsumeInput());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ConsumeInput();
+            }());
         }
         catch (...)
         {
@@ -17884,7 +19664,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.ConsumeInput(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ConsumeInput(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -17911,7 +19695,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.EffectDefinitions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EffectDefinitions();
+            }());
         }
         catch (...)
         {
@@ -17937,7 +19725,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.EncodingProperties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EncodingProperties();
+            }());
         }
         catch (...)
         {
@@ -17963,7 +19755,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.OutgoingGain());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OutgoingGain();
+            }());
         }
         catch (...)
         {
@@ -17997,7 +19793,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.OutgoingGain(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.OutgoingGain(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -18024,7 +19824,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.OutgoingConnections());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OutgoingConnections();
+            }());
         }
         catch (...)
         {
@@ -18066,7 +19870,11 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -18642,7 +20450,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -18681,7 +20493,11 @@ namespace py::cpp::Windows::Media::Audio
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
-                self->obj.DisableEffectsByDefinition(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.DisableEffectsByDefinition(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -18720,7 +20536,11 @@ namespace py::cpp::Windows::Media::Audio
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
-                self->obj.EnableEffectsByDefinition(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.EnableEffectsByDefinition(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -18757,7 +20577,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                self->obj.Reset();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Reset();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -18794,7 +20618,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                self->obj.Start();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Start();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -18831,7 +20659,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                self->obj.Stop();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Stop();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -18864,7 +20696,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.ConsumeInput());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ConsumeInput();
+            }());
         }
         catch (...)
         {
@@ -18898,7 +20734,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.ConsumeInput(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ConsumeInput(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -18925,7 +20765,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.EffectDefinitions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EffectDefinitions();
+            }());
         }
         catch (...)
         {
@@ -18951,7 +20795,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.EncodingProperties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EncodingProperties();
+            }());
         }
         catch (...)
         {
@@ -18977,7 +20825,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.OutgoingGain());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OutgoingGain();
+            }());
         }
         catch (...)
         {
@@ -19011,7 +20863,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.OutgoingGain(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.OutgoingGain(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -19054,7 +20910,11 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -19483,7 +21343,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -19522,7 +21386,11 @@ namespace py::cpp::Windows::Media::Audio
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
-                self->obj.DisableEffectsByDefinition(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.DisableEffectsByDefinition(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -19561,7 +21429,11 @@ namespace py::cpp::Windows::Media::Audio
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
-                self->obj.EnableEffectsByDefinition(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.EnableEffectsByDefinition(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -19598,7 +21470,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                self->obj.Reset();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Reset();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -19635,7 +21511,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                self->obj.Start();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Start();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -19672,7 +21552,11 @@ namespace py::cpp::Windows::Media::Audio
                     return nullptr;
                 }
 
-                self->obj.Stop();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Stop();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -19705,7 +21589,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.Listener());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Listener();
+            }());
         }
         catch (...)
         {
@@ -19739,7 +21627,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<winrt::Windows::Media::Audio::AudioNodeListener>(arg);
 
-            self->obj.Listener(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Listener(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -19766,7 +21658,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.ConsumeInput());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ConsumeInput();
+            }());
         }
         catch (...)
         {
@@ -19800,7 +21696,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.ConsumeInput(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ConsumeInput(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -19827,7 +21727,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.EffectDefinitions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EffectDefinitions();
+            }());
         }
         catch (...)
         {
@@ -19853,7 +21757,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.EncodingProperties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EncodingProperties();
+            }());
         }
         catch (...)
         {
@@ -19879,7 +21787,11 @@ namespace py::cpp::Windows::Media::Audio
                 return nullptr;
             }
 
-            return py::convert(self->obj.OutgoingGain());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OutgoingGain();
+            }());
         }
         catch (...)
         {
@@ -19913,7 +21825,11 @@ namespace py::cpp::Windows::Media::Audio
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.OutgoingGain(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.OutgoingGain(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -19956,7 +21872,11 @@ namespace py::cpp::Windows::Media::Audio
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)

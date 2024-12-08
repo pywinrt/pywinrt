@@ -42,7 +42,11 @@ namespace py::cpp::Windows::Devices::Lights
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -81,7 +85,11 @@ namespace py::cpp::Windows::Devices::Lights
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Lights::Lamp::FromIdAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Lights::Lamp::FromIdAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -117,7 +125,11 @@ namespace py::cpp::Windows::Devices::Lights
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Lights::Lamp::GetDefaultAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Lights::Lamp::GetDefaultAsync();
+                }());
             }
             catch (...)
             {
@@ -153,7 +165,11 @@ namespace py::cpp::Windows::Devices::Lights
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Lights::Lamp::GetDeviceSelector());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Lights::Lamp::GetDeviceSelector();
+                }());
             }
             catch (...)
             {
@@ -185,7 +201,11 @@ namespace py::cpp::Windows::Devices::Lights
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsEnabled();
+            }());
         }
         catch (...)
         {
@@ -219,7 +239,11 @@ namespace py::cpp::Windows::Devices::Lights
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -246,7 +270,11 @@ namespace py::cpp::Windows::Devices::Lights
                 return nullptr;
             }
 
-            return py::convert(self->obj.Color());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Color();
+            }());
         }
         catch (...)
         {
@@ -280,7 +308,11 @@ namespace py::cpp::Windows::Devices::Lights
 
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
-            self->obj.Color(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Color(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -307,7 +339,11 @@ namespace py::cpp::Windows::Devices::Lights
                 return nullptr;
             }
 
-            return py::convert(self->obj.BrightnessLevel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BrightnessLevel();
+            }());
         }
         catch (...)
         {
@@ -341,7 +377,11 @@ namespace py::cpp::Windows::Devices::Lights
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.BrightnessLevel(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.BrightnessLevel(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -368,7 +408,11 @@ namespace py::cpp::Windows::Devices::Lights
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceId();
+            }());
         }
         catch (...)
         {
@@ -394,7 +438,11 @@ namespace py::cpp::Windows::Devices::Lights
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsColorSettable());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsColorSettable();
+            }());
         }
         catch (...)
         {
@@ -422,7 +470,11 @@ namespace py::cpp::Windows::Devices::Lights
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Lights::Lamp, winrt::Windows::Devices::Lights::LampAvailabilityChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.AvailabilityChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AvailabilityChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -450,7 +502,11 @@ namespace py::cpp::Windows::Devices::Lights
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.AvailabilityChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AvailabilityChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -493,7 +549,11 @@ namespace py::cpp::Windows::Devices::Lights
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -606,7 +666,11 @@ namespace py::cpp::Windows::Devices::Lights
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Lights::LampArray::FromIdAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Lights::LampArray::FromIdAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -642,7 +706,11 @@ namespace py::cpp::Windows::Devices::Lights
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Lights::LampArray::GetDeviceSelector());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Lights::LampArray::GetDeviceSelector();
+                }());
             }
             catch (...)
             {
@@ -680,7 +748,11 @@ namespace py::cpp::Windows::Devices::Lights
 
                 auto param0 = py::convert_to<winrt::Windows::System::VirtualKey>(args, 0);
 
-                return py::convert(self->obj.GetIndicesForKey(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetIndicesForKey(param0);
+                }());
             }
             catch (...)
             {
@@ -718,7 +790,11 @@ namespace py::cpp::Windows::Devices::Lights
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Lights::LampPurposes>(args, 0);
 
-                return py::convert(self->obj.GetIndicesForPurposes(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetIndicesForPurposes(param0);
+                }());
             }
             catch (...)
             {
@@ -756,7 +832,11 @@ namespace py::cpp::Windows::Devices::Lights
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                return py::convert(self->obj.GetLampInfo(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetLampInfo(param0);
+                }());
             }
             catch (...)
             {
@@ -794,7 +874,11 @@ namespace py::cpp::Windows::Devices::Lights
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                return py::convert(self->obj.RequestMessageAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestMessageAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -833,7 +917,11 @@ namespace py::cpp::Windows::Devices::Lights
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
-                return py::convert(self->obj.SendMessageAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SendMessageAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -871,7 +959,11 @@ namespace py::cpp::Windows::Devices::Lights
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Color>(args, 0);
 
-                self->obj.SetColor(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetColor(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -911,7 +1003,11 @@ namespace py::cpp::Windows::Devices::Lights
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Color>(args, 1);
 
-                self->obj.SetColorForIndex(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetColorForIndex(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -951,7 +1047,11 @@ namespace py::cpp::Windows::Devices::Lights
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::UI::Color, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<int32_t, false>>(args, 1);
 
-                self->obj.SetColorsForIndices(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetColorsForIndices(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -991,7 +1091,11 @@ namespace py::cpp::Windows::Devices::Lights
                 auto param0 = py::convert_to<winrt::Windows::UI::Color>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::System::VirtualKey>(args, 1);
 
-                self->obj.SetColorsForKey(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetColorsForKey(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1031,7 +1135,11 @@ namespace py::cpp::Windows::Devices::Lights
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::UI::Color, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::System::VirtualKey, false>>(args, 1);
 
-                self->obj.SetColorsForKeys(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetColorsForKeys(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1071,7 +1179,11 @@ namespace py::cpp::Windows::Devices::Lights
                 auto param0 = py::convert_to<winrt::Windows::UI::Color>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Lights::LampPurposes>(args, 1);
 
-                self->obj.SetColorsForPurposes(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetColorsForPurposes(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1111,7 +1223,11 @@ namespace py::cpp::Windows::Devices::Lights
                 auto param0 = py::convert_to<winrt::Windows::UI::Color>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<int32_t, false>>(args, 1);
 
-                self->obj.SetSingleColorForIndices(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetSingleColorForIndices(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1144,7 +1260,11 @@ namespace py::cpp::Windows::Devices::Lights
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsEnabled();
+            }());
         }
         catch (...)
         {
@@ -1178,7 +1298,11 @@ namespace py::cpp::Windows::Devices::Lights
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1205,7 +1329,11 @@ namespace py::cpp::Windows::Devices::Lights
                 return nullptr;
             }
 
-            return py::convert(self->obj.BrightnessLevel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BrightnessLevel();
+            }());
         }
         catch (...)
         {
@@ -1239,7 +1367,11 @@ namespace py::cpp::Windows::Devices::Lights
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.BrightnessLevel(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.BrightnessLevel(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1266,7 +1398,11 @@ namespace py::cpp::Windows::Devices::Lights
                 return nullptr;
             }
 
-            return py::convert(self->obj.BoundingBox());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BoundingBox();
+            }());
         }
         catch (...)
         {
@@ -1292,7 +1428,11 @@ namespace py::cpp::Windows::Devices::Lights
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceId();
+            }());
         }
         catch (...)
         {
@@ -1318,7 +1458,11 @@ namespace py::cpp::Windows::Devices::Lights
                 return nullptr;
             }
 
-            return py::convert(self->obj.HardwareProductId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HardwareProductId();
+            }());
         }
         catch (...)
         {
@@ -1344,7 +1488,11 @@ namespace py::cpp::Windows::Devices::Lights
                 return nullptr;
             }
 
-            return py::convert(self->obj.HardwareVendorId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HardwareVendorId();
+            }());
         }
         catch (...)
         {
@@ -1370,7 +1518,11 @@ namespace py::cpp::Windows::Devices::Lights
                 return nullptr;
             }
 
-            return py::convert(self->obj.HardwareVersion());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HardwareVersion();
+            }());
         }
         catch (...)
         {
@@ -1396,7 +1548,11 @@ namespace py::cpp::Windows::Devices::Lights
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsConnected());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsConnected();
+            }());
         }
         catch (...)
         {
@@ -1422,7 +1578,11 @@ namespace py::cpp::Windows::Devices::Lights
                 return nullptr;
             }
 
-            return py::convert(self->obj.LampArrayKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LampArrayKind();
+            }());
         }
         catch (...)
         {
@@ -1448,7 +1608,11 @@ namespace py::cpp::Windows::Devices::Lights
                 return nullptr;
             }
 
-            return py::convert(self->obj.LampCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LampCount();
+            }());
         }
         catch (...)
         {
@@ -1474,7 +1638,11 @@ namespace py::cpp::Windows::Devices::Lights
                 return nullptr;
             }
 
-            return py::convert(self->obj.MinUpdateInterval());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MinUpdateInterval();
+            }());
         }
         catch (...)
         {
@@ -1500,7 +1668,11 @@ namespace py::cpp::Windows::Devices::Lights
                 return nullptr;
             }
 
-            return py::convert(self->obj.SupportsVirtualKeys());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SupportsVirtualKeys();
+            }());
         }
         catch (...)
         {
@@ -1526,7 +1698,11 @@ namespace py::cpp::Windows::Devices::Lights
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsAvailable());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsAvailable();
+            }());
         }
         catch (...)
         {
@@ -1554,7 +1730,11 @@ namespace py::cpp::Windows::Devices::Lights
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Lights::LampArray, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.AvailabilityChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AvailabilityChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -1582,7 +1762,11 @@ namespace py::cpp::Windows::Devices::Lights
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.AvailabilityChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AvailabilityChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1729,7 +1913,11 @@ namespace py::cpp::Windows::Devices::Lights
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsAvailable());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsAvailable();
+            }());
         }
         catch (...)
         {
@@ -1828,7 +2016,11 @@ namespace py::cpp::Windows::Devices::Lights
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Color>(args, 0);
 
-                return py::convert(self->obj.GetNearestSupportedColor(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetNearestSupportedColor(param0);
+                }());
             }
             catch (...)
             {
@@ -1860,7 +2052,11 @@ namespace py::cpp::Windows::Devices::Lights
                 return nullptr;
             }
 
-            return py::convert(self->obj.BlueLevelCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BlueLevelCount();
+            }());
         }
         catch (...)
         {
@@ -1886,7 +2082,11 @@ namespace py::cpp::Windows::Devices::Lights
                 return nullptr;
             }
 
-            return py::convert(self->obj.FixedColor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FixedColor();
+            }());
         }
         catch (...)
         {
@@ -1912,7 +2112,11 @@ namespace py::cpp::Windows::Devices::Lights
                 return nullptr;
             }
 
-            return py::convert(self->obj.GainLevelCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.GainLevelCount();
+            }());
         }
         catch (...)
         {
@@ -1938,7 +2142,11 @@ namespace py::cpp::Windows::Devices::Lights
                 return nullptr;
             }
 
-            return py::convert(self->obj.GreenLevelCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.GreenLevelCount();
+            }());
         }
         catch (...)
         {
@@ -1964,7 +2172,11 @@ namespace py::cpp::Windows::Devices::Lights
                 return nullptr;
             }
 
-            return py::convert(self->obj.Index());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Index();
+            }());
         }
         catch (...)
         {
@@ -1990,7 +2202,11 @@ namespace py::cpp::Windows::Devices::Lights
                 return nullptr;
             }
 
-            return py::convert(self->obj.Position());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Position();
+            }());
         }
         catch (...)
         {
@@ -2016,7 +2232,11 @@ namespace py::cpp::Windows::Devices::Lights
                 return nullptr;
             }
 
-            return py::convert(self->obj.Purposes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Purposes();
+            }());
         }
         catch (...)
         {
@@ -2042,7 +2262,11 @@ namespace py::cpp::Windows::Devices::Lights
                 return nullptr;
             }
 
-            return py::convert(self->obj.RedLevelCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RedLevelCount();
+            }());
         }
         catch (...)
         {
@@ -2068,7 +2292,11 @@ namespace py::cpp::Windows::Devices::Lights
                 return nullptr;
             }
 
-            return py::convert(self->obj.UpdateLatency());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UpdateLatency();
+            }());
         }
         catch (...)
         {

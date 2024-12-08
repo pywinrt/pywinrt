@@ -30,7 +30,11 @@ namespace py::cpp::Windows::Phone::ApplicationModel
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Phone::ApplicationModel::ApplicationProfile::Modes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Phone::ApplicationModel::ApplicationProfile::Modes();
+            }());
         }
         catch (...)
         {

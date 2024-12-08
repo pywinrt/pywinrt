@@ -44,7 +44,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
                 auto param0 = py::convert_to<uint16_t>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristic::ConvertShortIdToUuid(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristic::ConvertShortIdToUuid(param0);
+                }());
             }
             catch (...)
             {
@@ -80,7 +84,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetAllDescriptors());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAllDescriptors();
+                }());
             }
             catch (...)
             {
@@ -118,7 +126,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
-                return py::convert(self->obj.GetDescriptors(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDescriptors(param0);
+                }());
             }
             catch (...)
             {
@@ -154,7 +166,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDescriptorsAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDescriptorsAsync();
+                }());
             }
             catch (...)
             {
@@ -192,7 +208,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
-                return py::convert(self->obj.GetDescriptorsForUuidAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDescriptorsForUuidAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -231,7 +251,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothCacheMode>(args, 1);
 
-                return py::convert(self->obj.GetDescriptorsForUuidAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDescriptorsForUuidAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -269,7 +293,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothCacheMode>(args, 0);
 
-                return py::convert(self->obj.GetDescriptorsAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDescriptorsAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -305,7 +333,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReadClientCharacteristicConfigurationDescriptorAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReadClientCharacteristicConfigurationDescriptorAsync();
+                }());
             }
             catch (...)
             {
@@ -341,7 +373,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReadValueAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReadValueAsync();
+                }());
             }
             catch (...)
             {
@@ -379,7 +415,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothCacheMode>(args, 0);
 
-                return py::convert(self->obj.ReadValueAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReadValueAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -417,7 +457,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattClientCharacteristicConfigurationDescriptorValue>(args, 0);
 
-                return py::convert(self->obj.WriteClientCharacteristicConfigurationDescriptorAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.WriteClientCharacteristicConfigurationDescriptorAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -455,7 +499,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattClientCharacteristicConfigurationDescriptorValue>(args, 0);
 
-                return py::convert(self->obj.WriteClientCharacteristicConfigurationDescriptorWithResultAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.WriteClientCharacteristicConfigurationDescriptorWithResultAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -493,7 +541,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
-                return py::convert(self->obj.WriteValueAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.WriteValueAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -532,7 +584,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteOption>(args, 1);
 
-                return py::convert(self->obj.WriteValueAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.WriteValueAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -571,7 +627,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteOption>(args, 1);
 
-                return py::convert(self->obj.WriteValueWithResultAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.WriteValueWithResultAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -609,7 +669,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
-                return py::convert(self->obj.WriteValueWithResultAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.WriteValueWithResultAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -641,7 +705,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProtectionLevel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProtectionLevel();
+            }());
         }
         catch (...)
         {
@@ -675,7 +743,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtectionLevel>(arg);
 
-            self->obj.ProtectionLevel(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ProtectionLevel(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -702,7 +774,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.AttributeHandle());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AttributeHandle();
+            }());
         }
         catch (...)
         {
@@ -728,7 +804,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.CharacteristicProperties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CharacteristicProperties();
+            }());
         }
         catch (...)
         {
@@ -754,7 +834,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.PresentationFormats());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PresentationFormats();
+            }());
         }
         catch (...)
         {
@@ -780,7 +864,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.UserDescription());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UserDescription();
+            }());
         }
         catch (...)
         {
@@ -806,7 +894,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.Uuid());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Uuid();
+            }());
         }
         catch (...)
         {
@@ -832,7 +924,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.Service());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Service();
+            }());
         }
         catch (...)
         {
@@ -860,7 +956,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristic, winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattValueChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.ValueChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ValueChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -888,7 +988,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ValueChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ValueChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1023,7 +1127,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::HeartRateMeasurement());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::HeartRateMeasurement();
+            }());
         }
         catch (...)
         {
@@ -1049,7 +1157,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::BatteryLevel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::BatteryLevel();
+            }());
         }
         catch (...)
         {
@@ -1075,7 +1187,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::BloodPressureFeature());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::BloodPressureFeature();
+            }());
         }
         catch (...)
         {
@@ -1101,7 +1217,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::BloodPressureMeasurement());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::BloodPressureMeasurement();
+            }());
         }
         catch (...)
         {
@@ -1127,7 +1247,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::BodySensorLocation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::BodySensorLocation();
+            }());
         }
         catch (...)
         {
@@ -1153,7 +1277,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::CscFeature());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::CscFeature();
+            }());
         }
         catch (...)
         {
@@ -1179,7 +1307,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::CscMeasurement());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::CscMeasurement();
+            }());
         }
         catch (...)
         {
@@ -1205,7 +1337,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::GlucoseFeature());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::GlucoseFeature();
+            }());
         }
         catch (...)
         {
@@ -1231,7 +1367,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::GlucoseMeasurement());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::GlucoseMeasurement();
+            }());
         }
         catch (...)
         {
@@ -1257,7 +1397,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::GlucoseMeasurementContext());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::GlucoseMeasurementContext();
+            }());
         }
         catch (...)
         {
@@ -1283,7 +1427,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::HeartRateControlPoint());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::HeartRateControlPoint();
+            }());
         }
         catch (...)
         {
@@ -1309,7 +1457,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::IntermediateCuffPressure());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::IntermediateCuffPressure();
+            }());
         }
         catch (...)
         {
@@ -1335,7 +1487,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::IntermediateTemperature());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::IntermediateTemperature();
+            }());
         }
         catch (...)
         {
@@ -1361,7 +1517,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::MeasurementInterval());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::MeasurementInterval();
+            }());
         }
         catch (...)
         {
@@ -1387,7 +1547,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::RecordAccessControlPoint());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::RecordAccessControlPoint();
+            }());
         }
         catch (...)
         {
@@ -1413,7 +1577,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::RscFeature());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::RscFeature();
+            }());
         }
         catch (...)
         {
@@ -1439,7 +1607,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::RscMeasurement());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::RscMeasurement();
+            }());
         }
         catch (...)
         {
@@ -1465,7 +1637,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::SCControlPoint());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::SCControlPoint();
+            }());
         }
         catch (...)
         {
@@ -1491,7 +1667,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::SensorLocation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::SensorLocation();
+            }());
         }
         catch (...)
         {
@@ -1517,7 +1697,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::TemperatureMeasurement());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::TemperatureMeasurement();
+            }());
         }
         catch (...)
         {
@@ -1543,7 +1727,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::TemperatureType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::TemperatureType();
+            }());
         }
         catch (...)
         {
@@ -1569,7 +1757,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::GapPeripheralPreferredConnectionParameters());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::GapPeripheralPreferredConnectionParameters();
+            }());
         }
         catch (...)
         {
@@ -1595,7 +1787,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::GapPeripheralPrivacyFlag());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::GapPeripheralPrivacyFlag();
+            }());
         }
         catch (...)
         {
@@ -1621,7 +1817,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::GapReconnectionAddress());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::GapReconnectionAddress();
+            }());
         }
         catch (...)
         {
@@ -1647,7 +1847,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::GattServiceChanged());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::GattServiceChanged();
+            }());
         }
         catch (...)
         {
@@ -1673,7 +1877,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::HardwareRevisionString());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::HardwareRevisionString();
+            }());
         }
         catch (...)
         {
@@ -1699,7 +1907,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::HidControlPoint());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::HidControlPoint();
+            }());
         }
         catch (...)
         {
@@ -1725,7 +1937,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::HidInformation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::HidInformation();
+            }());
         }
         catch (...)
         {
@@ -1751,7 +1967,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::Ieee1107320601RegulatoryCertificationDataList());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::Ieee1107320601RegulatoryCertificationDataList();
+            }());
         }
         catch (...)
         {
@@ -1777,7 +1997,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::LnControlPoint());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::LnControlPoint();
+            }());
         }
         catch (...)
         {
@@ -1803,7 +2027,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::LnFeature());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::LnFeature();
+            }());
         }
         catch (...)
         {
@@ -1829,7 +2057,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::LocalTimeInformation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::LocalTimeInformation();
+            }());
         }
         catch (...)
         {
@@ -1855,7 +2087,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::LocationAndSpeed());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::LocationAndSpeed();
+            }());
         }
         catch (...)
         {
@@ -1881,7 +2117,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::ManufacturerNameString());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::ManufacturerNameString();
+            }());
         }
         catch (...)
         {
@@ -1907,7 +2147,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::ModelNumberString());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::ModelNumberString();
+            }());
         }
         catch (...)
         {
@@ -1933,7 +2177,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::Navigation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::Navigation();
+            }());
         }
         catch (...)
         {
@@ -1959,7 +2207,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::NewAlert());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::NewAlert();
+            }());
         }
         catch (...)
         {
@@ -1985,7 +2237,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::PnpId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::PnpId();
+            }());
         }
         catch (...)
         {
@@ -2011,7 +2267,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::PositionQuality());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::PositionQuality();
+            }());
         }
         catch (...)
         {
@@ -2037,7 +2297,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::ProtocolMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::ProtocolMode();
+            }());
         }
         catch (...)
         {
@@ -2063,7 +2327,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::CyclingPowerFeature());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::CyclingPowerFeature();
+            }());
         }
         catch (...)
         {
@@ -2089,7 +2357,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::Report());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::Report();
+            }());
         }
         catch (...)
         {
@@ -2115,7 +2387,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::ReportMap());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::ReportMap();
+            }());
         }
         catch (...)
         {
@@ -2141,7 +2417,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::RingerControlPoint());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::RingerControlPoint();
+            }());
         }
         catch (...)
         {
@@ -2167,7 +2447,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::RingerSetting());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::RingerSetting();
+            }());
         }
         catch (...)
         {
@@ -2193,7 +2477,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::ScanIntervalWindow());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::ScanIntervalWindow();
+            }());
         }
         catch (...)
         {
@@ -2219,7 +2507,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::ScanRefresh());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::ScanRefresh();
+            }());
         }
         catch (...)
         {
@@ -2245,7 +2537,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::SerialNumberString());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::SerialNumberString();
+            }());
         }
         catch (...)
         {
@@ -2271,7 +2567,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::SoftwareRevisionString());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::SoftwareRevisionString();
+            }());
         }
         catch (...)
         {
@@ -2297,7 +2597,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::SupportUnreadAlertCategory());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::SupportUnreadAlertCategory();
+            }());
         }
         catch (...)
         {
@@ -2323,7 +2627,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::SupportedNewAlertCategory());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::SupportedNewAlertCategory();
+            }());
         }
         catch (...)
         {
@@ -2349,7 +2657,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::SystemId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::SystemId();
+            }());
         }
         catch (...)
         {
@@ -2375,7 +2687,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::TimeAccuracy());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::TimeAccuracy();
+            }());
         }
         catch (...)
         {
@@ -2401,7 +2717,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::TimeSource());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::TimeSource();
+            }());
         }
         catch (...)
         {
@@ -2427,7 +2747,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::TimeUpdateControlPoint());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::TimeUpdateControlPoint();
+            }());
         }
         catch (...)
         {
@@ -2453,7 +2777,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::TimeUpdateState());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::TimeUpdateState();
+            }());
         }
         catch (...)
         {
@@ -2479,7 +2807,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::TimeWithDst());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::TimeWithDst();
+            }());
         }
         catch (...)
         {
@@ -2505,7 +2837,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::TimeZone());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::TimeZone();
+            }());
         }
         catch (...)
         {
@@ -2531,7 +2867,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::TxPowerLevel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::TxPowerLevel();
+            }());
         }
         catch (...)
         {
@@ -2557,7 +2897,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::UnreadAlertStatus());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::UnreadAlertStatus();
+            }());
         }
         catch (...)
         {
@@ -2583,7 +2927,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::AlertCategoryId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::AlertCategoryId();
+            }());
         }
         catch (...)
         {
@@ -2609,7 +2957,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::AlertCategoryIdBitMask());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::AlertCategoryIdBitMask();
+            }());
         }
         catch (...)
         {
@@ -2635,7 +2987,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::AlertLevel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::AlertLevel();
+            }());
         }
         catch (...)
         {
@@ -2661,7 +3017,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::AlertNotificationControlPoint());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::AlertNotificationControlPoint();
+            }());
         }
         catch (...)
         {
@@ -2687,7 +3047,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::AlertStatus());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::AlertStatus();
+            }());
         }
         catch (...)
         {
@@ -2713,7 +3077,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::BootKeyboardInputReport());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::BootKeyboardInputReport();
+            }());
         }
         catch (...)
         {
@@ -2739,7 +3107,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::BootKeyboardOutputReport());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::BootKeyboardOutputReport();
+            }());
         }
         catch (...)
         {
@@ -2765,7 +3137,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::BootMouseInputReport());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::BootMouseInputReport();
+            }());
         }
         catch (...)
         {
@@ -2791,7 +3167,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::CurrentTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::CurrentTime();
+            }());
         }
         catch (...)
         {
@@ -2817,7 +3197,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::CyclingPowerControlPoint());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::CyclingPowerControlPoint();
+            }());
         }
         catch (...)
         {
@@ -2843,7 +3227,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::ReferenceTimeInformation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::ReferenceTimeInformation();
+            }());
         }
         catch (...)
         {
@@ -2869,7 +3257,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::CyclingPowerMeasurement());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::CyclingPowerMeasurement();
+            }());
         }
         catch (...)
         {
@@ -2895,7 +3287,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::CyclingPowerVector());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::CyclingPowerVector();
+            }());
         }
         catch (...)
         {
@@ -2921,7 +3317,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::DateTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::DateTime();
+            }());
         }
         catch (...)
         {
@@ -2947,7 +3347,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::DayDateTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::DayDateTime();
+            }());
         }
         catch (...)
         {
@@ -2973,7 +3377,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::DayOfWeek());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::DayOfWeek();
+            }());
         }
         catch (...)
         {
@@ -2999,7 +3407,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::DstOffset());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::DstOffset();
+            }());
         }
         catch (...)
         {
@@ -3025,7 +3437,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::ExactTime256());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::ExactTime256();
+            }());
         }
         catch (...)
         {
@@ -3051,7 +3467,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::FirmwareRevisionString());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::FirmwareRevisionString();
+            }());
         }
         catch (...)
         {
@@ -3077,7 +3497,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::GapAppearance());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::GapAppearance();
+            }());
         }
         catch (...)
         {
@@ -3103,7 +3527,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::GapDeviceName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids::GapDeviceName();
+            }());
         }
         catch (...)
         {
@@ -3274,7 +3702,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.Characteristics());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Characteristics();
+            }());
         }
         catch (...)
         {
@@ -3300,7 +3732,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProtocolError());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProtocolError();
+            }());
         }
         catch (...)
         {
@@ -3326,7 +3762,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -3421,7 +3861,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProtocolError());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProtocolError();
+            }());
         }
         catch (...)
         {
@@ -3447,7 +3891,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -3473,7 +3921,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.SubscribedClient());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SubscribedClient();
+            }());
         }
         catch (...)
         {
@@ -3499,7 +3951,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.BytesSent());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BytesSent();
+            }());
         }
         catch (...)
         {
@@ -3601,7 +4057,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
                 auto param0 = py::convert_to<uint16_t>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptor::ConvertShortIdToUuid(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptor::ConvertShortIdToUuid(param0);
+                }());
             }
             catch (...)
             {
@@ -3637,7 +4097,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReadValueAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReadValueAsync();
+                }());
             }
             catch (...)
             {
@@ -3675,7 +4139,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothCacheMode>(args, 0);
 
-                return py::convert(self->obj.ReadValueAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReadValueAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -3713,7 +4181,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
-                return py::convert(self->obj.WriteValueAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.WriteValueAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -3751,7 +4223,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
-                return py::convert(self->obj.WriteValueWithResultAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.WriteValueWithResultAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -3783,7 +4259,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProtectionLevel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProtectionLevel();
+            }());
         }
         catch (...)
         {
@@ -3817,7 +4297,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtectionLevel>(arg);
 
-            self->obj.ProtectionLevel(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ProtectionLevel(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3844,7 +4328,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.AttributeHandle());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AttributeHandle();
+            }());
         }
         catch (...)
         {
@@ -3870,7 +4358,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.Uuid());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Uuid();
+            }());
         }
         catch (...)
         {
@@ -3987,7 +4479,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptorUuids::CharacteristicAggregateFormat());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptorUuids::CharacteristicAggregateFormat();
+            }());
         }
         catch (...)
         {
@@ -4013,7 +4509,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptorUuids::CharacteristicExtendedProperties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptorUuids::CharacteristicExtendedProperties();
+            }());
         }
         catch (...)
         {
@@ -4039,7 +4539,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptorUuids::CharacteristicPresentationFormat());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptorUuids::CharacteristicPresentationFormat();
+            }());
         }
         catch (...)
         {
@@ -4065,7 +4569,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptorUuids::CharacteristicUserDescription());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptorUuids::CharacteristicUserDescription();
+            }());
         }
         catch (...)
         {
@@ -4091,7 +4599,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptorUuids::ClientCharacteristicConfiguration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptorUuids::ClientCharacteristicConfiguration();
+            }());
         }
         catch (...)
         {
@@ -4117,7 +4629,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptorUuids::ServerCharacteristicConfiguration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptorUuids::ServerCharacteristicConfiguration();
+            }());
         }
         catch (...)
         {
@@ -4213,7 +4729,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.Descriptors());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Descriptors();
+            }());
         }
         catch (...)
         {
@@ -4239,7 +4759,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProtocolError());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProtocolError();
+            }());
         }
         catch (...)
         {
@@ -4265,7 +4789,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -4364,7 +4892,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4403,7 +4935,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
                 auto param0 = py::convert_to<uint16_t>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService::ConvertShortIdToUuid(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService::ConvertShortIdToUuid(param0);
+                }());
             }
             catch (...)
             {
@@ -4441,7 +4977,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService::FromIdAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService::FromIdAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -4480,7 +5020,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattSharingMode>(args, 1);
 
-                return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService::FromIdAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService::FromIdAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -4516,7 +5060,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetAllCharacteristics());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAllCharacteristics();
+                }());
             }
             catch (...)
             {
@@ -4552,7 +5100,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetAllIncludedServices());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAllIncludedServices();
+                }());
             }
             catch (...)
             {
@@ -4590,7 +5142,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
-                return py::convert(self->obj.GetCharacteristics(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetCharacteristics(param0);
+                }());
             }
             catch (...)
             {
@@ -4626,7 +5182,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetCharacteristicsAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetCharacteristicsAsync();
+                }());
             }
             catch (...)
             {
@@ -4664,7 +5224,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
-                return py::convert(self->obj.GetCharacteristicsForUuidAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetCharacteristicsForUuidAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -4703,7 +5267,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothCacheMode>(args, 1);
 
-                return py::convert(self->obj.GetCharacteristicsForUuidAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetCharacteristicsForUuidAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -4741,7 +5309,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothCacheMode>(args, 0);
 
-                return py::convert(self->obj.GetCharacteristicsAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetCharacteristicsAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -4779,7 +5351,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothDeviceId>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService::GetDeviceSelectorForBluetoothDeviceId(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService::GetDeviceSelectorForBluetoothDeviceId(param0);
+                }());
             }
             catch (...)
             {
@@ -4818,7 +5394,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothDeviceId>(args, 0);
                 auto param1 = py::convert_to<winrt::guid>(args, 1);
 
-                return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService::GetDeviceSelectorForBluetoothDeviceIdAndUuid(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService::GetDeviceSelectorForBluetoothDeviceIdAndUuid(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -4858,7 +5438,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 auto param1 = py::convert_to<winrt::guid>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothCacheMode>(args, 2);
 
-                return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService::GetDeviceSelectorForBluetoothDeviceIdAndUuid(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService::GetDeviceSelectorForBluetoothDeviceIdAndUuid(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -4897,7 +5481,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothDeviceId>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothCacheMode>(args, 1);
 
-                return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService::GetDeviceSelectorForBluetoothDeviceId(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService::GetDeviceSelectorForBluetoothDeviceId(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -4935,7 +5523,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
                 auto param0 = py::convert_to<uint16_t>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService::GetDeviceSelectorFromShortId(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService::GetDeviceSelectorFromShortId(param0);
+                }());
             }
             catch (...)
             {
@@ -4973,7 +5565,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService::GetDeviceSelectorFromUuid(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService::GetDeviceSelectorFromUuid(param0);
+                }());
             }
             catch (...)
             {
@@ -5011,7 +5607,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
-                return py::convert(self->obj.GetIncludedServices(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetIncludedServices(param0);
+                }());
             }
             catch (...)
             {
@@ -5047,7 +5647,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetIncludedServicesAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetIncludedServicesAsync();
+                }());
             }
             catch (...)
             {
@@ -5085,7 +5689,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
-                return py::convert(self->obj.GetIncludedServicesForUuidAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetIncludedServicesForUuidAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -5124,7 +5732,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothCacheMode>(args, 1);
 
-                return py::convert(self->obj.GetIncludedServicesForUuidAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetIncludedServicesForUuidAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -5162,7 +5774,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothCacheMode>(args, 0);
 
-                return py::convert(self->obj.GetIncludedServicesAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetIncludedServicesAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -5200,7 +5816,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattSharingMode>(args, 0);
 
-                return py::convert(self->obj.OpenAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.OpenAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -5236,7 +5856,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                     return nullptr;
                 }
 
-                return py::convert(self->obj.RequestAccessAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestAccessAsync();
+                }());
             }
             catch (...)
             {
@@ -5268,7 +5892,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.AttributeHandle());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AttributeHandle();
+            }());
         }
         catch (...)
         {
@@ -5294,7 +5922,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceId();
+            }());
         }
         catch (...)
         {
@@ -5320,7 +5952,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.Uuid());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Uuid();
+            }());
         }
         catch (...)
         {
@@ -5346,7 +5982,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.Device());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Device();
+            }());
         }
         catch (...)
         {
@@ -5372,7 +6012,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.ParentServices());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ParentServices();
+            }());
         }
         catch (...)
         {
@@ -5398,7 +6042,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceAccessInformation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceAccessInformation();
+            }());
         }
         catch (...)
         {
@@ -5424,7 +6072,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.Session());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Session();
+            }());
         }
         catch (...)
         {
@@ -5450,7 +6102,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.SharingMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SharingMode();
+            }());
         }
         catch (...)
         {
@@ -5492,7 +6148,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -5620,7 +6280,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProtocolError());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProtocolError();
+            }());
         }
         catch (...)
         {
@@ -5646,7 +6310,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.Services());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Services();
+            }());
         }
         catch (...)
         {
@@ -5672,7 +6340,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -5774,7 +6446,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalDescriptorParameters>(args, 1);
 
-                return py::convert(self->obj.CreateDescriptorAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateDescriptorAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -5812,7 +6488,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
-                return py::convert(self->obj.NotifyValueAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.NotifyValueAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -5851,7 +6531,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattSubscribedClient>(args, 1);
 
-                return py::convert(self->obj.NotifyValueAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.NotifyValueAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -5883,7 +6567,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.CharacteristicProperties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CharacteristicProperties();
+            }());
         }
         catch (...)
         {
@@ -5909,7 +6597,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.Descriptors());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Descriptors();
+            }());
         }
         catch (...)
         {
@@ -5935,7 +6627,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.PresentationFormats());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PresentationFormats();
+            }());
         }
         catch (...)
         {
@@ -5961,7 +6657,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReadProtectionLevel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReadProtectionLevel();
+            }());
         }
         catch (...)
         {
@@ -5987,7 +6687,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.StaticValue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StaticValue();
+            }());
         }
         catch (...)
         {
@@ -6013,7 +6717,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.SubscribedClients());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SubscribedClients();
+            }());
         }
         catch (...)
         {
@@ -6039,7 +6747,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.UserDescription());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UserDescription();
+            }());
         }
         catch (...)
         {
@@ -6065,7 +6777,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.Uuid());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Uuid();
+            }());
         }
         catch (...)
         {
@@ -6091,7 +6807,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.WriteProtectionLevel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WriteProtectionLevel();
+            }());
         }
         catch (...)
         {
@@ -6119,7 +6839,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalCharacteristic, winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadRequestedEventArgs>>(arg);
 
-            return py::convert(self->obj.ReadRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReadRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -6147,7 +6871,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ReadRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReadRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -6176,7 +6904,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalCharacteristic, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.SubscribedClientsChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SubscribedClientsChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -6204,7 +6936,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.SubscribedClientsChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SubscribedClientsChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -6233,7 +6969,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalCharacteristic, winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteRequestedEventArgs>>(arg);
 
-            return py::convert(self->obj.WriteRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WriteRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -6261,7 +7001,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.WriteRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.WriteRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -6394,7 +7138,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.WriteProtectionLevel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WriteProtectionLevel();
+            }());
         }
         catch (...)
         {
@@ -6428,7 +7176,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtectionLevel>(arg);
 
-            self->obj.WriteProtectionLevel(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.WriteProtectionLevel(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6455,7 +7207,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.UserDescription());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UserDescription();
+            }());
         }
         catch (...)
         {
@@ -6489,7 +7245,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.UserDescription(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.UserDescription(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6516,7 +7276,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.StaticValue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StaticValue();
+            }());
         }
         catch (...)
         {
@@ -6550,7 +7314,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(arg);
 
-            self->obj.StaticValue(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StaticValue(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6577,7 +7345,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReadProtectionLevel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReadProtectionLevel();
+            }());
         }
         catch (...)
         {
@@ -6611,7 +7383,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtectionLevel>(arg);
 
-            self->obj.ReadProtectionLevel(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReadProtectionLevel(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6638,7 +7414,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.CharacteristicProperties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CharacteristicProperties();
+            }());
         }
         catch (...)
         {
@@ -6672,7 +7452,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicProperties>(arg);
 
-            self->obj.CharacteristicProperties(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CharacteristicProperties(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6699,7 +7483,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.PresentationFormats());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PresentationFormats();
+            }());
         }
         catch (...)
         {
@@ -6797,7 +7585,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.Characteristic());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Characteristic();
+            }());
         }
         catch (...)
         {
@@ -6823,7 +7615,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.Error());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Error();
+            }());
         }
         catch (...)
         {
@@ -6917,7 +7713,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReadProtectionLevel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReadProtectionLevel();
+            }());
         }
         catch (...)
         {
@@ -6943,7 +7743,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.StaticValue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StaticValue();
+            }());
         }
         catch (...)
         {
@@ -6969,7 +7773,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.Uuid());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Uuid();
+            }());
         }
         catch (...)
         {
@@ -6995,7 +7803,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.WriteProtectionLevel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WriteProtectionLevel();
+            }());
         }
         catch (...)
         {
@@ -7023,7 +7835,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalDescriptor, winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadRequestedEventArgs>>(arg);
 
-            return py::convert(self->obj.ReadRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReadRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -7051,7 +7867,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ReadRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReadRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -7080,7 +7900,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalDescriptor, winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteRequestedEventArgs>>(arg);
 
-            return py::convert(self->obj.WriteRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WriteRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -7108,7 +7932,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.WriteRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.WriteRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -7231,7 +8059,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.WriteProtectionLevel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WriteProtectionLevel();
+            }());
         }
         catch (...)
         {
@@ -7265,7 +8097,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtectionLevel>(arg);
 
-            self->obj.WriteProtectionLevel(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.WriteProtectionLevel(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7292,7 +8128,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.StaticValue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StaticValue();
+            }());
         }
         catch (...)
         {
@@ -7326,7 +8166,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(arg);
 
-            self->obj.StaticValue(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StaticValue(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7353,7 +8197,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReadProtectionLevel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReadProtectionLevel();
+            }());
         }
         catch (...)
         {
@@ -7387,7 +8235,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtectionLevel>(arg);
 
-            self->obj.ReadProtectionLevel(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReadProtectionLevel(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7483,7 +8335,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.Descriptor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Descriptor();
+            }());
         }
         catch (...)
         {
@@ -7509,7 +8365,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.Error());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Error();
+            }());
         }
         catch (...)
         {
@@ -7610,7 +8470,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalCharacteristicParameters>(args, 1);
 
-                return py::convert(self->obj.CreateCharacteristicAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateCharacteristicAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -7642,7 +8506,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.Characteristics());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Characteristics();
+            }());
         }
         catch (...)
         {
@@ -7668,7 +8536,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.Uuid());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Uuid();
+            }());
         }
         catch (...)
         {
@@ -7773,7 +8645,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 auto param3 = py::convert_to<uint8_t>(args, 3);
                 auto param4 = py::convert_to<uint16_t>(args, 4);
 
-                return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormat::FromParts(param0, param1, param2, param3, param4));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormat::FromParts(param0, param1, param2, param3, param4);
+                }());
             }
             catch (...)
             {
@@ -7805,7 +8681,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.Description());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Description();
+            }());
         }
         catch (...)
         {
@@ -7831,7 +8711,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.Exponent());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Exponent();
+            }());
         }
         catch (...)
         {
@@ -7857,7 +8741,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.FormatType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FormatType();
+            }());
         }
         catch (...)
         {
@@ -7883,7 +8771,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.Namespace());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Namespace();
+            }());
         }
         catch (...)
         {
@@ -7909,7 +8801,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.Unit());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Unit();
+            }());
         }
         catch (...)
         {
@@ -7935,7 +8831,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormat::BluetoothSigAssignedNumbers());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormat::BluetoothSigAssignedNumbers();
+            }());
         }
         catch (...)
         {
@@ -8051,7 +8951,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormatTypes::Bit2());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormatTypes::Bit2();
+            }());
         }
         catch (...)
         {
@@ -8077,7 +8981,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormatTypes::Boolean());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormatTypes::Boolean();
+            }());
         }
         catch (...)
         {
@@ -8103,7 +9011,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormatTypes::DUInt16());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormatTypes::DUInt16();
+            }());
         }
         catch (...)
         {
@@ -8129,7 +9041,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormatTypes::Float());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormatTypes::Float();
+            }());
         }
         catch (...)
         {
@@ -8155,7 +9071,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormatTypes::Float32());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormatTypes::Float32();
+            }());
         }
         catch (...)
         {
@@ -8181,7 +9101,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormatTypes::Float64());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormatTypes::Float64();
+            }());
         }
         catch (...)
         {
@@ -8207,7 +9131,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormatTypes::Nibble());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormatTypes::Nibble();
+            }());
         }
         catch (...)
         {
@@ -8233,7 +9161,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormatTypes::SFloat());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormatTypes::SFloat();
+            }());
         }
         catch (...)
         {
@@ -8259,7 +9191,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormatTypes::SInt12());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormatTypes::SInt12();
+            }());
         }
         catch (...)
         {
@@ -8285,7 +9221,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormatTypes::SInt128());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormatTypes::SInt128();
+            }());
         }
         catch (...)
         {
@@ -8311,7 +9251,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormatTypes::SInt16());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormatTypes::SInt16();
+            }());
         }
         catch (...)
         {
@@ -8337,7 +9281,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormatTypes::SInt24());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormatTypes::SInt24();
+            }());
         }
         catch (...)
         {
@@ -8363,7 +9311,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormatTypes::SInt32());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormatTypes::SInt32();
+            }());
         }
         catch (...)
         {
@@ -8389,7 +9341,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormatTypes::SInt48());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormatTypes::SInt48();
+            }());
         }
         catch (...)
         {
@@ -8415,7 +9371,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormatTypes::SInt64());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormatTypes::SInt64();
+            }());
         }
         catch (...)
         {
@@ -8441,7 +9401,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormatTypes::SInt8());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormatTypes::SInt8();
+            }());
         }
         catch (...)
         {
@@ -8467,7 +9431,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormatTypes::Struct());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormatTypes::Struct();
+            }());
         }
         catch (...)
         {
@@ -8493,7 +9461,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormatTypes::UInt12());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormatTypes::UInt12();
+            }());
         }
         catch (...)
         {
@@ -8519,7 +9491,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormatTypes::UInt128());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormatTypes::UInt128();
+            }());
         }
         catch (...)
         {
@@ -8545,7 +9521,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormatTypes::UInt16());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormatTypes::UInt16();
+            }());
         }
         catch (...)
         {
@@ -8571,7 +9551,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormatTypes::UInt24());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormatTypes::UInt24();
+            }());
         }
         catch (...)
         {
@@ -8597,7 +9581,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormatTypes::UInt32());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormatTypes::UInt32();
+            }());
         }
         catch (...)
         {
@@ -8623,7 +9611,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormatTypes::UInt48());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormatTypes::UInt48();
+            }());
         }
         catch (...)
         {
@@ -8649,7 +9641,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormatTypes::UInt64());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormatTypes::UInt64();
+            }());
         }
         catch (...)
         {
@@ -8675,7 +9671,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormatTypes::UInt8());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormatTypes::UInt8();
+            }());
         }
         catch (...)
         {
@@ -8701,7 +9701,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormatTypes::Utf16());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormatTypes::Utf16();
+            }());
         }
         catch (...)
         {
@@ -8727,7 +9731,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormatTypes::Utf8());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormatTypes::Utf8();
+            }());
         }
         catch (...)
         {
@@ -8836,7 +9844,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtocolError::AttributeNotFound());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtocolError::AttributeNotFound();
+            }());
         }
         catch (...)
         {
@@ -8862,7 +9874,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtocolError::AttributeNotLong());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtocolError::AttributeNotLong();
+            }());
         }
         catch (...)
         {
@@ -8888,7 +9904,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtocolError::InsufficientAuthentication());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtocolError::InsufficientAuthentication();
+            }());
         }
         catch (...)
         {
@@ -8914,7 +9934,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtocolError::InsufficientAuthorization());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtocolError::InsufficientAuthorization();
+            }());
         }
         catch (...)
         {
@@ -8940,7 +9964,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtocolError::InsufficientEncryption());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtocolError::InsufficientEncryption();
+            }());
         }
         catch (...)
         {
@@ -8966,7 +9994,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtocolError::InsufficientEncryptionKeySize());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtocolError::InsufficientEncryptionKeySize();
+            }());
         }
         catch (...)
         {
@@ -8992,7 +10024,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtocolError::InsufficientResources());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtocolError::InsufficientResources();
+            }());
         }
         catch (...)
         {
@@ -9018,7 +10054,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtocolError::InvalidAttributeValueLength());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtocolError::InvalidAttributeValueLength();
+            }());
         }
         catch (...)
         {
@@ -9044,7 +10084,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtocolError::InvalidHandle());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtocolError::InvalidHandle();
+            }());
         }
         catch (...)
         {
@@ -9070,7 +10114,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtocolError::InvalidOffset());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtocolError::InvalidOffset();
+            }());
         }
         catch (...)
         {
@@ -9096,7 +10144,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtocolError::InvalidPdu());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtocolError::InvalidPdu();
+            }());
         }
         catch (...)
         {
@@ -9122,7 +10174,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtocolError::PrepareQueueFull());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtocolError::PrepareQueueFull();
+            }());
         }
         catch (...)
         {
@@ -9148,7 +10204,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtocolError::ReadNotPermitted());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtocolError::ReadNotPermitted();
+            }());
         }
         catch (...)
         {
@@ -9174,7 +10234,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtocolError::RequestNotSupported());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtocolError::RequestNotSupported();
+            }());
         }
         catch (...)
         {
@@ -9200,7 +10264,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtocolError::UnlikelyError());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtocolError::UnlikelyError();
+            }());
         }
         catch (...)
         {
@@ -9226,7 +10294,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtocolError::UnsupportedGroupType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtocolError::UnsupportedGroupType();
+            }());
         }
         catch (...)
         {
@@ -9252,7 +10324,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtocolError::WriteNotPermitted());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtocolError::WriteNotPermitted();
+            }());
         }
         catch (...)
         {
@@ -9359,7 +10435,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.ClientCharacteristicConfigurationDescriptor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ClientCharacteristicConfigurationDescriptor();
+            }());
         }
         catch (...)
         {
@@ -9385,7 +10465,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -9411,7 +10495,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProtocolError());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProtocolError();
+            }());
         }
         catch (...)
         {
@@ -9512,7 +10600,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
                 auto param0 = py::convert_to<uint8_t>(args, 0);
 
-                self->obj.RespondWithProtocolError(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RespondWithProtocolError(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -9551,7 +10643,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
-                self->obj.RespondWithValue(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RespondWithValue(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -9584,7 +10680,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.Length());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Length();
+            }());
         }
         catch (...)
         {
@@ -9610,7 +10710,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.Offset());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Offset();
+            }());
         }
         catch (...)
         {
@@ -9636,7 +10740,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.State());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.State();
+            }());
         }
         catch (...)
         {
@@ -9664,7 +10772,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadRequest, winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattRequestStateChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.StateChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StateChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -9692,7 +10804,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.StateChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StateChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -9796,7 +10912,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -9832,7 +10952,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetRequestAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetRequestAsync();
+                }());
             }
             catch (...)
             {
@@ -9864,7 +10988,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.Session());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Session();
+            }());
         }
         catch (...)
         {
@@ -9959,7 +11087,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -9985,7 +11117,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.Value());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Value();
+            }());
         }
         catch (...)
         {
@@ -10011,7 +11147,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProtocolError());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProtocolError();
+            }());
         }
         catch (...)
         {
@@ -10132,7 +11272,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CommitAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CommitAsync();
+                }());
             }
             catch (...)
             {
@@ -10168,7 +11312,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CommitWithResultAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CommitWithResultAsync();
+                }());
             }
             catch (...)
             {
@@ -10207,7 +11355,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristic>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
-                self->obj.WriteValue(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.WriteValue(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10309,7 +11461,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.Error());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Error();
+            }());
         }
         catch (...)
         {
@@ -10335,7 +11491,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.State());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.State();
+            }());
         }
         catch (...)
         {
@@ -10435,7 +11595,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProvider::CreateAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProvider::CreateAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -10471,7 +11635,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                     return nullptr;
                 }
 
-                self->obj.StartAdvertising();
+                {
+                    auto _gil = release_gil();
+                    self->obj.StartAdvertising();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10510,7 +11678,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderAdvertisingParameters>(args, 0);
 
-                self->obj.StartAdvertising(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.StartAdvertising(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10547,7 +11719,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                     return nullptr;
                 }
 
-                self->obj.StopAdvertising();
+                {
+                    auto _gil = release_gil();
+                    self->obj.StopAdvertising();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10580,7 +11756,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.AdvertisementStatus());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AdvertisementStatus();
+            }());
         }
         catch (...)
         {
@@ -10606,7 +11786,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.Service());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Service();
+            }());
         }
         catch (...)
         {
@@ -10634,7 +11818,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProvider, winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderAdvertisementStatusChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.AdvertisementStatusChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AdvertisementStatusChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -10662,7 +11850,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.AdvertisementStatusChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AdvertisementStatusChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -10788,7 +11980,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.Error());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Error();
+            }());
         }
         catch (...)
         {
@@ -10814,7 +12010,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -10930,7 +12130,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsDiscoverable());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsDiscoverable();
+            }());
         }
         catch (...)
         {
@@ -10964,7 +12168,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsDiscoverable(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsDiscoverable(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -10991,7 +12199,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsConnectable());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsConnectable();
+            }());
         }
         catch (...)
         {
@@ -11025,7 +12237,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsConnectable(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsConnectable(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -11052,7 +12268,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.ServiceData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServiceData();
+            }());
         }
         catch (...)
         {
@@ -11086,7 +12306,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(arg);
 
-            self->obj.ServiceData(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ServiceData(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -11182,7 +12406,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.Error());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Error();
+            }());
         }
         catch (...)
         {
@@ -11208,7 +12436,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.ServiceProvider());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServiceProvider();
+            }());
         }
         catch (...)
         {
@@ -11294,7 +12526,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceUuids::Battery());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceUuids::Battery();
+            }());
         }
         catch (...)
         {
@@ -11320,7 +12556,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceUuids::BloodPressure());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceUuids::BloodPressure();
+            }());
         }
         catch (...)
         {
@@ -11346,7 +12586,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceUuids::CyclingSpeedAndCadence());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceUuids::CyclingSpeedAndCadence();
+            }());
         }
         catch (...)
         {
@@ -11372,7 +12616,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceUuids::GenericAccess());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceUuids::GenericAccess();
+            }());
         }
         catch (...)
         {
@@ -11398,7 +12646,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceUuids::GenericAttribute());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceUuids::GenericAttribute();
+            }());
         }
         catch (...)
         {
@@ -11424,7 +12676,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceUuids::Glucose());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceUuids::Glucose();
+            }());
         }
         catch (...)
         {
@@ -11450,7 +12706,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceUuids::HealthThermometer());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceUuids::HealthThermometer();
+            }());
         }
         catch (...)
         {
@@ -11476,7 +12736,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceUuids::HeartRate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceUuids::HeartRate();
+            }());
         }
         catch (...)
         {
@@ -11502,7 +12766,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceUuids::RunningSpeedAndCadence());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceUuids::RunningSpeedAndCadence();
+            }());
         }
         catch (...)
         {
@@ -11528,7 +12796,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceUuids::AlertNotification());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceUuids::AlertNotification();
+            }());
         }
         catch (...)
         {
@@ -11554,7 +12826,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceUuids::CurrentTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceUuids::CurrentTime();
+            }());
         }
         catch (...)
         {
@@ -11580,7 +12856,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceUuids::CyclingPower());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceUuids::CyclingPower();
+            }());
         }
         catch (...)
         {
@@ -11606,7 +12886,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceUuids::DeviceInformation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceUuids::DeviceInformation();
+            }());
         }
         catch (...)
         {
@@ -11632,7 +12916,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceUuids::HumanInterfaceDevice());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceUuids::HumanInterfaceDevice();
+            }());
         }
         catch (...)
         {
@@ -11658,7 +12946,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceUuids::ImmediateAlert());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceUuids::ImmediateAlert();
+            }());
         }
         catch (...)
         {
@@ -11684,7 +12976,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceUuids::LinkLoss());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceUuids::LinkLoss();
+            }());
         }
         catch (...)
         {
@@ -11710,7 +13006,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceUuids::LocationAndNavigation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceUuids::LocationAndNavigation();
+            }());
         }
         catch (...)
         {
@@ -11736,7 +13036,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceUuids::NextDstChange());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceUuids::NextDstChange();
+            }());
         }
         catch (...)
         {
@@ -11762,7 +13066,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceUuids::PhoneAlertStatus());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceUuids::PhoneAlertStatus();
+            }());
         }
         catch (...)
         {
@@ -11788,7 +13096,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceUuids::ReferenceTimeUpdate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceUuids::ReferenceTimeUpdate();
+            }());
         }
         catch (...)
         {
@@ -11814,7 +13126,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceUuids::ScanParameters());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceUuids::ScanParameters();
+            }());
         }
         catch (...)
         {
@@ -11840,7 +13156,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceUuids::TxPower());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceUuids::TxPower();
+            }());
         }
         catch (...)
         {
@@ -11956,7 +13276,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -11995,7 +13319,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothDeviceId>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattSession::FromDeviceIdAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattSession::FromDeviceIdAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -12027,7 +13355,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaintainConnection());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaintainConnection();
+            }());
         }
         catch (...)
         {
@@ -12061,7 +13393,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.MaintainConnection(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MaintainConnection(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -12088,7 +13424,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.CanMaintainConnection());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CanMaintainConnection();
+            }());
         }
         catch (...)
         {
@@ -12114,7 +13454,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceId();
+            }());
         }
         catch (...)
         {
@@ -12140,7 +13484,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxPduSize());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxPduSize();
+            }());
         }
         catch (...)
         {
@@ -12166,7 +13514,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.SessionStatus());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SessionStatus();
+            }());
         }
         catch (...)
         {
@@ -12194,7 +13546,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattSession, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.MaxPduSizeChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxPduSizeChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -12222,7 +13578,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.MaxPduSizeChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MaxPduSizeChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -12251,7 +13611,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattSession, winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattSessionStatusChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.SessionStatusChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SessionStatusChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -12279,7 +13643,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.SessionStatusChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SessionStatusChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -12322,7 +13690,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -12429,7 +13801,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.Error());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Error();
+            }());
         }
         catch (...)
         {
@@ -12455,7 +13831,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -12549,7 +13929,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxNotificationSize());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxNotificationSize();
+            }());
         }
         catch (...)
         {
@@ -12575,7 +13959,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.Session());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Session();
+            }());
         }
         catch (...)
         {
@@ -12603,7 +13991,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattSubscribedClient, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.MaxNotificationSizeChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxNotificationSizeChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -12631,7 +14023,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.MaxNotificationSizeChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MaxNotificationSizeChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -12728,7 +14124,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.CharacteristicValue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CharacteristicValue();
+            }());
         }
         catch (...)
         {
@@ -12754,7 +14154,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -12852,7 +14256,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                     return nullptr;
                 }
 
-                self->obj.Respond();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Respond();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -12891,7 +14299,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
                 auto param0 = py::convert_to<uint8_t>(args, 0);
 
-                self->obj.RespondWithProtocolError(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RespondWithProtocolError(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -12924,7 +14336,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.Offset());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Offset();
+            }());
         }
         catch (...)
         {
@@ -12950,7 +14366,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.Option());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Option();
+            }());
         }
         catch (...)
         {
@@ -12976,7 +14396,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.State());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.State();
+            }());
         }
         catch (...)
         {
@@ -13002,7 +14426,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.Value());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Value();
+            }());
         }
         catch (...)
         {
@@ -13030,7 +14458,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteRequest, winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattRequestStateChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.StateChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StateChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -13058,7 +14490,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.StateChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StateChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -13163,7 +14599,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -13199,7 +14639,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetRequestAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetRequestAsync();
+                }());
             }
             catch (...)
             {
@@ -13231,7 +14675,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.Session());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Session();
+            }());
         }
         catch (...)
         {
@@ -13326,7 +14774,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProtocolError());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProtocolError();
+            }());
         }
         catch (...)
         {
@@ -13352,7 +14804,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {

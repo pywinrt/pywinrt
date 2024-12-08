@@ -36,7 +36,11 @@ namespace py::cpp::Windows::Web
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                return py::convert(winrt::Windows::Web::WebError::GetStatus(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Web::WebError::GetStatus(param0);
+                }());
             }
             catch (...)
             {
@@ -139,7 +143,11 @@ namespace py::cpp::Windows::Web
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
-                return py::convert(self->obj.UriToStreamAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.UriToStreamAsync(param0);
+                }());
             }
             catch (...)
             {

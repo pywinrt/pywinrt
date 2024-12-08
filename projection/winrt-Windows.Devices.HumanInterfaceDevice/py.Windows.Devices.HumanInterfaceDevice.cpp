@@ -38,7 +38,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsActive());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsActive();
+            }());
         }
         catch (...)
         {
@@ -72,7 +76,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsActive(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsActive(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -99,7 +107,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 return nullptr;
             }
 
-            return py::convert(self->obj.ControlDescription());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ControlDescription();
+            }());
         }
         catch (...)
         {
@@ -125,7 +137,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -151,7 +167,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 return nullptr;
             }
 
-            return py::convert(self->obj.UsageId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UsageId();
+            }());
         }
         catch (...)
         {
@@ -177,7 +197,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 return nullptr;
             }
 
-            return py::convert(self->obj.UsagePage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UsagePage();
+            }());
         }
         catch (...)
         {
@@ -274,7 +298,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -300,7 +328,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 return nullptr;
             }
 
-            return py::convert(self->obj.ParentCollections());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ParentCollections();
+            }());
         }
         catch (...)
         {
@@ -326,7 +358,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReportId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReportId();
+            }());
         }
         catch (...)
         {
@@ -352,7 +388,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReportType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReportType();
+            }());
         }
         catch (...)
         {
@@ -378,7 +418,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 return nullptr;
             }
 
-            return py::convert(self->obj.UsageId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UsageId();
+            }());
         }
         catch (...)
         {
@@ -404,7 +448,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 return nullptr;
             }
 
-            return py::convert(self->obj.UsagePage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UsagePage();
+            }());
         }
         catch (...)
         {
@@ -430,7 +478,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsAbsolute());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsAbsolute();
+            }());
         }
         catch (...)
         {
@@ -529,7 +581,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -555,7 +611,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 return nullptr;
             }
 
-            return py::convert(self->obj.Type());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Type();
+            }());
         }
         catch (...)
         {
@@ -581,7 +641,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 return nullptr;
             }
 
-            return py::convert(self->obj.UsageId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UsageId();
+            }());
         }
         catch (...)
         {
@@ -607,7 +671,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 return nullptr;
             }
 
-            return py::convert(self->obj.UsagePage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UsagePage();
+            }());
         }
         catch (...)
         {
@@ -707,7 +775,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -744,7 +816,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CreateFeatureReport());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateFeatureReport();
+                }());
             }
             catch (...)
             {
@@ -782,7 +858,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
                 auto param0 = py::convert_to<uint16_t>(args, 0);
 
-                return py::convert(self->obj.CreateFeatureReport(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateFeatureReport(param0);
+                }());
             }
             catch (...)
             {
@@ -818,7 +898,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CreateOutputReport());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateOutputReport();
+                }());
             }
             catch (...)
             {
@@ -856,7 +940,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
                 auto param0 = py::convert_to<uint16_t>(args, 0);
 
-                return py::convert(self->obj.CreateOutputReport(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateOutputReport(param0);
+                }());
             }
             catch (...)
             {
@@ -895,7 +983,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::FileAccessMode>(args, 1);
 
-                return py::convert(winrt::Windows::Devices::HumanInterfaceDevice::HidDevice::FromIdAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::HumanInterfaceDevice::HidDevice::FromIdAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -935,7 +1027,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 auto param1 = py::convert_to<uint16_t>(args, 1);
                 auto param2 = py::convert_to<uint16_t>(args, 2);
 
-                return py::convert(self->obj.GetBooleanControlDescriptions(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetBooleanControlDescriptions(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -974,7 +1070,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 auto param0 = py::convert_to<uint16_t>(args, 0);
                 auto param1 = py::convert_to<uint16_t>(args, 1);
 
-                return py::convert(winrt::Windows::Devices::HumanInterfaceDevice::HidDevice::GetDeviceSelector(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::HumanInterfaceDevice::HidDevice::GetDeviceSelector(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1015,7 +1115,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 auto param2 = py::convert_to<uint16_t>(args, 2);
                 auto param3 = py::convert_to<uint16_t>(args, 3);
 
-                return py::convert(winrt::Windows::Devices::HumanInterfaceDevice::HidDevice::GetDeviceSelector(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::HumanInterfaceDevice::HidDevice::GetDeviceSelector(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -1051,7 +1155,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetFeatureReportAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetFeatureReportAsync();
+                }());
             }
             catch (...)
             {
@@ -1089,7 +1197,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
                 auto param0 = py::convert_to<uint16_t>(args, 0);
 
-                return py::convert(self->obj.GetFeatureReportAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetFeatureReportAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1125,7 +1237,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetInputReportAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetInputReportAsync();
+                }());
             }
             catch (...)
             {
@@ -1163,7 +1279,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
                 auto param0 = py::convert_to<uint16_t>(args, 0);
 
-                return py::convert(self->obj.GetInputReportAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetInputReportAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1203,7 +1323,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 auto param1 = py::convert_to<uint16_t>(args, 1);
                 auto param2 = py::convert_to<uint16_t>(args, 2);
 
-                return py::convert(self->obj.GetNumericControlDescriptions(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetNumericControlDescriptions(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -1241,7 +1365,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::HumanInterfaceDevice::HidFeatureReport>(args, 0);
 
-                return py::convert(self->obj.SendFeatureReportAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SendFeatureReportAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1279,7 +1407,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::HumanInterfaceDevice::HidOutputReport>(args, 0);
 
-                return py::convert(self->obj.SendOutputReportAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SendOutputReportAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1311,7 +1443,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProductId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProductId();
+            }());
         }
         catch (...)
         {
@@ -1337,7 +1473,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 return nullptr;
             }
 
-            return py::convert(self->obj.UsageId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UsageId();
+            }());
         }
         catch (...)
         {
@@ -1363,7 +1503,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 return nullptr;
             }
 
-            return py::convert(self->obj.UsagePage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UsagePage();
+            }());
         }
         catch (...)
         {
@@ -1389,7 +1533,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 return nullptr;
             }
 
-            return py::convert(self->obj.VendorId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.VendorId();
+            }());
         }
         catch (...)
         {
@@ -1415,7 +1563,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 return nullptr;
             }
 
-            return py::convert(self->obj.Version());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Version();
+            }());
         }
         catch (...)
         {
@@ -1443,7 +1595,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::HumanInterfaceDevice::HidDevice, winrt::Windows::Devices::HumanInterfaceDevice::HidInputReportReceivedEventArgs>>(arg);
 
-            return py::convert(self->obj.InputReportReceived(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InputReportReceived(param0);
+            }());
         }
         catch (...)
         {
@@ -1471,7 +1627,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.InputReportReceived(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.InputReportReceived(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1514,7 +1674,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -1640,7 +1804,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 auto param0 = py::convert_to<uint16_t>(args, 0);
                 auto param1 = py::convert_to<uint16_t>(args, 1);
 
-                return py::convert(self->obj.GetBooleanControl(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetBooleanControl(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1678,7 +1846,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::HumanInterfaceDevice::HidBooleanControlDescription>(args, 0);
 
-                return py::convert(self->obj.GetBooleanControlByDescription(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetBooleanControlByDescription(param0);
+                }());
             }
             catch (...)
             {
@@ -1717,7 +1889,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 auto param0 = py::convert_to<uint16_t>(args, 0);
                 auto param1 = py::convert_to<uint16_t>(args, 1);
 
-                return py::convert(self->obj.GetNumericControl(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetNumericControl(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1755,7 +1931,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::HumanInterfaceDevice::HidNumericControlDescription>(args, 0);
 
-                return py::convert(self->obj.GetNumericControlByDescription(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetNumericControlByDescription(param0);
+                }());
             }
             catch (...)
             {
@@ -1787,7 +1967,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 return nullptr;
             }
 
-            return py::convert(self->obj.Data());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Data();
+            }());
         }
         catch (...)
         {
@@ -1821,7 +2005,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(arg);
 
-            self->obj.Data(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Data(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1848,7 +2036,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -1953,7 +2145,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 auto param0 = py::convert_to<uint16_t>(args, 0);
                 auto param1 = py::convert_to<uint16_t>(args, 1);
 
-                return py::convert(self->obj.GetBooleanControl(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetBooleanControl(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1991,7 +2187,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::HumanInterfaceDevice::HidBooleanControlDescription>(args, 0);
 
-                return py::convert(self->obj.GetBooleanControlByDescription(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetBooleanControlByDescription(param0);
+                }());
             }
             catch (...)
             {
@@ -2030,7 +2230,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 auto param0 = py::convert_to<uint16_t>(args, 0);
                 auto param1 = py::convert_to<uint16_t>(args, 1);
 
-                return py::convert(self->obj.GetNumericControl(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetNumericControl(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2068,7 +2272,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::HumanInterfaceDevice::HidNumericControlDescription>(args, 0);
 
-                return py::convert(self->obj.GetNumericControlByDescription(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetNumericControlByDescription(param0);
+                }());
             }
             catch (...)
             {
@@ -2100,7 +2308,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 return nullptr;
             }
 
-            return py::convert(self->obj.ActivatedBooleanControls());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ActivatedBooleanControls();
+            }());
         }
         catch (...)
         {
@@ -2126,7 +2338,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 return nullptr;
             }
 
-            return py::convert(self->obj.Data());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Data();
+            }());
         }
         catch (...)
         {
@@ -2152,7 +2368,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -2178,7 +2398,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 return nullptr;
             }
 
-            return py::convert(self->obj.TransitionedBooleanControls());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TransitionedBooleanControls();
+            }());
         }
         catch (...)
         {
@@ -2278,7 +2502,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 return nullptr;
             }
 
-            return py::convert(self->obj.Report());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Report();
+            }());
         }
         catch (...)
         {
@@ -2371,7 +2599,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 return nullptr;
             }
 
-            return py::convert(self->obj.Value());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Value();
+            }());
         }
         catch (...)
         {
@@ -2405,7 +2637,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
             auto param0 = py::convert_to<int64_t>(arg);
 
-            self->obj.Value(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Value(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2432,7 +2668,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 return nullptr;
             }
 
-            return py::convert(self->obj.ScaledValue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ScaledValue();
+            }());
         }
         catch (...)
         {
@@ -2466,7 +2706,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
             auto param0 = py::convert_to<int64_t>(arg);
 
-            self->obj.ScaledValue(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ScaledValue(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2493,7 +2737,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 return nullptr;
             }
 
-            return py::convert(self->obj.ControlDescription());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ControlDescription();
+            }());
         }
         catch (...)
         {
@@ -2519,7 +2767,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -2545,7 +2797,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsGrouped());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsGrouped();
+            }());
         }
         catch (...)
         {
@@ -2571,7 +2827,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 return nullptr;
             }
 
-            return py::convert(self->obj.UsageId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UsageId();
+            }());
         }
         catch (...)
         {
@@ -2597,7 +2857,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 return nullptr;
             }
 
-            return py::convert(self->obj.UsagePage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UsagePage();
+            }());
         }
         catch (...)
         {
@@ -2696,7 +2960,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 return nullptr;
             }
 
-            return py::convert(self->obj.HasNull());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HasNull();
+            }());
         }
         catch (...)
         {
@@ -2722,7 +2990,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -2748,7 +3020,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsAbsolute());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsAbsolute();
+            }());
         }
         catch (...)
         {
@@ -2774,7 +3050,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 return nullptr;
             }
 
-            return py::convert(self->obj.LogicalMaximum());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LogicalMaximum();
+            }());
         }
         catch (...)
         {
@@ -2800,7 +3080,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 return nullptr;
             }
 
-            return py::convert(self->obj.LogicalMinimum());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LogicalMinimum();
+            }());
         }
         catch (...)
         {
@@ -2826,7 +3110,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 return nullptr;
             }
 
-            return py::convert(self->obj.ParentCollections());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ParentCollections();
+            }());
         }
         catch (...)
         {
@@ -2852,7 +3140,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 return nullptr;
             }
 
-            return py::convert(self->obj.PhysicalMaximum());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PhysicalMaximum();
+            }());
         }
         catch (...)
         {
@@ -2878,7 +3170,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 return nullptr;
             }
 
-            return py::convert(self->obj.PhysicalMinimum());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PhysicalMinimum();
+            }());
         }
         catch (...)
         {
@@ -2904,7 +3200,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReportCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReportCount();
+            }());
         }
         catch (...)
         {
@@ -2930,7 +3230,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReportId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReportId();
+            }());
         }
         catch (...)
         {
@@ -2956,7 +3260,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReportSize());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReportSize();
+            }());
         }
         catch (...)
         {
@@ -2982,7 +3290,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReportType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReportType();
+            }());
         }
         catch (...)
         {
@@ -3008,7 +3320,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 return nullptr;
             }
 
-            return py::convert(self->obj.Unit());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Unit();
+            }());
         }
         catch (...)
         {
@@ -3034,7 +3350,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 return nullptr;
             }
 
-            return py::convert(self->obj.UnitExponent());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UnitExponent();
+            }());
         }
         catch (...)
         {
@@ -3060,7 +3380,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 return nullptr;
             }
 
-            return py::convert(self->obj.UsageId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UsageId();
+            }());
         }
         catch (...)
         {
@@ -3086,7 +3410,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 return nullptr;
             }
 
-            return py::convert(self->obj.UsagePage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UsagePage();
+            }());
         }
         catch (...)
         {
@@ -3201,7 +3529,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 auto param0 = py::convert_to<uint16_t>(args, 0);
                 auto param1 = py::convert_to<uint16_t>(args, 1);
 
-                return py::convert(self->obj.GetBooleanControl(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetBooleanControl(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -3239,7 +3571,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::HumanInterfaceDevice::HidBooleanControlDescription>(args, 0);
 
-                return py::convert(self->obj.GetBooleanControlByDescription(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetBooleanControlByDescription(param0);
+                }());
             }
             catch (...)
             {
@@ -3278,7 +3614,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 auto param0 = py::convert_to<uint16_t>(args, 0);
                 auto param1 = py::convert_to<uint16_t>(args, 1);
 
-                return py::convert(self->obj.GetNumericControl(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetNumericControl(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -3316,7 +3656,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::HumanInterfaceDevice::HidNumericControlDescription>(args, 0);
 
-                return py::convert(self->obj.GetNumericControlByDescription(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetNumericControlByDescription(param0);
+                }());
             }
             catch (...)
             {
@@ -3348,7 +3692,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 return nullptr;
             }
 
-            return py::convert(self->obj.Data());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Data();
+            }());
         }
         catch (...)
         {
@@ -3382,7 +3730,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(arg);
 
-            self->obj.Data(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Data(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3409,7 +3761,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {

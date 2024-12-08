@@ -42,7 +42,11 @@ namespace py::cpp::Windows::UI::WebUI::Core
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::UI::WebUI::Core::WebUICommandBar::GetForCurrentView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::WebUI::Core::WebUICommandBar::GetForCurrentView();
+                }());
             }
             catch (...)
             {
@@ -74,7 +78,11 @@ namespace py::cpp::Windows::UI::WebUI::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Visible());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Visible();
+            }());
         }
         catch (...)
         {
@@ -108,7 +116,11 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Visible(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Visible(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -135,7 +147,11 @@ namespace py::cpp::Windows::UI::WebUI::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Opacity());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Opacity();
+            }());
         }
         catch (...)
         {
@@ -169,7 +185,11 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.Opacity(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Opacity(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -196,7 +216,11 @@ namespace py::cpp::Windows::UI::WebUI::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsOpen());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsOpen();
+            }());
         }
         catch (...)
         {
@@ -230,7 +254,11 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsOpen(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsOpen(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -257,7 +285,11 @@ namespace py::cpp::Windows::UI::WebUI::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.ForegroundColor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ForegroundColor();
+            }());
         }
         catch (...)
         {
@@ -291,7 +323,11 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
-            self->obj.ForegroundColor(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ForegroundColor(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -318,7 +354,11 @@ namespace py::cpp::Windows::UI::WebUI::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.ClosedDisplayMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ClosedDisplayMode();
+            }());
         }
         catch (...)
         {
@@ -352,7 +392,11 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
             auto param0 = py::convert_to<winrt::Windows::UI::WebUI::Core::WebUICommandBarClosedDisplayMode>(arg);
 
-            self->obj.ClosedDisplayMode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ClosedDisplayMode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -379,7 +423,11 @@ namespace py::cpp::Windows::UI::WebUI::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.BackgroundColor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BackgroundColor();
+            }());
         }
         catch (...)
         {
@@ -413,7 +461,11 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
-            self->obj.BackgroundColor(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.BackgroundColor(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -440,7 +492,11 @@ namespace py::cpp::Windows::UI::WebUI::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.PrimaryCommands());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PrimaryCommands();
+            }());
         }
         catch (...)
         {
@@ -466,7 +522,11 @@ namespace py::cpp::Windows::UI::WebUI::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.SecondaryCommands());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SecondaryCommands();
+            }());
         }
         catch (...)
         {
@@ -492,7 +552,11 @@ namespace py::cpp::Windows::UI::WebUI::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -520,7 +584,11 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
             auto param0 = py::convert_to<winrt::Windows::UI::WebUI::Core::MenuClosedEventHandler>(arg);
 
-            return py::convert(self->obj.MenuClosed(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MenuClosed(param0);
+            }());
         }
         catch (...)
         {
@@ -548,7 +616,11 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.MenuClosed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MenuClosed(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -577,7 +649,11 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
             auto param0 = py::convert_to<winrt::Windows::UI::WebUI::Core::MenuOpenedEventHandler>(arg);
 
-            return py::convert(self->obj.MenuOpened(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MenuOpened(param0);
+            }());
         }
         catch (...)
         {
@@ -605,7 +681,11 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.MenuOpened(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MenuOpened(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -634,7 +714,11 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
             auto param0 = py::convert_to<winrt::Windows::UI::WebUI::Core::SizeChangedEventHandler>(arg);
 
-            return py::convert(self->obj.SizeChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SizeChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -662,7 +746,11 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.SizeChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SizeChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -833,7 +921,11 @@ namespace py::cpp::Windows::UI::WebUI::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Uri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Uri();
+            }());
         }
         catch (...)
         {
@@ -867,7 +959,11 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.Uri(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Uri(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -983,7 +1079,11 @@ namespace py::cpp::Windows::UI::WebUI::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Text());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Text();
+            }());
         }
         catch (...)
         {
@@ -1017,7 +1117,11 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Text(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Text(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1046,7 +1150,11 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::WebUI::Core::WebUICommandBarConfirmationButton, winrt::Windows::UI::WebUI::Core::WebUICommandBarItemInvokedEventArgs>>(arg);
 
-            return py::convert(self->obj.ItemInvoked(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ItemInvoked(param0);
+            }());
         }
         catch (...)
         {
@@ -1074,7 +1182,11 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ItemInvoked(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ItemInvoked(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1192,7 +1304,11 @@ namespace py::cpp::Windows::UI::WebUI::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Label());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Label();
+            }());
         }
         catch (...)
         {
@@ -1226,7 +1342,11 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Label(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Label(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1253,7 +1373,11 @@ namespace py::cpp::Windows::UI::WebUI::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsToggleButton());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsToggleButton();
+            }());
         }
         catch (...)
         {
@@ -1287,7 +1411,11 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsToggleButton(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsToggleButton(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1314,7 +1442,11 @@ namespace py::cpp::Windows::UI::WebUI::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsChecked());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsChecked();
+            }());
         }
         catch (...)
         {
@@ -1348,7 +1480,11 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsChecked(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsChecked(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1375,7 +1511,11 @@ namespace py::cpp::Windows::UI::WebUI::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Icon());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Icon();
+            }());
         }
         catch (...)
         {
@@ -1409,7 +1549,11 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
             auto param0 = py::convert_to<winrt::Windows::UI::WebUI::Core::IWebUICommandBarIcon>(arg);
 
-            self->obj.Icon(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Icon(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1436,7 +1580,11 @@ namespace py::cpp::Windows::UI::WebUI::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Enabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Enabled();
+            }());
         }
         catch (...)
         {
@@ -1470,7 +1618,11 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Enabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Enabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1499,7 +1651,11 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::WebUI::Core::WebUICommandBarIconButton, winrt::Windows::UI::WebUI::Core::WebUICommandBarItemInvokedEventArgs>>(arg);
 
-            return py::convert(self->obj.ItemInvoked(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ItemInvoked(param0);
+            }());
         }
         catch (...)
         {
@@ -1527,7 +1683,11 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ItemInvoked(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ItemInvoked(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1627,7 +1787,11 @@ namespace py::cpp::Windows::UI::WebUI::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsPrimaryCommand());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsPrimaryCommand();
+            }());
         }
         catch (...)
         {
@@ -1720,7 +1884,11 @@ namespace py::cpp::Windows::UI::WebUI::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -1850,7 +2018,11 @@ namespace py::cpp::Windows::UI::WebUI::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Symbol());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Symbol();
+            }());
         }
         catch (...)
         {
@@ -1884,7 +2056,11 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Symbol(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Symbol(param0);
+            }
+
             return 0;
         }
         catch (...)

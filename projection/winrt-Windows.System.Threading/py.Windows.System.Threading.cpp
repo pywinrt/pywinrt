@@ -36,7 +36,11 @@ namespace py::cpp::Windows::System::Threading
 
                 auto param0 = py::convert_to<winrt::Windows::System::Threading::WorkItemHandler>(args, 0);
 
-                return py::convert(winrt::Windows::System::Threading::ThreadPool::RunAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::System::Threading::ThreadPool::RunAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -76,7 +80,11 @@ namespace py::cpp::Windows::System::Threading
                 auto param1 = py::convert_to<winrt::Windows::System::Threading::WorkItemPriority>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::System::Threading::WorkItemOptions>(args, 2);
 
-                return py::convert(winrt::Windows::System::Threading::ThreadPool::RunAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::System::Threading::ThreadPool::RunAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -115,7 +123,11 @@ namespace py::cpp::Windows::System::Threading
                 auto param0 = py::convert_to<winrt::Windows::System::Threading::WorkItemHandler>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::System::Threading::WorkItemPriority>(args, 1);
 
-                return py::convert(winrt::Windows::System::Threading::ThreadPool::RunAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::System::Threading::ThreadPool::RunAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -218,7 +230,11 @@ namespace py::cpp::Windows::System::Threading
                     return nullptr;
                 }
 
-                self->obj.Cancel();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Cancel();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -258,7 +274,11 @@ namespace py::cpp::Windows::System::Threading
                 auto param0 = py::convert_to<winrt::Windows::System::Threading::TimerElapsedHandler>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 1);
 
-                return py::convert(winrt::Windows::System::Threading::ThreadPoolTimer::CreatePeriodicTimer(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::System::Threading::ThreadPoolTimer::CreatePeriodicTimer(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -298,7 +318,11 @@ namespace py::cpp::Windows::System::Threading
                 auto param1 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::System::Threading::TimerDestroyedHandler>(args, 2);
 
-                return py::convert(winrt::Windows::System::Threading::ThreadPoolTimer::CreatePeriodicTimer(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::System::Threading::ThreadPoolTimer::CreatePeriodicTimer(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -337,7 +361,11 @@ namespace py::cpp::Windows::System::Threading
                 auto param0 = py::convert_to<winrt::Windows::System::Threading::TimerElapsedHandler>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 1);
 
-                return py::convert(winrt::Windows::System::Threading::ThreadPoolTimer::CreateTimer(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::System::Threading::ThreadPoolTimer::CreateTimer(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -377,7 +405,11 @@ namespace py::cpp::Windows::System::Threading
                 auto param1 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::System::Threading::TimerDestroyedHandler>(args, 2);
 
-                return py::convert(winrt::Windows::System::Threading::ThreadPoolTimer::CreateTimer(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::System::Threading::ThreadPoolTimer::CreateTimer(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -409,7 +441,11 @@ namespace py::cpp::Windows::System::Threading
                 return nullptr;
             }
 
-            return py::convert(self->obj.Delay());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Delay();
+            }());
         }
         catch (...)
         {
@@ -435,7 +471,11 @@ namespace py::cpp::Windows::System::Threading
                 return nullptr;
             }
 
-            return py::convert(self->obj.Period());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Period();
+            }());
         }
         catch (...)
         {

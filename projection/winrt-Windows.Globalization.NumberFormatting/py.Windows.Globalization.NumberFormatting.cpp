@@ -85,7 +85,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 auto param0 = py::convert_to<winrt::Windows::Globalization::NumberFormatting::RoundingAlgorithm>(args, 0);
 
-                self->obj.ApplyRoundingForCurrency(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ApplyRoundingForCurrency(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -124,7 +128,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 auto param0 = py::convert_to<double>(args, 0);
 
-                return py::convert(self->obj.Format(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Format(param0);
+                }());
             }
             catch (...)
             {
@@ -162,7 +170,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 auto param0 = py::convert_to<int64_t>(args, 0);
 
-                return py::convert(self->obj.Format(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Format(param0);
+                }());
             }
             catch (...)
             {
@@ -200,7 +212,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
-                return py::convert(self->obj.Format(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Format(param0);
+                }());
             }
             catch (...)
             {
@@ -238,7 +254,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.ParseDouble(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ParseDouble(param0);
+                }());
             }
             catch (...)
             {
@@ -276,7 +296,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.ParseInt(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ParseInt(param0);
+                }());
             }
             catch (...)
             {
@@ -314,7 +338,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.ParseUInt(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ParseUInt(param0);
+                }());
             }
             catch (...)
             {
@@ -346,7 +374,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.Currency());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Currency();
+            }());
         }
         catch (...)
         {
@@ -380,7 +412,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Currency(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Currency(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -407,7 +443,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.Mode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Mode();
+            }());
         }
         catch (...)
         {
@@ -441,7 +481,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
             auto param0 = py::convert_to<winrt::Windows::Globalization::NumberFormatting::CurrencyFormatterMode>(arg);
 
-            self->obj.Mode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Mode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -468,7 +512,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.NumeralSystem());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NumeralSystem();
+            }());
         }
         catch (...)
         {
@@ -502,7 +550,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.NumeralSystem(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NumeralSystem(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -529,7 +581,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsGrouped());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsGrouped();
+            }());
         }
         catch (...)
         {
@@ -563,7 +619,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsGrouped(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsGrouped(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -590,7 +650,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsDecimalPointAlwaysDisplayed());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsDecimalPointAlwaysDisplayed();
+            }());
         }
         catch (...)
         {
@@ -624,7 +688,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsDecimalPointAlwaysDisplayed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsDecimalPointAlwaysDisplayed(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -651,7 +719,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.IntegerDigits());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IntegerDigits();
+            }());
         }
         catch (...)
         {
@@ -685,7 +757,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.IntegerDigits(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IntegerDigits(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -712,7 +788,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.FractionDigits());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FractionDigits();
+            }());
         }
         catch (...)
         {
@@ -746,7 +826,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.FractionDigits(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.FractionDigits(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -773,7 +857,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.GeographicRegion());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.GeographicRegion();
+            }());
         }
         catch (...)
         {
@@ -799,7 +887,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResolvedGeographicRegion());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResolvedGeographicRegion();
+            }());
         }
         catch (...)
         {
@@ -825,7 +917,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResolvedLanguage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResolvedLanguage();
+            }());
         }
         catch (...)
         {
@@ -851,7 +947,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.Languages());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Languages();
+            }());
         }
         catch (...)
         {
@@ -877,7 +977,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.NumberRounder());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NumberRounder();
+            }());
         }
         catch (...)
         {
@@ -911,7 +1015,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
             auto param0 = py::convert_to<winrt::Windows::Globalization::NumberFormatting::INumberRounder>(arg);
 
-            self->obj.NumberRounder(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NumberRounder(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -938,7 +1046,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsZeroSigned());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsZeroSigned();
+            }());
         }
         catch (...)
         {
@@ -972,7 +1084,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsZeroSigned(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsZeroSigned(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -999,7 +1115,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.SignificantDigits());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SignificantDigits();
+            }());
         }
         catch (...)
         {
@@ -1033,7 +1153,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.SignificantDigits(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SignificantDigits(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1191,7 +1315,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 auto param0 = py::convert_to<double>(args, 0);
 
-                return py::convert(self->obj.Format(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Format(param0);
+                }());
             }
             catch (...)
             {
@@ -1229,7 +1357,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 auto param0 = py::convert_to<int64_t>(args, 0);
 
-                return py::convert(self->obj.Format(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Format(param0);
+                }());
             }
             catch (...)
             {
@@ -1267,7 +1399,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
-                return py::convert(self->obj.Format(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Format(param0);
+                }());
             }
             catch (...)
             {
@@ -1305,7 +1441,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.ParseDouble(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ParseDouble(param0);
+                }());
             }
             catch (...)
             {
@@ -1343,7 +1483,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.ParseInt(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ParseInt(param0);
+                }());
             }
             catch (...)
             {
@@ -1381,7 +1525,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.ParseUInt(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ParseUInt(param0);
+                }());
             }
             catch (...)
             {
@@ -1413,7 +1561,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsDecimalPointAlwaysDisplayed());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsDecimalPointAlwaysDisplayed();
+            }());
         }
         catch (...)
         {
@@ -1447,7 +1599,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsDecimalPointAlwaysDisplayed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsDecimalPointAlwaysDisplayed(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1474,7 +1630,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.IntegerDigits());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IntegerDigits();
+            }());
         }
         catch (...)
         {
@@ -1508,7 +1668,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.IntegerDigits(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IntegerDigits(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1535,7 +1699,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsGrouped());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsGrouped();
+            }());
         }
         catch (...)
         {
@@ -1569,7 +1737,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsGrouped(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsGrouped(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1596,7 +1768,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.NumeralSystem());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NumeralSystem();
+            }());
         }
         catch (...)
         {
@@ -1630,7 +1806,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.NumeralSystem(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NumeralSystem(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1657,7 +1837,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.FractionDigits());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FractionDigits();
+            }());
         }
         catch (...)
         {
@@ -1691,7 +1875,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.FractionDigits(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.FractionDigits(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1718,7 +1906,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.GeographicRegion());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.GeographicRegion();
+            }());
         }
         catch (...)
         {
@@ -1744,7 +1936,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.Languages());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Languages();
+            }());
         }
         catch (...)
         {
@@ -1770,7 +1966,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResolvedGeographicRegion());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResolvedGeographicRegion();
+            }());
         }
         catch (...)
         {
@@ -1796,7 +1996,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResolvedLanguage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResolvedLanguage();
+            }());
         }
         catch (...)
         {
@@ -1822,7 +2026,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.NumberRounder());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NumberRounder();
+            }());
         }
         catch (...)
         {
@@ -1856,7 +2064,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
             auto param0 = py::convert_to<winrt::Windows::Globalization::NumberFormatting::INumberRounder>(arg);
 
-            self->obj.NumberRounder(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NumberRounder(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1883,7 +2095,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsZeroSigned());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsZeroSigned();
+            }());
         }
         catch (...)
         {
@@ -1917,7 +2133,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsZeroSigned(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsZeroSigned(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1944,7 +2164,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.SignificantDigits());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SignificantDigits();
+            }());
         }
         catch (...)
         {
@@ -1978,7 +2202,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.SignificantDigits(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SignificantDigits(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2117,7 +2345,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 auto param0 = py::convert_to<double>(args, 0);
 
-                return py::convert(self->obj.RoundDouble(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RoundDouble(param0);
+                }());
             }
             catch (...)
             {
@@ -2155,7 +2387,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                return py::convert(self->obj.RoundInt32(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RoundInt32(param0);
+                }());
             }
             catch (...)
             {
@@ -2193,7 +2429,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 auto param0 = py::convert_to<int64_t>(args, 0);
 
-                return py::convert(self->obj.RoundInt64(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RoundInt64(param0);
+                }());
             }
             catch (...)
             {
@@ -2231,7 +2471,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 auto param0 = py::convert_to<float>(args, 0);
 
-                return py::convert(self->obj.RoundSingle(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RoundSingle(param0);
+                }());
             }
             catch (...)
             {
@@ -2269,7 +2513,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(self->obj.RoundUInt32(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RoundUInt32(param0);
+                }());
             }
             catch (...)
             {
@@ -2307,7 +2555,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
-                return py::convert(self->obj.RoundUInt64(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RoundUInt64(param0);
+                }());
             }
             catch (...)
             {
@@ -2339,7 +2591,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.RoundingAlgorithm());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RoundingAlgorithm();
+            }());
         }
         catch (...)
         {
@@ -2373,7 +2629,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
             auto param0 = py::convert_to<winrt::Windows::Globalization::NumberFormatting::RoundingAlgorithm>(arg);
 
-            self->obj.RoundingAlgorithm(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RoundingAlgorithm(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2400,7 +2660,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.Increment());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Increment();
+            }());
         }
         catch (...)
         {
@@ -2434,7 +2698,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.Increment(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Increment(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2578,7 +2846,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.TranslateNumerals(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TranslateNumerals(param0);
+                }());
             }
             catch (...)
             {
@@ -2610,7 +2882,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.NumeralSystem());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NumeralSystem();
+            }());
         }
         catch (...)
         {
@@ -2644,7 +2920,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.NumeralSystem(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NumeralSystem(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2671,7 +2951,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.Languages());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Languages();
+            }());
         }
         catch (...)
         {
@@ -2697,7 +2981,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResolvedLanguage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResolvedLanguage();
+            }());
         }
         catch (...)
         {
@@ -2837,7 +3125,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 auto param0 = py::convert_to<double>(args, 0);
 
-                return py::convert(self->obj.Format(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Format(param0);
+                }());
             }
             catch (...)
             {
@@ -2875,7 +3167,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 auto param0 = py::convert_to<int64_t>(args, 0);
 
-                return py::convert(self->obj.Format(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Format(param0);
+                }());
             }
             catch (...)
             {
@@ -2913,7 +3209,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
-                return py::convert(self->obj.Format(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Format(param0);
+                }());
             }
             catch (...)
             {
@@ -2951,7 +3251,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.ParseDouble(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ParseDouble(param0);
+                }());
             }
             catch (...)
             {
@@ -2989,7 +3293,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.ParseInt(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ParseInt(param0);
+                }());
             }
             catch (...)
             {
@@ -3027,7 +3335,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.ParseUInt(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ParseUInt(param0);
+                }());
             }
             catch (...)
             {
@@ -3059,7 +3371,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsDecimalPointAlwaysDisplayed());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsDecimalPointAlwaysDisplayed();
+            }());
         }
         catch (...)
         {
@@ -3093,7 +3409,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsDecimalPointAlwaysDisplayed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsDecimalPointAlwaysDisplayed(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3120,7 +3440,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.IntegerDigits());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IntegerDigits();
+            }());
         }
         catch (...)
         {
@@ -3154,7 +3478,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.IntegerDigits(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IntegerDigits(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3181,7 +3509,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsGrouped());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsGrouped();
+            }());
         }
         catch (...)
         {
@@ -3215,7 +3547,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsGrouped(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsGrouped(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3242,7 +3578,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.NumeralSystem());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NumeralSystem();
+            }());
         }
         catch (...)
         {
@@ -3276,7 +3616,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.NumeralSystem(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NumeralSystem(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3303,7 +3647,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.FractionDigits());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FractionDigits();
+            }());
         }
         catch (...)
         {
@@ -3337,7 +3685,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.FractionDigits(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.FractionDigits(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3364,7 +3716,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.GeographicRegion());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.GeographicRegion();
+            }());
         }
         catch (...)
         {
@@ -3390,7 +3746,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.Languages());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Languages();
+            }());
         }
         catch (...)
         {
@@ -3416,7 +3776,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResolvedGeographicRegion());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResolvedGeographicRegion();
+            }());
         }
         catch (...)
         {
@@ -3442,7 +3806,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResolvedLanguage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResolvedLanguage();
+            }());
         }
         catch (...)
         {
@@ -3468,7 +3836,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.NumberRounder());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NumberRounder();
+            }());
         }
         catch (...)
         {
@@ -3502,7 +3874,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
             auto param0 = py::convert_to<winrt::Windows::Globalization::NumberFormatting::INumberRounder>(arg);
 
-            self->obj.NumberRounder(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NumberRounder(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3529,7 +3905,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsZeroSigned());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsZeroSigned();
+            }());
         }
         catch (...)
         {
@@ -3563,7 +3943,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsZeroSigned(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsZeroSigned(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3590,7 +3974,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.SignificantDigits());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SignificantDigits();
+            }());
         }
         catch (...)
         {
@@ -3624,7 +4012,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.SignificantDigits(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SignificantDigits(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3779,7 +4171,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 auto param0 = py::convert_to<double>(args, 0);
 
-                return py::convert(self->obj.Format(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Format(param0);
+                }());
             }
             catch (...)
             {
@@ -3817,7 +4213,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 auto param0 = py::convert_to<int64_t>(args, 0);
 
-                return py::convert(self->obj.Format(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Format(param0);
+                }());
             }
             catch (...)
             {
@@ -3855,7 +4255,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
-                return py::convert(self->obj.Format(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Format(param0);
+                }());
             }
             catch (...)
             {
@@ -3893,7 +4297,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.ParseDouble(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ParseDouble(param0);
+                }());
             }
             catch (...)
             {
@@ -3931,7 +4339,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.ParseInt(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ParseInt(param0);
+                }());
             }
             catch (...)
             {
@@ -3969,7 +4381,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.ParseUInt(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ParseUInt(param0);
+                }());
             }
             catch (...)
             {
@@ -4001,7 +4417,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsDecimalPointAlwaysDisplayed());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsDecimalPointAlwaysDisplayed();
+            }());
         }
         catch (...)
         {
@@ -4035,7 +4455,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsDecimalPointAlwaysDisplayed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsDecimalPointAlwaysDisplayed(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4062,7 +4486,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.IntegerDigits());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IntegerDigits();
+            }());
         }
         catch (...)
         {
@@ -4096,7 +4524,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.IntegerDigits(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IntegerDigits(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4123,7 +4555,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsGrouped());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsGrouped();
+            }());
         }
         catch (...)
         {
@@ -4157,7 +4593,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsGrouped(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsGrouped(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4184,7 +4624,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.NumeralSystem());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NumeralSystem();
+            }());
         }
         catch (...)
         {
@@ -4218,7 +4662,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.NumeralSystem(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NumeralSystem(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4245,7 +4693,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.FractionDigits());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FractionDigits();
+            }());
         }
         catch (...)
         {
@@ -4279,7 +4731,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.FractionDigits(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.FractionDigits(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4306,7 +4762,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.GeographicRegion());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.GeographicRegion();
+            }());
         }
         catch (...)
         {
@@ -4332,7 +4792,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.Languages());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Languages();
+            }());
         }
         catch (...)
         {
@@ -4358,7 +4822,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResolvedGeographicRegion());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResolvedGeographicRegion();
+            }());
         }
         catch (...)
         {
@@ -4384,7 +4852,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResolvedLanguage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResolvedLanguage();
+            }());
         }
         catch (...)
         {
@@ -4410,7 +4882,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.NumberRounder());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NumberRounder();
+            }());
         }
         catch (...)
         {
@@ -4444,7 +4920,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
             auto param0 = py::convert_to<winrt::Windows::Globalization::NumberFormatting::INumberRounder>(arg);
 
-            self->obj.NumberRounder(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NumberRounder(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4471,7 +4951,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsZeroSigned());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsZeroSigned();
+            }());
         }
         catch (...)
         {
@@ -4505,7 +4989,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsZeroSigned(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsZeroSigned(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4532,7 +5020,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.SignificantDigits());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SignificantDigits();
+            }());
         }
         catch (...)
         {
@@ -4566,7 +5058,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.SignificantDigits(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SignificantDigits(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4705,7 +5201,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 auto param0 = py::convert_to<double>(args, 0);
 
-                return py::convert(self->obj.RoundDouble(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RoundDouble(param0);
+                }());
             }
             catch (...)
             {
@@ -4743,7 +5243,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                return py::convert(self->obj.RoundInt32(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RoundInt32(param0);
+                }());
             }
             catch (...)
             {
@@ -4781,7 +5285,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 auto param0 = py::convert_to<int64_t>(args, 0);
 
-                return py::convert(self->obj.RoundInt64(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RoundInt64(param0);
+                }());
             }
             catch (...)
             {
@@ -4819,7 +5327,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 auto param0 = py::convert_to<float>(args, 0);
 
-                return py::convert(self->obj.RoundSingle(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RoundSingle(param0);
+                }());
             }
             catch (...)
             {
@@ -4857,7 +5369,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(self->obj.RoundUInt32(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RoundUInt32(param0);
+                }());
             }
             catch (...)
             {
@@ -4895,7 +5411,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
-                return py::convert(self->obj.RoundUInt64(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RoundUInt64(param0);
+                }());
             }
             catch (...)
             {
@@ -4927,7 +5447,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.SignificantDigits());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SignificantDigits();
+            }());
         }
         catch (...)
         {
@@ -4961,7 +5485,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.SignificantDigits(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SignificantDigits(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4988,7 +5516,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.RoundingAlgorithm());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RoundingAlgorithm();
+            }());
         }
         catch (...)
         {
@@ -5022,7 +5554,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
             auto param0 = py::convert_to<winrt::Windows::Globalization::NumberFormatting::RoundingAlgorithm>(arg);
 
-            self->obj.RoundingAlgorithm(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RoundingAlgorithm(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5129,7 +5665,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 auto param0 = py::convert_to<double>(args, 0);
 
-                return py::convert(self->obj.Format(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Format(param0);
+                }());
             }
             catch (...)
             {
@@ -5167,7 +5707,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 auto param0 = py::convert_to<int64_t>(args, 0);
 
-                return py::convert(self->obj.Format(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Format(param0);
+                }());
             }
             catch (...)
             {
@@ -5205,7 +5749,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
-                return py::convert(self->obj.Format(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Format(param0);
+                }());
             }
             catch (...)
             {
@@ -5470,7 +6018,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 auto param0 = py::convert_to<double>(args, 0);
 
-                return py::convert(self->obj.FormatDouble(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.FormatDouble(param0);
+                }());
             }
             catch (...)
             {
@@ -5508,7 +6060,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 auto param0 = py::convert_to<int64_t>(args, 0);
 
-                return py::convert(self->obj.FormatInt(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.FormatInt(param0);
+                }());
             }
             catch (...)
             {
@@ -5546,7 +6102,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
-                return py::convert(self->obj.FormatUInt(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.FormatUInt(param0);
+                }());
             }
             catch (...)
             {
@@ -5805,7 +6365,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.FractionDigits());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FractionDigits();
+            }());
         }
         catch (...)
         {
@@ -5839,7 +6403,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.FractionDigits(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.FractionDigits(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5866,7 +6434,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.GeographicRegion());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.GeographicRegion();
+            }());
         }
         catch (...)
         {
@@ -5892,7 +6464,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.IntegerDigits());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IntegerDigits();
+            }());
         }
         catch (...)
         {
@@ -5926,7 +6502,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.IntegerDigits(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IntegerDigits(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5953,7 +6533,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsDecimalPointAlwaysDisplayed());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsDecimalPointAlwaysDisplayed();
+            }());
         }
         catch (...)
         {
@@ -5987,7 +6571,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsDecimalPointAlwaysDisplayed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsDecimalPointAlwaysDisplayed(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6014,7 +6602,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsGrouped());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsGrouped();
+            }());
         }
         catch (...)
         {
@@ -6048,7 +6640,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsGrouped(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsGrouped(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6075,7 +6671,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.Languages());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Languages();
+            }());
         }
         catch (...)
         {
@@ -6101,7 +6701,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.NumeralSystem());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NumeralSystem();
+            }());
         }
         catch (...)
         {
@@ -6135,7 +6739,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.NumeralSystem(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NumeralSystem(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6162,7 +6770,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResolvedGeographicRegion());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResolvedGeographicRegion();
+            }());
         }
         catch (...)
         {
@@ -6188,7 +6800,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResolvedLanguage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResolvedLanguage();
+            }());
         }
         catch (...)
         {
@@ -6652,7 +7268,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.ParseDouble(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ParseDouble(param0);
+                }());
             }
             catch (...)
             {
@@ -6690,7 +7310,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.ParseInt(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ParseInt(param0);
+                }());
             }
             catch (...)
             {
@@ -6728,7 +7352,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.ParseUInt(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ParseUInt(param0);
+                }());
             }
             catch (...)
             {
@@ -6993,7 +7621,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 auto param0 = py::convert_to<double>(args, 0);
 
-                return py::convert(self->obj.RoundDouble(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RoundDouble(param0);
+                }());
             }
             catch (...)
             {
@@ -7031,7 +7663,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                return py::convert(self->obj.RoundInt32(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RoundInt32(param0);
+                }());
             }
             catch (...)
             {
@@ -7069,7 +7705,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 auto param0 = py::convert_to<int64_t>(args, 0);
 
-                return py::convert(self->obj.RoundInt64(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RoundInt64(param0);
+                }());
             }
             catch (...)
             {
@@ -7107,7 +7747,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 auto param0 = py::convert_to<float>(args, 0);
 
-                return py::convert(self->obj.RoundSingle(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RoundSingle(param0);
+                }());
             }
             catch (...)
             {
@@ -7145,7 +7789,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(self->obj.RoundUInt32(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RoundUInt32(param0);
+                }());
             }
             catch (...)
             {
@@ -7183,7 +7831,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
-                return py::convert(self->obj.RoundUInt64(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RoundUInt64(param0);
+                }());
             }
             catch (...)
             {
@@ -7541,7 +8193,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.NumberRounder());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NumberRounder();
+            }());
         }
         catch (...)
         {
@@ -7575,7 +8231,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
             auto param0 = py::convert_to<winrt::Windows::Globalization::NumberFormatting::INumberRounder>(arg);
 
-            self->obj.NumberRounder(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NumberRounder(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7774,7 +8434,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsZeroSigned());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsZeroSigned();
+            }());
         }
         catch (...)
         {
@@ -7808,7 +8472,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsZeroSigned(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsZeroSigned(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8007,7 +8675,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.SignificantDigits());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SignificantDigits();
+            }());
         }
         catch (...)
         {
@@ -8041,7 +8713,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.SignificantDigits(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SignificantDigits(param0);
+            }
+
             return 0;
         }
         catch (...)

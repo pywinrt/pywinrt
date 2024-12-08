@@ -44,7 +44,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Management
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetQualifierValue(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetQualifierValue(param0);
+                }());
             }
             catch (...)
             {
@@ -76,7 +80,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.Metadata());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Metadata();
+            }());
         }
         catch (...)
         {
@@ -102,7 +110,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.Qualifiers());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Qualifiers();
+            }());
         }
         catch (...)
         {
@@ -128,7 +140,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.Type());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Type();
+            }());
         }
         catch (...)
         {
@@ -154,7 +170,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.Uri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Uri();
+            }());
         }
         catch (...)
         {
@@ -180,7 +200,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.ValueAsString());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ValueAsString();
+            }());
         }
         catch (...)
         {
@@ -278,7 +302,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.QualifierName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.QualifierName();
+            }());
         }
         catch (...)
         {
@@ -304,7 +332,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.QualifierValue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.QualifierValue();
+            }());
         }
         catch (...)
         {
@@ -444,7 +476,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Management
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
-                return py::convert(self->obj.IndexFileContentsAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IndexFileContentsAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -482,7 +518,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Management
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
-                return py::convert(self->obj.IndexFilePath(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IndexFilePath(param0);
+                }());
             }
             catch (...)
             {

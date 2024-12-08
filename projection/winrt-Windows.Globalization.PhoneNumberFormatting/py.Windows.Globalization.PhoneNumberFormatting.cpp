@@ -66,7 +66,11 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
 
                 auto param0 = py::convert_to<winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo>(args, 0);
 
-                return py::convert(self->obj.Format(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Format(param0);
+                }());
             }
             catch (...)
             {
@@ -104,7 +108,11 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.FormatPartialString(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.FormatPartialString(param0);
+                }());
             }
             catch (...)
             {
@@ -142,7 +150,11 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.FormatString(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.FormatString(param0);
+                }());
             }
             catch (...)
             {
@@ -180,7 +192,11 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.FormatStringWithLeftToRightMarkers(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.FormatStringWithLeftToRightMarkers(param0);
+                }());
             }
             catch (...)
             {
@@ -219,7 +235,11 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
                 auto param0 = py::convert_to<winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberFormat>(args, 1);
 
-                return py::convert(self->obj.Format(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Format(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -257,7 +277,11 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberFormatter::GetCountryCodeForRegion(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberFormatter::GetCountryCodeForRegion(param0);
+                }());
             }
             catch (...)
             {
@@ -296,7 +320,11 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                return py::convert(winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberFormatter::GetNationalDirectDialingPrefixForRegion(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberFormatter::GetNationalDirectDialingPrefixForRegion(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -335,13 +363,17 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberFormatter param1{nullptr};
 
-                winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberFormatter::TryCreate(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberFormatter::TryCreate(param0, param1);
+                }
 
                 py::pyobj_handle out1{ py::convert(param1) };
                 if (!out1)
                 {
                     return nullptr;
                 }
+
                 return out1.detach();
             }
             catch (...)
@@ -380,7 +412,11 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberFormatter::WrapWithLeftToRightMarkers(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberFormatter::WrapWithLeftToRightMarkers(param0);
+                }());
             }
             catch (...)
             {
@@ -542,7 +578,11 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
 
                 auto param0 = py::convert_to<winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo>(args, 0);
 
-                return py::convert(self->obj.CheckNumberMatch(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CheckNumberMatch(param0);
+                }());
             }
             catch (...)
             {
@@ -578,7 +618,11 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetGeographicRegionCode());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetGeographicRegionCode();
+                }());
             }
             catch (...)
             {
@@ -614,7 +658,11 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetLengthOfGeographicalAreaCode());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetLengthOfGeographicalAreaCode();
+                }());
             }
             catch (...)
             {
@@ -650,7 +698,11 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetLengthOfNationalDestinationCode());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetLengthOfNationalDestinationCode();
+                }());
             }
             catch (...)
             {
@@ -686,7 +738,11 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetNationalSignificantNumber());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetNationalSignificantNumber();
+                }());
             }
             catch (...)
             {
@@ -722,7 +778,11 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
                     return nullptr;
                 }
 
-                return py::convert(self->obj.PredictNumberKind());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.PredictNumberKind();
+                }());
             }
             catch (...)
             {
@@ -758,7 +818,11 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ToString());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ToString();
+                }());
             }
             catch (...)
             {
@@ -797,7 +861,11 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo param1{nullptr};
 
-                auto return_value = winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo::TryParse(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo::TryParse(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -809,6 +877,7 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -849,7 +918,11 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo param2{nullptr};
 
-                auto return_value = winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo::TryParse(param0, param1, param2);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo::TryParse(param0, param1, param2);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -861,6 +934,7 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out2.get());
             }
             catch (...)
@@ -893,7 +967,11 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.CountryCode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CountryCode();
+            }());
         }
         catch (...)
         {
@@ -919,7 +997,11 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
                 return nullptr;
             }
 
-            return py::convert(self->obj.PhoneNumber());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PhoneNumber();
+            }());
         }
         catch (...)
         {
@@ -956,7 +1038,11 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
     {
         try
         {
-            return py::convert(self->obj.ToString());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.ToString();
+            }());
         }
         catch (...)
         {

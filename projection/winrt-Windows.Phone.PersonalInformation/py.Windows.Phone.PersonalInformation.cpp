@@ -60,7 +60,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(self->obj.StreetAddress());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StreetAddress();
+            }());
         }
         catch (...)
         {
@@ -94,7 +98,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.StreetAddress(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StreetAddress(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -121,7 +129,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(self->obj.Region());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Region();
+            }());
         }
         catch (...)
         {
@@ -155,7 +167,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Region(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Region(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -182,7 +198,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(self->obj.PostalCode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PostalCode();
+            }());
         }
         catch (...)
         {
@@ -216,7 +236,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.PostalCode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PostalCode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -243,7 +267,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(self->obj.Locality());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Locality();
+            }());
         }
         catch (...)
         {
@@ -277,7 +305,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Locality(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Locality(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -304,7 +336,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(self->obj.Country());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Country();
+            }());
         }
         catch (...)
         {
@@ -338,7 +374,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Country(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Country(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -436,7 +476,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(self->obj.ChangeType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ChangeType();
+            }());
         }
         catch (...)
         {
@@ -462,7 +506,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -488,7 +536,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(self->obj.RemoteId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RemoteId();
+            }());
         }
         catch (...)
         {
@@ -514,7 +566,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(self->obj.RevisionNumber());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RevisionNumber();
+            }());
         }
         catch (...)
         {
@@ -636,7 +692,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDisplayPictureAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDisplayPictureAsync();
+                }());
             }
             catch (...)
             {
@@ -672,7 +732,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetPropertiesAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetPropertiesAsync();
+                }());
             }
             catch (...)
             {
@@ -710,7 +774,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 0);
 
-                return py::convert(winrt::Windows::Phone::PersonalInformation::ContactInformation::ParseVcardAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Phone::PersonalInformation::ContactInformation::ParseVcardAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -748,7 +816,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 0);
 
-                return py::convert(self->obj.SetDisplayPictureAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SetDisplayPictureAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -784,7 +856,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ToVcardAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ToVcardAsync();
+                }());
             }
             catch (...)
             {
@@ -822,7 +898,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
                 auto param0 = py::convert_to<winrt::Windows::Phone::PersonalInformation::VCardFormat>(args, 0);
 
-                return py::convert(self->obj.ToVcardAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ToVcardAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -854,7 +934,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(self->obj.HonorificSuffix());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HonorificSuffix();
+            }());
         }
         catch (...)
         {
@@ -888,7 +972,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.HonorificSuffix(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.HonorificSuffix(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -915,7 +1003,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(self->obj.HonorificPrefix());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HonorificPrefix();
+            }());
         }
         catch (...)
         {
@@ -949,7 +1041,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.HonorificPrefix(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.HonorificPrefix(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -976,7 +1072,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(self->obj.GivenName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.GivenName();
+            }());
         }
         catch (...)
         {
@@ -1010,7 +1110,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.GivenName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.GivenName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1037,7 +1141,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(self->obj.FamilyName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FamilyName();
+            }());
         }
         catch (...)
         {
@@ -1071,7 +1179,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.FamilyName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.FamilyName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1098,7 +1210,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayName();
+            }());
         }
         catch (...)
         {
@@ -1132,7 +1248,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.DisplayName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DisplayName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1159,7 +1279,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayPicture());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayPicture();
+            }());
         }
         catch (...)
         {
@@ -1310,7 +1434,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(self->obj.OrderBy());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OrderBy();
+            }());
         }
         catch (...)
         {
@@ -1344,7 +1472,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
             auto param0 = py::convert_to<winrt::Windows::Phone::PersonalInformation::ContactQueryResultOrdering>(arg);
 
-            self->obj.OrderBy(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.OrderBy(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1371,7 +1503,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(self->obj.DesiredFields());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DesiredFields();
+            }());
         }
         catch (...)
         {
@@ -1469,7 +1605,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetContactCountAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetContactCountAsync();
+                }());
             }
             catch (...)
             {
@@ -1505,7 +1645,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetContactsAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetContactsAsync();
+                }());
             }
             catch (...)
             {
@@ -1544,7 +1688,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
-                return py::convert(self->obj.GetContactsAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetContactsAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1580,7 +1728,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetCurrentQueryOptions());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetCurrentQueryOptions();
+                }());
             }
             catch (...)
             {
@@ -1686,7 +1838,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CreateContactQuery());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateContactQuery();
+                }());
             }
             catch (...)
             {
@@ -1724,7 +1880,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
                 auto param0 = py::convert_to<winrt::Windows::Phone::PersonalInformation::ContactQueryOptions>(args, 0);
 
-                return py::convert(self->obj.CreateContactQuery(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateContactQuery(param0);
+                }());
             }
             catch (...)
             {
@@ -1762,7 +1922,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.CreateMeContactAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateMeContactAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1798,7 +1962,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Phone::PersonalInformation::ContactStore::CreateOrOpenAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Phone::PersonalInformation::ContactStore::CreateOrOpenAsync();
+                }());
             }
             catch (...)
             {
@@ -1837,7 +2005,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 auto param0 = py::convert_to<winrt::Windows::Phone::PersonalInformation::ContactStoreSystemAccessMode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Phone::PersonalInformation::ContactStoreApplicationAccessMode>(args, 1);
 
-                return py::convert(winrt::Windows::Phone::PersonalInformation::ContactStore::CreateOrOpenAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Phone::PersonalInformation::ContactStore::CreateOrOpenAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1873,7 +2045,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                     return nullptr;
                 }
 
-                return py::convert(self->obj.DeleteAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.DeleteAsync();
+                }());
             }
             catch (...)
             {
@@ -1911,7 +2087,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.DeleteContactAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.DeleteContactAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1949,7 +2129,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.FindContactByIdAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.FindContactByIdAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1987,7 +2171,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.FindContactByRemoteIdAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.FindContactByRemoteIdAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -2025,7 +2213,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
-                return py::convert(self->obj.GetChangesAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetChangesAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -2061,7 +2253,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                     return nullptr;
                 }
 
-                return py::convert(self->obj.LoadExtendedPropertiesAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.LoadExtendedPropertiesAsync();
+                }());
             }
             catch (...)
             {
@@ -2099,7 +2295,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(args, 0);
 
-                return py::convert(self->obj.SaveExtendedPropertiesAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SaveExtendedPropertiesAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -2131,7 +2331,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(self->obj.RevisionNumber());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RevisionNumber();
+            }());
         }
         catch (...)
         {
@@ -2253,7 +2457,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::AdditionalName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Phone::PersonalInformation::KnownContactProperties::AdditionalName();
+            }());
         }
         catch (...)
         {
@@ -2279,7 +2487,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::Address());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Phone::PersonalInformation::KnownContactProperties::Address();
+            }());
         }
         catch (...)
         {
@@ -2305,7 +2517,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::AlternateMobileTelephone());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Phone::PersonalInformation::KnownContactProperties::AlternateMobileTelephone();
+            }());
         }
         catch (...)
         {
@@ -2331,7 +2547,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::AlternateTelephone());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Phone::PersonalInformation::KnownContactProperties::AlternateTelephone();
+            }());
         }
         catch (...)
         {
@@ -2357,7 +2577,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::AlternateWorkTelephone());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Phone::PersonalInformation::KnownContactProperties::AlternateWorkTelephone();
+            }());
         }
         catch (...)
         {
@@ -2383,7 +2607,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::Anniversary());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Phone::PersonalInformation::KnownContactProperties::Anniversary();
+            }());
         }
         catch (...)
         {
@@ -2409,7 +2637,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::Birthdate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Phone::PersonalInformation::KnownContactProperties::Birthdate();
+            }());
         }
         catch (...)
         {
@@ -2435,7 +2667,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::Children());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Phone::PersonalInformation::KnownContactProperties::Children();
+            }());
         }
         catch (...)
         {
@@ -2461,7 +2697,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::CompanyName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Phone::PersonalInformation::KnownContactProperties::CompanyName();
+            }());
         }
         catch (...)
         {
@@ -2487,7 +2727,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::CompanyTelephone());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Phone::PersonalInformation::KnownContactProperties::CompanyTelephone();
+            }());
         }
         catch (...)
         {
@@ -2513,7 +2757,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::DisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Phone::PersonalInformation::KnownContactProperties::DisplayName();
+            }());
         }
         catch (...)
         {
@@ -2539,7 +2787,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::Email());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Phone::PersonalInformation::KnownContactProperties::Email();
+            }());
         }
         catch (...)
         {
@@ -2565,7 +2817,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::FamilyName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Phone::PersonalInformation::KnownContactProperties::FamilyName();
+            }());
         }
         catch (...)
         {
@@ -2591,7 +2847,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::GivenName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Phone::PersonalInformation::KnownContactProperties::GivenName();
+            }());
         }
         catch (...)
         {
@@ -2617,7 +2877,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::HomeFax());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Phone::PersonalInformation::KnownContactProperties::HomeFax();
+            }());
         }
         catch (...)
         {
@@ -2643,7 +2907,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::HonorificPrefix());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Phone::PersonalInformation::KnownContactProperties::HonorificPrefix();
+            }());
         }
         catch (...)
         {
@@ -2669,7 +2937,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::HonorificSuffix());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Phone::PersonalInformation::KnownContactProperties::HonorificSuffix();
+            }());
         }
         catch (...)
         {
@@ -2695,7 +2967,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::JobTitle());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Phone::PersonalInformation::KnownContactProperties::JobTitle();
+            }());
         }
         catch (...)
         {
@@ -2721,7 +2997,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::Manager());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Phone::PersonalInformation::KnownContactProperties::Manager();
+            }());
         }
         catch (...)
         {
@@ -2747,7 +3027,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::MobileTelephone());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Phone::PersonalInformation::KnownContactProperties::MobileTelephone();
+            }());
         }
         catch (...)
         {
@@ -2773,7 +3057,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::Nickname());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Phone::PersonalInformation::KnownContactProperties::Nickname();
+            }());
         }
         catch (...)
         {
@@ -2799,7 +3087,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::Notes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Phone::PersonalInformation::KnownContactProperties::Notes();
+            }());
         }
         catch (...)
         {
@@ -2825,7 +3117,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::OfficeLocation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Phone::PersonalInformation::KnownContactProperties::OfficeLocation();
+            }());
         }
         catch (...)
         {
@@ -2851,7 +3147,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::OtherAddress());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Phone::PersonalInformation::KnownContactProperties::OtherAddress();
+            }());
         }
         catch (...)
         {
@@ -2877,7 +3177,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::OtherEmail());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Phone::PersonalInformation::KnownContactProperties::OtherEmail();
+            }());
         }
         catch (...)
         {
@@ -2903,7 +3207,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::SignificantOther());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Phone::PersonalInformation::KnownContactProperties::SignificantOther();
+            }());
         }
         catch (...)
         {
@@ -2929,7 +3237,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::Telephone());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Phone::PersonalInformation::KnownContactProperties::Telephone();
+            }());
         }
         catch (...)
         {
@@ -2955,7 +3267,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::Url());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Phone::PersonalInformation::KnownContactProperties::Url();
+            }());
         }
         catch (...)
         {
@@ -2981,7 +3297,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::WorkAddress());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Phone::PersonalInformation::KnownContactProperties::WorkAddress();
+            }());
         }
         catch (...)
         {
@@ -3007,7 +3327,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::WorkEmail());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Phone::PersonalInformation::KnownContactProperties::WorkEmail();
+            }());
         }
         catch (...)
         {
@@ -3033,7 +3357,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::WorkFax());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Phone::PersonalInformation::KnownContactProperties::WorkFax();
+            }());
         }
         catch (...)
         {
@@ -3059,7 +3387,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::WorkTelephone());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Phone::PersonalInformation::KnownContactProperties::WorkTelephone();
+            }());
         }
         catch (...)
         {
@@ -3085,7 +3417,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::YomiCompanyName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Phone::PersonalInformation::KnownContactProperties::YomiCompanyName();
+            }());
         }
         catch (...)
         {
@@ -3111,7 +3447,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::YomiFamilyName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Phone::PersonalInformation::KnownContactProperties::YomiFamilyName();
+            }());
         }
         catch (...)
         {
@@ -3137,7 +3477,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Phone::PersonalInformation::KnownContactProperties::YomiGivenName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Phone::PersonalInformation::KnownContactProperties::YomiGivenName();
+            }());
         }
         catch (...)
         {
@@ -3306,7 +3650,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDisplayPictureAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDisplayPictureAsync();
+                }());
             }
             catch (...)
             {
@@ -3342,7 +3690,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetExtendedPropertiesAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetExtendedPropertiesAsync();
+                }());
             }
             catch (...)
             {
@@ -3378,7 +3730,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetPropertiesAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetPropertiesAsync();
+                }());
             }
             catch (...)
             {
@@ -3416,7 +3772,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.ReplaceExistingContactAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReplaceExistingContactAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -3452,7 +3812,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                     return nullptr;
                 }
 
-                return py::convert(self->obj.SaveAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SaveAsync();
+                }());
             }
             catch (...)
             {
@@ -3490,7 +3854,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 0);
 
-                return py::convert(self->obj.SetDisplayPictureAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SetDisplayPictureAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -3526,7 +3894,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ToVcardAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ToVcardAsync();
+                }());
             }
             catch (...)
             {
@@ -3564,7 +3936,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
                 auto param0 = py::convert_to<winrt::Windows::Phone::PersonalInformation::VCardFormat>(args, 0);
 
-                return py::convert(self->obj.ToVcardAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ToVcardAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -3596,7 +3972,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(self->obj.HonorificSuffix());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HonorificSuffix();
+            }());
         }
         catch (...)
         {
@@ -3630,7 +4010,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.HonorificSuffix(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.HonorificSuffix(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3657,7 +4041,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(self->obj.HonorificPrefix());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HonorificPrefix();
+            }());
         }
         catch (...)
         {
@@ -3691,7 +4079,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.HonorificPrefix(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.HonorificPrefix(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3718,7 +4110,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(self->obj.GivenName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.GivenName();
+            }());
         }
         catch (...)
         {
@@ -3752,7 +4148,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.GivenName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.GivenName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3779,7 +4179,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(self->obj.FamilyName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FamilyName();
+            }());
         }
         catch (...)
         {
@@ -3813,7 +4217,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.FamilyName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.FamilyName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3840,7 +4248,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayName();
+            }());
         }
         catch (...)
         {
@@ -3874,7 +4286,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.DisplayName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DisplayName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3901,7 +4317,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayPicture());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayPicture();
+            }());
         }
         catch (...)
         {
@@ -3927,7 +4347,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayPictureDate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayPictureDate();
+            }());
         }
         catch (...)
         {
@@ -3961,7 +4385,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(arg);
 
-            self->obj.DisplayPictureDate(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DisplayPictureDate(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3988,7 +4416,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(self->obj.RemoteId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RemoteId();
+            }());
         }
         catch (...)
         {
@@ -4022,7 +4454,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.RemoteId(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RemoteId(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4049,7 +4485,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -4075,7 +4515,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(self->obj.Store());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Store();
+            }());
         }
         catch (...)
         {
@@ -4189,7 +4633,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDisplayPictureAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDisplayPictureAsync();
+                }());
             }
             catch (...)
             {
@@ -4225,7 +4673,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetPropertiesAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetPropertiesAsync();
+                }());
             }
             catch (...)
             {
@@ -4263,7 +4715,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 0);
 
-                return py::convert(self->obj.SetDisplayPictureAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SetDisplayPictureAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -4299,7 +4755,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ToVcardAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ToVcardAsync();
+                }());
             }
             catch (...)
             {
@@ -4337,7 +4797,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
                 auto param0 = py::convert_to<winrt::Windows::Phone::PersonalInformation::VCardFormat>(args, 0);
 
-                return py::convert(self->obj.ToVcardAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ToVcardAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -4369,7 +4833,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayName();
+            }());
         }
         catch (...)
         {
@@ -4403,7 +4871,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.DisplayName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DisplayName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4430,7 +4902,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayPicture());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayPicture();
+            }());
         }
         catch (...)
         {
@@ -4456,7 +4932,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(self->obj.FamilyName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FamilyName();
+            }());
         }
         catch (...)
         {
@@ -4490,7 +4970,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.FamilyName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.FamilyName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4517,7 +5001,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(self->obj.GivenName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.GivenName();
+            }());
         }
         catch (...)
         {
@@ -4551,7 +5039,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.GivenName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.GivenName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4578,7 +5070,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(self->obj.HonorificPrefix());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HonorificPrefix();
+            }());
         }
         catch (...)
         {
@@ -4612,7 +5108,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.HonorificPrefix(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.HonorificPrefix(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4639,7 +5139,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(self->obj.HonorificSuffix());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HonorificSuffix();
+            }());
         }
         catch (...)
         {
@@ -4673,7 +5177,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.HonorificSuffix(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.HonorificSuffix(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5216,7 +5724,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayPictureDate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayPictureDate();
+            }());
         }
         catch (...)
         {
@@ -5250,7 +5762,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(arg);
 
-            self->obj.DisplayPictureDate(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DisplayPictureDate(param0);
+            }
+
             return 0;
         }
         catch (...)

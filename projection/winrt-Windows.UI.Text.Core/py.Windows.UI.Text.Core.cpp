@@ -42,7 +42,11 @@ namespace py::cpp::Windows::UI::Text::Core
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -74,7 +78,11 @@ namespace py::cpp::Windows::UI::Text::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.CompositionSegments());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CompositionSegments();
+            }());
         }
         catch (...)
         {
@@ -100,7 +108,11 @@ namespace py::cpp::Windows::UI::Text::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsCanceled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsCanceled();
+            }());
         }
         catch (...)
         {
@@ -195,7 +207,11 @@ namespace py::cpp::Windows::UI::Text::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.PreconversionString());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PreconversionString();
+            }());
         }
         catch (...)
         {
@@ -221,7 +237,11 @@ namespace py::cpp::Windows::UI::Text::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Range());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Range();
+            }());
         }
         catch (...)
         {
@@ -319,7 +339,11 @@ namespace py::cpp::Windows::UI::Text::Core
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -351,7 +375,11 @@ namespace py::cpp::Windows::UI::Text::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsCanceled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsCanceled();
+            }());
         }
         catch (...)
         {
@@ -449,7 +477,11 @@ namespace py::cpp::Windows::UI::Text::Core
                     return nullptr;
                 }
 
-                self->obj.NotifyFocusEnter();
+                {
+                    auto _gil = release_gil();
+                    self->obj.NotifyFocusEnter();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -486,7 +518,11 @@ namespace py::cpp::Windows::UI::Text::Core
                     return nullptr;
                 }
 
-                self->obj.NotifyFocusLeave();
+                {
+                    auto _gil = release_gil();
+                    self->obj.NotifyFocusLeave();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -523,7 +559,11 @@ namespace py::cpp::Windows::UI::Text::Core
                     return nullptr;
                 }
 
-                self->obj.NotifyLayoutChanged();
+                {
+                    auto _gil = release_gil();
+                    self->obj.NotifyLayoutChanged();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -562,7 +602,11 @@ namespace py::cpp::Windows::UI::Text::Core
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::Core::CoreTextRange>(args, 0);
 
-                self->obj.NotifySelectionChanged(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.NotifySelectionChanged(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -603,7 +647,11 @@ namespace py::cpp::Windows::UI::Text::Core
                 auto param1 = py::convert_to<int32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::UI::Text::Core::CoreTextRange>(args, 2);
 
-                self->obj.NotifyTextChanged(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.NotifyTextChanged(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -636,7 +684,11 @@ namespace py::cpp::Windows::UI::Text::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -670,7 +722,11 @@ namespace py::cpp::Windows::UI::Text::Core
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Name(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Name(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -697,7 +753,11 @@ namespace py::cpp::Windows::UI::Text::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsReadOnly());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsReadOnly();
+            }());
         }
         catch (...)
         {
@@ -731,7 +791,11 @@ namespace py::cpp::Windows::UI::Text::Core
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsReadOnly(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsReadOnly(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -758,7 +822,11 @@ namespace py::cpp::Windows::UI::Text::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.InputScope());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InputScope();
+            }());
         }
         catch (...)
         {
@@ -792,7 +860,11 @@ namespace py::cpp::Windows::UI::Text::Core
 
             auto param0 = py::convert_to<winrt::Windows::UI::Text::Core::CoreTextInputScope>(arg);
 
-            self->obj.InputScope(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.InputScope(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -819,7 +891,11 @@ namespace py::cpp::Windows::UI::Text::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.InputPaneDisplayPolicy());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InputPaneDisplayPolicy();
+            }());
         }
         catch (...)
         {
@@ -853,7 +929,11 @@ namespace py::cpp::Windows::UI::Text::Core
 
             auto param0 = py::convert_to<winrt::Windows::UI::Text::Core::CoreTextInputPaneDisplayPolicy>(arg);
 
-            self->obj.InputPaneDisplayPolicy(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.InputPaneDisplayPolicy(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -882,7 +962,11 @@ namespace py::cpp::Windows::UI::Text::Core
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Text::Core::CoreTextEditContext, winrt::Windows::UI::Text::Core::CoreTextCompositionCompletedEventArgs>>(arg);
 
-            return py::convert(self->obj.CompositionCompleted(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CompositionCompleted(param0);
+            }());
         }
         catch (...)
         {
@@ -910,7 +994,11 @@ namespace py::cpp::Windows::UI::Text::Core
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.CompositionCompleted(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CompositionCompleted(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -939,7 +1027,11 @@ namespace py::cpp::Windows::UI::Text::Core
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Text::Core::CoreTextEditContext, winrt::Windows::UI::Text::Core::CoreTextCompositionStartedEventArgs>>(arg);
 
-            return py::convert(self->obj.CompositionStarted(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CompositionStarted(param0);
+            }());
         }
         catch (...)
         {
@@ -967,7 +1059,11 @@ namespace py::cpp::Windows::UI::Text::Core
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.CompositionStarted(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CompositionStarted(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -996,7 +1092,11 @@ namespace py::cpp::Windows::UI::Text::Core
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Text::Core::CoreTextEditContext, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.FocusRemoved(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FocusRemoved(param0);
+            }());
         }
         catch (...)
         {
@@ -1024,7 +1124,11 @@ namespace py::cpp::Windows::UI::Text::Core
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.FocusRemoved(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.FocusRemoved(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1053,7 +1157,11 @@ namespace py::cpp::Windows::UI::Text::Core
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Text::Core::CoreTextEditContext, winrt::Windows::UI::Text::Core::CoreTextFormatUpdatingEventArgs>>(arg);
 
-            return py::convert(self->obj.FormatUpdating(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FormatUpdating(param0);
+            }());
         }
         catch (...)
         {
@@ -1081,7 +1189,11 @@ namespace py::cpp::Windows::UI::Text::Core
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.FormatUpdating(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.FormatUpdating(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1110,7 +1222,11 @@ namespace py::cpp::Windows::UI::Text::Core
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Text::Core::CoreTextEditContext, winrt::Windows::UI::Text::Core::CoreTextLayoutRequestedEventArgs>>(arg);
 
-            return py::convert(self->obj.LayoutRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LayoutRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -1138,7 +1254,11 @@ namespace py::cpp::Windows::UI::Text::Core
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.LayoutRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.LayoutRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1167,7 +1287,11 @@ namespace py::cpp::Windows::UI::Text::Core
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Text::Core::CoreTextEditContext, winrt::Windows::UI::Text::Core::CoreTextSelectionRequestedEventArgs>>(arg);
 
-            return py::convert(self->obj.SelectionRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SelectionRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -1195,7 +1319,11 @@ namespace py::cpp::Windows::UI::Text::Core
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.SelectionRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SelectionRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1224,7 +1352,11 @@ namespace py::cpp::Windows::UI::Text::Core
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Text::Core::CoreTextEditContext, winrt::Windows::UI::Text::Core::CoreTextSelectionUpdatingEventArgs>>(arg);
 
-            return py::convert(self->obj.SelectionUpdating(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SelectionUpdating(param0);
+            }());
         }
         catch (...)
         {
@@ -1252,7 +1384,11 @@ namespace py::cpp::Windows::UI::Text::Core
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.SelectionUpdating(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SelectionUpdating(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1281,7 +1417,11 @@ namespace py::cpp::Windows::UI::Text::Core
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Text::Core::CoreTextEditContext, winrt::Windows::UI::Text::Core::CoreTextTextRequestedEventArgs>>(arg);
 
-            return py::convert(self->obj.TextRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TextRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -1309,7 +1449,11 @@ namespace py::cpp::Windows::UI::Text::Core
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.TextRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TextRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1338,7 +1482,11 @@ namespace py::cpp::Windows::UI::Text::Core
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Text::Core::CoreTextEditContext, winrt::Windows::UI::Text::Core::CoreTextTextUpdatingEventArgs>>(arg);
 
-            return py::convert(self->obj.TextUpdating(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TextUpdating(param0);
+            }());
         }
         catch (...)
         {
@@ -1366,7 +1514,11 @@ namespace py::cpp::Windows::UI::Text::Core
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.TextUpdating(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TextUpdating(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1395,7 +1547,11 @@ namespace py::cpp::Windows::UI::Text::Core
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Text::Core::CoreTextEditContext, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.NotifyFocusLeaveCompleted(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NotifyFocusLeaveCompleted(param0);
+            }());
         }
         catch (...)
         {
@@ -1423,7 +1579,11 @@ namespace py::cpp::Windows::UI::Text::Core
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.NotifyFocusLeaveCompleted(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NotifyFocusLeaveCompleted(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1549,7 +1709,11 @@ namespace py::cpp::Windows::UI::Text::Core
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -1581,7 +1745,11 @@ namespace py::cpp::Windows::UI::Text::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Result());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Result();
+            }());
         }
         catch (...)
         {
@@ -1615,7 +1783,11 @@ namespace py::cpp::Windows::UI::Text::Core
 
             auto param0 = py::convert_to<winrt::Windows::UI::Text::Core::CoreTextFormatUpdatingResult>(arg);
 
-            self->obj.Result(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Result(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1642,7 +1814,11 @@ namespace py::cpp::Windows::UI::Text::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.BackgroundColor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BackgroundColor();
+            }());
         }
         catch (...)
         {
@@ -1668,7 +1844,11 @@ namespace py::cpp::Windows::UI::Text::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsCanceled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsCanceled();
+            }());
         }
         catch (...)
         {
@@ -1694,7 +1874,11 @@ namespace py::cpp::Windows::UI::Text::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Range());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Range();
+            }());
         }
         catch (...)
         {
@@ -1720,7 +1904,11 @@ namespace py::cpp::Windows::UI::Text::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Reason());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Reason();
+            }());
         }
         catch (...)
         {
@@ -1746,7 +1934,11 @@ namespace py::cpp::Windows::UI::Text::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.TextColor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TextColor();
+            }());
         }
         catch (...)
         {
@@ -1772,7 +1964,11 @@ namespace py::cpp::Windows::UI::Text::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.UnderlineColor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UnderlineColor();
+            }());
         }
         catch (...)
         {
@@ -1798,7 +1994,11 @@ namespace py::cpp::Windows::UI::Text::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.UnderlineType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UnderlineType();
+            }());
         }
         catch (...)
         {
@@ -1899,7 +2099,11 @@ namespace py::cpp::Windows::UI::Text::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.TextBounds());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TextBounds();
+            }());
         }
         catch (...)
         {
@@ -1933,7 +2137,11 @@ namespace py::cpp::Windows::UI::Text::Core
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(arg);
 
-            self->obj.TextBounds(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TextBounds(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1960,7 +2168,11 @@ namespace py::cpp::Windows::UI::Text::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.ControlBounds());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ControlBounds();
+            }());
         }
         catch (...)
         {
@@ -1994,7 +2206,11 @@ namespace py::cpp::Windows::UI::Text::Core
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(arg);
 
-            self->obj.ControlBounds(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ControlBounds(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2093,7 +2309,11 @@ namespace py::cpp::Windows::UI::Text::Core
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -2125,7 +2345,11 @@ namespace py::cpp::Windows::UI::Text::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsCanceled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsCanceled();
+            }());
         }
         catch (...)
         {
@@ -2151,7 +2375,11 @@ namespace py::cpp::Windows::UI::Text::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.LayoutBounds());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LayoutBounds();
+            }());
         }
         catch (...)
         {
@@ -2177,7 +2405,11 @@ namespace py::cpp::Windows::UI::Text::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Range());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Range();
+            }());
         }
         catch (...)
         {
@@ -2203,7 +2435,11 @@ namespace py::cpp::Windows::UI::Text::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.LayoutBoundsVisualPixels());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LayoutBoundsVisualPixels();
+            }());
         }
         catch (...)
         {
@@ -2300,7 +2536,11 @@ namespace py::cpp::Windows::UI::Text::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Request());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Request();
+            }());
         }
         catch (...)
         {
@@ -2397,7 +2637,11 @@ namespace py::cpp::Windows::UI::Text::Core
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -2429,7 +2673,11 @@ namespace py::cpp::Windows::UI::Text::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Selection());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Selection();
+            }());
         }
         catch (...)
         {
@@ -2463,7 +2711,11 @@ namespace py::cpp::Windows::UI::Text::Core
 
             auto param0 = py::convert_to<winrt::Windows::UI::Text::Core::CoreTextRange>(arg);
 
-            self->obj.Selection(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Selection(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2490,7 +2742,11 @@ namespace py::cpp::Windows::UI::Text::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsCanceled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsCanceled();
+            }());
         }
         catch (...)
         {
@@ -2585,7 +2841,11 @@ namespace py::cpp::Windows::UI::Text::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Request());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Request();
+            }());
         }
         catch (...)
         {
@@ -2682,7 +2942,11 @@ namespace py::cpp::Windows::UI::Text::Core
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -2714,7 +2978,11 @@ namespace py::cpp::Windows::UI::Text::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Result());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Result();
+            }());
         }
         catch (...)
         {
@@ -2748,7 +3016,11 @@ namespace py::cpp::Windows::UI::Text::Core
 
             auto param0 = py::convert_to<winrt::Windows::UI::Text::Core::CoreTextSelectionUpdatingResult>(arg);
 
-            self->obj.Result(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Result(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2775,7 +3047,11 @@ namespace py::cpp::Windows::UI::Text::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsCanceled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsCanceled();
+            }());
         }
         catch (...)
         {
@@ -2801,7 +3077,11 @@ namespace py::cpp::Windows::UI::Text::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Selection());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Selection();
+            }());
         }
         catch (...)
         {
@@ -2889,7 +3169,11 @@ namespace py::cpp::Windows::UI::Text::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Text::Core::CoreTextServicesConstants::HiddenCharacter());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Text::Core::CoreTextServicesConstants::HiddenCharacter();
+            }());
         }
         catch (...)
         {
@@ -2984,7 +3268,11 @@ namespace py::cpp::Windows::UI::Text::Core
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CreateEditContext());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateEditContext();
+                }());
             }
             catch (...)
             {
@@ -3020,7 +3308,11 @@ namespace py::cpp::Windows::UI::Text::Core
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::UI::Text::Core::CoreTextServicesManager::GetForCurrentView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::Text::Core::CoreTextServicesManager::GetForCurrentView();
+                }());
             }
             catch (...)
             {
@@ -3052,7 +3344,11 @@ namespace py::cpp::Windows::UI::Text::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.InputLanguage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InputLanguage();
+            }());
         }
         catch (...)
         {
@@ -3080,7 +3376,11 @@ namespace py::cpp::Windows::UI::Text::Core
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Text::Core::CoreTextServicesManager, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.InputLanguageChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InputLanguageChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -3108,7 +3408,11 @@ namespace py::cpp::Windows::UI::Text::Core
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.InputLanguageChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.InputLanguageChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3235,7 +3539,11 @@ namespace py::cpp::Windows::UI::Text::Core
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -3267,7 +3575,11 @@ namespace py::cpp::Windows::UI::Text::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Text());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Text();
+            }());
         }
         catch (...)
         {
@@ -3301,7 +3613,11 @@ namespace py::cpp::Windows::UI::Text::Core
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Text(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Text(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3328,7 +3644,11 @@ namespace py::cpp::Windows::UI::Text::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsCanceled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsCanceled();
+            }());
         }
         catch (...)
         {
@@ -3354,7 +3674,11 @@ namespace py::cpp::Windows::UI::Text::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Range());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Range();
+            }());
         }
         catch (...)
         {
@@ -3450,7 +3774,11 @@ namespace py::cpp::Windows::UI::Text::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Request());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Request();
+            }());
         }
         catch (...)
         {
@@ -3547,7 +3875,11 @@ namespace py::cpp::Windows::UI::Text::Core
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -3579,7 +3911,11 @@ namespace py::cpp::Windows::UI::Text::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Result());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Result();
+            }());
         }
         catch (...)
         {
@@ -3613,7 +3949,11 @@ namespace py::cpp::Windows::UI::Text::Core
 
             auto param0 = py::convert_to<winrt::Windows::UI::Text::Core::CoreTextTextUpdatingResult>(arg);
 
-            self->obj.Result(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Result(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3640,7 +3980,11 @@ namespace py::cpp::Windows::UI::Text::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.InputLanguage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InputLanguage();
+            }());
         }
         catch (...)
         {
@@ -3666,7 +4010,11 @@ namespace py::cpp::Windows::UI::Text::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsCanceled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsCanceled();
+            }());
         }
         catch (...)
         {
@@ -3692,7 +4040,11 @@ namespace py::cpp::Windows::UI::Text::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.NewSelection());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NewSelection();
+            }());
         }
         catch (...)
         {
@@ -3718,7 +4070,11 @@ namespace py::cpp::Windows::UI::Text::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Range());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Range();
+            }());
         }
         catch (...)
         {
@@ -3744,7 +4100,11 @@ namespace py::cpp::Windows::UI::Text::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Text());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Text();
+            }());
         }
         catch (...)
         {

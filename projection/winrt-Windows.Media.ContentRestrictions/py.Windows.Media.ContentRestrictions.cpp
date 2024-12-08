@@ -38,7 +38,11 @@ namespace py::cpp::Windows::Media::ContentRestrictions
                 return nullptr;
             }
 
-            return py::convert(self->obj.GeographicRegion());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.GeographicRegion();
+            }());
         }
         catch (...)
         {
@@ -64,7 +68,11 @@ namespace py::cpp::Windows::Media::ContentRestrictions
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxBrowsableAgeRating());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxBrowsableAgeRating();
+            }());
         }
         catch (...)
         {
@@ -90,7 +98,11 @@ namespace py::cpp::Windows::Media::ContentRestrictions
                 return nullptr;
             }
 
-            return py::convert(self->obj.PreferredAgeRating());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PreferredAgeRating();
+            }());
         }
         catch (...)
         {
@@ -211,7 +223,11 @@ namespace py::cpp::Windows::Media::ContentRestrictions
                 return nullptr;
             }
 
-            return py::convert(self->obj.Title());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Title();
+            }());
         }
         catch (...)
         {
@@ -245,7 +261,11 @@ namespace py::cpp::Windows::Media::ContentRestrictions
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Title(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Title(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -272,7 +292,11 @@ namespace py::cpp::Windows::Media::ContentRestrictions
                 return nullptr;
             }
 
-            return py::convert(self->obj.Ratings());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Ratings();
+            }());
         }
         catch (...)
         {
@@ -306,7 +330,11 @@ namespace py::cpp::Windows::Media::ContentRestrictions
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::hstring>>(arg);
 
-            self->obj.Ratings(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Ratings(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -333,7 +361,11 @@ namespace py::cpp::Windows::Media::ContentRestrictions
                 return nullptr;
             }
 
-            return py::convert(self->obj.Image());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Image();
+            }());
         }
         catch (...)
         {
@@ -367,7 +399,11 @@ namespace py::cpp::Windows::Media::ContentRestrictions
 
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(arg);
 
-            self->obj.Image(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Image(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -394,7 +430,11 @@ namespace py::cpp::Windows::Media::ContentRestrictions
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -428,7 +468,11 @@ namespace py::cpp::Windows::Media::ContentRestrictions
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Id(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Id(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -455,7 +499,11 @@ namespace py::cpp::Windows::Media::ContentRestrictions
                 return nullptr;
             }
 
-            return py::convert(self->obj.Category());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Category();
+            }());
         }
         catch (...)
         {
@@ -489,7 +537,11 @@ namespace py::cpp::Windows::Media::ContentRestrictions
 
             auto param0 = py::convert_to<winrt::Windows::Media::ContentRestrictions::RatedContentCategory>(arg);
 
-            self->obj.Category(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Category(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -628,7 +680,11 @@ namespace py::cpp::Windows::Media::ContentRestrictions
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetBrowsePolicyAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetBrowsePolicyAsync();
+                }());
             }
             catch (...)
             {
@@ -666,7 +722,11 @@ namespace py::cpp::Windows::Media::ContentRestrictions
 
                 auto param0 = py::convert_to<winrt::Windows::Media::ContentRestrictions::RatedContentDescription>(args, 0);
 
-                return py::convert(self->obj.GetRestrictionLevelAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetRestrictionLevelAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -704,7 +764,11 @@ namespace py::cpp::Windows::Media::ContentRestrictions
 
                 auto param0 = py::convert_to<winrt::Windows::Media::ContentRestrictions::RatedContentDescription>(args, 0);
 
-                return py::convert(self->obj.RequestContentAccessAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestContentAccessAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -738,7 +802,11 @@ namespace py::cpp::Windows::Media::ContentRestrictions
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.RestrictionsChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RestrictionsChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -766,7 +834,11 @@ namespace py::cpp::Windows::Media::ContentRestrictions
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.RestrictionsChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RestrictionsChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)

@@ -36,7 +36,11 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Input::Custom::IGameControllerProvider>(args, 0);
 
-                return py::convert(winrt::Windows::Gaming::Input::Preview::GameControllerProviderInfo::GetParentProviderId(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Gaming::Input::Preview::GameControllerProviderInfo::GetParentProviderId(param0);
+                }());
             }
             catch (...)
             {
@@ -74,7 +78,11 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Input::Custom::IGameControllerProvider>(args, 0);
 
-                return py::convert(winrt::Windows::Gaming::Input::Preview::GameControllerProviderInfo::GetProviderId(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Gaming::Input::Preview::GameControllerProviderInfo::GetProviderId(param0);
+                }());
             }
             catch (...)
             {
@@ -179,7 +187,11 @@ namespace py::cpp::Windows::Gaming::Input::Preview
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                winrt::Windows::Gaming::Input::Preview::LegacyGipGameControllerProvider::ClearPairing(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Gaming::Input::Preview::LegacyGipGameControllerProvider::ClearPairing(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -218,7 +230,11 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Input::Preview::DeviceCommand>(args, 0);
 
-                self->obj.ExecuteCommand(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ExecuteCommand(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -257,7 +273,11 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Input::IGameController>(args, 0);
 
-                return py::convert(winrt::Windows::Gaming::Input::Preview::LegacyGipGameControllerProvider::FromGameController(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Gaming::Input::Preview::LegacyGipGameControllerProvider::FromGameController(param0);
+                }());
             }
             catch (...)
             {
@@ -295,7 +315,11 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Input::Custom::IGameControllerProvider>(args, 0);
 
-                return py::convert(winrt::Windows::Gaming::Input::Preview::LegacyGipGameControllerProvider::FromGameControllerProvider(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Gaming::Input::Preview::LegacyGipGameControllerProvider::FromGameControllerProvider(param0);
+                }());
             }
             catch (...)
             {
@@ -331,7 +355,11 @@ namespace py::cpp::Windows::Gaming::Input::Preview
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeviceFirmwareCorruptionState());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeviceFirmwareCorruptionState();
+                }());
             }
             catch (...)
             {
@@ -367,7 +395,11 @@ namespace py::cpp::Windows::Gaming::Input::Preview
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetExtendedDeviceInfo());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetExtendedDeviceInfo();
+                }());
             }
             catch (...)
             {
@@ -405,7 +437,11 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Input::Preview::HeadsetOperation>(args, 0);
 
-                return py::convert(self->obj.GetHeadsetOperation(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetHeadsetOperation(param0);
+                }());
             }
             catch (...)
             {
@@ -444,7 +480,11 @@ namespace py::cpp::Windows::Gaming::Input::Preview
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                return py::convert(self->obj.GetStandardControllerButtonRemapping(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetStandardControllerButtonRemapping(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -483,7 +523,11 @@ namespace py::cpp::Windows::Gaming::Input::Preview
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(winrt::Windows::Gaming::Input::Preview::LegacyGipGameControllerProvider::IsCopilot(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Gaming::Input::Preview::LegacyGipGameControllerProvider::IsCopilot(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -521,7 +565,11 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
-                return py::convert(self->obj.IsInterfaceSupported(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsInterfaceSupported(param0);
+                }());
             }
             catch (...)
             {
@@ -560,7 +608,11 @@ namespace py::cpp::Windows::Gaming::Input::Preview
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(winrt::Windows::Gaming::Input::Preview::LegacyGipGameControllerProvider::IsPilot(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Gaming::Input::Preview::LegacyGipGameControllerProvider::IsPilot(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -600,7 +652,11 @@ namespace py::cpp::Windows::Gaming::Input::Preview
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
-                winrt::Windows::Gaming::Input::Preview::LegacyGipGameControllerProvider::PairPilotToCopilot(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Gaming::Input::Preview::LegacyGipGameControllerProvider::PairPilotToCopilot(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -640,7 +696,11 @@ namespace py::cpp::Windows::Gaming::Input::Preview
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Input::Preview::HeadsetOperation>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 1);
 
-                self->obj.SetHeadsetOperation(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetHeadsetOperation(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -679,7 +739,11 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
                 auto param0 = py::convert_to<uint8_t>(args, 0);
 
-                self->obj.SetHomeLedIntensity(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetHomeLedIntensity(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -720,7 +784,11 @@ namespace py::cpp::Windows::Gaming::Input::Preview
                 auto param1 = py::convert_to<bool>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Collections::IMapView<winrt::Windows::Gaming::Input::Preview::RemappingButtonCategory, winrt::Windows::Foundation::IInspectable>>(args, 2);
 
-                self->obj.SetStandardControllerButtonRemapping(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetStandardControllerButtonRemapping(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -753,7 +821,11 @@ namespace py::cpp::Windows::Gaming::Input::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppCompatVersion());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppCompatVersion();
+            }());
         }
         catch (...)
         {
@@ -779,7 +851,11 @@ namespace py::cpp::Windows::Gaming::Input::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.BatteryChargingState());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BatteryChargingState();
+            }());
         }
         catch (...)
         {
@@ -805,7 +881,11 @@ namespace py::cpp::Windows::Gaming::Input::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.BatteryKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BatteryKind();
+            }());
         }
         catch (...)
         {
@@ -831,7 +911,11 @@ namespace py::cpp::Windows::Gaming::Input::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.BatteryLevel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BatteryLevel();
+            }());
         }
         catch (...)
         {
@@ -857,7 +941,11 @@ namespace py::cpp::Windows::Gaming::Input::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsFirmwareCorrupted());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsFirmwareCorrupted();
+            }());
         }
         catch (...)
         {
@@ -883,7 +971,11 @@ namespace py::cpp::Windows::Gaming::Input::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsSyntheticDevice());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsSyntheticDevice();
+            }());
         }
         catch (...)
         {
@@ -909,7 +1001,11 @@ namespace py::cpp::Windows::Gaming::Input::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.PreferredTypes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PreferredTypes();
+            }());
         }
         catch (...)
         {

@@ -66,7 +66,11 @@ namespace py::cpp::Windows::Devices::Gpio
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -103,7 +107,11 @@ namespace py::cpp::Windows::Devices::Gpio
                     return nullptr;
                 }
 
-                return py::convert(self->obj.Read());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Read();
+                }());
             }
             catch (...)
             {
@@ -139,7 +147,11 @@ namespace py::cpp::Windows::Devices::Gpio
                     return nullptr;
                 }
 
-                return py::convert(self->obj.Reset());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Reset();
+                }());
             }
             catch (...)
             {
@@ -175,7 +187,11 @@ namespace py::cpp::Windows::Devices::Gpio
                     return nullptr;
                 }
 
-                self->obj.Start();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Start();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -212,7 +228,11 @@ namespace py::cpp::Windows::Devices::Gpio
                     return nullptr;
                 }
 
-                self->obj.Stop();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Stop();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -245,7 +265,11 @@ namespace py::cpp::Windows::Devices::Gpio
                 return nullptr;
             }
 
-            return py::convert(self->obj.Polarity());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Polarity();
+            }());
         }
         catch (...)
         {
@@ -279,7 +303,11 @@ namespace py::cpp::Windows::Devices::Gpio
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Gpio::GpioChangePolarity>(arg);
 
-            self->obj.Polarity(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Polarity(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -306,7 +334,11 @@ namespace py::cpp::Windows::Devices::Gpio
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsStarted());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsStarted();
+            }());
         }
         catch (...)
         {
@@ -348,7 +380,11 @@ namespace py::cpp::Windows::Devices::Gpio
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -470,7 +506,11 @@ namespace py::cpp::Windows::Devices::Gpio
                     return nullptr;
                 }
 
-                self->obj.Clear();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Clear();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -507,7 +547,11 @@ namespace py::cpp::Windows::Devices::Gpio
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -544,7 +588,11 @@ namespace py::cpp::Windows::Devices::Gpio
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetAllItems());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAllItems();
+                }());
             }
             catch (...)
             {
@@ -580,7 +628,11 @@ namespace py::cpp::Windows::Devices::Gpio
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetNextItem());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetNextItem();
+                }());
             }
             catch (...)
             {
@@ -616,7 +668,11 @@ namespace py::cpp::Windows::Devices::Gpio
                     return nullptr;
                 }
 
-                return py::convert(self->obj.PeekNextItem());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.PeekNextItem();
+                }());
             }
             catch (...)
             {
@@ -652,7 +708,11 @@ namespace py::cpp::Windows::Devices::Gpio
                     return nullptr;
                 }
 
-                self->obj.Start();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Start();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -689,7 +749,11 @@ namespace py::cpp::Windows::Devices::Gpio
                     return nullptr;
                 }
 
-                self->obj.Stop();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Stop();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -728,7 +792,11 @@ namespace py::cpp::Windows::Devices::Gpio
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                return py::convert(self->obj.WaitForItemsAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.WaitForItemsAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -760,7 +828,11 @@ namespace py::cpp::Windows::Devices::Gpio
                 return nullptr;
             }
 
-            return py::convert(self->obj.Polarity());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Polarity();
+            }());
         }
         catch (...)
         {
@@ -794,7 +866,11 @@ namespace py::cpp::Windows::Devices::Gpio
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Gpio::GpioChangePolarity>(arg);
 
-            self->obj.Polarity(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Polarity(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -821,7 +897,11 @@ namespace py::cpp::Windows::Devices::Gpio
                 return nullptr;
             }
 
-            return py::convert(self->obj.Capacity());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Capacity();
+            }());
         }
         catch (...)
         {
@@ -847,7 +927,11 @@ namespace py::cpp::Windows::Devices::Gpio
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsEmpty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsEmpty();
+            }());
         }
         catch (...)
         {
@@ -873,7 +957,11 @@ namespace py::cpp::Windows::Devices::Gpio
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsOverflowed());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsOverflowed();
+            }());
         }
         catch (...)
         {
@@ -899,7 +987,11 @@ namespace py::cpp::Windows::Devices::Gpio
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsStarted());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsStarted();
+            }());
         }
         catch (...)
         {
@@ -925,7 +1017,11 @@ namespace py::cpp::Windows::Devices::Gpio
                 return nullptr;
             }
 
-            return py::convert(self->obj.Length());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Length();
+            }());
         }
         catch (...)
         {
@@ -967,7 +1063,11 @@ namespace py::cpp::Windows::Devices::Gpio
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -1058,7 +1158,11 @@ namespace py::cpp::Windows::Devices::Gpio
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Gpio::Provider::IGpioProvider>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Gpio::GpioController::GetControllersAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Gpio::GpioController::GetControllersAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1094,7 +1198,11 @@ namespace py::cpp::Windows::Devices::Gpio
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Gpio::GpioController::GetDefault());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Gpio::GpioController::GetDefault();
+                }());
             }
             catch (...)
             {
@@ -1130,7 +1238,11 @@ namespace py::cpp::Windows::Devices::Gpio
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Gpio::GpioController::GetDefaultAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Gpio::GpioController::GetDefaultAsync();
+                }());
             }
             catch (...)
             {
@@ -1168,7 +1280,11 @@ namespace py::cpp::Windows::Devices::Gpio
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                return py::convert(self->obj.OpenPin(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.OpenPin(param0);
+                }());
             }
             catch (...)
             {
@@ -1207,7 +1323,11 @@ namespace py::cpp::Windows::Devices::Gpio
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Gpio::GpioSharingMode>(args, 1);
 
-                return py::convert(self->obj.OpenPin(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.OpenPin(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1248,7 +1368,11 @@ namespace py::cpp::Windows::Devices::Gpio
                 winrt::Windows::Devices::Gpio::GpioPin param2{nullptr};
                 winrt::Windows::Devices::Gpio::GpioOpenStatus param3{};
 
-                auto return_value = self->obj.TryOpenPin(param0, param1, param2, param3);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryOpenPin(param0, param1, param2, param3);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -1265,6 +1389,7 @@ namespace py::cpp::Windows::Devices::Gpio
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(3, out_return_value.get(), out2.get(), out3.get());
             }
             catch (...)
@@ -1297,7 +1422,11 @@ namespace py::cpp::Windows::Devices::Gpio
                 return nullptr;
             }
 
-            return py::convert(self->obj.PinCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PinCount();
+            }());
         }
         catch (...)
         {
@@ -1425,7 +1554,11 @@ namespace py::cpp::Windows::Devices::Gpio
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1462,7 +1595,11 @@ namespace py::cpp::Windows::Devices::Gpio
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDriveMode());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDriveMode();
+                }());
             }
             catch (...)
             {
@@ -1500,7 +1637,11 @@ namespace py::cpp::Windows::Devices::Gpio
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Gpio::GpioPinDriveMode>(args, 0);
 
-                return py::convert(self->obj.IsDriveModeSupported(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsDriveModeSupported(param0);
+                }());
             }
             catch (...)
             {
@@ -1536,7 +1677,11 @@ namespace py::cpp::Windows::Devices::Gpio
                     return nullptr;
                 }
 
-                return py::convert(self->obj.Read());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Read();
+                }());
             }
             catch (...)
             {
@@ -1574,7 +1719,11 @@ namespace py::cpp::Windows::Devices::Gpio
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Gpio::GpioPinDriveMode>(args, 0);
 
-                self->obj.SetDriveMode(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetDriveMode(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1613,7 +1762,11 @@ namespace py::cpp::Windows::Devices::Gpio
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Gpio::GpioPinValue>(args, 0);
 
-                self->obj.Write(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Write(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1646,7 +1799,11 @@ namespace py::cpp::Windows::Devices::Gpio
                 return nullptr;
             }
 
-            return py::convert(self->obj.DebounceTimeout());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DebounceTimeout();
+            }());
         }
         catch (...)
         {
@@ -1680,7 +1837,11 @@ namespace py::cpp::Windows::Devices::Gpio
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
-            self->obj.DebounceTimeout(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DebounceTimeout(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1707,7 +1868,11 @@ namespace py::cpp::Windows::Devices::Gpio
                 return nullptr;
             }
 
-            return py::convert(self->obj.PinNumber());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PinNumber();
+            }());
         }
         catch (...)
         {
@@ -1733,7 +1898,11 @@ namespace py::cpp::Windows::Devices::Gpio
                 return nullptr;
             }
 
-            return py::convert(self->obj.SharingMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SharingMode();
+            }());
         }
         catch (...)
         {
@@ -1761,7 +1930,11 @@ namespace py::cpp::Windows::Devices::Gpio
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Gpio::GpioPin, winrt::Windows::Devices::Gpio::GpioPinValueChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.ValueChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ValueChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -1789,7 +1962,11 @@ namespace py::cpp::Windows::Devices::Gpio
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ValueChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ValueChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1832,7 +2009,11 @@ namespace py::cpp::Windows::Devices::Gpio
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -1914,7 +2095,11 @@ namespace py::cpp::Windows::Devices::Gpio
                 return nullptr;
             }
 
-            return py::convert(self->obj.Edge());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Edge();
+            }());
         }
         catch (...)
         {

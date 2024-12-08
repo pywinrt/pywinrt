@@ -44,7 +44,11 @@ namespace py::cpp::Windows::Devices::Pwm
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Pwm::PwmController::FromIdAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Pwm::PwmController::FromIdAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -82,7 +86,11 @@ namespace py::cpp::Windows::Devices::Pwm
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Pwm::Provider::IPwmProvider>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Pwm::PwmController::GetControllersAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Pwm::PwmController::GetControllersAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -118,7 +126,11 @@ namespace py::cpp::Windows::Devices::Pwm
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Pwm::PwmController::GetDefaultAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Pwm::PwmController::GetDefaultAsync();
+                }());
             }
             catch (...)
             {
@@ -154,7 +166,11 @@ namespace py::cpp::Windows::Devices::Pwm
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Pwm::PwmController::GetDeviceSelector());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Pwm::PwmController::GetDeviceSelector();
+                }());
             }
             catch (...)
             {
@@ -192,7 +208,11 @@ namespace py::cpp::Windows::Devices::Pwm
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Pwm::PwmController::GetDeviceSelector(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Pwm::PwmController::GetDeviceSelector(param0);
+                }());
             }
             catch (...)
             {
@@ -230,7 +250,11 @@ namespace py::cpp::Windows::Devices::Pwm
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                return py::convert(self->obj.OpenPin(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.OpenPin(param0);
+                }());
             }
             catch (...)
             {
@@ -268,7 +292,11 @@ namespace py::cpp::Windows::Devices::Pwm
 
                 auto param0 = py::convert_to<double>(args, 0);
 
-                return py::convert(self->obj.SetDesiredFrequency(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SetDesiredFrequency(param0);
+                }());
             }
             catch (...)
             {
@@ -300,7 +328,11 @@ namespace py::cpp::Windows::Devices::Pwm
                 return nullptr;
             }
 
-            return py::convert(self->obj.ActualFrequency());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ActualFrequency();
+            }());
         }
         catch (...)
         {
@@ -326,7 +358,11 @@ namespace py::cpp::Windows::Devices::Pwm
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxFrequency());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxFrequency();
+            }());
         }
         catch (...)
         {
@@ -352,7 +388,11 @@ namespace py::cpp::Windows::Devices::Pwm
                 return nullptr;
             }
 
-            return py::convert(self->obj.MinFrequency());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MinFrequency();
+            }());
         }
         catch (...)
         {
@@ -378,7 +418,11 @@ namespace py::cpp::Windows::Devices::Pwm
                 return nullptr;
             }
 
-            return py::convert(self->obj.PinCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PinCount();
+            }());
         }
         catch (...)
         {
@@ -510,7 +554,11 @@ namespace py::cpp::Windows::Devices::Pwm
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -547,7 +595,11 @@ namespace py::cpp::Windows::Devices::Pwm
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetActiveDutyCyclePercentage());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetActiveDutyCyclePercentage();
+                }());
             }
             catch (...)
             {
@@ -585,7 +637,11 @@ namespace py::cpp::Windows::Devices::Pwm
 
                 auto param0 = py::convert_to<double>(args, 0);
 
-                self->obj.SetActiveDutyCyclePercentage(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetActiveDutyCyclePercentage(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -622,7 +678,11 @@ namespace py::cpp::Windows::Devices::Pwm
                     return nullptr;
                 }
 
-                self->obj.Start();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Start();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -659,7 +719,11 @@ namespace py::cpp::Windows::Devices::Pwm
                     return nullptr;
                 }
 
-                self->obj.Stop();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Stop();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -692,7 +756,11 @@ namespace py::cpp::Windows::Devices::Pwm
                 return nullptr;
             }
 
-            return py::convert(self->obj.Polarity());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Polarity();
+            }());
         }
         catch (...)
         {
@@ -726,7 +794,11 @@ namespace py::cpp::Windows::Devices::Pwm
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Pwm::PwmPulsePolarity>(arg);
 
-            self->obj.Polarity(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Polarity(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -753,7 +825,11 @@ namespace py::cpp::Windows::Devices::Pwm
                 return nullptr;
             }
 
-            return py::convert(self->obj.Controller());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Controller();
+            }());
         }
         catch (...)
         {
@@ -779,7 +855,11 @@ namespace py::cpp::Windows::Devices::Pwm
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsStarted());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsStarted();
+            }());
         }
         catch (...)
         {
@@ -821,7 +901,11 @@ namespace py::cpp::Windows::Devices::Pwm
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)

@@ -38,7 +38,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -131,7 +135,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                 return nullptr;
             }
 
-            return py::convert(self->obj.Result());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Result();
+            }());
         }
         catch (...)
         {
@@ -228,7 +236,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CancelAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CancelAsync();
+                }());
             }
             catch (...)
             {
@@ -264,7 +276,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                     return nullptr;
                 }
 
-                return py::convert(self->obj.PauseAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.PauseAsync();
+                }());
             }
             catch (...)
             {
@@ -300,7 +316,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                     return nullptr;
                 }
 
-                self->obj.Resume();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Resume();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -337,7 +357,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                     return nullptr;
                 }
 
-                return py::convert(self->obj.StartAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.StartAsync();
+                }());
             }
             catch (...)
             {
@@ -375,7 +399,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
                 auto param0 = py::convert_to<winrt::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionMode>(args, 0);
 
-                return py::convert(self->obj.StartAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.StartAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -411,7 +439,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                     return nullptr;
                 }
 
-                return py::convert(self->obj.StopAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.StopAsync();
+                }());
             }
             catch (...)
             {
@@ -443,7 +475,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                 return nullptr;
             }
 
-            return py::convert(self->obj.AutoStopSilenceTimeout());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AutoStopSilenceTimeout();
+            }());
         }
         catch (...)
         {
@@ -477,7 +513,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
-            self->obj.AutoStopSilenceTimeout(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AutoStopSilenceTimeout(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -506,7 +546,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionSession, winrt::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionCompletedEventArgs>>(arg);
 
-            return py::convert(self->obj.Completed(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Completed(param0);
+            }());
         }
         catch (...)
         {
@@ -534,7 +578,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Completed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Completed(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -563,7 +611,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionSession, winrt::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionResultGeneratedEventArgs>>(arg);
 
-            return py::convert(self->obj.ResultGenerated(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResultGenerated(param0);
+            }());
         }
         catch (...)
         {
@@ -591,7 +643,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ResultGenerated(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ResultGenerated(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -695,7 +751,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -828,7 +888,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                 return nullptr;
             }
 
-            return py::convert(self->obj.Tag());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Tag();
+            }());
         }
         catch (...)
         {
@@ -862,7 +926,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Tag(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Tag(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -889,7 +957,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                 return nullptr;
             }
 
-            return py::convert(self->obj.Probability());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Probability();
+            }());
         }
         catch (...)
         {
@@ -923,7 +995,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
             auto param0 = py::convert_to<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionConstraintProbability>(arg);
 
-            self->obj.Probability(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Probability(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -950,7 +1026,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsEnabled();
+            }());
         }
         catch (...)
         {
@@ -984,7 +1064,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1011,7 +1095,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                 return nullptr;
             }
 
-            return py::convert(self->obj.Type());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Type();
+            }());
         }
         catch (...)
         {
@@ -1037,7 +1125,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                 return nullptr;
             }
 
-            return py::convert(self->obj.GrammarFile());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.GrammarFile();
+            }());
         }
         catch (...)
         {
@@ -1134,7 +1226,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                 return nullptr;
             }
 
-            return py::convert(self->obj.Text());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Text();
+            }());
         }
         catch (...)
         {
@@ -1227,7 +1323,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                 return nullptr;
             }
 
-            return py::convert(self->obj.Hypothesis());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Hypothesis();
+            }());
         }
         catch (...)
         {
@@ -1360,7 +1460,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                 return nullptr;
             }
 
-            return py::convert(self->obj.Tag());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Tag();
+            }());
         }
         catch (...)
         {
@@ -1394,7 +1498,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Tag(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Tag(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1421,7 +1529,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                 return nullptr;
             }
 
-            return py::convert(self->obj.Probability());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Probability();
+            }());
         }
         catch (...)
         {
@@ -1455,7 +1567,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
             auto param0 = py::convert_to<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionConstraintProbability>(arg);
 
-            self->obj.Probability(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Probability(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1482,7 +1598,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsEnabled();
+            }());
         }
         catch (...)
         {
@@ -1516,7 +1636,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1543,7 +1667,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                 return nullptr;
             }
 
-            return py::convert(self->obj.Type());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Type();
+            }());
         }
         catch (...)
         {
@@ -1569,7 +1697,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                 return nullptr;
             }
 
-            return py::convert(self->obj.Commands());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Commands();
+            }());
         }
         catch (...)
         {
@@ -1666,7 +1798,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                 return nullptr;
             }
 
-            return py::convert(self->obj.Problem());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Problem();
+            }());
         }
         catch (...)
         {
@@ -1765,7 +1901,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(self->obj.GetAlternates(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAlternates(param0);
+                }());
             }
             catch (...)
             {
@@ -1797,7 +1937,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                 return nullptr;
             }
 
-            return py::convert(self->obj.Confidence());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Confidence();
+            }());
         }
         catch (...)
         {
@@ -1823,7 +1967,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                 return nullptr;
             }
 
-            return py::convert(self->obj.Constraint());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Constraint();
+            }());
         }
         catch (...)
         {
@@ -1849,7 +1997,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                 return nullptr;
             }
 
-            return py::convert(self->obj.RawConfidence());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RawConfidence();
+            }());
         }
         catch (...)
         {
@@ -1875,7 +2027,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                 return nullptr;
             }
 
-            return py::convert(self->obj.RulePath());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RulePath();
+            }());
         }
         catch (...)
         {
@@ -1901,7 +2057,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                 return nullptr;
             }
 
-            return py::convert(self->obj.SemanticInterpretation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SemanticInterpretation();
+            }());
         }
         catch (...)
         {
@@ -1927,7 +2087,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -1953,7 +2117,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                 return nullptr;
             }
 
-            return py::convert(self->obj.Text());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Text();
+            }());
         }
         catch (...)
         {
@@ -1979,7 +2147,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                 return nullptr;
             }
 
-            return py::convert(self->obj.PhraseDuration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PhraseDuration();
+            }());
         }
         catch (...)
         {
@@ -2005,7 +2177,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                 return nullptr;
             }
 
-            return py::convert(self->obj.PhraseStartTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PhraseStartTime();
+            }());
         }
         catch (...)
         {
@@ -2107,7 +2283,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                 return nullptr;
             }
 
-            return py::convert(self->obj.Properties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Properties();
+            }());
         }
         catch (...)
         {
@@ -2242,7 +2422,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                 return nullptr;
             }
 
-            return py::convert(self->obj.Tag());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Tag();
+            }());
         }
         catch (...)
         {
@@ -2276,7 +2460,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Tag(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Tag(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2303,7 +2491,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                 return nullptr;
             }
 
-            return py::convert(self->obj.Probability());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Probability();
+            }());
         }
         catch (...)
         {
@@ -2337,7 +2529,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
             auto param0 = py::convert_to<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionConstraintProbability>(arg);
 
-            self->obj.Probability(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Probability(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2364,7 +2560,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsEnabled();
+            }());
         }
         catch (...)
         {
@@ -2398,7 +2598,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2425,7 +2629,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                 return nullptr;
             }
 
-            return py::convert(self->obj.Type());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Type();
+            }());
         }
         catch (...)
         {
@@ -2451,7 +2659,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                 return nullptr;
             }
 
-            return py::convert(self->obj.Scenario());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Scenario();
+            }());
         }
         catch (...)
         {
@@ -2477,7 +2689,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                 return nullptr;
             }
 
-            return py::convert(self->obj.TopicHint());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TopicHint();
+            }());
         }
         catch (...)
         {
@@ -2575,7 +2791,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                 return nullptr;
             }
 
-            return py::convert(self->obj.Tag());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Tag();
+            }());
         }
         catch (...)
         {
@@ -2609,7 +2829,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Tag(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Tag(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2636,7 +2860,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                 return nullptr;
             }
 
-            return py::convert(self->obj.Probability());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Probability();
+            }());
         }
         catch (...)
         {
@@ -2670,7 +2898,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
             auto param0 = py::convert_to<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionConstraintProbability>(arg);
 
-            self->obj.Probability(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Probability(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2697,7 +2929,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsEnabled();
+            }());
         }
         catch (...)
         {
@@ -2731,7 +2967,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2758,7 +2998,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                 return nullptr;
             }
 
-            return py::convert(self->obj.Type());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Type();
+            }());
         }
         catch (...)
         {
@@ -2895,7 +3139,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2932,7 +3180,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CompileConstraintsAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CompileConstraintsAsync();
+                }());
             }
             catch (...)
             {
@@ -2968,7 +3220,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                     return nullptr;
                 }
 
-                return py::convert(self->obj.RecognizeAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RecognizeAsync();
+                }());
             }
             catch (...)
             {
@@ -3004,7 +3260,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                     return nullptr;
                 }
 
-                return py::convert(self->obj.RecognizeWithUIAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RecognizeWithUIAsync();
+                }());
             }
             catch (...)
             {
@@ -3040,7 +3300,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                     return nullptr;
                 }
 
-                return py::convert(self->obj.StopRecognitionAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.StopRecognitionAsync();
+                }());
             }
             catch (...)
             {
@@ -3078,7 +3342,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
                 auto param0 = py::convert_to<winrt::Windows::Globalization::Language>(args, 0);
 
-                return py::convert(winrt::Windows::Media::SpeechRecognition::SpeechRecognizer::TrySetSystemSpeechLanguageAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::SpeechRecognition::SpeechRecognizer::TrySetSystemSpeechLanguageAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -3110,7 +3378,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                 return nullptr;
             }
 
-            return py::convert(self->obj.Constraints());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Constraints();
+            }());
         }
         catch (...)
         {
@@ -3136,7 +3408,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                 return nullptr;
             }
 
-            return py::convert(self->obj.CurrentLanguage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CurrentLanguage();
+            }());
         }
         catch (...)
         {
@@ -3162,7 +3438,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timeouts());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timeouts();
+            }());
         }
         catch (...)
         {
@@ -3188,7 +3468,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                 return nullptr;
             }
 
-            return py::convert(self->obj.UIOptions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UIOptions();
+            }());
         }
         catch (...)
         {
@@ -3214,7 +3498,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContinuousRecognitionSession());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContinuousRecognitionSession();
+            }());
         }
         catch (...)
         {
@@ -3240,7 +3528,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                 return nullptr;
             }
 
-            return py::convert(self->obj.State());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.State();
+            }());
         }
         catch (...)
         {
@@ -3266,7 +3558,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::SpeechRecognition::SpeechRecognizer::SupportedGrammarLanguages());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::SpeechRecognition::SpeechRecognizer::SupportedGrammarLanguages();
+            }());
         }
         catch (...)
         {
@@ -3292,7 +3588,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::SpeechRecognition::SpeechRecognizer::SupportedTopicLanguages());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::SpeechRecognition::SpeechRecognizer::SupportedTopicLanguages();
+            }());
         }
         catch (...)
         {
@@ -3318,7 +3618,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::SpeechRecognition::SpeechRecognizer::SystemSpeechLanguage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::SpeechRecognition::SpeechRecognizer::SystemSpeechLanguage();
+            }());
         }
         catch (...)
         {
@@ -3346,7 +3650,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::SpeechRecognition::SpeechRecognizer, winrt::Windows::Media::SpeechRecognition::SpeechRecognitionQualityDegradingEventArgs>>(arg);
 
-            return py::convert(self->obj.RecognitionQualityDegrading(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RecognitionQualityDegrading(param0);
+            }());
         }
         catch (...)
         {
@@ -3374,7 +3682,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.RecognitionQualityDegrading(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RecognitionQualityDegrading(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3403,7 +3715,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::SpeechRecognition::SpeechRecognizer, winrt::Windows::Media::SpeechRecognition::SpeechRecognizerStateChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.StateChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StateChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -3431,7 +3747,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.StateChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StateChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3460,7 +3780,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::SpeechRecognition::SpeechRecognizer, winrt::Windows::Media::SpeechRecognition::SpeechRecognitionHypothesisGeneratedEventArgs>>(arg);
 
-            return py::convert(self->obj.HypothesisGenerated(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HypothesisGenerated(param0);
+            }());
         }
         catch (...)
         {
@@ -3488,7 +3812,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.HypothesisGenerated(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.HypothesisGenerated(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3531,7 +3859,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -3648,7 +3980,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                 return nullptr;
             }
 
-            return py::convert(self->obj.State());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.State();
+            }());
         }
         catch (...)
         {
@@ -3741,7 +4077,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                 return nullptr;
             }
 
-            return py::convert(self->obj.InitialSilenceTimeout());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InitialSilenceTimeout();
+            }());
         }
         catch (...)
         {
@@ -3775,7 +4115,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
-            self->obj.InitialSilenceTimeout(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.InitialSilenceTimeout(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3802,7 +4146,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                 return nullptr;
             }
 
-            return py::convert(self->obj.EndSilenceTimeout());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EndSilenceTimeout();
+            }());
         }
         catch (...)
         {
@@ -3836,7 +4184,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
-            self->obj.EndSilenceTimeout(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.EndSilenceTimeout(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3863,7 +4215,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                 return nullptr;
             }
 
-            return py::convert(self->obj.BabbleTimeout());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BabbleTimeout();
+            }());
         }
         catch (...)
         {
@@ -3897,7 +4253,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
-            self->obj.BabbleTimeout(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.BabbleTimeout(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3993,7 +4353,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                 return nullptr;
             }
 
-            return py::convert(self->obj.ShowConfirmation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ShowConfirmation();
+            }());
         }
         catch (...)
         {
@@ -4027,7 +4391,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.ShowConfirmation(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ShowConfirmation(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4054,7 +4422,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsReadBackEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsReadBackEnabled();
+            }());
         }
         catch (...)
         {
@@ -4088,7 +4460,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsReadBackEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsReadBackEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4115,7 +4491,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExampleText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExampleText();
+            }());
         }
         catch (...)
         {
@@ -4149,7 +4529,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ExampleText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ExampleText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4176,7 +4560,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                 return nullptr;
             }
 
-            return py::convert(self->obj.AudiblePrompt());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AudiblePrompt();
+            }());
         }
         catch (...)
         {
@@ -4210,7 +4598,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.AudiblePrompt(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AudiblePrompt(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4305,7 +4697,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::StorageFile>(args, 0);
 
-                return py::convert(winrt::Windows::Media::SpeechRecognition::VoiceCommandManager::InstallCommandSetsFromStorageFileAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::SpeechRecognition::VoiceCommandManager::InstallCommandSetsFromStorageFileAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -4337,7 +4733,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Media::SpeechRecognition::VoiceCommandManager::InstalledCommandSets());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Media::SpeechRecognition::VoiceCommandManager::InstalledCommandSets();
+            }());
         }
         catch (...)
         {
@@ -4436,7 +4836,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 1);
 
-                return py::convert(self->obj.SetPhraseListAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SetPhraseListAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -4468,7 +4872,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                 return nullptr;
             }
 
-            return py::convert(self->obj.Language());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Language();
+            }());
         }
         catch (...)
         {
@@ -4494,7 +4902,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -4589,7 +5001,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsEnabled();
+            }());
         }
         catch (...)
         {
@@ -4623,7 +5039,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4650,7 +5070,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                 return nullptr;
             }
 
-            return py::convert(self->obj.Probability());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Probability();
+            }());
         }
         catch (...)
         {
@@ -4684,7 +5108,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
             auto param0 = py::convert_to<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionConstraintProbability>(arg);
 
-            self->obj.Probability(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Probability(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4711,7 +5139,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                 return nullptr;
             }
 
-            return py::convert(self->obj.Tag());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Tag();
+            }());
         }
         catch (...)
         {
@@ -4745,7 +5177,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Tag(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Tag(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4772,7 +5208,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                 return nullptr;
             }
 
-            return py::convert(self->obj.Type());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Type();
+            }());
         }
         catch (...)
         {

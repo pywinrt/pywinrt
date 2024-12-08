@@ -62,7 +62,11 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
                 return nullptr;
             }
 
-            return py::convert(self->obj.Json());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Json();
+            }());
         }
         catch (...)
         {
@@ -157,7 +161,11 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::Implementation::FileExplorer::ISysStorageProviderEventSource, winrt::Windows::System::Implementation::FileExplorer::SysStorageProviderEventReceivedEventArgs>>(arg);
 
-            return py::convert(self->obj.EventReceived(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EventReceived(param0);
+            }());
         }
         catch (...)
         {
@@ -185,7 +193,11 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.EventReceived(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.EventReceived(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -411,7 +423,11 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.GetEventSource(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetEventSource(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -449,7 +465,11 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetHttpRequestProvider(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetHttpRequestProvider(param0);
+                }());
             }
             catch (...)
             {
@@ -693,7 +713,11 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
 
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::HttpRequestMessage>(args, 0);
 
-                return py::convert(self->obj.SendRequestAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SendRequestAsync(param0);
+                }());
             }
             catch (...)
             {

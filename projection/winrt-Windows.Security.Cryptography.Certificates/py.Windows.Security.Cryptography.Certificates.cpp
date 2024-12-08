@@ -68,7 +68,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Security::Cryptography::Certificates::Certificate>>(args, 0);
 
-                return py::convert(self->obj.BuildChainAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.BuildChainAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -107,7 +111,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Security::Cryptography::Certificates::Certificate>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::ChainBuildingParameters>(args, 1);
 
-                return py::convert(self->obj.BuildChainAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.BuildChainAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -143,7 +151,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetCertificateBlob());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetCertificateBlob();
+                }());
             }
             catch (...)
             {
@@ -179,7 +191,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetHashValue());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetHashValue();
+                }());
             }
             catch (...)
             {
@@ -217,7 +233,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetHashValue(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetHashValue(param0);
+                }());
             }
             catch (...)
             {
@@ -249,7 +269,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.FriendlyName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FriendlyName();
+            }());
         }
         catch (...)
         {
@@ -283,7 +307,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.FriendlyName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.FriendlyName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -310,7 +338,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.EnhancedKeyUsages());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EnhancedKeyUsages();
+            }());
         }
         catch (...)
         {
@@ -336,7 +368,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.HasPrivateKey());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HasPrivateKey();
+            }());
         }
         catch (...)
         {
@@ -362,7 +398,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsStronglyProtected());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsStronglyProtected();
+            }());
         }
         catch (...)
         {
@@ -388,7 +428,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.Issuer());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Issuer();
+            }());
         }
         catch (...)
         {
@@ -414,7 +458,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.SerialNumber());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SerialNumber();
+            }());
         }
         catch (...)
         {
@@ -440,7 +488,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.Subject());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Subject();
+            }());
         }
         catch (...)
         {
@@ -466,7 +518,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.ValidFrom());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ValidFrom();
+            }());
         }
         catch (...)
         {
@@ -492,7 +548,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.ValidTo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ValidTo();
+            }());
         }
         catch (...)
         {
@@ -518,7 +578,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsSecurityDeviceBound());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsSecurityDeviceBound();
+            }());
         }
         catch (...)
         {
@@ -544,7 +608,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.KeyAlgorithmName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.KeyAlgorithmName();
+            }());
         }
         catch (...)
         {
@@ -570,7 +638,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.KeyUsages());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.KeyUsages();
+            }());
         }
         catch (...)
         {
@@ -596,7 +668,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.SignatureAlgorithmName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SignatureAlgorithmName();
+            }());
         }
         catch (...)
         {
@@ -622,7 +698,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.SignatureHashAlgorithmName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SignatureHashAlgorithmName();
+            }());
         }
         catch (...)
         {
@@ -648,7 +728,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.SubjectAlternativeName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SubjectAlternativeName();
+            }());
         }
         catch (...)
         {
@@ -674,7 +758,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsPerUser());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsPerUser();
+            }());
         }
         catch (...)
         {
@@ -700,7 +788,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.KeyStorageProviderName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.KeyStorageProviderName();
+            }());
         }
         catch (...)
         {
@@ -726,7 +818,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.StoreName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StoreName();
+            }());
         }
         catch (...)
         {
@@ -847,7 +943,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
                 auto param0 = py::convert_to<bool>(args, 0);
 
-                return py::convert(self->obj.GetCertificates(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetCertificates(param0);
+                }());
             }
             catch (...)
             {
@@ -883,7 +983,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                     return nullptr;
                 }
 
-                return py::convert(self->obj.Validate());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Validate();
+                }());
             }
             catch (...)
             {
@@ -921,7 +1025,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
                 auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::ChainValidationParameters>(args, 0);
 
-                return py::convert(self->obj.Validate(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Validate(param0);
+                }());
             }
             catch (...)
             {
@@ -1020,7 +1128,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
                 auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::CertificateRequestProperties>(args, 0);
 
-                return py::convert(winrt::Windows::Security::Cryptography::Certificates::CertificateEnrollmentManager::CreateRequestAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Cryptography::Certificates::CertificateEnrollmentManager::CreateRequestAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1063,7 +1175,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 auto param4 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::InstallOptions>(args, 4);
                 auto param5 = py::convert_to<winrt::hstring>(args, 5);
 
-                return py::convert(winrt::Windows::Security::Cryptography::Certificates::CertificateEnrollmentManager::ImportPfxDataAsync(param0, param1, param2, param3, param4, param5));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Cryptography::Certificates::CertificateEnrollmentManager::ImportPfxDataAsync(param0, param1, param2, param3, param4, param5);
+                }());
             }
             catch (...)
             {
@@ -1107,7 +1223,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 auto param5 = py::convert_to<winrt::hstring>(args, 5);
                 auto param6 = py::convert_to<winrt::hstring>(args, 6);
 
-                return py::convert(winrt::Windows::Security::Cryptography::Certificates::CertificateEnrollmentManager::ImportPfxDataAsync(param0, param1, param2, param3, param4, param5, param6));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Cryptography::Certificates::CertificateEnrollmentManager::ImportPfxDataAsync(param0, param1, param2, param3, param4, param5, param6);
+                }());
             }
             catch (...)
             {
@@ -1147,7 +1267,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::PfxImportParameters>(args, 2);
 
-                return py::convert(winrt::Windows::Security::Cryptography::Certificates::CertificateEnrollmentManager::ImportPfxDataAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Cryptography::Certificates::CertificateEnrollmentManager::ImportPfxDataAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -1186,7 +1310,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::InstallOptions>(args, 1);
 
-                return py::convert(winrt::Windows::Security::Cryptography::Certificates::CertificateEnrollmentManager::InstallCertificateAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Cryptography::Certificates::CertificateEnrollmentManager::InstallCertificateAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1218,7 +1346,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Certificates::CertificateEnrollmentManager::UserCertificateEnrollmentManager());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Certificates::CertificateEnrollmentManager::UserCertificateEnrollmentManager();
+            }());
         }
         catch (...)
         {
@@ -1342,7 +1474,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.EncodeValue(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.EncodeValue(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1375,7 +1511,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.Value());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Value();
+            }());
         }
         catch (...)
         {
@@ -1409,7 +1549,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
             auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(arg);
 
-            self->obj.Value(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Value(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1436,7 +1580,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.ObjectId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ObjectId();
+            }());
         }
         catch (...)
         {
@@ -1470,7 +1618,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ObjectId(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ObjectId(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1497,7 +1649,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsCritical());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsCritical();
+            }());
         }
         catch (...)
         {
@@ -1531,7 +1687,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsCritical(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsCritical(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1650,7 +1810,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.NonRepudiation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NonRepudiation();
+            }());
         }
         catch (...)
         {
@@ -1684,7 +1848,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.NonRepudiation(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NonRepudiation(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1711,7 +1879,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.KeyEncipherment());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.KeyEncipherment();
+            }());
         }
         catch (...)
         {
@@ -1745,7 +1917,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.KeyEncipherment(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.KeyEncipherment(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1772,7 +1948,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.KeyCertificateSign());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.KeyCertificateSign();
+            }());
         }
         catch (...)
         {
@@ -1806,7 +1986,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.KeyCertificateSign(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.KeyCertificateSign(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1833,7 +2017,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.KeyAgreement());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.KeyAgreement();
+            }());
         }
         catch (...)
         {
@@ -1867,7 +2055,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.KeyAgreement(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.KeyAgreement(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1894,7 +2086,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.EncipherOnly());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EncipherOnly();
+            }());
         }
         catch (...)
         {
@@ -1928,7 +2124,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.EncipherOnly(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.EncipherOnly(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1955,7 +2155,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.DigitalSignature());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DigitalSignature();
+            }());
         }
         catch (...)
         {
@@ -1989,7 +2193,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.DigitalSignature(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DigitalSignature(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2016,7 +2224,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.DataEncipherment());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DataEncipherment();
+            }());
         }
         catch (...)
         {
@@ -2050,7 +2262,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.DataEncipherment(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DataEncipherment(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2077,7 +2293,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.CrlSign());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CrlSign();
+            }());
         }
         catch (...)
         {
@@ -2111,7 +2331,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.CrlSign(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CrlSign(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2234,7 +2458,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.Thumbprint());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Thumbprint();
+            }());
         }
         catch (...)
         {
@@ -2268,7 +2496,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
             auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(arg);
 
-            self->obj.Thumbprint(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Thumbprint(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2295,7 +2527,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.IssuerName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IssuerName();
+            }());
         }
         catch (...)
         {
@@ -2329,7 +2565,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.IssuerName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IssuerName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2356,7 +2596,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.HardwareOnly());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HardwareOnly();
+            }());
         }
         catch (...)
         {
@@ -2390,7 +2634,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.HardwareOnly(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.HardwareOnly(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2417,7 +2665,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.FriendlyName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FriendlyName();
+            }());
         }
         catch (...)
         {
@@ -2451,7 +2703,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.FriendlyName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.FriendlyName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2478,7 +2734,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.EnhancedKeyUsages());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EnhancedKeyUsages();
+            }());
         }
         catch (...)
         {
@@ -2504,7 +2764,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.StoreName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StoreName();
+            }());
         }
         catch (...)
         {
@@ -2538,7 +2802,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.StoreName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StoreName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2565,7 +2833,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.IncludeExpiredCertificates());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IncludeExpiredCertificates();
+            }());
         }
         catch (...)
         {
@@ -2599,7 +2871,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IncludeExpiredCertificates(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IncludeExpiredCertificates(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2626,7 +2902,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.IncludeDuplicates());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IncludeDuplicates();
+            }());
         }
         catch (...)
         {
@@ -2660,7 +2940,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IncludeDuplicates(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IncludeDuplicates(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2783,7 +3067,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.Subject());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Subject();
+            }());
         }
         catch (...)
         {
@@ -2817,7 +3105,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Subject(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Subject(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2844,7 +3136,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.KeyUsages());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.KeyUsages();
+            }());
         }
         catch (...)
         {
@@ -2878,7 +3174,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
             auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::EnrollKeyUsages>(arg);
 
-            self->obj.KeyUsages(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.KeyUsages(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2905,7 +3205,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.KeyStorageProviderName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.KeyStorageProviderName();
+            }());
         }
         catch (...)
         {
@@ -2939,7 +3243,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.KeyStorageProviderName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.KeyStorageProviderName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2966,7 +3274,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.KeySize());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.KeySize();
+            }());
         }
         catch (...)
         {
@@ -3000,7 +3312,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.KeySize(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.KeySize(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3027,7 +3343,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.Exportable());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Exportable();
+            }());
         }
         catch (...)
         {
@@ -3061,7 +3381,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
             auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::ExportOption>(arg);
 
-            self->obj.Exportable(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Exportable(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3088,7 +3412,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.KeyProtectionLevel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.KeyProtectionLevel();
+            }());
         }
         catch (...)
         {
@@ -3122,7 +3450,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
             auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::KeyProtectionLevel>(arg);
 
-            self->obj.KeyProtectionLevel(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.KeyProtectionLevel(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3149,7 +3481,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.KeyAlgorithmName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.KeyAlgorithmName();
+            }());
         }
         catch (...)
         {
@@ -3183,7 +3519,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.KeyAlgorithmName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.KeyAlgorithmName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3210,7 +3550,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.HashAlgorithmName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HashAlgorithmName();
+            }());
         }
         catch (...)
         {
@@ -3244,7 +3588,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.HashAlgorithmName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.HashAlgorithmName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3271,7 +3619,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.FriendlyName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FriendlyName();
+            }());
         }
         catch (...)
         {
@@ -3305,7 +3657,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.FriendlyName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.FriendlyName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3332,7 +3688,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.AttestationCredentialCertificate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AttestationCredentialCertificate();
+            }());
         }
         catch (...)
         {
@@ -3366,7 +3726,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
             auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::Certificate>(arg);
 
-            self->obj.AttestationCredentialCertificate(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AttestationCredentialCertificate(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3393,7 +3757,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.SigningCertificate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SigningCertificate();
+            }());
         }
         catch (...)
         {
@@ -3427,7 +3795,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
             auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::Certificate>(arg);
 
-            self->obj.SigningCertificate(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SigningCertificate(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3454,7 +3826,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.SmartcardReaderName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SmartcardReaderName();
+            }());
         }
         catch (...)
         {
@@ -3488,7 +3864,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.SmartcardReaderName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SmartcardReaderName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3515,7 +3895,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.UseExistingKey());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UseExistingKey();
+            }());
         }
         catch (...)
         {
@@ -3549,7 +3933,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.UseExistingKey(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.UseExistingKey(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3576,7 +3964,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.CurveParameters());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CurveParameters();
+            }());
         }
         catch (...)
         {
@@ -3610,7 +4002,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
             auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(arg);
 
-            self->obj.CurveParameters(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CurveParameters(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3637,7 +4033,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.CurveName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CurveName();
+            }());
         }
         catch (...)
         {
@@ -3671,7 +4071,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.CurveName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CurveName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3698,7 +4102,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContainerNamePrefix());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContainerNamePrefix();
+            }());
         }
         catch (...)
         {
@@ -3732,7 +4140,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ContainerNamePrefix(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ContainerNamePrefix(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3759,7 +4171,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContainerName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContainerName();
+            }());
         }
         catch (...)
         {
@@ -3793,7 +4209,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ContainerName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ContainerName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3820,7 +4240,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.Extensions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Extensions();
+            }());
         }
         catch (...)
         {
@@ -3846,7 +4270,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.SubjectAlternativeName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SubjectAlternativeName();
+            }());
         }
         catch (...)
         {
@@ -3872,7 +4300,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.SuppressedDefaults());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SuppressedDefaults();
+            }());
         }
         catch (...)
         {
@@ -3990,7 +4422,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
                 auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::Certificate>(args, 0);
 
-                self->obj.Add(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Add(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4029,7 +4465,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
                 auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::Certificate>(args, 0);
 
-                self->obj.Delete(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Delete(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4062,7 +4502,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -4153,7 +4597,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Security::Cryptography::Certificates::CertificateStores::FindAllAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Cryptography::Certificates::CertificateStores::FindAllAsync();
+                }());
             }
             catch (...)
             {
@@ -4191,7 +4639,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
                 auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::CertificateQuery>(args, 0);
 
-                return py::convert(winrt::Windows::Security::Cryptography::Certificates::CertificateStores::FindAllAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Cryptography::Certificates::CertificateStores::FindAllAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -4229,7 +4681,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Security::Cryptography::Certificates::CertificateStores::GetStoreByName(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Cryptography::Certificates::CertificateStores::GetStoreByName(param0);
+                }());
             }
             catch (...)
             {
@@ -4267,7 +4723,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Security::Cryptography::Certificates::CertificateStores::GetUserStoreByName(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Cryptography::Certificates::CertificateStores::GetUserStoreByName(param0);
+                }());
             }
             catch (...)
             {
@@ -4299,7 +4759,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Certificates::CertificateStores::IntermediateCertificationAuthorities());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Certificates::CertificateStores::IntermediateCertificationAuthorities();
+            }());
         }
         catch (...)
         {
@@ -4325,7 +4789,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Certificates::CertificateStores::TrustedRootCertificationAuthorities());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Certificates::CertificateStores::TrustedRootCertificationAuthorities();
+            }());
         }
         catch (...)
         {
@@ -4443,7 +4911,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.ValidationTimestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ValidationTimestamp();
+            }());
         }
         catch (...)
         {
@@ -4477,7 +4949,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(arg);
 
-            self->obj.ValidationTimestamp(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ValidationTimestamp(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4504,7 +4980,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.RevocationCheckEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RevocationCheckEnabled();
+            }());
         }
         catch (...)
         {
@@ -4538,7 +5018,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.RevocationCheckEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RevocationCheckEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4565,7 +5049,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.NetworkRetrievalEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NetworkRetrievalEnabled();
+            }());
         }
         catch (...)
         {
@@ -4599,7 +5087,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.NetworkRetrievalEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NetworkRetrievalEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4626,7 +5118,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.CurrentTimeValidationEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CurrentTimeValidationEnabled();
+            }());
         }
         catch (...)
         {
@@ -4660,7 +5156,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.CurrentTimeValidationEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CurrentTimeValidationEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4687,7 +5187,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.AuthorityInformationAccessEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AuthorityInformationAccessEnabled();
+            }());
         }
         catch (...)
         {
@@ -4721,7 +5225,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.AuthorityInformationAccessEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AuthorityInformationAccessEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4748,7 +5256,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.EnhancedKeyUsages());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EnhancedKeyUsages();
+            }());
         }
         catch (...)
         {
@@ -4774,7 +5286,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExclusiveTrustRoots());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExclusiveTrustRoots();
+            }());
         }
         catch (...)
         {
@@ -4895,7 +5411,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.ServerDnsName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServerDnsName();
+            }());
         }
         catch (...)
         {
@@ -4929,7 +5449,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
             auto param0 = py::convert_to<winrt::Windows::Networking::HostName>(arg);
 
-            self->obj.ServerDnsName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ServerDnsName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4956,7 +5480,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.CertificateChainPolicy());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CertificateChainPolicy();
+            }());
         }
         catch (...)
         {
@@ -4990,7 +5518,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
             auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::CertificateChainPolicy>(arg);
 
-            self->obj.CertificateChainPolicy(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CertificateChainPolicy(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5117,7 +5649,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Security::Cryptography::Certificates::CmsSignerInfo>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Security::Cryptography::Certificates::Certificate>>(args, 2);
 
-                return py::convert(winrt::Windows::Security::Cryptography::Certificates::CmsAttachedSignature::GenerateSignatureAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Cryptography::Certificates::CmsAttachedSignature::GenerateSignatureAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -5153,7 +5689,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                     return nullptr;
                 }
 
-                return py::convert(self->obj.VerifySignature());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.VerifySignature();
+                }());
             }
             catch (...)
             {
@@ -5185,7 +5725,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.Certificates());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Certificates();
+            }());
         }
         catch (...)
         {
@@ -5211,7 +5755,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.Content());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Content();
+            }());
         }
         catch (...)
         {
@@ -5237,7 +5785,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.Signers());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Signers();
+            }());
         }
         catch (...)
         {
@@ -5391,7 +5943,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Security::Cryptography::Certificates::CmsSignerInfo>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Security::Cryptography::Certificates::Certificate>>(args, 2);
 
-                return py::convert(winrt::Windows::Security::Cryptography::Certificates::CmsDetachedSignature::GenerateSignatureAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Cryptography::Certificates::CmsDetachedSignature::GenerateSignatureAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -5429,7 +5985,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 0);
 
-                return py::convert(self->obj.VerifySignatureAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.VerifySignatureAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -5461,7 +6021,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.Certificates());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Certificates();
+            }());
         }
         catch (...)
         {
@@ -5487,7 +6051,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.Signers());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Signers();
+            }());
         }
         catch (...)
         {
@@ -5630,7 +6198,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.HashAlgorithmName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HashAlgorithmName();
+            }());
         }
         catch (...)
         {
@@ -5664,7 +6236,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.HashAlgorithmName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.HashAlgorithmName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5691,7 +6267,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.Certificate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Certificate();
+            }());
         }
         catch (...)
         {
@@ -5725,7 +6305,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
             auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::Certificate>(arg);
 
-            self->obj.Certificate(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Certificate(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5752,7 +6336,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.TimestampInfo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TimestampInfo();
+            }());
         }
         catch (...)
         {
@@ -5847,7 +6435,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.Certificates());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Certificates();
+            }());
         }
         catch (...)
         {
@@ -5873,7 +6465,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.SigningCertificate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SigningCertificate();
+            }());
         }
         catch (...)
         {
@@ -5899,7 +6495,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -5986,7 +6586,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Certificates::KeyAlgorithmNames::Dsa());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Certificates::KeyAlgorithmNames::Dsa();
+            }());
         }
         catch (...)
         {
@@ -6012,7 +6616,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Certificates::KeyAlgorithmNames::Ecdh256());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Certificates::KeyAlgorithmNames::Ecdh256();
+            }());
         }
         catch (...)
         {
@@ -6038,7 +6646,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Certificates::KeyAlgorithmNames::Ecdh384());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Certificates::KeyAlgorithmNames::Ecdh384();
+            }());
         }
         catch (...)
         {
@@ -6064,7 +6676,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Certificates::KeyAlgorithmNames::Ecdh521());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Certificates::KeyAlgorithmNames::Ecdh521();
+            }());
         }
         catch (...)
         {
@@ -6090,7 +6706,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Certificates::KeyAlgorithmNames::Ecdsa256());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Certificates::KeyAlgorithmNames::Ecdsa256();
+            }());
         }
         catch (...)
         {
@@ -6116,7 +6736,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Certificates::KeyAlgorithmNames::Ecdsa384());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Certificates::KeyAlgorithmNames::Ecdsa384();
+            }());
         }
         catch (...)
         {
@@ -6142,7 +6766,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Certificates::KeyAlgorithmNames::Ecdsa521());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Certificates::KeyAlgorithmNames::Ecdsa521();
+            }());
         }
         catch (...)
         {
@@ -6168,7 +6796,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Certificates::KeyAlgorithmNames::Rsa());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Certificates::KeyAlgorithmNames::Rsa();
+            }());
         }
         catch (...)
         {
@@ -6194,7 +6826,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Certificates::KeyAlgorithmNames::Ecdh());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Certificates::KeyAlgorithmNames::Ecdh();
+            }());
         }
         catch (...)
         {
@@ -6220,7 +6856,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Certificates::KeyAlgorithmNames::Ecdsa());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Certificates::KeyAlgorithmNames::Ecdsa();
+            }());
         }
         catch (...)
         {
@@ -6318,7 +6958,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Security::Cryptography::Certificates::KeyAttestationHelper::DecryptTpmAttestationCredentialAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Cryptography::Certificates::KeyAttestationHelper::DecryptTpmAttestationCredentialAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -6357,7 +7001,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(winrt::Windows::Security::Cryptography::Certificates::KeyAttestationHelper::DecryptTpmAttestationCredentialAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Cryptography::Certificates::KeyAttestationHelper::DecryptTpmAttestationCredentialAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -6395,7 +7043,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Security::Cryptography::Certificates::KeyAttestationHelper::GetTpmAttestationCredentialId(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Cryptography::Certificates::KeyAttestationHelper::GetTpmAttestationCredentialId(param0);
+                }());
             }
             catch (...)
             {
@@ -6486,7 +7138,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Certificates::KeyStorageProviderNames::PlatformKeyStorageProvider());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Certificates::KeyStorageProviderNames::PlatformKeyStorageProvider();
+            }());
         }
         catch (...)
         {
@@ -6512,7 +7168,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Certificates::KeyStorageProviderNames::SmartcardKeyStorageProvider());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Certificates::KeyStorageProviderNames::SmartcardKeyStorageProvider();
+            }());
         }
         catch (...)
         {
@@ -6538,7 +7198,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Certificates::KeyStorageProviderNames::SoftwareKeyStorageProvider());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Certificates::KeyStorageProviderNames::SoftwareKeyStorageProvider();
+            }());
         }
         catch (...)
         {
@@ -6564,7 +7228,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Certificates::KeyStorageProviderNames::PassportKeyStorageProvider());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Certificates::KeyStorageProviderNames::PassportKeyStorageProvider();
+            }());
         }
         catch (...)
         {
@@ -6680,7 +7348,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReaderName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReaderName();
+            }());
         }
         catch (...)
         {
@@ -6714,7 +7386,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ReaderName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReaderName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6741,7 +7417,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.KeyStorageProviderName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.KeyStorageProviderName();
+            }());
         }
         catch (...)
         {
@@ -6775,7 +7455,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.KeyStorageProviderName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.KeyStorageProviderName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6802,7 +7486,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.KeyProtectionLevel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.KeyProtectionLevel();
+            }());
         }
         catch (...)
         {
@@ -6836,7 +7524,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
             auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::KeyProtectionLevel>(arg);
 
-            self->obj.KeyProtectionLevel(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.KeyProtectionLevel(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6863,7 +7555,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.InstallOptions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InstallOptions();
+            }());
         }
         catch (...)
         {
@@ -6897,7 +7593,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
             auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::InstallOptions>(arg);
 
-            self->obj.InstallOptions(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.InstallOptions(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6924,7 +7624,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.FriendlyName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FriendlyName();
+            }());
         }
         catch (...)
         {
@@ -6958,7 +7662,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.FriendlyName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.FriendlyName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6985,7 +7693,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.Exportable());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Exportable();
+            }());
         }
         catch (...)
         {
@@ -7019,7 +7731,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
             auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::ExportOption>(arg);
 
-            self->obj.Exportable(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Exportable(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7046,7 +7762,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContainerNamePrefix());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContainerNamePrefix();
+            }());
         }
         catch (...)
         {
@@ -7080,7 +7800,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ContainerNamePrefix(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ContainerNamePrefix(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7172,7 +7896,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Certificates::StandardCertificateStoreNames::IntermediateCertificationAuthorities());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Certificates::StandardCertificateStoreNames::IntermediateCertificationAuthorities();
+            }());
         }
         catch (...)
         {
@@ -7198,7 +7926,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Certificates::StandardCertificateStoreNames::Personal());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Certificates::StandardCertificateStoreNames::Personal();
+            }());
         }
         catch (...)
         {
@@ -7224,7 +7956,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Cryptography::Certificates::StandardCertificateStoreNames::TrustedRootCertificationAuthorities());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Cryptography::Certificates::StandardCertificateStoreNames::TrustedRootCertificationAuthorities();
+            }());
         }
         catch (...)
         {
@@ -7339,7 +8075,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.DistinguishedName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DistinguishedName();
+            }());
         }
         catch (...)
         {
@@ -7365,7 +8105,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.DnsName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DnsName();
+            }());
         }
         catch (...)
         {
@@ -7391,7 +8135,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.EmailName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EmailName();
+            }());
         }
         catch (...)
         {
@@ -7417,7 +8165,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.IPAddress());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IPAddress();
+            }());
         }
         catch (...)
         {
@@ -7443,7 +8195,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.PrincipalName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PrincipalName();
+            }());
         }
         catch (...)
         {
@@ -7469,7 +8225,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.Url());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Url();
+            }());
         }
         catch (...)
         {
@@ -7495,7 +8255,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.DistinguishedNames());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DistinguishedNames();
+            }());
         }
         catch (...)
         {
@@ -7521,7 +8285,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.DnsNames());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DnsNames();
+            }());
         }
         catch (...)
         {
@@ -7547,7 +8315,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.EmailNames());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EmailNames();
+            }());
         }
         catch (...)
         {
@@ -7573,7 +8345,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.Extension());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Extension();
+            }());
         }
         catch (...)
         {
@@ -7599,7 +8375,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.IPAddresses());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IPAddresses();
+            }());
         }
         catch (...)
         {
@@ -7625,7 +8405,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.PrincipalNames());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PrincipalNames();
+            }());
         }
         catch (...)
         {
@@ -7651,7 +8435,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.Urls());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Urls();
+            }());
         }
         catch (...)
         {
@@ -7762,7 +8550,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
                 auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::CertificateRequestProperties>(args, 0);
 
-                return py::convert(self->obj.CreateRequestAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateRequestAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -7805,7 +8597,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 auto param4 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::InstallOptions>(args, 4);
                 auto param5 = py::convert_to<winrt::hstring>(args, 5);
 
-                return py::convert(self->obj.ImportPfxDataAsync(param0, param1, param2, param3, param4, param5));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ImportPfxDataAsync(param0, param1, param2, param3, param4, param5);
+                }());
             }
             catch (...)
             {
@@ -7849,7 +8645,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 auto param5 = py::convert_to<winrt::hstring>(args, 5);
                 auto param6 = py::convert_to<winrt::hstring>(args, 6);
 
-                return py::convert(self->obj.ImportPfxDataAsync(param0, param1, param2, param3, param4, param5, param6));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ImportPfxDataAsync(param0, param1, param2, param3, param4, param5, param6);
+                }());
             }
             catch (...)
             {
@@ -7889,7 +8689,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::PfxImportParameters>(args, 2);
 
-                return py::convert(self->obj.ImportPfxDataAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ImportPfxDataAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -7928,7 +8732,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::InstallOptions>(args, 1);
 
-                return py::convert(self->obj.InstallCertificateAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.InstallCertificateAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -8037,7 +8845,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
                 auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::Certificate>(args, 0);
 
-                return py::convert(self->obj.RequestAddAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestAddAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -8075,7 +8887,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
                 auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::Certificate>(args, 0);
 
-                return py::convert(self->obj.RequestDeleteAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestDeleteAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -8107,7 +8923,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {

@@ -32,7 +32,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                self->obj.AddHostObjectToScript(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddHostObjectToScript(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -58,7 +62,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.AddScriptToExecuteOnDocumentCreatedAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.AddScriptToExecuteOnDocumentCreatedAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -84,7 +92,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceContext>(args, 1);
 
-                self->obj.AddWebResourceRequestedFilter(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddWebResourceRequestedFilter(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -101,7 +113,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
                 auto param1 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceContext>(args, 1);
                 auto param2 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceRequestSourceKinds>(args, 2);
 
-                self->obj.AddWebResourceRequestedFilter(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddWebResourceRequestedFilter(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -128,7 +144,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.CallDevToolsProtocolMethodAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CallDevToolsProtocolMethodAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -155,7 +175,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
-                return py::convert(self->obj.CallDevToolsProtocolMethodForSessionAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CallDevToolsProtocolMethodForSessionAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -181,7 +205,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
                 auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2CapturePreviewImageFormat>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 1);
 
-                return py::convert(self->obj.CapturePreviewAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CapturePreviewAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -204,7 +232,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             try
             {
-                return py::convert(self->obj.ClearServerCertificateErrorActionsAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ClearServerCertificateErrorActionsAsync();
+                }());
             }
             catch (...)
             {
@@ -229,7 +261,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.ClearVirtualHostNameToFolderMapping(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ClearVirtualHostNameToFolderMapping(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -253,7 +289,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             try
             {
-                self->obj.CloseDefaultDownloadDialog();
+                {
+                    auto _gil = release_gil();
+                    self->obj.CloseDefaultDownloadDialog();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -279,7 +319,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.ExecuteScriptAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ExecuteScriptAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -304,7 +348,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.ExecuteScriptWithResultAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ExecuteScriptWithResultAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -329,7 +377,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetDevToolsProtocolEventReceiver(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDevToolsProtocolEventReceiver(param0);
+                }());
             }
             catch (...)
             {
@@ -354,7 +406,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
             {
                 auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2FaviconImageFormat>(args, 0);
 
-                return py::convert(self->obj.GetFaviconAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetFaviconAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -377,7 +433,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             try
             {
-                self->obj.GoBack();
+                {
+                    auto _gil = release_gil();
+                    self->obj.GoBack();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -401,7 +461,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             try
             {
-                self->obj.GoForward();
+                {
+                    auto _gil = release_gil();
+                    self->obj.GoForward();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -427,7 +491,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.Navigate(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Navigate(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -453,7 +521,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.NavigateToString(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.NavigateToString(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -479,7 +551,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
             {
                 auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceRequest>(args, 0);
 
-                self->obj.NavigateWithWebResourceRequest(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.NavigateWithWebResourceRequest(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -503,7 +579,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             try
             {
-                self->obj.OpenDefaultDownloadDialog();
+                {
+                    auto _gil = release_gil();
+                    self->obj.OpenDefaultDownloadDialog();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -527,7 +607,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             try
             {
-                self->obj.OpenDevToolsWindow();
+                {
+                    auto _gil = release_gil();
+                    self->obj.OpenDevToolsWindow();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -551,7 +635,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             try
             {
-                self->obj.OpenTaskManagerWindow();
+                {
+                    auto _gil = release_gil();
+                    self->obj.OpenTaskManagerWindow();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -579,7 +667,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
                 auto param1 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2SharedBufferAccess>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
-                self->obj.PostSharedBufferToScript(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.PostSharedBufferToScript(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -605,7 +697,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.PostWebMessageAsJson(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.PostWebMessageAsJson(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -621,7 +717,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Foundation::IInspectable>>(args, 1);
 
-                self->obj.PostWebMessageAsJson(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.PostWebMessageAsJson(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -647,7 +747,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.PostWebMessageAsString(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.PostWebMessageAsString(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -673,7 +777,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
             {
                 auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings>(args, 0);
 
-                return py::convert(self->obj.PrintAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.PrintAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -699,7 +807,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings>(args, 1);
 
-                return py::convert(self->obj.PrintToPdfAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.PrintToPdfAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -724,7 +836,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
             {
                 auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings>(args, 0);
 
-                return py::convert(self->obj.PrintToPdfStreamAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.PrintToPdfStreamAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -747,7 +863,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             try
             {
-                self->obj.Reload();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Reload();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -773,7 +893,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.RemoveHostObjectFromScript(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveHostObjectFromScript(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -799,7 +923,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.RemoveScriptToExecuteOnDocumentCreated(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveScriptToExecuteOnDocumentCreated(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -826,7 +954,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceContext>(args, 1);
 
-                self->obj.RemoveWebResourceRequestedFilter(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveWebResourceRequestedFilter(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -843,7 +975,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
                 auto param1 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceContext>(args, 1);
                 auto param2 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceRequestSourceKinds>(args, 2);
 
-                self->obj.RemoveWebResourceRequestedFilter(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveWebResourceRequestedFilter(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -867,7 +1003,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             try
             {
-                self->obj.Resume();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Resume();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -895,7 +1035,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2HostResourceAccessKind>(args, 2);
 
-                self->obj.SetVirtualHostNameToFolderMapping(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetVirtualHostNameToFolderMapping(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -921,7 +1065,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
             {
                 auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2PrintDialogKind>(args, 0);
 
-                self->obj.ShowPrintUI(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ShowPrintUI(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -945,7 +1093,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             try
             {
-                return py::convert(self->obj.ShowSaveAsUIAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ShowSaveAsUIAsync();
+                }());
             }
             catch (...)
             {
@@ -968,7 +1120,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             try
             {
-                self->obj.Stop();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Stop();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -992,7 +1148,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             try
             {
-                return py::convert(self->obj.TrySuspendAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TrySuspendAsync();
+                }());
             }
             catch (...)
             {
@@ -1011,7 +1171,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.BrowserProcessId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BrowserProcessId();
+            }());
         }
         catch (...)
         {
@@ -1024,7 +1188,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.CanGoBack());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CanGoBack();
+            }());
         }
         catch (...)
         {
@@ -1037,7 +1205,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.CanGoForward());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CanGoForward();
+            }());
         }
         catch (...)
         {
@@ -1050,7 +1222,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.ContainsFullScreenElement());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContainsFullScreenElement();
+            }());
         }
         catch (...)
         {
@@ -1063,7 +1239,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.DocumentTitle());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DocumentTitle();
+            }());
         }
         catch (...)
         {
@@ -1076,7 +1256,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Settings());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Settings();
+            }());
         }
         catch (...)
         {
@@ -1089,7 +1273,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Source());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Source();
+            }());
         }
         catch (...)
         {
@@ -1102,7 +1290,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.StatusBarText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StatusBarText();
+            }());
         }
         catch (...)
         {
@@ -1115,7 +1307,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Profile());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Profile();
+            }());
         }
         catch (...)
         {
@@ -1128,7 +1324,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.FaviconUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FaviconUri();
+            }());
         }
         catch (...)
         {
@@ -1141,7 +1341,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.MemoryUsageTargetLevel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MemoryUsageTargetLevel();
+            }());
         }
         catch (...)
         {
@@ -1162,7 +1366,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2MemoryUsageTargetLevel>(arg);
 
-            self->obj.MemoryUsageTargetLevel(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MemoryUsageTargetLevel(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1176,7 +1384,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.CookieManager());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CookieManager();
+            }());
         }
         catch (...)
         {
@@ -1189,7 +1401,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Environment());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Environment();
+            }());
         }
         catch (...)
         {
@@ -1202,7 +1418,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.FrameId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FrameId();
+            }());
         }
         catch (...)
         {
@@ -1215,7 +1435,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.IsSuspended());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsSuspended();
+            }());
         }
         catch (...)
         {
@@ -1228,7 +1452,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.IsMuted());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsMuted();
+            }());
         }
         catch (...)
         {
@@ -1249,7 +1477,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsMuted(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsMuted(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1263,7 +1495,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.IsDocumentPlayingAudio());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsDocumentPlayingAudio();
+            }());
         }
         catch (...)
         {
@@ -1276,7 +1512,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.DefaultDownloadDialogMargin());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DefaultDownloadDialogMargin();
+            }());
         }
         catch (...)
         {
@@ -1297,7 +1537,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(arg);
 
-            self->obj.DefaultDownloadDialogMargin(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DefaultDownloadDialogMargin(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1311,7 +1555,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.DefaultDownloadDialogCornerAlignment());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DefaultDownloadDialogCornerAlignment();
+            }());
         }
         catch (...)
         {
@@ -1332,7 +1580,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2DefaultDownloadDialogCornerAlignment>(arg);
 
-            self->obj.DefaultDownloadDialogCornerAlignment(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DefaultDownloadDialogCornerAlignment(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1346,7 +1598,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.IsDefaultDownloadDialogOpen());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsDefaultDownloadDialogOpen();
+            }());
         }
         catch (...)
         {
@@ -1361,7 +1617,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2BasicAuthenticationRequestedEventArgs>>(arg);
 
-            return py::convert(self->obj.BasicAuthenticationRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BasicAuthenticationRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -1376,7 +1636,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.BasicAuthenticationRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.BasicAuthenticationRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1392,7 +1656,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2ContextMenuRequestedEventArgs>>(arg);
 
-            return py::convert(self->obj.ContextMenuRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContextMenuRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -1407,7 +1675,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ContextMenuRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ContextMenuRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1423,7 +1695,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.StatusBarTextChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StatusBarTextChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -1438,7 +1714,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.StatusBarTextChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StatusBarTextChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1454,7 +1734,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2ServerCertificateErrorDetectedEventArgs>>(arg);
 
-            return py::convert(self->obj.ServerCertificateErrorDetected(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServerCertificateErrorDetected(param0);
+            }());
         }
         catch (...)
         {
@@ -1469,7 +1753,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ServerCertificateErrorDetected(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ServerCertificateErrorDetected(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1485,7 +1773,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.FaviconChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FaviconChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -1500,7 +1792,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.FaviconChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.FaviconChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1516,7 +1812,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2LaunchingExternalUriSchemeEventArgs>>(arg);
 
-            return py::convert(self->obj.LaunchingExternalUriScheme(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LaunchingExternalUriScheme(param0);
+            }());
         }
         catch (...)
         {
@@ -1531,7 +1831,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.LaunchingExternalUriScheme(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.LaunchingExternalUriScheme(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1547,7 +1851,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2DOMContentLoadedEventArgs>>(arg);
 
-            return py::convert(self->obj.DOMContentLoaded(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DOMContentLoaded(param0);
+            }());
         }
         catch (...)
         {
@@ -1562,7 +1870,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.DOMContentLoaded(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DOMContentLoaded(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1578,7 +1890,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceResponseReceivedEventArgs>>(arg);
 
-            return py::convert(self->obj.WebResourceResponseReceived(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WebResourceResponseReceived(param0);
+            }());
         }
         catch (...)
         {
@@ -1593,7 +1909,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.WebResourceResponseReceived(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.WebResourceResponseReceived(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1609,7 +1929,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2NotificationReceivedEventArgs>>(arg);
 
-            return py::convert(self->obj.NotificationReceived(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NotificationReceived(param0);
+            }());
         }
         catch (...)
         {
@@ -1624,7 +1948,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.NotificationReceived(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NotificationReceived(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1640,7 +1968,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2SaveAsUIShowingEventArgs>>(arg);
 
-            return py::convert(self->obj.SaveAsUIShowing(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SaveAsUIShowing(param0);
+            }());
         }
         catch (...)
         {
@@ -1655,7 +1987,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.SaveAsUIShowing(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SaveAsUIShowing(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1671,7 +2007,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2DownloadStartingEventArgs>>(arg);
 
-            return py::convert(self->obj.DownloadStarting(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DownloadStarting(param0);
+            }());
         }
         catch (...)
         {
@@ -1686,7 +2026,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.DownloadStarting(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DownloadStarting(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1702,7 +2046,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2FrameCreatedEventArgs>>(arg);
 
-            return py::convert(self->obj.FrameCreated(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FrameCreated(param0);
+            }());
         }
         catch (...)
         {
@@ -1717,7 +2065,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.FrameCreated(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.FrameCreated(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1733,7 +2085,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2ClientCertificateRequestedEventArgs>>(arg);
 
-            return py::convert(self->obj.ClientCertificateRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ClientCertificateRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -1748,7 +2104,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ClientCertificateRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ClientCertificateRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1764,7 +2124,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.IsDocumentPlayingAudioChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsDocumentPlayingAudioChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -1779,7 +2143,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.IsDocumentPlayingAudioChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsDocumentPlayingAudioChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1795,7 +2163,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.IsMutedChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsMutedChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -1810,7 +2182,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.IsMutedChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsMutedChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1826,7 +2202,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.IsDefaultDownloadDialogOpenChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsDefaultDownloadDialogOpenChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -1841,7 +2221,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.IsDefaultDownloadDialogOpenChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsDefaultDownloadDialogOpenChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1857,7 +2241,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.ContainsFullScreenElementChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContainsFullScreenElementChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -1872,7 +2260,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ContainsFullScreenElementChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ContainsFullScreenElementChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1888,7 +2280,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2ContentLoadingEventArgs>>(arg);
 
-            return py::convert(self->obj.ContentLoading(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContentLoading(param0);
+            }());
         }
         catch (...)
         {
@@ -1903,7 +2299,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ContentLoading(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ContentLoading(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1919,7 +2319,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.DocumentTitleChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DocumentTitleChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -1934,7 +2338,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.DocumentTitleChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DocumentTitleChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1950,7 +2358,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2NavigationCompletedEventArgs>>(arg);
 
-            return py::convert(self->obj.FrameNavigationCompleted(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FrameNavigationCompleted(param0);
+            }());
         }
         catch (...)
         {
@@ -1965,7 +2377,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.FrameNavigationCompleted(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.FrameNavigationCompleted(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1981,7 +2397,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2NavigationStartingEventArgs>>(arg);
 
-            return py::convert(self->obj.FrameNavigationStarting(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FrameNavigationStarting(param0);
+            }());
         }
         catch (...)
         {
@@ -1996,7 +2416,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.FrameNavigationStarting(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.FrameNavigationStarting(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2012,7 +2436,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.HistoryChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HistoryChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -2027,7 +2455,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.HistoryChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.HistoryChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2043,7 +2475,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2NavigationCompletedEventArgs>>(arg);
 
-            return py::convert(self->obj.NavigationCompleted(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NavigationCompleted(param0);
+            }());
         }
         catch (...)
         {
@@ -2058,7 +2494,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.NavigationCompleted(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NavigationCompleted(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2074,7 +2514,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2NavigationStartingEventArgs>>(arg);
 
-            return py::convert(self->obj.NavigationStarting(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NavigationStarting(param0);
+            }());
         }
         catch (...)
         {
@@ -2089,7 +2533,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.NavigationStarting(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NavigationStarting(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2105,7 +2553,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2NewWindowRequestedEventArgs>>(arg);
 
-            return py::convert(self->obj.NewWindowRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NewWindowRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -2120,7 +2572,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.NewWindowRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NewWindowRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2136,7 +2592,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2PermissionRequestedEventArgs>>(arg);
 
-            return py::convert(self->obj.PermissionRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PermissionRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -2151,7 +2611,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.PermissionRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PermissionRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2167,7 +2631,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2ProcessFailedEventArgs>>(arg);
 
-            return py::convert(self->obj.ProcessFailed(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProcessFailed(param0);
+            }());
         }
         catch (...)
         {
@@ -2182,7 +2650,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ProcessFailed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ProcessFailed(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2198,7 +2670,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2ScriptDialogOpeningEventArgs>>(arg);
 
-            return py::convert(self->obj.ScriptDialogOpening(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ScriptDialogOpening(param0);
+            }());
         }
         catch (...)
         {
@@ -2213,7 +2689,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ScriptDialogOpening(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ScriptDialogOpening(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2229,7 +2709,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2SourceChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.SourceChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SourceChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -2244,7 +2728,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.SourceChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SourceChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2260,7 +2748,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2WebMessageReceivedEventArgs>>(arg);
 
-            return py::convert(self->obj.WebMessageReceived(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WebMessageReceived(param0);
+            }());
         }
         catch (...)
         {
@@ -2275,7 +2767,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.WebMessageReceived(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.WebMessageReceived(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2291,7 +2787,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceRequestedEventArgs>>(arg);
 
-            return py::convert(self->obj.WebResourceRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WebResourceRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -2306,7 +2806,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.WebResourceRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.WebResourceRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2322,7 +2826,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.WindowCloseRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WindowCloseRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -2337,7 +2845,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.WindowCloseRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.WindowCloseRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2538,7 +3050,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Handled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Handled();
+            }());
         }
         catch (...)
         {
@@ -2559,7 +3075,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Handled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Handled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2573,7 +3093,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.KeyEventKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.KeyEventKind();
+            }());
         }
         catch (...)
         {
@@ -2586,7 +3110,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.KeyEventLParam());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.KeyEventLParam();
+            }());
         }
         catch (...)
         {
@@ -2599,7 +3127,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.PhysicalKeyStatus());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PhysicalKeyStatus();
+            }());
         }
         catch (...)
         {
@@ -2612,7 +3144,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.VirtualKey());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.VirtualKey();
+            }());
         }
         catch (...)
         {
@@ -2625,7 +3161,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.IsBrowserAcceleratorKeyEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsBrowserAcceleratorKeyEnabled();
+            }());
         }
         catch (...)
         {
@@ -2646,7 +3186,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsBrowserAcceleratorKeyEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsBrowserAcceleratorKeyEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2736,7 +3280,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             try
             {
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -2755,7 +3303,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Cancel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Cancel();
+            }());
         }
         catch (...)
         {
@@ -2776,7 +3328,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Cancel(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Cancel(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2790,7 +3346,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Challenge());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Challenge();
+            }());
         }
         catch (...)
         {
@@ -2803,7 +3363,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Response());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Response();
+            }());
         }
         catch (...)
         {
@@ -2816,7 +3380,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Uri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Uri();
+            }());
         }
         catch (...)
         {
@@ -2900,7 +3468,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.UserName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UserName();
+            }());
         }
         catch (...)
         {
@@ -2921,7 +3493,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.UserName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.UserName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2935,7 +3511,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Password());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Password();
+            }());
         }
         catch (...)
         {
@@ -2956,7 +3536,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Password(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Password(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3044,7 +3628,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
             {
                 auto param0 = py::convert_to<bool>(args, 0);
 
-                return py::convert(self->obj.EnableAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.EnableAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -3067,7 +3655,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             try
             {
-                return py::convert(self->obj.RemoveAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RemoveAsync();
+                }());
             }
             catch (...)
             {
@@ -3086,7 +3678,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -3099,7 +3695,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.IsEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsEnabled();
+            }());
         }
         catch (...)
         {
@@ -3112,7 +3712,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -3196,7 +3800,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.BrowserProcessExitKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BrowserProcessExitKind();
+            }());
         }
         catch (...)
         {
@@ -3209,7 +3817,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.BrowserProcessId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BrowserProcessId();
+            }());
         }
         catch (...)
         {
@@ -3294,7 +3906,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             try
             {
-                return py::convert(self->obj.ToCertificate());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ToCertificate();
+                }());
             }
             catch (...)
             {
@@ -3317,7 +3933,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             try
             {
-                return py::convert(self->obj.ToPemEncoding());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ToPemEncoding();
+                }());
             }
             catch (...)
             {
@@ -3336,7 +3956,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.DerEncodedSerialNumber());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DerEncodedSerialNumber();
+            }());
         }
         catch (...)
         {
@@ -3349,7 +3973,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.DisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayName();
+            }());
         }
         catch (...)
         {
@@ -3362,7 +3990,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Issuer());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Issuer();
+            }());
         }
         catch (...)
         {
@@ -3375,7 +4007,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.PemEncodedIssuerCertificateChain());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PemEncodedIssuerCertificateChain();
+            }());
         }
         catch (...)
         {
@@ -3388,7 +4024,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Subject());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Subject();
+            }());
         }
         catch (...)
         {
@@ -3401,7 +4041,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.ValidFrom());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ValidFrom();
+            }());
         }
         catch (...)
         {
@@ -3414,7 +4058,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.ValidTo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ValidTo();
+            }());
         }
         catch (...)
         {
@@ -3506,7 +4154,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             try
             {
-                return py::convert(self->obj.ToCertificate());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ToCertificate();
+                }());
             }
             catch (...)
             {
@@ -3529,7 +4181,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             try
             {
-                return py::convert(self->obj.ToPemEncoding());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ToPemEncoding();
+                }());
             }
             catch (...)
             {
@@ -3548,7 +4204,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.DerEncodedSerialNumber());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DerEncodedSerialNumber();
+            }());
         }
         catch (...)
         {
@@ -3561,7 +4221,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.DisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayName();
+            }());
         }
         catch (...)
         {
@@ -3574,7 +4238,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Issuer());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Issuer();
+            }());
         }
         catch (...)
         {
@@ -3587,7 +4255,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -3600,7 +4272,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.PemEncodedIssuerCertificateChain());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PemEncodedIssuerCertificateChain();
+            }());
         }
         catch (...)
         {
@@ -3613,7 +4289,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Subject());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Subject();
+            }());
         }
         catch (...)
         {
@@ -3626,7 +4306,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.ValidFrom());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ValidFrom();
+            }());
         }
         catch (...)
         {
@@ -3639,7 +4323,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.ValidTo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ValidTo();
+            }());
         }
         catch (...)
         {
@@ -3732,7 +4420,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             try
             {
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -3751,7 +4443,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.SelectedCertificate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SelectedCertificate();
+            }());
         }
         catch (...)
         {
@@ -3772,7 +4468,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ClientCertificate>(arg);
 
-            self->obj.SelectedCertificate(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SelectedCertificate(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3786,7 +4486,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Handled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Handled();
+            }());
         }
         catch (...)
         {
@@ -3807,7 +4511,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Handled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Handled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3821,7 +4529,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Cancel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Cancel();
+            }());
         }
         catch (...)
         {
@@ -3842,7 +4554,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Cancel(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Cancel(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3856,7 +4572,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.AllowedCertificateAuthorities());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AllowedCertificateAuthorities();
+            }());
         }
         catch (...)
         {
@@ -3869,7 +4589,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Host());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Host();
+            }());
         }
         catch (...)
         {
@@ -3882,7 +4606,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.IsProxy());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsProxy();
+            }());
         }
         catch (...)
         {
@@ -3895,7 +4623,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.MutuallyTrustedCertificates());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MutuallyTrustedCertificates();
+            }());
         }
         catch (...)
         {
@@ -3908,7 +4640,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Port());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Port();
+            }());
         }
         catch (...)
         {
@@ -4003,7 +4739,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragInfo>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragUIOverride>(args, 1);
 
-                return py::convert(self->obj.DragEnter(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.DragEnter(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -4026,7 +4766,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             try
             {
-                self->obj.DragLeave();
+                {
+                    auto _gil = release_gil();
+                    self->obj.DragLeave();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4053,7 +4797,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragInfo>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragUIOverride>(args, 1);
 
-                return py::convert(self->obj.DragOver(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.DragOver(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -4078,7 +4826,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
             {
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragInfo>(args, 0);
 
-                return py::convert(self->obj.Drop(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Drop(param0);
+                }());
             }
             catch (...)
             {
@@ -4103,7 +4855,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
             {
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
 
-                return py::convert(self->obj.GetNonClientRegionAtPoint(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetNonClientRegionAtPoint(param0);
+                }());
             }
             catch (...)
             {
@@ -4128,7 +4884,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
             {
                 auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2NonClientRegionKind>(args, 0);
 
-                return py::convert(self->obj.QueryNonClientRegion(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.QueryNonClientRegion(param0);
+                }());
             }
             catch (...)
             {
@@ -4156,7 +4916,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
                 auto param2 = py::convert_to<uint32_t>(args, 2);
                 auto param3 = py::convert_to<winrt::Windows::Foundation::Point>(args, 3);
 
-                self->obj.SendMouseInput(param0, param1, param2, param3);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SendMouseInput(param0, param1, param2, param3);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4183,7 +4947,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
                 auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2PointerEventKind>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo>(args, 1);
 
-                self->obj.SendPointerInput(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SendPointerInput(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4203,7 +4971,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.RootVisualTarget());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RootVisualTarget();
+            }());
         }
         catch (...)
         {
@@ -4224,7 +4996,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
-            self->obj.RootVisualTarget(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RootVisualTarget(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4238,7 +5014,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Cursor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Cursor();
+            }());
         }
         catch (...)
         {
@@ -4253,7 +5033,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2CompositionController, winrt::Microsoft::Web::WebView2::Core::CoreWebView2NonClientRegionChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.NonClientRegionChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NonClientRegionChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -4268,7 +5052,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.NonClientRegionChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NonClientRegionChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -4284,7 +5072,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2CompositionController, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.CursorChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CursorChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -4299,7 +5091,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.CursorChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CursorChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -4393,7 +5189,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.IsErrorPage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsErrorPage();
+            }());
         }
         catch (...)
         {
@@ -4406,7 +5206,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.NavigationId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NavigationId();
+            }());
         }
         catch (...)
         {
@@ -4487,7 +5291,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.IsEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsEnabled();
+            }());
         }
         catch (...)
         {
@@ -4508,7 +5316,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4522,7 +5334,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.IsChecked());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsChecked();
+            }());
         }
         catch (...)
         {
@@ -4543,7 +5359,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsChecked(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsChecked(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4557,7 +5377,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Children());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Children();
+            }());
         }
         catch (...)
         {
@@ -4570,7 +5394,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.CommandId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CommandId();
+            }());
         }
         catch (...)
         {
@@ -4583,7 +5411,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Icon());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Icon();
+            }());
         }
         catch (...)
         {
@@ -4596,7 +5428,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -4609,7 +5445,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Label());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Label();
+            }());
         }
         catch (...)
         {
@@ -4622,7 +5462,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -4635,7 +5479,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.ShortcutKeyDescription());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ShortcutKeyDescription();
+            }());
         }
         catch (...)
         {
@@ -4650,7 +5498,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ContextMenuItem, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.CustomItemSelected(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CustomItemSelected(param0);
+            }());
         }
         catch (...)
         {
@@ -4665,7 +5517,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.CustomItemSelected(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CustomItemSelected(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -4760,7 +5616,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             try
             {
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -4779,7 +5639,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.SelectedCommandId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SelectedCommandId();
+            }());
         }
         catch (...)
         {
@@ -4800,7 +5664,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.SelectedCommandId(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SelectedCommandId(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4814,7 +5682,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Handled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Handled();
+            }());
         }
         catch (...)
         {
@@ -4835,7 +5707,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Handled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Handled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4849,7 +5725,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.ContextMenuTarget());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContextMenuTarget();
+            }());
         }
         catch (...)
         {
@@ -4862,7 +5742,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Location());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Location();
+            }());
         }
         catch (...)
         {
@@ -4875,7 +5759,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.MenuItems());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MenuItems();
+            }());
         }
         catch (...)
         {
@@ -4960,7 +5848,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.FrameUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FrameUri();
+            }());
         }
         catch (...)
         {
@@ -4973,7 +5865,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.HasLinkText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HasLinkText();
+            }());
         }
         catch (...)
         {
@@ -4986,7 +5882,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.HasLinkUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HasLinkUri();
+            }());
         }
         catch (...)
         {
@@ -4999,7 +5899,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.HasSelection());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HasSelection();
+            }());
         }
         catch (...)
         {
@@ -5012,7 +5916,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.HasSourceUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HasSourceUri();
+            }());
         }
         catch (...)
         {
@@ -5025,7 +5933,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.IsEditable());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsEditable();
+            }());
         }
         catch (...)
         {
@@ -5038,7 +5950,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.IsRequestedForMainFrame());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsRequestedForMainFrame();
+            }());
         }
         catch (...)
         {
@@ -5051,7 +5967,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -5064,7 +5984,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.LinkText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LinkText();
+            }());
         }
         catch (...)
         {
@@ -5077,7 +6001,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.LinkUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LinkUri();
+            }());
         }
         catch (...)
         {
@@ -5090,7 +6018,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.PageUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PageUri();
+            }());
         }
         catch (...)
         {
@@ -5103,7 +6035,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.SelectionText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SelectionText();
+            }());
         }
         catch (...)
         {
@@ -5116,7 +6052,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.SourceUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SourceUri();
+            }());
         }
         catch (...)
         {
@@ -5212,7 +6152,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             try
             {
-                self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5238,7 +6182,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
             {
                 auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2MoveFocusReason>(args, 0);
 
-                self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().MoveFocus(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().MoveFocus(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5262,7 +6210,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             try
             {
-                self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().NotifyParentWindowPositionChanged();
+                {
+                    auto _gil = release_gil();
+                    self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().NotifyParentWindowPositionChanged();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5289,7 +6241,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
-                self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().SetBoundsAndZoomFactor(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().SetBoundsAndZoomFactor(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5309,7 +6265,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().ZoomFactor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().ZoomFactor();
+            }());
         }
         catch (...)
         {
@@ -5330,7 +6290,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().ZoomFactor(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().ZoomFactor(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5344,7 +6308,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().ParentWindow());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().ParentWindow();
+            }());
         }
         catch (...)
         {
@@ -5365,7 +6333,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ControllerWindowReference>(arg);
 
-            self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().ParentWindow(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().ParentWindow(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5379,7 +6351,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().IsVisible());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().IsVisible();
+            }());
         }
         catch (...)
         {
@@ -5400,7 +6376,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().IsVisible(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().IsVisible(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5414,7 +6394,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().Bounds());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().Bounds();
+            }());
         }
         catch (...)
         {
@@ -5435,7 +6419,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(arg);
 
-            self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().Bounds(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().Bounds(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5449,7 +6437,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().CoreWebView2());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().CoreWebView2();
+            }());
         }
         catch (...)
         {
@@ -5462,7 +6454,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().DefaultBackgroundColor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().DefaultBackgroundColor();
+            }());
         }
         catch (...)
         {
@@ -5483,7 +6479,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
-            self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().DefaultBackgroundColor(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().DefaultBackgroundColor(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5497,7 +6497,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().ShouldDetectMonitorScaleChanges());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().ShouldDetectMonitorScaleChanges();
+            }());
         }
         catch (...)
         {
@@ -5518,7 +6522,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().ShouldDetectMonitorScaleChanges(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().ShouldDetectMonitorScaleChanges(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5532,7 +6540,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().RasterizationScale());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().RasterizationScale();
+            }());
         }
         catch (...)
         {
@@ -5553,7 +6565,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().RasterizationScale(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().RasterizationScale(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5567,7 +6583,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().BoundsMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().BoundsMode();
+            }());
         }
         catch (...)
         {
@@ -5588,7 +6608,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2BoundsMode>(arg);
 
-            self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().BoundsMode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().BoundsMode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5602,7 +6626,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().AllowExternalDrop());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().AllowExternalDrop();
+            }());
         }
         catch (...)
         {
@@ -5623,7 +6651,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().AllowExternalDrop(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().AllowExternalDrop(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5637,7 +6669,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().IsBrowserHitTransparent());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().IsBrowserHitTransparent();
+            }());
         }
         catch (...)
         {
@@ -5652,7 +6688,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().RasterizationScaleChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().RasterizationScaleChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -5667,7 +6707,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().RasterizationScaleChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().RasterizationScaleChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -5683,7 +6727,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller, winrt::Microsoft::Web::WebView2::Core::CoreWebView2AcceleratorKeyPressedEventArgs>>(arg);
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().AcceleratorKeyPressed(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().AcceleratorKeyPressed(param0);
+            }());
         }
         catch (...)
         {
@@ -5698,7 +6746,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().AcceleratorKeyPressed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().AcceleratorKeyPressed(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -5714,7 +6766,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().GotFocus(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().GotFocus(param0);
+            }());
         }
         catch (...)
         {
@@ -5729,7 +6785,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().GotFocus(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().GotFocus(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -5745,7 +6805,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().LostFocus(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().LostFocus(param0);
+            }());
         }
         catch (...)
         {
@@ -5760,7 +6824,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().LostFocus(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().LostFocus(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -5776,7 +6844,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller, winrt::Microsoft::Web::WebView2::Core::CoreWebView2MoveFocusRequestedEventArgs>>(arg);
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().MoveFocusRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().MoveFocusRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -5791,7 +6863,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().MoveFocusRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().MoveFocusRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -5807,7 +6883,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().ZoomFactorChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().ZoomFactorChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -5822,7 +6902,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().ZoomFactorChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().ZoomFactorChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -5954,7 +7038,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.ProfileName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProfileName();
+            }());
         }
         catch (...)
         {
@@ -5975,7 +7063,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ProfileName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ProfileName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5989,7 +7081,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.IsInPrivateModeEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsInPrivateModeEnabled();
+            }());
         }
         catch (...)
         {
@@ -6010,7 +7106,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsInPrivateModeEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsInPrivateModeEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6024,7 +7124,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.ScriptLocale());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ScriptLocale();
+            }());
         }
         catch (...)
         {
@@ -6045,7 +7149,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ScriptLocale(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ScriptLocale(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6134,7 +7242,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
             {
                 auto param0 = py::convert_to<winrt::Windows::UI::Core::CoreWindow>(args, 0);
 
-                return py::convert(winrt::Microsoft::Web::WebView2::Core::CoreWebView2ControllerWindowReference::CreateFromCoreWindow(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::Web::WebView2::Core::CoreWebView2ControllerWindowReference::CreateFromCoreWindow(param0);
+                }());
             }
             catch (...)
             {
@@ -6159,7 +7271,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
             {
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
-                return py::convert(winrt::Microsoft::Web::WebView2::Core::CoreWebView2ControllerWindowReference::CreateFromWindowHandle(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::Web::WebView2::Core::CoreWebView2ControllerWindowReference::CreateFromWindowHandle(param0);
+                }());
             }
             catch (...)
             {
@@ -6178,7 +7294,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.CoreWindow());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CoreWindow();
+            }());
         }
         catch (...)
         {
@@ -6191,7 +7311,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.WindowHandle());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WindowHandle();
+            }());
         }
         catch (...)
         {
@@ -6299,7 +7423,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Value());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Value();
+            }());
         }
         catch (...)
         {
@@ -6320,7 +7448,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Value(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Value(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6334,7 +7466,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.SameSite());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SameSite();
+            }());
         }
         catch (...)
         {
@@ -6355,7 +7491,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2CookieSameSiteKind>(arg);
 
-            self->obj.SameSite(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SameSite(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6369,7 +7509,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.IsSecure());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsSecure();
+            }());
         }
         catch (...)
         {
@@ -6390,7 +7534,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsSecure(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsSecure(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6404,7 +7552,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.IsHttpOnly());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsHttpOnly();
+            }());
         }
         catch (...)
         {
@@ -6425,7 +7577,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsHttpOnly(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsHttpOnly(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6439,7 +7595,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Expires());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Expires();
+            }());
         }
         catch (...)
         {
@@ -6460,7 +7620,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.Expires(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Expires(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6474,7 +7638,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Domain());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Domain();
+            }());
         }
         catch (...)
         {
@@ -6487,7 +7655,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.IsSession());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsSession();
+            }());
         }
         catch (...)
         {
@@ -6500,7 +7672,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -6513,7 +7689,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Path());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Path();
+            }());
         }
         catch (...)
         {
@@ -6607,7 +7787,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
             {
                 auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Cookie>(args, 0);
 
-                self->obj.AddOrUpdateCookie(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddOrUpdateCookie(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6633,7 +7817,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
             {
                 auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Cookie>(args, 0);
 
-                return py::convert(self->obj.CopyCookie(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CopyCookie(param0);
+                }());
             }
             catch (...)
             {
@@ -6661,7 +7849,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
                 auto param3 = py::convert_to<winrt::hstring>(args, 3);
 
-                return py::convert(self->obj.CreateCookie(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateCookie(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -6684,7 +7876,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             try
             {
-                self->obj.DeleteAllCookies();
+                {
+                    auto _gil = release_gil();
+                    self->obj.DeleteAllCookies();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6710,7 +7906,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
             {
                 auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Cookie>(args, 0);
 
-                self->obj.DeleteCookie(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.DeleteCookie(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6737,7 +7937,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                self->obj.DeleteCookies(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.DeleteCookies(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6765,7 +7969,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
-                self->obj.DeleteCookiesWithDomainAndPath(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.DeleteCookiesWithDomainAndPath(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6791,7 +7999,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetCookiesAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetCookiesAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -6908,7 +8120,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.TreatAsSecure());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TreatAsSecure();
+            }());
         }
         catch (...)
         {
@@ -6929,7 +8145,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.TreatAsSecure(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TreatAsSecure(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6943,7 +8163,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.HasAuthorityComponent());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HasAuthorityComponent();
+            }());
         }
         catch (...)
         {
@@ -6964,7 +8188,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.HasAuthorityComponent(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.HasAuthorityComponent(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6978,7 +8206,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.AllowedOrigins());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AllowedOrigins();
+            }());
         }
         catch (...)
         {
@@ -6991,7 +8223,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.SchemeName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SchemeName();
+            }());
         }
         catch (...)
         {
@@ -7074,7 +8310,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.NavigationId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NavigationId();
+            }());
         }
         catch (...)
         {
@@ -7154,7 +8394,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.ParameterObjectAsJson());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ParameterObjectAsJson();
+            }());
         }
         catch (...)
         {
@@ -7167,7 +8411,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.SessionId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SessionId();
+            }());
         }
         catch (...)
         {
@@ -7250,7 +8498,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2DevToolsProtocolEventReceivedEventArgs>>(arg);
 
-            return py::convert(self->obj.DevToolsProtocolEventReceived(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DevToolsProtocolEventReceived(param0);
+            }());
         }
         catch (...)
         {
@@ -7265,7 +8517,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.DevToolsProtocolEventReceived(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DevToolsProtocolEventReceived(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -7351,7 +8607,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             try
             {
-                self->obj.Cancel();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Cancel();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -7375,7 +8635,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             try
             {
-                self->obj.Pause();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Pause();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -7399,7 +8663,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             try
             {
-                self->obj.Resume();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Resume();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -7419,7 +8687,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.BytesReceived());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BytesReceived();
+            }());
         }
         catch (...)
         {
@@ -7432,7 +8704,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.CanResume());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CanResume();
+            }());
         }
         catch (...)
         {
@@ -7445,7 +8721,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.ContentDisposition());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContentDisposition();
+            }());
         }
         catch (...)
         {
@@ -7458,7 +8738,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.EstimatedEndTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EstimatedEndTime();
+            }());
         }
         catch (...)
         {
@@ -7471,7 +8755,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.InterruptReason());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InterruptReason();
+            }());
         }
         catch (...)
         {
@@ -7484,7 +8772,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.MimeType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MimeType();
+            }());
         }
         catch (...)
         {
@@ -7497,7 +8789,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.ResultFilePath());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResultFilePath();
+            }());
         }
         catch (...)
         {
@@ -7510,7 +8806,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.State());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.State();
+            }());
         }
         catch (...)
         {
@@ -7523,7 +8823,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.TotalBytesToReceive());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TotalBytesToReceive();
+            }());
         }
         catch (...)
         {
@@ -7536,7 +8840,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Uri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Uri();
+            }());
         }
         catch (...)
         {
@@ -7551,7 +8859,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2DownloadOperation, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.BytesReceivedChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BytesReceivedChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -7566,7 +8878,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.BytesReceivedChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.BytesReceivedChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -7582,7 +8898,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2DownloadOperation, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.EstimatedEndTimeChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EstimatedEndTimeChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -7597,7 +8917,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.EstimatedEndTimeChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.EstimatedEndTimeChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -7613,7 +8937,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2DownloadOperation, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.StateChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StateChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -7628,7 +8956,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.StateChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StateChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -7731,7 +9063,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             try
             {
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -7750,7 +9086,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.ResultFilePath());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResultFilePath();
+            }());
         }
         catch (...)
         {
@@ -7771,7 +9111,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ResultFilePath(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ResultFilePath(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7785,7 +9129,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Handled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Handled();
+            }());
         }
         catch (...)
         {
@@ -7806,7 +9154,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Handled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Handled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7820,7 +9172,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Cancel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Cancel();
+            }());
         }
         catch (...)
         {
@@ -7841,7 +9197,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Cancel(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Cancel(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7855,7 +9215,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.DownloadOperation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DownloadOperation();
+            }());
         }
         catch (...)
         {
@@ -7946,7 +9310,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(winrt::Microsoft::Web::WebView2::Core::CoreWebView2Environment::CompareBrowserVersionString(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::Web::WebView2::Core::CoreWebView2Environment::CompareBrowserVersionString(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -7969,7 +9337,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             try
             {
-                return py::convert(winrt::Microsoft::Web::WebView2::Core::CoreWebView2Environment::CreateAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::Web::WebView2::Core::CoreWebView2Environment::CreateAsync();
+                }());
             }
             catch (...)
             {
@@ -7996,7 +9368,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 1);
                 auto param2 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ContextMenuItemKind>(args, 2);
 
-                return py::convert(self->obj.CreateContextMenuItem(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateContextMenuItem(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -8021,7 +9397,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
             {
                 auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ControllerWindowReference>(args, 0);
 
-                return py::convert(self->obj.CreateCoreWebView2CompositionControllerAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateCoreWebView2CompositionControllerAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -8036,7 +9416,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
                 auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ControllerWindowReference>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ControllerOptions>(args, 1);
 
-                return py::convert(self->obj.CreateCoreWebView2CompositionControllerAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateCoreWebView2CompositionControllerAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -8061,7 +9445,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
             {
                 auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ControllerWindowReference>(args, 0);
 
-                return py::convert(self->obj.CreateCoreWebView2ControllerAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateCoreWebView2ControllerAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -8076,7 +9464,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
                 auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ControllerWindowReference>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ControllerOptions>(args, 1);
 
-                return py::convert(self->obj.CreateCoreWebView2ControllerAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateCoreWebView2ControllerAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -8099,7 +9491,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             try
             {
-                return py::convert(self->obj.CreateCoreWebView2ControllerOptions());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateCoreWebView2ControllerOptions();
+                }());
             }
             catch (...)
             {
@@ -8122,7 +9518,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             try
             {
-                return py::convert(self->obj.CreateCoreWebView2PointerInfo());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateCoreWebView2PointerInfo();
+                }());
             }
             catch (...)
             {
@@ -8145,7 +9545,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             try
             {
-                return py::convert(self->obj.CreatePrintSettings());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreatePrintSettings();
+                }());
             }
             catch (...)
             {
@@ -8170,7 +9574,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
             {
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
-                return py::convert(self->obj.CreateSharedBuffer(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateSharedBuffer(param0);
+                }());
             }
             catch (...)
             {
@@ -8196,7 +9604,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2FileSystemHandlePermission>(args, 1);
 
-                return py::convert(self->obj.CreateWebFileSystemDirectoryHandle(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateWebFileSystemDirectoryHandle(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -8222,7 +9634,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2FileSystemHandlePermission>(args, 1);
 
-                return py::convert(self->obj.CreateWebFileSystemFileHandle(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateWebFileSystemFileHandle(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -8250,7 +9666,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
                 auto param2 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 2);
                 auto param3 = py::convert_to<winrt::hstring>(args, 3);
 
-                return py::convert(self->obj.CreateWebResourceRequest(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateWebResourceRequest(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -8278,7 +9698,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
                 auto param3 = py::convert_to<winrt::hstring>(args, 3);
 
-                return py::convert(self->obj.CreateWebResourceResponse(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateWebResourceResponse(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -8305,7 +9729,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2EnvironmentOptions>(args, 2);
 
-                return py::convert(winrt::Microsoft::Web::WebView2::Core::CoreWebView2Environment::CreateWithOptionsAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::Web::WebView2::Core::CoreWebView2Environment::CreateWithOptionsAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -8328,7 +9756,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             try
             {
-                return py::convert(winrt::Microsoft::Web::WebView2::Core::CoreWebView2Environment::GetAvailableBrowserVersionString());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::Web::WebView2::Core::CoreWebView2Environment::GetAvailableBrowserVersionString();
+                }());
             }
             catch (...)
             {
@@ -8353,7 +9785,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Microsoft::Web::WebView2::Core::CoreWebView2Environment::GetAvailableBrowserVersionString(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::Web::WebView2::Core::CoreWebView2Environment::GetAvailableBrowserVersionString(param0);
+                }());
             }
             catch (...)
             {
@@ -8379,7 +9815,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2EnvironmentOptions>(args, 1);
 
-                return py::convert(winrt::Microsoft::Web::WebView2::Core::CoreWebView2Environment::GetAvailableBrowserVersionString(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::Web::WebView2::Core::CoreWebView2Environment::GetAvailableBrowserVersionString(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -8402,7 +9842,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             try
             {
-                return py::convert(self->obj.GetProcessExtendedInfosAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetProcessExtendedInfosAsync();
+                }());
             }
             catch (...)
             {
@@ -8425,7 +9869,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             try
             {
-                return py::convert(self->obj.GetProcessInfos());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetProcessInfos();
+                }());
             }
             catch (...)
             {
@@ -8444,7 +9892,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.BrowserVersionString());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BrowserVersionString();
+            }());
         }
         catch (...)
         {
@@ -8457,7 +9909,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.FailureReportFolderPath());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FailureReportFolderPath();
+            }());
         }
         catch (...)
         {
@@ -8470,7 +9926,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.UserDataFolder());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UserDataFolder();
+            }());
         }
         catch (...)
         {
@@ -8485,7 +9945,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Environment, winrt::Microsoft::Web::WebView2::Core::CoreWebView2BrowserProcessExitedEventArgs>>(arg);
 
-            return py::convert(self->obj.BrowserProcessExited(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BrowserProcessExited(param0);
+            }());
         }
         catch (...)
         {
@@ -8500,7 +9964,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.BrowserProcessExited(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.BrowserProcessExited(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -8516,7 +9984,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Environment, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.ProcessInfosChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProcessInfosChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -8531,7 +10003,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ProcessInfosChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ProcessInfosChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -8547,7 +10023,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Environment, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.NewBrowserVersionAvailable(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NewBrowserVersionAvailable(param0);
+            }());
         }
         catch (...)
         {
@@ -8562,7 +10042,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.NewBrowserVersionAvailable(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NewBrowserVersionAvailable(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -8717,7 +10201,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.TargetCompatibleBrowserVersion());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TargetCompatibleBrowserVersion();
+            }());
         }
         catch (...)
         {
@@ -8738,7 +10226,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.TargetCompatibleBrowserVersion(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TargetCompatibleBrowserVersion(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8752,7 +10244,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Language());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Language();
+            }());
         }
         catch (...)
         {
@@ -8773,7 +10269,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Language(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Language(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8787,7 +10287,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.AllowSingleSignOnUsingOSPrimaryAccount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AllowSingleSignOnUsingOSPrimaryAccount();
+            }());
         }
         catch (...)
         {
@@ -8808,7 +10312,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.AllowSingleSignOnUsingOSPrimaryAccount(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AllowSingleSignOnUsingOSPrimaryAccount(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8822,7 +10330,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.AdditionalBrowserArguments());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AdditionalBrowserArguments();
+            }());
         }
         catch (...)
         {
@@ -8843,7 +10355,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.AdditionalBrowserArguments(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AdditionalBrowserArguments(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8857,7 +10373,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.CustomSchemeRegistrations());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CustomSchemeRegistrations();
+            }());
         }
         catch (...)
         {
@@ -8878,7 +10398,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::Microsoft::Web::WebView2::Core::CoreWebView2CustomSchemeRegistration>>(arg);
 
-            self->obj.CustomSchemeRegistrations(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CustomSchemeRegistrations(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8892,7 +10416,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.ExclusiveUserDataFolderAccess());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExclusiveUserDataFolderAccess();
+            }());
         }
         catch (...)
         {
@@ -8913,7 +10441,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.ExclusiveUserDataFolderAccess(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ExclusiveUserDataFolderAccess(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8927,7 +10459,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.IsCustomCrashReportingEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsCustomCrashReportingEnabled();
+            }());
         }
         catch (...)
         {
@@ -8948,7 +10484,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsCustomCrashReportingEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsCustomCrashReportingEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8962,7 +10502,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.EnableTrackingPrevention());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EnableTrackingPrevention();
+            }());
         }
         catch (...)
         {
@@ -8983,7 +10527,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.EnableTrackingPrevention(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.EnableTrackingPrevention(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8997,7 +10545,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.AreBrowserExtensionsEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AreBrowserExtensionsEnabled();
+            }());
         }
         catch (...)
         {
@@ -9018,7 +10570,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.AreBrowserExtensionsEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AreBrowserExtensionsEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -9032,7 +10588,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.ReleaseChannels());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReleaseChannels();
+            }());
         }
         catch (...)
         {
@@ -9053,7 +10613,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ReleaseChannels>(arg);
 
-            self->obj.ReleaseChannels(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReleaseChannels(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -9067,7 +10631,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.ChannelSearchKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ChannelSearchKind();
+            }());
         }
         catch (...)
         {
@@ -9088,7 +10656,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ChannelSearchKind>(arg);
 
-            self->obj.ChannelSearchKind(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ChannelSearchKind(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -9102,7 +10674,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.ScrollBarStyle());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ScrollBarStyle();
+            }());
         }
         catch (...)
         {
@@ -9123,7 +10699,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ScrollbarStyle>(arg);
 
-            self->obj.ScrollBarStyle(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ScrollBarStyle(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -9221,7 +10801,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
             {
                 winrt::hstring param0{};
 
-                auto return_value = self->obj.TryGetResultAsString(param0);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryGetResultAsString(param0);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -9233,6 +10817,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out0.get());
             }
             catch (...)
@@ -9252,7 +10837,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Exception());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Exception();
+            }());
         }
         catch (...)
         {
@@ -9265,7 +10854,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.ResultAsJson());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResultAsJson();
+            }());
         }
         catch (...)
         {
@@ -9278,7 +10871,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Succeeded());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Succeeded();
+            }());
         }
         catch (...)
         {
@@ -9361,7 +10958,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Path());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Path();
+            }());
         }
         catch (...)
         {
@@ -9441,7 +11042,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -9454,7 +11059,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Path());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Path();
+            }());
         }
         catch (...)
         {
@@ -9467,7 +11076,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Permission());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Permission();
+            }());
         }
         catch (...)
         {
@@ -9555,7 +11168,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.ExecuteScriptAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ExecuteScriptAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -9578,7 +11195,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             try
             {
-                return py::convert(self->obj.IsDestroyed());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsDestroyed();
+                }());
             }
             catch (...)
             {
@@ -9605,7 +11226,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
                 auto param1 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2SharedBufferAccess>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
-                self->obj.PostSharedBufferToScript(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.PostSharedBufferToScript(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -9631,7 +11256,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.PostWebMessageAsJson(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.PostWebMessageAsJson(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -9657,7 +11286,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.PostWebMessageAsString(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.PostWebMessageAsString(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -9683,7 +11316,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.RemoveHostObjectFromScript(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveHostObjectFromScript(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -9703,7 +11340,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -9716,7 +11357,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.FrameId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FrameId();
+            }());
         }
         catch (...)
         {
@@ -9731,7 +11376,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Frame, winrt::Microsoft::Web::WebView2::Core::CoreWebView2ContentLoadingEventArgs>>(arg);
 
-            return py::convert(self->obj.ContentLoading(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContentLoading(param0);
+            }());
         }
         catch (...)
         {
@@ -9746,7 +11395,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ContentLoading(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ContentLoading(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -9762,7 +11415,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Frame, winrt::Microsoft::Web::WebView2::Core::CoreWebView2DOMContentLoadedEventArgs>>(arg);
 
-            return py::convert(self->obj.DOMContentLoaded(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DOMContentLoaded(param0);
+            }());
         }
         catch (...)
         {
@@ -9777,7 +11434,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.DOMContentLoaded(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DOMContentLoaded(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -9793,7 +11454,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Frame, winrt::Microsoft::Web::WebView2::Core::CoreWebView2NavigationCompletedEventArgs>>(arg);
 
-            return py::convert(self->obj.NavigationCompleted(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NavigationCompleted(param0);
+            }());
         }
         catch (...)
         {
@@ -9808,7 +11473,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.NavigationCompleted(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NavigationCompleted(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -9824,7 +11493,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Frame, winrt::Microsoft::Web::WebView2::Core::CoreWebView2NavigationStartingEventArgs>>(arg);
 
-            return py::convert(self->obj.NavigationStarting(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NavigationStarting(param0);
+            }());
         }
         catch (...)
         {
@@ -9839,7 +11512,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.NavigationStarting(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NavigationStarting(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -9855,7 +11532,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Frame, winrt::Microsoft::Web::WebView2::Core::CoreWebView2WebMessageReceivedEventArgs>>(arg);
 
-            return py::convert(self->obj.WebMessageReceived(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WebMessageReceived(param0);
+            }());
         }
         catch (...)
         {
@@ -9870,7 +11551,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.WebMessageReceived(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.WebMessageReceived(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -9886,7 +11571,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Frame, winrt::Microsoft::Web::WebView2::Core::CoreWebView2PermissionRequestedEventArgs>>(arg);
 
-            return py::convert(self->obj.PermissionRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PermissionRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -9901,7 +11590,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.PermissionRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PermissionRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -9917,7 +11610,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Frame, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.Destroyed(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Destroyed(param0);
+            }());
         }
         catch (...)
         {
@@ -9932,7 +11629,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Destroyed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Destroyed(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -9948,7 +11649,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Frame, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.NameChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NameChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -9963,7 +11668,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.NameChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NameChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -10067,7 +11776,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Frame());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Frame();
+            }());
         }
         catch (...)
         {
@@ -10147,7 +11860,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -10160,7 +11877,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Source());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Source();
+            }());
         }
         catch (...)
         {
@@ -10173,7 +11894,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.FrameId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FrameId();
+            }());
         }
         catch (...)
         {
@@ -10186,7 +11911,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.FrameKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FrameKind();
+            }());
         }
         catch (...)
         {
@@ -10199,7 +11928,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.ParentFrameInfo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ParentFrameInfo();
+            }());
         }
         catch (...)
         {
@@ -10289,7 +12022,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
             {
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::hstring>, true>>(args, 0);
 
-                return py::convert(self->obj.GetMany(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetMany(param0);
+                }());
             }
             catch (...)
             {
@@ -10312,7 +12049,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             try
             {
-                return py::convert(self->obj.MoveNext());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.MoveNext();
+                }());
             }
             catch (...)
             {
@@ -10331,7 +12072,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Current());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Current();
+            }());
         }
         catch (...)
         {
@@ -10344,7 +12089,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.HasCurrent());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HasCurrent();
+            }());
         }
         catch (...)
         {
@@ -10388,9 +12137,13 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             if (self->obj.HasCurrent())
             {
-                auto cur = self->obj.Current();
-                self->obj.MoveNext();
-                return py::convert(cur);
+                return py::convert([&]()
+                {
+                    auto _gil = py::release_gil();
+                    auto cur = self->obj.Current();
+                    self->obj.MoveNext();
+                    return cur;
+                }());
             }
             else
             {
@@ -10462,7 +12215,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.Contains(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Contains(param0);
+                }());
             }
             catch (...)
             {
@@ -10485,7 +12242,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             try
             {
-                return py::convert(self->obj.First());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.First();
+                }());
             }
             catch (...)
             {
@@ -10510,7 +12271,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetHeader(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetHeader(param0);
+                }());
             }
             catch (...)
             {
@@ -10535,7 +12300,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetHeaders(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetHeaders(param0);
+                }());
             }
             catch (...)
             {
@@ -10560,7 +12329,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.RemoveHeader(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveHeader(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10587,7 +12360,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                self->obj.SetHeader(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetHeader(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10631,7 +12408,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.First());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.First();
+            }());
         }
         catch (...)
         {
@@ -10700,7 +12481,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                self->obj.AppendHeader(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AppendHeader(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10726,7 +12511,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.Contains(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Contains(param0);
+                }());
             }
             catch (...)
             {
@@ -10749,7 +12538,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             try
             {
-                return py::convert(self->obj.First());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.First();
+                }());
             }
             catch (...)
             {
@@ -10774,7 +12567,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetHeader(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetHeader(param0);
+                }());
             }
             catch (...)
             {
@@ -10799,7 +12596,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetHeaders(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetHeaders(param0);
+                }());
             }
             catch (...)
             {
@@ -10842,7 +12643,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.First());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.First();
+            }());
         }
         catch (...)
         {
@@ -10907,7 +12712,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             try
             {
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -10926,7 +12735,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Cancel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Cancel();
+            }());
         }
         catch (...)
         {
@@ -10947,7 +12760,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Cancel(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Cancel(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -10961,7 +12778,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.InitiatingOrigin());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InitiatingOrigin();
+            }());
         }
         catch (...)
         {
@@ -10974,7 +12795,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.IsUserInitiated());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsUserInitiated();
+            }());
         }
         catch (...)
         {
@@ -10987,7 +12812,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Uri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Uri();
+            }());
         }
         catch (...)
         {
@@ -11071,7 +12900,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Handled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Handled();
+            }());
         }
         catch (...)
         {
@@ -11092,7 +12925,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Handled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Handled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -11106,7 +12943,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Reason());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Reason();
+            }());
         }
         catch (...)
         {
@@ -11187,7 +13028,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.IsSuccess());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsSuccess();
+            }());
         }
         catch (...)
         {
@@ -11200,7 +13045,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.NavigationId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NavigationId();
+            }());
         }
         catch (...)
         {
@@ -11213,7 +13062,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.WebErrorStatus());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WebErrorStatus();
+            }());
         }
         catch (...)
         {
@@ -11226,7 +13079,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.HttpStatusCode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HttpStatusCode();
+            }());
         }
         catch (...)
         {
@@ -11309,7 +13166,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Cancel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Cancel();
+            }());
         }
         catch (...)
         {
@@ -11330,7 +13191,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Cancel(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Cancel(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -11344,7 +13209,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.IsRedirected());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsRedirected();
+            }());
         }
         catch (...)
         {
@@ -11357,7 +13226,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.IsUserInitiated());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsUserInitiated();
+            }());
         }
         catch (...)
         {
@@ -11370,7 +13243,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.NavigationId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NavigationId();
+            }());
         }
         catch (...)
         {
@@ -11383,7 +13260,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.RequestHeaders());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RequestHeaders();
+            }());
         }
         catch (...)
         {
@@ -11396,7 +13277,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Uri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Uri();
+            }());
         }
         catch (...)
         {
@@ -11409,7 +13294,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.AdditionalAllowedFrameAncestors());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AdditionalAllowedFrameAncestors();
+            }());
         }
         catch (...)
         {
@@ -11430,7 +13319,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.AdditionalAllowedFrameAncestors(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AdditionalAllowedFrameAncestors(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -11444,7 +13337,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.NavigationKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NavigationKind();
+            }());
         }
         catch (...)
         {
@@ -11535,7 +13432,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             try
             {
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -11554,7 +13455,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.NewWindow());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NewWindow();
+            }());
         }
         catch (...)
         {
@@ -11575,7 +13480,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2>(arg);
 
-            self->obj.NewWindow(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NewWindow(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -11589,7 +13498,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Handled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Handled();
+            }());
         }
         catch (...)
         {
@@ -11610,7 +13523,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Handled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Handled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -11624,7 +13541,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.IsUserInitiated());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsUserInitiated();
+            }());
         }
         catch (...)
         {
@@ -11637,7 +13558,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Uri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Uri();
+            }());
         }
         catch (...)
         {
@@ -11650,7 +13575,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.WindowFeatures());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WindowFeatures();
+            }());
         }
         catch (...)
         {
@@ -11663,7 +13592,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -11676,7 +13609,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.OriginalSourceFrameInfo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OriginalSourceFrameInfo();
+            }());
         }
         catch (...)
         {
@@ -11763,7 +13700,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.RegionKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RegionKind();
+            }());
         }
         catch (...)
         {
@@ -11847,7 +13788,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             try
             {
-                self->obj.ReportClicked();
+                {
+                    auto _gil = release_gil();
+                    self->obj.ReportClicked();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -11871,7 +13816,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             try
             {
-                self->obj.ReportClosed();
+                {
+                    auto _gil = release_gil();
+                    self->obj.ReportClosed();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -11895,7 +13844,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             try
             {
-                self->obj.ReportShown();
+                {
+                    auto _gil = release_gil();
+                    self->obj.ReportShown();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -11915,7 +13868,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.BadgeUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BadgeUri();
+            }());
         }
         catch (...)
         {
@@ -11928,7 +13885,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Body());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Body();
+            }());
         }
         catch (...)
         {
@@ -11941,7 +13902,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.BodyImageUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BodyImageUri();
+            }());
         }
         catch (...)
         {
@@ -11954,7 +13919,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Direction());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Direction();
+            }());
         }
         catch (...)
         {
@@ -11967,7 +13936,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.IconUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IconUri();
+            }());
         }
         catch (...)
         {
@@ -11980,7 +13953,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.IsSilent());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsSilent();
+            }());
         }
         catch (...)
         {
@@ -11993,7 +13970,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Language());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Language();
+            }());
         }
         catch (...)
         {
@@ -12006,7 +13987,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.RequiresInteraction());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RequiresInteraction();
+            }());
         }
         catch (...)
         {
@@ -12019,7 +14004,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.ShouldRenotify());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ShouldRenotify();
+            }());
         }
         catch (...)
         {
@@ -12032,7 +14021,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Tag());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Tag();
+            }());
         }
         catch (...)
         {
@@ -12045,7 +14038,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -12058,7 +14055,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Title());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Title();
+            }());
         }
         catch (...)
         {
@@ -12071,7 +14072,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.VibrationPattern());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.VibrationPattern();
+            }());
         }
         catch (...)
         {
@@ -12086,7 +14091,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Notification, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.CloseRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CloseRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -12101,7 +14110,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.CloseRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CloseRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -12203,7 +14216,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             try
             {
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -12222,7 +14239,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Handled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Handled();
+            }());
         }
         catch (...)
         {
@@ -12243,7 +14264,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Handled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Handled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -12257,7 +14282,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Notification());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Notification();
+            }());
         }
         catch (...)
         {
@@ -12270,7 +14299,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.SenderOrigin());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SenderOrigin();
+            }());
         }
         catch (...)
         {
@@ -12357,7 +14390,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             try
             {
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -12376,7 +14413,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.State());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.State();
+            }());
         }
         catch (...)
         {
@@ -12397,7 +14438,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2PermissionState>(arg);
 
-            self->obj.State(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.State(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -12411,7 +14456,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.IsUserInitiated());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsUserInitiated();
+            }());
         }
         catch (...)
         {
@@ -12424,7 +14473,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.PermissionKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PermissionKind();
+            }());
         }
         catch (...)
         {
@@ -12437,7 +14490,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Uri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Uri();
+            }());
         }
         catch (...)
         {
@@ -12450,7 +14507,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Handled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Handled();
+            }());
         }
         catch (...)
         {
@@ -12471,7 +14532,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Handled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Handled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -12485,7 +14550,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.SavesInProfile());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SavesInProfile();
+            }());
         }
         catch (...)
         {
@@ -12506,7 +14575,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.SavesInProfile(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SavesInProfile(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -12593,7 +14666,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.PermissionKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PermissionKind();
+            }());
         }
         catch (...)
         {
@@ -12606,7 +14683,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.PermissionOrigin());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PermissionOrigin();
+            }());
         }
         catch (...)
         {
@@ -12619,7 +14700,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.PermissionState());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PermissionState();
+            }());
         }
         catch (...)
         {
@@ -12701,7 +14786,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.TouchPressure());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TouchPressure();
+            }());
         }
         catch (...)
         {
@@ -12722,7 +14811,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.TouchPressure(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TouchPressure(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -12736,7 +14829,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.TouchOrientation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TouchOrientation();
+            }());
         }
         catch (...)
         {
@@ -12757,7 +14854,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.TouchOrientation(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TouchOrientation(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -12771,7 +14872,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.TouchMask());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TouchMask();
+            }());
         }
         catch (...)
         {
@@ -12792,7 +14897,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.TouchMask(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TouchMask(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -12806,7 +14915,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.TouchFlags());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TouchFlags();
+            }());
         }
         catch (...)
         {
@@ -12827,7 +14940,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.TouchFlags(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TouchFlags(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -12841,7 +14958,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.TouchContactRaw());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TouchContactRaw();
+            }());
         }
         catch (...)
         {
@@ -12862,7 +14983,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(arg);
 
-            self->obj.TouchContactRaw(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TouchContactRaw(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -12876,7 +15001,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.TouchContact());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TouchContact();
+            }());
         }
         catch (...)
         {
@@ -12897,7 +15026,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(arg);
 
-            self->obj.TouchContact(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TouchContact(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -12911,7 +15044,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Time());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Time();
+            }());
         }
         catch (...)
         {
@@ -12932,7 +15069,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.Time(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Time(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -12946,7 +15087,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.PointerKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PointerKind();
+            }());
         }
         catch (...)
         {
@@ -12967,7 +15112,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.PointerKind(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PointerKind(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -12981,7 +15130,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.PointerId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PointerId();
+            }());
         }
         catch (...)
         {
@@ -13002,7 +15155,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.PointerId(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PointerId(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -13016,7 +15173,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.PointerFlags());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PointerFlags();
+            }());
         }
         catch (...)
         {
@@ -13037,7 +15198,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.PointerFlags(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PointerFlags(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -13051,7 +15216,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.PointerDeviceRect());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PointerDeviceRect();
+            }());
         }
         catch (...)
         {
@@ -13072,7 +15241,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(arg);
 
-            self->obj.PointerDeviceRect(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PointerDeviceRect(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -13086,7 +15259,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.PixelLocationRaw());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PixelLocationRaw();
+            }());
         }
         catch (...)
         {
@@ -13107,7 +15284,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(arg);
 
-            self->obj.PixelLocationRaw(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PixelLocationRaw(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -13121,7 +15302,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.PixelLocation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PixelLocation();
+            }());
         }
         catch (...)
         {
@@ -13142,7 +15327,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(arg);
 
-            self->obj.PixelLocation(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PixelLocation(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -13156,7 +15345,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.PerformanceCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PerformanceCount();
+            }());
         }
         catch (...)
         {
@@ -13177,7 +15370,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<uint64_t>(arg);
 
-            self->obj.PerformanceCount(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PerformanceCount(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -13191,7 +15388,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.PenTiltY());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PenTiltY();
+            }());
         }
         catch (...)
         {
@@ -13212,7 +15413,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.PenTiltY(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PenTiltY(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -13226,7 +15431,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.PenTiltX());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PenTiltX();
+            }());
         }
         catch (...)
         {
@@ -13247,7 +15456,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.PenTiltX(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PenTiltX(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -13261,7 +15474,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.PenRotation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PenRotation();
+            }());
         }
         catch (...)
         {
@@ -13282,7 +15499,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.PenRotation(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PenRotation(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -13296,7 +15517,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.PenPressure());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PenPressure();
+            }());
         }
         catch (...)
         {
@@ -13317,7 +15542,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.PenPressure(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PenPressure(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -13331,7 +15560,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.PenMask());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PenMask();
+            }());
         }
         catch (...)
         {
@@ -13352,7 +15585,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.PenMask(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PenMask(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -13366,7 +15603,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.PenFlags());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PenFlags();
+            }());
         }
         catch (...)
         {
@@ -13387,7 +15628,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.PenFlags(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PenFlags(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -13401,7 +15646,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.KeyStates());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.KeyStates();
+            }());
         }
         catch (...)
         {
@@ -13422,7 +15671,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.KeyStates(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.KeyStates(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -13436,7 +15689,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.InputData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InputData();
+            }());
         }
         catch (...)
         {
@@ -13457,7 +15714,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.InputData(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.InputData(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -13471,7 +15732,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.HistoryCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HistoryCount();
+            }());
         }
         catch (...)
         {
@@ -13492,7 +15757,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.HistoryCount(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.HistoryCount(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -13506,7 +15775,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.HimetricLocationRaw());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HimetricLocationRaw();
+            }());
         }
         catch (...)
         {
@@ -13527,7 +15800,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(arg);
 
-            self->obj.HimetricLocationRaw(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.HimetricLocationRaw(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -13541,7 +15818,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.HimetricLocation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HimetricLocation();
+            }());
         }
         catch (...)
         {
@@ -13562,7 +15843,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(arg);
 
-            self->obj.HimetricLocation(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.HimetricLocation(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -13576,7 +15861,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.FrameId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FrameId();
+            }());
         }
         catch (...)
         {
@@ -13597,7 +15886,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.FrameId(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.FrameId(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -13611,7 +15904,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.DisplayRect());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayRect();
+            }());
         }
         catch (...)
         {
@@ -13632,7 +15929,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(arg);
 
-            self->obj.DisplayRect(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DisplayRect(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -13646,7 +15947,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.ButtonChangeKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ButtonChangeKind();
+            }());
         }
         catch (...)
         {
@@ -13667,7 +15972,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.ButtonChangeKind(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ButtonChangeKind(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -13775,7 +16084,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.ShouldPrintSelectionOnly());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ShouldPrintSelectionOnly();
+            }());
         }
         catch (...)
         {
@@ -13796,7 +16109,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.ShouldPrintSelectionOnly(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ShouldPrintSelectionOnly(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -13810,7 +16127,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.ShouldPrintHeaderAndFooter());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ShouldPrintHeaderAndFooter();
+            }());
         }
         catch (...)
         {
@@ -13831,7 +16152,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.ShouldPrintHeaderAndFooter(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ShouldPrintHeaderAndFooter(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -13845,7 +16170,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.ShouldPrintBackgrounds());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ShouldPrintBackgrounds();
+            }());
         }
         catch (...)
         {
@@ -13866,7 +16195,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.ShouldPrintBackgrounds(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ShouldPrintBackgrounds(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -13880,7 +16213,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.ScaleFactor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ScaleFactor();
+            }());
         }
         catch (...)
         {
@@ -13901,7 +16238,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.ScaleFactor(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ScaleFactor(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -13915,7 +16256,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.PageWidth());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PageWidth();
+            }());
         }
         catch (...)
         {
@@ -13936,7 +16281,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.PageWidth(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PageWidth(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -13950,7 +16299,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.PageHeight());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PageHeight();
+            }());
         }
         catch (...)
         {
@@ -13971,7 +16324,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.PageHeight(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PageHeight(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -13985,7 +16342,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Orientation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Orientation();
+            }());
         }
         catch (...)
         {
@@ -14006,7 +16367,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2PrintOrientation>(arg);
 
-            self->obj.Orientation(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Orientation(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -14020,7 +16385,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.MarginTop());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MarginTop();
+            }());
         }
         catch (...)
         {
@@ -14041,7 +16410,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.MarginTop(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MarginTop(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -14055,7 +16428,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.MarginRight());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MarginRight();
+            }());
         }
         catch (...)
         {
@@ -14076,7 +16453,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.MarginRight(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MarginRight(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -14090,7 +16471,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.MarginLeft());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MarginLeft();
+            }());
         }
         catch (...)
         {
@@ -14111,7 +16496,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.MarginLeft(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MarginLeft(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -14125,7 +16514,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.MarginBottom());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MarginBottom();
+            }());
         }
         catch (...)
         {
@@ -14146,7 +16539,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.MarginBottom(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MarginBottom(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -14160,7 +16557,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.HeaderTitle());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HeaderTitle();
+            }());
         }
         catch (...)
         {
@@ -14181,7 +16582,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.HeaderTitle(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.HeaderTitle(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -14195,7 +16600,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.FooterUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FooterUri();
+            }());
         }
         catch (...)
         {
@@ -14216,7 +16625,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.FooterUri(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.FooterUri(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -14230,7 +16643,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.PrinterName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PrinterName();
+            }());
         }
         catch (...)
         {
@@ -14251,7 +16668,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.PrinterName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PrinterName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -14265,7 +16686,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.PagesPerSide());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PagesPerSide();
+            }());
         }
         catch (...)
         {
@@ -14286,7 +16711,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.PagesPerSide(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PagesPerSide(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -14300,7 +16729,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.PageRanges());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PageRanges();
+            }());
         }
         catch (...)
         {
@@ -14321,7 +16754,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.PageRanges(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PageRanges(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -14335,7 +16772,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.MediaSize());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MediaSize();
+            }());
         }
         catch (...)
         {
@@ -14356,7 +16797,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2PrintMediaSize>(arg);
 
-            self->obj.MediaSize(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MediaSize(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -14370,7 +16815,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Duplex());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Duplex();
+            }());
         }
         catch (...)
         {
@@ -14391,7 +16840,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2PrintDuplex>(arg);
 
-            self->obj.Duplex(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Duplex(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -14405,7 +16858,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Copies());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Copies();
+            }());
         }
         catch (...)
         {
@@ -14426,7 +16883,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.Copies(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Copies(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -14440,7 +16901,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.ColorMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ColorMode();
+            }());
         }
         catch (...)
         {
@@ -14461,7 +16926,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2PrintColorMode>(arg);
 
-            self->obj.ColorMode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ColorMode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -14475,7 +16944,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Collation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Collation();
+            }());
         }
         catch (...)
         {
@@ -14496,7 +16969,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2PrintCollation>(arg);
 
-            self->obj.Collation(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Collation(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -14597,7 +17074,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.AssociatedFrameInfos());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AssociatedFrameInfos();
+            }());
         }
         catch (...)
         {
@@ -14610,7 +17091,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.ProcessInfo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProcessInfo();
+            }());
         }
         catch (...)
         {
@@ -14691,7 +17176,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.ProcessFailedKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProcessFailedKind();
+            }());
         }
         catch (...)
         {
@@ -14704,7 +17193,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.ExitCode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExitCode();
+            }());
         }
         catch (...)
         {
@@ -14717,7 +17210,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.FrameInfosForFailedProcess());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FrameInfosForFailedProcess();
+            }());
         }
         catch (...)
         {
@@ -14730,7 +17227,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.ProcessDescription());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProcessDescription();
+            }());
         }
         catch (...)
         {
@@ -14743,7 +17244,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Reason());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Reason();
+            }());
         }
         catch (...)
         {
@@ -14756,7 +17261,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.FailureSourceModulePath());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FailureSourceModulePath();
+            }());
         }
         catch (...)
         {
@@ -14841,7 +17350,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -14854,7 +17367,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.ProcessId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProcessId();
+            }());
         }
         catch (...)
         {
@@ -14941,7 +17458,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.AddBrowserExtensionAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.AddBrowserExtensionAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -14966,7 +17487,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
             {
                 auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2BrowsingDataKinds>(args, 0);
 
-                return py::convert(self->obj.ClearBrowsingDataAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ClearBrowsingDataAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -14982,7 +17507,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
                 auto param1 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 2);
 
-                return py::convert(self->obj.ClearBrowsingDataAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ClearBrowsingDataAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -15005,7 +17534,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             try
             {
-                return py::convert(self->obj.ClearBrowsingDataAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ClearBrowsingDataAsync();
+                }());
             }
             catch (...)
             {
@@ -15028,7 +17561,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             try
             {
-                self->obj.Delete();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Delete();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -15052,7 +17589,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             try
             {
-                return py::convert(self->obj.GetBrowserExtensionsAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetBrowserExtensionsAsync();
+                }());
             }
             catch (...)
             {
@@ -15075,7 +17616,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             try
             {
-                return py::convert(self->obj.GetNonDefaultPermissionSettingsAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetNonDefaultPermissionSettingsAsync();
+                }());
             }
             catch (...)
             {
@@ -15102,7 +17647,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2PermissionState>(args, 2);
 
-                return py::convert(self->obj.SetPermissionStateAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SetPermissionStateAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -15121,7 +17670,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.PreferredColorScheme());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PreferredColorScheme();
+            }());
         }
         catch (...)
         {
@@ -15142,7 +17695,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2PreferredColorScheme>(arg);
 
-            self->obj.PreferredColorScheme(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PreferredColorScheme(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -15156,7 +17713,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.DefaultDownloadFolderPath());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DefaultDownloadFolderPath();
+            }());
         }
         catch (...)
         {
@@ -15177,7 +17738,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.DefaultDownloadFolderPath(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DefaultDownloadFolderPath(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -15191,7 +17756,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.IsInPrivateModeEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsInPrivateModeEnabled();
+            }());
         }
         catch (...)
         {
@@ -15204,7 +17773,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.ProfileName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProfileName();
+            }());
         }
         catch (...)
         {
@@ -15217,7 +17790,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.ProfilePath());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProfilePath();
+            }());
         }
         catch (...)
         {
@@ -15230,7 +17807,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.PreferredTrackingPreventionLevel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PreferredTrackingPreventionLevel();
+            }());
         }
         catch (...)
         {
@@ -15251,7 +17832,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2TrackingPreventionLevel>(arg);
 
-            self->obj.PreferredTrackingPreventionLevel(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PreferredTrackingPreventionLevel(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -15265,7 +17850,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.CookieManager());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CookieManager();
+            }());
         }
         catch (...)
         {
@@ -15278,7 +17867,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.IsPasswordAutosaveEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsPasswordAutosaveEnabled();
+            }());
         }
         catch (...)
         {
@@ -15299,7 +17892,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsPasswordAutosaveEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsPasswordAutosaveEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -15313,7 +17910,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.IsGeneralAutofillEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsGeneralAutofillEnabled();
+            }());
         }
         catch (...)
         {
@@ -15334,7 +17935,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsGeneralAutofillEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsGeneralAutofillEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -15350,7 +17955,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Profile, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.Deleted(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Deleted(param0);
+            }());
         }
         catch (...)
         {
@@ -15365,7 +17974,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Deleted(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Deleted(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -15467,7 +18080,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             try
             {
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -15486,7 +18103,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.SuppressDefaultDialog());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SuppressDefaultDialog();
+            }());
         }
         catch (...)
         {
@@ -15507,7 +18128,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.SuppressDefaultDialog(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SuppressDefaultDialog(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -15521,7 +18146,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.SaveAsFilePath());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SaveAsFilePath();
+            }());
         }
         catch (...)
         {
@@ -15542,7 +18171,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.SaveAsFilePath(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SaveAsFilePath(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -15556,7 +18189,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -15577,7 +18214,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2SaveAsKind>(arg);
 
-            self->obj.Kind(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Kind(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -15591,7 +18232,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Cancel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Cancel();
+            }());
         }
         catch (...)
         {
@@ -15612,7 +18257,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Cancel(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Cancel(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -15626,7 +18275,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.AllowReplace());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AllowReplace();
+            }());
         }
         catch (...)
         {
@@ -15647,7 +18300,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.AllowReplace(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AllowReplace(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -15661,7 +18318,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.ContentMimeType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContentMimeType();
+            }());
         }
         catch (...)
         {
@@ -15751,7 +18412,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             try
             {
-                self->obj.Accept();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Accept();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -15775,7 +18440,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             try
             {
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -15794,7 +18463,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.ResultText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResultText();
+            }());
         }
         catch (...)
         {
@@ -15815,7 +18488,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ResultText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ResultText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -15829,7 +18506,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.DefaultText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DefaultText();
+            }());
         }
         catch (...)
         {
@@ -15842,7 +18523,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -15855,7 +18540,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Message());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Message();
+            }());
         }
         catch (...)
         {
@@ -15868,7 +18557,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Uri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Uri();
+            }());
         }
         catch (...)
         {
@@ -15954,7 +18647,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.ColumnNumber());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ColumnNumber();
+            }());
         }
         catch (...)
         {
@@ -15967,7 +18664,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.LineNumber());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LineNumber();
+            }());
         }
         catch (...)
         {
@@ -15980,7 +18681,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Message());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Message();
+            }());
         }
         catch (...)
         {
@@ -15993,7 +18698,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -16006,7 +18715,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.ToJson());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ToJson();
+            }());
         }
         catch (...)
         {
@@ -16094,7 +18807,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             try
             {
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -16113,7 +18830,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Action());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Action();
+            }());
         }
         catch (...)
         {
@@ -16134,7 +18855,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ServerCertificateErrorAction>(arg);
 
-            self->obj.Action(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Action(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -16148,7 +18873,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.ErrorStatus());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ErrorStatus();
+            }());
         }
         catch (...)
         {
@@ -16161,7 +18890,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.RequestUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RequestUri();
+            }());
         }
         catch (...)
         {
@@ -16174,7 +18907,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.ServerCertificate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServerCertificate();
+            }());
         }
         catch (...)
         {
@@ -16258,7 +18995,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.IsZoomControlEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsZoomControlEnabled();
+            }());
         }
         catch (...)
         {
@@ -16279,7 +19020,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsZoomControlEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsZoomControlEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -16293,7 +19038,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.IsWebMessageEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsWebMessageEnabled();
+            }());
         }
         catch (...)
         {
@@ -16314,7 +19063,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsWebMessageEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsWebMessageEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -16328,7 +19081,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.IsStatusBarEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsStatusBarEnabled();
+            }());
         }
         catch (...)
         {
@@ -16349,7 +19106,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsStatusBarEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsStatusBarEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -16363,7 +19124,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.IsScriptEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsScriptEnabled();
+            }());
         }
         catch (...)
         {
@@ -16384,7 +19149,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsScriptEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsScriptEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -16398,7 +19167,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.IsBuiltInErrorPageEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsBuiltInErrorPageEnabled();
+            }());
         }
         catch (...)
         {
@@ -16419,7 +19192,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsBuiltInErrorPageEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsBuiltInErrorPageEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -16433,7 +19210,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.AreHostObjectsAllowed());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AreHostObjectsAllowed();
+            }());
         }
         catch (...)
         {
@@ -16454,7 +19235,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.AreHostObjectsAllowed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AreHostObjectsAllowed(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -16468,7 +19253,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.AreDevToolsEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AreDevToolsEnabled();
+            }());
         }
         catch (...)
         {
@@ -16489,7 +19278,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.AreDevToolsEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AreDevToolsEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -16503,7 +19296,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.AreDefaultScriptDialogsEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AreDefaultScriptDialogsEnabled();
+            }());
         }
         catch (...)
         {
@@ -16524,7 +19321,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.AreDefaultScriptDialogsEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AreDefaultScriptDialogsEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -16538,7 +19339,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.AreDefaultContextMenusEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AreDefaultContextMenusEnabled();
+            }());
         }
         catch (...)
         {
@@ -16559,7 +19364,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.AreDefaultContextMenusEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AreDefaultContextMenusEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -16573,7 +19382,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.HostObjectDispatchAdapter());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HostObjectDispatchAdapter();
+            }());
         }
         catch (...)
         {
@@ -16594,7 +19407,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2DispatchAdapter>(arg);
 
-            self->obj.HostObjectDispatchAdapter(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.HostObjectDispatchAdapter(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -16608,7 +19425,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.UserAgent());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UserAgent();
+            }());
         }
         catch (...)
         {
@@ -16629,7 +19450,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.UserAgent(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.UserAgent(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -16643,7 +19468,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.AreBrowserAcceleratorKeysEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AreBrowserAcceleratorKeysEnabled();
+            }());
         }
         catch (...)
         {
@@ -16664,7 +19493,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.AreBrowserAcceleratorKeysEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AreBrowserAcceleratorKeysEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -16678,7 +19511,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.IsPasswordAutosaveEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsPasswordAutosaveEnabled();
+            }());
         }
         catch (...)
         {
@@ -16699,7 +19536,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsPasswordAutosaveEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsPasswordAutosaveEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -16713,7 +19554,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.IsGeneralAutofillEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsGeneralAutofillEnabled();
+            }());
         }
         catch (...)
         {
@@ -16734,7 +19579,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsGeneralAutofillEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsGeneralAutofillEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -16748,7 +19597,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.IsPinchZoomEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsPinchZoomEnabled();
+            }());
         }
         catch (...)
         {
@@ -16769,7 +19622,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsPinchZoomEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsPinchZoomEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -16783,7 +19640,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.IsSwipeNavigationEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsSwipeNavigationEnabled();
+            }());
         }
         catch (...)
         {
@@ -16804,7 +19665,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsSwipeNavigationEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsSwipeNavigationEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -16818,7 +19683,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.HiddenPdfToolbarItems());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HiddenPdfToolbarItems();
+            }());
         }
         catch (...)
         {
@@ -16839,7 +19708,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2PdfToolbarItems>(arg);
 
-            self->obj.HiddenPdfToolbarItems(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.HiddenPdfToolbarItems(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -16853,7 +19726,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.IsReputationCheckingRequired());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsReputationCheckingRequired();
+            }());
         }
         catch (...)
         {
@@ -16874,7 +19751,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsReputationCheckingRequired(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsReputationCheckingRequired(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -16888,7 +19769,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.IsNonClientRegionSupportEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsNonClientRegionSupportEnabled();
+            }());
         }
         catch (...)
         {
@@ -16909,7 +19794,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsNonClientRegionSupportEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsNonClientRegionSupportEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -17012,7 +19901,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             try
             {
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -17036,7 +19929,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             try
             {
-                return py::convert(self->obj.OpenStream());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.OpenStream();
+                }());
             }
             catch (...)
             {
@@ -17055,7 +19952,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -17068,7 +19969,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Buffer());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Buffer();
+            }());
         }
         catch (...)
         {
@@ -17110,7 +20015,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -17172,7 +20081,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.IsNewDocument());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsNewDocument();
+            }());
         }
         catch (...)
         {
@@ -17256,7 +20169,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             try
             {
-                return py::convert(self->obj.TryGetWebMessageAsString());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryGetWebMessageAsString();
+                }());
             }
             catch (...)
             {
@@ -17275,7 +20192,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Source());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Source();
+            }());
         }
         catch (...)
         {
@@ -17288,7 +20209,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.WebMessageAsJson());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WebMessageAsJson();
+            }());
         }
         catch (...)
         {
@@ -17301,7 +20226,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.AdditionalObjects());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AdditionalObjects();
+            }());
         }
         catch (...)
         {
@@ -17384,7 +20313,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Uri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Uri();
+            }());
         }
         catch (...)
         {
@@ -17405,7 +20338,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Uri(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Uri(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -17419,7 +20356,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Method());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Method();
+            }());
         }
         catch (...)
         {
@@ -17440,7 +20381,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Method(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Method(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -17454,7 +20399,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Content());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Content();
+            }());
         }
         catch (...)
         {
@@ -17475,7 +20424,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(arg);
 
-            self->obj.Content(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Content(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -17489,7 +20442,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Headers());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Headers();
+            }());
         }
         catch (...)
         {
@@ -17576,7 +20533,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             try
             {
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -17595,7 +20556,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Response());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Response();
+            }());
         }
         catch (...)
         {
@@ -17616,7 +20581,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceResponse>(arg);
 
-            self->obj.Response(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Response(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -17630,7 +20599,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Request());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Request();
+            }());
         }
         catch (...)
         {
@@ -17643,7 +20616,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.ResourceContext());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResourceContext();
+            }());
         }
         catch (...)
         {
@@ -17656,7 +20633,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.RequestedSourceKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RequestedSourceKind();
+            }());
         }
         catch (...)
         {
@@ -17740,7 +20721,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.StatusCode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StatusCode();
+            }());
         }
         catch (...)
         {
@@ -17761,7 +20746,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.StatusCode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StatusCode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -17775,7 +20764,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.ReasonPhrase());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReasonPhrase();
+            }());
         }
         catch (...)
         {
@@ -17796,7 +20789,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ReasonPhrase(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ReasonPhrase(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -17810,7 +20807,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Content());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Content();
+            }());
         }
         catch (...)
         {
@@ -17831,7 +20832,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(arg);
 
-            self->obj.Content(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Content(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -17845,7 +20850,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Headers());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Headers();
+            }());
         }
         catch (...)
         {
@@ -17928,7 +20937,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Request());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Request();
+            }());
         }
         catch (...)
         {
@@ -17941,7 +20954,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Response());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Response();
+            }());
         }
         catch (...)
         {
@@ -18026,7 +21043,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             try
             {
-                return py::convert(self->obj.GetContentAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetContentAsync();
+                }());
             }
             catch (...)
             {
@@ -18045,7 +21066,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Headers());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Headers();
+            }());
         }
         catch (...)
         {
@@ -18058,7 +21083,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.ReasonPhrase());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReasonPhrase();
+            }());
         }
         catch (...)
         {
@@ -18071,7 +21100,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.StatusCode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StatusCode();
+            }());
         }
         catch (...)
         {
@@ -18154,7 +21187,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.HasPosition());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HasPosition();
+            }());
         }
         catch (...)
         {
@@ -18167,7 +21204,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.HasSize());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HasSize();
+            }());
         }
         catch (...)
         {
@@ -18180,7 +21221,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Height());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Height();
+            }());
         }
         catch (...)
         {
@@ -18193,7 +21238,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Left());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Left();
+            }());
         }
         catch (...)
         {
@@ -18206,7 +21255,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.ShouldDisplayMenuBar());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ShouldDisplayMenuBar();
+            }());
         }
         catch (...)
         {
@@ -18219,7 +21272,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.ShouldDisplayScrollBars());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ShouldDisplayScrollBars();
+            }());
         }
         catch (...)
         {
@@ -18232,7 +21289,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.ShouldDisplayStatus());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ShouldDisplayStatus();
+            }());
         }
         catch (...)
         {
@@ -18245,7 +21306,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.ShouldDisplayToolbar());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ShouldDisplayToolbar();
+            }());
         }
         catch (...)
         {
@@ -18258,7 +21323,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Top());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Top();
+            }());
         }
         catch (...)
         {
@@ -18271,7 +21340,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Width());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Width();
+            }());
         }
         catch (...)
         {
@@ -18364,7 +21437,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             try
             {
-                self->obj.Clean();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Clean();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -18390,7 +21467,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
             {
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
-                return py::convert(self->obj.UnwrapObject(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.UnwrapObject(param0);
+                }());
             }
             catch (...)
             {
@@ -18416,7 +21497,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2DispatchAdapter>(args, 1);
 
-                return py::convert(self->obj.WrapNamedObject(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.WrapNamedObject(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -18442,7 +21527,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2DispatchAdapter>(args, 1);
 
-                return py::convert(self->obj.WrapObject(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.WrapObject(param0, param1);
+                }());
             }
             catch (...)
             {

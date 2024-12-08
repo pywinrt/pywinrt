@@ -64,7 +64,11 @@ namespace py::cpp::Windows::Foundation::Collections
                     return nullptr;
                 }
 
-                self->obj.Clear();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Clear();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -101,7 +105,11 @@ namespace py::cpp::Windows::Foundation::Collections
                     return nullptr;
                 }
 
-                return py::convert(self->obj.First());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.First();
+                }());
             }
             catch (...)
             {
@@ -137,7 +145,11 @@ namespace py::cpp::Windows::Foundation::Collections
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetView();
+                }());
             }
             catch (...)
             {
@@ -175,7 +187,11 @@ namespace py::cpp::Windows::Foundation::Collections
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.HasKey(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.HasKey(param0);
+                }());
             }
             catch (...)
             {
@@ -214,7 +230,11 @@ namespace py::cpp::Windows::Foundation::Collections
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                return py::convert(self->obj.Insert(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Insert(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -252,7 +272,11 @@ namespace py::cpp::Windows::Foundation::Collections
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.Lookup(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Lookup(param0);
+                }());
             }
             catch (...)
             {
@@ -290,7 +314,11 @@ namespace py::cpp::Windows::Foundation::Collections
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.Remove(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Remove(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -323,7 +351,11 @@ namespace py::cpp::Windows::Foundation::Collections
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -351,7 +383,11 @@ namespace py::cpp::Windows::Foundation::Collections
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::MapChangedEventHandler<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.MapChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MapChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -379,7 +415,11 @@ namespace py::cpp::Windows::Foundation::Collections
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.MapChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MapChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -417,7 +457,11 @@ namespace py::cpp::Windows::Foundation::Collections
     {
         try
         {
-            py::pyobj_handle iter{py::convert(self->obj.First())};
+            py::pyobj_handle iter{py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.First();
+            }())};
 
             if (!iter)
             {
@@ -437,7 +481,11 @@ namespace py::cpp::Windows::Foundation::Collections
     {
         try
         {
-            return static_cast<int>(self->obj.HasKey(py::convert_to<winrt::hstring>(key)));
+            auto _key = py::convert_to<winrt::hstring>(key);
+            {
+                auto _gil = py::release_gil();
+                return static_cast<int>(self->obj.HasKey(_key));
+            }
         }
         catch (...)
         {
@@ -450,6 +498,7 @@ namespace py::cpp::Windows::Foundation::Collections
     {
         try
         {
+            auto _gil = py::release_gil();
             return static_cast<Py_ssize_t>(self->obj.Size());
         }
         catch (...)
@@ -464,12 +513,22 @@ namespace py::cpp::Windows::Foundation::Collections
         try
         {
             auto _key = py::convert_to<winrt::hstring>(key);
-            auto value = self->obj.TryLookup(_key);
+            auto value = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.TryLookup(_key);
+            }();
 
             if (!value) {
                 if constexpr (std::is_base_of_v<winrt::Windows::Foundation::IUnknown, decltype(value)>)
                 {
-                    if (self->obj.HasKey(_key))
+                    auto has_key = [&]()
+                    {
+                        auto _gil = py::release_gil();
+                        return self->obj.HasKey(_key);
+                    }();
+
+                    if (has_key)
                     {
                         Py_RETURN_NONE;
                     }
@@ -495,7 +554,12 @@ namespace py::cpp::Windows::Foundation::Collections
             auto _key = py::convert_to<winrt::hstring>(key);
 
             if (value == nullptr) {
-                if (!self->obj.TryRemove(_key)) {
+                bool did_remove;
+                {
+                    auto _gil = py::release_gil();
+                    did_remove = self->obj.TryRemove(_key);
+                }
+                if (!did_remove) {
                     PyErr_SetObject(PyExc_KeyError, key);
                     return -1;
                 }
@@ -503,7 +567,11 @@ namespace py::cpp::Windows::Foundation::Collections
                 return 0;
             }
 
-            self->obj.Insert(_key, py::convert_to<winrt::Windows::Foundation::IInspectable>(value));
+            auto _value = py::convert_to<winrt::Windows::Foundation::IInspectable>(value);
+            {
+                auto _gil = py::release_gil();
+                self->obj.Insert(_key, _value);
+            }
 
             return 0;
         }
@@ -614,7 +682,11 @@ namespace py::cpp::Windows::Foundation::Collections
                     return nullptr;
                 }
 
-                self->obj.Clear();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Clear();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -651,7 +723,11 @@ namespace py::cpp::Windows::Foundation::Collections
                     return nullptr;
                 }
 
-                return py::convert(self->obj.First());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.First();
+                }());
             }
             catch (...)
             {
@@ -687,7 +763,11 @@ namespace py::cpp::Windows::Foundation::Collections
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetView();
+                }());
             }
             catch (...)
             {
@@ -725,7 +805,11 @@ namespace py::cpp::Windows::Foundation::Collections
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.HasKey(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.HasKey(param0);
+                }());
             }
             catch (...)
             {
@@ -764,7 +848,11 @@ namespace py::cpp::Windows::Foundation::Collections
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.Insert(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Insert(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -802,7 +890,11 @@ namespace py::cpp::Windows::Foundation::Collections
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.Lookup(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Lookup(param0);
+                }());
             }
             catch (...)
             {
@@ -840,7 +932,11 @@ namespace py::cpp::Windows::Foundation::Collections
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.Remove(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Remove(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -873,7 +969,11 @@ namespace py::cpp::Windows::Foundation::Collections
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -901,7 +1001,11 @@ namespace py::cpp::Windows::Foundation::Collections
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::MapChangedEventHandler<winrt::hstring, winrt::hstring>>(arg);
 
-            return py::convert(self->obj.MapChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MapChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -929,7 +1033,11 @@ namespace py::cpp::Windows::Foundation::Collections
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.MapChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MapChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -967,7 +1075,11 @@ namespace py::cpp::Windows::Foundation::Collections
     {
         try
         {
-            py::pyobj_handle iter{py::convert(self->obj.First())};
+            py::pyobj_handle iter{py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.First();
+            }())};
 
             if (!iter)
             {
@@ -987,7 +1099,11 @@ namespace py::cpp::Windows::Foundation::Collections
     {
         try
         {
-            return static_cast<int>(self->obj.HasKey(py::convert_to<winrt::hstring>(key)));
+            auto _key = py::convert_to<winrt::hstring>(key);
+            {
+                auto _gil = py::release_gil();
+                return static_cast<int>(self->obj.HasKey(_key));
+            }
         }
         catch (...)
         {
@@ -1000,6 +1116,7 @@ namespace py::cpp::Windows::Foundation::Collections
     {
         try
         {
+            auto _gil = py::release_gil();
             return static_cast<Py_ssize_t>(self->obj.Size());
         }
         catch (...)
@@ -1014,12 +1131,22 @@ namespace py::cpp::Windows::Foundation::Collections
         try
         {
             auto _key = py::convert_to<winrt::hstring>(key);
-            auto value = self->obj.TryLookup(_key);
+            auto value = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.TryLookup(_key);
+            }();
 
             if (!value) {
                 if constexpr (std::is_base_of_v<winrt::Windows::Foundation::IUnknown, decltype(value)>)
                 {
-                    if (self->obj.HasKey(_key))
+                    auto has_key = [&]()
+                    {
+                        auto _gil = py::release_gil();
+                        return self->obj.HasKey(_key);
+                    }();
+
+                    if (has_key)
                     {
                         Py_RETURN_NONE;
                     }
@@ -1045,7 +1172,12 @@ namespace py::cpp::Windows::Foundation::Collections
             auto _key = py::convert_to<winrt::hstring>(key);
 
             if (value == nullptr) {
-                if (!self->obj.TryRemove(_key)) {
+                bool did_remove;
+                {
+                    auto _gil = py::release_gil();
+                    did_remove = self->obj.TryRemove(_key);
+                }
+                if (!did_remove) {
                     PyErr_SetObject(PyExc_KeyError, key);
                     return -1;
                 }
@@ -1053,7 +1185,11 @@ namespace py::cpp::Windows::Foundation::Collections
                 return 0;
             }
 
-            self->obj.Insert(_key, py::convert_to<winrt::hstring>(value));
+            auto _value = py::convert_to<winrt::hstring>(value);
+            {
+                auto _gil = py::release_gil();
+                self->obj.Insert(_key, _value);
+            }
 
             return 0;
         }
@@ -1164,7 +1300,11 @@ namespace py::cpp::Windows::Foundation::Collections
                     return nullptr;
                 }
 
-                self->obj.Clear();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Clear();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1201,7 +1341,11 @@ namespace py::cpp::Windows::Foundation::Collections
                     return nullptr;
                 }
 
-                return py::convert(self->obj.First());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.First();
+                }());
             }
             catch (...)
             {
@@ -1237,7 +1381,11 @@ namespace py::cpp::Windows::Foundation::Collections
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetView();
+                }());
             }
             catch (...)
             {
@@ -1275,7 +1423,11 @@ namespace py::cpp::Windows::Foundation::Collections
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.HasKey(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.HasKey(param0);
+                }());
             }
             catch (...)
             {
@@ -1314,7 +1466,11 @@ namespace py::cpp::Windows::Foundation::Collections
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                return py::convert(self->obj.Insert(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Insert(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1352,7 +1508,11 @@ namespace py::cpp::Windows::Foundation::Collections
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.Lookup(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Lookup(param0);
+                }());
             }
             catch (...)
             {
@@ -1390,7 +1550,11 @@ namespace py::cpp::Windows::Foundation::Collections
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.Remove(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Remove(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1423,7 +1587,11 @@ namespace py::cpp::Windows::Foundation::Collections
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -1451,7 +1619,11 @@ namespace py::cpp::Windows::Foundation::Collections
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::MapChangedEventHandler<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.MapChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MapChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -1479,7 +1651,11 @@ namespace py::cpp::Windows::Foundation::Collections
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.MapChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MapChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1517,7 +1693,11 @@ namespace py::cpp::Windows::Foundation::Collections
     {
         try
         {
-            py::pyobj_handle iter{py::convert(self->obj.First())};
+            py::pyobj_handle iter{py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.First();
+            }())};
 
             if (!iter)
             {
@@ -1537,7 +1717,11 @@ namespace py::cpp::Windows::Foundation::Collections
     {
         try
         {
-            return static_cast<int>(self->obj.HasKey(py::convert_to<winrt::hstring>(key)));
+            auto _key = py::convert_to<winrt::hstring>(key);
+            {
+                auto _gil = py::release_gil();
+                return static_cast<int>(self->obj.HasKey(_key));
+            }
         }
         catch (...)
         {
@@ -1550,6 +1734,7 @@ namespace py::cpp::Windows::Foundation::Collections
     {
         try
         {
+            auto _gil = py::release_gil();
             return static_cast<Py_ssize_t>(self->obj.Size());
         }
         catch (...)
@@ -1564,12 +1749,22 @@ namespace py::cpp::Windows::Foundation::Collections
         try
         {
             auto _key = py::convert_to<winrt::hstring>(key);
-            auto value = self->obj.TryLookup(_key);
+            auto value = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.TryLookup(_key);
+            }();
 
             if (!value) {
                 if constexpr (std::is_base_of_v<winrt::Windows::Foundation::IUnknown, decltype(value)>)
                 {
-                    if (self->obj.HasKey(_key))
+                    auto has_key = [&]()
+                    {
+                        auto _gil = py::release_gil();
+                        return self->obj.HasKey(_key);
+                    }();
+
+                    if (has_key)
                     {
                         Py_RETURN_NONE;
                     }
@@ -1595,7 +1790,12 @@ namespace py::cpp::Windows::Foundation::Collections
             auto _key = py::convert_to<winrt::hstring>(key);
 
             if (value == nullptr) {
-                if (!self->obj.TryRemove(_key)) {
+                bool did_remove;
+                {
+                    auto _gil = py::release_gil();
+                    did_remove = self->obj.TryRemove(_key);
+                }
+                if (!did_remove) {
                     PyErr_SetObject(PyExc_KeyError, key);
                     return -1;
                 }
@@ -1603,7 +1803,11 @@ namespace py::cpp::Windows::Foundation::Collections
                 return 0;
             }
 
-            self->obj.Insert(_key, py::convert_to<winrt::Windows::Foundation::IInspectable>(value));
+            auto _value = py::convert_to<winrt::Windows::Foundation::IInspectable>(value);
+            {
+                auto _gil = py::release_gil();
+                self->obj.Insert(_key, _value);
+            }
 
             return 0;
         }
@@ -3168,7 +3372,11 @@ namespace py::cpp::Windows::Foundation::Collections
                     return nullptr;
                 }
 
-                self->obj.Clear();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Clear();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3205,7 +3413,11 @@ namespace py::cpp::Windows::Foundation::Collections
                     return nullptr;
                 }
 
-                return py::convert(self->obj.First());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.First();
+                }());
             }
             catch (...)
             {
@@ -3241,7 +3453,11 @@ namespace py::cpp::Windows::Foundation::Collections
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetView();
+                }());
             }
             catch (...)
             {
@@ -3279,7 +3495,11 @@ namespace py::cpp::Windows::Foundation::Collections
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.HasKey(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.HasKey(param0);
+                }());
             }
             catch (...)
             {
@@ -3318,7 +3538,11 @@ namespace py::cpp::Windows::Foundation::Collections
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                return py::convert(self->obj.Insert(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Insert(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -3356,7 +3580,11 @@ namespace py::cpp::Windows::Foundation::Collections
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.Lookup(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Lookup(param0);
+                }());
             }
             catch (...)
             {
@@ -3394,7 +3622,11 @@ namespace py::cpp::Windows::Foundation::Collections
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.Remove(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Remove(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3427,7 +3659,11 @@ namespace py::cpp::Windows::Foundation::Collections
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -3455,7 +3691,11 @@ namespace py::cpp::Windows::Foundation::Collections
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::MapChangedEventHandler<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.MapChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MapChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -3483,7 +3723,11 @@ namespace py::cpp::Windows::Foundation::Collections
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.MapChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MapChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3521,7 +3765,11 @@ namespace py::cpp::Windows::Foundation::Collections
     {
         try
         {
-            py::pyobj_handle iter{py::convert(self->obj.First())};
+            py::pyobj_handle iter{py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.First();
+            }())};
 
             if (!iter)
             {
@@ -3541,7 +3789,11 @@ namespace py::cpp::Windows::Foundation::Collections
     {
         try
         {
-            return static_cast<int>(self->obj.HasKey(py::convert_to<winrt::hstring>(key)));
+            auto _key = py::convert_to<winrt::hstring>(key);
+            {
+                auto _gil = py::release_gil();
+                return static_cast<int>(self->obj.HasKey(_key));
+            }
         }
         catch (...)
         {
@@ -3554,6 +3806,7 @@ namespace py::cpp::Windows::Foundation::Collections
     {
         try
         {
+            auto _gil = py::release_gil();
             return static_cast<Py_ssize_t>(self->obj.Size());
         }
         catch (...)
@@ -3568,12 +3821,22 @@ namespace py::cpp::Windows::Foundation::Collections
         try
         {
             auto _key = py::convert_to<winrt::hstring>(key);
-            auto value = self->obj.TryLookup(_key);
+            auto value = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.TryLookup(_key);
+            }();
 
             if (!value) {
                 if constexpr (std::is_base_of_v<winrt::Windows::Foundation::IUnknown, decltype(value)>)
                 {
-                    if (self->obj.HasKey(_key))
+                    auto has_key = [&]()
+                    {
+                        auto _gil = py::release_gil();
+                        return self->obj.HasKey(_key);
+                    }();
+
+                    if (has_key)
                     {
                         Py_RETURN_NONE;
                     }
@@ -3599,7 +3862,12 @@ namespace py::cpp::Windows::Foundation::Collections
             auto _key = py::convert_to<winrt::hstring>(key);
 
             if (value == nullptr) {
-                if (!self->obj.TryRemove(_key)) {
+                bool did_remove;
+                {
+                    auto _gil = py::release_gil();
+                    did_remove = self->obj.TryRemove(_key);
+                }
+                if (!did_remove) {
                     PyErr_SetObject(PyExc_KeyError, key);
                     return -1;
                 }
@@ -3607,7 +3875,11 @@ namespace py::cpp::Windows::Foundation::Collections
                 return 0;
             }
 
-            self->obj.Insert(_key, py::convert_to<winrt::Windows::Foundation::IInspectable>(value));
+            auto _value = py::convert_to<winrt::Windows::Foundation::IInspectable>(value);
+            {
+                auto _gil = py::release_gil();
+                self->obj.Insert(_key, _value);
+            }
 
             return 0;
         }
@@ -4050,7 +4322,11 @@ namespace py::cpp::Windows::Foundation::Collections
                 return nullptr;
             }
 
-            return py::convert(self->obj.CollectionChange());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CollectionChange();
+            }());
         }
         catch (...)
         {
@@ -4076,7 +4352,11 @@ namespace py::cpp::Windows::Foundation::Collections
                 return nullptr;
             }
 
-            return py::convert(self->obj.Index());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Index();
+            }());
         }
         catch (...)
         {

@@ -69,7 +69,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::UI::Input::Inking::InkPoint>>(args, 0);
 
-                return py::convert(self->obj.AppendInkPoints(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.AppendInkPoints(param0);
+                }());
             }
             catch (...)
             {
@@ -105,7 +109,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CreateInkStroke());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateInkStroke();
+                }());
             }
             catch (...)
             {
@@ -137,7 +145,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.BoundingRect());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BoundingRect();
+            }());
         }
         catch (...)
         {
@@ -163,7 +175,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.DrawingAttributes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DrawingAttributes();
+            }());
         }
         catch (...)
         {
@@ -189,7 +205,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.PointTransform());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PointTransform();
+            }());
         }
         catch (...)
         {
@@ -292,7 +312,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::Inking::InkPresenter>(args, 0);
 
-                return py::convert(winrt::Windows::UI::Input::Inking::Core::CoreInkIndependentInputSource::Create(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::Input::Inking::Core::CoreInkIndependentInputSource::Create(param0);
+                }());
             }
             catch (...)
             {
@@ -324,7 +348,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.InkPresenter());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InkPresenter();
+            }());
         }
         catch (...)
         {
@@ -350,7 +378,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.PointerCursor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PointerCursor();
+            }());
         }
         catch (...)
         {
@@ -384,7 +416,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
 
             auto param0 = py::convert_to<winrt::Windows::UI::Core::CoreCursor>(arg);
 
-            self->obj.PointerCursor(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PointerCursor(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -413,7 +449,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Inking::Core::CoreInkIndependentInputSource, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
-            return py::convert(self->obj.PointerEntering(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PointerEntering(param0);
+            }());
         }
         catch (...)
         {
@@ -441,7 +481,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.PointerEntering(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PointerEntering(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -470,7 +514,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Inking::Core::CoreInkIndependentInputSource, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
-            return py::convert(self->obj.PointerExiting(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PointerExiting(param0);
+            }());
         }
         catch (...)
         {
@@ -498,7 +546,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.PointerExiting(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PointerExiting(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -527,7 +579,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Inking::Core::CoreInkIndependentInputSource, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
-            return py::convert(self->obj.PointerHovering(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PointerHovering(param0);
+            }());
         }
         catch (...)
         {
@@ -555,7 +611,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.PointerHovering(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PointerHovering(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -584,7 +644,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Inking::Core::CoreInkIndependentInputSource, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
-            return py::convert(self->obj.PointerLost(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PointerLost(param0);
+            }());
         }
         catch (...)
         {
@@ -612,7 +676,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.PointerLost(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PointerLost(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -641,7 +709,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Inking::Core::CoreInkIndependentInputSource, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
-            return py::convert(self->obj.PointerMoving(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PointerMoving(param0);
+            }());
         }
         catch (...)
         {
@@ -669,7 +741,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.PointerMoving(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PointerMoving(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -698,7 +774,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Inking::Core::CoreInkIndependentInputSource, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
-            return py::convert(self->obj.PointerPressing(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PointerPressing(param0);
+            }());
         }
         catch (...)
         {
@@ -726,7 +806,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.PointerPressing(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PointerPressing(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -755,7 +839,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Inking::Core::CoreInkIndependentInputSource, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
-            return py::convert(self->obj.PointerReleasing(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PointerReleasing(param0);
+            }());
         }
         catch (...)
         {
@@ -783,7 +871,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.PointerReleasing(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PointerReleasing(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -940,7 +1032,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.RootVisual());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RootVisual();
+            }());
         }
         catch (...)
         {
@@ -974,7 +1070,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
 
             auto param0 = py::convert_to<winrt::Windows::UI::Composition::ContainerVisual>(arg);
 
-            self->obj.RootVisual(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RootVisual(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1001,7 +1101,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.InkPresenter());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InkPresenter();
+            }());
         }
         catch (...)
         {
@@ -1095,7 +1199,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Disposition());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Disposition();
+            }());
         }
         catch (...)
         {
@@ -1129,7 +1237,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
 
             auto param0 = py::convert_to<winrt::Windows::UI::Input::Inking::Core::CoreWetStrokeDisposition>(arg);
 
-            self->obj.Disposition(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Disposition(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1156,7 +1268,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.NewInkPoints());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NewInkPoints();
+            }());
         }
         catch (...)
         {
@@ -1182,7 +1298,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.PointerId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PointerId();
+            }());
         }
         catch (...)
         {
@@ -1283,7 +1403,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::Inking::InkPresenter>(args, 0);
 
-                return py::convert(winrt::Windows::UI::Input::Inking::Core::CoreWetStrokeUpdateSource::Create(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::Input::Inking::Core::CoreWetStrokeUpdateSource::Create(param0);
+                }());
             }
             catch (...)
             {
@@ -1315,7 +1439,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.InkPresenter());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InkPresenter();
+            }());
         }
         catch (...)
         {
@@ -1343,7 +1471,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Inking::Core::CoreWetStrokeUpdateSource, winrt::Windows::UI::Input::Inking::Core::CoreWetStrokeUpdateEventArgs>>(arg);
 
-            return py::convert(self->obj.WetStrokeCanceled(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WetStrokeCanceled(param0);
+            }());
         }
         catch (...)
         {
@@ -1371,7 +1503,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.WetStrokeCanceled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.WetStrokeCanceled(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1400,7 +1536,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Inking::Core::CoreWetStrokeUpdateSource, winrt::Windows::UI::Input::Inking::Core::CoreWetStrokeUpdateEventArgs>>(arg);
 
-            return py::convert(self->obj.WetStrokeCompleted(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WetStrokeCompleted(param0);
+            }());
         }
         catch (...)
         {
@@ -1428,7 +1568,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.WetStrokeCompleted(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.WetStrokeCompleted(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1457,7 +1601,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Inking::Core::CoreWetStrokeUpdateSource, winrt::Windows::UI::Input::Inking::Core::CoreWetStrokeUpdateEventArgs>>(arg);
 
-            return py::convert(self->obj.WetStrokeContinuing(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WetStrokeContinuing(param0);
+            }());
         }
         catch (...)
         {
@@ -1485,7 +1633,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.WetStrokeContinuing(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.WetStrokeContinuing(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1514,7 +1666,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Inking::Core::CoreWetStrokeUpdateSource, winrt::Windows::UI::Input::Inking::Core::CoreWetStrokeUpdateEventArgs>>(arg);
 
-            return py::convert(self->obj.WetStrokeStarting(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WetStrokeStarting(param0);
+            }());
         }
         catch (...)
         {
@@ -1542,7 +1698,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.WetStrokeStarting(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.WetStrokeStarting(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1571,7 +1731,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Inking::Core::CoreWetStrokeUpdateSource, winrt::Windows::UI::Input::Inking::Core::CoreWetStrokeUpdateEventArgs>>(arg);
 
-            return py::convert(self->obj.WetStrokeStopping(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WetStrokeStopping(param0);
+            }());
         }
         catch (...)
         {
@@ -1599,7 +1763,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.WetStrokeStopping(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.WetStrokeStopping(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)

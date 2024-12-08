@@ -38,7 +38,11 @@ namespace py::cpp::Windows::UI::Composition::Desktop
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsTopmost());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsTopmost();
+            }());
         }
         catch (...)
         {

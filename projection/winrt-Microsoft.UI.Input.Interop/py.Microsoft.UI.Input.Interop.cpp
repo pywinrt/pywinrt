@@ -36,7 +36,11 @@ namespace py::cpp::Microsoft::UI::Input::Interop
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Input::PointerPoint>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Input::Interop::PenDeviceInterop::FromPointerPoint(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Input::Interop::PenDeviceInterop::FromPointerPoint(param0);
+                }());
             }
             catch (...)
             {

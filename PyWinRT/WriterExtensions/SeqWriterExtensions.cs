@@ -77,7 +77,11 @@ static class SeqWriterExtensions
         );
 
         w.WriteTryCatch(
-            () => w.WriteLine($"return static_cast<Py_ssize_t>({self}Size());"),
+            () =>
+            {
+                w.WriteLine("auto _gil = py::release_gil();");
+                w.WriteLine($"return static_cast<Py_ssize_t>({self}Size());");
+            },
             catchReturn: "-1"
         );
     }
@@ -86,9 +90,16 @@ static class SeqWriterExtensions
     {
         var self = type.GetMethodInvokeContext(type.Methods.Single(m => m.Name == "GetAt"));
 
-        w.WriteTryCatch(
-            () => w.WriteLine($"return py::convert({self}GetAt(static_cast<uint32_t>(i)));")
-        );
+        w.WriteTryCatch(() =>
+        {
+            w.WriteLine("return py::convert([&]()");
+            w.WriteLine("{");
+            w.Indent++;
+            w.WriteLine("auto _gil = py::release_gil();");
+            w.WriteLine($"return {self}GetAt(static_cast<uint32_t>(i));");
+            w.Indent--;
+            w.WriteLine("}());");
+        });
     }
 
     public static void WriteSeqSubscriptBody(this IndentedTextWriter w, ProjectedType type)
@@ -140,8 +151,15 @@ static class SeqWriterExtensions
             w.WriteBlankLine();
             w.WriteLine("Py_ssize_t start, stop, step, length;");
             w.WriteBlankLine();
+            w.WriteLine("auto size = [&]()");
+            w.WriteLine("{");
+            w.Indent++;
+            w.WriteLine("auto _gil = py::release_gil();");
+            w.WriteLine($"return {self}Size();");
+            w.Indent--;
+            w.WriteLine("}();");
             w.WriteLine(
-                $"if (PySlice_GetIndicesEx(slice, {self}Size(), &start, &stop, &step, &length) < 0)"
+                "if (PySlice_GetIndicesEx(slice, size, &start, &stop, &step, &length) < 0)"
             );
             w.WriteLine("{");
             w.Indent++;
@@ -163,7 +181,13 @@ static class SeqWriterExtensions
                 $"winrt::com_array<{collectionType}> items(static_cast<uint32_t>(length), empty_instance<{collectionType}>::get());"
             );
             w.WriteBlankLine();
-            w.WriteLine($"auto count = {self}GetMany(static_cast<uint32_t>(start), items);");
+            w.WriteLine("auto count = [&]()");
+            w.WriteLine("{");
+            w.Indent++;
+            w.WriteLine("auto _gil = py::release_gil();");
+            w.WriteLine($"return {self}GetMany(static_cast<uint32_t>(start), items);");
+            w.Indent--;
+            w.WriteLine("}();");
             w.WriteBlankLine();
             w.WriteLine("if (count != static_cast<uint32_t>(length))");
             w.WriteLine("{");
@@ -194,15 +218,20 @@ static class SeqWriterExtensions
                 w.WriteLine($"if (!value)");
                 w.WriteLine("{");
                 w.Indent++;
+                w.WriteLine("auto _gil = py::release_gil();");
                 w.WriteLine($"{self}RemoveAt(static_cast<uint32_t>(i));");
                 w.Indent--;
                 w.WriteLine("}");
                 w.WriteLine("else");
                 w.WriteLine("{");
                 w.Indent++;
-                w.WriteLine(
-                    $"{self}SetAt(static_cast<uint32_t>(i), py::convert_to<{collectionType}>(value));"
-                );
+                w.WriteLine($"auto _value = py::convert_to<{collectionType}>(value);");
+                w.WriteLine("{");
+                w.Indent++;
+                w.WriteLine("auto _gil = py::release_gil();");
+                w.WriteLine($"{self}SetAt(static_cast<uint32_t>(i), _value);");
+                w.Indent--;
+                w.WriteLine("}");
                 w.Indent--;
                 w.WriteLine("}");
                 w.WriteBlankLine();

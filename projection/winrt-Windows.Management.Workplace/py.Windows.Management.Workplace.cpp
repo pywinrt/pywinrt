@@ -34,7 +34,11 @@ namespace py::cpp::Windows::Management::Workplace
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Management::Workplace::MdmPolicy::GetMessagingSyncPolicy());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Management::Workplace::MdmPolicy::GetMessagingSyncPolicy();
+                }());
             }
             catch (...)
             {
@@ -70,7 +74,11 @@ namespace py::cpp::Windows::Management::Workplace
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Management::Workplace::MdmPolicy::IsBrowserAllowed());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Management::Workplace::MdmPolicy::IsBrowserAllowed();
+                }());
             }
             catch (...)
             {
@@ -106,7 +114,11 @@ namespace py::cpp::Windows::Management::Workplace
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Management::Workplace::MdmPolicy::IsCameraAllowed());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Management::Workplace::MdmPolicy::IsCameraAllowed();
+                }());
             }
             catch (...)
             {
@@ -142,7 +154,11 @@ namespace py::cpp::Windows::Management::Workplace
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Management::Workplace::MdmPolicy::IsMicrosoftAccountAllowed());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Management::Workplace::MdmPolicy::IsMicrosoftAccountAllowed();
+                }());
             }
             catch (...)
             {
@@ -178,7 +194,11 @@ namespace py::cpp::Windows::Management::Workplace
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Management::Workplace::MdmPolicy::IsStoreAllowed());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Management::Workplace::MdmPolicy::IsStoreAllowed();
+                }());
             }
             catch (...)
             {
@@ -271,7 +291,11 @@ namespace py::cpp::Windows::Management::Workplace
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Management::Workplace::WorkplaceSettings::IsMicrosoftAccountOptional());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Management::Workplace::WorkplaceSettings::IsMicrosoftAccountOptional();
+            }());
         }
         catch (...)
         {

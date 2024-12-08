@@ -42,7 +42,11 @@ namespace py::cpp::Windows::Services::TargetedContent
                     return nullptr;
                 }
 
-                return py::convert(self->obj.InvokeAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.InvokeAsync();
+                }());
             }
             catch (...)
             {
@@ -145,7 +149,11 @@ namespace py::cpp::Windows::Services::TargetedContent
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -248,7 +256,11 @@ namespace py::cpp::Windows::Services::TargetedContent
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -280,7 +292,11 @@ namespace py::cpp::Windows::Services::TargetedContent
                 return nullptr;
             }
 
-            return py::convert(self->obj.HasPreviousContentExpired());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HasPreviousContentExpired();
+            }());
         }
         catch (...)
         {
@@ -380,7 +396,11 @@ namespace py::cpp::Windows::Services::TargetedContent
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.ReportCustomInteraction(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ReportCustomInteraction(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -419,7 +439,11 @@ namespace py::cpp::Windows::Services::TargetedContent
 
                 auto param0 = py::convert_to<winrt::Windows::Services::TargetedContent::TargetedContentInteraction>(args, 0);
 
-                self->obj.ReportInteraction(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ReportInteraction(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -452,7 +476,11 @@ namespace py::cpp::Windows::Services::TargetedContent
                 return nullptr;
             }
 
-            return py::convert(self->obj.Collections());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Collections();
+            }());
         }
         catch (...)
         {
@@ -478,7 +506,11 @@ namespace py::cpp::Windows::Services::TargetedContent
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -504,7 +536,11 @@ namespace py::cpp::Windows::Services::TargetedContent
                 return nullptr;
             }
 
-            return py::convert(self->obj.Items());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Items();
+            }());
         }
         catch (...)
         {
@@ -530,7 +566,11 @@ namespace py::cpp::Windows::Services::TargetedContent
                 return nullptr;
             }
 
-            return py::convert(self->obj.Path());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Path();
+            }());
         }
         catch (...)
         {
@@ -556,7 +596,11 @@ namespace py::cpp::Windows::Services::TargetedContent
                 return nullptr;
             }
 
-            return py::convert(self->obj.Properties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Properties();
+            }());
         }
         catch (...)
         {
@@ -661,7 +705,11 @@ namespace py::cpp::Windows::Services::TargetedContent
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Services::TargetedContent::TargetedContentContainer::GetAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Services::TargetedContent::TargetedContentContainer::GetAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -699,7 +747,11 @@ namespace py::cpp::Windows::Services::TargetedContent
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.SelectSingleObject(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SelectSingleObject(param0);
+                }());
             }
             catch (...)
             {
@@ -731,7 +783,11 @@ namespace py::cpp::Windows::Services::TargetedContent
                 return nullptr;
             }
 
-            return py::convert(self->obj.Availability());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Availability();
+            }());
         }
         catch (...)
         {
@@ -757,7 +813,11 @@ namespace py::cpp::Windows::Services::TargetedContent
                 return nullptr;
             }
 
-            return py::convert(self->obj.Content());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Content();
+            }());
         }
         catch (...)
         {
@@ -783,7 +843,11 @@ namespace py::cpp::Windows::Services::TargetedContent
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -809,7 +873,11 @@ namespace py::cpp::Windows::Services::TargetedContent
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -936,7 +1004,11 @@ namespace py::cpp::Windows::Services::TargetedContent
                     return nullptr;
                 }
 
-                return py::convert(self->obj.OpenReadAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.OpenReadAsync();
+                }());
             }
             catch (...)
             {
@@ -1039,7 +1111,11 @@ namespace py::cpp::Windows::Services::TargetedContent
                     return nullptr;
                 }
 
-                return py::convert(self->obj.OpenReadAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.OpenReadAsync();
+                }());
             }
             catch (...)
             {
@@ -1071,7 +1147,11 @@ namespace py::cpp::Windows::Services::TargetedContent
                 return nullptr;
             }
 
-            return py::convert(self->obj.Height());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Height();
+            }());
         }
         catch (...)
         {
@@ -1097,7 +1177,11 @@ namespace py::cpp::Windows::Services::TargetedContent
                 return nullptr;
             }
 
-            return py::convert(self->obj.Width());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Width();
+            }());
         }
         catch (...)
         {
@@ -1198,7 +1282,11 @@ namespace py::cpp::Windows::Services::TargetedContent
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.ReportCustomInteraction(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ReportCustomInteraction(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1237,7 +1325,11 @@ namespace py::cpp::Windows::Services::TargetedContent
 
                 auto param0 = py::convert_to<winrt::Windows::Services::TargetedContent::TargetedContentInteraction>(args, 0);
 
-                self->obj.ReportInteraction(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ReportInteraction(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1270,7 +1362,11 @@ namespace py::cpp::Windows::Services::TargetedContent
                 return nullptr;
             }
 
-            return py::convert(self->obj.Collections());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Collections();
+            }());
         }
         catch (...)
         {
@@ -1296,7 +1392,11 @@ namespace py::cpp::Windows::Services::TargetedContent
                 return nullptr;
             }
 
-            return py::convert(self->obj.Path());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Path();
+            }());
         }
         catch (...)
         {
@@ -1322,7 +1422,11 @@ namespace py::cpp::Windows::Services::TargetedContent
                 return nullptr;
             }
 
-            return py::convert(self->obj.Properties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Properties();
+            }());
         }
         catch (...)
         {
@@ -1348,7 +1452,11 @@ namespace py::cpp::Windows::Services::TargetedContent
                 return nullptr;
             }
 
-            return py::convert(self->obj.State());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.State();
+            }());
         }
         catch (...)
         {
@@ -1446,7 +1554,11 @@ namespace py::cpp::Windows::Services::TargetedContent
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppInstallationState());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppInstallationState();
+            }());
         }
         catch (...)
         {
@@ -1472,7 +1584,11 @@ namespace py::cpp::Windows::Services::TargetedContent
                 return nullptr;
             }
 
-            return py::convert(self->obj.ShouldDisplay());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ShouldDisplay();
+            }());
         }
         catch (...)
         {
@@ -1566,7 +1682,11 @@ namespace py::cpp::Windows::Services::TargetedContent
                 return nullptr;
             }
 
-            return py::convert(self->obj.Collection());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Collection();
+            }());
         }
         catch (...)
         {
@@ -1592,7 +1712,11 @@ namespace py::cpp::Windows::Services::TargetedContent
                 return nullptr;
             }
 
-            return py::convert(self->obj.Item());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Item();
+            }());
         }
         catch (...)
         {
@@ -1618,7 +1742,11 @@ namespace py::cpp::Windows::Services::TargetedContent
                 return nullptr;
             }
 
-            return py::convert(self->obj.ObjectKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ObjectKind();
+            }());
         }
         catch (...)
         {
@@ -1644,7 +1772,11 @@ namespace py::cpp::Windows::Services::TargetedContent
                 return nullptr;
             }
 
-            return py::convert(self->obj.Value());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Value();
+            }());
         }
         catch (...)
         {
@@ -1744,7 +1876,11 @@ namespace py::cpp::Windows::Services::TargetedContent
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -1849,7 +1985,11 @@ namespace py::cpp::Windows::Services::TargetedContent
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Services::TargetedContent::TargetedContentSubscription::GetAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Services::TargetedContent::TargetedContentSubscription::GetAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1885,7 +2025,11 @@ namespace py::cpp::Windows::Services::TargetedContent
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetContentContainerAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetContentContainerAsync();
+                }());
             }
             catch (...)
             {
@@ -1923,7 +2067,11 @@ namespace py::cpp::Windows::Services::TargetedContent
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Services::TargetedContent::TargetedContentSubscription::GetOptions(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Services::TargetedContent::TargetedContentSubscription::GetOptions(param0);
+                }());
             }
             catch (...)
             {
@@ -1955,7 +2103,11 @@ namespace py::cpp::Windows::Services::TargetedContent
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -1983,7 +2135,11 @@ namespace py::cpp::Windows::Services::TargetedContent
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Services::TargetedContent::TargetedContentSubscription, winrt::Windows::Services::TargetedContent::TargetedContentAvailabilityChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.AvailabilityChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AvailabilityChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -2011,7 +2167,11 @@ namespace py::cpp::Windows::Services::TargetedContent
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.AvailabilityChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AvailabilityChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2040,7 +2200,11 @@ namespace py::cpp::Windows::Services::TargetedContent
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Services::TargetedContent::TargetedContentSubscription, winrt::Windows::Services::TargetedContent::TargetedContentChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.ContentChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContentChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -2068,7 +2232,11 @@ namespace py::cpp::Windows::Services::TargetedContent
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ContentChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ContentChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2097,7 +2265,11 @@ namespace py::cpp::Windows::Services::TargetedContent
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Services::TargetedContent::TargetedContentSubscription, winrt::Windows::Services::TargetedContent::TargetedContentStateChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.StateChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StateChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -2125,7 +2297,11 @@ namespace py::cpp::Windows::Services::TargetedContent
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.StateChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StateChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2257,7 +2433,11 @@ namespace py::cpp::Windows::Services::TargetedContent
                     return nullptr;
                 }
 
-                self->obj.Update();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Update();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2290,7 +2470,11 @@ namespace py::cpp::Windows::Services::TargetedContent
                 return nullptr;
             }
 
-            return py::convert(self->obj.AllowPartialContentAvailability());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AllowPartialContentAvailability();
+            }());
         }
         catch (...)
         {
@@ -2324,7 +2508,11 @@ namespace py::cpp::Windows::Services::TargetedContent
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.AllowPartialContentAvailability(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AllowPartialContentAvailability(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2351,7 +2539,11 @@ namespace py::cpp::Windows::Services::TargetedContent
                 return nullptr;
             }
 
-            return py::convert(self->obj.CloudQueryParameters());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CloudQueryParameters();
+            }());
         }
         catch (...)
         {
@@ -2377,7 +2569,11 @@ namespace py::cpp::Windows::Services::TargetedContent
                 return nullptr;
             }
 
-            return py::convert(self->obj.LocalFilters());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LocalFilters();
+            }());
         }
         catch (...)
         {
@@ -2403,7 +2599,11 @@ namespace py::cpp::Windows::Services::TargetedContent
                 return nullptr;
             }
 
-            return py::convert(self->obj.SubscriptionId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SubscriptionId();
+            }());
         }
         catch (...)
         {
@@ -2500,7 +2700,11 @@ namespace py::cpp::Windows::Services::TargetedContent
                 return nullptr;
             }
 
-            return py::convert(self->obj.Action());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Action();
+            }());
         }
         catch (...)
         {
@@ -2526,7 +2730,11 @@ namespace py::cpp::Windows::Services::TargetedContent
                 return nullptr;
             }
 
-            return py::convert(self->obj.Actions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Actions();
+            }());
         }
         catch (...)
         {
@@ -2552,7 +2760,11 @@ namespace py::cpp::Windows::Services::TargetedContent
                 return nullptr;
             }
 
-            return py::convert(self->obj.Boolean());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Boolean();
+            }());
         }
         catch (...)
         {
@@ -2578,7 +2790,11 @@ namespace py::cpp::Windows::Services::TargetedContent
                 return nullptr;
             }
 
-            return py::convert(self->obj.Booleans());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Booleans();
+            }());
         }
         catch (...)
         {
@@ -2604,7 +2820,11 @@ namespace py::cpp::Windows::Services::TargetedContent
                 return nullptr;
             }
 
-            return py::convert(self->obj.File());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.File();
+            }());
         }
         catch (...)
         {
@@ -2630,7 +2850,11 @@ namespace py::cpp::Windows::Services::TargetedContent
                 return nullptr;
             }
 
-            return py::convert(self->obj.Files());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Files();
+            }());
         }
         catch (...)
         {
@@ -2656,7 +2880,11 @@ namespace py::cpp::Windows::Services::TargetedContent
                 return nullptr;
             }
 
-            return py::convert(self->obj.ImageFile());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ImageFile();
+            }());
         }
         catch (...)
         {
@@ -2682,7 +2910,11 @@ namespace py::cpp::Windows::Services::TargetedContent
                 return nullptr;
             }
 
-            return py::convert(self->obj.ImageFiles());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ImageFiles();
+            }());
         }
         catch (...)
         {
@@ -2708,7 +2940,11 @@ namespace py::cpp::Windows::Services::TargetedContent
                 return nullptr;
             }
 
-            return py::convert(self->obj.Number());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Number();
+            }());
         }
         catch (...)
         {
@@ -2734,7 +2970,11 @@ namespace py::cpp::Windows::Services::TargetedContent
                 return nullptr;
             }
 
-            return py::convert(self->obj.Numbers());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Numbers();
+            }());
         }
         catch (...)
         {
@@ -2760,7 +3000,11 @@ namespace py::cpp::Windows::Services::TargetedContent
                 return nullptr;
             }
 
-            return py::convert(self->obj.Path());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Path();
+            }());
         }
         catch (...)
         {
@@ -2786,7 +3030,11 @@ namespace py::cpp::Windows::Services::TargetedContent
                 return nullptr;
             }
 
-            return py::convert(self->obj.String());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.String();
+            }());
         }
         catch (...)
         {
@@ -2812,7 +3060,11 @@ namespace py::cpp::Windows::Services::TargetedContent
                 return nullptr;
             }
 
-            return py::convert(self->obj.Strings());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Strings();
+            }());
         }
         catch (...)
         {
@@ -2838,7 +3090,11 @@ namespace py::cpp::Windows::Services::TargetedContent
                 return nullptr;
             }
 
-            return py::convert(self->obj.Uri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Uri();
+            }());
         }
         catch (...)
         {
@@ -2864,7 +3120,11 @@ namespace py::cpp::Windows::Services::TargetedContent
                 return nullptr;
             }
 
-            return py::convert(self->obj.Uris());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Uris();
+            }());
         }
         catch (...)
         {
@@ -2890,7 +3150,11 @@ namespace py::cpp::Windows::Services::TargetedContent
                 return nullptr;
             }
 
-            return py::convert(self->obj.ValueKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ValueKind();
+            }());
         }
         catch (...)
         {

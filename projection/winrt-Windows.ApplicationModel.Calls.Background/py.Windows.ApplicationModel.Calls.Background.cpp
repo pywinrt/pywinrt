@@ -38,7 +38,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.CallBlockedReason());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CallBlockedReason();
+            }());
         }
         catch (...)
         {
@@ -64,7 +68,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.LineId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LineId();
+            }());
         }
         catch (...)
         {
@@ -90,7 +98,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.PhoneNumber());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PhoneNumber();
+            }());
         }
         catch (...)
         {
@@ -185,7 +197,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.PhoneNumber());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PhoneNumber();
+            }());
         }
         catch (...)
         {
@@ -211,7 +227,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.RequestId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RequestId();
+            }());
         }
         catch (...)
         {
@@ -305,7 +325,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.DismissalTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DismissalTime();
+            }());
         }
         catch (...)
         {
@@ -331,7 +355,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayName();
+            }());
         }
         catch (...)
         {
@@ -357,7 +385,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.LineId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LineId();
+            }());
         }
         catch (...)
         {
@@ -383,7 +415,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.PhoneNumber());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PhoneNumber();
+            }());
         }
         catch (...)
         {
@@ -409,7 +445,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.Reason());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Reason();
+            }());
         }
         catch (...)
         {
@@ -435,7 +475,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.TextReplyMessage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TextReplyMessage();
+            }());
         }
         catch (...)
         {
@@ -533,7 +577,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.CallId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CallId();
+            }());
         }
         catch (...)
         {
@@ -559,7 +607,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.LineId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LineId();
+            }());
         }
         catch (...)
         {
@@ -659,7 +711,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Calls::Background::PhoneLineProperties>(args, 0);
 
-                return py::convert(self->obj.HasLinePropertyChanged(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.HasLinePropertyChanged(param0);
+                }());
             }
             catch (...)
             {
@@ -691,7 +747,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.ChangeType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ChangeType();
+            }());
         }
         catch (...)
         {
@@ -717,7 +777,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.LineId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LineId();
+            }());
         }
         catch (...)
         {
@@ -812,7 +876,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.LineId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LineId();
+            }());
         }
         catch (...)
         {
@@ -838,7 +906,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.OperatorMessage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OperatorMessage();
+            }());
         }
         catch (...)
         {
@@ -864,7 +936,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.VoicemailCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.VoicemailCount();
+            }());
         }
         catch (...)
         {

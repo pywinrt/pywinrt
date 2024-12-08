@@ -36,7 +36,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities::Core
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::UserActivities::UserActivity>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::UserActivities::Core::CoreUserActivityManager::CreateUserActivitySessionInBackground(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::UserActivities::Core::CoreUserActivityManager::CreateUserActivitySessionInBackground(param0);
+                }());
             }
             catch (...)
             {
@@ -76,7 +80,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities::Core
                 auto param1 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 2);
 
-                return py::convert(winrt::Windows::ApplicationModel::UserActivities::Core::CoreUserActivityManager::DeleteUserActivitySessionsInTimeRangeAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::UserActivities::Core::CoreUserActivityManager::DeleteUserActivitySessionsInTimeRangeAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {

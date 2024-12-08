@@ -60,7 +60,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -94,7 +98,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(arg);
 
-            self->obj.Timestamp(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Timestamp(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -121,7 +129,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
                 return nullptr;
             }
 
-            return py::convert(self->obj.TargetUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TargetUri();
+            }());
         }
         catch (...)
         {
@@ -155,7 +167,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.TargetUri(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TargetUri(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -182,7 +198,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
                 return nullptr;
             }
 
-            return py::convert(self->obj.SharedItem());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SharedItem();
+            }());
         }
         catch (...)
         {
@@ -216,7 +236,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::SocialInfo::SocialFeedSharedItem>(arg);
 
-            self->obj.SharedItem(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SharedItem(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -243,7 +267,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
                 return nullptr;
             }
 
-            return py::convert(self->obj.Author());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Author();
+            }());
         }
         catch (...)
         {
@@ -269,7 +297,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
                 return nullptr;
             }
 
-            return py::convert(self->obj.PrimaryContent());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PrimaryContent();
+            }());
         }
         catch (...)
         {
@@ -295,7 +327,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
                 return nullptr;
             }
 
-            return py::convert(self->obj.SecondaryContent());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SecondaryContent();
+            }());
         }
         catch (...)
         {
@@ -321,7 +357,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
                 return nullptr;
             }
 
-            return py::convert(self->obj.Thumbnails());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Thumbnails();
+            }());
         }
         catch (...)
         {
@@ -420,7 +460,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
                 return nullptr;
             }
 
-            return py::convert(self->obj.Title());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Title();
+            }());
         }
         catch (...)
         {
@@ -454,7 +498,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Title(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Title(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -481,7 +529,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
                 return nullptr;
             }
 
-            return py::convert(self->obj.TargetUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TargetUri();
+            }());
         }
         catch (...)
         {
@@ -515,7 +567,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.TargetUri(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TargetUri(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -542,7 +598,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
                 return nullptr;
             }
 
-            return py::convert(self->obj.Message());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Message();
+            }());
         }
         catch (...)
         {
@@ -576,7 +636,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Message(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Message(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -694,7 +758,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -728,7 +796,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(arg);
 
-            self->obj.Timestamp(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Timestamp(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -755,7 +827,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
                 return nullptr;
             }
 
-            return py::convert(self->obj.TargetUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TargetUri();
+            }());
         }
         catch (...)
         {
@@ -789,7 +865,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.TargetUri(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TargetUri(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -816,7 +896,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
                 return nullptr;
             }
 
-            return py::convert(self->obj.Style());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Style();
+            }());
         }
         catch (...)
         {
@@ -850,7 +934,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::SocialInfo::SocialFeedItemStyle>(arg);
 
-            self->obj.Style(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Style(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -877,7 +965,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
                 return nullptr;
             }
 
-            return py::convert(self->obj.SharedItem());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SharedItem();
+            }());
         }
         catch (...)
         {
@@ -911,7 +1003,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::SocialInfo::SocialFeedSharedItem>(arg);
 
-            self->obj.SharedItem(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SharedItem(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -938,7 +1034,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
                 return nullptr;
             }
 
-            return py::convert(self->obj.RemoteId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RemoteId();
+            }());
         }
         catch (...)
         {
@@ -972,7 +1072,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.RemoteId(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RemoteId(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -999,7 +1103,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
                 return nullptr;
             }
 
-            return py::convert(self->obj.ChildItem());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ChildItem();
+            }());
         }
         catch (...)
         {
@@ -1033,7 +1141,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::SocialInfo::SocialFeedChildItem>(arg);
 
-            self->obj.ChildItem(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ChildItem(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1060,7 +1172,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
                 return nullptr;
             }
 
-            return py::convert(self->obj.BadgeStyle());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BadgeStyle();
+            }());
         }
         catch (...)
         {
@@ -1094,7 +1210,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::SocialInfo::SocialItemBadgeStyle>(arg);
 
-            self->obj.BadgeStyle(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.BadgeStyle(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1121,7 +1241,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
                 return nullptr;
             }
 
-            return py::convert(self->obj.BadgeCountValue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BadgeCountValue();
+            }());
         }
         catch (...)
         {
@@ -1155,7 +1279,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.BadgeCountValue(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.BadgeCountValue(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1182,7 +1310,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
                 return nullptr;
             }
 
-            return py::convert(self->obj.Author());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Author();
+            }());
         }
         catch (...)
         {
@@ -1208,7 +1340,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
                 return nullptr;
             }
 
-            return py::convert(self->obj.Thumbnails());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Thumbnails();
+            }());
         }
         catch (...)
         {
@@ -1234,7 +1370,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
                 return nullptr;
             }
 
-            return py::convert(self->obj.PrimaryContent());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PrimaryContent();
+            }());
         }
         catch (...)
         {
@@ -1260,7 +1400,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
                 return nullptr;
             }
 
-            return py::convert(self->obj.SecondaryContent());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SecondaryContent();
+            }());
         }
         catch (...)
         {
@@ -1386,7 +1530,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -1420,7 +1568,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(arg);
 
-            self->obj.Timestamp(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Timestamp(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1447,7 +1599,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
                 return nullptr;
             }
 
-            return py::convert(self->obj.Thumbnail());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Thumbnail();
+            }());
         }
         catch (...)
         {
@@ -1481,7 +1637,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::SocialInfo::SocialItemThumbnail>(arg);
 
-            self->obj.Thumbnail(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Thumbnail(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1508,7 +1668,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
                 return nullptr;
             }
 
-            return py::convert(self->obj.TargetUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TargetUri();
+            }());
         }
         catch (...)
         {
@@ -1542,7 +1706,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.TargetUri(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TargetUri(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1569,7 +1737,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
                 return nullptr;
             }
 
-            return py::convert(self->obj.OriginalSource());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OriginalSource();
+            }());
         }
         catch (...)
         {
@@ -1603,7 +1775,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.OriginalSource(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.OriginalSource(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1630,7 +1806,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
                 return nullptr;
             }
 
-            return py::convert(self->obj.Content());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Content();
+            }());
         }
         catch (...)
         {
@@ -1755,7 +1935,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 0);
 
-                return py::convert(self->obj.SetImageAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SetImageAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1787,7 +1971,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
                 return nullptr;
             }
 
-            return py::convert(self->obj.TargetUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TargetUri();
+            }());
         }
         catch (...)
         {
@@ -1821,7 +2009,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.TargetUri(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TargetUri(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1848,7 +2040,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
                 return nullptr;
             }
 
-            return py::convert(self->obj.ImageUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ImageUri();
+            }());
         }
         catch (...)
         {
@@ -1882,7 +2078,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.ImageUri(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ImageUri(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1909,7 +2109,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
                 return nullptr;
             }
 
-            return py::convert(self->obj.BitmapSize());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BitmapSize();
+            }());
         }
         catch (...)
         {
@@ -1943,7 +2147,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapSize>(arg);
 
-            self->obj.BitmapSize(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.BitmapSize(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2040,7 +2248,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
                 return nullptr;
             }
 
-            return py::convert(self->obj.UserName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UserName();
+            }());
         }
         catch (...)
         {
@@ -2074,7 +2286,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.UserName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.UserName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2101,7 +2317,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
                 return nullptr;
             }
 
-            return py::convert(self->obj.TargetUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TargetUri();
+            }());
         }
         catch (...)
         {
@@ -2135,7 +2355,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.TargetUri(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TargetUri(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2162,7 +2386,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
                 return nullptr;
             }
 
-            return py::convert(self->obj.RemoteId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RemoteId();
+            }());
         }
         catch (...)
         {
@@ -2196,7 +2424,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.RemoteId(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RemoteId(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2223,7 +2455,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayName();
+            }());
         }
         catch (...)
         {
@@ -2257,7 +2493,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.DisplayName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DisplayName(param0);
+            }
+
             return 0;
         }
         catch (...)

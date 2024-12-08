@@ -36,7 +36,11 @@ namespace py::cpp::Windows::Devices::Portable
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Portable::ServiceDeviceType>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Portable::ServiceDevice::GetDeviceSelector(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Portable::ServiceDevice::GetDeviceSelector(param0);
+                }());
             }
             catch (...)
             {
@@ -74,7 +78,11 @@ namespace py::cpp::Windows::Devices::Portable
 
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Portable::ServiceDevice::GetDeviceSelectorFromServiceId(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Portable::ServiceDevice::GetDeviceSelectorFromServiceId(param0);
+                }());
             }
             catch (...)
             {
@@ -170,7 +178,11 @@ namespace py::cpp::Windows::Devices::Portable
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Portable::StorageDevice::FromId(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Portable::StorageDevice::FromId(param0);
+                }());
             }
             catch (...)
             {
@@ -206,7 +218,11 @@ namespace py::cpp::Windows::Devices::Portable
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Portable::StorageDevice::GetDeviceSelector());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Portable::StorageDevice::GetDeviceSelector();
+                }());
             }
             catch (...)
             {

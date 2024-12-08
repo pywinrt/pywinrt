@@ -65,7 +65,11 @@ namespace py::cpp::Windows::Networking
                 return nullptr;
             }
 
-            return py::convert(self->obj.RemoteServiceName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RemoteServiceName();
+            }());
         }
         catch (...)
         {
@@ -99,7 +103,11 @@ namespace py::cpp::Windows::Networking
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.RemoteServiceName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RemoteServiceName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -126,7 +134,11 @@ namespace py::cpp::Windows::Networking
                 return nullptr;
             }
 
-            return py::convert(self->obj.RemoteHostName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RemoteHostName();
+            }());
         }
         catch (...)
         {
@@ -160,7 +172,11 @@ namespace py::cpp::Windows::Networking
 
             auto param0 = py::convert_to<winrt::Windows::Networking::HostName>(arg);
 
-            self->obj.RemoteHostName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RemoteHostName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -187,7 +203,11 @@ namespace py::cpp::Windows::Networking
                 return nullptr;
             }
 
-            return py::convert(self->obj.LocalServiceName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LocalServiceName();
+            }());
         }
         catch (...)
         {
@@ -221,7 +241,11 @@ namespace py::cpp::Windows::Networking
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.LocalServiceName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.LocalServiceName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -248,7 +272,11 @@ namespace py::cpp::Windows::Networking
                 return nullptr;
             }
 
-            return py::convert(self->obj.LocalHostName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LocalHostName();
+            }());
         }
         catch (...)
         {
@@ -282,7 +310,11 @@ namespace py::cpp::Windows::Networking
 
             auto param0 = py::convert_to<winrt::Windows::Networking::HostName>(arg);
 
-            self->obj.LocalHostName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.LocalHostName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -410,7 +442,11 @@ namespace py::cpp::Windows::Networking
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(winrt::Windows::Networking::HostName::Compare(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Networking::HostName::Compare(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -448,7 +484,11 @@ namespace py::cpp::Windows::Networking
 
                 auto param0 = py::convert_to<winrt::Windows::Networking::HostName>(args, 0);
 
-                return py::convert(self->obj.IsEqual(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsEqual(param0);
+                }());
             }
             catch (...)
             {
@@ -484,7 +524,11 @@ namespace py::cpp::Windows::Networking
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ToString());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ToString();
+                }());
             }
             catch (...)
             {
@@ -516,7 +560,11 @@ namespace py::cpp::Windows::Networking
                 return nullptr;
             }
 
-            return py::convert(self->obj.CanonicalName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CanonicalName();
+            }());
         }
         catch (...)
         {
@@ -542,7 +590,11 @@ namespace py::cpp::Windows::Networking
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayName();
+            }());
         }
         catch (...)
         {
@@ -568,7 +620,11 @@ namespace py::cpp::Windows::Networking
                 return nullptr;
             }
 
-            return py::convert(self->obj.IPInformation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IPInformation();
+            }());
         }
         catch (...)
         {
@@ -594,7 +650,11 @@ namespace py::cpp::Windows::Networking
                 return nullptr;
             }
 
-            return py::convert(self->obj.RawName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RawName();
+            }());
         }
         catch (...)
         {
@@ -620,7 +680,11 @@ namespace py::cpp::Windows::Networking
                 return nullptr;
             }
 
-            return py::convert(self->obj.Type());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Type();
+            }());
         }
         catch (...)
         {
@@ -657,7 +721,11 @@ namespace py::cpp::Windows::Networking
     {
         try
         {
-            return py::convert(self->obj.ToString());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.ToString();
+            }());
         }
         catch (...)
         {

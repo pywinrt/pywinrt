@@ -45,7 +45,11 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 1);
 
-                return py::convert(self->obj.AddFile(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.AddFile(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -83,7 +87,11 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
 
-                return py::convert(self->obj.CanAddFile(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CanAddFile(param0);
+                }());
             }
             catch (...)
             {
@@ -121,7 +129,11 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.ContainsFile(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ContainsFile(param0);
+                }());
             }
             catch (...)
             {
@@ -159,7 +171,11 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.RemoveFile(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveFile(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -192,7 +208,11 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Title());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Title();
+            }());
         }
         catch (...)
         {
@@ -226,7 +246,11 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Title(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Title(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -253,7 +277,11 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.AllowedFileTypes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AllowedFileTypes();
+            }());
         }
         catch (...)
         {
@@ -279,7 +307,11 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectionMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SelectionMode();
+            }());
         }
         catch (...)
         {
@@ -305,7 +337,11 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.SettingsIdentifier());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SettingsIdentifier();
+            }());
         }
         catch (...)
         {
@@ -333,7 +369,11 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Storage::Pickers::Provider::FileOpenPickerUI, winrt::Windows::Storage::Pickers::Provider::PickerClosingEventArgs>>(arg);
 
-            return py::convert(self->obj.Closing(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Closing(param0);
+            }());
         }
         catch (...)
         {
@@ -361,7 +401,11 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Closing(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Closing(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -390,7 +434,11 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Storage::Pickers::Provider::FileOpenPickerUI, winrt::Windows::Storage::Pickers::Provider::FileRemovedEventArgs>>(arg);
 
-            return py::convert(self->obj.FileRemoved(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FileRemoved(param0);
+            }());
         }
         catch (...)
         {
@@ -418,7 +466,11 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.FileRemoved(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.FileRemoved(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -523,7 +575,11 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -622,7 +678,11 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.TrySetFileName(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TrySetFileName(param0);
+                }());
             }
             catch (...)
             {
@@ -654,7 +714,11 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Title());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Title();
+            }());
         }
         catch (...)
         {
@@ -688,7 +752,11 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Title(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Title(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -715,7 +783,11 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.AllowedFileTypes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AllowedFileTypes();
+            }());
         }
         catch (...)
         {
@@ -741,7 +813,11 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.FileName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FileName();
+            }());
         }
         catch (...)
         {
@@ -767,7 +843,11 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.SettingsIdentifier());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SettingsIdentifier();
+            }());
         }
         catch (...)
         {
@@ -795,7 +875,11 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Storage::Pickers::Provider::FileSavePickerUI, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.FileNameChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FileNameChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -823,7 +907,11 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.FileNameChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.FileNameChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -852,7 +940,11 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Storage::Pickers::Provider::FileSavePickerUI, winrt::Windows::Storage::Pickers::Provider::TargetFileRequestedEventArgs>>(arg);
 
-            return py::convert(self->obj.TargetFileRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TargetFileRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -880,7 +972,11 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.TargetFileRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TargetFileRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -986,7 +1082,11 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
                     return nullptr;
                 }
 
-                self->obj.Complete();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Complete();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1086,7 +1186,11 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.ClosingOperation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ClosingOperation();
+            }());
         }
         catch (...)
         {
@@ -1112,7 +1216,11 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsCanceled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsCanceled();
+            }());
         }
         catch (...)
         {
@@ -1210,7 +1318,11 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -1242,7 +1354,11 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Deadline());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Deadline();
+            }());
         }
         catch (...)
         {
@@ -1340,7 +1456,11 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -1372,7 +1492,11 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.TargetFile());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TargetFile();
+            }());
         }
         catch (...)
         {
@@ -1406,7 +1530,11 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
             auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(arg);
 
-            self->obj.TargetFile(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TargetFile(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1505,7 +1633,11 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
                     return nullptr;
                 }
 
-                self->obj.Complete();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Complete();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1605,7 +1737,11 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Request());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Request();
+            }());
         }
         catch (...)
         {

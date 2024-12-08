@@ -47,7 +47,11 @@ namespace py::cpp::Windows::UI
                 auto param2 = py::convert_to<uint8_t>(args, 2);
                 auto param3 = py::convert_to<uint8_t>(args, 3);
 
-                return py::convert(winrt::Windows::UI::ColorHelper::FromArgb(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::ColorHelper::FromArgb(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -85,7 +89,11 @@ namespace py::cpp::Windows::UI
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Color>(args, 0);
 
-                return py::convert(winrt::Windows::UI::ColorHelper::ToDisplayName(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::ColorHelper::ToDisplayName(param0);
+                }());
             }
             catch (...)
             {
@@ -210,7 +218,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::AliceBlue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::AliceBlue();
+            }());
         }
         catch (...)
         {
@@ -236,7 +248,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::AntiqueWhite());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::AntiqueWhite();
+            }());
         }
         catch (...)
         {
@@ -262,7 +278,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::Aqua());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::Aqua();
+            }());
         }
         catch (...)
         {
@@ -288,7 +308,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::Aquamarine());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::Aquamarine();
+            }());
         }
         catch (...)
         {
@@ -314,7 +338,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::Azure());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::Azure();
+            }());
         }
         catch (...)
         {
@@ -340,7 +368,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::Beige());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::Beige();
+            }());
         }
         catch (...)
         {
@@ -366,7 +398,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::Bisque());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::Bisque();
+            }());
         }
         catch (...)
         {
@@ -392,7 +428,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::Black());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::Black();
+            }());
         }
         catch (...)
         {
@@ -418,7 +458,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::BlanchedAlmond());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::BlanchedAlmond();
+            }());
         }
         catch (...)
         {
@@ -444,7 +488,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::Blue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::Blue();
+            }());
         }
         catch (...)
         {
@@ -470,7 +518,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::BlueViolet());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::BlueViolet();
+            }());
         }
         catch (...)
         {
@@ -496,7 +548,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::Brown());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::Brown();
+            }());
         }
         catch (...)
         {
@@ -522,7 +578,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::BurlyWood());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::BurlyWood();
+            }());
         }
         catch (...)
         {
@@ -548,7 +608,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::CadetBlue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::CadetBlue();
+            }());
         }
         catch (...)
         {
@@ -574,7 +638,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::Chartreuse());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::Chartreuse();
+            }());
         }
         catch (...)
         {
@@ -600,7 +668,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::Chocolate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::Chocolate();
+            }());
         }
         catch (...)
         {
@@ -626,7 +698,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::Coral());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::Coral();
+            }());
         }
         catch (...)
         {
@@ -652,7 +728,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::CornflowerBlue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::CornflowerBlue();
+            }());
         }
         catch (...)
         {
@@ -678,7 +758,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::Cornsilk());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::Cornsilk();
+            }());
         }
         catch (...)
         {
@@ -704,7 +788,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::Crimson());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::Crimson();
+            }());
         }
         catch (...)
         {
@@ -730,7 +818,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::Cyan());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::Cyan();
+            }());
         }
         catch (...)
         {
@@ -756,7 +848,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::DarkBlue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::DarkBlue();
+            }());
         }
         catch (...)
         {
@@ -782,7 +878,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::DarkCyan());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::DarkCyan();
+            }());
         }
         catch (...)
         {
@@ -808,7 +908,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::DarkGoldenrod());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::DarkGoldenrod();
+            }());
         }
         catch (...)
         {
@@ -834,7 +938,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::DarkGray());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::DarkGray();
+            }());
         }
         catch (...)
         {
@@ -860,7 +968,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::DarkGreen());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::DarkGreen();
+            }());
         }
         catch (...)
         {
@@ -886,7 +998,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::DarkKhaki());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::DarkKhaki();
+            }());
         }
         catch (...)
         {
@@ -912,7 +1028,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::DarkMagenta());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::DarkMagenta();
+            }());
         }
         catch (...)
         {
@@ -938,7 +1058,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::DarkOliveGreen());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::DarkOliveGreen();
+            }());
         }
         catch (...)
         {
@@ -964,7 +1088,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::DarkOrange());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::DarkOrange();
+            }());
         }
         catch (...)
         {
@@ -990,7 +1118,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::DarkOrchid());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::DarkOrchid();
+            }());
         }
         catch (...)
         {
@@ -1016,7 +1148,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::DarkRed());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::DarkRed();
+            }());
         }
         catch (...)
         {
@@ -1042,7 +1178,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::DarkSalmon());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::DarkSalmon();
+            }());
         }
         catch (...)
         {
@@ -1068,7 +1208,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::DarkSeaGreen());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::DarkSeaGreen();
+            }());
         }
         catch (...)
         {
@@ -1094,7 +1238,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::DarkSlateBlue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::DarkSlateBlue();
+            }());
         }
         catch (...)
         {
@@ -1120,7 +1268,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::DarkSlateGray());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::DarkSlateGray();
+            }());
         }
         catch (...)
         {
@@ -1146,7 +1298,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::DarkTurquoise());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::DarkTurquoise();
+            }());
         }
         catch (...)
         {
@@ -1172,7 +1328,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::DarkViolet());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::DarkViolet();
+            }());
         }
         catch (...)
         {
@@ -1198,7 +1358,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::DeepPink());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::DeepPink();
+            }());
         }
         catch (...)
         {
@@ -1224,7 +1388,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::DeepSkyBlue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::DeepSkyBlue();
+            }());
         }
         catch (...)
         {
@@ -1250,7 +1418,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::DimGray());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::DimGray();
+            }());
         }
         catch (...)
         {
@@ -1276,7 +1448,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::DodgerBlue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::DodgerBlue();
+            }());
         }
         catch (...)
         {
@@ -1302,7 +1478,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::Firebrick());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::Firebrick();
+            }());
         }
         catch (...)
         {
@@ -1328,7 +1508,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::FloralWhite());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::FloralWhite();
+            }());
         }
         catch (...)
         {
@@ -1354,7 +1538,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::ForestGreen());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::ForestGreen();
+            }());
         }
         catch (...)
         {
@@ -1380,7 +1568,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::Fuchsia());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::Fuchsia();
+            }());
         }
         catch (...)
         {
@@ -1406,7 +1598,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::Gainsboro());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::Gainsboro();
+            }());
         }
         catch (...)
         {
@@ -1432,7 +1628,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::GhostWhite());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::GhostWhite();
+            }());
         }
         catch (...)
         {
@@ -1458,7 +1658,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::Gold());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::Gold();
+            }());
         }
         catch (...)
         {
@@ -1484,7 +1688,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::Goldenrod());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::Goldenrod();
+            }());
         }
         catch (...)
         {
@@ -1510,7 +1718,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::Gray());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::Gray();
+            }());
         }
         catch (...)
         {
@@ -1536,7 +1748,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::Green());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::Green();
+            }());
         }
         catch (...)
         {
@@ -1562,7 +1778,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::GreenYellow());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::GreenYellow();
+            }());
         }
         catch (...)
         {
@@ -1588,7 +1808,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::Honeydew());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::Honeydew();
+            }());
         }
         catch (...)
         {
@@ -1614,7 +1838,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::HotPink());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::HotPink();
+            }());
         }
         catch (...)
         {
@@ -1640,7 +1868,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::IndianRed());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::IndianRed();
+            }());
         }
         catch (...)
         {
@@ -1666,7 +1898,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::Indigo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::Indigo();
+            }());
         }
         catch (...)
         {
@@ -1692,7 +1928,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::Ivory());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::Ivory();
+            }());
         }
         catch (...)
         {
@@ -1718,7 +1958,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::Khaki());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::Khaki();
+            }());
         }
         catch (...)
         {
@@ -1744,7 +1988,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::Lavender());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::Lavender();
+            }());
         }
         catch (...)
         {
@@ -1770,7 +2018,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::LavenderBlush());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::LavenderBlush();
+            }());
         }
         catch (...)
         {
@@ -1796,7 +2048,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::LawnGreen());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::LawnGreen();
+            }());
         }
         catch (...)
         {
@@ -1822,7 +2078,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::LemonChiffon());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::LemonChiffon();
+            }());
         }
         catch (...)
         {
@@ -1848,7 +2108,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::LightBlue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::LightBlue();
+            }());
         }
         catch (...)
         {
@@ -1874,7 +2138,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::LightCoral());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::LightCoral();
+            }());
         }
         catch (...)
         {
@@ -1900,7 +2168,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::LightCyan());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::LightCyan();
+            }());
         }
         catch (...)
         {
@@ -1926,7 +2198,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::LightGoldenrodYellow());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::LightGoldenrodYellow();
+            }());
         }
         catch (...)
         {
@@ -1952,7 +2228,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::LightGray());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::LightGray();
+            }());
         }
         catch (...)
         {
@@ -1978,7 +2258,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::LightGreen());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::LightGreen();
+            }());
         }
         catch (...)
         {
@@ -2004,7 +2288,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::LightPink());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::LightPink();
+            }());
         }
         catch (...)
         {
@@ -2030,7 +2318,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::LightSalmon());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::LightSalmon();
+            }());
         }
         catch (...)
         {
@@ -2056,7 +2348,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::LightSeaGreen());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::LightSeaGreen();
+            }());
         }
         catch (...)
         {
@@ -2082,7 +2378,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::LightSkyBlue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::LightSkyBlue();
+            }());
         }
         catch (...)
         {
@@ -2108,7 +2408,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::LightSlateGray());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::LightSlateGray();
+            }());
         }
         catch (...)
         {
@@ -2134,7 +2438,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::LightSteelBlue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::LightSteelBlue();
+            }());
         }
         catch (...)
         {
@@ -2160,7 +2468,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::LightYellow());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::LightYellow();
+            }());
         }
         catch (...)
         {
@@ -2186,7 +2498,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::Lime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::Lime();
+            }());
         }
         catch (...)
         {
@@ -2212,7 +2528,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::LimeGreen());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::LimeGreen();
+            }());
         }
         catch (...)
         {
@@ -2238,7 +2558,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::Linen());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::Linen();
+            }());
         }
         catch (...)
         {
@@ -2264,7 +2588,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::Magenta());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::Magenta();
+            }());
         }
         catch (...)
         {
@@ -2290,7 +2618,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::Maroon());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::Maroon();
+            }());
         }
         catch (...)
         {
@@ -2316,7 +2648,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::MediumAquamarine());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::MediumAquamarine();
+            }());
         }
         catch (...)
         {
@@ -2342,7 +2678,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::MediumBlue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::MediumBlue();
+            }());
         }
         catch (...)
         {
@@ -2368,7 +2708,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::MediumOrchid());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::MediumOrchid();
+            }());
         }
         catch (...)
         {
@@ -2394,7 +2738,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::MediumPurple());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::MediumPurple();
+            }());
         }
         catch (...)
         {
@@ -2420,7 +2768,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::MediumSeaGreen());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::MediumSeaGreen();
+            }());
         }
         catch (...)
         {
@@ -2446,7 +2798,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::MediumSlateBlue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::MediumSlateBlue();
+            }());
         }
         catch (...)
         {
@@ -2472,7 +2828,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::MediumSpringGreen());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::MediumSpringGreen();
+            }());
         }
         catch (...)
         {
@@ -2498,7 +2858,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::MediumTurquoise());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::MediumTurquoise();
+            }());
         }
         catch (...)
         {
@@ -2524,7 +2888,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::MediumVioletRed());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::MediumVioletRed();
+            }());
         }
         catch (...)
         {
@@ -2550,7 +2918,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::MidnightBlue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::MidnightBlue();
+            }());
         }
         catch (...)
         {
@@ -2576,7 +2948,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::MintCream());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::MintCream();
+            }());
         }
         catch (...)
         {
@@ -2602,7 +2978,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::MistyRose());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::MistyRose();
+            }());
         }
         catch (...)
         {
@@ -2628,7 +3008,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::Moccasin());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::Moccasin();
+            }());
         }
         catch (...)
         {
@@ -2654,7 +3038,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::NavajoWhite());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::NavajoWhite();
+            }());
         }
         catch (...)
         {
@@ -2680,7 +3068,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::Navy());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::Navy();
+            }());
         }
         catch (...)
         {
@@ -2706,7 +3098,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::OldLace());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::OldLace();
+            }());
         }
         catch (...)
         {
@@ -2732,7 +3128,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::Olive());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::Olive();
+            }());
         }
         catch (...)
         {
@@ -2758,7 +3158,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::OliveDrab());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::OliveDrab();
+            }());
         }
         catch (...)
         {
@@ -2784,7 +3188,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::Orange());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::Orange();
+            }());
         }
         catch (...)
         {
@@ -2810,7 +3218,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::OrangeRed());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::OrangeRed();
+            }());
         }
         catch (...)
         {
@@ -2836,7 +3248,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::Orchid());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::Orchid();
+            }());
         }
         catch (...)
         {
@@ -2862,7 +3278,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::PaleGoldenrod());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::PaleGoldenrod();
+            }());
         }
         catch (...)
         {
@@ -2888,7 +3308,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::PaleGreen());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::PaleGreen();
+            }());
         }
         catch (...)
         {
@@ -2914,7 +3338,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::PaleTurquoise());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::PaleTurquoise();
+            }());
         }
         catch (...)
         {
@@ -2940,7 +3368,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::PaleVioletRed());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::PaleVioletRed();
+            }());
         }
         catch (...)
         {
@@ -2966,7 +3398,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::PapayaWhip());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::PapayaWhip();
+            }());
         }
         catch (...)
         {
@@ -2992,7 +3428,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::PeachPuff());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::PeachPuff();
+            }());
         }
         catch (...)
         {
@@ -3018,7 +3458,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::Peru());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::Peru();
+            }());
         }
         catch (...)
         {
@@ -3044,7 +3488,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::Pink());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::Pink();
+            }());
         }
         catch (...)
         {
@@ -3070,7 +3518,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::Plum());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::Plum();
+            }());
         }
         catch (...)
         {
@@ -3096,7 +3548,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::PowderBlue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::PowderBlue();
+            }());
         }
         catch (...)
         {
@@ -3122,7 +3578,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::Purple());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::Purple();
+            }());
         }
         catch (...)
         {
@@ -3148,7 +3608,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::Red());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::Red();
+            }());
         }
         catch (...)
         {
@@ -3174,7 +3638,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::RosyBrown());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::RosyBrown();
+            }());
         }
         catch (...)
         {
@@ -3200,7 +3668,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::RoyalBlue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::RoyalBlue();
+            }());
         }
         catch (...)
         {
@@ -3226,7 +3698,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::SaddleBrown());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::SaddleBrown();
+            }());
         }
         catch (...)
         {
@@ -3252,7 +3728,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::Salmon());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::Salmon();
+            }());
         }
         catch (...)
         {
@@ -3278,7 +3758,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::SandyBrown());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::SandyBrown();
+            }());
         }
         catch (...)
         {
@@ -3304,7 +3788,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::SeaGreen());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::SeaGreen();
+            }());
         }
         catch (...)
         {
@@ -3330,7 +3818,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::SeaShell());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::SeaShell();
+            }());
         }
         catch (...)
         {
@@ -3356,7 +3848,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::Sienna());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::Sienna();
+            }());
         }
         catch (...)
         {
@@ -3382,7 +3878,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::Silver());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::Silver();
+            }());
         }
         catch (...)
         {
@@ -3408,7 +3908,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::SkyBlue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::SkyBlue();
+            }());
         }
         catch (...)
         {
@@ -3434,7 +3938,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::SlateBlue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::SlateBlue();
+            }());
         }
         catch (...)
         {
@@ -3460,7 +3968,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::SlateGray());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::SlateGray();
+            }());
         }
         catch (...)
         {
@@ -3486,7 +3998,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::Snow());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::Snow();
+            }());
         }
         catch (...)
         {
@@ -3512,7 +4028,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::SpringGreen());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::SpringGreen();
+            }());
         }
         catch (...)
         {
@@ -3538,7 +4058,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::SteelBlue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::SteelBlue();
+            }());
         }
         catch (...)
         {
@@ -3564,7 +4088,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::Tan());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::Tan();
+            }());
         }
         catch (...)
         {
@@ -3590,7 +4118,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::Teal());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::Teal();
+            }());
         }
         catch (...)
         {
@@ -3616,7 +4148,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::Thistle());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::Thistle();
+            }());
         }
         catch (...)
         {
@@ -3642,7 +4178,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::Tomato());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::Tomato();
+            }());
         }
         catch (...)
         {
@@ -3668,7 +4208,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::Transparent());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::Transparent();
+            }());
         }
         catch (...)
         {
@@ -3694,7 +4238,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::Turquoise());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::Turquoise();
+            }());
         }
         catch (...)
         {
@@ -3720,7 +4268,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::Violet());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::Violet();
+            }());
         }
         catch (...)
         {
@@ -3746,7 +4298,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::Wheat());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::Wheat();
+            }());
         }
         catch (...)
         {
@@ -3772,7 +4328,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::White());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::White();
+            }());
         }
         catch (...)
         {
@@ -3798,7 +4358,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::WhiteSmoke());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::WhiteSmoke();
+            }());
         }
         catch (...)
         {
@@ -3824,7 +4388,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::Yellow());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::Yellow();
+            }());
         }
         catch (...)
         {
@@ -3850,7 +4418,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Colors::YellowGreen());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Colors::YellowGreen();
+            }());
         }
         catch (...)
         {
@@ -4108,7 +4680,11 @@ namespace py::cpp::Windows::UI
                 return nullptr;
             }
 
-            return py::convert(self->obj.UIContext());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UIContext();
+            }());
         }
         catch (...)
         {

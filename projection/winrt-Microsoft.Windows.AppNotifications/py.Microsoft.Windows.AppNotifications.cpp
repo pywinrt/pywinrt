@@ -62,7 +62,11 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
                 return nullptr;
             }
 
-            return py::convert(self->obj.Tag());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Tag();
+            }());
         }
         catch (...)
         {
@@ -96,7 +100,11 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Tag(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Tag(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -123,7 +131,11 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
                 return nullptr;
             }
 
-            return py::convert(self->obj.SuppressDisplay());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SuppressDisplay();
+            }());
         }
         catch (...)
         {
@@ -157,7 +169,11 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.SuppressDisplay(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SuppressDisplay(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -184,7 +200,11 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
                 return nullptr;
             }
 
-            return py::convert(self->obj.Progress());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Progress();
+            }());
         }
         catch (...)
         {
@@ -218,7 +238,11 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
 
             auto param0 = py::convert_to<winrt::Microsoft::Windows::AppNotifications::AppNotificationProgressData>(arg);
 
-            self->obj.Progress(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Progress(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -245,7 +269,11 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
                 return nullptr;
             }
 
-            return py::convert(self->obj.Priority());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Priority();
+            }());
         }
         catch (...)
         {
@@ -279,7 +307,11 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
 
             auto param0 = py::convert_to<winrt::Microsoft::Windows::AppNotifications::AppNotificationPriority>(arg);
 
-            self->obj.Priority(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Priority(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -306,7 +338,11 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
                 return nullptr;
             }
 
-            return py::convert(self->obj.Group());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Group();
+            }());
         }
         catch (...)
         {
@@ -340,7 +376,11 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Group(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Group(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -367,7 +407,11 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExpiresOnReboot());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExpiresOnReboot();
+            }());
         }
         catch (...)
         {
@@ -401,7 +445,11 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.ExpiresOnReboot(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ExpiresOnReboot(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -428,7 +476,11 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
                 return nullptr;
             }
 
-            return py::convert(self->obj.Expiration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Expiration();
+            }());
         }
         catch (...)
         {
@@ -462,7 +514,11 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(arg);
 
-            self->obj.Expiration(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Expiration(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -489,7 +545,11 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -515,7 +575,11 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
                 return nullptr;
             }
 
-            return py::convert(self->obj.Payload());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Payload();
+            }());
         }
         catch (...)
         {
@@ -616,7 +680,11 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
                 return nullptr;
             }
 
-            return py::convert(self->obj.Argument());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Argument();
+            }());
         }
         catch (...)
         {
@@ -642,7 +710,11 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
                 return nullptr;
             }
 
-            return py::convert(self->obj.UserInput());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UserInput();
+            }());
         }
         catch (...)
         {
@@ -668,7 +740,11 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
                 return nullptr;
             }
 
-            return py::convert(self->obj.Arguments());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Arguments();
+            }());
         }
         catch (...)
         {
@@ -767,7 +843,11 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetAllAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAllAsync();
+                }());
             }
             catch (...)
             {
@@ -803,7 +883,11 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
                     return nullptr;
                 }
 
-                return py::convert(winrt::Microsoft::Windows::AppNotifications::AppNotificationManager::IsSupported());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::Windows::AppNotifications::AppNotificationManager::IsSupported();
+                }());
             }
             catch (...)
             {
@@ -839,7 +923,11 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
                     return nullptr;
                 }
 
-                self->obj.Register();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Register();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -868,7 +956,11 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 1);
 
-                self->obj.Register(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Register(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -905,7 +997,11 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
                     return nullptr;
                 }
 
-                return py::convert(self->obj.RemoveAllAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RemoveAllAsync();
+                }());
             }
             catch (...)
             {
@@ -943,7 +1039,11 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.RemoveByGroupAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RemoveByGroupAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -981,7 +1081,11 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(self->obj.RemoveByIdAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RemoveByIdAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1020,7 +1124,11 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.RemoveByTagAndGroupAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RemoveByTagAndGroupAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1058,7 +1166,11 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.RemoveByTagAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RemoveByTagAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1096,7 +1208,11 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
 
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::AppNotifications::AppNotification>(args, 0);
 
-                self->obj.Show(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Show(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1133,7 +1249,11 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
                     return nullptr;
                 }
 
-                self->obj.Unregister();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Unregister();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1170,7 +1290,11 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
                     return nullptr;
                 }
 
-                self->obj.UnregisterAll();
+                {
+                    auto _gil = release_gil();
+                    self->obj.UnregisterAll();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1211,7 +1335,11 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
-                return py::convert(self->obj.UpdateAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.UpdateAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -1250,7 +1378,11 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::AppNotifications::AppNotificationProgressData>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.UpdateAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.UpdateAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1282,7 +1414,11 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
                 return nullptr;
             }
 
-            return py::convert(self->obj.Setting());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Setting();
+            }());
         }
         catch (...)
         {
@@ -1308,7 +1444,11 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::Windows::AppNotifications::AppNotificationManager::Default());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::Windows::AppNotifications::AppNotificationManager::Default();
+            }());
         }
         catch (...)
         {
@@ -1336,7 +1476,11 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Windows::AppNotifications::AppNotificationManager, winrt::Microsoft::Windows::AppNotifications::AppNotificationActivatedEventArgs>>(arg);
 
-            return py::convert(self->obj.NotificationInvoked(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NotificationInvoked(param0);
+            }());
         }
         catch (...)
         {
@@ -1364,7 +1508,11 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.NotificationInvoked(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NotificationInvoked(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1523,7 +1671,11 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
                 return nullptr;
             }
 
-            return py::convert(self->obj.ValueStringOverride());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ValueStringOverride();
+            }());
         }
         catch (...)
         {
@@ -1557,7 +1709,11 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ValueStringOverride(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ValueStringOverride(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1584,7 +1740,11 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
                 return nullptr;
             }
 
-            return py::convert(self->obj.Value());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Value();
+            }());
         }
         catch (...)
         {
@@ -1618,7 +1778,11 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.Value(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Value(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1645,7 +1809,11 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
                 return nullptr;
             }
 
-            return py::convert(self->obj.Title());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Title();
+            }());
         }
         catch (...)
         {
@@ -1679,7 +1847,11 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Title(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Title(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1706,7 +1878,11 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -1740,7 +1916,11 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Status(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Status(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1767,7 +1947,11 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
                 return nullptr;
             }
 
-            return py::convert(self->obj.SequenceNumber());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SequenceNumber();
+            }());
         }
         catch (...)
         {
@@ -1801,7 +1985,11 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.SequenceNumber(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SequenceNumber(param0);
+            }
+
             return 0;
         }
         catch (...)

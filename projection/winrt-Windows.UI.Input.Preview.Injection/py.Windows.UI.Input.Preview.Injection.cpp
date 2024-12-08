@@ -75,7 +75,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
                 return nullptr;
             }
 
-            return py::convert(self->obj.RightTrigger());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RightTrigger();
+            }());
         }
         catch (...)
         {
@@ -109,7 +113,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.RightTrigger(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RightTrigger(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -136,7 +144,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
                 return nullptr;
             }
 
-            return py::convert(self->obj.RightThumbstickY());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RightThumbstickY();
+            }());
         }
         catch (...)
         {
@@ -170,7 +182,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.RightThumbstickY(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RightThumbstickY(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -197,7 +213,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
                 return nullptr;
             }
 
-            return py::convert(self->obj.RightThumbstickX());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RightThumbstickX();
+            }());
         }
         catch (...)
         {
@@ -231,7 +251,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.RightThumbstickX(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RightThumbstickX(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -258,7 +282,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
                 return nullptr;
             }
 
-            return py::convert(self->obj.LeftTrigger());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LeftTrigger();
+            }());
         }
         catch (...)
         {
@@ -292,7 +320,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.LeftTrigger(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.LeftTrigger(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -319,7 +351,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
                 return nullptr;
             }
 
-            return py::convert(self->obj.LeftThumbstickY());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LeftThumbstickY();
+            }());
         }
         catch (...)
         {
@@ -353,7 +389,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.LeftThumbstickY(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.LeftThumbstickY(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -380,7 +420,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
                 return nullptr;
             }
 
-            return py::convert(self->obj.LeftThumbstickX());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LeftThumbstickX();
+            }());
         }
         catch (...)
         {
@@ -414,7 +458,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.LeftThumbstickX(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.LeftThumbstickX(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -441,7 +489,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
                 return nullptr;
             }
 
-            return py::convert(self->obj.Buttons());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Buttons();
+            }());
         }
         catch (...)
         {
@@ -475,7 +527,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
             auto param0 = py::convert_to<winrt::Windows::Gaming::Input::GamepadButtons>(arg);
 
-            self->obj.Buttons(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Buttons(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -597,7 +653,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
                 return nullptr;
             }
 
-            return py::convert(self->obj.VirtualKey());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.VirtualKey();
+            }());
         }
         catch (...)
         {
@@ -631,7 +691,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
             auto param0 = py::convert_to<uint16_t>(arg);
 
-            self->obj.VirtualKey(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.VirtualKey(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -658,7 +722,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
                 return nullptr;
             }
 
-            return py::convert(self->obj.ScanCode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ScanCode();
+            }());
         }
         catch (...)
         {
@@ -692,7 +760,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
             auto param0 = py::convert_to<uint16_t>(arg);
 
-            self->obj.ScanCode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ScanCode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -719,7 +791,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
                 return nullptr;
             }
 
-            return py::convert(self->obj.KeyOptions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.KeyOptions();
+            }());
         }
         catch (...)
         {
@@ -753,7 +829,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
             auto param0 = py::convert_to<winrt::Windows::UI::Input::Preview::Injection::InjectedInputKeyOptions>(arg);
 
-            self->obj.KeyOptions(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.KeyOptions(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -871,7 +951,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
                 return nullptr;
             }
 
-            return py::convert(self->obj.TimeOffsetInMilliseconds());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TimeOffsetInMilliseconds();
+            }());
         }
         catch (...)
         {
@@ -905,7 +989,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.TimeOffsetInMilliseconds(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TimeOffsetInMilliseconds(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -932,7 +1020,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
                 return nullptr;
             }
 
-            return py::convert(self->obj.MouseOptions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MouseOptions();
+            }());
         }
         catch (...)
         {
@@ -966,7 +1058,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
             auto param0 = py::convert_to<winrt::Windows::UI::Input::Preview::Injection::InjectedInputMouseOptions>(arg);
 
-            self->obj.MouseOptions(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MouseOptions(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -993,7 +1089,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
                 return nullptr;
             }
 
-            return py::convert(self->obj.MouseData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MouseData();
+            }());
         }
         catch (...)
         {
@@ -1027,7 +1127,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.MouseData(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MouseData(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1054,7 +1158,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeltaY());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeltaY();
+            }());
         }
         catch (...)
         {
@@ -1088,7 +1196,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.DeltaY(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DeltaY(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1115,7 +1227,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeltaX());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeltaX();
+            }());
         }
         catch (...)
         {
@@ -1149,7 +1265,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.DeltaX(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DeltaX(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1269,7 +1389,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
                 return nullptr;
             }
 
-            return py::convert(self->obj.TiltY());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TiltY();
+            }());
         }
         catch (...)
         {
@@ -1303,7 +1427,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.TiltY(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TiltY(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1330,7 +1458,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
                 return nullptr;
             }
 
-            return py::convert(self->obj.TiltX());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TiltX();
+            }());
         }
         catch (...)
         {
@@ -1364,7 +1496,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.TiltX(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TiltX(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1391,7 +1527,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
                 return nullptr;
             }
 
-            return py::convert(self->obj.Rotation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Rotation();
+            }());
         }
         catch (...)
         {
@@ -1425,7 +1565,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.Rotation(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Rotation(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1452,7 +1596,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
                 return nullptr;
             }
 
-            return py::convert(self->obj.Pressure());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Pressure();
+            }());
         }
         catch (...)
         {
@@ -1486,7 +1634,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.Pressure(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Pressure(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1513,7 +1665,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
                 return nullptr;
             }
 
-            return py::convert(self->obj.PointerInfo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PointerInfo();
+            }());
         }
         catch (...)
         {
@@ -1547,7 +1703,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
             auto param0 = py::convert_to<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo>(arg);
 
-            self->obj.PointerInfo(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PointerInfo(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1574,7 +1734,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
                 return nullptr;
             }
 
-            return py::convert(self->obj.PenParameters());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PenParameters();
+            }());
         }
         catch (...)
         {
@@ -1608,7 +1772,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
             auto param0 = py::convert_to<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPenParameters>(arg);
 
-            self->obj.PenParameters(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PenParameters(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1635,7 +1803,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
                 return nullptr;
             }
 
-            return py::convert(self->obj.PenButtons());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PenButtons();
+            }());
         }
         catch (...)
         {
@@ -1669,7 +1841,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
             auto param0 = py::convert_to<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPenButtons>(arg);
 
-            self->obj.PenButtons(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PenButtons(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1791,7 +1967,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
                 return nullptr;
             }
 
-            return py::convert(self->obj.TouchParameters());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TouchParameters();
+            }());
         }
         catch (...)
         {
@@ -1825,7 +2005,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
             auto param0 = py::convert_to<winrt::Windows::UI::Input::Preview::Injection::InjectedInputTouchParameters>(arg);
 
-            self->obj.TouchParameters(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TouchParameters(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1852,7 +2036,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
                 return nullptr;
             }
 
-            return py::convert(self->obj.Pressure());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Pressure();
+            }());
         }
         catch (...)
         {
@@ -1886,7 +2074,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.Pressure(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Pressure(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1913,7 +2105,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
                 return nullptr;
             }
 
-            return py::convert(self->obj.PointerInfo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PointerInfo();
+            }());
         }
         catch (...)
         {
@@ -1947,7 +2143,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
             auto param0 = py::convert_to<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo>(arg);
 
-            self->obj.PointerInfo(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PointerInfo(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1974,7 +2174,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
                 return nullptr;
             }
 
-            return py::convert(self->obj.Orientation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Orientation();
+            }());
         }
         catch (...)
         {
@@ -2008,7 +2212,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.Orientation(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Orientation(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2035,7 +2243,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
                 return nullptr;
             }
 
-            return py::convert(self->obj.Contact());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Contact();
+            }());
         }
         catch (...)
         {
@@ -2069,7 +2281,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
             auto param0 = py::convert_to<winrt::Windows::UI::Input::Preview::Injection::InjectedInputRectangle>(arg);
 
-            self->obj.Contact(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Contact(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2171,7 +2387,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
                     return nullptr;
                 }
 
-                self->obj.InitializeGamepadInjection();
+                {
+                    auto _gil = release_gil();
+                    self->obj.InitializeGamepadInjection();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2210,7 +2430,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::Preview::Injection::InjectedInputVisualizationMode>(args, 0);
 
-                self->obj.InitializePenInjection(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.InitializePenInjection(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2249,7 +2473,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::Preview::Injection::InjectedInputVisualizationMode>(args, 0);
 
-                self->obj.InitializeTouchInjection(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.InitializeTouchInjection(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2288,7 +2516,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::Preview::Injection::InjectedInputGamepadInfo>(args, 0);
 
-                self->obj.InjectGamepadInput(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.InjectGamepadInput(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2327,7 +2559,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::UI::Input::Preview::Injection::InjectedInputKeyboardInfo>>(args, 0);
 
-                self->obj.InjectKeyboardInput(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.InjectKeyboardInput(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2366,7 +2602,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::UI::Input::Preview::Injection::InjectedInputMouseInfo>>(args, 0);
 
-                self->obj.InjectMouseInput(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.InjectMouseInput(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2405,7 +2645,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPenInfo>(args, 0);
 
-                self->obj.InjectPenInput(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.InjectPenInput(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2444,7 +2688,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::Preview::Injection::InjectedInputShortcut>(args, 0);
 
-                self->obj.InjectShortcut(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.InjectShortcut(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2483,7 +2731,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::UI::Input::Preview::Injection::InjectedInputTouchInfo>>(args, 0);
 
-                self->obj.InjectTouchInput(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.InjectTouchInput(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2520,7 +2772,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::UI::Input::Preview::Injection::InputInjector::TryCreate());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::Input::Preview::Injection::InputInjector::TryCreate();
+                }());
             }
             catch (...)
             {
@@ -2556,7 +2812,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::UI::Input::Preview::Injection::InputInjector::TryCreateForAppBroadcastOnly());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::Input::Preview::Injection::InputInjector::TryCreateForAppBroadcastOnly();
+                }());
             }
             catch (...)
             {
@@ -2592,7 +2852,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
                     return nullptr;
                 }
 
-                self->obj.UninitializeGamepadInjection();
+                {
+                    auto _gil = release_gil();
+                    self->obj.UninitializeGamepadInjection();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2629,7 +2893,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
                     return nullptr;
                 }
 
-                self->obj.UninitializePenInjection();
+                {
+                    auto _gil = release_gil();
+                    self->obj.UninitializePenInjection();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2666,7 +2934,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
                     return nullptr;
                 }
 
-                self->obj.UninitializeTouchInjection();
+                {
+                    auto _gil = release_gil();
+                    self->obj.UninitializeTouchInjection();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)

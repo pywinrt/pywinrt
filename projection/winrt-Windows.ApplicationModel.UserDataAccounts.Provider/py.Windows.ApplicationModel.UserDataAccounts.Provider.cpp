@@ -38,7 +38,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.AccountKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AccountKind();
+            }());
         }
         catch (...)
         {
@@ -64,7 +68,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayName();
+            }());
         }
         catch (...)
         {
@@ -90,7 +98,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Priority());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Priority();
+            }());
         }
         catch (...)
         {
@@ -191,7 +203,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.ReportCompleted(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ReportCompleted(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -224,7 +240,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContentKinds());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContentKinds();
+            }());
         }
         catch (...)
         {
@@ -250,7 +270,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.PartnerAccountInfos());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PartnerAccountInfos();
+            }());
         }
         catch (...)
         {
@@ -276,7 +300,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -376,7 +404,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
                     return nullptr;
                 }
 
-                self->obj.ReportCompleted();
+                {
+                    auto _gil = release_gil();
+                    self->obj.ReportCompleted();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -409,7 +441,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -435,7 +471,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.UserDataAccountId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UserDataAccountId();
+            }());
         }
         catch (...)
         {
@@ -534,7 +574,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
                     return nullptr;
                 }
 
-                self->obj.ReportCompleted();
+                {
+                    auto _gil = release_gil();
+                    self->obj.ReportCompleted();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -567,7 +611,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -593,7 +641,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.UserDataAccountId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UserDataAccountId();
+            }());
         }
         catch (...)
         {
@@ -688,7 +740,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {

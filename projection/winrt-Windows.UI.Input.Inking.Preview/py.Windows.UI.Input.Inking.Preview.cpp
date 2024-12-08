@@ -42,7 +42,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Preview
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -82,7 +86,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Preview
                 auto param0 = py::convert_to<winrt::Windows::UI::Composition::Visual>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 1);
 
-                return py::convert(winrt::Windows::UI::Input::Inking::Preview::PalmRejectionDelayZonePreview::CreateForVisual(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::Input::Inking::Preview::PalmRejectionDelayZonePreview::CreateForVisual(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -123,7 +131,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Preview
                 auto param2 = py::convert_to<winrt::Windows::UI::Composition::Visual>(args, 2);
                 auto param3 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 3);
 
-                return py::convert(winrt::Windows::UI::Input::Inking::Preview::PalmRejectionDelayZonePreview::CreateForVisual(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::Input::Inking::Preview::PalmRejectionDelayZonePreview::CreateForVisual(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -171,7 +183,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Preview
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)

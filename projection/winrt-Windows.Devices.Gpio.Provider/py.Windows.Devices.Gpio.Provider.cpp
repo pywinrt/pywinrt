@@ -62,7 +62,11 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Edge());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Edge();
+            }());
         }
         catch (...)
         {
@@ -162,7 +166,11 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Gpio::Provider::ProviderGpioSharingMode>(args, 1);
 
-                return py::convert(self->obj.OpenPinProvider(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.OpenPinProvider(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -194,7 +202,11 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.PinCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PinCount();
+            }());
         }
         catch (...)
         {
@@ -418,7 +430,11 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDriveMode());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDriveMode();
+                }());
             }
             catch (...)
             {
@@ -456,7 +472,11 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Gpio::Provider::ProviderGpioPinDriveMode>(args, 0);
 
-                return py::convert(self->obj.IsDriveModeSupported(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsDriveModeSupported(param0);
+                }());
             }
             catch (...)
             {
@@ -492,7 +512,11 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.Read());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Read();
+                }());
             }
             catch (...)
             {
@@ -530,7 +554,11 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Gpio::Provider::ProviderGpioPinDriveMode>(args, 0);
 
-                self->obj.SetDriveMode(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetDriveMode(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -569,7 +597,11 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Gpio::Provider::ProviderGpioPinValue>(args, 0);
 
-                self->obj.Write(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Write(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -602,7 +634,11 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.DebounceTimeout());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DebounceTimeout();
+            }());
         }
         catch (...)
         {
@@ -636,7 +672,11 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
-            self->obj.DebounceTimeout(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DebounceTimeout(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -663,7 +703,11 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.PinNumber());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PinNumber();
+            }());
         }
         catch (...)
         {
@@ -689,7 +733,11 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.SharingMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SharingMode();
+            }());
         }
         catch (...)
         {
@@ -717,7 +765,11 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Gpio::Provider::IGpioPinProvider, winrt::Windows::Devices::Gpio::Provider::GpioPinProviderValueChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.ValueChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ValueChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -745,7 +797,11 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ValueChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ValueChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1203,7 +1259,11 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetControllers());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetControllers();
+                }());
             }
             catch (...)
             {

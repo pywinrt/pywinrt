@@ -82,7 +82,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 1);
 
-                return py::convert(self->obj.CreateDownload(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateDownload(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -122,7 +126,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 auto param1 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 2);
 
-                return py::convert(self->obj.CreateDownloadAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateDownloadAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -162,7 +170,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 auto param1 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 2);
 
-                return py::convert(self->obj.CreateDownload(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateDownload(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -198,7 +210,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Networking::BackgroundTransfer::BackgroundDownloader::GetCurrentDownloadsAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Networking::BackgroundTransfer::BackgroundDownloader::GetCurrentDownloadsAsync();
+                }());
             }
             catch (...)
             {
@@ -236,7 +252,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Networking::BackgroundTransfer::BackgroundDownloader::GetCurrentDownloadsAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Networking::BackgroundTransfer::BackgroundDownloader::GetCurrentDownloadsAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -274,7 +294,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
                 auto param0 = py::convert_to<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferGroup>(args, 0);
 
-                return py::convert(winrt::Windows::Networking::BackgroundTransfer::BackgroundDownloader::GetCurrentDownloadsForTransferGroupAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Networking::BackgroundTransfer::BackgroundDownloader::GetCurrentDownloadsForTransferGroupAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -312,7 +336,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Networking::BackgroundTransfer::DownloadOperation>>(args, 0);
 
-                return py::convert(winrt::Windows::Networking::BackgroundTransfer::BackgroundDownloader::RequestUnconstrainedDownloadsAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Networking::BackgroundTransfer::BackgroundDownloader::RequestUnconstrainedDownloadsAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -351,7 +379,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                self->obj.SetRequestHeader(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetRequestHeader(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -384,7 +416,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.FailureToastNotification());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FailureToastNotification();
+            }());
         }
         catch (...)
         {
@@ -418,7 +454,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
             auto param0 = py::convert_to<winrt::Windows::UI::Notifications::ToastNotification>(arg);
 
-            self->obj.FailureToastNotification(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.FailureToastNotification(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -445,7 +485,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.SuccessTileNotification());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SuccessTileNotification();
+            }());
         }
         catch (...)
         {
@@ -479,7 +523,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
             auto param0 = py::convert_to<winrt::Windows::UI::Notifications::TileNotification>(arg);
 
-            self->obj.SuccessTileNotification(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SuccessTileNotification(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -506,7 +554,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.SuccessToastNotification());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SuccessToastNotification();
+            }());
         }
         catch (...)
         {
@@ -540,7 +592,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
             auto param0 = py::convert_to<winrt::Windows::UI::Notifications::ToastNotification>(arg);
 
-            self->obj.SuccessToastNotification(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SuccessToastNotification(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -567,7 +623,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.TransferGroup());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TransferGroup();
+            }());
         }
         catch (...)
         {
@@ -601,7 +661,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
             auto param0 = py::convert_to<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferGroup>(arg);
 
-            self->obj.TransferGroup(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TransferGroup(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -628,7 +692,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.FailureTileNotification());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FailureTileNotification();
+            }());
         }
         catch (...)
         {
@@ -662,7 +730,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
             auto param0 = py::convert_to<winrt::Windows::UI::Notifications::TileNotification>(arg);
 
-            self->obj.FailureTileNotification(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.FailureTileNotification(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -689,7 +761,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.CompletionGroup());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CompletionGroup();
+            }());
         }
         catch (...)
         {
@@ -715,7 +791,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.CostPolicy());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CostPolicy();
+            }());
         }
         catch (...)
         {
@@ -749,7 +829,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
             auto param0 = py::convert_to<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferCostPolicy>(arg);
 
-            self->obj.CostPolicy(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CostPolicy(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -776,7 +860,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.Group());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Group();
+            }());
         }
         catch (...)
         {
@@ -810,7 +898,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Group(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Group(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -837,7 +929,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.Method());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Method();
+            }());
         }
         catch (...)
         {
@@ -871,7 +967,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Method(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Method(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -898,7 +998,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProxyCredential());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProxyCredential();
+            }());
         }
         catch (...)
         {
@@ -932,7 +1036,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
             auto param0 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(arg);
 
-            self->obj.ProxyCredential(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ProxyCredential(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -959,7 +1067,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.ServerCredential());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServerCredential();
+            }());
         }
         catch (...)
         {
@@ -993,7 +1105,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
             auto param0 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(arg);
 
-            self->obj.ServerCredential(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ServerCredential(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1156,7 +1272,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                     return nullptr;
                 }
 
-                self->obj.Enable();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Enable();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1189,7 +1309,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsEnabled();
+            }());
         }
         catch (...)
         {
@@ -1215,7 +1339,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.Trigger());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Trigger();
+            }());
         }
         catch (...)
         {
@@ -1310,7 +1438,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.Downloads());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Downloads();
+            }());
         }
         catch (...)
         {
@@ -1336,7 +1468,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.Uploads());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Uploads();
+            }());
         }
         catch (...)
         {
@@ -1489,7 +1625,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
 
-                self->obj.SetFile(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetFile(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1529,7 +1669,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                self->obj.SetHeader(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetHeader(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1568,7 +1712,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.SetText(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetText(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1668,7 +1816,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                return py::convert(winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferError::GetStatus(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferError::GetStatus(param0);
+                }());
             }
             catch (...)
             {
@@ -1771,7 +1923,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferGroup::CreateGroup(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferGroup::CreateGroup(param0);
+                }());
             }
             catch (...)
             {
@@ -1803,7 +1959,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.TransferBehavior());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TransferBehavior();
+            }());
         }
         catch (...)
         {
@@ -1837,7 +1997,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
             auto param0 = py::convert_to<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferBehavior>(arg);
 
-            self->obj.TransferBehavior(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TransferBehavior(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1864,7 +2028,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -1988,7 +2156,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -2020,7 +2192,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.AddedRanges());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AddedRanges();
+            }());
         }
         catch (...)
         {
@@ -2046,7 +2222,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.WasDownloadRestarted());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WasDownloadRestarted();
+            }());
         }
         catch (...)
         {
@@ -2185,7 +2365,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 1);
 
-                return py::convert(self->obj.CreateUpload(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateUpload(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2224,7 +2408,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 1);
 
-                return py::convert(self->obj.CreateUploadFromStreamAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateUploadFromStreamAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2263,7 +2451,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferContentPart>>(args, 1);
 
-                return py::convert(self->obj.CreateUploadAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateUploadAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2304,7 +2496,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
                 auto param3 = py::convert_to<winrt::hstring>(args, 3);
 
-                return py::convert(self->obj.CreateUploadAsync(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateUploadAsync(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -2344,7 +2540,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferContentPart>>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
-                return py::convert(self->obj.CreateUploadAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateUploadAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -2380,7 +2580,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Networking::BackgroundTransfer::BackgroundUploader::GetCurrentUploadsAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Networking::BackgroundTransfer::BackgroundUploader::GetCurrentUploadsAsync();
+                }());
             }
             catch (...)
             {
@@ -2418,7 +2622,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Networking::BackgroundTransfer::BackgroundUploader::GetCurrentUploadsAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Networking::BackgroundTransfer::BackgroundUploader::GetCurrentUploadsAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -2456,7 +2664,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
                 auto param0 = py::convert_to<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferGroup>(args, 0);
 
-                return py::convert(winrt::Windows::Networking::BackgroundTransfer::BackgroundUploader::GetCurrentUploadsForTransferGroupAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Networking::BackgroundTransfer::BackgroundUploader::GetCurrentUploadsForTransferGroupAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -2494,7 +2706,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Networking::BackgroundTransfer::UploadOperation>>(args, 0);
 
-                return py::convert(winrt::Windows::Networking::BackgroundTransfer::BackgroundUploader::RequestUnconstrainedUploadsAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Networking::BackgroundTransfer::BackgroundUploader::RequestUnconstrainedUploadsAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -2533,7 +2749,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                self->obj.SetRequestHeader(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetRequestHeader(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2566,7 +2786,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.ServerCredential());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServerCredential();
+            }());
         }
         catch (...)
         {
@@ -2600,7 +2824,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
             auto param0 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(arg);
 
-            self->obj.ServerCredential(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ServerCredential(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2627,7 +2855,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProxyCredential());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProxyCredential();
+            }());
         }
         catch (...)
         {
@@ -2661,7 +2893,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
             auto param0 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(arg);
 
-            self->obj.ProxyCredential(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ProxyCredential(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2688,7 +2924,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.Method());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Method();
+            }());
         }
         catch (...)
         {
@@ -2722,7 +2962,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Method(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Method(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2749,7 +2993,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.Group());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Group();
+            }());
         }
         catch (...)
         {
@@ -2783,7 +3031,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Group(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Group(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2810,7 +3062,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.CostPolicy());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CostPolicy();
+            }());
         }
         catch (...)
         {
@@ -2844,7 +3100,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
             auto param0 = py::convert_to<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferCostPolicy>(arg);
 
-            self->obj.CostPolicy(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CostPolicy(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2871,7 +3131,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.FailureTileNotification());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FailureTileNotification();
+            }());
         }
         catch (...)
         {
@@ -2905,7 +3169,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
             auto param0 = py::convert_to<winrt::Windows::UI::Notifications::TileNotification>(arg);
 
-            self->obj.FailureTileNotification(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.FailureTileNotification(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2932,7 +3200,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.TransferGroup());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TransferGroup();
+            }());
         }
         catch (...)
         {
@@ -2966,7 +3238,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
             auto param0 = py::convert_to<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferGroup>(arg);
 
-            self->obj.TransferGroup(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TransferGroup(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2993,7 +3269,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.SuccessToastNotification());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SuccessToastNotification();
+            }());
         }
         catch (...)
         {
@@ -3027,7 +3307,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
             auto param0 = py::convert_to<winrt::Windows::UI::Notifications::ToastNotification>(arg);
 
-            self->obj.SuccessToastNotification(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SuccessToastNotification(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3054,7 +3338,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.SuccessTileNotification());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SuccessTileNotification();
+            }());
         }
         catch (...)
         {
@@ -3088,7 +3376,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
             auto param0 = py::convert_to<winrt::Windows::UI::Notifications::TileNotification>(arg);
 
-            self->obj.SuccessTileNotification(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SuccessTileNotification(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3115,7 +3407,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.FailureToastNotification());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FailureToastNotification();
+            }());
         }
         catch (...)
         {
@@ -3149,7 +3445,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
             auto param0 = py::convert_to<winrt::Windows::UI::Notifications::ToastNotification>(arg);
 
-            self->obj.FailureToastNotification(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.FailureToastNotification(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3176,7 +3476,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.CompletionGroup());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CompletionGroup();
+            }());
         }
         catch (...)
         {
@@ -3306,7 +3610,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Networking::BackgroundTransfer::ContentPrefetcher::IndirectContentUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Networking::BackgroundTransfer::ContentPrefetcher::IndirectContentUri();
+            }());
         }
         catch (...)
         {
@@ -3340,7 +3648,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            winrt::Windows::Networking::BackgroundTransfer::ContentPrefetcher::IndirectContentUri(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::Networking::BackgroundTransfer::ContentPrefetcher::IndirectContentUri(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3367,7 +3679,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Networking::BackgroundTransfer::ContentPrefetcher::ContentUris());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Networking::BackgroundTransfer::ContentPrefetcher::ContentUris();
+            }());
         }
         catch (...)
         {
@@ -3393,7 +3709,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Networking::BackgroundTransfer::ContentPrefetcher::LastSuccessfulPrefetchTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Networking::BackgroundTransfer::ContentPrefetcher::LastSuccessfulPrefetchTime();
+            }());
         }
         catch (...)
         {
@@ -3490,7 +3810,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                     return nullptr;
                 }
 
-                return py::convert(self->obj.AttachAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.AttachAsync();
+                }());
             }
             catch (...)
             {
@@ -3526,7 +3850,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDownloadedRanges());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDownloadedRanges();
+                }());
             }
             catch (...)
             {
@@ -3562,7 +3890,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetResponseInformation());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetResponseInformation();
+                }());
             }
             catch (...)
             {
@@ -3598,7 +3930,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetResultRandomAccessStreamReference());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetResultRandomAccessStreamReference();
+                }());
             }
             catch (...)
             {
@@ -3636,7 +3972,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
-                return py::convert(self->obj.GetResultStreamAt(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetResultStreamAt(param0);
+                }());
             }
             catch (...)
             {
@@ -3672,7 +4012,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                     return nullptr;
                 }
 
-                self->obj.MakeCurrentInTransferGroup();
+                {
+                    auto _gil = release_gil();
+                    self->obj.MakeCurrentInTransferGroup();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3709,7 +4053,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                     return nullptr;
                 }
 
-                self->obj.Pause();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Pause();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3748,7 +4096,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.RemoveRequestHeader(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveRequestHeader(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3785,7 +4137,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                     return nullptr;
                 }
 
-                self->obj.Resume();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Resume();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3825,7 +4181,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                self->obj.SetRequestHeader(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetRequestHeader(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3862,7 +4222,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                     return nullptr;
                 }
 
-                return py::convert(self->obj.StartAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.StartAsync();
+                }());
             }
             catch (...)
             {
@@ -3894,7 +4258,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.CostPolicy());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CostPolicy();
+            }());
         }
         catch (...)
         {
@@ -3928,7 +4296,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
             auto param0 = py::convert_to<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferCostPolicy>(arg);
 
-            self->obj.CostPolicy(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CostPolicy(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3955,7 +4327,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.RequestedUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RequestedUri();
+            }());
         }
         catch (...)
         {
@@ -3989,7 +4365,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.RequestedUri(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RequestedUri(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4016,7 +4396,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.Method());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Method();
+            }());
         }
         catch (...)
         {
@@ -4042,7 +4426,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.Group());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Group();
+            }());
         }
         catch (...)
         {
@@ -4068,7 +4456,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.Guid());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Guid();
+            }());
         }
         catch (...)
         {
@@ -4094,7 +4486,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.Priority());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Priority();
+            }());
         }
         catch (...)
         {
@@ -4128,7 +4524,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
             auto param0 = py::convert_to<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferPriority>(arg);
 
-            self->obj.Priority(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Priority(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4155,7 +4555,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.Progress());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Progress();
+            }());
         }
         catch (...)
         {
@@ -4181,7 +4585,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResultFile());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResultFile();
+            }());
         }
         catch (...)
         {
@@ -4207,7 +4615,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.TransferGroup());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TransferGroup();
+            }());
         }
         catch (...)
         {
@@ -4233,7 +4645,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsRandomAccessRequired());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsRandomAccessRequired();
+            }());
         }
         catch (...)
         {
@@ -4267,7 +4683,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsRandomAccessRequired(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsRandomAccessRequired(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4294,7 +4714,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.CurrentWebErrorStatus());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CurrentWebErrorStatus();
+            }());
         }
         catch (...)
         {
@@ -4320,7 +4744,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.RecoverableWebErrorStatuses());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RecoverableWebErrorStatuses();
+            }());
         }
         catch (...)
         {
@@ -4348,7 +4776,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::BackgroundTransfer::DownloadOperation, winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferRangesDownloadedEventArgs>>(arg);
 
-            return py::convert(self->obj.RangesDownloaded(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RangesDownloaded(param0);
+            }());
         }
         catch (...)
         {
@@ -4376,7 +4808,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.RangesDownloaded(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RangesDownloaded(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -4494,7 +4930,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.ActualUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ActualUri();
+            }());
         }
         catch (...)
         {
@@ -4520,7 +4960,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.Headers());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Headers();
+            }());
         }
         catch (...)
         {
@@ -4546,7 +4990,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsResumable());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsResumable();
+            }());
         }
         catch (...)
         {
@@ -4572,7 +5020,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.StatusCode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StatusCode();
+            }());
         }
         catch (...)
         {
@@ -4668,7 +5120,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsUnconstrained());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsUnconstrained();
+            }());
         }
         catch (...)
         {
@@ -4765,7 +5221,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                     return nullptr;
                 }
 
-                return py::convert(self->obj.AttachAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.AttachAsync();
+                }());
             }
             catch (...)
             {
@@ -4801,7 +5261,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetResponseInformation());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetResponseInformation();
+                }());
             }
             catch (...)
             {
@@ -4839,7 +5303,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
-                return py::convert(self->obj.GetResultStreamAt(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetResultStreamAt(param0);
+                }());
             }
             catch (...)
             {
@@ -4875,7 +5343,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                     return nullptr;
                 }
 
-                self->obj.MakeCurrentInTransferGroup();
+                {
+                    auto _gil = release_gil();
+                    self->obj.MakeCurrentInTransferGroup();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4914,7 +5386,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.RemoveRequestHeader(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveRequestHeader(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4954,7 +5430,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                self->obj.SetRequestHeader(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetRequestHeader(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4991,7 +5471,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                     return nullptr;
                 }
 
-                return py::convert(self->obj.StartAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.StartAsync();
+                }());
             }
             catch (...)
             {
@@ -5023,7 +5507,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.CostPolicy());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CostPolicy();
+            }());
         }
         catch (...)
         {
@@ -5057,7 +5545,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
             auto param0 = py::convert_to<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferCostPolicy>(arg);
 
-            self->obj.CostPolicy(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CostPolicy(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5084,7 +5576,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.Group());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Group();
+            }());
         }
         catch (...)
         {
@@ -5110,7 +5606,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.Guid());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Guid();
+            }());
         }
         catch (...)
         {
@@ -5136,7 +5636,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.Method());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Method();
+            }());
         }
         catch (...)
         {
@@ -5162,7 +5666,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.RequestedUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RequestedUri();
+            }());
         }
         catch (...)
         {
@@ -5188,7 +5696,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.Priority());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Priority();
+            }());
         }
         catch (...)
         {
@@ -5222,7 +5734,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
             auto param0 = py::convert_to<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferPriority>(arg);
 
-            self->obj.Priority(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Priority(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5249,7 +5765,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.Progress());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Progress();
+            }());
         }
         catch (...)
         {
@@ -5275,7 +5795,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.SourceFile());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SourceFile();
+            }());
         }
         catch (...)
         {
@@ -5301,7 +5825,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.TransferGroup());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TransferGroup();
+            }());
         }
         catch (...)
         {
@@ -5416,7 +5944,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                self->obj.SetRequestHeader(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetRequestHeader(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5449,7 +5981,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.CostPolicy());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CostPolicy();
+            }());
         }
         catch (...)
         {
@@ -5483,7 +6019,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
             auto param0 = py::convert_to<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferCostPolicy>(arg);
 
-            self->obj.CostPolicy(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CostPolicy(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5510,7 +6050,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.Group());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Group();
+            }());
         }
         catch (...)
         {
@@ -5544,7 +6088,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Group(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Group(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5571,7 +6119,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.Method());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Method();
+            }());
         }
         catch (...)
         {
@@ -5605,7 +6157,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Method(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Method(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5632,7 +6188,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProxyCredential());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProxyCredential();
+            }());
         }
         catch (...)
         {
@@ -5666,7 +6226,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
             auto param0 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(arg);
 
-            self->obj.ProxyCredential(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ProxyCredential(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5693,7 +6257,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.ServerCredential());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServerCredential();
+            }());
         }
         catch (...)
         {
@@ -5727,7 +6295,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
             auto param0 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(arg);
 
-            self->obj.ServerCredential(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ServerCredential(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6151,7 +6723,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.CreateWithName(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateWithName(param0);
+                }());
             }
             catch (...)
             {
@@ -6190,7 +6766,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.CreateWithNameAndFileName(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateWithNameAndFileName(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -6432,7 +7012,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetResponseInformation());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetResponseInformation();
+                }());
             }
             catch (...)
             {
@@ -6470,7 +7054,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
-                return py::convert(self->obj.GetResultStreamAt(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetResultStreamAt(param0);
+                }());
             }
             catch (...)
             {
@@ -6502,7 +7090,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.CostPolicy());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CostPolicy();
+            }());
         }
         catch (...)
         {
@@ -6536,7 +7128,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
             auto param0 = py::convert_to<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferCostPolicy>(arg);
 
-            self->obj.CostPolicy(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CostPolicy(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6563,7 +7159,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.Group());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Group();
+            }());
         }
         catch (...)
         {
@@ -6589,7 +7189,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.Guid());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Guid();
+            }());
         }
         catch (...)
         {
@@ -6615,7 +7219,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.Method());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Method();
+            }());
         }
         catch (...)
         {
@@ -6641,7 +7249,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.RequestedUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RequestedUri();
+            }());
         }
         catch (...)
         {
@@ -6983,7 +7595,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 return nullptr;
             }
 
-            return py::convert(self->obj.Priority());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Priority();
+            }());
         }
         catch (...)
         {
@@ -7017,7 +7633,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
             auto param0 = py::convert_to<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferPriority>(arg);
 
-            self->obj.Priority(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Priority(param0);
+            }
+
             return 0;
         }
         catch (...)

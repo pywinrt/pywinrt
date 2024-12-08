@@ -42,7 +42,11 @@ namespace py::cpp::Windows::UI::Notifications::Management
                     return nullptr;
                 }
 
-                self->obj.ClearNotifications();
+                {
+                    auto _gil = release_gil();
+                    self->obj.ClearNotifications();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -79,7 +83,11 @@ namespace py::cpp::Windows::UI::Notifications::Management
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetAccessStatus());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAccessStatus();
+                }());
             }
             catch (...)
             {
@@ -117,7 +125,11 @@ namespace py::cpp::Windows::UI::Notifications::Management
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(self->obj.GetNotification(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetNotification(param0);
+                }());
             }
             catch (...)
             {
@@ -155,7 +167,11 @@ namespace py::cpp::Windows::UI::Notifications::Management
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Notifications::NotificationKinds>(args, 0);
 
-                return py::convert(self->obj.GetNotificationsAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetNotificationsAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -193,7 +209,11 @@ namespace py::cpp::Windows::UI::Notifications::Management
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                self->obj.RemoveNotification(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveNotification(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -230,7 +250,11 @@ namespace py::cpp::Windows::UI::Notifications::Management
                     return nullptr;
                 }
 
-                return py::convert(self->obj.RequestAccessAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestAccessAsync();
+                }());
             }
             catch (...)
             {
@@ -262,7 +286,11 @@ namespace py::cpp::Windows::UI::Notifications::Management
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Notifications::Management::UserNotificationListener::Current());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Notifications::Management::UserNotificationListener::Current();
+            }());
         }
         catch (...)
         {
@@ -290,7 +318,11 @@ namespace py::cpp::Windows::UI::Notifications::Management
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Notifications::Management::UserNotificationListener, winrt::Windows::UI::Notifications::UserNotificationChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.NotificationChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NotificationChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -318,7 +350,11 @@ namespace py::cpp::Windows::UI::Notifications::Management
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.NotificationChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NotificationChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)

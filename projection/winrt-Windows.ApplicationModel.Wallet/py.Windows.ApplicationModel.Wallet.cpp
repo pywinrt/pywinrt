@@ -82,7 +82,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetImageAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetImageAsync();
+                }());
             }
             catch (...)
             {
@@ -114,7 +118,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
                 return nullptr;
             }
 
-            return py::convert(self->obj.Symbology());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Symbology();
+            }());
         }
         catch (...)
         {
@@ -140,7 +148,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
                 return nullptr;
             }
 
-            return py::convert(self->obj.Value());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Value();
+            }());
         }
         catch (...)
         {
@@ -260,7 +272,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayName();
+            }());
         }
         catch (...)
         {
@@ -294,7 +310,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.DisplayName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DisplayName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -321,7 +341,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayMessage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayMessage();
+            }());
         }
         catch (...)
         {
@@ -355,7 +379,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.DisplayMessage(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DisplayMessage(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -382,7 +410,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
                 return nullptr;
             }
 
-            return py::convert(self->obj.LogoText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LogoText();
+            }());
         }
         catch (...)
         {
@@ -416,7 +448,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.LogoText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.LogoText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -443,7 +479,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
                 return nullptr;
             }
 
-            return py::convert(self->obj.BodyFontColor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BodyFontColor();
+            }());
         }
         catch (...)
         {
@@ -477,7 +517,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
-            self->obj.BodyFontColor(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.BodyFontColor(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -504,7 +548,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
                 return nullptr;
             }
 
-            return py::convert(self->obj.BodyColor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BodyColor();
+            }());
         }
         catch (...)
         {
@@ -538,7 +586,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
-            self->obj.BodyColor(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.BodyColor(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -565,7 +617,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
                 return nullptr;
             }
 
-            return py::convert(self->obj.BodyBackgroundImage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BodyBackgroundImage();
+            }());
         }
         catch (...)
         {
@@ -599,7 +655,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(arg);
 
-            self->obj.BodyBackgroundImage(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.BodyBackgroundImage(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -626,7 +686,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsDisplayMessageLaunchable());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsDisplayMessageLaunchable();
+            }());
         }
         catch (...)
         {
@@ -660,7 +724,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsDisplayMessageLaunchable(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsDisplayMessageLaunchable(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -687,7 +755,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsAcknowledged());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsAcknowledged();
+            }());
         }
         catch (...)
         {
@@ -721,7 +793,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsAcknowledged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsAcknowledged(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -748,7 +824,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsMoreTransactionHistoryLaunchable());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsMoreTransactionHistoryLaunchable();
+            }());
         }
         catch (...)
         {
@@ -782,7 +862,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsMoreTransactionHistoryLaunchable(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsMoreTransactionHistoryLaunchable(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -809,7 +893,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
                 return nullptr;
             }
 
-            return py::convert(self->obj.HeaderFontColor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HeaderFontColor();
+            }());
         }
         catch (...)
         {
@@ -843,7 +931,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
-            self->obj.HeaderFontColor(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.HeaderFontColor(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -870,7 +962,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
                 return nullptr;
             }
 
-            return py::convert(self->obj.HeaderColor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HeaderColor();
+            }());
         }
         catch (...)
         {
@@ -904,7 +1000,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
-            self->obj.HeaderColor(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.HeaderColor(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -931,7 +1031,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
                 return nullptr;
             }
 
-            return py::convert(self->obj.HeaderBackgroundImage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HeaderBackgroundImage();
+            }());
         }
         catch (...)
         {
@@ -965,7 +1069,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(arg);
 
-            self->obj.HeaderBackgroundImage(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.HeaderBackgroundImage(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -992,7 +1100,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExpirationDate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExpirationDate();
+            }());
         }
         catch (...)
         {
@@ -1026,7 +1138,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
-            self->obj.ExpirationDate(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ExpirationDate(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1053,7 +1169,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
                 return nullptr;
             }
 
-            return py::convert(self->obj.Logo99x99());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Logo99x99();
+            }());
         }
         catch (...)
         {
@@ -1087,7 +1207,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(arg);
 
-            self->obj.Logo99x99(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Logo99x99(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1114,7 +1238,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
                 return nullptr;
             }
 
-            return py::convert(self->obj.LogoImage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LogoImage();
+            }());
         }
         catch (...)
         {
@@ -1148,7 +1276,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(arg);
 
-            self->obj.LogoImage(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.LogoImage(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1175,7 +1307,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
                 return nullptr;
             }
 
-            return py::convert(self->obj.PromotionalImage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PromotionalImage();
+            }());
         }
         catch (...)
         {
@@ -1209,7 +1345,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(arg);
 
-            self->obj.PromotionalImage(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PromotionalImage(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1236,7 +1376,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
                 return nullptr;
             }
 
-            return py::convert(self->obj.Logo159x159());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Logo159x159();
+            }());
         }
         catch (...)
         {
@@ -1270,7 +1414,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(arg);
 
-            self->obj.Logo159x159(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Logo159x159(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1297,7 +1445,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
                 return nullptr;
             }
 
-            return py::convert(self->obj.LastUpdated());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LastUpdated();
+            }());
         }
         catch (...)
         {
@@ -1331,7 +1483,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
-            self->obj.LastUpdated(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.LastUpdated(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1358,7 +1514,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
                 return nullptr;
             }
 
-            return py::convert(self->obj.IssuerDisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IssuerDisplayName();
+            }());
         }
         catch (...)
         {
@@ -1392,7 +1552,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.IssuerDisplayName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IssuerDisplayName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1419,7 +1583,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
                 return nullptr;
             }
 
-            return py::convert(self->obj.Barcode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Barcode();
+            }());
         }
         catch (...)
         {
@@ -1453,7 +1621,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Wallet::WalletBarcode>(arg);
 
-            self->obj.Barcode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Barcode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1480,7 +1652,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
                 return nullptr;
             }
 
-            return py::convert(self->obj.RelevantDateDisplayMessage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RelevantDateDisplayMessage();
+            }());
         }
         catch (...)
         {
@@ -1514,7 +1690,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.RelevantDateDisplayMessage(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RelevantDateDisplayMessage(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1541,7 +1721,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
                 return nullptr;
             }
 
-            return py::convert(self->obj.RelevantDate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RelevantDate();
+            }());
         }
         catch (...)
         {
@@ -1575,7 +1759,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
-            self->obj.RelevantDate(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RelevantDate(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1602,7 +1790,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
                 return nullptr;
             }
 
-            return py::convert(self->obj.Logo336x336());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Logo336x336();
+            }());
         }
         catch (...)
         {
@@ -1636,7 +1828,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(arg);
 
-            self->obj.Logo336x336(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Logo336x336(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1663,7 +1859,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -1689,7 +1889,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayProperties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayProperties();
+            }());
         }
         catch (...)
         {
@@ -1715,7 +1919,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -1741,7 +1949,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
                 return nullptr;
             }
 
-            return py::convert(self->obj.RelevantLocations());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RelevantLocations();
+            }());
         }
         catch (...)
         {
@@ -1767,7 +1979,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
                 return nullptr;
             }
 
-            return py::convert(self->obj.TransactionHistory());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TransactionHistory();
+            }());
         }
         catch (...)
         {
@@ -1793,7 +2009,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
                 return nullptr;
             }
 
-            return py::convert(self->obj.Verbs());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Verbs();
+            }());
         }
         catch (...)
         {
@@ -1939,7 +2159,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
                 return nullptr;
             }
 
-            return py::convert(self->obj.Value());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Value();
+            }());
         }
         catch (...)
         {
@@ -1973,7 +2197,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Value(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Value(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2000,7 +2228,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
                 return nullptr;
             }
 
-            return py::convert(self->obj.SummaryViewPosition());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SummaryViewPosition();
+            }());
         }
         catch (...)
         {
@@ -2034,7 +2266,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Wallet::WalletSummaryViewPosition>(arg);
 
-            self->obj.SummaryViewPosition(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SummaryViewPosition(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2061,7 +2297,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -2095,7 +2335,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Name(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Name(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2122,7 +2366,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
                 return nullptr;
             }
 
-            return py::convert(self->obj.DetailViewPosition());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DetailViewPosition();
+            }());
         }
         catch (...)
         {
@@ -2156,7 +2404,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Wallet::WalletDetailViewPosition>(arg);
 
-            self->obj.DetailViewPosition(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DetailViewPosition(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2183,7 +2435,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
                 return nullptr;
             }
 
-            return py::convert(self->obj.AutoDetectLinks());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AutoDetectLinks();
+            }());
         }
         catch (...)
         {
@@ -2217,7 +2473,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.AutoDetectLinks(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AutoDetectLinks(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2322,7 +2582,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Wallet::WalletItem>(args, 1);
 
-                return py::convert(self->obj.AddAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.AddAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2358,7 +2622,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ClearAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ClearAsync();
+                }());
             }
             catch (...)
             {
@@ -2396,7 +2664,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.DeleteAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.DeleteAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -2432,7 +2704,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetItemsAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetItemsAsync();
+                }());
             }
             catch (...)
             {
@@ -2470,7 +2746,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Wallet::WalletItemKind>(args, 0);
 
-                return py::convert(self->obj.GetItemsAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetItemsAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -2508,7 +2788,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetWalletItemAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetWalletItemAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -2546,7 +2830,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(args, 0);
 
-                return py::convert(self->obj.ImportItemAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ImportItemAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -2582,7 +2870,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ShowAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ShowAsync();
+                }());
             }
             catch (...)
             {
@@ -2620,7 +2912,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.ShowAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ShowAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -2658,7 +2954,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Wallet::WalletItem>(args, 0);
 
-                return py::convert(self->obj.UpdateAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.UpdateAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -2762,7 +3062,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::ApplicationModel::Wallet::WalletManager::RequestStoreAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Wallet::WalletManager::RequestStoreAsync();
+                }());
             }
             catch (...)
             {
@@ -2881,7 +3185,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
                 return nullptr;
             }
 
-            return py::convert(self->obj.Position());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Position();
+            }());
         }
         catch (...)
         {
@@ -2915,7 +3223,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::BasicGeoposition>(arg);
 
-            self->obj.Position(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Position(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2942,7 +3254,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayMessage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayMessage();
+            }());
         }
         catch (...)
         {
@@ -2976,7 +3292,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.DisplayMessage(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DisplayMessage(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3093,7 +3413,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
                 return nullptr;
             }
 
-            return py::convert(self->obj.TransactionDate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TransactionDate();
+            }());
         }
         catch (...)
         {
@@ -3127,7 +3451,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
-            self->obj.TransactionDate(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TransactionDate(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3154,7 +3482,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsLaunchable());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsLaunchable();
+            }());
         }
         catch (...)
         {
@@ -3188,7 +3520,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsLaunchable(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsLaunchable(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3215,7 +3551,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
                 return nullptr;
             }
 
-            return py::convert(self->obj.IgnoreTimeOfDay());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IgnoreTimeOfDay();
+            }());
         }
         catch (...)
         {
@@ -3249,7 +3589,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IgnoreTimeOfDay(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IgnoreTimeOfDay(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3276,7 +3620,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayLocation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayLocation();
+            }());
         }
         catch (...)
         {
@@ -3310,7 +3658,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.DisplayLocation(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DisplayLocation(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3337,7 +3689,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayAmount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayAmount();
+            }());
         }
         catch (...)
         {
@@ -3371,7 +3727,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.DisplayAmount(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DisplayAmount(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3398,7 +3758,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
                 return nullptr;
             }
 
-            return py::convert(self->obj.Description());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Description();
+            }());
         }
         catch (...)
         {
@@ -3432,7 +3796,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Description(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Description(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3555,7 +3923,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -3589,7 +3961,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Name(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Name(param0);
+            }
+
             return 0;
         }
         catch (...)

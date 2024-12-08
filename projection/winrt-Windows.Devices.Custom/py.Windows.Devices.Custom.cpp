@@ -46,7 +46,11 @@ namespace py::cpp::Windows::Devices::Custom
                 auto param1 = py::convert_to<winrt::Windows::Devices::Custom::DeviceAccessMode>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Devices::Custom::DeviceSharingMode>(args, 2);
 
-                return py::convert(winrt::Windows::Devices::Custom::CustomDevice::FromIdAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Custom::CustomDevice::FromIdAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -84,7 +88,11 @@ namespace py::cpp::Windows::Devices::Custom
 
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Custom::CustomDevice::GetDeviceSelector(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Custom::CustomDevice::GetDeviceSelector(param0);
+                }());
             }
             catch (...)
             {
@@ -124,7 +132,11 @@ namespace py::cpp::Windows::Devices::Custom
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 2);
 
-                return py::convert(self->obj.SendIOControlAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SendIOControlAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -164,7 +176,11 @@ namespace py::cpp::Windows::Devices::Custom
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 2);
 
-                return py::convert(self->obj.TrySendIOControlAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TrySendIOControlAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -196,7 +212,11 @@ namespace py::cpp::Windows::Devices::Custom
                 return nullptr;
             }
 
-            return py::convert(self->obj.InputStream());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InputStream();
+            }());
         }
         catch (...)
         {
@@ -222,7 +242,11 @@ namespace py::cpp::Windows::Devices::Custom
                 return nullptr;
             }
 
-            return py::convert(self->obj.OutputStream());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OutputStream();
+            }());
         }
         catch (...)
         {
@@ -372,7 +396,11 @@ namespace py::cpp::Windows::Devices::Custom
                 return nullptr;
             }
 
-            return py::convert(self->obj.AccessMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AccessMode();
+            }());
         }
         catch (...)
         {
@@ -398,7 +426,11 @@ namespace py::cpp::Windows::Devices::Custom
                 return nullptr;
             }
 
-            return py::convert(self->obj.BufferingMethod());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BufferingMethod();
+            }());
         }
         catch (...)
         {
@@ -424,7 +456,11 @@ namespace py::cpp::Windows::Devices::Custom
                 return nullptr;
             }
 
-            return py::convert(self->obj.ControlCode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ControlCode();
+            }());
         }
         catch (...)
         {
@@ -450,7 +486,11 @@ namespace py::cpp::Windows::Devices::Custom
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceType();
+            }());
         }
         catch (...)
         {
@@ -476,7 +516,11 @@ namespace py::cpp::Windows::Devices::Custom
                 return nullptr;
             }
 
-            return py::convert(self->obj.Function());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Function();
+            }());
         }
         catch (...)
         {
@@ -565,7 +609,11 @@ namespace py::cpp::Windows::Devices::Custom
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Devices::Custom::KnownDeviceTypes::Unknown());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Devices::Custom::KnownDeviceTypes::Unknown();
+            }());
         }
         catch (...)
         {
@@ -656,7 +704,11 @@ namespace py::cpp::Windows::Devices::Custom
                 return nullptr;
             }
 
-            return py::convert(self->obj.AccessMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AccessMode();
+            }());
         }
         catch (...)
         {
@@ -682,7 +734,11 @@ namespace py::cpp::Windows::Devices::Custom
                 return nullptr;
             }
 
-            return py::convert(self->obj.BufferingMethod());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BufferingMethod();
+            }());
         }
         catch (...)
         {
@@ -708,7 +764,11 @@ namespace py::cpp::Windows::Devices::Custom
                 return nullptr;
             }
 
-            return py::convert(self->obj.ControlCode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ControlCode();
+            }());
         }
         catch (...)
         {
@@ -734,7 +794,11 @@ namespace py::cpp::Windows::Devices::Custom
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceType();
+            }());
         }
         catch (...)
         {
@@ -760,7 +824,11 @@ namespace py::cpp::Windows::Devices::Custom
                 return nullptr;
             }
 
-            return py::convert(self->obj.Function());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Function();
+            }());
         }
         catch (...)
         {

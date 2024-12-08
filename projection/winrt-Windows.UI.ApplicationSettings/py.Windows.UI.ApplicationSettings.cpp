@@ -42,7 +42,11 @@ namespace py::cpp::Windows::UI::ApplicationSettings
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::UI::ApplicationSettings::AccountsSettingsPane::GetForCurrentView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::ApplicationSettings::AccountsSettingsPane::GetForCurrentView();
+                }());
             }
             catch (...)
             {
@@ -78,7 +82,11 @@ namespace py::cpp::Windows::UI::ApplicationSettings
                     return nullptr;
                 }
 
-                winrt::Windows::UI::ApplicationSettings::AccountsSettingsPane::Show();
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::UI::ApplicationSettings::AccountsSettingsPane::Show();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -115,7 +123,11 @@ namespace py::cpp::Windows::UI::ApplicationSettings
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::UI::ApplicationSettings::AccountsSettingsPane::ShowAddAccountAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::ApplicationSettings::AccountsSettingsPane::ShowAddAccountAsync();
+                }());
             }
             catch (...)
             {
@@ -153,7 +165,11 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
 
-                return py::convert(winrt::Windows::UI::ApplicationSettings::AccountsSettingsPane::ShowAddAccountForUserAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::ApplicationSettings::AccountsSettingsPane::ShowAddAccountForUserAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -189,7 +205,11 @@ namespace py::cpp::Windows::UI::ApplicationSettings
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::UI::ApplicationSettings::AccountsSettingsPane::ShowManageAccountsAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::ApplicationSettings::AccountsSettingsPane::ShowManageAccountsAsync();
+                }());
             }
             catch (...)
             {
@@ -227,7 +247,11 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
 
-                return py::convert(winrt::Windows::UI::ApplicationSettings::AccountsSettingsPane::ShowManageAccountsForUserAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::ApplicationSettings::AccountsSettingsPane::ShowManageAccountsForUserAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -261,7 +285,11 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ApplicationSettings::AccountsSettingsPane, winrt::Windows::UI::ApplicationSettings::AccountsSettingsPaneCommandsRequestedEventArgs>>(arg);
 
-            return py::convert(self->obj.AccountCommandsRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AccountCommandsRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -289,7 +317,11 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.AccountCommandsRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AccountCommandsRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -419,7 +451,11 @@ namespace py::cpp::Windows::UI::ApplicationSettings
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -451,7 +487,11 @@ namespace py::cpp::Windows::UI::ApplicationSettings
                 return nullptr;
             }
 
-            return py::convert(self->obj.HeaderText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HeaderText();
+            }());
         }
         catch (...)
         {
@@ -485,7 +525,11 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.HeaderText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.HeaderText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -512,7 +556,11 @@ namespace py::cpp::Windows::UI::ApplicationSettings
                 return nullptr;
             }
 
-            return py::convert(self->obj.Commands());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Commands();
+            }());
         }
         catch (...)
         {
@@ -538,7 +586,11 @@ namespace py::cpp::Windows::UI::ApplicationSettings
                 return nullptr;
             }
 
-            return py::convert(self->obj.CredentialCommands());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CredentialCommands();
+            }());
         }
         catch (...)
         {
@@ -564,7 +616,11 @@ namespace py::cpp::Windows::UI::ApplicationSettings
                 return nullptr;
             }
 
-            return py::convert(self->obj.WebAccountCommands());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WebAccountCommands();
+            }());
         }
         catch (...)
         {
@@ -590,7 +646,11 @@ namespace py::cpp::Windows::UI::ApplicationSettings
                 return nullptr;
             }
 
-            return py::convert(self->obj.WebAccountProviderCommands());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WebAccountProviderCommands();
+            }());
         }
         catch (...)
         {
@@ -616,7 +676,11 @@ namespace py::cpp::Windows::UI::ApplicationSettings
                 return nullptr;
             }
 
-            return py::convert(self->obj.User());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.User();
+            }());
         }
         catch (...)
         {
@@ -719,7 +783,11 @@ namespace py::cpp::Windows::UI::ApplicationSettings
                     return nullptr;
                 }
 
-                self->obj.Complete();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Complete();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -859,7 +927,11 @@ namespace py::cpp::Windows::UI::ApplicationSettings
                 return nullptr;
             }
 
-            return py::convert(self->obj.CredentialDeleted());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CredentialDeleted();
+            }());
         }
         catch (...)
         {
@@ -885,7 +957,11 @@ namespace py::cpp::Windows::UI::ApplicationSettings
                 return nullptr;
             }
 
-            return py::convert(self->obj.PasswordCredential());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PasswordCredential();
+            }());
         }
         catch (...)
         {
@@ -1005,7 +1081,11 @@ namespace py::cpp::Windows::UI::ApplicationSettings
                 return nullptr;
             }
 
-            return py::convert(self->obj.Label());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Label();
+            }());
         }
         catch (...)
         {
@@ -1039,7 +1119,11 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Label(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Label(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1066,7 +1150,11 @@ namespace py::cpp::Windows::UI::ApplicationSettings
                 return nullptr;
             }
 
-            return py::convert(self->obj.Invoked());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Invoked();
+            }());
         }
         catch (...)
         {
@@ -1100,7 +1188,11 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
             auto param0 = py::convert_to<winrt::Windows::UI::Popups::UICommandInvokedHandler>(arg);
 
-            self->obj.Invoked(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Invoked(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1127,7 +1219,11 @@ namespace py::cpp::Windows::UI::ApplicationSettings
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -1161,7 +1257,11 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
-            self->obj.Id(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Id(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1188,7 +1288,11 @@ namespace py::cpp::Windows::UI::ApplicationSettings
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::ApplicationSettings::SettingsCommand::AccountsCommand());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::ApplicationSettings::SettingsCommand::AccountsCommand();
+            }());
         }
         catch (...)
         {
@@ -1313,7 +1417,11 @@ namespace py::cpp::Windows::UI::ApplicationSettings
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::UI::ApplicationSettings::SettingsPane::GetForCurrentView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::ApplicationSettings::SettingsPane::GetForCurrentView();
+                }());
             }
             catch (...)
             {
@@ -1349,7 +1457,11 @@ namespace py::cpp::Windows::UI::ApplicationSettings
                     return nullptr;
                 }
 
-                winrt::Windows::UI::ApplicationSettings::SettingsPane::Show();
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::UI::ApplicationSettings::SettingsPane::Show();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1382,7 +1494,11 @@ namespace py::cpp::Windows::UI::ApplicationSettings
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::ApplicationSettings::SettingsPane::Edge());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::ApplicationSettings::SettingsPane::Edge();
+            }());
         }
         catch (...)
         {
@@ -1410,7 +1526,11 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ApplicationSettings::SettingsPane, winrt::Windows::UI::ApplicationSettings::SettingsPaneCommandsRequestedEventArgs>>(arg);
 
-            return py::convert(self->obj.CommandsRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CommandsRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -1438,7 +1558,11 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.CommandsRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CommandsRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1561,7 +1685,11 @@ namespace py::cpp::Windows::UI::ApplicationSettings
                 return nullptr;
             }
 
-            return py::convert(self->obj.ApplicationCommands());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ApplicationCommands();
+            }());
         }
         catch (...)
         {
@@ -1654,7 +1782,11 @@ namespace py::cpp::Windows::UI::ApplicationSettings
                 return nullptr;
             }
 
-            return py::convert(self->obj.Request());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Request();
+            }());
         }
         catch (...)
         {
@@ -1773,7 +1905,11 @@ namespace py::cpp::Windows::UI::ApplicationSettings
                 return nullptr;
             }
 
-            return py::convert(self->obj.Actions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Actions();
+            }());
         }
         catch (...)
         {
@@ -1799,7 +1935,11 @@ namespace py::cpp::Windows::UI::ApplicationSettings
                 return nullptr;
             }
 
-            return py::convert(self->obj.Invoked());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Invoked();
+            }());
         }
         catch (...)
         {
@@ -1825,7 +1965,11 @@ namespace py::cpp::Windows::UI::ApplicationSettings
                 return nullptr;
             }
 
-            return py::convert(self->obj.WebAccount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WebAccount();
+            }());
         }
         catch (...)
         {
@@ -1920,7 +2064,11 @@ namespace py::cpp::Windows::UI::ApplicationSettings
                 return nullptr;
             }
 
-            return py::convert(self->obj.Action());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Action();
+            }());
         }
         catch (...)
         {
@@ -2038,7 +2186,11 @@ namespace py::cpp::Windows::UI::ApplicationSettings
                 return nullptr;
             }
 
-            return py::convert(self->obj.Invoked());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Invoked();
+            }());
         }
         catch (...)
         {
@@ -2064,7 +2216,11 @@ namespace py::cpp::Windows::UI::ApplicationSettings
                 return nullptr;
             }
 
-            return py::convert(self->obj.WebAccountProvider());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WebAccountProvider();
+            }());
         }
         catch (...)
         {

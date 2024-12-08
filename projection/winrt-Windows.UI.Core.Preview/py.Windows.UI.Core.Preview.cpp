@@ -44,7 +44,11 @@ namespace py::cpp::Windows::UI::Core::Preview
 
                 auto param0 = py::convert_to<winrt::Windows::UI::WindowManagement::AppWindow>(args, 0);
 
-                return py::convert(winrt::Windows::UI::Core::Preview::CoreAppWindowPreview::GetIdFromWindow(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::Core::Preview::CoreAppWindowPreview::GetIdFromWindow(param0);
+                }());
             }
             catch (...)
             {
@@ -172,7 +176,11 @@ namespace py::cpp::Windows::UI::Core::Preview
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -204,7 +212,11 @@ namespace py::cpp::Windows::UI::Core::Preview
                 return nullptr;
             }
 
-            return py::convert(self->obj.Handled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Handled();
+            }());
         }
         catch (...)
         {
@@ -238,7 +250,11 @@ namespace py::cpp::Windows::UI::Core::Preview
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Handled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Handled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -337,7 +353,11 @@ namespace py::cpp::Windows::UI::Core::Preview
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::UI::Core::Preview::SystemNavigationManagerPreview::GetForCurrentView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::Core::Preview::SystemNavigationManagerPreview::GetForCurrentView();
+                }());
             }
             catch (...)
             {
@@ -371,7 +391,11 @@ namespace py::cpp::Windows::UI::Core::Preview
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::UI::Core::Preview::SystemNavigationCloseRequestedPreviewEventArgs>>(arg);
 
-            return py::convert(self->obj.CloseRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CloseRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -399,7 +423,11 @@ namespace py::cpp::Windows::UI::Core::Preview
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.CloseRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CloseRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)

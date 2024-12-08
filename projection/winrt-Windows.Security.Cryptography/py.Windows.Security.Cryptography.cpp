@@ -37,7 +37,11 @@ namespace py::cpp::Windows::Security::Cryptography
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
-                return py::convert(winrt::Windows::Security::Cryptography::CryptographicBuffer::Compare(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Cryptography::CryptographicBuffer::Compare(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -76,7 +80,11 @@ namespace py::cpp::Windows::Security::Cryptography
                 auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::BinaryStringEncoding>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
-                return py::convert(winrt::Windows::Security::Cryptography::CryptographicBuffer::ConvertBinaryToString(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Cryptography::CryptographicBuffer::ConvertBinaryToString(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -115,7 +123,11 @@ namespace py::cpp::Windows::Security::Cryptography
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Security::Cryptography::BinaryStringEncoding>(args, 1);
 
-                return py::convert(winrt::Windows::Security::Cryptography::CryptographicBuffer::ConvertStringToBinary(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Cryptography::CryptographicBuffer::ConvertStringToBinary(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -154,13 +166,17 @@ namespace py::cpp::Windows::Security::Cryptography
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
                 winrt::com_array<uint8_t> param1{};
 
-                winrt::Windows::Security::Cryptography::CryptographicBuffer::CopyToByteArray(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Security::Cryptography::CryptographicBuffer::CopyToByteArray(param0, param1);
+                }
 
                 py::pyobj_handle out1{ py::convert(param1) };
                 if (!out1)
                 {
                     return nullptr;
                 }
+
                 return out1.detach();
             }
             catch (...)
@@ -199,7 +215,11 @@ namespace py::cpp::Windows::Security::Cryptography
 
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
-                return py::convert(winrt::Windows::Security::Cryptography::CryptographicBuffer::CreateFromByteArray(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Cryptography::CryptographicBuffer::CreateFromByteArray(param0);
+                }());
             }
             catch (...)
             {
@@ -237,7 +257,11 @@ namespace py::cpp::Windows::Security::Cryptography
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Security::Cryptography::CryptographicBuffer::DecodeFromBase64String(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Cryptography::CryptographicBuffer::DecodeFromBase64String(param0);
+                }());
             }
             catch (...)
             {
@@ -275,7 +299,11 @@ namespace py::cpp::Windows::Security::Cryptography
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Security::Cryptography::CryptographicBuffer::DecodeFromHexString(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Cryptography::CryptographicBuffer::DecodeFromHexString(param0);
+                }());
             }
             catch (...)
             {
@@ -313,7 +341,11 @@ namespace py::cpp::Windows::Security::Cryptography
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
-                return py::convert(winrt::Windows::Security::Cryptography::CryptographicBuffer::EncodeToBase64String(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Cryptography::CryptographicBuffer::EncodeToBase64String(param0);
+                }());
             }
             catch (...)
             {
@@ -351,7 +383,11 @@ namespace py::cpp::Windows::Security::Cryptography
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
-                return py::convert(winrt::Windows::Security::Cryptography::CryptographicBuffer::EncodeToHexString(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Cryptography::CryptographicBuffer::EncodeToHexString(param0);
+                }());
             }
             catch (...)
             {
@@ -389,7 +425,11 @@ namespace py::cpp::Windows::Security::Cryptography
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(winrt::Windows::Security::Cryptography::CryptographicBuffer::GenerateRandom(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Cryptography::CryptographicBuffer::GenerateRandom(param0);
+                }());
             }
             catch (...)
             {
@@ -425,7 +465,11 @@ namespace py::cpp::Windows::Security::Cryptography
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Security::Cryptography::CryptographicBuffer::GenerateRandomNumber());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Cryptography::CryptographicBuffer::GenerateRandomNumber();
+                }());
             }
             catch (...)
             {

@@ -42,7 +42,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CommitAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CommitAsync();
+                }());
             }
             catch (...)
             {
@@ -74,7 +78,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -108,7 +116,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(arg);
 
-            self->obj.Timestamp(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Timestamp(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -135,7 +147,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Thumbnail());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Thumbnail();
+            }());
         }
         catch (...)
         {
@@ -169,7 +185,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::SocialInfo::SocialItemThumbnail>(arg);
 
-            self->obj.Thumbnail(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Thumbnail(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -196,7 +216,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.TargetUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TargetUri();
+            }());
         }
         catch (...)
         {
@@ -230,7 +254,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.TargetUri(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TargetUri(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -257,7 +285,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Content());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Content();
+            }());
         }
         catch (...)
         {
@@ -283,7 +315,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.OwnerRemoteId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OwnerRemoteId();
+            }());
         }
         catch (...)
         {
@@ -385,7 +421,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CommitAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CommitAsync();
+                }());
             }
             catch (...)
             {
@@ -417,7 +457,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Items());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Items();
+            }());
         }
         catch (...)
         {
@@ -443,7 +487,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -469,7 +517,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
                 return nullptr;
             }
 
-            return py::convert(self->obj.OwnerRemoteId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OwnerRemoteId();
+            }());
         }
         catch (...)
         {
@@ -563,7 +615,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::SocialInfo::Provider::SocialInfoProviderManager::CreateDashboardItemUpdaterAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::SocialInfo::Provider::SocialInfoProviderManager::CreateDashboardItemUpdaterAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -603,7 +659,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::SocialInfo::SocialFeedUpdateMode>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
-                return py::convert(winrt::Windows::ApplicationModel::SocialInfo::Provider::SocialInfoProviderManager::CreateSocialFeedUpdaterAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::SocialInfo::Provider::SocialInfoProviderManager::CreateSocialFeedUpdaterAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -639,7 +699,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::ApplicationModel::SocialInfo::Provider::SocialInfoProviderManager::DeprovisionAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::SocialInfo::Provider::SocialInfoProviderManager::DeprovisionAsync();
+                }());
             }
             catch (...)
             {
@@ -675,7 +739,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::ApplicationModel::SocialInfo::Provider::SocialInfoProviderManager::ProvisionAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::SocialInfo::Provider::SocialInfoProviderManager::ProvisionAsync();
+                }());
             }
             catch (...)
             {
@@ -714,7 +782,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::SocialInfo::SocialFeedKind>(args, 1);
 
-                winrt::Windows::ApplicationModel::SocialInfo::Provider::SocialInfoProviderManager::ReportNewContentAvailable(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::ApplicationModel::SocialInfo::Provider::SocialInfoProviderManager::ReportNewContentAvailable(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -754,7 +826,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
-                winrt::Windows::ApplicationModel::SocialInfo::Provider::SocialInfoProviderManager::UpdateBadgeCountValue(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::ApplicationModel::SocialInfo::Provider::SocialInfoProviderManager::UpdateBadgeCountValue(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)

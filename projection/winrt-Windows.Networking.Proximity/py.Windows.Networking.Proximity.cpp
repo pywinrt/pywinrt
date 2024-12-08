@@ -38,7 +38,11 @@ namespace py::cpp::Windows::Networking::Proximity
                 return nullptr;
             }
 
-            return py::convert(self->obj.PeerInformation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PeerInformation();
+            }());
         }
         catch (...)
         {
@@ -129,7 +133,11 @@ namespace py::cpp::Windows::Networking::Proximity
 
                 auto param0 = py::convert_to<winrt::Windows::Networking::Proximity::PeerInformation>(args, 0);
 
-                return py::convert(winrt::Windows::Networking::Proximity::PeerFinder::ConnectAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Networking::Proximity::PeerFinder::ConnectAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -165,7 +173,11 @@ namespace py::cpp::Windows::Networking::Proximity
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Networking::Proximity::PeerFinder::CreateWatcher());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Networking::Proximity::PeerFinder::CreateWatcher();
+                }());
             }
             catch (...)
             {
@@ -201,7 +213,11 @@ namespace py::cpp::Windows::Networking::Proximity
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Networking::Proximity::PeerFinder::FindAllPeersAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Networking::Proximity::PeerFinder::FindAllPeersAsync();
+                }());
             }
             catch (...)
             {
@@ -237,7 +253,11 @@ namespace py::cpp::Windows::Networking::Proximity
                     return nullptr;
                 }
 
-                winrt::Windows::Networking::Proximity::PeerFinder::Start();
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Networking::Proximity::PeerFinder::Start();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -276,7 +296,11 @@ namespace py::cpp::Windows::Networking::Proximity
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Networking::Proximity::PeerFinder::Start(param0);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Networking::Proximity::PeerFinder::Start(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -313,7 +337,11 @@ namespace py::cpp::Windows::Networking::Proximity
                     return nullptr;
                 }
 
-                winrt::Windows::Networking::Proximity::PeerFinder::Stop();
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Networking::Proximity::PeerFinder::Stop();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -346,7 +374,11 @@ namespace py::cpp::Windows::Networking::Proximity
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Networking::Proximity::PeerFinder::DisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Networking::Proximity::PeerFinder::DisplayName();
+            }());
         }
         catch (...)
         {
@@ -380,7 +412,11 @@ namespace py::cpp::Windows::Networking::Proximity
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            winrt::Windows::Networking::Proximity::PeerFinder::DisplayName(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::Networking::Proximity::PeerFinder::DisplayName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -407,7 +443,11 @@ namespace py::cpp::Windows::Networking::Proximity
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Networking::Proximity::PeerFinder::AllowWiFiDirect());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Networking::Proximity::PeerFinder::AllowWiFiDirect();
+            }());
         }
         catch (...)
         {
@@ -441,7 +481,11 @@ namespace py::cpp::Windows::Networking::Proximity
 
             auto param0 = py::convert_to<bool>(arg);
 
-            winrt::Windows::Networking::Proximity::PeerFinder::AllowWiFiDirect(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::Networking::Proximity::PeerFinder::AllowWiFiDirect(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -468,7 +512,11 @@ namespace py::cpp::Windows::Networking::Proximity
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Networking::Proximity::PeerFinder::AllowInfrastructure());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Networking::Proximity::PeerFinder::AllowInfrastructure();
+            }());
         }
         catch (...)
         {
@@ -502,7 +550,11 @@ namespace py::cpp::Windows::Networking::Proximity
 
             auto param0 = py::convert_to<bool>(arg);
 
-            winrt::Windows::Networking::Proximity::PeerFinder::AllowInfrastructure(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::Networking::Proximity::PeerFinder::AllowInfrastructure(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -529,7 +581,11 @@ namespace py::cpp::Windows::Networking::Proximity
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Networking::Proximity::PeerFinder::AllowBluetooth());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Networking::Proximity::PeerFinder::AllowBluetooth();
+            }());
         }
         catch (...)
         {
@@ -563,7 +619,11 @@ namespace py::cpp::Windows::Networking::Proximity
 
             auto param0 = py::convert_to<bool>(arg);
 
-            winrt::Windows::Networking::Proximity::PeerFinder::AllowBluetooth(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::Networking::Proximity::PeerFinder::AllowBluetooth(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -590,7 +650,11 @@ namespace py::cpp::Windows::Networking::Proximity
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Networking::Proximity::PeerFinder::AlternateIdentities());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Networking::Proximity::PeerFinder::AlternateIdentities();
+            }());
         }
         catch (...)
         {
@@ -616,7 +680,11 @@ namespace py::cpp::Windows::Networking::Proximity
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Networking::Proximity::PeerFinder::SupportedDiscoveryTypes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Networking::Proximity::PeerFinder::SupportedDiscoveryTypes();
+            }());
         }
         catch (...)
         {
@@ -642,7 +710,11 @@ namespace py::cpp::Windows::Networking::Proximity
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Networking::Proximity::PeerFinder::Role());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Networking::Proximity::PeerFinder::Role();
+            }());
         }
         catch (...)
         {
@@ -676,7 +748,11 @@ namespace py::cpp::Windows::Networking::Proximity
 
             auto param0 = py::convert_to<winrt::Windows::Networking::Proximity::PeerRole>(arg);
 
-            winrt::Windows::Networking::Proximity::PeerFinder::Role(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::Networking::Proximity::PeerFinder::Role(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -703,7 +779,11 @@ namespace py::cpp::Windows::Networking::Proximity
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Networking::Proximity::PeerFinder::DiscoveryData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Networking::Proximity::PeerFinder::DiscoveryData();
+            }());
         }
         catch (...)
         {
@@ -737,7 +817,11 @@ namespace py::cpp::Windows::Networking::Proximity
 
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(arg);
 
-            winrt::Windows::Networking::Proximity::PeerFinder::DiscoveryData(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::Networking::Proximity::PeerFinder::DiscoveryData(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -766,7 +850,11 @@ namespace py::cpp::Windows::Networking::Proximity
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::IInspectable, winrt::Windows::Networking::Proximity::ConnectionRequestedEventArgs>>(arg);
 
-            return py::convert(winrt::Windows::Networking::Proximity::PeerFinder::ConnectionRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Networking::Proximity::PeerFinder::ConnectionRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -794,7 +882,11 @@ namespace py::cpp::Windows::Networking::Proximity
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Windows::Networking::Proximity::PeerFinder::ConnectionRequested(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::Networking::Proximity::PeerFinder::ConnectionRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -823,7 +915,11 @@ namespace py::cpp::Windows::Networking::Proximity
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::IInspectable, winrt::Windows::Networking::Proximity::TriggeredConnectionStateChangedEventArgs>>(arg);
 
-            return py::convert(winrt::Windows::Networking::Proximity::PeerFinder::TriggeredConnectionStateChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Networking::Proximity::PeerFinder::TriggeredConnectionStateChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -851,7 +947,11 @@ namespace py::cpp::Windows::Networking::Proximity
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Windows::Networking::Proximity::PeerFinder::TriggeredConnectionStateChanged(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::Networking::Proximity::PeerFinder::TriggeredConnectionStateChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -960,7 +1060,11 @@ namespace py::cpp::Windows::Networking::Proximity
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayName();
+            }());
         }
         catch (...)
         {
@@ -986,7 +1090,11 @@ namespace py::cpp::Windows::Networking::Proximity
                 return nullptr;
             }
 
-            return py::convert(self->obj.DiscoveryData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DiscoveryData();
+            }());
         }
         catch (...)
         {
@@ -1012,7 +1120,11 @@ namespace py::cpp::Windows::Networking::Proximity
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -1038,7 +1150,11 @@ namespace py::cpp::Windows::Networking::Proximity
                 return nullptr;
             }
 
-            return py::convert(self->obj.HostName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HostName();
+            }());
         }
         catch (...)
         {
@@ -1064,7 +1180,11 @@ namespace py::cpp::Windows::Networking::Proximity
                 return nullptr;
             }
 
-            return py::convert(self->obj.ServiceName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServiceName();
+            }());
         }
         catch (...)
         {
@@ -1165,7 +1285,11 @@ namespace py::cpp::Windows::Networking::Proximity
                     return nullptr;
                 }
 
-                self->obj.Start();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Start();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1202,7 +1326,11 @@ namespace py::cpp::Windows::Networking::Proximity
                     return nullptr;
                 }
 
-                self->obj.Stop();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Stop();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1235,7 +1363,11 @@ namespace py::cpp::Windows::Networking::Proximity
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -1263,7 +1395,11 @@ namespace py::cpp::Windows::Networking::Proximity
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::Proximity::PeerWatcher, winrt::Windows::Networking::Proximity::PeerInformation>>(arg);
 
-            return py::convert(self->obj.Added(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Added(param0);
+            }());
         }
         catch (...)
         {
@@ -1291,7 +1427,11 @@ namespace py::cpp::Windows::Networking::Proximity
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Added(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Added(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1320,7 +1460,11 @@ namespace py::cpp::Windows::Networking::Proximity
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::Proximity::PeerWatcher, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.EnumerationCompleted(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EnumerationCompleted(param0);
+            }());
         }
         catch (...)
         {
@@ -1348,7 +1492,11 @@ namespace py::cpp::Windows::Networking::Proximity
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.EnumerationCompleted(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.EnumerationCompleted(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1377,7 +1525,11 @@ namespace py::cpp::Windows::Networking::Proximity
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::Proximity::PeerWatcher, winrt::Windows::Networking::Proximity::PeerInformation>>(arg);
 
-            return py::convert(self->obj.Removed(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Removed(param0);
+            }());
         }
         catch (...)
         {
@@ -1405,7 +1557,11 @@ namespace py::cpp::Windows::Networking::Proximity
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Removed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Removed(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1434,7 +1590,11 @@ namespace py::cpp::Windows::Networking::Proximity
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::Proximity::PeerWatcher, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.Stopped(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Stopped(param0);
+            }());
         }
         catch (...)
         {
@@ -1462,7 +1622,11 @@ namespace py::cpp::Windows::Networking::Proximity
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Stopped(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Stopped(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1491,7 +1655,11 @@ namespace py::cpp::Windows::Networking::Proximity
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::Proximity::PeerWatcher, winrt::Windows::Networking::Proximity::PeerInformation>>(arg);
 
-            return py::convert(self->obj.Updated(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Updated(param0);
+            }());
         }
         catch (...)
         {
@@ -1519,7 +1687,11 @@ namespace py::cpp::Windows::Networking::Proximity
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Updated(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Updated(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1631,7 +1803,11 @@ namespace py::cpp::Windows::Networking::Proximity
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Networking::Proximity::ProximityDevice::FromId(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Networking::Proximity::ProximityDevice::FromId(param0);
+                }());
             }
             catch (...)
             {
@@ -1667,7 +1843,11 @@ namespace py::cpp::Windows::Networking::Proximity
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Networking::Proximity::ProximityDevice::GetDefault());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Networking::Proximity::ProximityDevice::GetDefault();
+                }());
             }
             catch (...)
             {
@@ -1703,7 +1883,11 @@ namespace py::cpp::Windows::Networking::Proximity
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Networking::Proximity::ProximityDevice::GetDeviceSelector());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Networking::Proximity::ProximityDevice::GetDeviceSelector();
+                }());
             }
             catch (...)
             {
@@ -1742,7 +1926,11 @@ namespace py::cpp::Windows::Networking::Proximity
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
-                return py::convert(self->obj.PublishBinaryMessage(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.PublishBinaryMessage(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1782,7 +1970,11 @@ namespace py::cpp::Windows::Networking::Proximity
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Networking::Proximity::MessageTransmittedHandler>(args, 2);
 
-                return py::convert(self->obj.PublishBinaryMessage(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.PublishBinaryMessage(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -1821,7 +2013,11 @@ namespace py::cpp::Windows::Networking::Proximity
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.PublishMessage(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.PublishMessage(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1861,7 +2057,11 @@ namespace py::cpp::Windows::Networking::Proximity
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Networking::Proximity::MessageTransmittedHandler>(args, 2);
 
-                return py::convert(self->obj.PublishMessage(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.PublishMessage(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -1899,7 +2099,11 @@ namespace py::cpp::Windows::Networking::Proximity
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
-                return py::convert(self->obj.PublishUriMessage(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.PublishUriMessage(param0);
+                }());
             }
             catch (...)
             {
@@ -1938,7 +2142,11 @@ namespace py::cpp::Windows::Networking::Proximity
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Networking::Proximity::MessageTransmittedHandler>(args, 1);
 
-                return py::convert(self->obj.PublishUriMessage(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.PublishUriMessage(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1976,7 +2184,11 @@ namespace py::cpp::Windows::Networking::Proximity
 
                 auto param0 = py::convert_to<int64_t>(args, 0);
 
-                self->obj.StopPublishingMessage(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.StopPublishingMessage(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2015,7 +2227,11 @@ namespace py::cpp::Windows::Networking::Proximity
 
                 auto param0 = py::convert_to<int64_t>(args, 0);
 
-                self->obj.StopSubscribingForMessage(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.StopSubscribingForMessage(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2055,7 +2271,11 @@ namespace py::cpp::Windows::Networking::Proximity
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Networking::Proximity::MessageReceivedHandler>(args, 1);
 
-                return py::convert(self->obj.SubscribeForMessage(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SubscribeForMessage(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2087,7 +2307,11 @@ namespace py::cpp::Windows::Networking::Proximity
                 return nullptr;
             }
 
-            return py::convert(self->obj.BitsPerSecond());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BitsPerSecond();
+            }());
         }
         catch (...)
         {
@@ -2113,7 +2337,11 @@ namespace py::cpp::Windows::Networking::Proximity
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceId();
+            }());
         }
         catch (...)
         {
@@ -2139,7 +2367,11 @@ namespace py::cpp::Windows::Networking::Proximity
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxMessageBytes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxMessageBytes();
+            }());
         }
         catch (...)
         {
@@ -2167,7 +2399,11 @@ namespace py::cpp::Windows::Networking::Proximity
 
             auto param0 = py::convert_to<winrt::Windows::Networking::Proximity::DeviceArrivedEventHandler>(arg);
 
-            return py::convert(self->obj.DeviceArrived(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceArrived(param0);
+            }());
         }
         catch (...)
         {
@@ -2195,7 +2431,11 @@ namespace py::cpp::Windows::Networking::Proximity
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.DeviceArrived(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DeviceArrived(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2224,7 +2464,11 @@ namespace py::cpp::Windows::Networking::Proximity
 
             auto param0 = py::convert_to<winrt::Windows::Networking::Proximity::DeviceDepartedEventHandler>(arg);
 
-            return py::convert(self->obj.DeviceDeparted(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceDeparted(param0);
+            }());
         }
         catch (...)
         {
@@ -2252,7 +2496,11 @@ namespace py::cpp::Windows::Networking::Proximity
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.DeviceDeparted(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DeviceDeparted(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2389,7 +2637,11 @@ namespace py::cpp::Windows::Networking::Proximity
                 return nullptr;
             }
 
-            return py::convert(self->obj.Data());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Data();
+            }());
         }
         catch (...)
         {
@@ -2415,7 +2667,11 @@ namespace py::cpp::Windows::Networking::Proximity
                 return nullptr;
             }
 
-            return py::convert(self->obj.DataAsString());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DataAsString();
+            }());
         }
         catch (...)
         {
@@ -2441,7 +2697,11 @@ namespace py::cpp::Windows::Networking::Proximity
                 return nullptr;
             }
 
-            return py::convert(self->obj.MessageType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MessageType();
+            }());
         }
         catch (...)
         {
@@ -2467,7 +2727,11 @@ namespace py::cpp::Windows::Networking::Proximity
                 return nullptr;
             }
 
-            return py::convert(self->obj.SubscriptionId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SubscriptionId();
+            }());
         }
         catch (...)
         {
@@ -2563,7 +2827,11 @@ namespace py::cpp::Windows::Networking::Proximity
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -2589,7 +2857,11 @@ namespace py::cpp::Windows::Networking::Proximity
                 return nullptr;
             }
 
-            return py::convert(self->obj.Socket());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Socket();
+            }());
         }
         catch (...)
         {
@@ -2615,7 +2887,11 @@ namespace py::cpp::Windows::Networking::Proximity
                 return nullptr;
             }
 
-            return py::convert(self->obj.State());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.State();
+            }());
         }
         catch (...)
         {

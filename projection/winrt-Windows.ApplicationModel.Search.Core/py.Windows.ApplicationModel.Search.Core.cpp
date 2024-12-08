@@ -104,7 +104,11 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.DetailText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DetailText();
+            }());
         }
         catch (...)
         {
@@ -130,7 +134,11 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Image());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Image();
+            }());
         }
         catch (...)
         {
@@ -156,7 +164,11 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.ImageAlternateText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ImageAlternateText();
+            }());
         }
         catch (...)
         {
@@ -182,7 +194,11 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -208,7 +224,11 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Tag());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Tag();
+            }());
         }
         catch (...)
         {
@@ -234,7 +254,11 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Text());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Text();
+            }());
         }
         catch (...)
         {
@@ -360,7 +384,11 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.AddToHistory(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddToHistory(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -400,7 +428,11 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                self->obj.AddToHistory(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddToHistory(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -437,7 +469,11 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
                     return nullptr;
                 }
 
-                self->obj.ClearHistory();
+                {
+                    auto _gil = release_gil();
+                    self->obj.ClearHistory();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -476,7 +512,11 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Search::LocalContentSuggestionSettings>(args, 0);
 
-                self->obj.SetLocalContentSuggestionSettings(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetLocalContentSuggestionSettings(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -515,7 +555,11 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.SetQuery(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetQuery(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -555,7 +599,11 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                self->obj.SetQuery(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetQuery(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -596,7 +644,11 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::ApplicationModel::Search::SearchQueryLinguisticDetails>(args, 2);
 
-                self->obj.SetQuery(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetQuery(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -629,7 +681,11 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.SearchHistoryEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SearchHistoryEnabled();
+            }());
         }
         catch (...)
         {
@@ -663,7 +719,11 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.SearchHistoryEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SearchHistoryEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -690,7 +750,11 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.SearchHistoryContext());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SearchHistoryContext();
+            }());
         }
         catch (...)
         {
@@ -724,7 +788,11 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.SearchHistoryContext(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SearchHistoryContext(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -751,7 +819,11 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Suggestions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Suggestions();
+            }());
         }
         catch (...)
         {
@@ -779,7 +851,11 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Search::Core::SearchSuggestionManager, winrt::Windows::ApplicationModel::Search::Core::RequestingFocusOnKeyboardInputEventArgs>>(arg);
 
-            return py::convert(self->obj.RequestingFocusOnKeyboardInput(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RequestingFocusOnKeyboardInput(param0);
+            }());
         }
         catch (...)
         {
@@ -807,7 +883,11 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.RequestingFocusOnKeyboardInput(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RequestingFocusOnKeyboardInput(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -836,7 +916,11 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Search::Core::SearchSuggestionManager, winrt::Windows::ApplicationModel::Search::Core::SearchSuggestionsRequestedEventArgs>>(arg);
 
-            return py::convert(self->obj.SuggestionsRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SuggestionsRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -864,7 +948,11 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.SuggestionsRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SuggestionsRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -971,7 +1059,11 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Language());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Language();
+            }());
         }
         catch (...)
         {
@@ -997,7 +1089,11 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.LinguisticDetails());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LinguisticDetails();
+            }());
         }
         catch (...)
         {
@@ -1023,7 +1119,11 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.QueryText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.QueryText();
+            }());
         }
         catch (...)
         {
@@ -1049,7 +1149,11 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Request());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Request();
+            }());
         }
         catch (...)
         {

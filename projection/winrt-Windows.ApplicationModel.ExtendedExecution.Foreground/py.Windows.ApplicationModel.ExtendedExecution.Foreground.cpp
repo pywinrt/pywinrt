@@ -38,7 +38,11 @@ namespace py::cpp::Windows::ApplicationModel::ExtendedExecution::Foreground
                 return nullptr;
             }
 
-            return py::convert(self->obj.Reason());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Reason();
+            }());
         }
         catch (...)
         {
@@ -157,7 +161,11 @@ namespace py::cpp::Windows::ApplicationModel::ExtendedExecution::Foreground
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -194,7 +202,11 @@ namespace py::cpp::Windows::ApplicationModel::ExtendedExecution::Foreground
                     return nullptr;
                 }
 
-                return py::convert(self->obj.RequestExtensionAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestExtensionAsync();
+                }());
             }
             catch (...)
             {
@@ -226,7 +238,11 @@ namespace py::cpp::Windows::ApplicationModel::ExtendedExecution::Foreground
                 return nullptr;
             }
 
-            return py::convert(self->obj.Reason());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Reason();
+            }());
         }
         catch (...)
         {
@@ -260,7 +276,11 @@ namespace py::cpp::Windows::ApplicationModel::ExtendedExecution::Foreground
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundReason>(arg);
 
-            self->obj.Reason(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Reason(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -287,7 +307,11 @@ namespace py::cpp::Windows::ApplicationModel::ExtendedExecution::Foreground
                 return nullptr;
             }
 
-            return py::convert(self->obj.Description());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Description();
+            }());
         }
         catch (...)
         {
@@ -321,7 +345,11 @@ namespace py::cpp::Windows::ApplicationModel::ExtendedExecution::Foreground
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Description(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Description(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -350,7 +378,11 @@ namespace py::cpp::Windows::ApplicationModel::ExtendedExecution::Foreground
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::IInspectable, winrt::Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundRevokedEventArgs>>(arg);
 
-            return py::convert(self->obj.Revoked(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Revoked(param0);
+            }());
         }
         catch (...)
         {
@@ -378,7 +410,11 @@ namespace py::cpp::Windows::ApplicationModel::ExtendedExecution::Foreground
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Revoked(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Revoked(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -421,7 +457,11 @@ namespace py::cpp::Windows::ApplicationModel::ExtendedExecution::Foreground
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)

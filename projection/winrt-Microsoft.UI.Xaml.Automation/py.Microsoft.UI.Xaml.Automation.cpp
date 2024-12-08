@@ -38,7 +38,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AnnotationPatternIdentifiers::AnnotationTypeIdProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AnnotationPatternIdentifiers::AnnotationTypeIdProperty();
+            }());
         }
         catch (...)
         {
@@ -64,7 +68,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AnnotationPatternIdentifiers::AnnotationTypeNameProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AnnotationPatternIdentifiers::AnnotationTypeNameProperty();
+            }());
         }
         catch (...)
         {
@@ -90,7 +98,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AnnotationPatternIdentifiers::AuthorProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AnnotationPatternIdentifiers::AuthorProperty();
+            }());
         }
         catch (...)
         {
@@ -116,7 +128,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AnnotationPatternIdentifiers::DateTimeProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AnnotationPatternIdentifiers::DateTimeProperty();
+            }());
         }
         catch (...)
         {
@@ -142,7 +158,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AnnotationPatternIdentifiers::TargetProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AnnotationPatternIdentifiers::TargetProperty();
+            }());
         }
         catch (...)
         {
@@ -317,7 +337,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(self->obj.Type());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Type();
+            }());
         }
         catch (...)
         {
@@ -351,7 +375,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Automation::AnnotationType>(arg);
 
-            self->obj.Type(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Type(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -378,7 +406,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(self->obj.Element());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Element();
+            }());
         }
         catch (...)
         {
@@ -412,7 +444,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::UIElement>(arg);
 
-            self->obj.Element(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Element(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -439,7 +475,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationAnnotation::ElementProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationAnnotation::ElementProperty();
+            }());
         }
         catch (...)
         {
@@ -465,7 +505,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationAnnotation::TypeProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationAnnotation::TypeProperty();
+            }());
         }
         catch (...)
         {
@@ -586,7 +630,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::AcceleratorKeyProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::AcceleratorKeyProperty();
+            }());
         }
         catch (...)
         {
@@ -612,7 +660,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::AccessKeyProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::AccessKeyProperty();
+            }());
         }
         catch (...)
         {
@@ -638,7 +690,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::AnnotationsProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::AnnotationsProperty();
+            }());
         }
         catch (...)
         {
@@ -664,7 +720,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::AutomationIdProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::AutomationIdProperty();
+            }());
         }
         catch (...)
         {
@@ -690,7 +750,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::BoundingRectangleProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::BoundingRectangleProperty();
+            }());
         }
         catch (...)
         {
@@ -716,7 +780,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::ClassNameProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::ClassNameProperty();
+            }());
         }
         catch (...)
         {
@@ -742,7 +810,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::ClickablePointProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::ClickablePointProperty();
+            }());
         }
         catch (...)
         {
@@ -768,7 +840,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::ControlTypeProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::ControlTypeProperty();
+            }());
         }
         catch (...)
         {
@@ -794,7 +870,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::ControlledPeersProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::ControlledPeersProperty();
+            }());
         }
         catch (...)
         {
@@ -820,7 +900,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::CultureProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::CultureProperty();
+            }());
         }
         catch (...)
         {
@@ -846,7 +930,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::DescribedByProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::DescribedByProperty();
+            }());
         }
         catch (...)
         {
@@ -872,7 +960,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::FlowsFromProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::FlowsFromProperty();
+            }());
         }
         catch (...)
         {
@@ -898,7 +990,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::FlowsToProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::FlowsToProperty();
+            }());
         }
         catch (...)
         {
@@ -924,7 +1020,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::FullDescriptionProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::FullDescriptionProperty();
+            }());
         }
         catch (...)
         {
@@ -950,7 +1050,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::HasKeyboardFocusProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::HasKeyboardFocusProperty();
+            }());
         }
         catch (...)
         {
@@ -976,7 +1080,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::HeadingLevelProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::HeadingLevelProperty();
+            }());
         }
         catch (...)
         {
@@ -1002,7 +1110,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::HelpTextProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::HelpTextProperty();
+            }());
         }
         catch (...)
         {
@@ -1028,7 +1140,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::IsContentElementProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::IsContentElementProperty();
+            }());
         }
         catch (...)
         {
@@ -1054,7 +1170,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::IsControlElementProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::IsControlElementProperty();
+            }());
         }
         catch (...)
         {
@@ -1080,7 +1200,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::IsDataValidForFormProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::IsDataValidForFormProperty();
+            }());
         }
         catch (...)
         {
@@ -1106,7 +1230,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::IsDialogProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::IsDialogProperty();
+            }());
         }
         catch (...)
         {
@@ -1132,7 +1260,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::IsEnabledProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::IsEnabledProperty();
+            }());
         }
         catch (...)
         {
@@ -1158,7 +1290,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::IsKeyboardFocusableProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::IsKeyboardFocusableProperty();
+            }());
         }
         catch (...)
         {
@@ -1184,7 +1320,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::IsOffscreenProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::IsOffscreenProperty();
+            }());
         }
         catch (...)
         {
@@ -1210,7 +1350,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::IsPasswordProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::IsPasswordProperty();
+            }());
         }
         catch (...)
         {
@@ -1236,7 +1380,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::IsPeripheralProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::IsPeripheralProperty();
+            }());
         }
         catch (...)
         {
@@ -1262,7 +1410,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::IsRequiredForFormProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::IsRequiredForFormProperty();
+            }());
         }
         catch (...)
         {
@@ -1288,7 +1440,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::ItemStatusProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::ItemStatusProperty();
+            }());
         }
         catch (...)
         {
@@ -1314,7 +1470,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::ItemTypeProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::ItemTypeProperty();
+            }());
         }
         catch (...)
         {
@@ -1340,7 +1500,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::LabeledByProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::LabeledByProperty();
+            }());
         }
         catch (...)
         {
@@ -1366,7 +1530,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::LandmarkTypeProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::LandmarkTypeProperty();
+            }());
         }
         catch (...)
         {
@@ -1392,7 +1560,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::LevelProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::LevelProperty();
+            }());
         }
         catch (...)
         {
@@ -1418,7 +1590,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::LiveSettingProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::LiveSettingProperty();
+            }());
         }
         catch (...)
         {
@@ -1444,7 +1620,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::LocalizedControlTypeProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::LocalizedControlTypeProperty();
+            }());
         }
         catch (...)
         {
@@ -1470,7 +1650,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::LocalizedLandmarkTypeProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::LocalizedLandmarkTypeProperty();
+            }());
         }
         catch (...)
         {
@@ -1496,7 +1680,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::NameProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::NameProperty();
+            }());
         }
         catch (...)
         {
@@ -1522,7 +1710,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::OrientationProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::OrientationProperty();
+            }());
         }
         catch (...)
         {
@@ -1548,7 +1740,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::PositionInSetProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::PositionInSetProperty();
+            }());
         }
         catch (...)
         {
@@ -1574,7 +1770,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::SizeOfSetProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers::SizeOfSetProperty();
+            }());
         }
         catch (...)
         {
@@ -1736,7 +1936,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::GetAcceleratorKey(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::GetAcceleratorKey(param0);
+                }());
             }
             catch (...)
             {
@@ -1774,7 +1978,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::GetAccessKey(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::GetAccessKey(param0);
+                }());
             }
             catch (...)
             {
@@ -1812,7 +2020,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::GetAccessibilityView(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::GetAccessibilityView(param0);
+                }());
             }
             catch (...)
             {
@@ -1850,7 +2062,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::GetAnnotations(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::GetAnnotations(param0);
+                }());
             }
             catch (...)
             {
@@ -1888,7 +2104,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::UIElement>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::GetAutomationControlType(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::GetAutomationControlType(param0);
+                }());
             }
             catch (...)
             {
@@ -1926,7 +2146,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::GetAutomationId(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::GetAutomationId(param0);
+                }());
             }
             catch (...)
             {
@@ -1964,7 +2188,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::GetControlledPeers(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::GetControlledPeers(param0);
+                }());
             }
             catch (...)
             {
@@ -2002,7 +2230,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::GetCulture(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::GetCulture(param0);
+                }());
             }
             catch (...)
             {
@@ -2040,7 +2272,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::GetDescribedBy(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::GetDescribedBy(param0);
+                }());
             }
             catch (...)
             {
@@ -2078,7 +2314,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::GetFlowsFrom(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::GetFlowsFrom(param0);
+                }());
             }
             catch (...)
             {
@@ -2116,7 +2356,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::GetFlowsTo(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::GetFlowsTo(param0);
+                }());
             }
             catch (...)
             {
@@ -2154,7 +2398,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::GetFullDescription(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::GetFullDescription(param0);
+                }());
             }
             catch (...)
             {
@@ -2192,7 +2440,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::GetHeadingLevel(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::GetHeadingLevel(param0);
+                }());
             }
             catch (...)
             {
@@ -2230,7 +2482,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::GetHelpText(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::GetHelpText(param0);
+                }());
             }
             catch (...)
             {
@@ -2268,7 +2524,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::GetIsDataValidForForm(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::GetIsDataValidForForm(param0);
+                }());
             }
             catch (...)
             {
@@ -2306,7 +2566,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::GetIsDialog(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::GetIsDialog(param0);
+                }());
             }
             catch (...)
             {
@@ -2344,7 +2608,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::GetIsPeripheral(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::GetIsPeripheral(param0);
+                }());
             }
             catch (...)
             {
@@ -2382,7 +2650,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::GetIsRequiredForForm(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::GetIsRequiredForForm(param0);
+                }());
             }
             catch (...)
             {
@@ -2420,7 +2692,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::GetItemStatus(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::GetItemStatus(param0);
+                }());
             }
             catch (...)
             {
@@ -2458,7 +2734,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::GetItemType(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::GetItemType(param0);
+                }());
             }
             catch (...)
             {
@@ -2496,7 +2776,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::GetLabeledBy(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::GetLabeledBy(param0);
+                }());
             }
             catch (...)
             {
@@ -2534,7 +2818,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::GetLandmarkType(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::GetLandmarkType(param0);
+                }());
             }
             catch (...)
             {
@@ -2572,7 +2860,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::GetLevel(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::GetLevel(param0);
+                }());
             }
             catch (...)
             {
@@ -2610,7 +2902,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::GetLiveSetting(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::GetLiveSetting(param0);
+                }());
             }
             catch (...)
             {
@@ -2648,7 +2944,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::GetLocalizedControlType(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::GetLocalizedControlType(param0);
+                }());
             }
             catch (...)
             {
@@ -2686,7 +2986,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::GetLocalizedLandmarkType(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::GetLocalizedLandmarkType(param0);
+                }());
             }
             catch (...)
             {
@@ -2724,7 +3028,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::GetName(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::GetName(param0);
+                }());
             }
             catch (...)
             {
@@ -2762,7 +3070,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::GetPositionInSet(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::GetPositionInSet(param0);
+                }());
             }
             catch (...)
             {
@@ -2800,7 +3112,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::GetSizeOfSet(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::GetSizeOfSet(param0);
+                }());
             }
             catch (...)
             {
@@ -2839,7 +3155,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::SetAcceleratorKey(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::SetAcceleratorKey(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2879,7 +3199,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::SetAccessKey(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::SetAccessKey(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2919,7 +3243,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Automation::Peers::AccessibilityView>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::SetAccessibilityView(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::SetAccessibilityView(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2959,7 +3287,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::UIElement>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Automation::Peers::AutomationControlType>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::SetAutomationControlType(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::SetAutomationControlType(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2999,7 +3331,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::SetAutomationId(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::SetAutomationId(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3039,7 +3375,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::SetCulture(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::SetCulture(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3079,7 +3419,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::SetFullDescription(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::SetFullDescription(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3119,7 +3463,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Automation::Peers::AutomationHeadingLevel>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::SetHeadingLevel(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::SetHeadingLevel(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3159,7 +3507,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::SetHelpText(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::SetHelpText(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3199,7 +3551,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::SetIsDataValidForForm(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::SetIsDataValidForForm(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3239,7 +3595,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::SetIsDialog(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::SetIsDialog(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3279,7 +3639,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::SetIsPeripheral(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::SetIsPeripheral(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3319,7 +3683,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::SetIsRequiredForForm(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::SetIsRequiredForForm(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3359,7 +3727,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::SetItemStatus(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::SetItemStatus(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3399,7 +3771,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::SetItemType(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::SetItemType(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3439,7 +3815,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::UIElement>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::SetLabeledBy(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::SetLabeledBy(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3479,7 +3859,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Automation::Peers::AutomationLandmarkType>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::SetLandmarkType(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::SetLandmarkType(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3519,7 +3903,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::SetLevel(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::SetLevel(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3559,7 +3947,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Automation::Peers::AutomationLiveSetting>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::SetLiveSetting(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::SetLiveSetting(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3599,7 +3991,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::SetLocalizedControlType(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::SetLocalizedControlType(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3639,7 +4035,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::SetLocalizedLandmarkType(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::SetLocalizedLandmarkType(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3679,7 +4079,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::SetName(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::SetName(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3719,7 +4123,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::SetPositionInSet(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::SetPositionInSet(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3759,7 +4167,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::SetSizeOfSet(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::SetSizeOfSet(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3792,7 +4204,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::AcceleratorKeyProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::AcceleratorKeyProperty();
+            }());
         }
         catch (...)
         {
@@ -3818,7 +4234,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::AccessKeyProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::AccessKeyProperty();
+            }());
         }
         catch (...)
         {
@@ -3844,7 +4264,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::AccessibilityViewProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::AccessibilityViewProperty();
+            }());
         }
         catch (...)
         {
@@ -3870,7 +4294,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::AnnotationsProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::AnnotationsProperty();
+            }());
         }
         catch (...)
         {
@@ -3896,7 +4324,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::AutomationIdProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::AutomationIdProperty();
+            }());
         }
         catch (...)
         {
@@ -3922,7 +4354,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::ControlledPeersProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::ControlledPeersProperty();
+            }());
         }
         catch (...)
         {
@@ -3948,7 +4384,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::CultureProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::CultureProperty();
+            }());
         }
         catch (...)
         {
@@ -3974,7 +4414,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::DescribedByProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::DescribedByProperty();
+            }());
         }
         catch (...)
         {
@@ -4000,7 +4444,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::FlowsFromProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::FlowsFromProperty();
+            }());
         }
         catch (...)
         {
@@ -4026,7 +4474,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::FlowsToProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::FlowsToProperty();
+            }());
         }
         catch (...)
         {
@@ -4052,7 +4504,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::FullDescriptionProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::FullDescriptionProperty();
+            }());
         }
         catch (...)
         {
@@ -4078,7 +4534,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::HeadingLevelProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::HeadingLevelProperty();
+            }());
         }
         catch (...)
         {
@@ -4104,7 +4564,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::HelpTextProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::HelpTextProperty();
+            }());
         }
         catch (...)
         {
@@ -4130,7 +4594,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::IsDataValidForFormProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::IsDataValidForFormProperty();
+            }());
         }
         catch (...)
         {
@@ -4156,7 +4624,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::IsDialogProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::IsDialogProperty();
+            }());
         }
         catch (...)
         {
@@ -4182,7 +4654,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::IsPeripheralProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::IsPeripheralProperty();
+            }());
         }
         catch (...)
         {
@@ -4208,7 +4684,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::IsRequiredForFormProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::IsRequiredForFormProperty();
+            }());
         }
         catch (...)
         {
@@ -4234,7 +4714,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::ItemStatusProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::ItemStatusProperty();
+            }());
         }
         catch (...)
         {
@@ -4260,7 +4744,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::ItemTypeProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::ItemTypeProperty();
+            }());
         }
         catch (...)
         {
@@ -4286,7 +4774,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::LabeledByProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::LabeledByProperty();
+            }());
         }
         catch (...)
         {
@@ -4312,7 +4804,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::LandmarkTypeProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::LandmarkTypeProperty();
+            }());
         }
         catch (...)
         {
@@ -4338,7 +4834,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::LevelProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::LevelProperty();
+            }());
         }
         catch (...)
         {
@@ -4364,7 +4864,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::LiveSettingProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::LiveSettingProperty();
+            }());
         }
         catch (...)
         {
@@ -4390,7 +4894,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::LocalizedControlTypeProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::LocalizedControlTypeProperty();
+            }());
         }
         catch (...)
         {
@@ -4416,7 +4924,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::LocalizedLandmarkTypeProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::LocalizedLandmarkTypeProperty();
+            }());
         }
         catch (...)
         {
@@ -4442,7 +4954,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::NameProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::NameProperty();
+            }());
         }
         catch (...)
         {
@@ -4468,7 +4984,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::PositionInSetProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::PositionInSetProperty();
+            }());
         }
         catch (...)
         {
@@ -4494,7 +5014,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::SizeOfSetProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::SizeOfSetProperty();
+            }());
         }
         catch (...)
         {
@@ -4520,7 +5044,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::AutomationControlTypeProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::AutomationProperties::AutomationControlTypeProperty();
+            }());
         }
         catch (...)
         {
@@ -4785,7 +5313,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::DockPatternIdentifiers::DockPositionProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::DockPatternIdentifiers::DockPositionProperty();
+            }());
         }
         catch (...)
         {
@@ -4903,7 +5435,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::DragPatternIdentifiers::DropEffectProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::DragPatternIdentifiers::DropEffectProperty();
+            }());
         }
         catch (...)
         {
@@ -4929,7 +5465,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::DragPatternIdentifiers::DropEffectsProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::DragPatternIdentifiers::DropEffectsProperty();
+            }());
         }
         catch (...)
         {
@@ -4955,7 +5495,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::DragPatternIdentifiers::GrabbedItemsProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::DragPatternIdentifiers::GrabbedItemsProperty();
+            }());
         }
         catch (...)
         {
@@ -4981,7 +5525,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::DragPatternIdentifiers::IsGrabbedProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::DragPatternIdentifiers::IsGrabbedProperty();
+            }());
         }
         catch (...)
         {
@@ -5102,7 +5650,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::DropTargetPatternIdentifiers::DropTargetEffectProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::DropTargetPatternIdentifiers::DropTargetEffectProperty();
+            }());
         }
         catch (...)
         {
@@ -5128,7 +5680,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::DropTargetPatternIdentifiers::DropTargetEffectsProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::DropTargetPatternIdentifiers::DropTargetEffectsProperty();
+            }());
         }
         catch (...)
         {
@@ -5247,7 +5803,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::ExpandCollapsePatternIdentifiers::ExpandCollapseStateProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::ExpandCollapsePatternIdentifiers::ExpandCollapseStateProperty();
+            }());
         }
         catch (...)
         {
@@ -5365,7 +5925,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::GridItemPatternIdentifiers::ColumnProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::GridItemPatternIdentifiers::ColumnProperty();
+            }());
         }
         catch (...)
         {
@@ -5391,7 +5955,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::GridItemPatternIdentifiers::ColumnSpanProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::GridItemPatternIdentifiers::ColumnSpanProperty();
+            }());
         }
         catch (...)
         {
@@ -5417,7 +5985,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::GridItemPatternIdentifiers::ContainingGridProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::GridItemPatternIdentifiers::ContainingGridProperty();
+            }());
         }
         catch (...)
         {
@@ -5443,7 +6015,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::GridItemPatternIdentifiers::RowProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::GridItemPatternIdentifiers::RowProperty();
+            }());
         }
         catch (...)
         {
@@ -5469,7 +6045,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::GridItemPatternIdentifiers::RowSpanProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::GridItemPatternIdentifiers::RowSpanProperty();
+            }());
         }
         catch (...)
         {
@@ -5591,7 +6171,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::GridPatternIdentifiers::ColumnCountProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::GridPatternIdentifiers::ColumnCountProperty();
+            }());
         }
         catch (...)
         {
@@ -5617,7 +6201,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::GridPatternIdentifiers::RowCountProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::GridPatternIdentifiers::RowCountProperty();
+            }());
         }
         catch (...)
         {
@@ -5736,7 +6324,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::MultipleViewPatternIdentifiers::CurrentViewProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::MultipleViewPatternIdentifiers::CurrentViewProperty();
+            }());
         }
         catch (...)
         {
@@ -5762,7 +6354,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::MultipleViewPatternIdentifiers::SupportedViewsProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::MultipleViewPatternIdentifiers::SupportedViewsProperty();
+            }());
         }
         catch (...)
         {
@@ -5881,7 +6477,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::RangeValuePatternIdentifiers::IsReadOnlyProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::RangeValuePatternIdentifiers::IsReadOnlyProperty();
+            }());
         }
         catch (...)
         {
@@ -5907,7 +6507,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::RangeValuePatternIdentifiers::LargeChangeProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::RangeValuePatternIdentifiers::LargeChangeProperty();
+            }());
         }
         catch (...)
         {
@@ -5933,7 +6537,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::RangeValuePatternIdentifiers::MaximumProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::RangeValuePatternIdentifiers::MaximumProperty();
+            }());
         }
         catch (...)
         {
@@ -5959,7 +6567,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::RangeValuePatternIdentifiers::MinimumProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::RangeValuePatternIdentifiers::MinimumProperty();
+            }());
         }
         catch (...)
         {
@@ -5985,7 +6597,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::RangeValuePatternIdentifiers::SmallChangeProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::RangeValuePatternIdentifiers::SmallChangeProperty();
+            }());
         }
         catch (...)
         {
@@ -6011,7 +6627,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::RangeValuePatternIdentifiers::ValueProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::RangeValuePatternIdentifiers::ValueProperty();
+            }());
         }
         catch (...)
         {
@@ -6134,7 +6754,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::ScrollPatternIdentifiers::HorizontalScrollPercentProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::ScrollPatternIdentifiers::HorizontalScrollPercentProperty();
+            }());
         }
         catch (...)
         {
@@ -6160,7 +6784,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::ScrollPatternIdentifiers::HorizontalViewSizeProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::ScrollPatternIdentifiers::HorizontalViewSizeProperty();
+            }());
         }
         catch (...)
         {
@@ -6186,7 +6814,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::ScrollPatternIdentifiers::HorizontallyScrollableProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::ScrollPatternIdentifiers::HorizontallyScrollableProperty();
+            }());
         }
         catch (...)
         {
@@ -6212,7 +6844,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::ScrollPatternIdentifiers::NoScroll());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::ScrollPatternIdentifiers::NoScroll();
+            }());
         }
         catch (...)
         {
@@ -6238,7 +6874,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::ScrollPatternIdentifiers::VerticalScrollPercentProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::ScrollPatternIdentifiers::VerticalScrollPercentProperty();
+            }());
         }
         catch (...)
         {
@@ -6264,7 +6904,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::ScrollPatternIdentifiers::VerticalViewSizeProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::ScrollPatternIdentifiers::VerticalViewSizeProperty();
+            }());
         }
         catch (...)
         {
@@ -6290,7 +6934,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::ScrollPatternIdentifiers::VerticallyScrollableProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::ScrollPatternIdentifiers::VerticallyScrollableProperty();
+            }());
         }
         catch (...)
         {
@@ -6414,7 +7062,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::SelectionItemPatternIdentifiers::IsSelectedProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::SelectionItemPatternIdentifiers::IsSelectedProperty();
+            }());
         }
         catch (...)
         {
@@ -6440,7 +7092,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::SelectionItemPatternIdentifiers::SelectionContainerProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::SelectionItemPatternIdentifiers::SelectionContainerProperty();
+            }());
         }
         catch (...)
         {
@@ -6559,7 +7215,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::SelectionPatternIdentifiers::CanSelectMultipleProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::SelectionPatternIdentifiers::CanSelectMultipleProperty();
+            }());
         }
         catch (...)
         {
@@ -6585,7 +7245,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::SelectionPatternIdentifiers::IsSelectionRequiredProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::SelectionPatternIdentifiers::IsSelectionRequiredProperty();
+            }());
         }
         catch (...)
         {
@@ -6611,7 +7275,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::SelectionPatternIdentifiers::SelectionProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::SelectionPatternIdentifiers::SelectionProperty();
+            }());
         }
         catch (...)
         {
@@ -6731,7 +7399,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::SpreadsheetItemPatternIdentifiers::FormulaProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::SpreadsheetItemPatternIdentifiers::FormulaProperty();
+            }());
         }
         catch (...)
         {
@@ -6849,7 +7521,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::StylesPatternIdentifiers::ExtendedPropertiesProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::StylesPatternIdentifiers::ExtendedPropertiesProperty();
+            }());
         }
         catch (...)
         {
@@ -6875,7 +7551,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::StylesPatternIdentifiers::FillColorProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::StylesPatternIdentifiers::FillColorProperty();
+            }());
         }
         catch (...)
         {
@@ -6901,7 +7581,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::StylesPatternIdentifiers::FillPatternColorProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::StylesPatternIdentifiers::FillPatternColorProperty();
+            }());
         }
         catch (...)
         {
@@ -6927,7 +7611,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::StylesPatternIdentifiers::FillPatternStyleProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::StylesPatternIdentifiers::FillPatternStyleProperty();
+            }());
         }
         catch (...)
         {
@@ -6953,7 +7641,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::StylesPatternIdentifiers::ShapeProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::StylesPatternIdentifiers::ShapeProperty();
+            }());
         }
         catch (...)
         {
@@ -6979,7 +7671,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::StylesPatternIdentifiers::StyleIdProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::StylesPatternIdentifiers::StyleIdProperty();
+            }());
         }
         catch (...)
         {
@@ -7005,7 +7701,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::StylesPatternIdentifiers::StyleNameProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::StylesPatternIdentifiers::StyleNameProperty();
+            }());
         }
         catch (...)
         {
@@ -7129,7 +7829,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::TableItemPatternIdentifiers::ColumnHeaderItemsProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::TableItemPatternIdentifiers::ColumnHeaderItemsProperty();
+            }());
         }
         catch (...)
         {
@@ -7155,7 +7859,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::TableItemPatternIdentifiers::RowHeaderItemsProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::TableItemPatternIdentifiers::RowHeaderItemsProperty();
+            }());
         }
         catch (...)
         {
@@ -7274,7 +7982,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::TablePatternIdentifiers::ColumnHeadersProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::TablePatternIdentifiers::ColumnHeadersProperty();
+            }());
         }
         catch (...)
         {
@@ -7300,7 +8012,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::TablePatternIdentifiers::RowHeadersProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::TablePatternIdentifiers::RowHeadersProperty();
+            }());
         }
         catch (...)
         {
@@ -7326,7 +8042,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::TablePatternIdentifiers::RowOrColumnMajorProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::TablePatternIdentifiers::RowOrColumnMajorProperty();
+            }());
         }
         catch (...)
         {
@@ -7446,7 +8166,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::TogglePatternIdentifiers::ToggleStateProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::TogglePatternIdentifiers::ToggleStateProperty();
+            }());
         }
         catch (...)
         {
@@ -7564,7 +8288,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::TransformPattern2Identifiers::CanZoomProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::TransformPattern2Identifiers::CanZoomProperty();
+            }());
         }
         catch (...)
         {
@@ -7590,7 +8318,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::TransformPattern2Identifiers::MaxZoomProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::TransformPattern2Identifiers::MaxZoomProperty();
+            }());
         }
         catch (...)
         {
@@ -7616,7 +8348,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::TransformPattern2Identifiers::MinZoomProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::TransformPattern2Identifiers::MinZoomProperty();
+            }());
         }
         catch (...)
         {
@@ -7642,7 +8378,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::TransformPattern2Identifiers::ZoomLevelProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::TransformPattern2Identifiers::ZoomLevelProperty();
+            }());
         }
         catch (...)
         {
@@ -7763,7 +8503,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::TransformPatternIdentifiers::CanMoveProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::TransformPatternIdentifiers::CanMoveProperty();
+            }());
         }
         catch (...)
         {
@@ -7789,7 +8533,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::TransformPatternIdentifiers::CanResizeProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::TransformPatternIdentifiers::CanResizeProperty();
+            }());
         }
         catch (...)
         {
@@ -7815,7 +8563,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::TransformPatternIdentifiers::CanRotateProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::TransformPatternIdentifiers::CanRotateProperty();
+            }());
         }
         catch (...)
         {
@@ -7935,7 +8687,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::ValuePatternIdentifiers::IsReadOnlyProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::ValuePatternIdentifiers::IsReadOnlyProperty();
+            }());
         }
         catch (...)
         {
@@ -7961,7 +8717,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::ValuePatternIdentifiers::ValueProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::ValuePatternIdentifiers::ValueProperty();
+            }());
         }
         catch (...)
         {
@@ -8080,7 +8840,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::WindowPatternIdentifiers::CanMaximizeProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::WindowPatternIdentifiers::CanMaximizeProperty();
+            }());
         }
         catch (...)
         {
@@ -8106,7 +8870,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::WindowPatternIdentifiers::CanMinimizeProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::WindowPatternIdentifiers::CanMinimizeProperty();
+            }());
         }
         catch (...)
         {
@@ -8132,7 +8900,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::WindowPatternIdentifiers::IsModalProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::WindowPatternIdentifiers::IsModalProperty();
+            }());
         }
         catch (...)
         {
@@ -8158,7 +8930,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::WindowPatternIdentifiers::IsTopmostProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::WindowPatternIdentifiers::IsTopmostProperty();
+            }());
         }
         catch (...)
         {
@@ -8184,7 +8960,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::WindowPatternIdentifiers::WindowInteractionStateProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::WindowPatternIdentifiers::WindowInteractionStateProperty();
+            }());
         }
         catch (...)
         {
@@ -8210,7 +8990,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 return nullptr;
             }
 
-            return py::convert(winrt::Microsoft::UI::Xaml::Automation::WindowPatternIdentifiers::WindowVisualStateProperty());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Automation::WindowPatternIdentifiers::WindowVisualStateProperty();
+            }());
         }
         catch (...)
         {

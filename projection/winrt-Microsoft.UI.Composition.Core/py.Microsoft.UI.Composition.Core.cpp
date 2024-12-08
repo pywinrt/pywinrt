@@ -64,7 +64,11 @@ namespace py::cpp::Microsoft::UI::Composition::Core
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -101,7 +105,11 @@ namespace py::cpp::Microsoft::UI::Composition::Core
                     return nullptr;
                 }
 
-                self->obj.Commit();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Commit();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -138,7 +146,11 @@ namespace py::cpp::Microsoft::UI::Composition::Core
                     return nullptr;
                 }
 
-                return py::convert(self->obj.EnsurePreviousCommitCompletedAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.EnsurePreviousCommitCompletedAsync();
+                }());
             }
             catch (...)
             {
@@ -170,7 +182,11 @@ namespace py::cpp::Microsoft::UI::Composition::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Compositor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Compositor();
+            }());
         }
         catch (...)
         {
@@ -198,7 +214,11 @@ namespace py::cpp::Microsoft::UI::Composition::Core
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Composition::Core::CompositorController, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.CommitNeeded(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CommitNeeded(param0);
+            }());
         }
         catch (...)
         {
@@ -226,7 +246,11 @@ namespace py::cpp::Microsoft::UI::Composition::Core
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.CommitNeeded(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CommitNeeded(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -269,7 +293,11 @@ namespace py::cpp::Microsoft::UI::Composition::Core
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)

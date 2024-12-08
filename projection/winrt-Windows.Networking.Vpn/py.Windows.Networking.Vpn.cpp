@@ -63,7 +63,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.Value());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Value();
+            }());
         }
         catch (...)
         {
@@ -97,7 +101,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Value(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Value(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -124,7 +132,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.Type());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Type();
+            }());
         }
         catch (...)
         {
@@ -158,7 +170,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnAppIdType>(arg);
 
-            self->obj.Type(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Type(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -260,7 +276,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::ValueSet>(args, 1);
 
-                return py::convert(self->obj.ActivateForeground(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ActivateForeground(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -299,7 +319,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                self->obj.AddAndAssociateTransport(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddAndAssociateTransport(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -338,7 +362,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
                 auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnPacketBuffer>(args, 0);
 
-                self->obj.AppendVpnReceivePacketBuffer(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AppendVpnReceivePacketBuffer(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -377,7 +405,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
                 auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnPacketBuffer>(args, 0);
 
-                self->obj.AppendVpnSendPacketBuffer(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AppendVpnSendPacketBuffer(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -417,7 +449,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                self->obj.AssociateTransport(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AssociateTransport(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -454,7 +490,11 @@ namespace py::cpp::Windows::Networking::Vpn
                     return nullptr;
                 }
 
-                self->obj.FlushVpnReceivePacketBuffers();
+                {
+                    auto _gil = release_gil();
+                    self->obj.FlushVpnReceivePacketBuffers();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -491,7 +531,11 @@ namespace py::cpp::Windows::Networking::Vpn
                     return nullptr;
                 }
 
-                self->obj.FlushVpnSendPacketBuffers();
+                {
+                    auto _gil = release_gil();
+                    self->obj.FlushVpnSendPacketBuffers();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -530,7 +574,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
-                return py::convert(self->obj.GetSlotTypeForTransportContext(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetSlotTypeForTransportContext(param0);
+                }());
             }
             catch (...)
             {
@@ -566,7 +614,11 @@ namespace py::cpp::Windows::Networking::Vpn
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetVpnReceivePacketBuffer());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetVpnReceivePacketBuffer();
+                }());
             }
             catch (...)
             {
@@ -602,7 +654,11 @@ namespace py::cpp::Windows::Networking::Vpn
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetVpnSendPacketBuffer());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetVpnSendPacketBuffer();
+                }());
             }
             catch (...)
             {
@@ -640,7 +696,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.LogDiagnosticMessage(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.LogDiagnosticMessage(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -680,7 +740,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                winrt::Windows::Networking::Vpn::VpnChannel::ProcessEventAsync(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Networking::Vpn::VpnChannel::ProcessEventAsync(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -720,7 +784,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                self->obj.ReplaceAndAssociateTransport(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ReplaceAndAssociateTransport(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -762,7 +830,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 auto param2 = py::convert_to<bool>(args, 2);
                 auto param3 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::Certificate>(args, 3);
 
-                return py::convert(self->obj.RequestCredentials(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestCredentials(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -800,7 +872,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
                 auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnCredentialType>(args, 0);
 
-                return py::convert(self->obj.RequestCredentialsAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestCredentialsAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -840,7 +916,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::Certificate>(args, 2);
 
-                return py::convert(self->obj.RequestCredentialsAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestCredentialsAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -879,7 +959,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnCredentialType>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
-                return py::convert(self->obj.RequestCredentialsAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestCredentialsAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -917,7 +1001,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Networking::Vpn::IVpnCustomPrompt>>(args, 0);
 
-                self->obj.RequestCustomPrompt(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RequestCustomPrompt(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -956,7 +1044,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Networking::Vpn::IVpnCustomPromptElement>>(args, 0);
 
-                return py::convert(self->obj.RequestCustomPromptAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestCustomPromptAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -995,13 +1087,17 @@ namespace py::cpp::Windows::Networking::Vpn
                 auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnDataPathType>(args, 0);
                 winrt::Windows::Networking::Vpn::VpnPacketBuffer param1{nullptr};
 
-                self->obj.RequestVpnPacketBuffer(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RequestVpnPacketBuffer(param0, param1);
+                }
 
                 py::pyobj_handle out1{ py::convert(param1) };
                 if (!out1)
                 {
                     return nullptr;
                 }
+
                 return out1.detach();
             }
             catch (...)
@@ -1041,7 +1137,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                self->obj.SetAllowedSslTlsVersions(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetAllowedSslTlsVersions(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1080,7 +1180,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.SetErrorMessage(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetErrorMessage(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1128,7 +1232,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 auto param8 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 8);
                 auto param9 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 9);
 
-                self->obj.Start(param0, param1, param2, param3, param4, param5, param6, param7, param8, param9);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Start(param0, param1, param2, param3, param4, param5, param6, param7, param8, param9);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1174,7 +1282,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 auto param6 = py::convert_to<uint32_t>(args, 6);
                 auto param7 = py::convert_to<bool>(args, 7);
 
-                self->obj.StartExistingTransports(param0, param1, param2, param3, param4, param5, param6, param7);
+                {
+                    auto _gil = release_gil();
+                    self->obj.StartExistingTransports(param0, param1, param2, param3, param4, param5, param6, param7);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1214,7 +1326,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                self->obj.StartReconnectingTransport(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.StartReconnectingTransport(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1261,7 +1377,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 auto param7 = py::convert_to<bool>(args, 7);
                 auto param8 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 8);
 
-                self->obj.StartWithMainTransport(param0, param1, param2, param3, param4, param5, param6, param7, param8);
+                {
+                    auto _gil = release_gil();
+                    self->obj.StartWithMainTransport(param0, param1, param2, param3, param4, param5, param6, param7, param8);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1309,7 +1429,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 auto param8 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::IInspectable>>(args, 8);
                 auto param9 = py::convert_to<winrt::Windows::Networking::Vpn::VpnTrafficFilterAssignment>(args, 9);
 
-                self->obj.StartWithTrafficFilter(param0, param1, param2, param3, param4, param5, param6, param7, param8, param9);
+                {
+                    auto _gil = release_gil();
+                    self->obj.StartWithTrafficFilter(param0, param1, param2, param3, param4, param5, param6, param7, param8, param9);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1358,7 +1482,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 auto param9 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 9);
                 auto param10 = py::convert_to<winrt::Windows::Networking::Vpn::VpnTrafficFilterAssignment>(args, 10);
 
-                self->obj.StartWithTrafficFilter(param0, param1, param2, param3, param4, param5, param6, param7, param8, param9, param10);
+                {
+                    auto _gil = release_gil();
+                    self->obj.StartWithTrafficFilter(param0, param1, param2, param3, param4, param5, param6, param7, param8, param9, param10);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1395,7 +1523,11 @@ namespace py::cpp::Windows::Networking::Vpn
                     return nullptr;
                 }
 
-                self->obj.Stop();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Stop();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1434,7 +1566,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.TerminateConnection(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.TerminateConnection(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1467,7 +1603,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.PlugInContext());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PlugInContext();
+            }());
         }
         catch (...)
         {
@@ -1501,7 +1641,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
-            self->obj.PlugInContext(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PlugInContext(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1528,7 +1672,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.Configuration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Configuration();
+            }());
         }
         catch (...)
         {
@@ -1554,7 +1702,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -1580,7 +1732,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.SystemHealth());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SystemHealth();
+            }());
         }
         catch (...)
         {
@@ -1606,7 +1762,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.CurrentRequestTransportContext());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CurrentRequestTransportContext();
+            }());
         }
         catch (...)
         {
@@ -1634,7 +1794,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::Vpn::VpnChannel, winrt::Windows::Networking::Vpn::VpnChannelActivityEventArgs>>(arg);
 
-            return py::convert(self->obj.ActivityChange(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ActivityChange(param0);
+            }());
         }
         catch (...)
         {
@@ -1662,7 +1826,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ActivityChange(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ActivityChange(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1691,7 +1859,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::Vpn::VpnChannel, winrt::Windows::Networking::Vpn::VpnChannelActivityStateChangedArgs>>(arg);
 
-            return py::convert(self->obj.ActivityStateChange(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ActivityStateChange(param0);
+            }());
         }
         catch (...)
         {
@@ -1719,7 +1891,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ActivityStateChange(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ActivityStateChange(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1876,7 +2052,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.Type());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Type();
+            }());
         }
         catch (...)
         {
@@ -1969,7 +2149,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.ActivityState());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ActivityState();
+            }());
         }
         catch (...)
         {
@@ -2062,7 +2246,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.CustomField());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CustomField();
+            }());
         }
         catch (...)
         {
@@ -2088,7 +2276,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.ServerHostNameList());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServerHostNameList();
+            }());
         }
         catch (...)
         {
@@ -2114,7 +2306,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.ServerServiceName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServerServiceName();
+            }());
         }
         catch (...)
         {
@@ -2140,7 +2336,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.ServerUris());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServerUris();
+            }());
         }
         catch (...)
         {
@@ -2236,7 +2436,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.AdditionalPin());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AdditionalPin();
+            }());
         }
         catch (...)
         {
@@ -2262,7 +2466,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.CertificateCredential());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CertificateCredential();
+            }());
         }
         catch (...)
         {
@@ -2288,7 +2496,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.OldPasswordCredential());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OldPasswordCredential();
+            }());
         }
         catch (...)
         {
@@ -2314,7 +2526,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.PasskeyCredential());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PasskeyCredential();
+            }());
         }
         catch (...)
         {
@@ -2432,7 +2648,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.InitialCheckState());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InitialCheckState();
+            }());
         }
         catch (...)
         {
@@ -2466,7 +2686,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.InitialCheckState(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.InitialCheckState(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2493,7 +2717,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.Checked());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Checked();
+            }());
         }
         catch (...)
         {
@@ -2519,7 +2747,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.Label());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Label();
+            }());
         }
         catch (...)
         {
@@ -2553,7 +2785,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Label(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Label(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2580,7 +2816,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.Compulsory());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Compulsory();
+            }());
         }
         catch (...)
         {
@@ -2614,7 +2854,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Compulsory(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Compulsory(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2641,7 +2885,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.Bordered());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Bordered();
+            }());
         }
         catch (...)
         {
@@ -2675,7 +2923,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Bordered(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Bordered(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2795,7 +3047,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.OptionsText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OptionsText();
+            }());
         }
         catch (...)
         {
@@ -2829,7 +3085,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::hstring>>(arg);
 
-            self->obj.OptionsText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.OptionsText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2856,7 +3116,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.Selected());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Selected();
+            }());
         }
         catch (...)
         {
@@ -2882,7 +3146,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.Label());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Label();
+            }());
         }
         catch (...)
         {
@@ -2916,7 +3184,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Label(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Label(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2943,7 +3215,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.Compulsory());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Compulsory();
+            }());
         }
         catch (...)
         {
@@ -2977,7 +3253,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Compulsory(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Compulsory(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3004,7 +3284,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.Bordered());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Bordered();
+            }());
         }
         catch (...)
         {
@@ -3038,7 +3322,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Bordered(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Bordered(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3158,7 +3446,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.NoEcho());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NoEcho();
+            }());
         }
         catch (...)
         {
@@ -3192,7 +3484,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.NoEcho(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NoEcho(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3219,7 +3515,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.DefaultText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DefaultText();
+            }());
         }
         catch (...)
         {
@@ -3253,7 +3553,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.DefaultText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DefaultText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3280,7 +3584,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.Text());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Text();
+            }());
         }
         catch (...)
         {
@@ -3306,7 +3614,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.Label());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Label();
+            }());
         }
         catch (...)
         {
@@ -3340,7 +3652,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Label(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Label(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3367,7 +3683,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.Compulsory());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Compulsory();
+            }());
         }
         catch (...)
         {
@@ -3401,7 +3721,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Compulsory(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Compulsory(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3428,7 +3752,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.Bordered());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Bordered();
+            }());
         }
         catch (...)
         {
@@ -3462,7 +3790,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Bordered(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Bordered(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3583,7 +3915,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.Label());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Label();
+            }());
         }
         catch (...)
         {
@@ -3617,7 +3953,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Label(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Label(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3644,7 +3984,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.Compulsory());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Compulsory();
+            }());
         }
         catch (...)
         {
@@ -3678,7 +4022,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Compulsory(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Compulsory(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3705,7 +4053,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.Bordered());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Bordered();
+            }());
         }
         catch (...)
         {
@@ -3739,7 +4091,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Bordered(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Bordered(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3857,7 +4213,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.InitialValue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InitialValue();
+            }());
         }
         catch (...)
         {
@@ -3891,7 +4251,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.InitialValue(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.InitialValue(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3918,7 +4282,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.Value());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Value();
+            }());
         }
         catch (...)
         {
@@ -3944,7 +4312,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.Emphasized());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Emphasized();
+            }());
         }
         catch (...)
         {
@@ -3978,7 +4350,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Emphasized(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Emphasized(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4005,7 +4381,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayName();
+            }());
         }
         catch (...)
         {
@@ -4039,7 +4419,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.DisplayName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DisplayName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4066,7 +4450,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.Compulsory());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Compulsory();
+            }());
         }
         catch (...)
         {
@@ -4100,7 +4488,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Compulsory(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Compulsory(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4220,7 +4612,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.Emphasized());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Emphasized();
+            }());
         }
         catch (...)
         {
@@ -4254,7 +4650,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Emphasized(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Emphasized(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4281,7 +4681,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayName();
+            }());
         }
         catch (...)
         {
@@ -4315,7 +4719,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.DisplayName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DisplayName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4342,7 +4750,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.Compulsory());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Compulsory();
+            }());
         }
         catch (...)
         {
@@ -4376,7 +4788,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Compulsory(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Compulsory(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4403,7 +4819,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.Options());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Options();
+            }());
         }
         catch (...)
         {
@@ -4429,7 +4849,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectedIndex());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SelectedIndex();
+            }());
         }
         catch (...)
         {
@@ -4548,7 +4972,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.Emphasized());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Emphasized();
+            }());
         }
         catch (...)
         {
@@ -4582,7 +5010,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Emphasized(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Emphasized(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4609,7 +5041,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayName();
+            }());
         }
         catch (...)
         {
@@ -4643,7 +5079,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.DisplayName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DisplayName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4670,7 +5110,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.Compulsory());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Compulsory();
+            }());
         }
         catch (...)
         {
@@ -4704,7 +5148,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Compulsory(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Compulsory(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4731,7 +5179,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.Text());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Text();
+            }());
         }
         catch (...)
         {
@@ -4765,7 +5217,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Text(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Text(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4884,7 +5340,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.Emphasized());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Emphasized();
+            }());
         }
         catch (...)
         {
@@ -4918,7 +5378,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Emphasized(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Emphasized(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4945,7 +5409,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayName();
+            }());
         }
         catch (...)
         {
@@ -4979,7 +5447,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.DisplayName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DisplayName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5006,7 +5478,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.Compulsory());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Compulsory();
+            }());
         }
         catch (...)
         {
@@ -5040,7 +5516,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Compulsory(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Compulsory(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5067,7 +5547,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.PlaceholderText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PlaceholderText();
+            }());
         }
         catch (...)
         {
@@ -5101,7 +5585,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.PlaceholderText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PlaceholderText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5128,7 +5616,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsTextHidden());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsTextHidden();
+            }());
         }
         catch (...)
         {
@@ -5162,7 +5654,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsTextHidden(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsTextHidden(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5189,7 +5685,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.Text());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Text();
+            }());
         }
         catch (...)
         {
@@ -5309,7 +5809,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.Label());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Label();
+            }());
         }
         catch (...)
         {
@@ -5343,7 +5847,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Label(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Label(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5370,7 +5878,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.Compulsory());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Compulsory();
+            }());
         }
         catch (...)
         {
@@ -5404,7 +5916,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Compulsory(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Compulsory(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5431,7 +5947,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.Bordered());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Bordered();
+            }());
         }
         catch (...)
         {
@@ -5465,7 +5985,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Bordered(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Bordered(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5492,7 +6016,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayText();
+            }());
         }
         catch (...)
         {
@@ -5526,7 +6054,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.DisplayText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DisplayText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5645,7 +6177,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProxyAutoConfigurationUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProxyAutoConfigurationUri();
+            }());
         }
         catch (...)
         {
@@ -5679,7 +6215,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.ProxyAutoConfigurationUri(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ProxyAutoConfigurationUri(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5706,7 +6246,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.DomainNameList());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DomainNameList();
+            }());
         }
         catch (...)
         {
@@ -5827,7 +6371,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.DomainNameType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DomainNameType();
+            }());
         }
         catch (...)
         {
@@ -5861,7 +6409,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnDomainNameType>(arg);
 
-            self->obj.DomainNameType(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DomainNameType(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5888,7 +6440,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.DomainName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DomainName();
+            }());
         }
         catch (...)
         {
@@ -5922,7 +6478,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<winrt::Windows::Networking::HostName>(arg);
 
-            self->obj.DomainName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DomainName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5949,7 +6509,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.DnsServers());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DnsServers();
+            }());
         }
         catch (...)
         {
@@ -5975,7 +6539,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.WebProxyServers());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WebProxyServers();
+            }());
         }
         catch (...)
         {
@@ -6001,7 +6569,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.WebProxyUris());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WebProxyUris();
+            }());
         }
         catch (...)
         {
@@ -6098,7 +6670,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -6124,7 +6700,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.PreviousExecutionState());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PreviousExecutionState();
+            }());
         }
         catch (...)
         {
@@ -6150,7 +6730,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.SplashScreen());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SplashScreen();
+            }());
         }
         catch (...)
         {
@@ -6176,7 +6760,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.User());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.User();
+            }());
         }
         catch (...)
         {
@@ -6202,7 +6790,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.ActivationOperation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ActivationOperation();
+            }());
         }
         catch (...)
         {
@@ -6228,7 +6820,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProfileName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProfileName();
+            }());
         }
         catch (...)
         {
@@ -6254,7 +6850,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.SharedContext());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SharedContext();
+            }());
         }
         catch (...)
         {
@@ -6359,7 +6959,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::ValueSet>(args, 0);
 
-                self->obj.Complete(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Complete(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6489,13 +7093,17 @@ namespace py::cpp::Windows::Networking::Vpn
 
                 winrt::com_array<uint8_t> param0{};
 
-                self->obj.GetAddressInfo(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.GetAddressInfo(param0);
+                }
 
                 py::pyobj_handle out0{ py::convert(param0) };
                 if (!out0)
                 {
                     return nullptr;
                 }
+
                 return out0.detach();
             }
             catch (...)
@@ -6623,7 +7231,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
                 auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::IVpnProfile>(args, 0);
 
-                return py::convert(self->obj.AddProfileFromObjectAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.AddProfileFromObjectAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -6661,7 +7273,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.AddProfileFromXmlAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.AddProfileFromXmlAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -6699,7 +7315,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
                 auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::IVpnProfile>(args, 0);
 
-                return py::convert(self->obj.ConnectProfileAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ConnectProfileAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -6738,7 +7358,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::IVpnProfile>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(args, 1);
 
-                return py::convert(self->obj.ConnectProfileWithPasswordCredentialAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ConnectProfileWithPasswordCredentialAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -6776,7 +7400,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
                 auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::IVpnProfile>(args, 0);
 
-                return py::convert(self->obj.DeleteProfileAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.DeleteProfileAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -6814,7 +7442,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
                 auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::IVpnProfile>(args, 0);
 
-                return py::convert(self->obj.DisconnectProfileAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.DisconnectProfileAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -6850,7 +7482,11 @@ namespace py::cpp::Windows::Networking::Vpn
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetProfilesAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetProfilesAsync();
+                }());
             }
             catch (...)
             {
@@ -6888,7 +7524,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
                 auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::IVpnProfile>(args, 0);
 
-                return py::convert(self->obj.UpdateProfileFromObjectAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.UpdateProfileFromObjectAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -6926,7 +7566,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.UpdateProfileFromXmlAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.UpdateProfileFromXmlAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -7055,7 +7699,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProxyAutoConfigUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProxyAutoConfigUri();
+            }());
         }
         catch (...)
         {
@@ -7089,7 +7737,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.ProxyAutoConfigUri(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ProxyAutoConfigUri(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7116,7 +7768,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.NamespaceList());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NamespaceList();
+            }());
         }
         catch (...)
         {
@@ -7150,7 +7806,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Networking::Vpn::VpnNamespaceInfo>>(arg);
 
-            self->obj.NamespaceList(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NamespaceList(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7271,7 +7931,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.WebProxyServers());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WebProxyServers();
+            }());
         }
         catch (...)
         {
@@ -7305,7 +7969,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Networking::HostName>>(arg);
 
-            self->obj.WebProxyServers(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.WebProxyServers(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7332,7 +8000,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.Namespace());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Namespace();
+            }());
         }
         catch (...)
         {
@@ -7366,7 +8038,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Namespace(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Namespace(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7393,7 +8069,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.DnsServers());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DnsServers();
+            }());
         }
         catch (...)
         {
@@ -7427,7 +8107,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Networking::HostName>>(arg);
 
-            self->obj.DnsServers(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DnsServers(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7545,7 +8229,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.UserAuthenticationMethod());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UserAuthenticationMethod();
+            }());
         }
         catch (...)
         {
@@ -7579,7 +8267,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnAuthenticationMethod>(arg);
 
-            self->obj.UserAuthenticationMethod(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.UserAuthenticationMethod(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7606,7 +8298,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.TunnelAuthenticationMethod());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TunnelAuthenticationMethod();
+            }());
         }
         catch (...)
         {
@@ -7640,7 +8336,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnAuthenticationMethod>(arg);
 
-            self->obj.TunnelAuthenticationMethod(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TunnelAuthenticationMethod(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7667,7 +8367,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.RoutingPolicyType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RoutingPolicyType();
+            }());
         }
         catch (...)
         {
@@ -7701,7 +8405,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnRoutingPolicyType>(arg);
 
-            self->obj.RoutingPolicyType(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RoutingPolicyType(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7728,7 +8436,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.EapConfiguration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EapConfiguration();
+            }());
         }
         catch (...)
         {
@@ -7762,7 +8474,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.EapConfiguration(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.EapConfiguration(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7789,7 +8505,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.NativeProtocolType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NativeProtocolType();
+            }());
         }
         catch (...)
         {
@@ -7823,7 +8543,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnNativeProtocolType>(arg);
 
-            self->obj.NativeProtocolType(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NativeProtocolType(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7850,7 +8574,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.Servers());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Servers();
+            }());
         }
         catch (...)
         {
@@ -7876,7 +8604,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.RequireVpnClientAppUI());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RequireVpnClientAppUI();
+            }());
         }
         catch (...)
         {
@@ -7910,7 +8642,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.RequireVpnClientAppUI(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RequireVpnClientAppUI(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7937,7 +8673,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.ConnectionStatus());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ConnectionStatus();
+            }());
         }
         catch (...)
         {
@@ -7963,7 +8703,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProfileName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProfileName();
+            }());
         }
         catch (...)
         {
@@ -7997,7 +8741,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ProfileName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ProfileName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8024,7 +8772,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.RememberCredentials());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RememberCredentials();
+            }());
         }
         catch (...)
         {
@@ -8058,7 +8810,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.RememberCredentials(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RememberCredentials(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8085,7 +8841,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.AlwaysOn());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AlwaysOn();
+            }());
         }
         catch (...)
         {
@@ -8119,7 +8879,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.AlwaysOn(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AlwaysOn(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8146,7 +8910,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.Routes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Routes();
+            }());
         }
         catch (...)
         {
@@ -8172,7 +8940,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppTriggers());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppTriggers();
+            }());
         }
         catch (...)
         {
@@ -8198,7 +8970,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.TrafficFilters());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TrafficFilters();
+            }());
         }
         catch (...)
         {
@@ -8224,7 +9000,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.DomainNameInfoList());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DomainNameInfoList();
+            }());
         }
         catch (...)
         {
@@ -8357,7 +9137,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.TransportAffinity());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TransportAffinity();
+            }());
         }
         catch (...)
         {
@@ -8391,7 +9175,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.TransportAffinity(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TransportAffinity(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8418,7 +9206,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -8452,7 +9244,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnPacketBufferStatus>(arg);
 
-            self->obj.Status(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Status(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8479,7 +9275,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.Buffer());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Buffer();
+            }());
         }
         catch (...)
         {
@@ -8505,7 +9305,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppId();
+            }());
         }
         catch (...)
         {
@@ -8531,7 +9335,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.TransportContext());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TransportContext();
+            }());
         }
         catch (...)
         {
@@ -8565,7 +9373,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
-            self->obj.TransportContext(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TransportContext(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8669,7 +9481,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
                 auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnPacketBuffer>(args, 0);
 
-                self->obj.AddAtBegin(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddAtBegin(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -8708,7 +9524,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
                 auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnPacketBuffer>(args, 0);
 
-                self->obj.Append(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Append(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -8745,7 +9565,11 @@ namespace py::cpp::Windows::Networking::Vpn
                     return nullptr;
                 }
 
-                self->obj.Clear();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Clear();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -8782,7 +9606,11 @@ namespace py::cpp::Windows::Networking::Vpn
                     return nullptr;
                 }
 
-                return py::convert(self->obj.First());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.First();
+                }());
             }
             catch (...)
             {
@@ -8818,7 +9646,11 @@ namespace py::cpp::Windows::Networking::Vpn
                     return nullptr;
                 }
 
-                return py::convert(self->obj.RemoveAtBegin());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RemoveAtBegin();
+                }());
             }
             catch (...)
             {
@@ -8854,7 +9686,11 @@ namespace py::cpp::Windows::Networking::Vpn
                     return nullptr;
                 }
 
-                return py::convert(self->obj.RemoveAtEnd());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RemoveAtEnd();
+                }());
             }
             catch (...)
             {
@@ -8886,7 +9722,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -8920,7 +9760,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnPacketBufferStatus>(arg);
 
-            self->obj.Status(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Status(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8947,7 +9791,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -8984,7 +9832,11 @@ namespace py::cpp::Windows::Networking::Vpn
     {
         try
         {
-            return py::convert(self->obj.First());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.First();
+            }());
         }
         catch (...)
         {
@@ -9061,7 +9913,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.AdditionalPin());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AdditionalPin();
+            }());
         }
         catch (...)
         {
@@ -9087,7 +9943,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.OldPasswordCredential());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OldPasswordCredential();
+            }());
         }
         catch (...)
         {
@@ -9113,7 +9973,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.PasskeyCredential());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PasskeyCredential();
+            }());
         }
         catch (...)
         {
@@ -9230,7 +10094,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.VpnPluginPackageFamilyName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.VpnPluginPackageFamilyName();
+            }());
         }
         catch (...)
         {
@@ -9264,7 +10132,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.VpnPluginPackageFamilyName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.VpnPluginPackageFamilyName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -9291,7 +10163,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.CustomConfiguration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CustomConfiguration();
+            }());
         }
         catch (...)
         {
@@ -9325,7 +10201,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.CustomConfiguration(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CustomConfiguration(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -9352,7 +10232,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.ServerUris());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServerUris();
+            }());
         }
         catch (...)
         {
@@ -9378,7 +10262,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.RequireVpnClientAppUI());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RequireVpnClientAppUI();
+            }());
         }
         catch (...)
         {
@@ -9412,7 +10300,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.RequireVpnClientAppUI(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RequireVpnClientAppUI(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -9439,7 +10331,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.ConnectionStatus());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ConnectionStatus();
+            }());
         }
         catch (...)
         {
@@ -9465,7 +10361,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProfileName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProfileName();
+            }());
         }
         catch (...)
         {
@@ -9499,7 +10399,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ProfileName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ProfileName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -9526,7 +10430,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.RememberCredentials());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RememberCredentials();
+            }());
         }
         catch (...)
         {
@@ -9560,7 +10468,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.RememberCredentials(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RememberCredentials(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -9587,7 +10499,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.AlwaysOn());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AlwaysOn();
+            }());
         }
         catch (...)
         {
@@ -9621,7 +10537,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.AlwaysOn(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AlwaysOn(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -9648,7 +10568,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppTriggers());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppTriggers();
+            }());
         }
         catch (...)
         {
@@ -9674,7 +10598,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.DomainNameInfoList());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DomainNameInfoList();
+            }());
         }
         catch (...)
         {
@@ -9700,7 +10628,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.Routes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Routes();
+            }());
         }
         catch (...)
         {
@@ -9726,7 +10658,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.TrafficFilters());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TrafficFilters();
+            }());
         }
         catch (...)
         {
@@ -9855,7 +10791,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.PrefixSize());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PrefixSize();
+            }());
         }
         catch (...)
         {
@@ -9889,7 +10829,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<uint8_t>(arg);
 
-            self->obj.PrefixSize(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PrefixSize(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -9916,7 +10860,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.Address());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Address();
+            }());
         }
         catch (...)
         {
@@ -9950,7 +10898,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<winrt::Windows::Networking::HostName>(arg);
 
-            self->obj.Address(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Address(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -10067,7 +11019,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.Ipv6InclusionRoutes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Ipv6InclusionRoutes();
+            }());
         }
         catch (...)
         {
@@ -10101,7 +11057,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Networking::Vpn::VpnRoute>>(arg);
 
-            self->obj.Ipv6InclusionRoutes(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Ipv6InclusionRoutes(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -10128,7 +11088,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.Ipv6ExclusionRoutes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Ipv6ExclusionRoutes();
+            }());
         }
         catch (...)
         {
@@ -10162,7 +11126,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Networking::Vpn::VpnRoute>>(arg);
 
-            self->obj.Ipv6ExclusionRoutes(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Ipv6ExclusionRoutes(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -10189,7 +11157,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.Ipv4InclusionRoutes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Ipv4InclusionRoutes();
+            }());
         }
         catch (...)
         {
@@ -10223,7 +11195,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Networking::Vpn::VpnRoute>>(arg);
 
-            self->obj.Ipv4InclusionRoutes(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Ipv4InclusionRoutes(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -10250,7 +11226,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.Ipv4ExclusionRoutes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Ipv4ExclusionRoutes();
+            }());
         }
         catch (...)
         {
@@ -10284,7 +11264,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Networking::Vpn::VpnRoute>>(arg);
 
-            self->obj.Ipv4ExclusionRoutes(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Ipv4ExclusionRoutes(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -10311,7 +11295,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExcludeLocalSubnets());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExcludeLocalSubnets();
+            }());
         }
         catch (...)
         {
@@ -10345,7 +11333,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.ExcludeLocalSubnets(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ExcludeLocalSubnets(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -10443,7 +11435,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.StatementOfHealth());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StatementOfHealth();
+            }());
         }
         catch (...)
         {
@@ -10560,7 +11556,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.RoutingPolicyType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RoutingPolicyType();
+            }());
         }
         catch (...)
         {
@@ -10594,7 +11594,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnRoutingPolicyType>(arg);
 
-            self->obj.RoutingPolicyType(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RoutingPolicyType(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -10621,7 +11625,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.Protocol());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Protocol();
+            }());
         }
         catch (...)
         {
@@ -10655,7 +11663,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnIPProtocol>(arg);
 
-            self->obj.Protocol(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Protocol(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -10682,7 +11694,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppId();
+            }());
         }
         catch (...)
         {
@@ -10716,7 +11732,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnAppId>(arg);
 
-            self->obj.AppId(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AppId(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -10743,7 +11763,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppClaims());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppClaims();
+            }());
         }
         catch (...)
         {
@@ -10769,7 +11793,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.LocalAddressRanges());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LocalAddressRanges();
+            }());
         }
         catch (...)
         {
@@ -10795,7 +11823,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.LocalPortRanges());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LocalPortRanges();
+            }());
         }
         catch (...)
         {
@@ -10821,7 +11853,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.RemoteAddressRanges());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RemoteAddressRanges();
+            }());
         }
         catch (...)
         {
@@ -10847,7 +11883,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.RemotePortRanges());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RemotePortRanges();
+            }());
         }
         catch (...)
         {
@@ -10969,7 +12009,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.AllowOutbound());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AllowOutbound();
+            }());
         }
         catch (...)
         {
@@ -11003,7 +12047,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.AllowOutbound(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AllowOutbound(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -11030,7 +12078,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.AllowInbound());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AllowInbound();
+            }());
         }
         catch (...)
         {
@@ -11064,7 +12116,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.AllowInbound(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AllowInbound(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -11091,7 +12147,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.TrafficFilterList());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TrafficFilterList();
+            }());
         }
         catch (...)
         {
@@ -11193,7 +12253,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                self->obj.ProcessEventAsync(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ProcessEventAsync(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -11397,7 +12461,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.AdditionalPin());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AdditionalPin();
+            }());
         }
         catch (...)
         {
@@ -11423,7 +12491,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.CertificateCredential());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CertificateCredential();
+            }());
         }
         catch (...)
         {
@@ -11449,7 +12521,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.OldPasswordCredential());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OldPasswordCredential();
+            }());
         }
         catch (...)
         {
@@ -11475,7 +12551,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.PasskeyCredential());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PasskeyCredential();
+            }());
         }
         catch (...)
         {
@@ -11713,7 +12793,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.Bordered());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Bordered();
+            }());
         }
         catch (...)
         {
@@ -11747,7 +12831,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Bordered(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Bordered(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -11774,7 +12862,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.Compulsory());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Compulsory();
+            }());
         }
         catch (...)
         {
@@ -11808,7 +12900,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Compulsory(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Compulsory(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -11835,7 +12931,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.Label());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Label();
+            }());
         }
         catch (...)
         {
@@ -11869,7 +12969,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Label(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Label(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -12156,7 +13260,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.Compulsory());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Compulsory();
+            }());
         }
         catch (...)
         {
@@ -12190,7 +13298,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Compulsory(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Compulsory(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -12217,7 +13329,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayName();
+            }());
         }
         catch (...)
         {
@@ -12251,7 +13367,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.DisplayName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DisplayName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -12278,7 +13398,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.Emphasized());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Emphasized();
+            }());
         }
         catch (...)
         {
@@ -12312,7 +13436,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Emphasized(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Emphasized(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -12608,7 +13736,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Networking::HostName>>(args, 2);
                 auto param3 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Networking::HostName>>(args, 3);
 
-                return py::convert(self->obj.CreateVpnDomainNameInfo(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateVpnDomainNameInfo(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -12831,7 +13963,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
-                return py::convert(self->obj.CreateVpnInterfaceId(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateVpnInterfaceId(param0);
+                }());
             }
             catch (...)
             {
@@ -13032,7 +14168,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Networking::HostName>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Networking::HostName>>(args, 2);
 
-                return py::convert(self->obj.CreateVpnNamespaceInfo(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateVpnNamespaceInfo(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -13251,7 +14391,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
 
-                return py::convert(self->obj.CreateVpnPacketBuffer(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateVpnPacketBuffer(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -13468,7 +14612,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
                 auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnChannel>(args, 0);
 
-                self->obj.Connect(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Connect(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -13510,7 +14658,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 auto param2 = py::convert_to<winrt::Windows::Networking::Vpn::VpnPacketBufferList>(args, 2);
                 auto param3 = py::convert_to<winrt::Windows::Networking::Vpn::VpnPacketBufferList>(args, 3);
 
-                self->obj.Decapsulate(param0, param1, param2, param3);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Decapsulate(param0, param1, param2, param3);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -13549,7 +14701,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
                 auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnChannel>(args, 0);
 
-                self->obj.Disconnect(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Disconnect(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -13590,7 +14746,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 auto param1 = py::convert_to<winrt::Windows::Networking::Vpn::VpnPacketBufferList>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Networking::Vpn::VpnPacketBufferList>(args, 2);
 
-                self->obj.Encapsulate(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Encapsulate(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -13630,13 +14790,17 @@ namespace py::cpp::Windows::Networking::Vpn
                 auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnChannel>(args, 0);
                 winrt::Windows::Networking::Vpn::VpnPacketBuffer param1{nullptr};
 
-                self->obj.GetKeepAlivePayload(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.GetKeepAlivePayload(param0, param1);
+                }
 
                 py::pyobj_handle out1{ py::convert(param1) };
                 if (!out1)
                 {
                     return nullptr;
                 }
+
                 return out1.detach();
             }
             catch (...)
@@ -14003,7 +15167,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnChannel>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                self->obj.ReconnectTransport(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ReconnectTransport(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -14207,7 +15375,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.AlwaysOn());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AlwaysOn();
+            }());
         }
         catch (...)
         {
@@ -14241,7 +15413,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.AlwaysOn(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AlwaysOn(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -14268,7 +15444,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppTriggers());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppTriggers();
+            }());
         }
         catch (...)
         {
@@ -14294,7 +15474,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.DomainNameInfoList());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DomainNameInfoList();
+            }());
         }
         catch (...)
         {
@@ -14320,7 +15504,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProfileName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProfileName();
+            }());
         }
         catch (...)
         {
@@ -14354,7 +15542,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ProfileName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ProfileName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -14381,7 +15573,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.RememberCredentials());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RememberCredentials();
+            }());
         }
         catch (...)
         {
@@ -14415,7 +15611,11 @@ namespace py::cpp::Windows::Networking::Vpn
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.RememberCredentials(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RememberCredentials(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -14442,7 +15642,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.Routes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Routes();
+            }());
         }
         catch (...)
         {
@@ -14468,7 +15672,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
 
-            return py::convert(self->obj.TrafficFilters());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TrafficFilters();
+            }());
         }
         catch (...)
         {
@@ -14845,7 +16053,11 @@ namespace py::cpp::Windows::Networking::Vpn
                 auto param0 = py::convert_to<winrt::Windows::Networking::HostName>(args, 0);
                 auto param1 = py::convert_to<uint8_t>(args, 1);
 
-                return py::convert(self->obj.CreateVpnRoute(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateVpnRoute(param0, param1);
+                }());
             }
             catch (...)
             {

@@ -38,7 +38,11 @@ namespace py::cpp::Windows::Globalization::Fonts
                 return nullptr;
             }
 
-            return py::convert(self->obj.FontFamily());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FontFamily();
+            }());
         }
         catch (...)
         {
@@ -64,7 +68,11 @@ namespace py::cpp::Windows::Globalization::Fonts
                 return nullptr;
             }
 
-            return py::convert(self->obj.FontStretch());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FontStretch();
+            }());
         }
         catch (...)
         {
@@ -90,7 +98,11 @@ namespace py::cpp::Windows::Globalization::Fonts
                 return nullptr;
             }
 
-            return py::convert(self->obj.FontStyle());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FontStyle();
+            }());
         }
         catch (...)
         {
@@ -116,7 +128,11 @@ namespace py::cpp::Windows::Globalization::Fonts
                 return nullptr;
             }
 
-            return py::convert(self->obj.FontWeight());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FontWeight();
+            }());
         }
         catch (...)
         {
@@ -142,7 +158,11 @@ namespace py::cpp::Windows::Globalization::Fonts
                 return nullptr;
             }
 
-            return py::convert(self->obj.ScaleFactor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ScaleFactor();
+            }());
         }
         catch (...)
         {
@@ -263,7 +283,11 @@ namespace py::cpp::Windows::Globalization::Fonts
                 return nullptr;
             }
 
-            return py::convert(self->obj.DocumentAlternate1Font());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DocumentAlternate1Font();
+            }());
         }
         catch (...)
         {
@@ -289,7 +313,11 @@ namespace py::cpp::Windows::Globalization::Fonts
                 return nullptr;
             }
 
-            return py::convert(self->obj.DocumentAlternate2Font());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DocumentAlternate2Font();
+            }());
         }
         catch (...)
         {
@@ -315,7 +343,11 @@ namespace py::cpp::Windows::Globalization::Fonts
                 return nullptr;
             }
 
-            return py::convert(self->obj.DocumentHeadingFont());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DocumentHeadingFont();
+            }());
         }
         catch (...)
         {
@@ -341,7 +373,11 @@ namespace py::cpp::Windows::Globalization::Fonts
                 return nullptr;
             }
 
-            return py::convert(self->obj.FixedWidthTextFont());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FixedWidthTextFont();
+            }());
         }
         catch (...)
         {
@@ -367,7 +403,11 @@ namespace py::cpp::Windows::Globalization::Fonts
                 return nullptr;
             }
 
-            return py::convert(self->obj.ModernDocumentFont());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ModernDocumentFont();
+            }());
         }
         catch (...)
         {
@@ -393,7 +433,11 @@ namespace py::cpp::Windows::Globalization::Fonts
                 return nullptr;
             }
 
-            return py::convert(self->obj.TraditionalDocumentFont());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TraditionalDocumentFont();
+            }());
         }
         catch (...)
         {
@@ -419,7 +463,11 @@ namespace py::cpp::Windows::Globalization::Fonts
                 return nullptr;
             }
 
-            return py::convert(self->obj.UICaptionFont());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UICaptionFont();
+            }());
         }
         catch (...)
         {
@@ -445,7 +493,11 @@ namespace py::cpp::Windows::Globalization::Fonts
                 return nullptr;
             }
 
-            return py::convert(self->obj.UIHeadingFont());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UIHeadingFont();
+            }());
         }
         catch (...)
         {
@@ -471,7 +523,11 @@ namespace py::cpp::Windows::Globalization::Fonts
                 return nullptr;
             }
 
-            return py::convert(self->obj.UINotificationHeadingFont());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UINotificationHeadingFont();
+            }());
         }
         catch (...)
         {
@@ -497,7 +553,11 @@ namespace py::cpp::Windows::Globalization::Fonts
                 return nullptr;
             }
 
-            return py::convert(self->obj.UITextFont());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UITextFont();
+            }());
         }
         catch (...)
         {
@@ -523,7 +583,11 @@ namespace py::cpp::Windows::Globalization::Fonts
                 return nullptr;
             }
 
-            return py::convert(self->obj.UITitleFont());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UITitleFont();
+            }());
         }
         catch (...)
         {

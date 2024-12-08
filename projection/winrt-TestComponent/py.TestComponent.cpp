@@ -51,7 +51,11 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                return py::convert(self->obj.One());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.One();
+                }());
             }
             catch (...)
             {
@@ -264,7 +268,11 @@ namespace py::cpp::TestComponent
             {
                 auto param0 = py::convert_to<winrt::TestComponent::Composable>(args, 0);
 
-                return py::convert(winrt::TestComponent::Composable::ExpectComposable(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::TestComponent::Composable::ExpectComposable(param0);
+                }());
             }
             catch (...)
             {
@@ -289,7 +297,11 @@ namespace py::cpp::TestComponent
             {
                 auto param0 = py::convert_to<winrt::TestComponent::IRequiredFour>(args, 0);
 
-                return py::convert(winrt::TestComponent::Composable::ExpectRequiredFour(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::TestComponent::Composable::ExpectRequiredFour(param0);
+                }());
             }
             catch (...)
             {
@@ -314,7 +326,11 @@ namespace py::cpp::TestComponent
             {
                 auto param0 = py::convert_to<winrt::TestComponent::IRequiredOne>(args, 0);
 
-                return py::convert(winrt::TestComponent::Composable::ExpectRequiredOne(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::TestComponent::Composable::ExpectRequiredOne(param0);
+                }());
             }
             catch (...)
             {
@@ -339,7 +355,11 @@ namespace py::cpp::TestComponent
             {
                 auto param0 = py::convert_to<winrt::TestComponent::IRequiredThree>(args, 0);
 
-                return py::convert(winrt::TestComponent::Composable::ExpectRequiredThree(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::TestComponent::Composable::ExpectRequiredThree(param0);
+                }());
             }
             catch (...)
             {
@@ -364,7 +384,11 @@ namespace py::cpp::TestComponent
             {
                 auto param0 = py::convert_to<winrt::TestComponent::IRequiredTwo>(args, 0);
 
-                return py::convert(winrt::TestComponent::Composable::ExpectRequiredTwo(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::TestComponent::Composable::ExpectRequiredTwo(param0);
+                }());
             }
             catch (...)
             {
@@ -387,7 +411,11 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                return py::convert(self->obj.try_as<winrt::TestComponent::Composable>().Four());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.try_as<winrt::TestComponent::Composable>().Four();
+                }());
             }
             catch (...)
             {
@@ -410,7 +438,11 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                return py::convert(self->obj.try_as<winrt::TestComponent::Composable>().One());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.try_as<winrt::TestComponent::Composable>().One();
+                }());
             }
             catch (...)
             {
@@ -433,7 +465,11 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                return py::convert(self->obj.try_as<winrt::TestComponent::Composable>().Three());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.try_as<winrt::TestComponent::Composable>().Three();
+                }());
             }
             catch (...)
             {
@@ -456,7 +492,11 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                return py::convert(self->obj.try_as<winrt::TestComponent::Composable>().Two());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.try_as<winrt::TestComponent::Composable>().Two();
+                }());
             }
             catch (...)
             {
@@ -475,7 +515,11 @@ namespace py::cpp::TestComponent
     {
         try
         {
-            return py::convert(self->obj.try_as<winrt::TestComponent::Composable>().Value());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::TestComponent::Composable>().Value();
+            }());
         }
         catch (...)
         {
@@ -496,7 +540,11 @@ namespace py::cpp::TestComponent
         {
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.try_as<winrt::TestComponent::Composable>().Value(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::TestComponent::Composable>().Value(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -946,7 +994,11 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                self->obj.try_as<winrt::TestComponent::OverloadClass>().Overload();
+                {
+                    auto _gil = release_gil();
+                    self->obj.try_as<winrt::TestComponent::OverloadClass>().Overload();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -972,7 +1024,11 @@ namespace py::cpp::TestComponent
             {
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                py::get_inner_or_self(self->obj).try_as<winrt::TestComponent::IOverloadClassOverrides>().Overload(param0);
+                {
+                    auto _gil = release_gil();
+                    py::get_inner_or_self(self->obj).try_as<winrt::TestComponent::IOverloadClassOverrides>().Overload(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1000,7 +1056,11 @@ namespace py::cpp::TestComponent
                 auto param1 = py::convert_to<int32_t>(args, 1);
                 auto param2 = py::convert_to<int32_t>(args, 2);
 
-                self->obj.try_as<winrt::TestComponent::IOverloadClassProtected>().Overload(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.try_as<winrt::TestComponent::IOverloadClassProtected>().Overload(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1027,7 +1087,11 @@ namespace py::cpp::TestComponent
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
-                py::get_inner_or_self(self->obj).try_as<winrt::TestComponent::IOverloadClassOverrides2>().Overload(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    py::get_inner_or_self(self->obj).try_as<winrt::TestComponent::IOverloadClassOverrides2>().Overload(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1254,7 +1318,11 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                self->obj.try_as<winrt::TestComponent::Override>().CallOverridable();
+                {
+                    auto _gil = release_gil();
+                    self->obj.try_as<winrt::TestComponent::Override>().CallOverridable();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1278,7 +1346,11 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                self->obj.try_as<winrt::TestComponent::Override>().CallProtected();
+                {
+                    auto _gil = release_gil();
+                    self->obj.try_as<winrt::TestComponent::Override>().CallProtected();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1302,7 +1374,11 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                py::get_inner_or_self(self->obj).try_as<winrt::TestComponent::IOverrideOverrides>().OnOverridable();
+                {
+                    auto _gil = release_gil();
+                    py::get_inner_or_self(self->obj).try_as<winrt::TestComponent::IOverrideOverrides>().OnOverridable();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1326,7 +1402,11 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                self->obj.try_as<winrt::TestComponent::IOverrideProtected>().OnProtected();
+                {
+                    auto _gil = release_gil();
+                    self->obj.try_as<winrt::TestComponent::IOverrideProtected>().OnProtected();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1348,7 +1428,11 @@ namespace py::cpp::TestComponent
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.try_as<winrt::TestComponent::Override>().OverridableCalled(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::TestComponent::Override>().OverridableCalled(param0);
+            }());
         }
         catch (...)
         {
@@ -1363,7 +1447,11 @@ namespace py::cpp::TestComponent
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.try_as<winrt::TestComponent::Override>().OverridableCalled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::TestComponent::Override>().OverridableCalled(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1379,7 +1467,11 @@ namespace py::cpp::TestComponent
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.try_as<winrt::TestComponent::Override>().ProtectedCalled(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::TestComponent::Override>().ProtectedCalled(param0);
+            }());
         }
         catch (...)
         {
@@ -1394,7 +1486,11 @@ namespace py::cpp::TestComponent
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.try_as<winrt::TestComponent::Override>().ProtectedCalled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::TestComponent::Override>().ProtectedCalled(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1505,7 +1601,11 @@ namespace py::cpp::TestComponent
             {
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(winrt::TestComponent::TestRunner::CreateAsyncAction(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::TestComponent::TestRunner::CreateAsyncAction(param0);
+                }());
             }
             catch (...)
             {
@@ -1528,7 +1628,11 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                return py::convert(winrt::TestComponent::TestRunner::CreateInt32Vector());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::TestComponent::TestRunner::CreateInt32Vector();
+                }());
             }
             catch (...)
             {
@@ -1551,7 +1655,11 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                return py::convert(winrt::TestComponent::TestRunner::CreateStringVector());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::TestComponent::TestRunner::CreateStringVector();
+                }());
             }
             catch (...)
             {
@@ -1574,7 +1682,11 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                return py::convert(winrt::TestComponent::TestRunner::CreateStringableVector());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::TestComponent::TestRunner::CreateStringableVector();
+                }());
             }
             catch (...)
             {
@@ -1599,7 +1711,11 @@ namespace py::cpp::TestComponent
             {
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(winrt::TestComponent::TestRunner::CreateTimeSpan(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::TestComponent::TestRunner::CreateTimeSpan(param0);
+                }());
             }
             catch (...)
             {
@@ -1624,7 +1740,11 @@ namespace py::cpp::TestComponent
             {
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
-                return py::convert(winrt::TestComponent::TestRunner::ExpectObject(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::TestComponent::TestRunner::ExpectObject(param0);
+                }());
             }
             catch (...)
             {
@@ -1647,7 +1767,11 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                return py::convert(winrt::TestComponent::TestRunner::MakeTests());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::TestComponent::TestRunner::MakeTests();
+                }());
             }
             catch (...)
             {
@@ -1672,7 +1796,11 @@ namespace py::cpp::TestComponent
             {
                 auto param0 = py::convert_to<winrt::TestComponent::TestHandler>(args, 0);
 
-                return py::convert(winrt::TestComponent::TestRunner::TestConsumer(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::TestComponent::TestRunner::TestConsumer(param0);
+                }());
             }
             catch (...)
             {
@@ -1697,7 +1825,11 @@ namespace py::cpp::TestComponent
             {
                 auto param0 = py::convert_to<winrt::TestComponent::ITests>(args, 0);
 
-                winrt::TestComponent::TestRunner::TestProducer(param0);
+                {
+                    auto _gil = release_gil();
+                    winrt::TestComponent::TestRunner::TestProducer(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1721,7 +1853,11 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                winrt::TestComponent::TestRunner::TestSelf();
+                {
+                    auto _gil = release_gil();
+                    winrt::TestComponent::TestRunner::TestSelf();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1819,7 +1955,11 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                return py::convert(self->obj.Four());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Four();
+                }());
             }
             catch (...)
             {
@@ -1842,7 +1982,11 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                return py::convert(self->obj.One());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.One();
+                }());
             }
             catch (...)
             {
@@ -1865,7 +2009,11 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                return py::convert(self->obj.Three());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Three();
+                }());
             }
             catch (...)
             {
@@ -1888,7 +2036,11 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                return py::convert(self->obj.Two());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Two();
+                }());
             }
             catch (...)
             {
@@ -2147,7 +2299,11 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                return py::convert(self->obj.One());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.One();
+                }());
             }
             catch (...)
             {
@@ -2325,7 +2481,11 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                return py::convert(self->obj.One());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.One();
+                }());
             }
             catch (...)
             {
@@ -2348,7 +2508,11 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                return py::convert(self->obj.Three());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Three();
+                }());
             }
             catch (...)
             {
@@ -2371,7 +2535,11 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                return py::convert(self->obj.Two());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Two();
+                }());
             }
             catch (...)
             {
@@ -2603,7 +2771,11 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                return py::convert(self->obj.One());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.One();
+                }());
             }
             catch (...)
             {
@@ -2626,7 +2798,11 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                return py::convert(self->obj.Two());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Two();
+                }());
             }
             catch (...)
             {
@@ -2835,7 +3011,11 @@ namespace py::cpp::TestComponent
                 auto param1 = py::convert_to<py::pybuf_view<bool, true>>(args, 1);
                 winrt::com_array<bool> param2{};
 
-                auto return_value = self->obj.Array1(param0, param1, param2);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Array1(param0, param1, param2);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -2847,6 +3027,7 @@ namespace py::cpp::TestComponent
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out2.get());
             }
             catch (...)
@@ -2874,7 +3055,11 @@ namespace py::cpp::TestComponent
                 auto param1 = py::convert_to<py::pybuf_view<double, true>>(args, 1);
                 winrt::com_array<double> param2{};
 
-                auto return_value = self->obj.Array10(param0, param1, param2);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Array10(param0, param1, param2);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -2886,6 +3071,7 @@ namespace py::cpp::TestComponent
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out2.get());
             }
             catch (...)
@@ -2911,7 +3097,11 @@ namespace py::cpp::TestComponent
             {
                 auto param0 = py::convert_to<winrt::TestComponent::Array10Handler>(args, 0);
 
-                self->obj.Array10Call(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Array10Call(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2939,7 +3129,11 @@ namespace py::cpp::TestComponent
                 auto param1 = py::convert_to<py::pybuf_view<char16_t, true>>(args, 1);
                 winrt::com_array<char16_t> param2{};
 
-                auto return_value = self->obj.Array11(param0, param1, param2);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Array11(param0, param1, param2);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -2951,6 +3145,7 @@ namespace py::cpp::TestComponent
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out2.get());
             }
             catch (...)
@@ -2976,7 +3171,11 @@ namespace py::cpp::TestComponent
             {
                 auto param0 = py::convert_to<winrt::TestComponent::Array11Handler>(args, 0);
 
-                self->obj.Array11Call(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Array11Call(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3004,7 +3203,11 @@ namespace py::cpp::TestComponent
                 auto param1 = py::convert_to<py::pybuf_view<winrt::hstring, true>>(args, 1);
                 winrt::com_array<winrt::hstring> param2{};
 
-                auto return_value = self->obj.Array12(param0, param1, param2);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Array12(param0, param1, param2);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -3016,6 +3219,7 @@ namespace py::cpp::TestComponent
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out2.get());
             }
             catch (...)
@@ -3041,7 +3245,11 @@ namespace py::cpp::TestComponent
             {
                 auto param0 = py::convert_to<winrt::TestComponent::Array12Handler>(args, 0);
 
-                self->obj.Array12Call(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Array12Call(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3069,7 +3277,11 @@ namespace py::cpp::TestComponent
                 auto param1 = py::convert_to<py::pybuf_view<winrt::TestComponent::Blittable, true>>(args, 1);
                 winrt::com_array<winrt::TestComponent::Blittable> param2{};
 
-                auto return_value = self->obj.Array13(param0, param1, param2);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Array13(param0, param1, param2);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -3081,6 +3293,7 @@ namespace py::cpp::TestComponent
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out2.get());
             }
             catch (...)
@@ -3106,7 +3319,11 @@ namespace py::cpp::TestComponent
             {
                 auto param0 = py::convert_to<winrt::TestComponent::Array13Handler>(args, 0);
 
-                self->obj.Array13Call(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Array13Call(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3134,7 +3351,11 @@ namespace py::cpp::TestComponent
                 auto param1 = py::convert_to<py::pybuf_view<winrt::TestComponent::NonBlittable, true>>(args, 1);
                 winrt::com_array<winrt::TestComponent::NonBlittable> param2{};
 
-                auto return_value = self->obj.Array14(param0, param1, param2);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Array14(param0, param1, param2);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -3146,6 +3367,7 @@ namespace py::cpp::TestComponent
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out2.get());
             }
             catch (...)
@@ -3171,7 +3393,11 @@ namespace py::cpp::TestComponent
             {
                 auto param0 = py::convert_to<winrt::TestComponent::Array14Handler>(args, 0);
 
-                self->obj.Array14Call(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Array14Call(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3199,7 +3425,11 @@ namespace py::cpp::TestComponent
                 auto param1 = py::convert_to<py::pybuf_view<winrt::TestComponent::Nested, true>>(args, 1);
                 winrt::com_array<winrt::TestComponent::Nested> param2{};
 
-                auto return_value = self->obj.Array15(param0, param1, param2);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Array15(param0, param1, param2);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -3211,6 +3441,7 @@ namespace py::cpp::TestComponent
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out2.get());
             }
             catch (...)
@@ -3236,7 +3467,11 @@ namespace py::cpp::TestComponent
             {
                 auto param0 = py::convert_to<winrt::TestComponent::Array15Handler>(args, 0);
 
-                self->obj.Array15Call(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Array15Call(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3264,7 +3499,11 @@ namespace py::cpp::TestComponent
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::IStringable, true>>(args, 1);
                 winrt::com_array<winrt::Windows::Foundation::IStringable> param2{};
 
-                auto return_value = self->obj.Array16(param0, param1, param2);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Array16(param0, param1, param2);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -3276,6 +3515,7 @@ namespace py::cpp::TestComponent
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out2.get());
             }
             catch (...)
@@ -3301,7 +3541,11 @@ namespace py::cpp::TestComponent
             {
                 auto param0 = py::convert_to<winrt::TestComponent::Array16Handler>(args, 0);
 
-                self->obj.Array16Call(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Array16Call(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3327,7 +3571,11 @@ namespace py::cpp::TestComponent
             {
                 auto param0 = py::convert_to<winrt::TestComponent::Array1Handler>(args, 0);
 
-                self->obj.Array1Call(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Array1Call(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3355,7 +3603,11 @@ namespace py::cpp::TestComponent
                 auto param1 = py::convert_to<py::pybuf_view<uint8_t, true>>(args, 1);
                 winrt::com_array<uint8_t> param2{};
 
-                auto return_value = self->obj.Array2(param0, param1, param2);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Array2(param0, param1, param2);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -3367,6 +3619,7 @@ namespace py::cpp::TestComponent
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out2.get());
             }
             catch (...)
@@ -3392,7 +3645,11 @@ namespace py::cpp::TestComponent
             {
                 auto param0 = py::convert_to<winrt::TestComponent::Array2Handler>(args, 0);
 
-                self->obj.Array2Call(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Array2Call(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3420,7 +3677,11 @@ namespace py::cpp::TestComponent
                 auto param1 = py::convert_to<py::pybuf_view<uint16_t, true>>(args, 1);
                 winrt::com_array<uint16_t> param2{};
 
-                auto return_value = self->obj.Array3(param0, param1, param2);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Array3(param0, param1, param2);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -3432,6 +3693,7 @@ namespace py::cpp::TestComponent
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out2.get());
             }
             catch (...)
@@ -3457,7 +3719,11 @@ namespace py::cpp::TestComponent
             {
                 auto param0 = py::convert_to<winrt::TestComponent::Array3Handler>(args, 0);
 
-                self->obj.Array3Call(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Array3Call(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3485,7 +3751,11 @@ namespace py::cpp::TestComponent
                 auto param1 = py::convert_to<py::pybuf_view<uint32_t, true>>(args, 1);
                 winrt::com_array<uint32_t> param2{};
 
-                auto return_value = self->obj.Array4(param0, param1, param2);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Array4(param0, param1, param2);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -3497,6 +3767,7 @@ namespace py::cpp::TestComponent
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out2.get());
             }
             catch (...)
@@ -3522,7 +3793,11 @@ namespace py::cpp::TestComponent
             {
                 auto param0 = py::convert_to<winrt::TestComponent::Array4Handler>(args, 0);
 
-                self->obj.Array4Call(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Array4Call(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3550,7 +3825,11 @@ namespace py::cpp::TestComponent
                 auto param1 = py::convert_to<py::pybuf_view<uint64_t, true>>(args, 1);
                 winrt::com_array<uint64_t> param2{};
 
-                auto return_value = self->obj.Array5(param0, param1, param2);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Array5(param0, param1, param2);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -3562,6 +3841,7 @@ namespace py::cpp::TestComponent
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out2.get());
             }
             catch (...)
@@ -3587,7 +3867,11 @@ namespace py::cpp::TestComponent
             {
                 auto param0 = py::convert_to<winrt::TestComponent::Array5Handler>(args, 0);
 
-                self->obj.Array5Call(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Array5Call(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3615,7 +3899,11 @@ namespace py::cpp::TestComponent
                 auto param1 = py::convert_to<py::pybuf_view<int16_t, true>>(args, 1);
                 winrt::com_array<int16_t> param2{};
 
-                auto return_value = self->obj.Array6(param0, param1, param2);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Array6(param0, param1, param2);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -3627,6 +3915,7 @@ namespace py::cpp::TestComponent
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out2.get());
             }
             catch (...)
@@ -3652,7 +3941,11 @@ namespace py::cpp::TestComponent
             {
                 auto param0 = py::convert_to<winrt::TestComponent::Array6Handler>(args, 0);
 
-                self->obj.Array6Call(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Array6Call(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3680,7 +3973,11 @@ namespace py::cpp::TestComponent
                 auto param1 = py::convert_to<py::pybuf_view<int32_t, true>>(args, 1);
                 winrt::com_array<int32_t> param2{};
 
-                auto return_value = self->obj.Array7(param0, param1, param2);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Array7(param0, param1, param2);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -3692,6 +3989,7 @@ namespace py::cpp::TestComponent
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out2.get());
             }
             catch (...)
@@ -3717,7 +4015,11 @@ namespace py::cpp::TestComponent
             {
                 auto param0 = py::convert_to<winrt::TestComponent::Array7Handler>(args, 0);
 
-                self->obj.Array7Call(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Array7Call(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3745,7 +4047,11 @@ namespace py::cpp::TestComponent
                 auto param1 = py::convert_to<py::pybuf_view<int64_t, true>>(args, 1);
                 winrt::com_array<int64_t> param2{};
 
-                auto return_value = self->obj.Array8(param0, param1, param2);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Array8(param0, param1, param2);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -3757,6 +4063,7 @@ namespace py::cpp::TestComponent
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out2.get());
             }
             catch (...)
@@ -3782,7 +4089,11 @@ namespace py::cpp::TestComponent
             {
                 auto param0 = py::convert_to<winrt::TestComponent::Array8Handler>(args, 0);
 
-                self->obj.Array8Call(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Array8Call(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3810,7 +4121,11 @@ namespace py::cpp::TestComponent
                 auto param1 = py::convert_to<py::pybuf_view<float, true>>(args, 1);
                 winrt::com_array<float> param2{};
 
-                auto return_value = self->obj.Array9(param0, param1, param2);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Array9(param0, param1, param2);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -3822,6 +4137,7 @@ namespace py::cpp::TestComponent
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out2.get());
             }
             catch (...)
@@ -3847,7 +4163,11 @@ namespace py::cpp::TestComponent
             {
                 auto param0 = py::convert_to<winrt::TestComponent::Array9Handler>(args, 0);
 
-                self->obj.Array9Call(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Array9Call(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3874,7 +4194,11 @@ namespace py::cpp::TestComponent
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IAsyncAction>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                return py::convert(self->obj.Async1(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Async1(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -3899,7 +4223,11 @@ namespace py::cpp::TestComponent
             {
                 auto param0 = py::convert_to<winrt::TestComponent::Async1Handler>(args, 0);
 
-                self->obj.Async1Call(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Async1Call(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3927,7 +4255,11 @@ namespace py::cpp::TestComponent
                 auto param1 = py::convert_to<bool>(args, 1);
                 auto param2 = py::convert_to<int32_t>(args, 2);
 
-                return py::convert(self->obj.Async2(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Async2(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -3952,7 +4284,11 @@ namespace py::cpp::TestComponent
             {
                 auto param0 = py::convert_to<winrt::TestComponent::Async2Handler>(args, 0);
 
-                self->obj.Async2Call(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Async2Call(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3980,7 +4316,11 @@ namespace py::cpp::TestComponent
                 auto param1 = py::convert_to<bool>(args, 1);
                 auto param2 = py::convert_to<int32_t>(args, 2);
 
-                return py::convert(self->obj.Async3(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Async3(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -4005,7 +4345,11 @@ namespace py::cpp::TestComponent
             {
                 auto param0 = py::convert_to<winrt::TestComponent::Async3Handler>(args, 0);
 
-                self->obj.Async3Call(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Async3Call(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4034,7 +4378,11 @@ namespace py::cpp::TestComponent
                 auto param2 = py::convert_to<int32_t>(args, 2);
                 auto param3 = py::convert_to<int32_t>(args, 3);
 
-                return py::convert(self->obj.Async4(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Async4(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -4059,7 +4407,11 @@ namespace py::cpp::TestComponent
             {
                 auto param0 = py::convert_to<winrt::TestComponent::Async4Handler>(args, 0);
 
-                self->obj.Async4Call(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Async4Call(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4086,7 +4438,11 @@ namespace py::cpp::TestComponent
                 auto param0 = py::convert_to<uint8_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                return py::convert(self->obj.Box1(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Box1(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -4112,7 +4468,11 @@ namespace py::cpp::TestComponent
                 auto param0 = py::convert_to<double>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                return py::convert(self->obj.Box10(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Box10(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -4138,7 +4498,11 @@ namespace py::cpp::TestComponent
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                return py::convert(self->obj.Box11(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Box11(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -4164,7 +4528,11 @@ namespace py::cpp::TestComponent
                 auto param0 = py::convert_to<char16_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                return py::convert(self->obj.Box12(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Box12(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -4190,7 +4558,11 @@ namespace py::cpp::TestComponent
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                return py::convert(self->obj.Box13(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Box13(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -4216,7 +4588,11 @@ namespace py::cpp::TestComponent
                 auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                return py::convert(self->obj.Box14(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Box14(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -4242,7 +4618,11 @@ namespace py::cpp::TestComponent
                 auto param0 = py::convert_to<winrt::TestComponent::Blittable>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                return py::convert(self->obj.Box15(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Box15(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -4268,7 +4648,11 @@ namespace py::cpp::TestComponent
                 auto param0 = py::convert_to<winrt::TestComponent::NonBlittable>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                return py::convert(self->obj.Box16(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Box16(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -4294,7 +4678,11 @@ namespace py::cpp::TestComponent
                 auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                return py::convert(self->obj.Box17(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Box17(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -4320,7 +4708,11 @@ namespace py::cpp::TestComponent
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                return py::convert(self->obj.Box18(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Box18(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -4346,7 +4738,11 @@ namespace py::cpp::TestComponent
                 auto param0 = py::convert_to<py::pybuf_view<bool, false>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                return py::convert(self->obj.Box19(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Box19(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -4372,7 +4768,11 @@ namespace py::cpp::TestComponent
                 auto param0 = py::convert_to<uint16_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                return py::convert(self->obj.Box2(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Box2(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -4398,7 +4798,11 @@ namespace py::cpp::TestComponent
                 auto param0 = py::convert_to<py::pybuf_view<winrt::hstring, false>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                return py::convert(self->obj.Box20(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Box20(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -4424,7 +4828,11 @@ namespace py::cpp::TestComponent
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::TimeSpan, false>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                return py::convert(self->obj.Box21(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Box21(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -4450,7 +4858,11 @@ namespace py::cpp::TestComponent
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                return py::convert(self->obj.Box3(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Box3(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -4476,7 +4888,11 @@ namespace py::cpp::TestComponent
                 auto param0 = py::convert_to<uint64_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                return py::convert(self->obj.Box4(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Box4(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -4502,7 +4918,11 @@ namespace py::cpp::TestComponent
                 auto param0 = py::convert_to<int16_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                return py::convert(self->obj.Box5(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Box5(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -4528,7 +4948,11 @@ namespace py::cpp::TestComponent
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                return py::convert(self->obj.Box6(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Box6(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -4554,7 +4978,11 @@ namespace py::cpp::TestComponent
                 auto param0 = py::convert_to<int64_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                return py::convert(self->obj.Box7(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Box7(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -4580,7 +5008,11 @@ namespace py::cpp::TestComponent
                 auto param0 = py::convert_to<bool>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                return py::convert(self->obj.Box8(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Box8(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -4606,7 +5038,11 @@ namespace py::cpp::TestComponent
                 auto param0 = py::convert_to<float>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                return py::convert(self->obj.Box9(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Box9(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -4632,7 +5068,11 @@ namespace py::cpp::TestComponent
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
                 winrt::Windows::Foundation::Collections::IIterable<winrt::hstring> param1{nullptr};
 
-                auto return_value = self->obj.Collection1(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Collection1(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -4644,6 +5084,7 @@ namespace py::cpp::TestComponent
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -4669,7 +5110,11 @@ namespace py::cpp::TestComponent
             {
                 auto param0 = py::convert_to<winrt::TestComponent::Collection1Handler>(args, 0);
 
-                self->obj.Collection1Call(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Collection1Call(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4696,7 +5141,11 @@ namespace py::cpp::TestComponent
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::hstring>>>(args, 0);
                 winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::hstring>> param1{nullptr};
 
-                auto return_value = self->obj.Collection2(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Collection2(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -4708,6 +5157,7 @@ namespace py::cpp::TestComponent
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -4733,7 +5183,11 @@ namespace py::cpp::TestComponent
             {
                 auto param0 = py::convert_to<winrt::TestComponent::Collection2Handler>(args, 0);
 
-                self->obj.Collection2Call(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Collection2Call(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4760,7 +5214,11 @@ namespace py::cpp::TestComponent
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring>>(args, 0);
                 winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring> param1{nullptr};
 
-                auto return_value = self->obj.Collection3(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Collection3(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -4772,6 +5230,7 @@ namespace py::cpp::TestComponent
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -4797,7 +5256,11 @@ namespace py::cpp::TestComponent
             {
                 auto param0 = py::convert_to<winrt::TestComponent::Collection3Handler>(args, 0);
 
-                self->obj.Collection3Call(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Collection3Call(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4824,7 +5287,11 @@ namespace py::cpp::TestComponent
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::hstring>>(args, 0);
                 winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::hstring> param1{nullptr};
 
-                auto return_value = self->obj.Collection4(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Collection4(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -4836,6 +5303,7 @@ namespace py::cpp::TestComponent
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -4861,7 +5329,11 @@ namespace py::cpp::TestComponent
             {
                 auto param0 = py::convert_to<winrt::TestComponent::Collection4Handler>(args, 0);
 
-                self->obj.Collection4Call(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Collection4Call(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4888,7 +5360,11 @@ namespace py::cpp::TestComponent
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::hstring>>(args, 0);
                 winrt::Windows::Foundation::Collections::IVector<winrt::hstring> param1{nullptr};
 
-                auto return_value = self->obj.Collection5(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Collection5(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -4900,6 +5376,7 @@ namespace py::cpp::TestComponent
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -4925,7 +5402,11 @@ namespace py::cpp::TestComponent
             {
                 auto param0 = py::convert_to<winrt::TestComponent::Collection5Handler>(args, 0);
 
-                self->obj.Collection5Call(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Collection5Call(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4952,7 +5433,11 @@ namespace py::cpp::TestComponent
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::hstring>>(args, 0);
                 winrt::Windows::Foundation::Collections::IVectorView<winrt::hstring> param1{nullptr};
 
-                auto return_value = self->obj.Collection6(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Collection6(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -4964,6 +5449,7 @@ namespace py::cpp::TestComponent
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -4989,7 +5475,11 @@ namespace py::cpp::TestComponent
             {
                 auto param0 = py::convert_to<winrt::TestComponent::Collection6Handler>(args, 0);
 
-                self->obj.Collection6Call(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Collection6Call(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5015,7 +5505,11 @@ namespace py::cpp::TestComponent
             {
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                self->obj.Event1Call(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Event1Call(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5041,7 +5535,11 @@ namespace py::cpp::TestComponent
             {
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                self->obj.Event2Call(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Event2Call(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5068,7 +5566,11 @@ namespace py::cpp::TestComponent
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::TestComponent::Blittable>>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
-                return py::convert(self->obj.GetBlittableVectorSubset(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetBlittableVectorSubset(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -5094,7 +5596,11 @@ namespace py::cpp::TestComponent
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<bool>>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
-                return py::convert(self->obj.GetBooleanVectorSubset(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetBooleanVectorSubset(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -5120,7 +5626,11 @@ namespace py::cpp::TestComponent
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::TestComponent::Class>>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
-                return py::convert(self->obj.GetClassVectorSubset(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetClassVectorSubset(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -5146,7 +5656,11 @@ namespace py::cpp::TestComponent
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::TestComponent::Composable>>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
-                return py::convert(self->obj.GetComposableClassVectorSubset(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetComposableClassVectorSubset(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -5172,7 +5686,11 @@ namespace py::cpp::TestComponent
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::TestComponent::IRequiredOne>>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
-                return py::convert(self->obj.GetInterfaceVectorSubset(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetInterfaceVectorSubset(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -5198,7 +5716,11 @@ namespace py::cpp::TestComponent
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::TestComponent::NonBlittable>>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
-                return py::convert(self->obj.GetNonBlittableVectorSubset(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetNonBlittableVectorSubset(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -5224,7 +5746,11 @@ namespace py::cpp::TestComponent
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Foundation::IInspectable>>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
-                return py::convert(self->obj.GetObjectVectorSubset(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetObjectVectorSubset(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -5250,7 +5776,11 @@ namespace py::cpp::TestComponent
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::hstring>>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
-                return py::convert(self->obj.GetStringVectorSubset(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetStringVectorSubset(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -5276,7 +5806,11 @@ namespace py::cpp::TestComponent
                 auto param0 = py::convert_to<bool>(args, 0);
                 bool param1{};
 
-                auto return_value = self->obj.Param1(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Param1(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -5288,6 +5822,7 @@ namespace py::cpp::TestComponent
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -5314,7 +5849,11 @@ namespace py::cpp::TestComponent
                 auto param0 = py::convert_to<double>(args, 0);
                 double param1{};
 
-                auto return_value = self->obj.Param10(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Param10(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -5326,6 +5865,7 @@ namespace py::cpp::TestComponent
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -5351,7 +5891,11 @@ namespace py::cpp::TestComponent
             {
                 auto param0 = py::convert_to<winrt::TestComponent::Param10Handler>(args, 0);
 
-                self->obj.Param10Call(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Param10Call(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5378,7 +5922,11 @@ namespace py::cpp::TestComponent
                 auto param0 = py::convert_to<char16_t>(args, 0);
                 char16_t param1{};
 
-                auto return_value = self->obj.Param11(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Param11(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -5390,6 +5938,7 @@ namespace py::cpp::TestComponent
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -5415,7 +5964,11 @@ namespace py::cpp::TestComponent
             {
                 auto param0 = py::convert_to<winrt::TestComponent::Param11Handler>(args, 0);
 
-                self->obj.Param11Call(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Param11Call(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5442,7 +5995,11 @@ namespace py::cpp::TestComponent
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 winrt::hstring param1{};
 
-                auto return_value = self->obj.Param12(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Param12(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -5454,6 +6011,7 @@ namespace py::cpp::TestComponent
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -5479,7 +6037,11 @@ namespace py::cpp::TestComponent
             {
                 auto param0 = py::convert_to<winrt::TestComponent::Param12Handler>(args, 0);
 
-                self->obj.Param12Call(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Param12Call(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5507,7 +6069,11 @@ namespace py::cpp::TestComponent
                 auto param1 = py::convert_to<winrt::TestComponent::Blittable>(args, 1);
                 winrt::TestComponent::Blittable param2{};
 
-                auto return_value = self->obj.Param13(param0, param1, param2);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Param13(param0, param1, param2);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -5519,6 +6085,7 @@ namespace py::cpp::TestComponent
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out2.get());
             }
             catch (...)
@@ -5544,7 +6111,11 @@ namespace py::cpp::TestComponent
             {
                 auto param0 = py::convert_to<winrt::TestComponent::Param13Handler>(args, 0);
 
-                self->obj.Param13Call(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Param13Call(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5572,7 +6143,11 @@ namespace py::cpp::TestComponent
                 auto param1 = py::convert_to<winrt::TestComponent::NonBlittable>(args, 1);
                 winrt::TestComponent::NonBlittable param2{};
 
-                auto return_value = self->obj.Param14(param0, param1, param2);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Param14(param0, param1, param2);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -5584,6 +6159,7 @@ namespace py::cpp::TestComponent
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out2.get());
             }
             catch (...)
@@ -5609,7 +6185,11 @@ namespace py::cpp::TestComponent
             {
                 auto param0 = py::convert_to<winrt::TestComponent::Param14Handler>(args, 0);
 
-                self->obj.Param14Call(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Param14Call(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5637,7 +6217,11 @@ namespace py::cpp::TestComponent
                 auto param1 = py::convert_to<winrt::TestComponent::Nested>(args, 1);
                 winrt::TestComponent::Nested param2{};
 
-                auto return_value = self->obj.Param15(param0, param1, param2);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Param15(param0, param1, param2);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -5649,6 +6233,7 @@ namespace py::cpp::TestComponent
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out2.get());
             }
             catch (...)
@@ -5674,7 +6259,11 @@ namespace py::cpp::TestComponent
             {
                 auto param0 = py::convert_to<winrt::TestComponent::Param15Handler>(args, 0);
 
-                self->obj.Param15Call(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Param15Call(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5700,7 +6289,11 @@ namespace py::cpp::TestComponent
             {
                 auto param0 = py::convert_to<winrt::TestComponent::Param1Handler>(args, 0);
 
-                self->obj.Param1Call(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Param1Call(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5727,7 +6320,11 @@ namespace py::cpp::TestComponent
                 auto param0 = py::convert_to<uint8_t>(args, 0);
                 uint8_t param1{};
 
-                auto return_value = self->obj.Param2(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Param2(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -5739,6 +6336,7 @@ namespace py::cpp::TestComponent
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -5764,7 +6362,11 @@ namespace py::cpp::TestComponent
             {
                 auto param0 = py::convert_to<winrt::TestComponent::Param2Handler>(args, 0);
 
-                self->obj.Param2Call(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Param2Call(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5791,7 +6393,11 @@ namespace py::cpp::TestComponent
                 auto param0 = py::convert_to<uint16_t>(args, 0);
                 uint16_t param1{};
 
-                auto return_value = self->obj.Param3(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Param3(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -5803,6 +6409,7 @@ namespace py::cpp::TestComponent
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -5828,7 +6435,11 @@ namespace py::cpp::TestComponent
             {
                 auto param0 = py::convert_to<winrt::TestComponent::Param3Handler>(args, 0);
 
-                self->obj.Param3Call(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Param3Call(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5855,7 +6466,11 @@ namespace py::cpp::TestComponent
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 uint32_t param1{};
 
-                auto return_value = self->obj.Param4(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Param4(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -5867,6 +6482,7 @@ namespace py::cpp::TestComponent
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -5892,7 +6508,11 @@ namespace py::cpp::TestComponent
             {
                 auto param0 = py::convert_to<winrt::TestComponent::Param4Handler>(args, 0);
 
-                self->obj.Param4Call(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Param4Call(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5919,7 +6539,11 @@ namespace py::cpp::TestComponent
                 auto param0 = py::convert_to<uint64_t>(args, 0);
                 uint64_t param1{};
 
-                auto return_value = self->obj.Param5(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Param5(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -5931,6 +6555,7 @@ namespace py::cpp::TestComponent
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -5956,7 +6581,11 @@ namespace py::cpp::TestComponent
             {
                 auto param0 = py::convert_to<winrt::TestComponent::Param5Handler>(args, 0);
 
-                self->obj.Param5Call(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Param5Call(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5983,7 +6612,11 @@ namespace py::cpp::TestComponent
                 auto param0 = py::convert_to<int16_t>(args, 0);
                 int16_t param1{};
 
-                auto return_value = self->obj.Param6(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Param6(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -5995,6 +6628,7 @@ namespace py::cpp::TestComponent
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -6020,7 +6654,11 @@ namespace py::cpp::TestComponent
             {
                 auto param0 = py::convert_to<winrt::TestComponent::Param6Handler>(args, 0);
 
-                self->obj.Param6Call(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Param6Call(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6047,7 +6685,11 @@ namespace py::cpp::TestComponent
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 int32_t param1{};
 
-                auto return_value = self->obj.Param7(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Param7(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -6059,6 +6701,7 @@ namespace py::cpp::TestComponent
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -6084,7 +6727,11 @@ namespace py::cpp::TestComponent
             {
                 auto param0 = py::convert_to<winrt::TestComponent::Param7Handler>(args, 0);
 
-                self->obj.Param7Call(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Param7Call(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6111,7 +6758,11 @@ namespace py::cpp::TestComponent
                 auto param0 = py::convert_to<int64_t>(args, 0);
                 int64_t param1{};
 
-                auto return_value = self->obj.Param8(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Param8(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -6123,6 +6774,7 @@ namespace py::cpp::TestComponent
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -6148,7 +6800,11 @@ namespace py::cpp::TestComponent
             {
                 auto param0 = py::convert_to<winrt::TestComponent::Param8Handler>(args, 0);
 
-                self->obj.Param8Call(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Param8Call(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6175,7 +6831,11 @@ namespace py::cpp::TestComponent
                 auto param0 = py::convert_to<float>(args, 0);
                 float param1{};
 
-                auto return_value = self->obj.Param9(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Param9(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -6187,6 +6847,7 @@ namespace py::cpp::TestComponent
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -6212,7 +6873,11 @@ namespace py::cpp::TestComponent
             {
                 auto param0 = py::convert_to<winrt::TestComponent::Param9Handler>(args, 0);
 
-                self->obj.Param9Call(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Param9Call(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6236,7 +6901,11 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                self->obj.Simple();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Simple();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6256,7 +6925,11 @@ namespace py::cpp::TestComponent
     {
         try
         {
-            return py::convert(self->obj.Percentage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Percentage();
+            }());
         }
         catch (...)
         {
@@ -6271,7 +6944,11 @@ namespace py::cpp::TestComponent
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<int32_t>>(arg);
 
-            return py::convert(self->obj.Event1(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Event1(param0);
+            }());
         }
         catch (...)
         {
@@ -6286,7 +6963,11 @@ namespace py::cpp::TestComponent
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Event1(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Event1(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -6302,7 +6983,11 @@ namespace py::cpp::TestComponent
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::TestComponent::ITests, int32_t>>(arg);
 
-            return py::convert(self->obj.Event2(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Event2(param0);
+            }());
         }
         catch (...)
         {
@@ -6317,7 +7002,11 @@ namespace py::cpp::TestComponent
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Event2(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Event2(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)

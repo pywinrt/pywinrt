@@ -37,7 +37,11 @@ namespace py::cpp::Windows::Management::Policies
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(winrt::Windows::Management::Policies::NamedPolicy::GetPolicyFromPath(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Management::Policies::NamedPolicy::GetPolicyFromPath(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -77,7 +81,11 @@ namespace py::cpp::Windows::Management::Policies
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
-                return py::convert(winrt::Windows::Management::Policies::NamedPolicy::GetPolicyFromPathForUser(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Management::Policies::NamedPolicy::GetPolicyFromPathForUser(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -179,7 +187,11 @@ namespace py::cpp::Windows::Management::Policies
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetBinary());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetBinary();
+                }());
             }
             catch (...)
             {
@@ -215,7 +227,11 @@ namespace py::cpp::Windows::Management::Policies
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetBoolean());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetBoolean();
+                }());
             }
             catch (...)
             {
@@ -251,7 +267,11 @@ namespace py::cpp::Windows::Management::Policies
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetInt32());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetInt32();
+                }());
             }
             catch (...)
             {
@@ -287,7 +307,11 @@ namespace py::cpp::Windows::Management::Policies
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetInt64());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetInt64();
+                }());
             }
             catch (...)
             {
@@ -323,7 +347,11 @@ namespace py::cpp::Windows::Management::Policies
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetString());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetString();
+                }());
             }
             catch (...)
             {
@@ -355,7 +383,11 @@ namespace py::cpp::Windows::Management::Policies
                 return nullptr;
             }
 
-            return py::convert(self->obj.Area());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Area();
+            }());
         }
         catch (...)
         {
@@ -381,7 +413,11 @@ namespace py::cpp::Windows::Management::Policies
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsManaged());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsManaged();
+            }());
         }
         catch (...)
         {
@@ -407,7 +443,11 @@ namespace py::cpp::Windows::Management::Policies
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsUserPolicy());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsUserPolicy();
+            }());
         }
         catch (...)
         {
@@ -433,7 +473,11 @@ namespace py::cpp::Windows::Management::Policies
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -459,7 +503,11 @@ namespace py::cpp::Windows::Management::Policies
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -485,7 +533,11 @@ namespace py::cpp::Windows::Management::Policies
                 return nullptr;
             }
 
-            return py::convert(self->obj.User());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.User();
+            }());
         }
         catch (...)
         {
@@ -513,7 +565,11 @@ namespace py::cpp::Windows::Management::Policies
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Management::Policies::NamedPolicyData, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.Changed(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Changed(param0);
+            }());
         }
         catch (...)
         {
@@ -541,7 +597,11 @@ namespace py::cpp::Windows::Management::Policies
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Changed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Changed(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)

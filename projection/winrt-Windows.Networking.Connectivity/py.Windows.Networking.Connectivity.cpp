@@ -38,7 +38,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.AttributionId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AttributionId();
+            }());
         }
         catch (...)
         {
@@ -64,7 +68,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.AttributionName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AttributionName();
+            }());
         }
         catch (...)
         {
@@ -90,7 +98,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.AttributionThumbnail());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AttributionThumbnail();
+            }());
         }
         catch (...)
         {
@@ -116,7 +128,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.BytesReceived());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BytesReceived();
+            }());
         }
         catch (...)
         {
@@ -142,7 +158,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.BytesSent());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BytesSent();
+            }());
         }
         catch (...)
         {
@@ -261,7 +281,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.UserName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UserName();
+            }());
         }
         catch (...)
         {
@@ -295,7 +319,11 @@ namespace py::cpp::Windows::Networking::Connectivity
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.UserName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.UserName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -322,7 +350,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProviderId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProviderId();
+            }());
         }
         catch (...)
         {
@@ -356,7 +388,11 @@ namespace py::cpp::Windows::Networking::Connectivity
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ProviderId(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ProviderId(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -383,7 +419,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.Password());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Password();
+            }());
         }
         catch (...)
         {
@@ -417,7 +457,11 @@ namespace py::cpp::Windows::Networking::Connectivity
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Password(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Password(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -444,7 +488,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsCompressionEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsCompressionEnabled();
+            }());
         }
         catch (...)
         {
@@ -478,7 +526,11 @@ namespace py::cpp::Windows::Networking::Connectivity
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsCompressionEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsCompressionEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -505,7 +557,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.AuthenticationType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AuthenticationType();
+            }());
         }
         catch (...)
         {
@@ -539,7 +595,11 @@ namespace py::cpp::Windows::Networking::Connectivity
 
             auto param0 = py::convert_to<winrt::Windows::Networking::Connectivity::CellularApnAuthenticationType>(arg);
 
-            self->obj.AuthenticationType(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AuthenticationType(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -566,7 +626,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.AccessPointName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AccessPointName();
+            }());
         }
         catch (...)
         {
@@ -600,7 +664,11 @@ namespace py::cpp::Windows::Networking::Connectivity
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.AccessPointName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AccessPointName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -627,7 +695,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProfileName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProfileName();
+            }());
         }
         catch (...)
         {
@@ -661,7 +733,11 @@ namespace py::cpp::Windows::Networking::Connectivity
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ProfileName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ProfileName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -761,7 +837,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.ApproachingDataLimit());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ApproachingDataLimit();
+            }());
         }
         catch (...)
         {
@@ -787,7 +867,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.NetworkCostType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NetworkCostType();
+            }());
         }
         catch (...)
         {
@@ -813,7 +897,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.OverDataLimit());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OverDataLimit();
+            }());
         }
         catch (...)
         {
@@ -839,7 +927,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.Roaming());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Roaming();
+            }());
         }
         catch (...)
         {
@@ -865,7 +957,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.BackgroundDataUsageRestricted());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BackgroundDataUsageRestricted();
+            }());
         }
         catch (...)
         {
@@ -970,7 +1066,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 auto param1 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Networking::Connectivity::NetworkUsageStates>(args, 2);
 
-                return py::convert(self->obj.GetAttributedNetworkUsageAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAttributedNetworkUsageAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -1006,7 +1106,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetConnectionCost());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetConnectionCost();
+                }());
             }
             catch (...)
             {
@@ -1046,7 +1150,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 auto param1 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Networking::Connectivity::NetworkUsageStates>(args, 2);
 
-                return py::convert(self->obj.GetConnectivityIntervalsAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetConnectivityIntervalsAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -1082,7 +1190,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDataPlanStatus());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDataPlanStatus();
+                }());
             }
             catch (...)
             {
@@ -1118,7 +1230,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDomainConnectivityLevel());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDomainConnectivityLevel();
+                }());
             }
             catch (...)
             {
@@ -1157,7 +1273,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 1);
 
-                return py::convert(self->obj.GetLocalUsage(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetLocalUsage(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1197,7 +1317,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 auto param1 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Networking::Connectivity::RoamingStates>(args, 2);
 
-                return py::convert(self->obj.GetLocalUsage(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetLocalUsage(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -1233,7 +1357,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetNetworkConnectivityLevel());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetNetworkConnectivityLevel();
+                }());
             }
             catch (...)
             {
@@ -1269,7 +1397,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetNetworkNames());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetNetworkNames();
+                }());
             }
             catch (...)
             {
@@ -1310,7 +1442,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 auto param2 = py::convert_to<winrt::Windows::Networking::Connectivity::DataUsageGranularity>(args, 2);
                 auto param3 = py::convert_to<winrt::Windows::Networking::Connectivity::NetworkUsageStates>(args, 3);
 
-                return py::convert(self->obj.GetNetworkUsageAsync(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetNetworkUsageAsync(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -1350,7 +1486,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 auto param1 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Networking::Connectivity::NetworkUsageStates>(args, 2);
 
-                return py::convert(self->obj.GetProviderNetworkUsageAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetProviderNetworkUsageAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -1386,7 +1526,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetSignalBars());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetSignalBars();
+                }());
             }
             catch (...)
             {
@@ -1424,7 +1568,11 @@ namespace py::cpp::Windows::Networking::Connectivity
 
                 auto param0 = py::convert_to<winrt::Windows::Networking::Connectivity::DomainAuthenticationKind>(args, 0);
 
-                return py::convert(self->obj.IsDomainAuthenticatedBy(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsDomainAuthenticatedBy(param0);
+                }());
             }
             catch (...)
             {
@@ -1460,7 +1608,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                     return nullptr;
                 }
 
-                return py::convert(self->obj.TryDeleteAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryDeleteAsync();
+                }());
             }
             catch (...)
             {
@@ -1492,7 +1644,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.NetworkAdapter());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NetworkAdapter();
+            }());
         }
         catch (...)
         {
@@ -1518,7 +1674,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.NetworkSecuritySettings());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NetworkSecuritySettings();
+            }());
         }
         catch (...)
         {
@@ -1544,7 +1704,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProfileName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProfileName();
+            }());
         }
         catch (...)
         {
@@ -1570,7 +1734,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsWlanConnectionProfile());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsWlanConnectionProfile();
+            }());
         }
         catch (...)
         {
@@ -1596,7 +1764,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsWwanConnectionProfile());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsWwanConnectionProfile();
+            }());
         }
         catch (...)
         {
@@ -1622,7 +1794,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.ServiceProviderGuid());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServiceProviderGuid();
+            }());
         }
         catch (...)
         {
@@ -1648,7 +1824,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.WlanConnectionProfileDetails());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WlanConnectionProfileDetails();
+            }());
         }
         catch (...)
         {
@@ -1674,7 +1854,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.WwanConnectionProfileDetails());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WwanConnectionProfileDetails();
+            }());
         }
         catch (...)
         {
@@ -1700,7 +1884,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.CanDelete());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CanDelete();
+            }());
         }
         catch (...)
         {
@@ -1837,7 +2025,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.ServiceProviderGuid());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServiceProviderGuid();
+            }());
         }
         catch (...)
         {
@@ -1871,7 +2063,11 @@ namespace py::cpp::Windows::Networking::Connectivity
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::guid>>(arg);
 
-            self->obj.ServiceProviderGuid(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ServiceProviderGuid(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1898,7 +2094,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.NetworkCostType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NetworkCostType();
+            }());
         }
         catch (...)
         {
@@ -1932,7 +2132,11 @@ namespace py::cpp::Windows::Networking::Connectivity
 
             auto param0 = py::convert_to<winrt::Windows::Networking::Connectivity::NetworkCostType>(arg);
 
-            self->obj.NetworkCostType(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NetworkCostType(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1959,7 +2163,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsWwanConnectionProfile());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsWwanConnectionProfile();
+            }());
         }
         catch (...)
         {
@@ -1993,7 +2201,11 @@ namespace py::cpp::Windows::Networking::Connectivity
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsWwanConnectionProfile(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsWwanConnectionProfile(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2020,7 +2232,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsWlanConnectionProfile());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsWlanConnectionProfile();
+            }());
         }
         catch (...)
         {
@@ -2054,7 +2270,11 @@ namespace py::cpp::Windows::Networking::Connectivity
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsWlanConnectionProfile(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsWlanConnectionProfile(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2081,7 +2301,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsConnected());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsConnected();
+            }());
         }
         catch (...)
         {
@@ -2115,7 +2339,11 @@ namespace py::cpp::Windows::Networking::Connectivity
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsConnected(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsConnected(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2142,7 +2370,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsRoaming());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsRoaming();
+            }());
         }
         catch (...)
         {
@@ -2176,7 +2408,11 @@ namespace py::cpp::Windows::Networking::Connectivity
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<bool>>(arg);
 
-            self->obj.IsRoaming(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsRoaming(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2203,7 +2439,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsOverDataLimit());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsOverDataLimit();
+            }());
         }
         catch (...)
         {
@@ -2237,7 +2477,11 @@ namespace py::cpp::Windows::Networking::Connectivity
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<bool>>(arg);
 
-            self->obj.IsOverDataLimit(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsOverDataLimit(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2264,7 +2508,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsBackgroundDataUsageRestricted());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsBackgroundDataUsageRestricted();
+            }());
         }
         catch (...)
         {
@@ -2298,7 +2546,11 @@ namespace py::cpp::Windows::Networking::Connectivity
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<bool>>(arg);
 
-            self->obj.IsBackgroundDataUsageRestricted(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsBackgroundDataUsageRestricted(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2325,7 +2577,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.RawData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RawData();
+            }());
         }
         catch (...)
         {
@@ -2351,7 +2607,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.PurposeGuid());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PurposeGuid();
+            }());
         }
         catch (...)
         {
@@ -2385,7 +2645,11 @@ namespace py::cpp::Windows::Networking::Connectivity
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::guid>>(arg);
 
-            self->obj.PurposeGuid(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PurposeGuid(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2492,7 +2756,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2525,7 +2793,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.ConnectionProfile());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ConnectionProfile();
+            }());
         }
         catch (...)
         {
@@ -2567,7 +2839,11 @@ namespace py::cpp::Windows::Networking::Connectivity
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -2640,7 +2916,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.ConnectionDuration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ConnectionDuration();
+            }());
         }
         catch (...)
         {
@@ -2666,7 +2946,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.StartTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StartTime();
+            }());
         }
         catch (...)
         {
@@ -2758,7 +3042,11 @@ namespace py::cpp::Windows::Networking::Connectivity
 
                 auto param0 = py::convert_to<winrt::Windows::Networking::Connectivity::CellularApnContext>(args, 0);
 
-                return py::convert(winrt::Windows::Networking::Connectivity::ConnectivityManager::AcquireConnectionAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Networking::Connectivity::ConnectivityManager::AcquireConnectionAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -2796,7 +3084,11 @@ namespace py::cpp::Windows::Networking::Connectivity
 
                 auto param0 = py::convert_to<winrt::Windows::Networking::Connectivity::RoutePolicy>(args, 0);
 
-                winrt::Windows::Networking::Connectivity::ConnectivityManager::AddHttpRoutePolicy(param0);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Networking::Connectivity::ConnectivityManager::AddHttpRoutePolicy(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2835,7 +3127,11 @@ namespace py::cpp::Windows::Networking::Connectivity
 
                 auto param0 = py::convert_to<winrt::Windows::Networking::Connectivity::RoutePolicy>(args, 0);
 
-                winrt::Windows::Networking::Connectivity::ConnectivityManager::RemoveHttpRoutePolicy(param0);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Networking::Connectivity::ConnectivityManager::RemoveHttpRoutePolicy(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2935,7 +3231,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.DataLimitInMegabytes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DataLimitInMegabytes();
+            }());
         }
         catch (...)
         {
@@ -2961,7 +3261,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.DataPlanUsage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DataPlanUsage();
+            }());
         }
         catch (...)
         {
@@ -2987,7 +3291,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.InboundBitsPerSecond());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InboundBitsPerSecond();
+            }());
         }
         catch (...)
         {
@@ -3013,7 +3321,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxTransferSizeInMegabytes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxTransferSizeInMegabytes();
+            }());
         }
         catch (...)
         {
@@ -3039,7 +3351,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.NextBillingCycle());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NextBillingCycle();
+            }());
         }
         catch (...)
         {
@@ -3065,7 +3381,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.OutboundBitsPerSecond());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OutboundBitsPerSecond();
+            }());
         }
         catch (...)
         {
@@ -3163,7 +3483,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.LastSyncTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LastSyncTime();
+            }());
         }
         catch (...)
         {
@@ -3189,7 +3513,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.MegabytesUsed());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MegabytesUsed();
+            }());
         }
         catch (...)
         {
@@ -3283,7 +3611,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.BytesReceived());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BytesReceived();
+            }());
         }
         catch (...)
         {
@@ -3309,7 +3641,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.BytesSent());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BytesSent();
+            }());
         }
         catch (...)
         {
@@ -3403,7 +3739,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.NetworkAdapter());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NetworkAdapter();
+            }());
         }
         catch (...)
         {
@@ -3429,7 +3769,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.PrefixLength());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PrefixLength();
+            }());
         }
         catch (...)
         {
@@ -3523,7 +3867,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.InfrastructureId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InfrastructureId();
+            }());
         }
         catch (...)
         {
@@ -3549,7 +3897,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.NetworkAdapterId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NetworkAdapterId();
+            }());
         }
         catch (...)
         {
@@ -3575,7 +3927,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.PortId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PortId();
+            }());
         }
         catch (...)
         {
@@ -3670,7 +4026,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.Type());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Type();
+            }());
         }
         catch (...)
         {
@@ -3696,7 +4056,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.Value());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Value();
+            }());
         }
         catch (...)
         {
@@ -3794,7 +4158,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetConnectedProfileAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetConnectedProfileAsync();
+                }());
             }
             catch (...)
             {
@@ -3826,7 +4194,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.IanaInterfaceType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IanaInterfaceType();
+            }());
         }
         catch (...)
         {
@@ -3852,7 +4224,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.InboundMaxBitsPerSecond());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InboundMaxBitsPerSecond();
+            }());
         }
         catch (...)
         {
@@ -3878,7 +4254,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.NetworkAdapterId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NetworkAdapterId();
+            }());
         }
         catch (...)
         {
@@ -3904,7 +4284,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.NetworkItem());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NetworkItem();
+            }());
         }
         catch (...)
         {
@@ -3930,7 +4314,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.OutboundMaxBitsPerSecond());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OutboundMaxBitsPerSecond();
+            }());
         }
         catch (...)
         {
@@ -4026,7 +4414,11 @@ namespace py::cpp::Windows::Networking::Connectivity
 
                 auto param0 = py::convert_to<winrt::Windows::Networking::Connectivity::ConnectionProfileFilter>(args, 0);
 
-                return py::convert(winrt::Windows::Networking::Connectivity::NetworkInformation::FindConnectionProfilesAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Networking::Connectivity::NetworkInformation::FindConnectionProfilesAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -4062,7 +4454,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Networking::Connectivity::NetworkInformation::GetConnectionProfiles());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Networking::Connectivity::NetworkInformation::GetConnectionProfiles();
+                }());
             }
             catch (...)
             {
@@ -4098,7 +4494,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Networking::Connectivity::NetworkInformation::GetHostNames());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Networking::Connectivity::NetworkInformation::GetHostNames();
+                }());
             }
             catch (...)
             {
@@ -4134,7 +4534,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Networking::Connectivity::NetworkInformation::GetInternetConnectionProfile());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Networking::Connectivity::NetworkInformation::GetInternetConnectionProfile();
+                }());
             }
             catch (...)
             {
@@ -4170,7 +4574,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Networking::Connectivity::NetworkInformation::GetLanIdentifiers());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Networking::Connectivity::NetworkInformation::GetLanIdentifiers();
+                }());
             }
             catch (...)
             {
@@ -4208,7 +4616,11 @@ namespace py::cpp::Windows::Networking::Connectivity
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
-                return py::convert(winrt::Windows::Networking::Connectivity::NetworkInformation::GetProxyConfigurationAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Networking::Connectivity::NetworkInformation::GetProxyConfigurationAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -4247,7 +4659,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Networking::EndpointPair>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Networking::HostNameSortOptions>(args, 1);
 
-                return py::convert(winrt::Windows::Networking::Connectivity::NetworkInformation::GetSortedEndpointPairs(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Networking::Connectivity::NetworkInformation::GetSortedEndpointPairs(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -4281,7 +4697,11 @@ namespace py::cpp::Windows::Networking::Connectivity
 
             auto param0 = py::convert_to<winrt::Windows::Networking::Connectivity::NetworkStatusChangedEventHandler>(arg);
 
-            return py::convert(winrt::Windows::Networking::Connectivity::NetworkInformation::NetworkStatusChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Networking::Connectivity::NetworkInformation::NetworkStatusChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -4309,7 +4729,11 @@ namespace py::cpp::Windows::Networking::Connectivity
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Windows::Networking::Connectivity::NetworkInformation::NetworkStatusChanged(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::Networking::Connectivity::NetworkInformation::NetworkStatusChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -4413,7 +4837,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetNetworkTypes());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetNetworkTypes();
+                }());
             }
             catch (...)
             {
@@ -4445,7 +4873,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.NetworkId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NetworkId();
+            }());
         }
         catch (...)
         {
@@ -4539,7 +4971,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.NetworkAuthenticationType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NetworkAuthenticationType();
+            }());
         }
         catch (...)
         {
@@ -4565,7 +5001,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.NetworkEncryptionType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NetworkEncryptionType();
+            }());
         }
         catch (...)
         {
@@ -4659,7 +5099,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.HasNewConnectionCost());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HasNewConnectionCost();
+            }());
         }
         catch (...)
         {
@@ -4685,7 +5129,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.HasNewDomainConnectivityLevel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HasNewDomainConnectivityLevel();
+            }());
         }
         catch (...)
         {
@@ -4711,7 +5159,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.HasNewHostNameList());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HasNewHostNameList();
+            }());
         }
         catch (...)
         {
@@ -4737,7 +5189,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.HasNewInternetConnectionProfile());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HasNewInternetConnectionProfile();
+            }());
         }
         catch (...)
         {
@@ -4763,7 +5219,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.HasNewNetworkConnectivityLevel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HasNewNetworkConnectivityLevel();
+            }());
         }
         catch (...)
         {
@@ -4789,7 +5249,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.HasNewWwanRegistrationState());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HasNewWwanRegistrationState();
+            }());
         }
         catch (...)
         {
@@ -4815,7 +5279,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.HasNewTetheringClientCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HasNewTetheringClientCount();
+            }());
         }
         catch (...)
         {
@@ -4841,7 +5309,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.HasNewTetheringOperationalState());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HasNewTetheringOperationalState();
+            }());
         }
         catch (...)
         {
@@ -4941,7 +5413,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.BytesReceived());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BytesReceived();
+            }());
         }
         catch (...)
         {
@@ -4967,7 +5443,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.BytesSent());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BytesSent();
+            }());
         }
         catch (...)
         {
@@ -4993,7 +5473,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.ConnectionDuration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ConnectionDuration();
+            }());
         }
         catch (...)
         {
@@ -5088,7 +5572,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.BytesReceived());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BytesReceived();
+            }());
         }
         catch (...)
         {
@@ -5114,7 +5602,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.BytesSent());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BytesSent();
+            }());
         }
         catch (...)
         {
@@ -5140,7 +5632,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProviderId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProviderId();
+            }());
         }
         catch (...)
         {
@@ -5235,7 +5731,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.CanConnectDirectly());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CanConnectDirectly();
+            }());
         }
         catch (...)
         {
@@ -5261,7 +5761,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProxyUris());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProxyUris();
+            }());
         }
         catch (...)
         {
@@ -5381,7 +5885,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.ConnectionProfile());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ConnectionProfile();
+            }());
         }
         catch (...)
         {
@@ -5407,7 +5915,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.HostName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HostName();
+            }());
         }
         catch (...)
         {
@@ -5433,7 +5945,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.HostNameType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HostNameType();
+            }());
         }
         catch (...)
         {
@@ -5532,7 +6048,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetConnectedSsid());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetConnectedSsid();
+                }());
             }
             catch (...)
             {
@@ -5635,7 +6155,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetCurrentDataClass());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetCurrentDataClass();
+                }());
             }
             catch (...)
             {
@@ -5671,7 +6195,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetNetworkRegistrationState());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetNetworkRegistrationState();
+                }());
             }
             catch (...)
             {
@@ -5703,7 +6231,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.AccessPointName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AccessPointName();
+            }());
         }
         catch (...)
         {
@@ -5729,7 +6261,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.HomeProviderId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HomeProviderId();
+            }());
         }
         catch (...)
         {
@@ -5755,7 +6291,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.IPKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IPKind();
+            }());
         }
         catch (...)
         {
@@ -5781,7 +6321,11 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
 
-            return py::convert(self->obj.PurposeGuids());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PurposeGuids();
+            }());
         }
         catch (...)
         {

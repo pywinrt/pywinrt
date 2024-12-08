@@ -84,7 +84,11 @@ namespace py::cpp::Windows::System::RemoteDesktop::Input
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -123,7 +127,11 @@ namespace py::cpp::Windows::System::RemoteDesktop::Input
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                self->obj.RegisterThread(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RegisterThread(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -162,7 +170,11 @@ namespace py::cpp::Windows::System::RemoteDesktop::Input
 
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
-                self->obj.ReportDataReceived(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ReportDataReceived(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -202,7 +214,11 @@ namespace py::cpp::Windows::System::RemoteDesktop::Input
                 auto param0 = py::convert_to<uint16_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::System::RemoteDesktop::Input::RemoteKeyEventAttributes>(args, 1);
 
-                self->obj.ReportPredictedKeyEvent(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ReportPredictedKeyEvent(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -241,7 +257,11 @@ namespace py::cpp::Windows::System::RemoteDesktop::Input
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                self->obj.UnregisterThread(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.UnregisterThread(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -274,7 +294,11 @@ namespace py::cpp::Windows::System::RemoteDesktop::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsEnabled();
+            }());
         }
         catch (...)
         {
@@ -308,7 +332,11 @@ namespace py::cpp::Windows::System::RemoteDesktop::Input
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -351,7 +379,11 @@ namespace py::cpp::Windows::System::RemoteDesktop::Input
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)

@@ -38,7 +38,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Accounts());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Accounts();
+            }());
         }
         catch (...)
         {
@@ -64,7 +68,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProviderError());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProviderError();
+            }());
         }
         catch (...)
         {
@@ -90,7 +98,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -185,7 +197,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Account());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Account();
+            }());
         }
         catch (...)
         {
@@ -280,7 +296,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Security::Authentication::Web::Core::WebAccountMonitor, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.DefaultSignInAccountChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DefaultSignInAccountChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -308,7 +328,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.DefaultSignInAccountChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DefaultSignInAccountChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -337,7 +361,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Security::Authentication::Web::Core::WebAccountMonitor, winrt::Windows::Security::Authentication::Web::Core::WebAccountEventArgs>>(arg);
 
-            return py::convert(self->obj.Removed(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Removed(param0);
+            }());
         }
         catch (...)
         {
@@ -365,7 +393,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Removed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Removed(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -394,7 +426,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Security::Authentication::Web::Core::WebAccountMonitor, winrt::Windows::Security::Authentication::Web::Core::WebAccountEventArgs>>(arg);
 
-            return py::convert(self->obj.Updated(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Updated(param0);
+            }());
         }
         catch (...)
         {
@@ -422,7 +458,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Updated(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Updated(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -451,7 +491,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Security::Authentication::Web::Core::WebAccountMonitor, winrt::Windows::Security::Authentication::Web::Core::WebAccountEventArgs>>(arg);
 
-            return py::convert(self->obj.AccountPictureUpdated(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AccountPictureUpdated(param0);
+            }());
         }
         catch (...)
         {
@@ -479,7 +523,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.AccountPictureUpdated(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AccountPictureUpdated(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -604,7 +652,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Properties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Properties();
+            }());
         }
         catch (...)
         {
@@ -630,7 +682,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.WebAccount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WebAccount();
+            }());
         }
         catch (...)
         {
@@ -724,7 +780,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResponseData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResponseData();
+            }());
         }
         catch (...)
         {
@@ -750,7 +810,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResponseError());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResponseError();
+            }());
         }
         catch (...)
         {
@@ -776,7 +840,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResponseStatus());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResponseStatus();
+            }());
         }
         catch (...)
         {
@@ -869,7 +937,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
 
                 auto param0 = py::convert_to<winrt::Windows::Security::Authentication::Web::Core::WebAuthenticationTransferTokenRequest>(args, 0);
 
-                return py::convert(winrt::Windows::Security::Authentication::Web::Core::WebAuthenticationCoreManager::AddAccountWithTransferTokenAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Authentication::Web::Core::WebAuthenticationCoreManager::AddAccountWithTransferTokenAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -907,7 +979,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Security::Credentials::WebAccount>>(args, 0);
 
-                return py::convert(winrt::Windows::Security::Authentication::Web::Core::WebAuthenticationCoreManager::CreateWebAccountMonitor(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Authentication::Web::Core::WebAuthenticationCoreManager::CreateWebAccountMonitor(param0);
+                }());
             }
             catch (...)
             {
@@ -946,7 +1022,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
                 auto param0 = py::convert_to<winrt::Windows::Security::Credentials::WebAccountProvider>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(winrt::Windows::Security::Authentication::Web::Core::WebAuthenticationCoreManager::FindAccountAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Authentication::Web::Core::WebAuthenticationCoreManager::FindAccountAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -984,7 +1064,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Security::Authentication::Web::Core::WebAuthenticationCoreManager::FindAccountProviderAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Authentication::Web::Core::WebAuthenticationCoreManager::FindAccountProviderAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1023,7 +1107,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(winrt::Windows::Security::Authentication::Web::Core::WebAuthenticationCoreManager::FindAccountProviderAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Authentication::Web::Core::WebAuthenticationCoreManager::FindAccountProviderAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1063,7 +1151,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::System::User>(args, 2);
 
-                return py::convert(winrt::Windows::Security::Authentication::Web::Core::WebAuthenticationCoreManager::FindAccountProviderAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Authentication::Web::Core::WebAuthenticationCoreManager::FindAccountProviderAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -1101,7 +1193,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
 
                 auto param0 = py::convert_to<winrt::Windows::Security::Credentials::WebAccountProvider>(args, 0);
 
-                return py::convert(winrt::Windows::Security::Authentication::Web::Core::WebAuthenticationCoreManager::FindAllAccountsAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Authentication::Web::Core::WebAuthenticationCoreManager::FindAllAccountsAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1140,7 +1236,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
                 auto param0 = py::convert_to<winrt::Windows::Security::Credentials::WebAccountProvider>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(winrt::Windows::Security::Authentication::Web::Core::WebAuthenticationCoreManager::FindAllAccountsAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Authentication::Web::Core::WebAuthenticationCoreManager::FindAllAccountsAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1178,7 +1278,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Security::Authentication::Web::Core::WebAuthenticationCoreManager::FindSystemAccountProviderAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Authentication::Web::Core::WebAuthenticationCoreManager::FindSystemAccountProviderAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1217,7 +1321,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(winrt::Windows::Security::Authentication::Web::Core::WebAuthenticationCoreManager::FindSystemAccountProviderAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Authentication::Web::Core::WebAuthenticationCoreManager::FindSystemAccountProviderAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1257,7 +1365,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::System::User>(args, 2);
 
-                return py::convert(winrt::Windows::Security::Authentication::Web::Core::WebAuthenticationCoreManager::FindSystemAccountProviderAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Authentication::Web::Core::WebAuthenticationCoreManager::FindSystemAccountProviderAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -1295,7 +1407,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
 
                 auto param0 = py::convert_to<winrt::Windows::Security::Authentication::Web::Core::WebTokenRequest>(args, 0);
 
-                return py::convert(winrt::Windows::Security::Authentication::Web::Core::WebAuthenticationCoreManager::GetTokenSilentlyAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Authentication::Web::Core::WebAuthenticationCoreManager::GetTokenSilentlyAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1334,7 +1450,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
                 auto param0 = py::convert_to<winrt::Windows::Security::Authentication::Web::Core::WebTokenRequest>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Security::Credentials::WebAccount>(args, 1);
 
-                return py::convert(winrt::Windows::Security::Authentication::Web::Core::WebAuthenticationCoreManager::GetTokenSilentlyAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Authentication::Web::Core::WebAuthenticationCoreManager::GetTokenSilentlyAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1372,7 +1492,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
 
                 auto param0 = py::convert_to<winrt::Windows::Security::Authentication::Web::Core::WebTokenRequest>(args, 0);
 
-                return py::convert(winrt::Windows::Security::Authentication::Web::Core::WebAuthenticationCoreManager::RequestTokenAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Authentication::Web::Core::WebAuthenticationCoreManager::RequestTokenAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1411,7 +1535,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
                 auto param0 = py::convert_to<winrt::Windows::Security::Authentication::Web::Core::WebTokenRequest>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Security::Credentials::WebAccount>(args, 1);
 
-                return py::convert(winrt::Windows::Security::Authentication::Web::Core::WebAuthenticationCoreManager::RequestTokenAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::Authentication::Web::Core::WebAuthenticationCoreManager::RequestTokenAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1564,7 +1692,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.TransferToken());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TransferToken();
+            }());
         }
         catch (...)
         {
@@ -1598,7 +1730,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.TransferToken(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TransferToken(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1625,7 +1761,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.CorrelationId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CorrelationId();
+            }());
         }
         catch (...)
         {
@@ -1659,7 +1799,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.CorrelationId(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CorrelationId(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1686,7 +1830,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Properties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Properties();
+            }());
         }
         catch (...)
         {
@@ -1712,7 +1860,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.WebAccountProvider());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WebAccountProvider();
+            }());
         }
         catch (...)
         {
@@ -1833,7 +1985,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.ErrorCode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ErrorCode();
+            }());
         }
         catch (...)
         {
@@ -1859,7 +2015,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.ErrorMessage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ErrorMessage();
+            }());
         }
         catch (...)
         {
@@ -1885,7 +2045,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Properties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Properties();
+            }());
         }
         catch (...)
         {
@@ -2055,7 +2219,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.ClientId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ClientId();
+            }());
         }
         catch (...)
         {
@@ -2081,7 +2249,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.PromptType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PromptType();
+            }());
         }
         catch (...)
         {
@@ -2107,7 +2279,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Properties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Properties();
+            }());
         }
         catch (...)
         {
@@ -2133,7 +2309,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Scope());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Scope();
+            }());
         }
         catch (...)
         {
@@ -2159,7 +2339,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.WebAccountProvider());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WebAccountProvider();
+            }());
         }
         catch (...)
         {
@@ -2185,7 +2369,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppProperties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppProperties();
+            }());
         }
         catch (...)
         {
@@ -2211,7 +2399,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.CorrelationId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CorrelationId();
+            }());
         }
         catch (...)
         {
@@ -2245,7 +2437,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.CorrelationId(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CorrelationId(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2349,7 +2545,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
                     return nullptr;
                 }
 
-                return py::convert(self->obj.InvalidateCacheAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.InvalidateCacheAsync();
+                }());
             }
             catch (...)
             {
@@ -2381,7 +2581,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResponseData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResponseData();
+            }());
         }
         catch (...)
         {
@@ -2407,7 +2611,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResponseError());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResponseError();
+            }());
         }
         catch (...)
         {
@@ -2433,7 +2641,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.ResponseStatus());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResponseStatus();
+            }());
         }
         catch (...)
         {
@@ -2599,7 +2811,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Properties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Properties();
+            }());
         }
         catch (...)
         {
@@ -2625,7 +2841,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProviderError());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProviderError();
+            }());
         }
         catch (...)
         {
@@ -2651,7 +2871,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Token());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Token();
+            }());
         }
         catch (...)
         {
@@ -2677,7 +2901,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.WebAccount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WebAccount();
+            }());
         }
         catch (...)
         {

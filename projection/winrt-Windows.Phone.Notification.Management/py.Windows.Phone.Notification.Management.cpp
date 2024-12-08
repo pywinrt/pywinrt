@@ -36,7 +36,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                winrt::Windows::Phone::Notification::Management::AccessoryManager::AcceptPhoneCall(param0);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Phone::Notification::Management::AccessoryManager::AcceptPhoneCall(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -76,7 +80,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Phone::Notification::Management::PhoneCallAudioEndpoint>(args, 1);
 
-                winrt::Windows::Phone::Notification::Management::AccessoryManager::AcceptPhoneCall(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Phone::Notification::Management::AccessoryManager::AcceptPhoneCall(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -115,7 +123,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                winrt::Windows::Phone::Notification::Management::AccessoryManager::AcceptPhoneCallWithVideo(param0);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Phone::Notification::Management::AccessoryManager::AcceptPhoneCallWithVideo(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -155,7 +167,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Phone::Notification::Management::PhoneCallAudioEndpoint>(args, 1);
 
-                winrt::Windows::Phone::Notification::Management::AccessoryManager::AcceptPhoneCallWithVideo(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Phone::Notification::Management::AccessoryManager::AcceptPhoneCallWithVideo(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -194,7 +210,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Phone::Notification::Management::AccessoryManager::ClearToast(param0);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Phone::Notification::Management::AccessoryManager::ClearToast(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -233,7 +253,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                winrt::Windows::Phone::Notification::Management::AccessoryManager::DecreaseVolume(param0);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Phone::Notification::Management::AccessoryManager::DecreaseVolume(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -270,7 +294,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                     return nullptr;
                 }
 
-                winrt::Windows::Phone::Notification::Management::AccessoryManager::DisableAllAccessoryNotificationTypes();
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Phone::Notification::Management::AccessoryManager::DisableAllAccessoryNotificationTypes();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -309,7 +337,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Phone::Notification::Management::AccessoryManager::DisableEmailNotificationEmailAccount(param0);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Phone::Notification::Management::AccessoryManager::DisableEmailNotificationEmailAccount(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -348,7 +380,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Phone::Notification::Management::AccessoryManager::DisableNotificationsForApplication(param0);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Phone::Notification::Management::AccessoryManager::DisableNotificationsForApplication(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -387,7 +423,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
-                winrt::Windows::Phone::Notification::Management::AccessoryManager::DismissAlarm(param0);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Phone::Notification::Management::AccessoryManager::DismissAlarm(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -426,7 +466,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Phone::Notification::Management::AccessoryManager::DismissAlarmByInstanceId(param0);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Phone::Notification::Management::AccessoryManager::DismissAlarmByInstanceId(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -465,7 +509,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
-                winrt::Windows::Phone::Notification::Management::AccessoryManager::DismissReminder(param0);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Phone::Notification::Management::AccessoryManager::DismissReminder(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -504,7 +552,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Phone::Notification::Management::AccessoryManager::DismissReminderByInstanceId(param0);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Phone::Notification::Management::AccessoryManager::DismissReminderByInstanceId(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -543,7 +595,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                winrt::Windows::Phone::Notification::Management::AccessoryManager::EnableAccessoryNotificationTypes(param0);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Phone::Notification::Management::AccessoryManager::EnableAccessoryNotificationTypes(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -582,7 +638,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Phone::Notification::Management::AccessoryManager::EnableEmailNotificationEmailAccount(param0);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Phone::Notification::Management::AccessoryManager::EnableEmailNotificationEmailAccount(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -622,7 +682,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::hstring>>(args, 1);
 
-                winrt::Windows::Phone::Notification::Management::AccessoryManager::EnableEmailNotificationFolderFilter(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Phone::Notification::Management::AccessoryManager::EnableEmailNotificationFolderFilter(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -661,7 +725,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Phone::Notification::Management::AccessoryManager::EnableNotificationsForApplication(param0);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Phone::Notification::Management::AccessoryManager::EnableNotificationsForApplication(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -700,7 +768,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                winrt::Windows::Phone::Notification::Management::AccessoryManager::EndPhoneCall(param0);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Phone::Notification::Management::AccessoryManager::EndPhoneCall(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -737,7 +809,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Phone::Notification::Management::AccessoryManager::GetAllEmailAccounts());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Phone::Notification::Management::AccessoryManager::GetAllEmailAccounts();
+                }());
             }
             catch (...)
             {
@@ -775,7 +851,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Phone::Notification::Management::AccessoryManager::GetAppIcon(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Phone::Notification::Management::AccessoryManager::GetAppIcon(param0);
+                }());
             }
             catch (...)
             {
@@ -811,7 +891,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Phone::Notification::Management::AccessoryManager::GetApps());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Phone::Notification::Management::AccessoryManager::GetApps();
+                }());
             }
             catch (...)
             {
@@ -847,7 +931,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Phone::Notification::Management::AccessoryManager::GetEnabledAccessoryNotificationTypes());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Phone::Notification::Management::AccessoryManager::GetEnabledAccessoryNotificationTypes();
+                }());
             }
             catch (...)
             {
@@ -885,7 +973,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Phone::Notification::Management::AccessoryManager::GetFolders(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Phone::Notification::Management::AccessoryManager::GetFolders(param0);
+                }());
             }
             catch (...)
             {
@@ -921,7 +1013,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Phone::Notification::Management::AccessoryManager::GetMediaMetadata());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Phone::Notification::Management::AccessoryManager::GetMediaMetadata();
+                }());
             }
             catch (...)
             {
@@ -957,7 +1053,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Phone::Notification::Management::AccessoryManager::GetNextTriggerDetails());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Phone::Notification::Management::AccessoryManager::GetNextTriggerDetails();
+                }());
             }
             catch (...)
             {
@@ -995,7 +1095,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
-                return py::convert(winrt::Windows::Phone::Notification::Management::AccessoryManager::GetPhoneLineDetails(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Phone::Notification::Management::AccessoryManager::GetPhoneLineDetails(param0);
+                }());
             }
             catch (...)
             {
@@ -1031,7 +1135,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Phone::Notification::Management::AccessoryManager::GetUserConsent());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Phone::Notification::Management::AccessoryManager::GetUserConsent();
+                }());
             }
             catch (...)
             {
@@ -1070,7 +1178,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                winrt::Windows::Phone::Notification::Management::AccessoryManager::HoldPhoneCall(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Phone::Notification::Management::AccessoryManager::HoldPhoneCall(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1109,7 +1221,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                winrt::Windows::Phone::Notification::Management::AccessoryManager::IncreaseVolume(param0);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Phone::Notification::Management::AccessoryManager::IncreaseVolume(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1148,7 +1264,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Phone::Notification::Management::AccessoryManager::IsNotificationEnabledForApplication(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Phone::Notification::Management::AccessoryManager::IsNotificationEnabledForApplication(param0);
+                }());
             }
             catch (...)
             {
@@ -1187,7 +1307,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                winrt::Windows::Phone::Notification::Management::AccessoryManager::MakePhoneCall(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Phone::Notification::Management::AccessoryManager::MakePhoneCall(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1228,7 +1352,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Phone::Notification::Management::PhoneCallAudioEndpoint>(args, 2);
 
-                winrt::Windows::Phone::Notification::Management::AccessoryManager::MakePhoneCall(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Phone::Notification::Management::AccessoryManager::MakePhoneCall(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1268,7 +1396,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                winrt::Windows::Phone::Notification::Management::AccessoryManager::MakePhoneCallWithVideo(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Phone::Notification::Management::AccessoryManager::MakePhoneCallWithVideo(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1309,7 +1441,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Phone::Notification::Management::PhoneCallAudioEndpoint>(args, 2);
 
-                winrt::Windows::Phone::Notification::Management::AccessoryManager::MakePhoneCallWithVideo(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Phone::Notification::Management::AccessoryManager::MakePhoneCallWithVideo(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1348,7 +1484,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
                 auto param0 = py::convert_to<winrt::Windows::Phone::Notification::Management::PlaybackCommand>(args, 0);
 
-                winrt::Windows::Phone::Notification::Management::AccessoryManager::PerformMediaPlaybackCommand(param0);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Phone::Notification::Management::AccessoryManager::PerformMediaPlaybackCommand(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1387,7 +1527,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
                 auto param0 = py::convert_to<winrt::Windows::Phone::Notification::Management::IAccessoryNotificationTriggerDetails>(args, 0);
 
-                winrt::Windows::Phone::Notification::Management::AccessoryManager::ProcessTriggerDetails(param0);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Phone::Notification::Management::AccessoryManager::ProcessTriggerDetails(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1424,7 +1568,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Phone::Notification::Management::AccessoryManager::RegisterAccessoryApp());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Phone::Notification::Management::AccessoryManager::RegisterAccessoryApp();
+                }());
             }
             catch (...)
             {
@@ -1462,7 +1610,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                winrt::Windows::Phone::Notification::Management::AccessoryManager::RejectPhoneCall(param0);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Phone::Notification::Management::AccessoryManager::RejectPhoneCall(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1502,7 +1654,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
-                winrt::Windows::Phone::Notification::Management::AccessoryManager::RejectPhoneCall(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Phone::Notification::Management::AccessoryManager::RejectPhoneCall(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1539,7 +1695,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                     return nullptr;
                 }
 
-                winrt::Windows::Phone::Notification::Management::AccessoryManager::RingDevice();
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Phone::Notification::Management::AccessoryManager::RingDevice();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1578,7 +1738,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
                 auto param0 = py::convert_to<bool>(args, 0);
 
-                winrt::Windows::Phone::Notification::Management::AccessoryManager::SetMute(param0);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Phone::Notification::Management::AccessoryManager::SetMute(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1618,7 +1782,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 auto param0 = py::convert_to<bool>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                winrt::Windows::Phone::Notification::Management::AccessoryManager::SetRingerVibrate(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Phone::Notification::Management::AccessoryManager::SetRingerVibrate(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1657,7 +1825,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
-                winrt::Windows::Phone::Notification::Management::AccessoryManager::SnoozeAlarm(param0);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Phone::Notification::Management::AccessoryManager::SnoozeAlarm(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1696,7 +1868,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Phone::Notification::Management::AccessoryManager::SnoozeAlarmByInstanceId(param0);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Phone::Notification::Management::AccessoryManager::SnoozeAlarmByInstanceId(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1736,7 +1912,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 1);
 
-                winrt::Windows::Phone::Notification::Management::AccessoryManager::SnoozeAlarm(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Phone::Notification::Management::AccessoryManager::SnoozeAlarm(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1775,7 +1955,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
-                winrt::Windows::Phone::Notification::Management::AccessoryManager::SnoozeReminder(param0);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Phone::Notification::Management::AccessoryManager::SnoozeReminder(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1814,7 +1998,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Phone::Notification::Management::AccessoryManager::SnoozeReminderByInstanceId(param0);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Phone::Notification::Management::AccessoryManager::SnoozeReminderByInstanceId(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1854,7 +2042,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 1);
 
-                winrt::Windows::Phone::Notification::Management::AccessoryManager::SnoozeReminder(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Phone::Notification::Management::AccessoryManager::SnoozeReminder(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1894,7 +2086,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
-                winrt::Windows::Phone::Notification::Management::AccessoryManager::SwapPhoneCalls(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Phone::Notification::Management::AccessoryManager::SwapPhoneCalls(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1934,7 +2130,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 auto param0 = py::convert_to<winrt::Windows::Phone::Notification::Management::BinaryId>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                winrt::Windows::Phone::Notification::Management::AccessoryManager::UpdateEmailReadStatus(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Phone::Notification::Management::AccessoryManager::UpdateEmailReadStatus(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1967,7 +2167,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Phone::Notification::Management::AccessoryManager::PhoneMute());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Phone::Notification::Management::AccessoryManager::PhoneMute();
+            }());
         }
         catch (...)
         {
@@ -2001,7 +2205,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
             auto param0 = py::convert_to<bool>(arg);
 
-            winrt::Windows::Phone::Notification::Management::AccessoryManager::PhoneMute(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::Phone::Notification::Management::AccessoryManager::PhoneMute(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2028,7 +2236,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Phone::Notification::Management::AccessoryManager::PhoneCallAudioEndpoint());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Phone::Notification::Management::AccessoryManager::PhoneCallAudioEndpoint();
+            }());
         }
         catch (...)
         {
@@ -2062,7 +2274,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
             auto param0 = py::convert_to<winrt::Windows::Phone::Notification::Management::PhoneCallAudioEndpoint>(arg);
 
-            winrt::Windows::Phone::Notification::Management::AccessoryManager::PhoneCallAudioEndpoint(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::Phone::Notification::Management::AccessoryManager::PhoneCallAudioEndpoint(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2089,7 +2305,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Phone::Notification::Management::AccessoryManager::BatterySaverState());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Phone::Notification::Management::AccessoryManager::BatterySaverState();
+            }());
         }
         catch (...)
         {
@@ -2115,7 +2335,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Phone::Notification::Management::AccessoryManager::DoNotDisturbEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Phone::Notification::Management::AccessoryManager::DoNotDisturbEnabled();
+            }());
         }
         catch (...)
         {
@@ -2141,7 +2365,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Phone::Notification::Management::AccessoryManager::DrivingModeEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Phone::Notification::Management::AccessoryManager::DrivingModeEnabled();
+            }());
         }
         catch (...)
         {
@@ -2167,7 +2395,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Phone::Notification::Management::AccessoryManager::MediaPlaybackCapabilities());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Phone::Notification::Management::AccessoryManager::MediaPlaybackCapabilities();
+            }());
         }
         catch (...)
         {
@@ -2193,7 +2425,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Phone::Notification::Management::AccessoryManager::MediaPlaybackStatus());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Phone::Notification::Management::AccessoryManager::MediaPlaybackStatus();
+            }());
         }
         catch (...)
         {
@@ -2219,7 +2455,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Phone::Notification::Management::AccessoryManager::PhoneLineDetails());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Phone::Notification::Management::AccessoryManager::PhoneLineDetails();
+            }());
         }
         catch (...)
         {
@@ -2245,7 +2485,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Phone::Notification::Management::AccessoryManager::IsPhonePinLocked());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Phone::Notification::Management::AccessoryManager::IsPhonePinLocked();
+            }());
         }
         catch (...)
         {
@@ -2271,7 +2515,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Phone::Notification::Management::AccessoryManager::SpeedDialList());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Phone::Notification::Management::AccessoryManager::SpeedDialList();
+            }());
         }
         catch (...)
         {
@@ -2297,7 +2545,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Phone::Notification::Management::AccessoryManager::VolumeInfo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Phone::Notification::Management::AccessoryManager::VolumeInfo();
+            }());
         }
         catch (...)
         {
@@ -2448,7 +2700,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.StartedProcessing());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StartedProcessing();
+            }());
         }
         catch (...)
         {
@@ -2482,7 +2738,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.StartedProcessing(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StartedProcessing(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2509,7 +2769,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.AccessoryNotificationType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AccessoryNotificationType();
+            }());
         }
         catch (...)
         {
@@ -2535,7 +2799,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppDisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppDisplayName();
+            }());
         }
         catch (...)
         {
@@ -2561,7 +2829,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppId();
+            }());
         }
         catch (...)
         {
@@ -2587,7 +2859,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.TimeCreated());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TimeCreated();
+            }());
         }
         catch (...)
         {
@@ -2613,7 +2889,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.AlarmId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AlarmId();
+            }());
         }
         catch (...)
         {
@@ -2639,7 +2919,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReminderState());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReminderState();
+            }());
         }
         catch (...)
         {
@@ -2665,7 +2949,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -2691,7 +2979,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.Title());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Title();
+            }());
         }
         catch (...)
         {
@@ -2717,7 +3009,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.InstanceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InstanceId();
+            }());
         }
         catch (...)
         {
@@ -2819,7 +3115,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -2845,7 +3145,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -2939,7 +3243,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -2965,7 +3273,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.Length());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Length();
+            }());
         }
         catch (...)
         {
@@ -3059,7 +3371,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.StartedProcessing());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StartedProcessing();
+            }());
         }
         catch (...)
         {
@@ -3093,7 +3409,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.StartedProcessing(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StartedProcessing(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3120,7 +3440,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.AccessoryNotificationType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AccessoryNotificationType();
+            }());
         }
         catch (...)
         {
@@ -3146,7 +3470,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppDisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppDisplayName();
+            }());
         }
         catch (...)
         {
@@ -3172,7 +3500,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppId();
+            }());
         }
         catch (...)
         {
@@ -3198,7 +3530,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.TimeCreated());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TimeCreated();
+            }());
         }
         catch (...)
         {
@@ -3224,7 +3560,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.EventType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EventType();
+            }());
         }
         catch (...)
         {
@@ -3250,7 +3590,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.ItemId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ItemId();
+            }());
         }
         catch (...)
         {
@@ -3349,7 +3693,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.StartedProcessing());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StartedProcessing();
+            }());
         }
         catch (...)
         {
@@ -3383,7 +3731,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.StartedProcessing(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StartedProcessing(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3410,7 +3762,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.AccessoryNotificationType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AccessoryNotificationType();
+            }());
         }
         catch (...)
         {
@@ -3436,7 +3792,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppDisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppDisplayName();
+            }());
         }
         catch (...)
         {
@@ -3462,7 +3822,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppId();
+            }());
         }
         catch (...)
         {
@@ -3488,7 +3852,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.TimeCreated());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TimeCreated();
+            }());
         }
         catch (...)
         {
@@ -3514,7 +3882,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.Content());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Content();
+            }());
         }
         catch (...)
         {
@@ -3540,7 +3912,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.EmphasizedText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EmphasizedText();
+            }());
         }
         catch (...)
         {
@@ -3566,7 +3942,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.LargeContent1());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LargeContent1();
+            }());
         }
         catch (...)
         {
@@ -3592,7 +3972,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.LargeContent2());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LargeContent2();
+            }());
         }
         catch (...)
         {
@@ -3618,7 +4002,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.NonWrappedSmallContent1());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NonWrappedSmallContent1();
+            }());
         }
         catch (...)
         {
@@ -3644,7 +4032,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.NonWrappedSmallContent2());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NonWrappedSmallContent2();
+            }());
         }
         catch (...)
         {
@@ -3670,7 +4062,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.NonWrappedSmallContent3());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NonWrappedSmallContent3();
+            }());
         }
         catch (...)
         {
@@ -3696,7 +4092,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.NonWrappedSmallContent4());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NonWrappedSmallContent4();
+            }());
         }
         catch (...)
         {
@@ -3722,7 +4122,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.Source());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Source();
+            }());
         }
         catch (...)
         {
@@ -3748,7 +4152,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.TileId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TileId();
+            }());
         }
         catch (...)
         {
@@ -3855,7 +4263,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayName();
+            }());
         }
         catch (...)
         {
@@ -3881,7 +4293,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsNotificationEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsNotificationEnabled();
+            }());
         }
         catch (...)
         {
@@ -3975,7 +4391,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayName();
+            }());
         }
         catch (...)
         {
@@ -4001,7 +4421,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsNotificationEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsNotificationEnabled();
+            }());
         }
         catch (...)
         {
@@ -4095,7 +4519,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.StartedProcessing());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StartedProcessing();
+            }());
         }
         catch (...)
         {
@@ -4129,7 +4557,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.StartedProcessing(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StartedProcessing(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4156,7 +4588,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.AccessoryNotificationType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AccessoryNotificationType();
+            }());
         }
         catch (...)
         {
@@ -4182,7 +4618,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppDisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppDisplayName();
+            }());
         }
         catch (...)
         {
@@ -4208,7 +4648,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppId();
+            }());
         }
         catch (...)
         {
@@ -4234,7 +4678,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.TimeCreated());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TimeCreated();
+            }());
         }
         catch (...)
         {
@@ -4260,7 +4708,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.AccountName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AccountName();
+            }());
         }
         catch (...)
         {
@@ -4286,7 +4738,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.EmailMessage());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EmailMessage();
+            }());
         }
         catch (...)
         {
@@ -4312,7 +4768,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.ParentFolderName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ParentFolderName();
+            }());
         }
         catch (...)
         {
@@ -4338,7 +4798,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.SenderAddress());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SenderAddress();
+            }());
         }
         catch (...)
         {
@@ -4364,7 +4828,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.SenderName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SenderName();
+            }());
         }
         catch (...)
         {
@@ -4390,7 +4858,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -4416,7 +4888,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.MessageEntryId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MessageEntryId();
+            }());
         }
         catch (...)
         {
@@ -4520,7 +4996,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.StartedProcessing());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StartedProcessing();
+            }());
         }
         catch (...)
         {
@@ -4554,7 +5034,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.StartedProcessing(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StartedProcessing(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4581,7 +5065,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.AccessoryNotificationType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AccessoryNotificationType();
+            }());
         }
         catch (...)
         {
@@ -4607,7 +5095,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppDisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppDisplayName();
+            }());
         }
         catch (...)
         {
@@ -4633,7 +5125,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppId();
+            }());
         }
         catch (...)
         {
@@ -4659,7 +5155,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.TimeCreated());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TimeCreated();
+            }());
         }
         catch (...)
         {
@@ -4685,7 +5185,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.AccountName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AccountName();
+            }());
         }
         catch (...)
         {
@@ -4711,7 +5215,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsRead());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsRead();
+            }());
         }
         catch (...)
         {
@@ -4737,7 +5245,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.MessageEntryId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MessageEntryId();
+            }());
         }
         catch (...)
         {
@@ -4763,7 +5275,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.ParentFolderName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ParentFolderName();
+            }());
         }
         catch (...)
         {
@@ -4864,7 +5380,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.StartedProcessing());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StartedProcessing();
+            }());
         }
         catch (...)
         {
@@ -4898,7 +5418,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.StartedProcessing(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StartedProcessing(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4925,7 +5449,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.AccessoryNotificationType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AccessoryNotificationType();
+            }());
         }
         catch (...)
         {
@@ -4951,7 +5479,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppDisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppDisplayName();
+            }());
         }
         catch (...)
         {
@@ -4977,7 +5509,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppId();
+            }());
         }
         catch (...)
         {
@@ -5003,7 +5539,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.TimeCreated());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TimeCreated();
+            }());
         }
         catch (...)
         {
@@ -5029,7 +5569,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.MediaMetadata());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MediaMetadata();
+            }());
         }
         catch (...)
         {
@@ -5055,7 +5599,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.PlaybackStatus());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PlaybackStatus();
+            }());
         }
         catch (...)
         {
@@ -5154,7 +5702,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.Album());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Album();
+            }());
         }
         catch (...)
         {
@@ -5180,7 +5732,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.Artist());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Artist();
+            }());
         }
         catch (...)
         {
@@ -5206,7 +5762,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.Duration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Duration();
+            }());
         }
         catch (...)
         {
@@ -5232,7 +5792,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.Subtitle());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Subtitle();
+            }());
         }
         catch (...)
         {
@@ -5258,7 +5822,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.Thumbnail());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Thumbnail();
+            }());
         }
         catch (...)
         {
@@ -5284,7 +5852,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.Title());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Title();
+            }());
         }
         catch (...)
         {
@@ -5310,7 +5882,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.Track());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Track();
+            }());
         }
         catch (...)
         {
@@ -5409,7 +5985,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.CallDirection());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CallDirection();
+            }());
         }
         catch (...)
         {
@@ -5435,7 +6015,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.CallId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CallId();
+            }());
         }
         catch (...)
         {
@@ -5461,7 +6045,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.CallMediaType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CallMediaType();
+            }());
         }
         catch (...)
         {
@@ -5487,7 +6075,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.CallTransport());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CallTransport();
+            }());
         }
         catch (...)
         {
@@ -5513,7 +6105,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.ConferenceCallId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ConferenceCallId();
+            }());
         }
         catch (...)
         {
@@ -5539,7 +6135,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContactName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContactName();
+            }());
         }
         catch (...)
         {
@@ -5565,7 +6165,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.EndTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EndTime();
+            }());
         }
         catch (...)
         {
@@ -5591,7 +6195,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.PhoneLine());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PhoneLine();
+            }());
         }
         catch (...)
         {
@@ -5617,7 +6225,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.PhoneNumber());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PhoneNumber();
+            }());
         }
         catch (...)
         {
@@ -5643,7 +6255,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.PresetTextResponses());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PresetTextResponses();
+            }());
         }
         catch (...)
         {
@@ -5669,7 +6285,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.StartTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StartTime();
+            }());
         }
         catch (...)
         {
@@ -5695,7 +6315,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.State());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.State();
+            }());
         }
         catch (...)
         {
@@ -5799,7 +6423,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.DefaultOutgoingLine());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DefaultOutgoingLine();
+            }());
         }
         catch (...)
         {
@@ -5825,7 +6453,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayName();
+            }());
         }
         catch (...)
         {
@@ -5851,7 +6483,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.LineId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LineId();
+            }());
         }
         catch (...)
         {
@@ -5877,7 +6513,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.LineNumber());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LineNumber();
+            }());
         }
         catch (...)
         {
@@ -5903,7 +6543,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.RegistrationState());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RegistrationState();
+            }());
         }
         catch (...)
         {
@@ -5929,7 +6573,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.VoicemailCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.VoicemailCount();
+            }());
         }
         catch (...)
         {
@@ -5955,7 +6603,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.MissedCallCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MissedCallCount();
+            }());
         }
         catch (...)
         {
@@ -6054,7 +6706,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.StartedProcessing());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StartedProcessing();
+            }());
         }
         catch (...)
         {
@@ -6088,7 +6744,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.StartedProcessing(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StartedProcessing(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6115,7 +6775,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.AccessoryNotificationType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AccessoryNotificationType();
+            }());
         }
         catch (...)
         {
@@ -6141,7 +6805,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppDisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppDisplayName();
+            }());
         }
         catch (...)
         {
@@ -6167,7 +6835,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppId();
+            }());
         }
         catch (...)
         {
@@ -6193,7 +6865,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.TimeCreated());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TimeCreated();
+            }());
         }
         catch (...)
         {
@@ -6219,7 +6895,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.CallDetails());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CallDetails();
+            }());
         }
         catch (...)
         {
@@ -6245,7 +6925,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.PhoneLineChangedId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PhoneLineChangedId();
+            }());
         }
         catch (...)
         {
@@ -6271,7 +6955,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.PhoneNotificationType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PhoneNotificationType();
+            }());
         }
         catch (...)
         {
@@ -6371,7 +7059,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.StartedProcessing());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StartedProcessing();
+            }());
         }
         catch (...)
         {
@@ -6405,7 +7097,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.StartedProcessing(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StartedProcessing(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6432,7 +7128,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.AccessoryNotificationType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AccessoryNotificationType();
+            }());
         }
         catch (...)
         {
@@ -6458,7 +7158,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppDisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppDisplayName();
+            }());
         }
         catch (...)
         {
@@ -6484,7 +7188,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppId();
+            }());
         }
         catch (...)
         {
@@ -6510,7 +7218,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.TimeCreated());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TimeCreated();
+            }());
         }
         catch (...)
         {
@@ -6536,7 +7248,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.Appointment());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Appointment();
+            }());
         }
         catch (...)
         {
@@ -6562,7 +7278,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.Description());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Description();
+            }());
         }
         catch (...)
         {
@@ -6588,7 +7308,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.Details());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Details();
+            }());
         }
         catch (...)
         {
@@ -6614,7 +7338,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReminderId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReminderId();
+            }());
         }
         catch (...)
         {
@@ -6640,7 +7368,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReminderState());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReminderState();
+            }());
         }
         catch (...)
         {
@@ -6666,7 +7398,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -6692,7 +7428,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.Title());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Title();
+            }());
         }
         catch (...)
         {
@@ -6718,7 +7458,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.InstanceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InstanceId();
+            }());
         }
         catch (...)
         {
@@ -6823,7 +7567,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContactName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContactName();
+            }());
         }
         catch (...)
         {
@@ -6849,7 +7597,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.NumberType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NumberType();
+            }());
         }
         catch (...)
         {
@@ -6875,7 +7627,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.PhoneNumber());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PhoneNumber();
+            }());
         }
         catch (...)
         {
@@ -6970,7 +7726,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.Content());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Content();
+            }());
         }
         catch (...)
         {
@@ -6996,7 +7756,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -7090,7 +7854,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.StartedProcessing());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StartedProcessing();
+            }());
         }
         catch (...)
         {
@@ -7124,7 +7892,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.StartedProcessing(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StartedProcessing(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7151,7 +7923,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.AccessoryNotificationType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AccessoryNotificationType();
+            }());
         }
         catch (...)
         {
@@ -7177,7 +7953,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppDisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppDisplayName();
+            }());
         }
         catch (...)
         {
@@ -7203,7 +7983,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppId();
+            }());
         }
         catch (...)
         {
@@ -7229,7 +8013,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.TimeCreated());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TimeCreated();
+            }());
         }
         catch (...)
         {
@@ -7255,7 +8043,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.SuppressPopup());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SuppressPopup();
+            }());
         }
         catch (...)
         {
@@ -7281,7 +8073,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.Text1());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Text1();
+            }());
         }
         catch (...)
         {
@@ -7307,7 +8103,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.Text2());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Text2();
+            }());
         }
         catch (...)
         {
@@ -7333,7 +8133,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.Text3());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Text3();
+            }());
         }
         catch (...)
         {
@@ -7359,7 +8163,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.Text4());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Text4();
+            }());
         }
         catch (...)
         {
@@ -7385,7 +8193,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.InstanceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InstanceId();
+            }());
         }
         catch (...)
         {
@@ -7488,7 +8300,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.CallVolume());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CallVolume();
+            }());
         }
         catch (...)
         {
@@ -7514,7 +8330,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsMuted());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsMuted();
+            }());
         }
         catch (...)
         {
@@ -7540,7 +8360,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsVibrateEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsVibrateEnabled();
+            }());
         }
         catch (...)
         {
@@ -7566,7 +8390,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.MediaVolume());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MediaVolume();
+            }());
         }
         catch (...)
         {
@@ -7592,7 +8420,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.SystemVolume());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SystemVolume();
+            }());
         }
         catch (...)
         {
@@ -7689,7 +8521,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.AccessoryNotificationType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AccessoryNotificationType();
+            }());
         }
         catch (...)
         {
@@ -7715,7 +8551,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppDisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppDisplayName();
+            }());
         }
         catch (...)
         {
@@ -7741,7 +8581,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppId();
+            }());
         }
         catch (...)
         {
@@ -7767,7 +8611,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.StartedProcessing());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StartedProcessing();
+            }());
         }
         catch (...)
         {
@@ -7801,7 +8649,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.StartedProcessing(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StartedProcessing(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7828,7 +8680,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
 
-            return py::convert(self->obj.TimeCreated());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TimeCreated();
+            }());
         }
         catch (...)
         {

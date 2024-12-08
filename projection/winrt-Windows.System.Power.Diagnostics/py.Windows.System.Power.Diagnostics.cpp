@@ -34,7 +34,11 @@ namespace py::cpp::Windows::System::Power::Diagnostics
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::System::Power::Diagnostics::BackgroundEnergyDiagnostics::ComputeTotalEnergyUsage());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::System::Power::Diagnostics::BackgroundEnergyDiagnostics::ComputeTotalEnergyUsage();
+                }());
             }
             catch (...)
             {
@@ -70,7 +74,11 @@ namespace py::cpp::Windows::System::Power::Diagnostics
                     return nullptr;
                 }
 
-                winrt::Windows::System::Power::Diagnostics::BackgroundEnergyDiagnostics::ResetTotalEnergyUsage();
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::System::Power::Diagnostics::BackgroundEnergyDiagnostics::ResetTotalEnergyUsage();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -103,7 +111,11 @@ namespace py::cpp::Windows::System::Power::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::System::Power::Diagnostics::BackgroundEnergyDiagnostics::DeviceSpecificConversionFactor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::System::Power::Diagnostics::BackgroundEnergyDiagnostics::DeviceSpecificConversionFactor();
+            }());
         }
         catch (...)
         {
@@ -192,7 +204,11 @@ namespace py::cpp::Windows::System::Power::Diagnostics
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::System::Power::Diagnostics::ForegroundEnergyDiagnostics::ComputeTotalEnergyUsage());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::System::Power::Diagnostics::ForegroundEnergyDiagnostics::ComputeTotalEnergyUsage();
+                }());
             }
             catch (...)
             {
@@ -228,7 +244,11 @@ namespace py::cpp::Windows::System::Power::Diagnostics
                     return nullptr;
                 }
 
-                winrt::Windows::System::Power::Diagnostics::ForegroundEnergyDiagnostics::ResetTotalEnergyUsage();
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::System::Power::Diagnostics::ForegroundEnergyDiagnostics::ResetTotalEnergyUsage();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -261,7 +281,11 @@ namespace py::cpp::Windows::System::Power::Diagnostics
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::System::Power::Diagnostics::ForegroundEnergyDiagnostics::DeviceSpecificConversionFactor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::System::Power::Diagnostics::ForegroundEnergyDiagnostics::DeviceSpecificConversionFactor();
+            }());
         }
         catch (...)
         {

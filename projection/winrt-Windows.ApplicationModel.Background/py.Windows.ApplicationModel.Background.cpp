@@ -62,7 +62,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.MinimumReportInterval());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MinimumReportInterval();
+            }());
         }
         catch (...)
         {
@@ -88,7 +92,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReportInterval());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReportInterval();
+            }());
         }
         catch (...)
         {
@@ -114,7 +122,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.SubscribedActivities());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SubscribedActivities();
+            }());
         }
         catch (...)
         {
@@ -140,7 +152,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.SupportedActivities());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SupportedActivities();
+            }());
         }
         catch (...)
         {
@@ -232,7 +248,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::ApplicationModel::Background::AlarmApplicationManager::GetAccessStatus());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Background::AlarmApplicationManager::GetAccessStatus();
+                }());
             }
             catch (...)
             {
@@ -268,7 +288,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::ApplicationModel::Background::AlarmApplicationManager::RequestAccessAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Background::AlarmApplicationManager::RequestAccessAsync();
+                }());
             }
             catch (...)
             {
@@ -390,7 +414,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProviderInfo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProviderInfo();
+            }());
         }
         catch (...)
         {
@@ -424,7 +452,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Background::AppBroadcastTriggerProviderInfo>(arg);
 
-            self->obj.ProviderInfo(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ProviderInfo(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -518,7 +550,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.VideoKeyFrameInterval());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.VideoKeyFrameInterval();
+            }());
         }
         catch (...)
         {
@@ -552,7 +588,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
-            self->obj.VideoKeyFrameInterval(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.VideoKeyFrameInterval(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -579,7 +619,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxVideoWidth());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxVideoWidth();
+            }());
         }
         catch (...)
         {
@@ -613,7 +657,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.MaxVideoWidth(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MaxVideoWidth(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -640,7 +688,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxVideoHeight());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxVideoHeight();
+            }());
         }
         catch (...)
         {
@@ -674,7 +726,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.MaxVideoHeight(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MaxVideoHeight(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -701,7 +757,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxVideoBitrate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxVideoBitrate();
+            }());
         }
         catch (...)
         {
@@ -735,7 +795,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.MaxVideoBitrate(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MaxVideoBitrate(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -762,7 +826,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.LogoResource());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LogoResource();
+            }());
         }
         catch (...)
         {
@@ -796,7 +864,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.LogoResource(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.LogoResource(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -823,7 +895,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayNameResource());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayNameResource();
+            }());
         }
         catch (...)
         {
@@ -857,7 +933,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.DisplayNameResource(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DisplayNameResource(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -982,7 +1062,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                     return nullptr;
                 }
 
-                return py::convert(self->obj.RequestAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestAsync();
+                }());
             }
             catch (...)
             {
@@ -1020,7 +1104,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::ValueSet>(args, 0);
 
-                return py::convert(self->obj.RequestAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1120,7 +1208,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.Arguments());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Arguments();
+            }());
         }
         catch (...)
         {
@@ -1297,7 +1389,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::ApplicationModel::Background::BackgroundExecutionManager::GetAccessStatus());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Background::BackgroundExecutionManager::GetAccessStatus();
+                }());
             }
             catch (...)
             {
@@ -1335,7 +1431,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::Background::BackgroundExecutionManager::GetAccessStatus(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Background::BackgroundExecutionManager::GetAccessStatus(param0);
+                }());
             }
             catch (...)
             {
@@ -1371,7 +1471,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::ApplicationModel::Background::BackgroundExecutionManager::GetAccessStatusForModernStandby());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Background::BackgroundExecutionManager::GetAccessStatusForModernStandby();
+                }());
             }
             catch (...)
             {
@@ -1409,7 +1513,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::Background::BackgroundExecutionManager::GetAccessStatusForModernStandby(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Background::BackgroundExecutionManager::GetAccessStatusForModernStandby(param0);
+                }());
             }
             catch (...)
             {
@@ -1445,7 +1553,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                     return nullptr;
                 }
 
-                winrt::Windows::ApplicationModel::Background::BackgroundExecutionManager::RemoveAccess();
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::ApplicationModel::Background::BackgroundExecutionManager::RemoveAccess();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1484,7 +1596,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::ApplicationModel::Background::BackgroundExecutionManager::RemoveAccess(param0);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::ApplicationModel::Background::BackgroundExecutionManager::RemoveAccess(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1521,7 +1637,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::ApplicationModel::Background::BackgroundExecutionManager::RequestAccessAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Background::BackgroundExecutionManager::RequestAccessAsync();
+                }());
             }
             catch (...)
             {
@@ -1559,7 +1679,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::Background::BackgroundExecutionManager::RequestAccessAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Background::BackgroundExecutionManager::RequestAccessAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1598,7 +1722,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Background::BackgroundAccessRequestKind>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(winrt::Windows::ApplicationModel::Background::BackgroundExecutionManager::RequestAccessKindAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Background::BackgroundExecutionManager::RequestAccessKindAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1637,7 +1765,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Background::BackgroundAccessRequestKind>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(winrt::Windows::ApplicationModel::Background::BackgroundExecutionManager::RequestAccessKindForModernStandbyAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Background::BackgroundExecutionManager::RequestAccessKindForModernStandbyAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1771,7 +1903,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Background::IBackgroundCondition>(args, 0);
 
-                self->obj.AddCondition(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddCondition(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1808,7 +1944,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                     return nullptr;
                 }
 
-                return py::convert(self->obj.Register());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Register();
+                }());
             }
             catch (...)
             {
@@ -1835,7 +1975,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.Register(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Register(param0);
+                }());
             }
             catch (...)
             {
@@ -1873,7 +2017,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
-                self->obj.SetTaskEntryPointClsid(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetTaskEntryPointClsid(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1912,7 +2060,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Background::IBackgroundTrigger>(args, 0);
 
-                self->obj.SetTrigger(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetTrigger(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1949,7 +2101,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                     return nullptr;
                 }
 
-                return py::convert(self->obj.Validate());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Validate();
+                }());
             }
             catch (...)
             {
@@ -1981,7 +2137,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.TaskEntryPoint());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TaskEntryPoint();
+            }());
         }
         catch (...)
         {
@@ -2015,7 +2175,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.TaskEntryPoint(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TaskEntryPoint(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2042,7 +2206,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -2076,7 +2244,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Name(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Name(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2103,7 +2275,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.CancelOnConditionLoss());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CancelOnConditionLoss();
+            }());
         }
         catch (...)
         {
@@ -2137,7 +2313,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.CancelOnConditionLoss(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CancelOnConditionLoss(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2164,7 +2344,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsNetworkRequested());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsNetworkRequested();
+            }());
         }
         catch (...)
         {
@@ -2198,7 +2382,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsNetworkRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsNetworkRequested(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2225,7 +2413,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.TaskGroup());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TaskGroup();
+            }());
         }
         catch (...)
         {
@@ -2259,7 +2451,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Background::BackgroundTaskRegistrationGroup>(arg);
 
-            self->obj.TaskGroup(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TaskGroup(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2286,7 +2482,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.AllowRunningTaskInStandby());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AllowRunningTaskInStandby();
+            }());
         }
         catch (...)
         {
@@ -2320,7 +2520,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.AllowRunningTaskInStandby(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AllowRunningTaskInStandby(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2347,7 +2551,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::ApplicationModel::Background::BackgroundTaskBuilder::IsRunningTaskInStandbySupported());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::Background::BackgroundTaskBuilder::IsRunningTaskInStandbySupported();
+            }());
         }
         catch (...)
         {
@@ -2480,7 +2688,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                     return nullptr;
                 }
 
-                self->obj.CheckResult();
+                {
+                    auto _gil = release_gil();
+                    self->obj.CheckResult();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2513,7 +2725,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.InstanceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InstanceId();
+            }());
         }
         catch (...)
         {
@@ -2611,7 +2827,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                     return nullptr;
                 }
 
-                self->obj.Complete();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Complete();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2711,7 +2931,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.InstanceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InstanceId();
+            }());
         }
         catch (...)
         {
@@ -2737,7 +2961,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.Progress());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Progress();
+            }());
         }
         catch (...)
         {
@@ -2837,7 +3065,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::Background::BackgroundTaskRegistration::GetTaskGroup(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Background::BackgroundTaskRegistration::GetTaskGroup(param0);
+                }());
             }
             catch (...)
             {
@@ -2875,7 +3107,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
                 auto param0 = py::convert_to<bool>(args, 0);
 
-                self->obj.Unregister(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Unregister(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2908,7 +3144,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -2934,7 +3174,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.TaskId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TaskId();
+            }());
         }
         catch (...)
         {
@@ -2960,7 +3204,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.Trigger());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Trigger();
+            }());
         }
         catch (...)
         {
@@ -2986,7 +3234,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.TaskGroup());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TaskGroup();
+            }());
         }
         catch (...)
         {
@@ -3012,7 +3264,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppEnergyUsePredictionContribution());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppEnergyUsePredictionContribution();
+            }());
         }
         catch (...)
         {
@@ -3038,7 +3294,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.TaskLastThrottledInStandbyTimestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TaskLastThrottledInStandbyTimestamp();
+            }());
         }
         catch (...)
         {
@@ -3064,7 +3324,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::ApplicationModel::Background::BackgroundTaskRegistration::AllTasks());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::Background::BackgroundTaskRegistration::AllTasks();
+            }());
         }
         catch (...)
         {
@@ -3090,7 +3354,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::ApplicationModel::Background::BackgroundTaskRegistration::AllTaskGroups());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::Background::BackgroundTaskRegistration::AllTaskGroups();
+            }());
         }
         catch (...)
         {
@@ -3118,7 +3386,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Background::BackgroundTaskCompletedEventHandler>(arg);
 
-            return py::convert(self->obj.Completed(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Completed(param0);
+            }());
         }
         catch (...)
         {
@@ -3146,7 +3418,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Completed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Completed(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3175,7 +3451,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Background::BackgroundTaskProgressEventHandler>(arg);
 
-            return py::convert(self->obj.Progress(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Progress(param0);
+            }());
         }
         catch (...)
         {
@@ -3203,7 +3483,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Progress(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Progress(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3375,7 +3659,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.AllTasks());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AllTasks();
+            }());
         }
         catch (...)
         {
@@ -3401,7 +3689,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -3427,7 +3719,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -3455,7 +3751,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Background::BackgroundTaskRegistrationGroup, winrt::Windows::ApplicationModel::Activation::BackgroundActivatedEventArgs>>(arg);
 
-            return py::convert(self->obj.BackgroundActivated(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BackgroundActivated(param0);
+            }());
         }
         catch (...)
         {
@@ -3483,7 +3783,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.BackgroundActivated(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.BackgroundActivated(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3573,7 +3877,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::ApplicationModel::Background::BackgroundWorkCost::CurrentBackgroundWorkCost());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::Background::BackgroundWorkCost::CurrentBackgroundWorkCost();
+            }());
         }
         catch (...)
         {
@@ -3599,7 +3907,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::ApplicationModel::Background::BackgroundWorkCost::AppEnergyUseLevel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::Background::BackgroundWorkCost::AppEnergyUseLevel();
+            }());
         }
         catch (...)
         {
@@ -3625,7 +3937,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::ApplicationModel::Background::BackgroundWorkCost::AppEnergyUsePrediction());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::Background::BackgroundWorkCost::AppEnergyUsePrediction();
+            }());
         }
         catch (...)
         {
@@ -3651,7 +3967,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::ApplicationModel::Background::BackgroundWorkCost::AppLastThrottledInStandbyTimestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::ApplicationModel::Background::BackgroundWorkCost::AppLastThrottledInStandbyTimestamp();
+            }());
         }
         catch (...)
         {
@@ -3767,7 +4087,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.Advertisement());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Advertisement();
+            }());
         }
         catch (...)
         {
@@ -3793,7 +4117,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.UseExtendedFormat());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UseExtendedFormat();
+            }());
         }
         catch (...)
         {
@@ -3827,7 +4155,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.UseExtendedFormat(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.UseExtendedFormat(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3854,7 +4186,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.PreferredTransmitPowerLevelInDBm());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PreferredTransmitPowerLevelInDBm();
+            }());
         }
         catch (...)
         {
@@ -3888,7 +4224,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int16_t>>(arg);
 
-            self->obj.PreferredTransmitPowerLevelInDBm(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PreferredTransmitPowerLevelInDBm(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3915,7 +4255,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsAnonymous());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsAnonymous();
+            }());
         }
         catch (...)
         {
@@ -3949,7 +4293,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsAnonymous(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsAnonymous(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3976,7 +4324,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.IncludeTransmitPowerLevel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IncludeTransmitPowerLevel();
+            }());
         }
         catch (...)
         {
@@ -4010,7 +4362,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IncludeTransmitPowerLevel(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IncludeTransmitPowerLevel(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4130,7 +4486,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.SignalStrengthFilter());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SignalStrengthFilter();
+            }());
         }
         catch (...)
         {
@@ -4164,7 +4524,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothSignalStrengthFilter>(arg);
 
-            self->obj.SignalStrengthFilter(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SignalStrengthFilter(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4191,7 +4555,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.AdvertisementFilter());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AdvertisementFilter();
+            }());
         }
         catch (...)
         {
@@ -4225,7 +4593,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementFilter>(arg);
 
-            self->obj.AdvertisementFilter(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AdvertisementFilter(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4252,7 +4624,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxOutOfRangeTimeout());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxOutOfRangeTimeout();
+            }());
         }
         catch (...)
         {
@@ -4278,7 +4654,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxSamplingInterval());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxSamplingInterval();
+            }());
         }
         catch (...)
         {
@@ -4304,7 +4684,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.MinOutOfRangeTimeout());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MinOutOfRangeTimeout();
+            }());
         }
         catch (...)
         {
@@ -4330,7 +4714,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.MinSamplingInterval());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MinSamplingInterval();
+            }());
         }
         catch (...)
         {
@@ -4356,7 +4744,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.AllowExtendedAdvertisements());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AllowExtendedAdvertisements();
+            }());
         }
         catch (...)
         {
@@ -4390,7 +4782,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.AllowExtendedAdvertisements(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AllowExtendedAdvertisements(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4578,7 +4974,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.CanRequestUserInput());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CanRequestUserInput();
+            }());
         }
         catch (...)
         {
@@ -4604,7 +5004,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.UpdateRequest());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UpdateRequest();
+            }());
         }
         catch (...)
         {
@@ -4630,7 +5034,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.UpdateTarget());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UpdateTarget();
+            }());
         }
         catch (...)
         {
@@ -5114,7 +5522,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.WaitInterval());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WaitInterval();
+            }());
         }
         catch (...)
         {
@@ -5320,7 +5732,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.Recurrence());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Recurrence();
+            }());
         }
         catch (...)
         {
@@ -5346,7 +5762,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.TriggerId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TriggerId();
+            }());
         }
         catch (...)
         {
@@ -5446,7 +5866,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::Background::DeviceConnectionChangeTrigger::FromIdAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Background::DeviceConnectionChangeTrigger::FromIdAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -5478,7 +5902,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaintainConnection());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaintainConnection();
+            }());
         }
         catch (...)
         {
@@ -5512,7 +5940,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.MaintainConnection(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MaintainConnection(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5539,7 +5971,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.CanMaintainConnection());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CanMaintainConnection();
+            }());
         }
         catch (...)
         {
@@ -5565,7 +6001,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceId();
+            }());
         }
         catch (...)
         {
@@ -5711,7 +6151,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.OneShot());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OneShot();
+            }());
         }
         catch (...)
         {
@@ -5737,7 +6181,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.TriggerQualifier());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TriggerQualifier();
+            }());
         }
         catch (...)
         {
@@ -5860,7 +6308,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 1);
 
-                return py::convert(self->obj.RequestAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -5900,7 +6352,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 auto param1 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
-                return py::convert(self->obj.RequestAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -6028,7 +6484,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.RequestAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -6067,7 +6527,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.RequestAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -6361,7 +6825,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.Characteristic());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Characteristic();
+            }());
         }
         catch (...)
         {
@@ -6387,7 +6855,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.EventTriggeringMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EventTriggeringMode();
+            }());
         }
         catch (...)
         {
@@ -6488,7 +6960,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::guid>(args, 1);
 
-                return py::convert(winrt::Windows::ApplicationModel::Background::GattServiceProviderTrigger::CreateAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Background::GattServiceProviderTrigger::CreateAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -6520,7 +6996,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.AdvertisingParameters());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AdvertisingParameters();
+            }());
         }
         catch (...)
         {
@@ -6554,7 +7034,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderAdvertisingParameters>(arg);
 
-            self->obj.AdvertisingParameters(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AdvertisingParameters(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6581,7 +7065,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.Service());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Service();
+            }());
         }
         catch (...)
         {
@@ -6607,7 +7095,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.TriggerId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TriggerId();
+            }());
         }
         catch (...)
         {
@@ -6728,7 +7220,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.Error());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Error();
+            }());
         }
         catch (...)
         {
@@ -6754,7 +7250,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.Trigger());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Trigger();
+            }());
         }
         catch (...)
         {
@@ -6870,7 +7370,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.MonitoringScope());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MonitoringScope();
+            }());
         }
         catch (...)
         {
@@ -6904,7 +7408,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::VisitMonitoringScope>(arg);
 
-            self->obj.MonitoringScope(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MonitoringScope(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7022,7 +7530,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.TriggerType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TriggerType();
+            }());
         }
         catch (...)
         {
@@ -7140,7 +7652,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.FreshnessTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FreshnessTime();
+            }());
         }
         catch (...)
         {
@@ -7166,7 +7682,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.OneShot());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OneShot();
+            }());
         }
         catch (...)
         {
@@ -7286,7 +7806,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                     return nullptr;
                 }
 
-                return py::convert(self->obj.RequestAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestAsync();
+                }());
             }
             catch (...)
             {
@@ -7324,7 +7848,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::ValueSet>(args, 0);
 
-                return py::convert(self->obj.RequestAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -8064,7 +8592,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.NetworkAccountId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NetworkAccountId();
+            }());
         }
         catch (...)
         {
@@ -8270,7 +8802,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.OneShot());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OneShot();
+            }());
         }
         catch (...)
         {
@@ -8296,7 +8832,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.TriggerType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TriggerType();
+            }());
         }
         catch (...)
         {
@@ -8603,7 +9143,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.RemoteHostName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RemoteHostName();
+            }());
         }
         catch (...)
         {
@@ -8637,7 +9181,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
             auto param0 = py::convert_to<winrt::Windows::Networking::HostName>(arg);
 
-            self->obj.RemoteHostName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RemoteHostName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8664,7 +9212,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProtectionLevel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProtectionLevel();
+            }());
         }
         catch (...)
         {
@@ -8698,7 +9250,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
             auto param0 = py::convert_to<winrt::Windows::Networking::Sockets::SocketProtectionLevel>(arg);
 
-            self->obj.ProtectionLevel(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ProtectionLevel(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8725,7 +9281,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.AllowMultipleConnections());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AllowMultipleConnections();
+            }());
         }
         catch (...)
         {
@@ -8759,7 +9319,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.AllowMultipleConnections(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AllowMultipleConnections(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8786,7 +9350,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.InboundConnection());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InboundConnection();
+            }());
         }
         catch (...)
         {
@@ -8812,7 +9380,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.OutboundConnection());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OutboundConnection();
+            }());
         }
         catch (...)
         {
@@ -9111,7 +9683,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.TriggerType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TriggerType();
+            }());
         }
         catch (...)
         {
@@ -9316,7 +9892,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsWakeFromLowPowerSupported());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsWakeFromLowPowerSupported();
+            }());
         }
         catch (...)
         {
@@ -9505,7 +10085,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::StorageLibrary>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::Background::StorageLibraryContentChangedTrigger::Create(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Background::StorageLibraryContentChangedTrigger::Create(param0);
+                }());
             }
             catch (...)
             {
@@ -9543,7 +10127,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Storage::StorageLibrary>>(args, 0);
 
-                return py::convert(winrt::Windows::ApplicationModel::Background::StorageLibraryContentChangedTrigger::CreateFromLibraries(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Background::StorageLibraryContentChangedTrigger::CreateFromLibraries(param0);
+                }());
             }
             catch (...)
             {
@@ -9692,7 +10280,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.ConditionType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ConditionType();
+            }());
         }
         catch (...)
         {
@@ -9810,7 +10402,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.OneShot());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OneShot();
+            }());
         }
         catch (...)
         {
@@ -9836,7 +10432,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.TriggerType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TriggerType();
+            }());
         }
         catch (...)
         {
@@ -10043,7 +10643,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.FreshnessTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FreshnessTime();
+            }());
         }
         catch (...)
         {
@@ -10069,7 +10673,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.OneShot());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OneShot();
+            }());
         }
         catch (...)
         {
@@ -10769,7 +11377,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance>(args, 0);
 
-                self->obj.Run(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Run(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10965,7 +11577,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -10997,7 +11613,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.InstanceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InstanceId();
+            }());
         }
         catch (...)
         {
@@ -11023,7 +11643,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.Progress());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Progress();
+            }());
         }
         catch (...)
         {
@@ -11057,7 +11681,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.Progress(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Progress(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -11084,7 +11712,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.SuspendedCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SuspendedCount();
+            }());
         }
         catch (...)
         {
@@ -11110,7 +11742,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.Task());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Task();
+            }());
         }
         catch (...)
         {
@@ -11136,7 +11772,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.TriggerDetails());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TriggerDetails();
+            }());
         }
         catch (...)
         {
@@ -11164,7 +11804,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Background::BackgroundTaskCanceledEventHandler>(arg);
 
-            return py::convert(self->obj.Canceled(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Canceled(param0);
+            }());
         }
         catch (...)
         {
@@ -11192,7 +11836,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Canceled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Canceled(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -11570,7 +12218,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -11608,7 +12260,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Background::BackgroundTaskThrottleCounter>(args, 0);
 
-                return py::convert(self->obj.GetThrottleCount(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetThrottleCount(param0);
+                }());
             }
             catch (...)
             {
@@ -11640,7 +12296,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.InstanceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InstanceId();
+            }());
         }
         catch (...)
         {
@@ -11666,7 +12326,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.Progress());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Progress();
+            }());
         }
         catch (...)
         {
@@ -11700,7 +12364,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.Progress(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Progress(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -11727,7 +12395,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.SuspendedCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SuspendedCount();
+            }());
         }
         catch (...)
         {
@@ -11753,7 +12425,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.Task());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Task();
+            }());
         }
         catch (...)
         {
@@ -11779,7 +12455,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.TriggerDetails());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TriggerDetails();
+            }());
         }
         catch (...)
         {
@@ -11807,7 +12487,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Background::BackgroundTaskCanceledEventHandler>(arg);
 
-            return py::convert(self->obj.Canceled(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Canceled(param0);
+            }());
         }
         catch (...)
         {
@@ -11835,7 +12519,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Canceled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Canceled(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -12246,7 +12934,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -12278,7 +12970,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.User());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.User();
+            }());
         }
         catch (...)
         {
@@ -12304,7 +13000,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.InstanceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InstanceId();
+            }());
         }
         catch (...)
         {
@@ -12330,7 +13030,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.Progress());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Progress();
+            }());
         }
         catch (...)
         {
@@ -12364,7 +13068,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.Progress(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Progress(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -12391,7 +13099,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.SuspendedCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SuspendedCount();
+            }());
         }
         catch (...)
         {
@@ -12417,7 +13129,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.Task());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Task();
+            }());
         }
         catch (...)
         {
@@ -12443,7 +13159,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.TriggerDetails());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TriggerDetails();
+            }());
         }
         catch (...)
         {
@@ -12471,7 +13191,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Background::BackgroundTaskCanceledEventHandler>(arg);
 
-            return py::convert(self->obj.Canceled(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Canceled(param0);
+            }());
         }
         catch (...)
         {
@@ -12499,7 +13223,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Canceled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Canceled(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -12900,7 +13628,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
                 auto param0 = py::convert_to<bool>(args, 0);
 
-                self->obj.Unregister(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Unregister(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -12933,7 +13665,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -12959,7 +13695,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.TaskId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TaskId();
+            }());
         }
         catch (...)
         {
@@ -12987,7 +13727,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Background::BackgroundTaskCompletedEventHandler>(arg);
 
-            return py::convert(self->obj.Completed(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Completed(param0);
+            }());
         }
         catch (...)
         {
@@ -13015,7 +13759,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Completed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Completed(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -13044,7 +13792,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Background::BackgroundTaskProgressEventHandler>(arg);
 
-            return py::convert(self->obj.Progress(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Progress(param0);
+            }());
         }
         catch (...)
         {
@@ -13072,7 +13824,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Progress(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Progress(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -13434,7 +14190,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
                 auto param0 = py::convert_to<bool>(args, 0);
 
-                self->obj.Unregister(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Unregister(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -13467,7 +14227,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.Trigger());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Trigger();
+            }());
         }
         catch (...)
         {
@@ -13493,7 +14257,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -13519,7 +14287,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.TaskId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TaskId();
+            }());
         }
         catch (...)
         {
@@ -13547,7 +14319,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Background::BackgroundTaskCompletedEventHandler>(arg);
 
-            return py::convert(self->obj.Completed(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Completed(param0);
+            }());
         }
         catch (...)
         {
@@ -13575,7 +14351,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Completed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Completed(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -13604,7 +14384,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Background::BackgroundTaskProgressEventHandler>(arg);
 
-            return py::convert(self->obj.Progress(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Progress(param0);
+            }());
         }
         catch (...)
         {
@@ -13632,7 +14416,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Progress(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Progress(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -14015,7 +14803,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
                 auto param0 = py::convert_to<bool>(args, 0);
 
-                self->obj.Unregister(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Unregister(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -14048,7 +14840,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.TaskGroup());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TaskGroup();
+            }());
         }
         catch (...)
         {
@@ -14074,7 +14870,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -14100,7 +14900,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
 
-            return py::convert(self->obj.TaskId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TaskId();
+            }());
         }
         catch (...)
         {
@@ -14128,7 +14932,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Background::BackgroundTaskCompletedEventHandler>(arg);
 
-            return py::convert(self->obj.Completed(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Completed(param0);
+            }());
         }
         catch (...)
         {
@@ -14156,7 +14964,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Completed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Completed(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -14185,7 +14997,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Background::BackgroundTaskProgressEventHandler>(arg);
 
-            return py::convert(self->obj.Progress(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Progress(param0);
+            }());
         }
         catch (...)
         {
@@ -14213,7 +15029,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Progress(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Progress(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)

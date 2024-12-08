@@ -42,7 +42,11 @@ namespace py::cpp::Windows::Media::AppRecording
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Media::AppRecording::AppRecordingManager::GetDefault());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Media::AppRecording::AppRecordingManager::GetDefault();
+                }());
             }
             catch (...)
             {
@@ -78,7 +82,11 @@ namespace py::cpp::Windows::Media::AppRecording
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetStatus());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetStatus();
+                }());
             }
             catch (...)
             {
@@ -118,7 +126,11 @@ namespace py::cpp::Windows::Media::AppRecording
                 auto param1 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::StorageFile>(args, 2);
 
-                return py::convert(self->obj.RecordTimeSpanToFileAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RecordTimeSpanToFileAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -159,7 +171,11 @@ namespace py::cpp::Windows::Media::AppRecording
                 auto param2 = py::convert_to<winrt::Windows::Media::AppRecording::AppRecordingSaveScreenshotOption>(args, 2);
                 auto param3 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 3);
 
-                return py::convert(self->obj.SaveScreenshotToFilesAsync(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SaveScreenshotToFilesAsync(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -197,7 +213,11 @@ namespace py::cpp::Windows::Media::AppRecording
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::StorageFile>(args, 0);
 
-                return py::convert(self->obj.StartRecordingToFileAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.StartRecordingToFileAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -229,7 +249,11 @@ namespace py::cpp::Windows::Media::AppRecording
                 return nullptr;
             }
 
-            return py::convert(self->obj.SupportedScreenshotMediaEncodingSubtypes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SupportedScreenshotMediaEncodingSubtypes();
+            }());
         }
         catch (...)
         {
@@ -352,7 +376,11 @@ namespace py::cpp::Windows::Media::AppRecording
                 return nullptr;
             }
 
-            return py::convert(self->obj.Duration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Duration();
+            }());
         }
         catch (...)
         {
@@ -378,7 +406,11 @@ namespace py::cpp::Windows::Media::AppRecording
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExtendedError());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExtendedError();
+            }());
         }
         catch (...)
         {
@@ -404,7 +436,11 @@ namespace py::cpp::Windows::Media::AppRecording
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsFileTruncated());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsFileTruncated();
+            }());
         }
         catch (...)
         {
@@ -430,7 +466,11 @@ namespace py::cpp::Windows::Media::AppRecording
                 return nullptr;
             }
 
-            return py::convert(self->obj.Succeeded());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Succeeded();
+            }());
         }
         catch (...)
         {
@@ -526,7 +566,11 @@ namespace py::cpp::Windows::Media::AppRecording
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExtendedError());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExtendedError();
+            }());
         }
         catch (...)
         {
@@ -552,7 +596,11 @@ namespace py::cpp::Windows::Media::AppRecording
                 return nullptr;
             }
 
-            return py::convert(self->obj.SavedScreenshotInfos());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SavedScreenshotInfos();
+            }());
         }
         catch (...)
         {
@@ -578,7 +626,11 @@ namespace py::cpp::Windows::Media::AppRecording
                 return nullptr;
             }
 
-            return py::convert(self->obj.Succeeded());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Succeeded();
+            }());
         }
         catch (...)
         {
@@ -673,7 +725,11 @@ namespace py::cpp::Windows::Media::AppRecording
                 return nullptr;
             }
 
-            return py::convert(self->obj.File());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.File();
+            }());
         }
         catch (...)
         {
@@ -699,7 +755,11 @@ namespace py::cpp::Windows::Media::AppRecording
                 return nullptr;
             }
 
-            return py::convert(self->obj.MediaEncodingSubtype());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MediaEncodingSubtype();
+            }());
         }
         catch (...)
         {
@@ -793,7 +853,11 @@ namespace py::cpp::Windows::Media::AppRecording
                 return nullptr;
             }
 
-            return py::convert(self->obj.CanRecord());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CanRecord();
+            }());
         }
         catch (...)
         {
@@ -819,7 +883,11 @@ namespace py::cpp::Windows::Media::AppRecording
                 return nullptr;
             }
 
-            return py::convert(self->obj.CanRecordTimeSpan());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CanRecordTimeSpan();
+            }());
         }
         catch (...)
         {
@@ -845,7 +913,11 @@ namespace py::cpp::Windows::Media::AppRecording
                 return nullptr;
             }
 
-            return py::convert(self->obj.Details());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Details();
+            }());
         }
         catch (...)
         {
@@ -871,7 +943,11 @@ namespace py::cpp::Windows::Media::AppRecording
                 return nullptr;
             }
 
-            return py::convert(self->obj.HistoricalBufferDuration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HistoricalBufferDuration();
+            }());
         }
         catch (...)
         {
@@ -967,7 +1043,11 @@ namespace py::cpp::Windows::Media::AppRecording
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsAnyAppBroadcasting());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsAnyAppBroadcasting();
+            }());
         }
         catch (...)
         {
@@ -993,7 +1073,11 @@ namespace py::cpp::Windows::Media::AppRecording
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsAppInactive());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsAppInactive();
+            }());
         }
         catch (...)
         {
@@ -1019,7 +1103,11 @@ namespace py::cpp::Windows::Media::AppRecording
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsBlockedForApp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsBlockedForApp();
+            }());
         }
         catch (...)
         {
@@ -1045,7 +1133,11 @@ namespace py::cpp::Windows::Media::AppRecording
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsCaptureResourceUnavailable());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsCaptureResourceUnavailable();
+            }());
         }
         catch (...)
         {
@@ -1071,7 +1163,11 @@ namespace py::cpp::Windows::Media::AppRecording
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsDisabledBySystem());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsDisabledBySystem();
+            }());
         }
         catch (...)
         {
@@ -1097,7 +1193,11 @@ namespace py::cpp::Windows::Media::AppRecording
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsDisabledByUser());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsDisabledByUser();
+            }());
         }
         catch (...)
         {
@@ -1123,7 +1223,11 @@ namespace py::cpp::Windows::Media::AppRecording
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsGameStreamInProgress());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsGameStreamInProgress();
+            }());
         }
         catch (...)
         {
@@ -1149,7 +1253,11 @@ namespace py::cpp::Windows::Media::AppRecording
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsGpuConstrained());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsGpuConstrained();
+            }());
         }
         catch (...)
         {
@@ -1175,7 +1283,11 @@ namespace py::cpp::Windows::Media::AppRecording
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsTimeSpanRecordingDisabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsTimeSpanRecordingDisabled();
+            }());
         }
         catch (...)
         {

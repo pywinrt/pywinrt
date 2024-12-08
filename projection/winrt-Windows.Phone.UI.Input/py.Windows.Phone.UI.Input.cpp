@@ -38,7 +38,11 @@ namespace py::cpp::Windows::Phone::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Handled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Handled();
+            }());
         }
         catch (...)
         {
@@ -72,7 +76,11 @@ namespace py::cpp::Windows::Phone::UI::Input
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Handled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Handled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -226,7 +234,11 @@ namespace py::cpp::Windows::Phone::UI::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Phone::UI::Input::BackPressedEventArgs>>(arg);
 
-            return py::convert(winrt::Windows::Phone::UI::Input::HardwareButtons::BackPressed(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Phone::UI::Input::HardwareButtons::BackPressed(param0);
+            }());
         }
         catch (...)
         {
@@ -254,7 +266,11 @@ namespace py::cpp::Windows::Phone::UI::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Windows::Phone::UI::Input::HardwareButtons::BackPressed(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::Phone::UI::Input::HardwareButtons::BackPressed(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -283,7 +299,11 @@ namespace py::cpp::Windows::Phone::UI::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Phone::UI::Input::CameraEventArgs>>(arg);
 
-            return py::convert(winrt::Windows::Phone::UI::Input::HardwareButtons::CameraHalfPressed(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Phone::UI::Input::HardwareButtons::CameraHalfPressed(param0);
+            }());
         }
         catch (...)
         {
@@ -311,7 +331,11 @@ namespace py::cpp::Windows::Phone::UI::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Windows::Phone::UI::Input::HardwareButtons::CameraHalfPressed(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::Phone::UI::Input::HardwareButtons::CameraHalfPressed(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -340,7 +364,11 @@ namespace py::cpp::Windows::Phone::UI::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Phone::UI::Input::CameraEventArgs>>(arg);
 
-            return py::convert(winrt::Windows::Phone::UI::Input::HardwareButtons::CameraPressed(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Phone::UI::Input::HardwareButtons::CameraPressed(param0);
+            }());
         }
         catch (...)
         {
@@ -368,7 +396,11 @@ namespace py::cpp::Windows::Phone::UI::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Windows::Phone::UI::Input::HardwareButtons::CameraPressed(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::Phone::UI::Input::HardwareButtons::CameraPressed(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -397,7 +429,11 @@ namespace py::cpp::Windows::Phone::UI::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Phone::UI::Input::CameraEventArgs>>(arg);
 
-            return py::convert(winrt::Windows::Phone::UI::Input::HardwareButtons::CameraReleased(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Phone::UI::Input::HardwareButtons::CameraReleased(param0);
+            }());
         }
         catch (...)
         {
@@ -425,7 +461,11 @@ namespace py::cpp::Windows::Phone::UI::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Windows::Phone::UI::Input::HardwareButtons::CameraReleased(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::Phone::UI::Input::HardwareButtons::CameraReleased(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)

@@ -44,7 +44,11 @@ namespace py::cpp::Windows::Perception::Spatial
 
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
 
-                return py::convert(winrt::Windows::Perception::Spatial::SpatialAnchor::TryCreateRelativeTo(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Perception::Spatial::SpatialAnchor::TryCreateRelativeTo(param0);
+                }());
             }
             catch (...)
             {
@@ -84,7 +88,11 @@ namespace py::cpp::Windows::Perception::Spatial
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(args, 2);
 
-                return py::convert(winrt::Windows::Perception::Spatial::SpatialAnchor::TryCreateRelativeTo(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Perception::Spatial::SpatialAnchor::TryCreateRelativeTo(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -123,7 +131,11 @@ namespace py::cpp::Windows::Perception::Spatial
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 1);
 
-                return py::convert(winrt::Windows::Perception::Spatial::SpatialAnchor::TryCreateRelativeTo(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Perception::Spatial::SpatialAnchor::TryCreateRelativeTo(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -155,7 +167,11 @@ namespace py::cpp::Windows::Perception::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.CoordinateSystem());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CoordinateSystem();
+            }());
         }
         catch (...)
         {
@@ -181,7 +197,11 @@ namespace py::cpp::Windows::Perception::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.RawCoordinateSystem());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RawCoordinateSystem();
+            }());
         }
         catch (...)
         {
@@ -207,7 +227,11 @@ namespace py::cpp::Windows::Perception::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.RemovedByUser());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RemovedByUser();
+            }());
         }
         catch (...)
         {
@@ -235,7 +259,11 @@ namespace py::cpp::Windows::Perception::Spatial
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Perception::Spatial::SpatialAnchor, winrt::Windows::Perception::Spatial::SpatialAnchorRawCoordinateSystemAdjustedEventArgs>>(arg);
 
-            return py::convert(self->obj.RawCoordinateSystemAdjusted(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RawCoordinateSystemAdjusted(param0);
+            }());
         }
         catch (...)
         {
@@ -263,7 +291,11 @@ namespace py::cpp::Windows::Perception::Spatial
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.RawCoordinateSystemAdjusted(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RawCoordinateSystemAdjusted(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -389,7 +421,11 @@ namespace py::cpp::Windows::Perception::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsMinimallySufficient());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsMinimallySufficient();
+            }());
         }
         catch (...)
         {
@@ -415,7 +451,11 @@ namespace py::cpp::Windows::Perception::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.RecommendedSufficiencyLevel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RecommendedSufficiencyLevel();
+            }());
         }
         catch (...)
         {
@@ -441,7 +481,11 @@ namespace py::cpp::Windows::Perception::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.SufficiencyLevel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SufficiencyLevel();
+            }());
         }
         catch (...)
         {
@@ -543,7 +587,11 @@ namespace py::cpp::Windows::Perception::Spatial
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialAnchor>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialAnchorExportPurpose>(args, 1);
 
-                return py::convert(self->obj.GetAnchorExportSufficiencyAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAnchorExportSufficiencyAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -579,7 +627,11 @@ namespace py::cpp::Windows::Perception::Spatial
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Perception::Spatial::SpatialAnchorExporter::GetDefault());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Perception::Spatial::SpatialAnchorExporter::GetDefault();
+                }());
             }
             catch (...)
             {
@@ -615,7 +667,11 @@ namespace py::cpp::Windows::Perception::Spatial
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Perception::Spatial::SpatialAnchorExporter::RequestAccessAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Perception::Spatial::SpatialAnchorExporter::RequestAccessAsync();
+                }());
             }
             catch (...)
             {
@@ -655,7 +711,11 @@ namespace py::cpp::Windows::Perception::Spatial
                 auto param1 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialAnchorExportPurpose>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::Streams::IOutputStream>(args, 2);
 
-                return py::convert(self->obj.TryExportAnchorAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryExportAnchorAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -778,7 +838,11 @@ namespace py::cpp::Windows::Perception::Spatial
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Perception::Spatial::SpatialAnchorManager::RequestStoreAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Perception::Spatial::SpatialAnchorManager::RequestStoreAsync();
+                }());
             }
             catch (...)
             {
@@ -875,7 +939,11 @@ namespace py::cpp::Windows::Perception::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.OldRawCoordinateSystemToNewRawCoordinateSystemTransform());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OldRawCoordinateSystemToNewRawCoordinateSystemTransform();
+            }());
         }
         catch (...)
         {
@@ -972,7 +1040,11 @@ namespace py::cpp::Windows::Perception::Spatial
                     return nullptr;
                 }
 
-                self->obj.Clear();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Clear();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1009,7 +1081,11 @@ namespace py::cpp::Windows::Perception::Spatial
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetAllSavedAnchors());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAllSavedAnchors();
+                }());
             }
             catch (...)
             {
@@ -1047,7 +1123,11 @@ namespace py::cpp::Windows::Perception::Spatial
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.Remove(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Remove(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1087,7 +1167,11 @@ namespace py::cpp::Windows::Perception::Spatial
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialAnchor>(args, 1);
 
-                return py::convert(self->obj.TrySave(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TrySave(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1185,7 +1269,11 @@ namespace py::cpp::Windows::Perception::Spatial
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Perception::Spatial::SpatialAnchorTransferManager::RequestAccessAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Perception::Spatial::SpatialAnchorTransferManager::RequestAccessAsync();
+                }());
             }
             catch (...)
             {
@@ -1224,7 +1312,11 @@ namespace py::cpp::Windows::Perception::Spatial
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::Windows::Perception::Spatial::SpatialAnchor>>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IOutputStream>(args, 1);
 
-                return py::convert(winrt::Windows::Perception::Spatial::SpatialAnchorTransferManager::TryExportAnchorsAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Perception::Spatial::SpatialAnchorTransferManager::TryExportAnchorsAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1262,7 +1354,11 @@ namespace py::cpp::Windows::Perception::Spatial
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 0);
 
-                return py::convert(winrt::Windows::Perception::Spatial::SpatialAnchorTransferManager::TryImportAnchorsAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Perception::Spatial::SpatialAnchorTransferManager::TryImportAnchorsAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1368,7 +1464,11 @@ namespace py::cpp::Windows::Perception::Spatial
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialBoundingBox>(args, 1);
 
-                return py::convert(winrt::Windows::Perception::Spatial::SpatialBoundingVolume::FromBox(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Perception::Spatial::SpatialBoundingVolume::FromBox(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1407,7 +1507,11 @@ namespace py::cpp::Windows::Perception::Spatial
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialBoundingFrustum>(args, 1);
 
-                return py::convert(winrt::Windows::Perception::Spatial::SpatialBoundingVolume::FromFrustum(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Perception::Spatial::SpatialBoundingVolume::FromFrustum(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1446,7 +1550,11 @@ namespace py::cpp::Windows::Perception::Spatial
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialBoundingOrientedBox>(args, 1);
 
-                return py::convert(winrt::Windows::Perception::Spatial::SpatialBoundingVolume::FromOrientedBox(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Perception::Spatial::SpatialBoundingVolume::FromOrientedBox(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1485,7 +1593,11 @@ namespace py::cpp::Windows::Perception::Spatial
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialBoundingSphere>(args, 1);
 
-                return py::convert(winrt::Windows::Perception::Spatial::SpatialBoundingVolume::FromSphere(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Perception::Spatial::SpatialBoundingVolume::FromSphere(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1618,7 +1730,11 @@ namespace py::cpp::Windows::Perception::Spatial
 
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
 
-                return py::convert(self->obj.TryGetTransformTo(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryGetTransformTo(param0);
+                }());
             }
             catch (...)
             {
@@ -1757,7 +1873,11 @@ namespace py::cpp::Windows::Perception::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.Anchor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Anchor();
+            }());
         }
         catch (...)
         {
@@ -1783,7 +1903,11 @@ namespace py::cpp::Windows::Perception::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -1809,7 +1933,11 @@ namespace py::cpp::Windows::Perception::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.Properties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Properties();
+            }());
         }
         catch (...)
         {
@@ -1904,7 +2032,11 @@ namespace py::cpp::Windows::Perception::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.Entity());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Entity();
+            }());
         }
         catch (...)
         {
@@ -1997,7 +2129,11 @@ namespace py::cpp::Windows::Perception::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.Entity());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Entity();
+            }());
         }
         catch (...)
         {
@@ -2094,7 +2230,11 @@ namespace py::cpp::Windows::Perception::Spatial
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CreateEntityWatcher());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateEntityWatcher();
+                }());
             }
             catch (...)
             {
@@ -2132,7 +2272,11 @@ namespace py::cpp::Windows::Perception::Spatial
 
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialEntity>(args, 0);
 
-                return py::convert(self->obj.RemoveAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RemoveAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -2170,7 +2314,11 @@ namespace py::cpp::Windows::Perception::Spatial
 
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialEntity>(args, 0);
 
-                return py::convert(self->obj.SaveAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SaveAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -2208,7 +2356,11 @@ namespace py::cpp::Windows::Perception::Spatial
 
                 auto param0 = py::convert_to<winrt::Windows::System::RemoteSystems::RemoteSystemSession>(args, 0);
 
-                return py::convert(winrt::Windows::Perception::Spatial::SpatialEntityStore::TryGet(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Perception::Spatial::SpatialEntityStore::TryGet(param0);
+                }());
             }
             catch (...)
             {
@@ -2240,7 +2392,11 @@ namespace py::cpp::Windows::Perception::Spatial
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Perception::Spatial::SpatialEntityStore::IsSupported());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Perception::Spatial::SpatialEntityStore::IsSupported();
+            }());
         }
         catch (...)
         {
@@ -2362,7 +2518,11 @@ namespace py::cpp::Windows::Perception::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.Entity());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Entity();
+            }());
         }
         catch (...)
         {
@@ -2459,7 +2619,11 @@ namespace py::cpp::Windows::Perception::Spatial
                     return nullptr;
                 }
 
-                self->obj.Start();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Start();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2496,7 +2660,11 @@ namespace py::cpp::Windows::Perception::Spatial
                     return nullptr;
                 }
 
-                self->obj.Stop();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Stop();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2529,7 +2697,11 @@ namespace py::cpp::Windows::Perception::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -2557,7 +2729,11 @@ namespace py::cpp::Windows::Perception::Spatial
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Perception::Spatial::SpatialEntityWatcher, winrt::Windows::Perception::Spatial::SpatialEntityAddedEventArgs>>(arg);
 
-            return py::convert(self->obj.Added(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Added(param0);
+            }());
         }
         catch (...)
         {
@@ -2585,7 +2761,11 @@ namespace py::cpp::Windows::Perception::Spatial
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Added(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Added(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2614,7 +2794,11 @@ namespace py::cpp::Windows::Perception::Spatial
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Perception::Spatial::SpatialEntityWatcher, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.EnumerationCompleted(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EnumerationCompleted(param0);
+            }());
         }
         catch (...)
         {
@@ -2642,7 +2826,11 @@ namespace py::cpp::Windows::Perception::Spatial
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.EnumerationCompleted(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.EnumerationCompleted(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2671,7 +2859,11 @@ namespace py::cpp::Windows::Perception::Spatial
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Perception::Spatial::SpatialEntityWatcher, winrt::Windows::Perception::Spatial::SpatialEntityRemovedEventArgs>>(arg);
 
-            return py::convert(self->obj.Removed(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Removed(param0);
+            }());
         }
         catch (...)
         {
@@ -2699,7 +2891,11 @@ namespace py::cpp::Windows::Perception::Spatial
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Removed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Removed(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2728,7 +2924,11 @@ namespace py::cpp::Windows::Perception::Spatial
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Perception::Spatial::SpatialEntityWatcher, winrt::Windows::Perception::Spatial::SpatialEntityUpdatedEventArgs>>(arg);
 
-            return py::convert(self->obj.Updated(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Updated(param0);
+            }());
         }
         catch (...)
         {
@@ -2756,7 +2956,11 @@ namespace py::cpp::Windows::Perception::Spatial
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Updated(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Updated(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2860,7 +3064,11 @@ namespace py::cpp::Windows::Perception::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.AbsoluteAngularAcceleration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AbsoluteAngularAcceleration();
+            }());
         }
         catch (...)
         {
@@ -2886,7 +3094,11 @@ namespace py::cpp::Windows::Perception::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.AbsoluteAngularVelocity());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AbsoluteAngularVelocity();
+            }());
         }
         catch (...)
         {
@@ -2912,7 +3124,11 @@ namespace py::cpp::Windows::Perception::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.AbsoluteLinearAcceleration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AbsoluteLinearAcceleration();
+            }());
         }
         catch (...)
         {
@@ -2938,7 +3154,11 @@ namespace py::cpp::Windows::Perception::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.AbsoluteLinearVelocity());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AbsoluteLinearVelocity();
+            }());
         }
         catch (...)
         {
@@ -2964,7 +3184,11 @@ namespace py::cpp::Windows::Perception::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.Orientation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Orientation();
+            }());
         }
         catch (...)
         {
@@ -2990,7 +3214,11 @@ namespace py::cpp::Windows::Perception::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.Position());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Position();
+            }());
         }
         catch (...)
         {
@@ -3016,7 +3244,11 @@ namespace py::cpp::Windows::Perception::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.AbsoluteAngularAccelerationAxisAngle());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AbsoluteAngularAccelerationAxisAngle();
+            }());
         }
         catch (...)
         {
@@ -3042,7 +3274,11 @@ namespace py::cpp::Windows::Perception::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.AbsoluteAngularVelocityAxisAngle());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AbsoluteAngularVelocityAxisAngle();
+            }());
         }
         catch (...)
         {
@@ -3146,7 +3382,11 @@ namespace py::cpp::Windows::Perception::Spatial
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CreateAttachedFrameOfReferenceAtCurrentHeading());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateAttachedFrameOfReferenceAtCurrentHeading();
+                }());
             }
             catch (...)
             {
@@ -3184,7 +3424,11 @@ namespace py::cpp::Windows::Perception::Spatial
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 0);
 
-                return py::convert(self->obj.CreateAttachedFrameOfReferenceAtCurrentHeading(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateAttachedFrameOfReferenceAtCurrentHeading(param0);
+                }());
             }
             catch (...)
             {
@@ -3223,7 +3467,11 @@ namespace py::cpp::Windows::Perception::Spatial
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(args, 1);
 
-                return py::convert(self->obj.CreateAttachedFrameOfReferenceAtCurrentHeading(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateAttachedFrameOfReferenceAtCurrentHeading(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -3263,7 +3511,11 @@ namespace py::cpp::Windows::Perception::Spatial
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(args, 1);
                 auto param2 = py::convert_to<double>(args, 2);
 
-                return py::convert(self->obj.CreateAttachedFrameOfReferenceAtCurrentHeading(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateAttachedFrameOfReferenceAtCurrentHeading(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -3299,7 +3551,11 @@ namespace py::cpp::Windows::Perception::Spatial
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CreateStationaryFrameOfReferenceAtCurrentLocation());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateStationaryFrameOfReferenceAtCurrentLocation();
+                }());
             }
             catch (...)
             {
@@ -3337,7 +3593,11 @@ namespace py::cpp::Windows::Perception::Spatial
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 0);
 
-                return py::convert(self->obj.CreateStationaryFrameOfReferenceAtCurrentLocation(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateStationaryFrameOfReferenceAtCurrentLocation(param0);
+                }());
             }
             catch (...)
             {
@@ -3376,7 +3636,11 @@ namespace py::cpp::Windows::Perception::Spatial
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(args, 1);
 
-                return py::convert(self->obj.CreateStationaryFrameOfReferenceAtCurrentLocation(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateStationaryFrameOfReferenceAtCurrentLocation(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -3416,7 +3680,11 @@ namespace py::cpp::Windows::Perception::Spatial
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(args, 1);
                 auto param2 = py::convert_to<double>(args, 2);
 
-                return py::convert(self->obj.CreateStationaryFrameOfReferenceAtCurrentLocation(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateStationaryFrameOfReferenceAtCurrentLocation(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -3452,7 +3720,11 @@ namespace py::cpp::Windows::Perception::Spatial
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Perception::Spatial::SpatialLocator::GetDefault());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Perception::Spatial::SpatialLocator::GetDefault();
+                }());
             }
             catch (...)
             {
@@ -3491,7 +3763,11 @@ namespace py::cpp::Windows::Perception::Spatial
                 auto param0 = py::convert_to<winrt::Windows::Perception::PerceptionTimestamp>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 1);
 
-                return py::convert(self->obj.TryLocateAtTimestamp(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryLocateAtTimestamp(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -3523,7 +3799,11 @@ namespace py::cpp::Windows::Perception::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.Locatability());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Locatability();
+            }());
         }
         catch (...)
         {
@@ -3551,7 +3831,11 @@ namespace py::cpp::Windows::Perception::Spatial
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Perception::Spatial::SpatialLocator, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.LocatabilityChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LocatabilityChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -3579,7 +3863,11 @@ namespace py::cpp::Windows::Perception::Spatial
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.LocatabilityChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.LocatabilityChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3608,7 +3896,11 @@ namespace py::cpp::Windows::Perception::Spatial
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Perception::Spatial::SpatialLocator, winrt::Windows::Perception::Spatial::SpatialLocatorPositionalTrackingDeactivatingEventArgs>>(arg);
 
-            return py::convert(self->obj.PositionalTrackingDeactivating(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PositionalTrackingDeactivating(param0);
+            }());
         }
         catch (...)
         {
@@ -3636,7 +3928,11 @@ namespace py::cpp::Windows::Perception::Spatial
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.PositionalTrackingDeactivating(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PositionalTrackingDeactivating(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3775,7 +4071,11 @@ namespace py::cpp::Windows::Perception::Spatial
 
                 auto param0 = py::convert_to<double>(args, 0);
 
-                self->obj.AdjustHeading(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AdjustHeading(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3814,7 +4114,11 @@ namespace py::cpp::Windows::Perception::Spatial
 
                 auto param0 = py::convert_to<winrt::Windows::Perception::PerceptionTimestamp>(args, 0);
 
-                return py::convert(self->obj.GetStationaryCoordinateSystemAtTimestamp(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetStationaryCoordinateSystemAtTimestamp(param0);
+                }());
             }
             catch (...)
             {
@@ -3852,7 +4156,11 @@ namespace py::cpp::Windows::Perception::Spatial
 
                 auto param0 = py::convert_to<winrt::Windows::Perception::PerceptionTimestamp>(args, 0);
 
-                return py::convert(self->obj.TryGetRelativeHeadingAtTimestamp(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryGetRelativeHeadingAtTimestamp(param0);
+                }());
             }
             catch (...)
             {
@@ -3884,7 +4192,11 @@ namespace py::cpp::Windows::Perception::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.RelativePosition());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RelativePosition();
+            }());
         }
         catch (...)
         {
@@ -3918,7 +4230,11 @@ namespace py::cpp::Windows::Perception::Spatial
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
 
-            self->obj.RelativePosition(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RelativePosition(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3945,7 +4261,11 @@ namespace py::cpp::Windows::Perception::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.RelativeOrientation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RelativeOrientation();
+            }());
         }
         catch (...)
         {
@@ -3979,7 +4299,11 @@ namespace py::cpp::Windows::Perception::Spatial
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(arg);
 
-            self->obj.RelativeOrientation(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RelativeOrientation(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4077,7 +4401,11 @@ namespace py::cpp::Windows::Perception::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.Canceled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Canceled();
+            }());
         }
         catch (...)
         {
@@ -4111,7 +4439,11 @@ namespace py::cpp::Windows::Perception::Spatial
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Canceled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Canceled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4211,7 +4543,11 @@ namespace py::cpp::Windows::Perception::Spatial
 
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialLocator>(args, 0);
 
-                return py::convert(self->obj.GetCoordinateSystemAtCurrentLocation(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetCoordinateSystemAtCurrentLocation(param0);
+                }());
             }
             catch (...)
             {
@@ -4247,7 +4583,11 @@ namespace py::cpp::Windows::Perception::Spatial
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Perception::Spatial::SpatialStageFrameOfReference::RequestNewStageAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Perception::Spatial::SpatialStageFrameOfReference::RequestNewStageAsync();
+                }());
             }
             catch (...)
             {
@@ -4285,7 +4625,11 @@ namespace py::cpp::Windows::Perception::Spatial
 
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
 
-                return py::convert(self->obj.TryGetMovementBounds(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryGetMovementBounds(param0);
+                }());
             }
             catch (...)
             {
@@ -4317,7 +4661,11 @@ namespace py::cpp::Windows::Perception::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.CoordinateSystem());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CoordinateSystem();
+            }());
         }
         catch (...)
         {
@@ -4343,7 +4691,11 @@ namespace py::cpp::Windows::Perception::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.LookDirectionRange());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LookDirectionRange();
+            }());
         }
         catch (...)
         {
@@ -4369,7 +4721,11 @@ namespace py::cpp::Windows::Perception::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.MovementRange());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MovementRange();
+            }());
         }
         catch (...)
         {
@@ -4395,7 +4751,11 @@ namespace py::cpp::Windows::Perception::Spatial
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Perception::Spatial::SpatialStageFrameOfReference::Current());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Perception::Spatial::SpatialStageFrameOfReference::Current();
+            }());
         }
         catch (...)
         {
@@ -4423,7 +4783,11 @@ namespace py::cpp::Windows::Perception::Spatial
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(winrt::Windows::Perception::Spatial::SpatialStageFrameOfReference::CurrentChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Perception::Spatial::SpatialStageFrameOfReference::CurrentChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -4451,7 +4815,11 @@ namespace py::cpp::Windows::Perception::Spatial
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            winrt::Windows::Perception::Spatial::SpatialStageFrameOfReference::CurrentChanged(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::Perception::Spatial::SpatialStageFrameOfReference::CurrentChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -4578,7 +4946,11 @@ namespace py::cpp::Windows::Perception::Spatial
                 return nullptr;
             }
 
-            return py::convert(self->obj.CoordinateSystem());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CoordinateSystem();
+            }());
         }
         catch (...)
         {

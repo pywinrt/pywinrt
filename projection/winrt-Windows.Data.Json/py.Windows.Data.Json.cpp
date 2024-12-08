@@ -66,7 +66,11 @@ namespace py::cpp::Windows::Data::Json
 
                 auto param0 = py::convert_to<winrt::Windows::Data::Json::IJsonValue>(args, 0);
 
-                self->obj.Append(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Append(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -103,7 +107,11 @@ namespace py::cpp::Windows::Data::Json
                     return nullptr;
                 }
 
-                self->obj.Clear();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Clear();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -140,7 +148,11 @@ namespace py::cpp::Windows::Data::Json
                     return nullptr;
                 }
 
-                return py::convert(self->obj.First());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.First();
+                }());
             }
             catch (...)
             {
@@ -176,7 +188,11 @@ namespace py::cpp::Windows::Data::Json
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetArray());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetArray();
+                }());
             }
             catch (...)
             {
@@ -214,7 +230,11 @@ namespace py::cpp::Windows::Data::Json
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(self->obj.GetArrayAt(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetArrayAt(param0);
+                }());
             }
             catch (...)
             {
@@ -252,7 +272,11 @@ namespace py::cpp::Windows::Data::Json
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(self->obj.GetAt(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAt(param0);
+                }());
             }
             catch (...)
             {
@@ -288,7 +312,11 @@ namespace py::cpp::Windows::Data::Json
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetBoolean());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetBoolean();
+                }());
             }
             catch (...)
             {
@@ -326,7 +354,11 @@ namespace py::cpp::Windows::Data::Json
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(self->obj.GetBooleanAt(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetBooleanAt(param0);
+                }());
             }
             catch (...)
             {
@@ -365,7 +397,11 @@ namespace py::cpp::Windows::Data::Json
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Data::Json::IJsonValue, true>>(args, 1);
 
-                return py::convert(self->obj.GetMany(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetMany(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -401,7 +437,11 @@ namespace py::cpp::Windows::Data::Json
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetNumber());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetNumber();
+                }());
             }
             catch (...)
             {
@@ -439,7 +479,11 @@ namespace py::cpp::Windows::Data::Json
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(self->obj.GetNumberAt(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetNumberAt(param0);
+                }());
             }
             catch (...)
             {
@@ -475,7 +519,11 @@ namespace py::cpp::Windows::Data::Json
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetObject());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetObject();
+                }());
             }
             catch (...)
             {
@@ -513,7 +561,11 @@ namespace py::cpp::Windows::Data::Json
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(self->obj.GetObjectAt(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetObjectAt(param0);
+                }());
             }
             catch (...)
             {
@@ -549,7 +601,11 @@ namespace py::cpp::Windows::Data::Json
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetString());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetString();
+                }());
             }
             catch (...)
             {
@@ -587,7 +643,11 @@ namespace py::cpp::Windows::Data::Json
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(self->obj.GetStringAt(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetStringAt(param0);
+                }());
             }
             catch (...)
             {
@@ -623,7 +683,11 @@ namespace py::cpp::Windows::Data::Json
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetView();
+                }());
             }
             catch (...)
             {
@@ -662,7 +726,11 @@ namespace py::cpp::Windows::Data::Json
                 auto param0 = py::convert_to<winrt::Windows::Data::Json::IJsonValue>(args, 0);
                 uint32_t param1{};
 
-                auto return_value = self->obj.IndexOf(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IndexOf(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -674,6 +742,7 @@ namespace py::cpp::Windows::Data::Json
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -713,7 +782,11 @@ namespace py::cpp::Windows::Data::Json
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Json::IJsonValue>(args, 1);
 
-                self->obj.InsertAt(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.InsertAt(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -752,7 +825,11 @@ namespace py::cpp::Windows::Data::Json
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Data::Json::JsonArray::Parse(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Data::Json::JsonArray::Parse(param0);
+                }());
             }
             catch (...)
             {
@@ -790,7 +867,11 @@ namespace py::cpp::Windows::Data::Json
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                self->obj.RemoveAt(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveAt(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -827,7 +908,11 @@ namespace py::cpp::Windows::Data::Json
                     return nullptr;
                 }
 
-                self->obj.RemoveAtEnd();
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveAtEnd();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -866,7 +951,11 @@ namespace py::cpp::Windows::Data::Json
 
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Data::Json::IJsonValue, false>>(args, 0);
 
-                self->obj.ReplaceAll(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ReplaceAll(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -906,7 +995,11 @@ namespace py::cpp::Windows::Data::Json
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Json::IJsonValue>(args, 1);
 
-                self->obj.SetAt(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetAt(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -943,7 +1036,11 @@ namespace py::cpp::Windows::Data::Json
                     return nullptr;
                 }
 
-                return py::convert(self->obj.Stringify());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Stringify();
+                }());
             }
             catch (...)
             {
@@ -979,7 +1076,11 @@ namespace py::cpp::Windows::Data::Json
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ToString());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ToString();
+                }());
             }
             catch (...)
             {
@@ -1018,7 +1119,11 @@ namespace py::cpp::Windows::Data::Json
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 winrt::Windows::Data::Json::JsonArray param1{nullptr};
 
-                auto return_value = winrt::Windows::Data::Json::JsonArray::TryParse(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Data::Json::JsonArray::TryParse(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -1030,6 +1135,7 @@ namespace py::cpp::Windows::Data::Json
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -1062,7 +1168,11 @@ namespace py::cpp::Windows::Data::Json
                 return nullptr;
             }
 
-            return py::convert(self->obj.ValueType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ValueType();
+            }());
         }
         catch (...)
         {
@@ -1088,7 +1198,11 @@ namespace py::cpp::Windows::Data::Json
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -1125,7 +1239,11 @@ namespace py::cpp::Windows::Data::Json
     {
         try
         {
-            return py::convert(self->obj.ToString());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.ToString();
+            }());
         }
         catch (...)
         {
@@ -1138,7 +1256,11 @@ namespace py::cpp::Windows::Data::Json
     {
         try
         {
-            return py::convert(self->obj.First());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.First();
+            }());
         }
         catch (...)
         {
@@ -1151,6 +1273,7 @@ namespace py::cpp::Windows::Data::Json
     {
         try
         {
+            auto _gil = py::release_gil();
             return static_cast<Py_ssize_t>(self->obj.Size());
         }
         catch (...)
@@ -1164,7 +1287,11 @@ namespace py::cpp::Windows::Data::Json
     {
         try
         {
-            return py::convert(self->obj.GetAt(static_cast<uint32_t>(i)));
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.GetAt(static_cast<uint32_t>(i));
+            }());
         }
         catch (...)
         {
@@ -1203,7 +1330,12 @@ namespace py::cpp::Windows::Data::Json
 
             Py_ssize_t start, stop, step, length;
 
-            if (PySlice_GetIndicesEx(slice, self->obj.Size(), &start, &stop, &step, &length) < 0)
+            auto size = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.Size();
+            }();
+            if (PySlice_GetIndicesEx(slice, size, &start, &stop, &step, &length) < 0)
             {
                 return nullptr;
             }
@@ -1216,7 +1348,11 @@ namespace py::cpp::Windows::Data::Json
 
             winrt::com_array<winrt::Windows::Data::Json::IJsonValue> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::Data::Json::IJsonValue>::get());
 
-            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
+            auto count = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.GetMany(static_cast<uint32_t>(start), items);
+            }();
 
             if (count != static_cast<uint32_t>(length))
             {
@@ -1239,11 +1375,16 @@ namespace py::cpp::Windows::Data::Json
         {
             if (!value)
             {
+                auto _gil = py::release_gil();
                 self->obj.RemoveAt(static_cast<uint32_t>(i));
             }
             else
             {
-                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::Data::Json::IJsonValue>(value));
+                auto _value = py::convert_to<winrt::Windows::Data::Json::IJsonValue>(value);
+                {
+                    auto _gil = py::release_gil();
+                    self->obj.SetAt(static_cast<uint32_t>(i), _value);
+                }
             }
 
             return 0;
@@ -1371,7 +1512,11 @@ namespace py::cpp::Windows::Data::Json
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                return py::convert(winrt::Windows::Data::Json::JsonError::GetJsonStatus(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Data::Json::JsonError::GetJsonStatus(param0);
+                }());
             }
             catch (...)
             {
@@ -1494,7 +1639,11 @@ namespace py::cpp::Windows::Data::Json
                     return nullptr;
                 }
 
-                self->obj.Clear();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Clear();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1531,7 +1680,11 @@ namespace py::cpp::Windows::Data::Json
                     return nullptr;
                 }
 
-                return py::convert(self->obj.First());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.First();
+                }());
             }
             catch (...)
             {
@@ -1567,7 +1720,11 @@ namespace py::cpp::Windows::Data::Json
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetArray());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetArray();
+                }());
             }
             catch (...)
             {
@@ -1603,7 +1760,11 @@ namespace py::cpp::Windows::Data::Json
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetBoolean());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetBoolean();
+                }());
             }
             catch (...)
             {
@@ -1641,7 +1802,11 @@ namespace py::cpp::Windows::Data::Json
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetNamedArray(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetNamedArray(param0);
+                }());
             }
             catch (...)
             {
@@ -1680,7 +1845,11 @@ namespace py::cpp::Windows::Data::Json
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Json::JsonArray>(args, 1);
 
-                return py::convert(self->obj.GetNamedArray(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetNamedArray(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1718,7 +1887,11 @@ namespace py::cpp::Windows::Data::Json
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetNamedBoolean(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetNamedBoolean(param0);
+                }());
             }
             catch (...)
             {
@@ -1757,7 +1930,11 @@ namespace py::cpp::Windows::Data::Json
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                return py::convert(self->obj.GetNamedBoolean(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetNamedBoolean(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1795,7 +1972,11 @@ namespace py::cpp::Windows::Data::Json
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetNamedNumber(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetNamedNumber(param0);
+                }());
             }
             catch (...)
             {
@@ -1834,7 +2015,11 @@ namespace py::cpp::Windows::Data::Json
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
-                return py::convert(self->obj.GetNamedNumber(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetNamedNumber(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1872,7 +2057,11 @@ namespace py::cpp::Windows::Data::Json
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetNamedObject(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetNamedObject(param0);
+                }());
             }
             catch (...)
             {
@@ -1911,7 +2100,11 @@ namespace py::cpp::Windows::Data::Json
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Json::JsonObject>(args, 1);
 
-                return py::convert(self->obj.GetNamedObject(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetNamedObject(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1949,7 +2142,11 @@ namespace py::cpp::Windows::Data::Json
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetNamedString(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetNamedString(param0);
+                }());
             }
             catch (...)
             {
@@ -1988,7 +2185,11 @@ namespace py::cpp::Windows::Data::Json
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.GetNamedString(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetNamedString(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2026,7 +2227,11 @@ namespace py::cpp::Windows::Data::Json
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetNamedValue(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetNamedValue(param0);
+                }());
             }
             catch (...)
             {
@@ -2065,7 +2270,11 @@ namespace py::cpp::Windows::Data::Json
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Json::JsonValue>(args, 1);
 
-                return py::convert(self->obj.GetNamedValue(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetNamedValue(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2101,7 +2310,11 @@ namespace py::cpp::Windows::Data::Json
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetNumber());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetNumber();
+                }());
             }
             catch (...)
             {
@@ -2137,7 +2350,11 @@ namespace py::cpp::Windows::Data::Json
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetObject());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetObject();
+                }());
             }
             catch (...)
             {
@@ -2173,7 +2390,11 @@ namespace py::cpp::Windows::Data::Json
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetString());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetString();
+                }());
             }
             catch (...)
             {
@@ -2209,7 +2430,11 @@ namespace py::cpp::Windows::Data::Json
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetView();
+                }());
             }
             catch (...)
             {
@@ -2247,7 +2472,11 @@ namespace py::cpp::Windows::Data::Json
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.HasKey(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.HasKey(param0);
+                }());
             }
             catch (...)
             {
@@ -2286,7 +2515,11 @@ namespace py::cpp::Windows::Data::Json
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Json::IJsonValue>(args, 1);
 
-                return py::convert(self->obj.Insert(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Insert(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2324,7 +2557,11 @@ namespace py::cpp::Windows::Data::Json
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.Lookup(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Lookup(param0);
+                }());
             }
             catch (...)
             {
@@ -2362,7 +2599,11 @@ namespace py::cpp::Windows::Data::Json
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Data::Json::JsonObject::Parse(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Data::Json::JsonObject::Parse(param0);
+                }());
             }
             catch (...)
             {
@@ -2400,7 +2641,11 @@ namespace py::cpp::Windows::Data::Json
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.Remove(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Remove(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2440,7 +2685,11 @@ namespace py::cpp::Windows::Data::Json
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Json::IJsonValue>(args, 1);
 
-                self->obj.SetNamedValue(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetNamedValue(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2477,7 +2726,11 @@ namespace py::cpp::Windows::Data::Json
                     return nullptr;
                 }
 
-                return py::convert(self->obj.Stringify());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Stringify();
+                }());
             }
             catch (...)
             {
@@ -2513,7 +2766,11 @@ namespace py::cpp::Windows::Data::Json
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ToString());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ToString();
+                }());
             }
             catch (...)
             {
@@ -2552,7 +2809,11 @@ namespace py::cpp::Windows::Data::Json
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 winrt::Windows::Data::Json::JsonObject param1{nullptr};
 
-                auto return_value = winrt::Windows::Data::Json::JsonObject::TryParse(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Data::Json::JsonObject::TryParse(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -2564,6 +2825,7 @@ namespace py::cpp::Windows::Data::Json
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -2596,7 +2858,11 @@ namespace py::cpp::Windows::Data::Json
                 return nullptr;
             }
 
-            return py::convert(self->obj.ValueType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ValueType();
+            }());
         }
         catch (...)
         {
@@ -2622,7 +2888,11 @@ namespace py::cpp::Windows::Data::Json
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -2659,7 +2929,11 @@ namespace py::cpp::Windows::Data::Json
     {
         try
         {
-            return py::convert(self->obj.ToString());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.ToString();
+            }());
         }
         catch (...)
         {
@@ -2672,7 +2946,11 @@ namespace py::cpp::Windows::Data::Json
     {
         try
         {
-            py::pyobj_handle iter{py::convert(self->obj.First())};
+            py::pyobj_handle iter{py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.First();
+            }())};
 
             if (!iter)
             {
@@ -2692,7 +2970,11 @@ namespace py::cpp::Windows::Data::Json
     {
         try
         {
-            return static_cast<int>(self->obj.HasKey(py::convert_to<winrt::hstring>(key)));
+            auto _key = py::convert_to<winrt::hstring>(key);
+            {
+                auto _gil = py::release_gil();
+                return static_cast<int>(self->obj.HasKey(_key));
+            }
         }
         catch (...)
         {
@@ -2705,6 +2987,7 @@ namespace py::cpp::Windows::Data::Json
     {
         try
         {
+            auto _gil = py::release_gil();
             return static_cast<Py_ssize_t>(self->obj.Size());
         }
         catch (...)
@@ -2719,12 +3002,22 @@ namespace py::cpp::Windows::Data::Json
         try
         {
             auto _key = py::convert_to<winrt::hstring>(key);
-            auto value = self->obj.TryLookup(_key);
+            auto value = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.TryLookup(_key);
+            }();
 
             if (!value) {
                 if constexpr (std::is_base_of_v<winrt::Windows::Foundation::IUnknown, decltype(value)>)
                 {
-                    if (self->obj.HasKey(_key))
+                    auto has_key = [&]()
+                    {
+                        auto _gil = py::release_gil();
+                        return self->obj.HasKey(_key);
+                    }();
+
+                    if (has_key)
                     {
                         Py_RETURN_NONE;
                     }
@@ -2750,7 +3043,12 @@ namespace py::cpp::Windows::Data::Json
             auto _key = py::convert_to<winrt::hstring>(key);
 
             if (value == nullptr) {
-                if (!self->obj.TryRemove(_key)) {
+                bool did_remove;
+                {
+                    auto _gil = py::release_gil();
+                    did_remove = self->obj.TryRemove(_key);
+                }
+                if (!did_remove) {
                     PyErr_SetObject(PyExc_KeyError, key);
                     return -1;
                 }
@@ -2758,7 +3056,11 @@ namespace py::cpp::Windows::Data::Json
                 return 0;
             }
 
-            self->obj.Insert(_key, py::convert_to<winrt::Windows::Data::Json::IJsonValue>(value));
+            auto _value = py::convert_to<winrt::Windows::Data::Json::IJsonValue>(value);
+            {
+                auto _gil = py::release_gil();
+                self->obj.Insert(_key, _value);
+            }
 
             return 0;
         }
@@ -2896,7 +3198,11 @@ namespace py::cpp::Windows::Data::Json
 
                 auto param0 = py::convert_to<bool>(args, 0);
 
-                return py::convert(winrt::Windows::Data::Json::JsonValue::CreateBooleanValue(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Data::Json::JsonValue::CreateBooleanValue(param0);
+                }());
             }
             catch (...)
             {
@@ -2932,7 +3238,11 @@ namespace py::cpp::Windows::Data::Json
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Data::Json::JsonValue::CreateNullValue());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Data::Json::JsonValue::CreateNullValue();
+                }());
             }
             catch (...)
             {
@@ -2970,7 +3280,11 @@ namespace py::cpp::Windows::Data::Json
 
                 auto param0 = py::convert_to<double>(args, 0);
 
-                return py::convert(winrt::Windows::Data::Json::JsonValue::CreateNumberValue(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Data::Json::JsonValue::CreateNumberValue(param0);
+                }());
             }
             catch (...)
             {
@@ -3008,7 +3322,11 @@ namespace py::cpp::Windows::Data::Json
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Data::Json::JsonValue::CreateStringValue(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Data::Json::JsonValue::CreateStringValue(param0);
+                }());
             }
             catch (...)
             {
@@ -3044,7 +3362,11 @@ namespace py::cpp::Windows::Data::Json
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetArray());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetArray();
+                }());
             }
             catch (...)
             {
@@ -3080,7 +3402,11 @@ namespace py::cpp::Windows::Data::Json
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetBoolean());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetBoolean();
+                }());
             }
             catch (...)
             {
@@ -3116,7 +3442,11 @@ namespace py::cpp::Windows::Data::Json
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetNumber());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetNumber();
+                }());
             }
             catch (...)
             {
@@ -3152,7 +3482,11 @@ namespace py::cpp::Windows::Data::Json
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetObject());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetObject();
+                }());
             }
             catch (...)
             {
@@ -3188,7 +3522,11 @@ namespace py::cpp::Windows::Data::Json
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetString());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetString();
+                }());
             }
             catch (...)
             {
@@ -3226,7 +3564,11 @@ namespace py::cpp::Windows::Data::Json
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Data::Json::JsonValue::Parse(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Data::Json::JsonValue::Parse(param0);
+                }());
             }
             catch (...)
             {
@@ -3262,7 +3604,11 @@ namespace py::cpp::Windows::Data::Json
                     return nullptr;
                 }
 
-                return py::convert(self->obj.Stringify());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Stringify();
+                }());
             }
             catch (...)
             {
@@ -3298,7 +3644,11 @@ namespace py::cpp::Windows::Data::Json
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ToString());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ToString();
+                }());
             }
             catch (...)
             {
@@ -3337,7 +3687,11 @@ namespace py::cpp::Windows::Data::Json
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 winrt::Windows::Data::Json::JsonValue param1{nullptr};
 
-                auto return_value = winrt::Windows::Data::Json::JsonValue::TryParse(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Data::Json::JsonValue::TryParse(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -3349,6 +3703,7 @@ namespace py::cpp::Windows::Data::Json
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -3381,7 +3736,11 @@ namespace py::cpp::Windows::Data::Json
                 return nullptr;
             }
 
-            return py::convert(self->obj.ValueType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ValueType();
+            }());
         }
         catch (...)
         {
@@ -3418,7 +3777,11 @@ namespace py::cpp::Windows::Data::Json
     {
         try
         {
-            return py::convert(self->obj.ToString());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.ToString();
+            }());
         }
         catch (...)
         {
@@ -3530,7 +3893,11 @@ namespace py::cpp::Windows::Data::Json
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetArray());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetArray();
+                }());
             }
             catch (...)
             {
@@ -3566,7 +3933,11 @@ namespace py::cpp::Windows::Data::Json
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetBoolean());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetBoolean();
+                }());
             }
             catch (...)
             {
@@ -3602,7 +3973,11 @@ namespace py::cpp::Windows::Data::Json
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetNumber());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetNumber();
+                }());
             }
             catch (...)
             {
@@ -3638,7 +4013,11 @@ namespace py::cpp::Windows::Data::Json
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetObject());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetObject();
+                }());
             }
             catch (...)
             {
@@ -3674,7 +4053,11 @@ namespace py::cpp::Windows::Data::Json
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetString());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetString();
+                }());
             }
             catch (...)
             {
@@ -3710,7 +4093,11 @@ namespace py::cpp::Windows::Data::Json
                     return nullptr;
                 }
 
-                return py::convert(self->obj.Stringify());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Stringify();
+                }());
             }
             catch (...)
             {
@@ -3742,7 +4129,11 @@ namespace py::cpp::Windows::Data::Json
                 return nullptr;
             }
 
-            return py::convert(self->obj.ValueType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ValueType();
+            }());
         }
         catch (...)
         {

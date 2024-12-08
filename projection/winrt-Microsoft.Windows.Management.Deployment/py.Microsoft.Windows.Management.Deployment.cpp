@@ -60,7 +60,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.TargetVolume());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TargetVolume();
+            }());
         }
         catch (...)
         {
@@ -94,7 +98,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
             auto param0 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::PackageVolume>(arg);
 
-            self->obj.TargetVolume(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TargetVolume(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -121,7 +129,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.StubPackageOption());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StubPackageOption();
+            }());
         }
         catch (...)
         {
@@ -155,7 +167,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
             auto param0 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::StubPackageOption>(arg);
 
-            self->obj.StubPackageOption(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StubPackageOption(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -182,7 +198,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.StageInPlace());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StageInPlace();
+            }());
         }
         catch (...)
         {
@@ -216,7 +236,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.StageInPlace(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StageInPlace(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -243,7 +267,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.RetainFilesOnFailure());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RetainFilesOnFailure();
+            }());
         }
         catch (...)
         {
@@ -277,7 +305,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.RetainFilesOnFailure(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RetainFilesOnFailure(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -304,7 +336,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.RequiredContentGroupOnly());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RequiredContentGroupOnly();
+            }());
         }
         catch (...)
         {
@@ -338,7 +374,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.RequiredContentGroupOnly(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RequiredContentGroupOnly(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -365,7 +405,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.LimitToExistingPackages());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LimitToExistingPackages();
+            }());
         }
         catch (...)
         {
@@ -399,7 +443,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.LimitToExistingPackages(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.LimitToExistingPackages(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -426,7 +474,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.InstallAllResources());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InstallAllResources();
+            }());
         }
         catch (...)
         {
@@ -460,7 +512,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.InstallAllResources(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.InstallAllResources(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -487,7 +543,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.ForceUpdateFromAnyVersion());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ForceUpdateFromAnyVersion();
+            }());
         }
         catch (...)
         {
@@ -521,7 +581,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.ForceUpdateFromAnyVersion(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ForceUpdateFromAnyVersion(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -548,7 +612,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.ForceTargetAppShutdown());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ForceTargetAppShutdown();
+            }());
         }
         catch (...)
         {
@@ -582,7 +650,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.ForceTargetAppShutdown(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ForceTargetAppShutdown(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -609,7 +681,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.ForceAppShutdown());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ForceAppShutdown();
+            }());
         }
         catch (...)
         {
@@ -643,7 +719,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.ForceAppShutdown(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ForceAppShutdown(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -670,7 +750,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExternalLocationUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExternalLocationUri();
+            }());
         }
         catch (...)
         {
@@ -704,7 +788,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.ExternalLocationUri(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ExternalLocationUri(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -731,7 +819,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeveloperMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeveloperMode();
+            }());
         }
         catch (...)
         {
@@ -765,7 +857,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.DeveloperMode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DeveloperMode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -792,7 +888,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeferRegistrationWhenPackagesAreInUse());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeferRegistrationWhenPackagesAreInUse();
+            }());
         }
         catch (...)
         {
@@ -826,7 +926,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.DeferRegistrationWhenPackagesAreInUse(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DeferRegistrationWhenPackagesAreInUse(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -853,7 +957,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.AllowUnsigned());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AllowUnsigned();
+            }());
         }
         catch (...)
         {
@@ -887,7 +995,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.AllowUnsigned(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AllowUnsigned(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -914,7 +1026,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.DependencyPackageUris());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DependencyPackageUris();
+            }());
         }
         catch (...)
         {
@@ -940,7 +1056,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExpectedDigests());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExpectedDigests();
+            }());
         }
         catch (...)
         {
@@ -966,7 +1086,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsExpectedDigestsSupported());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsExpectedDigestsSupported();
+            }());
         }
         catch (...)
         {
@@ -992,7 +1116,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsLimitToExistingPackagesSupported());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsLimitToExistingPackagesSupported();
+            }());
         }
         catch (...)
         {
@@ -1018,7 +1146,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.OptionalPackageFamilyNames());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OptionalPackageFamilyNames();
+            }());
         }
         catch (...)
         {
@@ -1044,7 +1176,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.OptionalPackageUris());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OptionalPackageUris();
+            }());
         }
         catch (...)
         {
@@ -1070,7 +1206,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.RelatedPackageUris());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RelatedPackageUris();
+            }());
         }
         catch (...)
         {
@@ -1205,7 +1345,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.AddPackageOptions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AddPackageOptions();
+            }());
         }
         catch (...)
         {
@@ -1231,7 +1375,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.RegisterNewerIfAvailable());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RegisterNewerIfAvailable();
+            }());
         }
         catch (...)
         {
@@ -1265,7 +1413,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.RegisterNewerIfAvailable(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RegisterNewerIfAvailable(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1367,7 +1519,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::AddPackageOptions>(args, 1);
 
-                return py::convert(self->obj.AddPackageAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.AddPackageAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1406,7 +1562,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::AddPackageOptions>(args, 1);
 
-                return py::convert(self->obj.AddPackageByUriAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.AddPackageByUriAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1445,7 +1605,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::PackageSet>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::AddPackageOptions>(args, 1);
 
-                return py::convert(self->obj.AddPackageSetAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.AddPackageSetAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1483,7 +1647,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.DeprovisionPackageAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.DeprovisionPackageAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1521,7 +1689,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
-                return py::convert(self->obj.DeprovisionPackageByUriAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.DeprovisionPackageByUriAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1559,7 +1731,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::PackageSet>(args, 0);
 
-                return py::convert(self->obj.DeprovisionPackageSetAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.DeprovisionPackageSetAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1598,7 +1774,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::EnsureReadyOptions>(args, 1);
 
-                return py::convert(self->obj.EnsurePackageReadyAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.EnsurePackageReadyAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1637,7 +1817,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::EnsureReadyOptions>(args, 1);
 
-                return py::convert(self->obj.EnsurePackageReadyByUriAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.EnsurePackageReadyByUriAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1676,7 +1860,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::PackageSet>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::EnsureReadyOptions>(args, 1);
 
-                return py::convert(self->obj.EnsurePackageSetReadyAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.EnsurePackageSetReadyAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1712,7 +1900,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                     return nullptr;
                 }
 
-                return py::convert(winrt::Microsoft::Windows::Management::Deployment::PackageDeploymentManager::GetDefault());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::Windows::Management::Deployment::PackageDeploymentManager::GetDefault();
+                }());
             }
             catch (...)
             {
@@ -1750,7 +1942,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::PackageDeploymentFeature>(args, 0);
 
-                return py::convert(winrt::Microsoft::Windows::Management::Deployment::PackageDeploymentManager::IsPackageDeploymentFeatureSupported(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::Windows::Management::Deployment::PackageDeploymentManager::IsPackageDeploymentFeatureSupported(param0);
+                }());
             }
             catch (...)
             {
@@ -1788,7 +1984,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.IsPackageProvisioned(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsPackageProvisioned(param0);
+                }());
             }
             catch (...)
             {
@@ -1826,7 +2026,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
-                return py::convert(self->obj.IsPackageProvisionedByUri(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsPackageProvisionedByUri(param0);
+                }());
             }
             catch (...)
             {
@@ -1864,7 +2068,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.IsPackageReady(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsPackageReady(param0);
+                }());
             }
             catch (...)
             {
@@ -1902,7 +2110,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
-                return py::convert(self->obj.IsPackageReadyByUri(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsPackageReadyByUri(param0);
+                }());
             }
             catch (...)
             {
@@ -1940,7 +2152,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.IsPackageReadyOrNewerAvailable(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsPackageReadyOrNewerAvailable(param0);
+                }());
             }
             catch (...)
             {
@@ -1978,7 +2194,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
-                return py::convert(self->obj.IsPackageReadyOrNewerAvailableByUri(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsPackageReadyOrNewerAvailableByUri(param0);
+                }());
             }
             catch (...)
             {
@@ -2016,7 +2236,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.IsPackageRegistrationPending(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsPackageRegistrationPending(param0);
+                }());
             }
             catch (...)
             {
@@ -2055,7 +2279,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.IsPackageRegistrationPendingForUser(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsPackageRegistrationPendingForUser(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2093,7 +2321,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::PackageSet>(args, 0);
 
-                return py::convert(self->obj.IsPackageSetProvisioned(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsPackageSetProvisioned(param0);
+                }());
             }
             catch (...)
             {
@@ -2131,7 +2363,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::PackageSet>(args, 0);
 
-                return py::convert(self->obj.IsPackageSetReady(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsPackageSetReady(param0);
+                }());
             }
             catch (...)
             {
@@ -2169,7 +2405,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::PackageSet>(args, 0);
 
-                return py::convert(self->obj.IsPackageSetReadyOrNewerAvailable(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsPackageSetReadyOrNewerAvailable(param0);
+                }());
             }
             catch (...)
             {
@@ -2208,7 +2448,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::ProvisionPackageOptions>(args, 1);
 
-                return py::convert(self->obj.ProvisionPackageAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ProvisionPackageAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2247,7 +2491,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::ProvisionPackageOptions>(args, 1);
 
-                return py::convert(self->obj.ProvisionPackageByUriAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ProvisionPackageByUriAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2286,7 +2534,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::PackageSet>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::ProvisionPackageOptions>(args, 1);
 
-                return py::convert(self->obj.ProvisionPackageSetAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ProvisionPackageSetAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2325,7 +2577,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::RegisterPackageOptions>(args, 1);
 
-                return py::convert(self->obj.RegisterPackageAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RegisterPackageAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2364,7 +2620,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::RegisterPackageOptions>(args, 1);
 
-                return py::convert(self->obj.RegisterPackageByUriAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RegisterPackageByUriAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2403,7 +2663,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::PackageSet>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::RegisterPackageOptions>(args, 1);
 
-                return py::convert(self->obj.RegisterPackageSetAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RegisterPackageSetAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2442,7 +2706,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::RemovePackageOptions>(args, 1);
 
-                return py::convert(self->obj.RemovePackageAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RemovePackageAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2481,7 +2749,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::RemovePackageOptions>(args, 1);
 
-                return py::convert(self->obj.RemovePackageByFamilyNameAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RemovePackageByFamilyNameAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2520,7 +2792,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::RemovePackageOptions>(args, 1);
 
-                return py::convert(self->obj.RemovePackageByFullNameAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RemovePackageByFullNameAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2559,7 +2835,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::RemovePackageOptions>(args, 1);
 
-                return py::convert(self->obj.RemovePackageByUriAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RemovePackageByUriAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2598,7 +2878,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::PackageSet>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::RemovePackageOptions>(args, 1);
 
-                return py::convert(self->obj.RemovePackageSetAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RemovePackageSetAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2636,7 +2920,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.RepairPackageAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RepairPackageAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -2674,7 +2962,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
-                return py::convert(self->obj.RepairPackageByUriAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RepairPackageByUriAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -2712,7 +3004,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::PackageSet>(args, 0);
 
-                return py::convert(self->obj.RepairPackageSetAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RepairPackageSetAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -2750,7 +3046,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.ResetPackageAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ResetPackageAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -2788,7 +3088,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
-                return py::convert(self->obj.ResetPackageByUriAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ResetPackageByUriAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -2826,7 +3130,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::PackageSet>(args, 0);
 
-                return py::convert(self->obj.ResetPackageSetAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ResetPackageSetAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -2865,7 +3173,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::StagePackageOptions>(args, 1);
 
-                return py::convert(self->obj.StagePackageAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.StagePackageAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2904,7 +3216,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::StagePackageOptions>(args, 1);
 
-                return py::convert(self->obj.StagePackageByUriAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.StagePackageByUriAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2943,7 +3259,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::PackageSet>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::StagePackageOptions>(args, 1);
 
-                return py::convert(self->obj.StagePackageSetAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.StagePackageSetAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -3108,7 +3428,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.ActivityId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ActivityId();
+            }());
         }
         catch (...)
         {
@@ -3134,7 +3458,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.Error());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Error();
+            }());
         }
         catch (...)
         {
@@ -3160,7 +3488,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.ErrorText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ErrorText();
+            }());
         }
         catch (...)
         {
@@ -3186,7 +3518,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExtendedError());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExtendedError();
+            }());
         }
         catch (...)
         {
@@ -3212,7 +3548,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -3315,7 +3655,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::PackageSet>(args, 0);
 
-                return py::convert(self->obj.AddPackageSet(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.AddPackageSet(param0);
+                }());
             }
             catch (...)
             {
@@ -3355,7 +3699,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 auto param1 = py::convert_to<winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::CreatePackageDependencyOptions>(args, 1);
                 auto param2 = py::convert_to<winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::AddPackageDependencyOptions>(args, 2);
 
-                return py::convert(self->obj.AddPackageSet(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.AddPackageSet(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -3391,7 +3739,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                     return nullptr;
                 }
 
-                return py::convert(winrt::Microsoft::Windows::Management::Deployment::PackageRuntimeManager::GetDefault());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::Windows::Management::Deployment::PackageRuntimeManager::GetDefault();
+                }());
             }
             catch (...)
             {
@@ -3429,7 +3781,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::PackageSetRuntimeDisposition>(args, 0);
 
-                self->obj.RemovePackageSet(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemovePackageSet(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3579,7 +3935,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.PackageUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PackageUri();
+            }());
         }
         catch (...)
         {
@@ -3613,7 +3973,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.PackageUri(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PackageUri(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3640,7 +4004,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -3674,7 +4042,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Id(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Id(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3701,7 +4073,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.Items());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Items();
+            }());
         }
         catch (...)
         {
@@ -3818,7 +4194,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProcessorArchitectureFilter());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProcessorArchitectureFilter();
+            }());
         }
         catch (...)
         {
@@ -3852,7 +4232,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
             auto param0 = py::convert_to<winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependencyProcessorArchitectures>(arg);
 
-            self->obj.ProcessorArchitectureFilter(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ProcessorArchitectureFilter(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3879,7 +4263,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.PackageUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PackageUri();
+            }());
         }
         catch (...)
         {
@@ -3913,7 +4301,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.PackageUri(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PackageUri(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3940,7 +4332,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.PackageFamilyName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PackageFamilyName();
+            }());
         }
         catch (...)
         {
@@ -3974,7 +4370,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.PackageFamilyName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PackageFamilyName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4001,7 +4401,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.MinVersion());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MinVersion();
+            }());
         }
         catch (...)
         {
@@ -4035,7 +4439,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::PackageVersion>(arg);
 
-            self->obj.MinVersion(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MinVersion(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4062,7 +4470,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -4096,7 +4508,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Id(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Id(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4216,7 +4632,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.PackageDependencyContextId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PackageDependencyContextId();
+            }());
         }
         catch (...)
         {
@@ -4242,7 +4662,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.PackageDependencyId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PackageDependencyId();
+            }());
         }
         catch (...)
         {
@@ -4268,7 +4692,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.PackageFullName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PackageFullName();
+            }());
         }
         catch (...)
         {
@@ -4294,7 +4722,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.PackageSetItemId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PackageSetItemId();
+            }());
         }
         catch (...)
         {
@@ -4412,7 +4844,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.PackageSetId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PackageSetId();
+            }());
         }
         catch (...)
         {
@@ -4446,7 +4882,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.PackageSetId(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PackageSetId(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4473,7 +4913,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.PackageSetItemRuntimeDispositions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PackageSetItemRuntimeDispositions();
+            }());
         }
         catch (...)
         {
@@ -4573,7 +5017,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Microsoft::Windows::Management::Deployment::PackageVolume::FindPackageVolumeByName(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::Windows::Management::Deployment::PackageVolume::FindPackageVolumeByName(param0);
+                }());
             }
             catch (...)
             {
@@ -4611,7 +5059,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Microsoft::Windows::Management::Deployment::PackageVolume::FindPackageVolumeByPath(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::Windows::Management::Deployment::PackageVolume::FindPackageVolumeByPath(param0);
+                }());
             }
             catch (...)
             {
@@ -4647,7 +5099,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                     return nullptr;
                 }
 
-                return py::convert(winrt::Microsoft::Windows::Management::Deployment::PackageVolume::FindPackageVolumes());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::Windows::Management::Deployment::PackageVolume::FindPackageVolumes();
+                }());
             }
             catch (...)
             {
@@ -4683,7 +5139,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                     return nullptr;
                 }
 
-                return py::convert(self->obj.IsRepairNeeded());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsRepairNeeded();
+                }());
             }
             catch (...)
             {
@@ -4719,7 +5179,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                     return nullptr;
                 }
 
-                self->obj.Repair();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Repair();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4752,7 +5216,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsAppxInstallSupported());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsAppxInstallSupported();
+            }());
         }
         catch (...)
         {
@@ -4778,7 +5246,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsFullTrustPackageSupported());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsFullTrustPackageSupported();
+            }());
         }
         catch (...)
         {
@@ -4804,7 +5276,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsSystemVolume());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsSystemVolume();
+            }());
         }
         catch (...)
         {
@@ -4830,7 +5306,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.MountPoint());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MountPoint();
+            }());
         }
         catch (...)
         {
@@ -4856,7 +5336,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -4882,7 +5366,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.PackageStorePath());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PackageStorePath();
+            }());
         }
         catch (...)
         {
@@ -4908,7 +5396,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.SupportsHardLinks());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SupportsHardLinks();
+            }());
         }
         catch (...)
         {
@@ -5059,7 +5551,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsOptionalPackageFamilyNamesSupported());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsOptionalPackageFamilyNamesSupported();
+            }());
         }
         catch (...)
         {
@@ -5085,7 +5581,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsProjectionOrderPackageFamilyNamesSupported());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsProjectionOrderPackageFamilyNamesSupported();
+            }());
         }
         catch (...)
         {
@@ -5111,7 +5611,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.OptionalPackageFamilyNames());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OptionalPackageFamilyNames();
+            }());
         }
         catch (...)
         {
@@ -5137,7 +5641,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.ProjectionOrderPackageFamilyNames());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProjectionOrderPackageFamilyNames();
+            }());
         }
         catch (...)
         {
@@ -5255,7 +5763,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.StageInPlace());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StageInPlace();
+            }());
         }
         catch (...)
         {
@@ -5289,7 +5801,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.StageInPlace(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StageInPlace(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5316,7 +5832,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.InstallAllResources());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InstallAllResources();
+            }());
         }
         catch (...)
         {
@@ -5350,7 +5870,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.InstallAllResources(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.InstallAllResources(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5377,7 +5901,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.ForceUpdateFromAnyVersion());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ForceUpdateFromAnyVersion();
+            }());
         }
         catch (...)
         {
@@ -5411,7 +5939,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.ForceUpdateFromAnyVersion(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ForceUpdateFromAnyVersion(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5438,7 +5970,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.ForceTargetAppShutdown());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ForceTargetAppShutdown();
+            }());
         }
         catch (...)
         {
@@ -5472,7 +6008,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.ForceTargetAppShutdown(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ForceTargetAppShutdown(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5499,7 +6039,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.ForceAppShutdown());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ForceAppShutdown();
+            }());
         }
         catch (...)
         {
@@ -5533,7 +6077,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.ForceAppShutdown(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ForceAppShutdown(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5560,7 +6108,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExternalLocationUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExternalLocationUri();
+            }());
         }
         catch (...)
         {
@@ -5594,7 +6146,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.ExternalLocationUri(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ExternalLocationUri(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5621,7 +6177,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeveloperMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeveloperMode();
+            }());
         }
         catch (...)
         {
@@ -5655,7 +6215,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.DeveloperMode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DeveloperMode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5682,7 +6246,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeferRegistrationWhenPackagesAreInUse());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeferRegistrationWhenPackagesAreInUse();
+            }());
         }
         catch (...)
         {
@@ -5716,7 +6284,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.DeferRegistrationWhenPackagesAreInUse(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DeferRegistrationWhenPackagesAreInUse(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5743,7 +6315,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppDataVolume());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppDataVolume();
+            }());
         }
         catch (...)
         {
@@ -5777,7 +6353,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
             auto param0 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::PackageVolume>(arg);
 
-            self->obj.AppDataVolume(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AppDataVolume(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5804,7 +6384,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.AllowUnsigned());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AllowUnsigned();
+            }());
         }
         catch (...)
         {
@@ -5838,7 +6422,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.AllowUnsigned(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AllowUnsigned(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5865,7 +6453,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.DependencyPackageFamilyNames());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DependencyPackageFamilyNames();
+            }());
         }
         catch (...)
         {
@@ -5891,7 +6483,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.DependencyPackageUris());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DependencyPackageUris();
+            }());
         }
         catch (...)
         {
@@ -5917,7 +6513,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExpectedDigests());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExpectedDigests();
+            }());
         }
         catch (...)
         {
@@ -5943,7 +6543,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsExpectedDigestsSupported());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsExpectedDigestsSupported();
+            }());
         }
         catch (...)
         {
@@ -5969,7 +6573,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.OptionalPackageFamilyNames());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OptionalPackageFamilyNames();
+            }());
         }
         catch (...)
         {
@@ -6098,7 +6706,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.RemoveForAllUsers());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RemoveForAllUsers();
+            }());
         }
         catch (...)
         {
@@ -6132,7 +6744,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.RemoveForAllUsers(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RemoveForAllUsers(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6159,7 +6775,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.PreserveRoamableApplicationData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PreserveRoamableApplicationData();
+            }());
         }
         catch (...)
         {
@@ -6193,7 +6813,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.PreserveRoamableApplicationData(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PreserveRoamableApplicationData(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6220,7 +6844,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.PreserveApplicationData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PreserveApplicationData();
+            }());
         }
         catch (...)
         {
@@ -6254,7 +6882,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.PreserveApplicationData(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PreserveApplicationData(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6281,7 +6913,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.FailIfNotFound());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FailIfNotFound();
+            }());
         }
         catch (...)
         {
@@ -6315,7 +6951,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.FailIfNotFound(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.FailIfNotFound(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6434,7 +7074,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.TargetVolume());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TargetVolume();
+            }());
         }
         catch (...)
         {
@@ -6468,7 +7112,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
             auto param0 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::PackageVolume>(arg);
 
-            self->obj.TargetVolume(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TargetVolume(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6495,7 +7143,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.StubPackageOption());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StubPackageOption();
+            }());
         }
         catch (...)
         {
@@ -6529,7 +7181,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
             auto param0 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::StubPackageOption>(arg);
 
-            self->obj.StubPackageOption(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StubPackageOption(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6556,7 +7212,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.StageInPlace());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StageInPlace();
+            }());
         }
         catch (...)
         {
@@ -6590,7 +7250,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.StageInPlace(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StageInPlace(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6617,7 +7281,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.RequiredContentGroupOnly());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RequiredContentGroupOnly();
+            }());
         }
         catch (...)
         {
@@ -6651,7 +7319,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.RequiredContentGroupOnly(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RequiredContentGroupOnly(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6678,7 +7350,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.InstallAllResources());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InstallAllResources();
+            }());
         }
         catch (...)
         {
@@ -6712,7 +7388,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.InstallAllResources(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.InstallAllResources(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6739,7 +7419,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.ForceUpdateFromAnyVersion());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ForceUpdateFromAnyVersion();
+            }());
         }
         catch (...)
         {
@@ -6773,7 +7457,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.ForceUpdateFromAnyVersion(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ForceUpdateFromAnyVersion(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6800,7 +7488,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExternalLocationUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExternalLocationUri();
+            }());
         }
         catch (...)
         {
@@ -6834,7 +7526,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.ExternalLocationUri(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ExternalLocationUri(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6861,7 +7557,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeveloperMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeveloperMode();
+            }());
         }
         catch (...)
         {
@@ -6895,7 +7595,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.DeveloperMode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DeveloperMode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6922,7 +7626,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.AllowUnsigned());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AllowUnsigned();
+            }());
         }
         catch (...)
         {
@@ -6956,7 +7664,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.AllowUnsigned(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AllowUnsigned(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6983,7 +7695,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.DependencyPackageUris());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DependencyPackageUris();
+            }());
         }
         catch (...)
         {
@@ -7009,7 +7725,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExpectedDigests());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExpectedDigests();
+            }());
         }
         catch (...)
         {
@@ -7035,7 +7755,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsExpectedDigestsSupported());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsExpectedDigestsSupported();
+            }());
         }
         catch (...)
         {
@@ -7061,7 +7785,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.OptionalPackageFamilyNames());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OptionalPackageFamilyNames();
+            }());
         }
         catch (...)
         {
@@ -7087,7 +7815,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.OptionalPackageUris());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OptionalPackageUris();
+            }());
         }
         catch (...)
         {
@@ -7113,7 +7845,11 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
 
-            return py::convert(self->obj.RelatedPackageUris());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RelatedPackageUris();
+            }());
         }
         catch (...)
         {

@@ -44,7 +44,11 @@ namespace py::cpp::Windows::Networking::XboxLive
 
                 auto param0 = py::convert_to<winrt::Windows::Networking::XboxLive::XboxLiveDeviceAddress>(args, 0);
 
-                return py::convert(self->obj.Compare(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Compare(param0);
+                }());
             }
             catch (...)
             {
@@ -82,7 +86,11 @@ namespace py::cpp::Windows::Networking::XboxLive
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Networking::XboxLive::XboxLiveDeviceAddress::CreateFromSnapshotBase64(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Networking::XboxLive::XboxLiveDeviceAddress::CreateFromSnapshotBase64(param0);
+                }());
             }
             catch (...)
             {
@@ -120,7 +128,11 @@ namespace py::cpp::Windows::Networking::XboxLive
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
-                return py::convert(winrt::Windows::Networking::XboxLive::XboxLiveDeviceAddress::CreateFromSnapshotBuffer(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Networking::XboxLive::XboxLiveDeviceAddress::CreateFromSnapshotBuffer(param0);
+                }());
             }
             catch (...)
             {
@@ -158,7 +170,11 @@ namespace py::cpp::Windows::Networking::XboxLive
 
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
-                return py::convert(winrt::Windows::Networking::XboxLive::XboxLiveDeviceAddress::CreateFromSnapshotBytes(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Networking::XboxLive::XboxLiveDeviceAddress::CreateFromSnapshotBytes(param0);
+                }());
             }
             catch (...)
             {
@@ -194,7 +210,11 @@ namespace py::cpp::Windows::Networking::XboxLive
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Networking::XboxLive::XboxLiveDeviceAddress::GetLocal());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Networking::XboxLive::XboxLiveDeviceAddress::GetLocal();
+                }());
             }
             catch (...)
             {
@@ -230,7 +250,11 @@ namespace py::cpp::Windows::Networking::XboxLive
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetSnapshotAsBase64());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetSnapshotAsBase64();
+                }());
             }
             catch (...)
             {
@@ -266,7 +290,11 @@ namespace py::cpp::Windows::Networking::XboxLive
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetSnapshotAsBuffer());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetSnapshotAsBuffer();
+                }());
             }
             catch (...)
             {
@@ -305,13 +333,17 @@ namespace py::cpp::Windows::Networking::XboxLive
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, true>>(args, 0);
                 uint32_t param1{};
 
-                self->obj.GetSnapshotAsBytes(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.GetSnapshotAsBytes(param0, param1);
+                }
 
                 py::pyobj_handle out1{ py::convert(param1) };
                 if (!out1)
                 {
                     return nullptr;
                 }
+
                 return out1.detach();
             }
             catch (...)
@@ -344,7 +376,11 @@ namespace py::cpp::Windows::Networking::XboxLive
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsLocal());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsLocal();
+            }());
         }
         catch (...)
         {
@@ -370,7 +406,11 @@ namespace py::cpp::Windows::Networking::XboxLive
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsValid());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsValid();
+            }());
         }
         catch (...)
         {
@@ -396,7 +436,11 @@ namespace py::cpp::Windows::Networking::XboxLive
                 return nullptr;
             }
 
-            return py::convert(self->obj.NetworkAccessKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NetworkAccessKind();
+            }());
         }
         catch (...)
         {
@@ -422,7 +466,11 @@ namespace py::cpp::Windows::Networking::XboxLive
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Networking::XboxLive::XboxLiveDeviceAddress::MaxSnapshotBytesSize());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Networking::XboxLive::XboxLiveDeviceAddress::MaxSnapshotBytesSize();
+            }());
         }
         catch (...)
         {
@@ -450,7 +498,11 @@ namespace py::cpp::Windows::Networking::XboxLive
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::XboxLive::XboxLiveDeviceAddress, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.SnapshotChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SnapshotChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -478,7 +530,11 @@ namespace py::cpp::Windows::Networking::XboxLive
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.SnapshotChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SnapshotChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -614,7 +670,11 @@ namespace py::cpp::Windows::Networking::XboxLive
                     return nullptr;
                 }
 
-                return py::convert(self->obj.DeleteAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.DeleteAsync();
+                }());
             }
             catch (...)
             {
@@ -655,7 +715,11 @@ namespace py::cpp::Windows::Networking::XboxLive
                 auto param2 = py::convert_to<winrt::Windows::Networking::HostName>(args, 2);
                 auto param3 = py::convert_to<winrt::hstring>(args, 3);
 
-                return py::convert(winrt::Windows::Networking::XboxLive::XboxLiveEndpointPair::FindEndpointPairByHostNamesAndPorts(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Networking::XboxLive::XboxLiveEndpointPair::FindEndpointPairByHostNamesAndPorts(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -694,7 +758,11 @@ namespace py::cpp::Windows::Networking::XboxLive
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 1);
 
-                return py::convert(winrt::Windows::Networking::XboxLive::XboxLiveEndpointPair::FindEndpointPairBySocketAddressBytes(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Networking::XboxLive::XboxLiveEndpointPair::FindEndpointPairBySocketAddressBytes(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -732,7 +800,11 @@ namespace py::cpp::Windows::Networking::XboxLive
 
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, true>>(args, 0);
 
-                self->obj.GetLocalSocketAddressBytes(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.GetLocalSocketAddressBytes(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -771,7 +843,11 @@ namespace py::cpp::Windows::Networking::XboxLive
 
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, true>>(args, 0);
 
-                self->obj.GetRemoteSocketAddressBytes(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.GetRemoteSocketAddressBytes(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -804,7 +880,11 @@ namespace py::cpp::Windows::Networking::XboxLive
                 return nullptr;
             }
 
-            return py::convert(self->obj.LocalHostName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LocalHostName();
+            }());
         }
         catch (...)
         {
@@ -830,7 +910,11 @@ namespace py::cpp::Windows::Networking::XboxLive
                 return nullptr;
             }
 
-            return py::convert(self->obj.LocalPort());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LocalPort();
+            }());
         }
         catch (...)
         {
@@ -856,7 +940,11 @@ namespace py::cpp::Windows::Networking::XboxLive
                 return nullptr;
             }
 
-            return py::convert(self->obj.RemoteDeviceAddress());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RemoteDeviceAddress();
+            }());
         }
         catch (...)
         {
@@ -882,7 +970,11 @@ namespace py::cpp::Windows::Networking::XboxLive
                 return nullptr;
             }
 
-            return py::convert(self->obj.RemoteHostName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RemoteHostName();
+            }());
         }
         catch (...)
         {
@@ -908,7 +1000,11 @@ namespace py::cpp::Windows::Networking::XboxLive
                 return nullptr;
             }
 
-            return py::convert(self->obj.RemotePort());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RemotePort();
+            }());
         }
         catch (...)
         {
@@ -934,7 +1030,11 @@ namespace py::cpp::Windows::Networking::XboxLive
                 return nullptr;
             }
 
-            return py::convert(self->obj.State());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.State();
+            }());
         }
         catch (...)
         {
@@ -960,7 +1060,11 @@ namespace py::cpp::Windows::Networking::XboxLive
                 return nullptr;
             }
 
-            return py::convert(self->obj.Template());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Template();
+            }());
         }
         catch (...)
         {
@@ -988,7 +1092,11 @@ namespace py::cpp::Windows::Networking::XboxLive
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::XboxLive::XboxLiveEndpointPair, winrt::Windows::Networking::XboxLive::XboxLiveEndpointPairStateChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.StateChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StateChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -1016,7 +1124,11 @@ namespace py::cpp::Windows::Networking::XboxLive
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.StateChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StateChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1148,7 +1260,11 @@ namespace py::cpp::Windows::Networking::XboxLive
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceAddress());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceAddress();
+            }());
         }
         catch (...)
         {
@@ -1174,7 +1290,11 @@ namespace py::cpp::Windows::Networking::XboxLive
                 return nullptr;
             }
 
-            return py::convert(self->obj.EndpointPair());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EndpointPair();
+            }());
         }
         catch (...)
         {
@@ -1200,7 +1320,11 @@ namespace py::cpp::Windows::Networking::XboxLive
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsExistingPathEvaluation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsExistingPathEvaluation();
+            }());
         }
         catch (...)
         {
@@ -1226,7 +1350,11 @@ namespace py::cpp::Windows::Networking::XboxLive
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -1322,7 +1450,11 @@ namespace py::cpp::Windows::Networking::XboxLive
                 return nullptr;
             }
 
-            return py::convert(self->obj.NewState());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NewState();
+            }());
         }
         catch (...)
         {
@@ -1348,7 +1480,11 @@ namespace py::cpp::Windows::Networking::XboxLive
                 return nullptr;
             }
 
-            return py::convert(self->obj.OldState());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OldState();
+            }());
         }
         catch (...)
         {
@@ -1448,7 +1584,11 @@ namespace py::cpp::Windows::Networking::XboxLive
 
                 auto param0 = py::convert_to<winrt::Windows::Networking::XboxLive::XboxLiveDeviceAddress>(args, 0);
 
-                return py::convert(self->obj.CreateEndpointPairAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateEndpointPairAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1488,7 +1628,11 @@ namespace py::cpp::Windows::Networking::XboxLive
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
-                return py::convert(self->obj.CreateEndpointPairForPortsAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateEndpointPairForPortsAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -1529,7 +1673,11 @@ namespace py::cpp::Windows::Networking::XboxLive
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
                 auto param3 = py::convert_to<winrt::Windows::Networking::XboxLive::XboxLiveEndpointPairCreationBehaviors>(args, 3);
 
-                return py::convert(self->obj.CreateEndpointPairForPortsAsync(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateEndpointPairForPortsAsync(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -1568,7 +1716,11 @@ namespace py::cpp::Windows::Networking::XboxLive
                 auto param0 = py::convert_to<winrt::Windows::Networking::XboxLive::XboxLiveDeviceAddress>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Networking::XboxLive::XboxLiveEndpointPairCreationBehaviors>(args, 1);
 
-                return py::convert(self->obj.CreateEndpointPairAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateEndpointPairAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1606,7 +1758,11 @@ namespace py::cpp::Windows::Networking::XboxLive
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Networking::XboxLive::XboxLiveEndpointPairTemplate::GetTemplateByName(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Networking::XboxLive::XboxLiveEndpointPairTemplate::GetTemplateByName(param0);
+                }());
             }
             catch (...)
             {
@@ -1638,7 +1794,11 @@ namespace py::cpp::Windows::Networking::XboxLive
                 return nullptr;
             }
 
-            return py::convert(self->obj.AcceptorBoundPortRangeLower());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AcceptorBoundPortRangeLower();
+            }());
         }
         catch (...)
         {
@@ -1664,7 +1824,11 @@ namespace py::cpp::Windows::Networking::XboxLive
                 return nullptr;
             }
 
-            return py::convert(self->obj.AcceptorBoundPortRangeUpper());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AcceptorBoundPortRangeUpper();
+            }());
         }
         catch (...)
         {
@@ -1690,7 +1854,11 @@ namespace py::cpp::Windows::Networking::XboxLive
                 return nullptr;
             }
 
-            return py::convert(self->obj.EndpointPairs());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EndpointPairs();
+            }());
         }
         catch (...)
         {
@@ -1716,7 +1884,11 @@ namespace py::cpp::Windows::Networking::XboxLive
                 return nullptr;
             }
 
-            return py::convert(self->obj.InitiatorBoundPortRangeLower());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InitiatorBoundPortRangeLower();
+            }());
         }
         catch (...)
         {
@@ -1742,7 +1914,11 @@ namespace py::cpp::Windows::Networking::XboxLive
                 return nullptr;
             }
 
-            return py::convert(self->obj.InitiatorBoundPortRangeUpper());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InitiatorBoundPortRangeUpper();
+            }());
         }
         catch (...)
         {
@@ -1768,7 +1944,11 @@ namespace py::cpp::Windows::Networking::XboxLive
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -1794,7 +1974,11 @@ namespace py::cpp::Windows::Networking::XboxLive
                 return nullptr;
             }
 
-            return py::convert(self->obj.SocketKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SocketKind();
+            }());
         }
         catch (...)
         {
@@ -1820,7 +2004,11 @@ namespace py::cpp::Windows::Networking::XboxLive
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Networking::XboxLive::XboxLiveEndpointPairTemplate::Templates());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Networking::XboxLive::XboxLiveEndpointPairTemplate::Templates();
+            }());
         }
         catch (...)
         {
@@ -1848,7 +2036,11 @@ namespace py::cpp::Windows::Networking::XboxLive
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::XboxLive::XboxLiveEndpointPairTemplate, winrt::Windows::Networking::XboxLive::XboxLiveInboundEndpointPairCreatedEventArgs>>(arg);
 
-            return py::convert(self->obj.InboundEndpointPairCreated(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InboundEndpointPairCreated(param0);
+            }());
         }
         catch (...)
         {
@@ -1876,7 +2068,11 @@ namespace py::cpp::Windows::Networking::XboxLive
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.InboundEndpointPairCreated(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.InboundEndpointPairCreated(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2009,7 +2205,11 @@ namespace py::cpp::Windows::Networking::XboxLive
                 return nullptr;
             }
 
-            return py::convert(self->obj.EndpointPair());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EndpointPair();
+            }());
         }
         catch (...)
         {
@@ -2128,7 +2328,11 @@ namespace py::cpp::Windows::Networking::XboxLive
                     return nullptr;
                 }
 
-                winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement::ClearPrivatePayload();
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement::ClearPrivatePayload();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2168,7 +2372,11 @@ namespace py::cpp::Windows::Networking::XboxLive
                 auto param0 = py::convert_to<winrt::Windows::Networking::XboxLive::XboxLiveDeviceAddress>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMetric>(args, 1);
 
-                return py::convert(self->obj.GetMetricResult(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetMetricResult(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2206,7 +2414,11 @@ namespace py::cpp::Windows::Networking::XboxLive
 
                 auto param0 = py::convert_to<winrt::Windows::Networking::XboxLive::XboxLiveDeviceAddress>(args, 0);
 
-                return py::convert(self->obj.GetMetricResultsForDevice(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetMetricResultsForDevice(param0);
+                }());
             }
             catch (...)
             {
@@ -2244,7 +2456,11 @@ namespace py::cpp::Windows::Networking::XboxLive
 
                 auto param0 = py::convert_to<winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMetric>(args, 0);
 
-                return py::convert(self->obj.GetMetricResultsForMetric(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetMetricResultsForMetric(param0);
+                }());
             }
             catch (...)
             {
@@ -2282,7 +2498,11 @@ namespace py::cpp::Windows::Networking::XboxLive
 
                 auto param0 = py::convert_to<winrt::Windows::Networking::XboxLive::XboxLiveDeviceAddress>(args, 0);
 
-                return py::convert(self->obj.GetPrivatePayloadResult(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetPrivatePayloadResult(param0);
+                }());
             }
             catch (...)
             {
@@ -2318,7 +2538,11 @@ namespace py::cpp::Windows::Networking::XboxLive
                     return nullptr;
                 }
 
-                return py::convert(self->obj.MeasureAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.MeasureAsync();
+                }());
             }
             catch (...)
             {
@@ -2356,7 +2580,11 @@ namespace py::cpp::Windows::Networking::XboxLive
 
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
-                winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement::PublishPrivatePayloadBytes(param0);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement::PublishPrivatePayloadBytes(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2389,7 +2617,11 @@ namespace py::cpp::Windows::Networking::XboxLive
                 return nullptr;
             }
 
-            return py::convert(self->obj.TimeoutInMilliseconds());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TimeoutInMilliseconds();
+            }());
         }
         catch (...)
         {
@@ -2423,7 +2655,11 @@ namespace py::cpp::Windows::Networking::XboxLive
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.TimeoutInMilliseconds(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TimeoutInMilliseconds(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2450,7 +2686,11 @@ namespace py::cpp::Windows::Networking::XboxLive
                 return nullptr;
             }
 
-            return py::convert(self->obj.ShouldRequestPrivatePayloads());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ShouldRequestPrivatePayloads();
+            }());
         }
         catch (...)
         {
@@ -2484,7 +2724,11 @@ namespace py::cpp::Windows::Networking::XboxLive
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.ShouldRequestPrivatePayloads(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ShouldRequestPrivatePayloads(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2511,7 +2755,11 @@ namespace py::cpp::Windows::Networking::XboxLive
                 return nullptr;
             }
 
-            return py::convert(self->obj.NumberOfProbesToAttempt());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NumberOfProbesToAttempt();
+            }());
         }
         catch (...)
         {
@@ -2545,7 +2793,11 @@ namespace py::cpp::Windows::Networking::XboxLive
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.NumberOfProbesToAttempt(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.NumberOfProbesToAttempt(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2572,7 +2824,11 @@ namespace py::cpp::Windows::Networking::XboxLive
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceAddresses());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceAddresses();
+            }());
         }
         catch (...)
         {
@@ -2598,7 +2854,11 @@ namespace py::cpp::Windows::Networking::XboxLive
                 return nullptr;
             }
 
-            return py::convert(self->obj.MetricResults());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MetricResults();
+            }());
         }
         catch (...)
         {
@@ -2624,7 +2884,11 @@ namespace py::cpp::Windows::Networking::XboxLive
                 return nullptr;
             }
 
-            return py::convert(self->obj.Metrics());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Metrics();
+            }());
         }
         catch (...)
         {
@@ -2650,7 +2914,11 @@ namespace py::cpp::Windows::Networking::XboxLive
                 return nullptr;
             }
 
-            return py::convert(self->obj.NumberOfResultsPending());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NumberOfResultsPending();
+            }());
         }
         catch (...)
         {
@@ -2676,7 +2944,11 @@ namespace py::cpp::Windows::Networking::XboxLive
                 return nullptr;
             }
 
-            return py::convert(self->obj.PrivatePayloadResults());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PrivatePayloadResults();
+            }());
         }
         catch (...)
         {
@@ -2702,7 +2974,11 @@ namespace py::cpp::Windows::Networking::XboxLive
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement::PublishedPrivatePayload());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement::PublishedPrivatePayload();
+            }());
         }
         catch (...)
         {
@@ -2736,7 +3012,11 @@ namespace py::cpp::Windows::Networking::XboxLive
 
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(arg);
 
-            winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement::PublishedPrivatePayload(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement::PublishedPrivatePayload(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2763,7 +3043,11 @@ namespace py::cpp::Windows::Networking::XboxLive
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement::MaxSimultaneousProbeConnections());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement::MaxSimultaneousProbeConnections();
+            }());
         }
         catch (...)
         {
@@ -2797,7 +3081,11 @@ namespace py::cpp::Windows::Networking::XboxLive
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement::MaxSimultaneousProbeConnections(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement::MaxSimultaneousProbeConnections(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2824,7 +3112,11 @@ namespace py::cpp::Windows::Networking::XboxLive
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement::IsSystemOutboundBandwidthConstrained());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement::IsSystemOutboundBandwidthConstrained();
+            }());
         }
         catch (...)
         {
@@ -2858,7 +3150,11 @@ namespace py::cpp::Windows::Networking::XboxLive
 
             auto param0 = py::convert_to<bool>(arg);
 
-            winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement::IsSystemOutboundBandwidthConstrained(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement::IsSystemOutboundBandwidthConstrained(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2885,7 +3181,11 @@ namespace py::cpp::Windows::Networking::XboxLive
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement::IsSystemInboundBandwidthConstrained());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement::IsSystemInboundBandwidthConstrained();
+            }());
         }
         catch (...)
         {
@@ -2919,7 +3219,11 @@ namespace py::cpp::Windows::Networking::XboxLive
 
             auto param0 = py::convert_to<bool>(arg);
 
-            winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement::IsSystemInboundBandwidthConstrained(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement::IsSystemInboundBandwidthConstrained(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2946,7 +3250,11 @@ namespace py::cpp::Windows::Networking::XboxLive
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement::MaxPrivatePayloadSize());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement::MaxPrivatePayloadSize();
+            }());
         }
         catch (...)
         {
@@ -3083,7 +3391,11 @@ namespace py::cpp::Windows::Networking::XboxLive
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceAddress());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceAddress();
+            }());
         }
         catch (...)
         {
@@ -3109,7 +3421,11 @@ namespace py::cpp::Windows::Networking::XboxLive
                 return nullptr;
             }
 
-            return py::convert(self->obj.Metric());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Metric();
+            }());
         }
         catch (...)
         {
@@ -3135,7 +3451,11 @@ namespace py::cpp::Windows::Networking::XboxLive
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -3161,7 +3481,11 @@ namespace py::cpp::Windows::Networking::XboxLive
                 return nullptr;
             }
 
-            return py::convert(self->obj.Value());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Value();
+            }());
         }
         catch (...)
         {
@@ -3257,7 +3581,11 @@ namespace py::cpp::Windows::Networking::XboxLive
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceAddress());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceAddress();
+            }());
         }
         catch (...)
         {
@@ -3283,7 +3611,11 @@ namespace py::cpp::Windows::Networking::XboxLive
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -3309,7 +3641,11 @@ namespace py::cpp::Windows::Networking::XboxLive
                 return nullptr;
             }
 
-            return py::convert(self->obj.Value());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Value();
+            }());
         }
         catch (...)
         {

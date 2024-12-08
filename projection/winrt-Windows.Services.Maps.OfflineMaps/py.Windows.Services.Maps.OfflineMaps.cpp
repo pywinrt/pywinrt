@@ -44,7 +44,11 @@ namespace py::cpp::Windows::Services::Maps::OfflineMaps
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(args, 0);
 
-                return py::convert(winrt::Windows::Services::Maps::OfflineMaps::OfflineMapPackage::FindPackagesAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Services::Maps::OfflineMaps::OfflineMapPackage::FindPackagesAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -82,7 +86,11 @@ namespace py::cpp::Windows::Services::Maps::OfflineMaps
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::GeoboundingBox>(args, 0);
 
-                return py::convert(winrt::Windows::Services::Maps::OfflineMaps::OfflineMapPackage::FindPackagesInBoundingBoxAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Services::Maps::OfflineMaps::OfflineMapPackage::FindPackagesInBoundingBoxAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -120,7 +128,11 @@ namespace py::cpp::Windows::Services::Maps::OfflineMaps
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::Geocircle>(args, 0);
 
-                return py::convert(winrt::Windows::Services::Maps::OfflineMaps::OfflineMapPackage::FindPackagesInGeocircleAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Services::Maps::OfflineMaps::OfflineMapPackage::FindPackagesInGeocircleAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -156,7 +168,11 @@ namespace py::cpp::Windows::Services::Maps::OfflineMaps
                     return nullptr;
                 }
 
-                return py::convert(self->obj.RequestStartDownloadAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestStartDownloadAsync();
+                }());
             }
             catch (...)
             {
@@ -188,7 +204,11 @@ namespace py::cpp::Windows::Services::Maps::OfflineMaps
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayName();
+            }());
         }
         catch (...)
         {
@@ -214,7 +234,11 @@ namespace py::cpp::Windows::Services::Maps::OfflineMaps
                 return nullptr;
             }
 
-            return py::convert(self->obj.EnclosingRegionName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EnclosingRegionName();
+            }());
         }
         catch (...)
         {
@@ -240,7 +264,11 @@ namespace py::cpp::Windows::Services::Maps::OfflineMaps
                 return nullptr;
             }
 
-            return py::convert(self->obj.EstimatedSizeInBytes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EstimatedSizeInBytes();
+            }());
         }
         catch (...)
         {
@@ -266,7 +294,11 @@ namespace py::cpp::Windows::Services::Maps::OfflineMaps
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -294,7 +326,11 @@ namespace py::cpp::Windows::Services::Maps::OfflineMaps
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Services::Maps::OfflineMaps::OfflineMapPackage, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.StatusChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StatusChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -322,7 +358,11 @@ namespace py::cpp::Windows::Services::Maps::OfflineMaps
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.StatusChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.StatusChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -450,7 +490,11 @@ namespace py::cpp::Windows::Services::Maps::OfflineMaps
                 return nullptr;
             }
 
-            return py::convert(self->obj.Packages());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Packages();
+            }());
         }
         catch (...)
         {
@@ -476,7 +520,11 @@ namespace py::cpp::Windows::Services::Maps::OfflineMaps
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -570,7 +618,11 @@ namespace py::cpp::Windows::Services::Maps::OfflineMaps
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {

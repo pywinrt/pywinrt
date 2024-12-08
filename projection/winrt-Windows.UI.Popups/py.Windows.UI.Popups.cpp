@@ -82,7 +82,11 @@ namespace py::cpp::Windows::UI::Popups
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ShowAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ShowAsync();
+                }());
             }
             catch (...)
             {
@@ -114,7 +118,11 @@ namespace py::cpp::Windows::UI::Popups
                 return nullptr;
             }
 
-            return py::convert(self->obj.Title());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Title();
+            }());
         }
         catch (...)
         {
@@ -148,7 +156,11 @@ namespace py::cpp::Windows::UI::Popups
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Title(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Title(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -175,7 +187,11 @@ namespace py::cpp::Windows::UI::Popups
                 return nullptr;
             }
 
-            return py::convert(self->obj.Options());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Options();
+            }());
         }
         catch (...)
         {
@@ -209,7 +225,11 @@ namespace py::cpp::Windows::UI::Popups
 
             auto param0 = py::convert_to<winrt::Windows::UI::Popups::MessageDialogOptions>(arg);
 
-            self->obj.Options(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Options(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -236,7 +256,11 @@ namespace py::cpp::Windows::UI::Popups
                 return nullptr;
             }
 
-            return py::convert(self->obj.DefaultCommandIndex());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DefaultCommandIndex();
+            }());
         }
         catch (...)
         {
@@ -270,7 +294,11 @@ namespace py::cpp::Windows::UI::Popups
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.DefaultCommandIndex(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DefaultCommandIndex(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -297,7 +325,11 @@ namespace py::cpp::Windows::UI::Popups
                 return nullptr;
             }
 
-            return py::convert(self->obj.Content());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Content();
+            }());
         }
         catch (...)
         {
@@ -331,7 +363,11 @@ namespace py::cpp::Windows::UI::Popups
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Content(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Content(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -358,7 +394,11 @@ namespace py::cpp::Windows::UI::Popups
                 return nullptr;
             }
 
-            return py::convert(self->obj.CancelCommandIndex());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CancelCommandIndex();
+            }());
         }
         catch (...)
         {
@@ -392,7 +432,11 @@ namespace py::cpp::Windows::UI::Popups
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.CancelCommandIndex(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CancelCommandIndex(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -419,7 +463,11 @@ namespace py::cpp::Windows::UI::Popups
                 return nullptr;
             }
 
-            return py::convert(self->obj.Commands());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Commands();
+            }());
         }
         catch (...)
         {
@@ -546,7 +594,11 @@ namespace py::cpp::Windows::UI::Popups
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
 
-                return py::convert(self->obj.ShowAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ShowAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -584,7 +636,11 @@ namespace py::cpp::Windows::UI::Popups
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
 
-                return py::convert(self->obj.ShowForSelectionAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ShowForSelectionAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -623,7 +679,11 @@ namespace py::cpp::Windows::UI::Popups
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Popups::Placement>(args, 1);
 
-                return py::convert(self->obj.ShowForSelectionAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ShowForSelectionAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -655,7 +715,11 @@ namespace py::cpp::Windows::UI::Popups
                 return nullptr;
             }
 
-            return py::convert(self->obj.Commands());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Commands();
+            }());
         }
         catch (...)
         {
@@ -821,7 +885,11 @@ namespace py::cpp::Windows::UI::Popups
                 return nullptr;
             }
 
-            return py::convert(self->obj.Label());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Label();
+            }());
         }
         catch (...)
         {
@@ -855,7 +923,11 @@ namespace py::cpp::Windows::UI::Popups
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Label(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Label(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -882,7 +954,11 @@ namespace py::cpp::Windows::UI::Popups
                 return nullptr;
             }
 
-            return py::convert(self->obj.Invoked());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Invoked();
+            }());
         }
         catch (...)
         {
@@ -916,7 +992,11 @@ namespace py::cpp::Windows::UI::Popups
 
             auto param0 = py::convert_to<winrt::Windows::UI::Popups::UICommandInvokedHandler>(arg);
 
-            self->obj.Invoked(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Invoked(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -943,7 +1023,11 @@ namespace py::cpp::Windows::UI::Popups
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -977,7 +1061,11 @@ namespace py::cpp::Windows::UI::Popups
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
-            self->obj.Id(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Id(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1095,7 +1183,11 @@ namespace py::cpp::Windows::UI::Popups
                 return nullptr;
             }
 
-            return py::convert(self->obj.Label());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Label();
+            }());
         }
         catch (...)
         {
@@ -1129,7 +1221,11 @@ namespace py::cpp::Windows::UI::Popups
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Label(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Label(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1156,7 +1252,11 @@ namespace py::cpp::Windows::UI::Popups
                 return nullptr;
             }
 
-            return py::convert(self->obj.Invoked());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Invoked();
+            }());
         }
         catch (...)
         {
@@ -1190,7 +1290,11 @@ namespace py::cpp::Windows::UI::Popups
 
             auto param0 = py::convert_to<winrt::Windows::UI::Popups::UICommandInvokedHandler>(arg);
 
-            self->obj.Invoked(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Invoked(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1217,7 +1321,11 @@ namespace py::cpp::Windows::UI::Popups
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -1251,7 +1359,11 @@ namespace py::cpp::Windows::UI::Popups
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
-            self->obj.Id(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Id(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1347,7 +1459,11 @@ namespace py::cpp::Windows::UI::Popups
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -1381,7 +1497,11 @@ namespace py::cpp::Windows::UI::Popups
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
-            self->obj.Id(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Id(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1408,7 +1528,11 @@ namespace py::cpp::Windows::UI::Popups
                 return nullptr;
             }
 
-            return py::convert(self->obj.Invoked());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Invoked();
+            }());
         }
         catch (...)
         {
@@ -1442,7 +1566,11 @@ namespace py::cpp::Windows::UI::Popups
 
             auto param0 = py::convert_to<winrt::Windows::UI::Popups::UICommandInvokedHandler>(arg);
 
-            self->obj.Invoked(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Invoked(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1469,7 +1597,11 @@ namespace py::cpp::Windows::UI::Popups
                 return nullptr;
             }
 
-            return py::convert(self->obj.Label());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Label();
+            }());
         }
         catch (...)
         {
@@ -1503,7 +1635,11 @@ namespace py::cpp::Windows::UI::Popups
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Label(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Label(param0);
+            }
+
             return 0;
         }
         catch (...)

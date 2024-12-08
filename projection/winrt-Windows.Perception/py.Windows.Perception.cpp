@@ -38,7 +38,11 @@ namespace py::cpp::Windows::Perception
                 return nullptr;
             }
 
-            return py::convert(self->obj.PredictionAmount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PredictionAmount();
+            }());
         }
         catch (...)
         {
@@ -64,7 +68,11 @@ namespace py::cpp::Windows::Perception
                 return nullptr;
             }
 
-            return py::convert(self->obj.TargetTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TargetTime();
+            }());
         }
         catch (...)
         {
@@ -90,7 +98,11 @@ namespace py::cpp::Windows::Perception
                 return nullptr;
             }
 
-            return py::convert(self->obj.SystemRelativeTargetTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SystemRelativeTargetTime();
+            }());
         }
         catch (...)
         {
@@ -183,7 +195,11 @@ namespace py::cpp::Windows::Perception
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 0);
 
-                return py::convert(winrt::Windows::Perception::PerceptionTimestampHelper::FromHistoricalTargetTime(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Perception::PerceptionTimestampHelper::FromHistoricalTargetTime(param0);
+                }());
             }
             catch (...)
             {
@@ -221,7 +237,11 @@ namespace py::cpp::Windows::Perception
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 0);
 
-                return py::convert(winrt::Windows::Perception::PerceptionTimestampHelper::FromSystemRelativeTargetTime(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Perception::PerceptionTimestampHelper::FromSystemRelativeTargetTime(param0);
+                }());
             }
             catch (...)
             {

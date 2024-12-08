@@ -44,7 +44,11 @@ namespace py::cpp::Microsoft::Graphics::Display
 
                 auto param0 = py::convert_to<winrt::Microsoft::Graphics::Display::DisplayAdvancedColorKind>(args, 0);
 
-                return py::convert(self->obj.IsAdvancedColorKindAvailable(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsAdvancedColorKindAvailable(param0);
+                }());
             }
             catch (...)
             {
@@ -82,7 +86,11 @@ namespace py::cpp::Microsoft::Graphics::Display
 
                 auto param0 = py::convert_to<winrt::Microsoft::Graphics::Display::DisplayHdrMetadataFormat>(args, 0);
 
-                return py::convert(self->obj.IsHdrMetadataFormatCurrentlySupported(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsHdrMetadataFormatCurrentlySupported(param0);
+                }());
             }
             catch (...)
             {
@@ -114,7 +122,11 @@ namespace py::cpp::Microsoft::Graphics::Display
                 return nullptr;
             }
 
-            return py::convert(self->obj.BluePrimary());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BluePrimary();
+            }());
         }
         catch (...)
         {
@@ -140,7 +152,11 @@ namespace py::cpp::Microsoft::Graphics::Display
                 return nullptr;
             }
 
-            return py::convert(self->obj.CurrentAdvancedColorKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CurrentAdvancedColorKind();
+            }());
         }
         catch (...)
         {
@@ -166,7 +182,11 @@ namespace py::cpp::Microsoft::Graphics::Display
                 return nullptr;
             }
 
-            return py::convert(self->obj.GreenPrimary());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.GreenPrimary();
+            }());
         }
         catch (...)
         {
@@ -192,7 +212,11 @@ namespace py::cpp::Microsoft::Graphics::Display
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxAverageFullFrameLuminanceInNits());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxAverageFullFrameLuminanceInNits();
+            }());
         }
         catch (...)
         {
@@ -218,7 +242,11 @@ namespace py::cpp::Microsoft::Graphics::Display
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxLuminanceInNits());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxLuminanceInNits();
+            }());
         }
         catch (...)
         {
@@ -244,7 +272,11 @@ namespace py::cpp::Microsoft::Graphics::Display
                 return nullptr;
             }
 
-            return py::convert(self->obj.MinLuminanceInNits());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MinLuminanceInNits();
+            }());
         }
         catch (...)
         {
@@ -270,7 +302,11 @@ namespace py::cpp::Microsoft::Graphics::Display
                 return nullptr;
             }
 
-            return py::convert(self->obj.RedPrimary());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RedPrimary();
+            }());
         }
         catch (...)
         {
@@ -296,7 +332,11 @@ namespace py::cpp::Microsoft::Graphics::Display
                 return nullptr;
             }
 
-            return py::convert(self->obj.SdrWhiteLevelInNits());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SdrWhiteLevelInNits();
+            }());
         }
         catch (...)
         {
@@ -322,7 +362,11 @@ namespace py::cpp::Microsoft::Graphics::Display
                 return nullptr;
             }
 
-            return py::convert(self->obj.WhitePoint());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WhitePoint();
+            }());
         }
         catch (...)
         {
@@ -429,7 +473,11 @@ namespace py::cpp::Microsoft::Graphics::Display
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -468,7 +516,11 @@ namespace py::cpp::Microsoft::Graphics::Display
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::DisplayId>(args, 0);
 
-                return py::convert(winrt::Microsoft::Graphics::Display::DisplayInformation::CreateForDisplayId(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::Graphics::Display::DisplayInformation::CreateForDisplayId(param0);
+                }());
             }
             catch (...)
             {
@@ -506,7 +558,11 @@ namespace py::cpp::Microsoft::Graphics::Display
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::WindowId>(args, 0);
 
-                return py::convert(winrt::Microsoft::Graphics::Display::DisplayInformation::CreateForWindowId(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::Graphics::Display::DisplayInformation::CreateForWindowId(param0);
+                }());
             }
             catch (...)
             {
@@ -542,7 +598,11 @@ namespace py::cpp::Microsoft::Graphics::Display
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetAdvancedColorInfo());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAdvancedColorInfo();
+                }());
             }
             catch (...)
             {
@@ -578,7 +638,11 @@ namespace py::cpp::Microsoft::Graphics::Display
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetColorProfile());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetColorProfile();
+                }());
             }
             catch (...)
             {
@@ -614,7 +678,11 @@ namespace py::cpp::Microsoft::Graphics::Display
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetColorProfileAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetColorProfileAsync();
+                }());
             }
             catch (...)
             {
@@ -646,7 +714,11 @@ namespace py::cpp::Microsoft::Graphics::Display
                 return nullptr;
             }
 
-            return py::convert(self->obj.DispatcherQueue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DispatcherQueue();
+            }());
         }
         catch (...)
         {
@@ -672,7 +744,11 @@ namespace py::cpp::Microsoft::Graphics::Display
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsStereoEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsStereoEnabled();
+            }());
         }
         catch (...)
         {
@@ -700,7 +776,11 @@ namespace py::cpp::Microsoft::Graphics::Display
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Graphics::Display::DisplayInformation, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.AdvancedColorInfoChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AdvancedColorInfoChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -728,7 +808,11 @@ namespace py::cpp::Microsoft::Graphics::Display
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.AdvancedColorInfoChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AdvancedColorInfoChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -757,7 +841,11 @@ namespace py::cpp::Microsoft::Graphics::Display
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Graphics::Display::DisplayInformation, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.ColorProfileChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ColorProfileChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -785,7 +873,11 @@ namespace py::cpp::Microsoft::Graphics::Display
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ColorProfileChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ColorProfileChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -814,7 +906,11 @@ namespace py::cpp::Microsoft::Graphics::Display
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Graphics::Display::DisplayInformation, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.Destroyed(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Destroyed(param0);
+            }());
         }
         catch (...)
         {
@@ -842,7 +938,11 @@ namespace py::cpp::Microsoft::Graphics::Display
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Destroyed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Destroyed(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -871,7 +971,11 @@ namespace py::cpp::Microsoft::Graphics::Display
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Graphics::Display::DisplayInformation, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.IsStereoEnabledChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsStereoEnabledChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -899,7 +1003,11 @@ namespace py::cpp::Microsoft::Graphics::Display
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.IsStereoEnabledChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsStereoEnabledChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -942,7 +1050,11 @@ namespace py::cpp::Microsoft::Graphics::Display
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)

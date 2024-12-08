@@ -42,7 +42,11 @@ namespace py::cpp::Windows::Services::Cortana
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Services::Cortana::CortanaActionableInsights::GetDefault());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Services::Cortana::CortanaActionableInsights::GetDefault();
+                }());
             }
             catch (...)
             {
@@ -80,7 +84,11 @@ namespace py::cpp::Windows::Services::Cortana
 
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
 
-                return py::convert(winrt::Windows::Services::Cortana::CortanaActionableInsights::GetForUser(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Services::Cortana::CortanaActionableInsights::GetForUser(param0);
+                }());
             }
             catch (...)
             {
@@ -116,7 +124,11 @@ namespace py::cpp::Windows::Services::Cortana
                     return nullptr;
                 }
 
-                return py::convert(self->obj.IsAvailableAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsAvailableAsync();
+                }());
             }
             catch (...)
             {
@@ -154,7 +166,11 @@ namespace py::cpp::Windows::Services::Cortana
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::DataTransfer::DataPackage>(args, 0);
 
-                return py::convert(self->obj.ShowInsightsAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ShowInsightsAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -192,7 +208,11 @@ namespace py::cpp::Windows::Services::Cortana
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(args, 0);
 
-                return py::convert(self->obj.ShowInsightsForImageAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ShowInsightsForImageAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -231,7 +251,11 @@ namespace py::cpp::Windows::Services::Cortana
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Services::Cortana::CortanaActionableInsightsOptions>(args, 1);
 
-                return py::convert(self->obj.ShowInsightsForImageAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ShowInsightsForImageAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -269,7 +293,11 @@ namespace py::cpp::Windows::Services::Cortana
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.ShowInsightsForTextAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ShowInsightsForTextAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -308,7 +336,11 @@ namespace py::cpp::Windows::Services::Cortana
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Services::Cortana::CortanaActionableInsightsOptions>(args, 1);
 
-                return py::convert(self->obj.ShowInsightsForTextAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ShowInsightsForTextAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -347,7 +379,11 @@ namespace py::cpp::Windows::Services::Cortana
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::DataTransfer::DataPackage>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Services::Cortana::CortanaActionableInsightsOptions>(args, 1);
 
-                return py::convert(self->obj.ShowInsightsAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ShowInsightsAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -379,7 +415,11 @@ namespace py::cpp::Windows::Services::Cortana
                 return nullptr;
             }
 
-            return py::convert(self->obj.User());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.User();
+            }());
         }
         catch (...)
         {
@@ -528,7 +568,11 @@ namespace py::cpp::Windows::Services::Cortana
                 return nullptr;
             }
 
-            return py::convert(self->obj.SurroundingText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SurroundingText();
+            }());
         }
         catch (...)
         {
@@ -562,7 +606,11 @@ namespace py::cpp::Windows::Services::Cortana
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.SurroundingText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SurroundingText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -589,7 +637,11 @@ namespace py::cpp::Windows::Services::Cortana
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContentSourceWebLink());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContentSourceWebLink();
+            }());
         }
         catch (...)
         {
@@ -623,7 +675,11 @@ namespace py::cpp::Windows::Services::Cortana
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.ContentSourceWebLink(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ContentSourceWebLink(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -724,7 +780,11 @@ namespace py::cpp::Windows::Services::Cortana
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Services::Cortana::CortanaPermission>>(args, 0);
 
-                return py::convert(self->obj.ArePermissionsGrantedAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ArePermissionsGrantedAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -760,7 +820,11 @@ namespace py::cpp::Windows::Services::Cortana
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Services::Cortana::CortanaPermissionsManager::GetDefault());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Services::Cortana::CortanaPermissionsManager::GetDefault();
+                }());
             }
             catch (...)
             {
@@ -798,7 +862,11 @@ namespace py::cpp::Windows::Services::Cortana
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Services::Cortana::CortanaPermission>>(args, 0);
 
-                return py::convert(self->obj.GrantPermissionsAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GrantPermissionsAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -834,7 +902,11 @@ namespace py::cpp::Windows::Services::Cortana
                     return nullptr;
                 }
 
-                return py::convert(self->obj.IsSupported());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsSupported();
+                }());
             }
             catch (...)
             {
@@ -872,7 +944,11 @@ namespace py::cpp::Windows::Services::Cortana
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Services::Cortana::CortanaPermission>>(args, 0);
 
-                return py::convert(self->obj.RevokePermissionsAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RevokePermissionsAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1004,7 +1080,11 @@ namespace py::cpp::Windows::Services::Cortana
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Services::Cortana::CortanaSettings::GetDefault());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Services::Cortana::CortanaSettings::GetDefault();
+                }());
             }
             catch (...)
             {
@@ -1040,7 +1120,11 @@ namespace py::cpp::Windows::Services::Cortana
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Services::Cortana::CortanaSettings::IsSupported());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Services::Cortana::CortanaSettings::IsSupported();
+                }());
             }
             catch (...)
             {
@@ -1072,7 +1156,11 @@ namespace py::cpp::Windows::Services::Cortana
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsVoiceActivationEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsVoiceActivationEnabled();
+            }());
         }
         catch (...)
         {
@@ -1106,7 +1194,11 @@ namespace py::cpp::Windows::Services::Cortana
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsVoiceActivationEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsVoiceActivationEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1133,7 +1225,11 @@ namespace py::cpp::Windows::Services::Cortana
                 return nullptr;
             }
 
-            return py::convert(self->obj.HasUserConsentToVoiceActivation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HasUserConsentToVoiceActivation();
+            }());
         }
         catch (...)
         {

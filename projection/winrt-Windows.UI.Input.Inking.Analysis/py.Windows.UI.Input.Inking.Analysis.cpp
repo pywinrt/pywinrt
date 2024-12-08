@@ -42,7 +42,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetStrokeIds());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetStrokeIds();
+                }());
             }
             catch (...)
             {
@@ -74,7 +78,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.RecognizedText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RecognizedText();
+            }());
         }
         catch (...)
         {
@@ -100,7 +108,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.BoundingRect());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BoundingRect();
+            }());
         }
         catch (...)
         {
@@ -126,7 +138,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.Children());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Children();
+            }());
         }
         catch (...)
         {
@@ -152,7 +168,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -178,7 +198,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -204,7 +228,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.Parent());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Parent();
+            }());
         }
         catch (...)
         {
@@ -230,7 +258,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.RotatedBoundingRect());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RotatedBoundingRect();
+            }());
         }
         catch (...)
         {
@@ -334,7 +366,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetStrokeIds());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetStrokeIds();
+                }());
             }
             catch (...)
             {
@@ -366,7 +402,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.Center());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Center();
+            }());
         }
         catch (...)
         {
@@ -392,7 +432,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.DrawingKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DrawingKind();
+            }());
         }
         catch (...)
         {
@@ -418,7 +462,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.Points());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Points();
+            }());
         }
         catch (...)
         {
@@ -444,7 +492,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.BoundingRect());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BoundingRect();
+            }());
         }
         catch (...)
         {
@@ -470,7 +522,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.Children());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Children();
+            }());
         }
         catch (...)
         {
@@ -496,7 +552,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -522,7 +582,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -548,7 +612,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.Parent());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Parent();
+            }());
         }
         catch (...)
         {
@@ -574,7 +642,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.RotatedBoundingRect());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RotatedBoundingRect();
+            }());
         }
         catch (...)
         {
@@ -680,7 +752,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetStrokeIds());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetStrokeIds();
+                }());
             }
             catch (...)
             {
@@ -712,7 +788,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.RecognizedText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RecognizedText();
+            }());
         }
         catch (...)
         {
@@ -738,7 +818,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.TextAlternates());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TextAlternates();
+            }());
         }
         catch (...)
         {
@@ -764,7 +848,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.BoundingRect());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BoundingRect();
+            }());
         }
         catch (...)
         {
@@ -790,7 +878,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.Children());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Children();
+            }());
         }
         catch (...)
         {
@@ -816,7 +908,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -842,7 +938,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -868,7 +968,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.Parent());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Parent();
+            }());
         }
         catch (...)
         {
@@ -894,7 +998,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.RotatedBoundingRect());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RotatedBoundingRect();
+            }());
         }
         catch (...)
         {
@@ -999,7 +1107,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetStrokeIds());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetStrokeIds();
+                }());
             }
             catch (...)
             {
@@ -1031,7 +1143,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.IndentLevel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IndentLevel();
+            }());
         }
         catch (...)
         {
@@ -1057,7 +1173,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.RecognizedText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RecognizedText();
+            }());
         }
         catch (...)
         {
@@ -1083,7 +1203,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.BoundingRect());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BoundingRect();
+            }());
         }
         catch (...)
         {
@@ -1109,7 +1233,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.Children());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Children();
+            }());
         }
         catch (...)
         {
@@ -1135,7 +1263,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -1161,7 +1293,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -1187,7 +1323,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.Parent());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Parent();
+            }());
         }
         catch (...)
         {
@@ -1213,7 +1353,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.RotatedBoundingRect());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RotatedBoundingRect();
+            }());
         }
         catch (...)
         {
@@ -1318,7 +1462,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetStrokeIds());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetStrokeIds();
+                }());
             }
             catch (...)
             {
@@ -1350,7 +1498,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.RecognizedText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RecognizedText();
+            }());
         }
         catch (...)
         {
@@ -1376,7 +1528,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.BoundingRect());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BoundingRect();
+            }());
         }
         catch (...)
         {
@@ -1402,7 +1558,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.Children());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Children();
+            }());
         }
         catch (...)
         {
@@ -1428,7 +1588,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -1454,7 +1618,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -1480,7 +1648,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.Parent());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Parent();
+            }());
         }
         catch (...)
         {
@@ -1506,7 +1678,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.RotatedBoundingRect());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RotatedBoundingRect();
+            }());
         }
         catch (...)
         {
@@ -1610,7 +1786,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetStrokeIds());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetStrokeIds();
+                }());
             }
             catch (...)
             {
@@ -1642,7 +1822,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.BoundingRect());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BoundingRect();
+            }());
         }
         catch (...)
         {
@@ -1668,7 +1852,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.Children());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Children();
+            }());
         }
         catch (...)
         {
@@ -1694,7 +1882,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -1720,7 +1912,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -1746,7 +1942,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.Parent());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Parent();
+            }());
         }
         catch (...)
         {
@@ -1772,7 +1972,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.RotatedBoundingRect());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RotatedBoundingRect();
+            }());
         }
         catch (...)
         {
@@ -1875,7 +2079,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetStrokeIds());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetStrokeIds();
+                }());
             }
             catch (...)
             {
@@ -1907,7 +2115,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.BoundingRect());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BoundingRect();
+            }());
         }
         catch (...)
         {
@@ -1933,7 +2145,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.Children());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Children();
+            }());
         }
         catch (...)
         {
@@ -1959,7 +2175,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -1985,7 +2205,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -2011,7 +2235,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.Parent());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Parent();
+            }());
         }
         catch (...)
         {
@@ -2037,7 +2265,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.RotatedBoundingRect());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RotatedBoundingRect();
+            }());
         }
         catch (...)
         {
@@ -2063,7 +2295,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.RecognizedText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RecognizedText();
+            }());
         }
         catch (...)
         {
@@ -2163,7 +2399,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -2262,7 +2502,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisNodeKind>(args, 0);
 
-                return py::convert(self->obj.FindNodes(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.FindNodes(param0);
+                }());
             }
             catch (...)
             {
@@ -2298,7 +2542,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetStrokeIds());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetStrokeIds();
+                }());
             }
             catch (...)
             {
@@ -2330,7 +2578,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.BoundingRect());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BoundingRect();
+            }());
         }
         catch (...)
         {
@@ -2356,7 +2608,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.Children());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Children();
+            }());
         }
         catch (...)
         {
@@ -2382,7 +2638,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -2408,7 +2668,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -2434,7 +2698,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.Parent());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Parent();
+            }());
         }
         catch (...)
         {
@@ -2460,7 +2728,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.RotatedBoundingRect());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RotatedBoundingRect();
+            }());
         }
         catch (...)
         {
@@ -2486,7 +2758,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.RecognizedText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RecognizedText();
+            }());
         }
         catch (...)
         {
@@ -2591,7 +2867,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetStrokeIds());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetStrokeIds();
+                }());
             }
             catch (...)
             {
@@ -2623,7 +2903,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.BoundingRect());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BoundingRect();
+            }());
         }
         catch (...)
         {
@@ -2649,7 +2933,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.Children());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Children();
+            }());
         }
         catch (...)
         {
@@ -2675,7 +2963,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -2701,7 +2993,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -2727,7 +3023,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.Parent());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Parent();
+            }());
         }
         catch (...)
         {
@@ -2753,7 +3053,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.RotatedBoundingRect());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RotatedBoundingRect();
+            }());
         }
         catch (...)
         {
@@ -2779,7 +3083,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.RecognizedText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RecognizedText();
+            }());
         }
         catch (...)
         {
@@ -2907,7 +3215,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::Inking::InkStroke>(args, 0);
 
-                self->obj.AddDataForStroke(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddDataForStroke(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2946,7 +3258,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::UI::Input::Inking::InkStroke>>(args, 0);
 
-                self->obj.AddDataForStrokes(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.AddDataForStrokes(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2983,7 +3299,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                     return nullptr;
                 }
 
-                return py::convert(self->obj.AnalyzeAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.AnalyzeAsync();
+                }());
             }
             catch (...)
             {
@@ -3019,7 +3339,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                     return nullptr;
                 }
 
-                self->obj.ClearDataForAllStrokes();
+                {
+                    auto _gil = release_gil();
+                    self->obj.ClearDataForAllStrokes();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3058,7 +3382,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                self->obj.RemoveDataForStroke(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveDataForStroke(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3097,7 +3425,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<uint32_t>>(args, 0);
 
-                self->obj.RemoveDataForStrokes(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveDataForStrokes(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3136,7 +3468,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::Inking::InkStroke>(args, 0);
 
-                self->obj.ReplaceDataForStroke(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ReplaceDataForStroke(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3176,7 +3512,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisStrokeKind>(args, 1);
 
-                self->obj.SetStrokeDataKind(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetStrokeDataKind(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3209,7 +3549,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.AnalysisRoot());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AnalysisRoot();
+            }());
         }
         catch (...)
         {
@@ -3235,7 +3579,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsAnalyzing());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsAnalyzing();
+            }());
         }
         catch (...)
         {
@@ -3341,7 +3689,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetStrokeIds());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetStrokeIds();
+                }());
             }
             catch (...)
             {
@@ -3373,7 +3725,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.BoundingRect());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BoundingRect();
+            }());
         }
         catch (...)
         {
@@ -3399,7 +3755,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.Children());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Children();
+            }());
         }
         catch (...)
         {
@@ -3425,7 +3785,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -3451,7 +3815,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -3477,7 +3845,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.Parent());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Parent();
+            }());
         }
         catch (...)
         {
@@ -3503,7 +3875,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                 return nullptr;
             }
 
-            return py::convert(self->obj.RotatedBoundingRect());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RotatedBoundingRect();
+            }());
         }
         catch (...)
         {
@@ -3814,7 +4190,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CreateAnalyzer());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateAnalyzer();
+                }());
             }
             catch (...)
             {

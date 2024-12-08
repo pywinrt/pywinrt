@@ -34,7 +34,11 @@ namespace py::cpp::Windows::Phone::System::UserProfile::GameServices::Core
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Phone::System::UserProfile::GameServices::Core::GameService::GetAuthenticationStatus());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Phone::System::UserProfile::GameServices::Core::GameService::GetAuthenticationStatus();
+                }());
             }
             catch (...)
             {
@@ -70,7 +74,11 @@ namespace py::cpp::Windows::Phone::System::UserProfile::GameServices::Core
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Phone::System::UserProfile::GameServices::Core::GameService::GetGamerProfileAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Phone::System::UserProfile::GameServices::Core::GameService::GetGamerProfileAsync();
+                }());
             }
             catch (...)
             {
@@ -106,7 +114,11 @@ namespace py::cpp::Windows::Phone::System::UserProfile::GameServices::Core
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Phone::System::UserProfile::GameServices::Core::GameService::GetInstalledGameItemsAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Phone::System::UserProfile::GameServices::Core::GameService::GetInstalledGameItemsAsync();
+                }());
             }
             catch (...)
             {
@@ -144,7 +156,11 @@ namespace py::cpp::Windows::Phone::System::UserProfile::GameServices::Core
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
-                return py::convert(winrt::Windows::Phone::System::UserProfile::GameServices::Core::GameService::GetPartnerTokenAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Phone::System::UserProfile::GameServices::Core::GameService::GetPartnerTokenAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -180,7 +196,11 @@ namespace py::cpp::Windows::Phone::System::UserProfile::GameServices::Core
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Phone::System::UserProfile::GameServices::Core::GameService::GetPrivilegesAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Phone::System::UserProfile::GameServices::Core::GameService::GetPrivilegesAsync();
+                }());
             }
             catch (...)
             {
@@ -218,7 +238,11 @@ namespace py::cpp::Windows::Phone::System::UserProfile::GameServices::Core
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                winrt::Windows::Phone::System::UserProfile::GameServices::Core::GameService::GrantAchievement(param0);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Phone::System::UserProfile::GameServices::Core::GameService::GrantAchievement(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -257,7 +281,11 @@ namespace py::cpp::Windows::Phone::System::UserProfile::GameServices::Core
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                winrt::Windows::Phone::System::UserProfile::GameServices::Core::GameService::GrantAvatarAward(param0);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Phone::System::UserProfile::GameServices::Core::GameService::GrantAvatarAward(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -296,7 +324,11 @@ namespace py::cpp::Windows::Phone::System::UserProfile::GameServices::Core
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
-                winrt::Windows::Phone::System::UserProfile::GameServices::Core::GameService::NotifyPartnerTokenExpired(param0);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Phone::System::UserProfile::GameServices::Core::GameService::NotifyPartnerTokenExpired(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -339,7 +371,11 @@ namespace py::cpp::Windows::Phone::System::UserProfile::GameServices::Core
                 auto param3 = py::convert_to<winrt::Windows::Phone::System::UserProfile::GameServices::Core::GameServiceGameOutcome>(args, 3);
                 auto param4 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 4);
 
-                winrt::Windows::Phone::System::UserProfile::GameServices::Core::GameService::PostResult(param0, param1, param2, param3, param4);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::Phone::System::UserProfile::GameServices::Core::GameService::PostResult(param0, param1, param2, param3, param4);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -372,7 +408,11 @@ namespace py::cpp::Windows::Phone::System::UserProfile::GameServices::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Phone::System::UserProfile::GameServices::Core::GameService::ServiceUri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Phone::System::UserProfile::GameServices::Core::GameService::ServiceUri();
+            }());
         }
         catch (...)
         {
@@ -478,7 +518,11 @@ namespace py::cpp::Windows::Phone::System::UserProfile::GameServices::Core
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.GetPropertyAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetPropertyAsync(param0);
+                }());
             }
             catch (...)
             {

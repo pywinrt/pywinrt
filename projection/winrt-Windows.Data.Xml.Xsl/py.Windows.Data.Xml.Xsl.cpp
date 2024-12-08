@@ -68,7 +68,11 @@ namespace py::cpp::Windows::Data::Xml::Xsl
 
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
-                return py::convert(self->obj.TransformToDocument(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TransformToDocument(param0);
+                }());
             }
             catch (...)
             {
@@ -106,7 +110,11 @@ namespace py::cpp::Windows::Data::Xml::Xsl
 
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
 
-                return py::convert(self->obj.TransformToString(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TransformToString(param0);
+                }());
             }
             catch (...)
             {

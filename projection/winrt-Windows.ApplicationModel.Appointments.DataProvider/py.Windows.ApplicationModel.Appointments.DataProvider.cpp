@@ -42,7 +42,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReportCompletedAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportCompletedAsync();
+                }());
             }
             catch (...)
             {
@@ -78,7 +82,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReportFailedAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportFailedAsync();
+                }());
             }
             catch (...)
             {
@@ -110,7 +118,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppointmentCalendarLocalId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppointmentCalendarLocalId();
+            }());
         }
         catch (...)
         {
@@ -136,7 +148,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppointmentLocalId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppointmentLocalId();
+            }());
         }
         catch (...)
         {
@@ -162,7 +178,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppointmentOriginalStartTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppointmentOriginalStartTime();
+            }());
         }
         catch (...)
         {
@@ -188,7 +208,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Comment());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Comment();
+            }());
         }
         catch (...)
         {
@@ -214,7 +238,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.NotifyInvitees());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NotifyInvitees();
+            }());
         }
         catch (...)
         {
@@ -240,7 +268,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Subject());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Subject();
+            }());
         }
         catch (...)
         {
@@ -344,7 +376,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -376,7 +412,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Request());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Request();
+            }());
         }
         catch (...)
         {
@@ -476,7 +516,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::Appointment>(args, 0);
 
-                return py::convert(self->obj.ReportCompletedAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportCompletedAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -512,7 +556,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReportFailedAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportFailedAsync();
+                }());
             }
             catch (...)
             {
@@ -544,7 +592,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Appointment());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Appointment();
+            }());
         }
         catch (...)
         {
@@ -570,7 +622,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppointmentCalendarLocalId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppointmentCalendarLocalId();
+            }());
         }
         catch (...)
         {
@@ -596,7 +652,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.ChangedProperties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ChangedProperties();
+            }());
         }
         catch (...)
         {
@@ -622,7 +682,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.NotifyInvitees());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NotifyInvitees();
+            }());
         }
         catch (...)
         {
@@ -724,7 +788,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -756,7 +824,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Request());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Request();
+            }());
         }
         catch (...)
         {
@@ -854,7 +926,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReportCompletedAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportCompletedAsync();
+                }());
             }
             catch (...)
             {
@@ -890,7 +966,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReportFailedAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportFailedAsync();
+                }());
             }
             catch (...)
             {
@@ -922,7 +1002,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppointmentCalendarLocalId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppointmentCalendarLocalId();
+            }());
         }
         catch (...)
         {
@@ -948,7 +1032,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppointmentLocalId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppointmentLocalId();
+            }());
         }
         catch (...)
         {
@@ -974,7 +1062,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppointmentOriginalStartTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppointmentOriginalStartTime();
+            }());
         }
         catch (...)
         {
@@ -1000,7 +1092,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Comment());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Comment();
+            }());
         }
         catch (...)
         {
@@ -1026,7 +1122,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.ForwardHeader());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ForwardHeader();
+            }());
         }
         catch (...)
         {
@@ -1052,7 +1152,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Invitees());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Invitees();
+            }());
         }
         catch (...)
         {
@@ -1078,7 +1182,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Subject());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Subject();
+            }());
         }
         catch (...)
         {
@@ -1183,7 +1291,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -1215,7 +1327,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Request());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Request();
+            }());
         }
         catch (...)
         {
@@ -1313,7 +1429,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReportCompletedAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportCompletedAsync();
+                }());
             }
             catch (...)
             {
@@ -1349,7 +1469,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReportFailedAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportFailedAsync();
+                }());
             }
             catch (...)
             {
@@ -1381,7 +1505,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppointmentCalendarLocalId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppointmentCalendarLocalId();
+            }());
         }
         catch (...)
         {
@@ -1407,7 +1535,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppointmentLocalId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppointmentLocalId();
+            }());
         }
         catch (...)
         {
@@ -1433,7 +1565,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppointmentOriginalStartTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppointmentOriginalStartTime();
+            }());
         }
         catch (...)
         {
@@ -1459,7 +1595,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Comment());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Comment();
+            }());
         }
         catch (...)
         {
@@ -1485,7 +1625,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.NewDuration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NewDuration();
+            }());
         }
         catch (...)
         {
@@ -1511,7 +1655,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.NewStartTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NewStartTime();
+            }());
         }
         catch (...)
         {
@@ -1537,7 +1685,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Subject());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Subject();
+            }());
         }
         catch (...)
         {
@@ -1642,7 +1794,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -1674,7 +1830,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Request());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Request();
+            }());
         }
         catch (...)
         {
@@ -1772,7 +1932,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReportCompletedAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportCompletedAsync();
+                }());
             }
             catch (...)
             {
@@ -1808,7 +1972,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReportFailedAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportFailedAsync();
+                }());
             }
             catch (...)
             {
@@ -1840,7 +2008,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppointmentCalendarLocalId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppointmentCalendarLocalId();
+            }());
         }
         catch (...)
         {
@@ -1939,7 +2111,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -1971,7 +2147,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Request());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Request();
+            }());
         }
         catch (...)
         {
@@ -2069,7 +2249,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReportCompletedAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportCompletedAsync();
+                }());
             }
             catch (...)
             {
@@ -2105,7 +2289,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ReportFailedAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReportFailedAsync();
+                }());
             }
             catch (...)
             {
@@ -2137,7 +2325,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppointmentCalendarLocalId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppointmentCalendarLocalId();
+            }());
         }
         catch (...)
         {
@@ -2163,7 +2355,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppointmentLocalId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppointmentLocalId();
+            }());
         }
         catch (...)
         {
@@ -2189,7 +2385,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppointmentOriginalStartTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AppointmentOriginalStartTime();
+            }());
         }
         catch (...)
         {
@@ -2215,7 +2415,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Comment());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Comment();
+            }());
         }
         catch (...)
         {
@@ -2241,7 +2445,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Response());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Response();
+            }());
         }
         catch (...)
         {
@@ -2267,7 +2475,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.SendUpdate());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SendUpdate();
+            }());
         }
         catch (...)
         {
@@ -2293,7 +2505,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Subject());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Subject();
+            }());
         }
         catch (...)
         {
@@ -2398,7 +2614,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -2430,7 +2650,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Request());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Request();
+            }());
         }
         catch (...)
         {
@@ -2528,7 +2752,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
                     return nullptr;
                 }
 
-                self->obj.Start();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Start();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2563,7 +2791,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentDataProviderConnection, winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarCancelMeetingRequestEventArgs>>(arg);
 
-            return py::convert(self->obj.CancelMeetingRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CancelMeetingRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -2591,7 +2823,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.CancelMeetingRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CancelMeetingRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2620,7 +2856,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentDataProviderConnection, winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs>>(arg);
 
-            return py::convert(self->obj.CreateOrUpdateAppointmentRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CreateOrUpdateAppointmentRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -2648,7 +2888,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.CreateOrUpdateAppointmentRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CreateOrUpdateAppointmentRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2677,7 +2921,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentDataProviderConnection, winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarForwardMeetingRequestEventArgs>>(arg);
 
-            return py::convert(self->obj.ForwardMeetingRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ForwardMeetingRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -2705,7 +2953,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ForwardMeetingRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ForwardMeetingRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2734,7 +2986,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentDataProviderConnection, winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs>>(arg);
 
-            return py::convert(self->obj.ProposeNewTimeForMeetingRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProposeNewTimeForMeetingRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -2762,7 +3018,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ProposeNewTimeForMeetingRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ProposeNewTimeForMeetingRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2791,7 +3051,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentDataProviderConnection, winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarSyncManagerSyncRequestEventArgs>>(arg);
 
-            return py::convert(self->obj.SyncRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SyncRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -2819,7 +3083,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.SyncRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SyncRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2848,7 +3116,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentDataProviderConnection, winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarUpdateMeetingResponseRequestEventArgs>>(arg);
 
-            return py::convert(self->obj.UpdateMeetingResponseRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UpdateMeetingResponseRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -2876,7 +3148,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.UpdateMeetingResponseRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.UpdateMeetingResponseRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2982,7 +3258,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
                 return nullptr;
             }
 
-            return py::convert(self->obj.Connection());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Connection();
+            }());
         }
         catch (...)
         {

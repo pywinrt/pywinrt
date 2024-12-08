@@ -42,7 +42,11 @@ namespace py::cpp::Windows::System::Inventory
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::System::Inventory::InstalledDesktopApp::GetInventoryAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::System::Inventory::InstalledDesktopApp::GetInventoryAsync();
+                }());
             }
             catch (...)
             {
@@ -78,7 +82,11 @@ namespace py::cpp::Windows::System::Inventory
                     return nullptr;
                 }
 
-                return py::convert(self->obj.ToString());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ToString();
+                }());
             }
             catch (...)
             {
@@ -110,7 +118,11 @@ namespace py::cpp::Windows::System::Inventory
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayName();
+            }());
         }
         catch (...)
         {
@@ -136,7 +148,11 @@ namespace py::cpp::Windows::System::Inventory
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayVersion());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayVersion();
+            }());
         }
         catch (...)
         {
@@ -162,7 +178,11 @@ namespace py::cpp::Windows::System::Inventory
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Id();
+            }());
         }
         catch (...)
         {
@@ -188,7 +208,11 @@ namespace py::cpp::Windows::System::Inventory
                 return nullptr;
             }
 
-            return py::convert(self->obj.Publisher());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Publisher();
+            }());
         }
         catch (...)
         {
@@ -225,7 +249,11 @@ namespace py::cpp::Windows::System::Inventory
     {
         try
         {
-            return py::convert(self->obj.ToString());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.ToString();
+            }());
         }
         catch (...)
         {

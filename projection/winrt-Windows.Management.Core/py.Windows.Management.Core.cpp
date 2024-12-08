@@ -44,7 +44,11 @@ namespace py::cpp::Windows::Management::Core
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Management::Core::ApplicationDataManager::CreateForPackageFamily(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Management::Core::ApplicationDataManager::CreateForPackageFamily(param0);
+                }());
             }
             catch (...)
             {

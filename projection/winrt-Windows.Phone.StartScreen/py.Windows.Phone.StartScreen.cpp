@@ -64,7 +64,11 @@ namespace py::cpp::Windows::Phone::StartScreen
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CreateAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateAsync();
+                }());
             }
             catch (...)
             {
@@ -100,7 +104,11 @@ namespace py::cpp::Windows::Phone::StartScreen
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Phone::StartScreen::DualSimTile::CreateBadgeUpdaterForSim1());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Phone::StartScreen::DualSimTile::CreateBadgeUpdaterForSim1();
+                }());
             }
             catch (...)
             {
@@ -136,7 +144,11 @@ namespace py::cpp::Windows::Phone::StartScreen
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Phone::StartScreen::DualSimTile::CreateBadgeUpdaterForSim2());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Phone::StartScreen::DualSimTile::CreateBadgeUpdaterForSim2();
+                }());
             }
             catch (...)
             {
@@ -172,7 +184,11 @@ namespace py::cpp::Windows::Phone::StartScreen
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Phone::StartScreen::DualSimTile::CreateTileUpdaterForSim1());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Phone::StartScreen::DualSimTile::CreateTileUpdaterForSim1();
+                }());
             }
             catch (...)
             {
@@ -208,7 +224,11 @@ namespace py::cpp::Windows::Phone::StartScreen
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Phone::StartScreen::DualSimTile::CreateTileUpdaterForSim2());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Phone::StartScreen::DualSimTile::CreateTileUpdaterForSim2();
+                }());
             }
             catch (...)
             {
@@ -244,7 +264,11 @@ namespace py::cpp::Windows::Phone::StartScreen
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Phone::StartScreen::DualSimTile::CreateToastNotifierForSim1());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Phone::StartScreen::DualSimTile::CreateToastNotifierForSim1();
+                }());
             }
             catch (...)
             {
@@ -280,7 +304,11 @@ namespace py::cpp::Windows::Phone::StartScreen
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Phone::StartScreen::DualSimTile::CreateToastNotifierForSim2());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Phone::StartScreen::DualSimTile::CreateToastNotifierForSim2();
+                }());
             }
             catch (...)
             {
@@ -316,7 +344,11 @@ namespace py::cpp::Windows::Phone::StartScreen
                     return nullptr;
                 }
 
-                return py::convert(self->obj.DeleteAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.DeleteAsync();
+                }());
             }
             catch (...)
             {
@@ -352,7 +384,11 @@ namespace py::cpp::Windows::Phone::StartScreen
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Phone::StartScreen::DualSimTile::GetTileForSim2());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Phone::StartScreen::DualSimTile::GetTileForSim2();
+                }());
             }
             catch (...)
             {
@@ -388,7 +424,11 @@ namespace py::cpp::Windows::Phone::StartScreen
                     return nullptr;
                 }
 
-                return py::convert(self->obj.UpdateAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.UpdateAsync();
+                }());
             }
             catch (...)
             {
@@ -426,7 +466,11 @@ namespace py::cpp::Windows::Phone::StartScreen
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Phone::StartScreen::DualSimTile::UpdateDisplayNameForSim1Async(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Phone::StartScreen::DualSimTile::UpdateDisplayNameForSim1Async(param0);
+                }());
             }
             catch (...)
             {
@@ -458,7 +502,11 @@ namespace py::cpp::Windows::Phone::StartScreen
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayName();
+            }());
         }
         catch (...)
         {
@@ -492,7 +540,11 @@ namespace py::cpp::Windows::Phone::StartScreen
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.DisplayName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DisplayName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -519,7 +571,11 @@ namespace py::cpp::Windows::Phone::StartScreen
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsPinnedToStart());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsPinnedToStart();
+            }());
         }
         catch (...)
         {
@@ -655,7 +711,11 @@ namespace py::cpp::Windows::Phone::StartScreen
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.CreateToastNotifierForSecondaryTile(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateToastNotifierForSecondaryTile(param0);
+                }());
             }
             catch (...)
             {

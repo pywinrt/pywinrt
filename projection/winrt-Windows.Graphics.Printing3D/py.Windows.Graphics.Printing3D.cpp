@@ -42,7 +42,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Graphics::Printing3D::Print3DManager::GetForCurrentView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Graphics::Printing3D::Print3DManager::GetForCurrentView();
+                }());
             }
             catch (...)
             {
@@ -78,7 +82,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Graphics::Printing3D::Print3DManager::ShowPrintUIAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Graphics::Printing3D::Print3DManager::ShowPrintUIAsync();
+                }());
             }
             catch (...)
             {
@@ -112,7 +120,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Printing3D::Print3DManager, winrt::Windows::Graphics::Printing3D::Print3DTaskRequestedEventArgs>>(arg);
 
-            return py::convert(self->obj.TaskRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TaskRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -140,7 +152,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.TaskRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TaskRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -262,7 +278,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.Source());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Source();
+            }());
         }
         catch (...)
         {
@@ -290,7 +310,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Printing3D::Print3DTask, winrt::Windows::Graphics::Printing3D::Print3DTaskCompletedEventArgs>>(arg);
 
-            return py::convert(self->obj.Completed(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Completed(param0);
+            }());
         }
         catch (...)
         {
@@ -318,7 +342,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Completed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Completed(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -347,7 +375,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Printing3D::Print3DTask, winrt::Windows::Graphics::Printing3D::Print3DTaskSourceChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.SourceChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SourceChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -375,7 +407,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.SourceChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SourceChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -404,7 +440,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Printing3D::Print3DTask, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.Submitting(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Submitting(param0);
+            }());
         }
         catch (...)
         {
@@ -432,7 +472,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Submitting(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Submitting(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -532,7 +576,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.Completion());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Completion();
+            }());
         }
         catch (...)
         {
@@ -558,7 +606,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExtendedStatus());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExtendedStatus();
+            }());
         }
         catch (...)
         {
@@ -660,7 +712,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Graphics::Printing3D::Print3DTaskSourceRequestedHandler>(args, 2);
 
-                return py::convert(self->obj.CreateTask(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateTask(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -759,7 +815,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.Request());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Request();
+            }());
         }
         catch (...)
         {
@@ -852,7 +912,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.Source());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Source();
+            }());
         }
         catch (...)
         {
@@ -951,7 +1015,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Printing3D::Printing3D3MFPackage>(args, 0);
 
-                self->obj.SetSource(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetSource(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1079,7 +1147,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 0);
 
-                return py::convert(winrt::Windows::Graphics::Printing3D::Printing3D3MFPackage::LoadAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Graphics::Printing3D::Printing3D3MFPackage::LoadAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1117,7 +1189,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 0);
 
-                return py::convert(self->obj.LoadModelFromPackageAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.LoadModelFromPackageAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1153,7 +1229,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                     return nullptr;
                 }
 
-                return py::convert(self->obj.SaveAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SaveAsync();
+                }());
             }
             catch (...)
             {
@@ -1191,7 +1271,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Printing3D::Printing3DModel>(args, 0);
 
-                return py::convert(self->obj.SaveModelToPackageAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SaveModelToPackageAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1223,7 +1307,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.Thumbnail());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Thumbnail();
+            }());
         }
         catch (...)
         {
@@ -1257,7 +1345,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing3D::Printing3DTextureResource>(arg);
 
-            self->obj.Thumbnail(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Thumbnail(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1284,7 +1376,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.PrintTicket());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PrintTicket();
+            }());
         }
         catch (...)
         {
@@ -1318,7 +1414,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(arg);
 
-            self->obj.PrintTicket(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PrintTicket(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1345,7 +1445,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.ModelPart());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ModelPart();
+            }());
         }
         catch (...)
         {
@@ -1379,7 +1483,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(arg);
 
-            self->obj.ModelPart(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ModelPart(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1406,7 +1514,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.Textures());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Textures();
+            }());
         }
         catch (...)
         {
@@ -1432,7 +1544,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.Compression());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Compression();
+            }());
         }
         catch (...)
         {
@@ -1466,7 +1582,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing3D::Printing3DPackageCompression>(arg);
 
-            self->obj.Compression(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Compression(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1615,7 +1735,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -1649,7 +1773,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Name(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Name(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1676,7 +1804,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.Color());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Color();
+            }());
         }
         catch (...)
         {
@@ -1710,7 +1842,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing3D::Printing3DColorMaterial>(arg);
 
-            self->obj.Color(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Color(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1737,7 +1873,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Graphics::Printing3D::Printing3DBaseMaterial::Abs());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Graphics::Printing3D::Printing3DBaseMaterial::Abs();
+            }());
         }
         catch (...)
         {
@@ -1763,7 +1903,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Graphics::Printing3D::Printing3DBaseMaterial::Pla());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Graphics::Printing3D::Printing3DBaseMaterial::Pla();
+            }());
         }
         catch (...)
         {
@@ -1908,7 +2052,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.Bases());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Bases();
+            }());
         }
         catch (...)
         {
@@ -1934,7 +2082,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaterialGroupId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaterialGroupId();
+            }());
         }
         catch (...)
         {
@@ -2050,7 +2202,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.Value());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Value();
+            }());
         }
         catch (...)
         {
@@ -2084,7 +2240,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.Value(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Value(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2111,7 +2271,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.Color());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Color();
+            }());
         }
         catch (...)
         {
@@ -2145,7 +2309,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
-            self->obj.Color(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Color(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2264,7 +2432,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.Colors());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Colors();
+            }());
         }
         catch (...)
         {
@@ -2290,7 +2462,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaterialGroupId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaterialGroupId();
+            }());
         }
         catch (...)
         {
@@ -2406,7 +2582,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.Type());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Type();
+            }());
         }
         catch (...)
         {
@@ -2440,7 +2620,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing3D::Printing3DObjectType>(arg);
 
-            self->obj.Type(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Type(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2467,7 +2651,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.Thumbnail());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Thumbnail();
+            }());
         }
         catch (...)
         {
@@ -2501,7 +2689,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing3D::Printing3DTextureResource>(arg);
 
-            self->obj.Thumbnail(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Thumbnail(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2528,7 +2720,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.PartNumber());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PartNumber();
+            }());
         }
         catch (...)
         {
@@ -2562,7 +2758,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.PartNumber(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PartNumber(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2589,7 +2789,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -2623,7 +2827,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Name(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Name(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2650,7 +2858,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.Mesh());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Mesh();
+            }());
         }
         catch (...)
         {
@@ -2684,7 +2896,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing3D::Printing3DMesh>(arg);
 
-            self->obj.Mesh(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Mesh(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2711,7 +2927,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.Components());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Components();
+            }());
         }
         catch (...)
         {
@@ -2831,7 +3051,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.Matrix());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Matrix();
+            }());
         }
         catch (...)
         {
@@ -2865,7 +3089,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float4x4>(arg);
 
-            self->obj.Matrix(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Matrix(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2892,7 +3120,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.Component());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Component();
+            }());
         }
         catch (...)
         {
@@ -2926,7 +3158,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing3D::Printing3DComponent>(arg);
 
-            self->obj.Component(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Component(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3043,7 +3279,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.Values());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Values();
+            }());
         }
         catch (...)
         {
@@ -3160,7 +3400,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.Composites());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Composites();
+            }());
         }
         catch (...)
         {
@@ -3186,7 +3430,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaterialGroupId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaterialGroupId();
+            }());
         }
         catch (...)
         {
@@ -3212,7 +3460,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaterialIndices());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaterialIndices();
+            }());
         }
         catch (...)
         {
@@ -3238,7 +3490,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.BaseMaterialGroup());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BaseMaterialGroup();
+            }());
         }
         catch (...)
         {
@@ -3272,7 +3528,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing3D::Printing3DBaseMaterialGroup>(arg);
 
-            self->obj.BaseMaterialGroup(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.BaseMaterialGroup(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3391,7 +3651,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.TargetTriangleCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TargetTriangleCount();
+            }());
         }
         catch (...)
         {
@@ -3425,7 +3689,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.TargetTriangleCount(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TargetTriangleCount(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3452,7 +3720,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxReductionArea());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxReductionArea();
+            }());
         }
         catch (...)
         {
@@ -3486,7 +3758,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.MaxReductionArea(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MaxReductionArea(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3513,7 +3789,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxEdgeLength());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxEdgeLength();
+            }());
         }
         catch (...)
         {
@@ -3547,7 +3827,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.MaxEdgeLength(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MaxEdgeLength(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3665,7 +3949,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.BaseGroups());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BaseGroups();
+            }());
         }
         catch (...)
         {
@@ -3691,7 +3979,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.ColorGroups());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ColorGroups();
+            }());
         }
         catch (...)
         {
@@ -3717,7 +4009,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.CompositeGroups());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CompositeGroups();
+            }());
         }
         catch (...)
         {
@@ -3743,7 +4039,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.MultiplePropertyGroups());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MultiplePropertyGroups();
+            }());
         }
         catch (...)
         {
@@ -3769,7 +4069,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.Texture2CoordGroups());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Texture2CoordGroups();
+            }());
         }
         catch (...)
         {
@@ -3894,7 +4198,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                self->obj.CreateTriangleIndices(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.CreateTriangleIndices(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3933,7 +4241,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                self->obj.CreateTriangleMaterialIndices(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.CreateTriangleMaterialIndices(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3972,7 +4284,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                self->obj.CreateVertexNormals(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.CreateVertexNormals(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4011,7 +4327,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                self->obj.CreateVertexPositions(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.CreateVertexPositions(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4048,7 +4368,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetTriangleIndices());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetTriangleIndices();
+                }());
             }
             catch (...)
             {
@@ -4084,7 +4408,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetTriangleMaterialIndices());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetTriangleMaterialIndices();
+                }());
             }
             catch (...)
             {
@@ -4120,7 +4448,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetVertexNormals());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetVertexNormals();
+                }());
             }
             catch (...)
             {
@@ -4156,7 +4488,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetVertexPositions());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetVertexPositions();
+                }());
             }
             catch (...)
             {
@@ -4194,7 +4530,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Printing3D::Printing3DMeshVerificationMode>(args, 0);
 
-                return py::convert(self->obj.VerifyAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.VerifyAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -4226,7 +4566,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.VertexPositionsDescription());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.VertexPositionsDescription();
+            }());
         }
         catch (...)
         {
@@ -4260,7 +4604,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing3D::Printing3DBufferDescription>(arg);
 
-            self->obj.VertexPositionsDescription(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.VertexPositionsDescription(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4287,7 +4635,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.VertexNormalsDescription());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.VertexNormalsDescription();
+            }());
         }
         catch (...)
         {
@@ -4321,7 +4673,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing3D::Printing3DBufferDescription>(arg);
 
-            self->obj.VertexNormalsDescription(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.VertexNormalsDescription(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4348,7 +4704,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.VertexCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.VertexCount();
+            }());
         }
         catch (...)
         {
@@ -4382,7 +4742,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.VertexCount(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.VertexCount(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4409,7 +4773,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.TriangleMaterialIndicesDescription());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TriangleMaterialIndicesDescription();
+            }());
         }
         catch (...)
         {
@@ -4443,7 +4811,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing3D::Printing3DBufferDescription>(arg);
 
-            self->obj.TriangleMaterialIndicesDescription(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TriangleMaterialIndicesDescription(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4470,7 +4842,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.TriangleIndicesDescription());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TriangleIndicesDescription();
+            }());
         }
         catch (...)
         {
@@ -4504,7 +4880,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing3D::Printing3DBufferDescription>(arg);
 
-            self->obj.TriangleIndicesDescription(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TriangleIndicesDescription(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4531,7 +4911,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.IndexCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IndexCount();
+            }());
         }
         catch (...)
         {
@@ -4565,7 +4949,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.IndexCount(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IndexCount(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4592,7 +4980,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.BufferDescriptionSet());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BufferDescriptionSet();
+            }());
         }
         catch (...)
         {
@@ -4618,7 +5010,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.BufferSet());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BufferSet();
+            }());
         }
         catch (...)
         {
@@ -4727,7 +5123,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsValid());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsValid();
+            }());
         }
         catch (...)
         {
@@ -4753,7 +5153,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.NonmanifoldTriangles());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NonmanifoldTriangles();
+            }());
         }
         catch (...)
         {
@@ -4779,7 +5183,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReversedNormalTriangles());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReversedNormalTriangles();
+            }());
         }
         catch (...)
         {
@@ -4900,7 +5308,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                     return nullptr;
                 }
 
-                return py::convert(self->obj.Clone());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Clone();
+                }());
             }
             catch (...)
             {
@@ -4936,7 +5348,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                     return nullptr;
                 }
 
-                return py::convert(self->obj.RepairAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RepairAsync();
+                }());
             }
             catch (...)
             {
@@ -4972,7 +5388,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                     return nullptr;
                 }
 
-                return py::convert(self->obj.RepairWithProgressAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RepairWithProgressAsync();
+                }());
             }
             catch (...)
             {
@@ -5008,7 +5428,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                     return nullptr;
                 }
 
-                return py::convert(self->obj.TryPartialRepairAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryPartialRepairAsync();
+                }());
             }
             catch (...)
             {
@@ -5046,7 +5470,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 0);
 
-                return py::convert(self->obj.TryPartialRepairAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryPartialRepairAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -5082,7 +5510,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                     return nullptr;
                 }
 
-                return py::convert(self->obj.TryReduceFacesAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryReduceFacesAsync();
+                }());
             }
             catch (...)
             {
@@ -5121,7 +5553,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Printing3D::Printing3DFaceReductionOptions>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 1);
 
-                return py::convert(self->obj.TryReduceFacesAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryReduceFacesAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -5159,7 +5595,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Printing3D::Printing3DFaceReductionOptions>(args, 0);
 
-                return py::convert(self->obj.TryReduceFacesAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryReduceFacesAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -5191,7 +5631,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.Version());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Version();
+            }());
         }
         catch (...)
         {
@@ -5225,7 +5669,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Version(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Version(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5252,7 +5700,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.Unit());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Unit();
+            }());
         }
         catch (...)
         {
@@ -5286,7 +5738,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing3D::Printing3DModelUnit>(arg);
 
-            self->obj.Unit(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Unit(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5313,7 +5769,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.Material());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Material();
+            }());
         }
         catch (...)
         {
@@ -5347,7 +5807,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing3D::Printing3DMaterial>(arg);
 
-            self->obj.Material(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Material(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5374,7 +5838,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.Build());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Build();
+            }());
         }
         catch (...)
         {
@@ -5408,7 +5876,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing3D::Printing3DComponent>(arg);
 
-            self->obj.Build(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Build(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5435,7 +5907,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.Components());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Components();
+            }());
         }
         catch (...)
         {
@@ -5461,7 +5937,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.Meshes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Meshes();
+            }());
         }
         catch (...)
         {
@@ -5487,7 +5967,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.Metadata());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Metadata();
+            }());
         }
         catch (...)
         {
@@ -5513,7 +5997,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.RequiredExtensions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RequiredExtensions();
+            }());
         }
         catch (...)
         {
@@ -5539,7 +6027,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.Textures());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Textures();
+            }());
         }
         catch (...)
         {
@@ -5670,7 +6162,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.TileStyleV());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TileStyleV();
+            }());
         }
         catch (...)
         {
@@ -5704,7 +6200,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing3D::Printing3DTextureEdgeBehavior>(arg);
 
-            self->obj.TileStyleV(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TileStyleV(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5731,7 +6231,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.TileStyleU());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TileStyleU();
+            }());
         }
         catch (...)
         {
@@ -5765,7 +6269,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing3D::Printing3DTextureEdgeBehavior>(arg);
 
-            self->obj.TileStyleU(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TileStyleU(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5792,7 +6300,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.TextureResource());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TextureResource();
+            }());
         }
         catch (...)
         {
@@ -5826,7 +6338,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing3D::Printing3DTextureResource>(arg);
 
-            self->obj.TextureResource(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TextureResource(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5944,7 +6460,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaterialIndices());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaterialIndices();
+            }());
         }
         catch (...)
         {
@@ -6061,7 +6581,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaterialGroupId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaterialGroupId();
+            }());
         }
         catch (...)
         {
@@ -6087,7 +6611,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaterialGroupIndices());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaterialGroupIndices();
+            }());
         }
         catch (...)
         {
@@ -6113,7 +6641,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.MultipleProperties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MultipleProperties();
+            }());
         }
         catch (...)
         {
@@ -6230,7 +6762,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.V());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.V();
+            }());
         }
         catch (...)
         {
@@ -6264,7 +6800,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.V(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.V(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6291,7 +6831,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.U());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.U();
+            }());
         }
         catch (...)
         {
@@ -6325,7 +6869,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.U(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.U(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6352,7 +6900,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.Texture());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Texture();
+            }());
         }
         catch (...)
         {
@@ -6386,7 +6938,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing3D::Printing3DModelTexture>(arg);
 
-            self->obj.Texture(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Texture(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6506,7 +7062,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaterialGroupId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaterialGroupId();
+            }());
         }
         catch (...)
         {
@@ -6532,7 +7092,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.Texture2Coords());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Texture2Coords();
+            }());
         }
         catch (...)
         {
@@ -6558,7 +7122,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.Texture());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Texture();
+            }());
         }
         catch (...)
         {
@@ -6592,7 +7160,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing3D::Printing3DModelTexture>(arg);
 
-            self->obj.Texture(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Texture(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6710,7 +7282,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.TextureData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TextureData();
+            }());
         }
         catch (...)
         {
@@ -6744,7 +7320,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamWithContentType>(arg);
 
-            self->obj.TextureData(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TextureData(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6771,7 +7351,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -6805,7 +7389,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Name(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Name(param0);
+            }
+
             return 0;
         }
         catch (...)

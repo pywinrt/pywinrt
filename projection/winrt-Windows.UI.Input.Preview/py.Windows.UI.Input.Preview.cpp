@@ -36,7 +36,11 @@ namespace py::cpp::Windows::UI::Input::Preview
 
                 auto param0 = py::convert_to<winrt::Windows::UI::WindowManagement::AppWindow>(args, 0);
 
-                return py::convert(winrt::Windows::UI::Input::Preview::InputActivationListenerPreview::CreateForApplicationWindow(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::Input::Preview::InputActivationListenerPreview::CreateForApplicationWindow(param0);
+                }());
             }
             catch (...)
             {

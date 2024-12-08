@@ -44,7 +44,11 @@ namespace py::cpp::Windows::Storage::Pickers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.Append(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Append(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -81,7 +85,11 @@ namespace py::cpp::Windows::Storage::Pickers
                     return nullptr;
                 }
 
-                self->obj.Clear();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Clear();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -118,7 +126,11 @@ namespace py::cpp::Windows::Storage::Pickers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.First());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.First();
+                }());
             }
             catch (...)
             {
@@ -156,7 +168,11 @@ namespace py::cpp::Windows::Storage::Pickers
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(self->obj.GetAt(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAt(param0);
+                }());
             }
             catch (...)
             {
@@ -195,7 +211,11 @@ namespace py::cpp::Windows::Storage::Pickers
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::hstring, true>>(args, 1);
 
-                return py::convert(self->obj.GetMany(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetMany(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -231,7 +251,11 @@ namespace py::cpp::Windows::Storage::Pickers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetView();
+                }());
             }
             catch (...)
             {
@@ -270,7 +294,11 @@ namespace py::cpp::Windows::Storage::Pickers
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 uint32_t param1{};
 
-                auto return_value = self->obj.IndexOf(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IndexOf(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -282,6 +310,7 @@ namespace py::cpp::Windows::Storage::Pickers
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -321,7 +350,11 @@ namespace py::cpp::Windows::Storage::Pickers
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                self->obj.InsertAt(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.InsertAt(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -360,7 +393,11 @@ namespace py::cpp::Windows::Storage::Pickers
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                self->obj.RemoveAt(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveAt(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -397,7 +434,11 @@ namespace py::cpp::Windows::Storage::Pickers
                     return nullptr;
                 }
 
-                self->obj.RemoveAtEnd();
+                {
+                    auto _gil = release_gil();
+                    self->obj.RemoveAtEnd();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -436,7 +477,11 @@ namespace py::cpp::Windows::Storage::Pickers
 
                 auto param0 = py::convert_to<py::pybuf_view<winrt::hstring, false>>(args, 0);
 
-                self->obj.ReplaceAll(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ReplaceAll(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -476,7 +521,11 @@ namespace py::cpp::Windows::Storage::Pickers
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                self->obj.SetAt(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetAt(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -509,7 +558,11 @@ namespace py::cpp::Windows::Storage::Pickers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -546,7 +599,11 @@ namespace py::cpp::Windows::Storage::Pickers
     {
         try
         {
-            return py::convert(self->obj.First());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.First();
+            }());
         }
         catch (...)
         {
@@ -559,6 +616,7 @@ namespace py::cpp::Windows::Storage::Pickers
     {
         try
         {
+            auto _gil = py::release_gil();
             return static_cast<Py_ssize_t>(self->obj.Size());
         }
         catch (...)
@@ -572,7 +630,11 @@ namespace py::cpp::Windows::Storage::Pickers
     {
         try
         {
-            return py::convert(self->obj.GetAt(static_cast<uint32_t>(i)));
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.GetAt(static_cast<uint32_t>(i));
+            }());
         }
         catch (...)
         {
@@ -611,7 +673,12 @@ namespace py::cpp::Windows::Storage::Pickers
 
             Py_ssize_t start, stop, step, length;
 
-            if (PySlice_GetIndicesEx(slice, self->obj.Size(), &start, &stop, &step, &length) < 0)
+            auto size = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.Size();
+            }();
+            if (PySlice_GetIndicesEx(slice, size, &start, &stop, &step, &length) < 0)
             {
                 return nullptr;
             }
@@ -624,7 +691,11 @@ namespace py::cpp::Windows::Storage::Pickers
 
             winrt::com_array<winrt::hstring> items(static_cast<uint32_t>(length), empty_instance<winrt::hstring>::get());
 
-            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
+            auto count = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.GetMany(static_cast<uint32_t>(start), items);
+            }();
 
             if (count != static_cast<uint32_t>(length))
             {
@@ -647,11 +718,16 @@ namespace py::cpp::Windows::Storage::Pickers
         {
             if (!value)
             {
+                auto _gil = py::release_gil();
                 self->obj.RemoveAt(static_cast<uint32_t>(i));
             }
             else
             {
-                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::hstring>(value));
+                auto _value = py::convert_to<winrt::hstring>(value);
+                {
+                    auto _gil = py::release_gil();
+                    self->obj.SetAt(static_cast<uint32_t>(i), _value);
+                }
             }
 
             return 0;
@@ -768,7 +844,11 @@ namespace py::cpp::Windows::Storage::Pickers
 
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
 
-                return py::convert(winrt::Windows::Storage::Pickers::FileOpenPicker::CreateForUser(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Storage::Pickers::FileOpenPicker::CreateForUser(param0);
+                }());
             }
             catch (...)
             {
@@ -804,7 +884,11 @@ namespace py::cpp::Windows::Storage::Pickers
                     return nullptr;
                 }
 
-                self->obj.PickMultipleFilesAndContinue();
+                {
+                    auto _gil = release_gil();
+                    self->obj.PickMultipleFilesAndContinue();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -841,7 +925,11 @@ namespace py::cpp::Windows::Storage::Pickers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.PickMultipleFilesAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.PickMultipleFilesAsync();
+                }());
             }
             catch (...)
             {
@@ -877,7 +965,11 @@ namespace py::cpp::Windows::Storage::Pickers
                     return nullptr;
                 }
 
-                self->obj.PickSingleFileAndContinue();
+                {
+                    auto _gil = release_gil();
+                    self->obj.PickSingleFileAndContinue();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -914,7 +1006,11 @@ namespace py::cpp::Windows::Storage::Pickers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.PickSingleFileAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.PickSingleFileAsync();
+                }());
             }
             catch (...)
             {
@@ -941,7 +1037,11 @@ namespace py::cpp::Windows::Storage::Pickers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.PickSingleFileAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.PickSingleFileAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -977,7 +1077,11 @@ namespace py::cpp::Windows::Storage::Pickers
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Storage::Pickers::FileOpenPicker::ResumePickSingleFileAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Storage::Pickers::FileOpenPicker::ResumePickSingleFileAsync();
+                }());
             }
             catch (...)
             {
@@ -1009,7 +1113,11 @@ namespace py::cpp::Windows::Storage::Pickers
                 return nullptr;
             }
 
-            return py::convert(self->obj.ViewMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ViewMode();
+            }());
         }
         catch (...)
         {
@@ -1043,7 +1151,11 @@ namespace py::cpp::Windows::Storage::Pickers
 
             auto param0 = py::convert_to<winrt::Windows::Storage::Pickers::PickerViewMode>(arg);
 
-            self->obj.ViewMode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ViewMode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1070,7 +1182,11 @@ namespace py::cpp::Windows::Storage::Pickers
                 return nullptr;
             }
 
-            return py::convert(self->obj.SuggestedStartLocation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SuggestedStartLocation();
+            }());
         }
         catch (...)
         {
@@ -1104,7 +1220,11 @@ namespace py::cpp::Windows::Storage::Pickers
 
             auto param0 = py::convert_to<winrt::Windows::Storage::Pickers::PickerLocationId>(arg);
 
-            self->obj.SuggestedStartLocation(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SuggestedStartLocation(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1131,7 +1251,11 @@ namespace py::cpp::Windows::Storage::Pickers
                 return nullptr;
             }
 
-            return py::convert(self->obj.SettingsIdentifier());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SettingsIdentifier();
+            }());
         }
         catch (...)
         {
@@ -1165,7 +1289,11 @@ namespace py::cpp::Windows::Storage::Pickers
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.SettingsIdentifier(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SettingsIdentifier(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1192,7 +1320,11 @@ namespace py::cpp::Windows::Storage::Pickers
                 return nullptr;
             }
 
-            return py::convert(self->obj.CommitButtonText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CommitButtonText();
+            }());
         }
         catch (...)
         {
@@ -1226,7 +1358,11 @@ namespace py::cpp::Windows::Storage::Pickers
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.CommitButtonText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CommitButtonText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1253,7 +1389,11 @@ namespace py::cpp::Windows::Storage::Pickers
                 return nullptr;
             }
 
-            return py::convert(self->obj.FileTypeFilter());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FileTypeFilter();
+            }());
         }
         catch (...)
         {
@@ -1279,7 +1419,11 @@ namespace py::cpp::Windows::Storage::Pickers
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContinuationData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContinuationData();
+            }());
         }
         catch (...)
         {
@@ -1305,7 +1449,11 @@ namespace py::cpp::Windows::Storage::Pickers
                 return nullptr;
             }
 
-            return py::convert(self->obj.User());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.User();
+            }());
         }
         catch (...)
         {
@@ -1439,7 +1587,11 @@ namespace py::cpp::Windows::Storage::Pickers
                     return nullptr;
                 }
 
-                self->obj.Clear();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Clear();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1476,7 +1628,11 @@ namespace py::cpp::Windows::Storage::Pickers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.First());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.First();
+                }());
             }
             catch (...)
             {
@@ -1512,7 +1668,11 @@ namespace py::cpp::Windows::Storage::Pickers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetView();
+                }());
             }
             catch (...)
             {
@@ -1550,7 +1710,11 @@ namespace py::cpp::Windows::Storage::Pickers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.HasKey(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.HasKey(param0);
+                }());
             }
             catch (...)
             {
@@ -1589,7 +1753,11 @@ namespace py::cpp::Windows::Storage::Pickers
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::hstring>>(args, 1);
 
-                return py::convert(self->obj.Insert(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Insert(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1627,7 +1795,11 @@ namespace py::cpp::Windows::Storage::Pickers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.Lookup(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Lookup(param0);
+                }());
             }
             catch (...)
             {
@@ -1665,7 +1837,11 @@ namespace py::cpp::Windows::Storage::Pickers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.Remove(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Remove(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1698,7 +1874,11 @@ namespace py::cpp::Windows::Storage::Pickers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -1735,7 +1915,11 @@ namespace py::cpp::Windows::Storage::Pickers
     {
         try
         {
-            py::pyobj_handle iter{py::convert(self->obj.First())};
+            py::pyobj_handle iter{py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.First();
+            }())};
 
             if (!iter)
             {
@@ -1755,7 +1939,11 @@ namespace py::cpp::Windows::Storage::Pickers
     {
         try
         {
-            return static_cast<int>(self->obj.HasKey(py::convert_to<winrt::hstring>(key)));
+            auto _key = py::convert_to<winrt::hstring>(key);
+            {
+                auto _gil = py::release_gil();
+                return static_cast<int>(self->obj.HasKey(_key));
+            }
         }
         catch (...)
         {
@@ -1768,6 +1956,7 @@ namespace py::cpp::Windows::Storage::Pickers
     {
         try
         {
+            auto _gil = py::release_gil();
             return static_cast<Py_ssize_t>(self->obj.Size());
         }
         catch (...)
@@ -1782,12 +1971,22 @@ namespace py::cpp::Windows::Storage::Pickers
         try
         {
             auto _key = py::convert_to<winrt::hstring>(key);
-            auto value = self->obj.TryLookup(_key);
+            auto value = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.TryLookup(_key);
+            }();
 
             if (!value) {
                 if constexpr (std::is_base_of_v<winrt::Windows::Foundation::IUnknown, decltype(value)>)
                 {
-                    if (self->obj.HasKey(_key))
+                    auto has_key = [&]()
+                    {
+                        auto _gil = py::release_gil();
+                        return self->obj.HasKey(_key);
+                    }();
+
+                    if (has_key)
                     {
                         Py_RETURN_NONE;
                     }
@@ -1813,7 +2012,12 @@ namespace py::cpp::Windows::Storage::Pickers
             auto _key = py::convert_to<winrt::hstring>(key);
 
             if (value == nullptr) {
-                if (!self->obj.TryRemove(_key)) {
+                bool did_remove;
+                {
+                    auto _gil = py::release_gil();
+                    did_remove = self->obj.TryRemove(_key);
+                }
+                if (!did_remove) {
                     PyErr_SetObject(PyExc_KeyError, key);
                     return -1;
                 }
@@ -1821,7 +2025,11 @@ namespace py::cpp::Windows::Storage::Pickers
                 return 0;
             }
 
-            self->obj.Insert(_key, py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::hstring>>(value));
+            auto _value = py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::hstring>>(value);
+            {
+                auto _gil = py::release_gil();
+                self->obj.Insert(_key, _value);
+            }
 
             return 0;
         }
@@ -1908,7 +2116,11 @@ namespace py::cpp::Windows::Storage::Pickers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.First());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.First();
+                }());
             }
             catch (...)
             {
@@ -1946,7 +2158,11 @@ namespace py::cpp::Windows::Storage::Pickers
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(self->obj.GetAt(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAt(param0);
+                }());
             }
             catch (...)
             {
@@ -1985,7 +2201,11 @@ namespace py::cpp::Windows::Storage::Pickers
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Storage::StorageFile, true>>(args, 1);
 
-                return py::convert(self->obj.GetMany(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetMany(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2024,7 +2244,11 @@ namespace py::cpp::Windows::Storage::Pickers
                 auto param0 = py::convert_to<winrt::Windows::Storage::StorageFile>(args, 0);
                 uint32_t param1{};
 
-                auto return_value = self->obj.IndexOf(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IndexOf(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -2036,6 +2260,7 @@ namespace py::cpp::Windows::Storage::Pickers
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -2068,7 +2293,11 @@ namespace py::cpp::Windows::Storage::Pickers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -2105,7 +2334,11 @@ namespace py::cpp::Windows::Storage::Pickers
     {
         try
         {
-            return py::convert(self->obj.First());
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.First();
+            }());
         }
         catch (...)
         {
@@ -2118,6 +2351,7 @@ namespace py::cpp::Windows::Storage::Pickers
     {
         try
         {
+            auto _gil = py::release_gil();
             return static_cast<Py_ssize_t>(self->obj.Size());
         }
         catch (...)
@@ -2131,7 +2365,11 @@ namespace py::cpp::Windows::Storage::Pickers
     {
         try
         {
-            return py::convert(self->obj.GetAt(static_cast<uint32_t>(i)));
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.GetAt(static_cast<uint32_t>(i));
+            }());
         }
         catch (...)
         {
@@ -2170,7 +2408,12 @@ namespace py::cpp::Windows::Storage::Pickers
 
             Py_ssize_t start, stop, step, length;
 
-            if (PySlice_GetIndicesEx(slice, self->obj.Size(), &start, &stop, &step, &length) < 0)
+            auto size = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.Size();
+            }();
+            if (PySlice_GetIndicesEx(slice, size, &start, &stop, &step, &length) < 0)
             {
                 return nullptr;
             }
@@ -2183,7 +2426,11 @@ namespace py::cpp::Windows::Storage::Pickers
 
             winrt::com_array<winrt::Windows::Storage::StorageFile> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::Storage::StorageFile>::get());
 
-            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
+            auto count = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.GetMany(static_cast<uint32_t>(start), items);
+            }();
 
             if (count != static_cast<uint32_t>(length))
             {
@@ -2296,7 +2543,11 @@ namespace py::cpp::Windows::Storage::Pickers
 
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
 
-                return py::convert(winrt::Windows::Storage::Pickers::FileSavePicker::CreateForUser(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Storage::Pickers::FileSavePicker::CreateForUser(param0);
+                }());
             }
             catch (...)
             {
@@ -2332,7 +2583,11 @@ namespace py::cpp::Windows::Storage::Pickers
                     return nullptr;
                 }
 
-                self->obj.PickSaveFileAndContinue();
+                {
+                    auto _gil = release_gil();
+                    self->obj.PickSaveFileAndContinue();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2369,7 +2624,11 @@ namespace py::cpp::Windows::Storage::Pickers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.PickSaveFileAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.PickSaveFileAsync();
+                }());
             }
             catch (...)
             {
@@ -2401,7 +2660,11 @@ namespace py::cpp::Windows::Storage::Pickers
                 return nullptr;
             }
 
-            return py::convert(self->obj.SuggestedStartLocation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SuggestedStartLocation();
+            }());
         }
         catch (...)
         {
@@ -2435,7 +2698,11 @@ namespace py::cpp::Windows::Storage::Pickers
 
             auto param0 = py::convert_to<winrt::Windows::Storage::Pickers::PickerLocationId>(arg);
 
-            self->obj.SuggestedStartLocation(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SuggestedStartLocation(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2462,7 +2729,11 @@ namespace py::cpp::Windows::Storage::Pickers
                 return nullptr;
             }
 
-            return py::convert(self->obj.SuggestedSaveFile());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SuggestedSaveFile();
+            }());
         }
         catch (...)
         {
@@ -2496,7 +2767,11 @@ namespace py::cpp::Windows::Storage::Pickers
 
             auto param0 = py::convert_to<winrt::Windows::Storage::StorageFile>(arg);
 
-            self->obj.SuggestedSaveFile(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SuggestedSaveFile(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2523,7 +2798,11 @@ namespace py::cpp::Windows::Storage::Pickers
                 return nullptr;
             }
 
-            return py::convert(self->obj.SuggestedFileName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SuggestedFileName();
+            }());
         }
         catch (...)
         {
@@ -2557,7 +2836,11 @@ namespace py::cpp::Windows::Storage::Pickers
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.SuggestedFileName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SuggestedFileName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2584,7 +2867,11 @@ namespace py::cpp::Windows::Storage::Pickers
                 return nullptr;
             }
 
-            return py::convert(self->obj.SettingsIdentifier());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SettingsIdentifier();
+            }());
         }
         catch (...)
         {
@@ -2618,7 +2905,11 @@ namespace py::cpp::Windows::Storage::Pickers
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.SettingsIdentifier(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SettingsIdentifier(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2645,7 +2936,11 @@ namespace py::cpp::Windows::Storage::Pickers
                 return nullptr;
             }
 
-            return py::convert(self->obj.DefaultFileExtension());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DefaultFileExtension();
+            }());
         }
         catch (...)
         {
@@ -2679,7 +2974,11 @@ namespace py::cpp::Windows::Storage::Pickers
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.DefaultFileExtension(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DefaultFileExtension(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2706,7 +3005,11 @@ namespace py::cpp::Windows::Storage::Pickers
                 return nullptr;
             }
 
-            return py::convert(self->obj.CommitButtonText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CommitButtonText();
+            }());
         }
         catch (...)
         {
@@ -2740,7 +3043,11 @@ namespace py::cpp::Windows::Storage::Pickers
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.CommitButtonText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CommitButtonText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2767,7 +3074,11 @@ namespace py::cpp::Windows::Storage::Pickers
                 return nullptr;
             }
 
-            return py::convert(self->obj.FileTypeChoices());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FileTypeChoices();
+            }());
         }
         catch (...)
         {
@@ -2793,7 +3104,11 @@ namespace py::cpp::Windows::Storage::Pickers
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContinuationData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContinuationData();
+            }());
         }
         catch (...)
         {
@@ -2819,7 +3134,11 @@ namespace py::cpp::Windows::Storage::Pickers
                 return nullptr;
             }
 
-            return py::convert(self->obj.EnterpriseId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EnterpriseId();
+            }());
         }
         catch (...)
         {
@@ -2853,7 +3172,11 @@ namespace py::cpp::Windows::Storage::Pickers
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.EnterpriseId(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.EnterpriseId(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2880,7 +3203,11 @@ namespace py::cpp::Windows::Storage::Pickers
                 return nullptr;
             }
 
-            return py::convert(self->obj.User());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.User();
+            }());
         }
         catch (...)
         {
@@ -3038,7 +3365,11 @@ namespace py::cpp::Windows::Storage::Pickers
 
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
 
-                return py::convert(winrt::Windows::Storage::Pickers::FolderPicker::CreateForUser(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Storage::Pickers::FolderPicker::CreateForUser(param0);
+                }());
             }
             catch (...)
             {
@@ -3074,7 +3405,11 @@ namespace py::cpp::Windows::Storage::Pickers
                     return nullptr;
                 }
 
-                self->obj.PickFolderAndContinue();
+                {
+                    auto _gil = release_gil();
+                    self->obj.PickFolderAndContinue();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3111,7 +3446,11 @@ namespace py::cpp::Windows::Storage::Pickers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.PickSingleFolderAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.PickSingleFolderAsync();
+                }());
             }
             catch (...)
             {
@@ -3143,7 +3482,11 @@ namespace py::cpp::Windows::Storage::Pickers
                 return nullptr;
             }
 
-            return py::convert(self->obj.ViewMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ViewMode();
+            }());
         }
         catch (...)
         {
@@ -3177,7 +3520,11 @@ namespace py::cpp::Windows::Storage::Pickers
 
             auto param0 = py::convert_to<winrt::Windows::Storage::Pickers::PickerViewMode>(arg);
 
-            self->obj.ViewMode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ViewMode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3204,7 +3551,11 @@ namespace py::cpp::Windows::Storage::Pickers
                 return nullptr;
             }
 
-            return py::convert(self->obj.SuggestedStartLocation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SuggestedStartLocation();
+            }());
         }
         catch (...)
         {
@@ -3238,7 +3589,11 @@ namespace py::cpp::Windows::Storage::Pickers
 
             auto param0 = py::convert_to<winrt::Windows::Storage::Pickers::PickerLocationId>(arg);
 
-            self->obj.SuggestedStartLocation(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SuggestedStartLocation(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3265,7 +3620,11 @@ namespace py::cpp::Windows::Storage::Pickers
                 return nullptr;
             }
 
-            return py::convert(self->obj.SettingsIdentifier());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SettingsIdentifier();
+            }());
         }
         catch (...)
         {
@@ -3299,7 +3658,11 @@ namespace py::cpp::Windows::Storage::Pickers
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.SettingsIdentifier(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SettingsIdentifier(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3326,7 +3689,11 @@ namespace py::cpp::Windows::Storage::Pickers
                 return nullptr;
             }
 
-            return py::convert(self->obj.CommitButtonText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CommitButtonText();
+            }());
         }
         catch (...)
         {
@@ -3360,7 +3727,11 @@ namespace py::cpp::Windows::Storage::Pickers
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.CommitButtonText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CommitButtonText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3387,7 +3758,11 @@ namespace py::cpp::Windows::Storage::Pickers
                 return nullptr;
             }
 
-            return py::convert(self->obj.FileTypeFilter());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FileTypeFilter();
+            }());
         }
         catch (...)
         {
@@ -3413,7 +3788,11 @@ namespace py::cpp::Windows::Storage::Pickers
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContinuationData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContinuationData();
+            }());
         }
         catch (...)
         {
@@ -3439,7 +3818,11 @@ namespace py::cpp::Windows::Storage::Pickers
                 return nullptr;
             }
 
-            return py::convert(self->obj.User());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.User();
+            }());
         }
         catch (...)
         {

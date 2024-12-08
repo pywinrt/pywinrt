@@ -42,7 +42,11 @@ namespace py::cpp::Windows::UI::Input
                     return nullptr;
                 }
 
-                self->obj.try_as<winrt::Windows::UI::Input::AttachableInputObject>().Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.try_as<winrt::Windows::UI::Input::AttachableInputObject>().Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -91,7 +95,11 @@ namespace py::cpp::Windows::UI::Input
     {
         try
         {
-            self->obj.try_as<winrt::Windows::UI::Input::AttachableInputObject>().Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.try_as<winrt::Windows::UI::Input::AttachableInputObject>().Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -188,7 +196,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.CrossSlidingState());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CrossSlidingState();
+            }());
         }
         catch (...)
         {
@@ -214,7 +226,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.PointerDeviceType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PointerDeviceType();
+            }());
         }
         catch (...)
         {
@@ -240,7 +256,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Position());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Position();
+            }());
         }
         catch (...)
         {
@@ -266,7 +286,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContactCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContactCount();
+            }());
         }
         catch (...)
         {
@@ -362,7 +386,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.DraggingState());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DraggingState();
+            }());
         }
         catch (...)
         {
@@ -388,7 +416,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.PointerDeviceType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PointerDeviceType();
+            }());
         }
         catch (...)
         {
@@ -414,7 +446,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Position());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Position();
+            }());
         }
         catch (...)
         {
@@ -440,7 +476,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContactCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContactCount();
+            }());
         }
         catch (...)
         {
@@ -540,7 +580,11 @@ namespace py::cpp::Windows::UI::Input
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::UI::Input::EdgeGesture::GetForCurrentView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::Input::EdgeGesture::GetForCurrentView();
+                }());
             }
             catch (...)
             {
@@ -574,7 +618,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::EdgeGesture, winrt::Windows::UI::Input::EdgeGestureEventArgs>>(arg);
 
-            return py::convert(self->obj.Canceled(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Canceled(param0);
+            }());
         }
         catch (...)
         {
@@ -602,7 +650,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Canceled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Canceled(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -631,7 +683,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::EdgeGesture, winrt::Windows::UI::Input::EdgeGestureEventArgs>>(arg);
 
-            return py::convert(self->obj.Completed(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Completed(param0);
+            }());
         }
         catch (...)
         {
@@ -659,7 +715,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Completed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Completed(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -688,7 +748,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::EdgeGesture, winrt::Windows::UI::Input::EdgeGestureEventArgs>>(arg);
 
-            return py::convert(self->obj.Starting(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Starting(param0);
+            }());
         }
         catch (...)
         {
@@ -716,7 +780,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Starting(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Starting(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -841,7 +909,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -962,7 +1034,11 @@ namespace py::cpp::Windows::UI::Input
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::PointerPoint>(args, 0);
 
-                return py::convert(self->obj.CanBeDoubleTap(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CanBeDoubleTap(param0);
+                }());
             }
             catch (...)
             {
@@ -998,7 +1074,11 @@ namespace py::cpp::Windows::UI::Input
                     return nullptr;
                 }
 
-                self->obj.CompleteGesture();
+                {
+                    auto _gil = release_gil();
+                    self->obj.CompleteGesture();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1037,7 +1117,11 @@ namespace py::cpp::Windows::UI::Input
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::PointerPoint>(args, 0);
 
-                self->obj.ProcessDownEvent(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ProcessDownEvent(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1074,7 +1158,11 @@ namespace py::cpp::Windows::UI::Input
                     return nullptr;
                 }
 
-                self->obj.ProcessInertia();
+                {
+                    auto _gil = release_gil();
+                    self->obj.ProcessInertia();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1115,7 +1203,11 @@ namespace py::cpp::Windows::UI::Input
                 auto param1 = py::convert_to<bool>(args, 1);
                 auto param2 = py::convert_to<bool>(args, 2);
 
-                self->obj.ProcessMouseWheelEvent(param0, param1, param2);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ProcessMouseWheelEvent(param0, param1, param2);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1154,7 +1246,11 @@ namespace py::cpp::Windows::UI::Input
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::UI::Input::PointerPoint>>(args, 0);
 
-                self->obj.ProcessMoveEvents(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ProcessMoveEvents(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1193,7 +1289,11 @@ namespace py::cpp::Windows::UI::Input
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::PointerPoint>(args, 0);
 
-                self->obj.ProcessUpEvent(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ProcessUpEvent(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1226,7 +1326,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.ShowGestureFeedback());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ShowGestureFeedback();
+            }());
         }
         catch (...)
         {
@@ -1260,7 +1364,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.ShowGestureFeedback(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ShowGestureFeedback(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1287,7 +1395,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.PivotRadius());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PivotRadius();
+            }());
         }
         catch (...)
         {
@@ -1321,7 +1433,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.PivotRadius(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PivotRadius(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1348,7 +1464,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.PivotCenter());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PivotCenter();
+            }());
         }
         catch (...)
         {
@@ -1382,7 +1502,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(arg);
 
-            self->obj.PivotCenter(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PivotCenter(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1409,7 +1533,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.ManipulationExact());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ManipulationExact();
+            }());
         }
         catch (...)
         {
@@ -1443,7 +1571,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.ManipulationExact(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ManipulationExact(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1470,7 +1602,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.InertiaTranslationDisplacement());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InertiaTranslationDisplacement();
+            }());
         }
         catch (...)
         {
@@ -1504,7 +1640,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.InertiaTranslationDisplacement(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.InertiaTranslationDisplacement(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1531,7 +1671,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.InertiaTranslationDeceleration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InertiaTranslationDeceleration();
+            }());
         }
         catch (...)
         {
@@ -1565,7 +1709,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.InertiaTranslationDeceleration(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.InertiaTranslationDeceleration(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1592,7 +1740,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.InertiaRotationDeceleration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InertiaRotationDeceleration();
+            }());
         }
         catch (...)
         {
@@ -1626,7 +1778,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.InertiaRotationDeceleration(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.InertiaRotationDeceleration(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1653,7 +1809,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.InertiaRotationAngle());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InertiaRotationAngle();
+            }());
         }
         catch (...)
         {
@@ -1687,7 +1847,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.InertiaRotationAngle(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.InertiaRotationAngle(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1714,7 +1878,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.InertiaExpansionDeceleration());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InertiaExpansionDeceleration();
+            }());
         }
         catch (...)
         {
@@ -1748,7 +1916,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.InertiaExpansionDeceleration(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.InertiaExpansionDeceleration(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1775,7 +1947,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.InertiaExpansion());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InertiaExpansion();
+            }());
         }
         catch (...)
         {
@@ -1809,7 +1985,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.InertiaExpansion(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.InertiaExpansion(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1836,7 +2016,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.GestureSettings());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.GestureSettings();
+            }());
         }
         catch (...)
         {
@@ -1870,7 +2054,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::Windows::UI::Input::GestureSettings>(arg);
 
-            self->obj.GestureSettings(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.GestureSettings(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1897,7 +2085,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.CrossSlideThresholds());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CrossSlideThresholds();
+            }());
         }
         catch (...)
         {
@@ -1931,7 +2123,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::Windows::UI::Input::CrossSlideThresholds>(arg);
 
-            self->obj.CrossSlideThresholds(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CrossSlideThresholds(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1958,7 +2154,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.CrossSlideHorizontally());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CrossSlideHorizontally();
+            }());
         }
         catch (...)
         {
@@ -1992,7 +2192,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.CrossSlideHorizontally(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CrossSlideHorizontally(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2019,7 +2223,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.CrossSlideExact());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CrossSlideExact();
+            }());
         }
         catch (...)
         {
@@ -2053,7 +2261,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.CrossSlideExact(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CrossSlideExact(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2080,7 +2292,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.AutoProcessInertia());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AutoProcessInertia();
+            }());
         }
         catch (...)
         {
@@ -2114,7 +2330,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.AutoProcessInertia(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.AutoProcessInertia(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2141,7 +2361,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsActive());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsActive();
+            }());
         }
         catch (...)
         {
@@ -2167,7 +2391,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsInertial());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsInertial();
+            }());
         }
         catch (...)
         {
@@ -2193,7 +2421,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.MouseWheelParameters());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MouseWheelParameters();
+            }());
         }
         catch (...)
         {
@@ -2219,7 +2451,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.TranslationMinContactCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TranslationMinContactCount();
+            }());
         }
         catch (...)
         {
@@ -2253,7 +2489,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.TranslationMinContactCount(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TranslationMinContactCount(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2280,7 +2520,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.TranslationMaxContactCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TranslationMaxContactCount();
+            }());
         }
         catch (...)
         {
@@ -2314,7 +2558,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.TranslationMaxContactCount(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TranslationMaxContactCount(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2341,7 +2589,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.TapMinContactCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TapMinContactCount();
+            }());
         }
         catch (...)
         {
@@ -2375,7 +2627,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.TapMinContactCount(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TapMinContactCount(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2402,7 +2658,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.TapMaxContactCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TapMaxContactCount();
+            }());
         }
         catch (...)
         {
@@ -2436,7 +2696,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.TapMaxContactCount(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TapMaxContactCount(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2463,7 +2727,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.HoldStartDelay());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HoldStartDelay();
+            }());
         }
         catch (...)
         {
@@ -2497,7 +2765,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
-            self->obj.HoldStartDelay(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.HoldStartDelay(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2524,7 +2796,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.HoldRadius());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HoldRadius();
+            }());
         }
         catch (...)
         {
@@ -2558,7 +2834,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.HoldRadius(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.HoldRadius(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2585,7 +2865,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.HoldMinContactCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HoldMinContactCount();
+            }());
         }
         catch (...)
         {
@@ -2619,7 +2903,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.HoldMinContactCount(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.HoldMinContactCount(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2646,7 +2934,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.HoldMaxContactCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HoldMaxContactCount();
+            }());
         }
         catch (...)
         {
@@ -2680,7 +2972,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.HoldMaxContactCount(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.HoldMaxContactCount(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2709,7 +3005,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::GestureRecognizer, winrt::Windows::UI::Input::CrossSlidingEventArgs>>(arg);
 
-            return py::convert(self->obj.CrossSliding(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CrossSliding(param0);
+            }());
         }
         catch (...)
         {
@@ -2737,7 +3037,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.CrossSliding(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CrossSliding(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2766,7 +3070,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::GestureRecognizer, winrt::Windows::UI::Input::DraggingEventArgs>>(arg);
 
-            return py::convert(self->obj.Dragging(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Dragging(param0);
+            }());
         }
         catch (...)
         {
@@ -2794,7 +3102,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Dragging(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Dragging(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2823,7 +3135,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::GestureRecognizer, winrt::Windows::UI::Input::HoldingEventArgs>>(arg);
 
-            return py::convert(self->obj.Holding(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Holding(param0);
+            }());
         }
         catch (...)
         {
@@ -2851,7 +3167,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Holding(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Holding(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2880,7 +3200,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::GestureRecognizer, winrt::Windows::UI::Input::ManipulationCompletedEventArgs>>(arg);
 
-            return py::convert(self->obj.ManipulationCompleted(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ManipulationCompleted(param0);
+            }());
         }
         catch (...)
         {
@@ -2908,7 +3232,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ManipulationCompleted(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ManipulationCompleted(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2937,7 +3265,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::GestureRecognizer, winrt::Windows::UI::Input::ManipulationInertiaStartingEventArgs>>(arg);
 
-            return py::convert(self->obj.ManipulationInertiaStarting(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ManipulationInertiaStarting(param0);
+            }());
         }
         catch (...)
         {
@@ -2965,7 +3297,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ManipulationInertiaStarting(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ManipulationInertiaStarting(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2994,7 +3330,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::GestureRecognizer, winrt::Windows::UI::Input::ManipulationStartedEventArgs>>(arg);
 
-            return py::convert(self->obj.ManipulationStarted(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ManipulationStarted(param0);
+            }());
         }
         catch (...)
         {
@@ -3022,7 +3362,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ManipulationStarted(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ManipulationStarted(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3051,7 +3395,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::GestureRecognizer, winrt::Windows::UI::Input::ManipulationUpdatedEventArgs>>(arg);
 
-            return py::convert(self->obj.ManipulationUpdated(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ManipulationUpdated(param0);
+            }());
         }
         catch (...)
         {
@@ -3079,7 +3427,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ManipulationUpdated(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ManipulationUpdated(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3108,7 +3460,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::GestureRecognizer, winrt::Windows::UI::Input::RightTappedEventArgs>>(arg);
 
-            return py::convert(self->obj.RightTapped(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RightTapped(param0);
+            }());
         }
         catch (...)
         {
@@ -3136,7 +3492,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.RightTapped(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RightTapped(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3165,7 +3525,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::GestureRecognizer, winrt::Windows::UI::Input::TappedEventArgs>>(arg);
 
-            return py::convert(self->obj.Tapped(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Tapped(param0);
+            }());
         }
         catch (...)
         {
@@ -3193,7 +3557,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Tapped(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Tapped(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3337,7 +3705,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.HoldingState());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HoldingState();
+            }());
         }
         catch (...)
         {
@@ -3363,7 +3735,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.PointerDeviceType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PointerDeviceType();
+            }());
         }
         catch (...)
         {
@@ -3389,7 +3765,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Position());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Position();
+            }());
         }
         catch (...)
         {
@@ -3415,7 +3795,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContactCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContactCount();
+            }());
         }
         catch (...)
         {
@@ -3441,7 +3825,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.CurrentContactCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CurrentContactCount();
+            }());
         }
         catch (...)
         {
@@ -3538,7 +3926,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.State());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.State();
+            }());
         }
         catch (...)
         {
@@ -3566,7 +3958,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::InputActivationListener, winrt::Windows::UI::Input::InputActivationListenerActivationChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.InputActivationChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InputActivationChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -3594,7 +3990,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.InputActivationChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.InputActivationChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3690,7 +4090,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.State());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.State();
+            }());
         }
         catch (...)
         {
@@ -3787,7 +4191,11 @@ namespace py::cpp::Windows::UI::Input
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::UI::Input::KeyboardDeliveryInterceptor::GetForCurrentView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::Input::KeyboardDeliveryInterceptor::GetForCurrentView();
+                }());
             }
             catch (...)
             {
@@ -3819,7 +4227,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsInterceptionEnabledWhenInForeground());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsInterceptionEnabledWhenInForeground();
+            }());
         }
         catch (...)
         {
@@ -3853,7 +4265,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsInterceptionEnabledWhenInForeground(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsInterceptionEnabledWhenInForeground(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3882,7 +4298,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::KeyboardDeliveryInterceptor, winrt::Windows::UI::Core::KeyEventArgs>>(arg);
 
-            return py::convert(self->obj.KeyDown(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.KeyDown(param0);
+            }());
         }
         catch (...)
         {
@@ -3910,7 +4330,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.KeyDown(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.KeyDown(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3939,7 +4363,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::KeyboardDeliveryInterceptor, winrt::Windows::UI::Core::KeyEventArgs>>(arg);
 
-            return py::convert(self->obj.KeyUp(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.KeyUp(param0);
+            }());
         }
         catch (...)
         {
@@ -3967,7 +4395,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.KeyUp(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.KeyUp(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -4091,7 +4523,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Cumulative());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Cumulative();
+            }());
         }
         catch (...)
         {
@@ -4117,7 +4553,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.PointerDeviceType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PointerDeviceType();
+            }());
         }
         catch (...)
         {
@@ -4143,7 +4583,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Position());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Position();
+            }());
         }
         catch (...)
         {
@@ -4169,7 +4613,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Velocities());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Velocities();
+            }());
         }
         catch (...)
         {
@@ -4195,7 +4643,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContactCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContactCount();
+            }());
         }
         catch (...)
         {
@@ -4221,7 +4673,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.CurrentContactCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CurrentContactCount();
+            }());
         }
         catch (...)
         {
@@ -4319,7 +4775,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Cumulative());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Cumulative();
+            }());
         }
         catch (...)
         {
@@ -4345,7 +4805,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Delta());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Delta();
+            }());
         }
         catch (...)
         {
@@ -4371,7 +4835,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.PointerDeviceType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PointerDeviceType();
+            }());
         }
         catch (...)
         {
@@ -4397,7 +4865,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Position());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Position();
+            }());
         }
         catch (...)
         {
@@ -4423,7 +4895,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Velocities());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Velocities();
+            }());
         }
         catch (...)
         {
@@ -4449,7 +4925,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContactCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContactCount();
+            }());
         }
         catch (...)
         {
@@ -4547,7 +5027,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Cumulative());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Cumulative();
+            }());
         }
         catch (...)
         {
@@ -4573,7 +5057,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.PointerDeviceType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PointerDeviceType();
+            }());
         }
         catch (...)
         {
@@ -4599,7 +5087,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Position());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Position();
+            }());
         }
         catch (...)
         {
@@ -4625,7 +5117,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContactCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContactCount();
+            }());
         }
         catch (...)
         {
@@ -4721,7 +5217,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Cumulative());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Cumulative();
+            }());
         }
         catch (...)
         {
@@ -4747,7 +5247,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Delta());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Delta();
+            }());
         }
         catch (...)
         {
@@ -4773,7 +5277,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.PointerDeviceType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PointerDeviceType();
+            }());
         }
         catch (...)
         {
@@ -4799,7 +5307,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Position());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Position();
+            }());
         }
         catch (...)
         {
@@ -4825,7 +5337,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Velocities());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Velocities();
+            }());
         }
         catch (...)
         {
@@ -4851,7 +5367,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContactCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContactCount();
+            }());
         }
         catch (...)
         {
@@ -4877,7 +5397,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.CurrentContactCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CurrentContactCount();
+            }());
         }
         catch (...)
         {
@@ -4976,7 +5500,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.PageTranslation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PageTranslation();
+            }());
         }
         catch (...)
         {
@@ -5010,7 +5538,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(arg);
 
-            self->obj.PageTranslation(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PageTranslation(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5037,7 +5569,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeltaScale());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeltaScale();
+            }());
         }
         catch (...)
         {
@@ -5071,7 +5607,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.DeltaScale(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DeltaScale(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5098,7 +5638,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeltaRotationAngle());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeltaRotationAngle();
+            }());
         }
         catch (...)
         {
@@ -5132,7 +5676,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.DeltaRotationAngle(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DeltaRotationAngle(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5159,7 +5707,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.CharTranslation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CharTranslation();
+            }());
         }
         catch (...)
         {
@@ -5193,7 +5745,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(arg);
 
-            self->obj.CharTranslation(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.CharTranslation(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5316,7 +5872,11 @@ namespace py::cpp::Windows::UI::Input
                     return nullptr;
                 }
 
-                self->obj.CompleteGesture();
+                {
+                    auto _gil = release_gil();
+                    self->obj.CompleteGesture();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5355,7 +5915,11 @@ namespace py::cpp::Windows::UI::Input
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::PointerPoint>(args, 0);
 
-                self->obj.ProcessDownEvent(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ProcessDownEvent(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5394,7 +5958,11 @@ namespace py::cpp::Windows::UI::Input
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::UI::Input::PointerPoint>>(args, 0);
 
-                self->obj.ProcessMoveEvents(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ProcessMoveEvents(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5433,7 +6001,11 @@ namespace py::cpp::Windows::UI::Input
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::PointerPoint>(args, 0);
 
-                self->obj.ProcessUpEvent(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.ProcessUpEvent(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5466,7 +6038,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.TranslationMinContactCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TranslationMinContactCount();
+            }());
         }
         catch (...)
         {
@@ -5500,7 +6076,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.TranslationMinContactCount(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TranslationMinContactCount(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5527,7 +6107,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.TranslationMaxContactCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TranslationMaxContactCount();
+            }());
         }
         catch (...)
         {
@@ -5561,7 +6145,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.TranslationMaxContactCount(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TranslationMaxContactCount(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5588,7 +6176,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.TapMinContactCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TapMinContactCount();
+            }());
         }
         catch (...)
         {
@@ -5622,7 +6214,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.TapMinContactCount(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TapMinContactCount(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5649,7 +6245,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.TapMaxContactCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TapMaxContactCount();
+            }());
         }
         catch (...)
         {
@@ -5683,7 +6283,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.TapMaxContactCount(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TapMaxContactCount(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5710,7 +6314,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.HoldStartDelay());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HoldStartDelay();
+            }());
         }
         catch (...)
         {
@@ -5744,7 +6352,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
-            self->obj.HoldStartDelay(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.HoldStartDelay(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5771,7 +6383,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.HoldRadius());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HoldRadius();
+            }());
         }
         catch (...)
         {
@@ -5805,7 +6421,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.HoldRadius(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.HoldRadius(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5832,7 +6452,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.HoldMinContactCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HoldMinContactCount();
+            }());
         }
         catch (...)
         {
@@ -5866,7 +6490,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.HoldMinContactCount(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.HoldMinContactCount(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5893,7 +6521,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.HoldMaxContactCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.HoldMaxContactCount();
+            }());
         }
         catch (...)
         {
@@ -5927,7 +6559,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.HoldMaxContactCount(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.HoldMaxContactCount(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5954,7 +6590,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.GestureSettings());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.GestureSettings();
+            }());
         }
         catch (...)
         {
@@ -5988,7 +6628,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::Windows::UI::Input::GestureSettings>(arg);
 
-            self->obj.GestureSettings(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.GestureSettings(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -6017,7 +6661,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::PhysicalGestureRecognizer, winrt::Windows::UI::Input::HoldingEventArgs>>(arg);
 
-            return py::convert(self->obj.Holding(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Holding(param0);
+            }());
         }
         catch (...)
         {
@@ -6045,7 +6693,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Holding(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Holding(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -6074,7 +6726,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::PhysicalGestureRecognizer, winrt::Windows::UI::Input::ManipulationCompletedEventArgs>>(arg);
 
-            return py::convert(self->obj.ManipulationCompleted(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ManipulationCompleted(param0);
+            }());
         }
         catch (...)
         {
@@ -6102,7 +6758,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ManipulationCompleted(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ManipulationCompleted(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -6131,7 +6791,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::PhysicalGestureRecognizer, winrt::Windows::UI::Input::ManipulationStartedEventArgs>>(arg);
 
-            return py::convert(self->obj.ManipulationStarted(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ManipulationStarted(param0);
+            }());
         }
         catch (...)
         {
@@ -6159,7 +6823,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ManipulationStarted(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ManipulationStarted(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -6188,7 +6856,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::PhysicalGestureRecognizer, winrt::Windows::UI::Input::ManipulationUpdatedEventArgs>>(arg);
 
-            return py::convert(self->obj.ManipulationUpdated(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ManipulationUpdated(param0);
+            }());
         }
         catch (...)
         {
@@ -6216,7 +6888,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ManipulationUpdated(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ManipulationUpdated(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -6245,7 +6921,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::PhysicalGestureRecognizer, winrt::Windows::UI::Input::TappedEventArgs>>(arg);
 
-            return py::convert(self->obj.Tapped(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Tapped(param0);
+            }());
         }
         catch (...)
         {
@@ -6273,7 +6953,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Tapped(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Tapped(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -6395,7 +7079,11 @@ namespace py::cpp::Windows::UI::Input
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(winrt::Windows::UI::Input::PointerPoint::GetCurrentPoint(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::Input::PointerPoint::GetCurrentPoint(param0);
+                }());
             }
             catch (...)
             {
@@ -6434,7 +7122,11 @@ namespace py::cpp::Windows::UI::Input
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Input::IPointerPointTransform>(args, 1);
 
-                return py::convert(winrt::Windows::UI::Input::PointerPoint::GetCurrentPoint(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::Input::PointerPoint::GetCurrentPoint(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -6472,7 +7164,11 @@ namespace py::cpp::Windows::UI::Input
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(winrt::Windows::UI::Input::PointerPoint::GetIntermediatePoints(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::Input::PointerPoint::GetIntermediatePoints(param0);
+                }());
             }
             catch (...)
             {
@@ -6511,7 +7207,11 @@ namespace py::cpp::Windows::UI::Input
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Input::IPointerPointTransform>(args, 1);
 
-                return py::convert(winrt::Windows::UI::Input::PointerPoint::GetIntermediatePoints(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::Input::PointerPoint::GetIntermediatePoints(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -6543,7 +7243,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.FrameId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FrameId();
+            }());
         }
         catch (...)
         {
@@ -6569,7 +7273,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsInContact());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsInContact();
+            }());
         }
         catch (...)
         {
@@ -6595,7 +7303,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.PointerDevice());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PointerDevice();
+            }());
         }
         catch (...)
         {
@@ -6621,7 +7333,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.PointerId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PointerId();
+            }());
         }
         catch (...)
         {
@@ -6647,7 +7363,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Position());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Position();
+            }());
         }
         catch (...)
         {
@@ -6673,7 +7393,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Properties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Properties();
+            }());
         }
         catch (...)
         {
@@ -6699,7 +7423,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.RawPosition());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RawPosition();
+            }());
         }
         catch (...)
         {
@@ -6725,7 +7453,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -6751,7 +7483,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsPhysicalPositionSupported());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsPhysicalPositionSupported();
+            }());
         }
         catch (...)
         {
@@ -6777,7 +7513,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.PhysicalPosition());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PhysicalPosition();
+            }());
         }
         catch (...)
         {
@@ -6915,7 +7655,11 @@ namespace py::cpp::Windows::UI::Input
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
-                return py::convert(self->obj.GetUsageValue(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetUsageValue(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -6954,7 +7698,11 @@ namespace py::cpp::Windows::UI::Input
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
-                return py::convert(self->obj.HasUsage(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.HasUsage(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -6986,7 +7734,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContactRect());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContactRect();
+            }());
         }
         catch (...)
         {
@@ -7012,7 +7764,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContactRectRaw());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContactRectRaw();
+            }());
         }
         catch (...)
         {
@@ -7038,7 +7794,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsBarrelButtonPressed());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsBarrelButtonPressed();
+            }());
         }
         catch (...)
         {
@@ -7064,7 +7824,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsCanceled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsCanceled();
+            }());
         }
         catch (...)
         {
@@ -7090,7 +7854,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsEraser());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsEraser();
+            }());
         }
         catch (...)
         {
@@ -7116,7 +7884,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsHorizontalMouseWheel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsHorizontalMouseWheel();
+            }());
         }
         catch (...)
         {
@@ -7142,7 +7914,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsInRange());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsInRange();
+            }());
         }
         catch (...)
         {
@@ -7168,7 +7944,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsInverted());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsInverted();
+            }());
         }
         catch (...)
         {
@@ -7194,7 +7974,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsLeftButtonPressed());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsLeftButtonPressed();
+            }());
         }
         catch (...)
         {
@@ -7220,7 +8004,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsMiddleButtonPressed());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsMiddleButtonPressed();
+            }());
         }
         catch (...)
         {
@@ -7246,7 +8034,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsPrimary());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsPrimary();
+            }());
         }
         catch (...)
         {
@@ -7272,7 +8064,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsRightButtonPressed());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsRightButtonPressed();
+            }());
         }
         catch (...)
         {
@@ -7298,7 +8094,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsXButton1Pressed());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsXButton1Pressed();
+            }());
         }
         catch (...)
         {
@@ -7324,7 +8124,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsXButton2Pressed());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsXButton2Pressed();
+            }());
         }
         catch (...)
         {
@@ -7350,7 +8154,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.MouseWheelDelta());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MouseWheelDelta();
+            }());
         }
         catch (...)
         {
@@ -7376,7 +8184,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Orientation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Orientation();
+            }());
         }
         catch (...)
         {
@@ -7402,7 +8214,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.PointerUpdateKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PointerUpdateKind();
+            }());
         }
         catch (...)
         {
@@ -7428,7 +8244,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Pressure());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Pressure();
+            }());
         }
         catch (...)
         {
@@ -7454,7 +8274,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.TouchConfidence());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TouchConfidence();
+            }());
         }
         catch (...)
         {
@@ -7480,7 +8304,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Twist());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Twist();
+            }());
         }
         catch (...)
         {
@@ -7506,7 +8334,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.XTilt());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.XTilt();
+            }());
         }
         catch (...)
         {
@@ -7532,7 +8364,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.YTilt());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.YTilt();
+            }());
         }
         catch (...)
         {
@@ -7558,7 +8394,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.ZDistance());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ZDistance();
+            }());
         }
         catch (...)
         {
@@ -7679,7 +8519,11 @@ namespace py::cpp::Windows::UI::Input
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::UI::Input::PointerVisualizationSettings::GetForCurrentView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::Input::PointerVisualizationSettings::GetForCurrentView();
+                }());
             }
             catch (...)
             {
@@ -7711,7 +8555,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsContactFeedbackEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsContactFeedbackEnabled();
+            }());
         }
         catch (...)
         {
@@ -7745,7 +8593,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsContactFeedbackEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsContactFeedbackEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7772,7 +8624,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsBarrelButtonFeedbackEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsBarrelButtonFeedbackEnabled();
+            }());
         }
         catch (...)
         {
@@ -7806,7 +8662,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsBarrelButtonFeedbackEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsBarrelButtonFeedbackEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -7931,7 +8791,11 @@ namespace py::cpp::Windows::UI::Input
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::UI::Input::RadialController::CreateForCurrentView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::Input::RadialController::CreateForCurrentView();
+                }());
             }
             catch (...)
             {
@@ -7967,7 +8831,11 @@ namespace py::cpp::Windows::UI::Input
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::UI::Input::RadialController::IsSupported());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::Input::RadialController::IsSupported();
+                }());
             }
             catch (...)
             {
@@ -7999,7 +8867,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.UseAutomaticHapticFeedback());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UseAutomaticHapticFeedback();
+            }());
         }
         catch (...)
         {
@@ -8033,7 +8905,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.UseAutomaticHapticFeedback(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.UseAutomaticHapticFeedback(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8060,7 +8936,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.RotationResolutionInDegrees());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RotationResolutionInDegrees();
+            }());
         }
         catch (...)
         {
@@ -8094,7 +8974,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.RotationResolutionInDegrees(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RotationResolutionInDegrees(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -8121,7 +9005,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Menu());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Menu();
+            }());
         }
         catch (...)
         {
@@ -8149,7 +9037,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::RadialController, winrt::Windows::UI::Input::RadialControllerButtonClickedEventArgs>>(arg);
 
-            return py::convert(self->obj.ButtonClicked(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ButtonClicked(param0);
+            }());
         }
         catch (...)
         {
@@ -8177,7 +9069,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ButtonClicked(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ButtonClicked(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -8206,7 +9102,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::RadialController, winrt::Windows::UI::Input::RadialControllerControlAcquiredEventArgs>>(arg);
 
-            return py::convert(self->obj.ControlAcquired(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ControlAcquired(param0);
+            }());
         }
         catch (...)
         {
@@ -8234,7 +9134,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ControlAcquired(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ControlAcquired(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -8263,7 +9167,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::RadialController, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.ControlLost(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ControlLost(param0);
+            }());
         }
         catch (...)
         {
@@ -8291,7 +9199,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ControlLost(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ControlLost(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -8320,7 +9232,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::RadialController, winrt::Windows::UI::Input::RadialControllerRotationChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.RotationChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RotationChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -8348,7 +9264,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.RotationChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RotationChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -8377,7 +9297,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::RadialController, winrt::Windows::UI::Input::RadialControllerScreenContactContinuedEventArgs>>(arg);
 
-            return py::convert(self->obj.ScreenContactContinued(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ScreenContactContinued(param0);
+            }());
         }
         catch (...)
         {
@@ -8405,7 +9329,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ScreenContactContinued(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ScreenContactContinued(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -8434,7 +9362,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::RadialController, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.ScreenContactEnded(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ScreenContactEnded(param0);
+            }());
         }
         catch (...)
         {
@@ -8462,7 +9394,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ScreenContactEnded(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ScreenContactEnded(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -8491,7 +9427,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::RadialController, winrt::Windows::UI::Input::RadialControllerScreenContactStartedEventArgs>>(arg);
 
-            return py::convert(self->obj.ScreenContactStarted(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ScreenContactStarted(param0);
+            }());
         }
         catch (...)
         {
@@ -8519,7 +9459,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ScreenContactStarted(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ScreenContactStarted(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -8548,7 +9492,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::RadialController, winrt::Windows::UI::Input::RadialControllerButtonHoldingEventArgs>>(arg);
 
-            return py::convert(self->obj.ButtonHolding(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ButtonHolding(param0);
+            }());
         }
         catch (...)
         {
@@ -8576,7 +9524,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ButtonHolding(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ButtonHolding(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -8605,7 +9557,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::RadialController, winrt::Windows::UI::Input::RadialControllerButtonPressedEventArgs>>(arg);
 
-            return py::convert(self->obj.ButtonPressed(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ButtonPressed(param0);
+            }());
         }
         catch (...)
         {
@@ -8633,7 +9589,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ButtonPressed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ButtonPressed(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -8662,7 +9622,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::RadialController, winrt::Windows::UI::Input::RadialControllerButtonReleasedEventArgs>>(arg);
 
-            return py::convert(self->obj.ButtonReleased(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ButtonReleased(param0);
+            }());
         }
         catch (...)
         {
@@ -8690,7 +9654,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ButtonReleased(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ButtonReleased(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -8833,7 +9801,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Contact());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Contact();
+            }());
         }
         catch (...)
         {
@@ -8859,7 +9831,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.SimpleHapticsController());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SimpleHapticsController();
+            }());
         }
         catch (...)
         {
@@ -8953,7 +9929,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Contact());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Contact();
+            }());
         }
         catch (...)
         {
@@ -8979,7 +9959,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.SimpleHapticsController());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SimpleHapticsController();
+            }());
         }
         catch (...)
         {
@@ -9073,7 +10057,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Contact());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Contact();
+            }());
         }
         catch (...)
         {
@@ -9099,7 +10087,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.SimpleHapticsController());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SimpleHapticsController();
+            }());
         }
         catch (...)
         {
@@ -9193,7 +10185,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Contact());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Contact();
+            }());
         }
         catch (...)
         {
@@ -9219,7 +10215,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.SimpleHapticsController());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SimpleHapticsController();
+            }());
         }
         catch (...)
         {
@@ -9317,7 +10317,11 @@ namespace py::cpp::Windows::UI::Input
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::UI::Input::RadialControllerConfiguration::GetForCurrentView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::Input::RadialControllerConfiguration::GetForCurrentView();
+                }());
             }
             catch (...)
             {
@@ -9353,7 +10357,11 @@ namespace py::cpp::Windows::UI::Input
                     return nullptr;
                 }
 
-                self->obj.ResetToDefaultMenuItems();
+                {
+                    auto _gil = release_gil();
+                    self->obj.ResetToDefaultMenuItems();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -9392,7 +10400,11 @@ namespace py::cpp::Windows::UI::Input
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::UI::Input::RadialControllerSystemMenuItemKind>>(args, 0);
 
-                self->obj.SetDefaultMenuItems(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetDefaultMenuItems(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -9431,7 +10443,11 @@ namespace py::cpp::Windows::UI::Input
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::RadialControllerSystemMenuItemKind>(args, 0);
 
-                return py::convert(self->obj.TrySelectDefaultMenuItem(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TrySelectDefaultMenuItem(param0);
+                }());
             }
             catch (...)
             {
@@ -9463,7 +10479,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsMenuSuppressed());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsMenuSuppressed();
+            }());
         }
         catch (...)
         {
@@ -9497,7 +10517,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsMenuSuppressed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsMenuSuppressed(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -9524,7 +10548,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.ActiveControllerWhenMenuIsSuppressed());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ActiveControllerWhenMenuIsSuppressed();
+            }());
         }
         catch (...)
         {
@@ -9558,7 +10586,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::Windows::UI::Input::RadialController>(arg);
 
-            self->obj.ActiveControllerWhenMenuIsSuppressed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ActiveControllerWhenMenuIsSuppressed(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -9585,7 +10617,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Input::RadialControllerConfiguration::IsAppControllerEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Input::RadialControllerConfiguration::IsAppControllerEnabled();
+            }());
         }
         catch (...)
         {
@@ -9619,7 +10655,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<bool>(arg);
 
-            winrt::Windows::UI::Input::RadialControllerConfiguration::IsAppControllerEnabled(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::UI::Input::RadialControllerConfiguration::IsAppControllerEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -9646,7 +10686,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::UI::Input::RadialControllerConfiguration::AppController());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::UI::Input::RadialControllerConfiguration::AppController();
+            }());
         }
         catch (...)
         {
@@ -9680,7 +10724,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::Windows::UI::Input::RadialController>(arg);
 
-            winrt::Windows::UI::Input::RadialControllerConfiguration::AppController(param0);
+            {
+                auto _gil = release_gil();
+                winrt::Windows::UI::Input::RadialControllerConfiguration::AppController(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -9806,7 +10854,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Contact());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Contact();
+            }());
         }
         catch (...)
         {
@@ -9832,7 +10884,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsButtonPressed());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsButtonPressed();
+            }());
         }
         catch (...)
         {
@@ -9858,7 +10914,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.SimpleHapticsController());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SimpleHapticsController();
+            }());
         }
         catch (...)
         {
@@ -9957,7 +11017,11 @@ namespace py::cpp::Windows::UI::Input
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetSelectedMenuItem());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetSelectedMenuItem();
+                }());
             }
             catch (...)
             {
@@ -9995,7 +11059,11 @@ namespace py::cpp::Windows::UI::Input
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::RadialControllerMenuItem>(args, 0);
 
-                self->obj.SelectMenuItem(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SelectMenuItem(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10032,7 +11100,11 @@ namespace py::cpp::Windows::UI::Input
                     return nullptr;
                 }
 
-                return py::convert(self->obj.TrySelectPreviouslySelectedMenuItem());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TrySelectPreviouslySelectedMenuItem();
+                }());
             }
             catch (...)
             {
@@ -10064,7 +11136,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsEnabled();
+            }());
         }
         catch (...)
         {
@@ -10098,7 +11174,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -10125,7 +11205,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Items());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Items();
+            }());
         }
         catch (...)
         {
@@ -10230,7 +11314,11 @@ namespace py::cpp::Windows::UI::Input
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
-                return py::convert(winrt::Windows::UI::Input::RadialControllerMenuItem::CreateFromFontGlyph(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::Input::RadialControllerMenuItem::CreateFromFontGlyph(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -10271,7 +11359,11 @@ namespace py::cpp::Windows::UI::Input
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
                 auto param3 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 3);
 
-                return py::convert(winrt::Windows::UI::Input::RadialControllerMenuItem::CreateFromFontGlyph(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::Input::RadialControllerMenuItem::CreateFromFontGlyph(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -10310,7 +11402,11 @@ namespace py::cpp::Windows::UI::Input
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::RandomAccessStreamReference>(args, 1);
 
-                return py::convert(winrt::Windows::UI::Input::RadialControllerMenuItem::CreateFromIcon(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::Input::RadialControllerMenuItem::CreateFromIcon(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -10349,7 +11445,11 @@ namespace py::cpp::Windows::UI::Input
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Input::RadialControllerMenuKnownIcon>(args, 1);
 
-                return py::convert(winrt::Windows::UI::Input::RadialControllerMenuItem::CreateFromKnownIcon(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::Input::RadialControllerMenuItem::CreateFromKnownIcon(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -10381,7 +11481,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Tag());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Tag();
+            }());
         }
         catch (...)
         {
@@ -10415,7 +11519,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
-            self->obj.Tag(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Tag(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -10442,7 +11550,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayText();
+            }());
         }
         catch (...)
         {
@@ -10470,7 +11582,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::RadialControllerMenuItem, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.Invoked(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Invoked(param0);
+            }());
         }
         catch (...)
         {
@@ -10498,7 +11614,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Invoked(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Invoked(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -10624,7 +11744,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Contact());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Contact();
+            }());
         }
         catch (...)
         {
@@ -10650,7 +11774,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.RotationDeltaInDegrees());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RotationDeltaInDegrees();
+            }());
         }
         catch (...)
         {
@@ -10676,7 +11804,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsButtonPressed());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsButtonPressed();
+            }());
         }
         catch (...)
         {
@@ -10702,7 +11834,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.SimpleHapticsController());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SimpleHapticsController();
+            }());
         }
         catch (...)
         {
@@ -10798,7 +11934,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Bounds());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Bounds();
+            }());
         }
         catch (...)
         {
@@ -10824,7 +11964,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Position());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Position();
+            }());
         }
         catch (...)
         {
@@ -10918,7 +12062,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Contact());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Contact();
+            }());
         }
         catch (...)
         {
@@ -10944,7 +12092,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsButtonPressed());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsButtonPressed();
+            }());
         }
         catch (...)
         {
@@ -10970,7 +12122,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.SimpleHapticsController());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SimpleHapticsController();
+            }());
         }
         catch (...)
         {
@@ -11065,7 +12221,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsButtonPressed());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsButtonPressed();
+            }());
         }
         catch (...)
         {
@@ -11091,7 +12251,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.SimpleHapticsController());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SimpleHapticsController();
+            }());
         }
         catch (...)
         {
@@ -11185,7 +12349,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Contact());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Contact();
+            }());
         }
         catch (...)
         {
@@ -11211,7 +12379,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsButtonPressed());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsButtonPressed();
+            }());
         }
         catch (...)
         {
@@ -11237,7 +12409,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.SimpleHapticsController());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SimpleHapticsController();
+            }());
         }
         catch (...)
         {
@@ -11332,7 +12508,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.PointerDeviceType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PointerDeviceType();
+            }());
         }
         catch (...)
         {
@@ -11358,7 +12538,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Position());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Position();
+            }());
         }
         catch (...)
         {
@@ -11384,7 +12568,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContactCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContactCount();
+            }());
         }
         catch (...)
         {
@@ -11485,7 +12673,11 @@ namespace py::cpp::Windows::UI::Input
 
                 auto param0 = py::convert_to<winrt::Windows::System::DispatcherQueue>(args, 0);
 
-                return py::convert(winrt::Windows::UI::Input::SystemButtonEventController::CreateForDispatcherQueue(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::Input::SystemButtonEventController::CreateForDispatcherQueue(param0);
+                }());
             }
             catch (...)
             {
@@ -11519,7 +12711,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::SystemButtonEventController, winrt::Windows::UI::Input::SystemFunctionButtonEventArgs>>(arg);
 
-            return py::convert(self->obj.SystemFunctionButtonPressed(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SystemFunctionButtonPressed(param0);
+            }());
         }
         catch (...)
         {
@@ -11547,7 +12743,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.SystemFunctionButtonPressed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SystemFunctionButtonPressed(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -11576,7 +12776,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::SystemButtonEventController, winrt::Windows::UI::Input::SystemFunctionButtonEventArgs>>(arg);
 
-            return py::convert(self->obj.SystemFunctionButtonReleased(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SystemFunctionButtonReleased(param0);
+            }());
         }
         catch (...)
         {
@@ -11604,7 +12808,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.SystemFunctionButtonReleased(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SystemFunctionButtonReleased(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -11633,7 +12841,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::SystemButtonEventController, winrt::Windows::UI::Input::SystemFunctionLockChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.SystemFunctionLockChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SystemFunctionLockChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -11661,7 +12873,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.SystemFunctionLockChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SystemFunctionLockChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -11690,7 +12906,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::SystemButtonEventController, winrt::Windows::UI::Input::SystemFunctionLockIndicatorChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.SystemFunctionLockIndicatorChanged(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SystemFunctionLockIndicatorChanged(param0);
+            }());
         }
         catch (...)
         {
@@ -11718,7 +12938,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.SystemFunctionLockIndicatorChanged(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SystemFunctionLockIndicatorChanged(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -11845,7 +13069,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Handled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Handled();
+            }());
         }
         catch (...)
         {
@@ -11879,7 +13107,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Handled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Handled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -11906,7 +13138,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -12000,7 +13236,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Handled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Handled();
+            }());
         }
         catch (...)
         {
@@ -12034,7 +13274,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Handled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Handled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -12061,7 +13305,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsLocked());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsLocked();
+            }());
         }
         catch (...)
         {
@@ -12087,7 +13335,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -12182,7 +13434,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Handled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Handled();
+            }());
         }
         catch (...)
         {
@@ -12216,7 +13472,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Handled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Handled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -12243,7 +13503,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsIndicatorOn());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsIndicatorOn();
+            }());
         }
         catch (...)
         {
@@ -12269,7 +13533,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -12364,7 +13632,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.PointerDeviceType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PointerDeviceType();
+            }());
         }
         catch (...)
         {
@@ -12390,7 +13662,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Position());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Position();
+            }());
         }
         catch (...)
         {
@@ -12416,7 +13692,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.TapCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TapCount();
+            }());
         }
         catch (...)
         {
@@ -12442,7 +13722,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContactCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContactCount();
+            }());
         }
         catch (...)
         {
@@ -12542,7 +13826,11 @@ namespace py::cpp::Windows::UI::Input
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::UI::Input::TouchpadGesturesController::CreateForProcess());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::Input::TouchpadGesturesController::CreateForProcess();
+                }());
             }
             catch (...)
             {
@@ -12578,7 +13866,11 @@ namespace py::cpp::Windows::UI::Input
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::UI::Input::TouchpadGesturesController::IsSupported());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::Input::TouchpadGesturesController::IsSupported();
+                }());
             }
             catch (...)
             {
@@ -12610,7 +13902,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.SupportedGestures());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SupportedGestures();
+            }());
         }
         catch (...)
         {
@@ -12644,7 +13940,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::Windows::UI::Input::TouchpadGlobalGestureKinds>(arg);
 
-            self->obj.SupportedGestures(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SupportedGestures(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -12671,7 +13971,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.GesturesEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.GesturesEnabled();
+            }());
         }
         catch (...)
         {
@@ -12705,7 +14009,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.GesturesEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.GesturesEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -12734,7 +14042,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::TouchpadGesturesController, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
-            return py::convert(self->obj.PointerMoved(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PointerMoved(param0);
+            }());
         }
         catch (...)
         {
@@ -12762,7 +14074,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.PointerMoved(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PointerMoved(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -12791,7 +14107,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::TouchpadGesturesController, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
-            return py::convert(self->obj.PointerPressed(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PointerPressed(param0);
+            }());
         }
         catch (...)
         {
@@ -12819,7 +14139,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.PointerPressed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PointerPressed(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -12848,7 +14172,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::TouchpadGesturesController, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
-            return py::convert(self->obj.PointerReleased(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PointerReleased(param0);
+            }());
         }
         catch (...)
         {
@@ -12876,7 +14204,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.PointerReleased(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PointerReleased(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -12905,7 +14237,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::TouchpadGesturesController, winrt::Windows::UI::Input::TouchpadGlobalActionEventArgs>>(arg);
 
-            return py::convert(self->obj.TouchpadGlobalActionPerformed(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TouchpadGlobalActionPerformed(param0);
+            }());
         }
         catch (...)
         {
@@ -12933,7 +14269,11 @@ namespace py::cpp::Windows::UI::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.TouchpadGlobalActionPerformed(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TouchpadGlobalActionPerformed(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -13063,7 +14403,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Action());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Action();
+            }());
         }
         catch (...)
         {
@@ -13162,7 +14506,11 @@ namespace py::cpp::Windows::UI::Input
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
 
-                return py::convert(self->obj.TransformBounds(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TransformBounds(param0);
+                }());
             }
             catch (...)
             {
@@ -13201,7 +14549,11 @@ namespace py::cpp::Windows::UI::Input
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
                 winrt::Windows::Foundation::Point param1{};
 
-                auto return_value = self->obj.TryTransform(param0, param1);
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryTransform(param0, param1);
+                }();
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -13213,6 +14565,7 @@ namespace py::cpp::Windows::UI::Input
                 {
                     return nullptr;
                 }
+
                 return PyTuple_Pack(2, out_return_value.get(), out1.get());
             }
             catch (...)
@@ -13245,7 +14598,11 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Inverse());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Inverse();
+            }());
         }
         catch (...)
         {

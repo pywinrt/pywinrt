@@ -42,7 +42,11 @@ namespace py::cpp::Windows::UI::StartScreen
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::UI::StartScreen::JumpList::IsSupported());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::StartScreen::JumpList::IsSupported();
+                }());
             }
             catch (...)
             {
@@ -78,7 +82,11 @@ namespace py::cpp::Windows::UI::StartScreen
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::UI::StartScreen::JumpList::LoadCurrentAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::StartScreen::JumpList::LoadCurrentAsync();
+                }());
             }
             catch (...)
             {
@@ -114,7 +122,11 @@ namespace py::cpp::Windows::UI::StartScreen
                     return nullptr;
                 }
 
-                return py::convert(self->obj.SaveAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SaveAsync();
+                }());
             }
             catch (...)
             {
@@ -146,7 +158,11 @@ namespace py::cpp::Windows::UI::StartScreen
                 return nullptr;
             }
 
-            return py::convert(self->obj.SystemGroupKind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SystemGroupKind();
+            }());
         }
         catch (...)
         {
@@ -180,7 +196,11 @@ namespace py::cpp::Windows::UI::StartScreen
 
             auto param0 = py::convert_to<winrt::Windows::UI::StartScreen::JumpListSystemGroupKind>(arg);
 
-            self->obj.SystemGroupKind(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SystemGroupKind(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -207,7 +227,11 @@ namespace py::cpp::Windows::UI::StartScreen
                 return nullptr;
             }
 
-            return py::convert(self->obj.Items());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Items();
+            }());
         }
         catch (...)
         {
@@ -333,7 +357,11 @@ namespace py::cpp::Windows::UI::StartScreen
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::UI::StartScreen::JumpListItem::CreateSeparator());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::StartScreen::JumpListItem::CreateSeparator();
+                }());
             }
             catch (...)
             {
@@ -372,7 +400,11 @@ namespace py::cpp::Windows::UI::StartScreen
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(winrt::Windows::UI::StartScreen::JumpListItem::CreateWithArguments(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::StartScreen::JumpListItem::CreateWithArguments(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -404,7 +436,11 @@ namespace py::cpp::Windows::UI::StartScreen
                 return nullptr;
             }
 
-            return py::convert(self->obj.Logo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Logo();
+            }());
         }
         catch (...)
         {
@@ -438,7 +474,11 @@ namespace py::cpp::Windows::UI::StartScreen
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.Logo(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Logo(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -465,7 +505,11 @@ namespace py::cpp::Windows::UI::StartScreen
                 return nullptr;
             }
 
-            return py::convert(self->obj.GroupName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.GroupName();
+            }());
         }
         catch (...)
         {
@@ -499,7 +543,11 @@ namespace py::cpp::Windows::UI::StartScreen
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.GroupName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.GroupName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -526,7 +574,11 @@ namespace py::cpp::Windows::UI::StartScreen
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayName();
+            }());
         }
         catch (...)
         {
@@ -560,7 +612,11 @@ namespace py::cpp::Windows::UI::StartScreen
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.DisplayName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DisplayName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -587,7 +643,11 @@ namespace py::cpp::Windows::UI::StartScreen
                 return nullptr;
             }
 
-            return py::convert(self->obj.Description());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Description();
+            }());
         }
         catch (...)
         {
@@ -621,7 +681,11 @@ namespace py::cpp::Windows::UI::StartScreen
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Description(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Description(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -648,7 +712,11 @@ namespace py::cpp::Windows::UI::StartScreen
                 return nullptr;
             }
 
-            return py::convert(self->obj.Arguments());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Arguments();
+            }());
         }
         catch (...)
         {
@@ -674,7 +742,11 @@ namespace py::cpp::Windows::UI::StartScreen
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
         }
         catch (...)
         {
@@ -700,7 +772,11 @@ namespace py::cpp::Windows::UI::StartScreen
                 return nullptr;
             }
 
-            return py::convert(self->obj.RemovedByUser());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RemovedByUser();
+            }());
         }
         catch (...)
         {
@@ -929,7 +1005,11 @@ namespace py::cpp::Windows::UI::StartScreen
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::UI::StartScreen::SecondaryTile::Exists(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::StartScreen::SecondaryTile::Exists(param0);
+                }());
             }
             catch (...)
             {
@@ -965,7 +1045,11 @@ namespace py::cpp::Windows::UI::StartScreen
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::UI::StartScreen::SecondaryTile::FindAllAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::StartScreen::SecondaryTile::FindAllAsync();
+                }());
             }
             catch (...)
             {
@@ -1003,7 +1087,11 @@ namespace py::cpp::Windows::UI::StartScreen
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::UI::StartScreen::SecondaryTile::FindAllAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::StartScreen::SecondaryTile::FindAllAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1039,7 +1127,11 @@ namespace py::cpp::Windows::UI::StartScreen
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::UI::StartScreen::SecondaryTile::FindAllForPackageAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::StartScreen::SecondaryTile::FindAllForPackageAsync();
+                }());
             }
             catch (...)
             {
@@ -1075,7 +1167,11 @@ namespace py::cpp::Windows::UI::StartScreen
                     return nullptr;
                 }
 
-                return py::convert(self->obj.RequestCreateAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestCreateAsync();
+                }());
             }
             catch (...)
             {
@@ -1113,7 +1209,11 @@ namespace py::cpp::Windows::UI::StartScreen
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
 
-                return py::convert(self->obj.RequestCreateAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestCreateAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1151,7 +1251,11 @@ namespace py::cpp::Windows::UI::StartScreen
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
 
-                return py::convert(self->obj.RequestCreateForSelectionAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestCreateForSelectionAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1190,7 +1294,11 @@ namespace py::cpp::Windows::UI::StartScreen
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Popups::Placement>(args, 1);
 
-                return py::convert(self->obj.RequestCreateForSelectionAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestCreateForSelectionAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1226,7 +1334,11 @@ namespace py::cpp::Windows::UI::StartScreen
                     return nullptr;
                 }
 
-                return py::convert(self->obj.RequestDeleteAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestDeleteAsync();
+                }());
             }
             catch (...)
             {
@@ -1264,7 +1376,11 @@ namespace py::cpp::Windows::UI::StartScreen
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
 
-                return py::convert(self->obj.RequestDeleteAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestDeleteAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1302,7 +1418,11 @@ namespace py::cpp::Windows::UI::StartScreen
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
 
-                return py::convert(self->obj.RequestDeleteForSelectionAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestDeleteForSelectionAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1341,7 +1461,11 @@ namespace py::cpp::Windows::UI::StartScreen
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Popups::Placement>(args, 1);
 
-                return py::convert(self->obj.RequestDeleteForSelectionAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestDeleteForSelectionAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1377,7 +1501,11 @@ namespace py::cpp::Windows::UI::StartScreen
                     return nullptr;
                 }
 
-                return py::convert(self->obj.UpdateAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.UpdateAsync();
+                }());
             }
             catch (...)
             {
@@ -1409,7 +1537,11 @@ namespace py::cpp::Windows::UI::StartScreen
                 return nullptr;
             }
 
-            return py::convert(self->obj.ShortName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ShortName();
+            }());
         }
         catch (...)
         {
@@ -1443,7 +1575,11 @@ namespace py::cpp::Windows::UI::StartScreen
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ShortName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ShortName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1470,7 +1606,11 @@ namespace py::cpp::Windows::UI::StartScreen
                 return nullptr;
             }
 
-            return py::convert(self->obj.Logo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Logo();
+            }());
         }
         catch (...)
         {
@@ -1504,7 +1644,11 @@ namespace py::cpp::Windows::UI::StartScreen
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.Logo(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Logo(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1531,7 +1675,11 @@ namespace py::cpp::Windows::UI::StartScreen
                 return nullptr;
             }
 
-            return py::convert(self->obj.TileId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TileId();
+            }());
         }
         catch (...)
         {
@@ -1565,7 +1713,11 @@ namespace py::cpp::Windows::UI::StartScreen
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.TileId(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TileId(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1592,7 +1744,11 @@ namespace py::cpp::Windows::UI::StartScreen
                 return nullptr;
             }
 
-            return py::convert(self->obj.LockScreenDisplayBadgeAndTileText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LockScreenDisplayBadgeAndTileText();
+            }());
         }
         catch (...)
         {
@@ -1626,7 +1782,11 @@ namespace py::cpp::Windows::UI::StartScreen
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.LockScreenDisplayBadgeAndTileText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.LockScreenDisplayBadgeAndTileText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1653,7 +1813,11 @@ namespace py::cpp::Windows::UI::StartScreen
                 return nullptr;
             }
 
-            return py::convert(self->obj.LockScreenBadgeLogo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LockScreenBadgeLogo();
+            }());
         }
         catch (...)
         {
@@ -1687,7 +1851,11 @@ namespace py::cpp::Windows::UI::StartScreen
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.LockScreenBadgeLogo(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.LockScreenBadgeLogo(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1714,7 +1882,11 @@ namespace py::cpp::Windows::UI::StartScreen
                 return nullptr;
             }
 
-            return py::convert(self->obj.Arguments());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Arguments();
+            }());
         }
         catch (...)
         {
@@ -1748,7 +1920,11 @@ namespace py::cpp::Windows::UI::StartScreen
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Arguments(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Arguments(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1775,7 +1951,11 @@ namespace py::cpp::Windows::UI::StartScreen
                 return nullptr;
             }
 
-            return py::convert(self->obj.ForegroundText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ForegroundText();
+            }());
         }
         catch (...)
         {
@@ -1809,7 +1989,11 @@ namespace py::cpp::Windows::UI::StartScreen
 
             auto param0 = py::convert_to<winrt::Windows::UI::StartScreen::ForegroundText>(arg);
 
-            self->obj.ForegroundText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ForegroundText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1836,7 +2020,11 @@ namespace py::cpp::Windows::UI::StartScreen
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayName();
+            }());
         }
         catch (...)
         {
@@ -1870,7 +2058,11 @@ namespace py::cpp::Windows::UI::StartScreen
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.DisplayName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DisplayName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1897,7 +2089,11 @@ namespace py::cpp::Windows::UI::StartScreen
                 return nullptr;
             }
 
-            return py::convert(self->obj.BackgroundColor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BackgroundColor();
+            }());
         }
         catch (...)
         {
@@ -1931,7 +2127,11 @@ namespace py::cpp::Windows::UI::StartScreen
 
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
-            self->obj.BackgroundColor(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.BackgroundColor(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1958,7 +2158,11 @@ namespace py::cpp::Windows::UI::StartScreen
                 return nullptr;
             }
 
-            return py::convert(self->obj.WideLogo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WideLogo();
+            }());
         }
         catch (...)
         {
@@ -1992,7 +2196,11 @@ namespace py::cpp::Windows::UI::StartScreen
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.WideLogo(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.WideLogo(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2019,7 +2227,11 @@ namespace py::cpp::Windows::UI::StartScreen
                 return nullptr;
             }
 
-            return py::convert(self->obj.TileOptions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TileOptions();
+            }());
         }
         catch (...)
         {
@@ -2053,7 +2265,11 @@ namespace py::cpp::Windows::UI::StartScreen
 
             auto param0 = py::convert_to<winrt::Windows::UI::StartScreen::TileOptions>(arg);
 
-            self->obj.TileOptions(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.TileOptions(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2080,7 +2296,11 @@ namespace py::cpp::Windows::UI::StartScreen
                 return nullptr;
             }
 
-            return py::convert(self->obj.SmallLogo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SmallLogo();
+            }());
         }
         catch (...)
         {
@@ -2114,7 +2334,11 @@ namespace py::cpp::Windows::UI::StartScreen
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.SmallLogo(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.SmallLogo(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2141,7 +2365,11 @@ namespace py::cpp::Windows::UI::StartScreen
                 return nullptr;
             }
 
-            return py::convert(self->obj.RoamingEnabled());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RoamingEnabled();
+            }());
         }
         catch (...)
         {
@@ -2175,7 +2403,11 @@ namespace py::cpp::Windows::UI::StartScreen
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.RoamingEnabled(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.RoamingEnabled(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2202,7 +2434,11 @@ namespace py::cpp::Windows::UI::StartScreen
                 return nullptr;
             }
 
-            return py::convert(self->obj.PhoneticName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PhoneticName();
+            }());
         }
         catch (...)
         {
@@ -2236,7 +2472,11 @@ namespace py::cpp::Windows::UI::StartScreen
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.PhoneticName(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.PhoneticName(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2263,7 +2503,11 @@ namespace py::cpp::Windows::UI::StartScreen
                 return nullptr;
             }
 
-            return py::convert(self->obj.VisualElements());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.VisualElements();
+            }());
         }
         catch (...)
         {
@@ -2291,7 +2535,11 @@ namespace py::cpp::Windows::UI::StartScreen
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::StartScreen::SecondaryTile, winrt::Windows::UI::StartScreen::VisualElementsRequestedEventArgs>>(arg);
 
-            return py::convert(self->obj.VisualElementsRequested(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.VisualElementsRequested(param0);
+            }());
         }
         catch (...)
         {
@@ -2319,7 +2567,11 @@ namespace py::cpp::Windows::UI::StartScreen
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.VisualElementsRequested(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.VisualElementsRequested(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2467,7 +2719,11 @@ namespace py::cpp::Windows::UI::StartScreen
                 return nullptr;
             }
 
-            return py::convert(self->obj.Square150x150Logo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Square150x150Logo();
+            }());
         }
         catch (...)
         {
@@ -2501,7 +2757,11 @@ namespace py::cpp::Windows::UI::StartScreen
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.Square150x150Logo(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Square150x150Logo(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2528,7 +2788,11 @@ namespace py::cpp::Windows::UI::StartScreen
                 return nullptr;
             }
 
-            return py::convert(self->obj.ShowNameOnWide310x150Logo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ShowNameOnWide310x150Logo();
+            }());
         }
         catch (...)
         {
@@ -2562,7 +2826,11 @@ namespace py::cpp::Windows::UI::StartScreen
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.ShowNameOnWide310x150Logo(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ShowNameOnWide310x150Logo(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2589,7 +2857,11 @@ namespace py::cpp::Windows::UI::StartScreen
                 return nullptr;
             }
 
-            return py::convert(self->obj.ShowNameOnSquare310x310Logo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ShowNameOnSquare310x310Logo();
+            }());
         }
         catch (...)
         {
@@ -2623,7 +2895,11 @@ namespace py::cpp::Windows::UI::StartScreen
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.ShowNameOnSquare310x310Logo(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ShowNameOnSquare310x310Logo(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2650,7 +2926,11 @@ namespace py::cpp::Windows::UI::StartScreen
                 return nullptr;
             }
 
-            return py::convert(self->obj.ShowNameOnSquare150x150Logo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ShowNameOnSquare150x150Logo();
+            }());
         }
         catch (...)
         {
@@ -2684,7 +2964,11 @@ namespace py::cpp::Windows::UI::StartScreen
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.ShowNameOnSquare150x150Logo(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ShowNameOnSquare150x150Logo(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2711,7 +2995,11 @@ namespace py::cpp::Windows::UI::StartScreen
                 return nullptr;
             }
 
-            return py::convert(self->obj.ForegroundText());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ForegroundText();
+            }());
         }
         catch (...)
         {
@@ -2745,7 +3033,11 @@ namespace py::cpp::Windows::UI::StartScreen
 
             auto param0 = py::convert_to<winrt::Windows::UI::StartScreen::ForegroundText>(arg);
 
-            self->obj.ForegroundText(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ForegroundText(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2772,7 +3064,11 @@ namespace py::cpp::Windows::UI::StartScreen
                 return nullptr;
             }
 
-            return py::convert(self->obj.BackgroundColor());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BackgroundColor();
+            }());
         }
         catch (...)
         {
@@ -2806,7 +3102,11 @@ namespace py::cpp::Windows::UI::StartScreen
 
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
-            self->obj.BackgroundColor(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.BackgroundColor(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2833,7 +3133,11 @@ namespace py::cpp::Windows::UI::StartScreen
                 return nullptr;
             }
 
-            return py::convert(self->obj.Wide310x150Logo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Wide310x150Logo();
+            }());
         }
         catch (...)
         {
@@ -2867,7 +3171,11 @@ namespace py::cpp::Windows::UI::StartScreen
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.Wide310x150Logo(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Wide310x150Logo(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2894,7 +3202,11 @@ namespace py::cpp::Windows::UI::StartScreen
                 return nullptr;
             }
 
-            return py::convert(self->obj.Square70x70Logo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Square70x70Logo();
+            }());
         }
         catch (...)
         {
@@ -2928,7 +3240,11 @@ namespace py::cpp::Windows::UI::StartScreen
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.Square70x70Logo(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Square70x70Logo(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2955,7 +3271,11 @@ namespace py::cpp::Windows::UI::StartScreen
                 return nullptr;
             }
 
-            return py::convert(self->obj.Square310x310Logo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Square310x310Logo();
+            }());
         }
         catch (...)
         {
@@ -2989,7 +3309,11 @@ namespace py::cpp::Windows::UI::StartScreen
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.Square310x310Logo(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Square310x310Logo(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3016,7 +3340,11 @@ namespace py::cpp::Windows::UI::StartScreen
                 return nullptr;
             }
 
-            return py::convert(self->obj.Square30x30Logo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Square30x30Logo();
+            }());
         }
         catch (...)
         {
@@ -3050,7 +3378,11 @@ namespace py::cpp::Windows::UI::StartScreen
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.Square30x30Logo(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Square30x30Logo(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3077,7 +3409,11 @@ namespace py::cpp::Windows::UI::StartScreen
                 return nullptr;
             }
 
-            return py::convert(self->obj.Square71x71Logo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Square71x71Logo();
+            }());
         }
         catch (...)
         {
@@ -3111,7 +3447,11 @@ namespace py::cpp::Windows::UI::StartScreen
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.Square71x71Logo(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Square71x71Logo(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3138,7 +3478,11 @@ namespace py::cpp::Windows::UI::StartScreen
                 return nullptr;
             }
 
-            return py::convert(self->obj.Square44x44Logo());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Square44x44Logo();
+            }());
         }
         catch (...)
         {
@@ -3172,7 +3516,11 @@ namespace py::cpp::Windows::UI::StartScreen
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.Square44x44Logo(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Square44x44Logo(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3199,7 +3547,11 @@ namespace py::cpp::Windows::UI::StartScreen
                 return nullptr;
             }
 
-            return py::convert(self->obj.MixedRealityModel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MixedRealityModel();
+            }());
         }
         catch (...)
         {
@@ -3310,7 +3662,11 @@ namespace py::cpp::Windows::UI::StartScreen
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Core::AppListEntry>(args, 0);
 
-                return py::convert(self->obj.ContainsAppListEntryAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ContainsAppListEntryAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -3348,7 +3704,11 @@ namespace py::cpp::Windows::UI::StartScreen
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.ContainsSecondaryTileAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ContainsSecondaryTileAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -3384,7 +3744,11 @@ namespace py::cpp::Windows::UI::StartScreen
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::UI::StartScreen::StartScreenManager::GetDefault());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::StartScreen::StartScreenManager::GetDefault();
+                }());
             }
             catch (...)
             {
@@ -3422,7 +3786,11 @@ namespace py::cpp::Windows::UI::StartScreen
 
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
 
-                return py::convert(winrt::Windows::UI::StartScreen::StartScreenManager::GetForUser(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::UI::StartScreen::StartScreenManager::GetForUser(param0);
+                }());
             }
             catch (...)
             {
@@ -3460,7 +3828,11 @@ namespace py::cpp::Windows::UI::StartScreen
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Core::AppListEntry>(args, 0);
 
-                return py::convert(self->obj.RequestAddAppListEntryAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestAddAppListEntryAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -3498,7 +3870,11 @@ namespace py::cpp::Windows::UI::StartScreen
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Core::AppListEntry>(args, 0);
 
-                return py::convert(self->obj.SupportsAppListEntry(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SupportsAppListEntry(param0);
+                }());
             }
             catch (...)
             {
@@ -3536,7 +3912,11 @@ namespace py::cpp::Windows::UI::StartScreen
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.TryRemoveSecondaryTileAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryRemoveSecondaryTileAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -3568,7 +3948,11 @@ namespace py::cpp::Windows::UI::StartScreen
                 return nullptr;
             }
 
-            return py::convert(self->obj.User());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.User();
+            }());
         }
         catch (...)
         {
@@ -3693,7 +4077,11 @@ namespace py::cpp::Windows::UI::StartScreen
                 return nullptr;
             }
 
-            return py::convert(self->obj.Uri());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Uri();
+            }());
         }
         catch (...)
         {
@@ -3727,7 +4115,11 @@ namespace py::cpp::Windows::UI::StartScreen
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.Uri(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Uri(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3754,7 +4146,11 @@ namespace py::cpp::Windows::UI::StartScreen
                 return nullptr;
             }
 
-            return py::convert(self->obj.BoundingBox());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BoundingBox();
+            }());
         }
         catch (...)
         {
@@ -3788,7 +4184,11 @@ namespace py::cpp::Windows::UI::StartScreen
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Perception::Spatial::SpatialBoundingBox>>(arg);
 
-            self->obj.BoundingBox(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.BoundingBox(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3815,7 +4215,11 @@ namespace py::cpp::Windows::UI::StartScreen
                 return nullptr;
             }
 
-            return py::convert(self->obj.ActivationBehavior());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ActivationBehavior();
+            }());
         }
         catch (...)
         {
@@ -3849,7 +4253,11 @@ namespace py::cpp::Windows::UI::StartScreen
 
             auto param0 = py::convert_to<winrt::Windows::UI::StartScreen::TileMixedRealityModelActivationBehavior>(arg);
 
-            self->obj.ActivationBehavior(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ActivationBehavior(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3949,7 +4357,11 @@ namespace py::cpp::Windows::UI::StartScreen
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetDeferral());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
             }
             catch (...)
             {
@@ -3981,7 +4393,11 @@ namespace py::cpp::Windows::UI::StartScreen
                 return nullptr;
             }
 
-            return py::convert(self->obj.AlternateVisualElements());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AlternateVisualElements();
+            }());
         }
         catch (...)
         {
@@ -4007,7 +4423,11 @@ namespace py::cpp::Windows::UI::StartScreen
                 return nullptr;
             }
 
-            return py::convert(self->obj.Deadline());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Deadline();
+            }());
         }
         catch (...)
         {
@@ -4033,7 +4453,11 @@ namespace py::cpp::Windows::UI::StartScreen
                 return nullptr;
             }
 
-            return py::convert(self->obj.VisualElements());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.VisualElements();
+            }());
         }
         catch (...)
         {
@@ -4133,7 +4557,11 @@ namespace py::cpp::Windows::UI::StartScreen
                     return nullptr;
                 }
 
-                self->obj.Complete();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Complete();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4233,7 +4661,11 @@ namespace py::cpp::Windows::UI::StartScreen
                 return nullptr;
             }
 
-            return py::convert(self->obj.Request());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Request();
+            }());
         }
         catch (...)
         {

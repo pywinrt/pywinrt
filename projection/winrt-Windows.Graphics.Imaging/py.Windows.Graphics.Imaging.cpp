@@ -42,7 +42,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -79,7 +83,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CreateReference());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateReference();
+                }());
             }
             catch (...)
             {
@@ -115,7 +123,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetPlaneCount());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetPlaneCount();
+                }());
             }
             catch (...)
             {
@@ -153,7 +165,11 @@ namespace py::cpp::Windows::Graphics::Imaging
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                return py::convert(self->obj.GetPlaneDescription(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetPlaneDescription(param0);
+                }());
             }
             catch (...)
             {
@@ -201,7 +217,11 @@ namespace py::cpp::Windows::Graphics::Imaging
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -276,7 +296,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.CodecId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CodecId();
+            }());
         }
         catch (...)
         {
@@ -302,7 +326,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.FileExtensions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FileExtensions();
+            }());
         }
         catch (...)
         {
@@ -328,7 +356,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.FriendlyName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FriendlyName();
+            }());
         }
         catch (...)
         {
@@ -354,7 +386,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.MimeTypes());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MimeTypes();
+            }());
         }
         catch (...)
         {
@@ -456,7 +492,11 @@ namespace py::cpp::Windows::Graphics::Imaging
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 0);
 
-                return py::convert(winrt::Windows::Graphics::Imaging::BitmapDecoder::CreateAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Graphics::Imaging::BitmapDecoder::CreateAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -495,7 +535,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 1);
 
-                return py::convert(winrt::Windows::Graphics::Imaging::BitmapDecoder::CreateAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Graphics::Imaging::BitmapDecoder::CreateAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -531,7 +575,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Graphics::Imaging::BitmapDecoder::GetDecoderInformationEnumerator());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Graphics::Imaging::BitmapDecoder::GetDecoderInformationEnumerator();
+                }());
             }
             catch (...)
             {
@@ -569,7 +617,11 @@ namespace py::cpp::Windows::Graphics::Imaging
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                return py::convert(self->obj.GetFrameAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetFrameAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -605,7 +657,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetPixelDataAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetPixelDataAsync();
+                }());
             }
             catch (...)
             {
@@ -647,7 +703,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 auto param3 = py::convert_to<winrt::Windows::Graphics::Imaging::ExifOrientationMode>(args, 3);
                 auto param4 = py::convert_to<winrt::Windows::Graphics::Imaging::ColorManagementMode>(args, 4);
 
-                return py::convert(self->obj.GetPixelDataAsync(param0, param1, param2, param3, param4));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetPixelDataAsync(param0, param1, param2, param3, param4);
+                }());
             }
             catch (...)
             {
@@ -683,7 +743,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetPreviewAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetPreviewAsync();
+                }());
             }
             catch (...)
             {
@@ -719,7 +783,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetSoftwareBitmapAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetSoftwareBitmapAsync();
+                }());
             }
             catch (...)
             {
@@ -758,7 +826,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapPixelFormat>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapAlphaMode>(args, 1);
 
-                return py::convert(self->obj.GetSoftwareBitmapAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetSoftwareBitmapAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -800,7 +872,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 auto param3 = py::convert_to<winrt::Windows::Graphics::Imaging::ExifOrientationMode>(args, 3);
                 auto param4 = py::convert_to<winrt::Windows::Graphics::Imaging::ColorManagementMode>(args, 4);
 
-                return py::convert(self->obj.GetSoftwareBitmapAsync(param0, param1, param2, param3, param4));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetSoftwareBitmapAsync(param0, param1, param2, param3, param4);
+                }());
             }
             catch (...)
             {
@@ -836,7 +912,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetThumbnailAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetThumbnailAsync();
+                }());
             }
             catch (...)
             {
@@ -868,7 +948,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.BitmapContainerProperties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BitmapContainerProperties();
+            }());
         }
         catch (...)
         {
@@ -894,7 +978,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.DecoderInformation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DecoderInformation();
+            }());
         }
         catch (...)
         {
@@ -920,7 +1008,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.FrameCount());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FrameCount();
+            }());
         }
         catch (...)
         {
@@ -946,7 +1038,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.BitmapAlphaMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BitmapAlphaMode();
+            }());
         }
         catch (...)
         {
@@ -972,7 +1068,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.BitmapPixelFormat());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BitmapPixelFormat();
+            }());
         }
         catch (...)
         {
@@ -998,7 +1098,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.BitmapProperties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BitmapProperties();
+            }());
         }
         catch (...)
         {
@@ -1024,7 +1128,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.DpiX());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DpiX();
+            }());
         }
         catch (...)
         {
@@ -1050,7 +1158,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.DpiY());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DpiY();
+            }());
         }
         catch (...)
         {
@@ -1076,7 +1188,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.OrientedPixelHeight());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OrientedPixelHeight();
+            }());
         }
         catch (...)
         {
@@ -1102,7 +1218,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.OrientedPixelWidth());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OrientedPixelWidth();
+            }());
         }
         catch (...)
         {
@@ -1128,7 +1248,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.PixelHeight());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PixelHeight();
+            }());
         }
         catch (...)
         {
@@ -1154,7 +1278,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.PixelWidth());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PixelWidth();
+            }());
         }
         catch (...)
         {
@@ -1180,7 +1308,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Graphics::Imaging::BitmapDecoder::BmpDecoderId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Graphics::Imaging::BitmapDecoder::BmpDecoderId();
+            }());
         }
         catch (...)
         {
@@ -1206,7 +1338,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Graphics::Imaging::BitmapDecoder::GifDecoderId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Graphics::Imaging::BitmapDecoder::GifDecoderId();
+            }());
         }
         catch (...)
         {
@@ -1232,7 +1368,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Graphics::Imaging::BitmapDecoder::IcoDecoderId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Graphics::Imaging::BitmapDecoder::IcoDecoderId();
+            }());
         }
         catch (...)
         {
@@ -1258,7 +1398,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Graphics::Imaging::BitmapDecoder::JpegDecoderId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Graphics::Imaging::BitmapDecoder::JpegDecoderId();
+            }());
         }
         catch (...)
         {
@@ -1284,7 +1428,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Graphics::Imaging::BitmapDecoder::JpegXRDecoderId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Graphics::Imaging::BitmapDecoder::JpegXRDecoderId();
+            }());
         }
         catch (...)
         {
@@ -1310,7 +1458,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Graphics::Imaging::BitmapDecoder::PngDecoderId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Graphics::Imaging::BitmapDecoder::PngDecoderId();
+            }());
         }
         catch (...)
         {
@@ -1336,7 +1488,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Graphics::Imaging::BitmapDecoder::TiffDecoderId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Graphics::Imaging::BitmapDecoder::TiffDecoderId();
+            }());
         }
         catch (...)
         {
@@ -1362,7 +1518,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Graphics::Imaging::BitmapDecoder::HeifDecoderId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Graphics::Imaging::BitmapDecoder::HeifDecoderId();
+            }());
         }
         catch (...)
         {
@@ -1388,7 +1548,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Graphics::Imaging::BitmapDecoder::WebpDecoderId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Graphics::Imaging::BitmapDecoder::WebpDecoderId();
+            }());
         }
         catch (...)
         {
@@ -1544,7 +1708,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 1);
 
-                return py::convert(winrt::Windows::Graphics::Imaging::BitmapEncoder::CreateAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Graphics::Imaging::BitmapEncoder::CreateAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1582,7 +1750,11 @@ namespace py::cpp::Windows::Graphics::Imaging
 
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapDecoder>(args, 0);
 
-                return py::convert(winrt::Windows::Graphics::Imaging::BitmapEncoder::CreateForInPlacePropertyEncodingAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Graphics::Imaging::BitmapEncoder::CreateForInPlacePropertyEncodingAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1621,7 +1793,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapDecoder>(args, 1);
 
-                return py::convert(winrt::Windows::Graphics::Imaging::BitmapEncoder::CreateForTranscodingAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Graphics::Imaging::BitmapEncoder::CreateForTranscodingAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1661,7 +1837,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::Windows::Graphics::Imaging::BitmapTypedValue>>>(args, 2);
 
-                return py::convert(winrt::Windows::Graphics::Imaging::BitmapEncoder::CreateAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Graphics::Imaging::BitmapEncoder::CreateAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -1697,7 +1877,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                     return nullptr;
                 }
 
-                return py::convert(self->obj.FlushAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.FlushAsync();
+                }());
             }
             catch (...)
             {
@@ -1733,7 +1917,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Graphics::Imaging::BitmapEncoder::GetEncoderInformationEnumerator());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Graphics::Imaging::BitmapEncoder::GetEncoderInformationEnumerator();
+                }());
             }
             catch (...)
             {
@@ -1769,7 +1957,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GoToNextFrameAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GoToNextFrameAsync();
+                }());
             }
             catch (...)
             {
@@ -1807,7 +1999,11 @@ namespace py::cpp::Windows::Graphics::Imaging
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::Windows::Graphics::Imaging::BitmapTypedValue>>>(args, 0);
 
-                return py::convert(self->obj.GoToNextFrameAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GoToNextFrameAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1851,7 +2047,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 auto param5 = py::convert_to<double>(args, 5);
                 auto param6 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 6);
 
-                self->obj.SetPixelData(param0, param1, param2, param3, param4, param5, param6);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetPixelData(param0, param1, param2, param3, param4, param5, param6);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1890,7 +2090,11 @@ namespace py::cpp::Windows::Graphics::Imaging
 
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::SoftwareBitmap>(args, 0);
 
-                self->obj.SetSoftwareBitmap(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetSoftwareBitmap(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1923,7 +2127,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsThumbnailGenerated());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsThumbnailGenerated();
+            }());
         }
         catch (...)
         {
@@ -1957,7 +2165,11 @@ namespace py::cpp::Windows::Graphics::Imaging
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsThumbnailGenerated(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.IsThumbnailGenerated(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -1984,7 +2196,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.GeneratedThumbnailWidth());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.GeneratedThumbnailWidth();
+            }());
         }
         catch (...)
         {
@@ -2018,7 +2234,11 @@ namespace py::cpp::Windows::Graphics::Imaging
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.GeneratedThumbnailWidth(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.GeneratedThumbnailWidth(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2045,7 +2265,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.GeneratedThumbnailHeight());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.GeneratedThumbnailHeight();
+            }());
         }
         catch (...)
         {
@@ -2079,7 +2303,11 @@ namespace py::cpp::Windows::Graphics::Imaging
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.GeneratedThumbnailHeight(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.GeneratedThumbnailHeight(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -2106,7 +2334,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.BitmapContainerProperties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BitmapContainerProperties();
+            }());
         }
         catch (...)
         {
@@ -2132,7 +2364,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.BitmapProperties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BitmapProperties();
+            }());
         }
         catch (...)
         {
@@ -2158,7 +2394,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.BitmapTransform());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BitmapTransform();
+            }());
         }
         catch (...)
         {
@@ -2184,7 +2424,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.EncoderInformation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EncoderInformation();
+            }());
         }
         catch (...)
         {
@@ -2210,7 +2454,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Graphics::Imaging::BitmapEncoder::BmpEncoderId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Graphics::Imaging::BitmapEncoder::BmpEncoderId();
+            }());
         }
         catch (...)
         {
@@ -2236,7 +2484,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Graphics::Imaging::BitmapEncoder::GifEncoderId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Graphics::Imaging::BitmapEncoder::GifEncoderId();
+            }());
         }
         catch (...)
         {
@@ -2262,7 +2514,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Graphics::Imaging::BitmapEncoder::JpegEncoderId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Graphics::Imaging::BitmapEncoder::JpegEncoderId();
+            }());
         }
         catch (...)
         {
@@ -2288,7 +2544,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Graphics::Imaging::BitmapEncoder::JpegXREncoderId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Graphics::Imaging::BitmapEncoder::JpegXREncoderId();
+            }());
         }
         catch (...)
         {
@@ -2314,7 +2574,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Graphics::Imaging::BitmapEncoder::PngEncoderId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Graphics::Imaging::BitmapEncoder::PngEncoderId();
+            }());
         }
         catch (...)
         {
@@ -2340,7 +2604,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Graphics::Imaging::BitmapEncoder::TiffEncoderId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Graphics::Imaging::BitmapEncoder::TiffEncoderId();
+            }());
         }
         catch (...)
         {
@@ -2366,7 +2634,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Graphics::Imaging::BitmapEncoder::HeifEncoderId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Graphics::Imaging::BitmapEncoder::HeifEncoderId();
+            }());
         }
         catch (...)
         {
@@ -2511,7 +2783,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetPixelDataAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetPixelDataAsync();
+                }());
             }
             catch (...)
             {
@@ -2553,7 +2829,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 auto param3 = py::convert_to<winrt::Windows::Graphics::Imaging::ExifOrientationMode>(args, 3);
                 auto param4 = py::convert_to<winrt::Windows::Graphics::Imaging::ColorManagementMode>(args, 4);
 
-                return py::convert(self->obj.GetPixelDataAsync(param0, param1, param2, param3, param4));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetPixelDataAsync(param0, param1, param2, param3, param4);
+                }());
             }
             catch (...)
             {
@@ -2589,7 +2869,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetSoftwareBitmapAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetSoftwareBitmapAsync();
+                }());
             }
             catch (...)
             {
@@ -2628,7 +2912,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapPixelFormat>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapAlphaMode>(args, 1);
 
-                return py::convert(self->obj.GetSoftwareBitmapAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetSoftwareBitmapAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -2670,7 +2958,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 auto param3 = py::convert_to<winrt::Windows::Graphics::Imaging::ExifOrientationMode>(args, 3);
                 auto param4 = py::convert_to<winrt::Windows::Graphics::Imaging::ColorManagementMode>(args, 4);
 
-                return py::convert(self->obj.GetSoftwareBitmapAsync(param0, param1, param2, param3, param4));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetSoftwareBitmapAsync(param0, param1, param2, param3, param4);
+                }());
             }
             catch (...)
             {
@@ -2706,7 +2998,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetThumbnailAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetThumbnailAsync();
+                }());
             }
             catch (...)
             {
@@ -2738,7 +3034,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.BitmapAlphaMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BitmapAlphaMode();
+            }());
         }
         catch (...)
         {
@@ -2764,7 +3064,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.BitmapPixelFormat());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BitmapPixelFormat();
+            }());
         }
         catch (...)
         {
@@ -2790,7 +3094,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.BitmapProperties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BitmapProperties();
+            }());
         }
         catch (...)
         {
@@ -2816,7 +3124,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.DpiX());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DpiX();
+            }());
         }
         catch (...)
         {
@@ -2842,7 +3154,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.DpiY());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DpiY();
+            }());
         }
         catch (...)
         {
@@ -2868,7 +3184,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.OrientedPixelHeight());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OrientedPixelHeight();
+            }());
         }
         catch (...)
         {
@@ -2894,7 +3214,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.OrientedPixelWidth());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OrientedPixelWidth();
+            }());
         }
         catch (...)
         {
@@ -2920,7 +3244,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.PixelHeight());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PixelHeight();
+            }());
         }
         catch (...)
         {
@@ -2946,7 +3274,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.PixelWidth());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PixelWidth();
+            }());
         }
         catch (...)
         {
@@ -3059,7 +3391,11 @@ namespace py::cpp::Windows::Graphics::Imaging
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
-                return py::convert(self->obj.GetPropertiesAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetPropertiesAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -3097,7 +3433,11 @@ namespace py::cpp::Windows::Graphics::Imaging
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::Windows::Graphics::Imaging::BitmapTypedValue>>>(args, 0);
 
-                return py::convert(self->obj.SetPropertiesAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SetPropertiesAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -3203,7 +3543,11 @@ namespace py::cpp::Windows::Graphics::Imaging
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
-                return py::convert(self->obj.GetPropertiesAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetPropertiesAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -3328,7 +3672,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                     return nullptr;
                 }
 
-                self->obj.Clear();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Clear();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3365,7 +3713,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                     return nullptr;
                 }
 
-                return py::convert(self->obj.First());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.First();
+                }());
             }
             catch (...)
             {
@@ -3401,7 +3753,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetView();
+                }());
             }
             catch (...)
             {
@@ -3439,7 +3795,11 @@ namespace py::cpp::Windows::Graphics::Imaging
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.HasKey(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.HasKey(param0);
+                }());
             }
             catch (...)
             {
@@ -3478,7 +3838,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapTypedValue>(args, 1);
 
-                return py::convert(self->obj.Insert(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Insert(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -3516,7 +3880,11 @@ namespace py::cpp::Windows::Graphics::Imaging
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.Lookup(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Lookup(param0);
+                }());
             }
             catch (...)
             {
@@ -3554,7 +3922,11 @@ namespace py::cpp::Windows::Graphics::Imaging
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.Remove(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Remove(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3587,7 +3959,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -3624,7 +4000,11 @@ namespace py::cpp::Windows::Graphics::Imaging
     {
         try
         {
-            py::pyobj_handle iter{py::convert(self->obj.First())};
+            py::pyobj_handle iter{py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.First();
+            }())};
 
             if (!iter)
             {
@@ -3644,7 +4024,11 @@ namespace py::cpp::Windows::Graphics::Imaging
     {
         try
         {
-            return static_cast<int>(self->obj.HasKey(py::convert_to<winrt::hstring>(key)));
+            auto _key = py::convert_to<winrt::hstring>(key);
+            {
+                auto _gil = py::release_gil();
+                return static_cast<int>(self->obj.HasKey(_key));
+            }
         }
         catch (...)
         {
@@ -3657,6 +4041,7 @@ namespace py::cpp::Windows::Graphics::Imaging
     {
         try
         {
+            auto _gil = py::release_gil();
             return static_cast<Py_ssize_t>(self->obj.Size());
         }
         catch (...)
@@ -3671,12 +4056,22 @@ namespace py::cpp::Windows::Graphics::Imaging
         try
         {
             auto _key = py::convert_to<winrt::hstring>(key);
-            auto value = self->obj.TryLookup(_key);
+            auto value = [&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.TryLookup(_key);
+            }();
 
             if (!value) {
                 if constexpr (std::is_base_of_v<winrt::Windows::Foundation::IUnknown, decltype(value)>)
                 {
-                    if (self->obj.HasKey(_key))
+                    auto has_key = [&]()
+                    {
+                        auto _gil = py::release_gil();
+                        return self->obj.HasKey(_key);
+                    }();
+
+                    if (has_key)
                     {
                         Py_RETURN_NONE;
                     }
@@ -3702,7 +4097,12 @@ namespace py::cpp::Windows::Graphics::Imaging
             auto _key = py::convert_to<winrt::hstring>(key);
 
             if (value == nullptr) {
-                if (!self->obj.TryRemove(_key)) {
+                bool did_remove;
+                {
+                    auto _gil = py::release_gil();
+                    did_remove = self->obj.TryRemove(_key);
+                }
+                if (!did_remove) {
                     PyErr_SetObject(PyExc_KeyError, key);
                     return -1;
                 }
@@ -3710,7 +4110,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return 0;
             }
 
-            self->obj.Insert(_key, py::convert_to<winrt::Windows::Graphics::Imaging::BitmapTypedValue>(value));
+            auto _value = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapTypedValue>(value);
+            {
+                auto _gil = py::release_gil();
+                self->obj.Insert(_key, _value);
+            }
 
             return 0;
         }
@@ -3815,7 +4219,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.ScaledWidth());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ScaledWidth();
+            }());
         }
         catch (...)
         {
@@ -3849,7 +4257,11 @@ namespace py::cpp::Windows::Graphics::Imaging
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.ScaledWidth(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ScaledWidth(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3876,7 +4288,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.ScaledHeight());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ScaledHeight();
+            }());
         }
         catch (...)
         {
@@ -3910,7 +4326,11 @@ namespace py::cpp::Windows::Graphics::Imaging
 
             auto param0 = py::convert_to<uint32_t>(arg);
 
-            self->obj.ScaledHeight(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.ScaledHeight(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3937,7 +4357,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.Rotation());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Rotation();
+            }());
         }
         catch (...)
         {
@@ -3971,7 +4395,11 @@ namespace py::cpp::Windows::Graphics::Imaging
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapRotation>(arg);
 
-            self->obj.Rotation(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Rotation(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3998,7 +4426,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.InterpolationMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InterpolationMode();
+            }());
         }
         catch (...)
         {
@@ -4032,7 +4464,11 @@ namespace py::cpp::Windows::Graphics::Imaging
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapInterpolationMode>(arg);
 
-            self->obj.InterpolationMode(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.InterpolationMode(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4059,7 +4495,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.Flip());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Flip();
+            }());
         }
         catch (...)
         {
@@ -4093,7 +4533,11 @@ namespace py::cpp::Windows::Graphics::Imaging
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapFlip>(arg);
 
-            self->obj.Flip(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Flip(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4120,7 +4564,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.Bounds());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Bounds();
+            }());
         }
         catch (...)
         {
@@ -4154,7 +4602,11 @@ namespace py::cpp::Windows::Graphics::Imaging
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapBounds>(arg);
 
-            self->obj.Bounds(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Bounds(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4278,7 +4730,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.Type());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Type();
+            }());
         }
         catch (...)
         {
@@ -4304,7 +4760,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.Value());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Value();
+            }());
         }
         catch (...)
         {
@@ -4402,7 +4862,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CloneStream());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CloneStream();
+                }());
             }
             catch (...)
             {
@@ -4438,7 +4902,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4475,7 +4943,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                     return nullptr;
                 }
 
-                return py::convert(self->obj.FlushAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.FlushAsync();
+                }());
             }
             catch (...)
             {
@@ -4513,7 +4985,11 @@ namespace py::cpp::Windows::Graphics::Imaging
 
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
-                return py::convert(self->obj.GetInputStreamAt(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetInputStreamAt(param0);
+                }());
             }
             catch (...)
             {
@@ -4551,7 +5027,11 @@ namespace py::cpp::Windows::Graphics::Imaging
 
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
-                return py::convert(self->obj.GetOutputStreamAt(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetOutputStreamAt(param0);
+                }());
             }
             catch (...)
             {
@@ -4591,7 +5071,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::Streams::InputStreamOptions>(args, 2);
 
-                return py::convert(self->obj.ReadAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReadAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -4629,7 +5113,11 @@ namespace py::cpp::Windows::Graphics::Imaging
 
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
-                self->obj.Seek(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.Seek(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4668,7 +5156,11 @@ namespace py::cpp::Windows::Graphics::Imaging
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
-                return py::convert(self->obj.WriteAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.WriteAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -4700,7 +5192,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContentType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContentType();
+            }());
         }
         catch (...)
         {
@@ -4726,7 +5222,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -4760,7 +5260,11 @@ namespace py::cpp::Windows::Graphics::Imaging
 
             auto param0 = py::convert_to<uint64_t>(arg);
 
-            self->obj.Size(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Size(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -4787,7 +5291,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.CanRead());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CanRead();
+            }());
         }
         catch (...)
         {
@@ -4813,7 +5321,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.CanWrite());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CanWrite();
+            }());
         }
         catch (...)
         {
@@ -4839,7 +5351,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.Position());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Position();
+            }());
         }
         catch (...)
         {
@@ -4881,7 +5397,11 @@ namespace py::cpp::Windows::Graphics::Imaging
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -4969,7 +5489,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                     return nullptr;
                 }
 
-                return py::convert(self->obj.DetachPixelData());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.DetachPixelData();
+                }());
             }
             catch (...)
             {
@@ -5116,7 +5640,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5156,7 +5684,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::SoftwareBitmap>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapPixelFormat>(args, 1);
 
-                return py::convert(winrt::Windows::Graphics::Imaging::SoftwareBitmap::Convert(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Graphics::Imaging::SoftwareBitmap::Convert(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -5196,7 +5728,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 auto param1 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapPixelFormat>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapAlphaMode>(args, 2);
 
-                return py::convert(winrt::Windows::Graphics::Imaging::SoftwareBitmap::Convert(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Graphics::Imaging::SoftwareBitmap::Convert(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -5234,7 +5770,11 @@ namespace py::cpp::Windows::Graphics::Imaging
 
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::SoftwareBitmap>(args, 0);
 
-                return py::convert(winrt::Windows::Graphics::Imaging::SoftwareBitmap::Copy(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Graphics::Imaging::SoftwareBitmap::Copy(param0);
+                }());
             }
             catch (...)
             {
@@ -5272,7 +5812,11 @@ namespace py::cpp::Windows::Graphics::Imaging
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
-                self->obj.CopyFromBuffer(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.CopyFromBuffer(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5311,7 +5855,11 @@ namespace py::cpp::Windows::Graphics::Imaging
 
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::SoftwareBitmap>(args, 0);
 
-                self->obj.CopyTo(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.CopyTo(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5350,7 +5898,11 @@ namespace py::cpp::Windows::Graphics::Imaging
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
-                self->obj.CopyToBuffer(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.CopyToBuffer(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5392,7 +5944,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 auto param2 = py::convert_to<int32_t>(args, 2);
                 auto param3 = py::convert_to<int32_t>(args, 3);
 
-                return py::convert(winrt::Windows::Graphics::Imaging::SoftwareBitmap::CreateCopyFromBuffer(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Graphics::Imaging::SoftwareBitmap::CreateCopyFromBuffer(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -5430,7 +5986,11 @@ namespace py::cpp::Windows::Graphics::Imaging
 
                 auto param0 = py::convert_to<winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface>(args, 0);
 
-                return py::convert(winrt::Windows::Graphics::Imaging::SoftwareBitmap::CreateCopyFromSurfaceAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Graphics::Imaging::SoftwareBitmap::CreateCopyFromSurfaceAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -5472,7 +6032,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 auto param3 = py::convert_to<int32_t>(args, 3);
                 auto param4 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapAlphaMode>(args, 4);
 
-                return py::convert(winrt::Windows::Graphics::Imaging::SoftwareBitmap::CreateCopyFromBuffer(param0, param1, param2, param3, param4));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Graphics::Imaging::SoftwareBitmap::CreateCopyFromBuffer(param0, param1, param2, param3, param4);
+                }());
             }
             catch (...)
             {
@@ -5511,7 +6075,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 auto param0 = py::convert_to<winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapAlphaMode>(args, 1);
 
-                return py::convert(winrt::Windows::Graphics::Imaging::SoftwareBitmap::CreateCopyFromSurfaceAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Graphics::Imaging::SoftwareBitmap::CreateCopyFromSurfaceAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -5547,7 +6115,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetReadOnlyView());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetReadOnlyView();
+                }());
             }
             catch (...)
             {
@@ -5585,7 +6157,11 @@ namespace py::cpp::Windows::Graphics::Imaging
 
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapBufferAccessMode>(args, 0);
 
-                return py::convert(self->obj.LockBuffer(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.LockBuffer(param0);
+                }());
             }
             catch (...)
             {
@@ -5617,7 +6193,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.DpiY());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DpiY();
+            }());
         }
         catch (...)
         {
@@ -5651,7 +6231,11 @@ namespace py::cpp::Windows::Graphics::Imaging
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.DpiY(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DpiY(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5678,7 +6262,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.DpiX());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DpiX();
+            }());
         }
         catch (...)
         {
@@ -5712,7 +6300,11 @@ namespace py::cpp::Windows::Graphics::Imaging
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.DpiX(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.DpiX(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -5739,7 +6331,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.BitmapAlphaMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BitmapAlphaMode();
+            }());
         }
         catch (...)
         {
@@ -5765,7 +6361,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.BitmapPixelFormat());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BitmapPixelFormat();
+            }());
         }
         catch (...)
         {
@@ -5791,7 +6391,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsReadOnly());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsReadOnly();
+            }());
         }
         catch (...)
         {
@@ -5817,7 +6421,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.PixelHeight());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PixelHeight();
+            }());
         }
         catch (...)
         {
@@ -5843,7 +6451,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.PixelWidth());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PixelWidth();
+            }());
         }
         catch (...)
         {
@@ -5885,7 +6497,11 @@ namespace py::cpp::Windows::Graphics::Imaging
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -6005,7 +6621,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetPixelDataAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetPixelDataAsync();
+                }());
             }
             catch (...)
             {
@@ -6047,7 +6667,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 auto param3 = py::convert_to<winrt::Windows::Graphics::Imaging::ExifOrientationMode>(args, 3);
                 auto param4 = py::convert_to<winrt::Windows::Graphics::Imaging::ColorManagementMode>(args, 4);
 
-                return py::convert(self->obj.GetPixelDataAsync(param0, param1, param2, param3, param4));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetPixelDataAsync(param0, param1, param2, param3, param4);
+                }());
             }
             catch (...)
             {
@@ -6083,7 +6707,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetThumbnailAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetThumbnailAsync();
+                }());
             }
             catch (...)
             {
@@ -6115,7 +6743,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.BitmapAlphaMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BitmapAlphaMode();
+            }());
         }
         catch (...)
         {
@@ -6141,7 +6773,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.BitmapPixelFormat());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BitmapPixelFormat();
+            }());
         }
         catch (...)
         {
@@ -6167,7 +6803,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.BitmapProperties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BitmapProperties();
+            }());
         }
         catch (...)
         {
@@ -6193,7 +6833,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.DpiX());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DpiX();
+            }());
         }
         catch (...)
         {
@@ -6219,7 +6863,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.DpiY());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DpiY();
+            }());
         }
         catch (...)
         {
@@ -6245,7 +6893,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.OrientedPixelHeight());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OrientedPixelHeight();
+            }());
         }
         catch (...)
         {
@@ -6271,7 +6923,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.OrientedPixelWidth());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OrientedPixelWidth();
+            }());
         }
         catch (...)
         {
@@ -6297,7 +6953,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.PixelHeight());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PixelHeight();
+            }());
         }
         catch (...)
         {
@@ -6323,7 +6983,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.PixelWidth());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PixelWidth();
+            }());
         }
         catch (...)
         {
@@ -6787,7 +7451,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetPixelDataAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetPixelDataAsync();
+                }());
             }
             catch (...)
             {
@@ -6829,7 +7497,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 auto param3 = py::convert_to<winrt::Windows::Graphics::Imaging::ExifOrientationMode>(args, 3);
                 auto param4 = py::convert_to<winrt::Windows::Graphics::Imaging::ColorManagementMode>(args, 4);
 
-                return py::convert(self->obj.GetPixelDataAsync(param0, param1, param2, param3, param4));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetPixelDataAsync(param0, param1, param2, param3, param4);
+                }());
             }
             catch (...)
             {
@@ -6865,7 +7537,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetSoftwareBitmapAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetSoftwareBitmapAsync();
+                }());
             }
             catch (...)
             {
@@ -6904,7 +7580,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapPixelFormat>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapAlphaMode>(args, 1);
 
-                return py::convert(self->obj.GetSoftwareBitmapAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetSoftwareBitmapAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -6946,7 +7626,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 auto param3 = py::convert_to<winrt::Windows::Graphics::Imaging::ExifOrientationMode>(args, 3);
                 auto param4 = py::convert_to<winrt::Windows::Graphics::Imaging::ColorManagementMode>(args, 4);
 
-                return py::convert(self->obj.GetSoftwareBitmapAsync(param0, param1, param2, param3, param4));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetSoftwareBitmapAsync(param0, param1, param2, param3, param4);
+                }());
             }
             catch (...)
             {
@@ -6982,7 +7666,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetThumbnailAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetThumbnailAsync();
+                }());
             }
             catch (...)
             {
@@ -7014,7 +7702,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.BitmapAlphaMode());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BitmapAlphaMode();
+            }());
         }
         catch (...)
         {
@@ -7040,7 +7732,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.BitmapPixelFormat());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BitmapPixelFormat();
+            }());
         }
         catch (...)
         {
@@ -7066,7 +7762,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.BitmapProperties());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BitmapProperties();
+            }());
         }
         catch (...)
         {
@@ -7092,7 +7792,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.DpiX());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DpiX();
+            }());
         }
         catch (...)
         {
@@ -7118,7 +7822,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.DpiY());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DpiY();
+            }());
         }
         catch (...)
         {
@@ -7144,7 +7852,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.OrientedPixelHeight());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OrientedPixelHeight();
+            }());
         }
         catch (...)
         {
@@ -7170,7 +7882,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.OrientedPixelWidth());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OrientedPixelWidth();
+            }());
         }
         catch (...)
         {
@@ -7196,7 +7912,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.PixelHeight());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PixelHeight();
+            }());
         }
         catch (...)
         {
@@ -7222,7 +7942,11 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.PixelWidth());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PixelWidth();
+            }());
         }
         catch (...)
         {
@@ -7823,7 +8547,11 @@ namespace py::cpp::Windows::Graphics::Imaging
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
-                return py::convert(self->obj.GetPropertiesAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetPropertiesAsync(param0);
+                }());
             }
             catch (...)
             {

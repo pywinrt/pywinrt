@@ -60,7 +60,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.RawData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RawData();
+            }());
         }
         catch (...)
         {
@@ -86,7 +90,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -112,7 +120,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.Type());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Type();
+            }());
         }
         catch (...)
         {
@@ -232,7 +244,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.Channel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Channel();
+            }());
         }
         catch (...)
         {
@@ -258,7 +274,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.Pressure());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Pressure();
+            }());
         }
         catch (...)
         {
@@ -284,7 +304,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.RawData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RawData();
+            }());
         }
         catch (...)
         {
@@ -310,7 +334,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -336,7 +364,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.Type());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Type();
+            }());
         }
         catch (...)
         {
@@ -455,7 +487,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.RawData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RawData();
+            }());
         }
         catch (...)
         {
@@ -481,7 +517,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -507,7 +547,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.Type());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Type();
+            }());
         }
         catch (...)
         {
@@ -628,7 +672,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.Channel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Channel();
+            }());
         }
         catch (...)
         {
@@ -654,7 +702,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.ControlValue());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ControlValue();
+            }());
         }
         catch (...)
         {
@@ -680,7 +732,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.Controller());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Controller();
+            }());
         }
         catch (...)
         {
@@ -706,7 +762,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.RawData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RawData();
+            }());
         }
         catch (...)
         {
@@ -732,7 +792,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -758,7 +822,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.Type());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Type();
+            }());
         }
         catch (...)
         {
@@ -860,7 +928,11 @@ namespace py::cpp::Windows::Devices::Midi
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -899,7 +971,11 @@ namespace py::cpp::Windows::Devices::Midi
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Midi::MidiInPort::FromIdAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Midi::MidiInPort::FromIdAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -935,7 +1011,11 @@ namespace py::cpp::Windows::Devices::Midi
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Midi::MidiInPort::GetDeviceSelector());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Midi::MidiInPort::GetDeviceSelector();
+                }());
             }
             catch (...)
             {
@@ -967,7 +1047,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceId();
+            }());
         }
         catch (...)
         {
@@ -995,7 +1079,11 @@ namespace py::cpp::Windows::Devices::Midi
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Midi::MidiInPort, winrt::Windows::Devices::Midi::MidiMessageReceivedEventArgs>>(arg);
 
-            return py::convert(self->obj.MessageReceived(param0));
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MessageReceived(param0);
+            }());
         }
         catch (...)
         {
@@ -1023,7 +1111,11 @@ namespace py::cpp::Windows::Devices::Midi
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.MessageReceived(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.MessageReceived(param0);
+            }
+
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1066,7 +1158,11 @@ namespace py::cpp::Windows::Devices::Midi
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -1168,7 +1264,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.Message());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Message();
+            }());
         }
         catch (...)
         {
@@ -1287,7 +1387,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.RawData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RawData();
+            }());
         }
         catch (...)
         {
@@ -1313,7 +1417,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -1339,7 +1447,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.Type());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Type();
+            }());
         }
         catch (...)
         {
@@ -1365,7 +1477,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.Channel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Channel();
+            }());
         }
         catch (...)
         {
@@ -1391,7 +1507,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.Note());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Note();
+            }());
         }
         catch (...)
         {
@@ -1417,7 +1537,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.Velocity());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Velocity();
+            }());
         }
         catch (...)
         {
@@ -1541,7 +1665,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.RawData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RawData();
+            }());
         }
         catch (...)
         {
@@ -1567,7 +1695,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -1593,7 +1725,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.Type());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Type();
+            }());
         }
         catch (...)
         {
@@ -1619,7 +1755,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.Channel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Channel();
+            }());
         }
         catch (...)
         {
@@ -1645,7 +1785,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.Note());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Note();
+            }());
         }
         catch (...)
         {
@@ -1671,7 +1815,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.Velocity());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Velocity();
+            }());
         }
         catch (...)
         {
@@ -1773,7 +1921,11 @@ namespace py::cpp::Windows::Devices::Midi
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1812,7 +1964,11 @@ namespace py::cpp::Windows::Devices::Midi
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Midi::MidiOutPort::FromIdAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Midi::MidiOutPort::FromIdAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1848,7 +2004,11 @@ namespace py::cpp::Windows::Devices::Midi
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Midi::MidiOutPort::GetDeviceSelector());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Midi::MidiOutPort::GetDeviceSelector();
+                }());
             }
             catch (...)
             {
@@ -1886,7 +2046,11 @@ namespace py::cpp::Windows::Devices::Midi
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
-                self->obj.SendBuffer(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SendBuffer(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1925,7 +2089,11 @@ namespace py::cpp::Windows::Devices::Midi
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Midi::IMidiMessage>(args, 0);
 
-                self->obj.SendMessage(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SendMessage(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1958,7 +2126,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceId();
+            }());
         }
         catch (...)
         {
@@ -2000,7 +2172,11 @@ namespace py::cpp::Windows::Devices::Midi
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -2127,7 +2303,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.RawData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RawData();
+            }());
         }
         catch (...)
         {
@@ -2153,7 +2333,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -2179,7 +2363,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.Type());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Type();
+            }());
         }
         catch (...)
         {
@@ -2205,7 +2393,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.Bend());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Bend();
+            }());
         }
         catch (...)
         {
@@ -2231,7 +2423,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.Channel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Channel();
+            }());
         }
         catch (...)
         {
@@ -2354,7 +2550,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.RawData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RawData();
+            }());
         }
         catch (...)
         {
@@ -2380,7 +2580,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -2406,7 +2610,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.Type());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Type();
+            }());
         }
         catch (...)
         {
@@ -2432,7 +2640,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.Channel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Channel();
+            }());
         }
         catch (...)
         {
@@ -2458,7 +2670,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.Note());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Note();
+            }());
         }
         catch (...)
         {
@@ -2484,7 +2700,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.Pressure());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Pressure();
+            }());
         }
         catch (...)
         {
@@ -2607,7 +2827,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.RawData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RawData();
+            }());
         }
         catch (...)
         {
@@ -2633,7 +2857,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -2659,7 +2887,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.Type());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Type();
+            }());
         }
         catch (...)
         {
@@ -2685,7 +2917,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.Channel());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Channel();
+            }());
         }
         catch (...)
         {
@@ -2711,7 +2947,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.Program());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Program();
+            }());
         }
         catch (...)
         {
@@ -2832,7 +3072,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.RawData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RawData();
+            }());
         }
         catch (...)
         {
@@ -2858,7 +3102,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -2884,7 +3132,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.Type());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Type();
+            }());
         }
         catch (...)
         {
@@ -2910,7 +3162,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.Beats());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Beats();
+            }());
         }
         catch (...)
         {
@@ -3030,7 +3286,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.RawData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RawData();
+            }());
         }
         catch (...)
         {
@@ -3056,7 +3316,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -3082,7 +3346,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.Type());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Type();
+            }());
         }
         catch (...)
         {
@@ -3108,7 +3376,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.Song());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Song();
+            }());
         }
         catch (...)
         {
@@ -3226,7 +3498,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.RawData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RawData();
+            }());
         }
         catch (...)
         {
@@ -3252,7 +3528,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -3278,7 +3558,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.Type());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Type();
+            }());
         }
         catch (...)
         {
@@ -3395,7 +3679,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.RawData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RawData();
+            }());
         }
         catch (...)
         {
@@ -3421,7 +3709,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -3447,7 +3739,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.Type());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Type();
+            }());
         }
         catch (...)
         {
@@ -3546,7 +3842,11 @@ namespace py::cpp::Windows::Devices::Midi
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3583,7 +3883,11 @@ namespace py::cpp::Windows::Devices::Midi
                     return nullptr;
                 }
 
-                return py::convert(winrt::Windows::Devices::Midi::MidiSynthesizer::CreateAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Midi::MidiSynthesizer::CreateAsync();
+                }());
             }
             catch (...)
             {
@@ -3621,7 +3925,11 @@ namespace py::cpp::Windows::Devices::Midi
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Enumeration::DeviceInformation>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Midi::MidiSynthesizer::CreateAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Midi::MidiSynthesizer::CreateAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -3659,7 +3967,11 @@ namespace py::cpp::Windows::Devices::Midi
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Enumeration::DeviceInformation>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Midi::MidiSynthesizer::IsSynthesizer(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Midi::MidiSynthesizer::IsSynthesizer(param0);
+                }());
             }
             catch (...)
             {
@@ -3697,7 +4009,11 @@ namespace py::cpp::Windows::Devices::Midi
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
-                self->obj.SendBuffer(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SendBuffer(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3736,7 +4052,11 @@ namespace py::cpp::Windows::Devices::Midi
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Midi::IMidiMessage>(args, 0);
 
-                self->obj.SendMessage(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SendMessage(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3769,7 +4089,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceId();
+            }());
         }
         catch (...)
         {
@@ -3795,7 +4119,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.Volume());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Volume();
+            }());
         }
         catch (...)
         {
@@ -3829,7 +4157,11 @@ namespace py::cpp::Windows::Devices::Midi
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.Volume(param0);
+            {
+                auto _gil = release_gil();
+                self->obj.Volume(param0);
+            }
+
             return 0;
         }
         catch (...)
@@ -3856,7 +4188,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.AudioDevice());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AudioDevice();
+            }());
         }
         catch (...)
         {
@@ -3898,7 +4234,11 @@ namespace py::cpp::Windows::Devices::Midi
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)
@@ -4027,7 +4367,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.RawData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RawData();
+            }());
         }
         catch (...)
         {
@@ -4053,7 +4397,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -4079,7 +4427,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.Type());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Type();
+            }());
         }
         catch (...)
         {
@@ -4196,7 +4548,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.RawData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RawData();
+            }());
         }
         catch (...)
         {
@@ -4222,7 +4578,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -4248,7 +4608,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.Type());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Type();
+            }());
         }
         catch (...)
         {
@@ -4368,7 +4732,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.RawData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RawData();
+            }());
         }
         catch (...)
         {
@@ -4394,7 +4762,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -4420,7 +4792,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.Type());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Type();
+            }());
         }
         catch (...)
         {
@@ -4446,7 +4822,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.FrameType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FrameType();
+            }());
         }
         catch (...)
         {
@@ -4472,7 +4852,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.Values());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Values();
+            }());
         }
         catch (...)
         {
@@ -4591,7 +4975,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.RawData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RawData();
+            }());
         }
         catch (...)
         {
@@ -4617,7 +5005,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -4643,7 +5035,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.Type());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Type();
+            }());
         }
         catch (...)
         {
@@ -4760,7 +5156,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.RawData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RawData();
+            }());
         }
         catch (...)
         {
@@ -4786,7 +5186,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -4812,7 +5216,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.Type());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Type();
+            }());
         }
         catch (...)
         {
@@ -4907,7 +5315,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.RawData());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RawData();
+            }());
         }
         catch (...)
         {
@@ -4933,7 +5345,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.Timestamp());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Timestamp();
+            }());
         }
         catch (...)
         {
@@ -4959,7 +5375,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.Type());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Type();
+            }());
         }
         catch (...)
         {
@@ -5180,7 +5600,11 @@ namespace py::cpp::Windows::Devices::Midi
                     return nullptr;
                 }
 
-                self->obj.Close();
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5219,7 +5643,11 @@ namespace py::cpp::Windows::Devices::Midi
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
-                self->obj.SendBuffer(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SendBuffer(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5258,7 +5686,11 @@ namespace py::cpp::Windows::Devices::Midi
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Midi::IMidiMessage>(args, 0);
 
-                self->obj.SendMessage(param0);
+                {
+                    auto _gil = release_gil();
+                    self->obj.SendMessage(param0);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5291,7 +5723,11 @@ namespace py::cpp::Windows::Devices::Midi
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeviceId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceId();
+            }());
         }
         catch (...)
         {
@@ -5333,7 +5769,11 @@ namespace py::cpp::Windows::Devices::Midi
     {
         try
         {
-            self->obj.Close();
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
             Py_RETURN_FALSE;
         }
         catch (...)

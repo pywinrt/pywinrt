@@ -38,7 +38,11 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -64,7 +68,11 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
                 return nullptr;
             }
 
-            return py::convert(self->obj.Value());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Value();
+            }());
         }
         catch (...)
         {
@@ -158,7 +166,11 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -184,7 +196,11 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Size();
+            }());
         }
         catch (...)
         {
@@ -278,7 +294,11 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -304,7 +324,11 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
                 return nullptr;
             }
 
-            return py::convert(self->obj.Value());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Value();
+            }());
         }
         catch (...)
         {
@@ -402,7 +426,11 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetBlobInfoAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetBlobInfoAsync();
+                }());
             }
             catch (...)
             {
@@ -441,7 +469,11 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
-                return py::convert(self->obj.GetBlobInfoAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetBlobInfoAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -477,7 +509,11 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetItemCountAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetItemCountAsync();
+                }());
             }
             catch (...)
             {
@@ -584,7 +620,11 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.CreateBlobInfoQuery(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateBlobInfoQuery(param0);
+                }());
             }
             catch (...)
             {
@@ -622,7 +662,11 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
-                return py::convert(self->obj.GetAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -660,7 +704,11 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::Storage::Streams::IBuffer>>(args, 0);
 
-                return py::convert(self->obj.ReadAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ReadAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -700,7 +748,11 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
-                return py::convert(self->obj.SubmitPropertySetUpdatesAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SubmitPropertySetUpdatesAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -740,7 +792,11 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
-                return py::convert(self->obj.SubmitUpdatesAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SubmitUpdatesAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -772,7 +828,11 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -798,7 +858,11 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
                 return nullptr;
             }
 
-            return py::convert(self->obj.Provider());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Provider();
+            }());
         }
         catch (...)
         {
@@ -897,7 +961,11 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayName());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayName();
+            }());
         }
         catch (...)
         {
@@ -923,7 +991,11 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
                 return nullptr;
             }
 
-            return py::convert(self->obj.LastModifiedTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LastModifiedTime();
+            }());
         }
         catch (...)
         {
@@ -949,7 +1021,11 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Name();
+            }());
         }
         catch (...)
         {
@@ -975,7 +1051,11 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
                 return nullptr;
             }
 
-            return py::convert(self->obj.NeedsSync());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NeedsSync();
+            }());
         }
         catch (...)
         {
@@ -1001,7 +1081,11 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
                 return nullptr;
             }
 
-            return py::convert(self->obj.TotalSize());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TotalSize();
+            }());
         }
         catch (...)
         {
@@ -1098,7 +1182,11 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -1124,7 +1212,11 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
                 return nullptr;
             }
 
-            return py::convert(self->obj.Value());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Value();
+            }());
         }
         catch (...)
         {
@@ -1222,7 +1314,11 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetContainerInfoAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetContainerInfoAsync();
+                }());
             }
             catch (...)
             {
@@ -1261,7 +1357,11 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
-                return py::convert(self->obj.GetContainerInfoAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetContainerInfoAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1297,7 +1397,11 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetItemCountAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetItemCountAsync();
+                }());
             }
             catch (...)
             {
@@ -1398,7 +1502,11 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -1497,7 +1605,11 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.CreateContainer(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateContainer(param0);
+                }());
             }
             catch (...)
             {
@@ -1533,7 +1645,11 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
                     return nullptr;
                 }
 
-                return py::convert(self->obj.CreateContainerInfoQuery());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateContainerInfoQuery();
+                }());
             }
             catch (...)
             {
@@ -1571,7 +1687,11 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.CreateContainerInfoQuery(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateContainerInfoQuery(param0);
+                }());
             }
             catch (...)
             {
@@ -1609,7 +1729,11 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.DeleteContainerAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.DeleteContainerAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -1648,7 +1772,11 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(winrt::Windows::Gaming::XboxLive::Storage::GameSaveProvider::GetForUserAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Gaming::XboxLive::Storage::GameSaveProvider::GetForUserAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1684,7 +1812,11 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetRemainingBytesInQuotaAsync());
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetRemainingBytesInQuotaAsync();
+                }());
             }
             catch (...)
             {
@@ -1723,7 +1855,11 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(winrt::Windows::Gaming::XboxLive::Storage::GameSaveProvider::GetSyncOnDemandForUserAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Gaming::XboxLive::Storage::GameSaveProvider::GetSyncOnDemandForUserAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1755,7 +1891,11 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContainersChangedSinceLastSync());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContainersChangedSinceLastSync();
+            }());
         }
         catch (...)
         {
@@ -1781,7 +1921,11 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
                 return nullptr;
             }
 
-            return py::convert(self->obj.User());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.User();
+            }());
         }
         catch (...)
         {
@@ -1907,7 +2051,11 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
                 return nullptr;
             }
 
-            return py::convert(self->obj.Status());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
         }
         catch (...)
         {
@@ -1933,7 +2081,11 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
                 return nullptr;
             }
 
-            return py::convert(self->obj.Value());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Value();
+            }());
         }
         catch (...)
         {

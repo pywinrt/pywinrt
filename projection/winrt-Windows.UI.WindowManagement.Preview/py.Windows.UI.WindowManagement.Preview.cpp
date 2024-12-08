@@ -45,7 +45,11 @@ namespace py::cpp::Windows::UI::WindowManagement::Preview
                 auto param0 = py::convert_to<winrt::Windows::UI::WindowManagement::AppWindow>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Size>(args, 1);
 
-                winrt::Windows::UI::WindowManagement::Preview::WindowManagementPreview::SetPreferredMinSize(param0, param1);
+                {
+                    auto _gil = release_gil();
+                    winrt::Windows::UI::WindowManagement::Preview::WindowManagementPreview::SetPreferredMinSize(param0, param1);
+                }
+
                 Py_RETURN_NONE;
             }
             catch (...)

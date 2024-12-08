@@ -46,7 +46,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
-                return py::convert(self->obj.AddDeviceAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.AddDeviceAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -87,7 +91,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
                 auto param3 = py::convert_to<winrt::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorAuthenticationType>(args, 3);
 
-                return py::convert(self->obj.ApproveSessionAsync(param0, param1, param2, param3));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ApproveSessionAsync(param0, param1, param2, param3);
+                }());
             }
             catch (...)
             {
@@ -126,7 +134,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
                 auto param0 = py::convert_to<winrt::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionAuthenticationStatus>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionInfo>(args, 1);
 
-                return py::convert(self->obj.ApproveSessionAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ApproveSessionAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -166,7 +178,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorAuthenticationType>(args, 2);
 
-                return py::convert(self->obj.DenySessionAsync(param0, param1, param2));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.DenySessionAsync(param0, param1, param2);
+                }());
             }
             catch (...)
             {
@@ -204,7 +220,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
 
                 auto param0 = py::convert_to<winrt::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionInfo>(args, 0);
 
-                return py::convert(self->obj.DenySessionAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.DenySessionAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -243,7 +263,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
-                return py::convert(self->obj.GetOneTimePassCodeAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetOneTimePassCodeAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -281,7 +305,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
-                return py::convert(self->obj.GetSessionsAndUnregisteredAccountsAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetSessionsAndUnregisteredAccountsAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -319,7 +347,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
-                return py::convert(self->obj.GetSessionsAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetSessionsAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -357,7 +389,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.RemoveDeviceAsync(param0));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RemoveDeviceAsync(param0);
+                }());
             }
             catch (...)
             {
@@ -396,7 +432,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                return py::convert(self->obj.UpdateWnsChannelAsync(param0, param1));
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.UpdateWnsChannelAsync(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -428,7 +468,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
                 return nullptr;
             }
 
-            return py::convert(winrt::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorAuthenticationManager::Current());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorAuthenticationManager::Current();
+            }());
         }
         catch (...)
         {
@@ -556,7 +600,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.ServiceResponse());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServiceResponse();
+            }());
         }
         catch (...)
         {
@@ -582,7 +630,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Sessions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Sessions();
+            }());
         }
         catch (...)
         {
@@ -676,7 +728,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Code());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Code();
+            }());
         }
         catch (...)
         {
@@ -702,7 +758,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.ServiceResponse());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServiceResponse();
+            }());
         }
         catch (...)
         {
@@ -728,7 +788,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.TimeInterval());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TimeInterval();
+            }());
         }
         catch (...)
         {
@@ -754,7 +818,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.TimeToLive());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TimeToLive();
+            }());
         }
         catch (...)
         {
@@ -850,7 +918,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.ApprovalStatus());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ApprovalStatus();
+            }());
         }
         catch (...)
         {
@@ -876,7 +948,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.AuthenticationType());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AuthenticationType();
+            }());
         }
         catch (...)
         {
@@ -902,7 +978,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplaySessionId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplaySessionId();
+            }());
         }
         catch (...)
         {
@@ -928,7 +1008,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExpirationTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExpirationTime();
+            }());
         }
         catch (...)
         {
@@ -954,7 +1038,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.RequestTime());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RequestTime();
+            }());
         }
         catch (...)
         {
@@ -980,7 +1068,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.SessionId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SessionId();
+            }());
         }
         catch (...)
         {
@@ -1006,7 +1098,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.UserAccountId());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UserAccountId();
+            }());
         }
         catch (...)
         {
@@ -1105,7 +1201,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.ServiceResponse());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ServiceResponse();
+            }());
         }
         catch (...)
         {
@@ -1131,7 +1231,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.Sessions());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Sessions();
+            }());
         }
         catch (...)
         {
@@ -1157,7 +1261,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
                 return nullptr;
             }
 
-            return py::convert(self->obj.UnregisteredAccounts());
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UnregisteredAccounts();
+            }());
         }
         catch (...)
         {
