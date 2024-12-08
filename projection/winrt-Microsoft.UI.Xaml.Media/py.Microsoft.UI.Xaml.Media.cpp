@@ -13,13 +13,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         PyWinrtAcrylicBrush(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtAcrylicBrush() {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -1812,13 +1812,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     struct PyWinrtBrush : py::py_obj_ref, BasePyWinrtBrush
     {
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -3169,13 +3169,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     struct PyWinrtCacheMode : py::py_obj_ref, BasePyWinrtCacheMode
     {
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -4645,13 +4645,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         PyWinrtDesktopAcrylicBackdrop(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtDesktopAcrylicBackdrop() {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -6034,13 +6034,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         PyWinrtFontFamily(PyObject* py_obj, winrt::hstring familyName) : py::py_obj_ref(py_obj), BasePyWinrtFontFamily(familyName) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -6270,13 +6270,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     struct PyWinrtGeneralTransform : py::py_obj_ref, BasePyWinrtGeneralTransform
     {
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -8134,13 +8134,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     struct PyWinrtGradientBrush : py::py_obj_ref, BasePyWinrtGradientBrush
     {
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -12498,13 +12498,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         PyWinrtMicaBackdrop(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtMicaBackdrop() {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -18123,13 +18123,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     struct PyWinrtProjection : py::py_obj_ref, BasePyWinrtProjection
     {
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -18559,13 +18559,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         PyWinrtRadialGradientBrush(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtRadialGradientBrush() {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -21647,13 +21647,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     struct PyWinrtSystemBackdrop : py::py_obj_ref, BasePyWinrtSystemBackdrop
     {
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -22066,13 +22066,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         PyWinrtThemeShadow(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtThemeShadow() {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -22269,13 +22269,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     struct PyWinrtTileBrush : py::py_obj_ref, BasePyWinrtTileBrush
     {
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -24672,13 +24672,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     struct PyWinrtXamlCompositionBrushBase : py::py_obj_ref, BasePyWinrtXamlCompositionBrushBase
     {
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -25030,13 +25030,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     {
         PyWinrtXamlLight(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtXamlLight() {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;

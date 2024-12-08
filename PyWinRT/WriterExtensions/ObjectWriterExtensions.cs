@@ -500,7 +500,7 @@ static class ObjectWriterExtensions
         }
 
         w.WriteBlankLine();
-        w.WriteLine("int32_t GetPyObject(PyObject*& obj) override");
+        w.WriteLine("int32_t __stdcall GetPyObject(PyObject*& obj) override");
         w.WriteLine("{");
         w.Indent++;
         w.WriteLine("obj = py::py_obj_ref::get_py_obj();");
@@ -510,7 +510,7 @@ static class ObjectWriterExtensions
 
         w.WriteBlankLine();
         w.WriteLine(
-            "int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override"
+            "int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override"
         );
         w.WriteLine("{");
         w.Indent++;

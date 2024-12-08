@@ -130,13 +130,13 @@ namespace py::cpp::TestComponent
         PyWinrtComposable(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtComposable() {}
         PyWinrtComposable(PyObject* py_obj, int32_t init) : py::py_obj_ref(py_obj), BasePyWinrtComposable(init) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -647,13 +647,13 @@ namespace py::cpp::TestComponent
     {
         PyWinrtDerived(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtDerived() {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -820,13 +820,13 @@ namespace py::cpp::TestComponent
     {
         PyWinrtOverloadClass(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtOverloadClass() {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -1194,13 +1194,13 @@ namespace py::cpp::TestComponent
     {
         PyWinrtOverride(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtOverride() {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;

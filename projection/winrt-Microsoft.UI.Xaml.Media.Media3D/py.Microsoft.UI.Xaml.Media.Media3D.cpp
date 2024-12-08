@@ -2106,13 +2106,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
     struct PyWinrtTransform3D : py::py_obj_ref, BasePyWinrtTransform3D
     {
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;

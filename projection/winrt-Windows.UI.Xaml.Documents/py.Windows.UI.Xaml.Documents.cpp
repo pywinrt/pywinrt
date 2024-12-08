@@ -12,13 +12,13 @@ namespace py::cpp::Windows::UI::Xaml::Documents
     struct PyWinrtBlock : py::py_obj_ref, BasePyWinrtBlock
     {
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -3560,13 +3560,13 @@ namespace py::cpp::Windows::UI::Xaml::Documents
     struct PyWinrtContentLinkProvider : py::py_obj_ref, BasePyWinrtContentLinkProvider
     {
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -7401,13 +7401,13 @@ namespace py::cpp::Windows::UI::Xaml::Documents
     struct PyWinrtInline : py::py_obj_ref, BasePyWinrtInline
     {
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -9251,13 +9251,13 @@ namespace py::cpp::Windows::UI::Xaml::Documents
     {
         PyWinrtSpan(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtSpan() {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -11914,13 +11914,13 @@ namespace py::cpp::Windows::UI::Xaml::Documents
     {
         PyWinrtTextHighlighter(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtTextHighlighter() {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
