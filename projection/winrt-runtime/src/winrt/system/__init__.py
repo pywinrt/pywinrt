@@ -176,8 +176,11 @@ def _mixin_mapping(typ) -> None:
     if not hasattr(typ, "__contains__"):
         typ.__contains__ = Mapping.__contains__
 
-    if typ.__eq__ == object.__eq__:
+    if typ.__eq__ == object.__eq__ or typ.__eq__ == Object.__eq__:
         typ.__eq__ = Mapping.__eq__
+
+    if typ.__ne__ == object.__ne__ or typ.__ne__ == Object.__ne__:
+        typ.__ne__ = Mapping.__ne__
 
     Mapping.register(typ)
 
