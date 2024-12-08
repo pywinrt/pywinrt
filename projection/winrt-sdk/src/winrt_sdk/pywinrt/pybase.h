@@ -8,7 +8,9 @@
 #include "pywinrt_version.h"
 
 #define COM_NO_WINDOWS_H
+#ifndef NOMINMAX
 #define NOMINMAX
+#endif
 #include <unknwn.h>
 #undef GetCurrentTime
 #include <winrt/Windows.Foundation.h>
