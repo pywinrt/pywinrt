@@ -13,13 +13,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     {
         PyWinrtAppBarButton(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtAppBarButton() {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -885,13 +885,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     {
         PyWinrtAppBarToggleButton(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtAppBarToggleButton() {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -1757,13 +1757,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     {
         PyWinrtButton(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtButton() {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -2031,13 +2031,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     {
         PyWinrtCheckBox(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtCheckBox() {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -2204,13 +2204,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     {
         PyWinrtComboBox(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtComboBox() {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -4167,13 +4167,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     {
         PyWinrtComboBoxItem(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtComboBoxItem() {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -4340,13 +4340,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     {
         PyWinrtCommandBarFlyout(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtCommandBarFlyout() {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -5878,13 +5878,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     {
         PyWinrtDropDownButton(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtDropDownButton() {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -6051,13 +6051,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     {
         PyWinrtFlipView(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtFlipView() {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -6325,13 +6325,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     {
         PyWinrtFlipViewItem(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtFlipViewItem() {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -6498,13 +6498,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     {
         PyWinrtFlyout(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtFlyout() {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -6873,13 +6873,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     {
         PyWinrtGridView(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtGridView() {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -7046,13 +7046,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     {
         PyWinrtGridViewItem(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtGridViewItem() {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -7250,13 +7250,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     {
         PyWinrtHyperlinkButton(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtHyperlinkButton() {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -7524,13 +7524,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     {
         PyWinrtListBox(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtListBox() {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -8016,13 +8016,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     {
         PyWinrtListBoxItem(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtListBoxItem() {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -9251,13 +9251,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     {
         PyWinrtListView(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtListView() {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -9423,13 +9423,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     struct PyWinrtListViewBase : py::py_obj_ref, BasePyWinrtListViewBase
     {
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -12872,13 +12872,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     {
         PyWinrtListViewItem(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtListViewItem() {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -13076,13 +13076,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     {
         PyWinrtMenuBarItemFlyout(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtMenuBarItemFlyout() {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -13249,13 +13249,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     {
         PyWinrtMenuFlyout(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtMenuFlyout() {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -14024,13 +14024,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     {
         PyWinrtProgressBar(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtProgressBar() {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -14531,13 +14531,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     {
         PyWinrtRadioButton(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtRadioButton() {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -14805,13 +14805,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     {
         PyWinrtRevealListViewItemPresenter(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtRevealListViewItemPresenter() {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -14978,13 +14978,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     {
         PyWinrtSlider(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtSlider() {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -16262,13 +16262,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     {
         PyWinrtTabViewItem(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtTabViewItem() {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -16968,13 +16968,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     {
         PyWinrtTextCommandBarFlyout(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtTextCommandBarFlyout() {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -17667,13 +17667,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     {
         PyWinrtTreeViewItem(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtTreeViewItem() {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -18710,13 +18710,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     {
         PyWinrtTreeViewList(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtTreeViewList() {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;

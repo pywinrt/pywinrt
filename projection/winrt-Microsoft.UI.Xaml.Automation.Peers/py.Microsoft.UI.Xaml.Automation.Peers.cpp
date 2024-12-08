@@ -13,13 +13,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtAnimatedVisualPlayerAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::AnimatedVisualPlayer owner) : py::py_obj_ref(py_obj), BasePyWinrtAnimatedVisualPlayerAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -188,13 +188,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtAppBarAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::AppBar owner) : py::py_obj_ref(py_obj), BasePyWinrtAppBarAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -866,13 +866,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtAppBarButtonAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::AppBarButton owner) : py::py_obj_ref(py_obj), BasePyWinrtAppBarButtonAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -1156,13 +1156,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtAppBarToggleButtonAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::AppBarToggleButton owner) : py::py_obj_ref(py_obj), BasePyWinrtAppBarToggleButtonAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -1462,13 +1462,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     struct PyWinrtAutomationPeer : py::py_obj_ref, BasePyWinrtAutomationPeer
     {
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -7610,13 +7610,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtBreadcrumbBarItemAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::BreadcrumbBarItem owner) : py::py_obj_ref(py_obj), BasePyWinrtBreadcrumbBarItemAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -7827,13 +7827,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtButtonAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::Button owner) : py::py_obj_ref(py_obj), BasePyWinrtButtonAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -8043,13 +8043,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     struct PyWinrtButtonBaseAutomationPeer : py::py_obj_ref, BasePyWinrtButtonBaseAutomationPeer
     {
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -8164,13 +8164,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtCalendarDatePickerAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::CalendarDatePicker owner) : py::py_obj_ref(py_obj), BasePyWinrtCalendarDatePickerAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -8487,13 +8487,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtCheckBoxAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::CheckBox owner) : py::py_obj_ref(py_obj), BasePyWinrtCheckBoxAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -8662,13 +8662,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtColorPickerSliderAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::Primitives::ColorPickerSlider owner) : py::py_obj_ref(py_obj), BasePyWinrtColorPickerSliderAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -8837,13 +8837,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtColorSpectrumAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::Primitives::ColorSpectrum owner) : py::py_obj_ref(py_obj), BasePyWinrtColorSpectrumAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -9012,13 +9012,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtComboBoxAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::ComboBox owner) : py::py_obj_ref(py_obj), BasePyWinrtComboBoxAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -9723,13 +9723,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtComboBoxItemAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::ComboBoxItem owner) : py::py_obj_ref(py_obj), BasePyWinrtComboBoxItemAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -9898,13 +9898,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtComboBoxItemDataAutomationPeer(PyObject* py_obj, winrt::Windows::Foundation::IInspectable item, winrt::Microsoft::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer parent) : py::py_obj_ref(py_obj), BasePyWinrtComboBoxItemDataAutomationPeer(item, parent) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -10116,13 +10116,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtDatePickerAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::DatePicker owner) : py::py_obj_ref(py_obj), BasePyWinrtDatePickerAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -10357,13 +10357,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtDropDownButtonAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::DropDownButton owner) : py::py_obj_ref(py_obj), BasePyWinrtDropDownButtonAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -10647,13 +10647,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtExpanderAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::Expander owner) : py::py_obj_ref(py_obj), BasePyWinrtExpanderAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -10937,13 +10937,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtFlipViewAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::FlipView owner) : py::py_obj_ref(py_obj), BasePyWinrtFlipViewAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -11112,13 +11112,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtFlipViewItemAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::FlipViewItem owner) : py::py_obj_ref(py_obj), BasePyWinrtFlipViewItemAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -11287,13 +11287,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtFlipViewItemDataAutomationPeer(PyObject* py_obj, winrt::Windows::Foundation::IInspectable item, winrt::Microsoft::UI::Xaml::Automation::Peers::FlipViewAutomationPeer parent) : py::py_obj_ref(py_obj), BasePyWinrtFlipViewItemDataAutomationPeer(item, parent) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -11505,13 +11505,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtFlyoutPresenterAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::FlyoutPresenter owner) : py::py_obj_ref(py_obj), BasePyWinrtFlyoutPresenterAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -11680,13 +11680,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtFrameworkElementAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::FrameworkElement owner) : py::py_obj_ref(py_obj), BasePyWinrtFrameworkElementAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -11972,13 +11972,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtGridViewAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::GridView owner) : py::py_obj_ref(py_obj), BasePyWinrtGridViewAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -12147,13 +12147,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtGridViewHeaderItemAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::GridViewHeaderItem owner) : py::py_obj_ref(py_obj), BasePyWinrtGridViewHeaderItemAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -12322,13 +12322,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtGridViewItemAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::GridViewItem owner) : py::py_obj_ref(py_obj), BasePyWinrtGridViewItemAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -12497,13 +12497,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtGridViewItemDataAutomationPeer(PyObject* py_obj, winrt::Windows::Foundation::IInspectable item, winrt::Microsoft::UI::Xaml::Automation::Peers::GridViewAutomationPeer parent) : py::py_obj_ref(py_obj), BasePyWinrtGridViewItemDataAutomationPeer(item, parent) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -12715,13 +12715,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtGroupItemAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::GroupItem owner) : py::py_obj_ref(py_obj), BasePyWinrtGroupItemAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -12890,13 +12890,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtHubAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::Hub owner) : py::py_obj_ref(py_obj), BasePyWinrtHubAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -13065,13 +13065,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtHubSectionAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::HubSection owner) : py::py_obj_ref(py_obj), BasePyWinrtHubSectionAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -13282,13 +13282,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtHyperlinkButtonAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::HyperlinkButton owner) : py::py_obj_ref(py_obj), BasePyWinrtHyperlinkButtonAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -13499,13 +13499,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtImageAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::Image owner) : py::py_obj_ref(py_obj), BasePyWinrtImageAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -13674,13 +13674,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtInfoBarAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::InfoBar owner) : py::py_obj_ref(py_obj), BasePyWinrtInfoBarAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -13849,13 +13849,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtItemAutomationPeer(PyObject* py_obj, winrt::Windows::Foundation::IInspectable item, winrt::Microsoft::UI::Xaml::Automation::Peers::ItemsControlAutomationPeer parent) : py::py_obj_ref(py_obj), BasePyWinrtItemAutomationPeer(item, parent) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -14129,13 +14129,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtItemContainerAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::ItemContainer owner) : py::py_obj_ref(py_obj), BasePyWinrtItemContainerAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -14534,13 +14534,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtItemsControlAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::ItemsControl owner) : py::py_obj_ref(py_obj), BasePyWinrtItemsControlAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -14874,13 +14874,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtItemsViewAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::ItemsView owner) : py::py_obj_ref(py_obj), BasePyWinrtItemsViewAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -15152,13 +15152,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtListBoxAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::ListBox owner) : py::py_obj_ref(py_obj), BasePyWinrtListBoxAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -15327,13 +15327,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtListBoxItemAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::ListBoxItem owner) : py::py_obj_ref(py_obj), BasePyWinrtListBoxItemAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -15502,13 +15502,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtListBoxItemDataAutomationPeer(PyObject* py_obj, winrt::Windows::Foundation::IInspectable item, winrt::Microsoft::UI::Xaml::Automation::Peers::ListBoxAutomationPeer parent) : py::py_obj_ref(py_obj), BasePyWinrtListBoxItemDataAutomationPeer(item, parent) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -15786,13 +15786,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtListViewAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::ListView owner) : py::py_obj_ref(py_obj), BasePyWinrtListViewAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -15961,13 +15961,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtListViewBaseAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::ListViewBase owner) : py::py_obj_ref(py_obj), BasePyWinrtListViewBaseAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -16197,13 +16197,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     struct PyWinrtListViewBaseHeaderItemAutomationPeer : py::py_obj_ref, BasePyWinrtListViewBaseHeaderItemAutomationPeer
     {
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -16318,13 +16318,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtListViewHeaderItemAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::ListViewHeaderItem owner) : py::py_obj_ref(py_obj), BasePyWinrtListViewHeaderItemAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -16493,13 +16493,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtListViewItemAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::ListViewItem owner) : py::py_obj_ref(py_obj), BasePyWinrtListViewItemAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -16668,13 +16668,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtListViewItemDataAutomationPeer(PyObject* py_obj, winrt::Windows::Foundation::IInspectable item, winrt::Microsoft::UI::Xaml::Automation::Peers::ListViewBaseAutomationPeer parent) : py::py_obj_ref(py_obj), BasePyWinrtListViewItemDataAutomationPeer(item, parent) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -17780,13 +17780,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtMediaPlayerElementAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::MediaPlayerElement owner) : py::py_obj_ref(py_obj), BasePyWinrtMediaPlayerElementAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -17955,13 +17955,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtMediaTransportControlsAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::MediaTransportControls owner) : py::py_obj_ref(py_obj), BasePyWinrtMediaTransportControlsAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -18130,13 +18130,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtMenuBarAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::MenuBar owner) : py::py_obj_ref(py_obj), BasePyWinrtMenuBarAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -18305,13 +18305,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtMenuBarItemAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::MenuBarItem owner) : py::py_obj_ref(py_obj), BasePyWinrtMenuBarItemAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -18637,13 +18637,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtMenuFlyoutItemAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::MenuFlyoutItem owner) : py::py_obj_ref(py_obj), BasePyWinrtMenuFlyoutItemAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -18854,13 +18854,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtMenuFlyoutPresenterAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::MenuFlyoutPresenter owner) : py::py_obj_ref(py_obj), BasePyWinrtMenuFlyoutPresenterAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -19029,13 +19029,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtNavigationViewAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::NavigationView owner) : py::py_obj_ref(py_obj), BasePyWinrtNavigationViewAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -19204,13 +19204,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtNavigationViewItemAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::NavigationViewItem owner) : py::py_obj_ref(py_obj), BasePyWinrtNavigationViewItemAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -19494,13 +19494,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtNumberBoxAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::NumberBox owner) : py::py_obj_ref(py_obj), BasePyWinrtNumberBoxAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -19669,13 +19669,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtPasswordBoxAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::PasswordBox owner) : py::py_obj_ref(py_obj), BasePyWinrtPasswordBoxAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -19844,13 +19844,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtPersonPictureAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::PersonPicture owner) : py::py_obj_ref(py_obj), BasePyWinrtPersonPictureAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -20085,13 +20085,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtPipsPagerAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::PipsPager owner) : py::py_obj_ref(py_obj), BasePyWinrtPipsPagerAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -21182,13 +21182,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtProgressBarAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::ProgressBar owner) : py::py_obj_ref(py_obj), BasePyWinrtProgressBarAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -21357,13 +21357,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtProgressRingAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::ProgressRing owner) : py::py_obj_ref(py_obj), BasePyWinrtProgressRingAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -21762,13 +21762,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtRadioButtonAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::RadioButton owner) : py::py_obj_ref(py_obj), BasePyWinrtRadioButtonAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -22125,13 +22125,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtRadioButtonsAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::RadioButtons owner) : py::py_obj_ref(py_obj), BasePyWinrtRadioButtonsAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -22300,13 +22300,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtRangeBaseAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::Primitives::RangeBase owner) : py::py_obj_ref(py_obj), BasePyWinrtRangeBaseAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -22705,13 +22705,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtRatingControlAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::RatingControl owner) : py::py_obj_ref(py_obj), BasePyWinrtRatingControlAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -22880,13 +22880,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtRepeatButtonAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::Primitives::RepeatButton owner) : py::py_obj_ref(py_obj), BasePyWinrtRepeatButtonAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -23097,13 +23097,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtRepeaterAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::ItemsRepeater owner) : py::py_obj_ref(py_obj), BasePyWinrtRepeaterAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -23272,13 +23272,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtRichEditBoxAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::RichEditBox owner) : py::py_obj_ref(py_obj), BasePyWinrtRichEditBoxAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -23447,13 +23447,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtRichTextBlockAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::RichTextBlock owner) : py::py_obj_ref(py_obj), BasePyWinrtRichTextBlockAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -23622,13 +23622,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtRichTextBlockOverflowAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::RichTextBlockOverflow owner) : py::py_obj_ref(py_obj), BasePyWinrtRichTextBlockOverflowAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -23797,13 +23797,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtScrollBarAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollBar owner) : py::py_obj_ref(py_obj), BasePyWinrtScrollBarAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -23972,13 +23972,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtScrollPresenterAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter owner) : py::py_obj_ref(py_obj), BasePyWinrtScrollPresenterAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -24147,13 +24147,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtScrollViewerAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::ScrollViewer owner) : py::py_obj_ref(py_obj), BasePyWinrtScrollViewerAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -24598,13 +24598,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtSelectorAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::Primitives::Selector owner) : py::py_obj_ref(py_obj), BasePyWinrtSelectorAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -24876,13 +24876,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtSelectorBarItemAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::SelectorBarItem owner) : py::py_obj_ref(py_obj), BasePyWinrtSelectorBarItemAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -25051,13 +25051,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtSelectorItemAutomationPeer(PyObject* py_obj, winrt::Windows::Foundation::IInspectable item, winrt::Microsoft::UI::Xaml::Automation::Peers::SelectorAutomationPeer parent) : py::py_obj_ref(py_obj), BasePyWinrtSelectorItemAutomationPeer(item, parent) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -25415,13 +25415,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtSemanticZoomAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::SemanticZoom owner) : py::py_obj_ref(py_obj), BasePyWinrtSemanticZoomAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -25663,13 +25663,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtSliderAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::Slider owner) : py::py_obj_ref(py_obj), BasePyWinrtSliderAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -25838,13 +25838,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtSplitButtonAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::SplitButton owner) : py::py_obj_ref(py_obj), BasePyWinrtSplitButtonAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -26170,13 +26170,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtTabViewAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::TabView owner) : py::py_obj_ref(py_obj), BasePyWinrtTabViewAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -26345,13 +26345,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtTabViewItemAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::TabViewItem owner) : py::py_obj_ref(py_obj), BasePyWinrtTabViewItemAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -26520,13 +26520,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtTeachingTipAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::TeachingTip owner) : py::py_obj_ref(py_obj), BasePyWinrtTeachingTipAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -26695,13 +26695,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtTextBlockAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::TextBlock owner) : py::py_obj_ref(py_obj), BasePyWinrtTextBlockAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -26870,13 +26870,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtTextBoxAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::TextBox owner) : py::py_obj_ref(py_obj), BasePyWinrtTextBoxAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -27045,13 +27045,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtThumbAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::Primitives::Thumb owner) : py::py_obj_ref(py_obj), BasePyWinrtThumbAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -27220,13 +27220,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtTimePickerAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::TimePicker owner) : py::py_obj_ref(py_obj), BasePyWinrtTimePickerAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -27461,13 +27461,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtToggleButtonAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::Primitives::ToggleButton owner) : py::py_obj_ref(py_obj), BasePyWinrtToggleButtonAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -27709,13 +27709,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtToggleMenuFlyoutItemAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::ToggleMenuFlyoutItem owner) : py::py_obj_ref(py_obj), BasePyWinrtToggleMenuFlyoutItemAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -27957,13 +27957,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtToggleSplitButtonAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::ToggleSplitButton owner) : py::py_obj_ref(py_obj), BasePyWinrtToggleSplitButtonAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -28320,13 +28320,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtToggleSwitchAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::ToggleSwitch owner) : py::py_obj_ref(py_obj), BasePyWinrtToggleSwitchAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -28568,13 +28568,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtTreeViewItemAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::TreeViewItem owner) : py::py_obj_ref(py_obj), BasePyWinrtTreeViewItemAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -28858,13 +28858,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtTreeViewItemDataAutomationPeer(PyObject* py_obj, winrt::Windows::Foundation::IInspectable item, winrt::Microsoft::UI::Xaml::Automation::Peers::TreeViewListAutomationPeer parent) : py::py_obj_ref(py_obj), BasePyWinrtTreeViewItemDataAutomationPeer(item, parent) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -29149,13 +29149,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtTreeViewListAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::TreeViewList owner) : py::py_obj_ref(py_obj), BasePyWinrtTreeViewListAutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -29324,13 +29324,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         PyWinrtWebView2AutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::WebView2 owner) : py::py_obj_ref(py_obj), BasePyWinrtWebView2AutomationPeer(owner) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;

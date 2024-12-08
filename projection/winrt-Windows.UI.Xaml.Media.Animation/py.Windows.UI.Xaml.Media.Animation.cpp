@@ -315,13 +315,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     {
         PyWinrtBasicConnectedAnimationConfiguration(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtBasicConnectedAnimationConfiguration() {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -1967,13 +1967,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     struct PyWinrtColorKeyFrame : py::py_obj_ref, BasePyWinrtColorKeyFrame
     {
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -5294,13 +5294,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     {
         PyWinrtDirectConnectedAnimationConfiguration(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtDirectConnectedAnimationConfiguration() {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -6681,13 +6681,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     struct PyWinrtDoubleKeyFrame : py::py_obj_ref, BasePyWinrtDoubleKeyFrame
     {
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -12466,13 +12466,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     {
         PyWinrtGravityConnectedAnimationConfiguration(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtGravityConnectedAnimationConfiguration() {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -13548,13 +13548,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     struct PyWinrtNavigationTransitionInfo : py::py_obj_ref, BasePyWinrtNavigationTransitionInfo
     {
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -14058,13 +14058,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     struct PyWinrtObjectKeyFrame : py::py_obj_ref, BasePyWinrtObjectKeyFrame
     {
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -16257,13 +16257,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     struct PyWinrtPointKeyFrame : py::py_obj_ref, BasePyWinrtPointKeyFrame
     {
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
@@ -25405,13 +25405,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     struct PyWinrtTimeline : py::py_obj_ref, BasePyWinrtTimeline
     {
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;

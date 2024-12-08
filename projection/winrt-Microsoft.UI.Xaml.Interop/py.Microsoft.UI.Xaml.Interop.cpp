@@ -13,13 +13,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Interop
     {
         PyWinrtNotifyCollectionChangedEventArgs(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Interop::NotifyCollectionChangedAction action, winrt::Microsoft::UI::Xaml::Interop::IBindableVector newItems, winrt::Microsoft::UI::Xaml::Interop::IBindableVector oldItems, int32_t newIndex, int32_t oldIndex) : py::py_obj_ref(py_obj), BasePyWinrtNotifyCollectionChangedEventArgs(action, newItems, oldItems, newIndex, oldIndex) {}
 
-        int32_t GetPyObject(PyObject*& obj) override
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
         {
             obj = py::py_obj_ref::get_py_obj();
             return 0;
         }
 
-        int32_t GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
         {
             inner = m_inner;
             return winrt::impl::error_ok;
