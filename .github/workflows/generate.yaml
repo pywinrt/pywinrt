@@ -26,14 +26,6 @@ jobs:
   generate:
     runs-on: windows-latest
     steps:
-      # work around https://github.com/actions/runner-images/issues/10734
-      - name: Download Visual Studio installer
-        run: |
-          Invoke-WebRequest -Uri "https://aka.ms/vs/17/release/vs_enterprise.exe" -OutFile vs_enterprise.exe
-      - name: Install WinSdk 26100 with VS
-        run: |
-          $process = Start-Process -FilePath vs_enterprise.exe -ArgumentList "modify", "--add", '"Microsoft.VisualStudio.Component.Windows11SDK.26100"', "--installPath", '"C:\Program Files\Microsoft Visual Studio\2022\Enterprise"', "--wait", "--quiet", "--force", "--norestart" -Wait -PassThru
-          Write-Output $process.ExitCode
       - uses: actions/checkout@v4
       - run: dotnet build PyWinRT -c Release
       - run: ./scripts/fetch-tools.ps1
