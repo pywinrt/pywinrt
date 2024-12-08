@@ -204,11 +204,15 @@ class TestTestComponent(unittest.TestCase):
             c2,
             "different wrappers of the same WinRT object instance should be equal",
         )
+        self.assertFalse(
+            c1 == c3, "different WinRT object instances should not be equal"
+        )
         self.assertNotEqual(
             c1,
             c3,
             "different wrappers of the different WinRT object instances should not be equal",
         )
+        self.assertFalse(c1 != c2, "WinRT object should be equal to itself")
         self.assertNotEqual(
             c1,
             c4,
