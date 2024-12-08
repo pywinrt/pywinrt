@@ -1721,6 +1721,14 @@ namespace py
     template<typename D, typename... I>
     struct python_implements : winrt::implements<D, I...>
     {
+        // WinRT may free these objects without holding the GIL, so we need to
+        // make sure that the GIL is held when we release the object so that
+        // the Python finalizers can be called safely, if needed.
+        static void final_release(std::unique_ptr<D> self)
+        {
+            auto gil = ensure_gil();
+            self.reset();
+        }
     };
 
     template<typename T>
