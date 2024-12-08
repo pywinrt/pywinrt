@@ -1721,17 +1721,6 @@ namespace py
     template<typename D, typename... I>
     struct python_implements : winrt::implements<D, I...>
     {
-        PyGILState_STATE state;
-
-        void abi_enter() noexcept
-        {
-            state = PyGILState_Ensure();
-        }
-
-        void abi_exit() const noexcept
-        {
-            PyGILState_Release(state);
-        }
     };
 
     template<typename T>
@@ -1786,49 +1775,65 @@ namespace py
         }
 
         auto Current() const
-        try
         {
-            return _current_value.value();
-        }
-        catch (python_exception)
-        {
-            write_unraisable_and_throw();
+            auto gil = ensure_gil();
+
+            try
+            {
+                return _current_value.value();
+            }
+            catch (python_exception)
+            {
+                write_unraisable_and_throw();
+            }
         }
 
         bool HasCurrent() const
-        try
         {
-            return _current_value.has_value();
-        }
-        catch (python_exception)
-        {
-            write_unraisable_and_throw();
+            auto gil = ensure_gil();
+
+            try
+            {
+                return _current_value.has_value();
+            }
+            catch (python_exception)
+            {
+                write_unraisable_and_throw();
+            }
         }
 
         bool MoveNext()
-        try
         {
-            _current_value = get_next(_iterator);
-            return _current_value.has_value();
-        }
-        catch (python_exception)
-        {
-            write_unraisable_and_throw();
+            auto gil = ensure_gil();
+
+            try
+            {
+                _current_value = get_next(_iterator);
+                return _current_value.has_value();
+            }
+            catch (python_exception)
+            {
+                write_unraisable_and_throw();
+            }
         }
 
         uint32_t GetMany(winrt::array_view<T> /*unused*/)
-        try
         {
-            // TODO: implement GetMany
-            PyErr_Format(
-                PyExc_NotImplementedError,
-                "py::python_iterator<%s>::GetMany() is not implemented",
-                typeid(T).name());
-            throw python_exception();
-        }
-        catch (python_exception)
-        {
-            write_unraisable_and_throw();
+            auto gil = ensure_gil();
+
+            try
+            {
+                // TODO: implement GetMany
+                PyErr_Format(
+                    PyExc_NotImplementedError,
+                    "py::python_iterator<%s>::GetMany() is not implemented",
+                    typeid(T).name());
+                throw python_exception();
+            }
+            catch (python_exception)
+            {
+                write_unraisable_and_throw();
+            }
         }
     };
 
@@ -1845,13 +1850,18 @@ namespace py
         }
 
         auto First() const
-        try
         {
-            return winrt::make<python_iterator<T>>(PyObject_GetIter(_iterable.get()));
-        }
-        catch (python_exception)
-        {
-            write_unraisable_and_throw();
+            auto gil = ensure_gil();
+
+            try
+            {
+                return winrt::make<python_iterator<T>>(
+                    PyObject_GetIter(_iterable.get()));
+            }
+            catch (python_exception)
+            {
+                write_unraisable_and_throw();
+            }
         }
     };
 
@@ -1871,93 +1881,114 @@ namespace py
         }
 
         T GetAt(uint32_t index) const
-        try
         {
-            pyobj_handle item{PySequence_GetItem(_sequence.get(), index)};
+            auto gil = ensure_gil();
 
-            if (!item)
+            try
             {
-                throw python_exception();
-            }
+                pyobj_handle item{PySequence_GetItem(_sequence.get(), index)};
 
-            return converter<T>::convert_to(item.get());
-        }
-        catch (python_exception)
-        {
-            write_unraisable_and_throw();
+                if (!item)
+                {
+                    throw python_exception();
+                }
+
+                return converter<T>::convert_to(item.get());
+            }
+            catch (python_exception)
+            {
+                write_unraisable_and_throw();
+            }
         }
 
         uint32_t GetMany(uint32_t /*unused*/, winrt::array_view<T> /*unused*/)
-        try
         {
-            // TODO: implement GetMany
-            PyErr_Format(
-                PyExc_NotImplementedError,
-                "py::python_vector<%s>::GetMany() is not implemented",
-                typeid(T).name());
-            throw python_exception();
-        }
-        catch (python_exception)
-        {
-            write_unraisable_and_throw();
+            auto gil = ensure_gil();
+
+            try
+            {
+                // TODO: implement GetMany
+                PyErr_Format(
+                    PyExc_NotImplementedError,
+                    "py::python_vector<%s>::GetMany() is not implemented",
+                    typeid(T).name());
+                throw python_exception();
+            }
+            catch (python_exception)
+            {
+                write_unraisable_and_throw();
+            }
         }
 
         bool IndexOf(T const& value, uint32_t& index) const
-        try
         {
-            pyobj_handle py_value{converter<T>::convert(value)};
+            auto gil = ensure_gil();
 
-            if (!py_value)
+            try
             {
-                throw python_exception();
-            }
+                pyobj_handle py_value{converter<T>::convert(value)};
 
-            auto py_index = PySequence_Index(_sequence.get(), py_value.get());
-
-            if (py_index == -1)
-            {
-                if (PyErr_ExceptionMatches(PyExc_ValueError))
+                if (!py_value)
                 {
-                    PyErr_Clear();
-                    return false;
+                    throw python_exception();
                 }
 
-                throw python_exception();
+                auto py_index = PySequence_Index(_sequence.get(), py_value.get());
+
+                if (py_index == -1)
+                {
+                    if (PyErr_ExceptionMatches(PyExc_ValueError))
+                    {
+                        PyErr_Clear();
+                        return false;
+                    }
+
+                    throw python_exception();
+                }
+
+                index = static_cast<uint32_t>(py_index);
+
+                return true;
             }
-
-            index = static_cast<uint32_t>(py_index);
-
-            return true;
-        }
-        catch (python_exception)
-        {
-            write_unraisable_and_throw();
+            catch (python_exception)
+            {
+                write_unraisable_and_throw();
+            }
         }
 
         uint32_t Size() const
-        try
         {
-            auto size = PySequence_Size(_sequence.get());
-            if (size == -1 && PyErr_Occurred())
-            {
-                throw python_exception();
-            }
+            auto gil = ensure_gil();
 
-            return static_cast<uint32_t>(size);
-        }
-        catch (python_exception)
-        {
-            write_unraisable_and_throw();
+            try
+            {
+                auto size = PySequence_Size(_sequence.get());
+                if (size == -1 && PyErr_Occurred())
+                {
+                    throw python_exception();
+                }
+
+                return static_cast<uint32_t>(size);
+            }
+            catch (python_exception)
+            {
+                write_unraisable_and_throw();
+            }
         }
 
         auto First() const
-        try
         {
-            return winrt::make<python_iterator<T>>(PyObject_GetIter(_sequence.get()));
-        }
-        catch (python_exception)
-        {
-            write_unraisable_and_throw();
+            auto gil = ensure_gil();
+
+            try
+            {
+                return winrt::make<python_iterator<T>>(
+                    PyObject_GetIter(_sequence.get()));
+            }
+            catch (python_exception)
+            {
+                write_unraisable_and_throw();
+            }
         }
     };
 
@@ -1976,226 +2007,279 @@ namespace py
         }
 
         void Append(T const& value)
-        try
         {
-            pyobj_handle py_value{converter<T>::convert(value)};
+            auto gil = ensure_gil();
 
-            if (!py_value)
+            try
             {
-                throw python_exception();
+                pyobj_handle py_value{converter<T>::convert(value)};
+
+                if (!py_value)
+                {
+                    throw python_exception();
+                }
+
+                pyobj_handle result{PyObject_CallMethod(
+                    _sequence.get(), "append", "O", py_value.get())};
+
+                if (!result)
+                {
+                    throw python_exception();
+                }
             }
-
-            pyobj_handle result{
-                PyObject_CallMethod(_sequence.get(), "append", "O", py_value.get())};
-
-            if (!result)
+            catch (python_exception)
             {
-                throw python_exception();
+                write_unraisable_and_throw();
             }
-        }
-        catch (python_exception)
-        {
-            write_unraisable_and_throw();
         }
 
         void Clear() const
-        try
         {
-            if (PySequence_SetSlice(_sequence.get(), 0, PY_SSIZE_T_MAX, NULL) == -1)
+            auto gil = ensure_gil();
+
+            try
             {
-                throw python_exception();
+                if (PySequence_SetSlice(_sequence.get(), 0, PY_SSIZE_T_MAX, NULL) == -1)
+                {
+                    throw python_exception();
+                }
             }
-        }
-        catch (python_exception)
-        {
-            write_unraisable_and_throw();
+            catch (python_exception)
+            {
+                write_unraisable_and_throw();
+            }
         }
 
         T GetAt(uint32_t index) const
-        try
         {
-            pyobj_handle item{PySequence_GetItem(_sequence.get(), index)};
+            auto gil = ensure_gil();
 
-            if (!item)
+            try
             {
-                throw python_exception();
-            }
+                pyobj_handle item{PySequence_GetItem(_sequence.get(), index)};
 
-            return converter<T>::convert_to(item.get());
-        }
-        catch (python_exception)
-        {
-            write_unraisable_and_throw();
+                if (!item)
+                {
+                    throw python_exception();
+                }
+
+                return converter<T>::convert_to(item.get());
+            }
+            catch (python_exception)
+            {
+                write_unraisable_and_throw();
+            }
         }
 
         uint32_t GetMany(uint32_t /*unused*/, winrt::array_view<T> /*unused*/) const
-        try
         {
-            // TODO: implement GetMany
-            PyErr_Format(
-                PyExc_NotImplementedError,
-                "py::python_vector<%s>::GetMany() is not implemented",
-                typeid(T).name());
-            throw python_exception();
-        }
-        catch (python_exception)
-        {
-            write_unraisable_and_throw();
+            auto gil = ensure_gil();
+
+            try
+            {
+                // TODO: implement GetMany
+                PyErr_Format(
+                    PyExc_NotImplementedError,
+                    "py::python_vector<%s>::GetMany() is not implemented",
+                    typeid(T).name());
+                throw python_exception();
+            }
+            catch (python_exception)
+            {
+                write_unraisable_and_throw();
+            }
         }
 
         winrt::Windows::Foundation::Collections::IVectorView<T> GetView() const
-        try
         {
-            return winrt::make<python_vector_view<T>>(_sequence.get());
-        }
-        catch (python_exception)
-        {
-            write_unraisable_and_throw();
+            auto gil = ensure_gil();
+
+            try
+            {
+                return winrt::make<python_vector_view<T>>(_sequence.get());
+            }
+            catch (python_exception)
+            {
+                write_unraisable_and_throw();
+            }
         }
 
         bool IndexOf(T const& value, uint32_t& index) const
-        try
         {
-            pyobj_handle py_value{converter<T>::convert(value)};
+            auto gil = ensure_gil();
 
-            if (!py_value)
+            try
             {
-                throw python_exception();
-            }
+                pyobj_handle py_value{converter<T>::convert(value)};
 
-            auto py_index = PySequence_Index(_sequence.get(), py_value.get());
-
-            if (py_index == -1)
-            {
-                if (PyErr_ExceptionMatches(PyExc_ValueError))
+                if (!py_value)
                 {
-                    PyErr_Clear();
-                    return false;
+                    throw python_exception();
                 }
 
-                throw python_exception();
+                auto py_index = PySequence_Index(_sequence.get(), py_value.get());
+
+                if (py_index == -1)
+                {
+                    if (PyErr_ExceptionMatches(PyExc_ValueError))
+                    {
+                        PyErr_Clear();
+                        return false;
+                    }
+
+                    throw python_exception();
+                }
+
+                index = static_cast<uint32_t>(py_index);
+
+                return true;
             }
-
-            index = static_cast<uint32_t>(py_index);
-
-            return true;
-        }
-        catch (python_exception)
-        {
-            write_unraisable_and_throw();
+            catch (python_exception)
+            {
+                write_unraisable_and_throw();
+            }
         }
 
         void InsertAt(uint32_t index, T const& value) const
-        try
         {
-            pyobj_handle py_value{converter<T>::convert(value)};
+            auto gil = ensure_gil();
 
-            if (!py_value)
+            try
             {
-                throw python_exception();
+                pyobj_handle py_value{converter<T>::convert(value)};
+
+                if (!py_value)
+                {
+                    throw python_exception();
+                }
+
+                pyobj_handle result{PyObject_CallMethod(
+                    _sequence.get(), "insert", "IO", index, py_value.get())};
+
+                if (!result)
+                {
+                    throw python_exception();
+                }
             }
-
-            pyobj_handle result{PyObject_CallMethod(
-                _sequence.get(), "insert", "IO", index, py_value.get())};
-
-            if (!result)
+            catch (python_exception)
             {
-                throw python_exception();
+                write_unraisable_and_throw();
             }
-        }
-        catch (python_exception)
-        {
-            write_unraisable_and_throw();
         }
 
         void RemoveAt(uint32_t index) const
-        try
         {
-            if (PySequence_DelItem(_sequence.get(), index) == -1)
+            auto gil = ensure_gil();
+
+            try
             {
-                throw python_exception();
+                if (PySequence_DelItem(_sequence.get(), index) == -1)
+                {
+                    throw python_exception();
+                }
             }
-        }
-        catch (python_exception)
-        {
-            write_unraisable_and_throw();
+            catch (python_exception)
+            {
+                write_unraisable_and_throw();
+            }
         }
 
         void RemoveAtEnd() const
-        try
         {
-            RemoveAt(Size() - 1);
-        }
-        catch (python_exception)
-        {
-            write_unraisable_and_throw();
+            auto gil = ensure_gil();
+
+            try
+            {
+                RemoveAt(Size() - 1);
+            }
+            catch (python_exception)
+            {
+                write_unraisable_and_throw();
+            }
         }
 
         void ReplaceAll(winrt::array_view<T const> items)
-        try
         {
-            Clear();
+            auto gil = ensure_gil();
 
-            for (auto const& item : items)
+            try
             {
-                Append(item);
+                Clear();
+
+                for (auto const& item : items)
+                {
+                    Append(item);
+                }
             }
-        }
-        catch (python_exception)
-        {
-            write_unraisable_and_throw();
+            catch (python_exception)
+            {
+                write_unraisable_and_throw();
+            }
         }
 
         void SetAt(uint32_t index, T const& value) const
-        try
         {
-            pyobj_handle py_value{converter<T>::convert(value)};
+            auto gil = ensure_gil();
 
-            if (!py_value)
+            try
             {
-                throw python_exception();
-            }
+                pyobj_handle py_value{converter<T>::convert(value)};
 
-            if (PyList_SetItem(_sequence.get(), index, py_value.get()) == -1)
-            {
-                if (PyErr_ExceptionMatches(PyExc_IndexError))
+                if (!py_value)
                 {
-                    PyErr_Clear();
-                    throw winrt::hresult_out_of_bounds();
+                    throw python_exception();
                 }
 
-                throw python_exception();
+                if (PyList_SetItem(_sequence.get(), index, py_value.get()) == -1)
+                {
+                    if (PyErr_ExceptionMatches(PyExc_IndexError))
+                    {
+                        PyErr_Clear();
+                        throw winrt::hresult_out_of_bounds();
+                    }
+
+                    throw python_exception();
+                }
             }
-        }
-        catch (python_exception)
-        {
-            write_unraisable_and_throw();
+            catch (python_exception)
+            {
+                write_unraisable_and_throw();
+            }
         }
 
         uint32_t Size() const
-        try
         {
-            auto size = PySequence_Size(_sequence.get());
-            if (size == -1 && PyErr_Occurred())
-            {
-                throw python_exception();
-            }
+            auto gil = ensure_gil();
 
-            return static_cast<uint32_t>(size);
-        }
-        catch (python_exception)
-        {
-            write_unraisable_and_throw();
+            try
+            {
+                auto size = PySequence_Size(_sequence.get());
+                if (size == -1 && PyErr_Occurred())
+                {
+                    throw python_exception();
+                }
+
+                return static_cast<uint32_t>(size);
+            }
+            catch (python_exception)
+            {
+                write_unraisable_and_throw();
+            }
         }
 
         auto First() const
-        try
         {
-            return winrt::make<python_iterator<T>>(PyObject_GetIter(_sequence.get()));
-        }
-        catch (python_exception)
-        {
-            write_unraisable_and_throw();
+            auto gil = ensure_gil();
+
+            try
+            {
+                return winrt::make<python_iterator<T>>(
+                    PyObject_GetIter(_sequence.get()));
+            }
+            catch (python_exception)
+            {
+                write_unraisable_and_throw();
+            }
         }
     };
 
@@ -2213,23 +2297,31 @@ namespace py
         }
 
         K Key() const
-        try
         {
-            return _key;
-        }
-        catch (python_exception)
-        {
-            write_unraisable_and_throw();
+            auto gil = ensure_gil();
+
+            try
+            {
+                return _key;
+            }
+            catch (python_exception)
+            {
+                write_unraisable_and_throw();
+            }
         }
 
         V Value() const
-        try
         {
-            return _value;
-        }
-        catch (python_exception)
-        {
-            write_unraisable_and_throw();
+            auto gil = ensure_gil();
+
+            try
+            {
+                return _value;
+            }
+            catch (python_exception)
+            {
+                write_unraisable_and_throw();
+            }
         }
     };
 
@@ -2289,50 +2381,66 @@ namespace py
         }
 
         KVPair Current() const
-        try
         {
-            return _current_value.value();
-        }
-        catch (python_exception)
-        {
-            write_unraisable_and_throw();
+            auto gil = ensure_gil();
+
+            try
+            {
+                return _current_value.value();
+            }
+            catch (python_exception)
+            {
+                write_unraisable_and_throw();
+            }
         }
 
         bool HasCurrent() const
-        try
         {
-            return _current_value.has_value();
-        }
-        catch (python_exception)
-        {
-            write_unraisable_and_throw();
+            auto gil = ensure_gil();
+
+            try
+            {
+                return _current_value.has_value();
+            }
+            catch (python_exception)
+            {
+                write_unraisable_and_throw();
+            }
         }
 
         bool MoveNext()
-        try
         {
-            _current_value = get_next(_mapping, _iterator);
-            return _current_value.has_value();
-        }
-        catch (python_exception)
-        {
-            write_unraisable_and_throw();
+            auto gil = ensure_gil();
+
+            try
+            {
+                _current_value = get_next(_mapping, _iterator);
+                return _current_value.has_value();
+            }
+            catch (python_exception)
+            {
+                write_unraisable_and_throw();
+            }
         }
 
         uint32_t GetMany(winrt::array_view<KVPair> /*unused*/) const
-        try
         {
-            // TODO: implement GetMany
-            PyErr_Format(
-                PyExc_NotImplementedError,
-                "py::python_mapping_iterator<%s, %s>::GetMany() is not implemented",
-                typeid(K).name(),
-                typeid(V).name());
-            throw python_exception();
-        }
-        catch (python_exception)
-        {
-            write_unraisable_and_throw();
+            auto gil = ensure_gil();
+
+            try
+            {
+                // TODO: implement GetMany
+                PyErr_Format(
+                    PyExc_NotImplementedError,
+                    "py::python_mapping_iterator<%s, %s>::GetMany() is not implemented",
+                    typeid(K).name(),
+                    typeid(V).name());
+                throw python_exception();
+            }
+            catch (python_exception)
+            {
+                write_unraisable_and_throw();
+            }
         }
     };
 
@@ -2353,100 +2461,120 @@ namespace py
         }
 
         bool HasKey(K const& key) const
-        try
         {
-            pyobj_handle py_key{converter<K>::convert(key)};
+            auto gil = ensure_gil();
 
-            if (!py_key)
+            try
             {
-                throw python_exception();
+                pyobj_handle py_key{converter<K>::convert(key)};
+
+                if (!py_key)
+                {
+                    throw python_exception();
+                }
+
+                auto ret = PyMapping_HasKeyWithError(_mapping.get(), py_key.get());
+
+                if (ret == -1)
+                {
+                    throw python_exception();
+                }
+
+                return static_cast<bool>(ret);
             }
-
-            auto ret = PyMapping_HasKeyWithError(_mapping.get(), py_key.get());
-
-            if (ret == -1)
+            catch (python_exception)
             {
-                throw python_exception();
+                write_unraisable_and_throw();
             }
-
-            return static_cast<bool>(ret);
-        }
-        catch (python_exception)
-        {
-            write_unraisable_and_throw();
         }
 
         V Lookup(K const& key) const
-        try
         {
-            pyobj_handle py_key{converter<K>::convert(key)};
+            auto gil = ensure_gil();
 
-            if (!py_key)
+            try
             {
-                throw python_exception();
-            }
+                pyobj_handle py_key{converter<K>::convert(key)};
 
-            pyobj_handle item{PyObject_GetItem(_mapping.get(), py_key.get())};
-
-            if (!item)
-            {
-                if (PyErr_ExceptionMatches(PyExc_KeyError))
+                if (!py_key)
                 {
-                    PyErr_Clear();
-                    throw winrt::hresult_out_of_bounds();
+                    throw python_exception();
                 }
 
-                throw python_exception();
-            }
+                pyobj_handle item{PyObject_GetItem(_mapping.get(), py_key.get())};
 
-            return converter<V>::convert_to(item.get());
-        }
-        catch (python_exception)
-        {
-            write_unraisable_and_throw();
+                if (!item)
+                {
+                    if (PyErr_ExceptionMatches(PyExc_KeyError))
+                    {
+                        PyErr_Clear();
+                        throw winrt::hresult_out_of_bounds();
+                    }
+
+                    throw python_exception();
+                }
+
+                return converter<V>::convert_to(item.get());
+            }
+            catch (python_exception)
+            {
+                write_unraisable_and_throw();
+            }
         }
 
         void Split(
             winrt::Windows::Foundation::Collections::IMapView<K, V>& first,
             winrt::Windows::Foundation::Collections::IMapView<K, V>& second) const
-        try
         {
-            // null return indicates map cannot be split
-            first = nullptr;
-            second = nullptr;
-        }
-        catch (python_exception)
-        {
-            write_unraisable_and_throw();
+            auto gil = ensure_gil();
+
+            try
+            {
+                // null return indicates map cannot be split
+                first = nullptr;
+                second = nullptr;
+            }
+            catch (python_exception)
+            {
+                write_unraisable_and_throw();
+            }
         }
 
         uint32_t Size() const
-        try
         {
-            auto size = PyMapping_Size(_mapping.get());
+            auto gil = ensure_gil();
 
-            if (size == -1 && PyErr_Occurred())
+            try
             {
-                throw python_exception();
-            }
+                auto size = PyMapping_Size(_mapping.get());
 
-            return static_cast<uint32_t>(size);
-        }
-        catch (python_exception)
-        {
-            write_unraisable_and_throw();
+                if (size == -1 && PyErr_Occurred())
+                {
+                    throw python_exception();
+                }
+
+                return static_cast<uint32_t>(size);
+            }
+            catch (python_exception)
+            {
+                write_unraisable_and_throw();
+            }
         }
 
         winrt::Windows::Foundation::Collections::IIterator<
             winrt::Windows::Foundation::Collections::IKeyValuePair<K, V>>
         First() const
-        try
         {
-            return winrt::make<python_mapping_iterator<K, V>>(_mapping.get());
-        }
-        catch (python_exception)
-        {
-            write_unraisable_and_throw();
+            auto gil = ensure_gil();
+
+            try
+            {
+                return winrt::make<python_mapping_iterator<K, V>>(_mapping.get());
+            }
+            catch (python_exception)
+            {
+                write_unraisable_and_throw();
+            }
         }
     };
 
@@ -2467,168 +2595,202 @@ namespace py
         }
 
         void Clear() const
-        try
         {
-            pyobj_handle result{PyObject_CallMethod(_mapping.get(), "clear", nullptr)};
+            auto gil = ensure_gil();
 
-            if (!result)
+            try
             {
-                throw python_exception();
+                pyobj_handle result{
+                    PyObject_CallMethod(_mapping.get(), "clear", nullptr)};
+
+                if (!result)
+                {
+                    throw python_exception();
+                }
             }
-        }
-        catch (python_exception)
-        {
-            write_unraisable_and_throw();
+            catch (python_exception)
+            {
+                write_unraisable_and_throw();
+            }
         }
 
         winrt::Windows::Foundation::Collections::IMapView<K, V> GetView() const
-        try
         {
-            return winrt::make<python_map_view<K, V>>(_mapping.get());
-        }
-        catch (python_exception)
-        {
-            write_unraisable_and_throw();
+            auto gil = ensure_gil();
+
+            try
+            {
+                return winrt::make<python_map_view<K, V>>(_mapping.get());
+            }
+            catch (python_exception)
+            {
+                write_unraisable_and_throw();
+            }
         }
 
         bool HasKey(K const& key) const
-        try
         {
-            pyobj_handle py_key{converter<K>::convert(key)};
+            auto gil = ensure_gil();
 
-            if (!py_key)
+            try
             {
-                throw python_exception();
+                pyobj_handle py_key{converter<K>::convert(key)};
+
+                if (!py_key)
+                {
+                    throw python_exception();
+                }
+
+                auto ret = PyMapping_HasKeyWithError(_mapping.get(), py_key.get());
+
+                if (ret == -1)
+                {
+                    throw python_exception();
+                }
+
+                return static_cast<bool>(ret);
             }
-
-            auto ret = PyMapping_HasKeyWithError(_mapping.get(), py_key.get());
-
-            if (ret == -1)
+            catch (python_exception)
             {
-                throw python_exception();
+                write_unraisable_and_throw();
             }
-
-            return static_cast<bool>(ret);
-        }
-        catch (python_exception)
-        {
-            write_unraisable_and_throw();
         }
 
         bool Insert(K const& key, V const& value) const
-        try
         {
-            pyobj_handle py_key{converter<K>::convert(key)};
+            auto gil = ensure_gil();
 
-            if (!py_key)
+            try
             {
-                throw python_exception();
+                pyobj_handle py_key{converter<K>::convert(key)};
+
+                if (!py_key)
+                {
+                    throw python_exception();
+                }
+
+                pyobj_handle py_value{converter<V>::convert(value)};
+
+                if (!py_value)
+                {
+                    throw python_exception();
+                }
+
+                auto result = HasKey(key);
+
+                if (PyObject_SetItem(_mapping.get(), py_key.get(), py_value.get())
+                    == -1)
+                {
+                    throw python_exception();
+                }
+
+                return result;
             }
-
-            pyobj_handle py_value{converter<V>::convert(value)};
-
-            if (!py_value)
+            catch (python_exception)
             {
-                throw python_exception();
+                write_unraisable_and_throw();
             }
-
-            auto result = HasKey(key);
-
-            if (PyObject_SetItem(_mapping.get(), py_key.get(), py_value.get()) == -1)
-            {
-                throw python_exception();
-            }
-
-            return result;
-        }
-        catch (python_exception)
-        {
-            write_unraisable_and_throw();
         }
 
         V Lookup(K const& key) const
-        try
         {
-            pyobj_handle py_key{converter<K>::convert(key)};
+            auto gil = ensure_gil();
 
-            if (!py_key)
+            try
             {
-                throw python_exception();
-            }
+                pyobj_handle py_key{converter<K>::convert(key)};
 
-            pyobj_handle item{PyObject_GetItem(_mapping.get(), py_key.get())};
-
-            if (!item)
-            {
-                if (PyErr_ExceptionMatches(PyExc_KeyError))
+                if (!py_key)
                 {
-                    PyErr_Clear();
-                    throw winrt::hresult_out_of_bounds();
+                    throw python_exception();
                 }
 
-                throw python_exception();
-            }
+                pyobj_handle item{PyObject_GetItem(_mapping.get(), py_key.get())};
 
-            return converter<V>::convert_to(item.get());
-        }
-        catch (python_exception)
-        {
-            write_unraisable_and_throw();
+                if (!item)
+                {
+                    if (PyErr_ExceptionMatches(PyExc_KeyError))
+                    {
+                        PyErr_Clear();
+                        throw winrt::hresult_out_of_bounds();
+                    }
+
+                    throw python_exception();
+                }
+
+                return converter<V>::convert_to(item.get());
+            }
+            catch (python_exception)
+            {
+                write_unraisable_and_throw();
+            }
         }
 
         void Remove(K const& key) const
-        try
         {
-            pyobj_handle py_key{converter<K>::convert(key)};
+            auto gil = ensure_gil();
 
-            if (!py_key)
+            try
             {
-                throw python_exception();
-            }
+                pyobj_handle py_key{converter<K>::convert(key)};
 
-            if (PyObject_DelItem(_mapping.get(), py_key.get()) == -1)
-            {
-                if (PyErr_ExceptionMatches(PyExc_KeyError))
+                if (!py_key)
                 {
-                    PyErr_Clear();
-                    throw winrt::hresult_out_of_bounds();
+                    throw python_exception();
                 }
 
-                throw python_exception();
+                if (PyObject_DelItem(_mapping.get(), py_key.get()) == -1)
+                {
+                    if (PyErr_ExceptionMatches(PyExc_KeyError))
+                    {
+                        PyErr_Clear();
+                        throw winrt::hresult_out_of_bounds();
+                    }
+
+                    throw python_exception();
+                }
             }
-        }
-        catch (python_exception)
-        {
-            write_unraisable_and_throw();
+            catch (python_exception)
+            {
+                write_unraisable_and_throw();
+            }
         }
 
         uint32_t Size() const
-        try
         {
-            auto size = PyMapping_Size(_mapping.get());
+            auto gil = ensure_gil();
 
-            if (size == -1 && PyErr_Occurred())
+            try
             {
-                throw python_exception();
-            }
+                auto size = PyMapping_Size(_mapping.get());
 
-            return static_cast<uint32_t>(size);
-        }
-        catch (python_exception)
-        {
-            write_unraisable_and_throw();
+                if (size == -1 && PyErr_Occurred())
+                {
+                    throw python_exception();
+                }
+
+                return static_cast<uint32_t>(size);
+            }
+            catch (python_exception)
+            {
+                write_unraisable_and_throw();
+            }
         }
 
         winrt::Windows::Foundation::Collections::IIterator<
             winrt::Windows::Foundation::Collections::IKeyValuePair<K, V>>
         First() const
-        try
         {
-            return winrt::make<python_mapping_iterator<K, V>>(_mapping.get());
-        }
-        catch (python_exception)
-        {
-            write_unraisable_and_throw();
+            auto gil = ensure_gil();
+
+            try
+            {
+                return winrt::make<python_mapping_iterator<K, V>>(_mapping.get());
+            }
+            catch (python_exception)
+            {
+                write_unraisable_and_throw();
+            }
         }
     };
 
