@@ -21,8 +21,6 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class GuidanceAudioNotificationRequestedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> GuidanceAudioNotificationRequestedEventArgs: ...
     @_property
     def audio_file_paths(self) -> typing.Sequence[str]: ...
     @_property
@@ -32,8 +30,6 @@ class GuidanceAudioNotificationRequestedEventArgs(winrt.system.Object):
 
 @typing.final
 class GuidanceLaneInfo(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> GuidanceLaneInfo: ...
     @_property
     def is_on_route(self) -> bool: ...
     @_property
@@ -41,8 +37,6 @@ class GuidanceLaneInfo(winrt.system.Object):
 
 @typing.final
 class GuidanceManeuver(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> GuidanceManeuver: ...
     @_property
     def departure_road_name(self) -> str: ...
     @_property
@@ -70,8 +64,6 @@ class GuidanceManeuver(winrt.system.Object):
 
 @typing.final
 class GuidanceMapMatchedCoordinate(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> GuidanceMapMatchedCoordinate: ...
     @_property
     def current_heading(self) -> winrt.system.Double: ...
     @_property
@@ -91,8 +83,6 @@ class GuidanceNavigator_Static(type):
 
 @typing.final
 class GuidanceNavigator(winrt.system.Object, metaclass=GuidanceNavigator_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> GuidanceNavigator: ...
     def pause(self) -> None: ...
     def repeat_last_audio_notification(self) -> None: ...
     def resume(self) -> None: ...
@@ -134,15 +124,11 @@ class GuidanceNavigator(winrt.system.Object, metaclass=GuidanceNavigator_Static)
 
 @typing.final
 class GuidanceReroutedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> GuidanceReroutedEventArgs: ...
     @_property
     def route(self) -> GuidanceRoute: ...
 
 @typing.final
 class GuidanceRoadSegment(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> GuidanceRoadSegment: ...
     @_property
     def id(self) -> str: ...
     @_property
@@ -166,8 +152,6 @@ class GuidanceRoadSegment(winrt.system.Object):
 
 @typing.final
 class GuidanceRoadSignpost(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> GuidanceRoadSignpost: ...
     @_property
     def background_color(self) -> windows_ui.Color: ...
     @_property
@@ -186,8 +170,6 @@ class GuidanceRoute_Static(type):
 
 @typing.final
 class GuidanceRoute(winrt.system.Object, metaclass=GuidanceRoute_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> GuidanceRoute: ...
     def convert_to_map_route(self) -> windows_services_maps.MapRoute: ...
     @_property
     def bounding_box(self) -> windows_devices_geolocation.GeoboundingBox: ...
@@ -208,8 +190,6 @@ class GuidanceTelemetryCollector_Static(type):
 
 @typing.final
 class GuidanceTelemetryCollector(winrt.system.Object, metaclass=GuidanceTelemetryCollector_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> GuidanceTelemetryCollector: ...
     def clear_local_data(self) -> None: ...
     @_property
     def upload_frequency(self) -> winrt.system.Int32: ...
@@ -226,8 +206,6 @@ class GuidanceTelemetryCollector(winrt.system.Object, metaclass=GuidanceTelemetr
 
 @typing.final
 class GuidanceUpdatedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> GuidanceUpdatedEventArgs: ...
     @_property
     def after_next_maneuver(self) -> GuidanceManeuver: ...
     @_property

@@ -24,8 +24,6 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class BluetoothLEAdvertisementPublisherTriggerDetails(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> BluetoothLEAdvertisementPublisherTriggerDetails: ...
     @_property
     def error(self) -> windows_devices_bluetooth.BluetoothError: ...
     @_property
@@ -35,8 +33,6 @@ class BluetoothLEAdvertisementPublisherTriggerDetails(winrt.system.Object):
 
 @typing.final
 class BluetoothLEAdvertisementWatcherTriggerDetails(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> BluetoothLEAdvertisementWatcherTriggerDetails: ...
     @_property
     def advertisements(self) -> typing.Sequence[windows_devices_bluetooth_advertisement.BluetoothLEAdvertisementReceivedEventArgs]: ...
     @_property
@@ -46,8 +42,6 @@ class BluetoothLEAdvertisementWatcherTriggerDetails(winrt.system.Object):
 
 @typing.final
 class GattCharacteristicNotificationTriggerDetails(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> GattCharacteristicNotificationTriggerDetails: ...
     @_property
     def characteristic(self) -> windows_devices_bluetooth_genericattributeprofile.GattCharacteristic: ...
     @_property
@@ -66,8 +60,6 @@ class GattServiceProviderConnection_Static(type):
 
 @typing.final
 class GattServiceProviderConnection(winrt.system.Object, metaclass=GattServiceProviderConnection_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> GattServiceProviderConnection: ...
     def start(self) -> None: ...
     @_property
     def service(self) -> windows_devices_bluetooth_genericattributeprofile.GattLocalService: ...
@@ -76,15 +68,11 @@ class GattServiceProviderConnection(winrt.system.Object, metaclass=GattServicePr
 
 @typing.final
 class GattServiceProviderTriggerDetails(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> GattServiceProviderTriggerDetails: ...
     @_property
     def connection(self) -> GattServiceProviderConnection: ...
 
 @typing.final
 class RfcommConnectionTriggerDetails(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> RfcommConnectionTriggerDetails: ...
     @_property
     def incoming(self) -> bool: ...
     @_property
@@ -94,8 +82,6 @@ class RfcommConnectionTriggerDetails(winrt.system.Object):
 
 @typing.final
 class RfcommInboundConnectionInformation(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> RfcommInboundConnectionInformation: ...
     @_property
     def service_capabilities(self) -> windows_devices_bluetooth.BluetoothServiceCapabilities: ...
     @service_capabilities.setter
@@ -111,8 +97,6 @@ class RfcommInboundConnectionInformation(winrt.system.Object):
 
 @typing.final
 class RfcommOutboundConnectionInformation(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> RfcommOutboundConnectionInformation: ...
     @_property
     def remote_service_id(self) -> windows_devices_bluetooth_rfcomm.RfcommServiceId: ...
     @remote_service_id.setter

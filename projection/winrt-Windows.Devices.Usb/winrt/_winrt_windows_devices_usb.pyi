@@ -19,8 +19,6 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class UsbBulkInEndpointDescriptor(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> UsbBulkInEndpointDescriptor: ...
     @_property
     def endpoint_number(self) -> winrt.system.UInt8: ...
     @_property
@@ -30,8 +28,6 @@ class UsbBulkInEndpointDescriptor(winrt.system.Object):
 
 @typing.final
 class UsbBulkInPipe(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> UsbBulkInPipe: ...
     def clear_stall_async(self) -> windows_foundation.IAsyncAction: ...
     def flush_buffer(self) -> None: ...
     @_property
@@ -47,8 +43,6 @@ class UsbBulkInPipe(winrt.system.Object):
 
 @typing.final
 class UsbBulkOutEndpointDescriptor(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> UsbBulkOutEndpointDescriptor: ...
     @_property
     def endpoint_number(self) -> winrt.system.UInt8: ...
     @_property
@@ -58,8 +52,6 @@ class UsbBulkOutEndpointDescriptor(winrt.system.Object):
 
 @typing.final
 class UsbBulkOutPipe(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> UsbBulkOutPipe: ...
     def clear_stall_async(self) -> windows_foundation.IAsyncAction: ...
     @_property
     def write_options(self) -> UsbWriteOptions: ...
@@ -72,8 +64,6 @@ class UsbBulkOutPipe(winrt.system.Object):
 
 @typing.final
 class UsbConfiguration(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> UsbConfiguration: ...
     @_property
     def configuration_descriptor(self) -> UsbConfigurationDescriptor: ...
     @_property
@@ -88,8 +78,6 @@ class UsbConfigurationDescriptor_Static(type):
 
 @typing.final
 class UsbConfigurationDescriptor(winrt.system.Object, metaclass=UsbConfigurationDescriptor_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> UsbConfigurationDescriptor: ...
     @_property
     def configuration_value(self) -> winrt.system.UInt8: ...
     @_property
@@ -101,8 +89,6 @@ class UsbConfigurationDescriptor(winrt.system.Object, metaclass=UsbConfiguration
 
 @typing.final
 class UsbControlRequestType(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> UsbControlRequestType: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @_property
     def recipient(self) -> UsbControlRecipient: ...
@@ -123,8 +109,6 @@ class UsbControlRequestType(winrt.system.Object):
 
 @typing.final
 class UsbDescriptor(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> UsbDescriptor: ...
     def read_descriptor_buffer(self, buffer: windows_storage_streams.ImplementsIBuffer, /) -> None: ...
     @_property
     def descriptor_type(self) -> winrt.system.UInt8: ...
@@ -143,8 +127,6 @@ class UsbDevice_Static(type):
 class UsbDevice(winrt.system.Object, windows_foundation.ImplementsIClosable, metaclass=UsbDevice_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> UsbDevice: ...
     def close(self) -> None: ...
     def send_control_in_transfer_async(self, setup_packet: UsbSetupPacket, buffer: windows_storage_streams.ImplementsIBuffer, /) -> windows_foundation.IAsyncOperation[windows_storage_streams.IBuffer]: ...
     def send_control_in_transfer_async_no_buffer(self, setup_packet: UsbSetupPacket, /) -> windows_foundation.IAsyncOperation[windows_storage_streams.IBuffer]: ...
@@ -159,8 +141,6 @@ class UsbDevice(winrt.system.Object, windows_foundation.ImplementsIClosable, met
 
 @typing.final
 class UsbDeviceClass(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> UsbDeviceClass: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @_property
     def subclass_code(self) -> typing.Optional[winrt.system.UInt8]: ...
@@ -198,13 +178,10 @@ class UsbDeviceClasses_Static(type):
 
 @typing.final
 class UsbDeviceClasses(winrt.system.Object, metaclass=UsbDeviceClasses_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> UsbDeviceClasses: ...
+    pass
 
 @typing.final
 class UsbDeviceDescriptor(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> UsbDeviceDescriptor: ...
     @_property
     def bcd_device_revision(self) -> winrt.system.UInt32: ...
     @_property
@@ -225,8 +202,6 @@ class UsbEndpointDescriptor_Static(type):
 
 @typing.final
 class UsbEndpointDescriptor(winrt.system.Object, metaclass=UsbEndpointDescriptor_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> UsbEndpointDescriptor: ...
     @_property
     def as_bulk_in_endpoint_descriptor(self) -> UsbBulkInEndpointDescriptor: ...
     @_property
@@ -244,8 +219,6 @@ class UsbEndpointDescriptor(winrt.system.Object, metaclass=UsbEndpointDescriptor
 
 @typing.final
 class UsbInterface(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> UsbInterface: ...
     @_property
     def bulk_in_pipes(self) -> typing.Sequence[UsbBulkInPipe]: ...
     @_property
@@ -268,8 +241,6 @@ class UsbInterfaceDescriptor_Static(type):
 
 @typing.final
 class UsbInterfaceDescriptor(winrt.system.Object, metaclass=UsbInterfaceDescriptor_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> UsbInterfaceDescriptor: ...
     @_property
     def alternate_setting_number(self) -> winrt.system.UInt8: ...
     @_property
@@ -283,8 +254,6 @@ class UsbInterfaceDescriptor(winrt.system.Object, metaclass=UsbInterfaceDescript
 
 @typing.final
 class UsbInterfaceSetting(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> UsbInterfaceSetting: ...
     def select_setting_async(self) -> windows_foundation.IAsyncAction: ...
     @_property
     def bulk_in_endpoints(self) -> typing.Sequence[UsbBulkInEndpointDescriptor]: ...
@@ -303,8 +272,6 @@ class UsbInterfaceSetting(winrt.system.Object):
 
 @typing.final
 class UsbInterruptInEndpointDescriptor(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> UsbInterruptInEndpointDescriptor: ...
     @_property
     def endpoint_number(self) -> winrt.system.UInt8: ...
     @_property
@@ -316,15 +283,11 @@ class UsbInterruptInEndpointDescriptor(winrt.system.Object):
 
 @typing.final
 class UsbInterruptInEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> UsbInterruptInEventArgs: ...
     @_property
     def interrupt_data(self) -> windows_storage_streams.IBuffer: ...
 
 @typing.final
 class UsbInterruptInPipe(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> UsbInterruptInPipe: ...
     def clear_stall_async(self) -> windows_foundation.IAsyncAction: ...
     def add_data_received(self, handler: windows_foundation.TypedEventHandler[UsbInterruptInPipe, UsbInterruptInEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     def remove_data_received(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
@@ -333,8 +296,6 @@ class UsbInterruptInPipe(winrt.system.Object):
 
 @typing.final
 class UsbInterruptOutEndpointDescriptor(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> UsbInterruptOutEndpointDescriptor: ...
     @_property
     def endpoint_number(self) -> winrt.system.UInt8: ...
     @_property
@@ -346,8 +307,6 @@ class UsbInterruptOutEndpointDescriptor(winrt.system.Object):
 
 @typing.final
 class UsbInterruptOutPipe(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> UsbInterruptOutPipe: ...
     def clear_stall_async(self) -> windows_foundation.IAsyncAction: ...
     @_property
     def write_options(self) -> UsbWriteOptions: ...
@@ -360,8 +319,6 @@ class UsbInterruptOutPipe(winrt.system.Object):
 
 @typing.final
 class UsbSetupPacket(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> UsbSetupPacket: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], eight_byte_buffer: windows_storage_streams.ImplementsIBuffer) -> Self: ...
     @typing.overload

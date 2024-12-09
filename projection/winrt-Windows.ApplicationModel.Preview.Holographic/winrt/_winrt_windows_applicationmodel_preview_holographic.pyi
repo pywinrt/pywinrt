@@ -31,8 +31,6 @@ class HolographicKeyboardPlacementOverridePreview_Static(type):
 
 @typing.final
 class HolographicKeyboardPlacementOverridePreview(winrt.system.Object, metaclass=HolographicKeyboardPlacementOverridePreview_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> HolographicKeyboardPlacementOverridePreview: ...
     # @deprecated("Use Windows.ApplicationModel.Holographic.HolographicKeyboard instead of Windows.ApplicationModel.Preview.Holographic.HolographicKeyboardPlacementOverridePreview. For more info, see MSDN.")
     def reset_placement_override(self) -> None: ...
     # @deprecated("Use Windows.ApplicationModel.Holographic.HolographicKeyboard instead of Windows.ApplicationModel.Preview.Holographic.HolographicKeyboardPlacementOverridePreview. For more info, see MSDN.")

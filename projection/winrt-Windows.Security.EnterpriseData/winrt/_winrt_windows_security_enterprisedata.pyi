@@ -21,8 +21,6 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class BufferProtectUnprotectResult(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> BufferProtectUnprotectResult: ...
     @_property
     def buffer(self) -> windows_storage_streams.IBuffer: ...
     @_property
@@ -30,8 +28,6 @@ class BufferProtectUnprotectResult(winrt.system.Object):
 
 @typing.final
 class DataProtectionInfo(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> DataProtectionInfo: ...
     @_property
     def identity(self) -> str: ...
     @_property
@@ -52,8 +48,6 @@ class DataProtectionManager(winrt.system.Object, metaclass=DataProtectionManager
 
 @typing.final
 class FileProtectionInfo(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> FileProtectionInfo: ...
     @_property
     def identity(self) -> str: ...
     @_property
@@ -99,8 +93,6 @@ class FileRevocationManager(winrt.system.Object, metaclass=FileRevocationManager
 
 @typing.final
 class FileUnprotectOptions(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> FileUnprotectOptions: ...
     def __new__(cls: typing.Type[Self], audit: bool) -> Self: ...
     @_property
     def audit(self) -> bool: ...
@@ -109,15 +101,11 @@ class FileUnprotectOptions(winrt.system.Object):
 
 @typing.final
 class ProtectedAccessResumedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ProtectedAccessResumedEventArgs: ...
     @_property
     def identities(self) -> typing.Sequence[str]: ...
 
 @typing.final
 class ProtectedAccessSuspendingEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ProtectedAccessSuspendingEventArgs: ...
     def get_deferral(self) -> windows_foundation.Deferral: ...
     @_property
     def deadline(self) -> datetime.datetime: ...
@@ -126,8 +114,6 @@ class ProtectedAccessSuspendingEventArgs(winrt.system.Object):
 
 @typing.final
 class ProtectedContainerExportResult(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ProtectedContainerExportResult: ...
     @_property
     def file(self) -> windows_storage.StorageFile: ...
     @_property
@@ -135,8 +121,6 @@ class ProtectedContainerExportResult(winrt.system.Object):
 
 @typing.final
 class ProtectedContainerImportResult(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ProtectedContainerImportResult: ...
     @_property
     def file(self) -> windows_storage.StorageFile: ...
     @_property
@@ -144,15 +128,11 @@ class ProtectedContainerImportResult(winrt.system.Object):
 
 @typing.final
 class ProtectedContentRevokedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ProtectedContentRevokedEventArgs: ...
     @_property
     def identities(self) -> typing.Sequence[str]: ...
 
 @typing.final
 class ProtectedFileCreateResult(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ProtectedFileCreateResult: ...
     @_property
     def file(self) -> windows_storage.StorageFile: ...
     @_property
@@ -162,8 +142,6 @@ class ProtectedFileCreateResult(winrt.system.Object):
 
 @typing.final
 class ProtectionPolicyAuditInfo(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ProtectionPolicyAuditInfo: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], action: ProtectionPolicyAuditAction, data_description: str, source_description: str, target_description: str) -> Self: ...
     @typing.overload
@@ -232,8 +210,6 @@ class ProtectionPolicyManager_Static(type):
 
 @typing.final
 class ProtectionPolicyManager(winrt.system.Object, metaclass=ProtectionPolicyManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ProtectionPolicyManager: ...
     @_property
     def identity(self) -> str: ...
     @identity.setter
@@ -247,7 +223,5 @@ class ProtectionPolicyManager(winrt.system.Object, metaclass=ProtectionPolicyMan
 class ThreadNetworkContext(winrt.system.Object, windows_foundation.ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ThreadNetworkContext: ...
     def close(self) -> None: ...
 

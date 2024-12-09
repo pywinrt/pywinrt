@@ -20,8 +20,6 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class DiagnosticActionResult(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> DiagnosticActionResult: ...
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
     @_property
@@ -36,21 +34,15 @@ class DiagnosticInvoker_Static(type):
 
 @typing.final
 class DiagnosticInvoker(winrt.system.Object, metaclass=DiagnosticInvoker_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> DiagnosticInvoker: ...
     def run_diagnostic_action_async(self, context: windows_data_json.JsonObject, /) -> windows_foundation.IAsyncOperationWithProgress[DiagnosticActionResult, DiagnosticActionState]: ...
     def run_diagnostic_action_from_string_async(self, context: str, /) -> windows_foundation.IAsyncOperationWithProgress[DiagnosticActionResult, DiagnosticActionState]: ...
 
 @typing.final
 class ProcessCpuUsage(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ProcessCpuUsage: ...
     def get_report(self) -> ProcessCpuUsageReport: ...
 
 @typing.final
 class ProcessCpuUsageReport(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ProcessCpuUsageReport: ...
     @_property
     def kernel_time(self) -> datetime.timedelta: ...
     @_property
@@ -64,8 +56,6 @@ class ProcessDiagnosticInfo_Static(type):
 
 @typing.final
 class ProcessDiagnosticInfo(winrt.system.Object, metaclass=ProcessDiagnosticInfo_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ProcessDiagnosticInfo: ...
     def get_app_diagnostic_infos(self) -> typing.MutableSequence[windows_system.AppDiagnosticInfo]: ...
     @_property
     def cpu_usage(self) -> ProcessCpuUsage: ...
@@ -86,14 +76,10 @@ class ProcessDiagnosticInfo(winrt.system.Object, metaclass=ProcessDiagnosticInfo
 
 @typing.final
 class ProcessDiskUsage(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ProcessDiskUsage: ...
     def get_report(self) -> ProcessDiskUsageReport: ...
 
 @typing.final
 class ProcessDiskUsageReport(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ProcessDiskUsageReport: ...
     @_property
     def bytes_read_count(self) -> winrt.system.Int64: ...
     @_property
@@ -109,14 +95,10 @@ class ProcessDiskUsageReport(winrt.system.Object):
 
 @typing.final
 class ProcessMemoryUsage(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ProcessMemoryUsage: ...
     def get_report(self) -> ProcessMemoryUsageReport: ...
 
 @typing.final
 class ProcessMemoryUsageReport(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ProcessMemoryUsageReport: ...
     @_property
     def non_paged_pool_size_in_bytes(self) -> winrt.system.UInt64: ...
     @_property
@@ -144,14 +126,10 @@ class ProcessMemoryUsageReport(winrt.system.Object):
 
 @typing.final
 class SystemCpuUsage(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SystemCpuUsage: ...
     def get_report(self) -> SystemCpuUsageReport: ...
 
 @typing.final
 class SystemCpuUsageReport(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SystemCpuUsageReport: ...
     @_property
     def idle_time(self) -> datetime.timedelta: ...
     @_property
@@ -168,8 +146,6 @@ class SystemDiagnosticInfo_Static(type):
 
 @typing.final
 class SystemDiagnosticInfo(winrt.system.Object, metaclass=SystemDiagnosticInfo_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SystemDiagnosticInfo: ...
     @_property
     def cpu_usage(self) -> SystemCpuUsage: ...
     @_property
@@ -177,14 +153,10 @@ class SystemDiagnosticInfo(winrt.system.Object, metaclass=SystemDiagnosticInfo_S
 
 @typing.final
 class SystemMemoryUsage(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SystemMemoryUsage: ...
     def get_report(self) -> SystemMemoryUsageReport: ...
 
 @typing.final
 class SystemMemoryUsageReport(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SystemMemoryUsageReport: ...
     @_property
     def available_size_in_bytes(self) -> winrt.system.UInt64: ...
     @_property

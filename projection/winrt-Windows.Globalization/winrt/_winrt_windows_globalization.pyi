@@ -35,8 +35,6 @@ class ApplicationLanguages(winrt.system.Object, metaclass=ApplicationLanguages_S
 
 @typing.final
 class Calendar(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> Calendar: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], languages: typing.Iterable[str], calendar: str, clock: str, time_zone_id: str) -> Self: ...
     @typing.overload
@@ -246,8 +244,6 @@ class ClockIdentifiers(winrt.system.Object, metaclass=ClockIdentifiers_Static):
 
 @typing.final
 class CurrencyAmount(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> CurrencyAmount: ...
     def __new__(cls: typing.Type[Self], amount: str, currency: str) -> Self: ...
     @_property
     def amount(self) -> str: ...
@@ -591,8 +587,6 @@ class GeographicRegion_Static(type):
 
 @typing.final
 class GeographicRegion(winrt.system.Object, metaclass=GeographicRegion_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> GeographicRegion: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], geographic_region_code: str) -> Self: ...
     @typing.overload
@@ -614,8 +608,6 @@ class GeographicRegion(winrt.system.Object, metaclass=GeographicRegion_Static):
 
 @typing.final
 class JapanesePhoneme(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> JapanesePhoneme: ...
     @_property
     def display_text(self) -> str: ...
     @_property
@@ -642,8 +634,6 @@ class Language_Static(type):
 
 @typing.final
 class Language(winrt.system.Object, metaclass=Language_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> Language: ...
     def __new__(cls: typing.Type[Self], language_tag: str) -> Self: ...
     def get_extension_subtags(self, singleton: str, /) -> typing.Sequence[str]: ...
     @_property

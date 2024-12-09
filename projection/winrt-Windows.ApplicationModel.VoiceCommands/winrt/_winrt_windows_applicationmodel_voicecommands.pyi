@@ -22,8 +22,6 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class VoiceCommand(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> VoiceCommand: ...
     @_property
     def command_name(self) -> str: ...
     @_property
@@ -33,22 +31,16 @@ class VoiceCommand(winrt.system.Object):
 
 @typing.final
 class VoiceCommandCompletedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> VoiceCommandCompletedEventArgs: ...
     @_property
     def reason(self) -> VoiceCommandCompletionReason: ...
 
 @typing.final
 class VoiceCommandConfirmationResult(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> VoiceCommandConfirmationResult: ...
     @_property
     def confirmed(self) -> bool: ...
 
 @typing.final
 class VoiceCommandContentTile(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> VoiceCommandContentTile: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @_property
     def title(self) -> str: ...
@@ -85,8 +77,6 @@ class VoiceCommandContentTile(winrt.system.Object):
 
 @typing.final
 class VoiceCommandDefinition(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> VoiceCommandDefinition: ...
     def set_phrase_list_async(self, phrase_list_name: str, phrase_list: typing.Iterable[str], /) -> windows_foundation.IAsyncAction: ...
     @_property
     def language(self) -> str: ...
@@ -105,8 +95,6 @@ class VoiceCommandDefinitionManager(winrt.system.Object, metaclass=VoiceCommandD
 
 @typing.final
 class VoiceCommandDisambiguationResult(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> VoiceCommandDisambiguationResult: ...
     @_property
     def selected_item(self) -> VoiceCommandContentTile: ...
 
@@ -121,8 +109,6 @@ class VoiceCommandResponse_Static(type):
 
 @typing.final
 class VoiceCommandResponse(winrt.system.Object, metaclass=VoiceCommandResponse_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> VoiceCommandResponse: ...
     @_property
     def repeat_message(self) -> VoiceCommandUserMessage: ...
     @repeat_message.setter
@@ -144,8 +130,6 @@ class VoiceCommandServiceConnection_Static(type):
 
 @typing.final
 class VoiceCommandServiceConnection(winrt.system.Object, metaclass=VoiceCommandServiceConnection_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> VoiceCommandServiceConnection: ...
     def get_voice_command_async(self) -> windows_foundation.IAsyncOperation[VoiceCommand]: ...
     def report_failure_async(self, response: VoiceCommandResponse, /) -> windows_foundation.IAsyncAction: ...
     def report_progress_async(self, response: VoiceCommandResponse, /) -> windows_foundation.IAsyncAction: ...
@@ -160,8 +144,6 @@ class VoiceCommandServiceConnection(winrt.system.Object, metaclass=VoiceCommandS
 
 @typing.final
 class VoiceCommandUserMessage(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> VoiceCommandUserMessage: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @_property
     def spoken_message(self) -> str: ...

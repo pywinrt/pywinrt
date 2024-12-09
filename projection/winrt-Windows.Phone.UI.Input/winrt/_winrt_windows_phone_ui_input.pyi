@@ -15,8 +15,6 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class BackPressedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> BackPressedEventArgs: ...
     @_property
     def handled(self) -> bool: ...
     @handled.setter
@@ -24,8 +22,7 @@ class BackPressedEventArgs(winrt.system.Object):
 
 @typing.final
 class CameraEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> CameraEventArgs: ...
+    pass
 
 @typing.final
 class HardwareButtons_Static(type):

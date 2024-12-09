@@ -27,8 +27,6 @@ class WiFiAdapter_Static(type):
 
 @typing.final
 class WiFiAdapter(winrt.system.Object, metaclass=WiFiAdapter_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WiFiAdapter: ...
     def connect_async(self, available_network: WiFiAvailableNetwork, reconnection_kind: WiFiReconnectionKind, /) -> windows_foundation.IAsyncOperation[WiFiConnectionResult]: ...
     def connect_with_password_credential_and_ssid_and_connection_method_async(self, available_network: WiFiAvailableNetwork, reconnection_kind: WiFiReconnectionKind, password_credential: windows_security_credentials.PasswordCredential, ssid: str, connection_method: WiFiConnectionMethod, /) -> windows_foundation.IAsyncOperation[WiFiConnectionResult]: ...
     def connect_with_password_credential_and_ssid_async(self, available_network: WiFiAvailableNetwork, reconnection_kind: WiFiReconnectionKind, password_credential: windows_security_credentials.PasswordCredential, ssid: str, /) -> windows_foundation.IAsyncOperation[WiFiConnectionResult]: ...
@@ -45,8 +43,6 @@ class WiFiAdapter(winrt.system.Object, metaclass=WiFiAdapter_Static):
 
 @typing.final
 class WiFiAvailableNetwork(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WiFiAvailableNetwork: ...
     @_property
     def beacon_interval(self) -> datetime.timedelta: ...
     @_property
@@ -72,15 +68,11 @@ class WiFiAvailableNetwork(winrt.system.Object):
 
 @typing.final
 class WiFiConnectionResult(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WiFiConnectionResult: ...
     @_property
     def connection_status(self) -> WiFiConnectionStatus: ...
 
 @typing.final
 class WiFiNetworkReport(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WiFiNetworkReport: ...
     @_property
     def available_networks(self) -> typing.Sequence[WiFiAvailableNetwork]: ...
     @_property
@@ -88,8 +80,6 @@ class WiFiNetworkReport(winrt.system.Object):
 
 @typing.final
 class WiFiOnDemandHotspotConnectTriggerDetails(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WiFiOnDemandHotspotConnectTriggerDetails: ...
     def connect(self) -> WiFiOnDemandHotspotConnectionResult: ...
     def connect_async(self) -> windows_foundation.IAsyncOperation[WiFiOnDemandHotspotConnectionResult]: ...
     def report_error(self, status: WiFiOnDemandHotspotConnectStatus, /) -> None: ...
@@ -98,8 +88,6 @@ class WiFiOnDemandHotspotConnectTriggerDetails(winrt.system.Object):
 
 @typing.final
 class WiFiOnDemandHotspotConnectionResult(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WiFiOnDemandHotspotConnectionResult: ...
     @_property
     def status(self) -> WiFiOnDemandHotspotConnectStatus: ...
 
@@ -109,8 +97,6 @@ class WiFiOnDemandHotspotNetwork_Static(type):
 
 @typing.final
 class WiFiOnDemandHotspotNetwork(winrt.system.Object, metaclass=WiFiOnDemandHotspotNetwork_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WiFiOnDemandHotspotNetwork: ...
     def get_properties(self) -> WiFiOnDemandHotspotNetworkProperties: ...
     def update_properties(self, new_properties: WiFiOnDemandHotspotNetworkProperties, /) -> None: ...
     @_property
@@ -118,8 +104,6 @@ class WiFiOnDemandHotspotNetwork(winrt.system.Object, metaclass=WiFiOnDemandHots
 
 @typing.final
 class WiFiOnDemandHotspotNetworkProperties(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WiFiOnDemandHotspotNetworkProperties: ...
     @_property
     def ssid(self) -> str: ...
     @ssid.setter
@@ -151,8 +135,6 @@ class WiFiOnDemandHotspotNetworkProperties(winrt.system.Object):
 
 @typing.final
 class WiFiWpsConfigurationResult(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WiFiWpsConfigurationResult: ...
     @_property
     def status(self) -> WiFiWpsConfigurationStatus: ...
     @_property

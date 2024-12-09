@@ -76,8 +76,6 @@ class CurrentAppSimulator(winrt.system.Object, metaclass=CurrentAppSimulator_Sta
 
 @typing.final
 class LicenseInformation(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> LicenseInformation: ...
     def add_license_changed(self, handler: LicenseChangedEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
     def remove_license_changed(self, cookie: windows_foundation.EventRegistrationToken, /) -> None: ...
     @_property
@@ -91,8 +89,6 @@ class LicenseInformation(winrt.system.Object):
 
 @typing.final
 class ListingInformation(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ListingInformation: ...
     @_property
     def age_rating(self) -> winrt.system.UInt32: ...
     @_property
@@ -116,8 +112,6 @@ class ListingInformation(winrt.system.Object):
 
 @typing.final
 class ProductLicense(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ProductLicense: ...
     @_property
     def expiration_date(self) -> datetime.datetime: ...
     @_property
@@ -129,8 +123,6 @@ class ProductLicense(winrt.system.Object):
 
 @typing.final
 class ProductListing(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ProductListing: ...
     @_property
     def formatted_price(self) -> str: ...
     @_property
@@ -158,8 +150,6 @@ class ProductListing(winrt.system.Object):
 
 @typing.final
 class ProductPurchaseDisplayProperties(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ProductPurchaseDisplayProperties: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], name: str) -> Self: ...
     @typing.overload
@@ -179,8 +169,6 @@ class ProductPurchaseDisplayProperties(winrt.system.Object):
 
 @typing.final
 class PurchaseResults(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PurchaseResults: ...
     @_property
     def offer_id(self) -> str: ...
     @_property
@@ -192,8 +180,6 @@ class PurchaseResults(winrt.system.Object):
 
 @typing.final
 class UnfulfilledConsumable(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> UnfulfilledConsumable: ...
     @_property
     def offer_id(self) -> str: ...
     @_property

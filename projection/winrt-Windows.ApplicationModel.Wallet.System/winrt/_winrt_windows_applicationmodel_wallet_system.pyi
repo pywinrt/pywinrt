@@ -20,8 +20,6 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class WalletItemSystemStore(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WalletItemSystemStore: ...
     # @deprecated("IWalletItemSystemStore is deprecated and might not work on all platforms. For more info, see MSDN.")
     def delete_async(self, item: windows_applicationmodel_wallet.WalletItem, /) -> windows_foundation.IAsyncAction: ...
     # @deprecated("IWalletItemSystemStore is deprecated and might not work on all platforms. For more info, see MSDN.")

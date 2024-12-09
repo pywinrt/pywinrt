@@ -32,8 +32,7 @@ class ColorHelper_Static(type):
 
 @typing.final
 class ColorHelper(winrt.system.Object, metaclass=ColorHelper_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ColorHelper: ...
+    pass
 
 @typing.final
 class Colors_Static(type):
@@ -322,18 +321,14 @@ class Colors_Static(type):
 
 @typing.final
 class Colors(winrt.system.Object, metaclass=Colors_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> Colors: ...
+    pass
 
 @typing.final
 class UIContentRoot(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> UIContentRoot: ...
     @_property
     def ui_context(self) -> UIContext: ...
 
 @typing.final
 class UIContext(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> UIContext: ...
+    pass
 

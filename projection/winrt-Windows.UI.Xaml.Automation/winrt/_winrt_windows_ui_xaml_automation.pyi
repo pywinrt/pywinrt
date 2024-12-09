@@ -32,8 +32,7 @@ class AnnotationPatternIdentifiers_Static(type):
 
 @typing.final
 class AnnotationPatternIdentifiers(winrt.system.Object, metaclass=AnnotationPatternIdentifiers_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AnnotationPatternIdentifiers: ...
+    pass
 
 @typing.final
 class AutomationAnnotation_Static(windows_ui_xaml.DependencyObject_Static):
@@ -44,8 +43,6 @@ class AutomationAnnotation_Static(windows_ui_xaml.DependencyObject_Static):
 
 @typing.final
 class AutomationAnnotation(windows_ui_xaml.DependencyObject, metaclass=AutomationAnnotation_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AutomationAnnotation: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], type: AnnotationType) -> Self: ...
     @typing.overload
@@ -144,8 +141,7 @@ class AutomationElementIdentifiers_Static(type):
 
 @typing.final
 class AutomationElementIdentifiers(winrt.system.Object, metaclass=AutomationElementIdentifiers_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AutomationElementIdentifiers: ...
+    pass
 
 @typing.final
 class AutomationProperties_Static(type):
@@ -263,13 +259,11 @@ class AutomationProperties_Static(type):
 
 @typing.final
 class AutomationProperties(winrt.system.Object, metaclass=AutomationProperties_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AutomationProperties: ...
+    pass
 
 @typing.final
 class AutomationProperty(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AutomationProperty: ...
+    pass
 
 @typing.final
 class DockPatternIdentifiers_Static(type):
@@ -278,8 +272,7 @@ class DockPatternIdentifiers_Static(type):
 
 @typing.final
 class DockPatternIdentifiers(winrt.system.Object, metaclass=DockPatternIdentifiers_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> DockPatternIdentifiers: ...
+    pass
 
 @typing.final
 class DragPatternIdentifiers_Static(type):
@@ -294,8 +287,7 @@ class DragPatternIdentifiers_Static(type):
 
 @typing.final
 class DragPatternIdentifiers(winrt.system.Object, metaclass=DragPatternIdentifiers_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> DragPatternIdentifiers: ...
+    pass
 
 @typing.final
 class DropTargetPatternIdentifiers_Static(type):
@@ -306,8 +298,7 @@ class DropTargetPatternIdentifiers_Static(type):
 
 @typing.final
 class DropTargetPatternIdentifiers(winrt.system.Object, metaclass=DropTargetPatternIdentifiers_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> DropTargetPatternIdentifiers: ...
+    pass
 
 @typing.final
 class ExpandCollapsePatternIdentifiers_Static(type):
@@ -316,8 +307,7 @@ class ExpandCollapsePatternIdentifiers_Static(type):
 
 @typing.final
 class ExpandCollapsePatternIdentifiers(winrt.system.Object, metaclass=ExpandCollapsePatternIdentifiers_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ExpandCollapsePatternIdentifiers: ...
+    pass
 
 @typing.final
 class GridItemPatternIdentifiers_Static(type):
@@ -334,8 +324,7 @@ class GridItemPatternIdentifiers_Static(type):
 
 @typing.final
 class GridItemPatternIdentifiers(winrt.system.Object, metaclass=GridItemPatternIdentifiers_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> GridItemPatternIdentifiers: ...
+    pass
 
 @typing.final
 class GridPatternIdentifiers_Static(type):
@@ -346,8 +335,7 @@ class GridPatternIdentifiers_Static(type):
 
 @typing.final
 class GridPatternIdentifiers(winrt.system.Object, metaclass=GridPatternIdentifiers_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> GridPatternIdentifiers: ...
+    pass
 
 @typing.final
 class MultipleViewPatternIdentifiers_Static(type):
@@ -358,8 +346,7 @@ class MultipleViewPatternIdentifiers_Static(type):
 
 @typing.final
 class MultipleViewPatternIdentifiers(winrt.system.Object, metaclass=MultipleViewPatternIdentifiers_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> MultipleViewPatternIdentifiers: ...
+    pass
 
 @typing.final
 class RangeValuePatternIdentifiers_Static(type):
@@ -378,8 +365,7 @@ class RangeValuePatternIdentifiers_Static(type):
 
 @typing.final
 class RangeValuePatternIdentifiers(winrt.system.Object, metaclass=RangeValuePatternIdentifiers_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> RangeValuePatternIdentifiers: ...
+    pass
 
 @typing.final
 class ScrollPatternIdentifiers_Static(type):
@@ -400,8 +386,7 @@ class ScrollPatternIdentifiers_Static(type):
 
 @typing.final
 class ScrollPatternIdentifiers(winrt.system.Object, metaclass=ScrollPatternIdentifiers_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ScrollPatternIdentifiers: ...
+    pass
 
 @typing.final
 class SelectionItemPatternIdentifiers_Static(type):
@@ -412,8 +397,7 @@ class SelectionItemPatternIdentifiers_Static(type):
 
 @typing.final
 class SelectionItemPatternIdentifiers(winrt.system.Object, metaclass=SelectionItemPatternIdentifiers_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SelectionItemPatternIdentifiers: ...
+    pass
 
 @typing.final
 class SelectionPatternIdentifiers_Static(type):
@@ -426,8 +410,7 @@ class SelectionPatternIdentifiers_Static(type):
 
 @typing.final
 class SelectionPatternIdentifiers(winrt.system.Object, metaclass=SelectionPatternIdentifiers_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SelectionPatternIdentifiers: ...
+    pass
 
 @typing.final
 class SpreadsheetItemPatternIdentifiers_Static(type):
@@ -436,8 +419,7 @@ class SpreadsheetItemPatternIdentifiers_Static(type):
 
 @typing.final
 class SpreadsheetItemPatternIdentifiers(winrt.system.Object, metaclass=SpreadsheetItemPatternIdentifiers_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SpreadsheetItemPatternIdentifiers: ...
+    pass
 
 @typing.final
 class StylesPatternIdentifiers_Static(type):
@@ -458,8 +440,7 @@ class StylesPatternIdentifiers_Static(type):
 
 @typing.final
 class StylesPatternIdentifiers(winrt.system.Object, metaclass=StylesPatternIdentifiers_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> StylesPatternIdentifiers: ...
+    pass
 
 @typing.final
 class TableItemPatternIdentifiers_Static(type):
@@ -470,8 +451,7 @@ class TableItemPatternIdentifiers_Static(type):
 
 @typing.final
 class TableItemPatternIdentifiers(winrt.system.Object, metaclass=TableItemPatternIdentifiers_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> TableItemPatternIdentifiers: ...
+    pass
 
 @typing.final
 class TablePatternIdentifiers_Static(type):
@@ -484,8 +464,7 @@ class TablePatternIdentifiers_Static(type):
 
 @typing.final
 class TablePatternIdentifiers(winrt.system.Object, metaclass=TablePatternIdentifiers_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> TablePatternIdentifiers: ...
+    pass
 
 @typing.final
 class TogglePatternIdentifiers_Static(type):
@@ -494,8 +473,7 @@ class TogglePatternIdentifiers_Static(type):
 
 @typing.final
 class TogglePatternIdentifiers(winrt.system.Object, metaclass=TogglePatternIdentifiers_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> TogglePatternIdentifiers: ...
+    pass
 
 @typing.final
 class TransformPattern2Identifiers_Static(type):
@@ -510,8 +488,7 @@ class TransformPattern2Identifiers_Static(type):
 
 @typing.final
 class TransformPattern2Identifiers(winrt.system.Object, metaclass=TransformPattern2Identifiers_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> TransformPattern2Identifiers: ...
+    pass
 
 @typing.final
 class TransformPatternIdentifiers_Static(type):
@@ -524,8 +501,7 @@ class TransformPatternIdentifiers_Static(type):
 
 @typing.final
 class TransformPatternIdentifiers(winrt.system.Object, metaclass=TransformPatternIdentifiers_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> TransformPatternIdentifiers: ...
+    pass
 
 @typing.final
 class ValuePatternIdentifiers_Static(type):
@@ -536,8 +512,7 @@ class ValuePatternIdentifiers_Static(type):
 
 @typing.final
 class ValuePatternIdentifiers(winrt.system.Object, metaclass=ValuePatternIdentifiers_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ValuePatternIdentifiers: ...
+    pass
 
 @typing.final
 class WindowPatternIdentifiers_Static(type):
@@ -556,6 +531,5 @@ class WindowPatternIdentifiers_Static(type):
 
 @typing.final
 class WindowPatternIdentifiers(winrt.system.Object, metaclass=WindowPatternIdentifiers_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WindowPatternIdentifiers: ...
+    pass
 

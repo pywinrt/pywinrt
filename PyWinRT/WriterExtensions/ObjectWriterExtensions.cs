@@ -212,26 +212,32 @@ static class ObjectWriterExtensions
             return;
         }
 
+        var didWriteLine = false;
+
         if (type.IsGeneric)
         {
             w.WriteLine("def __class_getitem__(cls, key: typing.Any) -> types.GenericAlias: ...");
+            didWriteLine = true;
         }
 
         if (type.IsPyCloseable)
         {
             w.WriteLine("def __enter__(self: Self) -> Self: ...");
             w.WriteLine("def __exit__(self, *args) -> None: ...");
+            didWriteLine = true;
         }
 
         if (type.IsPyStringable)
         {
             w.WriteLine("def __str__(self) -> str: ...");
+            didWriteLine = true;
         }
 
         if (type.IsPyBuffer)
         {
             w.WriteLine("def __buffer__(self, flags: int, /) -> memoryview: ...");
             w.WriteLine("def __release_buffer__(self, view: memoryview, /) -> None: ...");
+            didWriteLine = true;
         }
 
         if (type.IsPyMapping)
@@ -259,6 +265,7 @@ static class ObjectWriterExtensions
                 );
                 w.WriteLine($"def __delitem__(self, key: {keyParamType}) -> None: ...");
             }
+            didWriteLine = true;
         }
         else if (type.IsPySequence)
         {
@@ -298,6 +305,7 @@ static class ObjectWriterExtensions
                     $"def __setitem__(self, index: slice, value: typing.Iterable[{valParamType}]) -> None: ..."
                 );
             }
+            didWriteLine = true;
         }
         else if (type.IsPyIterator)
         {
@@ -305,12 +313,14 @@ static class ObjectWriterExtensions
             var nextType = prop.PropertyType.ToPyTypeName(ns);
             w.WriteLine("def __iter__(self: Self) -> Self: ...");
             w.WriteLine($"def __next__(self) -> {nextType}: ...");
+            didWriteLine = true;
         }
         else if (type.IsPyIterable)
         {
             var method = type.Methods.Single(m => m.Name == "First");
             var iterType = method.Method.ToPyReturnTyping(ns, method.GenericArgMap);
             w.WriteLine($"def __iter__(self) -> {iterType}: ...");
+            didWriteLine = true;
         }
 
         if (type.IsPyAwaitable)
@@ -361,12 +371,7 @@ static class ObjectWriterExtensions
             w.WriteLine(
                 $"def __await__(self) -> typing.Generator[typing.Any, None, {returnType}]: ..."
             );
-        }
-
-        if (!type.IsGeneric)
-        {
-            w.WriteLine("@staticmethod");
-            w.WriteLine($"def _from(obj: winrt.system.Object, /) -> {type.Name}: ...");
+            didWriteLine = true;
         }
 
         foreach (var ctor in type.Constructors)
@@ -385,6 +390,7 @@ static class ObjectWriterExtensions
             }
 
             w.WriteLine($"def __new__(cls: typing.Type[Self]{paramList}) -> Self: ...");
+            didWriteLine = true;
         }
 
         foreach (var method in type.Methods.Where(m => !m.IsStatic))
@@ -411,6 +417,7 @@ static class ObjectWriterExtensions
             }
 
             w.WritePythonMethodTyping(method, ns);
+            didWriteLine = true;
         }
 
         foreach (var evt in type.Events.Where(e => !e.IsStatic))
@@ -428,6 +435,7 @@ static class ObjectWriterExtensions
             }
 
             w.WritePythonMethodTyping(evt.RemoveMethod, ns);
+            didWriteLine = true;
         }
 
         foreach (var prop in type.Properties.Where(p => !p.IsStatic))
@@ -467,6 +475,12 @@ static class ObjectWriterExtensions
 
                 w.WriteLine($"def {name}(self, value: {setType}) -> None: ...");
             }
+            didWriteLine = true;
+        }
+
+        if (!didWriteLine)
+        {
+            w.WriteLine("pass");
         }
 
         w.Indent--;

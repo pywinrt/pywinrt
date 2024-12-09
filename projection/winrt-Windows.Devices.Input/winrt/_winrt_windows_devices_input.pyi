@@ -37,16 +37,12 @@ class PointerDeviceUsage:
 
 @typing.final
 class KeyboardCapabilities(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> KeyboardCapabilities: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @_property
     def keyboard_present(self) -> winrt.system.Int32: ...
 
 @typing.final
 class MouseCapabilities(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> MouseCapabilities: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @_property
     def horizontal_wheel_present(self) -> winrt.system.Int32: ...
@@ -65,15 +61,11 @@ class MouseDevice_Static(type):
 
 @typing.final
 class MouseDevice(winrt.system.Object, metaclass=MouseDevice_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> MouseDevice: ...
     def add_mouse_moved(self, handler: windows_foundation.TypedEventHandler[MouseDevice, MouseEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     def remove_mouse_moved(self, cookie: windows_foundation.EventRegistrationToken, /) -> None: ...
 
 @typing.final
 class MouseEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> MouseEventArgs: ...
     @_property
     def mouse_delta(self) -> MouseDelta: ...
 
@@ -83,8 +75,6 @@ class PenButtonListener_Static(type):
 
 @typing.final
 class PenButtonListener(winrt.system.Object, metaclass=PenButtonListener_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PenButtonListener: ...
     def is_supported(self) -> bool: ...
     def add_is_supported_changed(self, handler: windows_foundation.TypedEventHandler[PenButtonListener, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     def remove_is_supported_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
@@ -101,8 +91,6 @@ class PenDevice_Static(type):
 
 @typing.final
 class PenDevice(winrt.system.Object, metaclass=PenDevice_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PenDevice: ...
     @_property
     def pen_id(self) -> _uuid.UUID: ...
     @_property
@@ -114,8 +102,6 @@ class PenDockListener_Static(type):
 
 @typing.final
 class PenDockListener(winrt.system.Object, metaclass=PenDockListener_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PenDockListener: ...
     def is_supported(self) -> bool: ...
     def add_docked(self, handler: windows_foundation.TypedEventHandler[PenDockListener, PenDockedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     def remove_docked(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
@@ -126,28 +112,23 @@ class PenDockListener(winrt.system.Object, metaclass=PenDockListener_Static):
 
 @typing.final
 class PenDockedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PenDockedEventArgs: ...
+    pass
 
 @typing.final
 class PenTailButtonClickedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PenTailButtonClickedEventArgs: ...
+    pass
 
 @typing.final
 class PenTailButtonDoubleClickedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PenTailButtonDoubleClickedEventArgs: ...
+    pass
 
 @typing.final
 class PenTailButtonLongPressedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PenTailButtonLongPressedEventArgs: ...
+    pass
 
 @typing.final
 class PenUndockedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PenUndockedEventArgs: ...
+    pass
 
 @typing.final
 class PointerDevice_Static(type):
@@ -156,8 +137,6 @@ class PointerDevice_Static(type):
 
 @typing.final
 class PointerDevice(winrt.system.Object, metaclass=PointerDevice_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PointerDevice: ...
     @_property
     def is_integrated(self) -> bool: ...
     @_property
@@ -175,8 +154,6 @@ class PointerDevice(winrt.system.Object, metaclass=PointerDevice_Static):
 
 @typing.final
 class TouchCapabilities(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> TouchCapabilities: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @_property
     def contacts(self) -> winrt.system.UInt32: ...

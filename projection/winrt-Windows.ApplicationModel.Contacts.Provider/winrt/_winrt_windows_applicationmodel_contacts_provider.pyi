@@ -19,8 +19,6 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class ContactPickerUI(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ContactPickerUI: ...
     @typing.overload
     def add_contact(self, contact: windows_applicationmodel_contacts.Contact, /) -> AddContactResult: ...
     @typing.overload
@@ -39,8 +37,6 @@ class ContactPickerUI(winrt.system.Object):
 
 @typing.final
 class ContactRemovedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ContactRemovedEventArgs: ...
     @_property
     def id(self) -> str: ...
 

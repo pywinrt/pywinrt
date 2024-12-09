@@ -32,8 +32,6 @@ class SecondaryAuthenticationFactorAuthentication_Static(type):
 
 @typing.final
 class SecondaryAuthenticationFactorAuthentication(winrt.system.Object, metaclass=SecondaryAuthenticationFactorAuthentication_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SecondaryAuthenticationFactorAuthentication: ...
     # @deprecated("SecondaryAuthenticationFactorAuthentication is deprecated and might not work on all platforms. For more info, see MSDN.")
     def abort_authentication_async(self, error_log_message: str, /) -> windows_foundation.IAsyncAction: ...
     # @deprecated("SecondaryAuthenticationFactorAuthentication is deprecated and might not work on all platforms. For more info, see MSDN.")
@@ -49,8 +47,6 @@ class SecondaryAuthenticationFactorAuthentication(winrt.system.Object, metaclass
 
 @typing.final
 class SecondaryAuthenticationFactorAuthenticationResult(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SecondaryAuthenticationFactorAuthenticationResult: ...
     @_property
     def authentication(self) -> SecondaryAuthenticationFactorAuthentication: ...
     @_property
@@ -58,15 +54,11 @@ class SecondaryAuthenticationFactorAuthenticationResult(winrt.system.Object):
 
 @typing.final
 class SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs: ...
     @_property
     def stage_info(self) -> SecondaryAuthenticationFactorAuthenticationStageInfo: ...
 
 @typing.final
 class SecondaryAuthenticationFactorAuthenticationStageInfo(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SecondaryAuthenticationFactorAuthenticationStageInfo: ...
     @_property
     def device_id(self) -> str: ...
     @_property
@@ -76,8 +68,6 @@ class SecondaryAuthenticationFactorAuthenticationStageInfo(winrt.system.Object):
 
 @typing.final
 class SecondaryAuthenticationFactorInfo(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SecondaryAuthenticationFactorInfo: ...
     # @deprecated("UpdateDevicePresenceAsync is deprecated and might not work on all platforms. For more info, see MSDN.")
     def update_device_presence_async(self, presence_state: SecondaryAuthenticationFactorDevicePresence, /) -> windows_foundation.IAsyncAction: ...
     @_property
@@ -114,8 +104,6 @@ class SecondaryAuthenticationFactorRegistration_Static(type):
 
 @typing.final
 class SecondaryAuthenticationFactorRegistration(winrt.system.Object, metaclass=SecondaryAuthenticationFactorRegistration_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SecondaryAuthenticationFactorRegistration: ...
     # @deprecated("SecondaryAuthenticationFactorRegistration is deprecated and might not work on all platforms. For more info, see MSDN.")
     def abort_registering_device_async(self, error_log_message: str, /) -> windows_foundation.IAsyncAction: ...
     # @deprecated("SecondaryAuthenticationFactorRegistration is deprecated and might not work on all platforms. For more info, see MSDN.")
@@ -123,8 +111,6 @@ class SecondaryAuthenticationFactorRegistration(winrt.system.Object, metaclass=S
 
 @typing.final
 class SecondaryAuthenticationFactorRegistrationResult(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SecondaryAuthenticationFactorRegistrationResult: ...
     @_property
     def registration(self) -> SecondaryAuthenticationFactorRegistration: ...
     @_property

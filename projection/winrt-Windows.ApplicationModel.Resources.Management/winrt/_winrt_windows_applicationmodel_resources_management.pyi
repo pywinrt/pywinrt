@@ -18,8 +18,6 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class IndexedResourceCandidate(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IndexedResourceCandidate: ...
     def get_qualifier_value(self, qualifier_name: str, /) -> str: ...
     @_property
     def metadata(self) -> typing.Mapping[str, str]: ...
@@ -34,8 +32,6 @@ class IndexedResourceCandidate(winrt.system.Object):
 
 @typing.final
 class IndexedResourceQualifier(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IndexedResourceQualifier: ...
     @_property
     def qualifier_name(self) -> str: ...
     @_property
@@ -43,8 +39,6 @@ class IndexedResourceQualifier(winrt.system.Object):
 
 @typing.final
 class ResourceIndexer(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ResourceIndexer: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], project_root: windows_foundation.Uri, extension_dll_path: windows_foundation.Uri) -> Self: ...
     @typing.overload

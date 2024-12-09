@@ -20,13 +20,10 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class RequestingFocusOnKeyboardInputEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> RequestingFocusOnKeyboardInputEventArgs: ...
+    pass
 
 @typing.final
 class SearchSuggestion(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SearchSuggestion: ...
     @_property
     def detail_text(self) -> str: ...
     @_property
@@ -42,8 +39,6 @@ class SearchSuggestion(winrt.system.Object):
 
 @typing.final
 class SearchSuggestionManager(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SearchSuggestionManager: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     def add_to_history(self, query_text: str, /) -> None: ...
     def add_to_history_with_language(self, query_text: str, language: str, /) -> None: ...
@@ -69,8 +64,6 @@ class SearchSuggestionManager(winrt.system.Object):
 
 @typing.final
 class SearchSuggestionsRequestedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SearchSuggestionsRequestedEventArgs: ...
     @_property
     def language(self) -> str: ...
     @_property

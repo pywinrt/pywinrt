@@ -25,8 +25,6 @@ class OfflineMapPackage_Static(type):
 
 @typing.final
 class OfflineMapPackage(winrt.system.Object, metaclass=OfflineMapPackage_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> OfflineMapPackage: ...
     def request_start_download_async(self) -> windows_foundation.IAsyncOperation[OfflineMapPackageStartDownloadResult]: ...
     def add_status_changed(self, value: windows_foundation.TypedEventHandler[OfflineMapPackage, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     def remove_status_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
@@ -41,8 +39,6 @@ class OfflineMapPackage(winrt.system.Object, metaclass=OfflineMapPackage_Static)
 
 @typing.final
 class OfflineMapPackageQueryResult(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> OfflineMapPackageQueryResult: ...
     @_property
     def packages(self) -> typing.Sequence[OfflineMapPackage]: ...
     @_property
@@ -50,8 +46,6 @@ class OfflineMapPackageQueryResult(winrt.system.Object):
 
 @typing.final
 class OfflineMapPackageStartDownloadResult(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> OfflineMapPackageStartDownloadResult: ...
     @_property
     def status(self) -> OfflineMapPackageStartDownloadStatus: ...
 

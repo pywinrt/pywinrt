@@ -24,8 +24,6 @@ class WebUICommandBar_Static(type):
 
 @typing.final
 class WebUICommandBar(winrt.system.Object, metaclass=WebUICommandBar_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WebUICommandBar: ...
     def add_menu_closed(self, handler: MenuClosedEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
     def remove_menu_closed(self, value: windows_foundation.EventRegistrationToken, /) -> None: ...
     def add_menu_opened(self, handler: MenuOpenedEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
@@ -65,8 +63,6 @@ class WebUICommandBar(winrt.system.Object, metaclass=WebUICommandBar_Static):
 
 @typing.final
 class WebUICommandBarBitmapIcon(winrt.system.Object, ImplementsIWebUICommandBarIcon):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WebUICommandBarBitmapIcon: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], uri: windows_foundation.Uri) -> Self: ...
     @typing.overload
@@ -78,8 +74,6 @@ class WebUICommandBarBitmapIcon(winrt.system.Object, ImplementsIWebUICommandBarI
 
 @typing.final
 class WebUICommandBarConfirmationButton(winrt.system.Object, ImplementsIWebUICommandBarElement):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WebUICommandBarConfirmationButton: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     def add_item_invoked(self, handler: windows_foundation.TypedEventHandler[WebUICommandBarConfirmationButton, WebUICommandBarItemInvokedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     def remove_item_invoked(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
@@ -90,8 +84,6 @@ class WebUICommandBarConfirmationButton(winrt.system.Object, ImplementsIWebUICom
 
 @typing.final
 class WebUICommandBarIconButton(winrt.system.Object, ImplementsIWebUICommandBarElement):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WebUICommandBarIconButton: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     def add_item_invoked(self, handler: windows_foundation.TypedEventHandler[WebUICommandBarIconButton, WebUICommandBarItemInvokedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     def remove_item_invoked(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
@@ -118,22 +110,16 @@ class WebUICommandBarIconButton(winrt.system.Object, ImplementsIWebUICommandBarE
 
 @typing.final
 class WebUICommandBarItemInvokedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WebUICommandBarItemInvokedEventArgs: ...
     @_property
     def is_primary_command(self) -> bool: ...
 
 @typing.final
 class WebUICommandBarSizeChangedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WebUICommandBarSizeChangedEventArgs: ...
     @_property
     def size(self) -> windows_foundation.Size: ...
 
 @typing.final
 class WebUICommandBarSymbolIcon(winrt.system.Object, ImplementsIWebUICommandBarIcon):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WebUICommandBarSymbolIcon: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], symbol: str) -> Self: ...
     @typing.overload
@@ -148,14 +134,12 @@ class ImplementsIWebUICommandBarElement():
 
 @typing.final
 class IWebUICommandBarElement(winrt.system.Object, ImplementsIWebUICommandBarElement):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IWebUICommandBarElement: ...
+    pass
 
 class ImplementsIWebUICommandBarIcon():
     pass
 
 @typing.final
 class IWebUICommandBarIcon(winrt.system.Object, ImplementsIWebUICommandBarIcon):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IWebUICommandBarIcon: ...
+    pass
 

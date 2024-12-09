@@ -19,8 +19,6 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class AgentProvisioningProgressReport(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AgentProvisioningProgressReport: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @_property
     def state(self) -> DeploymentAgentProgressState: ...
@@ -51,8 +49,6 @@ class AgentProvisioningProgressReport(winrt.system.Object):
 
 @typing.final
 class DeploymentSessionConnectionChangedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> DeploymentSessionConnectionChangedEventArgs: ...
     @_property
     def change(self) -> DeploymentSessionConnectionChange: ...
     @_property
@@ -60,8 +56,6 @@ class DeploymentSessionConnectionChangedEventArgs(winrt.system.Object):
 
 @typing.final
 class DeploymentSessionHeartbeatRequestedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> DeploymentSessionHeartbeatRequestedEventArgs: ...
     @_property
     def handled(self) -> bool: ...
     @handled.setter
@@ -69,8 +63,6 @@ class DeploymentSessionHeartbeatRequestedEventArgs(winrt.system.Object):
 
 @typing.final
 class DeploymentSessionStateChangedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> DeploymentSessionStateChangedEventArgs: ...
     @_property
     def change(self) -> DeploymentSessionStateChange: ...
     @_property
@@ -78,8 +70,6 @@ class DeploymentSessionStateChangedEventArgs(winrt.system.Object):
 
 @typing.final
 class DeploymentWorkload(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> DeploymentWorkload: ...
     def __new__(cls: typing.Type[Self], id: str) -> Self: ...
     @_property
     def state_details(self) -> str: ...
@@ -122,8 +112,6 @@ class DeploymentWorkload(winrt.system.Object):
 
 @typing.final
 class DeploymentWorkloadBatch(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> DeploymentWorkloadBatch: ...
     def __new__(cls: typing.Type[Self], id: winrt.system.UInt32) -> Self: ...
     @_property
     def display_category_title(self) -> str: ...
@@ -136,8 +124,6 @@ class DeploymentWorkloadBatch(winrt.system.Object):
 
 @typing.final
 class DevicePreparationExecutionContext(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> DevicePreparationExecutionContext: ...
     @_property
     def context(self) -> str: ...
 
@@ -147,8 +133,6 @@ class MachineProvisioningProgressReporter_Static(type):
 
 @typing.final
 class MachineProvisioningProgressReporter(winrt.system.Object, metaclass=MachineProvisioningProgressReporter_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> MachineProvisioningProgressReporter: ...
     def get_device_preparation_execution_context_async(self) -> windows_foundation.IAsyncOperation[DevicePreparationExecutionContext]: ...
     def report_progress(self, update_report: AgentProvisioningProgressReport, /) -> None: ...
     def add_session_connection_changed(self, handler: windows_foundation.TypedEventHandler[MachineProvisioningProgressReporter, DeploymentSessionConnectionChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...

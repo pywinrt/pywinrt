@@ -30,6 +30,7 @@
 
 ### Removed
 - BREAKING: Removed `winrt.windows.foundation.interop` module.
+- Removed `_from()` methods from type hints.
 
 [#25]: https://github.com/pywinrt/pywinrt/issues/25
 [#80]: https://github.com/pywinrt/pywinrt/issues/80

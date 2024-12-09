@@ -27,8 +27,6 @@ class NetworkUsageStates:
 
 @typing.final
 class AttributedNetworkUsage(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AttributedNetworkUsage: ...
     @_property
     def attribution_id(self) -> str: ...
     @_property
@@ -42,8 +40,6 @@ class AttributedNetworkUsage(winrt.system.Object):
 
 @typing.final
 class CellularApnContext(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> CellularApnContext: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @_property
     def user_name(self) -> str: ...
@@ -76,8 +72,6 @@ class CellularApnContext(winrt.system.Object):
 
 @typing.final
 class ConnectionCost(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ConnectionCost: ...
     @_property
     def approaching_data_limit(self) -> bool: ...
     @_property
@@ -91,8 +85,6 @@ class ConnectionCost(winrt.system.Object):
 
 @typing.final
 class ConnectionProfile(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ConnectionProfile: ...
     def get_attributed_network_usage_async(self, start_time: datetime.datetime, end_time: datetime.datetime, states: NetworkUsageStates, /) -> windows_foundation.IAsyncOperation[typing.Sequence[AttributedNetworkUsage]]: ...
     def get_connection_cost(self) -> ConnectionCost: ...
     def get_connectivity_intervals_async(self, start_time: datetime.datetime, end_time: datetime.datetime, states: NetworkUsageStates, /) -> windows_foundation.IAsyncOperation[typing.Sequence[ConnectivityInterval]]: ...
@@ -130,8 +122,6 @@ class ConnectionProfile(winrt.system.Object):
 
 @typing.final
 class ConnectionProfileFilter(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ConnectionProfileFilter: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @_property
     def service_provider_guid(self) -> typing.Optional[_uuid.UUID]: ...
@@ -176,16 +166,12 @@ class ConnectionProfileFilter(winrt.system.Object):
 class ConnectionSession(winrt.system.Object, windows_foundation.ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ConnectionSession: ...
     def close(self) -> None: ...
     @_property
     def connection_profile(self) -> ConnectionProfile: ...
 
 @typing.final
 class ConnectivityInterval(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ConnectivityInterval: ...
     @_property
     def connection_duration(self) -> datetime.timedelta: ...
     @_property
@@ -203,8 +189,6 @@ class ConnectivityManager(winrt.system.Object, metaclass=ConnectivityManager_Sta
 
 @typing.final
 class DataPlanStatus(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> DataPlanStatus: ...
     @_property
     def data_limit_in_megabytes(self) -> typing.Optional[winrt.system.UInt32]: ...
     @_property
@@ -220,8 +204,6 @@ class DataPlanStatus(winrt.system.Object):
 
 @typing.final
 class DataPlanUsage(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> DataPlanUsage: ...
     @_property
     def last_sync_time(self) -> datetime.datetime: ...
     @_property
@@ -229,8 +211,6 @@ class DataPlanUsage(winrt.system.Object):
 
 @typing.final
 class DataUsage(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> DataUsage: ...
     @_property
     def bytes_received(self) -> winrt.system.UInt64: ...
     @_property
@@ -238,8 +218,6 @@ class DataUsage(winrt.system.Object):
 
 @typing.final
 class IPInformation(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IPInformation: ...
     @_property
     def network_adapter(self) -> NetworkAdapter: ...
     @_property
@@ -247,8 +225,6 @@ class IPInformation(winrt.system.Object):
 
 @typing.final
 class LanIdentifier(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> LanIdentifier: ...
     @_property
     def infrastructure_id(self) -> LanIdentifierData: ...
     @_property
@@ -258,8 +234,6 @@ class LanIdentifier(winrt.system.Object):
 
 @typing.final
 class LanIdentifierData(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> LanIdentifierData: ...
     @_property
     def type(self) -> winrt.system.UInt32: ...
     @_property
@@ -267,8 +241,6 @@ class LanIdentifierData(winrt.system.Object):
 
 @typing.final
 class NetworkAdapter(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> NetworkAdapter: ...
     def get_connected_profile_async(self) -> windows_foundation.IAsyncOperation[ConnectionProfile]: ...
     @_property
     def iana_interface_type(self) -> winrt.system.UInt32: ...
@@ -299,16 +271,12 @@ class NetworkInformation(winrt.system.Object, metaclass=NetworkInformation_Stati
 
 @typing.final
 class NetworkItem(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> NetworkItem: ...
     def get_network_types(self) -> NetworkTypes: ...
     @_property
     def network_id(self) -> _uuid.UUID: ...
 
 @typing.final
 class NetworkSecuritySettings(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> NetworkSecuritySettings: ...
     @_property
     def network_authentication_type(self) -> NetworkAuthenticationType: ...
     @_property
@@ -316,8 +284,6 @@ class NetworkSecuritySettings(winrt.system.Object):
 
 @typing.final
 class NetworkStateChangeEventDetails(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> NetworkStateChangeEventDetails: ...
     @_property
     def has_new_connection_cost(self) -> bool: ...
     @_property
@@ -337,8 +303,6 @@ class NetworkStateChangeEventDetails(winrt.system.Object):
 
 @typing.final
 class NetworkUsage(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> NetworkUsage: ...
     @_property
     def bytes_received(self) -> winrt.system.UInt64: ...
     @_property
@@ -348,8 +312,6 @@ class NetworkUsage(winrt.system.Object):
 
 @typing.final
 class ProviderNetworkUsage(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ProviderNetworkUsage: ...
     @_property
     def bytes_received(self) -> winrt.system.UInt64: ...
     @_property
@@ -359,8 +321,6 @@ class ProviderNetworkUsage(winrt.system.Object):
 
 @typing.final
 class ProxyConfiguration(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ProxyConfiguration: ...
     @_property
     def can_connect_directly(self) -> bool: ...
     @_property
@@ -368,8 +328,6 @@ class ProxyConfiguration(winrt.system.Object):
 
 @typing.final
 class RoutePolicy(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> RoutePolicy: ...
     def __new__(cls: typing.Type[Self], connection_profile: ConnectionProfile, host_name: windows_networking.HostName, type: windows_networking.DomainNameType) -> Self: ...
     @_property
     def connection_profile(self) -> ConnectionProfile: ...
@@ -380,14 +338,10 @@ class RoutePolicy(winrt.system.Object):
 
 @typing.final
 class WlanConnectionProfileDetails(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WlanConnectionProfileDetails: ...
     def get_connected_ssid(self) -> str: ...
 
 @typing.final
 class WwanConnectionProfileDetails(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WwanConnectionProfileDetails: ...
     def get_current_data_class(self) -> WwanDataClass: ...
     def get_network_registration_state(self) -> WwanNetworkRegistrationState: ...
     @_property

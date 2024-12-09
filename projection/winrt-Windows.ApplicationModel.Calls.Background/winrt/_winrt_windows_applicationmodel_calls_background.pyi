@@ -17,8 +17,6 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class PhoneCallBlockedTriggerDetails(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PhoneCallBlockedTriggerDetails: ...
     @_property
     def call_blocked_reason(self) -> PhoneCallBlockedReason: ...
     @_property
@@ -28,8 +26,6 @@ class PhoneCallBlockedTriggerDetails(winrt.system.Object):
 
 @typing.final
 class PhoneCallOriginDataRequestTriggerDetails(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PhoneCallOriginDataRequestTriggerDetails: ...
     @_property
     def phone_number(self) -> str: ...
     @_property
@@ -37,8 +33,6 @@ class PhoneCallOriginDataRequestTriggerDetails(winrt.system.Object):
 
 @typing.final
 class PhoneIncomingCallDismissedTriggerDetails(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PhoneIncomingCallDismissedTriggerDetails: ...
     @_property
     def dismissal_time(self) -> datetime.datetime: ...
     @_property
@@ -54,8 +48,6 @@ class PhoneIncomingCallDismissedTriggerDetails(winrt.system.Object):
 
 @typing.final
 class PhoneIncomingCallNotificationTriggerDetails(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PhoneIncomingCallNotificationTriggerDetails: ...
     @_property
     def call_id(self) -> str: ...
     @_property
@@ -63,8 +55,6 @@ class PhoneIncomingCallNotificationTriggerDetails(winrt.system.Object):
 
 @typing.final
 class PhoneLineChangedTriggerDetails(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PhoneLineChangedTriggerDetails: ...
     def has_line_property_changed(self, line_property: PhoneLineProperties, /) -> bool: ...
     @_property
     def change_type(self) -> PhoneLineChangeKind: ...
@@ -73,8 +63,6 @@ class PhoneLineChangedTriggerDetails(winrt.system.Object):
 
 @typing.final
 class PhoneNewVoicemailMessageTriggerDetails(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PhoneNewVoicemailMessageTriggerDetails: ...
     @_property
     def line_id(self) -> _uuid.UUID: ...
     @_property

@@ -20,7 +20,5 @@ class InkWorkspaceHostedAppManager_Static(type):
 
 @typing.final
 class InkWorkspaceHostedAppManager(winrt.system.Object, metaclass=InkWorkspaceHostedAppManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> InkWorkspaceHostedAppManager: ...
     def set_thumbnail_async(self, bitmap: windows_graphics_imaging.SoftwareBitmap, /) -> windows_foundation.IAsyncAction: ...
 

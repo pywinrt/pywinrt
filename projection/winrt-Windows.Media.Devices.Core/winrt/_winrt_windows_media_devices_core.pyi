@@ -21,8 +21,6 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class CameraIntrinsics(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> CameraIntrinsics: ...
     def __new__(cls: typing.Type[Self], focal_length: windows_foundation_numerics.Vector2, principal_point: windows_foundation_numerics.Vector2, radial_distortion: windows_foundation_numerics.Vector3, tangential_distortion: windows_foundation_numerics.Vector2, image_width: winrt.system.UInt32, image_height: winrt.system.UInt32) -> Self: ...
     def distort_point(self, input: windows_foundation.Point, /) -> windows_foundation.Point: ...
     def distort_points(self, inputs: typing.Union[winrt.system.Array[windows_foundation.Point], winrt.system.ReadableBuffer], results: typing.Union[winrt.system.Array[windows_foundation.Point], winrt.system.WriteableBuffer], /) -> None: ...
@@ -51,8 +49,6 @@ class CameraIntrinsics(winrt.system.Object):
 class DepthCorrelatedCoordinateMapper(winrt.system.Object, windows_foundation.ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> DepthCorrelatedCoordinateMapper: ...
     def close(self) -> None: ...
     def map_point(self, source_point: windows_foundation.Point, target_coordinate_system: windows_perception_spatial.SpatialCoordinateSystem, target_camera_intrinsics: CameraIntrinsics, /) -> windows_foundation.Point: ...
     def map_points(self, source_points: typing.Union[winrt.system.Array[windows_foundation.Point], winrt.system.ReadableBuffer], target_coordinate_system: windows_perception_spatial.SpatialCoordinateSystem, target_camera_intrinsics: CameraIntrinsics, results: typing.Union[winrt.system.Array[windows_foundation.Point], winrt.system.WriteableBuffer], /) -> None: ...
@@ -61,8 +57,6 @@ class DepthCorrelatedCoordinateMapper(winrt.system.Object, windows_foundation.Im
 
 @typing.final
 class FrameControlCapabilities(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> FrameControlCapabilities: ...
     @_property
     def exposure(self) -> FrameExposureCapabilities: ...
     @_property
@@ -78,8 +72,6 @@ class FrameControlCapabilities(winrt.system.Object):
 
 @typing.final
 class FrameController(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> FrameController: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @_property
     def photo_confirmation_enabled(self) -> typing.Optional[bool]: ...
@@ -98,8 +90,6 @@ class FrameController(winrt.system.Object):
 
 @typing.final
 class FrameExposureCapabilities(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> FrameExposureCapabilities: ...
     @_property
     def max(self) -> datetime.timedelta: ...
     @_property
@@ -111,8 +101,6 @@ class FrameExposureCapabilities(winrt.system.Object):
 
 @typing.final
 class FrameExposureCompensationCapabilities(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> FrameExposureCompensationCapabilities: ...
     @_property
     def max(self) -> winrt.system.Single: ...
     @_property
@@ -124,8 +112,6 @@ class FrameExposureCompensationCapabilities(winrt.system.Object):
 
 @typing.final
 class FrameExposureCompensationControl(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> FrameExposureCompensationControl: ...
     @_property
     def value(self) -> typing.Optional[winrt.system.Single]: ...
     @value.setter
@@ -133,8 +119,6 @@ class FrameExposureCompensationControl(winrt.system.Object):
 
 @typing.final
 class FrameExposureControl(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> FrameExposureControl: ...
     @_property
     def value(self) -> typing.Optional[datetime.timedelta]: ...
     @value.setter
@@ -146,8 +130,6 @@ class FrameExposureControl(winrt.system.Object):
 
 @typing.final
 class FrameFlashCapabilities(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> FrameFlashCapabilities: ...
     @_property
     def power_supported(self) -> bool: ...
     @_property
@@ -157,8 +139,6 @@ class FrameFlashCapabilities(winrt.system.Object):
 
 @typing.final
 class FrameFlashControl(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> FrameFlashControl: ...
     @_property
     def red_eye_reduction(self) -> bool: ...
     @red_eye_reduction.setter
@@ -178,8 +158,6 @@ class FrameFlashControl(winrt.system.Object):
 
 @typing.final
 class FrameFocusCapabilities(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> FrameFocusCapabilities: ...
     @_property
     def max(self) -> winrt.system.UInt32: ...
     @_property
@@ -191,8 +169,6 @@ class FrameFocusCapabilities(winrt.system.Object):
 
 @typing.final
 class FrameFocusControl(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> FrameFocusControl: ...
     @_property
     def value(self) -> typing.Optional[winrt.system.UInt32]: ...
     @value.setter
@@ -200,8 +176,6 @@ class FrameFocusControl(winrt.system.Object):
 
 @typing.final
 class FrameIsoSpeedCapabilities(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> FrameIsoSpeedCapabilities: ...
     @_property
     def max(self) -> winrt.system.UInt32: ...
     @_property
@@ -213,8 +187,6 @@ class FrameIsoSpeedCapabilities(winrt.system.Object):
 
 @typing.final
 class FrameIsoSpeedControl(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> FrameIsoSpeedControl: ...
     @_property
     def value(self) -> typing.Optional[winrt.system.UInt32]: ...
     @value.setter
@@ -226,8 +198,6 @@ class FrameIsoSpeedControl(winrt.system.Object):
 
 @typing.final
 class VariablePhotoSequenceController(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> VariablePhotoSequenceController: ...
     def get_current_frame_rate(self) -> windows_media_mediaproperties.MediaRatio: ...
     def get_highest_concurrent_frame_rate(self, capture_properties: windows_media_mediaproperties.ImplementsIMediaEncodingProperties, /) -> windows_media_mediaproperties.MediaRatio: ...
     @_property

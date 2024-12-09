@@ -15,8 +15,6 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class DeviceServicingDetails(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> DeviceServicingDetails: ...
     @_property
     def arguments(self) -> str: ...
     @_property
@@ -26,8 +24,6 @@ class DeviceServicingDetails(winrt.system.Object):
 
 @typing.final
 class DeviceUseDetails(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> DeviceUseDetails: ...
     @_property
     def arguments(self) -> str: ...
     @_property

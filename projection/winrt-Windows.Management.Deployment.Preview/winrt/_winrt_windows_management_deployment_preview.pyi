@@ -22,8 +22,6 @@ class ClassicAppManager(winrt.system.Object, metaclass=ClassicAppManager_Static)
 
 @typing.final
 class InstalledClassicAppInfo(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> InstalledClassicAppInfo: ...
     @_property
     def display_name(self) -> str: ...
     @_property

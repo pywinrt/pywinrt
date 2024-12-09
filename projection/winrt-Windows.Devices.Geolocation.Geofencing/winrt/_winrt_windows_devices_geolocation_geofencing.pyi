@@ -19,8 +19,6 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class Geofence(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> Geofence: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], id: str, geoshape: windows_devices_geolocation.ImplementsIGeoshape) -> Self: ...
     @typing.overload
@@ -51,8 +49,6 @@ class GeofenceMonitor_Static(type):
 
 @typing.final
 class GeofenceMonitor(winrt.system.Object, metaclass=GeofenceMonitor_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> GeofenceMonitor: ...
     def read_reports(self) -> typing.Sequence[GeofenceStateChangeReport]: ...
     def add_geofence_state_changed(self, event_handler: windows_foundation.TypedEventHandler[GeofenceMonitor, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     def remove_geofence_state_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
@@ -67,8 +63,6 @@ class GeofenceMonitor(winrt.system.Object, metaclass=GeofenceMonitor_Static):
 
 @typing.final
 class GeofenceStateChangeReport(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> GeofenceStateChangeReport: ...
     @_property
     def geofence(self) -> Geofence: ...
     @_property

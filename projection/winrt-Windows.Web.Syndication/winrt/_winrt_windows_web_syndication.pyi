@@ -34,8 +34,6 @@ class TransferProgress:
 
 @typing.final
 class SyndicationAttribute(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SyndicationAttribute: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], attribute_name: str, attribute_namespace: str, attribute_value: str) -> Self: ...
     @typing.overload
@@ -55,8 +53,6 @@ class SyndicationAttribute(winrt.system.Object):
 
 @typing.final
 class SyndicationCategory(winrt.system.Object, ImplementsISyndicationNode):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SyndicationCategory: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], term: str) -> Self: ...
     @typing.overload
@@ -103,8 +99,6 @@ class SyndicationCategory(winrt.system.Object, ImplementsISyndicationNode):
 
 @typing.final
 class SyndicationClient(winrt.system.Object, ImplementsISyndicationClient):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SyndicationClient: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], server_credential: windows_security_credentials.PasswordCredential) -> Self: ...
     @typing.overload
@@ -134,8 +128,6 @@ class SyndicationClient(winrt.system.Object, ImplementsISyndicationClient):
 
 @typing.final
 class SyndicationContent(winrt.system.Object, ImplementsISyndicationText, ImplementsISyndicationNode):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SyndicationContent: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], text: str, type: SyndicationTextType) -> Self: ...
     @typing.overload
@@ -194,8 +186,6 @@ class SyndicationError(winrt.system.Object, metaclass=SyndicationError_Static):
 
 @typing.final
 class SyndicationFeed(winrt.system.Object, ImplementsISyndicationNode):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SyndicationFeed: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], title: str, subtitle: str, uri: windows_foundation.Uri) -> Self: ...
     @typing.overload
@@ -282,8 +272,6 @@ class SyndicationFeed(winrt.system.Object, ImplementsISyndicationNode):
 
 @typing.final
 class SyndicationGenerator(winrt.system.Object, ImplementsISyndicationNode):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SyndicationGenerator: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], text: str) -> Self: ...
     @typing.overload
@@ -328,8 +316,6 @@ class SyndicationGenerator(winrt.system.Object, ImplementsISyndicationNode):
 
 @typing.final
 class SyndicationItem(winrt.system.Object, ImplementsISyndicationNode):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SyndicationItem: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], title: str, content: SyndicationContent, uri: windows_foundation.Uri) -> Self: ...
     @typing.overload
@@ -416,8 +402,6 @@ class SyndicationItem(winrt.system.Object, ImplementsISyndicationNode):
 
 @typing.final
 class SyndicationLink(winrt.system.Object, ImplementsISyndicationNode):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SyndicationLink: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], uri: windows_foundation.Uri) -> Self: ...
     @typing.overload
@@ -476,8 +460,6 @@ class SyndicationLink(winrt.system.Object, ImplementsISyndicationNode):
 
 @typing.final
 class SyndicationNode(winrt.system.Object, ImplementsISyndicationNode):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SyndicationNode: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], node_name: str, node_namespace: str, node_value: str) -> Self: ...
     @typing.overload
@@ -510,8 +492,6 @@ class SyndicationNode(winrt.system.Object, ImplementsISyndicationNode):
 
 @typing.final
 class SyndicationPerson(winrt.system.Object, ImplementsISyndicationNode):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SyndicationPerson: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], name: str) -> Self: ...
     @typing.overload
@@ -558,8 +538,6 @@ class SyndicationPerson(winrt.system.Object, ImplementsISyndicationNode):
 
 @typing.final
 class SyndicationText(winrt.system.Object, ImplementsISyndicationText, ImplementsISyndicationNode):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SyndicationText: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], text: str) -> Self: ...
     @typing.overload
@@ -609,8 +587,6 @@ class ImplementsISyndicationClient():
 
 @typing.final
 class ISyndicationClient(winrt.system.Object, ImplementsISyndicationClient):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ISyndicationClient: ...
     def retrieve_feed_async(self, uri: windows_foundation.Uri, /) -> windows_foundation.IAsyncOperationWithProgress[SyndicationFeed, RetrievalProgress]: ...
     def set_request_header(self, name: str, value: str, /) -> None: ...
     @_property
@@ -639,8 +615,6 @@ class ImplementsISyndicationNode():
 
 @typing.final
 class ISyndicationNode(winrt.system.Object, ImplementsISyndicationNode):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ISyndicationNode: ...
     def get_xml_document(self, format: SyndicationFormat, /) -> windows_data_xml_dom.XmlDocument: ...
     @_property
     def attribute_extensions(self) -> typing.MutableSequence[SyndicationAttribute]: ...
@@ -672,8 +646,6 @@ class ImplementsISyndicationText():
 
 @typing.final
 class ISyndicationText(winrt.system.Object, ImplementsISyndicationText, ImplementsISyndicationNode):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ISyndicationText: ...
     def get_xml_document(self, format: SyndicationFormat, /) -> windows_data_xml_dom.XmlDocument: ...
     @_property
     def text(self) -> str: ...

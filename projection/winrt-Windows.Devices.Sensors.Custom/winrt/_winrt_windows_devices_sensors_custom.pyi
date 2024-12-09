@@ -21,8 +21,6 @@ class CustomSensor_Static(type):
 
 @typing.final
 class CustomSensor(winrt.system.Object, metaclass=CustomSensor_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> CustomSensor: ...
     def get_current_reading(self) -> CustomSensorReading: ...
     def add_reading_changed(self, handler: windows_foundation.TypedEventHandler[CustomSensor, CustomSensorReadingChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     def remove_reading_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
@@ -43,8 +41,6 @@ class CustomSensor(winrt.system.Object, metaclass=CustomSensor_Static):
 
 @typing.final
 class CustomSensorReading(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> CustomSensorReading: ...
     @_property
     def properties(self) -> typing.Mapping[str, winrt.system.Object]: ...
     @_property
@@ -54,8 +50,6 @@ class CustomSensorReading(winrt.system.Object):
 
 @typing.final
 class CustomSensorReadingChangedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> CustomSensorReadingChangedEventArgs: ...
     @_property
     def reading(self) -> CustomSensorReading: ...
 

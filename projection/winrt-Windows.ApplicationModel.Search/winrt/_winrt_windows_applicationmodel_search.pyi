@@ -18,8 +18,6 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class LocalContentSuggestionSettings(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> LocalContentSuggestionSettings: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @_property
     def enabled(self) -> bool: ...
@@ -43,8 +41,6 @@ class SearchPane_Static(type):
 
 @typing.final
 class SearchPane(winrt.system.Object, metaclass=SearchPane_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SearchPane: ...
     # @deprecated("ISearchPane may be altered or unavailable for releases after Windows 10.")
     def set_local_content_suggestion_settings(self, settings: LocalContentSuggestionSettings, /) -> None: ...
     # @deprecated("ISearchPane may be altered or unavailable for releases after Windows 10.")
@@ -98,8 +94,6 @@ class SearchPane(winrt.system.Object, metaclass=SearchPane_Static):
 
 @typing.final
 class SearchPaneQueryChangedEventArgs(winrt.system.Object, ImplementsISearchPaneQueryChangedEventArgs):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SearchPaneQueryChangedEventArgs: ...
     @_property
     def language(self) -> str: ...
     @_property
@@ -109,8 +103,6 @@ class SearchPaneQueryChangedEventArgs(winrt.system.Object, ImplementsISearchPane
 
 @typing.final
 class SearchPaneQueryLinguisticDetails(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SearchPaneQueryLinguisticDetails: ...
     @_property
     def query_text_alternatives(self) -> typing.Sequence[str]: ...
     @_property
@@ -120,8 +112,6 @@ class SearchPaneQueryLinguisticDetails(winrt.system.Object):
 
 @typing.final
 class SearchPaneQuerySubmittedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SearchPaneQuerySubmittedEventArgs: ...
     @_property
     def language(self) -> str: ...
     @_property
@@ -131,15 +121,11 @@ class SearchPaneQuerySubmittedEventArgs(winrt.system.Object):
 
 @typing.final
 class SearchPaneResultSuggestionChosenEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SearchPaneResultSuggestionChosenEventArgs: ...
     @_property
     def tag(self) -> str: ...
 
 @typing.final
 class SearchPaneSuggestionsRequest(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SearchPaneSuggestionsRequest: ...
     # @deprecated("ISearchPaneSuggestionsRequest may be altered or unavailable for releases after Windows 10.")
     def get_deferral(self) -> SearchPaneSuggestionsRequestDeferral: ...
     @_property
@@ -149,15 +135,11 @@ class SearchPaneSuggestionsRequest(winrt.system.Object):
 
 @typing.final
 class SearchPaneSuggestionsRequestDeferral(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SearchPaneSuggestionsRequestDeferral: ...
     # @deprecated("ISearchPaneSuggestionsRequestDeferral may be altered or unavailable for releases after Windows 10.")
     def complete(self) -> None: ...
 
 @typing.final
 class SearchPaneSuggestionsRequestedEventArgs(winrt.system.Object, ImplementsISearchPaneQueryChangedEventArgs):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SearchPaneSuggestionsRequestedEventArgs: ...
     @_property
     def language(self) -> str: ...
     @_property
@@ -169,15 +151,11 @@ class SearchPaneSuggestionsRequestedEventArgs(winrt.system.Object, ImplementsISe
 
 @typing.final
 class SearchPaneVisibilityChangedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SearchPaneVisibilityChangedEventArgs: ...
     @_property
     def visible(self) -> bool: ...
 
 @typing.final
 class SearchQueryLinguisticDetails(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SearchQueryLinguisticDetails: ...
     def __new__(cls: typing.Type[Self], query_text_alternatives: typing.Iterable[str], query_text_composition_start: winrt.system.UInt32, query_text_composition_length: winrt.system.UInt32) -> Self: ...
     @_property
     def query_text_alternatives(self) -> typing.Sequence[str]: ...
@@ -188,8 +166,6 @@ class SearchQueryLinguisticDetails(winrt.system.Object):
 
 @typing.final
 class SearchSuggestionCollection(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SearchSuggestionCollection: ...
     def append_query_suggestion(self, text: str, /) -> None: ...
     def append_query_suggestions(self, suggestions: typing.Iterable[str], /) -> None: ...
     def append_result_suggestion(self, text: str, detail_text: str, tag: str, image: windows_storage_streams.ImplementsIRandomAccessStreamReference, image_alternate_text: str, /) -> None: ...
@@ -199,8 +175,6 @@ class SearchSuggestionCollection(winrt.system.Object):
 
 @typing.final
 class SearchSuggestionsRequest(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SearchSuggestionsRequest: ...
     def get_deferral(self) -> SearchSuggestionsRequestDeferral: ...
     @_property
     def is_canceled(self) -> bool: ...
@@ -209,8 +183,6 @@ class SearchSuggestionsRequest(winrt.system.Object):
 
 @typing.final
 class SearchSuggestionsRequestDeferral(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SearchSuggestionsRequestDeferral: ...
     def complete(self) -> None: ...
 
 class ImplementsISearchPaneQueryChangedEventArgs():
@@ -218,8 +190,6 @@ class ImplementsISearchPaneQueryChangedEventArgs():
 
 @typing.final
 class ISearchPaneQueryChangedEventArgs(winrt.system.Object, ImplementsISearchPaneQueryChangedEventArgs):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ISearchPaneQueryChangedEventArgs: ...
     @_property
     def language(self) -> str: ...
     @_property

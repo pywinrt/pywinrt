@@ -15,8 +15,6 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class LanguageFont(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> LanguageFont: ...
     @_property
     def font_family(self) -> str: ...
     @_property
@@ -30,8 +28,6 @@ class LanguageFont(winrt.system.Object):
 
 @typing.final
 class LanguageFontGroup(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> LanguageFontGroup: ...
     def __new__(cls: typing.Type[Self], language_tag: str) -> Self: ...
     @_property
     def document_alternate1_font(self) -> LanguageFont: ...

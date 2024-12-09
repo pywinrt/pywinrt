@@ -44,8 +44,6 @@ class LocalCategories(winrt.system.Object, metaclass=LocalCategories_Static):
 
 @typing.final
 class LocalLocation(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> LocalLocation: ...
     @_property
     def address(self) -> windows_services_maps.MapAddress: ...
     @_property
@@ -77,8 +75,6 @@ class LocalLocationFinder(winrt.system.Object, metaclass=LocalLocationFinder_Sta
 
 @typing.final
 class LocalLocationFinderResult(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> LocalLocationFinderResult: ...
     @_property
     def local_locations(self) -> typing.Sequence[LocalLocation]: ...
     @_property
@@ -86,8 +82,6 @@ class LocalLocationFinderResult(winrt.system.Object):
 
 @typing.final
 class LocalLocationHoursOfOperationItem(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> LocalLocationHoursOfOperationItem: ...
     @_property
     def day(self) -> windows_globalization.DayOfWeek: ...
     @_property
@@ -97,8 +91,6 @@ class LocalLocationHoursOfOperationItem(winrt.system.Object):
 
 @typing.final
 class LocalLocationRatingInfo(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> LocalLocationRatingInfo: ...
     @_property
     def aggregate_rating(self) -> typing.Optional[winrt.system.Double]: ...
     @_property

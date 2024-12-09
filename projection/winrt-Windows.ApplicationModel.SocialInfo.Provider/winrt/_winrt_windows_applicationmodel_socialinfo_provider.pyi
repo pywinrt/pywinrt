@@ -17,8 +17,6 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class SocialDashboardItemUpdater(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SocialDashboardItemUpdater: ...
     # @deprecated("ISocialDashboardItemUpdater is deprecated and might not work on all platforms. For more info, see MSDN.")
     def commit_async(self) -> windows_foundation.IAsyncAction: ...
     @_property
@@ -40,8 +38,6 @@ class SocialDashboardItemUpdater(winrt.system.Object):
 
 @typing.final
 class SocialFeedUpdater(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SocialFeedUpdater: ...
     # @deprecated("ISocialFeedUpdater is deprecated and might not work on all platforms. For more info, see MSDN.")
     def commit_async(self) -> windows_foundation.IAsyncAction: ...
     @_property

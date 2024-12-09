@@ -18,8 +18,6 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class AnimationDescription(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AnimationDescription: ...
     def __new__(cls: typing.Type[Self], effect: AnimationEffect, target: AnimationEffectTarget) -> Self: ...
     @_property
     def animations(self) -> typing.Sequence[IPropertyAnimation]: ...
@@ -34,8 +32,6 @@ class AnimationDescription(winrt.system.Object):
 
 @typing.final
 class OpacityAnimation(winrt.system.Object, ImplementsIPropertyAnimation):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> OpacityAnimation: ...
     @_property
     def final_opacity(self) -> winrt.system.Single: ...
     @_property
@@ -53,8 +49,6 @@ class OpacityAnimation(winrt.system.Object, ImplementsIPropertyAnimation):
 
 @typing.final
 class PropertyAnimation(winrt.system.Object, ImplementsIPropertyAnimation):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PropertyAnimation: ...
     @_property
     def control1(self) -> windows_foundation.Point: ...
     @_property
@@ -68,8 +62,6 @@ class PropertyAnimation(winrt.system.Object, ImplementsIPropertyAnimation):
 
 @typing.final
 class ScaleAnimation(winrt.system.Object, ImplementsIPropertyAnimation):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ScaleAnimation: ...
     @_property
     def control1(self) -> windows_foundation.Point: ...
     @_property
@@ -93,8 +85,6 @@ class ScaleAnimation(winrt.system.Object, ImplementsIPropertyAnimation):
 
 @typing.final
 class TranslationAnimation(winrt.system.Object, ImplementsIPropertyAnimation):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> TranslationAnimation: ...
     @_property
     def control1(self) -> windows_foundation.Point: ...
     @_property
@@ -111,8 +101,6 @@ class ImplementsIPropertyAnimation():
 
 @typing.final
 class IPropertyAnimation(winrt.system.Object, ImplementsIPropertyAnimation):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IPropertyAnimation: ...
     @_property
     def control1(self) -> windows_foundation.Point: ...
     @_property

@@ -23,8 +23,6 @@ class MicrosoftAccountMultiFactorAuthenticationManager_Static(type):
 
 @typing.final
 class MicrosoftAccountMultiFactorAuthenticationManager(winrt.system.Object, metaclass=MicrosoftAccountMultiFactorAuthenticationManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> MicrosoftAccountMultiFactorAuthenticationManager: ...
     def add_device_async(self, user_account_id: str, authentication_token: str, wns_channel_id: str, /) -> windows_foundation.IAsyncOperation[MicrosoftAccountMultiFactorServiceResponse]: ...
     def approve_session_async(self, session_authentiction_status: MicrosoftAccountMultiFactorSessionAuthenticationStatus, user_account_id: str, session_id: str, session_authentication_type: MicrosoftAccountMultiFactorAuthenticationType, /) -> windows_foundation.IAsyncOperation[MicrosoftAccountMultiFactorServiceResponse]: ...
     def approve_session_using_auth_session_info_async(self, session_authentiction_status: MicrosoftAccountMultiFactorSessionAuthenticationStatus, authentication_session_info: MicrosoftAccountMultiFactorSessionInfo, /) -> windows_foundation.IAsyncOperation[MicrosoftAccountMultiFactorServiceResponse]: ...
@@ -38,8 +36,6 @@ class MicrosoftAccountMultiFactorAuthenticationManager(winrt.system.Object, meta
 
 @typing.final
 class MicrosoftAccountMultiFactorGetSessionsResult(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> MicrosoftAccountMultiFactorGetSessionsResult: ...
     @_property
     def service_response(self) -> MicrosoftAccountMultiFactorServiceResponse: ...
     @_property
@@ -47,8 +43,6 @@ class MicrosoftAccountMultiFactorGetSessionsResult(winrt.system.Object):
 
 @typing.final
 class MicrosoftAccountMultiFactorOneTimeCodedInfo(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> MicrosoftAccountMultiFactorOneTimeCodedInfo: ...
     @_property
     def code(self) -> str: ...
     @_property
@@ -60,8 +54,6 @@ class MicrosoftAccountMultiFactorOneTimeCodedInfo(winrt.system.Object):
 
 @typing.final
 class MicrosoftAccountMultiFactorSessionInfo(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> MicrosoftAccountMultiFactorSessionInfo: ...
     @_property
     def approval_status(self) -> MicrosoftAccountMultiFactorSessionApprovalStatus: ...
     @_property
@@ -79,8 +71,6 @@ class MicrosoftAccountMultiFactorSessionInfo(winrt.system.Object):
 
 @typing.final
 class MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo: ...
     @_property
     def service_response(self) -> MicrosoftAccountMultiFactorServiceResponse: ...
     @_property

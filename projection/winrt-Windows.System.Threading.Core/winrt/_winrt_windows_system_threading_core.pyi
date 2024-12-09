@@ -18,8 +18,6 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class PreallocatedWorkItem(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PreallocatedWorkItem: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], handler: windows_system_threading.WorkItemHandler) -> Self: ...
     @typing.overload
@@ -37,8 +35,6 @@ class SignalNotifier_Static(type):
 
 @typing.final
 class SignalNotifier(winrt.system.Object, metaclass=SignalNotifier_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SignalNotifier: ...
     def enable(self) -> None: ...
     def terminate(self) -> None: ...
 

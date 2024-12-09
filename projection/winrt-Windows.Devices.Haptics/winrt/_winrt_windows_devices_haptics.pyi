@@ -55,8 +55,6 @@ class KnownSimpleHapticsControllerWaveforms(winrt.system.Object, metaclass=Known
 
 @typing.final
 class SimpleHapticsController(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SimpleHapticsController: ...
     def send_haptic_feedback(self, feedback: SimpleHapticsControllerFeedback, /) -> None: ...
     def send_haptic_feedback_for_duration(self, feedback: SimpleHapticsControllerFeedback, intensity: winrt.system.Double, play_duration: datetime.timedelta, /) -> None: ...
     def send_haptic_feedback_for_play_count(self, feedback: SimpleHapticsControllerFeedback, intensity: winrt.system.Double, play_count: winrt.system.Int32, replay_pause_interval: datetime.timedelta, /) -> None: ...
@@ -77,8 +75,6 @@ class SimpleHapticsController(winrt.system.Object):
 
 @typing.final
 class SimpleHapticsControllerFeedback(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SimpleHapticsControllerFeedback: ...
     @_property
     def duration(self) -> datetime.timedelta: ...
     @_property
@@ -94,8 +90,6 @@ class VibrationDevice_Static(type):
 
 @typing.final
 class VibrationDevice(winrt.system.Object, metaclass=VibrationDevice_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> VibrationDevice: ...
     @_property
     def id(self) -> str: ...
     @_property

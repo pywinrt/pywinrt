@@ -38,8 +38,7 @@ class ColorHelper_Static(type):
 
 @typing.final
 class ColorHelper(winrt.system.Object, metaclass=ColorHelper_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ColorHelper: ...
+    pass
 
 @typing.final
 class Colors_Static(type):
@@ -328,16 +327,13 @@ class Colors_Static(type):
 
 @typing.final
 class Colors(winrt.system.Object, metaclass=Colors_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> Colors: ...
+    pass
 
 class ImplementsIClosableNotifier():
     pass
 
 @typing.final
 class IClosableNotifier(winrt.system.Object, ImplementsIClosableNotifier):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IClosableNotifier: ...
     def add_closed(self, handler: ClosableNotifierHandler, /) -> windows_foundation.EventRegistrationToken: ...
     def remove_closed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     def add_framework_closed(self, handler: ClosableNotifierHandler, /) -> windows_foundation.EventRegistrationToken: ...

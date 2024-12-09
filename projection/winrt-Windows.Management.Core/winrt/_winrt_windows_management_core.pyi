@@ -19,6 +19,5 @@ class ApplicationDataManager_Static(type):
 
 @typing.final
 class ApplicationDataManager(winrt.system.Object, metaclass=ApplicationDataManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ApplicationDataManager: ...
+    pass
 

@@ -30,8 +30,6 @@ class AppWindow_Static(type):
 
 @typing.final
 class AppWindow(winrt.system.Object, metaclass=AppWindow_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AppWindow: ...
     def associate_with_dispatcher_queue(self, dispatcher_queue: microsoft_ui_dispatching.DispatcherQueue, /) -> None: ...
     def destroy(self) -> None: ...
     def hide(self) -> None: ...
@@ -85,8 +83,6 @@ class AppWindow(winrt.system.Object, metaclass=AppWindow_Static):
 
 @typing.final
 class AppWindowChangedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AppWindowChangedEventArgs: ...
     @_property
     def did_position_change(self) -> bool: ...
     @_property
@@ -106,8 +102,6 @@ class AppWindowChangedEventArgs(winrt.system.Object):
 
 @typing.final
 class AppWindowClosingEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AppWindowClosingEventArgs: ...
     @_property
     def cancel(self) -> bool: ...
     @cancel.setter
@@ -117,8 +111,6 @@ class AppWindowPresenter_Static(type):
     pass
 
 class AppWindowPresenter(winrt.system.Object, metaclass=AppWindowPresenter_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AppWindowPresenter: ...
     @_property
     @typing.final
     def kind(self) -> AppWindowPresenterKind: ...
@@ -129,8 +121,6 @@ class AppWindowTitleBar_Static(type):
 
 @typing.final
 class AppWindowTitleBar(winrt.system.Object, metaclass=AppWindowTitleBar_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AppWindowTitleBar: ...
     def reset_to_default(self) -> None: ...
     # @deprecated("Use Microsoft.UI.Input.InputNonClientPointerSource.ConfigureRegion instead of SetDragRectangles.  For more info, see MSDN.")
     def set_drag_rectangles(self, value: typing.Union[winrt.system.Array[windows_graphics.RectInt32], winrt.system.ReadableBuffer], /) -> None: ...
@@ -207,8 +197,6 @@ class CompactOverlayPresenter_Static(AppWindowPresenter_Static):
 
 @typing.final
 class CompactOverlayPresenter(AppWindowPresenter, metaclass=CompactOverlayPresenter_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> CompactOverlayPresenter: ...
     @_property
     def initial_size(self) -> CompactOverlaySize: ...
     @initial_size.setter
@@ -227,8 +215,6 @@ class DisplayArea_Static(type):
 
 @typing.final
 class DisplayArea(winrt.system.Object, metaclass=DisplayArea_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> DisplayArea: ...
     @_property
     def display_id(self) -> microsoft_ui.DisplayId: ...
     @_property
@@ -240,8 +226,6 @@ class DisplayArea(winrt.system.Object, metaclass=DisplayArea_Static):
 
 @typing.final
 class DisplayAreaWatcher(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> DisplayAreaWatcher: ...
     def start(self) -> None: ...
     def stop(self) -> None: ...
     def add_added(self, handler: windows_foundation.TypedEventHandler[DisplayAreaWatcher, DisplayArea], /) -> windows_foundation.EventRegistrationToken: ...
@@ -263,8 +247,7 @@ class FullScreenPresenter_Static(AppWindowPresenter_Static):
 
 @typing.final
 class FullScreenPresenter(AppWindowPresenter, metaclass=FullScreenPresenter_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> FullScreenPresenter: ...
+    pass
 
 @typing.final
 class OverlappedPresenter_Static(AppWindowPresenter_Static):
@@ -277,8 +260,6 @@ class OverlappedPresenter_Static(AppWindowPresenter_Static):
 
 @typing.final
 class OverlappedPresenter(AppWindowPresenter, metaclass=OverlappedPresenter_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> OverlappedPresenter: ...
     def maximize(self) -> None: ...
     def minimize(self) -> None: ...
     def minimize_with_activation(self, activate_window: bool, /) -> None: ...

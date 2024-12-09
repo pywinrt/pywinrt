@@ -34,8 +34,6 @@ class MarkupExtension_Static(type):
     pass
 
 class MarkupExtension(winrt.system.Object, metaclass=MarkupExtension_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> MarkupExtension: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     def _provide_value(self) -> winrt.system.Object: ...
 
@@ -45,8 +43,7 @@ class XamlBinaryWriter_Static(type):
 
 @typing.final
 class XamlBinaryWriter(winrt.system.Object, metaclass=XamlBinaryWriter_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> XamlBinaryWriter: ...
+    pass
 
 @typing.final
 class XamlBindingHelper_Static(type):
@@ -77,8 +74,7 @@ class XamlBindingHelper_Static(type):
 
 @typing.final
 class XamlBindingHelper(winrt.system.Object, metaclass=XamlBindingHelper_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> XamlBindingHelper: ...
+    pass
 
 @typing.final
 class XamlMarkupHelper_Static(type):
@@ -86,8 +82,7 @@ class XamlMarkupHelper_Static(type):
 
 @typing.final
 class XamlMarkupHelper(winrt.system.Object, metaclass=XamlMarkupHelper_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> XamlMarkupHelper: ...
+    pass
 
 @typing.final
 class XamlReader_Static(type):
@@ -96,16 +91,13 @@ class XamlReader_Static(type):
 
 @typing.final
 class XamlReader(winrt.system.Object, metaclass=XamlReader_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> XamlReader: ...
+    pass
 
 class ImplementsIComponentConnector():
     pass
 
 @typing.final
 class IComponentConnector(winrt.system.Object, ImplementsIComponentConnector):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IComponentConnector: ...
     def connect(self, connection_id: winrt.system.Int32, target: winrt.system.Object, /) -> None: ...
 
 class ImplementsIComponentConnector2():
@@ -113,8 +105,6 @@ class ImplementsIComponentConnector2():
 
 @typing.final
 class IComponentConnector2(winrt.system.Object, ImplementsIComponentConnector2):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IComponentConnector2: ...
     def get_binding_connector(self, connection_id: winrt.system.Int32, target: winrt.system.Object, /) -> IComponentConnector: ...
 
 class ImplementsIDataTemplateComponent():
@@ -122,8 +112,6 @@ class ImplementsIDataTemplateComponent():
 
 @typing.final
 class IDataTemplateComponent(winrt.system.Object, ImplementsIDataTemplateComponent):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IDataTemplateComponent: ...
     def process_bindings(self, item: winrt.system.Object, item_index: winrt.system.Int32, phase: winrt.system.Int32, /) -> winrt.system.Int32: ...
     def recycle(self) -> None: ...
 
@@ -132,8 +120,6 @@ class ImplementsIXamlBindScopeDiagnostics():
 
 @typing.final
 class IXamlBindScopeDiagnostics(winrt.system.Object, ImplementsIXamlBindScopeDiagnostics):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IXamlBindScopeDiagnostics: ...
     def disable(self, line_number: winrt.system.Int32, column_number: winrt.system.Int32, /) -> None: ...
 
 class ImplementsIXamlMember():
@@ -141,8 +127,6 @@ class ImplementsIXamlMember():
 
 @typing.final
 class IXamlMember(winrt.system.Object, ImplementsIXamlMember):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IXamlMember: ...
     def get_value(self, instance: winrt.system.Object, /) -> winrt.system.Object: ...
     def set_value(self, instance: winrt.system.Object, value: winrt.system.Object, /) -> None: ...
     @_property
@@ -163,8 +147,6 @@ class ImplementsIXamlMetadataProvider():
 
 @typing.final
 class IXamlMetadataProvider(winrt.system.Object, ImplementsIXamlMetadataProvider):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IXamlMetadataProvider: ...
     def get_xaml_type(self, type: windows_ui_xaml_interop.TypeName, /) -> IXamlType: ...
     def get_xaml_type_by_full_name(self, full_name: str, /) -> IXamlType: ...
     def get_xmlns_definitions(self) -> winrt.system.Array[XmlnsDefinition]: ...
@@ -174,8 +156,6 @@ class ImplementsIXamlType():
 
 @typing.final
 class IXamlType(winrt.system.Object, ImplementsIXamlType):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IXamlType: ...
     def activate_instance(self) -> winrt.system.Object: ...
     def add_to_map(self, instance: winrt.system.Object, key: winrt.system.Object, value: winrt.system.Object, /) -> None: ...
     def add_to_vector(self, instance: winrt.system.Object, value: winrt.system.Object, /) -> None: ...
@@ -212,8 +192,6 @@ class ImplementsIXamlType2():
 
 @typing.final
 class IXamlType2(winrt.system.Object, ImplementsIXamlType2, ImplementsIXamlType):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IXamlType2: ...
     def activate_instance(self) -> winrt.system.Object: ...
     def add_to_map(self, instance: winrt.system.Object, key: winrt.system.Object, value: winrt.system.Object, /) -> None: ...
     def add_to_vector(self, instance: winrt.system.Object, value: winrt.system.Object, /) -> None: ...

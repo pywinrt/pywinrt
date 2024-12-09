@@ -29,8 +29,6 @@ class LicenseManager(winrt.system.Object, metaclass=LicenseManager_Static):
 
 @typing.final
 class LicenseSatisfactionInfo(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> LicenseSatisfactionInfo: ...
     @_property
     def is_satisfied(self) -> bool: ...
     @_property
@@ -48,8 +46,6 @@ class LicenseSatisfactionInfo(winrt.system.Object):
 
 @typing.final
 class LicenseSatisfactionResult(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> LicenseSatisfactionResult: ...
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
     @_property

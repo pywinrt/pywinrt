@@ -28,16 +28,12 @@ class OcrEngine_Static(type):
 
 @typing.final
 class OcrEngine(winrt.system.Object, metaclass=OcrEngine_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> OcrEngine: ...
     def recognize_async(self, bitmap: windows_graphics_imaging.SoftwareBitmap, /) -> windows_foundation.IAsyncOperation[OcrResult]: ...
     @_property
     def recognizer_language(self) -> windows_globalization.Language: ...
 
 @typing.final
 class OcrLine(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> OcrLine: ...
     @_property
     def text(self) -> str: ...
     @_property
@@ -45,8 +41,6 @@ class OcrLine(winrt.system.Object):
 
 @typing.final
 class OcrResult(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> OcrResult: ...
     @_property
     def lines(self) -> typing.Sequence[OcrLine]: ...
     @_property
@@ -56,8 +50,6 @@ class OcrResult(winrt.system.Object):
 
 @typing.final
 class OcrWord(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> OcrWord: ...
     @_property
     def bounding_rect(self) -> windows_foundation.Rect: ...
     @_property

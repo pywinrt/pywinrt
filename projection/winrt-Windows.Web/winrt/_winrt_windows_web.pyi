@@ -29,7 +29,5 @@ class ImplementsIUriToStreamResolver():
 
 @typing.final
 class IUriToStreamResolver(winrt.system.Object, ImplementsIUriToStreamResolver):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IUriToStreamResolver: ...
     def uri_to_stream_async(self, uri: windows_foundation.Uri, /) -> windows_foundation.IAsyncOperation[windows_storage_streams.IInputStream]: ...
 

@@ -16,8 +16,6 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class EnterpriseKeyCredentialRegistrationInfo(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> EnterpriseKeyCredentialRegistrationInfo: ...
     @_property
     def key_id(self) -> str: ...
     @_property
@@ -36,7 +34,5 @@ class EnterpriseKeyCredentialRegistrationManager_Static(type):
 
 @typing.final
 class EnterpriseKeyCredentialRegistrationManager(winrt.system.Object, metaclass=EnterpriseKeyCredentialRegistrationManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> EnterpriseKeyCredentialRegistrationManager: ...
     def get_registrations_async(self) -> windows_foundation.IAsyncOperation[typing.Sequence[EnterpriseKeyCredentialRegistrationInfo]]: ...
 

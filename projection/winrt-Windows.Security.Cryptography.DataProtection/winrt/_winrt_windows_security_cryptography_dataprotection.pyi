@@ -16,8 +16,6 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class DataProtectionProvider(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> DataProtectionProvider: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], protection_descriptor: str) -> Self: ...
     @typing.overload

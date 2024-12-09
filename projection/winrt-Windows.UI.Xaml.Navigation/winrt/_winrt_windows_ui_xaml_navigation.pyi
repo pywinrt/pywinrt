@@ -23,8 +23,6 @@ class FrameNavigationOptions_Static(type):
     pass
 
 class FrameNavigationOptions(winrt.system.Object, metaclass=FrameNavigationOptions_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> FrameNavigationOptions: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @_property
     def transition_info_override(self) -> windows_ui_xaml_media_animation.NavigationTransitionInfo: ...
@@ -39,8 +37,6 @@ class FrameNavigationOptions(winrt.system.Object, metaclass=FrameNavigationOptio
 
 @typing.final
 class NavigatingCancelEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> NavigatingCancelEventArgs: ...
     @_property
     def cancel(self) -> bool: ...
     @cancel.setter
@@ -56,8 +52,6 @@ class NavigatingCancelEventArgs(winrt.system.Object):
 
 @typing.final
 class NavigationEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> NavigationEventArgs: ...
     @_property
     def uri(self) -> windows_foundation.Uri: ...
     @uri.setter
@@ -75,8 +69,6 @@ class NavigationEventArgs(winrt.system.Object):
 
 @typing.final
 class NavigationFailedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> NavigationFailedEventArgs: ...
     @_property
     def handled(self) -> bool: ...
     @handled.setter
@@ -93,8 +85,6 @@ class PageStackEntry_Static(windows_ui_xaml.DependencyObject_Static):
 
 @typing.final
 class PageStackEntry(windows_ui_xaml.DependencyObject, metaclass=PageStackEntry_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PageStackEntry: ...
     def __new__(cls: typing.Type[Self], source_page_type: windows_ui_xaml_interop.TypeName, parameter: winrt.system.Object, navigation_transition_info: windows_ui_xaml_media_animation.NavigationTransitionInfo) -> Self: ...
     @_property
     def navigation_transition_info(self) -> windows_ui_xaml_media_animation.NavigationTransitionInfo: ...

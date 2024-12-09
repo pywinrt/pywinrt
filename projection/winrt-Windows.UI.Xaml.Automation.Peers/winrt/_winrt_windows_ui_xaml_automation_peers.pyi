@@ -31,8 +31,6 @@ class AppBarAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
     pass
 
 class AppBarAutomationPeer(FrameworkElementAutomationPeer, windows_ui_xaml_automation_provider.ImplementsIWindowProvider, windows_ui_xaml_automation_provider.ImplementsIExpandCollapseProvider, windows_ui_xaml_automation_provider.ImplementsIToggleProvider, metaclass=AppBarAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AppBarAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls.AppBar) -> Self: ...
     def close(self) -> None: ...
     def collapse(self) -> None: ...
@@ -69,8 +67,6 @@ class AppBarButtonAutomationPeer_Static(ButtonAutomationPeer_Static):
     pass
 
 class AppBarButtonAutomationPeer(ButtonAutomationPeer, windows_ui_xaml_automation_provider.ImplementsIExpandCollapseProvider, metaclass=AppBarButtonAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AppBarButtonAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls.AppBarButton) -> Self: ...
     def collapse(self) -> None: ...
     def expand(self) -> None: ...
@@ -82,14 +78,10 @@ class AppBarToggleButtonAutomationPeer_Static(ToggleButtonAutomationPeer_Static)
     pass
 
 class AppBarToggleButtonAutomationPeer(ToggleButtonAutomationPeer, metaclass=AppBarToggleButtonAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AppBarToggleButtonAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls.AppBarToggleButton) -> Self: ...
 
 @typing.final
 class AutoSuggestBoxAutomationPeer(FrameworkElementAutomationPeer, windows_ui_xaml_automation_provider.ImplementsIInvokeProvider):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AutoSuggestBoxAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls.AutoSuggestBox) -> Self: ...
     def invoke(self) -> None: ...
 
@@ -98,8 +90,6 @@ class AutomationPeer_Static(windows_ui_xaml.DependencyObject_Static):
     def listener_exists(cls, event_id: AutomationEvents, /) -> bool: ...
 
 class AutomationPeer(windows_ui_xaml.DependencyObject, metaclass=AutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AutomationPeer: ...
     @typing.final
     def get_accelerator_key(self) -> str: ...
     def _get_accelerator_key_core(self) -> str: ...
@@ -272,8 +262,6 @@ class AutomationPeerAnnotation_Static(windows_ui_xaml.DependencyObject_Static):
 
 @typing.final
 class AutomationPeerAnnotation(windows_ui_xaml.DependencyObject, metaclass=AutomationPeerAnnotation_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AutomationPeerAnnotation: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], type: windows_ui_xaml_automation.AnnotationType) -> Self: ...
     @typing.overload
@@ -293,8 +281,6 @@ class ButtonAutomationPeer_Static(ButtonBaseAutomationPeer_Static):
     pass
 
 class ButtonAutomationPeer(ButtonBaseAutomationPeer, windows_ui_xaml_automation_provider.ImplementsIInvokeProvider, metaclass=ButtonAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ButtonAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls.Button) -> Self: ...
     def invoke(self) -> None: ...
 
@@ -302,15 +288,12 @@ class ButtonBaseAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
     pass
 
 class ButtonBaseAutomationPeer(FrameworkElementAutomationPeer, metaclass=ButtonBaseAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ButtonBaseAutomationPeer: ...
+    pass
 
 class CalendarDatePickerAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
     pass
 
 class CalendarDatePickerAutomationPeer(FrameworkElementAutomationPeer, windows_ui_xaml_automation_provider.ImplementsIValueProvider, windows_ui_xaml_automation_provider.ImplementsIInvokeProvider, metaclass=CalendarDatePickerAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> CalendarDatePickerAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls.CalendarDatePicker) -> Self: ...
     def invoke(self) -> None: ...
     def set_value(self, value: str, /) -> None: ...  # type: ignore[misc,override]
@@ -325,40 +308,30 @@ class CaptureElementAutomationPeer_Static(FrameworkElementAutomationPeer_Static)
     pass
 
 class CaptureElementAutomationPeer(FrameworkElementAutomationPeer, metaclass=CaptureElementAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> CaptureElementAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls.CaptureElement) -> Self: ...
 
 class CheckBoxAutomationPeer_Static(ToggleButtonAutomationPeer_Static):
     pass
 
 class CheckBoxAutomationPeer(ToggleButtonAutomationPeer, metaclass=CheckBoxAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> CheckBoxAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls.CheckBox) -> Self: ...
 
 class ColorPickerSliderAutomationPeer_Static(SliderAutomationPeer_Static):
     pass
 
 class ColorPickerSliderAutomationPeer(SliderAutomationPeer, metaclass=ColorPickerSliderAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ColorPickerSliderAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls_primitives.ColorPickerSlider) -> Self: ...
 
 class ColorSpectrumAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
     pass
 
 class ColorSpectrumAutomationPeer(FrameworkElementAutomationPeer, metaclass=ColorSpectrumAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ColorSpectrumAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls_primitives.ColorSpectrum) -> Self: ...
 
 class ComboBoxAutomationPeer_Static(SelectorAutomationPeer_Static):
     pass
 
 class ComboBoxAutomationPeer(SelectorAutomationPeer, windows_ui_xaml_automation_provider.ImplementsIWindowProvider, windows_ui_xaml_automation_provider.ImplementsIExpandCollapseProvider, windows_ui_xaml_automation_provider.ImplementsIValueProvider, metaclass=ComboBoxAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ComboBoxAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls.ComboBox) -> Self: ...
     def close(self) -> None: ...
     def collapse(self) -> None: ...
@@ -398,16 +371,12 @@ class ComboBoxItemAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
     pass
 
 class ComboBoxItemAutomationPeer(FrameworkElementAutomationPeer, metaclass=ComboBoxItemAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ComboBoxItemAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls.ComboBoxItem) -> Self: ...
 
 class ComboBoxItemDataAutomationPeer_Static(SelectorItemAutomationPeer_Static):
     pass
 
 class ComboBoxItemDataAutomationPeer(SelectorItemAutomationPeer, windows_ui_xaml_automation_provider.ImplementsIScrollItemProvider, metaclass=ComboBoxItemDataAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ComboBoxItemDataAutomationPeer: ...
     def __new__(cls: typing.Type[Self], item: winrt.system.Object, parent: ComboBoxAutomationPeer) -> Self: ...
     def scroll_into_view(self) -> None: ...
 
@@ -415,37 +384,28 @@ class DatePickerAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
     pass
 
 class DatePickerAutomationPeer(FrameworkElementAutomationPeer, metaclass=DatePickerAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> DatePickerAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls.DatePicker) -> Self: ...
 
 @typing.final
 class DatePickerFlyoutPresenterAutomationPeer(FrameworkElementAutomationPeer):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> DatePickerFlyoutPresenterAutomationPeer: ...
+    pass
 
 class FlipViewAutomationPeer_Static(SelectorAutomationPeer_Static):
     pass
 
 class FlipViewAutomationPeer(SelectorAutomationPeer, metaclass=FlipViewAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> FlipViewAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls.FlipView) -> Self: ...
 
 class FlipViewItemAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
     pass
 
 class FlipViewItemAutomationPeer(FrameworkElementAutomationPeer, metaclass=FlipViewItemAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> FlipViewItemAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls.FlipViewItem) -> Self: ...
 
 class FlipViewItemDataAutomationPeer_Static(SelectorItemAutomationPeer_Static):
     pass
 
 class FlipViewItemDataAutomationPeer(SelectorItemAutomationPeer, windows_ui_xaml_automation_provider.ImplementsIScrollItemProvider, metaclass=FlipViewItemDataAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> FlipViewItemDataAutomationPeer: ...
     def __new__(cls: typing.Type[Self], item: winrt.system.Object, parent: FlipViewAutomationPeer) -> Self: ...
     def scroll_into_view(self) -> None: ...
 
@@ -453,8 +413,6 @@ class FlyoutPresenterAutomationPeer_Static(FrameworkElementAutomationPeer_Static
     pass
 
 class FlyoutPresenterAutomationPeer(FrameworkElementAutomationPeer, metaclass=FlyoutPresenterAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> FlyoutPresenterAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls.FlyoutPresenter) -> Self: ...
 
 class FrameworkElementAutomationPeer_Static(AutomationPeer_Static):
@@ -462,8 +420,6 @@ class FrameworkElementAutomationPeer_Static(AutomationPeer_Static):
     def from_element(cls, element: windows_ui_xaml.UIElement, /) -> AutomationPeer: ...
 
 class FrameworkElementAutomationPeer(AutomationPeer, metaclass=FrameworkElementAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> FrameworkElementAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml.FrameworkElement) -> Self: ...
     @_property
     @typing.final
@@ -473,32 +429,24 @@ class GridViewAutomationPeer_Static(ListViewBaseAutomationPeer_Static):
     pass
 
 class GridViewAutomationPeer(ListViewBaseAutomationPeer, metaclass=GridViewAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> GridViewAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls.GridView) -> Self: ...
 
 class GridViewHeaderItemAutomationPeer_Static(ListViewBaseHeaderItemAutomationPeer_Static):
     pass
 
 class GridViewHeaderItemAutomationPeer(ListViewBaseHeaderItemAutomationPeer, metaclass=GridViewHeaderItemAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> GridViewHeaderItemAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls.GridViewHeaderItem) -> Self: ...
 
 class GridViewItemAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
     pass
 
 class GridViewItemAutomationPeer(FrameworkElementAutomationPeer, metaclass=GridViewItemAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> GridViewItemAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls.GridViewItem) -> Self: ...
 
 class GridViewItemDataAutomationPeer_Static(SelectorItemAutomationPeer_Static):
     pass
 
 class GridViewItemDataAutomationPeer(SelectorItemAutomationPeer, windows_ui_xaml_automation_provider.ImplementsIScrollItemProvider, metaclass=GridViewItemDataAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> GridViewItemDataAutomationPeer: ...
     def __new__(cls: typing.Type[Self], item: winrt.system.Object, parent: GridViewAutomationPeer) -> Self: ...
     def scroll_into_view(self) -> None: ...
 
@@ -506,24 +454,18 @@ class GroupItemAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
     pass
 
 class GroupItemAutomationPeer(FrameworkElementAutomationPeer, metaclass=GroupItemAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> GroupItemAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls.GroupItem) -> Self: ...
 
 class HubAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
     pass
 
 class HubAutomationPeer(FrameworkElementAutomationPeer, metaclass=HubAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> HubAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls.Hub) -> Self: ...
 
 class HubSectionAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
     pass
 
 class HubSectionAutomationPeer(FrameworkElementAutomationPeer, windows_ui_xaml_automation_provider.ImplementsIScrollItemProvider, metaclass=HubSectionAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> HubSectionAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls.HubSection) -> Self: ...
     def scroll_into_view(self) -> None: ...
 
@@ -531,8 +473,6 @@ class HyperlinkButtonAutomationPeer_Static(ButtonBaseAutomationPeer_Static):
     pass
 
 class HyperlinkButtonAutomationPeer(ButtonBaseAutomationPeer, windows_ui_xaml_automation_provider.ImplementsIInvokeProvider, metaclass=HyperlinkButtonAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> HyperlinkButtonAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls.HyperlinkButton) -> Self: ...
     def invoke(self) -> None: ...
 
@@ -540,21 +480,16 @@ class ImageAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
     pass
 
 class ImageAutomationPeer(FrameworkElementAutomationPeer, metaclass=ImageAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ImageAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls.Image) -> Self: ...
 
 @typing.final
 class InkToolbarAutomationPeer(FrameworkElementAutomationPeer):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> InkToolbarAutomationPeer: ...
+    pass
 
 class ItemAutomationPeer_Static(AutomationPeer_Static):
     pass
 
 class ItemAutomationPeer(AutomationPeer, windows_ui_xaml_automation_provider.ImplementsIVirtualizedItemProvider, metaclass=ItemAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ItemAutomationPeer: ...
     def __new__(cls: typing.Type[Self], item: winrt.system.Object, parent: ItemsControlAutomationPeer) -> Self: ...
     def realize(self) -> None: ...
     @_property
@@ -568,8 +503,6 @@ class ItemsControlAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
     pass
 
 class ItemsControlAutomationPeer(FrameworkElementAutomationPeer, windows_ui_xaml_automation_provider.ImplementsIItemContainerProvider, metaclass=ItemsControlAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ItemsControlAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls.ItemsControl) -> Self: ...
     @typing.final
     def create_item_automation_peer(self, item: winrt.system.Object, /) -> ItemAutomationPeer: ...
@@ -580,46 +513,35 @@ class ListBoxAutomationPeer_Static(SelectorAutomationPeer_Static):
     pass
 
 class ListBoxAutomationPeer(SelectorAutomationPeer, metaclass=ListBoxAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ListBoxAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls.ListBox) -> Self: ...
 
 class ListBoxItemAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
     pass
 
 class ListBoxItemAutomationPeer(FrameworkElementAutomationPeer, metaclass=ListBoxItemAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ListBoxItemAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls.ListBoxItem) -> Self: ...
 
 class ListBoxItemDataAutomationPeer_Static(SelectorItemAutomationPeer_Static):
     pass
 
 class ListBoxItemDataAutomationPeer(SelectorItemAutomationPeer, windows_ui_xaml_automation_provider.ImplementsIScrollItemProvider, metaclass=ListBoxItemDataAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ListBoxItemDataAutomationPeer: ...
     def __new__(cls: typing.Type[Self], item: winrt.system.Object, parent: ListBoxAutomationPeer) -> Self: ...
     def scroll_into_view(self) -> None: ...
 
 @typing.final
 class ListPickerFlyoutPresenterAutomationPeer(FrameworkElementAutomationPeer):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ListPickerFlyoutPresenterAutomationPeer: ...
+    pass
 
 class ListViewAutomationPeer_Static(ListViewBaseAutomationPeer_Static):
     pass
 
 class ListViewAutomationPeer(ListViewBaseAutomationPeer, metaclass=ListViewAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ListViewAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls.ListView) -> Self: ...
 
 class ListViewBaseAutomationPeer_Static(SelectorAutomationPeer_Static):
     pass
 
 class ListViewBaseAutomationPeer(SelectorAutomationPeer, windows_ui_xaml_automation_provider.ImplementsIDropTargetProvider, metaclass=ListViewBaseAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ListViewBaseAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls.ListViewBase) -> Self: ...
     @_property
     @typing.final
@@ -632,38 +554,29 @@ class ListViewBaseHeaderItemAutomationPeer_Static(FrameworkElementAutomationPeer
     pass
 
 class ListViewBaseHeaderItemAutomationPeer(FrameworkElementAutomationPeer, metaclass=ListViewBaseHeaderItemAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ListViewBaseHeaderItemAutomationPeer: ...
+    pass
 
 class ListViewHeaderItemAutomationPeer_Static(ListViewBaseHeaderItemAutomationPeer_Static):
     pass
 
 class ListViewHeaderItemAutomationPeer(ListViewBaseHeaderItemAutomationPeer, metaclass=ListViewHeaderItemAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ListViewHeaderItemAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls.ListViewHeaderItem) -> Self: ...
 
 class ListViewItemAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
     pass
 
 class ListViewItemAutomationPeer(FrameworkElementAutomationPeer, metaclass=ListViewItemAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ListViewItemAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls.ListViewItem) -> Self: ...
 
 class ListViewItemDataAutomationPeer_Static(SelectorItemAutomationPeer_Static):
     pass
 
 class ListViewItemDataAutomationPeer(SelectorItemAutomationPeer, windows_ui_xaml_automation_provider.ImplementsIScrollItemProvider, metaclass=ListViewItemDataAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ListViewItemDataAutomationPeer: ...
     def __new__(cls: typing.Type[Self], item: winrt.system.Object, parent: ListViewBaseAutomationPeer) -> Self: ...
     def scroll_into_view(self) -> None: ...
 
 @typing.final
 class LoopingSelectorAutomationPeer(FrameworkElementAutomationPeer, windows_ui_xaml_automation_provider.ImplementsIScrollProvider, windows_ui_xaml_automation_provider.ImplementsIExpandCollapseProvider, windows_ui_xaml_automation_provider.ImplementsIItemContainerProvider, windows_ui_xaml_automation_provider.ImplementsISelectionProvider):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> LoopingSelectorAutomationPeer: ...
     def collapse(self) -> None: ...
     def expand(self) -> None: ...
     def find_item_by_property(self, start_after: windows_ui_xaml_automation_provider.IRawElementProviderSimple, automation_property: windows_ui_xaml_automation.AutomationProperty, value: winrt.system.Object, /) -> windows_ui_xaml_automation_provider.IRawElementProviderSimple: ...
@@ -691,8 +604,6 @@ class LoopingSelectorAutomationPeer(FrameworkElementAutomationPeer, windows_ui_x
 
 @typing.final
 class LoopingSelectorItemAutomationPeer(FrameworkElementAutomationPeer, windows_ui_xaml_automation_provider.ImplementsISelectionItemProvider, windows_ui_xaml_automation_provider.ImplementsIScrollItemProvider):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> LoopingSelectorItemAutomationPeer: ...
     def add_to_selection(self) -> None: ...
     def remove_from_selection(self) -> None: ...
     def scroll_into_view(self) -> None: ...
@@ -704,14 +615,10 @@ class LoopingSelectorItemAutomationPeer(FrameworkElementAutomationPeer, windows_
 
 @typing.final
 class LoopingSelectorItemDataAutomationPeer(AutomationPeer, windows_ui_xaml_automation_provider.ImplementsIVirtualizedItemProvider):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> LoopingSelectorItemDataAutomationPeer: ...
     def realize(self) -> None: ...
 
 @typing.final
 class MapControlAutomationPeer(FrameworkElementAutomationPeer, windows_ui_xaml_automation_provider.ImplementsITransformProvider2, windows_ui_xaml_automation_provider.ImplementsITransformProvider, windows_ui_xaml_automation_provider.ImplementsIScrollProvider):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> MapControlAutomationPeer: ...
     def move(self, x: winrt.system.Double, y: winrt.system.Double, /) -> None: ...
     def resize(self, width: winrt.system.Double, height: winrt.system.Double, /) -> None: ...
     def rotate(self, degrees: winrt.system.Double, /) -> None: ...
@@ -750,40 +657,30 @@ class MediaElementAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
     pass
 
 class MediaElementAutomationPeer(FrameworkElementAutomationPeer, metaclass=MediaElementAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> MediaElementAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls.MediaElement) -> Self: ...
 
 class MediaPlayerElementAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
     pass
 
 class MediaPlayerElementAutomationPeer(FrameworkElementAutomationPeer, metaclass=MediaPlayerElementAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> MediaPlayerElementAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls.MediaPlayerElement) -> Self: ...
 
 class MediaTransportControlsAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
     pass
 
 class MediaTransportControlsAutomationPeer(FrameworkElementAutomationPeer, metaclass=MediaTransportControlsAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> MediaTransportControlsAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls.MediaTransportControls) -> Self: ...
 
 class MenuBarAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
     pass
 
 class MenuBarAutomationPeer(FrameworkElementAutomationPeer, metaclass=MenuBarAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> MenuBarAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls.MenuBar) -> Self: ...
 
 class MenuBarItemAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
     pass
 
 class MenuBarItemAutomationPeer(FrameworkElementAutomationPeer, windows_ui_xaml_automation_provider.ImplementsIInvokeProvider, windows_ui_xaml_automation_provider.ImplementsIExpandCollapseProvider, metaclass=MenuBarItemAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> MenuBarItemAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls.MenuBarItem) -> Self: ...
     def collapse(self) -> None: ...
     def expand(self) -> None: ...
@@ -796,8 +693,6 @@ class MenuFlyoutItemAutomationPeer_Static(FrameworkElementAutomationPeer_Static)
     pass
 
 class MenuFlyoutItemAutomationPeer(FrameworkElementAutomationPeer, windows_ui_xaml_automation_provider.ImplementsIInvokeProvider, metaclass=MenuFlyoutItemAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> MenuFlyoutItemAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls.MenuFlyoutItem) -> Self: ...
     def invoke(self) -> None: ...
 
@@ -805,43 +700,32 @@ class MenuFlyoutPresenterAutomationPeer_Static(ItemsControlAutomationPeer_Static
     pass
 
 class MenuFlyoutPresenterAutomationPeer(ItemsControlAutomationPeer, metaclass=MenuFlyoutPresenterAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> MenuFlyoutPresenterAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls.MenuFlyoutPresenter) -> Self: ...
 
 class NavigationViewItemAutomationPeer_Static(ListViewItemAutomationPeer_Static):
     pass
 
 class NavigationViewItemAutomationPeer(ListViewItemAutomationPeer, metaclass=NavigationViewItemAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> NavigationViewItemAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls.NavigationViewItem) -> Self: ...
 
 class PasswordBoxAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
     pass
 
 class PasswordBoxAutomationPeer(FrameworkElementAutomationPeer, metaclass=PasswordBoxAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PasswordBoxAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls.PasswordBox) -> Self: ...
 
 class PersonPictureAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
     pass
 
 class PersonPictureAutomationPeer(FrameworkElementAutomationPeer, metaclass=PersonPictureAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PersonPictureAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls.PersonPicture) -> Self: ...
 
 @typing.final
 class PickerFlyoutPresenterAutomationPeer(FrameworkElementAutomationPeer):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PickerFlyoutPresenterAutomationPeer: ...
+    pass
 
 @typing.final
 class PivotAutomationPeer(ItemsControlAutomationPeer, windows_ui_xaml_automation_provider.ImplementsIScrollProvider, windows_ui_xaml_automation_provider.ImplementsISelectionProvider):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PivotAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls.Pivot) -> Self: ...
     def get_selection(self) -> winrt.system.Array[windows_ui_xaml_automation_provider.IRawElementProviderSimple]: ...
     def scroll(self, horizontal_amount: windows_ui_xaml_automation.ScrollAmount, vertical_amount: windows_ui_xaml_automation.ScrollAmount, /) -> None: ...
@@ -865,14 +749,10 @@ class PivotAutomationPeer(ItemsControlAutomationPeer, windows_ui_xaml_automation
 
 @typing.final
 class PivotItemAutomationPeer(FrameworkElementAutomationPeer):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PivotItemAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls.PivotItem) -> Self: ...
 
 @typing.final
 class PivotItemDataAutomationPeer(ItemAutomationPeer, windows_ui_xaml_automation_provider.ImplementsIVirtualizedItemProvider, windows_ui_xaml_automation_provider.ImplementsISelectionItemProvider, windows_ui_xaml_automation_provider.ImplementsIScrollItemProvider):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PivotItemDataAutomationPeer: ...
     def __new__(cls: typing.Type[Self], item: winrt.system.Object, parent: PivotAutomationPeer) -> Self: ...
     def add_to_selection(self) -> None: ...
     def realize(self) -> None: ...
@@ -888,24 +768,18 @@ class ProgressBarAutomationPeer_Static(RangeBaseAutomationPeer_Static):
     pass
 
 class ProgressBarAutomationPeer(RangeBaseAutomationPeer, metaclass=ProgressBarAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ProgressBarAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls.ProgressBar) -> Self: ...
 
 class ProgressRingAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
     pass
 
 class ProgressRingAutomationPeer(FrameworkElementAutomationPeer, metaclass=ProgressRingAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ProgressRingAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls.ProgressRing) -> Self: ...
 
 class RadioButtonAutomationPeer_Static(ToggleButtonAutomationPeer_Static):
     pass
 
 class RadioButtonAutomationPeer(ToggleButtonAutomationPeer, windows_ui_xaml_automation_provider.ImplementsISelectionItemProvider, metaclass=RadioButtonAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> RadioButtonAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls.RadioButton) -> Self: ...
     def add_to_selection(self) -> None: ...
     def remove_from_selection(self) -> None: ...
@@ -921,8 +795,6 @@ class RangeBaseAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
     pass
 
 class RangeBaseAutomationPeer(FrameworkElementAutomationPeer, windows_ui_xaml_automation_provider.ImplementsIRangeValueProvider, metaclass=RangeBaseAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> RangeBaseAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls_primitives.RangeBase) -> Self: ...
     def set_value(self, value: winrt.system.Double, /) -> None: ...  # type: ignore[misc,override]
     @_property
@@ -948,16 +820,12 @@ class RatingControlAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
     pass
 
 class RatingControlAutomationPeer(FrameworkElementAutomationPeer, metaclass=RatingControlAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> RatingControlAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls.RatingControl) -> Self: ...
 
 class RepeatButtonAutomationPeer_Static(ButtonBaseAutomationPeer_Static):
     pass
 
 class RepeatButtonAutomationPeer(ButtonBaseAutomationPeer, windows_ui_xaml_automation_provider.ImplementsIInvokeProvider, metaclass=RepeatButtonAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> RepeatButtonAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls_primitives.RepeatButton) -> Self: ...
     def invoke(self) -> None: ...
 
@@ -965,40 +833,30 @@ class RichEditBoxAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
     pass
 
 class RichEditBoxAutomationPeer(FrameworkElementAutomationPeer, metaclass=RichEditBoxAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> RichEditBoxAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls.RichEditBox) -> Self: ...
 
 class RichTextBlockAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
     pass
 
 class RichTextBlockAutomationPeer(FrameworkElementAutomationPeer, metaclass=RichTextBlockAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> RichTextBlockAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls.RichTextBlock) -> Self: ...
 
 class RichTextBlockOverflowAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
     pass
 
 class RichTextBlockOverflowAutomationPeer(FrameworkElementAutomationPeer, metaclass=RichTextBlockOverflowAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> RichTextBlockOverflowAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls.RichTextBlockOverflow) -> Self: ...
 
 class ScrollBarAutomationPeer_Static(RangeBaseAutomationPeer_Static):
     pass
 
 class ScrollBarAutomationPeer(RangeBaseAutomationPeer, metaclass=ScrollBarAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ScrollBarAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls_primitives.ScrollBar) -> Self: ...
 
 class ScrollViewerAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
     pass
 
 class ScrollViewerAutomationPeer(FrameworkElementAutomationPeer, windows_ui_xaml_automation_provider.ImplementsIScrollProvider, metaclass=ScrollViewerAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ScrollViewerAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls.ScrollViewer) -> Self: ...
     def scroll(self, horizontal_amount: windows_ui_xaml_automation.ScrollAmount, vertical_amount: windows_ui_xaml_automation.ScrollAmount, /) -> None: ...
     def set_scroll_percent(self, horizontal_percent: winrt.system.Double, vertical_percent: winrt.system.Double, /) -> None: ...
@@ -1025,16 +883,12 @@ class SearchBoxAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
     pass
 
 class SearchBoxAutomationPeer(FrameworkElementAutomationPeer, metaclass=SearchBoxAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SearchBoxAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls.SearchBox) -> Self: ...
 
 class SelectorAutomationPeer_Static(ItemsControlAutomationPeer_Static):
     pass
 
 class SelectorAutomationPeer(ItemsControlAutomationPeer, windows_ui_xaml_automation_provider.ImplementsISelectionProvider, metaclass=SelectorAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SelectorAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls_primitives.Selector) -> Self: ...
     def get_selection(self) -> winrt.system.Array[windows_ui_xaml_automation_provider.IRawElementProviderSimple]: ...
     @_property
@@ -1048,8 +902,6 @@ class SelectorItemAutomationPeer_Static(ItemAutomationPeer_Static):
     pass
 
 class SelectorItemAutomationPeer(ItemAutomationPeer, windows_ui_xaml_automation_provider.ImplementsISelectionItemProvider, metaclass=SelectorItemAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SelectorItemAutomationPeer: ...
     def __new__(cls: typing.Type[Self], item: winrt.system.Object, parent: SelectorAutomationPeer) -> Self: ...
     def add_to_selection(self) -> None: ...
     def remove_from_selection(self) -> None: ...
@@ -1065,8 +917,6 @@ class SemanticZoomAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
     pass
 
 class SemanticZoomAutomationPeer(FrameworkElementAutomationPeer, windows_ui_xaml_automation_provider.ImplementsIToggleProvider, metaclass=SemanticZoomAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SemanticZoomAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls.SemanticZoom) -> Self: ...
     def toggle(self) -> None: ...
     @_property
@@ -1077,61 +927,46 @@ class SettingsFlyoutAutomationPeer_Static(FrameworkElementAutomationPeer_Static)
     pass
 
 class SettingsFlyoutAutomationPeer(FrameworkElementAutomationPeer, metaclass=SettingsFlyoutAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SettingsFlyoutAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls.SettingsFlyout) -> Self: ...
 
 class SliderAutomationPeer_Static(RangeBaseAutomationPeer_Static):
     pass
 
 class SliderAutomationPeer(RangeBaseAutomationPeer, metaclass=SliderAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SliderAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls.Slider) -> Self: ...
 
 class TextBlockAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
     pass
 
 class TextBlockAutomationPeer(FrameworkElementAutomationPeer, metaclass=TextBlockAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> TextBlockAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls.TextBlock) -> Self: ...
 
 class TextBoxAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
     pass
 
 class TextBoxAutomationPeer(FrameworkElementAutomationPeer, metaclass=TextBoxAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> TextBoxAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls.TextBox) -> Self: ...
 
 class ThumbAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
     pass
 
 class ThumbAutomationPeer(FrameworkElementAutomationPeer, metaclass=ThumbAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ThumbAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls_primitives.Thumb) -> Self: ...
 
 class TimePickerAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
     pass
 
 class TimePickerAutomationPeer(FrameworkElementAutomationPeer, metaclass=TimePickerAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> TimePickerAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls.TimePicker) -> Self: ...
 
 @typing.final
 class TimePickerFlyoutPresenterAutomationPeer(FrameworkElementAutomationPeer):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> TimePickerFlyoutPresenterAutomationPeer: ...
+    pass
 
 class ToggleButtonAutomationPeer_Static(ButtonBaseAutomationPeer_Static):
     pass
 
 class ToggleButtonAutomationPeer(ButtonBaseAutomationPeer, windows_ui_xaml_automation_provider.ImplementsIToggleProvider, metaclass=ToggleButtonAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ToggleButtonAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls_primitives.ToggleButton) -> Self: ...
     def toggle(self) -> None: ...
     @_property
@@ -1142,8 +977,6 @@ class ToggleMenuFlyoutItemAutomationPeer_Static(FrameworkElementAutomationPeer_S
     pass
 
 class ToggleMenuFlyoutItemAutomationPeer(FrameworkElementAutomationPeer, windows_ui_xaml_automation_provider.ImplementsIToggleProvider, metaclass=ToggleMenuFlyoutItemAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ToggleMenuFlyoutItemAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls.ToggleMenuFlyoutItem) -> Self: ...
     def toggle(self) -> None: ...
     @_property
@@ -1154,8 +987,6 @@ class ToggleSwitchAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
     pass
 
 class ToggleSwitchAutomationPeer(FrameworkElementAutomationPeer, windows_ui_xaml_automation_provider.ImplementsIToggleProvider, metaclass=ToggleSwitchAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ToggleSwitchAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls.ToggleSwitch) -> Self: ...
     def toggle(self) -> None: ...
     @_property
@@ -1166,8 +997,6 @@ class TreeViewItemAutomationPeer_Static(ListViewItemAutomationPeer_Static):
     pass
 
 class TreeViewItemAutomationPeer(ListViewItemAutomationPeer, windows_ui_xaml_automation_provider.ImplementsIExpandCollapseProvider, metaclass=TreeViewItemAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> TreeViewItemAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls.TreeViewItem) -> Self: ...
     def collapse(self) -> None: ...
     def expand(self) -> None: ...
@@ -1179,7 +1008,5 @@ class TreeViewListAutomationPeer_Static(SelectorAutomationPeer_Static):
     pass
 
 class TreeViewListAutomationPeer(SelectorAutomationPeer, metaclass=TreeViewListAutomationPeer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> TreeViewListAutomationPeer: ...
     def __new__(cls: typing.Type[Self], owner: windows_ui_xaml_controls.TreeViewList) -> Self: ...
 

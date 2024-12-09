@@ -31,8 +31,6 @@ class BackgroundAudioTrack_Static(type):
 
 @typing.final
 class BackgroundAudioTrack(winrt.system.Object, metaclass=BackgroundAudioTrack_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> BackgroundAudioTrack: ...
     def clone(self) -> BackgroundAudioTrack: ...
     def get_audio_encoding_properties(self) -> windows_media_mediaproperties.AudioEncodingProperties: ...
     @_property
@@ -62,8 +60,6 @@ class BackgroundAudioTrack(winrt.system.Object, metaclass=BackgroundAudioTrack_S
 
 @typing.final
 class EmbeddedAudioTrack(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> EmbeddedAudioTrack: ...
     def get_audio_encoding_properties(self) -> windows_media_mediaproperties.AudioEncodingProperties: ...
 
 @typing.final
@@ -75,8 +71,6 @@ class MediaClip_Static(type):
 
 @typing.final
 class MediaClip(winrt.system.Object, metaclass=MediaClip_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> MediaClip: ...
     def clone(self) -> MediaClip: ...
     def get_video_encoding_properties(self) -> windows_media_mediaproperties.VideoEncodingProperties: ...
     @_property
@@ -118,8 +112,6 @@ class MediaComposition_Static(type):
 
 @typing.final
 class MediaComposition(winrt.system.Object, metaclass=MediaComposition_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> MediaComposition: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     def clone(self) -> MediaComposition: ...
     def create_default_encoding_profile(self) -> windows_media_mediaproperties.MediaEncodingProfile: ...
@@ -145,8 +137,6 @@ class MediaComposition(winrt.system.Object, metaclass=MediaComposition_Static):
 
 @typing.final
 class MediaOverlay(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> MediaOverlay: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], clip: MediaClip) -> Self: ...
     @typing.overload
@@ -173,8 +163,6 @@ class MediaOverlay(winrt.system.Object):
 
 @typing.final
 class MediaOverlayLayer(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> MediaOverlayLayer: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], compositor_definition: windows_media_effects.ImplementsIVideoCompositorDefinition) -> Self: ...
     @typing.overload

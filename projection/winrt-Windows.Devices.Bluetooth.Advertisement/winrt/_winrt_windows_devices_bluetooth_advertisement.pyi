@@ -20,8 +20,6 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class BluetoothLEAdvertisement(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> BluetoothLEAdvertisement: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     def get_manufacturer_data_by_company_id(self, company_id: winrt.system.UInt16, /) -> typing.Sequence[BluetoothLEManufacturerData]: ...
     def get_sections_by_type(self, type: winrt.system.UInt8, /) -> typing.Sequence[BluetoothLEAdvertisementDataSection]: ...
@@ -42,8 +40,6 @@ class BluetoothLEAdvertisement(winrt.system.Object):
 
 @typing.final
 class BluetoothLEAdvertisementBytePattern(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> BluetoothLEAdvertisementBytePattern: ...
     @typing.overload
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.overload
@@ -63,8 +59,6 @@ class BluetoothLEAdvertisementBytePattern(winrt.system.Object):
 
 @typing.final
 class BluetoothLEAdvertisementDataSection(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> BluetoothLEAdvertisementDataSection: ...
     @typing.overload
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.overload
@@ -131,8 +125,6 @@ class BluetoothLEAdvertisementDataTypes(winrt.system.Object, metaclass=Bluetooth
 
 @typing.final
 class BluetoothLEAdvertisementFilter(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> BluetoothLEAdvertisementFilter: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @_property
     def advertisement(self) -> BluetoothLEAdvertisement: ...
@@ -143,8 +135,6 @@ class BluetoothLEAdvertisementFilter(winrt.system.Object):
 
 @typing.final
 class BluetoothLEAdvertisementPublisher(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> BluetoothLEAdvertisementPublisher: ...
     @typing.overload
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.overload
@@ -176,8 +166,6 @@ class BluetoothLEAdvertisementPublisher(winrt.system.Object):
 
 @typing.final
 class BluetoothLEAdvertisementPublisherStatusChangedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> BluetoothLEAdvertisementPublisherStatusChangedEventArgs: ...
     @_property
     def error(self) -> windows_devices_bluetooth.BluetoothError: ...
     @_property
@@ -187,8 +175,6 @@ class BluetoothLEAdvertisementPublisherStatusChangedEventArgs(winrt.system.Objec
 
 @typing.final
 class BluetoothLEAdvertisementReceivedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> BluetoothLEAdvertisementReceivedEventArgs: ...
     @_property
     def advertisement(self) -> BluetoothLEAdvertisement: ...
     @_property
@@ -216,8 +202,6 @@ class BluetoothLEAdvertisementReceivedEventArgs(winrt.system.Object):
 
 @typing.final
 class BluetoothLEAdvertisementWatcher(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> BluetoothLEAdvertisementWatcher: ...
     @typing.overload
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.overload
@@ -257,15 +241,11 @@ class BluetoothLEAdvertisementWatcher(winrt.system.Object):
 
 @typing.final
 class BluetoothLEAdvertisementWatcherStoppedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> BluetoothLEAdvertisementWatcherStoppedEventArgs: ...
     @_property
     def error(self) -> windows_devices_bluetooth.BluetoothError: ...
 
 @typing.final
 class BluetoothLEManufacturerData(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> BluetoothLEManufacturerData: ...
     @typing.overload
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.overload

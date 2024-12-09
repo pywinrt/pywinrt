@@ -20,8 +20,6 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class Enterprise(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> Enterprise: ...
     @_property
     def enrollment_valid_from(self) -> datetime.datetime: ...
     @_property
@@ -51,8 +49,6 @@ class EnterpriseEnrollmentManager(winrt.system.Object, metaclass=EnterpriseEnrol
 
 @typing.final
 class EnterpriseEnrollmentResult(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> EnterpriseEnrollmentResult: ...
     @_property
     def enrolled_enterprise(self) -> Enterprise: ...
     @_property
@@ -75,8 +71,6 @@ class InstallationManager(winrt.system.Object, metaclass=InstallationManager_Sta
 
 @typing.final
 class PackageInstallResult(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PackageInstallResult: ...
     @_property
     def install_state(self) -> windows_management_deployment.PackageInstallState: ...
     @_property
