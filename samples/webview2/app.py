@@ -5,28 +5,31 @@ from ctypes import WinError
 from winrt.microsoft.ui.xaml import (
     Application,
     ApplicationInitializationCallbackParams,
-    GridLength,
-    GridUnitType,
-    HorizontalAlignment,
     LaunchActivatedEventArgs,
-    VerticalAlignment,
     Window,
 )
 from winrt.microsoft.ui.xaml.controls import (
-    ColumnDefinition,
     CoreWebView2InitializedEventArgs,
     Grid,
-    RowDefinition,
     WebView2,
+    XamlControlsResources,
 )
+from winrt.microsoft.ui.xaml.markup import (
+    ImplementsIXamlMetadataProvider,
+    IXamlType,
+    XamlReader,
+    XmlnsDefinition,
+)
+from winrt.microsoft.ui.xaml.xamltypeinfo import XamlControlsXamlMetaDataProvider
 from winrt.microsoft.web.webview2.core import CoreWebView2Environment
 from winrt.microsoft.windows.applicationmodel.dynamicdependency.bootstrap import (
     InitializeOptions,
     initialize,
 )
 from winrt.runtime import ApartmentType, init_apartment
-from winrt.system import box_int32
-from winrt.windows.foundation import AsyncStatus, IAsyncAction, IAsyncOperation, Uri
+from winrt.system import Array
+from winrt.windows.foundation import AsyncStatus, IAsyncAction, IAsyncOperation
+from winrt.windows.ui.xaml.interop import TypeName
 
 
 def check_initialized(sender: WebView2, args: CoreWebView2InitializedEventArgs):
@@ -36,51 +39,41 @@ def check_initialized(sender: WebView2, args: CoreWebView2InitializedEventArgs):
         print("Initialization failed", WinError(args.exception.value))
 
 
-class App(Application):
+_XAML = """
+<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <WebView2 Name="webview" Grid.Row="1" Grid.ColumnSpan="2"
+            HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+            Source="https://pywinrt.readthedocs.io/en/latest/"/>
+    </Grid>
+</Window>
+"""
+
+
+class App(Application, ImplementsIXamlMetadataProvider):
+    def __init__(self) -> None:
+        self._provider = XamlControlsXamlMetaDataProvider()
+
     def _on_launched(self, args: LaunchActivatedEventArgs) -> None:
-        webview = WebView2()
-        webview.source = Uri("https://pywinrt.readthedocs.io/en/latest/")
-        webview.add_core_web_view2_initialized(check_initialized)
+        # Have to add some default resources here, otherwise the
+        # app will crash when trying to create menus
+        resources = XamlControlsResources()
+        self.resources.merged_dictionaries.append(resources)
 
-        # Grid is used to make the WebView2 control fill the window.
-        # Equivalent to the following XAML:
-        """
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="Auto"/>
-            </Grid.ColumnDefinitions>
-
-            <WebView2 Grid.Row="1" Grid.ColumnSpan="2"
-                HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-        </Grid>
-        """
-        grid = Grid()
-        auto_row = RowDefinition()
-        auto_row.height = GridLength(1, GridUnitType.AUTO)
-        grid.row_definitions.append(auto_row)
-        star_row = RowDefinition()
-        star_row.height = GridLength(1, GridUnitType.STAR)
-        grid.row_definitions.append(star_row)
-        star_col = ColumnDefinition()
-        star_col.width = GridLength(1, GridUnitType.STAR)
-        grid.column_definitions.append(star_col)
-        auto_col = ColumnDefinition()
-        auto_col.width = GridLength(1, GridUnitType.AUTO)
-        grid.column_definitions.append(auto_col)
-        webview.horizontal_alignment = HorizontalAlignment.STRETCH
-        webview.vertical_alignment = VerticalAlignment.STRETCH
-        webview.set_value(Grid.row_property, box_int32(1))
-        webview.set_value(Grid.column_span_property, box_int32(2))
-        grid.children.append(webview)
-
-        window = Window()
+        window = XamlReader.load(_XAML).as_(Window)
         window.add_closed(lambda s, e: self.exit())
-        window.content = grid
+
+        webview = window.content.as_(Grid).find_name("webview").as_(WebView2)
+        webview.add_core_web_view2_initialized(check_initialized)
 
         # By default, WebView2 will create a directory in the .exe's directory
         # which isn't usually desireable. Here we create a temporary directory
@@ -125,6 +118,15 @@ class App(Application):
 
         env_op.completed = on_env
 
+    def get_xaml_type(self, type: TypeName) -> IXamlType:
+        return self._provider.get_xaml_type(type)
+
+    def get_xaml_type_by_full_name(self, full_name: str) -> IXamlType:
+        return self._provider.get_xaml_type_by_full_name(full_name)
+
+    def get_xmlns_definitions(self) -> Array[XmlnsDefinition]:
+        return self._provider.get_xmlns_definitions()
+
 
 def init(_: ApplicationInitializationCallbackParams) -> None:
     # This implicitly sets Application.current to this object so we don't need
@@ -138,6 +140,8 @@ if __name__ == "__main__":
     # This is the main entry point for the application. To use the Windows App SDK
     # outside of a packaged app, you have to bootstrap it using the initialize
     # function. The ON_NO_MATCH_SHOW_UI option will show a dialog if the required
-    # version of the Windows App runtime is not installed.
+    # version of the Windows App runtime is not installed. If you publish your app
+    # with an installer, the installer can install the runtime, then users will
+    # never see this dialog.
     with initialize(options=InitializeOptions.ON_NO_MATCH_SHOW_UI):
         Application.start(init)
