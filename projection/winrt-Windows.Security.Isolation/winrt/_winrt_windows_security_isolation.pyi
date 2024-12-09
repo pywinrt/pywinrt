@@ -36,8 +36,6 @@ class IsolatedWindowsEnvironment_Static(type):
 
 @typing.final
 class IsolatedWindowsEnvironment(winrt.system.Object, metaclass=IsolatedWindowsEnvironment_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IsolatedWindowsEnvironment: ...
     # @deprecated("IsolatedWindowsEnvironment is deprecated and might not work on all platforms. For more info, see MSDN.")
     def change_priority(self, priority: IsolatedWindowsEnvironmentCreationPriority, /) -> None: ...
     # @deprecated("IsolatedWindowsEnvironment is deprecated and might not work on all platforms. For more info, see MSDN.")
@@ -75,8 +73,6 @@ class IsolatedWindowsEnvironment(winrt.system.Object, metaclass=IsolatedWindowsE
 
 @typing.final
 class IsolatedWindowsEnvironmentCreateResult(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IsolatedWindowsEnvironmentCreateResult: ...
     # @deprecated("IsolatedWindowsEnvironmentCreateResult is deprecated and might not work on all platforms. For more info, see MSDN.")
     def change_creation_priority(self, priority: IsolatedWindowsEnvironmentCreationPriority, /) -> None: ...
     @_property
@@ -88,8 +84,6 @@ class IsolatedWindowsEnvironmentCreateResult(winrt.system.Object):
 
 @typing.final
 class IsolatedWindowsEnvironmentFile(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IsolatedWindowsEnvironmentFile: ...
     # @deprecated("IsolatedWindowsEnvironmentFile is deprecated and might not work on all platforms. For more info, see MSDN.")
     def close(self) -> None: ...
     @_property
@@ -114,8 +108,6 @@ class IsolatedWindowsEnvironmentHost(winrt.system.Object, metaclass=IsolatedWind
 
 @typing.final
 class IsolatedWindowsEnvironmentLaunchFileResult(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IsolatedWindowsEnvironmentLaunchFileResult: ...
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
     @_property
@@ -125,8 +117,6 @@ class IsolatedWindowsEnvironmentLaunchFileResult(winrt.system.Object):
 
 @typing.final
 class IsolatedWindowsEnvironmentOptions(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IsolatedWindowsEnvironmentOptions: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # @deprecated("IsolatedWindowsEnvironmentOptions is deprecated and might not work on all platforms. For more info, see MSDN.")
     def share_host_folder_for_untrusted_items(self, shared_host_folder_path: str, share_folder_name_in_environment: str, /) -> None: ...
@@ -192,8 +182,6 @@ class IsolatedWindowsEnvironmentOwnerRegistration(winrt.system.Object, metaclass
 
 @typing.final
 class IsolatedWindowsEnvironmentOwnerRegistrationData(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IsolatedWindowsEnvironmentOwnerRegistrationData: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @_property
     def activation_file_extensions(self) -> typing.MutableSequence[str]: ...
@@ -206,8 +194,6 @@ class IsolatedWindowsEnvironmentOwnerRegistrationData(winrt.system.Object):
 
 @typing.final
 class IsolatedWindowsEnvironmentOwnerRegistrationResult(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IsolatedWindowsEnvironmentOwnerRegistrationResult: ...
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
     @_property
@@ -215,8 +201,6 @@ class IsolatedWindowsEnvironmentOwnerRegistrationResult(winrt.system.Object):
 
 @typing.final
 class IsolatedWindowsEnvironmentPostMessageResult(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IsolatedWindowsEnvironmentPostMessageResult: ...
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
     @_property
@@ -224,8 +208,6 @@ class IsolatedWindowsEnvironmentPostMessageResult(winrt.system.Object):
 
 @typing.final
 class IsolatedWindowsEnvironmentProcess(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IsolatedWindowsEnvironmentProcess: ...
     # @deprecated("IsolatedWindowsEnvironmentProcess is deprecated and might not work on all platforms. For more info, see MSDN.")
     def wait_for_exit(self) -> None: ...
     # @deprecated("IsolatedWindowsEnvironmentProcess is deprecated and might not work on all platforms. For more info, see MSDN.")
@@ -239,8 +221,6 @@ class IsolatedWindowsEnvironmentProcess(winrt.system.Object):
 
 @typing.final
 class IsolatedWindowsEnvironmentShareFileRequestOptions(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IsolatedWindowsEnvironmentShareFileRequestOptions: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @_property
     def allow_write(self) -> bool: ...
@@ -249,8 +229,6 @@ class IsolatedWindowsEnvironmentShareFileRequestOptions(winrt.system.Object):
 
 @typing.final
 class IsolatedWindowsEnvironmentShareFileResult(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IsolatedWindowsEnvironmentShareFileResult: ...
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
     @_property
@@ -260,8 +238,6 @@ class IsolatedWindowsEnvironmentShareFileResult(winrt.system.Object):
 
 @typing.final
 class IsolatedWindowsEnvironmentShareFolderRequestOptions(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IsolatedWindowsEnvironmentShareFolderRequestOptions: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @_property
     def allow_write(self) -> bool: ...
@@ -270,8 +246,6 @@ class IsolatedWindowsEnvironmentShareFolderRequestOptions(winrt.system.Object):
 
 @typing.final
 class IsolatedWindowsEnvironmentShareFolderResult(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IsolatedWindowsEnvironmentShareFolderResult: ...
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
     @_property
@@ -279,8 +253,6 @@ class IsolatedWindowsEnvironmentShareFolderResult(winrt.system.Object):
 
 @typing.final
 class IsolatedWindowsEnvironmentStartProcessResult(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IsolatedWindowsEnvironmentStartProcessResult: ...
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
     @_property
@@ -290,8 +262,6 @@ class IsolatedWindowsEnvironmentStartProcessResult(winrt.system.Object):
 
 @typing.final
 class IsolatedWindowsEnvironmentTelemetryParameters(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IsolatedWindowsEnvironmentTelemetryParameters: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @_property
     def correlation_id(self) -> _uuid.UUID: ...
@@ -300,8 +270,6 @@ class IsolatedWindowsEnvironmentTelemetryParameters(winrt.system.Object):
 
 @typing.final
 class IsolatedWindowsEnvironmentUserInfo(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IsolatedWindowsEnvironmentUserInfo: ...
     # @deprecated("IsolatedWindowsEnvironmentUserInfo is deprecated and might not work on all platforms. For more info, see MSDN.")
     def try_wait_for_sign_in_async(self) -> windows_foundation.IAsyncOperation[bool]: ...
     # @deprecated("IsolatedWindowsEnvironmentUserInfo is deprecated and might not work on all platforms. For more info, see MSDN.")

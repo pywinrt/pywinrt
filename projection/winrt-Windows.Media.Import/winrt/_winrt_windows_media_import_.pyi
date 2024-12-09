@@ -29,8 +29,6 @@ class PhotoImportProgress:
 
 @typing.final
 class PhotoImportDeleteImportedItemsFromSourceResult(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PhotoImportDeleteImportedItemsFromSourceResult: ...
     @_property
     def deleted_items(self) -> typing.Sequence[PhotoImportItem]: ...
     @_property
@@ -60,8 +58,6 @@ class PhotoImportDeleteImportedItemsFromSourceResult(winrt.system.Object):
 
 @typing.final
 class PhotoImportFindItemsResult(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PhotoImportFindItemsResult: ...
     def add_items_in_date_range_to_selection(self, range_start: datetime.datetime, range_length: datetime.timedelta, /) -> None: ...
     def import_items_async(self) -> windows_foundation.IAsyncOperationWithProgress[PhotoImportImportItemsResult, PhotoImportProgress]: ...
     def select_all(self) -> None: ...
@@ -123,8 +119,6 @@ class PhotoImportFindItemsResult(winrt.system.Object):
 
 @typing.final
 class PhotoImportImportItemsResult(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PhotoImportImportItemsResult: ...
     def delete_imported_items_from_source_async(self) -> windows_foundation.IAsyncOperationWithProgress[PhotoImportDeleteImportedItemsFromSourceResult, winrt.system.Double]: ...
     @_property
     def has_succeeded(self) -> bool: ...
@@ -155,8 +149,6 @@ class PhotoImportImportItemsResult(winrt.system.Object):
 
 @typing.final
 class PhotoImportItem(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PhotoImportItem: ...
     @_property
     def is_selected(self) -> bool: ...
     @is_selected.setter
@@ -188,8 +180,6 @@ class PhotoImportItem(winrt.system.Object):
 
 @typing.final
 class PhotoImportItemImportedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PhotoImportItemImportedEventArgs: ...
     @_property
     def imported_item(self) -> PhotoImportItem: ...
 
@@ -205,8 +195,6 @@ class PhotoImportManager(winrt.system.Object, metaclass=PhotoImportManager_Stati
 
 @typing.final
 class PhotoImportOperation(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PhotoImportOperation: ...
     @_property
     def continue_deleting_imported_items_from_source_async(self) -> windows_foundation.IAsyncOperationWithProgress[PhotoImportDeleteImportedItemsFromSourceResult, winrt.system.Double]: ...
     @_property
@@ -220,8 +208,6 @@ class PhotoImportOperation(winrt.system.Object):
 
 @typing.final
 class PhotoImportSelectionChangedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PhotoImportSelectionChangedEventArgs: ...
     @_property
     def is_selection_empty(self) -> bool: ...
 
@@ -229,8 +215,6 @@ class PhotoImportSelectionChangedEventArgs(winrt.system.Object):
 class PhotoImportSession(winrt.system.Object, windows_foundation.ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PhotoImportSession: ...
     def close(self) -> None: ...
     def find_items_async(self, content_type_filter: PhotoImportContentTypeFilter, item_selection_mode: PhotoImportItemSelectionMode, /) -> windows_foundation.IAsyncOperationWithProgress[PhotoImportFindItemsResult, winrt.system.UInt32]: ...
     @_property
@@ -264,8 +248,6 @@ class PhotoImportSession(winrt.system.Object, windows_foundation.ImplementsIClos
 
 @typing.final
 class PhotoImportSidecar(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PhotoImportSidecar: ...
     @_property
     def date(self) -> datetime.datetime: ...
     @_property
@@ -280,8 +262,6 @@ class PhotoImportSource_Static(type):
 
 @typing.final
 class PhotoImportSource(winrt.system.Object, metaclass=PhotoImportSource_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PhotoImportSource: ...
     def create_import_session(self) -> PhotoImportSession: ...
     @_property
     def battery_level_percent(self) -> typing.Optional[winrt.system.UInt32]: ...
@@ -318,8 +298,6 @@ class PhotoImportSource(winrt.system.Object, metaclass=PhotoImportSource_Static)
 
 @typing.final
 class PhotoImportStorageMedium(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PhotoImportStorageMedium: ...
     def refresh(self) -> None: ...
     @_property
     def available_space_in_bytes(self) -> winrt.system.UInt64: ...
@@ -338,8 +316,6 @@ class PhotoImportStorageMedium(winrt.system.Object):
 
 @typing.final
 class PhotoImportVideoSegment(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PhotoImportVideoSegment: ...
     @_property
     def date(self) -> datetime.datetime: ...
     @_property

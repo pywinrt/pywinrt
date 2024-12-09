@@ -18,15 +18,11 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class CustomQueryParametersRequestedArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> CustomQueryParametersRequestedArgs: ...
     @_property
     def feed_provider_definition_id(self) -> str: ...
 
 @typing.final
 class CustomQueryParametersUpdateOptions(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> CustomQueryParametersUpdateOptions: ...
     def __new__(cls: typing.Type[Self], feed_provider_definition_id: str, custom_query_parameters: str) -> Self: ...
     @_property
     def custom_query_parameters(self) -> str: ...
@@ -35,8 +31,6 @@ class CustomQueryParametersUpdateOptions(winrt.system.Object):
 
 @typing.final
 class FeedAnalyticsInfoReportedArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> FeedAnalyticsInfoReportedArgs: ...
     @_property
     def analytics_json(self) -> str: ...
     @_property
@@ -46,8 +40,6 @@ class FeedAnalyticsInfoReportedArgs(winrt.system.Object):
 
 @typing.final
 class FeedDisabledArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> FeedDisabledArgs: ...
     @_property
     def feed_definition_id(self) -> str: ...
     @_property
@@ -55,8 +47,6 @@ class FeedDisabledArgs(winrt.system.Object):
 
 @typing.final
 class FeedEnabledArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> FeedEnabledArgs: ...
     @_property
     def feed_definition_id(self) -> str: ...
     @_property
@@ -64,8 +54,6 @@ class FeedEnabledArgs(winrt.system.Object):
 
 @typing.final
 class FeedErrorInfoReportedArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> FeedErrorInfoReportedArgs: ...
     @_property
     def error_json(self) -> str: ...
     @_property
@@ -79,8 +67,6 @@ class FeedManager_Static(type):
 
 @typing.final
 class FeedManager(winrt.system.Object, ImplementsIFeedManager2, ImplementsIFeedManager, metaclass=FeedManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> FeedManager: ...
     def get_enabled_feed_providers(self) -> winrt.system.Array[FeedProviderInfo]: ...
     def send_message_to_content(self, feed_provider_definition_id: str, feed_definition_id: str, message: str, /) -> None: ...
     def set_custom_query_parameters(self, options: CustomQueryParametersUpdateOptions, /) -> None: ...
@@ -88,8 +74,6 @@ class FeedManager(winrt.system.Object, ImplementsIFeedManager2, ImplementsIFeedM
 
 @typing.final
 class FeedMessageReceivedArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> FeedMessageReceivedArgs: ...
     @_property
     def feed_definition_id(self) -> str: ...
     @_property
@@ -99,22 +83,16 @@ class FeedMessageReceivedArgs(winrt.system.Object):
 
 @typing.final
 class FeedProviderDisabledArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> FeedProviderDisabledArgs: ...
     @_property
     def feed_provider_definition_id(self) -> str: ...
 
 @typing.final
 class FeedProviderEnabledArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> FeedProviderEnabledArgs: ...
     @_property
     def feed_provider_definition_id(self) -> str: ...
 
 @typing.final
 class FeedProviderInfo(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> FeedProviderInfo: ...
     @_property
     def enabled_feed_definition_ids(self) -> str: ...
     @_property
@@ -122,8 +100,6 @@ class FeedProviderInfo(winrt.system.Object):
 
 @typing.final
 class FeedResourceRequest(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> FeedResourceRequest: ...
     @_property
     def method(self) -> str: ...
     @method.setter
@@ -141,8 +117,6 @@ class FeedResourceRequest(winrt.system.Object):
 
 @typing.final
 class FeedResourceRequestedArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> FeedResourceRequestedArgs: ...
     def get_deferral(self) -> windows_foundation.Deferral: ...
     @_property
     def response(self) -> FeedResourceResponse: ...
@@ -157,8 +131,6 @@ class FeedResourceRequestedArgs(winrt.system.Object):
 
 @typing.final
 class FeedResourceResponse(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> FeedResourceResponse: ...
     def __new__(cls: typing.Type[Self], content: windows_storage_streams.ImplementsIRandomAccessStreamReference, reason_phrase: str, status_code: winrt.system.Int32) -> Self: ...
     @_property
     def headers(self) -> typing.Iterable[windows_foundation_collections.IKeyValuePair[str, str]]: ...
@@ -176,8 +148,6 @@ class ImplementsIFeedAnnouncementInvokedTarget():
 
 @typing.final
 class IFeedAnnouncementInvokedTarget(winrt.system.Object, ImplementsIFeedAnnouncementInvokedTarget):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IFeedAnnouncementInvokedTarget: ...
     def on_announcement_invoked(self, args: microsoft_windows_widgets_notifications.FeedAnnouncementInvokedArgs, /) -> None: ...
 
 class ImplementsIFeedManager():
@@ -185,8 +155,6 @@ class ImplementsIFeedManager():
 
 @typing.final
 class IFeedManager(winrt.system.Object, ImplementsIFeedManager):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IFeedManager: ...
     def get_enabled_feed_providers(self) -> winrt.system.Array[FeedProviderInfo]: ...
     def set_custom_query_parameters(self, options: CustomQueryParametersUpdateOptions, /) -> None: ...
 
@@ -195,8 +163,6 @@ class ImplementsIFeedManager2():
 
 @typing.final
 class IFeedManager2(winrt.system.Object, ImplementsIFeedManager2):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IFeedManager2: ...
     def send_message_to_content(self, feed_provider_definition_id: str, feed_definition_id: str, message: str, /) -> None: ...
     def try_show_announcement(self, feed_provider_definition_id: str, feed_definition_id: str, announcement: microsoft_windows_widgets_notifications.FeedAnnouncement, /) -> None: ...
 
@@ -205,8 +171,6 @@ class ImplementsIFeedProvider():
 
 @typing.final
 class IFeedProvider(winrt.system.Object, ImplementsIFeedProvider):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IFeedProvider: ...
     def on_custom_query_parameters_requested(self, args: CustomQueryParametersRequestedArgs, /) -> None: ...
     def on_feed_disabled(self, args: FeedDisabledArgs, /) -> None: ...
     def on_feed_enabled(self, args: FeedEnabledArgs, /) -> None: ...
@@ -218,8 +182,6 @@ class ImplementsIFeedProviderAnalytics():
 
 @typing.final
 class IFeedProviderAnalytics(winrt.system.Object, ImplementsIFeedProviderAnalytics):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IFeedProviderAnalytics: ...
     def on_analytics_info_reported(self, args: FeedAnalyticsInfoReportedArgs, /) -> None: ...
 
 class ImplementsIFeedProviderErrors():
@@ -227,8 +189,6 @@ class ImplementsIFeedProviderErrors():
 
 @typing.final
 class IFeedProviderErrors(winrt.system.Object, ImplementsIFeedProviderErrors):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IFeedProviderErrors: ...
     def on_error_info_reported(self, args: FeedErrorInfoReportedArgs, /) -> None: ...
 
 class ImplementsIFeedProviderMessage():
@@ -236,8 +196,6 @@ class ImplementsIFeedProviderMessage():
 
 @typing.final
 class IFeedProviderMessage(winrt.system.Object, ImplementsIFeedProviderMessage):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IFeedProviderMessage: ...
     def on_message_received(self, args: FeedMessageReceivedArgs, /) -> None: ...
 
 class ImplementsIFeedResourceProvider():
@@ -245,7 +203,5 @@ class ImplementsIFeedResourceProvider():
 
 @typing.final
 class IFeedResourceProvider(winrt.system.Object, ImplementsIFeedResourceProvider):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IFeedResourceProvider: ...
     def on_resource_requested(self, args: FeedResourceRequestedArgs, /) -> None: ...
 

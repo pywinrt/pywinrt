@@ -19,22 +19,16 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class CurrentTimeChangeRequestedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> CurrentTimeChangeRequestedEventArgs: ...
     @_property
     def time(self) -> datetime.timedelta: ...
 
 @typing.final
 class MuteChangeRequestedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> MuteChangeRequestedEventArgs: ...
     @_property
     def mute(self) -> bool: ...
 
 @typing.final
 class PlayToConnection(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PlayToConnection: ...
     # @deprecated("PlayToConnection may be altered or unavailable for releases after Windows 10. Instead, use CastingConnection.")
     def add_error(self, handler: windows_foundation.TypedEventHandler[PlayToConnection, PlayToConnectionErrorEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # @deprecated("PlayToConnection may be altered or unavailable for releases after Windows 10. Instead, use CastingConnection.")
@@ -52,8 +46,6 @@ class PlayToConnection(winrt.system.Object):
 
 @typing.final
 class PlayToConnectionErrorEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PlayToConnectionErrorEventArgs: ...
     @_property
     def code(self) -> PlayToConnectionError: ...
     @_property
@@ -61,8 +53,6 @@ class PlayToConnectionErrorEventArgs(winrt.system.Object):
 
 @typing.final
 class PlayToConnectionStateChangedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PlayToConnectionStateChangedEventArgs: ...
     @_property
     def current_state(self) -> PlayToConnectionState: ...
     @_property
@@ -70,8 +60,6 @@ class PlayToConnectionStateChangedEventArgs(winrt.system.Object):
 
 @typing.final
 class PlayToConnectionTransferredEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PlayToConnectionTransferredEventArgs: ...
     @_property
     def current_source(self) -> PlayToSource: ...
     @_property
@@ -86,8 +74,6 @@ class PlayToManager_Static(type):
 
 @typing.final
 class PlayToManager(winrt.system.Object, metaclass=PlayToManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PlayToManager: ...
     # @deprecated("PlayToManager may be altered or unavailable for releases after Windows 10.")
     def add_source_requested(self, handler: windows_foundation.TypedEventHandler[PlayToManager, PlayToSourceRequestedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # @deprecated("PlayToManager may be altered or unavailable for releases after Windows 10.")
@@ -103,8 +89,6 @@ class PlayToManager(winrt.system.Object, metaclass=PlayToManager_Static):
 
 @typing.final
 class PlayToReceiver(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PlayToReceiver: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     def notify_duration_change(self, duration: datetime.timedelta, /) -> None: ...
     def notify_ended(self) -> None: ...
@@ -159,8 +143,6 @@ class PlayToReceiver(winrt.system.Object):
 
 @typing.final
 class PlayToSource(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PlayToSource: ...
     # @deprecated("PlayToSource may be altered or unavailable for releases after Windows 10. Instead, use CastingSource.")
     def play_next(self) -> None: ...
     @_property
@@ -176,15 +158,11 @@ class PlayToSource(winrt.system.Object):
 
 @typing.final
 class PlayToSourceDeferral(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PlayToSourceDeferral: ...
     # @deprecated("PlayToSourceDeferral may be altered or unavailable for releases after Windows 10.")
     def complete(self) -> None: ...
 
 @typing.final
 class PlayToSourceRequest(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PlayToSourceRequest: ...
     # @deprecated("PlayToSourceRequest may be altered or unavailable for releases after Windows 10.")
     def display_error_string(self, error_string: str, /) -> None: ...
     # @deprecated("PlayToSourceRequest may be altered or unavailable for releases after Windows 10.")
@@ -196,15 +174,11 @@ class PlayToSourceRequest(winrt.system.Object):
 
 @typing.final
 class PlayToSourceRequestedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PlayToSourceRequestedEventArgs: ...
     @_property
     def source_request(self) -> PlayToSourceRequest: ...
 
 @typing.final
 class PlayToSourceSelectedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PlayToSourceSelectedEventArgs: ...
     @_property
     def friendly_name(self) -> str: ...
     @_property
@@ -218,15 +192,11 @@ class PlayToSourceSelectedEventArgs(winrt.system.Object):
 
 @typing.final
 class PlaybackRateChangeRequestedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PlaybackRateChangeRequestedEventArgs: ...
     @_property
     def rate(self) -> winrt.system.Double: ...
 
 @typing.final
 class SourceChangeRequestedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SourceChangeRequestedEventArgs: ...
     @_property
     def album(self) -> str: ...
     @_property
@@ -250,8 +220,6 @@ class SourceChangeRequestedEventArgs(winrt.system.Object):
 
 @typing.final
 class VolumeChangeRequestedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> VolumeChangeRequestedEventArgs: ...
     @_property
     def volume(self) -> winrt.system.Double: ...
 

@@ -25,8 +25,6 @@ class BasicGeoposition:
 
 @typing.final
 class CivicAddress(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> CivicAddress: ...
     @_property
     def city(self) -> str: ...
     @_property
@@ -46,8 +44,6 @@ class GeoboundingBox_Static(type):
 
 @typing.final
 class GeoboundingBox(winrt.system.Object, ImplementsIGeoshape, metaclass=GeoboundingBox_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> GeoboundingBox: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], northwest_corner: BasicGeoposition, southeast_corner: BasicGeoposition) -> Self: ...
     @typing.overload
@@ -73,8 +69,6 @@ class GeoboundingBox(winrt.system.Object, ImplementsIGeoshape, metaclass=Geoboun
 
 @typing.final
 class Geocircle(winrt.system.Object, ImplementsIGeoshape):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> Geocircle: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], position: BasicGeoposition, radius: winrt.system.Double) -> Self: ...
     @typing.overload
@@ -94,8 +88,6 @@ class Geocircle(winrt.system.Object, ImplementsIGeoshape):
 
 @typing.final
 class Geocoordinate(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> Geocoordinate: ...
     @_property
     def accuracy(self) -> winrt.system.Double: ...
     @_property
@@ -125,8 +117,6 @@ class Geocoordinate(winrt.system.Object):
 
 @typing.final
 class GeocoordinateSatelliteData(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> GeocoordinateSatelliteData: ...
     @_property
     def horizontal_dilution_of_precision(self) -> typing.Optional[winrt.system.Double]: ...
     @_property
@@ -152,8 +142,6 @@ class Geolocator_Static(type):
 
 @typing.final
 class Geolocator(winrt.system.Object, metaclass=Geolocator_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> Geolocator: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     def allow_fallback_to_consentless_positions(self) -> None: ...
     def get_geoposition_async(self) -> windows_foundation.IAsyncOperation[Geoposition]: ...
@@ -183,8 +171,6 @@ class Geolocator(winrt.system.Object, metaclass=Geolocator_Static):
 
 @typing.final
 class Geopath(winrt.system.Object, ImplementsIGeoshape):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> Geopath: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], positions: typing.Iterable[BasicGeoposition]) -> Self: ...
     @typing.overload
@@ -202,8 +188,6 @@ class Geopath(winrt.system.Object, ImplementsIGeoshape):
 
 @typing.final
 class Geopoint(winrt.system.Object, ImplementsIGeoshape):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> Geopoint: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], position: BasicGeoposition) -> Self: ...
     @typing.overload
@@ -221,8 +205,6 @@ class Geopoint(winrt.system.Object, ImplementsIGeoshape):
 
 @typing.final
 class Geoposition(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> Geoposition: ...
     @_property
     def civic_address(self) -> CivicAddress: ...
     @_property
@@ -232,8 +214,6 @@ class Geoposition(winrt.system.Object):
 
 @typing.final
 class Geovisit(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> Geovisit: ...
     @_property
     def position(self) -> Geoposition: ...
     @_property
@@ -247,8 +227,6 @@ class GeovisitMonitor_Static(type):
 
 @typing.final
 class GeovisitMonitor(winrt.system.Object, metaclass=GeovisitMonitor_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> GeovisitMonitor: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     def start(self, value: VisitMonitoringScope, /) -> None: ...
     def stop(self) -> None: ...
@@ -259,35 +237,25 @@ class GeovisitMonitor(winrt.system.Object, metaclass=GeovisitMonitor_Static):
 
 @typing.final
 class GeovisitStateChangedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> GeovisitStateChangedEventArgs: ...
     @_property
     def visit(self) -> Geovisit: ...
 
 @typing.final
 class GeovisitTriggerDetails(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> GeovisitTriggerDetails: ...
     def read_reports(self) -> typing.Sequence[Geovisit]: ...
 
 @typing.final
 class PositionChangedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PositionChangedEventArgs: ...
     @_property
     def position(self) -> Geoposition: ...
 
 @typing.final
 class StatusChangedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> StatusChangedEventArgs: ...
     @_property
     def status(self) -> PositionStatus: ...
 
 @typing.final
 class VenueData(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> VenueData: ...
     @_property
     def id(self) -> str: ...
     @_property
@@ -298,8 +266,6 @@ class ImplementsIGeoshape():
 
 @typing.final
 class IGeoshape(winrt.system.Object, ImplementsIGeoshape):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IGeoshape: ...
     @_property
     def altitude_reference_system(self) -> AltitudeReferenceSystem: ...
     @_property

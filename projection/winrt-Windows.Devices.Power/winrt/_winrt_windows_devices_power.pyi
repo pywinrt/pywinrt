@@ -24,8 +24,6 @@ class Battery_Static(type):
 
 @typing.final
 class Battery(winrt.system.Object, metaclass=Battery_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> Battery: ...
     def get_report(self) -> BatteryReport: ...
     def add_report_updated(self, handler: windows_foundation.TypedEventHandler[Battery, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     def remove_report_updated(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
@@ -34,8 +32,6 @@ class Battery(winrt.system.Object, metaclass=Battery_Static):
 
 @typing.final
 class BatteryReport(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> BatteryReport: ...
     @_property
     def charge_rate_in_milliwatts(self) -> typing.Optional[winrt.system.Int32]: ...
     @_property
@@ -49,8 +45,6 @@ class BatteryReport(winrt.system.Object):
 
 @typing.final
 class PowerGridData(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PowerGridData: ...
     @_property
     def is_low_user_experience_impact(self) -> bool: ...
     @_property
@@ -64,8 +58,6 @@ class PowerGridForecast_Static(type):
 
 @typing.final
 class PowerGridForecast(winrt.system.Object, metaclass=PowerGridForecast_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PowerGridForecast: ...
     @_property
     def block_duration(self) -> datetime.timedelta: ...
     @_property

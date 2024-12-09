@@ -22,8 +22,6 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class EmailAttachment(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> EmailAttachment: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], file_name: str, data: windows_storage_streams.ImplementsIRandomAccessStreamReference, mime_type: str) -> Self: ...
     @typing.overload
@@ -69,8 +67,6 @@ class EmailAttachment(winrt.system.Object):
 
 @typing.final
 class EmailConversation(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> EmailConversation: ...
     def find_messages_async(self) -> windows_foundation.IAsyncOperation[typing.Sequence[EmailMessage]]: ...
     def find_messages_with_count_async(self, count: winrt.system.UInt32, /) -> windows_foundation.IAsyncOperation[typing.Sequence[EmailMessage]]: ...
     @_property
@@ -102,8 +98,6 @@ class EmailConversation(winrt.system.Object):
 
 @typing.final
 class EmailConversationBatch(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> EmailConversationBatch: ...
     @_property
     def conversations(self) -> typing.Sequence[EmailConversation]: ...
     @_property
@@ -111,14 +105,10 @@ class EmailConversationBatch(winrt.system.Object):
 
 @typing.final
 class EmailConversationReader(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> EmailConversationReader: ...
     def read_batch_async(self) -> windows_foundation.IAsyncOperation[EmailConversationBatch]: ...
 
 @typing.final
 class EmailFolder(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> EmailFolder: ...
     def create_folder_async(self, name: str, /) -> windows_foundation.IAsyncOperation[EmailFolder]: ...
     def delete_async(self) -> windows_foundation.IAsyncAction: ...
     def find_child_folders_async(self) -> windows_foundation.IAsyncOperation[typing.Sequence[EmailFolder]]: ...
@@ -159,8 +149,6 @@ class EmailFolder(winrt.system.Object):
 
 @typing.final
 class EmailIrmInfo(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> EmailIrmInfo: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], expiration: datetime.datetime, irm_template: EmailIrmTemplate) -> Self: ...
     @typing.overload
@@ -216,8 +204,6 @@ class EmailIrmInfo(winrt.system.Object):
 
 @typing.final
 class EmailIrmTemplate(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> EmailIrmTemplate: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], id: str, name: str, description: str) -> Self: ...
     @typing.overload
@@ -237,8 +223,6 @@ class EmailIrmTemplate(winrt.system.Object):
 
 @typing.final
 class EmailItemCounts(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> EmailItemCounts: ...
     @_property
     def flagged(self) -> winrt.system.UInt32: ...
     @_property
@@ -250,8 +234,6 @@ class EmailItemCounts(winrt.system.Object):
 
 @typing.final
 class EmailMailbox(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> EmailMailbox: ...
     def change_message_flag_state_async(self, message_id: str, flag_state: EmailFlagState, /) -> windows_foundation.IAsyncAction: ...
     def create_response_message_async(self, message_id: str, response_type: EmailMessageResponseKind, subject: str, response_header_type: EmailMessageBodyKind, response_header: str, /) -> windows_foundation.IAsyncOperation[EmailMessage]: ...
     def delete_async(self) -> windows_foundation.IAsyncAction: ...
@@ -336,8 +318,6 @@ class EmailMailbox(winrt.system.Object):
 
 @typing.final
 class EmailMailboxAction(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> EmailMailboxAction: ...
     @_property
     def change_number(self) -> winrt.system.UInt64: ...
     @_property
@@ -345,8 +325,6 @@ class EmailMailboxAction(winrt.system.Object):
 
 @typing.final
 class EmailMailboxAutoReply(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> EmailMailboxAutoReply: ...
     @_property
     def response(self) -> str: ...
     @response.setter
@@ -358,8 +336,6 @@ class EmailMailboxAutoReply(winrt.system.Object):
 
 @typing.final
 class EmailMailboxAutoReplySettings(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> EmailMailboxAutoReplySettings: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @_property
     def start_time(self) -> typing.Optional[datetime.datetime]: ...
@@ -386,8 +362,6 @@ class EmailMailboxAutoReplySettings(winrt.system.Object):
 
 @typing.final
 class EmailMailboxCapabilities(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> EmailMailboxCapabilities: ...
     @_property
     def can_smart_send(self) -> bool: ...
     @can_smart_send.setter
@@ -447,8 +421,6 @@ class EmailMailboxCapabilities(winrt.system.Object):
 
 @typing.final
 class EmailMailboxChange(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> EmailMailboxChange: ...
     @_property
     def change_type(self) -> EmailMailboxChangeType: ...
     @_property
@@ -460,16 +432,12 @@ class EmailMailboxChange(winrt.system.Object):
 
 @typing.final
 class EmailMailboxChangeReader(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> EmailMailboxChangeReader: ...
     def accept_changes(self) -> None: ...
     def accept_changes_through(self, last_change_to_acknowledge: EmailMailboxChange, /) -> None: ...
     def read_batch_async(self) -> windows_foundation.IAsyncOperation[typing.Sequence[EmailMailboxChange]]: ...
 
 @typing.final
 class EmailMailboxChangeTracker(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> EmailMailboxChangeTracker: ...
     def enable(self) -> None: ...
     def get_change_reader(self) -> EmailMailboxChangeReader: ...
     def reset(self) -> None: ...
@@ -478,20 +446,14 @@ class EmailMailboxChangeTracker(winrt.system.Object):
 
 @typing.final
 class EmailMailboxChangedDeferral(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> EmailMailboxChangedDeferral: ...
     def complete(self) -> None: ...
 
 @typing.final
 class EmailMailboxChangedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> EmailMailboxChangedEventArgs: ...
     def get_deferral(self) -> EmailMailboxChangedDeferral: ...
 
 @typing.final
 class EmailMailboxCreateFolderResult(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> EmailMailboxCreateFolderResult: ...
     @_property
     def folder(self) -> EmailFolder: ...
     @_property
@@ -499,8 +461,6 @@ class EmailMailboxCreateFolderResult(winrt.system.Object):
 
 @typing.final
 class EmailMailboxPolicies(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> EmailMailboxPolicies: ...
     @_property
     def required_smime_signing_algorithm(self) -> typing.Optional[EmailMailboxSmimeSigningAlgorithm]: ...
     @required_smime_signing_algorithm.setter
@@ -528,8 +488,6 @@ class EmailMailboxPolicies(winrt.system.Object):
 
 @typing.final
 class EmailMailboxSyncManager(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> EmailMailboxSyncManager: ...
     def sync_async(self) -> windows_foundation.IAsyncOperation[bool]: ...
     def add_sync_status_changed(self, handler: windows_foundation.TypedEventHandler[EmailMailboxSyncManager, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     def remove_sync_status_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
@@ -558,8 +516,6 @@ class EmailManager(winrt.system.Object, metaclass=EmailManager_Static):
 
 @typing.final
 class EmailManagerForUser(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> EmailManagerForUser: ...
     def request_store_async(self, access_type: EmailStoreAccessType, /) -> windows_foundation.IAsyncOperation[EmailStore]: ...
     def show_compose_new_email_async(self, message: EmailMessage, /) -> windows_foundation.IAsyncAction: ...
     @_property
@@ -567,8 +523,6 @@ class EmailManagerForUser(winrt.system.Object):
 
 @typing.final
 class EmailMeetingInfo(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> EmailMeetingInfo: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @_property
     def location(self) -> str: ...
@@ -627,8 +581,6 @@ class EmailMeetingInfo(winrt.system.Object):
 
 @typing.final
 class EmailMessage(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> EmailMessage: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     def get_body_stream(self, type: EmailMessageBodyKind, /) -> windows_storage_streams.IRandomAccessStreamReference: ...
     def set_body_stream(self, type: EmailMessageBodyKind, stream: windows_storage_streams.ImplementsIRandomAccessStreamReference, /) -> None: ...
@@ -751,8 +703,6 @@ class EmailMessage(winrt.system.Object):
 
 @typing.final
 class EmailMessageBatch(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> EmailMessageBatch: ...
     @_property
     def messages(self) -> typing.Sequence[EmailMessage]: ...
     @_property
@@ -760,14 +710,10 @@ class EmailMessageBatch(winrt.system.Object):
 
 @typing.final
 class EmailMessageReader(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> EmailMessageReader: ...
     def read_batch_async(self) -> windows_foundation.IAsyncOperation[EmailMessageBatch]: ...
 
 @typing.final
 class EmailQueryOptions(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> EmailQueryOptions: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], text: str) -> Self: ...
     @typing.overload
@@ -793,8 +739,6 @@ class EmailQueryOptions(winrt.system.Object):
 
 @typing.final
 class EmailQueryTextSearch(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> EmailQueryTextSearch: ...
     @_property
     def text(self) -> str: ...
     @text.setter
@@ -810,8 +754,6 @@ class EmailQueryTextSearch(winrt.system.Object):
 
 @typing.final
 class EmailRecipient(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> EmailRecipient: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], address: str) -> Self: ...
     @typing.overload
@@ -829,8 +771,6 @@ class EmailRecipient(winrt.system.Object):
 
 @typing.final
 class EmailRecipientResolutionResult(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> EmailRecipientResolutionResult: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     def set_public_keys(self, value: typing.Iterable[windows_security_cryptography_certificates.Certificate], /) -> None: ...
     @_property
@@ -842,8 +782,6 @@ class EmailRecipientResolutionResult(winrt.system.Object):
 
 @typing.final
 class EmailStore(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> EmailStore: ...
     def create_mailbox_async(self, account_name: str, account_address: str, /) -> windows_foundation.IAsyncOperation[EmailMailbox]: ...
     def create_mailbox_in_account_async(self, account_name: str, account_address: str, user_data_account_id: str, /) -> windows_foundation.IAsyncOperation[EmailMailbox]: ...
     def find_mailboxes_async(self) -> windows_foundation.IAsyncOperation[typing.Sequence[EmailMailbox]]: ...
@@ -858,6 +796,5 @@ class EmailStore(winrt.system.Object):
 
 @typing.final
 class EmailStoreNotificationTriggerDetails(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> EmailStoreNotificationTriggerDetails: ...
+    pass
 

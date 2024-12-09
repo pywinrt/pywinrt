@@ -35,15 +35,11 @@ class PrintManager_Static(type):
 
 @typing.final
 class PrintManager(winrt.system.Object, metaclass=PrintManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PrintManager: ...
     def add_print_task_requested(self, event_handler: windows_foundation.TypedEventHandler[PrintManager, PrintTaskRequestedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     def remove_print_task_requested(self, event_cookie: windows_foundation.EventRegistrationToken, /) -> None: ...
 
 @typing.final
 class PrintPageInfo(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PrintPageInfo: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @_property
     def page_size(self) -> windows_foundation.Size: ...
@@ -68,8 +64,6 @@ class PrintPageInfo(winrt.system.Object):
 
 @typing.final
 class PrintPageRange(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PrintPageRange: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], first_page: winrt.system.Int32, last_page: winrt.system.Int32) -> Self: ...
     @typing.overload
@@ -81,8 +75,6 @@ class PrintPageRange(winrt.system.Object):
 
 @typing.final
 class PrintPageRangeOptions(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PrintPageRangeOptions: ...
     @_property
     def allow_custom_set_of_pages(self) -> bool: ...
     @allow_custom_set_of_pages.setter
@@ -98,8 +90,6 @@ class PrintPageRangeOptions(winrt.system.Object):
 
 @typing.final
 class PrintTask(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PrintTask: ...
     def add_completed(self, event_handler: windows_foundation.TypedEventHandler[PrintTask, PrintTaskCompletedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     def remove_completed(self, event_cookie: windows_foundation.EventRegistrationToken, /) -> None: ...
     def add_previewing(self, event_handler: windows_foundation.TypedEventHandler[PrintTask, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
@@ -129,15 +119,11 @@ class PrintTask(winrt.system.Object):
 
 @typing.final
 class PrintTaskCompletedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PrintTaskCompletedEventArgs: ...
     @_property
     def completion(self) -> PrintTaskCompletion: ...
 
 @typing.final
 class PrintTaskOptions(winrt.system.Object, ImplementsIPrintTaskOptionsCoreUIConfiguration, ImplementsIPrintTaskOptionsCoreProperties, ImplementsIPrintTaskOptionsCore):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PrintTaskOptions: ...
     def get_page_description(self, job_page_number: winrt.system.UInt32, /) -> PrintPageDescription: ...
     def get_page_print_ticket(self, print_page_info: PrintPageInfo, /) -> windows_storage_streams.IRandomAccessStream: ...
     @_property
@@ -201,15 +187,11 @@ class PrintTaskOptions(winrt.system.Object, ImplementsIPrintTaskOptionsCoreUICon
 
 @typing.final
 class PrintTaskProgressingEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PrintTaskProgressingEventArgs: ...
     @_property
     def document_page_count(self) -> winrt.system.UInt32: ...
 
 @typing.final
 class PrintTaskRequest(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PrintTaskRequest: ...
     def create_print_task(self, title: str, handler: PrintTaskSourceRequestedHandler, /) -> PrintTask: ...
     def get_deferral(self) -> PrintTaskRequestedDeferral: ...
     @_property
@@ -217,21 +199,15 @@ class PrintTaskRequest(winrt.system.Object):
 
 @typing.final
 class PrintTaskRequestedDeferral(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PrintTaskRequestedDeferral: ...
     def complete(self) -> None: ...
 
 @typing.final
 class PrintTaskRequestedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PrintTaskRequestedEventArgs: ...
     @_property
     def request(self) -> PrintTaskRequest: ...
 
 @typing.final
 class PrintTaskSourceRequestedArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PrintTaskSourceRequestedArgs: ...
     def get_deferral(self) -> PrintTaskSourceRequestedDeferral: ...
     def set_source(self, source: ImplementsIPrintDocumentSource, /) -> None: ...
     @_property
@@ -239,8 +215,6 @@ class PrintTaskSourceRequestedArgs(winrt.system.Object):
 
 @typing.final
 class PrintTaskSourceRequestedDeferral(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PrintTaskSourceRequestedDeferral: ...
     def complete(self) -> None: ...
 
 @typing.final
@@ -285,16 +259,13 @@ class ImplementsIPrintDocumentSource():
 
 @typing.final
 class IPrintDocumentSource(winrt.system.Object, ImplementsIPrintDocumentSource):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IPrintDocumentSource: ...
+    pass
 
 class ImplementsIPrintTaskOptionsCore():
     pass
 
 @typing.final
 class IPrintTaskOptionsCore(winrt.system.Object, ImplementsIPrintTaskOptionsCore):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IPrintTaskOptionsCore: ...
     def get_page_description(self, job_page_number: winrt.system.UInt32, /) -> PrintPageDescription: ...
 
 class ImplementsIPrintTaskOptionsCoreProperties():
@@ -302,8 +273,6 @@ class ImplementsIPrintTaskOptionsCoreProperties():
 
 @typing.final
 class IPrintTaskOptionsCoreProperties(winrt.system.Object, ImplementsIPrintTaskOptionsCoreProperties):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IPrintTaskOptionsCoreProperties: ...
     @_property
     def binding(self) -> PrintBinding: ...
     @binding.setter
@@ -358,8 +327,6 @@ class ImplementsIPrintTaskOptionsCoreUIConfiguration():
 
 @typing.final
 class IPrintTaskOptionsCoreUIConfiguration(winrt.system.Object, ImplementsIPrintTaskOptionsCoreUIConfiguration):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IPrintTaskOptionsCoreUIConfiguration: ...
     @_property
     def displayed_options(self) -> typing.MutableSequence[str]: ...
 

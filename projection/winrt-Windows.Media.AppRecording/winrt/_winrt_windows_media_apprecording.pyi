@@ -23,8 +23,6 @@ class AppRecordingManager_Static(type):
 
 @typing.final
 class AppRecordingManager(winrt.system.Object, metaclass=AppRecordingManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AppRecordingManager: ...
     def get_status(self) -> AppRecordingStatus: ...
     def record_time_span_to_file_async(self, start_time: datetime.datetime, duration: datetime.timedelta, file: windows_storage.StorageFile, /) -> windows_foundation.IAsyncOperation[AppRecordingResult]: ...
     def save_screenshot_to_files_async(self, folder: windows_storage.StorageFolder, filename_prefix: str, option: AppRecordingSaveScreenshotOption, requested_formats: typing.Iterable[str], /) -> windows_foundation.IAsyncOperation[AppRecordingSaveScreenshotResult]: ...
@@ -34,8 +32,6 @@ class AppRecordingManager(winrt.system.Object, metaclass=AppRecordingManager_Sta
 
 @typing.final
 class AppRecordingResult(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AppRecordingResult: ...
     @_property
     def duration(self) -> datetime.timedelta: ...
     @_property
@@ -47,8 +43,6 @@ class AppRecordingResult(winrt.system.Object):
 
 @typing.final
 class AppRecordingSaveScreenshotResult(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AppRecordingSaveScreenshotResult: ...
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
     @_property
@@ -58,8 +52,6 @@ class AppRecordingSaveScreenshotResult(winrt.system.Object):
 
 @typing.final
 class AppRecordingSavedScreenshotInfo(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AppRecordingSavedScreenshotInfo: ...
     @_property
     def file(self) -> windows_storage.StorageFile: ...
     @_property
@@ -67,8 +59,6 @@ class AppRecordingSavedScreenshotInfo(winrt.system.Object):
 
 @typing.final
 class AppRecordingStatus(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AppRecordingStatus: ...
     @_property
     def can_record(self) -> bool: ...
     @_property
@@ -80,8 +70,6 @@ class AppRecordingStatus(winrt.system.Object):
 
 @typing.final
 class AppRecordingStatusDetails(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AppRecordingStatusDetails: ...
     @_property
     def is_any_app_broadcasting(self) -> bool: ...
     @_property

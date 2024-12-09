@@ -16,8 +16,6 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class SpatialGraphInteropFrameOfReferencePreview(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SpatialGraphInteropFrameOfReferencePreview: ...
     @_property
     def coordinate_system(self) -> windows_perception_spatial.SpatialCoordinateSystem: ...
     @_property

@@ -23,8 +23,6 @@ class PreviewBuildsManager_Static(type):
 
 @typing.final
 class PreviewBuildsManager(winrt.system.Object, metaclass=PreviewBuildsManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PreviewBuildsManager: ...
     def get_current_state(self) -> PreviewBuildsState: ...
     def sync_async(self) -> windows_foundation.IAsyncOperation[bool]: ...
     @_property
@@ -34,15 +32,11 @@ class PreviewBuildsManager(winrt.system.Object, metaclass=PreviewBuildsManager_S
 
 @typing.final
 class PreviewBuildsState(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PreviewBuildsState: ...
     @_property
     def properties(self) -> windows_foundation_collections.ValueSet: ...
 
 @typing.final
 class WindowsUpdate(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WindowsUpdate: ...
     def accept_eula(self) -> None: ...
     def get_property_value(self, property_name: str, /) -> winrt.system.Object: ...
     @_property
@@ -92,8 +86,6 @@ class WindowsUpdate(winrt.system.Object):
 
 @typing.final
 class WindowsUpdateActionCompletedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WindowsUpdateActionCompletedEventArgs: ...
     @_property
     def action(self) -> str: ...
     @_property
@@ -105,8 +97,6 @@ class WindowsUpdateActionCompletedEventArgs(winrt.system.Object):
 
 @typing.final
 class WindowsUpdateActionProgress(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WindowsUpdateActionProgress: ...
     @_property
     def action(self) -> str: ...
     @_property
@@ -114,8 +104,6 @@ class WindowsUpdateActionProgress(winrt.system.Object):
 
 @typing.final
 class WindowsUpdateActionResult(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WindowsUpdateActionResult: ...
     @_property
     def action(self) -> str: ...
     @_property
@@ -136,8 +124,6 @@ class WindowsUpdateAdministrator_Static(type):
 
 @typing.final
 class WindowsUpdateAdministrator(winrt.system.Object, metaclass=WindowsUpdateAdministrator_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WindowsUpdateAdministrator: ...
     def approve_windows_update(self, update_id: str, approval_data: WindowsUpdateApprovalData, /) -> None: ...
     def approve_windows_update_action(self, update_id: str, action: str, /) -> None: ...
     def get_updates(self) -> typing.Sequence[WindowsUpdate]: ...
@@ -147,8 +133,6 @@ class WindowsUpdateAdministrator(winrt.system.Object, metaclass=WindowsUpdateAdm
 
 @typing.final
 class WindowsUpdateApprovalData(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WindowsUpdateApprovalData: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @_property
     def seeker(self) -> typing.Optional[bool]: ...
@@ -173,8 +157,6 @@ class WindowsUpdateApprovalData(winrt.system.Object):
 
 @typing.final
 class WindowsUpdateAttentionRequiredInfo(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WindowsUpdateAttentionRequiredInfo: ...
     @_property
     def reason(self) -> WindowsUpdateAttentionRequiredReason: ...
     @_property
@@ -182,8 +164,6 @@ class WindowsUpdateAttentionRequiredInfo(winrt.system.Object):
 
 @typing.final
 class WindowsUpdateAttentionRequiredReasonChangedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WindowsUpdateAttentionRequiredReasonChangedEventArgs: ...
     @_property
     def reason(self) -> WindowsUpdateAttentionRequiredReason: ...
     @_property
@@ -191,8 +171,6 @@ class WindowsUpdateAttentionRequiredReasonChangedEventArgs(winrt.system.Object):
 
 @typing.final
 class WindowsUpdateGetAdministratorResult(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WindowsUpdateGetAdministratorResult: ...
     @_property
     def administrator(self) -> WindowsUpdateAdministrator: ...
     @_property
@@ -200,8 +178,6 @@ class WindowsUpdateGetAdministratorResult(winrt.system.Object):
 
 @typing.final
 class WindowsUpdateItem(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WindowsUpdateItem: ...
     @_property
     def category(self) -> str: ...
     @_property
@@ -221,8 +197,6 @@ class WindowsUpdateItem(winrt.system.Object):
 
 @typing.final
 class WindowsUpdateManager(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WindowsUpdateManager: ...
     def __new__(cls: typing.Type[Self], client_id: str) -> Self: ...
     def get_applicable_updates(self) -> typing.Sequence[WindowsUpdate]: ...
     def get_most_recent_completed_updates(self, count: winrt.system.Int32, /) -> typing.Sequence[WindowsUpdateItem]: ...
@@ -249,8 +223,6 @@ class WindowsUpdateManager(winrt.system.Object):
 
 @typing.final
 class WindowsUpdateProgressChangedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WindowsUpdateProgressChangedEventArgs: ...
     @_property
     def action_progress(self) -> WindowsUpdateActionProgress: ...
     @_property
@@ -258,8 +230,6 @@ class WindowsUpdateProgressChangedEventArgs(winrt.system.Object):
 
 @typing.final
 class WindowsUpdateRestartRequestOptions(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WindowsUpdateRestartRequestOptions: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], title: str, description: str, more_info_url: windows_foundation.Uri, compliance_deadline_in_days: winrt.system.Int32, compliance_grace_period_in_days: winrt.system.Int32) -> Self: ...
     @typing.overload
@@ -295,8 +265,6 @@ class WindowsUpdateRestartRequestOptions(winrt.system.Object):
 
 @typing.final
 class WindowsUpdateScanCompletedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WindowsUpdateScanCompletedEventArgs: ...
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
     @_property

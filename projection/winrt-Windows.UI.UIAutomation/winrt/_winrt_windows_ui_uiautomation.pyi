@@ -14,8 +14,6 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class AutomationConnection(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AutomationConnection: ...
     @_property
     def app_user_model_id(self) -> str: ...
     @_property
@@ -25,15 +23,11 @@ class AutomationConnection(winrt.system.Object):
 
 @typing.final
 class AutomationConnectionBoundObject(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AutomationConnectionBoundObject: ...
     @_property
     def connection(self) -> AutomationConnection: ...
 
 @typing.final
 class AutomationElement(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AutomationElement: ...
     @_property
     def app_user_model_id(self) -> str: ...
     @_property
@@ -43,6 +37,5 @@ class AutomationElement(winrt.system.Object):
 
 @typing.final
 class AutomationTextRange(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AutomationTextRange: ...
+    pass
 

@@ -26,8 +26,6 @@ class Accelerometer_Static(type):
 
 @typing.final
 class Accelerometer(winrt.system.Object, metaclass=Accelerometer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> Accelerometer: ...
     def get_current_reading(self) -> AccelerometerReading: ...
     def add_reading_changed(self, handler: windows_foundation.TypedEventHandler[Accelerometer, AccelerometerReadingChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     def remove_reading_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
@@ -58,8 +56,6 @@ class Accelerometer(winrt.system.Object, metaclass=Accelerometer_Static):
 
 @typing.final
 class AccelerometerDataThreshold(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AccelerometerDataThreshold: ...
     @_property
     def z_axis_in_g_force(self) -> winrt.system.Double: ...
     @z_axis_in_g_force.setter
@@ -75,8 +71,6 @@ class AccelerometerDataThreshold(winrt.system.Object):
 
 @typing.final
 class AccelerometerReading(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AccelerometerReading: ...
     @_property
     def acceleration_x(self) -> winrt.system.Double: ...
     @_property
@@ -92,15 +86,11 @@ class AccelerometerReading(winrt.system.Object):
 
 @typing.final
 class AccelerometerReadingChangedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AccelerometerReadingChangedEventArgs: ...
     @_property
     def reading(self) -> AccelerometerReading: ...
 
 @typing.final
 class AccelerometerShakenEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AccelerometerShakenEventArgs: ...
     @_property
     def timestamp(self) -> datetime.datetime: ...
 
@@ -114,8 +104,6 @@ class ActivitySensor_Static(type):
 
 @typing.final
 class ActivitySensor(winrt.system.Object, metaclass=ActivitySensor_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ActivitySensor: ...
     def get_current_reading_async(self) -> windows_foundation.IAsyncOperation[ActivitySensorReading]: ...
     def add_reading_changed(self, handler: windows_foundation.TypedEventHandler[ActivitySensor, ActivitySensorReadingChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     def remove_reading_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
@@ -132,8 +120,6 @@ class ActivitySensor(winrt.system.Object, metaclass=ActivitySensor_Static):
 
 @typing.final
 class ActivitySensorReading(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ActivitySensorReading: ...
     @_property
     def activity(self) -> ActivityType: ...
     @_property
@@ -143,28 +129,20 @@ class ActivitySensorReading(winrt.system.Object):
 
 @typing.final
 class ActivitySensorReadingChangeReport(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ActivitySensorReadingChangeReport: ...
     @_property
     def reading(self) -> ActivitySensorReading: ...
 
 @typing.final
 class ActivitySensorReadingChangedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ActivitySensorReadingChangedEventArgs: ...
     @_property
     def reading(self) -> ActivitySensorReading: ...
 
 @typing.final
 class ActivitySensorTriggerDetails(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ActivitySensorTriggerDetails: ...
     def read_reports(self) -> typing.Sequence[ActivitySensorReadingChangeReport]: ...
 
 @typing.final
 class AdaptiveDimmingOptions(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AdaptiveDimmingOptions: ...
     @_property
     def allow_when_external_display_connected(self) -> bool: ...
     @allow_when_external_display_connected.setter
@@ -176,8 +154,6 @@ class Altimeter_Static(type):
 
 @typing.final
 class Altimeter(winrt.system.Object, metaclass=Altimeter_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> Altimeter: ...
     def get_current_reading(self) -> AltimeterReading: ...
     def add_reading_changed(self, handler: windows_foundation.TypedEventHandler[Altimeter, AltimeterReadingChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     def remove_reading_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
@@ -198,8 +174,6 @@ class Altimeter(winrt.system.Object, metaclass=Altimeter_Static):
 
 @typing.final
 class AltimeterReading(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AltimeterReading: ...
     @_property
     def altitude_change_in_meters(self) -> winrt.system.Double: ...
     @_property
@@ -211,8 +185,6 @@ class AltimeterReading(winrt.system.Object):
 
 @typing.final
 class AltimeterReadingChangedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AltimeterReadingChangedEventArgs: ...
     @_property
     def reading(self) -> AltimeterReading: ...
 
@@ -224,8 +196,6 @@ class Barometer_Static(type):
 
 @typing.final
 class Barometer(winrt.system.Object, metaclass=Barometer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> Barometer: ...
     def get_current_reading(self) -> BarometerReading: ...
     def add_reading_changed(self, handler: windows_foundation.TypedEventHandler[Barometer, BarometerReadingChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     def remove_reading_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
@@ -248,8 +218,6 @@ class Barometer(winrt.system.Object, metaclass=Barometer_Static):
 
 @typing.final
 class BarometerDataThreshold(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> BarometerDataThreshold: ...
     @_property
     def hectopascals(self) -> winrt.system.Double: ...
     @hectopascals.setter
@@ -257,8 +225,6 @@ class BarometerDataThreshold(winrt.system.Object):
 
 @typing.final
 class BarometerReading(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> BarometerReading: ...
     @_property
     def station_pressure_in_hectopascals(self) -> winrt.system.Double: ...
     @_property
@@ -270,8 +236,6 @@ class BarometerReading(winrt.system.Object):
 
 @typing.final
 class BarometerReadingChangedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> BarometerReadingChangedEventArgs: ...
     @_property
     def reading(self) -> BarometerReading: ...
 
@@ -283,8 +247,6 @@ class Compass_Static(type):
 
 @typing.final
 class Compass(winrt.system.Object, metaclass=Compass_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> Compass: ...
     def get_current_reading(self) -> CompassReading: ...
     def add_reading_changed(self, handler: windows_foundation.TypedEventHandler[Compass, CompassReadingChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     def remove_reading_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
@@ -311,8 +273,6 @@ class Compass(winrt.system.Object, metaclass=Compass_Static):
 
 @typing.final
 class CompassDataThreshold(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> CompassDataThreshold: ...
     @_property
     def degrees(self) -> winrt.system.Double: ...
     @degrees.setter
@@ -320,8 +280,6 @@ class CompassDataThreshold(winrt.system.Object):
 
 @typing.final
 class CompassReading(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> CompassReading: ...
     @_property
     def heading_magnetic_north(self) -> winrt.system.Double: ...
     @_property
@@ -337,15 +295,11 @@ class CompassReading(winrt.system.Object):
 
 @typing.final
 class CompassReadingChangedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> CompassReadingChangedEventArgs: ...
     @_property
     def reading(self) -> CompassReading: ...
 
 @typing.final
 class DetectedPerson(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> DetectedPerson: ...
     @_property
     def distance_in_millimeters(self) -> typing.Optional[winrt.system.UInt32]: ...
     @_property
@@ -365,8 +319,6 @@ class Gyrometer_Static(type):
 
 @typing.final
 class Gyrometer(winrt.system.Object, metaclass=Gyrometer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> Gyrometer: ...
     def get_current_reading(self) -> GyrometerReading: ...
     def add_reading_changed(self, handler: windows_foundation.TypedEventHandler[Gyrometer, GyrometerReadingChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     def remove_reading_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
@@ -393,8 +345,6 @@ class Gyrometer(winrt.system.Object, metaclass=Gyrometer_Static):
 
 @typing.final
 class GyrometerDataThreshold(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> GyrometerDataThreshold: ...
     @_property
     def z_axis_in_degrees_per_second(self) -> winrt.system.Double: ...
     @z_axis_in_degrees_per_second.setter
@@ -410,8 +360,6 @@ class GyrometerDataThreshold(winrt.system.Object):
 
 @typing.final
 class GyrometerReading(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> GyrometerReading: ...
     @_property
     def angular_velocity_x(self) -> winrt.system.Double: ...
     @_property
@@ -427,15 +375,11 @@ class GyrometerReading(winrt.system.Object):
 
 @typing.final
 class GyrometerReadingChangedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> GyrometerReadingChangedEventArgs: ...
     @_property
     def reading(self) -> GyrometerReading: ...
 
 @typing.final
 class HeadOrientation(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> HeadOrientation: ...
     @_property
     def pitch_in_degrees(self) -> typing.Optional[winrt.system.Double]: ...
     @_property
@@ -445,8 +389,6 @@ class HeadOrientation(winrt.system.Object):
 
 @typing.final
 class HeadPosition(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> HeadPosition: ...
     @_property
     def altitude_in_degrees(self) -> typing.Optional[winrt.system.Double]: ...
     @_property
@@ -454,8 +396,6 @@ class HeadPosition(winrt.system.Object):
 
 @typing.final
 class HingeAngleReading(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> HingeAngleReading: ...
     @_property
     def angle_in_degrees(self) -> winrt.system.Double: ...
     @_property
@@ -472,8 +412,6 @@ class HingeAngleSensor_Static(type):
 
 @typing.final
 class HingeAngleSensor(winrt.system.Object, metaclass=HingeAngleSensor_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> HingeAngleSensor: ...
     def get_current_reading_async(self) -> windows_foundation.IAsyncOperation[HingeAngleReading]: ...
     def add_reading_changed(self, handler: windows_foundation.TypedEventHandler[HingeAngleSensor, HingeAngleSensorReadingChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     def remove_reading_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
@@ -488,15 +426,11 @@ class HingeAngleSensor(winrt.system.Object, metaclass=HingeAngleSensor_Static):
 
 @typing.final
 class HingeAngleSensorReadingChangedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> HingeAngleSensorReadingChangedEventArgs: ...
     @_property
     def reading(self) -> HingeAngleReading: ...
 
 @typing.final
 class HumanPresenceFeatures(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> HumanPresenceFeatures: ...
     @_property
     def is_attention_aware_dimming_supported(self) -> bool: ...
     @_property
@@ -520,8 +454,6 @@ class HumanPresenceSensor_Static(type):
 
 @typing.final
 class HumanPresenceSensor(winrt.system.Object, metaclass=HumanPresenceSensor_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> HumanPresenceSensor: ...
     def get_current_reading(self) -> HumanPresenceSensorReading: ...
     def add_reading_changed(self, handler: windows_foundation.TypedEventHandler[HumanPresenceSensor, HumanPresenceSensorReadingChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     def remove_reading_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
@@ -548,8 +480,6 @@ class HumanPresenceSensor(winrt.system.Object, metaclass=HumanPresenceSensor_Sta
 
 @typing.final
 class HumanPresenceSensorReading(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> HumanPresenceSensorReading: ...
     @_property
     def distance_in_millimeters(self) -> typing.Optional[winrt.system.UInt32]: ...
     @_property
@@ -567,15 +497,11 @@ class HumanPresenceSensorReading(winrt.system.Object):
 
 @typing.final
 class HumanPresenceSensorReadingChangedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> HumanPresenceSensorReadingChangedEventArgs: ...
     @_property
     def reading(self) -> HumanPresenceSensorReading: ...
 
 @typing.final
 class HumanPresenceSensorReadingUpdate(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> HumanPresenceSensorReadingUpdate: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @_property
     def timestamp(self) -> typing.Optional[datetime.datetime]: ...
@@ -608,8 +534,6 @@ class HumanPresenceSettings_Static(type):
 
 @typing.final
 class HumanPresenceSettings(winrt.system.Object, metaclass=HumanPresenceSettings_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> HumanPresenceSettings: ...
     @_property
     def wake_on_approach_distance_in_millimeters(self) -> typing.Optional[winrt.system.UInt32]: ...
     @wake_on_approach_distance_in_millimeters.setter
@@ -659,8 +583,6 @@ class Inclinometer_Static(type):
 
 @typing.final
 class Inclinometer(winrt.system.Object, metaclass=Inclinometer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> Inclinometer: ...
     def get_current_reading(self) -> InclinometerReading: ...
     def add_reading_changed(self, handler: windows_foundation.TypedEventHandler[Inclinometer, InclinometerReadingChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     def remove_reading_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
@@ -689,8 +611,6 @@ class Inclinometer(winrt.system.Object, metaclass=Inclinometer_Static):
 
 @typing.final
 class InclinometerDataThreshold(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> InclinometerDataThreshold: ...
     @_property
     def yaw_in_degrees(self) -> winrt.system.Single: ...
     @yaw_in_degrees.setter
@@ -706,8 +626,6 @@ class InclinometerDataThreshold(winrt.system.Object):
 
 @typing.final
 class InclinometerReading(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> InclinometerReading: ...
     @_property
     def pitch_degrees(self) -> winrt.system.Single: ...
     @_property
@@ -725,8 +643,6 @@ class InclinometerReading(winrt.system.Object):
 
 @typing.final
 class InclinometerReadingChangedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> InclinometerReadingChangedEventArgs: ...
     @_property
     def reading(self) -> InclinometerReading: ...
 
@@ -738,8 +654,6 @@ class LightSensor_Static(type):
 
 @typing.final
 class LightSensor(winrt.system.Object, metaclass=LightSensor_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> LightSensor: ...
     def get_current_reading(self) -> LightSensorReading: ...
     def add_reading_changed(self, handler: windows_foundation.TypedEventHandler[LightSensor, LightSensorReadingChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     def remove_reading_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
@@ -762,8 +676,6 @@ class LightSensor(winrt.system.Object, metaclass=LightSensor_Static):
 
 @typing.final
 class LightSensorDataThreshold(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> LightSensorDataThreshold: ...
     @_property
     def lux_percentage(self) -> winrt.system.Single: ...
     @lux_percentage.setter
@@ -775,8 +687,6 @@ class LightSensorDataThreshold(winrt.system.Object):
 
 @typing.final
 class LightSensorReading(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> LightSensorReading: ...
     @_property
     def illuminance_in_lux(self) -> winrt.system.Single: ...
     @_property
@@ -788,15 +698,11 @@ class LightSensorReading(winrt.system.Object):
 
 @typing.final
 class LightSensorReadingChangedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> LightSensorReadingChangedEventArgs: ...
     @_property
     def reading(self) -> LightSensorReading: ...
 
 @typing.final
 class LockOnLeaveOptions(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> LockOnLeaveOptions: ...
     @_property
     def allow_when_external_display_connected(self) -> bool: ...
     @allow_when_external_display_connected.setter
@@ -810,8 +716,6 @@ class Magnetometer_Static(type):
 
 @typing.final
 class Magnetometer(winrt.system.Object, metaclass=Magnetometer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> Magnetometer: ...
     def get_current_reading(self) -> MagnetometerReading: ...
     def add_reading_changed(self, handler: windows_foundation.TypedEventHandler[Magnetometer, MagnetometerReadingChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     def remove_reading_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
@@ -838,8 +742,6 @@ class Magnetometer(winrt.system.Object, metaclass=Magnetometer_Static):
 
 @typing.final
 class MagnetometerDataThreshold(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> MagnetometerDataThreshold: ...
     @_property
     def z_axis_microteslas(self) -> winrt.system.Single: ...
     @z_axis_microteslas.setter
@@ -855,8 +757,6 @@ class MagnetometerDataThreshold(winrt.system.Object):
 
 @typing.final
 class MagnetometerReading(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> MagnetometerReading: ...
     @_property
     def directional_accuracy(self) -> MagnetometerAccuracy: ...
     @_property
@@ -874,8 +774,6 @@ class MagnetometerReading(winrt.system.Object):
 
 @typing.final
 class MagnetometerReadingChangedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> MagnetometerReadingChangedEventArgs: ...
     @_property
     def reading(self) -> MagnetometerReading: ...
 
@@ -891,8 +789,6 @@ class OrientationSensor_Static(type):
 
 @typing.final
 class OrientationSensor(winrt.system.Object, metaclass=OrientationSensor_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> OrientationSensor: ...
     def get_current_reading(self) -> OrientationSensorReading: ...
     def add_reading_changed(self, handler: windows_foundation.TypedEventHandler[OrientationSensor, OrientationSensorReadingChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     def remove_reading_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
@@ -919,8 +815,6 @@ class OrientationSensor(winrt.system.Object, metaclass=OrientationSensor_Static)
 
 @typing.final
 class OrientationSensorReading(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> OrientationSensorReading: ...
     @_property
     def quaternion(self) -> SensorQuaternion: ...
     @_property
@@ -936,8 +830,6 @@ class OrientationSensorReading(winrt.system.Object):
 
 @typing.final
 class OrientationSensorReadingChangedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> OrientationSensorReadingChangedEventArgs: ...
     @_property
     def reading(self) -> OrientationSensorReading: ...
 
@@ -952,8 +844,6 @@ class Pedometer_Static(type):
 
 @typing.final
 class Pedometer(winrt.system.Object, metaclass=Pedometer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> Pedometer: ...
     def get_current_readings(self) -> typing.Mapping[PedometerStepKind, PedometerReading]: ...
     def add_reading_changed(self, handler: windows_foundation.TypedEventHandler[Pedometer, PedometerReadingChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     def remove_reading_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
@@ -970,14 +860,10 @@ class Pedometer(winrt.system.Object, metaclass=Pedometer_Static):
 
 @typing.final
 class PedometerDataThreshold(winrt.system.Object, ImplementsISensorDataThreshold):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PedometerDataThreshold: ...
     def __new__(cls: typing.Type[Self], sensor: Pedometer, step_goal: winrt.system.Int32) -> Self: ...
 
 @typing.final
 class PedometerReading(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PedometerReading: ...
     @_property
     def cumulative_steps(self) -> winrt.system.Int32: ...
     @_property
@@ -989,8 +875,6 @@ class PedometerReading(winrt.system.Object):
 
 @typing.final
 class PedometerReadingChangedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PedometerReadingChangedEventArgs: ...
     @_property
     def reading(self) -> PedometerReading: ...
 
@@ -1002,8 +886,6 @@ class ProximitySensor_Static(type):
 
 @typing.final
 class ProximitySensor(winrt.system.Object, metaclass=ProximitySensor_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ProximitySensor: ...
     def create_display_on_off_controller(self) -> ProximitySensorDisplayOnOffController: ...
     def get_current_reading(self) -> ProximitySensorReading: ...
     def add_reading_changed(self, handler: windows_foundation.TypedEventHandler[ProximitySensor, ProximitySensorReadingChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
@@ -1017,22 +899,16 @@ class ProximitySensor(winrt.system.Object, metaclass=ProximitySensor_Static):
 
 @typing.final
 class ProximitySensorDataThreshold(winrt.system.Object, ImplementsISensorDataThreshold):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ProximitySensorDataThreshold: ...
     def __new__(cls: typing.Type[Self], sensor: ProximitySensor) -> Self: ...
 
 @typing.final
 class ProximitySensorDisplayOnOffController(winrt.system.Object, windows_foundation.ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ProximitySensorDisplayOnOffController: ...
     def close(self) -> None: ...
 
 @typing.final
 class ProximitySensorReading(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ProximitySensorReading: ...
     @_property
     def distance_in_millimeters(self) -> typing.Optional[winrt.system.UInt32]: ...
     @_property
@@ -1042,15 +918,11 @@ class ProximitySensorReading(winrt.system.Object):
 
 @typing.final
 class ProximitySensorReadingChangedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ProximitySensorReadingChangedEventArgs: ...
     @_property
     def reading(self) -> ProximitySensorReading: ...
 
 @typing.final
 class SensorDataThresholdTriggerDetails(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SensorDataThresholdTriggerDetails: ...
     @_property
     def device_id(self) -> str: ...
     @_property
@@ -1058,8 +930,6 @@ class SensorDataThresholdTriggerDetails(winrt.system.Object):
 
 @typing.final
 class SensorQuaternion(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SensorQuaternion: ...
     @_property
     def w(self) -> winrt.system.Single: ...
     @_property
@@ -1071,8 +941,6 @@ class SensorQuaternion(winrt.system.Object):
 
 @typing.final
 class SensorRotationMatrix(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SensorRotationMatrix: ...
     @_property
     def m11(self) -> winrt.system.Single: ...
     @_property
@@ -1100,8 +968,6 @@ class SimpleOrientationSensor_Static(type):
 
 @typing.final
 class SimpleOrientationSensor(winrt.system.Object, metaclass=SimpleOrientationSensor_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SimpleOrientationSensor: ...
     def get_current_orientation(self) -> SimpleOrientation: ...
     def add_orientation_changed(self, handler: windows_foundation.TypedEventHandler[SimpleOrientationSensor, SimpleOrientationSensorOrientationChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     def remove_orientation_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
@@ -1114,8 +980,6 @@ class SimpleOrientationSensor(winrt.system.Object, metaclass=SimpleOrientationSe
 
 @typing.final
 class SimpleOrientationSensorOrientationChangedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SimpleOrientationSensorOrientationChangedEventArgs: ...
     @_property
     def orientation(self) -> SimpleOrientation: ...
     @_property
@@ -1123,8 +987,6 @@ class SimpleOrientationSensorOrientationChangedEventArgs(winrt.system.Object):
 
 @typing.final
 class WakeOnApproachOptions(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WakeOnApproachOptions: ...
     @_property
     def disable_when_battery_saver_on(self) -> bool: ...
     @disable_when_battery_saver_on.setter
@@ -1139,8 +1001,6 @@ class ImplementsIHumanPresenceSensorExtension():
 
 @typing.final
 class IHumanPresenceSensorExtension(winrt.system.Object, ImplementsIHumanPresenceSensorExtension):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IHumanPresenceSensorExtension: ...
     def initialize(self, device_interface: str, /) -> None: ...
     def process_reading(self, reading: HumanPresenceSensorReading, /) -> HumanPresenceSensorReadingUpdate: ...
     def process_reading_timeout_expired(self, reading: HumanPresenceSensorReading, /) -> None: ...
@@ -1154,6 +1014,5 @@ class ImplementsISensorDataThreshold():
 
 @typing.final
 class ISensorDataThreshold(winrt.system.Object, ImplementsISensorDataThreshold):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ISensorDataThreshold: ...
+    pass
 

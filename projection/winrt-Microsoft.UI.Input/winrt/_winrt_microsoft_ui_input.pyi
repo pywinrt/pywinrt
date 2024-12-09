@@ -57,8 +57,6 @@ class PhysicalKeyStatus:
 
 @typing.final
 class CharacterReceivedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> CharacterReceivedEventArgs: ...
     @_property
     def handled(self) -> bool: ...
     @handled.setter
@@ -70,8 +68,6 @@ class CharacterReceivedEventArgs(winrt.system.Object):
 
 @typing.final
 class ContextMenuKeyEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ContextMenuKeyEventArgs: ...
     @_property
     def handled(self) -> bool: ...
     @handled.setter
@@ -79,8 +75,6 @@ class ContextMenuKeyEventArgs(winrt.system.Object):
 
 @typing.final
 class CrossSlidingEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> CrossSlidingEventArgs: ...
     @_property
     def cross_sliding_state(self) -> CrossSlidingState: ...
     @_property
@@ -90,8 +84,6 @@ class CrossSlidingEventArgs(winrt.system.Object):
 
 @typing.final
 class DraggingEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> DraggingEventArgs: ...
     @_property
     def dragging_state(self) -> DraggingState: ...
     @_property
@@ -101,8 +93,6 @@ class DraggingEventArgs(winrt.system.Object):
 
 @typing.final
 class EnteredMoveSizeEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> EnteredMoveSizeEventArgs: ...
     @_property
     def move_size_operation(self) -> MoveSizeOperation: ...
     @_property
@@ -110,8 +100,6 @@ class EnteredMoveSizeEventArgs(winrt.system.Object):
 
 @typing.final
 class EnteringMoveSizeEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> EnteringMoveSizeEventArgs: ...
     @_property
     def move_size_window_id(self) -> microsoft_ui.WindowId: ...
     @move_size_window_id.setter
@@ -123,8 +111,6 @@ class EnteringMoveSizeEventArgs(winrt.system.Object):
 
 @typing.final
 class ExitedMoveSizeEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ExitedMoveSizeEventArgs: ...
     @_property
     def move_size_operation(self) -> MoveSizeOperation: ...
     @_property
@@ -132,8 +118,6 @@ class ExitedMoveSizeEventArgs(winrt.system.Object):
 
 @typing.final
 class FocusChangedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> FocusChangedEventArgs: ...
     @_property
     def handled(self) -> bool: ...
     @handled.setter
@@ -147,8 +131,6 @@ class FocusNavigationRequest_Static(type):
 
 @typing.final
 class FocusNavigationRequest(winrt.system.Object, metaclass=FocusNavigationRequest_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> FocusNavigationRequest: ...
     @_property
     def correlation_id(self) -> _uuid.UUID: ...
     @_property
@@ -158,8 +140,6 @@ class FocusNavigationRequest(winrt.system.Object, metaclass=FocusNavigationReque
 
 @typing.final
 class FocusNavigationRequestEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> FocusNavigationRequestEventArgs: ...
     @_property
     def result(self) -> FocusNavigationResult: ...
     @result.setter
@@ -169,8 +149,6 @@ class FocusNavigationRequestEventArgs(winrt.system.Object):
 
 @typing.final
 class GestureRecognizer(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> GestureRecognizer: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     def can_be_double_tap(self, value: PointerPoint, /) -> bool: ...
     def complete_gesture(self) -> None: ...
@@ -266,8 +244,6 @@ class GestureRecognizer(winrt.system.Object):
 
 @typing.final
 class HoldingEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> HoldingEventArgs: ...
     @_property
     def holding_state(self) -> HoldingState: ...
     @_property
@@ -282,8 +258,6 @@ class InputActivationListener_Static(InputObject_Static):
 
 @typing.final
 class InputActivationListener(InputObject, metaclass=InputActivationListener_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> InputActivationListener: ...
     def add_input_activation_changed(self, handler: windows_foundation.TypedEventHandler[InputActivationListener, InputActivationListenerActivationChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     def remove_input_activation_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @_property
@@ -291,8 +265,7 @@ class InputActivationListener(InputObject, metaclass=InputActivationListener_Sta
 
 @typing.final
 class InputActivationListenerActivationChangedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> InputActivationListenerActivationChangedEventArgs: ...
+    pass
 
 class InputCursor_Static(type):
     def create_from_core_cursor(cls, cursor: windows_ui_core.CoreCursor, /) -> InputCursor: ...
@@ -300,16 +273,13 @@ class InputCursor_Static(type):
 class InputCursor(winrt.system.Object, windows_foundation.ImplementsIClosable, metaclass=InputCursor_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> InputCursor: ...
     def close(self) -> None: ...
 
 class InputCustomCursor_Static(InputCursor_Static):
     pass
 
 class InputCustomCursor(InputCursor, metaclass=InputCustomCursor_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> InputCustomCursor: ...
+    pass
 
 @typing.final
 class InputDesktopNamedResourceCursor_Static(InputCursor_Static):
@@ -318,8 +288,6 @@ class InputDesktopNamedResourceCursor_Static(InputCursor_Static):
 
 @typing.final
 class InputDesktopNamedResourceCursor(InputCursor, metaclass=InputDesktopNamedResourceCursor_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> InputDesktopNamedResourceCursor: ...
     @_property
     def module_name(self) -> str: ...
     @_property
@@ -332,8 +300,6 @@ class InputDesktopResourceCursor_Static(InputCursor_Static):
 
 @typing.final
 class InputDesktopResourceCursor(InputCursor, metaclass=InputDesktopResourceCursor_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> InputDesktopResourceCursor: ...
     @_property
     def module_name(self) -> str: ...
     @_property
@@ -345,8 +311,6 @@ class InputFocusController_Static(InputObject_Static):
 
 @typing.final
 class InputFocusController(InputObject, metaclass=InputFocusController_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> InputFocusController: ...
     def depart_focus(self, request: FocusNavigationRequest, /) -> FocusNavigationResult: ...
     def try_set_focus(self) -> bool: ...
     def add_got_focus(self, handler: windows_foundation.TypedEventHandler[InputFocusController, FocusChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
@@ -364,8 +328,6 @@ class InputFocusNavigationHost_Static(InputObject_Static):
 
 @typing.final
 class InputFocusNavigationHost(InputObject, metaclass=InputFocusNavigationHost_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> InputFocusNavigationHost: ...
     def navigate_focus(self, request: FocusNavigationRequest, /) -> FocusNavigationResult: ...
     def add_depart_focus_requested(self, handler: windows_foundation.TypedEventHandler[InputFocusNavigationHost, FocusNavigationRequestEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     def remove_depart_focus_requested(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
@@ -379,8 +341,6 @@ class InputKeyboardSource_Static(InputObject_Static):
 
 @typing.final
 class InputKeyboardSource(InputObject, metaclass=InputKeyboardSource_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> InputKeyboardSource: ...
     def get_current_key_state(self, virtual_key: windows_system.VirtualKey, /) -> VirtualKeyStates: ...
     def get_key_state(self, virtual_key: windows_system.VirtualKey, /) -> VirtualKeyStates: ...
     def add_character_received(self, handler: windows_foundation.TypedEventHandler[InputKeyboardSource, CharacterReceivedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
@@ -402,15 +362,12 @@ class InputLightDismissAction_Static(InputObject_Static):
 
 @typing.final
 class InputLightDismissAction(InputObject, metaclass=InputLightDismissAction_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> InputLightDismissAction: ...
     def add_dismissed(self, handler: windows_foundation.TypedEventHandler[InputLightDismissAction, InputLightDismissEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     def remove_dismissed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
 @typing.final
 class InputLightDismissEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> InputLightDismissEventArgs: ...
+    pass
 
 @typing.final
 class InputNonClientPointerSource_Static(type):
@@ -418,8 +375,6 @@ class InputNonClientPointerSource_Static(type):
 
 @typing.final
 class InputNonClientPointerSource(winrt.system.Object, metaclass=InputNonClientPointerSource_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> InputNonClientPointerSource: ...
     def clear_all_region_rects(self) -> None: ...
     def clear_region_rects(self, region: NonClientRegionKind, /) -> None: ...
     def get_region_rects(self, region: NonClientRegionKind, /) -> winrt.system.Array[windows_graphics.RectInt32]: ...
@@ -455,8 +410,6 @@ class InputObject_Static(type):
     pass
 
 class InputObject(winrt.system.Object, metaclass=InputObject_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> InputObject: ...
     @_property
     @typing.final
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
@@ -467,8 +420,6 @@ class InputPointerSource_Static(InputObject_Static):
 
 @typing.final
 class InputPointerSource(InputObject, metaclass=InputPointerSource_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> InputPointerSource: ...
     def add_pointer_capture_lost(self, handler: windows_foundation.TypedEventHandler[InputPointerSource, PointerEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     def remove_pointer_capture_lost(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     def add_pointer_entered(self, handler: windows_foundation.TypedEventHandler[InputPointerSource, PointerEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
@@ -502,8 +453,7 @@ class InputPreTranslateKeyboardSource_Static(InputObject_Static):
 
 @typing.final
 class InputPreTranslateKeyboardSource(InputObject, metaclass=InputPreTranslateKeyboardSource_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> InputPreTranslateKeyboardSource: ...
+    pass
 
 @typing.final
 class InputSystemCursor_Static(InputCursor_Static):
@@ -511,15 +461,11 @@ class InputSystemCursor_Static(InputCursor_Static):
 
 @typing.final
 class InputSystemCursor(InputCursor, metaclass=InputSystemCursor_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> InputSystemCursor: ...
     @_property
     def cursor_shape(self) -> InputSystemCursorShape: ...
 
 @typing.final
 class KeyEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> KeyEventArgs: ...
     @_property
     def handled(self) -> bool: ...
     @handled.setter
@@ -533,8 +479,6 @@ class KeyEventArgs(winrt.system.Object):
 
 @typing.final
 class ManipulationCompletedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ManipulationCompletedEventArgs: ...
     @_property
     def cumulative(self) -> ManipulationDelta: ...
     @_property
@@ -546,8 +490,6 @@ class ManipulationCompletedEventArgs(winrt.system.Object):
 
 @typing.final
 class ManipulationInertiaStartingEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ManipulationInertiaStartingEventArgs: ...
     @_property
     def cumulative(self) -> ManipulationDelta: ...
     @_property
@@ -561,8 +503,6 @@ class ManipulationInertiaStartingEventArgs(winrt.system.Object):
 
 @typing.final
 class ManipulationStartedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ManipulationStartedEventArgs: ...
     @_property
     def cumulative(self) -> ManipulationDelta: ...
     @_property
@@ -572,8 +512,6 @@ class ManipulationStartedEventArgs(winrt.system.Object):
 
 @typing.final
 class ManipulationUpdatedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ManipulationUpdatedEventArgs: ...
     @_property
     def cumulative(self) -> ManipulationDelta: ...
     @_property
@@ -587,8 +525,6 @@ class ManipulationUpdatedEventArgs(winrt.system.Object):
 
 @typing.final
 class MouseWheelParameters(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> MouseWheelParameters: ...
     @_property
     def page_translation(self) -> windows_foundation.Point: ...
     @page_translation.setter
@@ -608,8 +544,6 @@ class MouseWheelParameters(winrt.system.Object):
 
 @typing.final
 class NonClientCaptionTappedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> NonClientCaptionTappedEventArgs: ...
     @_property
     def point(self) -> windows_foundation.Point: ...
     @_property
@@ -617,8 +551,6 @@ class NonClientCaptionTappedEventArgs(winrt.system.Object):
 
 @typing.final
 class NonClientPointerEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> NonClientPointerEventArgs: ...
     @_property
     def is_point_in_region(self) -> bool: ...
     @_property
@@ -630,15 +562,11 @@ class NonClientPointerEventArgs(winrt.system.Object):
 
 @typing.final
 class NonClientRegionsChangedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> NonClientRegionsChangedEventArgs: ...
     @_property
     def changed_regions(self) -> NonClientRegionKind: ...
 
 @typing.final
 class PointerEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PointerEventArgs: ...
     def get_intermediate_points(self) -> typing.MutableSequence[PointerPoint]: ...
     def get_intermediate_transformed_points(self, transform: ImplementsIPointerPointTransform, /) -> typing.MutableSequence[PointerPoint]: ...
     @_property
@@ -652,8 +580,6 @@ class PointerEventArgs(winrt.system.Object):
 
 @typing.final
 class PointerPoint(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PointerPoint: ...
     def get_transformed_point(self, transform: ImplementsIPointerPointTransform, /) -> PointerPoint: ...
     @_property
     def frame_id(self) -> winrt.system.UInt32: ...
@@ -672,8 +598,6 @@ class PointerPoint(winrt.system.Object):
 
 @typing.final
 class PointerPointProperties(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PointerPointProperties: ...
     @_property
     def contact_rect(self) -> windows_foundation.Rect: ...
     @_property
@@ -725,8 +649,6 @@ class PointerPredictor_Static(type):
 class PointerPredictor(winrt.system.Object, windows_foundation.ImplementsIClosable, metaclass=PointerPredictor_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PointerPredictor: ...
     def close(self) -> None: ...
     def get_predicted_points(self, point: PointerPoint, /) -> winrt.system.Array[PointerPoint]: ...
     @_property
@@ -736,8 +658,6 @@ class PointerPredictor(winrt.system.Object, windows_foundation.ImplementsIClosab
 
 @typing.final
 class RightTappedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> RightTappedEventArgs: ...
     @_property
     def pointer_device_type(self) -> PointerDeviceType: ...
     @_property
@@ -745,8 +665,6 @@ class RightTappedEventArgs(winrt.system.Object):
 
 @typing.final
 class TappedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> TappedEventArgs: ...
     @_property
     def pointer_device_type(self) -> PointerDeviceType: ...
     @_property
@@ -756,8 +674,6 @@ class TappedEventArgs(winrt.system.Object):
 
 @typing.final
 class WindowRectChangedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WindowRectChangedEventArgs: ...
     @_property
     def move_size_operation(self) -> MoveSizeOperation: ...
     @_property
@@ -769,8 +685,6 @@ class WindowRectChangedEventArgs(winrt.system.Object):
 
 @typing.final
 class WindowRectChangingEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WindowRectChangingEventArgs: ...
     @_property
     def show_window(self) -> bool: ...
     @show_window.setter
@@ -795,8 +709,6 @@ class ImplementsIPointerPointTransform():
 
 @typing.final
 class IPointerPointTransform(winrt.system.Object, ImplementsIPointerPointTransform):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IPointerPointTransform: ...
     def try_transform(self, in_point: windows_foundation.Point, /) -> typing.Tuple[bool, windows_foundation.Point]: ...
     def try_transform_bounds(self, in_rect: windows_foundation.Rect, /) -> typing.Tuple[bool, windows_foundation.Rect]: ...
     @_property

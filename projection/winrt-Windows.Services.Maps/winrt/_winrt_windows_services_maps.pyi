@@ -20,8 +20,6 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class EnhancedWaypoint(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> EnhancedWaypoint: ...
     def __new__(cls: typing.Type[Self], point: windows_devices_geolocation.Geopoint, kind: WaypointKind) -> Self: ...
     @_property
     def kind(self) -> WaypointKind: ...
@@ -30,8 +28,6 @@ class EnhancedWaypoint(winrt.system.Object):
 
 @typing.final
 class ManeuverWarning(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ManeuverWarning: ...
     @_property
     def kind(self) -> ManeuverWarningKind: ...
     @_property
@@ -39,8 +35,6 @@ class ManeuverWarning(winrt.system.Object):
 
 @typing.final
 class MapAddress(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> MapAddress: ...
     @_property
     def building_floor(self) -> str: ...
     @_property
@@ -76,8 +70,6 @@ class MapAddress(winrt.system.Object):
 
 @typing.final
 class MapLocation(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> MapLocation: ...
     @_property
     def address(self) -> MapAddress: ...
     @_property
@@ -100,8 +92,6 @@ class MapLocationFinder(winrt.system.Object, metaclass=MapLocationFinder_Static)
 
 @typing.final
 class MapLocationFinderResult(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> MapLocationFinderResult: ...
     @_property
     def locations(self) -> typing.Sequence[MapLocation]: ...
     @_property
@@ -118,8 +108,6 @@ class MapManager(winrt.system.Object, metaclass=MapManager_Static):
 
 @typing.final
 class MapRoute(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> MapRoute: ...
     @_property
     def bounding_box(self) -> windows_devices_geolocation.GeoboundingBox: ...
     @_property
@@ -145,8 +133,6 @@ class MapRoute(winrt.system.Object):
 
 @typing.final
 class MapRouteDrivingOptions(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> MapRouteDrivingOptions: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @_property
     def route_restrictions(self) -> MapRouteRestrictions: ...
@@ -191,8 +177,6 @@ class MapRouteFinder(winrt.system.Object, metaclass=MapRouteFinder_Static):
 
 @typing.final
 class MapRouteFinderResult(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> MapRouteFinderResult: ...
     @_property
     def route(self) -> MapRoute: ...
     @_property
@@ -202,8 +186,6 @@ class MapRouteFinderResult(winrt.system.Object):
 
 @typing.final
 class MapRouteLeg(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> MapRouteLeg: ...
     @_property
     def bounding_box(self) -> windows_devices_geolocation.GeoboundingBox: ...
     @_property
@@ -221,8 +203,6 @@ class MapRouteLeg(winrt.system.Object):
 
 @typing.final
 class MapRouteManeuver(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> MapRouteManeuver: ...
     @_property
     def exit_number(self) -> str: ...
     @_property
@@ -277,8 +257,6 @@ class PlaceInfo_Static(type):
 
 @typing.final
 class PlaceInfo(winrt.system.Object, metaclass=PlaceInfo_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PlaceInfo: ...
     def show(self, selection: windows_foundation.Rect, /) -> None: ...
     def show_with_preferred_placement(self, selection: windows_foundation.Rect, preferred_placement: windows_ui_popups.Placement, /) -> None: ...
     @_property
@@ -292,8 +270,6 @@ class PlaceInfo(winrt.system.Object, metaclass=PlaceInfo_Static):
 
 @typing.final
 class PlaceInfoCreateOptions(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PlaceInfoCreateOptions: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @_property
     def display_name(self) -> str: ...

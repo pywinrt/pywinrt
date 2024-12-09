@@ -22,8 +22,6 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class ConnectionRequestedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ConnectionRequestedEventArgs: ...
     @_property
     def peer_information(self) -> PeerInformation: ...
 
@@ -74,8 +72,6 @@ class PeerFinder(winrt.system.Object, metaclass=PeerFinder_Static):
 
 @typing.final
 class PeerInformation(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PeerInformation: ...
     @_property
     def display_name(self) -> str: ...
     @_property
@@ -89,8 +85,6 @@ class PeerInformation(winrt.system.Object):
 
 @typing.final
 class PeerWatcher(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PeerWatcher: ...
     def start(self) -> None: ...
     def stop(self) -> None: ...
     def add_added(self, handler: windows_foundation.TypedEventHandler[PeerWatcher, PeerInformation], /) -> windows_foundation.EventRegistrationToken: ...
@@ -114,8 +108,6 @@ class ProximityDevice_Static(type):
 
 @typing.final
 class ProximityDevice(winrt.system.Object, metaclass=ProximityDevice_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ProximityDevice: ...
     def publish_binary_message(self, message_type: str, message: windows_storage_streams.ImplementsIBuffer, /) -> winrt.system.Int64: ...
     def publish_binary_message_with_callback(self, message_type: str, message: windows_storage_streams.ImplementsIBuffer, message_transmitted_handler: MessageTransmittedHandler, /) -> winrt.system.Int64: ...
     def publish_message(self, message_type: str, message: str, /) -> winrt.system.Int64: ...
@@ -138,8 +130,6 @@ class ProximityDevice(winrt.system.Object, metaclass=ProximityDevice_Static):
 
 @typing.final
 class ProximityMessage(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ProximityMessage: ...
     @_property
     def data(self) -> windows_storage_streams.IBuffer: ...
     @_property
@@ -151,8 +141,6 @@ class ProximityMessage(winrt.system.Object):
 
 @typing.final
 class TriggeredConnectionStateChangedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> TriggeredConnectionStateChangedEventArgs: ...
     @_property
     def id(self) -> winrt.system.UInt32: ...
     @_property

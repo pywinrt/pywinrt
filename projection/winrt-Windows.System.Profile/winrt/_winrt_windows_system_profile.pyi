@@ -32,8 +32,6 @@ class AnalyticsInfo(winrt.system.Object, metaclass=AnalyticsInfo_Static):
 
 @typing.final
 class AnalyticsVersionInfo(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AnalyticsVersionInfo: ...
     @_property
     def device_family(self) -> str: ...
     @_property
@@ -68,8 +66,6 @@ class HardwareIdentification(winrt.system.Object, metaclass=HardwareIdentificati
 
 @typing.final
 class HardwareToken(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> HardwareToken: ...
     @_property
     def certificate(self) -> windows_storage_streams.IBuffer: ...
     @_property
@@ -193,8 +189,6 @@ class SystemIdentification(winrt.system.Object, metaclass=SystemIdentification_S
 
 @typing.final
 class SystemIdentificationInfo(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SystemIdentificationInfo: ...
     @_property
     def id(self) -> windows_storage_streams.IBuffer: ...
     @_property
@@ -213,8 +207,6 @@ class SystemSetupInfo(winrt.system.Object, metaclass=SystemSetupInfo_Static):
 
 @typing.final
 class UnsupportedAppRequirement(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> UnsupportedAppRequirement: ...
     @_property
     def reasons(self) -> UnsupportedAppRequirementReasons: ...
     @_property

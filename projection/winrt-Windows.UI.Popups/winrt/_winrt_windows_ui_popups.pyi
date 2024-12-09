@@ -19,8 +19,6 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class MessageDialog(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> MessageDialog: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], content: str) -> Self: ...
     @typing.overload
@@ -51,8 +49,6 @@ class MessageDialog(winrt.system.Object):
 
 @typing.final
 class PopupMenu(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PopupMenu: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     def show_async(self, invocation_point: windows_foundation.Point, /) -> windows_foundation.IAsyncOperation[IUICommand]: ...
     def show_async_with_rect(self, selection: windows_foundation.Rect, /) -> windows_foundation.IAsyncOperation[IUICommand]: ...
@@ -62,8 +58,6 @@ class PopupMenu(winrt.system.Object):
 
 @typing.final
 class UICommand(winrt.system.Object, ImplementsIUICommand):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> UICommand: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], label: str) -> Self: ...
     @typing.overload
@@ -87,8 +81,6 @@ class UICommand(winrt.system.Object, ImplementsIUICommand):
 
 @typing.final
 class UICommandSeparator(winrt.system.Object, ImplementsIUICommand):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> UICommandSeparator: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @_property
     def label(self) -> str: ...
@@ -108,8 +100,6 @@ class ImplementsIUICommand():
 
 @typing.final
 class IUICommand(winrt.system.Object, ImplementsIUICommand):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IUICommand: ...
     @_property
     def id(self) -> winrt.system.Object: ...
     @id.setter

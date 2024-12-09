@@ -20,8 +20,6 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class SocialFeedChildItem(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SocialFeedChildItem: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @_property
     def timestamp(self) -> datetime.datetime: ...
@@ -46,8 +44,6 @@ class SocialFeedChildItem(winrt.system.Object):
 
 @typing.final
 class SocialFeedContent(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SocialFeedContent: ...
     @_property
     def title(self) -> str: ...
     @title.setter
@@ -63,8 +59,6 @@ class SocialFeedContent(winrt.system.Object):
 
 @typing.final
 class SocialFeedItem(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SocialFeedItem: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @_property
     def timestamp(self) -> datetime.datetime: ...
@@ -109,8 +103,6 @@ class SocialFeedItem(winrt.system.Object):
 
 @typing.final
 class SocialFeedSharedItem(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SocialFeedSharedItem: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @_property
     def timestamp(self) -> datetime.datetime: ...
@@ -133,8 +125,6 @@ class SocialFeedSharedItem(winrt.system.Object):
 
 @typing.final
 class SocialItemThumbnail(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SocialItemThumbnail: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # @deprecated("ISocialItemThumbnail is deprecated and might not work on all platforms. For more info, see MSDN.")
     def set_image_async(self, image: windows_storage_streams.ImplementsIInputStream, /) -> windows_foundation.IAsyncAction: ...
@@ -153,8 +143,6 @@ class SocialItemThumbnail(winrt.system.Object):
 
 @typing.final
 class SocialUserInfo(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SocialUserInfo: ...
     @_property
     def user_name(self) -> str: ...
     @user_name.setter

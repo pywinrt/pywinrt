@@ -20,13 +20,10 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class CurrentSessionChangedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> CurrentSessionChangedEventArgs: ...
+    pass
 
 @typing.final
 class GlobalSystemMediaTransportControlsSession(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> GlobalSystemMediaTransportControlsSession: ...
     def get_playback_info(self) -> GlobalSystemMediaTransportControlsSessionPlaybackInfo: ...
     def get_timeline_properties(self) -> GlobalSystemMediaTransportControlsSessionTimelineProperties: ...
     def try_change_auto_repeat_mode_async(self, requested_auto_repeat_mode: windows_media.MediaPlaybackAutoRepeatMode, /) -> windows_foundation.IAsyncOperation[bool]: ...
@@ -60,8 +57,6 @@ class GlobalSystemMediaTransportControlsSessionManager_Static(type):
 
 @typing.final
 class GlobalSystemMediaTransportControlsSessionManager(winrt.system.Object, metaclass=GlobalSystemMediaTransportControlsSessionManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> GlobalSystemMediaTransportControlsSessionManager: ...
     def get_current_session(self) -> GlobalSystemMediaTransportControlsSession: ...
     def get_sessions(self) -> typing.Sequence[GlobalSystemMediaTransportControlsSession]: ...
     def add_current_session_changed(self, handler: windows_foundation.TypedEventHandler[GlobalSystemMediaTransportControlsSessionManager, CurrentSessionChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
@@ -71,8 +66,6 @@ class GlobalSystemMediaTransportControlsSessionManager(winrt.system.Object, meta
 
 @typing.final
 class GlobalSystemMediaTransportControlsSessionMediaProperties(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> GlobalSystemMediaTransportControlsSessionMediaProperties: ...
     @_property
     def album_artist(self) -> str: ...
     @_property
@@ -96,8 +89,6 @@ class GlobalSystemMediaTransportControlsSessionMediaProperties(winrt.system.Obje
 
 @typing.final
 class GlobalSystemMediaTransportControlsSessionPlaybackControls(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> GlobalSystemMediaTransportControlsSessionPlaybackControls: ...
     @_property
     def is_channel_down_enabled(self) -> bool: ...
     @_property
@@ -131,8 +122,6 @@ class GlobalSystemMediaTransportControlsSessionPlaybackControls(winrt.system.Obj
 
 @typing.final
 class GlobalSystemMediaTransportControlsSessionPlaybackInfo(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> GlobalSystemMediaTransportControlsSessionPlaybackInfo: ...
     @_property
     def auto_repeat_mode(self) -> typing.Optional[windows_media.MediaPlaybackAutoRepeatMode]: ...
     @_property
@@ -148,8 +137,6 @@ class GlobalSystemMediaTransportControlsSessionPlaybackInfo(winrt.system.Object)
 
 @typing.final
 class GlobalSystemMediaTransportControlsSessionTimelineProperties(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> GlobalSystemMediaTransportControlsSessionTimelineProperties: ...
     @_property
     def end_time(self) -> datetime.timedelta: ...
     @_property
@@ -165,21 +152,17 @@ class GlobalSystemMediaTransportControlsSessionTimelineProperties(winrt.system.O
 
 @typing.final
 class MediaPropertiesChangedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> MediaPropertiesChangedEventArgs: ...
+    pass
 
 @typing.final
 class PlaybackInfoChangedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PlaybackInfoChangedEventArgs: ...
+    pass
 
 @typing.final
 class SessionsChangedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SessionsChangedEventArgs: ...
+    pass
 
 @typing.final
 class TimelinePropertiesChangedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> TimelinePropertiesChangedEventArgs: ...
+    pass
 

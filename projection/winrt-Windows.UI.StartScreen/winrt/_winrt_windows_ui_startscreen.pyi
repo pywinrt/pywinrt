@@ -28,8 +28,6 @@ class JumpList_Static(type):
 
 @typing.final
 class JumpList(winrt.system.Object, metaclass=JumpList_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> JumpList: ...
     def save_async(self) -> windows_foundation.IAsyncAction: ...
     @_property
     def system_group_kind(self) -> JumpListSystemGroupKind: ...
@@ -45,8 +43,6 @@ class JumpListItem_Static(type):
 
 @typing.final
 class JumpListItem(winrt.system.Object, metaclass=JumpListItem_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> JumpListItem: ...
     @_property
     def logo(self) -> windows_foundation.Uri: ...
     @logo.setter
@@ -79,8 +75,6 @@ class SecondaryTile_Static(type):
 
 @typing.final
 class SecondaryTile(winrt.system.Object, metaclass=SecondaryTile_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SecondaryTile: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], tile_id: str, display_name: str, arguments: str, square150x150_logo: windows_foundation.Uri, desired_size: TileSize) -> Self: ...
     @typing.overload
@@ -163,8 +157,6 @@ class SecondaryTile(winrt.system.Object, metaclass=SecondaryTile_Static):
 
 @typing.final
 class SecondaryTileVisualElements(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SecondaryTileVisualElements: ...
     @_property
     def square150x150_logo(self) -> windows_foundation.Uri: ...
     @square150x150_logo.setter
@@ -223,8 +215,6 @@ class StartScreenManager_Static(type):
 
 @typing.final
 class StartScreenManager(winrt.system.Object, metaclass=StartScreenManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> StartScreenManager: ...
     def contains_app_list_entry_async(self, app_list_entry: windows_applicationmodel_core.AppListEntry, /) -> windows_foundation.IAsyncOperation[bool]: ...
     def contains_secondary_tile_async(self, tile_id: str, /) -> windows_foundation.IAsyncOperation[bool]: ...
     def request_add_app_list_entry_async(self, app_list_entry: windows_applicationmodel_core.AppListEntry, /) -> windows_foundation.IAsyncOperation[bool]: ...
@@ -235,8 +225,6 @@ class StartScreenManager(winrt.system.Object, metaclass=StartScreenManager_Stati
 
 @typing.final
 class TileMixedRealityModel(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> TileMixedRealityModel: ...
     @_property
     def uri(self) -> windows_foundation.Uri: ...
     @uri.setter
@@ -252,8 +240,6 @@ class TileMixedRealityModel(winrt.system.Object):
 
 @typing.final
 class VisualElementsRequest(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> VisualElementsRequest: ...
     def get_deferral(self) -> VisualElementsRequestDeferral: ...
     @_property
     def alternate_visual_elements(self) -> typing.Sequence[SecondaryTileVisualElements]: ...
@@ -264,14 +250,10 @@ class VisualElementsRequest(winrt.system.Object):
 
 @typing.final
 class VisualElementsRequestDeferral(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> VisualElementsRequestDeferral: ...
     def complete(self) -> None: ...
 
 @typing.final
 class VisualElementsRequestedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> VisualElementsRequestedEventArgs: ...
     @_property
     def request(self) -> VisualElementsRequest: ...
 

@@ -20,13 +20,10 @@ class CoreAppWindowPreview_Static(type):
 
 @typing.final
 class CoreAppWindowPreview(winrt.system.Object, metaclass=CoreAppWindowPreview_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> CoreAppWindowPreview: ...
+    pass
 
 @typing.final
 class SystemNavigationCloseRequestedPreviewEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SystemNavigationCloseRequestedPreviewEventArgs: ...
     def get_deferral(self) -> windows_foundation.Deferral: ...
     @_property
     def handled(self) -> bool: ...
@@ -39,8 +36,6 @@ class SystemNavigationManagerPreview_Static(type):
 
 @typing.final
 class SystemNavigationManagerPreview(winrt.system.Object, metaclass=SystemNavigationManagerPreview_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SystemNavigationManagerPreview: ...
     def add_close_requested(self, handler: windows_foundation.EventHandler[SystemNavigationCloseRequestedPreviewEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     def remove_close_requested(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 

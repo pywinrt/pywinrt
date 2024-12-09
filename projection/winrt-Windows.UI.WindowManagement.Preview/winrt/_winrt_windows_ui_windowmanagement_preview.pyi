@@ -20,6 +20,5 @@ class WindowManagementPreview_Static(type):
 
 @typing.final
 class WindowManagementPreview(winrt.system.Object, metaclass=WindowManagementPreview_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WindowManagementPreview: ...
+    pass
 

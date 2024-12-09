@@ -28,8 +28,6 @@ class CortanaActionableInsights_Static(type):
 
 @typing.final
 class CortanaActionableInsights(winrt.system.Object, metaclass=CortanaActionableInsights_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> CortanaActionableInsights: ...
     # @deprecated("CortanaActionableInsights is deprecated and might not work on all platforms. For more info, see MSDN.")
     def is_available_async(self) -> windows_foundation.IAsyncOperation[bool]: ...
     # @deprecated("CortanaActionableInsights is deprecated and might not work on all platforms. For more info, see MSDN.")
@@ -49,8 +47,6 @@ class CortanaActionableInsights(winrt.system.Object, metaclass=CortanaActionable
 
 @typing.final
 class CortanaActionableInsightsOptions(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> CortanaActionableInsightsOptions: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @_property
     def surrounding_text(self) -> str: ...
@@ -68,8 +64,6 @@ class CortanaPermissionsManager_Static(type):
 
 @typing.final
 class CortanaPermissionsManager(winrt.system.Object, metaclass=CortanaPermissionsManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> CortanaPermissionsManager: ...
     # @deprecated("ICortanaPermissionsManager is deprecated and might not work on all platforms. For more info, see MSDN.")
     def are_permissions_granted_async(self, permissions: typing.Iterable[CortanaPermission], /) -> windows_foundation.IAsyncOperation[bool]: ...
     # @deprecated("ICortanaPermissionsManager is deprecated and might not work on all platforms. For more info, see MSDN.")
@@ -88,8 +82,6 @@ class CortanaSettings_Static(type):
 
 @typing.final
 class CortanaSettings(winrt.system.Object, metaclass=CortanaSettings_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> CortanaSettings: ...
     @_property
     def is_voice_activation_enabled(self) -> bool: ...
     @is_voice_activation_enabled.setter

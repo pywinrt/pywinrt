@@ -62,8 +62,6 @@ class CompositeTransform3D_Static(Transform3D_Static):
 
 @typing.final
 class CompositeTransform3D(Transform3D, metaclass=CompositeTransform3D_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> CompositeTransform3D: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @_property
     def translate_z(self) -> winrt.system.Double: ...
@@ -126,8 +124,7 @@ class Matrix3DHelper_Static(type):
 
 @typing.final
 class Matrix3DHelper(winrt.system.Object, metaclass=Matrix3DHelper_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> Matrix3DHelper: ...
+    pass
 
 @typing.final
 class PerspectiveTransform3D_Static(Transform3D_Static):
@@ -140,8 +137,6 @@ class PerspectiveTransform3D_Static(Transform3D_Static):
 
 @typing.final
 class PerspectiveTransform3D(Transform3D, metaclass=PerspectiveTransform3D_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PerspectiveTransform3D: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @_property
     def offset_y(self) -> winrt.system.Double: ...
@@ -160,6 +155,5 @@ class Transform3D_Static(windows_ui_xaml.DependencyObject_Static):
     pass
 
 class Transform3D(windows_ui_xaml.DependencyObject, metaclass=Transform3D_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> Transform3D: ...
+    pass
 

@@ -29,8 +29,6 @@ class DateTimeFormatter_Static(type):
 
 @typing.final
 class DateTimeFormatter(winrt.system.Object, metaclass=DateTimeFormatter_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> DateTimeFormatter: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], format_template: str) -> Self: ...
     @typing.overload

@@ -43,8 +43,6 @@ class KnownResourceQualifierName(winrt.system.Object, metaclass=KnownResourceQua
 
 @typing.final
 class ResourceCandidate(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ResourceCandidate: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], kind: ResourceCandidateKind, data: str) -> Self: ...
     @typing.overload
@@ -60,8 +58,6 @@ class ResourceCandidate(winrt.system.Object):
 
 @typing.final
 class ResourceContext(winrt.system.Object, ImplementsIResourceContext):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ResourceContext: ...
     @_property
     def qualifier_values(self) -> typing.MutableMapping[str, str]: ...
 
@@ -71,8 +67,6 @@ class ResourceLoader_Static(type):
 
 @typing.final
 class ResourceLoader(winrt.system.Object, metaclass=ResourceLoader_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ResourceLoader: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], file_name: str) -> Self: ...
     @typing.overload
@@ -84,8 +78,6 @@ class ResourceLoader(winrt.system.Object, metaclass=ResourceLoader_Static):
 
 @typing.final
 class ResourceManager(winrt.system.Object, ImplementsIResourceManager):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ResourceManager: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], file_name: str) -> Self: ...
     @typing.overload
@@ -98,8 +90,6 @@ class ResourceManager(winrt.system.Object, ImplementsIResourceManager):
 
 @typing.final
 class ResourceMap(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ResourceMap: ...
     def get_subtree(self, reference: str, /) -> ResourceMap: ...
     def get_value(self, resource: str, /) -> ResourceCandidate: ...
     def get_value_by_index(self, index: winrt.system.UInt32, /) -> windows_foundation_collections.IKeyValuePair[str, ResourceCandidate]: ...
@@ -113,8 +103,6 @@ class ResourceMap(winrt.system.Object):
 
 @typing.final
 class ResourceNotFoundEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ResourceNotFoundEventArgs: ...
     def set_resolved_candidate(self, candidate: ResourceCandidate, /) -> None: ...
     @_property
     def context(self) -> ResourceContext: ...
@@ -126,8 +114,6 @@ class ImplementsIResourceContext():
 
 @typing.final
 class IResourceContext(winrt.system.Object, ImplementsIResourceContext):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IResourceContext: ...
     @_property
     def qualifier_values(self) -> typing.MutableMapping[str, str]: ...
 
@@ -136,8 +122,6 @@ class ImplementsIResourceManager():
 
 @typing.final
 class IResourceManager(winrt.system.Object, ImplementsIResourceManager):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IResourceManager: ...
     def create_resource_context(self) -> ResourceContext: ...
     def add_resource_not_found(self, handler: windows_foundation.TypedEventHandler[ResourceManager, ResourceNotFoundEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     def remove_resource_not_found(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...

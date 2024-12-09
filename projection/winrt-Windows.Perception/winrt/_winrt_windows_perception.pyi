@@ -15,8 +15,6 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class PerceptionTimestamp(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PerceptionTimestamp: ...
     @_property
     def prediction_amount(self) -> datetime.timedelta: ...
     @_property

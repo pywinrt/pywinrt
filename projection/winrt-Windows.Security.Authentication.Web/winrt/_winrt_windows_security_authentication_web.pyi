@@ -33,8 +33,6 @@ class WebAuthenticationBroker(winrt.system.Object, metaclass=WebAuthenticationBr
 
 @typing.final
 class WebAuthenticationResult(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WebAuthenticationResult: ...
     @_property
     def response_data(self) -> str: ...
     @_property

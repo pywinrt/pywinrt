@@ -31,8 +31,6 @@ class StorePackageUpdateStatus:
 
 @typing.final
 class StoreAcquireLicenseResult(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> StoreAcquireLicenseResult: ...
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
     @_property
@@ -40,8 +38,6 @@ class StoreAcquireLicenseResult(winrt.system.Object):
 
 @typing.final
 class StoreAppLicense(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> StoreAppLicense: ...
     @_property
     def add_on_licenses(self) -> typing.Mapping[str, StoreLicense]: ...
     @_property
@@ -65,8 +61,6 @@ class StoreAppLicense(winrt.system.Object):
 
 @typing.final
 class StoreAvailability(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> StoreAvailability: ...
     def request_purchase_async(self) -> windows_foundation.IAsyncOperation[StorePurchaseResult]: ...
     def request_purchase_with_purchase_properties_async(self, store_purchase_properties: StorePurchaseProperties, /) -> windows_foundation.IAsyncOperation[StorePurchaseResult]: ...
     @_property
@@ -80,8 +74,6 @@ class StoreAvailability(winrt.system.Object):
 
 @typing.final
 class StoreCanAcquireLicenseResult(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> StoreCanAcquireLicenseResult: ...
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
     @_property
@@ -91,8 +83,6 @@ class StoreCanAcquireLicenseResult(winrt.system.Object):
 
 @typing.final
 class StoreCollectionData(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> StoreCollectionData: ...
     @_property
     def acquired_date(self) -> datetime.datetime: ...
     @_property
@@ -112,8 +102,6 @@ class StoreCollectionData(winrt.system.Object):
 
 @typing.final
 class StoreConsumableResult(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> StoreConsumableResult: ...
     @_property
     def balance_remaining(self) -> winrt.system.UInt32: ...
     @_property
@@ -130,8 +118,6 @@ class StoreContext_Static(type):
 
 @typing.final
 class StoreContext(winrt.system.Object, metaclass=StoreContext_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> StoreContext: ...
     def acquire_store_license_for_optional_package_async(self, optional_package: windows_applicationmodel.Package, /) -> windows_foundation.IAsyncOperation[StoreAcquireLicenseResult]: ...
     def can_acquire_store_license_async(self, product_store_id: str, /) -> windows_foundation.IAsyncOperation[StoreCanAcquireLicenseResult]: ...
     def can_acquire_store_license_for_optional_package_async(self, optional_package: windows_applicationmodel.Package, /) -> windows_foundation.IAsyncOperation[StoreCanAcquireLicenseResult]: ...
@@ -178,8 +164,6 @@ class StoreContext(winrt.system.Object, metaclass=StoreContext_Static):
 
 @typing.final
 class StoreImage(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> StoreImage: ...
     @_property
     def caption(self) -> str: ...
     @_property
@@ -193,8 +177,6 @@ class StoreImage(winrt.system.Object):
 
 @typing.final
 class StoreLicense(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> StoreLicense: ...
     @_property
     def expiration_date(self) -> datetime.datetime: ...
     @_property
@@ -208,8 +190,6 @@ class StoreLicense(winrt.system.Object):
 
 @typing.final
 class StorePackageInstallOptions(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> StorePackageInstallOptions: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @_property
     def allow_forced_app_restart(self) -> bool: ...
@@ -220,8 +200,6 @@ class StorePackageInstallOptions(winrt.system.Object):
 class StorePackageLicense(winrt.system.Object, windows_foundation.ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> StorePackageLicense: ...
     def close(self) -> None: ...
     def release_license(self) -> None: ...
     def add_license_lost(self, handler: windows_foundation.TypedEventHandler[StorePackageLicense, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
@@ -233,8 +211,6 @@ class StorePackageLicense(winrt.system.Object, windows_foundation.ImplementsIClo
 
 @typing.final
 class StorePackageUpdate(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> StorePackageUpdate: ...
     @_property
     def mandatory(self) -> bool: ...
     @_property
@@ -242,8 +218,6 @@ class StorePackageUpdate(winrt.system.Object):
 
 @typing.final
 class StorePackageUpdateResult(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> StorePackageUpdateResult: ...
     @_property
     def overall_state(self) -> StorePackageUpdateState: ...
     @_property
@@ -253,8 +227,6 @@ class StorePackageUpdateResult(winrt.system.Object):
 
 @typing.final
 class StorePrice(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> StorePrice: ...
     @_property
     def currency_code(self) -> str: ...
     @_property
@@ -276,8 +248,6 @@ class StorePrice(winrt.system.Object):
 
 @typing.final
 class StoreProduct(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> StoreProduct: ...
     def get_is_any_sku_installed_async(self) -> windows_foundation.IAsyncOperation[bool]: ...
     def request_purchase_async(self) -> windows_foundation.IAsyncOperation[StorePurchaseResult]: ...
     def request_purchase_with_purchase_properties_async(self, store_purchase_properties: StorePurchaseProperties, /) -> windows_foundation.IAsyncOperation[StorePurchaseResult]: ...
@@ -314,16 +284,12 @@ class StoreProduct(winrt.system.Object):
 
 @typing.final
 class StoreProductOptions(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> StoreProductOptions: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @_property
     def action_filters(self) -> typing.MutableSequence[str]: ...
 
 @typing.final
 class StoreProductPagedQueryResult(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> StoreProductPagedQueryResult: ...
     def get_next_async(self) -> windows_foundation.IAsyncOperation[StoreProductPagedQueryResult]: ...
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
@@ -334,8 +300,6 @@ class StoreProductPagedQueryResult(winrt.system.Object):
 
 @typing.final
 class StoreProductQueryResult(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> StoreProductQueryResult: ...
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
     @_property
@@ -343,8 +307,6 @@ class StoreProductQueryResult(winrt.system.Object):
 
 @typing.final
 class StoreProductResult(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> StoreProductResult: ...
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
     @_property
@@ -352,8 +314,6 @@ class StoreProductResult(winrt.system.Object):
 
 @typing.final
 class StorePurchaseProperties(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> StorePurchaseProperties: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], name: str) -> Self: ...
     @typing.overload
@@ -369,8 +329,6 @@ class StorePurchaseProperties(winrt.system.Object):
 
 @typing.final
 class StorePurchaseResult(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> StorePurchaseResult: ...
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
     @_property
@@ -378,8 +336,6 @@ class StorePurchaseResult(winrt.system.Object):
 
 @typing.final
 class StoreQueueItem(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> StoreQueueItem: ...
     def cancel_install_async(self) -> windows_foundation.IAsyncAction: ...
     def get_current_status(self) -> StoreQueueItemStatus: ...
     def pause_install_async(self) -> windows_foundation.IAsyncAction: ...
@@ -397,15 +353,11 @@ class StoreQueueItem(winrt.system.Object):
 
 @typing.final
 class StoreQueueItemCompletedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> StoreQueueItemCompletedEventArgs: ...
     @_property
     def status(self) -> StoreQueueItemStatus: ...
 
 @typing.final
 class StoreQueueItemStatus(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> StoreQueueItemStatus: ...
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
     @_property
@@ -417,8 +369,6 @@ class StoreQueueItemStatus(winrt.system.Object):
 
 @typing.final
 class StoreRateAndReviewResult(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> StoreRateAndReviewResult: ...
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
     @_property
@@ -438,8 +388,6 @@ class StoreRequestHelper(winrt.system.Object, metaclass=StoreRequestHelper_Stati
 
 @typing.final
 class StoreSendRequestResult(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> StoreSendRequestResult: ...
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
     @_property
@@ -449,8 +397,6 @@ class StoreSendRequestResult(winrt.system.Object):
 
 @typing.final
 class StoreSku(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> StoreSku: ...
     def get_is_installed_async(self) -> windows_foundation.IAsyncOperation[bool]: ...
     def request_purchase_async(self) -> windows_foundation.IAsyncOperation[StorePurchaseResult]: ...
     def request_purchase_with_purchase_properties_async(self, store_purchase_properties: StorePurchaseProperties, /) -> windows_foundation.IAsyncOperation[StorePurchaseResult]: ...
@@ -489,8 +435,6 @@ class StoreSku(winrt.system.Object):
 
 @typing.final
 class StoreSubscriptionInfo(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> StoreSubscriptionInfo: ...
     @_property
     def billing_period(self) -> winrt.system.UInt32: ...
     @_property
@@ -504,8 +448,6 @@ class StoreSubscriptionInfo(winrt.system.Object):
 
 @typing.final
 class StoreUninstallStorePackageResult(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> StoreUninstallStorePackageResult: ...
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
     @_property
@@ -513,8 +455,6 @@ class StoreUninstallStorePackageResult(winrt.system.Object):
 
 @typing.final
 class StoreVideo(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> StoreVideo: ...
     @_property
     def caption(self) -> str: ...
     @_property

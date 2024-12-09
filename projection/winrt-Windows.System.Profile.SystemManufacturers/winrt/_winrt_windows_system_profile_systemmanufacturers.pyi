@@ -15,8 +15,6 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class OemSupportInfo(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> OemSupportInfo: ...
     @_property
     def support_app_link(self) -> windows_foundation.Uri: ...
     @_property
@@ -35,8 +33,6 @@ class SmbiosInformation(winrt.system.Object, metaclass=SmbiosInformation_Static)
 
 @typing.final
 class SystemSupportDeviceInfo(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SystemSupportDeviceInfo: ...
     @_property
     def friendly_name(self) -> str: ...
     @_property

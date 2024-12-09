@@ -18,8 +18,6 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class DetectedFace(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> DetectedFace: ...
     @_property
     def face_box(self) -> windows_graphics_imaging.BitmapBounds: ...
 
@@ -33,8 +31,6 @@ class FaceDetector_Static(type):
 
 @typing.final
 class FaceDetector(winrt.system.Object, metaclass=FaceDetector_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> FaceDetector: ...
     def detect_faces_async(self, image: windows_graphics_imaging.SoftwareBitmap, /) -> windows_foundation.IAsyncOperation[typing.MutableSequence[DetectedFace]]: ...
     def detect_faces_with_search_area_async(self, image: windows_graphics_imaging.SoftwareBitmap, search_area: windows_graphics_imaging.BitmapBounds, /) -> windows_foundation.IAsyncOperation[typing.MutableSequence[DetectedFace]]: ...
     @_property
@@ -56,8 +52,6 @@ class FaceTracker_Static(type):
 
 @typing.final
 class FaceTracker(winrt.system.Object, metaclass=FaceTracker_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> FaceTracker: ...
     def process_next_frame_async(self, video_frame: windows_media.VideoFrame, /) -> windows_foundation.IAsyncOperation[typing.MutableSequence[DetectedFace]]: ...
     @_property
     def min_detectable_face_size(self) -> windows_graphics_imaging.BitmapSize: ...

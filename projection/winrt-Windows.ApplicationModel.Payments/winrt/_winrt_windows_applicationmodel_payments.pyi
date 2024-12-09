@@ -19,8 +19,6 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class PaymentAddress(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PaymentAddress: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @_property
     def sorting_code(self) -> str: ...
@@ -71,16 +69,12 @@ class PaymentAddress(winrt.system.Object):
 
 @typing.final
 class PaymentCanMakePaymentResult(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PaymentCanMakePaymentResult: ...
     def __new__(cls: typing.Type[Self], value: PaymentCanMakePaymentResultStatus) -> Self: ...
     @_property
     def status(self) -> PaymentCanMakePaymentResultStatus: ...
 
 @typing.final
 class PaymentCurrencyAmount(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PaymentCurrencyAmount: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], value: str, currency: str) -> Self: ...
     @typing.overload
@@ -100,8 +94,6 @@ class PaymentCurrencyAmount(winrt.system.Object):
 
 @typing.final
 class PaymentDetails(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PaymentDetails: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], total: PaymentItem) -> Self: ...
     @typing.overload
@@ -127,8 +119,6 @@ class PaymentDetails(winrt.system.Object):
 
 @typing.final
 class PaymentDetailsModifier(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PaymentDetailsModifier: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], supported_method_ids: typing.Iterable[str], total: PaymentItem) -> Self: ...
     @typing.overload
@@ -146,8 +136,6 @@ class PaymentDetailsModifier(winrt.system.Object):
 
 @typing.final
 class PaymentItem(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PaymentItem: ...
     def __new__(cls: typing.Type[Self], label: str, amount: PaymentCurrencyAmount) -> Self: ...
     @_property
     def pending(self) -> bool: ...
@@ -164,8 +152,6 @@ class PaymentItem(winrt.system.Object):
 
 @typing.final
 class PaymentMediator(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PaymentMediator: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     def can_make_payment_async(self, payment_request: PaymentRequest, /) -> windows_foundation.IAsyncOperation[PaymentCanMakePaymentResult]: ...
     def get_supported_method_ids_async(self) -> windows_foundation.IAsyncOperation[typing.Sequence[str]]: ...
@@ -174,8 +160,6 @@ class PaymentMediator(winrt.system.Object):
 
 @typing.final
 class PaymentMerchantInfo(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PaymentMerchantInfo: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], uri: windows_foundation.Uri) -> Self: ...
     @typing.overload
@@ -187,8 +171,6 @@ class PaymentMerchantInfo(winrt.system.Object):
 
 @typing.final
 class PaymentMethodData(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PaymentMethodData: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], supported_method_ids: typing.Iterable[str]) -> Self: ...
     @typing.overload
@@ -200,8 +182,6 @@ class PaymentMethodData(winrt.system.Object):
 
 @typing.final
 class PaymentOptions(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PaymentOptions: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @_property
     def shipping_type(self) -> PaymentShippingType: ...
@@ -226,8 +206,6 @@ class PaymentOptions(winrt.system.Object):
 
 @typing.final
 class PaymentRequest(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PaymentRequest: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], details: PaymentDetails, method_data: typing.Iterable[PaymentMethodData], merchant_info: PaymentMerchantInfo, options: PaymentOptions, id: str) -> Self: ...
     @typing.overload
@@ -249,8 +227,6 @@ class PaymentRequest(winrt.system.Object):
 
 @typing.final
 class PaymentRequestChangedArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PaymentRequestChangedArgs: ...
     def acknowledge(self, change_result: PaymentRequestChangedResult, /) -> None: ...
     @_property
     def change_kind(self) -> PaymentRequestChangeKind: ...
@@ -261,8 +237,6 @@ class PaymentRequestChangedArgs(winrt.system.Object):
 
 @typing.final
 class PaymentRequestChangedResult(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PaymentRequestChangedResult: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], change_accepted_by_merchant: bool) -> Self: ...
     @typing.overload
@@ -282,8 +256,6 @@ class PaymentRequestChangedResult(winrt.system.Object):
 
 @typing.final
 class PaymentRequestSubmitResult(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PaymentRequestSubmitResult: ...
     @_property
     def response(self) -> PaymentResponse: ...
     @_property
@@ -291,8 +263,6 @@ class PaymentRequestSubmitResult(winrt.system.Object):
 
 @typing.final
 class PaymentResponse(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PaymentResponse: ...
     def complete_async(self, status: PaymentRequestCompletionStatus, /) -> windows_foundation.IAsyncAction: ...
     @_property
     def payer_email(self) -> str: ...
@@ -309,8 +279,6 @@ class PaymentResponse(winrt.system.Object):
 
 @typing.final
 class PaymentShippingOption(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PaymentShippingOption: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], label: str, amount: PaymentCurrencyAmount) -> Self: ...
     @typing.overload
@@ -336,8 +304,6 @@ class PaymentShippingOption(winrt.system.Object):
 
 @typing.final
 class PaymentToken(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PaymentToken: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], payment_method_id: str) -> Self: ...
     @typing.overload

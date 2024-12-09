@@ -25,22 +25,16 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class AccessKeyDisplayDismissedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AccessKeyDisplayDismissedEventArgs: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
 
 @typing.final
 class AccessKeyDisplayRequestedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AccessKeyDisplayRequestedEventArgs: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @_property
     def pressed_keys(self) -> str: ...
 
 @typing.final
 class AccessKeyInvokedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AccessKeyInvokedEventArgs: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @_property
     def handled(self) -> bool: ...
@@ -61,13 +55,10 @@ class AccessKeyManager_Static(type):
 
 @typing.final
 class AccessKeyManager(winrt.system.Object, metaclass=AccessKeyManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AccessKeyManager: ...
+    pass
 
 @typing.final
 class CanExecuteRequestedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> CanExecuteRequestedEventArgs: ...
     @_property
     def can_execute(self) -> bool: ...
     @can_execute.setter
@@ -77,8 +68,6 @@ class CanExecuteRequestedEventArgs(winrt.system.Object):
 
 @typing.final
 class CharacterReceivedRoutedEventArgs(windows_ui_xaml.RoutedEventArgs):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> CharacterReceivedRoutedEventArgs: ...
     @_property
     def handled(self) -> bool: ...
     @handled.setter
@@ -90,8 +79,6 @@ class CharacterReceivedRoutedEventArgs(windows_ui_xaml.RoutedEventArgs):
 
 @typing.final
 class ContextRequestedEventArgs(windows_ui_xaml.RoutedEventArgs):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ContextRequestedEventArgs: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     def try_get_position(self, relative_to: windows_ui_xaml.UIElement, /) -> typing.Tuple[bool, windows_foundation.Point]: ...
     @_property
@@ -101,8 +88,6 @@ class ContextRequestedEventArgs(windows_ui_xaml.RoutedEventArgs):
 
 @typing.final
 class DoubleTappedRoutedEventArgs(windows_ui_xaml.RoutedEventArgs):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> DoubleTappedRoutedEventArgs: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     def get_position(self, relative_to: windows_ui_xaml.UIElement, /) -> windows_foundation.Point: ...
     @_property
@@ -114,15 +99,11 @@ class DoubleTappedRoutedEventArgs(windows_ui_xaml.RoutedEventArgs):
 
 @typing.final
 class ExecuteRequestedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ExecuteRequestedEventArgs: ...
     @_property
     def parameter(self) -> winrt.system.Object: ...
 
 @typing.final
 class FindNextElementOptions(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> FindNextElementOptions: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @_property
     def x_y_focus_navigation_strategy_override(self) -> XYFocusNavigationStrategyOverride: ...
@@ -169,13 +150,10 @@ class FocusManager_Static(type):
 
 @typing.final
 class FocusManager(winrt.system.Object, metaclass=FocusManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> FocusManager: ...
+    pass
 
 @typing.final
 class FocusManagerGotFocusEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> FocusManagerGotFocusEventArgs: ...
     @_property
     def correlation_id(self) -> _uuid.UUID: ...
     @_property
@@ -183,8 +161,6 @@ class FocusManagerGotFocusEventArgs(winrt.system.Object):
 
 @typing.final
 class FocusManagerLostFocusEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> FocusManagerLostFocusEventArgs: ...
     @_property
     def correlation_id(self) -> _uuid.UUID: ...
     @_property
@@ -192,15 +168,11 @@ class FocusManagerLostFocusEventArgs(winrt.system.Object):
 
 @typing.final
 class FocusMovementResult(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> FocusMovementResult: ...
     @_property
     def succeeded(self) -> bool: ...
 
 @typing.final
 class GettingFocusEventArgs(windows_ui_xaml.RoutedEventArgs):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> GettingFocusEventArgs: ...
     def try_cancel(self) -> bool: ...
     def try_set_new_focused_element(self, element: windows_ui_xaml.DependencyObject, /) -> bool: ...
     @_property
@@ -228,8 +200,6 @@ class GettingFocusEventArgs(windows_ui_xaml.RoutedEventArgs):
 
 @typing.final
 class HoldingRoutedEventArgs(windows_ui_xaml.RoutedEventArgs):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> HoldingRoutedEventArgs: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     def get_position(self, relative_to: windows_ui_xaml.UIElement, /) -> windows_foundation.Point: ...
     @_property
@@ -243,8 +213,6 @@ class HoldingRoutedEventArgs(windows_ui_xaml.RoutedEventArgs):
 
 @typing.final
 class InertiaExpansionBehavior(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> InertiaExpansionBehavior: ...
     @_property
     def desired_expansion(self) -> winrt.system.Double: ...
     @desired_expansion.setter
@@ -256,8 +224,6 @@ class InertiaExpansionBehavior(winrt.system.Object):
 
 @typing.final
 class InertiaRotationBehavior(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> InertiaRotationBehavior: ...
     @_property
     def desired_rotation(self) -> winrt.system.Double: ...
     @desired_rotation.setter
@@ -269,8 +235,6 @@ class InertiaRotationBehavior(winrt.system.Object):
 
 @typing.final
 class InertiaTranslationBehavior(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> InertiaTranslationBehavior: ...
     @_property
     def desired_displacement(self) -> winrt.system.Double: ...
     @desired_displacement.setter
@@ -282,16 +246,12 @@ class InertiaTranslationBehavior(winrt.system.Object):
 
 @typing.final
 class InputScope(windows_ui_xaml.DependencyObject):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> InputScope: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @_property
     def names(self) -> typing.MutableSequence[InputScopeName]: ...
 
 @typing.final
 class InputScopeName(windows_ui_xaml.DependencyObject):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> InputScopeName: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], name_value: InputScopeNameValue) -> Self: ...
     @typing.overload
@@ -303,8 +263,6 @@ class InputScopeName(windows_ui_xaml.DependencyObject):
 
 @typing.final
 class KeyRoutedEventArgs(windows_ui_xaml.RoutedEventArgs):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> KeyRoutedEventArgs: ...
     @_property
     def handled(self) -> bool: ...
     @handled.setter
@@ -333,8 +291,6 @@ class KeyboardAccelerator_Static(windows_ui_xaml.DependencyObject_Static):
     def scope_owner_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class KeyboardAccelerator(windows_ui_xaml.DependencyObject, metaclass=KeyboardAccelerator_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> KeyboardAccelerator: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.final
     def add_invoked(self, handler: windows_foundation.TypedEventHandler[KeyboardAccelerator, KeyboardAcceleratorInvokedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
@@ -363,8 +319,6 @@ class KeyboardAccelerator(windows_ui_xaml.DependencyObject, metaclass=KeyboardAc
 
 @typing.final
 class KeyboardAcceleratorInvokedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> KeyboardAcceleratorInvokedEventArgs: ...
     @_property
     def handled(self) -> bool: ...
     @handled.setter
@@ -376,8 +330,6 @@ class KeyboardAcceleratorInvokedEventArgs(winrt.system.Object):
 
 @typing.final
 class LosingFocusEventArgs(windows_ui_xaml.RoutedEventArgs):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> LosingFocusEventArgs: ...
     def try_cancel(self) -> bool: ...
     def try_set_new_focused_element(self, element: windows_ui_xaml.DependencyObject, /) -> bool: ...
     @_property
@@ -405,8 +357,6 @@ class LosingFocusEventArgs(windows_ui_xaml.RoutedEventArgs):
 
 @typing.final
 class ManipulationCompletedRoutedEventArgs(windows_ui_xaml.RoutedEventArgs):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ManipulationCompletedRoutedEventArgs: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @_property
     def handled(self) -> bool: ...
@@ -427,8 +377,6 @@ class ManipulationCompletedRoutedEventArgs(windows_ui_xaml.RoutedEventArgs):
 
 @typing.final
 class ManipulationDeltaRoutedEventArgs(windows_ui_xaml.RoutedEventArgs):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ManipulationDeltaRoutedEventArgs: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     def complete(self) -> None: ...
     @_property
@@ -452,8 +400,6 @@ class ManipulationDeltaRoutedEventArgs(windows_ui_xaml.RoutedEventArgs):
 
 @typing.final
 class ManipulationInertiaStartingRoutedEventArgs(windows_ui_xaml.RoutedEventArgs):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ManipulationInertiaStartingRoutedEventArgs: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @_property
     def translation_behavior(self) -> InertiaTranslationBehavior: ...
@@ -484,8 +430,6 @@ class ManipulationInertiaStartingRoutedEventArgs(windows_ui_xaml.RoutedEventArgs
 
 @typing.final
 class ManipulationPivot(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ManipulationPivot: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], center: windows_foundation.Point, radius: winrt.system.Double) -> Self: ...
     @typing.overload
@@ -503,8 +447,6 @@ class ManipulationStartedRoutedEventArgs_Static(windows_ui_xaml.RoutedEventArgs_
     pass
 
 class ManipulationStartedRoutedEventArgs(windows_ui_xaml.RoutedEventArgs, metaclass=ManipulationStartedRoutedEventArgs_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ManipulationStartedRoutedEventArgs: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.final
     def complete(self) -> None: ...
@@ -528,8 +470,6 @@ class ManipulationStartedRoutedEventArgs(windows_ui_xaml.RoutedEventArgs, metacl
 
 @typing.final
 class ManipulationStartingRoutedEventArgs(windows_ui_xaml.RoutedEventArgs):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ManipulationStartingRoutedEventArgs: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @_property
     def pivot(self) -> ManipulationPivot: ...
@@ -550,8 +490,6 @@ class ManipulationStartingRoutedEventArgs(windows_ui_xaml.RoutedEventArgs):
 
 @typing.final
 class NoFocusCandidateFoundEventArgs(windows_ui_xaml.RoutedEventArgs):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> NoFocusCandidateFoundEventArgs: ...
     @_property
     def handled(self) -> bool: ...
     @handled.setter
@@ -563,8 +501,6 @@ class NoFocusCandidateFoundEventArgs(windows_ui_xaml.RoutedEventArgs):
 
 @typing.final
 class Pointer(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> Pointer: ...
     @_property
     def is_in_contact(self) -> bool: ...
     @_property
@@ -576,8 +512,6 @@ class Pointer(winrt.system.Object):
 
 @typing.final
 class PointerRoutedEventArgs(windows_ui_xaml.RoutedEventArgs):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PointerRoutedEventArgs: ...
     def get_current_point(self, relative_to: windows_ui_xaml.UIElement, /) -> windows_ui_input.PointerPoint: ...
     def get_intermediate_points(self, relative_to: windows_ui_xaml.UIElement, /) -> typing.MutableSequence[windows_ui_input.PointerPoint]: ...
     @_property
@@ -593,8 +527,6 @@ class PointerRoutedEventArgs(windows_ui_xaml.RoutedEventArgs):
 
 @typing.final
 class ProcessKeyboardAcceleratorEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ProcessKeyboardAcceleratorEventArgs: ...
     @_property
     def handled(self) -> bool: ...
     @handled.setter
@@ -606,8 +538,6 @@ class ProcessKeyboardAcceleratorEventArgs(winrt.system.Object):
 
 @typing.final
 class RightTappedRoutedEventArgs(windows_ui_xaml.RoutedEventArgs):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> RightTappedRoutedEventArgs: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     def get_position(self, relative_to: windows_ui_xaml.UIElement, /) -> windows_foundation.Point: ...
     @_property
@@ -623,8 +553,6 @@ class StandardUICommand_Static(XamlUICommand_Static):
     def kind_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class StandardUICommand(XamlUICommand, metaclass=StandardUICommand_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> StandardUICommand: ...
     @typing.overload
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.overload
@@ -637,8 +565,6 @@ class StandardUICommand(XamlUICommand, metaclass=StandardUICommand_Static):
 
 @typing.final
 class TappedRoutedEventArgs(windows_ui_xaml.RoutedEventArgs):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> TappedRoutedEventArgs: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     def get_position(self, relative_to: windows_ui_xaml.UIElement, /) -> windows_foundation.Point: ...
     @_property
@@ -669,8 +595,6 @@ class XamlUICommand_Static(windows_ui_xaml.DependencyObject_Static):
     def label_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class XamlUICommand(windows_ui_xaml.DependencyObject, ImplementsICommand, metaclass=XamlUICommand_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> XamlUICommand: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     def can_execute(self, parameter: winrt.system.Object, /) -> bool: ...
     def execute(self, parameter: winrt.system.Object, /) -> None: ...
@@ -722,8 +646,6 @@ class ImplementsICommand():
 
 @typing.final
 class ICommand(winrt.system.Object, ImplementsICommand):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ICommand: ...
     def can_execute(self, parameter: winrt.system.Object, /) -> bool: ...
     def execute(self, parameter: winrt.system.Object, /) -> None: ...
     def add_can_execute_changed(self, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...

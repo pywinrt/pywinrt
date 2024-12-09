@@ -17,8 +17,6 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class FeedAnnouncement(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> FeedAnnouncement: ...
     def __new__(cls: typing.Type[Self], id: str, primary_text: str, secondary_text: str, light_mode_icon: windows_foundation.Uri, dark_mode_icon: windows_foundation.Uri) -> Self: ...
     @_property
     def show_badge_if_user_not_engaged(self) -> bool: ...
@@ -71,8 +69,6 @@ class FeedAnnouncement(winrt.system.Object):
 
 @typing.final
 class FeedAnnouncementInvokedArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> FeedAnnouncementInvokedArgs: ...
     @_property
     def action_kind(self) -> AnnouncementActionKind: ...
     @_property

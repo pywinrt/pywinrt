@@ -16,8 +16,6 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class WidgetActionInvokedArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WidgetActionInvokedArgs: ...
     @_property
     def custom_state(self) -> str: ...
     @_property
@@ -29,8 +27,6 @@ class WidgetActionInvokedArgs(winrt.system.Object):
 
 @typing.final
 class WidgetAnalyticsInfoReportedArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WidgetAnalyticsInfoReportedArgs: ...
     @_property
     def analytics_json(self) -> str: ...
     @_property
@@ -38,8 +34,6 @@ class WidgetAnalyticsInfoReportedArgs(winrt.system.Object):
 
 @typing.final
 class WidgetContext(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WidgetContext: ...
     @_property
     def definition_id(self) -> str: ...
     @_property
@@ -51,15 +45,11 @@ class WidgetContext(winrt.system.Object):
 
 @typing.final
 class WidgetContextChangedArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WidgetContextChangedArgs: ...
     @_property
     def widget_context(self) -> WidgetContext: ...
 
 @typing.final
 class WidgetCustomizationRequestedArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WidgetCustomizationRequestedArgs: ...
     @_property
     def custom_state(self) -> str: ...
     @_property
@@ -67,8 +57,6 @@ class WidgetCustomizationRequestedArgs(winrt.system.Object):
 
 @typing.final
 class WidgetErrorInfoReportedArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WidgetErrorInfoReportedArgs: ...
     @_property
     def error_json(self) -> str: ...
     @_property
@@ -76,8 +64,6 @@ class WidgetErrorInfoReportedArgs(winrt.system.Object):
 
 @typing.final
 class WidgetInfo(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WidgetInfo: ...
     @_property
     def custom_state(self) -> str: ...
     @_property
@@ -95,8 +81,6 @@ class WidgetManager_Static(type):
 
 @typing.final
 class WidgetManager(winrt.system.Object, ImplementsIWidgetManager, metaclass=WidgetManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WidgetManager: ...
     def delete_widget(self, widget_id: str, /) -> None: ...
     def get_widget_ids(self) -> winrt.system.Array[str]: ...
     def get_widget_info(self, widget_id: str, /) -> WidgetInfo: ...
@@ -110,8 +94,6 @@ class WidgetUpdateRequestOptions_Static(type):
 
 @typing.final
 class WidgetUpdateRequestOptions(winrt.system.Object, metaclass=WidgetUpdateRequestOptions_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WidgetUpdateRequestOptions: ...
     def __new__(cls: typing.Type[Self], widget_id: str) -> Self: ...
     @_property
     def template(self) -> str: ...
@@ -133,8 +115,6 @@ class ImplementsIWidgetManager():
 
 @typing.final
 class IWidgetManager(winrt.system.Object, ImplementsIWidgetManager):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IWidgetManager: ...
     def delete_widget(self, widget_id: str, /) -> None: ...
     def get_widget_ids(self) -> winrt.system.Array[str]: ...
     def get_widget_info(self, widget_id: str, /) -> WidgetInfo: ...
@@ -146,8 +126,6 @@ class ImplementsIWidgetProvider():
 
 @typing.final
 class IWidgetProvider(winrt.system.Object, ImplementsIWidgetProvider):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IWidgetProvider: ...
     def activate(self, widget_context: WidgetContext, /) -> None: ...
     def create_widget(self, widget_context: WidgetContext, /) -> None: ...
     def deactivate(self, widget_id: str, /) -> None: ...
@@ -160,8 +138,6 @@ class ImplementsIWidgetProvider2():
 
 @typing.final
 class IWidgetProvider2(winrt.system.Object, ImplementsIWidgetProvider2):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IWidgetProvider2: ...
     def on_customization_requested(self, customization_requested_args: WidgetCustomizationRequestedArgs, /) -> None: ...
 
 class ImplementsIWidgetProviderAnalytics():
@@ -169,8 +145,6 @@ class ImplementsIWidgetProviderAnalytics():
 
 @typing.final
 class IWidgetProviderAnalytics(winrt.system.Object, ImplementsIWidgetProviderAnalytics):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IWidgetProviderAnalytics: ...
     def on_analytics_info_reported(self, args: WidgetAnalyticsInfoReportedArgs, /) -> None: ...
 
 class ImplementsIWidgetProviderErrors():
@@ -178,7 +152,5 @@ class ImplementsIWidgetProviderErrors():
 
 @typing.final
 class IWidgetProviderErrors(winrt.system.Object, ImplementsIWidgetProviderErrors):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IWidgetProviderErrors: ...
     def on_error_info_reported(self, args: WidgetErrorInfoReportedArgs, /) -> None: ...
 

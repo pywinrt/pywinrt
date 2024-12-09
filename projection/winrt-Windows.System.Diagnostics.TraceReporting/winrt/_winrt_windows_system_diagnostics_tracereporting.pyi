@@ -32,8 +32,6 @@ class PlatformDiagnosticActions(winrt.system.Object, metaclass=PlatformDiagnosti
 
 @typing.final
 class PlatformDiagnosticTraceInfo(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PlatformDiagnosticTraceInfo: ...
     @_property
     def is_auto_logger(self) -> bool: ...
     @_property
@@ -49,8 +47,6 @@ class PlatformDiagnosticTraceInfo(winrt.system.Object):
 
 @typing.final
 class PlatformDiagnosticTraceRuntimeInfo(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PlatformDiagnosticTraceRuntimeInfo: ...
     @_property
     def etw_runtime_file_time(self) -> winrt.system.Int64: ...
     @_property

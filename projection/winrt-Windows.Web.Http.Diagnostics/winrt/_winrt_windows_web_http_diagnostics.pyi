@@ -24,8 +24,6 @@ class HttpDiagnosticProvider_Static(type):
 
 @typing.final
 class HttpDiagnosticProvider(winrt.system.Object, metaclass=HttpDiagnosticProvider_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> HttpDiagnosticProvider: ...
     def start(self) -> None: ...
     def stop(self) -> None: ...
     def add_request_response_completed(self, handler: windows_foundation.TypedEventHandler[HttpDiagnosticProvider, HttpDiagnosticProviderRequestResponseCompletedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
@@ -37,8 +35,6 @@ class HttpDiagnosticProvider(winrt.system.Object, metaclass=HttpDiagnosticProvid
 
 @typing.final
 class HttpDiagnosticProviderRequestResponseCompletedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> HttpDiagnosticProviderRequestResponseCompletedEventArgs: ...
     @_property
     def activity_id(self) -> _uuid.UUID: ...
     @_property
@@ -56,8 +52,6 @@ class HttpDiagnosticProviderRequestResponseCompletedEventArgs(winrt.system.Objec
 
 @typing.final
 class HttpDiagnosticProviderRequestResponseTimestamps(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> HttpDiagnosticProviderRequestResponseTimestamps: ...
     @_property
     def cache_checked_timestamp(self) -> typing.Optional[datetime.datetime]: ...
     @_property
@@ -79,8 +73,6 @@ class HttpDiagnosticProviderRequestResponseTimestamps(winrt.system.Object):
 
 @typing.final
 class HttpDiagnosticProviderRequestSentEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> HttpDiagnosticProviderRequestSentEventArgs: ...
     @_property
     def activity_id(self) -> _uuid.UUID: ...
     @_property
@@ -98,8 +90,6 @@ class HttpDiagnosticProviderRequestSentEventArgs(winrt.system.Object):
 
 @typing.final
 class HttpDiagnosticProviderResponseReceivedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> HttpDiagnosticProviderResponseReceivedEventArgs: ...
     @_property
     def activity_id(self) -> _uuid.UUID: ...
     @_property
@@ -109,8 +99,6 @@ class HttpDiagnosticProviderResponseReceivedEventArgs(winrt.system.Object):
 
 @typing.final
 class HttpDiagnosticSourceLocation(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> HttpDiagnosticSourceLocation: ...
     @_property
     def column_number(self) -> winrt.system.UInt64: ...
     @_property

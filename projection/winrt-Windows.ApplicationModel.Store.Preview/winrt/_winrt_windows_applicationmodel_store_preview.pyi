@@ -27,8 +27,6 @@ class DeliveryOptimizationSettings_Static(type):
 
 @typing.final
 class DeliveryOptimizationSettings(winrt.system.Object, metaclass=DeliveryOptimizationSettings_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> DeliveryOptimizationSettings: ...
     @_property
     def download_mode(self) -> DeliveryOptimizationDownloadMode: ...
     @_property
@@ -74,8 +72,6 @@ class StoreConfiguration(winrt.system.Object, metaclass=StoreConfiguration_Stati
 
 @typing.final
 class StoreHardwareManufacturerInfo(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> StoreHardwareManufacturerInfo: ...
     @_property
     def hardware_manufacturer_id(self) -> str: ...
     @_property
@@ -96,8 +92,6 @@ class StorePreview(winrt.system.Object, metaclass=StorePreview_Static):
 
 @typing.final
 class StorePreviewProductInfo(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> StorePreviewProductInfo: ...
     @_property
     def description(self) -> str: ...
     @_property
@@ -111,15 +105,11 @@ class StorePreviewProductInfo(winrt.system.Object):
 
 @typing.final
 class StorePreviewPurchaseResults(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> StorePreviewPurchaseResults: ...
     @_property
     def product_purchase_status(self) -> StorePreviewProductPurchaseStatus: ...
 
 @typing.final
 class StorePreviewSkuInfo(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> StorePreviewSkuInfo: ...
     @_property
     def currency_code(self) -> str: ...
     @_property

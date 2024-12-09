@@ -36,7 +36,5 @@ class GameService(winrt.system.Object, metaclass=GameService_Static):
 
 @typing.final
 class GameServicePropertyCollection(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> GameServicePropertyCollection: ...
     def get_property_async(self, property_name: str, /) -> windows_foundation.IAsyncOperation[winrt.system.Object]: ...
 

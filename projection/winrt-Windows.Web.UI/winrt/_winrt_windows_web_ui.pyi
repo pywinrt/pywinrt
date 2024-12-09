@@ -23,22 +23,16 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class WebViewControlContentLoadingEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WebViewControlContentLoadingEventArgs: ...
     @_property
     def uri(self) -> windows_foundation.Uri: ...
 
 @typing.final
 class WebViewControlDOMContentLoadedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WebViewControlDOMContentLoadedEventArgs: ...
     @_property
     def uri(self) -> windows_foundation.Uri: ...
 
 @typing.final
 class WebViewControlDeferredPermissionRequest(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WebViewControlDeferredPermissionRequest: ...
     def allow(self) -> None: ...
     def deny(self) -> None: ...
     @_property
@@ -50,8 +44,6 @@ class WebViewControlDeferredPermissionRequest(winrt.system.Object):
 
 @typing.final
 class WebViewControlLongRunningScriptDetectedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WebViewControlLongRunningScriptDetectedEventArgs: ...
     @_property
     def stop_page_script_execution(self) -> bool: ...
     @stop_page_script_execution.setter
@@ -61,8 +53,6 @@ class WebViewControlLongRunningScriptDetectedEventArgs(winrt.system.Object):
 
 @typing.final
 class WebViewControlNavigationCompletedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WebViewControlNavigationCompletedEventArgs: ...
     @_property
     def is_success(self) -> bool: ...
     @_property
@@ -72,8 +62,6 @@ class WebViewControlNavigationCompletedEventArgs(winrt.system.Object):
 
 @typing.final
 class WebViewControlNavigationStartingEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WebViewControlNavigationStartingEventArgs: ...
     @_property
     def cancel(self) -> bool: ...
     @cancel.setter
@@ -83,8 +71,6 @@ class WebViewControlNavigationStartingEventArgs(winrt.system.Object):
 
 @typing.final
 class WebViewControlNewWindowRequestedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WebViewControlNewWindowRequestedEventArgs: ...
     def get_deferral(self) -> windows_foundation.Deferral: ...
     @_property
     def handled(self) -> bool: ...
@@ -101,8 +87,6 @@ class WebViewControlNewWindowRequestedEventArgs(winrt.system.Object):
 
 @typing.final
 class WebViewControlPermissionRequest(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WebViewControlPermissionRequest: ...
     def allow(self) -> None: ...
     def defer(self) -> None: ...
     def deny(self) -> None: ...
@@ -117,15 +101,11 @@ class WebViewControlPermissionRequest(winrt.system.Object):
 
 @typing.final
 class WebViewControlPermissionRequestedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WebViewControlPermissionRequestedEventArgs: ...
     @_property
     def permission_request(self) -> WebViewControlPermissionRequest: ...
 
 @typing.final
 class WebViewControlScriptNotifyEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WebViewControlScriptNotifyEventArgs: ...
     @_property
     def uri(self) -> windows_foundation.Uri: ...
     @_property
@@ -133,8 +113,6 @@ class WebViewControlScriptNotifyEventArgs(winrt.system.Object):
 
 @typing.final
 class WebViewControlSettings(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WebViewControlSettings: ...
     @_property
     def is_script_notify_allowed(self) -> bool: ...
     @is_script_notify_allowed.setter
@@ -150,8 +128,6 @@ class WebViewControlSettings(winrt.system.Object):
 
 @typing.final
 class WebViewControlUnsupportedUriSchemeIdentifiedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WebViewControlUnsupportedUriSchemeIdentifiedEventArgs: ...
     @_property
     def handled(self) -> bool: ...
     @handled.setter
@@ -161,8 +137,6 @@ class WebViewControlUnsupportedUriSchemeIdentifiedEventArgs(winrt.system.Object)
 
 @typing.final
 class WebViewControlUnviewableContentIdentifiedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WebViewControlUnviewableContentIdentifiedEventArgs: ...
     @_property
     def media_type(self) -> str: ...
     @_property
@@ -172,8 +146,6 @@ class WebViewControlUnviewableContentIdentifiedEventArgs(winrt.system.Object):
 
 @typing.final
 class WebViewControlWebResourceRequestedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WebViewControlWebResourceRequestedEventArgs: ...
     def get_deferral(self) -> windows_foundation.Deferral: ...
     @_property
     def response(self) -> windows_web_http.HttpResponseMessage: ...
@@ -187,8 +159,6 @@ class ImplementsIWebViewControl():
 
 @typing.final
 class IWebViewControl(winrt.system.Object, ImplementsIWebViewControl):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IWebViewControl: ...
     def build_local_stream_uri(self, content_identifier: str, relative_path: str, /) -> windows_foundation.Uri: ...
     def capture_preview_to_stream_async(self, stream: windows_storage_streams.ImplementsIRandomAccessStream, /) -> windows_foundation.IAsyncAction: ...
     def capture_selected_content_to_data_package_async(self) -> windows_foundation.IAsyncOperation[windows_applicationmodel_datatransfer.DataPackage]: ...
@@ -262,7 +232,5 @@ class ImplementsIWebViewControl2():
 
 @typing.final
 class IWebViewControl2(winrt.system.Object, ImplementsIWebViewControl2):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IWebViewControl2: ...
     def add_initialize_script(self, script: str, /) -> None: ...
 

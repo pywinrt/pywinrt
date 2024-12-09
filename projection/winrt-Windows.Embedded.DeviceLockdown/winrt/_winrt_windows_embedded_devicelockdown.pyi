@@ -27,8 +27,6 @@ class DeviceLockdownProfile(winrt.system.Object, metaclass=DeviceLockdownProfile
 
 @typing.final
 class DeviceLockdownProfileInformation(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> DeviceLockdownProfileInformation: ...
     @_property
     def name(self) -> str: ...
 

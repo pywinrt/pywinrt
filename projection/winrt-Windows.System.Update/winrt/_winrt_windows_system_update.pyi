@@ -18,8 +18,6 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class SystemUpdateItem(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SystemUpdateItem: ...
     @_property
     def description(self) -> str: ...
     @_property
@@ -39,8 +37,6 @@ class SystemUpdateItem(winrt.system.Object):
 
 @typing.final
 class SystemUpdateLastErrorInfo(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SystemUpdateLastErrorInfo: ...
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
     @_property

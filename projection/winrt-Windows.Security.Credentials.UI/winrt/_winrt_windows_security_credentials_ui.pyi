@@ -28,8 +28,6 @@ class CredentialPicker(winrt.system.Object, metaclass=CredentialPicker_Static):
 
 @typing.final
 class CredentialPickerOptions(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> CredentialPickerOptions: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @_property
     def target_name(self) -> str: ...
@@ -74,8 +72,6 @@ class CredentialPickerOptions(winrt.system.Object):
 
 @typing.final
 class CredentialPickerResults(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> CredentialPickerResults: ...
     @_property
     def credential(self) -> windows_storage_streams.IBuffer: ...
     @_property

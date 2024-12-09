@@ -17,8 +17,6 @@ class ImplementsIGraphicsEffect():
 
 @typing.final
 class IGraphicsEffect(winrt.system.Object, ImplementsIGraphicsEffect, ImplementsIGraphicsEffectSource):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IGraphicsEffect: ...
     @_property
     def name(self) -> str: ...
     @name.setter
@@ -29,6 +27,5 @@ class ImplementsIGraphicsEffectSource():
 
 @typing.final
 class IGraphicsEffectSource(winrt.system.Object, ImplementsIGraphicsEffectSource):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IGraphicsEffectSource: ...
+    pass
 

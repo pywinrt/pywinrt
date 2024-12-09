@@ -22,8 +22,6 @@ class RadialControllerIndependentInputSource_Static(type):
 
 @typing.final
 class RadialControllerIndependentInputSource(winrt.system.Object, metaclass=RadialControllerIndependentInputSource_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> RadialControllerIndependentInputSource: ...
     @_property
     def controller(self) -> windows_ui_input.RadialController: ...
     @_property

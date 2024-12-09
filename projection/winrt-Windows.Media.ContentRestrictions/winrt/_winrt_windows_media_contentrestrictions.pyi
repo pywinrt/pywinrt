@@ -19,8 +19,6 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class ContentRestrictionsBrowsePolicy(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ContentRestrictionsBrowsePolicy: ...
     @_property
     def geographic_region(self) -> str: ...
     @_property
@@ -30,8 +28,6 @@ class ContentRestrictionsBrowsePolicy(winrt.system.Object):
 
 @typing.final
 class RatedContentDescription(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> RatedContentDescription: ...
     def __new__(cls: typing.Type[Self], id: str, title: str, category: RatedContentCategory) -> Self: ...
     @_property
     def title(self) -> str: ...
@@ -56,8 +52,6 @@ class RatedContentDescription(winrt.system.Object):
 
 @typing.final
 class RatedContentRestrictions(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> RatedContentRestrictions: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], max_age_rating: winrt.system.UInt32) -> Self: ...
     @typing.overload

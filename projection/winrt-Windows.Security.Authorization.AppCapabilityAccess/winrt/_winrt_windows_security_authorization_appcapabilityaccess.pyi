@@ -26,8 +26,6 @@ class AppCapability_Static(type):
 
 @typing.final
 class AppCapability(winrt.system.Object, metaclass=AppCapability_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AppCapability: ...
     def check_access(self) -> AppCapabilityAccessStatus: ...
     def request_access_async(self) -> windows_foundation.IAsyncOperation[AppCapabilityAccessStatus]: ...
     def add_access_changed(self, handler: windows_foundation.TypedEventHandler[AppCapability, AppCapabilityAccessChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
@@ -43,6 +41,5 @@ class AppCapability(winrt.system.Object, metaclass=AppCapability_Static):
 
 @typing.final
 class AppCapabilityAccessChangedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AppCapabilityAccessChangedEventArgs: ...
+    pass
 

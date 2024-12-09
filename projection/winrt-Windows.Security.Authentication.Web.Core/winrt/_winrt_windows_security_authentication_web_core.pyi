@@ -20,8 +20,6 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class FindAllAccountsResult(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> FindAllAccountsResult: ...
     @_property
     def accounts(self) -> typing.Sequence[windows_security_credentials.WebAccount]: ...
     @_property
@@ -31,15 +29,11 @@ class FindAllAccountsResult(winrt.system.Object):
 
 @typing.final
 class WebAccountEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WebAccountEventArgs: ...
     @_property
     def account(self) -> windows_security_credentials.WebAccount: ...
 
 @typing.final
 class WebAccountMonitor(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WebAccountMonitor: ...
     def add_default_sign_in_account_changed(self, handler: windows_foundation.TypedEventHandler[WebAccountMonitor, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     def remove_default_sign_in_account_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     def add_removed(self, handler: windows_foundation.TypedEventHandler[WebAccountMonitor, WebAccountEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
@@ -51,8 +45,6 @@ class WebAccountMonitor(winrt.system.Object):
 
 @typing.final
 class WebAuthenticationAddAccountResponse(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WebAuthenticationAddAccountResponse: ...
     def __new__(cls: typing.Type[Self], web_account: windows_security_credentials.WebAccount) -> Self: ...
     @_property
     def properties(self) -> typing.MutableMapping[str, str]: ...
@@ -61,8 +53,6 @@ class WebAuthenticationAddAccountResponse(winrt.system.Object):
 
 @typing.final
 class WebAuthenticationAddAccountResult(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WebAuthenticationAddAccountResult: ...
     @_property
     def response_data(self) -> WebAuthenticationAddAccountResponse: ...
     @_property
@@ -94,8 +84,6 @@ class WebAuthenticationCoreManager(winrt.system.Object, metaclass=WebAuthenticat
 
 @typing.final
 class WebAuthenticationTransferTokenRequest(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WebAuthenticationTransferTokenRequest: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], provider: windows_security_credentials.WebAccountProvider, transfer_token: str) -> Self: ...
     @typing.overload
@@ -115,8 +103,6 @@ class WebAuthenticationTransferTokenRequest(winrt.system.Object):
 
 @typing.final
 class WebProviderError(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WebProviderError: ...
     def __new__(cls: typing.Type[Self], error_code: winrt.system.UInt32, error_message: str) -> Self: ...
     @_property
     def error_code(self) -> winrt.system.UInt32: ...
@@ -127,8 +113,6 @@ class WebProviderError(winrt.system.Object):
 
 @typing.final
 class WebTokenRequest(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WebTokenRequest: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], provider: windows_security_credentials.WebAccountProvider, scope: str, client_id: str) -> Self: ...
     @typing.overload
@@ -156,8 +140,6 @@ class WebTokenRequest(winrt.system.Object):
 
 @typing.final
 class WebTokenRequestResult(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WebTokenRequestResult: ...
     def invalidate_cache_async(self) -> windows_foundation.IAsyncAction: ...
     @_property
     def response_data(self) -> typing.Sequence[WebTokenResponse]: ...
@@ -168,8 +150,6 @@ class WebTokenRequestResult(winrt.system.Object):
 
 @typing.final
 class WebTokenResponse(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WebTokenResponse: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], token: str) -> Self: ...
     @typing.overload

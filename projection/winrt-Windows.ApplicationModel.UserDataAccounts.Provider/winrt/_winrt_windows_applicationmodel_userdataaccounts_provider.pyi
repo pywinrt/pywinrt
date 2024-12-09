@@ -18,8 +18,6 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class UserDataAccountPartnerAccountInfo(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> UserDataAccountPartnerAccountInfo: ...
     @_property
     def account_kind(self) -> UserDataAccountProviderPartnerAccountKind: ...
     @_property
@@ -29,8 +27,6 @@ class UserDataAccountPartnerAccountInfo(winrt.system.Object):
 
 @typing.final
 class UserDataAccountProviderAddAccountOperation(winrt.system.Object, ImplementsIUserDataAccountProviderOperation):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> UserDataAccountProviderAddAccountOperation: ...
     def report_completed(self, user_data_account_id: str, /) -> None: ...
     @_property
     def content_kinds(self) -> windows_applicationmodel_userdataaccounts.UserDataAccountContentKinds: ...
@@ -41,8 +37,6 @@ class UserDataAccountProviderAddAccountOperation(winrt.system.Object, Implements
 
 @typing.final
 class UserDataAccountProviderResolveErrorsOperation(winrt.system.Object, ImplementsIUserDataAccountProviderOperation):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> UserDataAccountProviderResolveErrorsOperation: ...
     def report_completed(self) -> None: ...
     @_property
     def kind(self) -> UserDataAccountProviderOperationKind: ...
@@ -51,8 +45,6 @@ class UserDataAccountProviderResolveErrorsOperation(winrt.system.Object, Impleme
 
 @typing.final
 class UserDataAccountProviderSettingsOperation(winrt.system.Object, ImplementsIUserDataAccountProviderOperation):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> UserDataAccountProviderSettingsOperation: ...
     def report_completed(self) -> None: ...
     @_property
     def kind(self) -> UserDataAccountProviderOperationKind: ...
@@ -64,8 +56,6 @@ class ImplementsIUserDataAccountProviderOperation():
 
 @typing.final
 class IUserDataAccountProviderOperation(winrt.system.Object, ImplementsIUserDataAccountProviderOperation):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IUserDataAccountProviderOperation: ...
     @_property
     def kind(self) -> UserDataAccountProviderOperationKind: ...
 

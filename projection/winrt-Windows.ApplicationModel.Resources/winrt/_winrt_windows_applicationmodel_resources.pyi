@@ -26,8 +26,6 @@ class ResourceLoader_Static(type):
 
 @typing.final
 class ResourceLoader(winrt.system.Object, metaclass=ResourceLoader_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ResourceLoader: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], name: str) -> Self: ...
     @typing.overload

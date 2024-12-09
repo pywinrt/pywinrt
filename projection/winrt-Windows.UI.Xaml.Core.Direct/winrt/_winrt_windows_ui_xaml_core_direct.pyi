@@ -25,8 +25,6 @@ class XamlDirect_Static(type):
 
 @typing.final
 class XamlDirect(winrt.system.Object, metaclass=XamlDirect_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> XamlDirect: ...
     def add_event_handler(self, xaml_direct_object: ImplementsIXamlDirectObject, event_index: XamlEventIndex, handler: winrt.system.Object, /) -> None: ...
     def add_event_handler_handled_events_too(self, xaml_direct_object: ImplementsIXamlDirectObject, event_index: XamlEventIndex, handler: winrt.system.Object, handled_events_too: bool, /) -> None: ...
     def add_to_collection(self, xaml_direct_object: ImplementsIXamlDirectObject, value: ImplementsIXamlDirectObject, /) -> None: ...
@@ -85,6 +83,5 @@ class ImplementsIXamlDirectObject():
 
 @typing.final
 class IXamlDirectObject(winrt.system.Object, ImplementsIXamlDirectObject):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IXamlDirectObject: ...
+    pass
 

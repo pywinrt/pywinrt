@@ -25,8 +25,6 @@ class CompositionConditionalValue_Static(windows_ui_composition.CompositionObjec
 
 @typing.final
 class CompositionConditionalValue(windows_ui_composition.CompositionObject, metaclass=CompositionConditionalValue_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> CompositionConditionalValue: ...
     @_property
     def value(self) -> windows_ui_composition.ExpressionAnimation: ...
     @value.setter
@@ -39,8 +37,6 @@ class CompositionConditionalValue(windows_ui_composition.CompositionObject, meta
 @typing.final
 class CompositionInteractionSourceCollection(windows_ui_composition.CompositionObject):
     def __iter__(self) -> windows_foundation_collections.IIterator[ICompositionInteractionSource]: ...
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> CompositionInteractionSourceCollection: ...
     def add(self, value: ImplementsICompositionInteractionSource, /) -> None: ...
     def first(self) -> windows_foundation_collections.IIterator[ICompositionInteractionSource]: ...
     def remove(self, value: ImplementsICompositionInteractionSource, /) -> None: ...
@@ -50,8 +46,6 @@ class CompositionInteractionSourceCollection(windows_ui_composition.CompositionO
 
 @typing.final
 class InteractionSourceConfiguration(windows_ui_composition.CompositionObject):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> InteractionSourceConfiguration: ...
     @_property
     def scale_source_mode(self) -> InteractionSourceRedirectionMode: ...
     @scale_source_mode.setter
@@ -74,8 +68,6 @@ class InteractionTracker_Static(windows_ui_composition.CompositionObject_Static)
 
 @typing.final
 class InteractionTracker(windows_ui_composition.CompositionObject, metaclass=InteractionTracker_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> InteractionTracker: ...
     def adjust_position_x_if_greater_than_threshold(self, adjustment: winrt.system.Single, position_threshold: winrt.system.Single, /) -> None: ...
     def adjust_position_y_if_greater_than_threshold(self, adjustment: winrt.system.Single, position_threshold: winrt.system.Single, /) -> None: ...
     def configure_center_point_x_inertia_modifiers(self, conditional_values: typing.Iterable[CompositionConditionalValue], /) -> None: ...
@@ -143,8 +135,6 @@ class InteractionTracker(windows_ui_composition.CompositionObject, metaclass=Int
 
 @typing.final
 class InteractionTrackerCustomAnimationStateEnteredArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> InteractionTrackerCustomAnimationStateEnteredArgs: ...
     @_property
     def request_id(self) -> winrt.system.Int32: ...
     @_property
@@ -152,8 +142,6 @@ class InteractionTrackerCustomAnimationStateEnteredArgs(winrt.system.Object):
 
 @typing.final
 class InteractionTrackerIdleStateEnteredArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> InteractionTrackerIdleStateEnteredArgs: ...
     @_property
     def request_id(self) -> winrt.system.Int32: ...
     @_property
@@ -163,8 +151,7 @@ class InteractionTrackerInertiaModifier_Static(windows_ui_composition.Compositio
     pass
 
 class InteractionTrackerInertiaModifier(windows_ui_composition.CompositionObject, metaclass=InteractionTrackerInertiaModifier_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> InteractionTrackerInertiaModifier: ...
+    pass
 
 @typing.final
 class InteractionTrackerInertiaMotion_Static(InteractionTrackerInertiaModifier_Static):
@@ -172,8 +159,6 @@ class InteractionTrackerInertiaMotion_Static(InteractionTrackerInertiaModifier_S
 
 @typing.final
 class InteractionTrackerInertiaMotion(InteractionTrackerInertiaModifier, metaclass=InteractionTrackerInertiaMotion_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> InteractionTrackerInertiaMotion: ...
     @_property
     def motion(self) -> windows_ui_composition.ExpressionAnimation: ...
     @motion.setter
@@ -189,8 +174,6 @@ class InteractionTrackerInertiaNaturalMotion_Static(InteractionTrackerInertiaMod
 
 @typing.final
 class InteractionTrackerInertiaNaturalMotion(InteractionTrackerInertiaModifier, metaclass=InteractionTrackerInertiaNaturalMotion_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> InteractionTrackerInertiaNaturalMotion: ...
     @_property
     def natural_motion(self) -> windows_ui_composition.ScalarNaturalMotionAnimation: ...
     @natural_motion.setter
@@ -206,8 +189,6 @@ class InteractionTrackerInertiaRestingValue_Static(InteractionTrackerInertiaModi
 
 @typing.final
 class InteractionTrackerInertiaRestingValue(InteractionTrackerInertiaModifier, metaclass=InteractionTrackerInertiaRestingValue_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> InteractionTrackerInertiaRestingValue: ...
     @_property
     def resting_value(self) -> windows_ui_composition.ExpressionAnimation: ...
     @resting_value.setter
@@ -219,8 +200,6 @@ class InteractionTrackerInertiaRestingValue(InteractionTrackerInertiaModifier, m
 
 @typing.final
 class InteractionTrackerInertiaStateEnteredArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> InteractionTrackerInertiaStateEnteredArgs: ...
     @_property
     def modified_resting_position(self) -> typing.Optional[windows_foundation_numerics.Vector3]: ...
     @_property
@@ -242,8 +221,6 @@ class InteractionTrackerInertiaStateEnteredArgs(winrt.system.Object):
 
 @typing.final
 class InteractionTrackerInteractingStateEnteredArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> InteractionTrackerInteractingStateEnteredArgs: ...
     @_property
     def request_id(self) -> winrt.system.Int32: ...
     @_property
@@ -251,15 +228,11 @@ class InteractionTrackerInteractingStateEnteredArgs(winrt.system.Object):
 
 @typing.final
 class InteractionTrackerRequestIgnoredArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> InteractionTrackerRequestIgnoredArgs: ...
     @_property
     def request_id(self) -> winrt.system.Int32: ...
 
 @typing.final
 class InteractionTrackerValuesChangedArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> InteractionTrackerValuesChangedArgs: ...
     @_property
     def position(self) -> windows_foundation_numerics.Vector3: ...
     @_property
@@ -271,8 +244,7 @@ class InteractionTrackerVector2InertiaModifier_Static(windows_ui_composition.Com
     pass
 
 class InteractionTrackerVector2InertiaModifier(windows_ui_composition.CompositionObject, metaclass=InteractionTrackerVector2InertiaModifier_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> InteractionTrackerVector2InertiaModifier: ...
+    pass
 
 @typing.final
 class InteractionTrackerVector2InertiaNaturalMotion_Static(InteractionTrackerVector2InertiaModifier_Static):
@@ -280,8 +252,6 @@ class InteractionTrackerVector2InertiaNaturalMotion_Static(InteractionTrackerVec
 
 @typing.final
 class InteractionTrackerVector2InertiaNaturalMotion(InteractionTrackerVector2InertiaModifier, metaclass=InteractionTrackerVector2InertiaNaturalMotion_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> InteractionTrackerVector2InertiaNaturalMotion: ...
     @_property
     def natural_motion(self) -> windows_ui_composition.Vector2NaturalMotionAnimation: ...
     @natural_motion.setter
@@ -296,8 +266,6 @@ class VisualInteractionSource_Static(windows_ui_composition.CompositionObject_St
     def create_from_ivisual_element(cls, source: windows_ui_composition.ImplementsIVisualElement, /) -> VisualInteractionSource: ...
 
 class VisualInteractionSource(windows_ui_composition.CompositionObject, ImplementsICompositionInteractionSource, metaclass=VisualInteractionSource_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> VisualInteractionSource: ...
     @typing.final
     def configure_center_point_x_modifiers(self, conditional_values: typing.Iterable[CompositionConditionalValue], /) -> None: ...
     @typing.final
@@ -385,16 +353,13 @@ class ImplementsICompositionInteractionSource():
 
 @typing.final
 class ICompositionInteractionSource(winrt.system.Object, ImplementsICompositionInteractionSource):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ICompositionInteractionSource: ...
+    pass
 
 class ImplementsIInteractionTrackerOwner():
     pass
 
 @typing.final
 class IInteractionTrackerOwner(winrt.system.Object, ImplementsIInteractionTrackerOwner):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IInteractionTrackerOwner: ...
     def custom_animation_state_entered(self, sender: InteractionTracker, args: InteractionTrackerCustomAnimationStateEnteredArgs, /) -> None: ...
     def idle_state_entered(self, sender: InteractionTracker, args: InteractionTrackerIdleStateEnteredArgs, /) -> None: ...
     def inertia_state_entered(self, sender: InteractionTracker, args: InteractionTrackerInertiaStateEnteredArgs, /) -> None: ...

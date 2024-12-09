@@ -18,8 +18,6 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class AppExtension(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AppExtension: ...
     def get_extension_properties(self) -> windows_foundation_collections.IPropertySet: ...
     def get_extension_properties_async(self) -> windows_foundation.IAsyncOperation[windows_foundation_collections.IPropertySet]: ...
     def get_public_folder(self) -> windows_storage.StorageFolder: ...
@@ -44,8 +42,6 @@ class AppExtensionCatalog_Static(type):
 
 @typing.final
 class AppExtensionCatalog(winrt.system.Object, metaclass=AppExtensionCatalog_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AppExtensionCatalog: ...
     def find_all(self) -> typing.Sequence[AppExtension]: ...
     def find_all_async(self) -> windows_foundation.IAsyncOperation[typing.Sequence[AppExtension]]: ...
     def request_remove_package_async(self, package_full_name: str, /) -> windows_foundation.IAsyncOperation[bool]: ...
@@ -62,8 +58,6 @@ class AppExtensionCatalog(winrt.system.Object, metaclass=AppExtensionCatalog_Sta
 
 @typing.final
 class AppExtensionPackageInstalledEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AppExtensionPackageInstalledEventArgs: ...
     @_property
     def app_extension_name(self) -> str: ...
     @_property
@@ -73,8 +67,6 @@ class AppExtensionPackageInstalledEventArgs(winrt.system.Object):
 
 @typing.final
 class AppExtensionPackageStatusChangedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AppExtensionPackageStatusChangedEventArgs: ...
     @_property
     def app_extension_name(self) -> str: ...
     @_property
@@ -82,8 +74,6 @@ class AppExtensionPackageStatusChangedEventArgs(winrt.system.Object):
 
 @typing.final
 class AppExtensionPackageUninstallingEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AppExtensionPackageUninstallingEventArgs: ...
     @_property
     def app_extension_name(self) -> str: ...
     @_property
@@ -91,8 +81,6 @@ class AppExtensionPackageUninstallingEventArgs(winrt.system.Object):
 
 @typing.final
 class AppExtensionPackageUpdatedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AppExtensionPackageUpdatedEventArgs: ...
     @_property
     def app_extension_name(self) -> str: ...
     @_property
@@ -102,8 +90,6 @@ class AppExtensionPackageUpdatedEventArgs(winrt.system.Object):
 
 @typing.final
 class AppExtensionPackageUpdatingEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AppExtensionPackageUpdatingEventArgs: ...
     @_property
     def app_extension_name(self) -> str: ...
     @_property

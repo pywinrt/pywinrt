@@ -23,8 +23,6 @@ class TwoPanelHingedDevicePosturePreview_Static(type):
 
 @typing.final
 class TwoPanelHingedDevicePosturePreview(winrt.system.Object, metaclass=TwoPanelHingedDevicePosturePreview_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> TwoPanelHingedDevicePosturePreview: ...
     # @deprecated("TwoPanelHingedDevicePosturePreview is deprecated and might not work on all platforms. For more info, see MSDN.")
     def get_current_posture_async(self) -> windows_foundation.IAsyncOperation[TwoPanelHingedDevicePosturePreviewReading]: ...
     # @deprecated("TwoPanelHingedDevicePosturePreview is deprecated and might not work on all platforms. For more info, see MSDN.")
@@ -34,8 +32,6 @@ class TwoPanelHingedDevicePosturePreview(winrt.system.Object, metaclass=TwoPanel
 
 @typing.final
 class TwoPanelHingedDevicePosturePreviewReading(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> TwoPanelHingedDevicePosturePreviewReading: ...
     @_property
     def hinge_state(self) -> HingeState: ...
     @_property
@@ -51,8 +47,6 @@ class TwoPanelHingedDevicePosturePreviewReading(winrt.system.Object):
 
 @typing.final
 class TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs: ...
     @_property
     def reading(self) -> TwoPanelHingedDevicePosturePreviewReading: ...
 
