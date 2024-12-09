@@ -120,7 +120,7 @@ class TestTestComponent(unittest.TestCase):
             "user-created subclass instance should survive round-trip to WinRT-land",
         )
 
-        c3 = tc.Composable._from(c)
+        c3 = c.as_(tc.Composable)
 
         self.assertIs(
             c,
@@ -189,7 +189,7 @@ class TestTestComponent(unittest.TestCase):
 
     def test_object_equality(self):
         c1 = tc.Derived()
-        c2 = tc.Composable._from(c1)
+        c2 = c1.as_(tc.Composable)
         c3 = tc.Derived()
         c4 = str()
 
@@ -221,7 +221,7 @@ class TestTestComponent(unittest.TestCase):
 
     def test_object_hashable(self):
         c1 = tc.Derived()
-        c2 = tc.Composable._from(c1)
+        c2 = c1.as_(tc.Composable)
 
         # these have to be true in order for test to be valid
         self.assertIsNot(

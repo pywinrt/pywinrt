@@ -9,5 +9,5 @@ class TestQueryInterface(unittest.TestCase):
         propset.insert("strmap", wfc.StringMap())
         self.assertTrue(propset.has_key("strmap"))
         o = propset.lookup("strmap")
-        strmap = wfc.StringMap._from(o)
+        strmap = o.as_(wfc.StringMap)
         self.assertEqual(type(strmap), wfc.StringMap)

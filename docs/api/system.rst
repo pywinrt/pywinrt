@@ -15,6 +15,22 @@ Fundamental types
     This is the base type of all WinRT runtime objects and cannot be
     instantiated directly.
 
+    .. rubric:: Type casting
+
+    Sometimes WinRT wrapper objects may be returned as a base type or interface
+    type that needs to be cast to a different type. In these cases, use the
+    ``as_`` method to cast the object to the desired type.
+
+    .. method:: as_(type):
+
+        Casts the object to the specified type.
+
+        :param type: The type to cast the object to.
+        :type type: type
+        :return: The object cast to the specified type.
+
+        .. versionadded:: unreleased
+
     .. rubric:: Introspection attributes
 
     WinRT objects have the following attributes for inspecting various metatdata
@@ -136,6 +152,6 @@ be unboxed to get the original value.
 
         from winrt.windows.foundation import IPropertyValue
 
-        value = IPropertyValue._from(obj).get_xyz()
+        value = obj.as_(IPropertyValue).get_xyz()
 
     .. versionadded:: unreleased
