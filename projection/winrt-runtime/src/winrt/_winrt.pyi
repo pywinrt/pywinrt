@@ -70,6 +70,7 @@ _T_co = TypeVar("_T_co", covariant=True)  # Any type covariant containers.
 _KT = TypeVar("_KT")
 _VT = TypeVar("_VT")
 _VT_co = TypeVar("_VT_co", covariant=True)  # Value type covariant containers.
+_TObject = TypeVar("_TObject", bound=Object)
 
 # these classes don't actually exist but are just used to simplify type checking
 
@@ -129,6 +130,7 @@ class MutableMapping(Mapping[_KT, _VT]):
 # actual runtime classes
 
 class Object:
+    def as_(self, type: Type[_TObject], /) -> _TObject: ...
     @property
     def _iids_(self) -> Array[UUID]: ...
     @property

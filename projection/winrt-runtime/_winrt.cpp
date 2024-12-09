@@ -73,6 +73,25 @@ namespace py::cpp::_winrt
         }
     }
 
+    static PyObject* Object_as(PyObject* self, PyObject* arg) noexcept
+    {
+        if (reinterpret_cast<PyObject*>(Py_TYPE(self)) == arg)
+        {
+            return Py_NewRef(self);
+        }
+
+        pyobj_handle from{PyUnicode_InternFromString("_from")};
+        if (!from)
+        {
+            return nullptr;
+        }
+
+        return PyObject_CallMethodOneArg(arg, from.get(), self);
+    }
+
+    static PyMethodDef Object_methods[]
+        = {{"as_", reinterpret_cast<PyCFunction>(Object_as), METH_O, nullptr}, {}};
+
     static PyGetSetDef Object_getset[]
         = {{"_iids_",
             reinterpret_cast<getter>(Object_iids_get),
@@ -145,6 +164,7 @@ namespace py::cpp::_winrt
         = {{Py_tp_doc, const_cast<char*>(Object_doc)},
            {Py_tp_new, reinterpret_cast<void*>(Object_new)},
            {Py_tp_dealloc, reinterpret_cast<void*>(Object_dealloc)},
+           {Py_tp_methods, reinterpret_cast<void*>(Object_methods)},
            {Py_tp_getset, reinterpret_cast<void*>(Object_getset)},
            {Py_tp_richcompare, reinterpret_cast<void*>(Object_richcompare)},
            {Py_tp_hash, reinterpret_cast<void*>(Object_hash)},

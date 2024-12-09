@@ -37,7 +37,7 @@ target.root = c_root
 
 
 def add_element(size: float, x: float, y: float) -> None:
-    visuals = ContainerVisual._from(target.root).children
+    visuals = target.root.as_(ContainerVisual).children
     element = compositor.create_sprite_visual()
 
     r = randint(0, 255)
