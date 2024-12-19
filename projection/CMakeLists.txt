@@ -6,6 +6,10 @@ project(pywinrt-projection LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+# This can be a lot of files, so this really speeds up the install and prevents
+# filling up the console buffer with the output.
+set(CMAKE_INSTALL_MESSAGE NEVER)
+
 option(PYWINRT_FULL_PROJECTION "Build full projection" ON)
 set(PYWINRT_SITE_PACKAGES_DIR "." CACHE STRING "Python site-packages install prefix")
 
