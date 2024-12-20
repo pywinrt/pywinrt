@@ -223,7 +223,9 @@ static class ObjectWriterExtensions
         if (type.IsPyCloseable)
         {
             w.WriteLine("def __enter__(self: Self) -> Self: ...");
-            w.WriteLine("def __exit__(self, *args) -> None: ...");
+            w.WriteLine(
+                "def __exit__(self, exc_type: typing.Optional[typing.Type[BaseException]], exc_value: typing.Optional[BaseException], traceback: typing.Optional[types.TracebackType]) -> None: ..."
+            );
             didWriteLine = true;
         }
 
