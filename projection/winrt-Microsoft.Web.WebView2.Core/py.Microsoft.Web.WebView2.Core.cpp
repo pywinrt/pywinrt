@@ -6967,7 +6967,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "parent_window", reinterpret_cast<getter>(CoreWebView2Controller_get_ParentWindow), reinterpret_cast<setter>(CoreWebView2Controller_put_ParentWindow), nullptr, nullptr },
         { "is_visible", reinterpret_cast<getter>(CoreWebView2Controller_get_IsVisible), reinterpret_cast<setter>(CoreWebView2Controller_put_IsVisible), nullptr, nullptr },
         { "bounds", reinterpret_cast<getter>(CoreWebView2Controller_get_Bounds), reinterpret_cast<setter>(CoreWebView2Controller_put_Bounds), nullptr, nullptr },
-        { "core_web_view2", reinterpret_cast<getter>(CoreWebView2Controller_get_CoreWebView2), nullptr, nullptr, nullptr },
+        { "core_webview2", reinterpret_cast<getter>(CoreWebView2Controller_get_CoreWebView2), nullptr, nullptr, nullptr },
         { "default_background_color", reinterpret_cast<getter>(CoreWebView2Controller_get_DefaultBackgroundColor), reinterpret_cast<setter>(CoreWebView2Controller_put_DefaultBackgroundColor), nullptr, nullptr },
         { "should_detect_monitor_scale_changes", reinterpret_cast<getter>(CoreWebView2Controller_get_ShouldDetectMonitorScaleChanges), reinterpret_cast<setter>(CoreWebView2Controller_put_ShouldDetectMonitorScaleChanges), nullptr, nullptr },
         { "rasterization_scale", reinterpret_cast<getter>(CoreWebView2Controller_get_RasterizationScale), reinterpret_cast<setter>(CoreWebView2Controller_put_RasterizationScale), nullptr, nullptr },
@@ -10082,10 +10082,10 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyMethodDef _methods_CoreWebView2Environment[] = {
         { "create_context_menu_item", reinterpret_cast<PyCFunction>(CoreWebView2Environment_CreateContextMenuItem), METH_VARARGS, nullptr },
-        { "create_core_web_view2_composition_controller_async", reinterpret_cast<PyCFunction>(CoreWebView2Environment_CreateCoreWebView2CompositionControllerAsync), METH_VARARGS, nullptr },
-        { "create_core_web_view2_controller_async", reinterpret_cast<PyCFunction>(CoreWebView2Environment_CreateCoreWebView2ControllerAsync), METH_VARARGS, nullptr },
-        { "create_core_web_view2_controller_options", reinterpret_cast<PyCFunction>(CoreWebView2Environment_CreateCoreWebView2ControllerOptions), METH_VARARGS, nullptr },
-        { "create_core_web_view2_pointer_info", reinterpret_cast<PyCFunction>(CoreWebView2Environment_CreateCoreWebView2PointerInfo), METH_VARARGS, nullptr },
+        { "create_core_webview2_composition_controller_async", reinterpret_cast<PyCFunction>(CoreWebView2Environment_CreateCoreWebView2CompositionControllerAsync), METH_VARARGS, nullptr },
+        { "create_core_webview2_controller_async", reinterpret_cast<PyCFunction>(CoreWebView2Environment_CreateCoreWebView2ControllerAsync), METH_VARARGS, nullptr },
+        { "create_core_webview2_controller_options", reinterpret_cast<PyCFunction>(CoreWebView2Environment_CreateCoreWebView2ControllerOptions), METH_VARARGS, nullptr },
+        { "create_core_webview2_pointer_info", reinterpret_cast<PyCFunction>(CoreWebView2Environment_CreateCoreWebView2PointerInfo), METH_VARARGS, nullptr },
         { "create_print_settings", reinterpret_cast<PyCFunction>(CoreWebView2Environment_CreatePrintSettings), METH_VARARGS, nullptr },
         { "create_shared_buffer", reinterpret_cast<PyCFunction>(CoreWebView2Environment_CreateSharedBuffer), METH_VARARGS, nullptr },
         { "create_web_file_system_directory_handle", reinterpret_cast<PyCFunction>(CoreWebView2Environment_CreateWebFileSystemDirectoryHandle), METH_VARARGS, nullptr },
