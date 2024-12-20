@@ -2149,18 +2149,6 @@ static class WriterExtensions
         w.WriteBlankLine();
     }
 
-    private static TypeDefinition? TryResolve(TypeReference type)
-    {
-        try
-        {
-            return type?.Resolve();
-        }
-        catch
-        {
-            return null;
-        }
-    }
-
     public static void WritePythonMethodTyping(
         this IndentedTextWriter w,
         ProjectedMethod method,
