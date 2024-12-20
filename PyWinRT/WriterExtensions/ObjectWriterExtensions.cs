@@ -72,10 +72,12 @@ static class ObjectWriterExtensions
                 hasMembers = true;
             }
 
-            foreach (var prop in type.Type.Properties.Where(p => p.GetMethod.IsStatic))
+            foreach (var prop in type.Properties.Where(p => p.GetMethod.IsStatic))
             {
                 var name = prop.Name.ToPythonIdentifier(isTypeMethod: true);
-                var propType = prop.PropertyType.ToPyTypeName(ns);
+                var propType = prop.Property.PropertyType.ToPyTypeName(ns);
+
+                w.WriteLine($"# {prop.GetMethod.Signature}");
 
                 // HACK: work around https://github.com/microsoft/cppwinrt/issues/1287
                 // so far, this is the only case in the entire Windows SDK where
@@ -98,7 +100,9 @@ static class ObjectWriterExtensions
 
                 if (prop.SetMethod is not null)
                 {
-                    var setType = prop.SetMethod.Parameters[0].ToPyInParamTyping(ns);
+                    var setType = prop.SetMethod.Method.Parameters[0].ToPyInParamTyping(ns);
+
+                    w.WriteLine($"# {prop.SetMethod.Signature}");
 
                     w.WriteLine($"@{name}.setter");
 
@@ -455,6 +459,8 @@ static class ObjectWriterExtensions
                     ? "  # type: ignore[override]"
                     : "";
 
+            w.WriteLine($"# {prop.GetMethod.Signature}");
+
             w.WriteLine($"@_property{typeIgnore}");
 
             if (type.IsComposable && prop.SetMethod == null)
@@ -467,6 +473,8 @@ static class ObjectWriterExtensions
             if (prop.SetMethod is not null)
             {
                 var setType = prop.SetMethod.Method.Parameters[0].ToPyInParamTyping(ns);
+
+                w.WriteLine($"# {prop.SetMethod.Signature}");
 
                 w.WriteLine($"@{name}.setter");
 

@@ -15,16 +15,21 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class PerceptionTimestamp(winrt.system.Object):
+    # Windows.Foundation.TimeSpan Windows.Perception.PerceptionTimestamp::get_PredictionAmount()
     @_property
     def prediction_amount(self) -> datetime.timedelta: ...
+    # Windows.Foundation.DateTime Windows.Perception.PerceptionTimestamp::get_TargetTime()
     @_property
     def target_time(self) -> datetime.datetime: ...
+    # Windows.Foundation.TimeSpan Windows.Perception.PerceptionTimestamp::get_SystemRelativeTargetTime()
     @_property
     def system_relative_target_time(self) -> datetime.timedelta: ...
 
 @typing.final
 class PerceptionTimestampHelper_Static(type):
+    # Windows.Perception.PerceptionTimestamp Windows.Perception.PerceptionTimestampHelper::FromHistoricalTargetTime(Windows.Foundation.DateTime)
     def from_historical_target_time(cls, target_time: datetime.datetime, /) -> PerceptionTimestamp: ...
+    # Windows.Perception.PerceptionTimestamp Windows.Perception.PerceptionTimestampHelper::FromSystemRelativeTargetTime(Windows.Foundation.TimeSpan)
     def from_system_relative_target_time(cls, target_time: datetime.timedelta, /) -> PerceptionTimestamp: ...
 
 @typing.final

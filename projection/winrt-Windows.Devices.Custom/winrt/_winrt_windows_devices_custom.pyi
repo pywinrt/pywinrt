@@ -18,34 +18,46 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class CustomDevice_Static(type):
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Custom.CustomDevice> Windows.Devices.Custom.CustomDevice::FromIdAsync(System.String,Windows.Devices.Custom.DeviceAccessMode,Windows.Devices.Custom.DeviceSharingMode)
     def from_id_async(cls, device_id: str, desired_access: DeviceAccessMode, sharing_mode: DeviceSharingMode, /) -> windows_foundation.IAsyncOperation[CustomDevice]: ...
+    # System.String Windows.Devices.Custom.CustomDevice::GetDeviceSelector(System.Guid)
     def get_device_selector(cls, class_guid: _uuid.UUID, /) -> str: ...
 
 @typing.final
 class CustomDevice(winrt.system.Object, metaclass=CustomDevice_Static):
+    # Windows.Foundation.IAsyncOperation`1<System.UInt32> Windows.Devices.Custom.CustomDevice::SendIOControlAsync(Windows.Devices.Custom.IIOControlCode,Windows.Storage.Streams.IBuffer,Windows.Storage.Streams.IBuffer)
     def send_io_control_async(self, io_control_code: ImplementsIIOControlCode, input_buffer: windows_storage_streams.ImplementsIBuffer, output_buffer: windows_storage_streams.ImplementsIBuffer, /) -> windows_foundation.IAsyncOperation[winrt.system.UInt32]: ...
+    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Devices.Custom.CustomDevice::TrySendIOControlAsync(Windows.Devices.Custom.IIOControlCode,Windows.Storage.Streams.IBuffer,Windows.Storage.Streams.IBuffer)
     def try_send_io_control_async(self, io_control_code: ImplementsIIOControlCode, input_buffer: windows_storage_streams.ImplementsIBuffer, output_buffer: windows_storage_streams.ImplementsIBuffer, /) -> windows_foundation.IAsyncOperation[bool]: ...
+    # Windows.Storage.Streams.IInputStream Windows.Devices.Custom.CustomDevice::get_InputStream()
     @_property
     def input_stream(self) -> windows_storage_streams.IInputStream: ...
+    # Windows.Storage.Streams.IOutputStream Windows.Devices.Custom.CustomDevice::get_OutputStream()
     @_property
     def output_stream(self) -> windows_storage_streams.IOutputStream: ...
 
 @typing.final
 class IOControlCode(winrt.system.Object, ImplementsIIOControlCode):
     def __new__(cls: typing.Type[Self], device_type: winrt.system.UInt16, function: winrt.system.UInt16, access_mode: IOControlAccessMode, buffering_method: IOControlBufferingMethod) -> Self: ...
+    # Windows.Devices.Custom.IOControlAccessMode Windows.Devices.Custom.IOControlCode::get_AccessMode()
     @_property
     def access_mode(self) -> IOControlAccessMode: ...
+    # Windows.Devices.Custom.IOControlBufferingMethod Windows.Devices.Custom.IOControlCode::get_BufferingMethod()
     @_property
     def buffering_method(self) -> IOControlBufferingMethod: ...
+    # System.UInt32 Windows.Devices.Custom.IOControlCode::get_ControlCode()
     @_property
     def control_code(self) -> winrt.system.UInt32: ...
+    # System.UInt16 Windows.Devices.Custom.IOControlCode::get_DeviceType()
     @_property
     def device_type(self) -> winrt.system.UInt16: ...
+    # System.UInt16 Windows.Devices.Custom.IOControlCode::get_Function()
     @_property
     def function(self) -> winrt.system.UInt16: ...
 
 @typing.final
 class KnownDeviceTypes_Static(type):
+    # System.UInt16 Windows.Devices.Custom.KnownDeviceTypes::get_Unknown()
     @_property
     def unknown(cls) -> winrt.system.UInt16: ...
 
@@ -58,14 +70,19 @@ class ImplementsIIOControlCode():
 
 @typing.final
 class IIOControlCode(winrt.system.Object, ImplementsIIOControlCode):
+    # Windows.Devices.Custom.IOControlAccessMode Windows.Devices.Custom.IIOControlCode::get_AccessMode()
     @_property
     def access_mode(self) -> IOControlAccessMode: ...
+    # Windows.Devices.Custom.IOControlBufferingMethod Windows.Devices.Custom.IIOControlCode::get_BufferingMethod()
     @_property
     def buffering_method(self) -> IOControlBufferingMethod: ...
+    # System.UInt32 Windows.Devices.Custom.IIOControlCode::get_ControlCode()
     @_property
     def control_code(self) -> winrt.system.UInt32: ...
+    # System.UInt16 Windows.Devices.Custom.IIOControlCode::get_DeviceType()
     @_property
     def device_type(self) -> winrt.system.UInt16: ...
+    # System.UInt16 Windows.Devices.Custom.IIOControlCode::get_Function()
     @_property
     def function(self) -> winrt.system.UInt16: ...
 

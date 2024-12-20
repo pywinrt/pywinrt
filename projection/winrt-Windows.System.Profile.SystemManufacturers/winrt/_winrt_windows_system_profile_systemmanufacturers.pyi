@@ -15,15 +15,19 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class OemSupportInfo(winrt.system.Object):
+    # Windows.Foundation.Uri Windows.System.Profile.SystemManufacturers.OemSupportInfo::get_SupportAppLink()
     @_property
     def support_app_link(self) -> windows_foundation.Uri: ...
+    # Windows.Foundation.Uri Windows.System.Profile.SystemManufacturers.OemSupportInfo::get_SupportLink()
     @_property
     def support_link(self) -> windows_foundation.Uri: ...
+    # System.String Windows.System.Profile.SystemManufacturers.OemSupportInfo::get_SupportProvider()
     @_property
     def support_provider(self) -> str: ...
 
 @typing.final
 class SmbiosInformation_Static(type):
+    # System.String Windows.System.Profile.SystemManufacturers.SmbiosInformation::get_SerialNumber()
     @_property
     def serial_number(cls) -> str: ...
 
@@ -33,27 +37,37 @@ class SmbiosInformation(winrt.system.Object, metaclass=SmbiosInformation_Static)
 
 @typing.final
 class SystemSupportDeviceInfo(winrt.system.Object):
+    # System.String Windows.System.Profile.SystemManufacturers.SystemSupportDeviceInfo::get_FriendlyName()
     @_property
     def friendly_name(self) -> str: ...
+    # System.String Windows.System.Profile.SystemManufacturers.SystemSupportDeviceInfo::get_OperatingSystem()
     @_property
     def operating_system(self) -> str: ...
+    # System.String Windows.System.Profile.SystemManufacturers.SystemSupportDeviceInfo::get_SystemFirmwareVersion()
     @_property
     def system_firmware_version(self) -> str: ...
+    # System.String Windows.System.Profile.SystemManufacturers.SystemSupportDeviceInfo::get_SystemHardwareVersion()
     @_property
     def system_hardware_version(self) -> str: ...
+    # System.String Windows.System.Profile.SystemManufacturers.SystemSupportDeviceInfo::get_SystemManufacturer()
     @_property
     def system_manufacturer(self) -> str: ...
+    # System.String Windows.System.Profile.SystemManufacturers.SystemSupportDeviceInfo::get_SystemProductName()
     @_property
     def system_product_name(self) -> str: ...
+    # System.String Windows.System.Profile.SystemManufacturers.SystemSupportDeviceInfo::get_SystemSku()
     @_property
     def system_sku(self) -> str: ...
 
 @typing.final
 class SystemSupportInfo_Static(type):
+    # System.String Windows.System.Profile.SystemManufacturers.SystemSupportInfo::get_LocalSystemEdition()
     @_property
     def local_system_edition(cls) -> str: ...
+    # Windows.System.Profile.SystemManufacturers.OemSupportInfo Windows.System.Profile.SystemManufacturers.SystemSupportInfo::get_OemSupportInfo()
     @_property
     def oem_support_info(cls) -> OemSupportInfo: ...
+    # Windows.System.Profile.SystemManufacturers.SystemSupportDeviceInfo Windows.System.Profile.SystemManufacturers.SystemSupportInfo::get_LocalDeviceInfo()
     @_property
     def local_device_info(cls) -> SystemSupportDeviceInfo: ...
 

@@ -17,8 +17,10 @@ class ImplementsIGraphicsEffect():
 
 @typing.final
 class IGraphicsEffect(winrt.system.Object, ImplementsIGraphicsEffect, ImplementsIGraphicsEffectSource):
+    # System.String Windows.Graphics.Effects.IGraphicsEffect::get_Name()
     @_property
     def name(self) -> str: ...
+    # System.Void Windows.Graphics.Effects.IGraphicsEffect::put_Name(System.String)
     @name.setter
     def name(self, value: str) -> None: ...
 

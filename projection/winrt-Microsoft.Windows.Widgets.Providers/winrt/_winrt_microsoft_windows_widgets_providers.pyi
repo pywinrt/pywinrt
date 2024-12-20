@@ -16,97 +16,131 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class WidgetActionInvokedArgs(winrt.system.Object):
+    # System.String Microsoft.Windows.Widgets.Providers.WidgetActionInvokedArgs::get_CustomState()
     @_property
     def custom_state(self) -> str: ...
+    # System.String Microsoft.Windows.Widgets.Providers.WidgetActionInvokedArgs::get_Data()
     @_property
     def data(self) -> str: ...
+    # System.String Microsoft.Windows.Widgets.Providers.WidgetActionInvokedArgs::get_Verb()
     @_property
     def verb(self) -> str: ...
+    # Microsoft.Windows.Widgets.Providers.WidgetContext Microsoft.Windows.Widgets.Providers.WidgetActionInvokedArgs::get_WidgetContext()
     @_property
     def widget_context(self) -> WidgetContext: ...
 
 @typing.final
 class WidgetAnalyticsInfoReportedArgs(winrt.system.Object):
+    # System.String Microsoft.Windows.Widgets.Providers.WidgetAnalyticsInfoReportedArgs::get_AnalyticsJson()
     @_property
     def analytics_json(self) -> str: ...
+    # Microsoft.Windows.Widgets.Providers.WidgetContext Microsoft.Windows.Widgets.Providers.WidgetAnalyticsInfoReportedArgs::get_WidgetContext()
     @_property
     def widget_context(self) -> WidgetContext: ...
 
 @typing.final
 class WidgetContext(winrt.system.Object):
+    # System.String Microsoft.Windows.Widgets.Providers.WidgetContext::get_DefinitionId()
     @_property
     def definition_id(self) -> str: ...
+    # System.String Microsoft.Windows.Widgets.Providers.WidgetContext::get_Id()
     @_property
     def id(self) -> str: ...
+    # System.Boolean Microsoft.Windows.Widgets.Providers.WidgetContext::get_IsActive()
     @_property
     def is_active(self) -> bool: ...
+    # Microsoft.Windows.Widgets.WidgetSize Microsoft.Windows.Widgets.Providers.WidgetContext::get_Size()
     @_property
     def size(self) -> microsoft_windows_widgets.WidgetSize: ...
 
 @typing.final
 class WidgetContextChangedArgs(winrt.system.Object):
+    # Microsoft.Windows.Widgets.Providers.WidgetContext Microsoft.Windows.Widgets.Providers.WidgetContextChangedArgs::get_WidgetContext()
     @_property
     def widget_context(self) -> WidgetContext: ...
 
 @typing.final
 class WidgetCustomizationRequestedArgs(winrt.system.Object):
+    # System.String Microsoft.Windows.Widgets.Providers.WidgetCustomizationRequestedArgs::get_CustomState()
     @_property
     def custom_state(self) -> str: ...
+    # Microsoft.Windows.Widgets.Providers.WidgetContext Microsoft.Windows.Widgets.Providers.WidgetCustomizationRequestedArgs::get_WidgetContext()
     @_property
     def widget_context(self) -> WidgetContext: ...
 
 @typing.final
 class WidgetErrorInfoReportedArgs(winrt.system.Object):
+    # System.String Microsoft.Windows.Widgets.Providers.WidgetErrorInfoReportedArgs::get_ErrorJson()
     @_property
     def error_json(self) -> str: ...
+    # Microsoft.Windows.Widgets.Providers.WidgetContext Microsoft.Windows.Widgets.Providers.WidgetErrorInfoReportedArgs::get_WidgetContext()
     @_property
     def widget_context(self) -> WidgetContext: ...
 
 @typing.final
 class WidgetInfo(winrt.system.Object):
+    # System.String Microsoft.Windows.Widgets.Providers.WidgetInfo::get_CustomState()
     @_property
     def custom_state(self) -> str: ...
+    # System.String Microsoft.Windows.Widgets.Providers.WidgetInfo::get_Data()
     @_property
     def data(self) -> str: ...
+    # Windows.Foundation.DateTime Microsoft.Windows.Widgets.Providers.WidgetInfo::get_LastUpdateTime()
     @_property
     def last_update_time(self) -> datetime.datetime: ...
+    # System.String Microsoft.Windows.Widgets.Providers.WidgetInfo::get_Template()
     @_property
     def template(self) -> str: ...
+    # Microsoft.Windows.Widgets.Providers.WidgetContext Microsoft.Windows.Widgets.Providers.WidgetInfo::get_WidgetContext()
     @_property
     def widget_context(self) -> WidgetContext: ...
 
 @typing.final
 class WidgetManager_Static(type):
+    # Microsoft.Windows.Widgets.Providers.WidgetManager Microsoft.Windows.Widgets.Providers.WidgetManager::GetDefault()
     def get_default(cls) -> WidgetManager: ...
 
 @typing.final
 class WidgetManager(winrt.system.Object, ImplementsIWidgetManager, metaclass=WidgetManager_Static):
+    # System.Void Microsoft.Windows.Widgets.Providers.WidgetManager::DeleteWidget(System.String)
     def delete_widget(self, widget_id: str, /) -> None: ...
+    # System.String[] Microsoft.Windows.Widgets.Providers.WidgetManager::GetWidgetIds()
     def get_widget_ids(self) -> winrt.system.Array[str]: ...
+    # Microsoft.Windows.Widgets.Providers.WidgetInfo Microsoft.Windows.Widgets.Providers.WidgetManager::GetWidgetInfo(System.String)
     def get_widget_info(self, widget_id: str, /) -> WidgetInfo: ...
+    # Microsoft.Windows.Widgets.Providers.WidgetInfo[] Microsoft.Windows.Widgets.Providers.WidgetManager::GetWidgetInfos()
     def get_widget_infos(self) -> winrt.system.Array[WidgetInfo]: ...
+    # System.Void Microsoft.Windows.Widgets.Providers.WidgetManager::UpdateWidget(Microsoft.Windows.Widgets.Providers.WidgetUpdateRequestOptions)
     def update_widget(self, widget_update_request_options: WidgetUpdateRequestOptions, /) -> None: ...
 
 @typing.final
 class WidgetUpdateRequestOptions_Static(type):
+    # System.String Microsoft.Windows.Widgets.Providers.WidgetUpdateRequestOptions::get_UnsetValue()
     @_property
     def unset_value(cls) -> str: ...
 
 @typing.final
 class WidgetUpdateRequestOptions(winrt.system.Object, metaclass=WidgetUpdateRequestOptions_Static):
     def __new__(cls: typing.Type[Self], widget_id: str) -> Self: ...
+    # System.String Microsoft.Windows.Widgets.Providers.WidgetUpdateRequestOptions::get_Template()
     @_property
     def template(self) -> str: ...
+    # System.Void Microsoft.Windows.Widgets.Providers.WidgetUpdateRequestOptions::put_Template(System.String)
     @template.setter
     def template(self, value: str) -> None: ...
+    # System.String Microsoft.Windows.Widgets.Providers.WidgetUpdateRequestOptions::get_Data()
     @_property
     def data(self) -> str: ...
+    # System.Void Microsoft.Windows.Widgets.Providers.WidgetUpdateRequestOptions::put_Data(System.String)
     @data.setter
     def data(self, value: str) -> None: ...
+    # System.String Microsoft.Windows.Widgets.Providers.WidgetUpdateRequestOptions::get_CustomState()
     @_property
     def custom_state(self) -> str: ...
+    # System.Void Microsoft.Windows.Widgets.Providers.WidgetUpdateRequestOptions::put_CustomState(System.String)
     @custom_state.setter
     def custom_state(self, value: str) -> None: ...
+    # System.String Microsoft.Windows.Widgets.Providers.WidgetUpdateRequestOptions::get_WidgetId()
     @_property
     def widget_id(self) -> str: ...
 
@@ -115,10 +149,15 @@ class ImplementsIWidgetManager():
 
 @typing.final
 class IWidgetManager(winrt.system.Object, ImplementsIWidgetManager):
+    # System.Void Microsoft.Windows.Widgets.Providers.IWidgetManager::DeleteWidget(System.String)
     def delete_widget(self, widget_id: str, /) -> None: ...
+    # System.String[] Microsoft.Windows.Widgets.Providers.IWidgetManager::GetWidgetIds()
     def get_widget_ids(self) -> winrt.system.Array[str]: ...
+    # Microsoft.Windows.Widgets.Providers.WidgetInfo Microsoft.Windows.Widgets.Providers.IWidgetManager::GetWidgetInfo(System.String)
     def get_widget_info(self, widget_id: str, /) -> WidgetInfo: ...
+    # Microsoft.Windows.Widgets.Providers.WidgetInfo[] Microsoft.Windows.Widgets.Providers.IWidgetManager::GetWidgetInfos()
     def get_widget_infos(self) -> winrt.system.Array[WidgetInfo]: ...
+    # System.Void Microsoft.Windows.Widgets.Providers.IWidgetManager::UpdateWidget(Microsoft.Windows.Widgets.Providers.WidgetUpdateRequestOptions)
     def update_widget(self, widget_update_request_options: WidgetUpdateRequestOptions, /) -> None: ...
 
 class ImplementsIWidgetProvider():
@@ -126,11 +165,17 @@ class ImplementsIWidgetProvider():
 
 @typing.final
 class IWidgetProvider(winrt.system.Object, ImplementsIWidgetProvider):
+    # System.Void Microsoft.Windows.Widgets.Providers.IWidgetProvider::Activate(Microsoft.Windows.Widgets.Providers.WidgetContext)
     def activate(self, widget_context: WidgetContext, /) -> None: ...
+    # System.Void Microsoft.Windows.Widgets.Providers.IWidgetProvider::CreateWidget(Microsoft.Windows.Widgets.Providers.WidgetContext)
     def create_widget(self, widget_context: WidgetContext, /) -> None: ...
+    # System.Void Microsoft.Windows.Widgets.Providers.IWidgetProvider::Deactivate(System.String)
     def deactivate(self, widget_id: str, /) -> None: ...
+    # System.Void Microsoft.Windows.Widgets.Providers.IWidgetProvider::DeleteWidget(System.String,System.String)
     def delete_widget(self, widget_id: str, custom_state: str, /) -> None: ...
+    # System.Void Microsoft.Windows.Widgets.Providers.IWidgetProvider::OnActionInvoked(Microsoft.Windows.Widgets.Providers.WidgetActionInvokedArgs)
     def on_action_invoked(self, action_invoked_args: WidgetActionInvokedArgs, /) -> None: ...
+    # System.Void Microsoft.Windows.Widgets.Providers.IWidgetProvider::OnWidgetContextChanged(Microsoft.Windows.Widgets.Providers.WidgetContextChangedArgs)
     def on_widget_context_changed(self, context_changed_args: WidgetContextChangedArgs, /) -> None: ...
 
 class ImplementsIWidgetProvider2():
@@ -138,6 +183,7 @@ class ImplementsIWidgetProvider2():
 
 @typing.final
 class IWidgetProvider2(winrt.system.Object, ImplementsIWidgetProvider2):
+    # System.Void Microsoft.Windows.Widgets.Providers.IWidgetProvider2::OnCustomizationRequested(Microsoft.Windows.Widgets.Providers.WidgetCustomizationRequestedArgs)
     def on_customization_requested(self, customization_requested_args: WidgetCustomizationRequestedArgs, /) -> None: ...
 
 class ImplementsIWidgetProviderAnalytics():
@@ -145,6 +191,7 @@ class ImplementsIWidgetProviderAnalytics():
 
 @typing.final
 class IWidgetProviderAnalytics(winrt.system.Object, ImplementsIWidgetProviderAnalytics):
+    # System.Void Microsoft.Windows.Widgets.Providers.IWidgetProviderAnalytics::OnAnalyticsInfoReported(Microsoft.Windows.Widgets.Providers.WidgetAnalyticsInfoReportedArgs)
     def on_analytics_info_reported(self, args: WidgetAnalyticsInfoReportedArgs, /) -> None: ...
 
 class ImplementsIWidgetProviderErrors():
@@ -152,5 +199,6 @@ class ImplementsIWidgetProviderErrors():
 
 @typing.final
 class IWidgetProviderErrors(winrt.system.Object, ImplementsIWidgetProviderErrors):
+    # System.Void Microsoft.Windows.Widgets.Providers.IWidgetProviderErrors::OnErrorInfoReported(Microsoft.Windows.Widgets.Providers.WidgetErrorInfoReportedArgs)
     def on_error_info_reported(self, args: WidgetErrorInfoReportedArgs, /) -> None: ...
 

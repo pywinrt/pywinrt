@@ -17,44 +17,61 @@ Self = typing.TypeVar('Self')
 @typing.final
 class AppBroadcastingMonitor(winrt.system.Object):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Media.AppBroadcasting.AppBroadcastingMonitor::add_IsCurrentAppBroadcastingChanged(Windows.Foundation.TypedEventHandler`2<Windows.Media.AppBroadcasting.AppBroadcastingMonitor,System.Object>)
     def add_is_current_app_broadcasting_changed(self, handler: windows_foundation.TypedEventHandler[AppBroadcastingMonitor, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Media.AppBroadcasting.AppBroadcastingMonitor::remove_IsCurrentAppBroadcastingChanged(Windows.Foundation.EventRegistrationToken)
     def remove_is_current_app_broadcasting_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.Boolean Windows.Media.AppBroadcasting.AppBroadcastingMonitor::get_IsCurrentAppBroadcasting()
     @_property
     def is_current_app_broadcasting(self) -> bool: ...
 
 @typing.final
 class AppBroadcastingStatus(winrt.system.Object):
+    # System.Boolean Windows.Media.AppBroadcasting.AppBroadcastingStatus::get_CanStartBroadcast()
     @_property
     def can_start_broadcast(self) -> bool: ...
+    # Windows.Media.AppBroadcasting.AppBroadcastingStatusDetails Windows.Media.AppBroadcasting.AppBroadcastingStatus::get_Details()
     @_property
     def details(self) -> AppBroadcastingStatusDetails: ...
 
 @typing.final
 class AppBroadcastingStatusDetails(winrt.system.Object):
+    # System.Boolean Windows.Media.AppBroadcasting.AppBroadcastingStatusDetails::get_IsAnyAppBroadcasting()
     @_property
     def is_any_app_broadcasting(self) -> bool: ...
+    # System.Boolean Windows.Media.AppBroadcasting.AppBroadcastingStatusDetails::get_IsAppInactive()
     @_property
     def is_app_inactive(self) -> bool: ...
+    # System.Boolean Windows.Media.AppBroadcasting.AppBroadcastingStatusDetails::get_IsBlockedForApp()
     @_property
     def is_blocked_for_app(self) -> bool: ...
+    # System.Boolean Windows.Media.AppBroadcasting.AppBroadcastingStatusDetails::get_IsCaptureResourceUnavailable()
     @_property
     def is_capture_resource_unavailable(self) -> bool: ...
+    # System.Boolean Windows.Media.AppBroadcasting.AppBroadcastingStatusDetails::get_IsDisabledBySystem()
     @_property
     def is_disabled_by_system(self) -> bool: ...
+    # System.Boolean Windows.Media.AppBroadcasting.AppBroadcastingStatusDetails::get_IsDisabledByUser()
     @_property
     def is_disabled_by_user(self) -> bool: ...
+    # System.Boolean Windows.Media.AppBroadcasting.AppBroadcastingStatusDetails::get_IsGameStreamInProgress()
     @_property
     def is_game_stream_in_progress(self) -> bool: ...
+    # System.Boolean Windows.Media.AppBroadcasting.AppBroadcastingStatusDetails::get_IsGpuConstrained()
     @_property
     def is_gpu_constrained(self) -> bool: ...
 
 @typing.final
 class AppBroadcastingUI_Static(type):
+    # Windows.Media.AppBroadcasting.AppBroadcastingUI Windows.Media.AppBroadcasting.AppBroadcastingUI::GetDefault()
     def get_default(cls) -> AppBroadcastingUI: ...
+    # Windows.Media.AppBroadcasting.AppBroadcastingUI Windows.Media.AppBroadcasting.AppBroadcastingUI::GetForUser(Windows.System.User)
     def get_for_user(cls, user: windows_system.User, /) -> AppBroadcastingUI: ...
 
 @typing.final
 class AppBroadcastingUI(winrt.system.Object, metaclass=AppBroadcastingUI_Static):
+    # Windows.Media.AppBroadcasting.AppBroadcastingStatus Windows.Media.AppBroadcasting.AppBroadcastingUI::GetStatus()
     def get_status(self) -> AppBroadcastingStatus: ...
+    # System.Void Windows.Media.AppBroadcasting.AppBroadcastingUI::ShowBroadcastUI()
     def show_broadcast_ui(self) -> None: ...
 

@@ -17,10 +17,14 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class PowerManager_Static(type):
+    # Windows.Foundation.EventRegistrationToken Windows.Phone.System.Power.PowerManager::add_PowerSavingModeChanged(Windows.Foundation.EventHandler`1<System.Object>)
     def add_power_saving_mode_changed(cls, change_handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Phone.System.Power.PowerManager::remove_PowerSavingModeChanged(Windows.Foundation.EventRegistrationToken)
     def remove_power_saving_mode_changed(cls, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Phone.System.Power.PowerSavingMode Windows.Phone.System.Power.PowerManager::get_PowerSavingMode()
     @_property
     def power_saving_mode(cls) -> PowerSavingMode: ...
+    # System.Boolean Windows.Phone.System.Power.PowerManager::get_PowerSavingModeEnabled()
     @_property
     def power_saving_mode_enabled(cls) -> bool: ...
 

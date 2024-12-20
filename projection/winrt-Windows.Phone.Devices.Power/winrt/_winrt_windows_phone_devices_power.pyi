@@ -15,14 +15,19 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class Battery_Static(type):
+    # Windows.Phone.Devices.Power.Battery Windows.Phone.Devices.Power.Battery::GetDefault()
     def get_default(cls) -> Battery: ...
 
 @typing.final
 class Battery(winrt.system.Object, metaclass=Battery_Static):
+    # Windows.Foundation.EventRegistrationToken Windows.Phone.Devices.Power.Battery::add_RemainingChargePercentChanged(Windows.Foundation.EventHandler`1<System.Object>)
     def add_remaining_charge_percent_changed(self, change_handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Phone.Devices.Power.Battery::remove_RemainingChargePercentChanged(Windows.Foundation.EventRegistrationToken)
     def remove_remaining_charge_percent_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.Int32 Windows.Phone.Devices.Power.Battery::get_RemainingChargePercent()
     @_property
     def remaining_charge_percent(self) -> winrt.system.Int32: ...
+    # Windows.Foundation.TimeSpan Windows.Phone.Devices.Power.Battery::get_RemainingDischargeTime()
     @_property
     def remaining_discharge_time(self) -> datetime.timedelta: ...
 

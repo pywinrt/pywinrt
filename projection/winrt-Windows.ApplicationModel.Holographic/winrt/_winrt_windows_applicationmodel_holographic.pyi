@@ -16,11 +16,15 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class HolographicKeyboard_Static(type):
+    # Windows.ApplicationModel.Holographic.HolographicKeyboard Windows.ApplicationModel.Holographic.HolographicKeyboard::GetDefault()
     def get_default(cls) -> HolographicKeyboard: ...
 
 @typing.final
 class HolographicKeyboard(winrt.system.Object, metaclass=HolographicKeyboard_Static):
+    # System.Void Windows.ApplicationModel.Holographic.HolographicKeyboard::ResetPlacementOverride()
     def reset_placement_override(self) -> None: ...
+    # System.Void Windows.ApplicationModel.Holographic.HolographicKeyboard::SetPlacementOverride(Windows.Perception.Spatial.SpatialCoordinateSystem,Windows.Foundation.Numerics.Vector3,Windows.Foundation.Numerics.Quaternion)
     def set_placement_override(self, coordinate_system: windows_perception_spatial.SpatialCoordinateSystem, top_center_position: windows_foundation_numerics.Vector3, orientation: windows_foundation_numerics.Quaternion, /) -> None: ...
+    # System.Void Windows.ApplicationModel.Holographic.HolographicKeyboard::SetPlacementOverride(Windows.Perception.Spatial.SpatialCoordinateSystem,Windows.Foundation.Numerics.Vector3,Windows.Foundation.Numerics.Quaternion,Windows.Foundation.Numerics.Vector2)
     def set_placement_override_with_max_size(self, coordinate_system: windows_perception_spatial.SpatialCoordinateSystem, top_center_position: windows_foundation_numerics.Vector3, orientation: windows_foundation_numerics.Quaternion, max_size: windows_foundation_numerics.Vector2, /) -> None: ...
 

@@ -16,9 +16,11 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class InkWorkspaceHostedAppManager_Static(type):
+    # Windows.ApplicationModel.Preview.InkWorkspace.InkWorkspaceHostedAppManager Windows.ApplicationModel.Preview.InkWorkspace.InkWorkspaceHostedAppManager::GetForCurrentApp()
     def get_for_current_app(cls) -> InkWorkspaceHostedAppManager: ...
 
 @typing.final
 class InkWorkspaceHostedAppManager(winrt.system.Object, metaclass=InkWorkspaceHostedAppManager_Static):
+    # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Preview.InkWorkspace.InkWorkspaceHostedAppManager::SetThumbnailAsync(Windows.Graphics.Imaging.SoftwareBitmap)
     def set_thumbnail_async(self, bitmap: windows_graphics_imaging.SoftwareBitmap, /) -> windows_foundation.IAsyncAction: ...
 

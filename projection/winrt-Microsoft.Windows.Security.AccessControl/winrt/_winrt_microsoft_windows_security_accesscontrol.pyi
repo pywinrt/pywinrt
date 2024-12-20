@@ -20,7 +20,9 @@ class AppContainerNameAndAccess:
 
 @typing.final
 class SecurityDescriptorHelpers_Static(type):
+    # System.String Microsoft.Windows.Security.AccessControl.SecurityDescriptorHelpers::GetSddlForAppContainerNames(Microsoft.Windows.Security.AccessControl.AppContainerNameAndAccess[],System.String,System.UInt32)
     def get_sddl_for_app_container_names(cls, access_requests: typing.Union[winrt.system.Array[AppContainerNameAndAccess], winrt.system.ReadableBuffer], principal_string_sid: str, principal_access_mask: winrt.system.UInt32, /) -> str: ...
+    # System.Byte[] Microsoft.Windows.Security.AccessControl.SecurityDescriptorHelpers::GetSecurityDescriptorBytesFromAppContainerNames(Microsoft.Windows.Security.AccessControl.AppContainerNameAndAccess[],System.String,System.UInt32)
     def get_security_descriptor_bytes_from_app_container_names(cls, access_requests: typing.Union[winrt.system.Array[AppContainerNameAndAccess], winrt.system.ReadableBuffer], principal_string_sid: str, principal_access_mask: winrt.system.UInt32, /) -> winrt.system.Array[winrt.system.UInt8]: ...
 
 @typing.final

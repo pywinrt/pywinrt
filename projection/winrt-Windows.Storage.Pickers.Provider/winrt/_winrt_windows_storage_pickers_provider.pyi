@@ -19,81 +19,115 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class FileOpenPickerUI(winrt.system.Object):
+    # Windows.Storage.Pickers.Provider.AddFileResult Windows.Storage.Pickers.Provider.FileOpenPickerUI::AddFile(System.String,Windows.Storage.IStorageFile)
     def add_file(self, id: str, file: windows_storage.ImplementsIStorageFile, /) -> AddFileResult: ...
+    # System.Boolean Windows.Storage.Pickers.Provider.FileOpenPickerUI::CanAddFile(Windows.Storage.IStorageFile)
     def can_add_file(self, file: windows_storage.ImplementsIStorageFile, /) -> bool: ...
+    # System.Boolean Windows.Storage.Pickers.Provider.FileOpenPickerUI::ContainsFile(System.String)
     def contains_file(self, id: str, /) -> bool: ...
+    # System.Void Windows.Storage.Pickers.Provider.FileOpenPickerUI::RemoveFile(System.String)
     def remove_file(self, id: str, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Storage.Pickers.Provider.FileOpenPickerUI::add_Closing(Windows.Foundation.TypedEventHandler`2<Windows.Storage.Pickers.Provider.FileOpenPickerUI,Windows.Storage.Pickers.Provider.PickerClosingEventArgs>)
     def add_closing(self, handler: windows_foundation.TypedEventHandler[FileOpenPickerUI, PickerClosingEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Storage.Pickers.Provider.FileOpenPickerUI::remove_Closing(Windows.Foundation.EventRegistrationToken)
     def remove_closing(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Storage.Pickers.Provider.FileOpenPickerUI::add_FileRemoved(Windows.Foundation.TypedEventHandler`2<Windows.Storage.Pickers.Provider.FileOpenPickerUI,Windows.Storage.Pickers.Provider.FileRemovedEventArgs>)
     # @deprecated("Since Windows 10, only apps can remove files, not end users so the FileRemoved event will not be raised.")
     def add_file_removed(self, handler: windows_foundation.TypedEventHandler[FileOpenPickerUI, FileRemovedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Storage.Pickers.Provider.FileOpenPickerUI::remove_FileRemoved(Windows.Foundation.EventRegistrationToken)
     # @deprecated("Since Windows 10, only apps can remove files, not end users so the FileRemoved event will not be raised.")
     def remove_file_removed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.String Windows.Storage.Pickers.Provider.FileOpenPickerUI::get_Title()
     @_property
     def title(self) -> str: ...
+    # System.Void Windows.Storage.Pickers.Provider.FileOpenPickerUI::put_Title(System.String)
     @title.setter
     def title(self, value: str) -> None: ...
+    # Windows.Foundation.Collections.IVectorView`1<System.String> Windows.Storage.Pickers.Provider.FileOpenPickerUI::get_AllowedFileTypes()
     @_property
     def allowed_file_types(self) -> typing.Sequence[str]: ...
+    # Windows.Storage.Pickers.Provider.FileSelectionMode Windows.Storage.Pickers.Provider.FileOpenPickerUI::get_SelectionMode()
     @_property
     def selection_mode(self) -> FileSelectionMode: ...
+    # System.String Windows.Storage.Pickers.Provider.FileOpenPickerUI::get_SettingsIdentifier()
     @_property
     def settings_identifier(self) -> str: ...
 
 @typing.final
 class FileRemovedEventArgs(winrt.system.Object):
+    # System.String Windows.Storage.Pickers.Provider.FileRemovedEventArgs::get_Id()
     @_property
     def id(self) -> str: ...
 
 @typing.final
 class FileSavePickerUI(winrt.system.Object):
+    # Windows.Storage.Pickers.Provider.SetFileNameResult Windows.Storage.Pickers.Provider.FileSavePickerUI::TrySetFileName(System.String)
     def try_set_file_name(self, value: str, /) -> SetFileNameResult: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Storage.Pickers.Provider.FileSavePickerUI::add_FileNameChanged(Windows.Foundation.TypedEventHandler`2<Windows.Storage.Pickers.Provider.FileSavePickerUI,System.Object>)
     def add_file_name_changed(self, handler: windows_foundation.TypedEventHandler[FileSavePickerUI, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Storage.Pickers.Provider.FileSavePickerUI::remove_FileNameChanged(Windows.Foundation.EventRegistrationToken)
     def remove_file_name_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Storage.Pickers.Provider.FileSavePickerUI::add_TargetFileRequested(Windows.Foundation.TypedEventHandler`2<Windows.Storage.Pickers.Provider.FileSavePickerUI,Windows.Storage.Pickers.Provider.TargetFileRequestedEventArgs>)
     def add_target_file_requested(self, handler: windows_foundation.TypedEventHandler[FileSavePickerUI, TargetFileRequestedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Storage.Pickers.Provider.FileSavePickerUI::remove_TargetFileRequested(Windows.Foundation.EventRegistrationToken)
     def remove_target_file_requested(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.String Windows.Storage.Pickers.Provider.FileSavePickerUI::get_Title()
     @_property
     def title(self) -> str: ...
+    # System.Void Windows.Storage.Pickers.Provider.FileSavePickerUI::put_Title(System.String)
     @title.setter
     def title(self, value: str) -> None: ...
+    # Windows.Foundation.Collections.IVectorView`1<System.String> Windows.Storage.Pickers.Provider.FileSavePickerUI::get_AllowedFileTypes()
     @_property
     def allowed_file_types(self) -> typing.Sequence[str]: ...
+    # System.String Windows.Storage.Pickers.Provider.FileSavePickerUI::get_FileName()
     @_property
     def file_name(self) -> str: ...
+    # System.String Windows.Storage.Pickers.Provider.FileSavePickerUI::get_SettingsIdentifier()
     @_property
     def settings_identifier(self) -> str: ...
 
 @typing.final
 class PickerClosingDeferral(winrt.system.Object):
+    # System.Void Windows.Storage.Pickers.Provider.PickerClosingDeferral::Complete()
     def complete(self) -> None: ...
 
 @typing.final
 class PickerClosingEventArgs(winrt.system.Object):
+    # Windows.Storage.Pickers.Provider.PickerClosingOperation Windows.Storage.Pickers.Provider.PickerClosingEventArgs::get_ClosingOperation()
     @_property
     def closing_operation(self) -> PickerClosingOperation: ...
+    # System.Boolean Windows.Storage.Pickers.Provider.PickerClosingEventArgs::get_IsCanceled()
     @_property
     def is_canceled(self) -> bool: ...
 
 @typing.final
 class PickerClosingOperation(winrt.system.Object):
+    # Windows.Storage.Pickers.Provider.PickerClosingDeferral Windows.Storage.Pickers.Provider.PickerClosingOperation::GetDeferral()
     def get_deferral(self) -> PickerClosingDeferral: ...
+    # Windows.Foundation.DateTime Windows.Storage.Pickers.Provider.PickerClosingOperation::get_Deadline()
     @_property
     def deadline(self) -> datetime.datetime: ...
 
 @typing.final
 class TargetFileRequest(winrt.system.Object):
+    # Windows.Storage.Pickers.Provider.TargetFileRequestDeferral Windows.Storage.Pickers.Provider.TargetFileRequest::GetDeferral()
     def get_deferral(self) -> TargetFileRequestDeferral: ...
+    # Windows.Storage.IStorageFile Windows.Storage.Pickers.Provider.TargetFileRequest::get_TargetFile()
     @_property
     def target_file(self) -> windows_storage.IStorageFile: ...
+    # System.Void Windows.Storage.Pickers.Provider.TargetFileRequest::put_TargetFile(Windows.Storage.IStorageFile)
     @target_file.setter
     def target_file(self, value: windows_storage.ImplementsIStorageFile) -> None: ...
 
 @typing.final
 class TargetFileRequestDeferral(winrt.system.Object):
+    # System.Void Windows.Storage.Pickers.Provider.TargetFileRequestDeferral::Complete()
     def complete(self) -> None: ...
 
 @typing.final
 class TargetFileRequestedEventArgs(winrt.system.Object):
+    # Windows.Storage.Pickers.Provider.TargetFileRequest Windows.Storage.Pickers.Provider.TargetFileRequestedEventArgs::get_Request()
     @_property
     def request(self) -> TargetFileRequest: ...
 

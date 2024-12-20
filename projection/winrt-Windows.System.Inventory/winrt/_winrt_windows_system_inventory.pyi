@@ -16,18 +16,24 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class InstalledDesktopApp_Static(type):
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.System.Inventory.InstalledDesktopApp>> Windows.System.Inventory.InstalledDesktopApp::GetInventoryAsync()
     def get_inventory_async(cls) -> windows_foundation.IAsyncOperation[typing.Sequence[InstalledDesktopApp]]: ...
 
 @typing.final
 class InstalledDesktopApp(winrt.system.Object, windows_foundation.ImplementsIStringable, metaclass=InstalledDesktopApp_Static):
     def __str__(self) -> str: ...
+    # System.String Windows.System.Inventory.InstalledDesktopApp::ToString()
     def to_string(self) -> str: ...
+    # System.String Windows.System.Inventory.InstalledDesktopApp::get_DisplayName()
     @_property
     def display_name(self) -> str: ...
+    # System.String Windows.System.Inventory.InstalledDesktopApp::get_DisplayVersion()
     @_property
     def display_version(self) -> str: ...
+    # System.String Windows.System.Inventory.InstalledDesktopApp::get_Id()
     @_property
     def id(self) -> str: ...
+    # System.String Windows.System.Inventory.InstalledDesktopApp::get_Publisher()
     @_property
     def publisher(self) -> str: ...
 

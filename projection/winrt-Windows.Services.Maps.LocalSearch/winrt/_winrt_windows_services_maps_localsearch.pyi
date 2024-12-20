@@ -21,20 +21,28 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class LocalCategories_Static(type):
+    # System.String Windows.Services.Maps.LocalSearch.LocalCategories::get_All()
     @_property
     def all(cls) -> str: ...
+    # System.String Windows.Services.Maps.LocalSearch.LocalCategories::get_BankAndCreditUnions()
     @_property
     def bank_and_credit_unions(cls) -> str: ...
+    # System.String Windows.Services.Maps.LocalSearch.LocalCategories::get_EatDrink()
     @_property
     def eat_drink(cls) -> str: ...
+    # System.String Windows.Services.Maps.LocalSearch.LocalCategories::get_Hospitals()
     @_property
     def hospitals(cls) -> str: ...
+    # System.String Windows.Services.Maps.LocalSearch.LocalCategories::get_HotelsAndMotels()
     @_property
     def hotels_and_motels(cls) -> str: ...
+    # System.String Windows.Services.Maps.LocalSearch.LocalCategories::get_Parking()
     @_property
     def parking(cls) -> str: ...
+    # System.String Windows.Services.Maps.LocalSearch.LocalCategories::get_SeeDo()
     @_property
     def see_do(cls) -> str: ...
+    # System.String Windows.Services.Maps.LocalSearch.LocalCategories::get_Shop()
     @_property
     def shop(cls) -> str: ...
 
@@ -44,29 +52,40 @@ class LocalCategories(winrt.system.Object, metaclass=LocalCategories_Static):
 
 @typing.final
 class LocalLocation(winrt.system.Object):
+    # Windows.Services.Maps.MapAddress Windows.Services.Maps.LocalSearch.LocalLocation::get_Address()
     @_property
     def address(self) -> windows_services_maps.MapAddress: ...
+    # System.String Windows.Services.Maps.LocalSearch.LocalLocation::get_DataAttribution()
     @_property
     def data_attribution(self) -> str: ...
+    # System.String Windows.Services.Maps.LocalSearch.LocalLocation::get_Description()
     @_property
     def description(self) -> str: ...
+    # System.String Windows.Services.Maps.LocalSearch.LocalLocation::get_DisplayName()
     @_property
     def display_name(self) -> str: ...
+    # System.String Windows.Services.Maps.LocalSearch.LocalLocation::get_Identifier()
     @_property
     def identifier(self) -> str: ...
+    # System.String Windows.Services.Maps.LocalSearch.LocalLocation::get_PhoneNumber()
     @_property
     def phone_number(self) -> str: ...
+    # Windows.Devices.Geolocation.Geopoint Windows.Services.Maps.LocalSearch.LocalLocation::get_Point()
     @_property
     def point(self) -> windows_devices_geolocation.Geopoint: ...
+    # System.String Windows.Services.Maps.LocalSearch.LocalLocation::get_Category()
     @_property
     def category(self) -> str: ...
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Services.Maps.LocalSearch.LocalLocationHoursOfOperationItem> Windows.Services.Maps.LocalSearch.LocalLocation::get_HoursOfOperation()
     @_property
     def hours_of_operation(self) -> typing.Sequence[LocalLocationHoursOfOperationItem]: ...
+    # Windows.Services.Maps.LocalSearch.LocalLocationRatingInfo Windows.Services.Maps.LocalSearch.LocalLocation::get_RatingInfo()
     @_property
     def rating_info(self) -> LocalLocationRatingInfo: ...
 
 @typing.final
 class LocalLocationFinder_Static(type):
+    # Windows.Foundation.IAsyncOperation`1<Windows.Services.Maps.LocalSearch.LocalLocationFinderResult> Windows.Services.Maps.LocalSearch.LocalLocationFinder::FindLocalLocationsAsync(System.String,Windows.Devices.Geolocation.Geocircle,System.String,System.UInt32)
     def find_local_locations_async(cls, search_term: str, search_area: windows_devices_geolocation.Geocircle, local_category: str, max_results: winrt.system.UInt32, /) -> windows_foundation.IAsyncOperation[LocalLocationFinderResult]: ...
 
 @typing.final
@@ -75,31 +94,40 @@ class LocalLocationFinder(winrt.system.Object, metaclass=LocalLocationFinder_Sta
 
 @typing.final
 class LocalLocationFinderResult(winrt.system.Object):
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Services.Maps.LocalSearch.LocalLocation> Windows.Services.Maps.LocalSearch.LocalLocationFinderResult::get_LocalLocations()
     @_property
     def local_locations(self) -> typing.Sequence[LocalLocation]: ...
+    # Windows.Services.Maps.LocalSearch.LocalLocationFinderStatus Windows.Services.Maps.LocalSearch.LocalLocationFinderResult::get_Status()
     @_property
     def status(self) -> LocalLocationFinderStatus: ...
 
 @typing.final
 class LocalLocationHoursOfOperationItem(winrt.system.Object):
+    # Windows.Globalization.DayOfWeek Windows.Services.Maps.LocalSearch.LocalLocationHoursOfOperationItem::get_Day()
     @_property
     def day(self) -> windows_globalization.DayOfWeek: ...
+    # Windows.Foundation.TimeSpan Windows.Services.Maps.LocalSearch.LocalLocationHoursOfOperationItem::get_Span()
     @_property
     def span(self) -> datetime.timedelta: ...
+    # Windows.Foundation.TimeSpan Windows.Services.Maps.LocalSearch.LocalLocationHoursOfOperationItem::get_Start()
     @_property
     def start(self) -> datetime.timedelta: ...
 
 @typing.final
 class LocalLocationRatingInfo(winrt.system.Object):
+    # Windows.Foundation.IReference`1<System.Double> Windows.Services.Maps.LocalSearch.LocalLocationRatingInfo::get_AggregateRating()
     @_property
     def aggregate_rating(self) -> typing.Optional[winrt.system.Double]: ...
+    # System.String Windows.Services.Maps.LocalSearch.LocalLocationRatingInfo::get_ProviderIdentifier()
     @_property
     def provider_identifier(self) -> str: ...
+    # Windows.Foundation.IReference`1<System.Int32> Windows.Services.Maps.LocalSearch.LocalLocationRatingInfo::get_RatingCount()
     @_property
     def rating_count(self) -> typing.Optional[winrt.system.Int32]: ...
 
 @typing.final
 class PlaceInfoHelper_Static(type):
+    # Windows.Services.Maps.PlaceInfo Windows.Services.Maps.LocalSearch.PlaceInfoHelper::CreateFromLocalLocation(Windows.Services.Maps.LocalSearch.LocalLocation)
     def create_from_local_location(cls, location: LocalLocation, /) -> windows_services_maps.PlaceInfo: ...
 
 @typing.final

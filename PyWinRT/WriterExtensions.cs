@@ -2156,6 +2156,8 @@ static class WriterExtensions
         string self = "self"
     )
     {
+        w.WriteLine($"# {method.Signature}");
+
         // REVISIT: can use @warning.deprecated in Python 3.13
         if (method.IsDeprecated)
         {

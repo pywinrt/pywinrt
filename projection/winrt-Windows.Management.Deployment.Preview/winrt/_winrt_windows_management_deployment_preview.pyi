@@ -14,6 +14,7 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class ClassicAppManager_Static(type):
+    # Windows.Management.Deployment.Preview.InstalledClassicAppInfo Windows.Management.Deployment.Preview.ClassicAppManager::FindInstalledApp(System.String)
     def find_installed_app(cls, app_uninstall_key: str, /) -> InstalledClassicAppInfo: ...
 
 @typing.final
@@ -22,8 +23,10 @@ class ClassicAppManager(winrt.system.Object, metaclass=ClassicAppManager_Static)
 
 @typing.final
 class InstalledClassicAppInfo(winrt.system.Object):
+    # System.String Windows.Management.Deployment.Preview.InstalledClassicAppInfo::get_DisplayName()
     @_property
     def display_name(self) -> str: ...
+    # System.String Windows.Management.Deployment.Preview.InstalledClassicAppInfo::get_DisplayVersion()
     @_property
     def display_version(self) -> str: ...
 

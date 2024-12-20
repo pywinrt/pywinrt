@@ -17,7 +17,9 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class ServiceDevice_Static(type):
+    # System.String Windows.Devices.Portable.ServiceDevice::GetDeviceSelector(Windows.Devices.Portable.ServiceDeviceType)
     def get_device_selector(cls, service_type: ServiceDeviceType, /) -> str: ...
+    # System.String Windows.Devices.Portable.ServiceDevice::GetDeviceSelectorFromServiceId(System.Guid)
     def get_device_selector_from_service_id(cls, service_id: _uuid.UUID, /) -> str: ...
 
 @typing.final
@@ -26,7 +28,9 @@ class ServiceDevice(winrt.system.Object, metaclass=ServiceDevice_Static):
 
 @typing.final
 class StorageDevice_Static(type):
+    # Windows.Storage.StorageFolder Windows.Devices.Portable.StorageDevice::FromId(System.String)
     def from_id(cls, device_id: str, /) -> windows_storage.StorageFolder: ...
+    # System.String Windows.Devices.Portable.StorageDevice::GetDeviceSelector()
     def get_device_selector(cls) -> str: ...
 
 @typing.final

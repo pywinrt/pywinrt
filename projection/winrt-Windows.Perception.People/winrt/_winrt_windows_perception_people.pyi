@@ -36,56 +36,79 @@ class JointPose:
 
 @typing.final
 class EyesPose_Static(type):
+    # System.Boolean Windows.Perception.People.EyesPose::IsSupported()
     def is_supported(cls) -> bool: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.UI.Input.GazeInputAccessStatus> Windows.Perception.People.EyesPose::RequestAccessAsync()
     def request_access_async(cls) -> windows_foundation.IAsyncOperation[windows_ui_input.GazeInputAccessStatus]: ...
 
 @typing.final
 class EyesPose(winrt.system.Object, metaclass=EyesPose_Static):
+    # Windows.Foundation.IReference`1<Windows.Perception.Spatial.SpatialRay> Windows.Perception.People.EyesPose::get_Gaze()
     @_property
     def gaze(self) -> typing.Optional[windows_perception_spatial.SpatialRay]: ...
+    # System.Boolean Windows.Perception.People.EyesPose::get_IsCalibrationValid()
     @_property
     def is_calibration_valid(self) -> bool: ...
+    # Windows.Perception.PerceptionTimestamp Windows.Perception.People.EyesPose::get_UpdateTimestamp()
     @_property
     def update_timestamp(self) -> windows_perception.PerceptionTimestamp: ...
 
 @typing.final
 class HandMeshObserver(winrt.system.Object):
+    # System.Void Windows.Perception.People.HandMeshObserver::GetTriangleIndices(System.UInt16[])
     def get_triangle_indices(self, indices: typing.Union[winrt.system.Array[winrt.system.UInt16], winrt.system.WriteableBuffer], /) -> None: ...
+    # Windows.Perception.People.HandMeshVertexState Windows.Perception.People.HandMeshObserver::GetVertexStateForPose(Windows.Perception.People.HandPose)
     def get_vertex_state_for_pose(self, hand_pose: HandPose, /) -> HandMeshVertexState: ...
+    # System.Int32 Windows.Perception.People.HandMeshObserver::get_ModelId()
     @_property
     def model_id(self) -> winrt.system.Int32: ...
+    # Windows.Perception.People.HandPose Windows.Perception.People.HandMeshObserver::get_NeutralPose()
     @_property
     def neutral_pose(self) -> HandPose: ...
+    # System.Int32 Windows.Perception.People.HandMeshObserver::get_NeutralPoseVersion()
     @_property
     def neutral_pose_version(self) -> winrt.system.Int32: ...
+    # Windows.UI.Input.Spatial.SpatialInteractionSource Windows.Perception.People.HandMeshObserver::get_Source()
     @_property
     def source(self) -> windows_ui_input_spatial.SpatialInteractionSource: ...
+    # System.UInt32 Windows.Perception.People.HandMeshObserver::get_TriangleIndexCount()
     @_property
     def triangle_index_count(self) -> winrt.system.UInt32: ...
+    # System.UInt32 Windows.Perception.People.HandMeshObserver::get_VertexCount()
     @_property
     def vertex_count(self) -> winrt.system.UInt32: ...
 
 @typing.final
 class HandMeshVertexState(winrt.system.Object):
+    # System.Void Windows.Perception.People.HandMeshVertexState::GetVertices(Windows.Perception.People.HandMeshVertex[])
     def get_vertices(self, vertices: typing.Union[winrt.system.Array[HandMeshVertex], winrt.system.WriteableBuffer], /) -> None: ...
+    # Windows.Perception.Spatial.SpatialCoordinateSystem Windows.Perception.People.HandMeshVertexState::get_CoordinateSystem()
     @_property
     def coordinate_system(self) -> windows_perception_spatial.SpatialCoordinateSystem: ...
+    # Windows.Perception.PerceptionTimestamp Windows.Perception.People.HandMeshVertexState::get_UpdateTimestamp()
     @_property
     def update_timestamp(self) -> windows_perception.PerceptionTimestamp: ...
 
 @typing.final
 class HandPose(winrt.system.Object):
+    # Windows.Perception.People.JointPose Windows.Perception.People.HandPose::GetRelativeJoint(Windows.Perception.People.HandJointKind,Windows.Perception.People.HandJointKind)
     def get_relative_joint(self, joint: HandJointKind, reference_joint: HandJointKind, /) -> JointPose: ...
+    # System.Void Windows.Perception.People.HandPose::GetRelativeJoints(Windows.Perception.People.HandJointKind[],Windows.Perception.People.HandJointKind[],Windows.Perception.People.JointPose[])
     def get_relative_joints(self, joints: typing.Union[winrt.system.Array[HandJointKind], winrt.system.ReadableBuffer], reference_joints: typing.Union[winrt.system.Array[HandJointKind], winrt.system.ReadableBuffer], joint_poses: typing.Union[winrt.system.Array[JointPose], winrt.system.WriteableBuffer], /) -> None: ...
+    # System.Boolean Windows.Perception.People.HandPose::TryGetJoint(Windows.Perception.Spatial.SpatialCoordinateSystem,Windows.Perception.People.HandJointKind,Windows.Perception.People.JointPose&)
     def try_get_joint(self, coordinate_system: windows_perception_spatial.SpatialCoordinateSystem, joint: HandJointKind, /) -> typing.Tuple[bool, JointPose]: ...
+    # System.Boolean Windows.Perception.People.HandPose::TryGetJoints(Windows.Perception.Spatial.SpatialCoordinateSystem,Windows.Perception.People.HandJointKind[],Windows.Perception.People.JointPose[])
     def try_get_joints(self, coordinate_system: windows_perception_spatial.SpatialCoordinateSystem, joints: typing.Union[winrt.system.Array[HandJointKind], winrt.system.ReadableBuffer], joint_poses: typing.Union[winrt.system.Array[JointPose], winrt.system.WriteableBuffer], /) -> bool: ...
 
 @typing.final
 class HeadPose(winrt.system.Object):
+    # Windows.Foundation.Numerics.Vector3 Windows.Perception.People.HeadPose::get_ForwardDirection()
     @_property
     def forward_direction(self) -> windows_foundation_numerics.Vector3: ...
+    # Windows.Foundation.Numerics.Vector3 Windows.Perception.People.HeadPose::get_Position()
     @_property
     def position(self) -> windows_foundation_numerics.Vector3: ...
+    # Windows.Foundation.Numerics.Vector3 Windows.Perception.People.HeadPose::get_UpDirection()
     @_property
     def up_direction(self) -> windows_foundation_numerics.Vector3: ...
 

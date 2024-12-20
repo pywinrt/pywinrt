@@ -19,8 +19,11 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class LicenseManager_Static(type):
+    # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Store.LicenseManagement.LicenseManager::AddLicenseAsync(Windows.Storage.Streams.IBuffer)
     def add_license_async(cls, license: windows_storage_streams.ImplementsIBuffer, /) -> windows_foundation.IAsyncAction: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionResult> Windows.ApplicationModel.Store.LicenseManagement.LicenseManager::GetSatisfactionInfosAsync(Windows.Foundation.Collections.IIterable`1<System.String>,Windows.Foundation.Collections.IIterable`1<System.String>)
     def get_satisfaction_infos_async(cls, content_ids: typing.Iterable[str], key_ids: typing.Iterable[str], /) -> windows_foundation.IAsyncOperation[LicenseSatisfactionResult]: ...
+    # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Store.LicenseManagement.LicenseManager::RefreshLicensesAsync(Windows.ApplicationModel.Store.LicenseManagement.LicenseRefreshOption)
     def refresh_licenses_async(cls, refresh_option: LicenseRefreshOption, /) -> windows_foundation.IAsyncAction: ...
 
 @typing.final
@@ -29,25 +32,34 @@ class LicenseManager(winrt.system.Object, metaclass=LicenseManager_Static):
 
 @typing.final
 class LicenseSatisfactionInfo(winrt.system.Object):
+    # System.Boolean Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionInfo::get_IsSatisfied()
     @_property
     def is_satisfied(self) -> bool: ...
+    # System.Boolean Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionInfo::get_SatisfiedByDevice()
     @_property
     def satisfied_by_device(self) -> bool: ...
+    # System.Boolean Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionInfo::get_SatisfiedByInstallMedia()
     @_property
     def satisfied_by_install_media(self) -> bool: ...
+    # System.Boolean Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionInfo::get_SatisfiedByOpenLicense()
     @_property
     def satisfied_by_open_license(self) -> bool: ...
+    # System.Boolean Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionInfo::get_SatisfiedByPass()
     @_property
     def satisfied_by_pass(self) -> bool: ...
+    # System.Boolean Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionInfo::get_SatisfiedBySignedInUser()
     @_property
     def satisfied_by_signed_in_user(self) -> bool: ...
+    # System.Boolean Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionInfo::get_SatisfiedByTrial()
     @_property
     def satisfied_by_trial(self) -> bool: ...
 
 @typing.final
 class LicenseSatisfactionResult(winrt.system.Object):
+    # Windows.Foundation.HResult Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionResult::get_ExtendedError()
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
+    # Windows.Foundation.Collections.IMapView`2<System.String,Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionInfo> Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionResult::get_LicenseSatisfactionInfos()
     @_property
     def license_satisfaction_infos(self) -> typing.Mapping[str, LicenseSatisfactionInfo]: ...
 

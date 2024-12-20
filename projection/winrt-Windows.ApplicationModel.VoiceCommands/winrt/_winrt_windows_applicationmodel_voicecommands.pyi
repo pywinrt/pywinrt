@@ -22,70 +22,96 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class VoiceCommand(winrt.system.Object):
+    # System.String Windows.ApplicationModel.VoiceCommands.VoiceCommand::get_CommandName()
     @_property
     def command_name(self) -> str: ...
+    # Windows.Foundation.Collections.IMapView`2<System.String,Windows.Foundation.Collections.IVectorView`1<System.String>> Windows.ApplicationModel.VoiceCommands.VoiceCommand::get_Properties()
     @_property
     def properties(self) -> typing.Mapping[str, typing.Sequence[str]]: ...
+    # Windows.Media.SpeechRecognition.SpeechRecognitionResult Windows.ApplicationModel.VoiceCommands.VoiceCommand::get_SpeechRecognitionResult()
     @_property
     def speech_recognition_result(self) -> windows_media_speechrecognition.SpeechRecognitionResult: ...
 
 @typing.final
 class VoiceCommandCompletedEventArgs(winrt.system.Object):
+    # Windows.ApplicationModel.VoiceCommands.VoiceCommandCompletionReason Windows.ApplicationModel.VoiceCommands.VoiceCommandCompletedEventArgs::get_Reason()
     @_property
     def reason(self) -> VoiceCommandCompletionReason: ...
 
 @typing.final
 class VoiceCommandConfirmationResult(winrt.system.Object):
+    # System.Boolean Windows.ApplicationModel.VoiceCommands.VoiceCommandConfirmationResult::get_Confirmed()
     @_property
     def confirmed(self) -> bool: ...
 
 @typing.final
 class VoiceCommandContentTile(winrt.system.Object):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.String Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile::get_Title()
     @_property
     def title(self) -> str: ...
+    # System.Void Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile::put_Title(System.String)
     @title.setter
     def title(self, value: str) -> None: ...
+    # System.String Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile::get_TextLine3()
     @_property
     def text_line3(self) -> str: ...
+    # System.Void Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile::put_TextLine3(System.String)
     @text_line3.setter
     def text_line3(self, value: str) -> None: ...
+    # System.String Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile::get_TextLine2()
     @_property
     def text_line2(self) -> str: ...
+    # System.Void Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile::put_TextLine2(System.String)
     @text_line2.setter
     def text_line2(self, value: str) -> None: ...
+    # System.String Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile::get_TextLine1()
     @_property
     def text_line1(self) -> str: ...
+    # System.Void Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile::put_TextLine1(System.String)
     @text_line1.setter
     def text_line1(self, value: str) -> None: ...
+    # Windows.Storage.IStorageFile Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile::get_Image()
     @_property
     def image(self) -> windows_storage.IStorageFile: ...
+    # System.Void Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile::put_Image(Windows.Storage.IStorageFile)
     @image.setter
     def image(self, value: windows_storage.ImplementsIStorageFile) -> None: ...
+    # Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTileType Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile::get_ContentTileType()
     @_property
     def content_tile_type(self) -> VoiceCommandContentTileType: ...
+    # System.Void Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile::put_ContentTileType(Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTileType)
     @content_tile_type.setter
     def content_tile_type(self, value: VoiceCommandContentTileType) -> None: ...
+    # System.String Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile::get_AppLaunchArgument()
     @_property
     def app_launch_argument(self) -> str: ...
+    # System.Void Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile::put_AppLaunchArgument(System.String)
     @app_launch_argument.setter
     def app_launch_argument(self, value: str) -> None: ...
+    # System.Object Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile::get_AppContext()
     @_property
     def app_context(self) -> winrt.system.Object: ...
+    # System.Void Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile::put_AppContext(System.Object)
     @app_context.setter
     def app_context(self, value: winrt.system.Object) -> None: ...
 
 @typing.final
 class VoiceCommandDefinition(winrt.system.Object):
+    # Windows.Foundation.IAsyncAction Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinition::SetPhraseListAsync(System.String,Windows.Foundation.Collections.IIterable`1<System.String>)
     def set_phrase_list_async(self, phrase_list_name: str, phrase_list: typing.Iterable[str], /) -> windows_foundation.IAsyncAction: ...
+    # System.String Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinition::get_Language()
     @_property
     def language(self) -> str: ...
+    # System.String Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinition::get_Name()
     @_property
     def name(self) -> str: ...
 
 @typing.final
 class VoiceCommandDefinitionManager_Static(type):
+    # Windows.Foundation.IAsyncAction Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinitionManager::InstallCommandDefinitionsFromStorageFileAsync(Windows.Storage.StorageFile)
     def install_command_definitions_from_storage_file_async(cls, file: windows_storage.StorageFile, /) -> windows_foundation.IAsyncAction: ...
+    # Windows.Foundation.Collections.IMapView`2<System.String,Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinition> Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinitionManager::get_InstalledCommandDefinitions()
     @_property
     def installed_command_definitions(cls) -> typing.Mapping[str, VoiceCommandDefinition]: ...
 
@@ -95,62 +121,90 @@ class VoiceCommandDefinitionManager(winrt.system.Object, metaclass=VoiceCommandD
 
 @typing.final
 class VoiceCommandDisambiguationResult(winrt.system.Object):
+    # Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile Windows.ApplicationModel.VoiceCommands.VoiceCommandDisambiguationResult::get_SelectedItem()
     @_property
     def selected_item(self) -> VoiceCommandContentTile: ...
 
 @typing.final
 class VoiceCommandResponse_Static(type):
+    # Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse::CreateResponse(Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage)
     def create_response(cls, user_message: VoiceCommandUserMessage, /) -> VoiceCommandResponse: ...
+    # Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse::CreateResponseForPrompt(Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage,Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage)
     def create_response_for_prompt(cls, message: VoiceCommandUserMessage, repeat_message: VoiceCommandUserMessage, /) -> VoiceCommandResponse: ...
+    # Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse::CreateResponseForPrompt(Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage,Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage,Windows.Foundation.Collections.IIterable`1<Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile>)
     def create_response_for_prompt_with_tiles(cls, message: VoiceCommandUserMessage, repeat_message: VoiceCommandUserMessage, content_tiles: typing.Iterable[VoiceCommandContentTile], /) -> VoiceCommandResponse: ...
+    # Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse::CreateResponse(Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage,Windows.Foundation.Collections.IIterable`1<Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile>)
     def create_response_with_tiles(cls, message: VoiceCommandUserMessage, content_tiles: typing.Iterable[VoiceCommandContentTile], /) -> VoiceCommandResponse: ...
+    # System.UInt32 Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse::get_MaxSupportedVoiceCommandContentTiles()
     @_property
     def max_supported_voice_command_content_tiles(cls) -> winrt.system.UInt32: ...
 
 @typing.final
 class VoiceCommandResponse(winrt.system.Object, metaclass=VoiceCommandResponse_Static):
+    # Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse::get_RepeatMessage()
     @_property
     def repeat_message(self) -> VoiceCommandUserMessage: ...
+    # System.Void Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse::put_RepeatMessage(Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage)
     @repeat_message.setter
     def repeat_message(self, value: VoiceCommandUserMessage) -> None: ...
+    # Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse::get_Message()
     @_property
     def message(self) -> VoiceCommandUserMessage: ...
+    # System.Void Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse::put_Message(Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage)
     @message.setter
     def message(self, value: VoiceCommandUserMessage) -> None: ...
+    # System.String Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse::get_AppLaunchArgument()
     @_property
     def app_launch_argument(self) -> str: ...
+    # System.Void Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse::put_AppLaunchArgument(System.String)
     @app_launch_argument.setter
     def app_launch_argument(self, value: str) -> None: ...
+    # Windows.Foundation.Collections.IVector`1<Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile> Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse::get_VoiceCommandContentTiles()
     @_property
     def voice_command_content_tiles(self) -> typing.MutableSequence[VoiceCommandContentTile]: ...
 
 @typing.final
 class VoiceCommandServiceConnection_Static(type):
+    # Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection::FromAppServiceTriggerDetails(Windows.ApplicationModel.AppService.AppServiceTriggerDetails)
     def from_app_service_trigger_details(cls, trigger_details: windows_applicationmodel_appservice.AppServiceTriggerDetails, /) -> VoiceCommandServiceConnection: ...
 
 @typing.final
 class VoiceCommandServiceConnection(winrt.system.Object, metaclass=VoiceCommandServiceConnection_Static):
+    # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.VoiceCommands.VoiceCommand> Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection::GetVoiceCommandAsync()
     def get_voice_command_async(self) -> windows_foundation.IAsyncOperation[VoiceCommand]: ...
+    # Windows.Foundation.IAsyncAction Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection::ReportFailureAsync(Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse)
     def report_failure_async(self, response: VoiceCommandResponse, /) -> windows_foundation.IAsyncAction: ...
+    # Windows.Foundation.IAsyncAction Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection::ReportProgressAsync(Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse)
     def report_progress_async(self, response: VoiceCommandResponse, /) -> windows_foundation.IAsyncAction: ...
+    # Windows.Foundation.IAsyncAction Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection::ReportSuccessAsync(Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse)
     def report_success_async(self, response: VoiceCommandResponse, /) -> windows_foundation.IAsyncAction: ...
+    # Windows.Foundation.IAsyncAction Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection::RequestAppLaunchAsync(Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse)
     def request_app_launch_async(self, response: VoiceCommandResponse, /) -> windows_foundation.IAsyncAction: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.VoiceCommands.VoiceCommandConfirmationResult> Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection::RequestConfirmationAsync(Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse)
     def request_confirmation_async(self, response: VoiceCommandResponse, /) -> windows_foundation.IAsyncOperation[VoiceCommandConfirmationResult]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.VoiceCommands.VoiceCommandDisambiguationResult> Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection::RequestDisambiguationAsync(Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse)
     def request_disambiguation_async(self, response: VoiceCommandResponse, /) -> windows_foundation.IAsyncOperation[VoiceCommandDisambiguationResult]: ...
+    # Windows.Foundation.EventRegistrationToken Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection::add_VoiceCommandCompleted(Windows.Foundation.TypedEventHandler`2<Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection,Windows.ApplicationModel.VoiceCommands.VoiceCommandCompletedEventArgs>)
     def add_voice_command_completed(self, handler: windows_foundation.TypedEventHandler[VoiceCommandServiceConnection, VoiceCommandCompletedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection::remove_VoiceCommandCompleted(Windows.Foundation.EventRegistrationToken)
     def remove_voice_command_completed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Globalization.Language Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection::get_Language()
     @_property
     def language(self) -> windows_globalization.Language: ...
 
 @typing.final
 class VoiceCommandUserMessage(winrt.system.Object):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.String Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage::get_SpokenMessage()
     @_property
     def spoken_message(self) -> str: ...
+    # System.Void Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage::put_SpokenMessage(System.String)
     @spoken_message.setter
     def spoken_message(self, value: str) -> None: ...
+    # System.String Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage::get_DisplayMessage()
     @_property
     def display_message(self) -> str: ...
+    # System.Void Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage::put_DisplayMessage(System.String)
     @display_message.setter
     def display_message(self, value: str) -> None: ...
 

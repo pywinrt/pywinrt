@@ -22,38 +22,55 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class AccountsSettingsPane_Static(type):
+    # Windows.UI.ApplicationSettings.AccountsSettingsPane Windows.UI.ApplicationSettings.AccountsSettingsPane::GetForCurrentView()
     def get_for_current_view(cls) -> AccountsSettingsPane: ...
+    # System.Void Windows.UI.ApplicationSettings.AccountsSettingsPane::Show()
     def show(cls) -> None: ...
+    # Windows.Foundation.IAsyncAction Windows.UI.ApplicationSettings.AccountsSettingsPane::ShowAddAccountAsync()
     def show_add_account_async(cls) -> windows_foundation.IAsyncAction: ...
+    # Windows.Foundation.IAsyncAction Windows.UI.ApplicationSettings.AccountsSettingsPane::ShowAddAccountForUserAsync(Windows.System.User)
     def show_add_account_for_user_async(cls, user: windows_system.User, /) -> windows_foundation.IAsyncAction: ...
+    # Windows.Foundation.IAsyncAction Windows.UI.ApplicationSettings.AccountsSettingsPane::ShowManageAccountsAsync()
     def show_manage_accounts_async(cls) -> windows_foundation.IAsyncAction: ...
+    # Windows.Foundation.IAsyncAction Windows.UI.ApplicationSettings.AccountsSettingsPane::ShowManageAccountsForUserAsync(Windows.System.User)
     def show_manage_accounts_for_user_async(cls, user: windows_system.User, /) -> windows_foundation.IAsyncAction: ...
 
 @typing.final
 class AccountsSettingsPane(winrt.system.Object, metaclass=AccountsSettingsPane_Static):
+    # Windows.Foundation.EventRegistrationToken Windows.UI.ApplicationSettings.AccountsSettingsPane::add_AccountCommandsRequested(Windows.Foundation.TypedEventHandler`2<Windows.UI.ApplicationSettings.AccountsSettingsPane,Windows.UI.ApplicationSettings.AccountsSettingsPaneCommandsRequestedEventArgs>)
     def add_account_commands_requested(self, handler: windows_foundation.TypedEventHandler[AccountsSettingsPane, AccountsSettingsPaneCommandsRequestedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.UI.ApplicationSettings.AccountsSettingsPane::remove_AccountCommandsRequested(Windows.Foundation.EventRegistrationToken)
     def remove_account_commands_requested(self, cookie: windows_foundation.EventRegistrationToken, /) -> None: ...
 
 @typing.final
 class AccountsSettingsPaneCommandsRequestedEventArgs(winrt.system.Object):
+    # Windows.UI.ApplicationSettings.AccountsSettingsPaneEventDeferral Windows.UI.ApplicationSettings.AccountsSettingsPaneCommandsRequestedEventArgs::GetDeferral()
     def get_deferral(self) -> AccountsSettingsPaneEventDeferral: ...
+    # System.String Windows.UI.ApplicationSettings.AccountsSettingsPaneCommandsRequestedEventArgs::get_HeaderText()
     @_property
     def header_text(self) -> str: ...
+    # System.Void Windows.UI.ApplicationSettings.AccountsSettingsPaneCommandsRequestedEventArgs::put_HeaderText(System.String)
     @header_text.setter
     def header_text(self, value: str) -> None: ...
+    # Windows.Foundation.Collections.IVector`1<Windows.UI.ApplicationSettings.SettingsCommand> Windows.UI.ApplicationSettings.AccountsSettingsPaneCommandsRequestedEventArgs::get_Commands()
     @_property
     def commands(self) -> typing.MutableSequence[SettingsCommand]: ...
+    # Windows.Foundation.Collections.IVector`1<Windows.UI.ApplicationSettings.CredentialCommand> Windows.UI.ApplicationSettings.AccountsSettingsPaneCommandsRequestedEventArgs::get_CredentialCommands()
     @_property
     def credential_commands(self) -> typing.MutableSequence[CredentialCommand]: ...
+    # Windows.Foundation.Collections.IVector`1<Windows.UI.ApplicationSettings.WebAccountCommand> Windows.UI.ApplicationSettings.AccountsSettingsPaneCommandsRequestedEventArgs::get_WebAccountCommands()
     @_property
     def web_account_commands(self) -> typing.MutableSequence[WebAccountCommand]: ...
+    # Windows.Foundation.Collections.IVector`1<Windows.UI.ApplicationSettings.WebAccountProviderCommand> Windows.UI.ApplicationSettings.AccountsSettingsPaneCommandsRequestedEventArgs::get_WebAccountProviderCommands()
     @_property
     def web_account_provider_commands(self) -> typing.MutableSequence[WebAccountProviderCommand]: ...
+    # Windows.System.User Windows.UI.ApplicationSettings.AccountsSettingsPaneCommandsRequestedEventArgs::get_User()
     @_property
     def user(self) -> windows_system.User: ...
 
 @typing.final
 class AccountsSettingsPaneEventDeferral(winrt.system.Object):
+    # System.Void Windows.UI.ApplicationSettings.AccountsSettingsPaneEventDeferral::Complete()
     def complete(self) -> None: ...
 
 @typing.final
@@ -62,78 +79,100 @@ class CredentialCommand(winrt.system.Object):
     def __new__(cls: typing.Type[Self], password_credential: windows_security_credentials.PasswordCredential) -> Self: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], password_credential: windows_security_credentials.PasswordCredential, deleted: CredentialCommandCredentialDeletedHandler) -> Self: ...
+    # Windows.UI.ApplicationSettings.CredentialCommandCredentialDeletedHandler Windows.UI.ApplicationSettings.CredentialCommand::get_CredentialDeleted()
     @_property
     def credential_deleted(self) -> CredentialCommandCredentialDeletedHandler: ...
+    # Windows.Security.Credentials.PasswordCredential Windows.UI.ApplicationSettings.CredentialCommand::get_PasswordCredential()
     @_property
     def password_credential(self) -> windows_security_credentials.PasswordCredential: ...
 
 @typing.final
 class SettingsCommand_Static(type):
+    # Windows.UI.ApplicationSettings.SettingsCommand Windows.UI.ApplicationSettings.SettingsCommand::get_AccountsCommand()
     @_property
     def accounts_command(cls) -> SettingsCommand: ...
 
 @typing.final
 class SettingsCommand(winrt.system.Object, windows_ui_popups.ImplementsIUICommand, metaclass=SettingsCommand_Static):
     def __new__(cls: typing.Type[Self], settings_command_id: winrt.system.Object, label: str, handler: windows_ui_popups.UICommandInvokedHandler) -> Self: ...
+    # System.String Windows.UI.ApplicationSettings.SettingsCommand::get_Label()
     @_property
     def label(self) -> str: ...
+    # System.Void Windows.UI.ApplicationSettings.SettingsCommand::put_Label(System.String)
     @label.setter
     def label(self, value: str) -> None: ...
+    # Windows.UI.Popups.UICommandInvokedHandler Windows.UI.ApplicationSettings.SettingsCommand::get_Invoked()
     @_property
     def invoked(self) -> windows_ui_popups.UICommandInvokedHandler: ...
+    # System.Void Windows.UI.ApplicationSettings.SettingsCommand::put_Invoked(Windows.UI.Popups.UICommandInvokedHandler)
     @invoked.setter
     def invoked(self, value: windows_ui_popups.UICommandInvokedHandler) -> None: ...
+    # System.Object Windows.UI.ApplicationSettings.SettingsCommand::get_Id()
     @_property
     def id(self) -> winrt.system.Object: ...
+    # System.Void Windows.UI.ApplicationSettings.SettingsCommand::put_Id(System.Object)
     @id.setter
     def id(self, value: winrt.system.Object) -> None: ...
 
 @typing.final
 class SettingsPane_Static(type):
+    # Windows.UI.ApplicationSettings.SettingsPane Windows.UI.ApplicationSettings.SettingsPane::GetForCurrentView()
     # @deprecated("SettingsPane is deprecated and might not work on all platforms. For more info, see MSDN.")
     def get_for_current_view(cls) -> SettingsPane: ...
+    # System.Void Windows.UI.ApplicationSettings.SettingsPane::Show()
     # @deprecated("SettingsPane is deprecated and might not work on all platforms. For more info, see MSDN.")
     def show(cls) -> None: ...
+    # Windows.UI.ApplicationSettings.SettingsEdgeLocation Windows.UI.ApplicationSettings.SettingsPane::get_Edge()
     @_property
     def edge(cls) -> SettingsEdgeLocation: ...
 
 @typing.final
 class SettingsPane(winrt.system.Object, metaclass=SettingsPane_Static):
+    # Windows.Foundation.EventRegistrationToken Windows.UI.ApplicationSettings.SettingsPane::add_CommandsRequested(Windows.Foundation.TypedEventHandler`2<Windows.UI.ApplicationSettings.SettingsPane,Windows.UI.ApplicationSettings.SettingsPaneCommandsRequestedEventArgs>)
     # @deprecated("SettingsPane is deprecated and might not work on all platforms. For more info, see MSDN.")
     def add_commands_requested(self, handler: windows_foundation.TypedEventHandler[SettingsPane, SettingsPaneCommandsRequestedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.UI.ApplicationSettings.SettingsPane::remove_CommandsRequested(Windows.Foundation.EventRegistrationToken)
     # @deprecated("SettingsPane is deprecated and might not work on all platforms. For more info, see MSDN.")
     def remove_commands_requested(self, cookie: windows_foundation.EventRegistrationToken, /) -> None: ...
 
 @typing.final
 class SettingsPaneCommandsRequest(winrt.system.Object):
+    # Windows.Foundation.Collections.IVector`1<Windows.UI.ApplicationSettings.SettingsCommand> Windows.UI.ApplicationSettings.SettingsPaneCommandsRequest::get_ApplicationCommands()
     @_property
     def application_commands(self) -> typing.MutableSequence[SettingsCommand]: ...
 
 @typing.final
 class SettingsPaneCommandsRequestedEventArgs(winrt.system.Object):
+    # Windows.UI.ApplicationSettings.SettingsPaneCommandsRequest Windows.UI.ApplicationSettings.SettingsPaneCommandsRequestedEventArgs::get_Request()
     @_property
     def request(self) -> SettingsPaneCommandsRequest: ...
 
 @typing.final
 class WebAccountCommand(winrt.system.Object):
     def __new__(cls: typing.Type[Self], web_account: windows_security_credentials.WebAccount, invoked: WebAccountCommandInvokedHandler, actions: SupportedWebAccountActions) -> Self: ...
+    # Windows.UI.ApplicationSettings.SupportedWebAccountActions Windows.UI.ApplicationSettings.WebAccountCommand::get_Actions()
     @_property
     def actions(self) -> SupportedWebAccountActions: ...
+    # Windows.UI.ApplicationSettings.WebAccountCommandInvokedHandler Windows.UI.ApplicationSettings.WebAccountCommand::get_Invoked()
     @_property
     def invoked(self) -> WebAccountCommandInvokedHandler: ...
+    # Windows.Security.Credentials.WebAccount Windows.UI.ApplicationSettings.WebAccountCommand::get_WebAccount()
     @_property
     def web_account(self) -> windows_security_credentials.WebAccount: ...
 
 @typing.final
 class WebAccountInvokedArgs(winrt.system.Object):
+    # Windows.UI.ApplicationSettings.WebAccountAction Windows.UI.ApplicationSettings.WebAccountInvokedArgs::get_Action()
     @_property
     def action(self) -> WebAccountAction: ...
 
 @typing.final
 class WebAccountProviderCommand(winrt.system.Object):
     def __new__(cls: typing.Type[Self], web_account_provider: windows_security_credentials.WebAccountProvider, invoked: WebAccountProviderCommandInvokedHandler) -> Self: ...
+    # Windows.UI.ApplicationSettings.WebAccountProviderCommandInvokedHandler Windows.UI.ApplicationSettings.WebAccountProviderCommand::get_Invoked()
     @_property
     def invoked(self) -> WebAccountProviderCommandInvokedHandler: ...
+    # Windows.Security.Credentials.WebAccountProvider Windows.UI.ApplicationSettings.WebAccountProviderCommand::get_WebAccountProvider()
     @_property
     def web_account_provider(self) -> windows_security_credentials.WebAccountProvider: ...
 

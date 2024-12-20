@@ -16,12 +16,16 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class XamlControlsXamlMetaDataProvider_Static(type):
+    # System.Void Microsoft.UI.Xaml.XamlTypeInfo.XamlControlsXamlMetaDataProvider::Initialize()
     def initialize(cls) -> None: ...
 
 @typing.final
 class XamlControlsXamlMetaDataProvider(winrt.system.Object, microsoft_ui_xaml_markup.ImplementsIXamlMetadataProvider, metaclass=XamlControlsXamlMetaDataProvider_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Microsoft.UI.Xaml.Markup.IXamlType Microsoft.UI.Xaml.XamlTypeInfo.XamlControlsXamlMetaDataProvider::GetXamlType(Windows.UI.Xaml.Interop.TypeName)
     def get_xaml_type(self, type: windows_ui_xaml_interop.TypeName, /) -> microsoft_ui_xaml_markup.IXamlType: ...
+    # Microsoft.UI.Xaml.Markup.IXamlType Microsoft.UI.Xaml.XamlTypeInfo.XamlControlsXamlMetaDataProvider::GetXamlType(System.String)
     def get_xaml_type_by_full_name(self, full_name: str, /) -> microsoft_ui_xaml_markup.IXamlType: ...
+    # Microsoft.UI.Xaml.Markup.XmlnsDefinition[] Microsoft.UI.Xaml.XamlTypeInfo.XamlControlsXamlMetaDataProvider::GetXmlnsDefinitions()
     def get_xmlns_definitions(self) -> winrt.system.Array[microsoft_ui_xaml_markup.XmlnsDefinition]: ...
 

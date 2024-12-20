@@ -15,40 +15,56 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class LanguageFont(winrt.system.Object):
+    # System.String Windows.Globalization.Fonts.LanguageFont::get_FontFamily()
     @_property
     def font_family(self) -> str: ...
+    # Windows.UI.Text.FontStretch Windows.Globalization.Fonts.LanguageFont::get_FontStretch()
     @_property
     def font_stretch(self) -> windows_ui_text.FontStretch: ...
+    # Windows.UI.Text.FontStyle Windows.Globalization.Fonts.LanguageFont::get_FontStyle()
     @_property
     def font_style(self) -> windows_ui_text.FontStyle: ...
+    # Windows.UI.Text.FontWeight Windows.Globalization.Fonts.LanguageFont::get_FontWeight()
     @_property
     def font_weight(self) -> windows_ui_text.FontWeight: ...
+    # System.Double Windows.Globalization.Fonts.LanguageFont::get_ScaleFactor()
     @_property
     def scale_factor(self) -> winrt.system.Double: ...
 
 @typing.final
 class LanguageFontGroup(winrt.system.Object):
     def __new__(cls: typing.Type[Self], language_tag: str) -> Self: ...
+    # Windows.Globalization.Fonts.LanguageFont Windows.Globalization.Fonts.LanguageFontGroup::get_DocumentAlternate1Font()
     @_property
     def document_alternate1_font(self) -> LanguageFont: ...
+    # Windows.Globalization.Fonts.LanguageFont Windows.Globalization.Fonts.LanguageFontGroup::get_DocumentAlternate2Font()
     @_property
     def document_alternate2_font(self) -> LanguageFont: ...
+    # Windows.Globalization.Fonts.LanguageFont Windows.Globalization.Fonts.LanguageFontGroup::get_DocumentHeadingFont()
     @_property
     def document_heading_font(self) -> LanguageFont: ...
+    # Windows.Globalization.Fonts.LanguageFont Windows.Globalization.Fonts.LanguageFontGroup::get_FixedWidthTextFont()
     @_property
     def fixed_width_text_font(self) -> LanguageFont: ...
+    # Windows.Globalization.Fonts.LanguageFont Windows.Globalization.Fonts.LanguageFontGroup::get_ModernDocumentFont()
     @_property
     def modern_document_font(self) -> LanguageFont: ...
+    # Windows.Globalization.Fonts.LanguageFont Windows.Globalization.Fonts.LanguageFontGroup::get_TraditionalDocumentFont()
     @_property
     def traditional_document_font(self) -> LanguageFont: ...
+    # Windows.Globalization.Fonts.LanguageFont Windows.Globalization.Fonts.LanguageFontGroup::get_UICaptionFont()
     @_property
     def ui_caption_font(self) -> LanguageFont: ...
+    # Windows.Globalization.Fonts.LanguageFont Windows.Globalization.Fonts.LanguageFontGroup::get_UIHeadingFont()
     @_property
     def ui_heading_font(self) -> LanguageFont: ...
+    # Windows.Globalization.Fonts.LanguageFont Windows.Globalization.Fonts.LanguageFontGroup::get_UINotificationHeadingFont()
     @_property
     def ui_notification_heading_font(self) -> LanguageFont: ...
+    # Windows.Globalization.Fonts.LanguageFont Windows.Globalization.Fonts.LanguageFontGroup::get_UITextFont()
     @_property
     def ui_text_font(self) -> LanguageFont: ...
+    # Windows.Globalization.Fonts.LanguageFont Windows.Globalization.Fonts.LanguageFontGroup::get_UITitleFont()
     @_property
     def ui_title_font(self) -> LanguageFont: ...
 

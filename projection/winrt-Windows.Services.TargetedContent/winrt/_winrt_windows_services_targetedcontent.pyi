@@ -19,159 +19,225 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class TargetedContentAction(winrt.system.Object):
+    # Windows.Foundation.IAsyncAction Windows.Services.TargetedContent.TargetedContentAction::InvokeAsync()
     def invoke_async(self) -> windows_foundation.IAsyncAction: ...
 
 @typing.final
 class TargetedContentAvailabilityChangedEventArgs(winrt.system.Object):
+    # Windows.Foundation.Deferral Windows.Services.TargetedContent.TargetedContentAvailabilityChangedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
 
 @typing.final
 class TargetedContentChangedEventArgs(winrt.system.Object):
+    # Windows.Foundation.Deferral Windows.Services.TargetedContent.TargetedContentChangedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
+    # System.Boolean Windows.Services.TargetedContent.TargetedContentChangedEventArgs::get_HasPreviousContentExpired()
     @_property
     def has_previous_content_expired(self) -> bool: ...
 
 @typing.final
 class TargetedContentCollection(winrt.system.Object):
+    # System.Void Windows.Services.TargetedContent.TargetedContentCollection::ReportCustomInteraction(System.String)
     def report_custom_interaction(self, custom_interaction_name: str, /) -> None: ...
+    # System.Void Windows.Services.TargetedContent.TargetedContentCollection::ReportInteraction(Windows.Services.TargetedContent.TargetedContentInteraction)
     def report_interaction(self, interaction: TargetedContentInteraction, /) -> None: ...
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Services.TargetedContent.TargetedContentCollection> Windows.Services.TargetedContent.TargetedContentCollection::get_Collections()
     @_property
     def collections(self) -> typing.Sequence[TargetedContentCollection]: ...
+    # System.String Windows.Services.TargetedContent.TargetedContentCollection::get_Id()
     @_property
     def id(self) -> str: ...
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Services.TargetedContent.TargetedContentItem> Windows.Services.TargetedContent.TargetedContentCollection::get_Items()
     @_property
     def items(self) -> typing.Sequence[TargetedContentItem]: ...
+    # System.String Windows.Services.TargetedContent.TargetedContentCollection::get_Path()
     @_property
     def path(self) -> str: ...
+    # Windows.Foundation.Collections.IMapView`2<System.String,Windows.Services.TargetedContent.TargetedContentValue> Windows.Services.TargetedContent.TargetedContentCollection::get_Properties()
     @_property
     def properties(self) -> typing.Mapping[str, TargetedContentValue]: ...
 
 @typing.final
 class TargetedContentContainer_Static(type):
+    # Windows.Foundation.IAsyncOperation`1<Windows.Services.TargetedContent.TargetedContentContainer> Windows.Services.TargetedContent.TargetedContentContainer::GetAsync(System.String)
     def get_async(cls, content_id: str, /) -> windows_foundation.IAsyncOperation[TargetedContentContainer]: ...
 
 @typing.final
 class TargetedContentContainer(winrt.system.Object, metaclass=TargetedContentContainer_Static):
+    # Windows.Services.TargetedContent.TargetedContentObject Windows.Services.TargetedContent.TargetedContentContainer::SelectSingleObject(System.String)
     def select_single_object(self, path: str, /) -> TargetedContentObject: ...
+    # Windows.Services.TargetedContent.TargetedContentAvailability Windows.Services.TargetedContent.TargetedContentContainer::get_Availability()
     @_property
     def availability(self) -> TargetedContentAvailability: ...
+    # Windows.Services.TargetedContent.TargetedContentCollection Windows.Services.TargetedContent.TargetedContentContainer::get_Content()
     @_property
     def content(self) -> TargetedContentCollection: ...
+    # System.String Windows.Services.TargetedContent.TargetedContentContainer::get_Id()
     @_property
     def id(self) -> str: ...
+    # Windows.Foundation.DateTime Windows.Services.TargetedContent.TargetedContentContainer::get_Timestamp()
     @_property
     def timestamp(self) -> datetime.datetime: ...
 
 @typing.final
 class TargetedContentFile(winrt.system.Object, windows_storage_streams.ImplementsIRandomAccessStreamReference):
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IRandomAccessStreamWithContentType> Windows.Services.TargetedContent.TargetedContentFile::OpenReadAsync()
     def open_read_async(self) -> windows_foundation.IAsyncOperation[windows_storage_streams.IRandomAccessStreamWithContentType]: ...
 
 @typing.final
 class TargetedContentImage(winrt.system.Object, windows_storage_streams.ImplementsIRandomAccessStreamReference):
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IRandomAccessStreamWithContentType> Windows.Services.TargetedContent.TargetedContentImage::OpenReadAsync()
     def open_read_async(self) -> windows_foundation.IAsyncOperation[windows_storage_streams.IRandomAccessStreamWithContentType]: ...
+    # System.UInt32 Windows.Services.TargetedContent.TargetedContentImage::get_Height()
     @_property
     def height(self) -> winrt.system.UInt32: ...
+    # System.UInt32 Windows.Services.TargetedContent.TargetedContentImage::get_Width()
     @_property
     def width(self) -> winrt.system.UInt32: ...
 
 @typing.final
 class TargetedContentItem(winrt.system.Object):
+    # System.Void Windows.Services.TargetedContent.TargetedContentItem::ReportCustomInteraction(System.String)
     def report_custom_interaction(self, custom_interaction_name: str, /) -> None: ...
+    # System.Void Windows.Services.TargetedContent.TargetedContentItem::ReportInteraction(Windows.Services.TargetedContent.TargetedContentInteraction)
     def report_interaction(self, interaction: TargetedContentInteraction, /) -> None: ...
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Services.TargetedContent.TargetedContentCollection> Windows.Services.TargetedContent.TargetedContentItem::get_Collections()
     @_property
     def collections(self) -> typing.Sequence[TargetedContentCollection]: ...
+    # System.String Windows.Services.TargetedContent.TargetedContentItem::get_Path()
     @_property
     def path(self) -> str: ...
+    # Windows.Foundation.Collections.IMapView`2<System.String,Windows.Services.TargetedContent.TargetedContentValue> Windows.Services.TargetedContent.TargetedContentItem::get_Properties()
     @_property
     def properties(self) -> typing.Mapping[str, TargetedContentValue]: ...
+    # Windows.Services.TargetedContent.TargetedContentItemState Windows.Services.TargetedContent.TargetedContentItem::get_State()
     @_property
     def state(self) -> TargetedContentItemState: ...
 
 @typing.final
 class TargetedContentItemState(winrt.system.Object):
+    # Windows.Services.TargetedContent.TargetedContentAppInstallationState Windows.Services.TargetedContent.TargetedContentItemState::get_AppInstallationState()
     @_property
     def app_installation_state(self) -> TargetedContentAppInstallationState: ...
+    # System.Boolean Windows.Services.TargetedContent.TargetedContentItemState::get_ShouldDisplay()
     @_property
     def should_display(self) -> bool: ...
 
 @typing.final
 class TargetedContentObject(winrt.system.Object):
+    # Windows.Services.TargetedContent.TargetedContentCollection Windows.Services.TargetedContent.TargetedContentObject::get_Collection()
     @_property
     def collection(self) -> TargetedContentCollection: ...
+    # Windows.Services.TargetedContent.TargetedContentItem Windows.Services.TargetedContent.TargetedContentObject::get_Item()
     @_property
     def item(self) -> TargetedContentItem: ...
+    # Windows.Services.TargetedContent.TargetedContentObjectKind Windows.Services.TargetedContent.TargetedContentObject::get_ObjectKind()
     @_property
     def object_kind(self) -> TargetedContentObjectKind: ...
+    # Windows.Services.TargetedContent.TargetedContentValue Windows.Services.TargetedContent.TargetedContentObject::get_Value()
     @_property
     def value(self) -> TargetedContentValue: ...
 
 @typing.final
 class TargetedContentStateChangedEventArgs(winrt.system.Object):
+    # Windows.Foundation.Deferral Windows.Services.TargetedContent.TargetedContentStateChangedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
 
 @typing.final
 class TargetedContentSubscription_Static(type):
+    # Windows.Foundation.IAsyncOperation`1<Windows.Services.TargetedContent.TargetedContentSubscription> Windows.Services.TargetedContent.TargetedContentSubscription::GetAsync(System.String)
     def get_async(cls, subscription_id: str, /) -> windows_foundation.IAsyncOperation[TargetedContentSubscription]: ...
+    # Windows.Services.TargetedContent.TargetedContentSubscriptionOptions Windows.Services.TargetedContent.TargetedContentSubscription::GetOptions(System.String)
     def get_options(cls, subscription_id: str, /) -> TargetedContentSubscriptionOptions: ...
 
 @typing.final
 class TargetedContentSubscription(winrt.system.Object, metaclass=TargetedContentSubscription_Static):
+    # Windows.Foundation.IAsyncOperation`1<Windows.Services.TargetedContent.TargetedContentContainer> Windows.Services.TargetedContent.TargetedContentSubscription::GetContentContainerAsync()
     def get_content_container_async(self) -> windows_foundation.IAsyncOperation[TargetedContentContainer]: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Services.TargetedContent.TargetedContentSubscription::add_AvailabilityChanged(Windows.Foundation.TypedEventHandler`2<Windows.Services.TargetedContent.TargetedContentSubscription,Windows.Services.TargetedContent.TargetedContentAvailabilityChangedEventArgs>)
     def add_availability_changed(self, handler: windows_foundation.TypedEventHandler[TargetedContentSubscription, TargetedContentAvailabilityChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Services.TargetedContent.TargetedContentSubscription::remove_AvailabilityChanged(Windows.Foundation.EventRegistrationToken)
     def remove_availability_changed(self, cookie: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Services.TargetedContent.TargetedContentSubscription::add_ContentChanged(Windows.Foundation.TypedEventHandler`2<Windows.Services.TargetedContent.TargetedContentSubscription,Windows.Services.TargetedContent.TargetedContentChangedEventArgs>)
     def add_content_changed(self, handler: windows_foundation.TypedEventHandler[TargetedContentSubscription, TargetedContentChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Services.TargetedContent.TargetedContentSubscription::remove_ContentChanged(Windows.Foundation.EventRegistrationToken)
     def remove_content_changed(self, cookie: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Services.TargetedContent.TargetedContentSubscription::add_StateChanged(Windows.Foundation.TypedEventHandler`2<Windows.Services.TargetedContent.TargetedContentSubscription,Windows.Services.TargetedContent.TargetedContentStateChangedEventArgs>)
     def add_state_changed(self, handler: windows_foundation.TypedEventHandler[TargetedContentSubscription, TargetedContentStateChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Services.TargetedContent.TargetedContentSubscription::remove_StateChanged(Windows.Foundation.EventRegistrationToken)
     def remove_state_changed(self, cookie: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.String Windows.Services.TargetedContent.TargetedContentSubscription::get_Id()
     @_property
     def id(self) -> str: ...
 
 @typing.final
 class TargetedContentSubscriptionOptions(winrt.system.Object):
+    # System.Void Windows.Services.TargetedContent.TargetedContentSubscriptionOptions::Update()
     def update(self) -> None: ...
+    # System.Boolean Windows.Services.TargetedContent.TargetedContentSubscriptionOptions::get_AllowPartialContentAvailability()
     @_property
     def allow_partial_content_availability(self) -> bool: ...
+    # System.Void Windows.Services.TargetedContent.TargetedContentSubscriptionOptions::put_AllowPartialContentAvailability(System.Boolean)
     @allow_partial_content_availability.setter
     def allow_partial_content_availability(self, value: bool) -> None: ...
+    # Windows.Foundation.Collections.IMap`2<System.String,System.String> Windows.Services.TargetedContent.TargetedContentSubscriptionOptions::get_CloudQueryParameters()
     @_property
     def cloud_query_parameters(self) -> typing.MutableMapping[str, str]: ...
+    # Windows.Foundation.Collections.IVector`1<System.String> Windows.Services.TargetedContent.TargetedContentSubscriptionOptions::get_LocalFilters()
     @_property
     def local_filters(self) -> typing.MutableSequence[str]: ...
+    # System.String Windows.Services.TargetedContent.TargetedContentSubscriptionOptions::get_SubscriptionId()
     @_property
     def subscription_id(self) -> str: ...
 
 @typing.final
 class TargetedContentValue(winrt.system.Object):
+    # Windows.Services.TargetedContent.TargetedContentAction Windows.Services.TargetedContent.TargetedContentValue::get_Action()
     @_property
     def action(self) -> TargetedContentAction: ...
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Services.TargetedContent.TargetedContentAction> Windows.Services.TargetedContent.TargetedContentValue::get_Actions()
     @_property
     def actions(self) -> typing.Sequence[TargetedContentAction]: ...
+    # System.Boolean Windows.Services.TargetedContent.TargetedContentValue::get_Boolean()
     @_property
     def boolean(self) -> bool: ...
+    # Windows.Foundation.Collections.IVectorView`1<System.Boolean> Windows.Services.TargetedContent.TargetedContentValue::get_Booleans()
     @_property
     def booleans(self) -> typing.Sequence[bool]: ...
+    # Windows.Services.TargetedContent.TargetedContentFile Windows.Services.TargetedContent.TargetedContentValue::get_File()
     @_property
     def file(self) -> TargetedContentFile: ...
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Services.TargetedContent.TargetedContentFile> Windows.Services.TargetedContent.TargetedContentValue::get_Files()
     @_property
     def files(self) -> typing.Sequence[TargetedContentFile]: ...
+    # Windows.Services.TargetedContent.TargetedContentImage Windows.Services.TargetedContent.TargetedContentValue::get_ImageFile()
     @_property
     def image_file(self) -> TargetedContentImage: ...
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Services.TargetedContent.TargetedContentImage> Windows.Services.TargetedContent.TargetedContentValue::get_ImageFiles()
     @_property
     def image_files(self) -> typing.Sequence[TargetedContentImage]: ...
+    # System.Double Windows.Services.TargetedContent.TargetedContentValue::get_Number()
     @_property
     def number(self) -> winrt.system.Double: ...
+    # Windows.Foundation.Collections.IVectorView`1<System.Double> Windows.Services.TargetedContent.TargetedContentValue::get_Numbers()
     @_property
     def numbers(self) -> typing.Sequence[winrt.system.Double]: ...
+    # System.String Windows.Services.TargetedContent.TargetedContentValue::get_Path()
     @_property
     def path(self) -> str: ...
+    # System.String Windows.Services.TargetedContent.TargetedContentValue::get_String()
     @_property
     def string(self) -> str: ...
+    # Windows.Foundation.Collections.IVectorView`1<System.String> Windows.Services.TargetedContent.TargetedContentValue::get_Strings()
     @_property
     def strings(self) -> typing.Sequence[str]: ...
+    # Windows.Foundation.Uri Windows.Services.TargetedContent.TargetedContentValue::get_Uri()
     @_property
     def uri(self) -> windows_foundation.Uri: ...
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Foundation.Uri> Windows.Services.TargetedContent.TargetedContentValue::get_Uris()
     @_property
     def uris(self) -> typing.Sequence[windows_foundation.Uri]: ...
+    # Windows.Services.TargetedContent.TargetedContentValueKind Windows.Services.TargetedContent.TargetedContentValue::get_ValueKind()
     @_property
     def value_kind(self) -> TargetedContentValueKind: ...
 

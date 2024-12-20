@@ -88,14 +88,17 @@ from winrt.windows.ui.xaml.controls.primitives import DragCompletedEventHandler,
 Self = typing.TypeVar('Self')
 
 class ColorPickerSlider_Static(windows_ui_xaml_controls.Slider_Static):
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.Primitives.ColorPickerSlider::get_ColorChannelProperty()
     @_property
     @typing.final
     def color_channel_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class ColorPickerSlider(windows_ui_xaml_controls.Slider, metaclass=ColorPickerSlider_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Windows.UI.Xaml.Controls.ColorPickerHsvChannel Windows.UI.Xaml.Controls.Primitives.ColorPickerSlider::get_ColorChannel()
     @_property
     def color_channel(self) -> windows_ui_xaml_controls.ColorPickerHsvChannel: ...
+    # System.Void Windows.UI.Xaml.Controls.Primitives.ColorPickerSlider::put_ColorChannel(Windows.UI.Xaml.Controls.ColorPickerHsvChannel)
     @color_channel.setter
     @typing.final
     def color_channel(self, value: windows_ui_xaml_controls.ColorPickerHsvChannel) -> None: ...

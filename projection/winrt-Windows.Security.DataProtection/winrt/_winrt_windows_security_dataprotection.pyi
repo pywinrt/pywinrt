@@ -20,32 +20,45 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class UserDataAvailabilityStateChangedEventArgs(winrt.system.Object):
+    # Windows.Foundation.Deferral Windows.Security.DataProtection.UserDataAvailabilityStateChangedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
 
 @typing.final
 class UserDataBufferUnprotectResult(winrt.system.Object):
+    # Windows.Security.DataProtection.UserDataBufferUnprotectStatus Windows.Security.DataProtection.UserDataBufferUnprotectResult::get_Status()
     @_property
     def status(self) -> UserDataBufferUnprotectStatus: ...
+    # Windows.Storage.Streams.IBuffer Windows.Security.DataProtection.UserDataBufferUnprotectResult::get_UnprotectedBuffer()
     @_property
     def unprotected_buffer(self) -> windows_storage_streams.IBuffer: ...
 
 @typing.final
 class UserDataProtectionManager_Static(type):
+    # Windows.Security.DataProtection.UserDataProtectionManager Windows.Security.DataProtection.UserDataProtectionManager::TryGetDefault()
     def try_get_default(cls) -> UserDataProtectionManager: ...
+    # Windows.Security.DataProtection.UserDataProtectionManager Windows.Security.DataProtection.UserDataProtectionManager::TryGetForUser(Windows.System.User)
     def try_get_for_user(cls, user: windows_system.User, /) -> UserDataProtectionManager: ...
 
 @typing.final
 class UserDataProtectionManager(winrt.system.Object, metaclass=UserDataProtectionManager_Static):
+    # Windows.Foundation.IAsyncOperation`1<Windows.Security.DataProtection.UserDataStorageItemProtectionInfo> Windows.Security.DataProtection.UserDataProtectionManager::GetStorageItemProtectionInfoAsync(Windows.Storage.IStorageItem)
     def get_storage_item_protection_info_async(self, storage_item: windows_storage.ImplementsIStorageItem, /) -> windows_foundation.IAsyncOperation[UserDataStorageItemProtectionInfo]: ...
+    # System.Boolean Windows.Security.DataProtection.UserDataProtectionManager::IsContinuedDataAvailabilityExpected(Windows.Security.DataProtection.UserDataAvailability)
     def is_continued_data_availability_expected(self, availability: UserDataAvailability, /) -> bool: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IBuffer> Windows.Security.DataProtection.UserDataProtectionManager::ProtectBufferAsync(Windows.Storage.Streams.IBuffer,Windows.Security.DataProtection.UserDataAvailability)
     def protect_buffer_async(self, unprotected_buffer: windows_storage_streams.ImplementsIBuffer, availability: UserDataAvailability, /) -> windows_foundation.IAsyncOperation[windows_storage_streams.IBuffer]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Security.DataProtection.UserDataStorageItemProtectionStatus> Windows.Security.DataProtection.UserDataProtectionManager::ProtectStorageItemAsync(Windows.Storage.IStorageItem,Windows.Security.DataProtection.UserDataAvailability)
     def protect_storage_item_async(self, storage_item: windows_storage.ImplementsIStorageItem, availability: UserDataAvailability, /) -> windows_foundation.IAsyncOperation[UserDataStorageItemProtectionStatus]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Security.DataProtection.UserDataBufferUnprotectResult> Windows.Security.DataProtection.UserDataProtectionManager::UnprotectBufferAsync(Windows.Storage.Streams.IBuffer)
     def unprotect_buffer_async(self, protected_buffer: windows_storage_streams.ImplementsIBuffer, /) -> windows_foundation.IAsyncOperation[UserDataBufferUnprotectResult]: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Security.DataProtection.UserDataProtectionManager::add_DataAvailabilityStateChanged(Windows.Foundation.TypedEventHandler`2<Windows.Security.DataProtection.UserDataProtectionManager,Windows.Security.DataProtection.UserDataAvailabilityStateChangedEventArgs>)
     def add_data_availability_state_changed(self, handler: windows_foundation.TypedEventHandler[UserDataProtectionManager, UserDataAvailabilityStateChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Security.DataProtection.UserDataProtectionManager::remove_DataAvailabilityStateChanged(Windows.Foundation.EventRegistrationToken)
     def remove_data_availability_state_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
 @typing.final
 class UserDataStorageItemProtectionInfo(winrt.system.Object):
+    # Windows.Security.DataProtection.UserDataAvailability Windows.Security.DataProtection.UserDataStorageItemProtectionInfo::get_Availability()
     @_property
     def availability(self) -> UserDataAvailability: ...
 

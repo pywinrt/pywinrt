@@ -28,18 +28,25 @@ class AutomationRemoteOperationOperandId:
 
 @typing.final
 class AutomationRemoteOperationResult(winrt.system.Object):
+    # System.Object Windows.UI.UIAutomation.Core.AutomationRemoteOperationResult::GetOperand(Windows.UI.UIAutomation.Core.AutomationRemoteOperationOperandId)
     def get_operand(self, operand_id: AutomationRemoteOperationOperandId, /) -> winrt.system.Object: ...
+    # System.Boolean Windows.UI.UIAutomation.Core.AutomationRemoteOperationResult::HasOperand(Windows.UI.UIAutomation.Core.AutomationRemoteOperationOperandId)
     def has_operand(self, operand_id: AutomationRemoteOperationOperandId, /) -> bool: ...
+    # System.Int32 Windows.UI.UIAutomation.Core.AutomationRemoteOperationResult::get_ErrorLocation()
     @_property
     def error_location(self) -> winrt.system.Int32: ...
+    # Windows.Foundation.HResult Windows.UI.UIAutomation.Core.AutomationRemoteOperationResult::get_ExtendedError()
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
+    # Windows.UI.UIAutomation.Core.AutomationRemoteOperationStatus Windows.UI.UIAutomation.Core.AutomationRemoteOperationResult::get_Status()
     @_property
     def status(self) -> AutomationRemoteOperationStatus: ...
 
 @typing.final
 class CoreAutomationRegistrar_Static(type):
+    # Windows.UI.UIAutomation.Core.AutomationAnnotationTypeRegistration Windows.UI.UIAutomation.Core.CoreAutomationRegistrar::RegisterAnnotationType(System.Guid)
     def register_annotation_type(cls, guid: _uuid.UUID, /) -> AutomationAnnotationTypeRegistration: ...
+    # System.Void Windows.UI.UIAutomation.Core.CoreAutomationRegistrar::UnregisterAnnotationType(Windows.UI.UIAutomation.Core.AutomationAnnotationTypeRegistration)
     def unregister_annotation_type(cls, registration: AutomationAnnotationTypeRegistration, /) -> None: ...
 
 @typing.final
@@ -49,17 +56,26 @@ class CoreAutomationRegistrar(winrt.system.Object, metaclass=CoreAutomationRegis
 @typing.final
 class CoreAutomationRemoteOperation(winrt.system.Object):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Void Windows.UI.UIAutomation.Core.CoreAutomationRemoteOperation::AddToResults(Windows.UI.UIAutomation.Core.AutomationRemoteOperationOperandId)
     def add_to_results(self, operand_id: AutomationRemoteOperationOperandId, /) -> None: ...
+    # Windows.UI.UIAutomation.Core.AutomationRemoteOperationResult Windows.UI.UIAutomation.Core.CoreAutomationRemoteOperation::Execute(System.Byte[])
     def execute(self, bytecode_buffer: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], /) -> AutomationRemoteOperationResult: ...
+    # System.Void Windows.UI.UIAutomation.Core.CoreAutomationRemoteOperation::ImportConnectionBoundObject(Windows.UI.UIAutomation.Core.AutomationRemoteOperationOperandId,Windows.UI.UIAutomation.AutomationConnectionBoundObject)
     def import_connection_bound_object(self, operand_id: AutomationRemoteOperationOperandId, connection_bound_object: windows_ui_uiautomation.AutomationConnectionBoundObject, /) -> None: ...
+    # System.Void Windows.UI.UIAutomation.Core.CoreAutomationRemoteOperation::ImportElement(Windows.UI.UIAutomation.Core.AutomationRemoteOperationOperandId,Windows.UI.UIAutomation.AutomationElement)
     def import_element(self, operand_id: AutomationRemoteOperationOperandId, element: windows_ui_uiautomation.AutomationElement, /) -> None: ...
+    # System.Void Windows.UI.UIAutomation.Core.CoreAutomationRemoteOperation::ImportTextRange(Windows.UI.UIAutomation.Core.AutomationRemoteOperationOperandId,Windows.UI.UIAutomation.AutomationTextRange)
     def import_text_range(self, operand_id: AutomationRemoteOperationOperandId, text_range: windows_ui_uiautomation.AutomationTextRange, /) -> None: ...
+    # System.Boolean Windows.UI.UIAutomation.Core.CoreAutomationRemoteOperation::IsOpcodeSupported(System.UInt32)
     def is_opcode_supported(self, opcode: winrt.system.UInt32, /) -> bool: ...
 
 @typing.final
 class CoreAutomationRemoteOperationContext(winrt.system.Object):
+    # System.Object Windows.UI.UIAutomation.Core.CoreAutomationRemoteOperationContext::GetOperand(Windows.UI.UIAutomation.Core.AutomationRemoteOperationOperandId)
     def get_operand(self, id: AutomationRemoteOperationOperandId, /) -> winrt.system.Object: ...
+    # System.Void Windows.UI.UIAutomation.Core.CoreAutomationRemoteOperationContext::SetOperand(Windows.UI.UIAutomation.Core.AutomationRemoteOperationOperandId,System.Object)
     def set_operand(self, id: AutomationRemoteOperationOperandId, operand: winrt.system.Object, /) -> None: ...
+    # System.Void Windows.UI.UIAutomation.Core.CoreAutomationRemoteOperationContext::SetOperand(Windows.UI.UIAutomation.Core.AutomationRemoteOperationOperandId,System.Object,System.Guid)
     def set_operand2(self, id: AutomationRemoteOperationOperandId, operand: winrt.system.Object, operand_interface_id: _uuid.UUID, /) -> None: ...
 
 @typing.final
@@ -68,30 +84,42 @@ class RemoteAutomationClientSession(winrt.system.Object):
     def __new__(cls: typing.Type[Self], name: str) -> Self: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], name: str, session_id: _uuid.UUID) -> Self: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.UI.UIAutomation.Core.RemoteAutomationWindow> Windows.UI.UIAutomation.Core.RemoteAutomationClientSession::CreateWindowAsync(System.UInt64,System.UInt32,System.Object)
     def create_window_async(self, remote_window_id: winrt.system.UInt64, remote_process_id: winrt.system.UInt32, parent_automation_element: winrt.system.Object, /) -> windows_foundation.IAsyncOperation[RemoteAutomationWindow]: ...
+    # System.Void Windows.UI.UIAutomation.Core.RemoteAutomationClientSession::Start()
     def start(self) -> None: ...
+    # System.Void Windows.UI.UIAutomation.Core.RemoteAutomationClientSession::Stop()
     def stop(self) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.UI.UIAutomation.Core.RemoteAutomationClientSession::add_ConnectionRequested(Windows.Foundation.TypedEventHandler`2<Windows.UI.UIAutomation.Core.RemoteAutomationClientSession,Windows.UI.UIAutomation.Core.RemoteAutomationConnectionRequestedEventArgs>)
     def add_connection_requested(self, handler: windows_foundation.TypedEventHandler[RemoteAutomationClientSession, RemoteAutomationConnectionRequestedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.UI.UIAutomation.Core.RemoteAutomationClientSession::remove_ConnectionRequested(Windows.Foundation.EventRegistrationToken)
     def remove_connection_requested(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.UI.UIAutomation.Core.RemoteAutomationClientSession::add_Disconnected(Windows.Foundation.TypedEventHandler`2<Windows.UI.UIAutomation.Core.RemoteAutomationClientSession,Windows.UI.UIAutomation.Core.RemoteAutomationDisconnectedEventArgs>)
     def add_disconnected(self, handler: windows_foundation.TypedEventHandler[RemoteAutomationClientSession, RemoteAutomationDisconnectedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.UI.UIAutomation.Core.RemoteAutomationClientSession::remove_Disconnected(Windows.Foundation.EventRegistrationToken)
     def remove_disconnected(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.Guid Windows.UI.UIAutomation.Core.RemoteAutomationClientSession::get_SessionId()
     @_property
     def session_id(self) -> _uuid.UUID: ...
 
 @typing.final
 class RemoteAutomationConnectionRequestedEventArgs(winrt.system.Object):
+    # System.String Windows.UI.UIAutomation.Core.RemoteAutomationConnectionRequestedEventArgs::get_LocalPipeName()
     @_property
     def local_pipe_name(self) -> str: ...
+    # System.UInt32 Windows.UI.UIAutomation.Core.RemoteAutomationConnectionRequestedEventArgs::get_RemoteProcessId()
     @_property
     def remote_process_id(self) -> winrt.system.UInt32: ...
 
 @typing.final
 class RemoteAutomationDisconnectedEventArgs(winrt.system.Object):
+    # System.String Windows.UI.UIAutomation.Core.RemoteAutomationDisconnectedEventArgs::get_LocalPipeName()
     @_property
     def local_pipe_name(self) -> str: ...
 
 @typing.final
 class RemoteAutomationServer_Static(type):
+    # System.Void Windows.UI.UIAutomation.Core.RemoteAutomationServer::ReportSession(System.Guid)
     def report_session(cls, session_id: _uuid.UUID, /) -> None: ...
 
 @typing.final
@@ -100,7 +128,9 @@ class RemoteAutomationServer(winrt.system.Object, metaclass=RemoteAutomationServ
 
 @typing.final
 class RemoteAutomationWindow(winrt.system.Object):
+    # Windows.Foundation.IAsyncAction Windows.UI.UIAutomation.Core.RemoteAutomationWindow::UnregisterAsync()
     def unregister_async(self) -> windows_foundation.IAsyncAction: ...
+    # System.Object Windows.UI.UIAutomation.Core.RemoteAutomationWindow::get_AutomationProvider()
     @_property
     def automation_provider(self) -> winrt.system.Object: ...
 
@@ -109,6 +139,7 @@ class ImplementsICoreAutomationConnectionBoundObjectProvider():
 
 @typing.final
 class ICoreAutomationConnectionBoundObjectProvider(winrt.system.Object, ImplementsICoreAutomationConnectionBoundObjectProvider):
+    # System.Boolean Windows.UI.UIAutomation.Core.ICoreAutomationConnectionBoundObjectProvider::get_IsComThreadingRequired()
     @_property
     def is_com_threading_required(self) -> bool: ...
 
@@ -117,6 +148,8 @@ class ImplementsICoreAutomationRemoteOperationExtensionProvider():
 
 @typing.final
 class ICoreAutomationRemoteOperationExtensionProvider(winrt.system.Object, ImplementsICoreAutomationRemoteOperationExtensionProvider):
+    # System.Void Windows.UI.UIAutomation.Core.ICoreAutomationRemoteOperationExtensionProvider::CallExtension(System.Guid,Windows.UI.UIAutomation.Core.CoreAutomationRemoteOperationContext,Windows.UI.UIAutomation.Core.AutomationRemoteOperationOperandId[])
     def call_extension(self, extension_id: _uuid.UUID, context: CoreAutomationRemoteOperationContext, operand_ids: typing.Union[winrt.system.Array[AutomationRemoteOperationOperandId], winrt.system.ReadableBuffer], /) -> None: ...
+    # System.Boolean Windows.UI.UIAutomation.Core.ICoreAutomationRemoteOperationExtensionProvider::IsExtensionSupported(System.Guid)
     def is_extension_supported(self, extension_id: _uuid.UUID, /) -> bool: ...
 

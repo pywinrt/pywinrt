@@ -17,13 +17,21 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class PlatformDiagnosticActions_Static(type):
+    # Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActionState Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActions::DownloadLatestSettingsForNamespace(System.String,System.String,System.Boolean,System.Boolean,System.Boolean)
     def download_latest_settings_for_namespace(cls, partner: str, feature: str, is_scenario_namespace: bool, download_over_costed_network: bool, download_over_battery: bool, /) -> PlatformDiagnosticActionState: ...
+    # Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActionState Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActions::ForceUpload(Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticEventBufferLatencies,System.Boolean,System.Boolean)
     def force_upload(cls, latency: PlatformDiagnosticEventBufferLatencies, upload_over_costed_network: bool, upload_over_battery: bool, /) -> PlatformDiagnosticActionState: ...
+    # Windows.Foundation.Collections.IVectorView`1<System.Guid> Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActions::GetActiveScenarioList()
     def get_active_scenario_list(cls) -> typing.Sequence[_uuid.UUID]: ...
+    # Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceRuntimeInfo Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActions::GetActiveTraceRuntime(Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceSlotType)
     def get_active_trace_runtime(cls, slot_type: PlatformDiagnosticTraceSlotType, /) -> PlatformDiagnosticTraceRuntimeInfo: ...
+    # Windows.Foundation.Collections.IVectorView`1<Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo> Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActions::GetKnownTraceList(Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceSlotType)
     def get_known_trace_list(cls, slot_type: PlatformDiagnosticTraceSlotType, /) -> typing.Sequence[PlatformDiagnosticTraceInfo]: ...
+    # System.Boolean Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActions::IsScenarioEnabled(System.Guid)
     def is_scenario_enabled(cls, scenario_id: _uuid.UUID, /) -> bool: ...
+    # Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceSlotState Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActions::IsTraceRunning(Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceSlotType,System.Guid,System.UInt64)
     def is_trace_running(cls, slot_type: PlatformDiagnosticTraceSlotType, scenario_id: _uuid.UUID, trace_profile_hash: winrt.system.UInt64, /) -> PlatformDiagnosticTraceSlotState: ...
+    # System.Boolean Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActions::TryEscalateScenario(System.Guid,Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticEscalationType,System.String,System.Boolean,System.Boolean,Windows.Foundation.Collections.IMapView`2<System.String,System.String>)
     def try_escalate_scenario(cls, scenario_id: _uuid.UUID, escalation_type: PlatformDiagnosticEscalationType, output_directory: str, timestamp_output_directory: bool, force_escalation_upload: bool, triggers: typing.Mapping[str, str], /) -> bool: ...
 
 @typing.final
@@ -32,23 +40,31 @@ class PlatformDiagnosticActions(winrt.system.Object, metaclass=PlatformDiagnosti
 
 @typing.final
 class PlatformDiagnosticTraceInfo(winrt.system.Object):
+    # System.Boolean Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo::get_IsAutoLogger()
     @_property
     def is_auto_logger(self) -> bool: ...
+    # System.Boolean Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo::get_IsExclusive()
     @_property
     def is_exclusive(self) -> bool: ...
+    # System.Int64 Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo::get_MaxTraceDurationFileTime()
     @_property
     def max_trace_duration_file_time(self) -> winrt.system.Int64: ...
+    # Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTracePriority Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo::get_Priority()
     @_property
     def priority(self) -> PlatformDiagnosticTracePriority: ...
+    # System.UInt64 Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo::get_ProfileHash()
     @_property
     def profile_hash(self) -> winrt.system.UInt64: ...
+    # System.Guid Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo::get_ScenarioId()
     @_property
     def scenario_id(self) -> _uuid.UUID: ...
 
 @typing.final
 class PlatformDiagnosticTraceRuntimeInfo(winrt.system.Object):
+    # System.Int64 Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceRuntimeInfo::get_EtwRuntimeFileTime()
     @_property
     def etw_runtime_file_time(self) -> winrt.system.Int64: ...
+    # System.Int64 Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceRuntimeInfo::get_RuntimeFileTime()
     @_property
     def runtime_file_time(self) -> winrt.system.Int64: ...
 

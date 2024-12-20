@@ -24,81 +24,108 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class BluetoothLEAdvertisementPublisherTriggerDetails(winrt.system.Object):
+    # Windows.Devices.Bluetooth.BluetoothError Windows.Devices.Bluetooth.Background.BluetoothLEAdvertisementPublisherTriggerDetails::get_Error()
     @_property
     def error(self) -> windows_devices_bluetooth.BluetoothError: ...
+    # Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisherStatus Windows.Devices.Bluetooth.Background.BluetoothLEAdvertisementPublisherTriggerDetails::get_Status()
     @_property
     def status(self) -> windows_devices_bluetooth_advertisement.BluetoothLEAdvertisementPublisherStatus: ...
+    # Windows.Foundation.IReference`1<System.Int16> Windows.Devices.Bluetooth.Background.BluetoothLEAdvertisementPublisherTriggerDetails::get_SelectedTransmitPowerLevelInDBm()
     @_property
     def selected_transmit_power_level_in_dbm(self) -> typing.Optional[winrt.system.Int16]: ...
 
 @typing.final
 class BluetoothLEAdvertisementWatcherTriggerDetails(winrt.system.Object):
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEventArgs> Windows.Devices.Bluetooth.Background.BluetoothLEAdvertisementWatcherTriggerDetails::get_Advertisements()
     @_property
     def advertisements(self) -> typing.Sequence[windows_devices_bluetooth_advertisement.BluetoothLEAdvertisementReceivedEventArgs]: ...
+    # Windows.Devices.Bluetooth.BluetoothError Windows.Devices.Bluetooth.Background.BluetoothLEAdvertisementWatcherTriggerDetails::get_Error()
     @_property
     def error(self) -> windows_devices_bluetooth.BluetoothError: ...
+    # Windows.Devices.Bluetooth.BluetoothSignalStrengthFilter Windows.Devices.Bluetooth.Background.BluetoothLEAdvertisementWatcherTriggerDetails::get_SignalStrengthFilter()
     @_property
     def signal_strength_filter(self) -> windows_devices_bluetooth.BluetoothSignalStrengthFilter: ...
 
 @typing.final
 class GattCharacteristicNotificationTriggerDetails(winrt.system.Object):
+    # Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic Windows.Devices.Bluetooth.Background.GattCharacteristicNotificationTriggerDetails::get_Characteristic()
     @_property
     def characteristic(self) -> windows_devices_bluetooth_genericattributeprofile.GattCharacteristic: ...
+    # Windows.Storage.Streams.IBuffer Windows.Devices.Bluetooth.Background.GattCharacteristicNotificationTriggerDetails::get_Value()
     @_property
     def value(self) -> windows_storage_streams.IBuffer: ...
+    # Windows.Devices.Bluetooth.BluetoothError Windows.Devices.Bluetooth.Background.GattCharacteristicNotificationTriggerDetails::get_Error()
     @_property
     def error(self) -> windows_devices_bluetooth.BluetoothError: ...
+    # Windows.Devices.Bluetooth.Background.BluetoothEventTriggeringMode Windows.Devices.Bluetooth.Background.GattCharacteristicNotificationTriggerDetails::get_EventTriggeringMode()
     @_property
     def event_triggering_mode(self) -> BluetoothEventTriggeringMode: ...
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattValueChangedEventArgs> Windows.Devices.Bluetooth.Background.GattCharacteristicNotificationTriggerDetails::get_ValueChangedEvents()
     @_property
     def value_changed_events(self) -> typing.Sequence[windows_devices_bluetooth_genericattributeprofile.GattValueChangedEventArgs]: ...
 
 @typing.final
 class GattServiceProviderConnection_Static(type):
+    # Windows.Foundation.Collections.IMapView`2<System.String,Windows.Devices.Bluetooth.Background.GattServiceProviderConnection> Windows.Devices.Bluetooth.Background.GattServiceProviderConnection::get_AllServices()
     @_property
     def all_services(cls) -> typing.Mapping[str, GattServiceProviderConnection]: ...
 
 @typing.final
 class GattServiceProviderConnection(winrt.system.Object, metaclass=GattServiceProviderConnection_Static):
+    # System.Void Windows.Devices.Bluetooth.Background.GattServiceProviderConnection::Start()
     def start(self) -> None: ...
+    # Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalService Windows.Devices.Bluetooth.Background.GattServiceProviderConnection::get_Service()
     @_property
     def service(self) -> windows_devices_bluetooth_genericattributeprofile.GattLocalService: ...
+    # System.String Windows.Devices.Bluetooth.Background.GattServiceProviderConnection::get_TriggerId()
     @_property
     def trigger_id(self) -> str: ...
 
 @typing.final
 class GattServiceProviderTriggerDetails(winrt.system.Object):
+    # Windows.Devices.Bluetooth.Background.GattServiceProviderConnection Windows.Devices.Bluetooth.Background.GattServiceProviderTriggerDetails::get_Connection()
     @_property
     def connection(self) -> GattServiceProviderConnection: ...
 
 @typing.final
 class RfcommConnectionTriggerDetails(winrt.system.Object):
+    # System.Boolean Windows.Devices.Bluetooth.Background.RfcommConnectionTriggerDetails::get_Incoming()
     @_property
     def incoming(self) -> bool: ...
+    # Windows.Devices.Bluetooth.BluetoothDevice Windows.Devices.Bluetooth.Background.RfcommConnectionTriggerDetails::get_RemoteDevice()
     @_property
     def remote_device(self) -> windows_devices_bluetooth.BluetoothDevice: ...
+    # Windows.Networking.Sockets.StreamSocket Windows.Devices.Bluetooth.Background.RfcommConnectionTriggerDetails::get_Socket()
     @_property
     def socket(self) -> windows_networking_sockets.StreamSocket: ...
 
 @typing.final
 class RfcommInboundConnectionInformation(winrt.system.Object):
+    # Windows.Devices.Bluetooth.BluetoothServiceCapabilities Windows.Devices.Bluetooth.Background.RfcommInboundConnectionInformation::get_ServiceCapabilities()
     @_property
     def service_capabilities(self) -> windows_devices_bluetooth.BluetoothServiceCapabilities: ...
+    # System.Void Windows.Devices.Bluetooth.Background.RfcommInboundConnectionInformation::put_ServiceCapabilities(Windows.Devices.Bluetooth.BluetoothServiceCapabilities)
     @service_capabilities.setter
     def service_capabilities(self, value: windows_devices_bluetooth.BluetoothServiceCapabilities) -> None: ...
+    # Windows.Storage.Streams.IBuffer Windows.Devices.Bluetooth.Background.RfcommInboundConnectionInformation::get_SdpRecord()
     @_property
     def sdp_record(self) -> windows_storage_streams.IBuffer: ...
+    # System.Void Windows.Devices.Bluetooth.Background.RfcommInboundConnectionInformation::put_SdpRecord(Windows.Storage.Streams.IBuffer)
     @sdp_record.setter
     def sdp_record(self, value: windows_storage_streams.ImplementsIBuffer) -> None: ...
+    # Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId Windows.Devices.Bluetooth.Background.RfcommInboundConnectionInformation::get_LocalServiceId()
     @_property
     def local_service_id(self) -> windows_devices_bluetooth_rfcomm.RfcommServiceId: ...
+    # System.Void Windows.Devices.Bluetooth.Background.RfcommInboundConnectionInformation::put_LocalServiceId(Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId)
     @local_service_id.setter
     def local_service_id(self, value: windows_devices_bluetooth_rfcomm.RfcommServiceId) -> None: ...
 
 @typing.final
 class RfcommOutboundConnectionInformation(winrt.system.Object):
+    # Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId Windows.Devices.Bluetooth.Background.RfcommOutboundConnectionInformation::get_RemoteServiceId()
     @_property
     def remote_service_id(self) -> windows_devices_bluetooth_rfcomm.RfcommServiceId: ...
+    # System.Void Windows.Devices.Bluetooth.Background.RfcommOutboundConnectionInformation::put_RemoteServiceId(Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId)
     @remote_service_id.setter
     def remote_service_id(self, value: windows_devices_bluetooth_rfcomm.RfcommServiceId) -> None: ...
 

@@ -17,56 +17,75 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class PhoneCallBlockedTriggerDetails(winrt.system.Object):
+    # Windows.ApplicationModel.Calls.Background.PhoneCallBlockedReason Windows.ApplicationModel.Calls.Background.PhoneCallBlockedTriggerDetails::get_CallBlockedReason()
     @_property
     def call_blocked_reason(self) -> PhoneCallBlockedReason: ...
+    # System.Guid Windows.ApplicationModel.Calls.Background.PhoneCallBlockedTriggerDetails::get_LineId()
     @_property
     def line_id(self) -> _uuid.UUID: ...
+    # System.String Windows.ApplicationModel.Calls.Background.PhoneCallBlockedTriggerDetails::get_PhoneNumber()
     @_property
     def phone_number(self) -> str: ...
 
 @typing.final
 class PhoneCallOriginDataRequestTriggerDetails(winrt.system.Object):
+    # System.String Windows.ApplicationModel.Calls.Background.PhoneCallOriginDataRequestTriggerDetails::get_PhoneNumber()
     @_property
     def phone_number(self) -> str: ...
+    # System.Guid Windows.ApplicationModel.Calls.Background.PhoneCallOriginDataRequestTriggerDetails::get_RequestId()
     @_property
     def request_id(self) -> _uuid.UUID: ...
 
 @typing.final
 class PhoneIncomingCallDismissedTriggerDetails(winrt.system.Object):
+    # Windows.Foundation.DateTime Windows.ApplicationModel.Calls.Background.PhoneIncomingCallDismissedTriggerDetails::get_DismissalTime()
     @_property
     def dismissal_time(self) -> datetime.datetime: ...
+    # System.String Windows.ApplicationModel.Calls.Background.PhoneIncomingCallDismissedTriggerDetails::get_DisplayName()
     @_property
     def display_name(self) -> str: ...
+    # System.Guid Windows.ApplicationModel.Calls.Background.PhoneIncomingCallDismissedTriggerDetails::get_LineId()
     @_property
     def line_id(self) -> _uuid.UUID: ...
+    # System.String Windows.ApplicationModel.Calls.Background.PhoneIncomingCallDismissedTriggerDetails::get_PhoneNumber()
     @_property
     def phone_number(self) -> str: ...
+    # Windows.ApplicationModel.Calls.Background.PhoneIncomingCallDismissedReason Windows.ApplicationModel.Calls.Background.PhoneIncomingCallDismissedTriggerDetails::get_Reason()
     @_property
     def reason(self) -> PhoneIncomingCallDismissedReason: ...
+    # System.String Windows.ApplicationModel.Calls.Background.PhoneIncomingCallDismissedTriggerDetails::get_TextReplyMessage()
     @_property
     def text_reply_message(self) -> str: ...
 
 @typing.final
 class PhoneIncomingCallNotificationTriggerDetails(winrt.system.Object):
+    # System.String Windows.ApplicationModel.Calls.Background.PhoneIncomingCallNotificationTriggerDetails::get_CallId()
     @_property
     def call_id(self) -> str: ...
+    # System.Guid Windows.ApplicationModel.Calls.Background.PhoneIncomingCallNotificationTriggerDetails::get_LineId()
     @_property
     def line_id(self) -> _uuid.UUID: ...
 
 @typing.final
 class PhoneLineChangedTriggerDetails(winrt.system.Object):
+    # System.Boolean Windows.ApplicationModel.Calls.Background.PhoneLineChangedTriggerDetails::HasLinePropertyChanged(Windows.ApplicationModel.Calls.Background.PhoneLineProperties)
     def has_line_property_changed(self, line_property: PhoneLineProperties, /) -> bool: ...
+    # Windows.ApplicationModel.Calls.Background.PhoneLineChangeKind Windows.ApplicationModel.Calls.Background.PhoneLineChangedTriggerDetails::get_ChangeType()
     @_property
     def change_type(self) -> PhoneLineChangeKind: ...
+    # System.Guid Windows.ApplicationModel.Calls.Background.PhoneLineChangedTriggerDetails::get_LineId()
     @_property
     def line_id(self) -> _uuid.UUID: ...
 
 @typing.final
 class PhoneNewVoicemailMessageTriggerDetails(winrt.system.Object):
+    # System.Guid Windows.ApplicationModel.Calls.Background.PhoneNewVoicemailMessageTriggerDetails::get_LineId()
     @_property
     def line_id(self) -> _uuid.UUID: ...
+    # System.String Windows.ApplicationModel.Calls.Background.PhoneNewVoicemailMessageTriggerDetails::get_OperatorMessage()
     @_property
     def operator_message(self) -> str: ...
+    # System.Int32 Windows.ApplicationModel.Calls.Background.PhoneNewVoicemailMessageTriggerDetails::get_VoicemailCount()
     @_property
     def voicemail_count(self) -> winrt.system.Int32: ...
 

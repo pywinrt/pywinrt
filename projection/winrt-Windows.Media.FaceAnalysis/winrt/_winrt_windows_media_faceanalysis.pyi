@@ -18,47 +18,67 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class DetectedFace(winrt.system.Object):
+    # Windows.Graphics.Imaging.BitmapBounds Windows.Media.FaceAnalysis.DetectedFace::get_FaceBox()
     @_property
     def face_box(self) -> windows_graphics_imaging.BitmapBounds: ...
 
 @typing.final
 class FaceDetector_Static(type):
+    # Windows.Foundation.IAsyncOperation`1<Windows.Media.FaceAnalysis.FaceDetector> Windows.Media.FaceAnalysis.FaceDetector::CreateAsync()
     def create_async(cls) -> windows_foundation.IAsyncOperation[FaceDetector]: ...
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Graphics.Imaging.BitmapPixelFormat> Windows.Media.FaceAnalysis.FaceDetector::GetSupportedBitmapPixelFormats()
     def get_supported_bitmap_pixel_formats(cls) -> typing.Sequence[windows_graphics_imaging.BitmapPixelFormat]: ...
+    # System.Boolean Windows.Media.FaceAnalysis.FaceDetector::IsBitmapPixelFormatSupported(Windows.Graphics.Imaging.BitmapPixelFormat)
     def is_bitmap_pixel_format_supported(cls, bitmap_pixel_format: windows_graphics_imaging.BitmapPixelFormat, /) -> bool: ...
+    # System.Boolean Windows.Media.FaceAnalysis.FaceDetector::get_IsSupported()
     @_property
     def is_supported(cls) -> bool: ...
 
 @typing.final
 class FaceDetector(winrt.system.Object, metaclass=FaceDetector_Static):
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVector`1<Windows.Media.FaceAnalysis.DetectedFace>> Windows.Media.FaceAnalysis.FaceDetector::DetectFacesAsync(Windows.Graphics.Imaging.SoftwareBitmap)
     def detect_faces_async(self, image: windows_graphics_imaging.SoftwareBitmap, /) -> windows_foundation.IAsyncOperation[typing.MutableSequence[DetectedFace]]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVector`1<Windows.Media.FaceAnalysis.DetectedFace>> Windows.Media.FaceAnalysis.FaceDetector::DetectFacesAsync(Windows.Graphics.Imaging.SoftwareBitmap,Windows.Graphics.Imaging.BitmapBounds)
     def detect_faces_with_search_area_async(self, image: windows_graphics_imaging.SoftwareBitmap, search_area: windows_graphics_imaging.BitmapBounds, /) -> windows_foundation.IAsyncOperation[typing.MutableSequence[DetectedFace]]: ...
+    # Windows.Graphics.Imaging.BitmapSize Windows.Media.FaceAnalysis.FaceDetector::get_MinDetectableFaceSize()
     @_property
     def min_detectable_face_size(self) -> windows_graphics_imaging.BitmapSize: ...
+    # System.Void Windows.Media.FaceAnalysis.FaceDetector::put_MinDetectableFaceSize(Windows.Graphics.Imaging.BitmapSize)
     @min_detectable_face_size.setter
     def min_detectable_face_size(self, value: windows_graphics_imaging.BitmapSize) -> None: ...
+    # Windows.Graphics.Imaging.BitmapSize Windows.Media.FaceAnalysis.FaceDetector::get_MaxDetectableFaceSize()
     @_property
     def max_detectable_face_size(self) -> windows_graphics_imaging.BitmapSize: ...
+    # System.Void Windows.Media.FaceAnalysis.FaceDetector::put_MaxDetectableFaceSize(Windows.Graphics.Imaging.BitmapSize)
     @max_detectable_face_size.setter
     def max_detectable_face_size(self, value: windows_graphics_imaging.BitmapSize) -> None: ...
 
 @typing.final
 class FaceTracker_Static(type):
+    # Windows.Foundation.IAsyncOperation`1<Windows.Media.FaceAnalysis.FaceTracker> Windows.Media.FaceAnalysis.FaceTracker::CreateAsync()
     def create_async(cls) -> windows_foundation.IAsyncOperation[FaceTracker]: ...
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Graphics.Imaging.BitmapPixelFormat> Windows.Media.FaceAnalysis.FaceTracker::GetSupportedBitmapPixelFormats()
     def get_supported_bitmap_pixel_formats(cls) -> typing.Sequence[windows_graphics_imaging.BitmapPixelFormat]: ...
+    # System.Boolean Windows.Media.FaceAnalysis.FaceTracker::IsBitmapPixelFormatSupported(Windows.Graphics.Imaging.BitmapPixelFormat)
     def is_bitmap_pixel_format_supported(cls, bitmap_pixel_format: windows_graphics_imaging.BitmapPixelFormat, /) -> bool: ...
+    # System.Boolean Windows.Media.FaceAnalysis.FaceTracker::get_IsSupported()
     @_property
     def is_supported(cls) -> bool: ...
 
 @typing.final
 class FaceTracker(winrt.system.Object, metaclass=FaceTracker_Static):
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVector`1<Windows.Media.FaceAnalysis.DetectedFace>> Windows.Media.FaceAnalysis.FaceTracker::ProcessNextFrameAsync(Windows.Media.VideoFrame)
     def process_next_frame_async(self, video_frame: windows_media.VideoFrame, /) -> windows_foundation.IAsyncOperation[typing.MutableSequence[DetectedFace]]: ...
+    # Windows.Graphics.Imaging.BitmapSize Windows.Media.FaceAnalysis.FaceTracker::get_MinDetectableFaceSize()
     @_property
     def min_detectable_face_size(self) -> windows_graphics_imaging.BitmapSize: ...
+    # System.Void Windows.Media.FaceAnalysis.FaceTracker::put_MinDetectableFaceSize(Windows.Graphics.Imaging.BitmapSize)
     @min_detectable_face_size.setter
     def min_detectable_face_size(self, value: windows_graphics_imaging.BitmapSize) -> None: ...
+    # Windows.Graphics.Imaging.BitmapSize Windows.Media.FaceAnalysis.FaceTracker::get_MaxDetectableFaceSize()
     @_property
     def max_detectable_face_size(self) -> windows_graphics_imaging.BitmapSize: ...
+    # System.Void Windows.Media.FaceAnalysis.FaceTracker::put_MaxDetectableFaceSize(Windows.Graphics.Imaging.BitmapSize)
     @max_detectable_face_size.setter
     def max_detectable_face_size(self, value: windows_graphics_imaging.BitmapSize) -> None: ...
 

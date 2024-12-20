@@ -18,22 +18,30 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class IndexedResourceCandidate(winrt.system.Object):
+    # System.String Windows.ApplicationModel.Resources.Management.IndexedResourceCandidate::GetQualifierValue(System.String)
     def get_qualifier_value(self, qualifier_name: str, /) -> str: ...
+    # Windows.Foundation.Collections.IMapView`2<System.String,System.String> Windows.ApplicationModel.Resources.Management.IndexedResourceCandidate::get_Metadata()
     @_property
     def metadata(self) -> typing.Mapping[str, str]: ...
+    # Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Resources.Management.IndexedResourceQualifier> Windows.ApplicationModel.Resources.Management.IndexedResourceCandidate::get_Qualifiers()
     @_property
     def qualifiers(self) -> typing.Sequence[IndexedResourceQualifier]: ...
+    # Windows.ApplicationModel.Resources.Management.IndexedResourceType Windows.ApplicationModel.Resources.Management.IndexedResourceCandidate::get_Type()
     @_property
     def type(self) -> IndexedResourceType: ...
+    # Windows.Foundation.Uri Windows.ApplicationModel.Resources.Management.IndexedResourceCandidate::get_Uri()
     @_property
     def uri(self) -> windows_foundation.Uri: ...
+    # System.String Windows.ApplicationModel.Resources.Management.IndexedResourceCandidate::get_ValueAsString()
     @_property
     def value_as_string(self) -> str: ...
 
 @typing.final
 class IndexedResourceQualifier(winrt.system.Object):
+    # System.String Windows.ApplicationModel.Resources.Management.IndexedResourceQualifier::get_QualifierName()
     @_property
     def qualifier_name(self) -> str: ...
+    # System.String Windows.ApplicationModel.Resources.Management.IndexedResourceQualifier::get_QualifierValue()
     @_property
     def qualifier_value(self) -> str: ...
 
@@ -43,8 +51,10 @@ class ResourceIndexer(winrt.system.Object):
     def __new__(cls: typing.Type[Self], project_root: windows_foundation.Uri, extension_dll_path: windows_foundation.Uri) -> Self: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], project_root: windows_foundation.Uri) -> Self: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Resources.Management.IndexedResourceCandidate>> Windows.ApplicationModel.Resources.Management.ResourceIndexer::IndexFileContentsAsync(Windows.Foundation.Uri)
     # @deprecated("Use IndexFilePath in mrmsupport.dll instead of IResourceIndexer.  For more info, see MSDN.")
     def index_file_contents_async(self, file: windows_foundation.Uri, /) -> windows_foundation.IAsyncOperation[typing.Sequence[IndexedResourceCandidate]]: ...
+    # Windows.ApplicationModel.Resources.Management.IndexedResourceCandidate Windows.ApplicationModel.Resources.Management.ResourceIndexer::IndexFilePath(Windows.Foundation.Uri)
     # @deprecated("Use IndexFilePath in mrmsupport.dll instead of IResourceIndexer.  For more info, see MSDN.")
     def index_file_path(self, file_path: windows_foundation.Uri, /) -> IndexedResourceCandidate: ...
 

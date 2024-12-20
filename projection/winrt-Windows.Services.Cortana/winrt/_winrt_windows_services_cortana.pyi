@@ -21,71 +21,95 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class CortanaActionableInsights_Static(type):
+    # Windows.Services.Cortana.CortanaActionableInsights Windows.Services.Cortana.CortanaActionableInsights::GetDefault()
     # @deprecated("CortanaActionableInsights is deprecated and might not work on all platforms. For more info, see MSDN.")
     def get_default(cls) -> CortanaActionableInsights: ...
+    # Windows.Services.Cortana.CortanaActionableInsights Windows.Services.Cortana.CortanaActionableInsights::GetForUser(Windows.System.User)
     # @deprecated("CortanaActionableInsights is deprecated and might not work on all platforms. For more info, see MSDN.")
     def get_for_user(cls, user: windows_system.User, /) -> CortanaActionableInsights: ...
 
 @typing.final
 class CortanaActionableInsights(winrt.system.Object, metaclass=CortanaActionableInsights_Static):
+    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Services.Cortana.CortanaActionableInsights::IsAvailableAsync()
     # @deprecated("CortanaActionableInsights is deprecated and might not work on all platforms. For more info, see MSDN.")
     def is_available_async(self) -> windows_foundation.IAsyncOperation[bool]: ...
+    # Windows.Foundation.IAsyncAction Windows.Services.Cortana.CortanaActionableInsights::ShowInsightsAsync(Windows.ApplicationModel.DataTransfer.DataPackage)
     # @deprecated("CortanaActionableInsights is deprecated and might not work on all platforms. For more info, see MSDN.")
     def show_insights_async(self, datapackage: windows_applicationmodel_datatransfer.DataPackage, /) -> windows_foundation.IAsyncAction: ...
+    # Windows.Foundation.IAsyncAction Windows.Services.Cortana.CortanaActionableInsights::ShowInsightsForImageAsync(Windows.Storage.Streams.IRandomAccessStreamReference)
     # @deprecated("CortanaActionableInsights is deprecated and might not work on all platforms. For more info, see MSDN.")
     def show_insights_for_image_async(self, image_stream: windows_storage_streams.ImplementsIRandomAccessStreamReference, /) -> windows_foundation.IAsyncAction: ...
+    # Windows.Foundation.IAsyncAction Windows.Services.Cortana.CortanaActionableInsights::ShowInsightsForImageAsync(Windows.Storage.Streams.IRandomAccessStreamReference,Windows.Services.Cortana.CortanaActionableInsightsOptions)
     # @deprecated("CortanaActionableInsights is deprecated and might not work on all platforms. For more info, see MSDN.")
     def show_insights_for_image_with_options_async(self, image_stream: windows_storage_streams.ImplementsIRandomAccessStreamReference, options: CortanaActionableInsightsOptions, /) -> windows_foundation.IAsyncAction: ...
+    # Windows.Foundation.IAsyncAction Windows.Services.Cortana.CortanaActionableInsights::ShowInsightsForTextAsync(System.String)
     # @deprecated("CortanaActionableInsights is deprecated and might not work on all platforms. For more info, see MSDN.")
     def show_insights_for_text_async(self, text: str, /) -> windows_foundation.IAsyncAction: ...
+    # Windows.Foundation.IAsyncAction Windows.Services.Cortana.CortanaActionableInsights::ShowInsightsForTextAsync(System.String,Windows.Services.Cortana.CortanaActionableInsightsOptions)
     # @deprecated("CortanaActionableInsights is deprecated and might not work on all platforms. For more info, see MSDN.")
     def show_insights_for_text_with_options_async(self, text: str, options: CortanaActionableInsightsOptions, /) -> windows_foundation.IAsyncAction: ...
+    # Windows.Foundation.IAsyncAction Windows.Services.Cortana.CortanaActionableInsights::ShowInsightsAsync(Windows.ApplicationModel.DataTransfer.DataPackage,Windows.Services.Cortana.CortanaActionableInsightsOptions)
     # @deprecated("CortanaActionableInsights is deprecated and might not work on all platforms. For more info, see MSDN.")
     def show_insights_with_options_async(self, datapackage: windows_applicationmodel_datatransfer.DataPackage, options: CortanaActionableInsightsOptions, /) -> windows_foundation.IAsyncAction: ...
+    # Windows.System.User Windows.Services.Cortana.CortanaActionableInsights::get_User()
     @_property
     def user(self) -> windows_system.User: ...
 
 @typing.final
 class CortanaActionableInsightsOptions(winrt.system.Object):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.String Windows.Services.Cortana.CortanaActionableInsightsOptions::get_SurroundingText()
     @_property
     def surrounding_text(self) -> str: ...
+    # System.Void Windows.Services.Cortana.CortanaActionableInsightsOptions::put_SurroundingText(System.String)
     @surrounding_text.setter
     def surrounding_text(self, value: str) -> None: ...
+    # Windows.Foundation.Uri Windows.Services.Cortana.CortanaActionableInsightsOptions::get_ContentSourceWebLink()
     @_property
     def content_source_web_link(self) -> windows_foundation.Uri: ...
+    # System.Void Windows.Services.Cortana.CortanaActionableInsightsOptions::put_ContentSourceWebLink(Windows.Foundation.Uri)
     @content_source_web_link.setter
     def content_source_web_link(self, value: windows_foundation.Uri) -> None: ...
 
 @typing.final
 class CortanaPermissionsManager_Static(type):
+    # Windows.Services.Cortana.CortanaPermissionsManager Windows.Services.Cortana.CortanaPermissionsManager::GetDefault()
     # @deprecated("ICortanaPermissionsManagerStatics is deprecated and might not work on all platforms. For more info, see MSDN.")
     def get_default(cls) -> CortanaPermissionsManager: ...
 
 @typing.final
 class CortanaPermissionsManager(winrt.system.Object, metaclass=CortanaPermissionsManager_Static):
+    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Services.Cortana.CortanaPermissionsManager::ArePermissionsGrantedAsync(Windows.Foundation.Collections.IIterable`1<Windows.Services.Cortana.CortanaPermission>)
     # @deprecated("ICortanaPermissionsManager is deprecated and might not work on all platforms. For more info, see MSDN.")
     def are_permissions_granted_async(self, permissions: typing.Iterable[CortanaPermission], /) -> windows_foundation.IAsyncOperation[bool]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Services.Cortana.CortanaPermissionsChangeResult> Windows.Services.Cortana.CortanaPermissionsManager::GrantPermissionsAsync(Windows.Foundation.Collections.IIterable`1<Windows.Services.Cortana.CortanaPermission>)
     # @deprecated("ICortanaPermissionsManager is deprecated and might not work on all platforms. For more info, see MSDN.")
     def grant_permissions_async(self, permissions: typing.Iterable[CortanaPermission], /) -> windows_foundation.IAsyncOperation[CortanaPermissionsChangeResult]: ...
+    # System.Boolean Windows.Services.Cortana.CortanaPermissionsManager::IsSupported()
     # @deprecated("ICortanaPermissionsManager is deprecated and might not work on all platforms. For more info, see MSDN.")
     def is_supported(self) -> bool: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Services.Cortana.CortanaPermissionsChangeResult> Windows.Services.Cortana.CortanaPermissionsManager::RevokePermissionsAsync(Windows.Foundation.Collections.IIterable`1<Windows.Services.Cortana.CortanaPermission>)
     # @deprecated("ICortanaPermissionsManager is deprecated and might not work on all platforms. For more info, see MSDN.")
     def revoke_permissions_async(self, permissions: typing.Iterable[CortanaPermission], /) -> windows_foundation.IAsyncOperation[CortanaPermissionsChangeResult]: ...
 
 @typing.final
 class CortanaSettings_Static(type):
+    # Windows.Services.Cortana.CortanaSettings Windows.Services.Cortana.CortanaSettings::GetDefault()
     # @deprecated("ICortanaSettingsStatics is deprecated and might not work on all platforms. For more info, see MSDN.")
     def get_default(cls) -> CortanaSettings: ...
+    # System.Boolean Windows.Services.Cortana.CortanaSettings::IsSupported()
     # @deprecated("ICortanaSettingsStatics is deprecated and might not work on all platforms. For more info, see MSDN.")
     def is_supported(cls) -> bool: ...
 
 @typing.final
 class CortanaSettings(winrt.system.Object, metaclass=CortanaSettings_Static):
+    # System.Boolean Windows.Services.Cortana.CortanaSettings::get_IsVoiceActivationEnabled()
     @_property
     def is_voice_activation_enabled(self) -> bool: ...
+    # System.Void Windows.Services.Cortana.CortanaSettings::put_IsVoiceActivationEnabled(System.Boolean)
     @is_voice_activation_enabled.setter
     def is_voice_activation_enabled(self, value: bool) -> None: ...
+    # System.Boolean Windows.Services.Cortana.CortanaSettings::get_HasUserConsentToVoiceActivation()
     @_property
     def has_user_consent_to_voice_activation(self) -> bool: ...
 

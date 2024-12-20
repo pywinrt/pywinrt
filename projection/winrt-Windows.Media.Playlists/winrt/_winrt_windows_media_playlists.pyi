@@ -19,14 +19,19 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class Playlist_Static(type):
+    # Windows.Foundation.IAsyncOperation`1<Windows.Media.Playlists.Playlist> Windows.Media.Playlists.Playlist::LoadAsync(Windows.Storage.IStorageFile)
     def load_async(cls, file: windows_storage.ImplementsIStorageFile, /) -> windows_foundation.IAsyncOperation[Playlist]: ...
 
 @typing.final
 class Playlist(winrt.system.Object, metaclass=Playlist_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Media.Playlists.Playlist::SaveAsAsync(Windows.Storage.IStorageFolder,System.String,Windows.Storage.NameCollisionOption)
     def save_as_async(self, save_location: windows_storage.ImplementsIStorageFolder, desired_name: str, option: windows_storage.NameCollisionOption, /) -> windows_foundation.IAsyncOperation[windows_storage.StorageFile]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Media.Playlists.Playlist::SaveAsAsync(Windows.Storage.IStorageFolder,System.String,Windows.Storage.NameCollisionOption,Windows.Media.Playlists.PlaylistFormat)
     def save_as_with_format_async(self, save_location: windows_storage.ImplementsIStorageFolder, desired_name: str, option: windows_storage.NameCollisionOption, playlist_format: PlaylistFormat, /) -> windows_foundation.IAsyncOperation[windows_storage.StorageFile]: ...
+    # Windows.Foundation.IAsyncAction Windows.Media.Playlists.Playlist::SaveAsync()
     def save_async(self) -> windows_foundation.IAsyncAction: ...
+    # Windows.Foundation.Collections.IVector`1<Windows.Storage.StorageFile> Windows.Media.Playlists.Playlist::get_Files()
     @_property
     def files(self) -> typing.MutableSequence[windows_storage.StorageFile]: ...
 

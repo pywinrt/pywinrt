@@ -16,40 +16,56 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class CustomSensor_Static(type):
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Sensors.Custom.CustomSensor> Windows.Devices.Sensors.Custom.CustomSensor::FromIdAsync(System.String)
     def from_id_async(cls, sensor_id: str, /) -> windows_foundation.IAsyncOperation[CustomSensor]: ...
+    # System.String Windows.Devices.Sensors.Custom.CustomSensor::GetDeviceSelector(System.Guid)
     def get_device_selector(cls, interface_id: _uuid.UUID, /) -> str: ...
 
 @typing.final
 class CustomSensor(winrt.system.Object, metaclass=CustomSensor_Static):
+    # Windows.Devices.Sensors.Custom.CustomSensorReading Windows.Devices.Sensors.Custom.CustomSensor::GetCurrentReading()
     def get_current_reading(self) -> CustomSensorReading: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Devices.Sensors.Custom.CustomSensor::add_ReadingChanged(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Sensors.Custom.CustomSensor,Windows.Devices.Sensors.Custom.CustomSensorReadingChangedEventArgs>)
     def add_reading_changed(self, handler: windows_foundation.TypedEventHandler[CustomSensor, CustomSensorReadingChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Devices.Sensors.Custom.CustomSensor::remove_ReadingChanged(Windows.Foundation.EventRegistrationToken)
     def remove_reading_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.UInt32 Windows.Devices.Sensors.Custom.CustomSensor::get_ReportInterval()
     @_property
     def report_interval(self) -> winrt.system.UInt32: ...
+    # System.Void Windows.Devices.Sensors.Custom.CustomSensor::put_ReportInterval(System.UInt32)
     @report_interval.setter
     def report_interval(self, value: winrt.system.UInt32) -> None: ...
+    # System.String Windows.Devices.Sensors.Custom.CustomSensor::get_DeviceId()
     @_property
     def device_id(self) -> str: ...
+    # System.UInt32 Windows.Devices.Sensors.Custom.CustomSensor::get_MinimumReportInterval()
     @_property
     def minimum_report_interval(self) -> winrt.system.UInt32: ...
+    # System.UInt32 Windows.Devices.Sensors.Custom.CustomSensor::get_ReportLatency()
     @_property
     def report_latency(self) -> winrt.system.UInt32: ...
+    # System.Void Windows.Devices.Sensors.Custom.CustomSensor::put_ReportLatency(System.UInt32)
     @report_latency.setter
     def report_latency(self, value: winrt.system.UInt32) -> None: ...
+    # System.UInt32 Windows.Devices.Sensors.Custom.CustomSensor::get_MaxBatchSize()
     @_property
     def max_batch_size(self) -> winrt.system.UInt32: ...
 
 @typing.final
 class CustomSensorReading(winrt.system.Object):
+    # Windows.Foundation.Collections.IMapView`2<System.String,System.Object> Windows.Devices.Sensors.Custom.CustomSensorReading::get_Properties()
     @_property
     def properties(self) -> typing.Mapping[str, winrt.system.Object]: ...
+    # Windows.Foundation.DateTime Windows.Devices.Sensors.Custom.CustomSensorReading::get_Timestamp()
     @_property
     def timestamp(self) -> datetime.datetime: ...
+    # Windows.Foundation.IReference`1<Windows.Foundation.TimeSpan> Windows.Devices.Sensors.Custom.CustomSensorReading::get_PerformanceCount()
     @_property
     def performance_count(self) -> typing.Optional[datetime.timedelta]: ...
 
 @typing.final
 class CustomSensorReadingChangedEventArgs(winrt.system.Object):
+    # Windows.Devices.Sensors.Custom.CustomSensorReading Windows.Devices.Sensors.Custom.CustomSensorReadingChangedEventArgs::get_Reading()
     @_property
     def reading(self) -> CustomSensorReading: ...
 

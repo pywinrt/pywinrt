@@ -15,17 +15,22 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class DeviceServicingDetails(winrt.system.Object):
+    # System.String Windows.Devices.Background.DeviceServicingDetails::get_Arguments()
     @_property
     def arguments(self) -> str: ...
+    # System.String Windows.Devices.Background.DeviceServicingDetails::get_DeviceId()
     @_property
     def device_id(self) -> str: ...
+    # Windows.Foundation.TimeSpan Windows.Devices.Background.DeviceServicingDetails::get_ExpectedDuration()
     @_property
     def expected_duration(self) -> datetime.timedelta: ...
 
 @typing.final
 class DeviceUseDetails(winrt.system.Object):
+    # System.String Windows.Devices.Background.DeviceUseDetails::get_Arguments()
     @_property
     def arguments(self) -> str: ...
+    # System.String Windows.Devices.Background.DeviceUseDetails::get_DeviceId()
     @_property
     def device_id(self) -> str: ...
 

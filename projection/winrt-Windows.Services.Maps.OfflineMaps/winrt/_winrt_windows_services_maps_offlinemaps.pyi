@@ -19,33 +19,46 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class OfflineMapPackage_Static(type):
+    # Windows.Foundation.IAsyncOperation`1<Windows.Services.Maps.OfflineMaps.OfflineMapPackageQueryResult> Windows.Services.Maps.OfflineMaps.OfflineMapPackage::FindPackagesAsync(Windows.Devices.Geolocation.Geopoint)
     def find_packages_async(cls, query_point: windows_devices_geolocation.Geopoint, /) -> windows_foundation.IAsyncOperation[OfflineMapPackageQueryResult]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Services.Maps.OfflineMaps.OfflineMapPackageQueryResult> Windows.Services.Maps.OfflineMaps.OfflineMapPackage::FindPackagesInBoundingBoxAsync(Windows.Devices.Geolocation.GeoboundingBox)
     def find_packages_in_bounding_box_async(cls, query_bounding_box: windows_devices_geolocation.GeoboundingBox, /) -> windows_foundation.IAsyncOperation[OfflineMapPackageQueryResult]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Services.Maps.OfflineMaps.OfflineMapPackageQueryResult> Windows.Services.Maps.OfflineMaps.OfflineMapPackage::FindPackagesInGeocircleAsync(Windows.Devices.Geolocation.Geocircle)
     def find_packages_in_geocircle_async(cls, query_circle: windows_devices_geolocation.Geocircle, /) -> windows_foundation.IAsyncOperation[OfflineMapPackageQueryResult]: ...
 
 @typing.final
 class OfflineMapPackage(winrt.system.Object, metaclass=OfflineMapPackage_Static):
+    # Windows.Foundation.IAsyncOperation`1<Windows.Services.Maps.OfflineMaps.OfflineMapPackageStartDownloadResult> Windows.Services.Maps.OfflineMaps.OfflineMapPackage::RequestStartDownloadAsync()
     def request_start_download_async(self) -> windows_foundation.IAsyncOperation[OfflineMapPackageStartDownloadResult]: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Services.Maps.OfflineMaps.OfflineMapPackage::add_StatusChanged(Windows.Foundation.TypedEventHandler`2<Windows.Services.Maps.OfflineMaps.OfflineMapPackage,System.Object>)
     def add_status_changed(self, value: windows_foundation.TypedEventHandler[OfflineMapPackage, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Services.Maps.OfflineMaps.OfflineMapPackage::remove_StatusChanged(Windows.Foundation.EventRegistrationToken)
     def remove_status_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.String Windows.Services.Maps.OfflineMaps.OfflineMapPackage::get_DisplayName()
     @_property
     def display_name(self) -> str: ...
+    # System.String Windows.Services.Maps.OfflineMaps.OfflineMapPackage::get_EnclosingRegionName()
     @_property
     def enclosing_region_name(self) -> str: ...
+    # System.UInt64 Windows.Services.Maps.OfflineMaps.OfflineMapPackage::get_EstimatedSizeInBytes()
     @_property
     def estimated_size_in_bytes(self) -> winrt.system.UInt64: ...
+    # Windows.Services.Maps.OfflineMaps.OfflineMapPackageStatus Windows.Services.Maps.OfflineMaps.OfflineMapPackage::get_Status()
     @_property
     def status(self) -> OfflineMapPackageStatus: ...
 
 @typing.final
 class OfflineMapPackageQueryResult(winrt.system.Object):
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Services.Maps.OfflineMaps.OfflineMapPackage> Windows.Services.Maps.OfflineMaps.OfflineMapPackageQueryResult::get_Packages()
     @_property
     def packages(self) -> typing.Sequence[OfflineMapPackage]: ...
+    # Windows.Services.Maps.OfflineMaps.OfflineMapPackageQueryStatus Windows.Services.Maps.OfflineMaps.OfflineMapPackageQueryResult::get_Status()
     @_property
     def status(self) -> OfflineMapPackageQueryStatus: ...
 
 @typing.final
 class OfflineMapPackageStartDownloadResult(winrt.system.Object):
+    # Windows.Services.Maps.OfflineMaps.OfflineMapPackageStartDownloadStatus Windows.Services.Maps.OfflineMaps.OfflineMapPackageStartDownloadResult::get_Status()
     @_property
     def status(self) -> OfflineMapPackageStartDownloadStatus: ...
 

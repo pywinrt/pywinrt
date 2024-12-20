@@ -18,6 +18,7 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class WebError_Static(type):
+    # Windows.Web.WebErrorStatus Windows.Web.WebError::GetStatus(System.Int32)
     def get_status(cls, hresult: winrt.system.Int32, /) -> WebErrorStatus: ...
 
 @typing.final
@@ -29,5 +30,6 @@ class ImplementsIUriToStreamResolver():
 
 @typing.final
 class IUriToStreamResolver(winrt.system.Object, ImplementsIUriToStreamResolver):
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IInputStream> Windows.Web.IUriToStreamResolver::UriToStreamAsync(Windows.Foundation.Uri)
     def uri_to_stream_async(self, uri: windows_foundation.Uri, /) -> windows_foundation.IAsyncOperation[windows_storage_streams.IInputStream]: ...
 

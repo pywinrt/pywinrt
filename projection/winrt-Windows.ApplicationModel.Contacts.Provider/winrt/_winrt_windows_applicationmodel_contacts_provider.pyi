@@ -20,23 +20,33 @@ Self = typing.TypeVar('Self')
 @typing.final
 class ContactPickerUI(winrt.system.Object):
     @typing.overload
+    # Windows.ApplicationModel.Contacts.Provider.AddContactResult Windows.ApplicationModel.Contacts.Provider.ContactPickerUI::AddContact(Windows.ApplicationModel.Contacts.Contact)
     def add_contact(self, contact: windows_applicationmodel_contacts.Contact, /) -> AddContactResult: ...
     @typing.overload
+    # Windows.ApplicationModel.Contacts.Provider.AddContactResult Windows.ApplicationModel.Contacts.Provider.ContactPickerUI::AddContact(System.String,Windows.ApplicationModel.Contacts.Contact)
     # @deprecated("AddContact may be altered or unavailable for releases after Windows 8.1. Instead, use AddContact without the ID.")
     def add_contact(self, id: str, contact: windows_applicationmodel_contacts.Contact, /) -> AddContactResult: ...
+    # System.Boolean Windows.ApplicationModel.Contacts.Provider.ContactPickerUI::ContainsContact(System.String)
     def contains_contact(self, id: str, /) -> bool: ...
+    # System.Void Windows.ApplicationModel.Contacts.Provider.ContactPickerUI::RemoveContact(System.String)
     def remove_contact(self, id: str, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.ApplicationModel.Contacts.Provider.ContactPickerUI::add_ContactRemoved(Windows.Foundation.TypedEventHandler`2<Windows.ApplicationModel.Contacts.Provider.ContactPickerUI,Windows.ApplicationModel.Contacts.Provider.ContactRemovedEventArgs>)
     def add_contact_removed(self, handler: windows_foundation.TypedEventHandler[ContactPickerUI, ContactRemovedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.ApplicationModel.Contacts.Provider.ContactPickerUI::remove_ContactRemoved(Windows.Foundation.EventRegistrationToken)
     def remove_contact_removed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.Collections.IVectorView`1<System.String> Windows.ApplicationModel.Contacts.Provider.ContactPickerUI::get_DesiredFields()
     @_property
     def desired_fields(self) -> typing.Sequence[str]: ...
+    # Windows.ApplicationModel.Contacts.ContactSelectionMode Windows.ApplicationModel.Contacts.Provider.ContactPickerUI::get_SelectionMode()
     @_property
     def selection_mode(self) -> windows_applicationmodel_contacts.ContactSelectionMode: ...
+    # Windows.Foundation.Collections.IVector`1<Windows.ApplicationModel.Contacts.ContactFieldType> Windows.ApplicationModel.Contacts.Provider.ContactPickerUI::get_DesiredFieldsWithContactFieldType()
     @_property
     def desired_fields_with_contact_field_type(self) -> typing.MutableSequence[windows_applicationmodel_contacts.ContactFieldType]: ...
 
 @typing.final
 class ContactRemovedEventArgs(winrt.system.Object):
+    # System.String Windows.ApplicationModel.Contacts.Provider.ContactRemovedEventArgs::get_Id()
     @_property
     def id(self) -> str: ...
 

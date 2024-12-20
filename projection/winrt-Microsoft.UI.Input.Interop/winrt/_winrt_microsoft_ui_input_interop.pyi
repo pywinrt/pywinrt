@@ -16,6 +16,7 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class PenDeviceInterop_Static(type):
+    # Windows.Devices.Input.PenDevice Microsoft.UI.Input.Interop.PenDeviceInterop::FromPointerPoint(Microsoft.UI.Input.PointerPoint)
     def from_pointer_point(cls, pointer_point: microsoft_ui_input.PointerPoint, /) -> windows_devices_input.PenDevice: ...
 
 @typing.final

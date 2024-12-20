@@ -17,7 +17,9 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class HolographicApplicationPreview_Static(type):
+    # System.Boolean Windows.ApplicationModel.Preview.Holographic.HolographicApplicationPreview::IsCurrentViewPresentedOnHolographicDisplay()
     def is_current_view_presented_on_holographic_display(cls) -> bool: ...
+    # System.Boolean Windows.ApplicationModel.Preview.Holographic.HolographicApplicationPreview::IsHolographicActivation(Windows.ApplicationModel.Activation.IActivatedEventArgs)
     def is_holographic_activation(cls, activated_event_args: windows_applicationmodel_activation.ImplementsIActivatedEventArgs, /) -> bool: ...
 
 @typing.final
@@ -26,15 +28,19 @@ class HolographicApplicationPreview(winrt.system.Object, metaclass=HolographicAp
 
 @typing.final
 class HolographicKeyboardPlacementOverridePreview_Static(type):
+    # Windows.ApplicationModel.Preview.Holographic.HolographicKeyboardPlacementOverridePreview Windows.ApplicationModel.Preview.Holographic.HolographicKeyboardPlacementOverridePreview::GetForCurrentView()
     # @deprecated("Use Windows.ApplicationModel.Holographic.HolographicKeyboard instead of Windows.ApplicationModel.Preview.Holographic.HolographicKeyboardPlacementOverridePreview. For more info, see MSDN.")
     def get_for_current_view(cls) -> HolographicKeyboardPlacementOverridePreview: ...
 
 @typing.final
 class HolographicKeyboardPlacementOverridePreview(winrt.system.Object, metaclass=HolographicKeyboardPlacementOverridePreview_Static):
+    # System.Void Windows.ApplicationModel.Preview.Holographic.HolographicKeyboardPlacementOverridePreview::ResetPlacementOverride()
     # @deprecated("Use Windows.ApplicationModel.Holographic.HolographicKeyboard instead of Windows.ApplicationModel.Preview.Holographic.HolographicKeyboardPlacementOverridePreview. For more info, see MSDN.")
     def reset_placement_override(self) -> None: ...
+    # System.Void Windows.ApplicationModel.Preview.Holographic.HolographicKeyboardPlacementOverridePreview::SetPlacementOverride(Windows.Perception.Spatial.SpatialCoordinateSystem,Windows.Foundation.Numerics.Vector3,Windows.Foundation.Numerics.Vector3)
     # @deprecated("Use Windows.ApplicationModel.Holographic.HolographicKeyboard instead of Windows.ApplicationModel.Preview.Holographic.HolographicKeyboardPlacementOverridePreview. For more info, see MSDN.")
     def set_placement_override(self, coordinate_system: windows_perception_spatial.SpatialCoordinateSystem, top_center_position: windows_foundation_numerics.Vector3, normal: windows_foundation_numerics.Vector3, /) -> None: ...
+    # System.Void Windows.ApplicationModel.Preview.Holographic.HolographicKeyboardPlacementOverridePreview::SetPlacementOverride(Windows.Perception.Spatial.SpatialCoordinateSystem,Windows.Foundation.Numerics.Vector3,Windows.Foundation.Numerics.Vector3,Windows.Foundation.Numerics.Vector2)
     # @deprecated("Use Windows.ApplicationModel.Holographic.HolographicKeyboard instead of Windows.ApplicationModel.Preview.Holographic.HolographicKeyboardPlacementOverridePreview. For more info, see MSDN.")
     def set_placement_override_with_max_size(self, coordinate_system: windows_perception_spatial.SpatialCoordinateSystem, top_center_position: windows_foundation_numerics.Vector3, normal: windows_foundation_numerics.Vector3, max_size: windows_foundation_numerics.Vector2, /) -> None: ...
 

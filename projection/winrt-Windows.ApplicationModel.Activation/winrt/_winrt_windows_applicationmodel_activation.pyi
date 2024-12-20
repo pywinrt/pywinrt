@@ -39,721 +39,1009 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class AppointmentsProviderAddAppointmentActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsWithUser, ImplementsIAppointmentsProviderAddAppointmentActivatedEventArgs, ImplementsIAppointmentsProviderActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.AppointmentsProviderAddAppointmentActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.AppointmentsProviderAddAppointmentActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.AppointmentsProviderAddAppointmentActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
+    # Windows.System.User Windows.ApplicationModel.Activation.AppointmentsProviderAddAppointmentActivatedEventArgs::get_User()
     @_property
     def user(self) -> windows_system.User: ...
+    # System.String Windows.ApplicationModel.Activation.AppointmentsProviderAddAppointmentActivatedEventArgs::get_Verb()
     @_property
     def verb(self) -> str: ...
+    # Windows.ApplicationModel.Appointments.AppointmentsProvider.AddAppointmentOperation Windows.ApplicationModel.Activation.AppointmentsProviderAddAppointmentActivatedEventArgs::get_AddAppointmentOperation()
     @_property
     def add_appointment_operation(self) -> windows_applicationmodel_appointments_appointmentsprovider.AddAppointmentOperation: ...
 
 @typing.final
 class AppointmentsProviderRemoveAppointmentActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsWithUser, ImplementsIAppointmentsProviderRemoveAppointmentActivatedEventArgs, ImplementsIAppointmentsProviderActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.AppointmentsProviderRemoveAppointmentActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.AppointmentsProviderRemoveAppointmentActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.AppointmentsProviderRemoveAppointmentActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
+    # Windows.System.User Windows.ApplicationModel.Activation.AppointmentsProviderRemoveAppointmentActivatedEventArgs::get_User()
     @_property
     def user(self) -> windows_system.User: ...
+    # System.String Windows.ApplicationModel.Activation.AppointmentsProviderRemoveAppointmentActivatedEventArgs::get_Verb()
     @_property
     def verb(self) -> str: ...
+    # Windows.ApplicationModel.Appointments.AppointmentsProvider.RemoveAppointmentOperation Windows.ApplicationModel.Activation.AppointmentsProviderRemoveAppointmentActivatedEventArgs::get_RemoveAppointmentOperation()
     @_property
     def remove_appointment_operation(self) -> windows_applicationmodel_appointments_appointmentsprovider.RemoveAppointmentOperation: ...
 
 @typing.final
 class AppointmentsProviderReplaceAppointmentActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsWithUser, ImplementsIAppointmentsProviderReplaceAppointmentActivatedEventArgs, ImplementsIAppointmentsProviderActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.AppointmentsProviderReplaceAppointmentActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.AppointmentsProviderReplaceAppointmentActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.AppointmentsProviderReplaceAppointmentActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
+    # Windows.System.User Windows.ApplicationModel.Activation.AppointmentsProviderReplaceAppointmentActivatedEventArgs::get_User()
     @_property
     def user(self) -> windows_system.User: ...
+    # System.String Windows.ApplicationModel.Activation.AppointmentsProviderReplaceAppointmentActivatedEventArgs::get_Verb()
     @_property
     def verb(self) -> str: ...
+    # Windows.ApplicationModel.Appointments.AppointmentsProvider.ReplaceAppointmentOperation Windows.ApplicationModel.Activation.AppointmentsProviderReplaceAppointmentActivatedEventArgs::get_ReplaceAppointmentOperation()
     @_property
     def replace_appointment_operation(self) -> windows_applicationmodel_appointments_appointmentsprovider.ReplaceAppointmentOperation: ...
 
 @typing.final
 class AppointmentsProviderShowAppointmentDetailsActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsWithUser, ImplementsIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs, ImplementsIAppointmentsProviderActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.AppointmentsProviderShowAppointmentDetailsActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.AppointmentsProviderShowAppointmentDetailsActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.AppointmentsProviderShowAppointmentDetailsActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
+    # Windows.System.User Windows.ApplicationModel.Activation.AppointmentsProviderShowAppointmentDetailsActivatedEventArgs::get_User()
     @_property
     def user(self) -> windows_system.User: ...
+    # System.String Windows.ApplicationModel.Activation.AppointmentsProviderShowAppointmentDetailsActivatedEventArgs::get_Verb()
     @_property
     def verb(self) -> str: ...
+    # Windows.Foundation.IReference`1<Windows.Foundation.DateTime> Windows.ApplicationModel.Activation.AppointmentsProviderShowAppointmentDetailsActivatedEventArgs::get_InstanceStartDate()
     @_property
     def instance_start_date(self) -> typing.Optional[datetime.datetime]: ...
+    # System.String Windows.ApplicationModel.Activation.AppointmentsProviderShowAppointmentDetailsActivatedEventArgs::get_LocalId()
     @_property
     def local_id(self) -> str: ...
+    # System.String Windows.ApplicationModel.Activation.AppointmentsProviderShowAppointmentDetailsActivatedEventArgs::get_RoamingId()
     @_property
     def roaming_id(self) -> str: ...
 
 @typing.final
 class AppointmentsProviderShowTimeFrameActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsWithUser, ImplementsIAppointmentsProviderShowTimeFrameActivatedEventArgs, ImplementsIAppointmentsProviderActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.AppointmentsProviderShowTimeFrameActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.AppointmentsProviderShowTimeFrameActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.AppointmentsProviderShowTimeFrameActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
+    # Windows.System.User Windows.ApplicationModel.Activation.AppointmentsProviderShowTimeFrameActivatedEventArgs::get_User()
     @_property
     def user(self) -> windows_system.User: ...
+    # System.String Windows.ApplicationModel.Activation.AppointmentsProviderShowTimeFrameActivatedEventArgs::get_Verb()
     @_property
     def verb(self) -> str: ...
+    # Windows.Foundation.TimeSpan Windows.ApplicationModel.Activation.AppointmentsProviderShowTimeFrameActivatedEventArgs::get_Duration()
     @_property
     def duration(self) -> datetime.timedelta: ...
+    # Windows.Foundation.DateTime Windows.ApplicationModel.Activation.AppointmentsProviderShowTimeFrameActivatedEventArgs::get_TimeToShow()
     @_property
     def time_to_show(self) -> datetime.datetime: ...
 
 @typing.final
 class BackgroundActivatedEventArgs(winrt.system.Object, ImplementsIBackgroundActivatedEventArgs):
+    # Windows.ApplicationModel.Background.IBackgroundTaskInstance Windows.ApplicationModel.Activation.BackgroundActivatedEventArgs::get_TaskInstance()
     @_property
     def task_instance(self) -> windows_applicationmodel_background.IBackgroundTaskInstance: ...
 
 @typing.final
 class BarcodeScannerPreviewActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsWithUser, ImplementsIBarcodeScannerPreviewActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.BarcodeScannerPreviewActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.BarcodeScannerPreviewActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.BarcodeScannerPreviewActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
+    # Windows.System.User Windows.ApplicationModel.Activation.BarcodeScannerPreviewActivatedEventArgs::get_User()
     @_property
     def user(self) -> windows_system.User: ...
+    # System.String Windows.ApplicationModel.Activation.BarcodeScannerPreviewActivatedEventArgs::get_ConnectionId()
     @_property
     def connection_id(self) -> str: ...
 
 @typing.final
 class CachedFileUpdaterActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsWithUser, ImplementsICachedFileUpdaterActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.CachedFileUpdaterActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.CachedFileUpdaterActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.CachedFileUpdaterActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
+    # Windows.System.User Windows.ApplicationModel.Activation.CachedFileUpdaterActivatedEventArgs::get_User()
     @_property
     def user(self) -> windows_system.User: ...
+    # Windows.Storage.Provider.CachedFileUpdaterUI Windows.ApplicationModel.Activation.CachedFileUpdaterActivatedEventArgs::get_CachedFileUpdaterUI()
     @_property
     def cached_file_updater_ui(self) -> windows_storage_provider.CachedFileUpdaterUI: ...
 
 @typing.final
 class CameraSettingsActivatedEventArgs(winrt.system.Object, ImplementsICameraSettingsActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.CameraSettingsActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.CameraSettingsActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.CameraSettingsActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
+    # System.Object Windows.ApplicationModel.Activation.CameraSettingsActivatedEventArgs::get_VideoDeviceController()
     @_property
     def video_device_controller(self) -> winrt.system.Object: ...
+    # System.Object Windows.ApplicationModel.Activation.CameraSettingsActivatedEventArgs::get_VideoDeviceExtension()
     @_property
     def video_device_extension(self) -> winrt.system.Object: ...
 
 @typing.final
 class CommandLineActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsWithUser, ImplementsICommandLineActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.CommandLineActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.CommandLineActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.CommandLineActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
+    # Windows.System.User Windows.ApplicationModel.Activation.CommandLineActivatedEventArgs::get_User()
     @_property
     def user(self) -> windows_system.User: ...
+    # Windows.ApplicationModel.Activation.CommandLineActivationOperation Windows.ApplicationModel.Activation.CommandLineActivatedEventArgs::get_Operation()
     @_property
     def operation(self) -> CommandLineActivationOperation: ...
 
 @typing.final
 class CommandLineActivationOperation(winrt.system.Object):
+    # Windows.Foundation.Deferral Windows.ApplicationModel.Activation.CommandLineActivationOperation::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
+    # System.Int32 Windows.ApplicationModel.Activation.CommandLineActivationOperation::get_ExitCode()
     @_property
     def exit_code(self) -> winrt.system.Int32: ...
+    # System.Void Windows.ApplicationModel.Activation.CommandLineActivationOperation::put_ExitCode(System.Int32)
     @exit_code.setter
     def exit_code(self, value: winrt.system.Int32) -> None: ...
+    # System.String Windows.ApplicationModel.Activation.CommandLineActivationOperation::get_Arguments()
     @_property
     def arguments(self) -> str: ...
+    # System.String Windows.ApplicationModel.Activation.CommandLineActivationOperation::get_CurrentDirectoryPath()
     @_property
     def current_directory_path(self) -> str: ...
 
 @typing.final
 class ContactCallActivatedEventArgs(winrt.system.Object, ImplementsIContactCallActivatedEventArgs, ImplementsIContactActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
+    # System.String Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs::get_Verb()
     @_property
     def verb(self) -> str: ...
+    # Windows.ApplicationModel.Contacts.Contact Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs::get_Contact()
     @_property
     def contact(self) -> windows_applicationmodel_contacts.Contact: ...
+    # System.String Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs::get_ServiceId()
     @_property
     def service_id(self) -> str: ...
+    # System.String Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs::get_ServiceUserId()
     @_property
     def service_user_id(self) -> str: ...
 
 @typing.final
 class ContactMapActivatedEventArgs(winrt.system.Object, ImplementsIContactMapActivatedEventArgs, ImplementsIContactActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
+    # System.String Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs::get_Verb()
     @_property
     def verb(self) -> str: ...
+    # Windows.ApplicationModel.Contacts.ContactAddress Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs::get_Address()
     @_property
     def address(self) -> windows_applicationmodel_contacts.ContactAddress: ...
+    # Windows.ApplicationModel.Contacts.Contact Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs::get_Contact()
     @_property
     def contact(self) -> windows_applicationmodel_contacts.Contact: ...
 
 @typing.final
 class ContactMessageActivatedEventArgs(winrt.system.Object, ImplementsIContactMessageActivatedEventArgs, ImplementsIContactActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
+    # System.String Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs::get_Verb()
     @_property
     def verb(self) -> str: ...
+    # Windows.ApplicationModel.Contacts.Contact Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs::get_Contact()
     @_property
     def contact(self) -> windows_applicationmodel_contacts.Contact: ...
+    # System.String Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs::get_ServiceId()
     @_property
     def service_id(self) -> str: ...
+    # System.String Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs::get_ServiceUserId()
     @_property
     def service_user_id(self) -> str: ...
 
 @typing.final
 class ContactPanelActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsWithUser, ImplementsIActivatedEventArgs, ImplementsIContactPanelActivatedEventArgs):
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.ContactPanelActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.ContactPanelActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.ContactPanelActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
+    # Windows.System.User Windows.ApplicationModel.Activation.ContactPanelActivatedEventArgs::get_User()
     @_property
     def user(self) -> windows_system.User: ...
+    # Windows.ApplicationModel.Contacts.Contact Windows.ApplicationModel.Activation.ContactPanelActivatedEventArgs::get_Contact()
     @_property
     def contact(self) -> windows_applicationmodel_contacts.Contact: ...
+    # Windows.ApplicationModel.Contacts.ContactPanel Windows.ApplicationModel.Activation.ContactPanelActivatedEventArgs::get_ContactPanel()
     @_property
     def contact_panel(self) -> windows_applicationmodel_contacts.ContactPanel: ...
 
 @typing.final
 class ContactPickerActivatedEventArgs(winrt.system.Object, ImplementsIContactPickerActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.ContactPickerActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.ContactPickerActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.ContactPickerActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
+    # Windows.ApplicationModel.Contacts.Provider.ContactPickerUI Windows.ApplicationModel.Activation.ContactPickerActivatedEventArgs::get_ContactPickerUI()
     @_property
     def contact_picker_ui(self) -> windows_applicationmodel_contacts_provider.ContactPickerUI: ...
 
 @typing.final
 class ContactPostActivatedEventArgs(winrt.system.Object, ImplementsIContactPostActivatedEventArgs, ImplementsIContactActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
+    # System.String Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs::get_Verb()
     @_property
     def verb(self) -> str: ...
+    # Windows.ApplicationModel.Contacts.Contact Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs::get_Contact()
     @_property
     def contact(self) -> windows_applicationmodel_contacts.Contact: ...
+    # System.String Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs::get_ServiceId()
     @_property
     def service_id(self) -> str: ...
+    # System.String Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs::get_ServiceUserId()
     @_property
     def service_user_id(self) -> str: ...
 
 @typing.final
 class ContactVideoCallActivatedEventArgs(winrt.system.Object, ImplementsIContactVideoCallActivatedEventArgs, ImplementsIContactActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
+    # System.String Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs::get_Verb()
     @_property
     def verb(self) -> str: ...
+    # Windows.ApplicationModel.Contacts.Contact Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs::get_Contact()
     @_property
     def contact(self) -> windows_applicationmodel_contacts.Contact: ...
+    # System.String Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs::get_ServiceId()
     @_property
     def service_id(self) -> str: ...
+    # System.String Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs::get_ServiceUserId()
     @_property
     def service_user_id(self) -> str: ...
 
 @typing.final
 class DeviceActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsWithUser, ImplementsIViewSwitcherProvider, ImplementsIApplicationViewActivatedEventArgs, ImplementsIDeviceActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.DeviceActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.DeviceActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.DeviceActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
+    # Windows.System.User Windows.ApplicationModel.Activation.DeviceActivatedEventArgs::get_User()
     @_property
     def user(self) -> windows_system.User: ...
+    # System.Int32 Windows.ApplicationModel.Activation.DeviceActivatedEventArgs::get_CurrentlyShownApplicationViewId()
     @_property
     def currently_shown_application_view_id(self) -> winrt.system.Int32: ...
+    # System.String Windows.ApplicationModel.Activation.DeviceActivatedEventArgs::get_DeviceInformationId()
     @_property
     def device_information_id(self) -> str: ...
+    # System.String Windows.ApplicationModel.Activation.DeviceActivatedEventArgs::get_Verb()
     @_property
     def verb(self) -> str: ...
+    # Windows.UI.ViewManagement.ActivationViewSwitcher Windows.ApplicationModel.Activation.DeviceActivatedEventArgs::get_ViewSwitcher()
     @_property
     def view_switcher(self) -> windows_ui_viewmanagement.ActivationViewSwitcher: ...
 
 @typing.final
 class DevicePairingActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsWithUser, ImplementsIDevicePairingActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.DevicePairingActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.DevicePairingActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.DevicePairingActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
+    # Windows.System.User Windows.ApplicationModel.Activation.DevicePairingActivatedEventArgs::get_User()
     @_property
     def user(self) -> windows_system.User: ...
+    # Windows.Devices.Enumeration.DeviceInformation Windows.ApplicationModel.Activation.DevicePairingActivatedEventArgs::get_DeviceInformation()
     @_property
     def device_information(self) -> windows_devices_enumeration.DeviceInformation: ...
 
 @typing.final
 class DialReceiverActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsWithUser, ImplementsIViewSwitcherProvider, ImplementsIApplicationViewActivatedEventArgs, ImplementsIDialReceiverActivatedEventArgs, ImplementsILaunchActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.DialReceiverActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.DialReceiverActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.DialReceiverActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
+    # Windows.System.User Windows.ApplicationModel.Activation.DialReceiverActivatedEventArgs::get_User()
     @_property
     def user(self) -> windows_system.User: ...
+    # System.Int32 Windows.ApplicationModel.Activation.DialReceiverActivatedEventArgs::get_CurrentlyShownApplicationViewId()
     @_property
     def currently_shown_application_view_id(self) -> winrt.system.Int32: ...
+    # System.String Windows.ApplicationModel.Activation.DialReceiverActivatedEventArgs::get_AppName()
     @_property
     def app_name(self) -> str: ...
+    # System.String Windows.ApplicationModel.Activation.DialReceiverActivatedEventArgs::get_Arguments()
     @_property
     def arguments(self) -> str: ...
+    # System.String Windows.ApplicationModel.Activation.DialReceiverActivatedEventArgs::get_TileId()
     @_property
     def tile_id(self) -> str: ...
+    # Windows.UI.ViewManagement.ActivationViewSwitcher Windows.ApplicationModel.Activation.DialReceiverActivatedEventArgs::get_ViewSwitcher()
     @_property
     def view_switcher(self) -> windows_ui_viewmanagement.ActivationViewSwitcher: ...
 
 @typing.final
 class FileActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsWithUser, ImplementsIViewSwitcherProvider, ImplementsIApplicationViewActivatedEventArgs, ImplementsIFileActivatedEventArgsWithCallerPackageFamilyName, ImplementsIFileActivatedEventArgsWithNeighboringFiles, ImplementsIFileActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.FileActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.FileActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.FileActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
+    # Windows.System.User Windows.ApplicationModel.Activation.FileActivatedEventArgs::get_User()
     @_property
     def user(self) -> windows_system.User: ...
+    # System.Int32 Windows.ApplicationModel.Activation.FileActivatedEventArgs::get_CurrentlyShownApplicationViewId()
     @_property
     def currently_shown_application_view_id(self) -> winrt.system.Int32: ...
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Storage.IStorageItem> Windows.ApplicationModel.Activation.FileActivatedEventArgs::get_Files()
     @_property
     def files(self) -> typing.Sequence[windows_storage.IStorageItem]: ...
+    # System.String Windows.ApplicationModel.Activation.FileActivatedEventArgs::get_Verb()
     @_property
     def verb(self) -> str: ...
+    # System.String Windows.ApplicationModel.Activation.FileActivatedEventArgs::get_CallerPackageFamilyName()
     @_property
     def caller_package_family_name(self) -> str: ...
+    # Windows.Storage.Search.StorageFileQueryResult Windows.ApplicationModel.Activation.FileActivatedEventArgs::get_NeighboringFilesQuery()
     @_property
     def neighboring_files_query(self) -> windows_storage_search.StorageFileQueryResult: ...
+    # Windows.UI.ViewManagement.ActivationViewSwitcher Windows.ApplicationModel.Activation.FileActivatedEventArgs::get_ViewSwitcher()
     @_property
     def view_switcher(self) -> windows_ui_viewmanagement.ActivationViewSwitcher: ...
 
 @typing.final
 class FileOpenPickerActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsWithUser, ImplementsIFileOpenPickerActivatedEventArgs2, ImplementsIFileOpenPickerActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.FileOpenPickerActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.FileOpenPickerActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.FileOpenPickerActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
+    # Windows.System.User Windows.ApplicationModel.Activation.FileOpenPickerActivatedEventArgs::get_User()
     @_property
     def user(self) -> windows_system.User: ...
+    # Windows.Storage.Pickers.Provider.FileOpenPickerUI Windows.ApplicationModel.Activation.FileOpenPickerActivatedEventArgs::get_FileOpenPickerUI()
     @_property
     def file_open_picker_ui(self) -> windows_storage_pickers_provider.FileOpenPickerUI: ...
+    # System.String Windows.ApplicationModel.Activation.FileOpenPickerActivatedEventArgs::get_CallerPackageFamilyName()
     @_property
     def caller_package_family_name(self) -> str: ...
 
 @typing.final
 class FileOpenPickerContinuationEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsWithUser, ImplementsIFileOpenPickerContinuationEventArgs, ImplementsIContinuationActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.FileOpenPickerContinuationEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.FileOpenPickerContinuationEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.FileOpenPickerContinuationEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
+    # Windows.System.User Windows.ApplicationModel.Activation.FileOpenPickerContinuationEventArgs::get_User()
     @_property
     def user(self) -> windows_system.User: ...
+    # Windows.Foundation.Collections.ValueSet Windows.ApplicationModel.Activation.FileOpenPickerContinuationEventArgs::get_ContinuationData()
     @_property
     def continuation_data(self) -> windows_foundation_collections.ValueSet: ...
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Storage.StorageFile> Windows.ApplicationModel.Activation.FileOpenPickerContinuationEventArgs::get_Files()
     @_property
     def files(self) -> typing.Sequence[windows_storage.StorageFile]: ...
 
 @typing.final
 class FileSavePickerActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsWithUser, ImplementsIFileSavePickerActivatedEventArgs2, ImplementsIFileSavePickerActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.FileSavePickerActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.FileSavePickerActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.FileSavePickerActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
+    # Windows.System.User Windows.ApplicationModel.Activation.FileSavePickerActivatedEventArgs::get_User()
     @_property
     def user(self) -> windows_system.User: ...
+    # Windows.Storage.Pickers.Provider.FileSavePickerUI Windows.ApplicationModel.Activation.FileSavePickerActivatedEventArgs::get_FileSavePickerUI()
     @_property
     def file_save_picker_ui(self) -> windows_storage_pickers_provider.FileSavePickerUI: ...
+    # System.String Windows.ApplicationModel.Activation.FileSavePickerActivatedEventArgs::get_CallerPackageFamilyName()
     @_property
     def caller_package_family_name(self) -> str: ...
+    # System.String Windows.ApplicationModel.Activation.FileSavePickerActivatedEventArgs::get_EnterpriseId()
     @_property
     def enterprise_id(self) -> str: ...
 
 @typing.final
 class FileSavePickerContinuationEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsWithUser, ImplementsIFileSavePickerContinuationEventArgs, ImplementsIContinuationActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.FileSavePickerContinuationEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.FileSavePickerContinuationEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.FileSavePickerContinuationEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
+    # Windows.System.User Windows.ApplicationModel.Activation.FileSavePickerContinuationEventArgs::get_User()
     @_property
     def user(self) -> windows_system.User: ...
+    # Windows.Foundation.Collections.ValueSet Windows.ApplicationModel.Activation.FileSavePickerContinuationEventArgs::get_ContinuationData()
     @_property
     def continuation_data(self) -> windows_foundation_collections.ValueSet: ...
+    # Windows.Storage.StorageFile Windows.ApplicationModel.Activation.FileSavePickerContinuationEventArgs::get_File()
     @_property
     def file(self) -> windows_storage.StorageFile: ...
 
 @typing.final
 class FolderPickerContinuationEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsWithUser, ImplementsIFolderPickerContinuationEventArgs, ImplementsIContinuationActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.FolderPickerContinuationEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.FolderPickerContinuationEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.FolderPickerContinuationEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
+    # Windows.System.User Windows.ApplicationModel.Activation.FolderPickerContinuationEventArgs::get_User()
     @_property
     def user(self) -> windows_system.User: ...
+    # Windows.Foundation.Collections.ValueSet Windows.ApplicationModel.Activation.FolderPickerContinuationEventArgs::get_ContinuationData()
     @_property
     def continuation_data(self) -> windows_foundation_collections.ValueSet: ...
+    # Windows.Storage.StorageFolder Windows.ApplicationModel.Activation.FolderPickerContinuationEventArgs::get_Folder()
     @_property
     def folder(self) -> windows_storage.StorageFolder: ...
 
 @typing.final
 class LaunchActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsWithUser, ImplementsILaunchActivatedEventArgs2, ImplementsIViewSwitcherProvider, ImplementsIPrelaunchActivatedEventArgs, ImplementsIApplicationViewActivatedEventArgs, ImplementsILaunchActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.LaunchActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.LaunchActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.LaunchActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
+    # Windows.System.User Windows.ApplicationModel.Activation.LaunchActivatedEventArgs::get_User()
     @_property
     def user(self) -> windows_system.User: ...
+    # System.Int32 Windows.ApplicationModel.Activation.LaunchActivatedEventArgs::get_CurrentlyShownApplicationViewId()
     @_property
     def currently_shown_application_view_id(self) -> winrt.system.Int32: ...
+    # System.String Windows.ApplicationModel.Activation.LaunchActivatedEventArgs::get_Arguments()
     @_property
     def arguments(self) -> str: ...
+    # System.String Windows.ApplicationModel.Activation.LaunchActivatedEventArgs::get_TileId()
     @_property
     def tile_id(self) -> str: ...
+    # Windows.ApplicationModel.Activation.TileActivatedInfo Windows.ApplicationModel.Activation.LaunchActivatedEventArgs::get_TileActivatedInfo()
     @_property
     def tile_activated_info(self) -> TileActivatedInfo: ...
+    # System.Boolean Windows.ApplicationModel.Activation.LaunchActivatedEventArgs::get_PrelaunchActivated()
     @_property
     def prelaunch_activated(self) -> bool: ...
+    # Windows.UI.ViewManagement.ActivationViewSwitcher Windows.ApplicationModel.Activation.LaunchActivatedEventArgs::get_ViewSwitcher()
     @_property
     def view_switcher(self) -> windows_ui_viewmanagement.ActivationViewSwitcher: ...
 
 @typing.final
 class LockScreenActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsWithUser, ImplementsILockScreenActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.LockScreenActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.LockScreenActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.LockScreenActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
+    # Windows.System.User Windows.ApplicationModel.Activation.LockScreenActivatedEventArgs::get_User()
     @_property
     def user(self) -> windows_system.User: ...
+    # System.Object Windows.ApplicationModel.Activation.LockScreenActivatedEventArgs::get_Info()
     @_property
     def info(self) -> winrt.system.Object: ...
 
 @typing.final
 class LockScreenCallActivatedEventArgs(winrt.system.Object, ImplementsIViewSwitcherProvider, ImplementsIApplicationViewActivatedEventArgs, ImplementsILockScreenCallActivatedEventArgs, ImplementsILaunchActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
+    # System.Int32 Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs::get_CurrentlyShownApplicationViewId()
     @_property
     def currently_shown_application_view_id(self) -> winrt.system.Int32: ...
+    # System.String Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs::get_Arguments()
     @_property
     def arguments(self) -> str: ...
+    # System.String Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs::get_TileId()
     @_property
     def tile_id(self) -> str: ...
+    # Windows.ApplicationModel.Calls.LockScreenCallUI Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs::get_CallUI()
     @_property
     def call_ui(self) -> windows_applicationmodel_calls.LockScreenCallUI: ...
+    # Windows.UI.ViewManagement.ActivationViewSwitcher Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs::get_ViewSwitcher()
     @_property
     def view_switcher(self) -> windows_ui_viewmanagement.ActivationViewSwitcher: ...
 
 @typing.final
 class LockScreenComponentActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgs):
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.LockScreenComponentActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.LockScreenComponentActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.LockScreenComponentActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
 @typing.final
 class PhoneCallActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsWithUser, ImplementsIPhoneCallActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.PhoneCallActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.PhoneCallActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.PhoneCallActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
+    # Windows.System.User Windows.ApplicationModel.Activation.PhoneCallActivatedEventArgs::get_User()
     @_property
     def user(self) -> windows_system.User: ...
+    # System.Guid Windows.ApplicationModel.Activation.PhoneCallActivatedEventArgs::get_LineId()
     @_property
     def line_id(self) -> _uuid.UUID: ...
 
 @typing.final
 class PickerReturnedActivatedEventArgs(winrt.system.Object, ImplementsIPickerReturnedActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.PickerReturnedActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.PickerReturnedActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.PickerReturnedActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
+    # System.String Windows.ApplicationModel.Activation.PickerReturnedActivatedEventArgs::get_PickerOperationId()
     @_property
     def picker_operation_id(self) -> str: ...
 
 @typing.final
 class Print3DWorkflowActivatedEventArgs(winrt.system.Object, ImplementsIPrint3DWorkflowActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.Print3DWorkflowActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.Print3DWorkflowActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.Print3DWorkflowActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
+    # Windows.Devices.Printers.Extensions.Print3DWorkflow Windows.ApplicationModel.Activation.Print3DWorkflowActivatedEventArgs::get_Workflow()
     @_property
     def workflow(self) -> windows_devices_printers_extensions.Print3DWorkflow: ...
 
 @typing.final
 class PrintTaskSettingsActivatedEventArgs(winrt.system.Object, ImplementsIPrintTaskSettingsActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.PrintTaskSettingsActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.PrintTaskSettingsActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.PrintTaskSettingsActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
+    # Windows.Devices.Printers.Extensions.PrintTaskConfiguration Windows.ApplicationModel.Activation.PrintTaskSettingsActivatedEventArgs::get_Configuration()
     @_property
     def configuration(self) -> windows_devices_printers_extensions.PrintTaskConfiguration: ...
 
 @typing.final
 class ProtocolActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsWithUser, ImplementsIViewSwitcherProvider, ImplementsIApplicationViewActivatedEventArgs, ImplementsIProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData, ImplementsIProtocolActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
+    # Windows.System.User Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs::get_User()
     @_property
     def user(self) -> windows_system.User: ...
+    # System.Int32 Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs::get_CurrentlyShownApplicationViewId()
     @_property
     def currently_shown_application_view_id(self) -> winrt.system.Int32: ...
+    # Windows.Foundation.Uri Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs::get_Uri()
     @_property
     def uri(self) -> windows_foundation.Uri: ...
+    # System.String Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs::get_CallerPackageFamilyName()
     @_property
     def caller_package_family_name(self) -> str: ...
+    # Windows.Foundation.Collections.ValueSet Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs::get_Data()
     @_property
     def data(self) -> windows_foundation_collections.ValueSet: ...
+    # Windows.UI.ViewManagement.ActivationViewSwitcher Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs::get_ViewSwitcher()
     @_property
     def view_switcher(self) -> windows_ui_viewmanagement.ActivationViewSwitcher: ...
 
 @typing.final
 class ProtocolForResultsActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsWithUser, ImplementsIViewSwitcherProvider, ImplementsIApplicationViewActivatedEventArgs, ImplementsIProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData, ImplementsIProtocolActivatedEventArgs, ImplementsIProtocolForResultsActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.ProtocolForResultsActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.ProtocolForResultsActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.ProtocolForResultsActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
+    # Windows.System.User Windows.ApplicationModel.Activation.ProtocolForResultsActivatedEventArgs::get_User()
     @_property
     def user(self) -> windows_system.User: ...
+    # System.Int32 Windows.ApplicationModel.Activation.ProtocolForResultsActivatedEventArgs::get_CurrentlyShownApplicationViewId()
     @_property
     def currently_shown_application_view_id(self) -> winrt.system.Int32: ...
+    # Windows.Foundation.Uri Windows.ApplicationModel.Activation.ProtocolForResultsActivatedEventArgs::get_Uri()
     @_property
     def uri(self) -> windows_foundation.Uri: ...
+    # System.String Windows.ApplicationModel.Activation.ProtocolForResultsActivatedEventArgs::get_CallerPackageFamilyName()
     @_property
     def caller_package_family_name(self) -> str: ...
+    # Windows.Foundation.Collections.ValueSet Windows.ApplicationModel.Activation.ProtocolForResultsActivatedEventArgs::get_Data()
     @_property
     def data(self) -> windows_foundation_collections.ValueSet: ...
+    # Windows.System.ProtocolForResultsOperation Windows.ApplicationModel.Activation.ProtocolForResultsActivatedEventArgs::get_ProtocolForResultsOperation()
     @_property
     def protocol_for_results_operation(self) -> windows_system.ProtocolForResultsOperation: ...
+    # Windows.UI.ViewManagement.ActivationViewSwitcher Windows.ApplicationModel.Activation.ProtocolForResultsActivatedEventArgs::get_ViewSwitcher()
     @_property
     def view_switcher(self) -> windows_ui_viewmanagement.ActivationViewSwitcher: ...
 
 @typing.final
 class RestrictedLaunchActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsWithUser, ImplementsIRestrictedLaunchActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.RestrictedLaunchActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.RestrictedLaunchActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.RestrictedLaunchActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
+    # Windows.System.User Windows.ApplicationModel.Activation.RestrictedLaunchActivatedEventArgs::get_User()
     @_property
     def user(self) -> windows_system.User: ...
+    # System.Object Windows.ApplicationModel.Activation.RestrictedLaunchActivatedEventArgs::get_SharedContext()
     @_property
     def shared_context(self) -> winrt.system.Object: ...
 
 @typing.final
 class SearchActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsWithUser, ImplementsIViewSwitcherProvider, ImplementsISearchActivatedEventArgsWithLinguisticDetails, ImplementsIApplicationViewActivatedEventArgs, ImplementsISearchActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.SearchActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.SearchActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.SearchActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
+    # Windows.System.User Windows.ApplicationModel.Activation.SearchActivatedEventArgs::get_User()
     @_property
     def user(self) -> windows_system.User: ...
+    # System.Int32 Windows.ApplicationModel.Activation.SearchActivatedEventArgs::get_CurrentlyShownApplicationViewId()
     @_property
     def currently_shown_application_view_id(self) -> winrt.system.Int32: ...
+    # System.String Windows.ApplicationModel.Activation.SearchActivatedEventArgs::get_Language()
     @_property
     def language(self) -> str: ...
+    # System.String Windows.ApplicationModel.Activation.SearchActivatedEventArgs::get_QueryText()
     @_property
     def query_text(self) -> str: ...
+    # Windows.ApplicationModel.Search.SearchPaneQueryLinguisticDetails Windows.ApplicationModel.Activation.SearchActivatedEventArgs::get_LinguisticDetails()
     @_property
     def linguistic_details(self) -> windows_applicationmodel_search.SearchPaneQueryLinguisticDetails: ...
+    # Windows.UI.ViewManagement.ActivationViewSwitcher Windows.ApplicationModel.Activation.SearchActivatedEventArgs::get_ViewSwitcher()
     @_property
     def view_switcher(self) -> windows_ui_viewmanagement.ActivationViewSwitcher: ...
 
 @typing.final
 class ShareTargetActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsWithUser, ImplementsIShareTargetActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.ShareTargetActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.ShareTargetActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.ShareTargetActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
+    # Windows.System.User Windows.ApplicationModel.Activation.ShareTargetActivatedEventArgs::get_User()
     @_property
     def user(self) -> windows_system.User: ...
+    # Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation Windows.ApplicationModel.Activation.ShareTargetActivatedEventArgs::get_ShareOperation()
     @_property
     def share_operation(self) -> windows_applicationmodel_datatransfer_sharetarget.ShareOperation: ...
 
 @typing.final
 class SplashScreen(winrt.system.Object):
+    # Windows.Foundation.EventRegistrationToken Windows.ApplicationModel.Activation.SplashScreen::add_Dismissed(Windows.Foundation.TypedEventHandler`2<Windows.ApplicationModel.Activation.SplashScreen,System.Object>)
     def add_dismissed(self, handler: windows_foundation.TypedEventHandler[SplashScreen, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.ApplicationModel.Activation.SplashScreen::remove_Dismissed(Windows.Foundation.EventRegistrationToken)
     def remove_dismissed(self, cookie: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.Rect Windows.ApplicationModel.Activation.SplashScreen::get_ImageLocation()
     @_property
     def image_location(self) -> windows_foundation.Rect: ...
 
 @typing.final
 class StartupTaskActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsWithUser, ImplementsIStartupTaskActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.StartupTaskActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.StartupTaskActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.StartupTaskActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
+    # Windows.System.User Windows.ApplicationModel.Activation.StartupTaskActivatedEventArgs::get_User()
     @_property
     def user(self) -> windows_system.User: ...
+    # System.String Windows.ApplicationModel.Activation.StartupTaskActivatedEventArgs::get_TaskId()
     @_property
     def task_id(self) -> str: ...
 
 @typing.final
 class TileActivatedInfo(winrt.system.Object):
+    # Windows.Foundation.Collections.IVectorView`1<Windows.UI.Notifications.ShownTileNotification> Windows.ApplicationModel.Activation.TileActivatedInfo::get_RecentlyShownNotifications()
     @_property
     def recently_shown_notifications(self) -> typing.Sequence[windows_ui_notifications.ShownTileNotification]: ...
 
 @typing.final
 class ToastNotificationActivatedEventArgs(winrt.system.Object, ImplementsIApplicationViewActivatedEventArgs, ImplementsIActivatedEventArgsWithUser, ImplementsIToastNotificationActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.ToastNotificationActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.ToastNotificationActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.ToastNotificationActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
+    # Windows.System.User Windows.ApplicationModel.Activation.ToastNotificationActivatedEventArgs::get_User()
     @_property
     def user(self) -> windows_system.User: ...
+    # System.Int32 Windows.ApplicationModel.Activation.ToastNotificationActivatedEventArgs::get_CurrentlyShownApplicationViewId()
     @_property
     def currently_shown_application_view_id(self) -> winrt.system.Int32: ...
+    # System.String Windows.ApplicationModel.Activation.ToastNotificationActivatedEventArgs::get_Argument()
     @_property
     def argument(self) -> str: ...
+    # Windows.Foundation.Collections.ValueSet Windows.ApplicationModel.Activation.ToastNotificationActivatedEventArgs::get_UserInput()
     @_property
     def user_input(self) -> windows_foundation_collections.ValueSet: ...
 
 @typing.final
 class UserDataAccountProviderActivatedEventArgs(winrt.system.Object, ImplementsIUserDataAccountProviderActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.UserDataAccountProviderActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.UserDataAccountProviderActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.UserDataAccountProviderActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
+    # Windows.ApplicationModel.UserDataAccounts.Provider.IUserDataAccountProviderOperation Windows.ApplicationModel.Activation.UserDataAccountProviderActivatedEventArgs::get_Operation()
     @_property
     def operation(self) -> windows_applicationmodel_userdataaccounts_provider.IUserDataAccountProviderOperation: ...
 
 @typing.final
 class VoiceCommandActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsWithUser, ImplementsIVoiceCommandActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.VoiceCommandActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.VoiceCommandActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.VoiceCommandActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
+    # Windows.System.User Windows.ApplicationModel.Activation.VoiceCommandActivatedEventArgs::get_User()
     @_property
     def user(self) -> windows_system.User: ...
+    # Windows.Media.SpeechRecognition.SpeechRecognitionResult Windows.ApplicationModel.Activation.VoiceCommandActivatedEventArgs::get_Result()
     @_property
     def result(self) -> windows_media_speechrecognition.SpeechRecognitionResult: ...
 
 @typing.final
 class WalletActionActivatedEventArgs(winrt.system.Object, ImplementsIWalletActionActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
+    # System.String Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs::get_ActionId()
     @_property
     def action_id(self) -> str: ...
+    # Windows.ApplicationModel.Wallet.WalletActionKind Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs::get_ActionKind()
     @_property
     def action_kind(self) -> windows_applicationmodel_wallet.WalletActionKind: ...
+    # System.String Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs::get_ItemId()
     @_property
     def item_id(self) -> str: ...
 
 @typing.final
 class WebAccountProviderActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgsWithUser, ImplementsIWebAccountProviderActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.WebAccountProviderActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.WebAccountProviderActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.WebAccountProviderActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
+    # Windows.System.User Windows.ApplicationModel.Activation.WebAccountProviderActivatedEventArgs::get_User()
     @_property
     def user(self) -> windows_system.User: ...
+    # Windows.Security.Authentication.Web.Provider.IWebAccountProviderOperation Windows.ApplicationModel.Activation.WebAccountProviderActivatedEventArgs::get_Operation()
     @_property
     def operation(self) -> windows_security_authentication_web_provider.IWebAccountProviderOperation: ...
 
 @typing.final
 class WebAuthenticationBrokerContinuationEventArgs(winrt.system.Object, ImplementsIWebAuthenticationBrokerContinuationEventArgs, ImplementsIContinuationActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.WebAuthenticationBrokerContinuationEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.WebAuthenticationBrokerContinuationEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.WebAuthenticationBrokerContinuationEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
+    # Windows.Foundation.Collections.ValueSet Windows.ApplicationModel.Activation.WebAuthenticationBrokerContinuationEventArgs::get_ContinuationData()
     @_property
     def continuation_data(self) -> windows_foundation_collections.ValueSet: ...
+    # Windows.Security.Authentication.Web.WebAuthenticationResult Windows.ApplicationModel.Activation.WebAuthenticationBrokerContinuationEventArgs::get_WebAuthenticationResult()
     @_property
     def web_authentication_result(self) -> windows_security_authentication_web.WebAuthenticationResult: ...
 
@@ -762,10 +1050,13 @@ class ImplementsIActivatedEventArgs():
 
 @typing.final
 class IActivatedEventArgs(winrt.system.Object, ImplementsIActivatedEventArgs):
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.IActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.IActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.IActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
@@ -774,12 +1065,16 @@ class ImplementsIActivatedEventArgsWithUser():
 
 @typing.final
 class IActivatedEventArgsWithUser(winrt.system.Object, ImplementsIActivatedEventArgsWithUser, ImplementsIActivatedEventArgs):
+    # Windows.System.User Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser::get_User()
     @_property
     def user(self) -> windows_system.User: ...
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.IActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.IActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.IActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
@@ -788,12 +1083,16 @@ class ImplementsIApplicationViewActivatedEventArgs():
 
 @typing.final
 class IApplicationViewActivatedEventArgs(winrt.system.Object, ImplementsIApplicationViewActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # System.Int32 Windows.ApplicationModel.Activation.IApplicationViewActivatedEventArgs::get_CurrentlyShownApplicationViewId()
     @_property
     def currently_shown_application_view_id(self) -> winrt.system.Int32: ...
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.IActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.IActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.IActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
@@ -802,12 +1101,16 @@ class ImplementsIAppointmentsProviderActivatedEventArgs():
 
 @typing.final
 class IAppointmentsProviderActivatedEventArgs(winrt.system.Object, ImplementsIAppointmentsProviderActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # System.String Windows.ApplicationModel.Activation.IAppointmentsProviderActivatedEventArgs::get_Verb()
     @_property
     def verb(self) -> str: ...
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.IActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.IActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.IActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
@@ -816,14 +1119,19 @@ class ImplementsIAppointmentsProviderAddAppointmentActivatedEventArgs():
 
 @typing.final
 class IAppointmentsProviderAddAppointmentActivatedEventArgs(winrt.system.Object, ImplementsIAppointmentsProviderAddAppointmentActivatedEventArgs, ImplementsIAppointmentsProviderActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.ApplicationModel.Appointments.AppointmentsProvider.AddAppointmentOperation Windows.ApplicationModel.Activation.IAppointmentsProviderAddAppointmentActivatedEventArgs::get_AddAppointmentOperation()
     @_property
     def add_appointment_operation(self) -> windows_applicationmodel_appointments_appointmentsprovider.AddAppointmentOperation: ...
+    # System.String Windows.ApplicationModel.Activation.IAppointmentsProviderActivatedEventArgs::get_Verb()
     @_property
     def verb(self) -> str: ...
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.IActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.IActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.IActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
@@ -832,14 +1140,19 @@ class ImplementsIAppointmentsProviderRemoveAppointmentActivatedEventArgs():
 
 @typing.final
 class IAppointmentsProviderRemoveAppointmentActivatedEventArgs(winrt.system.Object, ImplementsIAppointmentsProviderRemoveAppointmentActivatedEventArgs, ImplementsIAppointmentsProviderActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.ApplicationModel.Appointments.AppointmentsProvider.RemoveAppointmentOperation Windows.ApplicationModel.Activation.IAppointmentsProviderRemoveAppointmentActivatedEventArgs::get_RemoveAppointmentOperation()
     @_property
     def remove_appointment_operation(self) -> windows_applicationmodel_appointments_appointmentsprovider.RemoveAppointmentOperation: ...
+    # System.String Windows.ApplicationModel.Activation.IAppointmentsProviderActivatedEventArgs::get_Verb()
     @_property
     def verb(self) -> str: ...
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.IActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.IActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.IActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
@@ -848,14 +1161,19 @@ class ImplementsIAppointmentsProviderReplaceAppointmentActivatedEventArgs():
 
 @typing.final
 class IAppointmentsProviderReplaceAppointmentActivatedEventArgs(winrt.system.Object, ImplementsIAppointmentsProviderReplaceAppointmentActivatedEventArgs, ImplementsIAppointmentsProviderActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.ApplicationModel.Appointments.AppointmentsProvider.ReplaceAppointmentOperation Windows.ApplicationModel.Activation.IAppointmentsProviderReplaceAppointmentActivatedEventArgs::get_ReplaceAppointmentOperation()
     @_property
     def replace_appointment_operation(self) -> windows_applicationmodel_appointments_appointmentsprovider.ReplaceAppointmentOperation: ...
+    # System.String Windows.ApplicationModel.Activation.IAppointmentsProviderActivatedEventArgs::get_Verb()
     @_property
     def verb(self) -> str: ...
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.IActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.IActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.IActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
@@ -864,18 +1182,25 @@ class ImplementsIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs():
 
 @typing.final
 class IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs(winrt.system.Object, ImplementsIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs, ImplementsIAppointmentsProviderActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.Foundation.IReference`1<Windows.Foundation.DateTime> Windows.ApplicationModel.Activation.IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs::get_InstanceStartDate()
     @_property
     def instance_start_date(self) -> typing.Optional[datetime.datetime]: ...
+    # System.String Windows.ApplicationModel.Activation.IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs::get_LocalId()
     @_property
     def local_id(self) -> str: ...
+    # System.String Windows.ApplicationModel.Activation.IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs::get_RoamingId()
     @_property
     def roaming_id(self) -> str: ...
+    # System.String Windows.ApplicationModel.Activation.IAppointmentsProviderActivatedEventArgs::get_Verb()
     @_property
     def verb(self) -> str: ...
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.IActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.IActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.IActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
@@ -884,16 +1209,22 @@ class ImplementsIAppointmentsProviderShowTimeFrameActivatedEventArgs():
 
 @typing.final
 class IAppointmentsProviderShowTimeFrameActivatedEventArgs(winrt.system.Object, ImplementsIAppointmentsProviderShowTimeFrameActivatedEventArgs, ImplementsIAppointmentsProviderActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.Foundation.TimeSpan Windows.ApplicationModel.Activation.IAppointmentsProviderShowTimeFrameActivatedEventArgs::get_Duration()
     @_property
     def duration(self) -> datetime.timedelta: ...
+    # Windows.Foundation.DateTime Windows.ApplicationModel.Activation.IAppointmentsProviderShowTimeFrameActivatedEventArgs::get_TimeToShow()
     @_property
     def time_to_show(self) -> datetime.datetime: ...
+    # System.String Windows.ApplicationModel.Activation.IAppointmentsProviderActivatedEventArgs::get_Verb()
     @_property
     def verb(self) -> str: ...
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.IActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.IActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.IActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
@@ -902,6 +1233,7 @@ class ImplementsIBackgroundActivatedEventArgs():
 
 @typing.final
 class IBackgroundActivatedEventArgs(winrt.system.Object, ImplementsIBackgroundActivatedEventArgs):
+    # Windows.ApplicationModel.Background.IBackgroundTaskInstance Windows.ApplicationModel.Activation.IBackgroundActivatedEventArgs::get_TaskInstance()
     @_property
     def task_instance(self) -> windows_applicationmodel_background.IBackgroundTaskInstance: ...
 
@@ -910,12 +1242,16 @@ class ImplementsIBarcodeScannerPreviewActivatedEventArgs():
 
 @typing.final
 class IBarcodeScannerPreviewActivatedEventArgs(winrt.system.Object, ImplementsIBarcodeScannerPreviewActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # System.String Windows.ApplicationModel.Activation.IBarcodeScannerPreviewActivatedEventArgs::get_ConnectionId()
     @_property
     def connection_id(self) -> str: ...
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.IActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.IActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.IActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
@@ -924,12 +1260,16 @@ class ImplementsICachedFileUpdaterActivatedEventArgs():
 
 @typing.final
 class ICachedFileUpdaterActivatedEventArgs(winrt.system.Object, ImplementsICachedFileUpdaterActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.Storage.Provider.CachedFileUpdaterUI Windows.ApplicationModel.Activation.ICachedFileUpdaterActivatedEventArgs::get_CachedFileUpdaterUI()
     @_property
     def cached_file_updater_ui(self) -> windows_storage_provider.CachedFileUpdaterUI: ...
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.IActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.IActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.IActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
@@ -938,14 +1278,19 @@ class ImplementsICameraSettingsActivatedEventArgs():
 
 @typing.final
 class ICameraSettingsActivatedEventArgs(winrt.system.Object, ImplementsICameraSettingsActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # System.Object Windows.ApplicationModel.Activation.ICameraSettingsActivatedEventArgs::get_VideoDeviceController()
     @_property
     def video_device_controller(self) -> winrt.system.Object: ...
+    # System.Object Windows.ApplicationModel.Activation.ICameraSettingsActivatedEventArgs::get_VideoDeviceExtension()
     @_property
     def video_device_extension(self) -> winrt.system.Object: ...
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.IActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.IActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.IActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
@@ -954,12 +1299,16 @@ class ImplementsICommandLineActivatedEventArgs():
 
 @typing.final
 class ICommandLineActivatedEventArgs(winrt.system.Object, ImplementsICommandLineActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.ApplicationModel.Activation.CommandLineActivationOperation Windows.ApplicationModel.Activation.ICommandLineActivatedEventArgs::get_Operation()
     @_property
     def operation(self) -> CommandLineActivationOperation: ...
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.IActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.IActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.IActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
@@ -968,12 +1317,16 @@ class ImplementsIContactActivatedEventArgs():
 
 @typing.final
 class IContactActivatedEventArgs(winrt.system.Object, ImplementsIContactActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # System.String Windows.ApplicationModel.Activation.IContactActivatedEventArgs::get_Verb()
     @_property
     def verb(self) -> str: ...
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.IActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.IActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.IActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
@@ -982,18 +1335,25 @@ class ImplementsIContactCallActivatedEventArgs():
 
 @typing.final
 class IContactCallActivatedEventArgs(winrt.system.Object, ImplementsIContactCallActivatedEventArgs, ImplementsIContactActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.ApplicationModel.Contacts.Contact Windows.ApplicationModel.Activation.IContactCallActivatedEventArgs::get_Contact()
     @_property
     def contact(self) -> windows_applicationmodel_contacts.Contact: ...
+    # System.String Windows.ApplicationModel.Activation.IContactCallActivatedEventArgs::get_ServiceId()
     @_property
     def service_id(self) -> str: ...
+    # System.String Windows.ApplicationModel.Activation.IContactCallActivatedEventArgs::get_ServiceUserId()
     @_property
     def service_user_id(self) -> str: ...
+    # System.String Windows.ApplicationModel.Activation.IContactActivatedEventArgs::get_Verb()
     @_property
     def verb(self) -> str: ...
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.IActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.IActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.IActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
@@ -1002,16 +1362,22 @@ class ImplementsIContactMapActivatedEventArgs():
 
 @typing.final
 class IContactMapActivatedEventArgs(winrt.system.Object, ImplementsIContactMapActivatedEventArgs, ImplementsIContactActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.ApplicationModel.Contacts.ContactAddress Windows.ApplicationModel.Activation.IContactMapActivatedEventArgs::get_Address()
     @_property
     def address(self) -> windows_applicationmodel_contacts.ContactAddress: ...
+    # Windows.ApplicationModel.Contacts.Contact Windows.ApplicationModel.Activation.IContactMapActivatedEventArgs::get_Contact()
     @_property
     def contact(self) -> windows_applicationmodel_contacts.Contact: ...
+    # System.String Windows.ApplicationModel.Activation.IContactActivatedEventArgs::get_Verb()
     @_property
     def verb(self) -> str: ...
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.IActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.IActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.IActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
@@ -1020,18 +1386,25 @@ class ImplementsIContactMessageActivatedEventArgs():
 
 @typing.final
 class IContactMessageActivatedEventArgs(winrt.system.Object, ImplementsIContactMessageActivatedEventArgs, ImplementsIContactActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.ApplicationModel.Contacts.Contact Windows.ApplicationModel.Activation.IContactMessageActivatedEventArgs::get_Contact()
     @_property
     def contact(self) -> windows_applicationmodel_contacts.Contact: ...
+    # System.String Windows.ApplicationModel.Activation.IContactMessageActivatedEventArgs::get_ServiceId()
     @_property
     def service_id(self) -> str: ...
+    # System.String Windows.ApplicationModel.Activation.IContactMessageActivatedEventArgs::get_ServiceUserId()
     @_property
     def service_user_id(self) -> str: ...
+    # System.String Windows.ApplicationModel.Activation.IContactActivatedEventArgs::get_Verb()
     @_property
     def verb(self) -> str: ...
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.IActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.IActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.IActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
@@ -1040,8 +1413,10 @@ class ImplementsIContactPanelActivatedEventArgs():
 
 @typing.final
 class IContactPanelActivatedEventArgs(winrt.system.Object, ImplementsIContactPanelActivatedEventArgs):
+    # Windows.ApplicationModel.Contacts.Contact Windows.ApplicationModel.Activation.IContactPanelActivatedEventArgs::get_Contact()
     @_property
     def contact(self) -> windows_applicationmodel_contacts.Contact: ...
+    # Windows.ApplicationModel.Contacts.ContactPanel Windows.ApplicationModel.Activation.IContactPanelActivatedEventArgs::get_ContactPanel()
     @_property
     def contact_panel(self) -> windows_applicationmodel_contacts.ContactPanel: ...
 
@@ -1050,12 +1425,16 @@ class ImplementsIContactPickerActivatedEventArgs():
 
 @typing.final
 class IContactPickerActivatedEventArgs(winrt.system.Object, ImplementsIContactPickerActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.ApplicationModel.Contacts.Provider.ContactPickerUI Windows.ApplicationModel.Activation.IContactPickerActivatedEventArgs::get_ContactPickerUI()
     @_property
     def contact_picker_ui(self) -> windows_applicationmodel_contacts_provider.ContactPickerUI: ...
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.IActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.IActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.IActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
@@ -1064,18 +1443,25 @@ class ImplementsIContactPostActivatedEventArgs():
 
 @typing.final
 class IContactPostActivatedEventArgs(winrt.system.Object, ImplementsIContactPostActivatedEventArgs, ImplementsIContactActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.ApplicationModel.Contacts.Contact Windows.ApplicationModel.Activation.IContactPostActivatedEventArgs::get_Contact()
     @_property
     def contact(self) -> windows_applicationmodel_contacts.Contact: ...
+    # System.String Windows.ApplicationModel.Activation.IContactPostActivatedEventArgs::get_ServiceId()
     @_property
     def service_id(self) -> str: ...
+    # System.String Windows.ApplicationModel.Activation.IContactPostActivatedEventArgs::get_ServiceUserId()
     @_property
     def service_user_id(self) -> str: ...
+    # System.String Windows.ApplicationModel.Activation.IContactActivatedEventArgs::get_Verb()
     @_property
     def verb(self) -> str: ...
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.IActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.IActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.IActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
@@ -1084,18 +1470,25 @@ class ImplementsIContactVideoCallActivatedEventArgs():
 
 @typing.final
 class IContactVideoCallActivatedEventArgs(winrt.system.Object, ImplementsIContactVideoCallActivatedEventArgs, ImplementsIContactActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.ApplicationModel.Contacts.Contact Windows.ApplicationModel.Activation.IContactVideoCallActivatedEventArgs::get_Contact()
     @_property
     def contact(self) -> windows_applicationmodel_contacts.Contact: ...
+    # System.String Windows.ApplicationModel.Activation.IContactVideoCallActivatedEventArgs::get_ServiceId()
     @_property
     def service_id(self) -> str: ...
+    # System.String Windows.ApplicationModel.Activation.IContactVideoCallActivatedEventArgs::get_ServiceUserId()
     @_property
     def service_user_id(self) -> str: ...
+    # System.String Windows.ApplicationModel.Activation.IContactActivatedEventArgs::get_Verb()
     @_property
     def verb(self) -> str: ...
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.IActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.IActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.IActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
@@ -1104,12 +1497,16 @@ class ImplementsIContactsProviderActivatedEventArgs():
 
 @typing.final
 class IContactsProviderActivatedEventArgs(winrt.system.Object, ImplementsIContactsProviderActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # System.String Windows.ApplicationModel.Activation.IContactsProviderActivatedEventArgs::get_Verb()
     @_property
     def verb(self) -> str: ...
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.IActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.IActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.IActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
@@ -1118,12 +1515,16 @@ class ImplementsIContinuationActivatedEventArgs():
 
 @typing.final
 class IContinuationActivatedEventArgs(winrt.system.Object, ImplementsIContinuationActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.Foundation.Collections.ValueSet Windows.ApplicationModel.Activation.IContinuationActivatedEventArgs::get_ContinuationData()
     @_property
     def continuation_data(self) -> windows_foundation_collections.ValueSet: ...
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.IActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.IActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.IActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
@@ -1132,14 +1533,19 @@ class ImplementsIDeviceActivatedEventArgs():
 
 @typing.final
 class IDeviceActivatedEventArgs(winrt.system.Object, ImplementsIDeviceActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # System.String Windows.ApplicationModel.Activation.IDeviceActivatedEventArgs::get_DeviceInformationId()
     @_property
     def device_information_id(self) -> str: ...
+    # System.String Windows.ApplicationModel.Activation.IDeviceActivatedEventArgs::get_Verb()
     @_property
     def verb(self) -> str: ...
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.IActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.IActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.IActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
@@ -1148,12 +1554,16 @@ class ImplementsIDevicePairingActivatedEventArgs():
 
 @typing.final
 class IDevicePairingActivatedEventArgs(winrt.system.Object, ImplementsIDevicePairingActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.Devices.Enumeration.DeviceInformation Windows.ApplicationModel.Activation.IDevicePairingActivatedEventArgs::get_DeviceInformation()
     @_property
     def device_information(self) -> windows_devices_enumeration.DeviceInformation: ...
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.IActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.IActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.IActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
@@ -1162,16 +1572,22 @@ class ImplementsIDialReceiverActivatedEventArgs():
 
 @typing.final
 class IDialReceiverActivatedEventArgs(winrt.system.Object, ImplementsIDialReceiverActivatedEventArgs, ImplementsILaunchActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # System.String Windows.ApplicationModel.Activation.IDialReceiverActivatedEventArgs::get_AppName()
     @_property
     def app_name(self) -> str: ...
+    # System.String Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs::get_Arguments()
     @_property
     def arguments(self) -> str: ...
+    # System.String Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs::get_TileId()
     @_property
     def tile_id(self) -> str: ...
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.IActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.IActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.IActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
@@ -1180,14 +1596,19 @@ class ImplementsIFileActivatedEventArgs():
 
 @typing.final
 class IFileActivatedEventArgs(winrt.system.Object, ImplementsIFileActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Storage.IStorageItem> Windows.ApplicationModel.Activation.IFileActivatedEventArgs::get_Files()
     @_property
     def files(self) -> typing.Sequence[windows_storage.IStorageItem]: ...
+    # System.String Windows.ApplicationModel.Activation.IFileActivatedEventArgs::get_Verb()
     @_property
     def verb(self) -> str: ...
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.IActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.IActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.IActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
@@ -1196,12 +1617,16 @@ class ImplementsIFileActivatedEventArgsWithCallerPackageFamilyName():
 
 @typing.final
 class IFileActivatedEventArgsWithCallerPackageFamilyName(winrt.system.Object, ImplementsIFileActivatedEventArgsWithCallerPackageFamilyName, ImplementsIActivatedEventArgs):
+    # System.String Windows.ApplicationModel.Activation.IFileActivatedEventArgsWithCallerPackageFamilyName::get_CallerPackageFamilyName()
     @_property
     def caller_package_family_name(self) -> str: ...
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.IActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.IActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.IActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
@@ -1210,16 +1635,22 @@ class ImplementsIFileActivatedEventArgsWithNeighboringFiles():
 
 @typing.final
 class IFileActivatedEventArgsWithNeighboringFiles(winrt.system.Object, ImplementsIFileActivatedEventArgsWithNeighboringFiles, ImplementsIFileActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.Storage.Search.StorageFileQueryResult Windows.ApplicationModel.Activation.IFileActivatedEventArgsWithNeighboringFiles::get_NeighboringFilesQuery()
     @_property
     def neighboring_files_query(self) -> windows_storage_search.StorageFileQueryResult: ...
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Storage.IStorageItem> Windows.ApplicationModel.Activation.IFileActivatedEventArgs::get_Files()
     @_property
     def files(self) -> typing.Sequence[windows_storage.IStorageItem]: ...
+    # System.String Windows.ApplicationModel.Activation.IFileActivatedEventArgs::get_Verb()
     @_property
     def verb(self) -> str: ...
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.IActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.IActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.IActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
@@ -1228,12 +1659,16 @@ class ImplementsIFileOpenPickerActivatedEventArgs():
 
 @typing.final
 class IFileOpenPickerActivatedEventArgs(winrt.system.Object, ImplementsIFileOpenPickerActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.Storage.Pickers.Provider.FileOpenPickerUI Windows.ApplicationModel.Activation.IFileOpenPickerActivatedEventArgs::get_FileOpenPickerUI()
     @_property
     def file_open_picker_ui(self) -> windows_storage_pickers_provider.FileOpenPickerUI: ...
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.IActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.IActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.IActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
@@ -1242,6 +1677,7 @@ class ImplementsIFileOpenPickerActivatedEventArgs2():
 
 @typing.final
 class IFileOpenPickerActivatedEventArgs2(winrt.system.Object, ImplementsIFileOpenPickerActivatedEventArgs2):
+    # System.String Windows.ApplicationModel.Activation.IFileOpenPickerActivatedEventArgs2::get_CallerPackageFamilyName()
     @_property
     def caller_package_family_name(self) -> str: ...
 
@@ -1250,14 +1686,19 @@ class ImplementsIFileOpenPickerContinuationEventArgs():
 
 @typing.final
 class IFileOpenPickerContinuationEventArgs(winrt.system.Object, ImplementsIFileOpenPickerContinuationEventArgs, ImplementsIContinuationActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Storage.StorageFile> Windows.ApplicationModel.Activation.IFileOpenPickerContinuationEventArgs::get_Files()
     @_property
     def files(self) -> typing.Sequence[windows_storage.StorageFile]: ...
+    # Windows.Foundation.Collections.ValueSet Windows.ApplicationModel.Activation.IContinuationActivatedEventArgs::get_ContinuationData()
     @_property
     def continuation_data(self) -> windows_foundation_collections.ValueSet: ...
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.IActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.IActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.IActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
@@ -1266,12 +1707,16 @@ class ImplementsIFileSavePickerActivatedEventArgs():
 
 @typing.final
 class IFileSavePickerActivatedEventArgs(winrt.system.Object, ImplementsIFileSavePickerActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.Storage.Pickers.Provider.FileSavePickerUI Windows.ApplicationModel.Activation.IFileSavePickerActivatedEventArgs::get_FileSavePickerUI()
     @_property
     def file_save_picker_ui(self) -> windows_storage_pickers_provider.FileSavePickerUI: ...
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.IActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.IActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.IActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
@@ -1280,8 +1725,10 @@ class ImplementsIFileSavePickerActivatedEventArgs2():
 
 @typing.final
 class IFileSavePickerActivatedEventArgs2(winrt.system.Object, ImplementsIFileSavePickerActivatedEventArgs2):
+    # System.String Windows.ApplicationModel.Activation.IFileSavePickerActivatedEventArgs2::get_CallerPackageFamilyName()
     @_property
     def caller_package_family_name(self) -> str: ...
+    # System.String Windows.ApplicationModel.Activation.IFileSavePickerActivatedEventArgs2::get_EnterpriseId()
     @_property
     def enterprise_id(self) -> str: ...
 
@@ -1290,14 +1737,19 @@ class ImplementsIFileSavePickerContinuationEventArgs():
 
 @typing.final
 class IFileSavePickerContinuationEventArgs(winrt.system.Object, ImplementsIFileSavePickerContinuationEventArgs, ImplementsIContinuationActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.Storage.StorageFile Windows.ApplicationModel.Activation.IFileSavePickerContinuationEventArgs::get_File()
     @_property
     def file(self) -> windows_storage.StorageFile: ...
+    # Windows.Foundation.Collections.ValueSet Windows.ApplicationModel.Activation.IContinuationActivatedEventArgs::get_ContinuationData()
     @_property
     def continuation_data(self) -> windows_foundation_collections.ValueSet: ...
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.IActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.IActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.IActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
@@ -1306,14 +1758,19 @@ class ImplementsIFolderPickerContinuationEventArgs():
 
 @typing.final
 class IFolderPickerContinuationEventArgs(winrt.system.Object, ImplementsIFolderPickerContinuationEventArgs, ImplementsIContinuationActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.Storage.StorageFolder Windows.ApplicationModel.Activation.IFolderPickerContinuationEventArgs::get_Folder()
     @_property
     def folder(self) -> windows_storage.StorageFolder: ...
+    # Windows.Foundation.Collections.ValueSet Windows.ApplicationModel.Activation.IContinuationActivatedEventArgs::get_ContinuationData()
     @_property
     def continuation_data(self) -> windows_foundation_collections.ValueSet: ...
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.IActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.IActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.IActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
@@ -1322,14 +1779,19 @@ class ImplementsILaunchActivatedEventArgs():
 
 @typing.final
 class ILaunchActivatedEventArgs(winrt.system.Object, ImplementsILaunchActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # System.String Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs::get_Arguments()
     @_property
     def arguments(self) -> str: ...
+    # System.String Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs::get_TileId()
     @_property
     def tile_id(self) -> str: ...
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.IActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.IActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.IActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
@@ -1338,16 +1800,22 @@ class ImplementsILaunchActivatedEventArgs2():
 
 @typing.final
 class ILaunchActivatedEventArgs2(winrt.system.Object, ImplementsILaunchActivatedEventArgs2, ImplementsILaunchActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.ApplicationModel.Activation.TileActivatedInfo Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs2::get_TileActivatedInfo()
     @_property
     def tile_activated_info(self) -> TileActivatedInfo: ...
+    # System.String Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs::get_Arguments()
     @_property
     def arguments(self) -> str: ...
+    # System.String Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs::get_TileId()
     @_property
     def tile_id(self) -> str: ...
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.IActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.IActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.IActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
@@ -1356,12 +1824,16 @@ class ImplementsILockScreenActivatedEventArgs():
 
 @typing.final
 class ILockScreenActivatedEventArgs(winrt.system.Object, ImplementsILockScreenActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # System.Object Windows.ApplicationModel.Activation.ILockScreenActivatedEventArgs::get_Info()
     @_property
     def info(self) -> winrt.system.Object: ...
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.IActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.IActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.IActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
@@ -1370,16 +1842,22 @@ class ImplementsILockScreenCallActivatedEventArgs():
 
 @typing.final
 class ILockScreenCallActivatedEventArgs(winrt.system.Object, ImplementsILockScreenCallActivatedEventArgs, ImplementsILaunchActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.ApplicationModel.Calls.LockScreenCallUI Windows.ApplicationModel.Activation.ILockScreenCallActivatedEventArgs::get_CallUI()
     @_property
     def call_ui(self) -> windows_applicationmodel_calls.LockScreenCallUI: ...
+    # System.String Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs::get_Arguments()
     @_property
     def arguments(self) -> str: ...
+    # System.String Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs::get_TileId()
     @_property
     def tile_id(self) -> str: ...
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.IActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.IActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.IActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
@@ -1388,12 +1866,16 @@ class ImplementsIPhoneCallActivatedEventArgs():
 
 @typing.final
 class IPhoneCallActivatedEventArgs(winrt.system.Object, ImplementsIPhoneCallActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # System.Guid Windows.ApplicationModel.Activation.IPhoneCallActivatedEventArgs::get_LineId()
     @_property
     def line_id(self) -> _uuid.UUID: ...
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.IActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.IActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.IActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
@@ -1402,12 +1884,16 @@ class ImplementsIPickerReturnedActivatedEventArgs():
 
 @typing.final
 class IPickerReturnedActivatedEventArgs(winrt.system.Object, ImplementsIPickerReturnedActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # System.String Windows.ApplicationModel.Activation.IPickerReturnedActivatedEventArgs::get_PickerOperationId()
     @_property
     def picker_operation_id(self) -> str: ...
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.IActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.IActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.IActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
@@ -1416,12 +1902,16 @@ class ImplementsIPrelaunchActivatedEventArgs():
 
 @typing.final
 class IPrelaunchActivatedEventArgs(winrt.system.Object, ImplementsIPrelaunchActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # System.Boolean Windows.ApplicationModel.Activation.IPrelaunchActivatedEventArgs::get_PrelaunchActivated()
     @_property
     def prelaunch_activated(self) -> bool: ...
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.IActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.IActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.IActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
@@ -1430,12 +1920,16 @@ class ImplementsIPrint3DWorkflowActivatedEventArgs():
 
 @typing.final
 class IPrint3DWorkflowActivatedEventArgs(winrt.system.Object, ImplementsIPrint3DWorkflowActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.Devices.Printers.Extensions.Print3DWorkflow Windows.ApplicationModel.Activation.IPrint3DWorkflowActivatedEventArgs::get_Workflow()
     @_property
     def workflow(self) -> windows_devices_printers_extensions.Print3DWorkflow: ...
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.IActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.IActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.IActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
@@ -1444,12 +1938,16 @@ class ImplementsIPrintTaskSettingsActivatedEventArgs():
 
 @typing.final
 class IPrintTaskSettingsActivatedEventArgs(winrt.system.Object, ImplementsIPrintTaskSettingsActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.Devices.Printers.Extensions.PrintTaskConfiguration Windows.ApplicationModel.Activation.IPrintTaskSettingsActivatedEventArgs::get_Configuration()
     @_property
     def configuration(self) -> windows_devices_printers_extensions.PrintTaskConfiguration: ...
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.IActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.IActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.IActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
@@ -1458,12 +1956,16 @@ class ImplementsIProtocolActivatedEventArgs():
 
 @typing.final
 class IProtocolActivatedEventArgs(winrt.system.Object, ImplementsIProtocolActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.Foundation.Uri Windows.ApplicationModel.Activation.IProtocolActivatedEventArgs::get_Uri()
     @_property
     def uri(self) -> windows_foundation.Uri: ...
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.IActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.IActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.IActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
@@ -1472,14 +1974,19 @@ class ImplementsIProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData():
 
 @typing.final
 class IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData(winrt.system.Object, ImplementsIProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData, ImplementsIActivatedEventArgs):
+    # System.String Windows.ApplicationModel.Activation.IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData::get_CallerPackageFamilyName()
     @_property
     def caller_package_family_name(self) -> str: ...
+    # Windows.Foundation.Collections.ValueSet Windows.ApplicationModel.Activation.IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData::get_Data()
     @_property
     def data(self) -> windows_foundation_collections.ValueSet: ...
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.IActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.IActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.IActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
@@ -1488,12 +1995,16 @@ class ImplementsIProtocolForResultsActivatedEventArgs():
 
 @typing.final
 class IProtocolForResultsActivatedEventArgs(winrt.system.Object, ImplementsIProtocolForResultsActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.System.ProtocolForResultsOperation Windows.ApplicationModel.Activation.IProtocolForResultsActivatedEventArgs::get_ProtocolForResultsOperation()
     @_property
     def protocol_for_results_operation(self) -> windows_system.ProtocolForResultsOperation: ...
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.IActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.IActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.IActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
@@ -1502,12 +2013,16 @@ class ImplementsIRestrictedLaunchActivatedEventArgs():
 
 @typing.final
 class IRestrictedLaunchActivatedEventArgs(winrt.system.Object, ImplementsIRestrictedLaunchActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # System.Object Windows.ApplicationModel.Activation.IRestrictedLaunchActivatedEventArgs::get_SharedContext()
     @_property
     def shared_context(self) -> winrt.system.Object: ...
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.IActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.IActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.IActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
@@ -1516,14 +2031,19 @@ class ImplementsISearchActivatedEventArgs():
 
 @typing.final
 class ISearchActivatedEventArgs(winrt.system.Object, ImplementsISearchActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # System.String Windows.ApplicationModel.Activation.ISearchActivatedEventArgs::get_Language()
     @_property
     def language(self) -> str: ...
+    # System.String Windows.ApplicationModel.Activation.ISearchActivatedEventArgs::get_QueryText()
     @_property
     def query_text(self) -> str: ...
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.IActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.IActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.IActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
@@ -1532,6 +2052,7 @@ class ImplementsISearchActivatedEventArgsWithLinguisticDetails():
 
 @typing.final
 class ISearchActivatedEventArgsWithLinguisticDetails(winrt.system.Object, ImplementsISearchActivatedEventArgsWithLinguisticDetails):
+    # Windows.ApplicationModel.Search.SearchPaneQueryLinguisticDetails Windows.ApplicationModel.Activation.ISearchActivatedEventArgsWithLinguisticDetails::get_LinguisticDetails()
     @_property
     def linguistic_details(self) -> windows_applicationmodel_search.SearchPaneQueryLinguisticDetails: ...
 
@@ -1540,12 +2061,16 @@ class ImplementsIShareTargetActivatedEventArgs():
 
 @typing.final
 class IShareTargetActivatedEventArgs(winrt.system.Object, ImplementsIShareTargetActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation Windows.ApplicationModel.Activation.IShareTargetActivatedEventArgs::get_ShareOperation()
     @_property
     def share_operation(self) -> windows_applicationmodel_datatransfer_sharetarget.ShareOperation: ...
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.IActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.IActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.IActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
@@ -1554,12 +2079,16 @@ class ImplementsIStartupTaskActivatedEventArgs():
 
 @typing.final
 class IStartupTaskActivatedEventArgs(winrt.system.Object, ImplementsIStartupTaskActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # System.String Windows.ApplicationModel.Activation.IStartupTaskActivatedEventArgs::get_TaskId()
     @_property
     def task_id(self) -> str: ...
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.IActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.IActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.IActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
@@ -1568,14 +2097,19 @@ class ImplementsIToastNotificationActivatedEventArgs():
 
 @typing.final
 class IToastNotificationActivatedEventArgs(winrt.system.Object, ImplementsIToastNotificationActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # System.String Windows.ApplicationModel.Activation.IToastNotificationActivatedEventArgs::get_Argument()
     @_property
     def argument(self) -> str: ...
+    # Windows.Foundation.Collections.ValueSet Windows.ApplicationModel.Activation.IToastNotificationActivatedEventArgs::get_UserInput()
     @_property
     def user_input(self) -> windows_foundation_collections.ValueSet: ...
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.IActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.IActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.IActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
@@ -1584,12 +2118,16 @@ class ImplementsIUserDataAccountProviderActivatedEventArgs():
 
 @typing.final
 class IUserDataAccountProviderActivatedEventArgs(winrt.system.Object, ImplementsIUserDataAccountProviderActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.ApplicationModel.UserDataAccounts.Provider.IUserDataAccountProviderOperation Windows.ApplicationModel.Activation.IUserDataAccountProviderActivatedEventArgs::get_Operation()
     @_property
     def operation(self) -> windows_applicationmodel_userdataaccounts_provider.IUserDataAccountProviderOperation: ...
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.IActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.IActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.IActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
@@ -1598,12 +2136,16 @@ class ImplementsIViewSwitcherProvider():
 
 @typing.final
 class IViewSwitcherProvider(winrt.system.Object, ImplementsIViewSwitcherProvider, ImplementsIActivatedEventArgs):
+    # Windows.UI.ViewManagement.ActivationViewSwitcher Windows.ApplicationModel.Activation.IViewSwitcherProvider::get_ViewSwitcher()
     @_property
     def view_switcher(self) -> windows_ui_viewmanagement.ActivationViewSwitcher: ...
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.IActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.IActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.IActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
@@ -1612,12 +2154,16 @@ class ImplementsIVoiceCommandActivatedEventArgs():
 
 @typing.final
 class IVoiceCommandActivatedEventArgs(winrt.system.Object, ImplementsIVoiceCommandActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.Media.SpeechRecognition.SpeechRecognitionResult Windows.ApplicationModel.Activation.IVoiceCommandActivatedEventArgs::get_Result()
     @_property
     def result(self) -> windows_media_speechrecognition.SpeechRecognitionResult: ...
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.IActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.IActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.IActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
@@ -1626,16 +2172,22 @@ class ImplementsIWalletActionActivatedEventArgs():
 
 @typing.final
 class IWalletActionActivatedEventArgs(winrt.system.Object, ImplementsIWalletActionActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # System.String Windows.ApplicationModel.Activation.IWalletActionActivatedEventArgs::get_ActionId()
     @_property
     def action_id(self) -> str: ...
+    # Windows.ApplicationModel.Wallet.WalletActionKind Windows.ApplicationModel.Activation.IWalletActionActivatedEventArgs::get_ActionKind()
     @_property
     def action_kind(self) -> windows_applicationmodel_wallet.WalletActionKind: ...
+    # System.String Windows.ApplicationModel.Activation.IWalletActionActivatedEventArgs::get_ItemId()
     @_property
     def item_id(self) -> str: ...
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.IActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.IActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.IActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
@@ -1644,12 +2196,16 @@ class ImplementsIWebAccountProviderActivatedEventArgs():
 
 @typing.final
 class IWebAccountProviderActivatedEventArgs(winrt.system.Object, ImplementsIWebAccountProviderActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.Security.Authentication.Web.Provider.IWebAccountProviderOperation Windows.ApplicationModel.Activation.IWebAccountProviderActivatedEventArgs::get_Operation()
     @_property
     def operation(self) -> windows_security_authentication_web_provider.IWebAccountProviderOperation: ...
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.IActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.IActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.IActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
 
@@ -1658,14 +2214,19 @@ class ImplementsIWebAuthenticationBrokerContinuationEventArgs():
 
 @typing.final
 class IWebAuthenticationBrokerContinuationEventArgs(winrt.system.Object, ImplementsIWebAuthenticationBrokerContinuationEventArgs, ImplementsIContinuationActivatedEventArgs, ImplementsIActivatedEventArgs):
+    # Windows.Security.Authentication.Web.WebAuthenticationResult Windows.ApplicationModel.Activation.IWebAuthenticationBrokerContinuationEventArgs::get_WebAuthenticationResult()
     @_property
     def web_authentication_result(self) -> windows_security_authentication_web.WebAuthenticationResult: ...
+    # Windows.Foundation.Collections.ValueSet Windows.ApplicationModel.Activation.IContinuationActivatedEventArgs::get_ContinuationData()
     @_property
     def continuation_data(self) -> windows_foundation_collections.ValueSet: ...
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.IActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.ApplicationModel.Activation.IActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.ApplicationModel.Activation.IActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> SplashScreen: ...
 

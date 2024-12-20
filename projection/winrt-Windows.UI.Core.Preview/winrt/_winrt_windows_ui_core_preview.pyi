@@ -16,6 +16,7 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class CoreAppWindowPreview_Static(type):
+    # System.Int32 Windows.UI.Core.Preview.CoreAppWindowPreview::GetIdFromWindow(Windows.UI.WindowManagement.AppWindow)
     def get_id_from_window(cls, window: windows_ui_windowmanagement.AppWindow, /) -> winrt.system.Int32: ...
 
 @typing.final
@@ -24,18 +25,24 @@ class CoreAppWindowPreview(winrt.system.Object, metaclass=CoreAppWindowPreview_S
 
 @typing.final
 class SystemNavigationCloseRequestedPreviewEventArgs(winrt.system.Object):
+    # Windows.Foundation.Deferral Windows.UI.Core.Preview.SystemNavigationCloseRequestedPreviewEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
+    # System.Boolean Windows.UI.Core.Preview.SystemNavigationCloseRequestedPreviewEventArgs::get_Handled()
     @_property
     def handled(self) -> bool: ...
+    # System.Void Windows.UI.Core.Preview.SystemNavigationCloseRequestedPreviewEventArgs::put_Handled(System.Boolean)
     @handled.setter
     def handled(self, value: bool) -> None: ...
 
 @typing.final
 class SystemNavigationManagerPreview_Static(type):
+    # Windows.UI.Core.Preview.SystemNavigationManagerPreview Windows.UI.Core.Preview.SystemNavigationManagerPreview::GetForCurrentView()
     def get_for_current_view(cls) -> SystemNavigationManagerPreview: ...
 
 @typing.final
 class SystemNavigationManagerPreview(winrt.system.Object, metaclass=SystemNavigationManagerPreview_Static):
+    # Windows.Foundation.EventRegistrationToken Windows.UI.Core.Preview.SystemNavigationManagerPreview::add_CloseRequested(Windows.Foundation.EventHandler`1<Windows.UI.Core.Preview.SystemNavigationCloseRequestedPreviewEventArgs>)
     def add_close_requested(self, handler: windows_foundation.EventHandler[SystemNavigationCloseRequestedPreviewEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.UI.Core.Preview.SystemNavigationManagerPreview::remove_CloseRequested(Windows.Foundation.EventRegistrationToken)
     def remove_close_requested(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 

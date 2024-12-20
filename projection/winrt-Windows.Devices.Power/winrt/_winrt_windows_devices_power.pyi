@@ -17,51 +17,71 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class Battery_Static(type):
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Power.Battery> Windows.Devices.Power.Battery::FromIdAsync(System.String)
     def from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[Battery]: ...
+    # System.String Windows.Devices.Power.Battery::GetDeviceSelector()
     def get_device_selector(cls) -> str: ...
+    # Windows.Devices.Power.Battery Windows.Devices.Power.Battery::get_AggregateBattery()
     @_property
     def aggregate_battery(cls) -> Battery: ...
 
 @typing.final
 class Battery(winrt.system.Object, metaclass=Battery_Static):
+    # Windows.Devices.Power.BatteryReport Windows.Devices.Power.Battery::GetReport()
     def get_report(self) -> BatteryReport: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Devices.Power.Battery::add_ReportUpdated(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Power.Battery,System.Object>)
     def add_report_updated(self, handler: windows_foundation.TypedEventHandler[Battery, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Devices.Power.Battery::remove_ReportUpdated(Windows.Foundation.EventRegistrationToken)
     def remove_report_updated(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.String Windows.Devices.Power.Battery::get_DeviceId()
     @_property
     def device_id(self) -> str: ...
 
 @typing.final
 class BatteryReport(winrt.system.Object):
+    # Windows.Foundation.IReference`1<System.Int32> Windows.Devices.Power.BatteryReport::get_ChargeRateInMilliwatts()
     @_property
     def charge_rate_in_milliwatts(self) -> typing.Optional[winrt.system.Int32]: ...
+    # Windows.Foundation.IReference`1<System.Int32> Windows.Devices.Power.BatteryReport::get_DesignCapacityInMilliwattHours()
     @_property
     def design_capacity_in_milliwatt_hours(self) -> typing.Optional[winrt.system.Int32]: ...
+    # Windows.Foundation.IReference`1<System.Int32> Windows.Devices.Power.BatteryReport::get_FullChargeCapacityInMilliwattHours()
     @_property
     def full_charge_capacity_in_milliwatt_hours(self) -> typing.Optional[winrt.system.Int32]: ...
+    # Windows.Foundation.IReference`1<System.Int32> Windows.Devices.Power.BatteryReport::get_RemainingCapacityInMilliwattHours()
     @_property
     def remaining_capacity_in_milliwatt_hours(self) -> typing.Optional[winrt.system.Int32]: ...
+    # Windows.System.Power.BatteryStatus Windows.Devices.Power.BatteryReport::get_Status()
     @_property
     def status(self) -> windows_system_power.BatteryStatus: ...
 
 @typing.final
 class PowerGridData(winrt.system.Object):
+    # System.Boolean Windows.Devices.Power.PowerGridData::get_IsLowUserExperienceImpact()
     @_property
     def is_low_user_experience_impact(self) -> bool: ...
+    # System.Double Windows.Devices.Power.PowerGridData::get_Severity()
     @_property
     def severity(self) -> winrt.system.Double: ...
 
 @typing.final
 class PowerGridForecast_Static(type):
+    # Windows.Devices.Power.PowerGridForecast Windows.Devices.Power.PowerGridForecast::GetForecast()
     def get_forecast(cls) -> PowerGridForecast: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Devices.Power.PowerGridForecast::add_ForecastUpdated(Windows.Foundation.EventHandler`1<System.Object>)
     def add_forecast_updated(cls, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Devices.Power.PowerGridForecast::remove_ForecastUpdated(Windows.Foundation.EventRegistrationToken)
     def remove_forecast_updated(cls, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
 @typing.final
 class PowerGridForecast(winrt.system.Object, metaclass=PowerGridForecast_Static):
+    # Windows.Foundation.TimeSpan Windows.Devices.Power.PowerGridForecast::get_BlockDuration()
     @_property
     def block_duration(self) -> datetime.timedelta: ...
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Power.PowerGridData> Windows.Devices.Power.PowerGridForecast::get_Forecast()
     @_property
     def forecast(self) -> typing.Sequence[PowerGridData]: ...
+    # Windows.Foundation.DateTime Windows.Devices.Power.PowerGridForecast::get_StartTime()
     @_property
     def start_time(self) -> datetime.datetime: ...
 

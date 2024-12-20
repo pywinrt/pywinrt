@@ -25,80 +25,112 @@ class IsolatedWindowsEnvironmentCreateProgress:
 
 @typing.final
 class IsolatedWindowsEnvironment_Static(type):
+    # Windows.Foundation.IAsyncOperationWithProgress`2<Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult,Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateProgress> Windows.Security.Isolation.IsolatedWindowsEnvironment::CreateAsync(Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions)
     # @deprecated("IsolatedWindowsEnvironment is deprecated and might not work on all platforms. For more info, see MSDN.")
     def create_async(cls, options: IsolatedWindowsEnvironmentOptions, /) -> windows_foundation.IAsyncOperationWithProgress[IsolatedWindowsEnvironmentCreateResult, IsolatedWindowsEnvironmentCreateProgress]: ...
+    # Windows.Foundation.IAsyncOperationWithProgress`2<Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult,Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateProgress> Windows.Security.Isolation.IsolatedWindowsEnvironment::CreateAsync(Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions,Windows.Security.Isolation.IsolatedWindowsEnvironmentTelemetryParameters)
     # @deprecated("IsolatedWindowsEnvironment is deprecated and might not work on all platforms. For more info, see MSDN.")
     def create_with_telemetry_async(cls, options: IsolatedWindowsEnvironmentOptions, telemetry_parameters: IsolatedWindowsEnvironmentTelemetryParameters, /) -> windows_foundation.IAsyncOperationWithProgress[IsolatedWindowsEnvironmentCreateResult, IsolatedWindowsEnvironmentCreateProgress]: ...
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Security.Isolation.IsolatedWindowsEnvironment> Windows.Security.Isolation.IsolatedWindowsEnvironment::FindByOwnerId(System.String)
     # @deprecated("IsolatedWindowsEnvironment is deprecated and might not work on all platforms. For more info, see MSDN.")
     def find_by_owner_id(cls, environment_owner_id: str, /) -> typing.Sequence[IsolatedWindowsEnvironment]: ...
+    # Windows.Security.Isolation.IsolatedWindowsEnvironment Windows.Security.Isolation.IsolatedWindowsEnvironment::GetById(System.String)
     # @deprecated("IsolatedWindowsEnvironment is deprecated and might not work on all platforms. For more info, see MSDN.")
     def get_by_id(cls, environment_id: str, /) -> IsolatedWindowsEnvironment: ...
 
 @typing.final
 class IsolatedWindowsEnvironment(winrt.system.Object, metaclass=IsolatedWindowsEnvironment_Static):
+    # System.Void Windows.Security.Isolation.IsolatedWindowsEnvironment::ChangePriority(Windows.Security.Isolation.IsolatedWindowsEnvironmentCreationPriority)
     # @deprecated("IsolatedWindowsEnvironment is deprecated and might not work on all platforms. For more info, see MSDN.")
     def change_priority(self, priority: IsolatedWindowsEnvironmentCreationPriority, /) -> None: ...
+    # Windows.Security.Isolation.IsolatedWindowsEnvironmentUserInfo Windows.Security.Isolation.IsolatedWindowsEnvironment::GetUserInfo()
     # @deprecated("IsolatedWindowsEnvironment is deprecated and might not work on all platforms. For more info, see MSDN.")
     def get_user_info(self) -> IsolatedWindowsEnvironmentUserInfo: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Security.Isolation.IsolatedWindowsEnvironmentLaunchFileResult> Windows.Security.Isolation.IsolatedWindowsEnvironment::LaunchFileWithUIAsync(System.String,System.String,System.String,Windows.Security.Isolation.IsolatedWindowsEnvironmentTelemetryParameters)
     # @deprecated("IsolatedWindowsEnvironment is deprecated and might not work on all platforms. For more info, see MSDN.")
     def launch_file_with_ui_and_telemetry_async(self, app_exe_path: str, arguments_template: str, file_path: str, telemetry_parameters: IsolatedWindowsEnvironmentTelemetryParameters, /) -> windows_foundation.IAsyncOperation[IsolatedWindowsEnvironmentLaunchFileResult]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Security.Isolation.IsolatedWindowsEnvironmentLaunchFileResult> Windows.Security.Isolation.IsolatedWindowsEnvironment::LaunchFileWithUIAsync(System.String,System.String,System.String)
     # @deprecated("IsolatedWindowsEnvironment is deprecated and might not work on all platforms. For more info, see MSDN.")
     def launch_file_with_ui_async(self, app_exe_path: str, arguments_template: str, file_path: str, /) -> windows_foundation.IAsyncOperation[IsolatedWindowsEnvironmentLaunchFileResult]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Security.Isolation.IsolatedWindowsEnvironmentPostMessageResult> Windows.Security.Isolation.IsolatedWindowsEnvironment::PostMessageToReceiverAsync(System.Guid,Windows.Foundation.Collections.IIterable`1<System.Object>)
     # @deprecated("IsolatedWindowsEnvironment is deprecated and might not work on all platforms. For more info, see MSDN.")
     def post_message_to_receiver_async(self, receiver_id: _uuid.UUID, message: typing.Iterable[winrt.system.Object], /) -> windows_foundation.IAsyncOperation[IsolatedWindowsEnvironmentPostMessageResult]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Security.Isolation.IsolatedWindowsEnvironmentPostMessageResult> Windows.Security.Isolation.IsolatedWindowsEnvironment::PostMessageToReceiverAsync(System.Guid,Windows.Foundation.Collections.IIterable`1<System.Object>,Windows.Security.Isolation.IsolatedWindowsEnvironmentTelemetryParameters)
     # @deprecated("IsolatedWindowsEnvironment is deprecated and might not work on all platforms. For more info, see MSDN.")
     def post_message_to_receiver_with_telemetry_async(self, receiver_id: _uuid.UUID, message: typing.Iterable[winrt.system.Object], telemetry_parameters: IsolatedWindowsEnvironmentTelemetryParameters, /) -> windows_foundation.IAsyncOperation[IsolatedWindowsEnvironmentPostMessageResult]: ...
+    # System.Void Windows.Security.Isolation.IsolatedWindowsEnvironment::RegisterMessageReceiver(System.Guid,Windows.Security.Isolation.MessageReceivedCallback)
     # @deprecated("IsolatedWindowsEnvironment is deprecated and might not work on all platforms. For more info, see MSDN.")
     def register_message_receiver(self, receiver_id: _uuid.UUID, message_received_callback: MessageReceivedCallback, /) -> None: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileResult> Windows.Security.Isolation.IsolatedWindowsEnvironment::ShareFileAsync(System.String,Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileRequestOptions)
     # @deprecated("IsolatedWindowsEnvironment is deprecated and might not work on all platforms. For more info, see MSDN.")
     def share_file_async(self, file_path: str, options: IsolatedWindowsEnvironmentShareFileRequestOptions, /) -> windows_foundation.IAsyncOperation[IsolatedWindowsEnvironmentShareFileResult]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileResult> Windows.Security.Isolation.IsolatedWindowsEnvironment::ShareFileAsync(System.String,Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileRequestOptions,Windows.Security.Isolation.IsolatedWindowsEnvironmentTelemetryParameters)
     # @deprecated("IsolatedWindowsEnvironment is deprecated and might not work on all platforms. For more info, see MSDN.")
     def share_file_with_telemetry_async(self, file_path: str, options: IsolatedWindowsEnvironmentShareFileRequestOptions, telemetry_parameters: IsolatedWindowsEnvironmentTelemetryParameters, /) -> windows_foundation.IAsyncOperation[IsolatedWindowsEnvironmentShareFileResult]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderResult> Windows.Security.Isolation.IsolatedWindowsEnvironment::ShareFolderAsync(System.String,Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderRequestOptions)
     # @deprecated("IsolatedWindowsEnvironment is deprecated and might not work on all platforms. For more info, see MSDN.")
     def share_folder_async(self, host_folder: str, request_options: IsolatedWindowsEnvironmentShareFolderRequestOptions, /) -> windows_foundation.IAsyncOperation[IsolatedWindowsEnvironmentShareFolderResult]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderResult> Windows.Security.Isolation.IsolatedWindowsEnvironment::ShareFolderAsync(System.String,Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderRequestOptions,Windows.Security.Isolation.IsolatedWindowsEnvironmentTelemetryParameters)
     # @deprecated("IsolatedWindowsEnvironment is deprecated and might not work on all platforms. For more info, see MSDN.")
     def share_folder_with_telemetry_async(self, host_folder: str, request_options: IsolatedWindowsEnvironmentShareFolderRequestOptions, telemetry_parameters: IsolatedWindowsEnvironmentTelemetryParameters, /) -> windows_foundation.IAsyncOperation[IsolatedWindowsEnvironmentShareFolderResult]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Security.Isolation.IsolatedWindowsEnvironmentStartProcessResult> Windows.Security.Isolation.IsolatedWindowsEnvironment::StartProcessSilentlyAsync(System.String,System.String,Windows.Security.Isolation.IsolatedWindowsEnvironmentActivator)
     # @deprecated("IsolatedWindowsEnvironment is deprecated and might not work on all platforms. For more info, see MSDN.")
     def start_process_silently_async(self, host_exe_path: str, arguments: str, activator: IsolatedWindowsEnvironmentActivator, /) -> windows_foundation.IAsyncOperation[IsolatedWindowsEnvironmentStartProcessResult]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Security.Isolation.IsolatedWindowsEnvironmentStartProcessResult> Windows.Security.Isolation.IsolatedWindowsEnvironment::StartProcessSilentlyAsync(System.String,System.String,Windows.Security.Isolation.IsolatedWindowsEnvironmentActivator,Windows.Security.Isolation.IsolatedWindowsEnvironmentTelemetryParameters)
     # @deprecated("IsolatedWindowsEnvironment is deprecated and might not work on all platforms. For more info, see MSDN.")
     def start_process_silently_with_telemetry_async(self, host_exe_path: str, arguments: str, activator: IsolatedWindowsEnvironmentActivator, telemetry_parameters: IsolatedWindowsEnvironmentTelemetryParameters, /) -> windows_foundation.IAsyncOperation[IsolatedWindowsEnvironmentStartProcessResult]: ...
+    # Windows.Foundation.IAsyncAction Windows.Security.Isolation.IsolatedWindowsEnvironment::TerminateAsync()
     # @deprecated("IsolatedWindowsEnvironment is deprecated and might not work on all platforms. For more info, see MSDN.")
     def terminate_async(self) -> windows_foundation.IAsyncAction: ...
+    # Windows.Foundation.IAsyncAction Windows.Security.Isolation.IsolatedWindowsEnvironment::TerminateAsync(Windows.Security.Isolation.IsolatedWindowsEnvironmentTelemetryParameters)
     # @deprecated("IsolatedWindowsEnvironment is deprecated and might not work on all platforms. For more info, see MSDN.")
     def terminate_with_telemetry_async(self, telemetry_parameters: IsolatedWindowsEnvironmentTelemetryParameters, /) -> windows_foundation.IAsyncAction: ...
+    # System.Void Windows.Security.Isolation.IsolatedWindowsEnvironment::UnregisterMessageReceiver(System.Guid)
     # @deprecated("IsolatedWindowsEnvironment is deprecated and might not work on all platforms. For more info, see MSDN.")
     def unregister_message_receiver(self, receiver_id: _uuid.UUID, /) -> None: ...
+    # System.String Windows.Security.Isolation.IsolatedWindowsEnvironment::get_Id()
     @_property
     def id(self) -> str: ...
 
 @typing.final
 class IsolatedWindowsEnvironmentCreateResult(winrt.system.Object):
+    # System.Void Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult::ChangeCreationPriority(Windows.Security.Isolation.IsolatedWindowsEnvironmentCreationPriority)
     # @deprecated("IsolatedWindowsEnvironmentCreateResult is deprecated and might not work on all platforms. For more info, see MSDN.")
     def change_creation_priority(self, priority: IsolatedWindowsEnvironmentCreationPriority, /) -> None: ...
+    # Windows.Security.Isolation.IsolatedWindowsEnvironment Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult::get_Environment()
     @_property
     def environment(self) -> IsolatedWindowsEnvironment: ...
+    # Windows.Foundation.HResult Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult::get_ExtendedError()
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
+    # Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateStatus Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult::get_Status()
     @_property
     def status(self) -> IsolatedWindowsEnvironmentCreateStatus: ...
 
 @typing.final
 class IsolatedWindowsEnvironmentFile(winrt.system.Object):
+    # System.Void Windows.Security.Isolation.IsolatedWindowsEnvironmentFile::Close()
     # @deprecated("IsolatedWindowsEnvironmentFile is deprecated and might not work on all platforms. For more info, see MSDN.")
     def close(self) -> None: ...
+    # System.String Windows.Security.Isolation.IsolatedWindowsEnvironmentFile::get_HostPath()
     @_property
     def host_path(self) -> str: ...
+    # System.Guid Windows.Security.Isolation.IsolatedWindowsEnvironmentFile::get_Id()
     @_property
     def id(self) -> _uuid.UUID: ...
+    # System.String Windows.Security.Isolation.IsolatedWindowsEnvironmentFile::get_GuestPath()
     @_property
     def guest_path(self) -> str: ...
+    # System.Boolean Windows.Security.Isolation.IsolatedWindowsEnvironmentFile::get_IsReadOnly()
     @_property
     def is_read_only(self) -> bool: ...
 
 @typing.final
 class IsolatedWindowsEnvironmentHost_Static(type):
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Security.Isolation.IsolatedWindowsEnvironmentHostError> Windows.Security.Isolation.IsolatedWindowsEnvironmentHost::get_HostErrors()
     @_property
     def host_errors(cls) -> typing.Sequence[IsolatedWindowsEnvironmentHostError]: ...
+    # System.Boolean Windows.Security.Isolation.IsolatedWindowsEnvironmentHost::get_IsReady()
     @_property
     def is_ready(cls) -> bool: ...
 
@@ -108,71 +140,101 @@ class IsolatedWindowsEnvironmentHost(winrt.system.Object, metaclass=IsolatedWind
 
 @typing.final
 class IsolatedWindowsEnvironmentLaunchFileResult(winrt.system.Object):
+    # Windows.Foundation.HResult Windows.Security.Isolation.IsolatedWindowsEnvironmentLaunchFileResult::get_ExtendedError()
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
+    # Windows.Security.Isolation.IsolatedWindowsEnvironmentFile Windows.Security.Isolation.IsolatedWindowsEnvironmentLaunchFileResult::get_File()
     @_property
     def file(self) -> IsolatedWindowsEnvironmentFile: ...
+    # Windows.Security.Isolation.IsolatedWindowsEnvironmentLaunchFileStatus Windows.Security.Isolation.IsolatedWindowsEnvironmentLaunchFileResult::get_Status()
     @_property
     def status(self) -> IsolatedWindowsEnvironmentLaunchFileStatus: ...
 
 @typing.final
 class IsolatedWindowsEnvironmentOptions(winrt.system.Object):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Void Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions::ShareHostFolderForUntrustedItems(System.String,System.String)
     # @deprecated("IsolatedWindowsEnvironmentOptions is deprecated and might not work on all platforms. For more info, see MSDN.")
     def share_host_folder_for_untrusted_items(self, shared_host_folder_path: str, share_folder_name_in_environment: str, /) -> None: ...
+    # System.Boolean Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions::get_PersistUserProfile()
     @_property
     def persist_user_profile(self) -> bool: ...
+    # System.Void Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions::put_PersistUserProfile(System.Boolean)
     @persist_user_profile.setter
     def persist_user_profile(self, value: bool) -> None: ...
+    # System.String Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions::get_EnvironmentOwnerId()
     @_property
     def environment_owner_id(self) -> str: ...
+    # System.Void Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions::put_EnvironmentOwnerId(System.String)
     @environment_owner_id.setter
     def environment_owner_id(self, value: str) -> None: ...
+    # Windows.Security.Isolation.IsolatedWindowsEnvironmentClipboardCopyPasteDirections Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions::get_ClipboardCopyPasteDirections()
     @_property
     def clipboard_copy_paste_directions(self) -> IsolatedWindowsEnvironmentClipboardCopyPasteDirections: ...
+    # System.Void Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions::put_ClipboardCopyPasteDirections(Windows.Security.Isolation.IsolatedWindowsEnvironmentClipboardCopyPasteDirections)
     @clipboard_copy_paste_directions.setter
     def clipboard_copy_paste_directions(self, value: IsolatedWindowsEnvironmentClipboardCopyPasteDirections) -> None: ...
+    # Windows.Security.Isolation.IsolatedWindowsEnvironmentAvailablePrinters Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions::get_AvailablePrinters()
     @_property
     def available_printers(self) -> IsolatedWindowsEnvironmentAvailablePrinters: ...
+    # System.Void Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions::put_AvailablePrinters(Windows.Security.Isolation.IsolatedWindowsEnvironmentAvailablePrinters)
     @available_printers.setter
     def available_printers(self, value: IsolatedWindowsEnvironmentAvailablePrinters) -> None: ...
+    # Windows.Security.Isolation.IsolatedWindowsEnvironmentAllowedClipboardFormats Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions::get_AllowedClipboardFormats()
     @_property
     def allowed_clipboard_formats(self) -> IsolatedWindowsEnvironmentAllowedClipboardFormats: ...
+    # System.Void Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions::put_AllowedClipboardFormats(Windows.Security.Isolation.IsolatedWindowsEnvironmentAllowedClipboardFormats)
     @allowed_clipboard_formats.setter
     def allowed_clipboard_formats(self, value: IsolatedWindowsEnvironmentAllowedClipboardFormats) -> None: ...
+    # System.Boolean Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions::get_AllowGraphicsHardwareAcceleration()
     @_property
     def allow_graphics_hardware_acceleration(self) -> bool: ...
+    # System.Void Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions::put_AllowGraphicsHardwareAcceleration(System.Boolean)
     @allow_graphics_hardware_acceleration.setter
     def allow_graphics_hardware_acceleration(self, value: bool) -> None: ...
+    # System.Boolean Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions::get_AllowCameraAndMicrophoneAccess()
     @_property
     def allow_camera_and_microphone_access(self) -> bool: ...
+    # System.Void Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions::put_AllowCameraAndMicrophoneAccess(System.Boolean)
     @allow_camera_and_microphone_access.setter
     def allow_camera_and_microphone_access(self, value: bool) -> None: ...
+    # System.String Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions::get_SharedFolderNameInEnvironment()
     @_property
     def shared_folder_name_in_environment(self) -> str: ...
+    # System.String Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions::get_SharedHostFolderPath()
     @_property
     def shared_host_folder_path(self) -> str: ...
+    # System.String Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions::get_WindowAnnotationOverride()
     @_property
     def window_annotation_override(self) -> str: ...
+    # System.Void Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions::put_WindowAnnotationOverride(System.String)
     @window_annotation_override.setter
     def window_annotation_override(self, value: str) -> None: ...
+    # Windows.Security.Isolation.IsolatedWindowsEnvironmentCreationPriority Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions::get_CreationPriority()
     @_property
     def creation_priority(self) -> IsolatedWindowsEnvironmentCreationPriority: ...
+    # System.Void Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions::put_CreationPriority(Windows.Security.Isolation.IsolatedWindowsEnvironmentCreationPriority)
     @creation_priority.setter
     def creation_priority(self, value: IsolatedWindowsEnvironmentCreationPriority) -> None: ...
+    # Windows.Security.Isolation.IsolatedWindowsEnvironmentAllowedClipboardFormats Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions::get_AllowedClipboardFormatsToHost()
     @_property
     def allowed_clipboard_formats_to_host(self) -> IsolatedWindowsEnvironmentAllowedClipboardFormats: ...
+    # System.Void Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions::put_AllowedClipboardFormatsToHost(Windows.Security.Isolation.IsolatedWindowsEnvironmentAllowedClipboardFormats)
     @allowed_clipboard_formats_to_host.setter
     def allowed_clipboard_formats_to_host(self, value: IsolatedWindowsEnvironmentAllowedClipboardFormats) -> None: ...
+    # Windows.Security.Isolation.IsolatedWindowsEnvironmentAllowedClipboardFormats Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions::get_AllowedClipboardFormatsToEnvironment()
     @_property
     def allowed_clipboard_formats_to_environment(self) -> IsolatedWindowsEnvironmentAllowedClipboardFormats: ...
+    # System.Void Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions::put_AllowedClipboardFormatsToEnvironment(Windows.Security.Isolation.IsolatedWindowsEnvironmentAllowedClipboardFormats)
     @allowed_clipboard_formats_to_environment.setter
     def allowed_clipboard_formats_to_environment(self, value: IsolatedWindowsEnvironmentAllowedClipboardFormats) -> None: ...
 
 @typing.final
 class IsolatedWindowsEnvironmentOwnerRegistration_Static(type):
+    # Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistrationResult Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistration::Register(System.String,Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistrationData)
     # @deprecated("IsolatedWindowsEnvironmentOwnerRegistration is deprecated and might not work on all platforms. For more info, see MSDN.")
     def register(cls, owner_name: str, owner_registration_data: IsolatedWindowsEnvironmentOwnerRegistrationData, /) -> IsolatedWindowsEnvironmentOwnerRegistrationResult: ...
+    # System.Void Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistration::Unregister(System.String)
     # @deprecated("IsolatedWindowsEnvironmentOwnerRegistration is deprecated and might not work on all platforms. For more info, see MSDN.")
     def unregister(cls, owner_name: str, /) -> None: ...
 
@@ -183,110 +245,145 @@ class IsolatedWindowsEnvironmentOwnerRegistration(winrt.system.Object, metaclass
 @typing.final
 class IsolatedWindowsEnvironmentOwnerRegistrationData(winrt.system.Object):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Windows.Foundation.Collections.IVector`1<System.String> Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistrationData::get_ActivationFileExtensions()
     @_property
     def activation_file_extensions(self) -> typing.MutableSequence[str]: ...
+    # Windows.Foundation.Collections.IVector`1<System.String> Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistrationData::get_ProcessesRunnableAsSystem()
     @_property
     def processes_runnable_as_system(self) -> typing.MutableSequence[str]: ...
+    # Windows.Foundation.Collections.IVector`1<System.String> Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistrationData::get_ProcessesRunnableAsUser()
     @_property
     def processes_runnable_as_user(self) -> typing.MutableSequence[str]: ...
+    # Windows.Foundation.Collections.IVector`1<System.String> Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistrationData::get_ShareableFolders()
     @_property
     def shareable_folders(self) -> typing.MutableSequence[str]: ...
 
 @typing.final
 class IsolatedWindowsEnvironmentOwnerRegistrationResult(winrt.system.Object):
+    # Windows.Foundation.HResult Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistrationResult::get_ExtendedError()
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
+    # Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistrationStatus Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistrationResult::get_Status()
     @_property
     def status(self) -> IsolatedWindowsEnvironmentOwnerRegistrationStatus: ...
 
 @typing.final
 class IsolatedWindowsEnvironmentPostMessageResult(winrt.system.Object):
+    # Windows.Foundation.HResult Windows.Security.Isolation.IsolatedWindowsEnvironmentPostMessageResult::get_ExtendedError()
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
+    # Windows.Security.Isolation.IsolatedWindowsEnvironmentPostMessageStatus Windows.Security.Isolation.IsolatedWindowsEnvironmentPostMessageResult::get_Status()
     @_property
     def status(self) -> IsolatedWindowsEnvironmentPostMessageStatus: ...
 
 @typing.final
 class IsolatedWindowsEnvironmentProcess(winrt.system.Object):
+    # System.Void Windows.Security.Isolation.IsolatedWindowsEnvironmentProcess::WaitForExit()
     # @deprecated("IsolatedWindowsEnvironmentProcess is deprecated and might not work on all platforms. For more info, see MSDN.")
     def wait_for_exit(self) -> None: ...
+    # Windows.Foundation.IAsyncAction Windows.Security.Isolation.IsolatedWindowsEnvironmentProcess::WaitForExitAsync()
     # @deprecated("IsolatedWindowsEnvironmentProcess is deprecated and might not work on all platforms. For more info, see MSDN.")
     def wait_for_exit_async(self) -> windows_foundation.IAsyncAction: ...
+    # System.Void Windows.Security.Isolation.IsolatedWindowsEnvironmentProcess::WaitForExitWithTimeout(System.UInt32)
     # @deprecated("IsolatedWindowsEnvironmentProcess is deprecated and might not work on all platforms. For more info, see MSDN.")
     def wait_for_exit_with_timeout(self, timeout_milliseconds: winrt.system.UInt32, /) -> None: ...
+    # System.UInt32 Windows.Security.Isolation.IsolatedWindowsEnvironmentProcess::get_ExitCode()
     @_property
     def exit_code(self) -> winrt.system.UInt32: ...
+    # Windows.Security.Isolation.IsolatedWindowsEnvironmentProcessState Windows.Security.Isolation.IsolatedWindowsEnvironmentProcess::get_State()
     @_property
     def state(self) -> IsolatedWindowsEnvironmentProcessState: ...
 
 @typing.final
 class IsolatedWindowsEnvironmentShareFileRequestOptions(winrt.system.Object):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Boolean Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileRequestOptions::get_AllowWrite()
     @_property
     def allow_write(self) -> bool: ...
+    # System.Void Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileRequestOptions::put_AllowWrite(System.Boolean)
     @allow_write.setter
     def allow_write(self, value: bool) -> None: ...
 
 @typing.final
 class IsolatedWindowsEnvironmentShareFileResult(winrt.system.Object):
+    # Windows.Foundation.HResult Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileResult::get_ExtendedError()
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
+    # Windows.Security.Isolation.IsolatedWindowsEnvironmentFile Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileResult::get_File()
     @_property
     def file(self) -> IsolatedWindowsEnvironmentFile: ...
+    # Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileStatus Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileResult::get_Status()
     @_property
     def status(self) -> IsolatedWindowsEnvironmentShareFileStatus: ...
 
 @typing.final
 class IsolatedWindowsEnvironmentShareFolderRequestOptions(winrt.system.Object):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Boolean Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderRequestOptions::get_AllowWrite()
     @_property
     def allow_write(self) -> bool: ...
+    # System.Void Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderRequestOptions::put_AllowWrite(System.Boolean)
     @allow_write.setter
     def allow_write(self, value: bool) -> None: ...
 
 @typing.final
 class IsolatedWindowsEnvironmentShareFolderResult(winrt.system.Object):
+    # Windows.Foundation.HResult Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderResult::get_ExtendedError()
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
+    # Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderStatus Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderResult::get_Status()
     @_property
     def status(self) -> IsolatedWindowsEnvironmentShareFolderStatus: ...
 
 @typing.final
 class IsolatedWindowsEnvironmentStartProcessResult(winrt.system.Object):
+    # Windows.Foundation.HResult Windows.Security.Isolation.IsolatedWindowsEnvironmentStartProcessResult::get_ExtendedError()
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
+    # Windows.Security.Isolation.IsolatedWindowsEnvironmentProcess Windows.Security.Isolation.IsolatedWindowsEnvironmentStartProcessResult::get_Process()
     @_property
     def process(self) -> IsolatedWindowsEnvironmentProcess: ...
+    # Windows.Security.Isolation.IsolatedWindowsEnvironmentStartProcessStatus Windows.Security.Isolation.IsolatedWindowsEnvironmentStartProcessResult::get_Status()
     @_property
     def status(self) -> IsolatedWindowsEnvironmentStartProcessStatus: ...
 
 @typing.final
 class IsolatedWindowsEnvironmentTelemetryParameters(winrt.system.Object):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Guid Windows.Security.Isolation.IsolatedWindowsEnvironmentTelemetryParameters::get_CorrelationId()
     @_property
     def correlation_id(self) -> _uuid.UUID: ...
+    # System.Void Windows.Security.Isolation.IsolatedWindowsEnvironmentTelemetryParameters::put_CorrelationId(System.Guid)
     @correlation_id.setter
     def correlation_id(self, value: _uuid.UUID) -> None: ...
 
 @typing.final
 class IsolatedWindowsEnvironmentUserInfo(winrt.system.Object):
+    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Security.Isolation.IsolatedWindowsEnvironmentUserInfo::TryWaitForSignInAsync()
     # @deprecated("IsolatedWindowsEnvironmentUserInfo is deprecated and might not work on all platforms. For more info, see MSDN.")
     def try_wait_for_sign_in_async(self) -> windows_foundation.IAsyncOperation[bool]: ...
+    # Windows.Foundation.IAsyncOperationWithProgress`2<System.Boolean,Windows.Security.Isolation.IsolatedWindowsEnvironmentSignInProgress> Windows.Security.Isolation.IsolatedWindowsEnvironmentUserInfo::TryWaitForSignInWithProgressAsync()
     # @deprecated("IsolatedWindowsEnvironmentUserInfo is deprecated and might not work on all platforms. For more info, see MSDN.")
     def try_wait_for_sign_in_with_progress_async(self) -> windows_foundation.IAsyncOperationWithProgress[bool, IsolatedWindowsEnvironmentSignInProgress]: ...
+    # System.String Windows.Security.Isolation.IsolatedWindowsEnvironmentUserInfo::get_EnvironmentUserName()
     @_property
     def environment_user_name(self) -> str: ...
+    # System.String Windows.Security.Isolation.IsolatedWindowsEnvironmentUserInfo::get_EnvironmentUserSid()
     @_property
     def environment_user_sid(self) -> str: ...
 
 @typing.final
 class IsolatedWindowsHostMessenger_Static(type):
+    # System.Guid Windows.Security.Isolation.IsolatedWindowsHostMessenger::GetFileId(System.String)
     # @deprecated("IsolatedWindowsHostMessenger is deprecated and might not work on all platforms. For more info, see MSDN.")
     def get_file_id(cls, file_path: str, /) -> _uuid.UUID: ...
+    # System.Void Windows.Security.Isolation.IsolatedWindowsHostMessenger::PostMessageToReceiver(System.Guid,Windows.Foundation.Collections.IVectorView`1<System.Object>)
     # @deprecated("IsolatedWindowsHostMessenger is deprecated and might not work on all platforms. For more info, see MSDN.")
     def post_message_to_receiver(cls, receiver_id: _uuid.UUID, message: typing.Sequence[winrt.system.Object], /) -> None: ...
+    # System.Void Windows.Security.Isolation.IsolatedWindowsHostMessenger::RegisterHostMessageReceiver(System.Guid,Windows.Security.Isolation.HostMessageReceivedCallback)
     # @deprecated("IsolatedWindowsHostMessenger is deprecated and might not work on all platforms. For more info, see MSDN.")
     def register_host_message_receiver(cls, receiver_id: _uuid.UUID, host_message_received_callback: HostMessageReceivedCallback, /) -> None: ...
+    # System.Void Windows.Security.Isolation.IsolatedWindowsHostMessenger::UnregisterHostMessageReceiver(System.Guid)
     # @deprecated("IsolatedWindowsHostMessenger is deprecated and might not work on all platforms. For more info, see MSDN.")
     def unregister_host_message_receiver(cls, receiver_id: _uuid.UUID, /) -> None: ...
 

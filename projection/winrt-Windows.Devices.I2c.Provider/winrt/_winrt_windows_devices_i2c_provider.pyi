@@ -24,16 +24,22 @@ class ProviderI2cTransferResult:
 
 @typing.final
 class ProviderI2cConnectionSettings(winrt.system.Object):
+    # System.Int32 Windows.Devices.I2c.Provider.ProviderI2cConnectionSettings::get_SlaveAddress()
     @_property
     def slave_address(self) -> winrt.system.Int32: ...
+    # System.Void Windows.Devices.I2c.Provider.ProviderI2cConnectionSettings::put_SlaveAddress(System.Int32)
     @slave_address.setter
     def slave_address(self, value: winrt.system.Int32) -> None: ...
+    # Windows.Devices.I2c.Provider.ProviderI2cSharingMode Windows.Devices.I2c.Provider.ProviderI2cConnectionSettings::get_SharingMode()
     @_property
     def sharing_mode(self) -> ProviderI2cSharingMode: ...
+    # System.Void Windows.Devices.I2c.Provider.ProviderI2cConnectionSettings::put_SharingMode(Windows.Devices.I2c.Provider.ProviderI2cSharingMode)
     @sharing_mode.setter
     def sharing_mode(self, value: ProviderI2cSharingMode) -> None: ...
+    # Windows.Devices.I2c.Provider.ProviderI2cBusSpeed Windows.Devices.I2c.Provider.ProviderI2cConnectionSettings::get_BusSpeed()
     @_property
     def bus_speed(self) -> ProviderI2cBusSpeed: ...
+    # System.Void Windows.Devices.I2c.Provider.ProviderI2cConnectionSettings::put_BusSpeed(Windows.Devices.I2c.Provider.ProviderI2cBusSpeed)
     @bus_speed.setter
     def bus_speed(self, value: ProviderI2cBusSpeed) -> None: ...
 
@@ -42,6 +48,7 @@ class ImplementsII2cControllerProvider():
 
 @typing.final
 class II2cControllerProvider(winrt.system.Object, ImplementsII2cControllerProvider):
+    # Windows.Devices.I2c.Provider.II2cDeviceProvider Windows.Devices.I2c.Provider.II2cControllerProvider::GetDeviceProvider(Windows.Devices.I2c.Provider.ProviderI2cConnectionSettings)
     def get_device_provider(self, settings: ProviderI2cConnectionSettings, /) -> II2cDeviceProvider: ...
 
 class ImplementsII2cDeviceProvider():
@@ -51,13 +58,21 @@ class ImplementsII2cDeviceProvider():
 class II2cDeviceProvider(winrt.system.Object, ImplementsII2cDeviceProvider, windows_foundation.ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, exc_type: typing.Optional[typing.Type[BaseException]], exc_value: typing.Optional[BaseException], traceback: typing.Optional[types.TracebackType]) -> None: ...
+    # System.Void Windows.Foundation.IClosable::Close()
     def close(self) -> None: ...
+    # System.Void Windows.Devices.I2c.Provider.II2cDeviceProvider::Read(System.Byte[])
     def read(self, buffer: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.WriteableBuffer], /) -> None: ...
+    # Windows.Devices.I2c.Provider.ProviderI2cTransferResult Windows.Devices.I2c.Provider.II2cDeviceProvider::ReadPartial(System.Byte[])
     def read_partial(self, buffer: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.WriteableBuffer], /) -> ProviderI2cTransferResult: ...
+    # System.Void Windows.Devices.I2c.Provider.II2cDeviceProvider::Write(System.Byte[])
     def write(self, buffer: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], /) -> None: ...
+    # Windows.Devices.I2c.Provider.ProviderI2cTransferResult Windows.Devices.I2c.Provider.II2cDeviceProvider::WritePartial(System.Byte[])
     def write_partial(self, buffer: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], /) -> ProviderI2cTransferResult: ...
+    # System.Void Windows.Devices.I2c.Provider.II2cDeviceProvider::WriteRead(System.Byte[],System.Byte[])
     def write_read(self, write_buffer: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], read_buffer: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.WriteableBuffer], /) -> None: ...
+    # Windows.Devices.I2c.Provider.ProviderI2cTransferResult Windows.Devices.I2c.Provider.II2cDeviceProvider::WriteReadPartial(System.Byte[],System.Byte[])
     def write_read_partial(self, write_buffer: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], read_buffer: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.WriteableBuffer], /) -> ProviderI2cTransferResult: ...
+    # System.String Windows.Devices.I2c.Provider.II2cDeviceProvider::get_DeviceId()
     @_property
     def device_id(self) -> str: ...
 
@@ -66,5 +81,6 @@ class ImplementsII2cProvider():
 
 @typing.final
 class II2cProvider(winrt.system.Object, ImplementsII2cProvider):
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Devices.I2c.Provider.II2cControllerProvider>> Windows.Devices.I2c.Provider.II2cProvider::GetControllersAsync()
     def get_controllers_async(self) -> windows_foundation.IAsyncOperation[typing.Sequence[II2cControllerProvider]]: ...
 

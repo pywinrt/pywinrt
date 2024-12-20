@@ -35,21 +35,27 @@ class MarkupExtension_Static(type):
 
 class MarkupExtension(winrt.system.Object, metaclass=MarkupExtension_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Object Microsoft.UI.Xaml.Markup.MarkupExtension::ProvideValue()
     def _provide_value(self) -> winrt.system.Object: ...
+    # System.Object Microsoft.UI.Xaml.Markup.MarkupExtension::ProvideValue(Microsoft.UI.Xaml.IXamlServiceProvider)
     def _provide_value_with_ixaml_service_provider(self, service_provider: microsoft_ui_xaml.ImplementsIXamlServiceProvider, /) -> winrt.system.Object: ...
 
 @typing.final
 class ProvideValueTargetProperty(winrt.system.Object):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Windows.UI.Xaml.Interop.TypeName Microsoft.UI.Xaml.Markup.ProvideValueTargetProperty::get_DeclaringType()
     @_property
     def declaring_type(self) -> windows_ui_xaml_interop.TypeName: ...
+    # System.String Microsoft.UI.Xaml.Markup.ProvideValueTargetProperty::get_Name()
     @_property
     def name(self) -> str: ...
+    # Windows.UI.Xaml.Interop.TypeName Microsoft.UI.Xaml.Markup.ProvideValueTargetProperty::get_Type()
     @_property
     def type(self) -> windows_ui_xaml_interop.TypeName: ...
 
 @typing.final
 class XamlBinaryWriter_Static(type):
+    # Microsoft.UI.Xaml.Markup.XamlBinaryWriterErrorInformation Microsoft.UI.Xaml.Markup.XamlBinaryWriter::Write(Windows.Foundation.Collections.IVector`1<Windows.Storage.Streams.IRandomAccessStream>,Windows.Foundation.Collections.IVector`1<Windows.Storage.Streams.IRandomAccessStream>,Microsoft.UI.Xaml.Markup.IXamlMetadataProvider)
     def write(cls, input_streams: typing.MutableSequence[windows_storage_streams.ImplementsIRandomAccessStream], output_streams: typing.MutableSequence[windows_storage_streams.ImplementsIRandomAccessStream], xaml_metadata_provider: ImplementsIXamlMetadataProvider, /) -> XamlBinaryWriterErrorInformation: ...
 
 @typing.final
@@ -58,28 +64,51 @@ class XamlBinaryWriter(winrt.system.Object, metaclass=XamlBinaryWriter_Static):
 
 @typing.final
 class XamlBindingHelper_Static(type):
+    # System.Object Microsoft.UI.Xaml.Markup.XamlBindingHelper::ConvertValue(Windows.UI.Xaml.Interop.TypeName,System.Object)
     def convert_value(cls, type: windows_ui_xaml_interop.TypeName, value: winrt.system.Object, /) -> winrt.system.Object: ...
+    # Microsoft.UI.Xaml.Markup.IDataTemplateComponent Microsoft.UI.Xaml.Markup.XamlBindingHelper::GetDataTemplateComponent(Microsoft.UI.Xaml.DependencyObject)
     def get_data_template_component(cls, element: microsoft_ui_xaml.DependencyObject, /) -> IDataTemplateComponent: ...
+    # System.Void Microsoft.UI.Xaml.Markup.XamlBindingHelper::ResumeRendering(Microsoft.UI.Xaml.UIElement)
     def resume_rendering(cls, target: microsoft_ui_xaml.UIElement, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Markup.XamlBindingHelper::SetDataTemplateComponent(Microsoft.UI.Xaml.DependencyObject,Microsoft.UI.Xaml.Markup.IDataTemplateComponent)
     def set_data_template_component(cls, element: microsoft_ui_xaml.DependencyObject, value: ImplementsIDataTemplateComponent, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Markup.XamlBindingHelper::SetPropertyFromBoolean(System.Object,Microsoft.UI.Xaml.DependencyProperty,System.Boolean)
     def set_property_from_boolean(cls, dependency_object: winrt.system.Object, property_to_set: microsoft_ui_xaml.DependencyProperty, value: bool, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Markup.XamlBindingHelper::SetPropertyFromByte(System.Object,Microsoft.UI.Xaml.DependencyProperty,System.Byte)
     def set_property_from_byte(cls, dependency_object: winrt.system.Object, property_to_set: microsoft_ui_xaml.DependencyProperty, value: winrt.system.UInt8, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Markup.XamlBindingHelper::SetPropertyFromChar16(System.Object,Microsoft.UI.Xaml.DependencyProperty,System.Char)
     def set_property_from_char16(cls, dependency_object: winrt.system.Object, property_to_set: microsoft_ui_xaml.DependencyProperty, value: winrt.system.Char16, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Markup.XamlBindingHelper::SetPropertyFromDateTime(System.Object,Microsoft.UI.Xaml.DependencyProperty,Windows.Foundation.DateTime)
     def set_property_from_date_time(cls, dependency_object: winrt.system.Object, property_to_set: microsoft_ui_xaml.DependencyProperty, value: datetime.datetime, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Markup.XamlBindingHelper::SetPropertyFromDouble(System.Object,Microsoft.UI.Xaml.DependencyProperty,System.Double)
     def set_property_from_double(cls, dependency_object: winrt.system.Object, property_to_set: microsoft_ui_xaml.DependencyProperty, value: winrt.system.Double, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Markup.XamlBindingHelper::SetPropertyFromInt32(System.Object,Microsoft.UI.Xaml.DependencyProperty,System.Int32)
     def set_property_from_int32(cls, dependency_object: winrt.system.Object, property_to_set: microsoft_ui_xaml.DependencyProperty, value: winrt.system.Int32, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Markup.XamlBindingHelper::SetPropertyFromInt64(System.Object,Microsoft.UI.Xaml.DependencyProperty,System.Int64)
     def set_property_from_int64(cls, dependency_object: winrt.system.Object, property_to_set: microsoft_ui_xaml.DependencyProperty, value: winrt.system.Int64, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Markup.XamlBindingHelper::SetPropertyFromObject(System.Object,Microsoft.UI.Xaml.DependencyProperty,System.Object)
     def set_property_from_object(cls, dependency_object: winrt.system.Object, property_to_set: microsoft_ui_xaml.DependencyProperty, value: winrt.system.Object, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Markup.XamlBindingHelper::SetPropertyFromPoint(System.Object,Microsoft.UI.Xaml.DependencyProperty,Windows.Foundation.Point)
     def set_property_from_point(cls, dependency_object: winrt.system.Object, property_to_set: microsoft_ui_xaml.DependencyProperty, value: windows_foundation.Point, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Markup.XamlBindingHelper::SetPropertyFromRect(System.Object,Microsoft.UI.Xaml.DependencyProperty,Windows.Foundation.Rect)
     def set_property_from_rect(cls, dependency_object: winrt.system.Object, property_to_set: microsoft_ui_xaml.DependencyProperty, value: windows_foundation.Rect, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Markup.XamlBindingHelper::SetPropertyFromSingle(System.Object,Microsoft.UI.Xaml.DependencyProperty,System.Single)
     def set_property_from_single(cls, dependency_object: winrt.system.Object, property_to_set: microsoft_ui_xaml.DependencyProperty, value: winrt.system.Single, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Markup.XamlBindingHelper::SetPropertyFromSize(System.Object,Microsoft.UI.Xaml.DependencyProperty,Windows.Foundation.Size)
     def set_property_from_size(cls, dependency_object: winrt.system.Object, property_to_set: microsoft_ui_xaml.DependencyProperty, value: windows_foundation.Size, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Markup.XamlBindingHelper::SetPropertyFromString(System.Object,Microsoft.UI.Xaml.DependencyProperty,System.String)
     def set_property_from_string(cls, dependency_object: winrt.system.Object, property_to_set: microsoft_ui_xaml.DependencyProperty, value: str, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Markup.XamlBindingHelper::SetPropertyFromTimeSpan(System.Object,Microsoft.UI.Xaml.DependencyProperty,Windows.Foundation.TimeSpan)
     def set_property_from_time_span(cls, dependency_object: winrt.system.Object, property_to_set: microsoft_ui_xaml.DependencyProperty, value: datetime.timedelta, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Markup.XamlBindingHelper::SetPropertyFromUInt32(System.Object,Microsoft.UI.Xaml.DependencyProperty,System.UInt32)
     def set_property_from_uint32(cls, dependency_object: winrt.system.Object, property_to_set: microsoft_ui_xaml.DependencyProperty, value: winrt.system.UInt32, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Markup.XamlBindingHelper::SetPropertyFromUInt64(System.Object,Microsoft.UI.Xaml.DependencyProperty,System.UInt64)
     def set_property_from_uint64(cls, dependency_object: winrt.system.Object, property_to_set: microsoft_ui_xaml.DependencyProperty, value: winrt.system.UInt64, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Markup.XamlBindingHelper::SetPropertyFromUri(System.Object,Microsoft.UI.Xaml.DependencyProperty,Windows.Foundation.Uri)
     def set_property_from_uri(cls, dependency_object: winrt.system.Object, property_to_set: microsoft_ui_xaml.DependencyProperty, value: windows_foundation.Uri, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Markup.XamlBindingHelper::SuspendRendering(Microsoft.UI.Xaml.UIElement)
     def suspend_rendering(cls, target: microsoft_ui_xaml.UIElement, /) -> None: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Markup.XamlBindingHelper::get_DataTemplateComponentProperty()
     @_property
     def data_template_component_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
@@ -89,6 +118,7 @@ class XamlBindingHelper(winrt.system.Object, metaclass=XamlBindingHelper_Static)
 
 @typing.final
 class XamlMarkupHelper_Static(type):
+    # System.Void Microsoft.UI.Xaml.Markup.XamlMarkupHelper::UnloadObject(Microsoft.UI.Xaml.DependencyObject)
     def unload_object(cls, element: microsoft_ui_xaml.DependencyObject, /) -> None: ...
 
 @typing.final
@@ -97,7 +127,9 @@ class XamlMarkupHelper(winrt.system.Object, metaclass=XamlMarkupHelper_Static):
 
 @typing.final
 class XamlReader_Static(type):
+    # System.Object Microsoft.UI.Xaml.Markup.XamlReader::Load(System.String)
     def load(cls, xaml: str, /) -> winrt.system.Object: ...
+    # System.Object Microsoft.UI.Xaml.Markup.XamlReader::LoadWithInitialTemplateValidation(System.String)
     def load_with_initial_template_validation(cls, xaml: str, /) -> winrt.system.Object: ...
 
 @typing.final
@@ -109,7 +141,9 @@ class ImplementsIComponentConnector():
 
 @typing.final
 class IComponentConnector(winrt.system.Object, ImplementsIComponentConnector):
+    # System.Void Microsoft.UI.Xaml.Markup.IComponentConnector::Connect(System.Int32,System.Object)
     def connect(self, connection_id: winrt.system.Int32, target: winrt.system.Object, /) -> None: ...
+    # Microsoft.UI.Xaml.Markup.IComponentConnector Microsoft.UI.Xaml.Markup.IComponentConnector::GetBindingConnector(System.Int32,System.Object)
     def get_binding_connector(self, connection_id: winrt.system.Int32, target: winrt.system.Object, /) -> IComponentConnector: ...
 
 class ImplementsIDataTemplateComponent():
@@ -117,7 +151,9 @@ class ImplementsIDataTemplateComponent():
 
 @typing.final
 class IDataTemplateComponent(winrt.system.Object, ImplementsIDataTemplateComponent):
+    # System.Void Microsoft.UI.Xaml.Markup.IDataTemplateComponent::ProcessBindings(System.Object,System.Int32,System.Int32,System.Int32&)
     def process_bindings(self, item: winrt.system.Object, item_index: winrt.system.Int32, phase: winrt.system.Int32, /) -> winrt.system.Int32: ...
+    # System.Void Microsoft.UI.Xaml.Markup.IDataTemplateComponent::Recycle()
     def recycle(self) -> None: ...
 
 class ImplementsIProvideValueTarget():
@@ -125,8 +161,10 @@ class ImplementsIProvideValueTarget():
 
 @typing.final
 class IProvideValueTarget(winrt.system.Object, ImplementsIProvideValueTarget):
+    # System.Object Microsoft.UI.Xaml.Markup.IProvideValueTarget::get_TargetObject()
     @_property
     def target_object(self) -> winrt.system.Object: ...
+    # System.Object Microsoft.UI.Xaml.Markup.IProvideValueTarget::get_TargetProperty()
     @_property
     def target_property(self) -> winrt.system.Object: ...
 
@@ -135,6 +173,7 @@ class ImplementsIRootObjectProvider():
 
 @typing.final
 class IRootObjectProvider(winrt.system.Object, ImplementsIRootObjectProvider):
+    # System.Object Microsoft.UI.Xaml.Markup.IRootObjectProvider::get_RootObject()
     @_property
     def root_object(self) -> winrt.system.Object: ...
 
@@ -143,6 +182,7 @@ class ImplementsIUriContext():
 
 @typing.final
 class IUriContext(winrt.system.Object, ImplementsIUriContext):
+    # Windows.Foundation.Uri Microsoft.UI.Xaml.Markup.IUriContext::get_BaseUri()
     @_property
     def base_uri(self) -> windows_foundation.Uri: ...
 
@@ -151,6 +191,7 @@ class ImplementsIXamlBindScopeDiagnostics():
 
 @typing.final
 class IXamlBindScopeDiagnostics(winrt.system.Object, ImplementsIXamlBindScopeDiagnostics):
+    # System.Void Microsoft.UI.Xaml.Markup.IXamlBindScopeDiagnostics::Disable(System.Int32,System.Int32)
     def disable(self, line_number: winrt.system.Int32, column_number: winrt.system.Int32, /) -> None: ...
 
 class ImplementsIXamlMember():
@@ -158,18 +199,26 @@ class ImplementsIXamlMember():
 
 @typing.final
 class IXamlMember(winrt.system.Object, ImplementsIXamlMember):
+    # System.Object Microsoft.UI.Xaml.Markup.IXamlMember::GetValue(System.Object)
     def get_value(self, instance: winrt.system.Object, /) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Markup.IXamlMember::SetValue(System.Object,System.Object)
     def set_value(self, instance: winrt.system.Object, value: winrt.system.Object, /) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Markup.IXamlMember::get_IsAttachable()
     @_property
     def is_attachable(self) -> bool: ...
+    # System.Boolean Microsoft.UI.Xaml.Markup.IXamlMember::get_IsDependencyProperty()
     @_property
     def is_dependency_property(self) -> bool: ...
+    # System.Boolean Microsoft.UI.Xaml.Markup.IXamlMember::get_IsReadOnly()
     @_property
     def is_read_only(self) -> bool: ...
+    # System.String Microsoft.UI.Xaml.Markup.IXamlMember::get_Name()
     @_property
     def name(self) -> str: ...
+    # Microsoft.UI.Xaml.Markup.IXamlType Microsoft.UI.Xaml.Markup.IXamlMember::get_TargetType()
     @_property
     def target_type(self) -> IXamlType: ...
+    # Microsoft.UI.Xaml.Markup.IXamlType Microsoft.UI.Xaml.Markup.IXamlMember::get_Type()
     @_property
     def type(self) -> IXamlType: ...
 
@@ -178,8 +227,11 @@ class ImplementsIXamlMetadataProvider():
 
 @typing.final
 class IXamlMetadataProvider(winrt.system.Object, ImplementsIXamlMetadataProvider):
+    # Microsoft.UI.Xaml.Markup.IXamlType Microsoft.UI.Xaml.Markup.IXamlMetadataProvider::GetXamlType(Windows.UI.Xaml.Interop.TypeName)
     def get_xaml_type(self, type: windows_ui_xaml_interop.TypeName, /) -> IXamlType: ...
+    # Microsoft.UI.Xaml.Markup.IXamlType Microsoft.UI.Xaml.Markup.IXamlMetadataProvider::GetXamlType(System.String)
     def get_xaml_type_by_full_name(self, full_name: str, /) -> IXamlType: ...
+    # Microsoft.UI.Xaml.Markup.XmlnsDefinition[] Microsoft.UI.Xaml.Markup.IXamlMetadataProvider::GetXmlnsDefinitions()
     def get_xmlns_definitions(self) -> winrt.system.Array[XmlnsDefinition]: ...
 
 class ImplementsIXamlType():
@@ -187,36 +239,55 @@ class ImplementsIXamlType():
 
 @typing.final
 class IXamlType(winrt.system.Object, ImplementsIXamlType):
+    # System.Object Microsoft.UI.Xaml.Markup.IXamlType::ActivateInstance()
     def activate_instance(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Markup.IXamlType::AddToMap(System.Object,System.Object,System.Object)
     def add_to_map(self, instance: winrt.system.Object, key: winrt.system.Object, value: winrt.system.Object, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Markup.IXamlType::AddToVector(System.Object,System.Object)
     def add_to_vector(self, instance: winrt.system.Object, value: winrt.system.Object, /) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Markup.IXamlType::CreateFromString(System.String)
     def create_from_string(self, value: str, /) -> winrt.system.Object: ...
+    # Microsoft.UI.Xaml.Markup.IXamlMember Microsoft.UI.Xaml.Markup.IXamlType::GetMember(System.String)
     def get_member(self, name: str, /) -> IXamlMember: ...
+    # System.Void Microsoft.UI.Xaml.Markup.IXamlType::RunInitializer()
     def run_initializer(self) -> None: ...
+    # Microsoft.UI.Xaml.Markup.IXamlType Microsoft.UI.Xaml.Markup.IXamlType::get_BaseType()
     @_property
     def base_type(self) -> IXamlType: ...
+    # Microsoft.UI.Xaml.Markup.IXamlType Microsoft.UI.Xaml.Markup.IXamlType::get_BoxedType()
     @_property
     def boxed_type(self) -> IXamlType: ...
+    # Microsoft.UI.Xaml.Markup.IXamlMember Microsoft.UI.Xaml.Markup.IXamlType::get_ContentProperty()
     @_property
     def content_property(self) -> IXamlMember: ...
+    # System.String Microsoft.UI.Xaml.Markup.IXamlType::get_FullName()
     @_property
     def full_name(self) -> str: ...
+    # System.Boolean Microsoft.UI.Xaml.Markup.IXamlType::get_IsArray()
     @_property
     def is_array(self) -> bool: ...
+    # System.Boolean Microsoft.UI.Xaml.Markup.IXamlType::get_IsBindable()
     @_property
     def is_bindable(self) -> bool: ...
+    # System.Boolean Microsoft.UI.Xaml.Markup.IXamlType::get_IsCollection()
     @_property
     def is_collection(self) -> bool: ...
+    # System.Boolean Microsoft.UI.Xaml.Markup.IXamlType::get_IsConstructible()
     @_property
     def is_constructible(self) -> bool: ...
+    # System.Boolean Microsoft.UI.Xaml.Markup.IXamlType::get_IsDictionary()
     @_property
     def is_dictionary(self) -> bool: ...
+    # System.Boolean Microsoft.UI.Xaml.Markup.IXamlType::get_IsMarkupExtension()
     @_property
     def is_markup_extension(self) -> bool: ...
+    # Microsoft.UI.Xaml.Markup.IXamlType Microsoft.UI.Xaml.Markup.IXamlType::get_ItemType()
     @_property
     def item_type(self) -> IXamlType: ...
+    # Microsoft.UI.Xaml.Markup.IXamlType Microsoft.UI.Xaml.Markup.IXamlType::get_KeyType()
     @_property
     def key_type(self) -> IXamlType: ...
+    # Windows.UI.Xaml.Interop.TypeName Microsoft.UI.Xaml.Markup.IXamlType::get_UnderlyingType()
     @_property
     def underlying_type(self) -> windows_ui_xaml_interop.TypeName: ...
 
@@ -225,5 +296,6 @@ class ImplementsIXamlTypeResolver():
 
 @typing.final
 class IXamlTypeResolver(winrt.system.Object, ImplementsIXamlTypeResolver):
+    # Windows.UI.Xaml.Interop.TypeName Microsoft.UI.Xaml.Markup.IXamlTypeResolver::Resolve(System.String)
     def resolve(self, qualified_type_name: str, /) -> windows_ui_xaml_interop.TypeName: ...
 

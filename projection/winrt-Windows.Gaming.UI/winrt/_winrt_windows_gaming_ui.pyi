@@ -19,12 +19,18 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class GameBar_Static(type):
+    # Windows.Foundation.EventRegistrationToken Windows.Gaming.UI.GameBar::add_IsInputRedirectedChanged(Windows.Foundation.EventHandler`1<System.Object>)
     def add_is_input_redirected_changed(cls, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Gaming.UI.GameBar::remove_IsInputRedirectedChanged(Windows.Foundation.EventRegistrationToken)
     def remove_is_input_redirected_changed(cls, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Gaming.UI.GameBar::add_VisibilityChanged(Windows.Foundation.EventHandler`1<System.Object>)
     def add_visibility_changed(cls, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Gaming.UI.GameBar::remove_VisibilityChanged(Windows.Foundation.EventRegistrationToken)
     def remove_visibility_changed(cls, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.Boolean Windows.Gaming.UI.GameBar::get_IsInputRedirected()
     @_property
     def is_input_redirected(cls) -> bool: ...
+    # System.Boolean Windows.Gaming.UI.GameBar::get_Visible()
     @_property
     def visible(cls) -> bool: ...
 
@@ -34,45 +40,62 @@ class GameBar(winrt.system.Object, metaclass=GameBar_Static):
 
 @typing.final
 class GameChatMessageReceivedEventArgs(winrt.system.Object):
+    # System.String Windows.Gaming.UI.GameChatMessageReceivedEventArgs::get_AppDisplayName()
     @_property
     def app_display_name(self) -> str: ...
+    # System.String Windows.Gaming.UI.GameChatMessageReceivedEventArgs::get_AppId()
     @_property
     def app_id(self) -> str: ...
+    # System.String Windows.Gaming.UI.GameChatMessageReceivedEventArgs::get_Message()
     @_property
     def message(self) -> str: ...
+    # Windows.Gaming.UI.GameChatMessageOrigin Windows.Gaming.UI.GameChatMessageReceivedEventArgs::get_Origin()
     @_property
     def origin(self) -> GameChatMessageOrigin: ...
+    # System.String Windows.Gaming.UI.GameChatMessageReceivedEventArgs::get_SenderName()
     @_property
     def sender_name(self) -> str: ...
 
 @typing.final
 class GameChatOverlay_Static(type):
+    # Windows.Gaming.UI.GameChatOverlay Windows.Gaming.UI.GameChatOverlay::GetDefault()
     def get_default(cls) -> GameChatOverlay: ...
 
 @typing.final
 class GameChatOverlay(winrt.system.Object, metaclass=GameChatOverlay_Static):
+    # System.Void Windows.Gaming.UI.GameChatOverlay::AddMessage(System.String,System.String,Windows.Gaming.UI.GameChatMessageOrigin)
     def add_message(self, sender: str, message: str, origin: GameChatMessageOrigin, /) -> None: ...
+    # Windows.Gaming.UI.GameChatOverlayPosition Windows.Gaming.UI.GameChatOverlay::get_DesiredPosition()
     @_property
     def desired_position(self) -> GameChatOverlayPosition: ...
+    # System.Void Windows.Gaming.UI.GameChatOverlay::put_DesiredPosition(Windows.Gaming.UI.GameChatOverlayPosition)
     @desired_position.setter
     def desired_position(self, value: GameChatOverlayPosition) -> None: ...
 
 @typing.final
 class GameChatOverlayMessageSource(winrt.system.Object):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Void Windows.Gaming.UI.GameChatOverlayMessageSource::SetDelayBeforeClosingAfterMessageReceived(Windows.Foundation.TimeSpan)
     def set_delay_before_closing_after_message_received(self, value: datetime.timedelta, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Gaming.UI.GameChatOverlayMessageSource::add_MessageReceived(Windows.Foundation.TypedEventHandler`2<Windows.Gaming.UI.GameChatOverlayMessageSource,Windows.Gaming.UI.GameChatMessageReceivedEventArgs>)
     def add_message_received(self, handler: windows_foundation.TypedEventHandler[GameChatOverlayMessageSource, GameChatMessageReceivedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Gaming.UI.GameChatOverlayMessageSource::remove_MessageReceived(Windows.Foundation.EventRegistrationToken)
     def remove_message_received(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
 @typing.final
 class GameUIProviderActivatedEventArgs(winrt.system.Object, windows_applicationmodel_activation.ImplementsIActivatedEventArgs):
+    # System.Void Windows.Gaming.UI.GameUIProviderActivatedEventArgs::ReportCompleted(Windows.Foundation.Collections.ValueSet)
     def report_completed(self, results: windows_foundation_collections.ValueSet, /) -> None: ...
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.Gaming.UI.GameUIProviderActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.Gaming.UI.GameUIProviderActivatedEventArgs::get_PreviousExecutionState()
     @_property
     def previous_execution_state(self) -> windows_applicationmodel_activation.ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.Gaming.UI.GameUIProviderActivatedEventArgs::get_SplashScreen()
     @_property
     def splash_screen(self) -> windows_applicationmodel_activation.SplashScreen: ...
+    # Windows.Foundation.Collections.ValueSet Windows.Gaming.UI.GameUIProviderActivatedEventArgs::get_GameUIArgs()
     @_property
     def game_ui_args(self) -> windows_foundation_collections.ValueSet: ...
 
