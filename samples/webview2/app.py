@@ -73,7 +73,7 @@ class App(Application, ImplementsIXamlMetadataProvider):
         window.add_closed(lambda s, e: self.exit())
 
         webview = window.content.as_(Grid).find_name("webview").as_(WebView2)
-        webview.add_core_web_view2_initialized(check_initialized)
+        webview.add_core_webview2_initialized(check_initialized)
 
         # By default, WebView2 will create a directory in the .exe's directory
         # which isn't usually desireable. Here we create a temporary directory
@@ -98,12 +98,12 @@ class App(Application, ImplementsIXamlMetadataProvider):
 
             env = op.get_results()
 
-            ensure_op = webview.ensure_core_web_view2_with_environment_async(env)
+            ensure_op = webview.ensure_core_webview2_with_environment_async(env)
 
             def on_ensure(op: IAsyncAction, status: AsyncStatus):
                 if status == AsyncStatus.ERROR:
                     print(
-                        "ensure_core_web_view2_async failed:",
+                        "ensure_core_webview2_async failed:",
                         WinError(op.error_code.value),
                     )
                     return

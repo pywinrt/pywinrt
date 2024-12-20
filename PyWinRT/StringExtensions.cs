@@ -101,6 +101,8 @@ static class StringExtensions
         str = Regex.Replace(str, @"UI(?!nfo)", "Ui");
         // Replace UWP with Uwp
         str = Regex.Replace(str, @"UWP", "Uwp");
+        // Replace WebView2 with Webview2
+        str = Regex.Replace(str, @"WebView2", "Webview2");
         // Fix up interface prefix, also fixes IR, IM, IBeam
         str = Regex.Replace(
             str,
