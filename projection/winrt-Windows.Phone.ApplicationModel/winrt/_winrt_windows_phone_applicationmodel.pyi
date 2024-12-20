@@ -16,6 +16,7 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class ApplicationProfile_Static(type):
+    # Windows.Phone.ApplicationModel.ApplicationProfileModes Windows.Phone.ApplicationModel.ApplicationProfile::get_Modes()
     @_property
     def modes(cls) -> ApplicationProfileModes: ...
 

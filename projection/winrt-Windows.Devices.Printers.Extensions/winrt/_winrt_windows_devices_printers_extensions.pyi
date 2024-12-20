@@ -17,33 +17,47 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class Print3DWorkflow(winrt.system.Object):
+    # System.Object Windows.Devices.Printers.Extensions.Print3DWorkflow::GetPrintModelPackage()
     def get_print_model_package(self) -> winrt.system.Object: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Devices.Printers.Extensions.Print3DWorkflow::add_PrintRequested(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Printers.Extensions.Print3DWorkflow,Windows.Devices.Printers.Extensions.Print3DWorkflowPrintRequestedEventArgs>)
     def add_print_requested(self, event_handler: windows_foundation.TypedEventHandler[Print3DWorkflow, Print3DWorkflowPrintRequestedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Devices.Printers.Extensions.Print3DWorkflow::remove_PrintRequested(Windows.Foundation.EventRegistrationToken)
     def remove_print_requested(self, event_cookie: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Devices.Printers.Extensions.Print3DWorkflow::add_PrinterChanged(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Printers.Extensions.Print3DWorkflow,Windows.Devices.Printers.Extensions.Print3DWorkflowPrinterChangedEventArgs>)
     def add_printer_changed(self, event_handler: windows_foundation.TypedEventHandler[Print3DWorkflow, Print3DWorkflowPrinterChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Devices.Printers.Extensions.Print3DWorkflow::remove_PrinterChanged(Windows.Foundation.EventRegistrationToken)
     def remove_printer_changed(self, event_cookie: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.Boolean Windows.Devices.Printers.Extensions.Print3DWorkflow::get_IsPrintReady()
     @_property
     def is_print_ready(self) -> bool: ...
+    # System.Void Windows.Devices.Printers.Extensions.Print3DWorkflow::put_IsPrintReady(System.Boolean)
     @is_print_ready.setter
     def is_print_ready(self, value: bool) -> None: ...
+    # System.String Windows.Devices.Printers.Extensions.Print3DWorkflow::get_DeviceID()
     @_property
     def device_id(self) -> str: ...
 
 @typing.final
 class Print3DWorkflowPrintRequestedEventArgs(winrt.system.Object):
+    # System.Void Windows.Devices.Printers.Extensions.Print3DWorkflowPrintRequestedEventArgs::SetExtendedStatus(Windows.Devices.Printers.Extensions.Print3DWorkflowDetail)
     def set_extended_status(self, value: Print3DWorkflowDetail, /) -> None: ...
+    # System.Void Windows.Devices.Printers.Extensions.Print3DWorkflowPrintRequestedEventArgs::SetSource(System.Object)
     def set_source(self, source: winrt.system.Object, /) -> None: ...
+    # System.Void Windows.Devices.Printers.Extensions.Print3DWorkflowPrintRequestedEventArgs::SetSourceChanged(System.Boolean)
     def set_source_changed(self, value: bool, /) -> None: ...
+    # Windows.Devices.Printers.Extensions.Print3DWorkflowStatus Windows.Devices.Printers.Extensions.Print3DWorkflowPrintRequestedEventArgs::get_Status()
     @_property
     def status(self) -> Print3DWorkflowStatus: ...
 
 @typing.final
 class Print3DWorkflowPrinterChangedEventArgs(winrt.system.Object):
+    # System.String Windows.Devices.Printers.Extensions.Print3DWorkflowPrinterChangedEventArgs::get_NewDeviceId()
     @_property
     def new_device_id(self) -> str: ...
 
 @typing.final
 class PrintExtensionContext_Static(type):
+    # System.Object Windows.Devices.Printers.Extensions.PrintExtensionContext::FromDeviceId(System.String)
     def from_device_id(cls, device_id: str, /) -> winrt.system.Object: ...
 
 @typing.final
@@ -52,34 +66,46 @@ class PrintExtensionContext(winrt.system.Object, metaclass=PrintExtensionContext
 
 @typing.final
 class PrintNotificationEventDetails(winrt.system.Object):
+    # System.String Windows.Devices.Printers.Extensions.PrintNotificationEventDetails::get_EventData()
     @_property
     def event_data(self) -> str: ...
+    # System.Void Windows.Devices.Printers.Extensions.PrintNotificationEventDetails::put_EventData(System.String)
     @event_data.setter
     def event_data(self, value: str) -> None: ...
+    # System.String Windows.Devices.Printers.Extensions.PrintNotificationEventDetails::get_PrinterName()
     @_property
     def printer_name(self) -> str: ...
 
 @typing.final
 class PrintTaskConfiguration(winrt.system.Object):
+    # Windows.Foundation.EventRegistrationToken Windows.Devices.Printers.Extensions.PrintTaskConfiguration::add_SaveRequested(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Printers.Extensions.PrintTaskConfiguration,Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedEventArgs>)
     def add_save_requested(self, event_handler: windows_foundation.TypedEventHandler[PrintTaskConfiguration, PrintTaskConfigurationSaveRequestedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Devices.Printers.Extensions.PrintTaskConfiguration::remove_SaveRequested(Windows.Foundation.EventRegistrationToken)
     def remove_save_requested(self, event_cookie: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.Object Windows.Devices.Printers.Extensions.PrintTaskConfiguration::get_PrinterExtensionContext()
     @_property
     def printer_extension_context(self) -> winrt.system.Object: ...
 
 @typing.final
 class PrintTaskConfigurationSaveRequest(winrt.system.Object):
+    # System.Void Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest::Cancel()
     def cancel(self) -> None: ...
+    # Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedDeferral Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest::GetDeferral()
     def get_deferral(self) -> PrintTaskConfigurationSaveRequestedDeferral: ...
+    # System.Void Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest::Save(System.Object)
     def save(self, printer_extension_context: winrt.system.Object, /) -> None: ...
+    # Windows.Foundation.DateTime Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest::get_Deadline()
     @_property
     def deadline(self) -> datetime.datetime: ...
 
 @typing.final
 class PrintTaskConfigurationSaveRequestedDeferral(winrt.system.Object):
+    # System.Void Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedDeferral::Complete()
     def complete(self) -> None: ...
 
 @typing.final
 class PrintTaskConfigurationSaveRequestedEventArgs(winrt.system.Object):
+    # Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedEventArgs::get_Request()
     @_property
     def request(self) -> PrintTaskConfigurationSaveRequest: ...
 

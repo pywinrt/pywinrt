@@ -23,143 +23,198 @@ from winrt.microsoft.ui.content import ContentCoordinateRoundingMode, ContentLay
 Self = typing.TypeVar('Self')
 
 class ContentCoordinateConverter_Static(type):
+    # Microsoft.UI.Content.ContentCoordinateConverter Microsoft.UI.Content.ContentCoordinateConverter::CreateForWindowId(Microsoft.UI.WindowId)
     def create_for_window_id(cls, window_id: microsoft_ui.WindowId, /) -> ContentCoordinateConverter: ...
 
 class ContentCoordinateConverter(winrt.system.Object, metaclass=ContentCoordinateConverter_Static):
     @typing.final
+    # Windows.Graphics.PointInt32 Microsoft.UI.Content.ContentCoordinateConverter::ConvertLocalToScreen(Windows.Foundation.Point)
     def convert_local_to_screen_with_point(self, local_point: windows_foundation.Point, /) -> windows_graphics.PointInt32: ...
     @typing.final
+    # Windows.Graphics.PointInt32[] Microsoft.UI.Content.ContentCoordinateConverter::ConvertLocalToScreen(Windows.Foundation.Point[])
     def convert_local_to_screen_with_points(self, local_points: typing.Union[winrt.system.Array[windows_foundation.Point], winrt.system.ReadableBuffer], /) -> winrt.system.Array[windows_graphics.PointInt32]: ...
     @typing.final
+    # Windows.Graphics.PointInt32[] Microsoft.UI.Content.ContentCoordinateConverter::ConvertLocalToScreen(Windows.Foundation.Point[],Microsoft.UI.Content.ContentCoordinateRoundingMode)
     def convert_local_to_screen_with_points_and_rounding_mode(self, local_points: typing.Union[winrt.system.Array[windows_foundation.Point], winrt.system.ReadableBuffer], rounding_mode: ContentCoordinateRoundingMode, /) -> winrt.system.Array[windows_graphics.PointInt32]: ...
     @typing.final
+    # Windows.Graphics.RectInt32 Microsoft.UI.Content.ContentCoordinateConverter::ConvertLocalToScreen(Windows.Foundation.Rect)
     def convert_local_to_screen_with_rect(self, local_rect: windows_foundation.Rect, /) -> windows_graphics.RectInt32: ...
     @typing.final
+    # Windows.Foundation.Point Microsoft.UI.Content.ContentCoordinateConverter::ConvertScreenToLocal(Windows.Graphics.PointInt32)
     def convert_screen_to_local_with_point(self, screen_point: windows_graphics.PointInt32, /) -> windows_foundation.Point: ...
     @typing.final
+    # Windows.Foundation.Point[] Microsoft.UI.Content.ContentCoordinateConverter::ConvertScreenToLocal(Windows.Graphics.PointInt32[])
     def convert_screen_to_local_with_points(self, screen_points: typing.Union[winrt.system.Array[windows_graphics.PointInt32], winrt.system.ReadableBuffer], /) -> winrt.system.Array[windows_foundation.Point]: ...
     @typing.final
+    # Windows.Foundation.Rect Microsoft.UI.Content.ContentCoordinateConverter::ConvertScreenToLocal(Windows.Graphics.RectInt32)
     def convert_screen_to_local_with_rect(self, screen_rect: windows_graphics.RectInt32, /) -> windows_foundation.Rect: ...
 
 @typing.final
 class ContentDeferral(winrt.system.Object):
+    # System.Void Microsoft.UI.Content.ContentDeferral::Complete()
     def complete(self) -> None: ...
 
 @typing.final
 class ContentEnvironmentSettingChangedEventArgs(winrt.system.Object):
+    # System.String Microsoft.UI.Content.ContentEnvironmentSettingChangedEventArgs::get_SettingName()
     @_property
     def setting_name(self) -> str: ...
 
 @typing.final
 class ContentEnvironmentStateChangedEventArgs(winrt.system.Object):
+    # System.Boolean Microsoft.UI.Content.ContentEnvironmentStateChangedEventArgs::get_DidAppWindowIdChange()
     @_property
     def did_app_window_id_change(self) -> bool: ...
+    # System.Boolean Microsoft.UI.Content.ContentEnvironmentStateChangedEventArgs::get_DidDisplayIdChange()
     @_property
     def did_display_id_change(self) -> bool: ...
 
 class ContentIsland_Static(type):
+    # Microsoft.UI.Content.ContentIsland Microsoft.UI.Content.ContentIsland::Create(Microsoft.UI.Composition.Visual)
     def create(cls, root: microsoft_ui_composition.Visual, /) -> ContentIsland: ...
+    # Microsoft.UI.Content.ContentIsland[] Microsoft.UI.Content.ContentIsland::FindAllForCompositor(Microsoft.UI.Composition.Compositor)
     def find_all_for_compositor(cls, compositor: microsoft_ui_composition.Compositor, /) -> winrt.system.Array[ContentIsland]: ...
+    # Microsoft.UI.Content.ContentIsland[] Microsoft.UI.Content.ContentIsland::FindAllForCurrentThread()
     def find_all_for_current_thread(cls) -> winrt.system.Array[ContentIsland]: ...
+    # Microsoft.UI.Content.ContentIsland Microsoft.UI.Content.ContentIsland::GetByVisual(Microsoft.UI.Composition.Visual)
     def get_by_visual(cls, child: microsoft_ui_composition.Visual, /) -> ContentIsland: ...
+    # Microsoft.UI.Content.ContentIsland Microsoft.UI.Content.ContentIsland::GetFromId(System.UInt64)
     def get_from_id(cls, id: winrt.system.UInt64, /) -> ContentIsland: ...
 
 class ContentIsland(winrt.system.Object, microsoft_ui_composition.ImplementsICompositionSupportsSystemBackdrop, microsoft_ui.ImplementsIClosableNotifier, windows_foundation.ImplementsIClosable, metaclass=ContentIsland_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, exc_type: typing.Optional[typing.Type[BaseException]], exc_value: typing.Optional[BaseException], traceback: typing.Optional[types.TracebackType]) -> None: ...
+    # System.Void Microsoft.UI.Content.ContentIsland::Close()
     def close(self) -> None: ...
     @typing.final
+    # System.Object Microsoft.UI.Content.ContentIsland::GetAutomationHostProvider()
     def get_automation_host_provider(self) -> winrt.system.Object: ...
     @typing.final
+    # Microsoft.UI.Content.ContentDeferral Microsoft.UI.Content.ContentIsland::GetStateChangeDeferral()
     def get_state_change_deferral(self) -> ContentDeferral: ...
     @typing.final
+    # System.Void Microsoft.UI.Content.ContentIsland::RequestSize(Windows.Foundation.Numerics.Vector2)
     def request_size(self, size: windows_foundation_numerics.Vector2, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Content.ContentIsland::add_AutomationProviderRequested(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Content.ContentIsland,Microsoft.UI.Content.ContentIslandAutomationProviderRequestedEventArgs>)
     def add_automation_provider_requested(self, handler: windows_foundation.TypedEventHandler[ContentIsland, ContentIslandAutomationProviderRequestedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Content.ContentIsland::remove_AutomationProviderRequested(Windows.Foundation.EventRegistrationToken)
     def remove_automation_provider_requested(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Content.ContentIsland::add_StateChanged(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Content.ContentIsland,Microsoft.UI.Content.ContentIslandStateChangedEventArgs>)
     def add_state_changed(self, handler: windows_foundation.TypedEventHandler[ContentIsland, ContentIslandStateChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Content.ContentIsland::remove_StateChanged(Windows.Foundation.EventRegistrationToken)
     def remove_state_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Content.ContentIsland::add_Closed(Microsoft.UI.ClosableNotifierHandler)
     def add_closed(self, handler: microsoft_ui.ClosableNotifierHandler, /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Content.ContentIsland::remove_Closed(Windows.Foundation.EventRegistrationToken)
     def remove_closed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Content.ContentIsland::add_FrameworkClosed(Microsoft.UI.ClosableNotifierHandler)
     def add_framework_closed(self, handler: microsoft_ui.ClosableNotifierHandler, /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Content.ContentIsland::remove_FrameworkClosed(Windows.Foundation.EventRegistrationToken)
     def remove_framework_closed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.UI.Composition.CompositionBrush Microsoft.UI.Content.ContentIsland::get_SystemBackdrop()
     @_property
     def system_backdrop(self) -> windows_ui_composition.CompositionBrush: ...
+    # System.Void Microsoft.UI.Content.ContentIsland::put_SystemBackdrop(Windows.UI.Composition.CompositionBrush)
     @system_backdrop.setter
     @typing.final
     def system_backdrop(self, value: windows_ui_composition.CompositionBrush) -> None: ...
+    # System.Boolean Microsoft.UI.Content.ContentIsland::get_IsIslandVisible()
     @_property
     def is_island_visible(self) -> bool: ...
+    # System.Void Microsoft.UI.Content.ContentIsland::put_IsIslandVisible(System.Boolean)
     @is_island_visible.setter
     @typing.final
     def is_island_visible(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Content.ContentIsland::get_IsIslandEnabled()
     @_property
     def is_island_enabled(self) -> bool: ...
+    # System.Void Microsoft.UI.Content.ContentIsland::put_IsIslandEnabled(System.Boolean)
     @is_island_enabled.setter
     @typing.final
     def is_island_enabled(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Content.ContentIsland::get_IsHitTestVisibleWhenTransparent()
     @_property
     def is_hit_test_visible_when_transparent(self) -> bool: ...
+    # System.Void Microsoft.UI.Content.ContentIsland::put_IsHitTestVisibleWhenTransparent(System.Boolean)
     @is_hit_test_visible_when_transparent.setter
     @typing.final
     def is_hit_test_visible_when_transparent(self, value: bool) -> None: ...
+    # System.Object Microsoft.UI.Content.ContentIsland::get_AppData()
     @_property
     def app_data(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Content.ContentIsland::put_AppData(System.Object)
     @app_data.setter
     @typing.final
     def app_data(self, value: winrt.system.Object) -> None: ...
+    # Windows.Foundation.Numerics.Vector2 Microsoft.UI.Content.ContentIsland::get_ActualSize()
     @_property
     @typing.final
     def actual_size(self) -> windows_foundation_numerics.Vector2: ...
+    # Microsoft.UI.Content.ContentCoordinateConverter Microsoft.UI.Content.ContentIsland::get_CoordinateConverter()
     @_property
     @typing.final
     def coordinate_converter(self) -> ContentCoordinateConverter: ...
+    # Windows.Foundation.Collections.IPropertySet Microsoft.UI.Content.ContentIsland::get_CustomProperties()
     @_property
     @typing.final
     def custom_properties(self) -> windows_foundation_collections.IPropertySet: ...
+    # Microsoft.UI.Dispatching.DispatcherQueue Microsoft.UI.Content.ContentIsland::get_DispatcherQueue()
     @_property
     @typing.final
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
+    # Microsoft.UI.Content.ContentIslandEnvironment Microsoft.UI.Content.ContentIsland::get_Environment()
     @_property
     @typing.final
     def environment(self) -> ContentIslandEnvironment: ...
+    # System.UInt64 Microsoft.UI.Content.ContentIsland::get_Id()
     @_property
     @typing.final
     def id(self) -> winrt.system.UInt64: ...
+    # System.Boolean Microsoft.UI.Content.ContentIsland::get_IsConnected()
     @_property
     @typing.final
     def is_connected(self) -> bool: ...
+    # System.Boolean Microsoft.UI.Content.ContentIsland::get_IsSiteEnabled()
     @_property
     @typing.final
     def is_site_enabled(self) -> bool: ...
+    # System.Boolean Microsoft.UI.Content.ContentIsland::get_IsSiteVisible()
     @_property
     @typing.final
     def is_site_visible(self) -> bool: ...
+    # Microsoft.UI.Content.ContentLayoutDirection Microsoft.UI.Content.ContentIsland::get_LayoutDirection()
     @_property
     @typing.final
     def layout_direction(self) -> ContentLayoutDirection: ...
+    # System.Single Microsoft.UI.Content.ContentIsland::get_RasterizationScale()
     @_property
     @typing.final
     def rasterization_scale(self) -> winrt.system.Single: ...
+    # System.Boolean Microsoft.UI.Content.ContentIsland::get_IsClosed()
     @_property
     @typing.final
     def is_closed(self) -> bool: ...
 
 @typing.final
 class ContentIslandAutomationProviderRequestedEventArgs(winrt.system.Object):
+    # System.Boolean Microsoft.UI.Content.ContentIslandAutomationProviderRequestedEventArgs::get_Handled()
     @_property
     def handled(self) -> bool: ...
+    # System.Void Microsoft.UI.Content.ContentIslandAutomationProviderRequestedEventArgs::put_Handled(System.Boolean)
     @handled.setter
     def handled(self, value: bool) -> None: ...
+    # System.Object Microsoft.UI.Content.ContentIslandAutomationProviderRequestedEventArgs::get_AutomationProvider()
     @_property
     def automation_provider(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Content.ContentIslandAutomationProviderRequestedEventArgs::put_AutomationProvider(System.Object)
     @automation_provider.setter
     def automation_provider(self, value: winrt.system.Object) -> None: ...
 
@@ -168,30 +223,41 @@ class ContentIslandEnvironment_Static(type):
 
 class ContentIslandEnvironment(winrt.system.Object, metaclass=ContentIslandEnvironment_Static):
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Content.ContentIslandEnvironment::add_SettingChanged(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Content.ContentIslandEnvironment,Microsoft.UI.Content.ContentEnvironmentSettingChangedEventArgs>)
     def add_setting_changed(self, handler: windows_foundation.TypedEventHandler[ContentIslandEnvironment, ContentEnvironmentSettingChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Content.ContentIslandEnvironment::remove_SettingChanged(Windows.Foundation.EventRegistrationToken)
     def remove_setting_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Content.ContentIslandEnvironment::add_StateChanged(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Content.ContentIslandEnvironment,Microsoft.UI.Content.ContentEnvironmentStateChangedEventArgs>)
     def add_state_changed(self, handler: windows_foundation.TypedEventHandler[ContentIslandEnvironment, ContentEnvironmentStateChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Content.ContentIslandEnvironment::remove_StateChanged(Windows.Foundation.EventRegistrationToken)
     def remove_state_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Microsoft.UI.WindowId Microsoft.UI.Content.ContentIslandEnvironment::get_AppWindowId()
     @_property
     @typing.final
     def app_window_id(self) -> microsoft_ui.WindowId: ...
+    # Microsoft.UI.DisplayId Microsoft.UI.Content.ContentIslandEnvironment::get_DisplayId()
     @_property
     @typing.final
     def display_id(self) -> microsoft_ui.DisplayId: ...
 
 @typing.final
 class ContentIslandStateChangedEventArgs(winrt.system.Object):
+    # System.Boolean Microsoft.UI.Content.ContentIslandStateChangedEventArgs::get_DidActualSizeChange()
     @_property
     def did_actual_size_change(self) -> bool: ...
+    # System.Boolean Microsoft.UI.Content.ContentIslandStateChangedEventArgs::get_DidLayoutDirectionChange()
     @_property
     def did_layout_direction_change(self) -> bool: ...
+    # System.Boolean Microsoft.UI.Content.ContentIslandStateChangedEventArgs::get_DidRasterizationScaleChange()
     @_property
     def did_rasterization_scale_change(self) -> bool: ...
+    # System.Boolean Microsoft.UI.Content.ContentIslandStateChangedEventArgs::get_DidSiteEnabledChange()
     @_property
     def did_site_enabled_change(self) -> bool: ...
+    # System.Boolean Microsoft.UI.Content.ContentIslandStateChangedEventArgs::get_DidSiteVisibleChange()
     @_property
     def did_site_visible_change(self) -> bool: ...
 
@@ -201,82 +267,114 @@ class ContentSite_Static(type):
 class ContentSite(winrt.system.Object, microsoft_ui.ImplementsIClosableNotifier, windows_foundation.ImplementsIClosable, metaclass=ContentSite_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, exc_type: typing.Optional[typing.Type[BaseException]], exc_value: typing.Optional[BaseException], traceback: typing.Optional[types.TracebackType]) -> None: ...
+    # System.Void Microsoft.UI.Content.ContentSite::Close()
     def close(self) -> None: ...
     @typing.final
+    # Microsoft.UI.Content.ContentDeferral Microsoft.UI.Content.ContentSite::GetIslandStateChangeDeferral()
     def get_island_state_change_deferral(self) -> ContentDeferral: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Content.ContentSite::add_RequestedStateChanged(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Content.ContentSite,Microsoft.UI.Content.ContentSiteRequestedStateChangedEventArgs>)
     def add_requested_state_changed(self, handler: windows_foundation.TypedEventHandler[ContentSite, ContentSiteRequestedStateChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Content.ContentSite::remove_RequestedStateChanged(Windows.Foundation.EventRegistrationToken)
     def remove_requested_state_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Content.ContentSite::add_Closed(Microsoft.UI.ClosableNotifierHandler)
     def add_closed(self, handler: microsoft_ui.ClosableNotifierHandler, /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Content.ContentSite::remove_Closed(Windows.Foundation.EventRegistrationToken)
     def remove_closed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Content.ContentSite::add_FrameworkClosed(Microsoft.UI.ClosableNotifierHandler)
     def add_framework_closed(self, handler: microsoft_ui.ClosableNotifierHandler, /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Content.ContentSite::remove_FrameworkClosed(Windows.Foundation.EventRegistrationToken)
     def remove_framework_closed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.Boolean Microsoft.UI.Content.ContentSite::get_ShouldApplyRasterizationScale()
     @_property
     def should_apply_rasterization_scale(self) -> bool: ...
+    # System.Void Microsoft.UI.Content.ContentSite::put_ShouldApplyRasterizationScale(System.Boolean)
     @should_apply_rasterization_scale.setter
     @typing.final
     def should_apply_rasterization_scale(self, value: bool) -> None: ...
+    # System.Single Microsoft.UI.Content.ContentSite::get_ParentScale()
     @_property
     def parent_scale(self) -> winrt.system.Single: ...
+    # System.Void Microsoft.UI.Content.ContentSite::put_ParentScale(System.Single)
     @parent_scale.setter
     @typing.final
     def parent_scale(self, value: winrt.system.Single) -> None: ...
+    # System.Single Microsoft.UI.Content.ContentSite::get_OverrideScale()
     @_property
     def override_scale(self) -> winrt.system.Single: ...
+    # System.Void Microsoft.UI.Content.ContentSite::put_OverrideScale(System.Single)
     @override_scale.setter
     @typing.final
     def override_scale(self, value: winrt.system.Single) -> None: ...
+    # Microsoft.UI.Content.ContentLayoutDirection Microsoft.UI.Content.ContentSite::get_LayoutDirection()
     @_property
     def layout_direction(self) -> ContentLayoutDirection: ...
+    # System.Void Microsoft.UI.Content.ContentSite::put_LayoutDirection(Microsoft.UI.Content.ContentLayoutDirection)
     @layout_direction.setter
     @typing.final
     def layout_direction(self, value: ContentLayoutDirection) -> None: ...
+    # System.Boolean Microsoft.UI.Content.ContentSite::get_IsSiteVisible()
     @_property
     def is_site_visible(self) -> bool: ...
+    # System.Void Microsoft.UI.Content.ContentSite::put_IsSiteVisible(System.Boolean)
     @is_site_visible.setter
     @typing.final
     def is_site_visible(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Content.ContentSite::get_IsSiteEnabled()
     @_property
     def is_site_enabled(self) -> bool: ...
+    # System.Void Microsoft.UI.Content.ContentSite::put_IsSiteEnabled(System.Boolean)
     @is_site_enabled.setter
     @typing.final
     def is_site_enabled(self, value: bool) -> None: ...
+    # Windows.Graphics.SizeInt32 Microsoft.UI.Content.ContentSite::get_ClientSize()
     @_property
     def client_size(self) -> windows_graphics.SizeInt32: ...
+    # System.Void Microsoft.UI.Content.ContentSite::put_ClientSize(Windows.Graphics.SizeInt32)
     @client_size.setter
     @typing.final
     def client_size(self, value: windows_graphics.SizeInt32) -> None: ...
+    # Windows.Foundation.Numerics.Vector2 Microsoft.UI.Content.ContentSite::get_ActualSize()
     @_property
     def actual_size(self) -> windows_foundation_numerics.Vector2: ...
+    # System.Void Microsoft.UI.Content.ContentSite::put_ActualSize(Windows.Foundation.Numerics.Vector2)
     @actual_size.setter
     @typing.final
     def actual_size(self, value: windows_foundation_numerics.Vector2) -> None: ...
+    # Microsoft.UI.Content.ContentCoordinateConverter Microsoft.UI.Content.ContentSite::get_CoordinateConverter()
     @_property
     @typing.final
     def coordinate_converter(self) -> ContentCoordinateConverter: ...
+    # Microsoft.UI.Dispatching.DispatcherQueue Microsoft.UI.Content.ContentSite::get_DispatcherQueue()
     @_property
     @typing.final
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
+    # Microsoft.UI.Content.ContentSiteEnvironment Microsoft.UI.Content.ContentSite::get_Environment()
     @_property
     @typing.final
     def environment(self) -> ContentSiteEnvironment: ...
+    # System.Boolean Microsoft.UI.Content.ContentSite::get_IsConnected()
     @_property
     @typing.final
     def is_connected(self) -> bool: ...
+    # System.Single Microsoft.UI.Content.ContentSite::get_RasterizationScale()
     @_property
     @typing.final
     def rasterization_scale(self) -> winrt.system.Single: ...
+    # Windows.Foundation.Numerics.Vector2 Microsoft.UI.Content.ContentSite::get_RequestedSize()
     @_property
     @typing.final
     def requested_size(self) -> windows_foundation_numerics.Vector2: ...
+    # Microsoft.UI.Content.ContentSiteView Microsoft.UI.Content.ContentSite::get_View()
     @_property
     @typing.final
     def view(self) -> ContentSiteView: ...
+    # System.Boolean Microsoft.UI.Content.ContentSite::get_IsClosed()
     @_property
     @typing.final
     def is_closed(self) -> bool: ...
@@ -286,17 +384,23 @@ class ContentSiteEnvironment_Static(type):
 
 class ContentSiteEnvironment(winrt.system.Object, metaclass=ContentSiteEnvironment_Static):
     @typing.final
+    # System.Void Microsoft.UI.Content.ContentSiteEnvironment::NotifySettingChanged(System.String)
     def notify_setting_changed(self, setting: str, /) -> None: ...
+    # Microsoft.UI.DisplayId Microsoft.UI.Content.ContentSiteEnvironment::get_DisplayId()
     @_property
     def display_id(self) -> microsoft_ui.DisplayId: ...
+    # System.Void Microsoft.UI.Content.ContentSiteEnvironment::put_DisplayId(Microsoft.UI.DisplayId)
     @display_id.setter
     @typing.final
     def display_id(self, value: microsoft_ui.DisplayId) -> None: ...
+    # Microsoft.UI.WindowId Microsoft.UI.Content.ContentSiteEnvironment::get_AppWindowId()
     @_property
     def app_window_id(self) -> microsoft_ui.WindowId: ...
+    # System.Void Microsoft.UI.Content.ContentSiteEnvironment::put_AppWindowId(Microsoft.UI.WindowId)
     @app_window_id.setter
     @typing.final
     def app_window_id(self, value: microsoft_ui.WindowId) -> None: ...
+    # Microsoft.UI.Content.ContentSiteEnvironmentView Microsoft.UI.Content.ContentSiteEnvironment::get_View()
     @_property
     @typing.final
     def view(self) -> ContentSiteEnvironmentView: ...
@@ -305,15 +409,18 @@ class ContentSiteEnvironmentView_Static(type):
     pass
 
 class ContentSiteEnvironmentView(winrt.system.Object, metaclass=ContentSiteEnvironmentView_Static):
+    # Microsoft.UI.WindowId Microsoft.UI.Content.ContentSiteEnvironmentView::get_AppWindowId()
     @_property
     @typing.final
     def app_window_id(self) -> microsoft_ui.WindowId: ...
+    # Microsoft.UI.DisplayId Microsoft.UI.Content.ContentSiteEnvironmentView::get_DisplayId()
     @_property
     @typing.final
     def display_id(self) -> microsoft_ui.DisplayId: ...
 
 @typing.final
 class ContentSiteRequestedStateChangedEventArgs(winrt.system.Object):
+    # System.Boolean Microsoft.UI.Content.ContentSiteRequestedStateChangedEventArgs::get_DidRequestedSizeChange()
     @_property
     def did_requested_size_change(self) -> bool: ...
 
@@ -321,117 +428,159 @@ class ContentSiteView_Static(type):
     pass
 
 class ContentSiteView(winrt.system.Object, metaclass=ContentSiteView_Static):
+    # Windows.Foundation.Numerics.Vector2 Microsoft.UI.Content.ContentSiteView::get_ActualSize()
     @_property
     @typing.final
     def actual_size(self) -> windows_foundation_numerics.Vector2: ...
+    # Windows.Graphics.SizeInt32 Microsoft.UI.Content.ContentSiteView::get_ClientSize()
     @_property
     @typing.final
     def client_size(self) -> windows_graphics.SizeInt32: ...
+    # Microsoft.UI.Content.ContentCoordinateConverter Microsoft.UI.Content.ContentSiteView::get_CoordinateConverter()
     @_property
     @typing.final
     def coordinate_converter(self) -> ContentCoordinateConverter: ...
+    # Microsoft.UI.Dispatching.DispatcherQueue Microsoft.UI.Content.ContentSiteView::get_DispatcherQueue()
     @_property
     @typing.final
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
+    # Microsoft.UI.Content.ContentSiteEnvironmentView Microsoft.UI.Content.ContentSiteView::get_EnvironmentView()
     @_property
     @typing.final
     def environment_view(self) -> ContentSiteEnvironmentView: ...
+    # System.Boolean Microsoft.UI.Content.ContentSiteView::get_IsConnected()
     @_property
     @typing.final
     def is_connected(self) -> bool: ...
+    # System.Boolean Microsoft.UI.Content.ContentSiteView::get_IsSiteEnabled()
     @_property
     @typing.final
     def is_site_enabled(self) -> bool: ...
+    # System.Boolean Microsoft.UI.Content.ContentSiteView::get_IsSiteVisible()
     @_property
     @typing.final
     def is_site_visible(self) -> bool: ...
+    # Microsoft.UI.Content.ContentLayoutDirection Microsoft.UI.Content.ContentSiteView::get_LayoutDirection()
     @_property
     @typing.final
     def layout_direction(self) -> ContentLayoutDirection: ...
+    # System.Single Microsoft.UI.Content.ContentSiteView::get_OverrideScale()
     @_property
     @typing.final
     def override_scale(self) -> winrt.system.Single: ...
+    # System.Single Microsoft.UI.Content.ContentSiteView::get_ParentScale()
     @_property
     @typing.final
     def parent_scale(self) -> winrt.system.Single: ...
+    # System.Single Microsoft.UI.Content.ContentSiteView::get_RasterizationScale()
     @_property
     @typing.final
     def rasterization_scale(self) -> winrt.system.Single: ...
+    # Windows.Foundation.Numerics.Vector2 Microsoft.UI.Content.ContentSiteView::get_RequestedSize()
     @_property
     @typing.final
     def requested_size(self) -> windows_foundation_numerics.Vector2: ...
+    # System.Boolean Microsoft.UI.Content.ContentSiteView::get_ShouldApplyRasterizationScale()
     @_property
     @typing.final
     def should_apply_rasterization_scale(self) -> bool: ...
 
 @typing.final
 class DesktopChildSiteBridge_Static(DesktopSiteBridge_Static):
+    # Microsoft.UI.Content.DesktopChildSiteBridge Microsoft.UI.Content.DesktopChildSiteBridge::Create(Microsoft.UI.Composition.Compositor,Microsoft.UI.WindowId)
     def create(cls, compositor: microsoft_ui_composition.Compositor, parent_window_id: microsoft_ui.WindowId, /) -> DesktopChildSiteBridge: ...
 
 @typing.final
 class DesktopChildSiteBridge(DesktopSiteBridge, metaclass=DesktopChildSiteBridge_Static):
+    # Microsoft.UI.Content.ContentSizePolicy Microsoft.UI.Content.DesktopChildSiteBridge::get_ResizePolicy()
     @_property
     def resize_policy(self) -> ContentSizePolicy: ...
+    # System.Void Microsoft.UI.Content.DesktopChildSiteBridge::put_ResizePolicy(Microsoft.UI.Content.ContentSizePolicy)
     @resize_policy.setter
     def resize_policy(self, value: ContentSizePolicy) -> None: ...
+    # Microsoft.UI.Content.ContentSiteView Microsoft.UI.Content.DesktopChildSiteBridge::get_SiteView()
     @_property
     def site_view(self) -> ContentSiteView: ...
 
 class DesktopSiteBridge_Static(type):
+    # System.Boolean Microsoft.UI.Content.DesktopSiteBridge::IsSupported()
     def is_supported(cls) -> bool: ...
 
 class DesktopSiteBridge(winrt.system.Object, ImplementsIContentSiteBridge, windows_foundation.ImplementsIClosable, microsoft_ui.ImplementsIClosableNotifier, metaclass=DesktopSiteBridge_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, exc_type: typing.Optional[typing.Type[BaseException]], exc_value: typing.Optional[BaseException], traceback: typing.Optional[types.TracebackType]) -> None: ...
+    # System.Void Microsoft.UI.Content.DesktopSiteBridge::Close()
     def close(self) -> None: ...
     @typing.final
+    # System.Void Microsoft.UI.Content.DesktopSiteBridge::Connect(Microsoft.UI.Content.ContentIsland)
     def connect(self, content: ContentIsland, /) -> None: ...
     @typing.final
+    # System.Void Microsoft.UI.Content.DesktopSiteBridge::Disable()
     def disable(self) -> None: ...
     @typing.final
+    # System.Void Microsoft.UI.Content.DesktopSiteBridge::Enable()
     def enable(self) -> None: ...
     @typing.final
+    # System.Void Microsoft.UI.Content.DesktopSiteBridge::Hide()
     def hide(self) -> None: ...
     @typing.final
+    # System.Void Microsoft.UI.Content.DesktopSiteBridge::MoveAndResize(Windows.Graphics.RectInt32)
     def move_and_resize(self, rect: windows_graphics.RectInt32, /) -> None: ...
     @typing.final
+    # System.Void Microsoft.UI.Content.DesktopSiteBridge::MoveInZOrderAtBottom()
     def move_in_z_order_at_bottom(self) -> None: ...
     @typing.final
+    # System.Void Microsoft.UI.Content.DesktopSiteBridge::MoveInZOrderAtTop()
     def move_in_z_order_at_top(self) -> None: ...
     @typing.final
+    # System.Void Microsoft.UI.Content.DesktopSiteBridge::MoveInZOrderBelow(Microsoft.UI.WindowId)
     def move_in_z_order_below(self, window_id: microsoft_ui.WindowId, /) -> None: ...
     @typing.final
+    # System.Void Microsoft.UI.Content.DesktopSiteBridge::Show()
     def show(self) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Content.DesktopSiteBridge::add_Closed(Microsoft.UI.ClosableNotifierHandler)
     def add_closed(self, handler: microsoft_ui.ClosableNotifierHandler, /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Content.DesktopSiteBridge::remove_Closed(Windows.Foundation.EventRegistrationToken)
     def remove_closed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Content.DesktopSiteBridge::add_FrameworkClosed(Microsoft.UI.ClosableNotifierHandler)
     def add_framework_closed(self, handler: microsoft_ui.ClosableNotifierHandler, /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Content.DesktopSiteBridge::remove_FrameworkClosed(Windows.Foundation.EventRegistrationToken)
     def remove_framework_closed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.Single Microsoft.UI.Content.DesktopSiteBridge::get_OverrideScale()
     @_property
     def override_scale(self) -> winrt.system.Single: ...
+    # System.Void Microsoft.UI.Content.DesktopSiteBridge::put_OverrideScale(System.Single)
     @override_scale.setter
     @typing.final
     def override_scale(self, value: winrt.system.Single) -> None: ...
+    # Windows.Foundation.IReference`1<Microsoft.UI.Content.ContentLayoutDirection> Microsoft.UI.Content.DesktopSiteBridge::get_LayoutDirectionOverride()
     @_property
     def layout_direction_override(self) -> typing.Optional[ContentLayoutDirection]: ...
+    # System.Void Microsoft.UI.Content.DesktopSiteBridge::put_LayoutDirectionOverride(Windows.Foundation.IReference`1<Microsoft.UI.Content.ContentLayoutDirection>)
     @layout_direction_override.setter
     @typing.final
     def layout_direction_override(self, value: typing.Optional[ContentLayoutDirection]) -> None: ...
+    # Microsoft.UI.Dispatching.DispatcherQueue Microsoft.UI.Content.DesktopSiteBridge::get_DispatcherQueue()
     @_property
     @typing.final
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
+    # System.Boolean Microsoft.UI.Content.DesktopSiteBridge::get_IsEnabled()
     @_property
     @typing.final
     def is_enabled(self) -> bool: ...
+    # System.Boolean Microsoft.UI.Content.DesktopSiteBridge::get_IsVisible()
     @_property
     @typing.final
     def is_visible(self) -> bool: ...
+    # Microsoft.UI.WindowId Microsoft.UI.Content.DesktopSiteBridge::get_WindowId()
     @_property
     @typing.final
     def window_id(self) -> microsoft_ui.WindowId: ...
+    # System.Boolean Microsoft.UI.Content.DesktopSiteBridge::get_IsClosed()
     @_property
     @typing.final
     def is_closed(self) -> bool: ...
@@ -443,15 +592,21 @@ class ImplementsIContentSiteBridge():
 class IContentSiteBridge(winrt.system.Object, ImplementsIContentSiteBridge, windows_foundation.ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, exc_type: typing.Optional[typing.Type[BaseException]], exc_value: typing.Optional[BaseException], traceback: typing.Optional[types.TracebackType]) -> None: ...
+    # System.Void Windows.Foundation.IClosable::Close()
     def close(self) -> None: ...
+    # Microsoft.UI.Dispatching.DispatcherQueue Microsoft.UI.Content.IContentSiteBridge::get_DispatcherQueue()
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
+    # Windows.Foundation.IReference`1<Microsoft.UI.Content.ContentLayoutDirection> Microsoft.UI.Content.IContentSiteBridge::get_LayoutDirectionOverride()
     @_property
     def layout_direction_override(self) -> typing.Optional[ContentLayoutDirection]: ...
+    # System.Void Microsoft.UI.Content.IContentSiteBridge::put_LayoutDirectionOverride(Windows.Foundation.IReference`1<Microsoft.UI.Content.ContentLayoutDirection>)
     @layout_direction_override.setter
     def layout_direction_override(self, value: typing.Optional[ContentLayoutDirection]) -> None: ...
+    # System.Single Microsoft.UI.Content.IContentSiteBridge::get_OverrideScale()
     @_property
     def override_scale(self) -> winrt.system.Single: ...
+    # System.Void Microsoft.UI.Content.IContentSiteBridge::put_OverrideScale(System.Single)
     @override_scale.setter
     def override_scale(self, value: winrt.system.Single) -> None: ...
 

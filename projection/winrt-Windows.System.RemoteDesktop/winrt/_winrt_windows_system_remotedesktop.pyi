@@ -14,6 +14,7 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class InteractiveSession_Static(type):
+    # System.Boolean Windows.System.RemoteDesktop.InteractiveSession::get_IsRemote()
     @_property
     def is_remote(cls) -> bool: ...
 

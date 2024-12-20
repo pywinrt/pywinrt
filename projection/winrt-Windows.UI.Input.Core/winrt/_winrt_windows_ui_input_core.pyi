@@ -18,14 +18,18 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class RadialControllerIndependentInputSource_Static(type):
+    # Windows.UI.Input.Core.RadialControllerIndependentInputSource Windows.UI.Input.Core.RadialControllerIndependentInputSource::CreateForView(Windows.ApplicationModel.Core.CoreApplicationView)
     def create_for_view(cls, view: windows_applicationmodel_core.CoreApplicationView, /) -> RadialControllerIndependentInputSource: ...
 
 @typing.final
 class RadialControllerIndependentInputSource(winrt.system.Object, metaclass=RadialControllerIndependentInputSource_Static):
+    # Windows.UI.Input.RadialController Windows.UI.Input.Core.RadialControllerIndependentInputSource::get_Controller()
     @_property
     def controller(self) -> windows_ui_input.RadialController: ...
+    # Windows.UI.Core.CoreDispatcher Windows.UI.Input.Core.RadialControllerIndependentInputSource::get_Dispatcher()
     @_property
     def dispatcher(self) -> windows_ui_core.CoreDispatcher: ...
+    # Windows.System.DispatcherQueue Windows.UI.Input.Core.RadialControllerIndependentInputSource::get_DispatcherQueue()
     @_property
     def dispatcher_queue(self) -> windows_system.DispatcherQueue: ...
 

@@ -15,16 +15,21 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class ScreenReaderPositionChangedEventArgs(winrt.system.Object):
+    # System.Boolean Windows.UI.Accessibility.ScreenReaderPositionChangedEventArgs::get_IsReadingText()
     @_property
     def is_reading_text(self) -> bool: ...
+    # Windows.Foundation.Rect Windows.UI.Accessibility.ScreenReaderPositionChangedEventArgs::get_ScreenPositionInRawPixels()
     @_property
     def screen_position_in_raw_pixels(self) -> windows_foundation.Rect: ...
 
 @typing.final
 class ScreenReaderService(winrt.system.Object):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Windows.Foundation.EventRegistrationToken Windows.UI.Accessibility.ScreenReaderService::add_ScreenReaderPositionChanged(Windows.Foundation.TypedEventHandler`2<Windows.UI.Accessibility.ScreenReaderService,Windows.UI.Accessibility.ScreenReaderPositionChangedEventArgs>)
     def add_screen_reader_position_changed(self, handler: windows_foundation.TypedEventHandler[ScreenReaderService, ScreenReaderPositionChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.UI.Accessibility.ScreenReaderService::remove_ScreenReaderPositionChanged(Windows.Foundation.EventRegistrationToken)
     def remove_screen_reader_position_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.UI.Accessibility.ScreenReaderPositionChangedEventArgs Windows.UI.Accessibility.ScreenReaderService::get_CurrentScreenReaderPosition()
     @_property
     def current_screen_reader_position(self) -> ScreenReaderPositionChangedEventArgs: ...
 

@@ -21,129 +21,193 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class CompositionConditionalValue_Static(windows_ui_composition.CompositionObject_Static):
+    # Windows.UI.Composition.Interactions.CompositionConditionalValue Windows.UI.Composition.Interactions.CompositionConditionalValue::Create(Windows.UI.Composition.Compositor)
     def create(cls, compositor: windows_ui_composition.Compositor, /) -> CompositionConditionalValue: ...
 
 @typing.final
 class CompositionConditionalValue(windows_ui_composition.CompositionObject, metaclass=CompositionConditionalValue_Static):
+    # Windows.UI.Composition.ExpressionAnimation Windows.UI.Composition.Interactions.CompositionConditionalValue::get_Value()
     @_property
     def value(self) -> windows_ui_composition.ExpressionAnimation: ...
+    # System.Void Windows.UI.Composition.Interactions.CompositionConditionalValue::put_Value(Windows.UI.Composition.ExpressionAnimation)
     @value.setter
     def value(self, value: windows_ui_composition.ExpressionAnimation) -> None: ...
+    # Windows.UI.Composition.ExpressionAnimation Windows.UI.Composition.Interactions.CompositionConditionalValue::get_Condition()
     @_property
     def condition(self) -> windows_ui_composition.ExpressionAnimation: ...
+    # System.Void Windows.UI.Composition.Interactions.CompositionConditionalValue::put_Condition(Windows.UI.Composition.ExpressionAnimation)
     @condition.setter
     def condition(self, value: windows_ui_composition.ExpressionAnimation) -> None: ...
 
 @typing.final
 class CompositionInteractionSourceCollection(windows_ui_composition.CompositionObject):
     def __iter__(self) -> windows_foundation_collections.IIterator[ICompositionInteractionSource]: ...
+    # System.Void Windows.UI.Composition.Interactions.CompositionInteractionSourceCollection::Add(Windows.UI.Composition.Interactions.ICompositionInteractionSource)
     def add(self, value: ImplementsICompositionInteractionSource, /) -> None: ...
+    # Windows.Foundation.Collections.IIterator`1<Windows.UI.Composition.Interactions.ICompositionInteractionSource> Windows.UI.Composition.Interactions.CompositionInteractionSourceCollection::First()
     def first(self) -> windows_foundation_collections.IIterator[ICompositionInteractionSource]: ...
+    # System.Void Windows.UI.Composition.Interactions.CompositionInteractionSourceCollection::Remove(Windows.UI.Composition.Interactions.ICompositionInteractionSource)
     def remove(self, value: ImplementsICompositionInteractionSource, /) -> None: ...
+    # System.Void Windows.UI.Composition.Interactions.CompositionInteractionSourceCollection::RemoveAll()
     def remove_all(self) -> None: ...
+    # System.Int32 Windows.UI.Composition.Interactions.CompositionInteractionSourceCollection::get_Count()
     @_property
     def count(self) -> winrt.system.Int32: ...
 
 @typing.final
 class InteractionSourceConfiguration(windows_ui_composition.CompositionObject):
+    # Windows.UI.Composition.Interactions.InteractionSourceRedirectionMode Windows.UI.Composition.Interactions.InteractionSourceConfiguration::get_ScaleSourceMode()
     @_property
     def scale_source_mode(self) -> InteractionSourceRedirectionMode: ...
+    # System.Void Windows.UI.Composition.Interactions.InteractionSourceConfiguration::put_ScaleSourceMode(Windows.UI.Composition.Interactions.InteractionSourceRedirectionMode)
     @scale_source_mode.setter
     def scale_source_mode(self, value: InteractionSourceRedirectionMode) -> None: ...
+    # Windows.UI.Composition.Interactions.InteractionSourceRedirectionMode Windows.UI.Composition.Interactions.InteractionSourceConfiguration::get_PositionYSourceMode()
     @_property
     def position_y_source_mode(self) -> InteractionSourceRedirectionMode: ...
+    # System.Void Windows.UI.Composition.Interactions.InteractionSourceConfiguration::put_PositionYSourceMode(Windows.UI.Composition.Interactions.InteractionSourceRedirectionMode)
     @position_y_source_mode.setter
     def position_y_source_mode(self, value: InteractionSourceRedirectionMode) -> None: ...
+    # Windows.UI.Composition.Interactions.InteractionSourceRedirectionMode Windows.UI.Composition.Interactions.InteractionSourceConfiguration::get_PositionXSourceMode()
     @_property
     def position_x_source_mode(self) -> InteractionSourceRedirectionMode: ...
+    # System.Void Windows.UI.Composition.Interactions.InteractionSourceConfiguration::put_PositionXSourceMode(Windows.UI.Composition.Interactions.InteractionSourceRedirectionMode)
     @position_x_source_mode.setter
     def position_x_source_mode(self, value: InteractionSourceRedirectionMode) -> None: ...
 
 @typing.final
 class InteractionTracker_Static(windows_ui_composition.CompositionObject_Static):
+    # Windows.UI.Composition.Interactions.InteractionTracker Windows.UI.Composition.Interactions.InteractionTracker::Create(Windows.UI.Composition.Compositor)
     def create(cls, compositor: windows_ui_composition.Compositor, /) -> InteractionTracker: ...
+    # Windows.UI.Composition.Interactions.InteractionTracker Windows.UI.Composition.Interactions.InteractionTracker::CreateWithOwner(Windows.UI.Composition.Compositor,Windows.UI.Composition.Interactions.IInteractionTrackerOwner)
     def create_with_owner(cls, compositor: windows_ui_composition.Compositor, owner: ImplementsIInteractionTrackerOwner, /) -> InteractionTracker: ...
+    # Windows.UI.Composition.Interactions.InteractionBindingAxisModes Windows.UI.Composition.Interactions.InteractionTracker::GetBindingMode(Windows.UI.Composition.Interactions.InteractionTracker,Windows.UI.Composition.Interactions.InteractionTracker)
     def get_binding_mode(cls, bound_tracker1: InteractionTracker, bound_tracker2: InteractionTracker, /) -> InteractionBindingAxisModes: ...
+    # System.Void Windows.UI.Composition.Interactions.InteractionTracker::SetBindingMode(Windows.UI.Composition.Interactions.InteractionTracker,Windows.UI.Composition.Interactions.InteractionTracker,Windows.UI.Composition.Interactions.InteractionBindingAxisModes)
     def set_binding_mode(cls, bound_tracker1: InteractionTracker, bound_tracker2: InteractionTracker, axis_mode: InteractionBindingAxisModes, /) -> None: ...
 
 @typing.final
 class InteractionTracker(windows_ui_composition.CompositionObject, metaclass=InteractionTracker_Static):
+    # System.Void Windows.UI.Composition.Interactions.InteractionTracker::AdjustPositionXIfGreaterThanThreshold(System.Single,System.Single)
     def adjust_position_x_if_greater_than_threshold(self, adjustment: winrt.system.Single, position_threshold: winrt.system.Single, /) -> None: ...
+    # System.Void Windows.UI.Composition.Interactions.InteractionTracker::AdjustPositionYIfGreaterThanThreshold(System.Single,System.Single)
     def adjust_position_y_if_greater_than_threshold(self, adjustment: winrt.system.Single, position_threshold: winrt.system.Single, /) -> None: ...
+    # System.Void Windows.UI.Composition.Interactions.InteractionTracker::ConfigureCenterPointXInertiaModifiers(Windows.Foundation.Collections.IIterable`1<Windows.UI.Composition.Interactions.CompositionConditionalValue>)
     def configure_center_point_x_inertia_modifiers(self, conditional_values: typing.Iterable[CompositionConditionalValue], /) -> None: ...
+    # System.Void Windows.UI.Composition.Interactions.InteractionTracker::ConfigureCenterPointYInertiaModifiers(Windows.Foundation.Collections.IIterable`1<Windows.UI.Composition.Interactions.CompositionConditionalValue>)
     def configure_center_point_y_inertia_modifiers(self, conditional_values: typing.Iterable[CompositionConditionalValue], /) -> None: ...
+    # System.Void Windows.UI.Composition.Interactions.InteractionTracker::ConfigurePositionXInertiaModifiers(Windows.Foundation.Collections.IIterable`1<Windows.UI.Composition.Interactions.InteractionTrackerInertiaModifier>)
     def configure_position_x_inertia_modifiers(self, modifiers: typing.Iterable[InteractionTrackerInertiaModifier], /) -> None: ...
+    # System.Void Windows.UI.Composition.Interactions.InteractionTracker::ConfigurePositionYInertiaModifiers(Windows.Foundation.Collections.IIterable`1<Windows.UI.Composition.Interactions.InteractionTrackerInertiaModifier>)
     def configure_position_y_inertia_modifiers(self, modifiers: typing.Iterable[InteractionTrackerInertiaModifier], /) -> None: ...
+    # System.Void Windows.UI.Composition.Interactions.InteractionTracker::ConfigureScaleInertiaModifiers(Windows.Foundation.Collections.IIterable`1<Windows.UI.Composition.Interactions.InteractionTrackerInertiaModifier>)
     def configure_scale_inertia_modifiers(self, modifiers: typing.Iterable[InteractionTrackerInertiaModifier], /) -> None: ...
+    # System.Void Windows.UI.Composition.Interactions.InteractionTracker::ConfigureVector2PositionInertiaModifiers(Windows.Foundation.Collections.IIterable`1<Windows.UI.Composition.Interactions.InteractionTrackerVector2InertiaModifier>)
     def configure_vector2_position_inertia_modifiers(self, modifiers: typing.Iterable[InteractionTrackerVector2InertiaModifier], /) -> None: ...
+    # System.Int32 Windows.UI.Composition.Interactions.InteractionTracker::TryUpdatePosition(Windows.Foundation.Numerics.Vector3)
     def try_update_position(self, value: windows_foundation_numerics.Vector3, /) -> winrt.system.Int32: ...
+    # System.Int32 Windows.UI.Composition.Interactions.InteractionTracker::TryUpdatePositionBy(Windows.Foundation.Numerics.Vector3)
     def try_update_position_by(self, amount: windows_foundation_numerics.Vector3, /) -> winrt.system.Int32: ...
+    # System.Int32 Windows.UI.Composition.Interactions.InteractionTracker::TryUpdatePositionBy(Windows.Foundation.Numerics.Vector3,Windows.UI.Composition.Interactions.InteractionTrackerClampingOption)
     def try_update_position_by_with_option(self, amount: windows_foundation_numerics.Vector3, option: InteractionTrackerClampingOption, /) -> winrt.system.Int32: ...
+    # System.Int32 Windows.UI.Composition.Interactions.InteractionTracker::TryUpdatePositionWithAdditionalVelocity(Windows.Foundation.Numerics.Vector3)
     def try_update_position_with_additional_velocity(self, velocity_in_pixels_per_second: windows_foundation_numerics.Vector3, /) -> winrt.system.Int32: ...
+    # System.Int32 Windows.UI.Composition.Interactions.InteractionTracker::TryUpdatePositionWithAnimation(Windows.UI.Composition.CompositionAnimation)
     def try_update_position_with_animation(self, animation: windows_ui_composition.CompositionAnimation, /) -> winrt.system.Int32: ...
     @typing.overload
+    # System.Int32 Windows.UI.Composition.Interactions.InteractionTracker::TryUpdatePosition(Windows.Foundation.Numerics.Vector3,Windows.UI.Composition.Interactions.InteractionTrackerClampingOption)
     def try_update_position_with_option(self, value: windows_foundation_numerics.Vector3, option: InteractionTrackerClampingOption, /) -> winrt.system.Int32: ...
     @typing.overload
+    # System.Int32 Windows.UI.Composition.Interactions.InteractionTracker::TryUpdatePosition(Windows.Foundation.Numerics.Vector3,Windows.UI.Composition.Interactions.InteractionTrackerClampingOption,Windows.UI.Composition.Interactions.InteractionTrackerPositionUpdateOption)
     def try_update_position_with_option(self, value: windows_foundation_numerics.Vector3, option: InteractionTrackerClampingOption, pos_update_option: InteractionTrackerPositionUpdateOption, /) -> winrt.system.Int32: ...
+    # System.Int32 Windows.UI.Composition.Interactions.InteractionTracker::TryUpdateScale(System.Single,Windows.Foundation.Numerics.Vector3)
     def try_update_scale(self, value: winrt.system.Single, center_point: windows_foundation_numerics.Vector3, /) -> winrt.system.Int32: ...
+    # System.Int32 Windows.UI.Composition.Interactions.InteractionTracker::TryUpdateScaleWithAdditionalVelocity(System.Single,Windows.Foundation.Numerics.Vector3)
     def try_update_scale_with_additional_velocity(self, velocity_in_percent_per_second: winrt.system.Single, center_point: windows_foundation_numerics.Vector3, /) -> winrt.system.Int32: ...
+    # System.Int32 Windows.UI.Composition.Interactions.InteractionTracker::TryUpdateScaleWithAnimation(Windows.UI.Composition.CompositionAnimation,Windows.Foundation.Numerics.Vector3)
     def try_update_scale_with_animation(self, animation: windows_ui_composition.CompositionAnimation, center_point: windows_foundation_numerics.Vector3, /) -> winrt.system.Int32: ...
+    # Windows.Foundation.IReference`1<System.Single> Windows.UI.Composition.Interactions.InteractionTracker::get_ScaleInertiaDecayRate()
     @_property
     def scale_inertia_decay_rate(self) -> typing.Optional[winrt.system.Single]: ...
+    # System.Void Windows.UI.Composition.Interactions.InteractionTracker::put_ScaleInertiaDecayRate(Windows.Foundation.IReference`1<System.Single>)
     @scale_inertia_decay_rate.setter
     def scale_inertia_decay_rate(self, value: typing.Optional[winrt.system.Single]) -> None: ...
+    # Windows.Foundation.IReference`1<Windows.Foundation.Numerics.Vector3> Windows.UI.Composition.Interactions.InteractionTracker::get_PositionInertiaDecayRate()
     @_property
     def position_inertia_decay_rate(self) -> typing.Optional[windows_foundation_numerics.Vector3]: ...
+    # System.Void Windows.UI.Composition.Interactions.InteractionTracker::put_PositionInertiaDecayRate(Windows.Foundation.IReference`1<Windows.Foundation.Numerics.Vector3>)
     @position_inertia_decay_rate.setter
     def position_inertia_decay_rate(self, value: typing.Optional[windows_foundation_numerics.Vector3]) -> None: ...
+    # System.Single Windows.UI.Composition.Interactions.InteractionTracker::get_MinScale()
     @_property
     def min_scale(self) -> winrt.system.Single: ...
+    # System.Void Windows.UI.Composition.Interactions.InteractionTracker::put_MinScale(System.Single)
     @min_scale.setter
     def min_scale(self, value: winrt.system.Single) -> None: ...
+    # Windows.Foundation.Numerics.Vector3 Windows.UI.Composition.Interactions.InteractionTracker::get_MinPosition()
     @_property
     def min_position(self) -> windows_foundation_numerics.Vector3: ...
+    # System.Void Windows.UI.Composition.Interactions.InteractionTracker::put_MinPosition(Windows.Foundation.Numerics.Vector3)
     @min_position.setter
     def min_position(self, value: windows_foundation_numerics.Vector3) -> None: ...
+    # System.Single Windows.UI.Composition.Interactions.InteractionTracker::get_MaxScale()
     @_property
     def max_scale(self) -> winrt.system.Single: ...
+    # System.Void Windows.UI.Composition.Interactions.InteractionTracker::put_MaxScale(System.Single)
     @max_scale.setter
     def max_scale(self, value: winrt.system.Single) -> None: ...
+    # Windows.Foundation.Numerics.Vector3 Windows.UI.Composition.Interactions.InteractionTracker::get_MaxPosition()
     @_property
     def max_position(self) -> windows_foundation_numerics.Vector3: ...
+    # System.Void Windows.UI.Composition.Interactions.InteractionTracker::put_MaxPosition(Windows.Foundation.Numerics.Vector3)
     @max_position.setter
     def max_position(self, value: windows_foundation_numerics.Vector3) -> None: ...
+    # Windows.UI.Composition.Interactions.CompositionInteractionSourceCollection Windows.UI.Composition.Interactions.InteractionTracker::get_InteractionSources()
     @_property
     def interaction_sources(self) -> CompositionInteractionSourceCollection: ...
+    # System.Boolean Windows.UI.Composition.Interactions.InteractionTracker::get_IsPositionRoundingSuggested()
     @_property
     def is_position_rounding_suggested(self) -> bool: ...
+    # Windows.Foundation.Numerics.Vector3 Windows.UI.Composition.Interactions.InteractionTracker::get_NaturalRestingPosition()
     @_property
     def natural_resting_position(self) -> windows_foundation_numerics.Vector3: ...
+    # System.Single Windows.UI.Composition.Interactions.InteractionTracker::get_NaturalRestingScale()
     @_property
     def natural_resting_scale(self) -> winrt.system.Single: ...
+    # Windows.UI.Composition.Interactions.IInteractionTrackerOwner Windows.UI.Composition.Interactions.InteractionTracker::get_Owner()
     @_property
     def owner(self) -> IInteractionTrackerOwner: ...
+    # Windows.Foundation.Numerics.Vector3 Windows.UI.Composition.Interactions.InteractionTracker::get_Position()
     @_property
     def position(self) -> windows_foundation_numerics.Vector3: ...
+    # Windows.Foundation.Numerics.Vector3 Windows.UI.Composition.Interactions.InteractionTracker::get_PositionVelocityInPixelsPerSecond()
     @_property
     def position_velocity_in_pixels_per_second(self) -> windows_foundation_numerics.Vector3: ...
+    # System.Single Windows.UI.Composition.Interactions.InteractionTracker::get_Scale()
     @_property
     def scale(self) -> winrt.system.Single: ...
+    # System.Single Windows.UI.Composition.Interactions.InteractionTracker::get_ScaleVelocityInPercentPerSecond()
     @_property
     def scale_velocity_in_percent_per_second(self) -> winrt.system.Single: ...
+    # System.Boolean Windows.UI.Composition.Interactions.InteractionTracker::get_IsInertiaFromImpulse()
     @_property
     def is_inertia_from_impulse(self) -> bool: ...
 
 @typing.final
 class InteractionTrackerCustomAnimationStateEnteredArgs(winrt.system.Object):
+    # System.Int32 Windows.UI.Composition.Interactions.InteractionTrackerCustomAnimationStateEnteredArgs::get_RequestId()
     @_property
     def request_id(self) -> winrt.system.Int32: ...
+    # System.Boolean Windows.UI.Composition.Interactions.InteractionTrackerCustomAnimationStateEnteredArgs::get_IsFromBinding()
     @_property
     def is_from_binding(self) -> bool: ...
 
 @typing.final
 class InteractionTrackerIdleStateEnteredArgs(winrt.system.Object):
+    # System.Int32 Windows.UI.Composition.Interactions.InteractionTrackerIdleStateEnteredArgs::get_RequestId()
     @_property
     def request_id(self) -> winrt.system.Int32: ...
+    # System.Boolean Windows.UI.Composition.Interactions.InteractionTrackerIdleStateEnteredArgs::get_IsFromBinding()
     @_property
     def is_from_binding(self) -> bool: ...
 
@@ -155,88 +219,118 @@ class InteractionTrackerInertiaModifier(windows_ui_composition.CompositionObject
 
 @typing.final
 class InteractionTrackerInertiaMotion_Static(InteractionTrackerInertiaModifier_Static):
+    # Windows.UI.Composition.Interactions.InteractionTrackerInertiaMotion Windows.UI.Composition.Interactions.InteractionTrackerInertiaMotion::Create(Windows.UI.Composition.Compositor)
     def create(cls, compositor: windows_ui_composition.Compositor, /) -> InteractionTrackerInertiaMotion: ...
 
 @typing.final
 class InteractionTrackerInertiaMotion(InteractionTrackerInertiaModifier, metaclass=InteractionTrackerInertiaMotion_Static):
+    # Windows.UI.Composition.ExpressionAnimation Windows.UI.Composition.Interactions.InteractionTrackerInertiaMotion::get_Motion()
     @_property
     def motion(self) -> windows_ui_composition.ExpressionAnimation: ...
+    # System.Void Windows.UI.Composition.Interactions.InteractionTrackerInertiaMotion::put_Motion(Windows.UI.Composition.ExpressionAnimation)
     @motion.setter
     def motion(self, value: windows_ui_composition.ExpressionAnimation) -> None: ...
+    # Windows.UI.Composition.ExpressionAnimation Windows.UI.Composition.Interactions.InteractionTrackerInertiaMotion::get_Condition()
     @_property
     def condition(self) -> windows_ui_composition.ExpressionAnimation: ...
+    # System.Void Windows.UI.Composition.Interactions.InteractionTrackerInertiaMotion::put_Condition(Windows.UI.Composition.ExpressionAnimation)
     @condition.setter
     def condition(self, value: windows_ui_composition.ExpressionAnimation) -> None: ...
 
 @typing.final
 class InteractionTrackerInertiaNaturalMotion_Static(InteractionTrackerInertiaModifier_Static):
+    # Windows.UI.Composition.Interactions.InteractionTrackerInertiaNaturalMotion Windows.UI.Composition.Interactions.InteractionTrackerInertiaNaturalMotion::Create(Windows.UI.Composition.Compositor)
     def create(cls, compositor: windows_ui_composition.Compositor, /) -> InteractionTrackerInertiaNaturalMotion: ...
 
 @typing.final
 class InteractionTrackerInertiaNaturalMotion(InteractionTrackerInertiaModifier, metaclass=InteractionTrackerInertiaNaturalMotion_Static):
+    # Windows.UI.Composition.ScalarNaturalMotionAnimation Windows.UI.Composition.Interactions.InteractionTrackerInertiaNaturalMotion::get_NaturalMotion()
     @_property
     def natural_motion(self) -> windows_ui_composition.ScalarNaturalMotionAnimation: ...
+    # System.Void Windows.UI.Composition.Interactions.InteractionTrackerInertiaNaturalMotion::put_NaturalMotion(Windows.UI.Composition.ScalarNaturalMotionAnimation)
     @natural_motion.setter
     def natural_motion(self, value: windows_ui_composition.ScalarNaturalMotionAnimation) -> None: ...
+    # Windows.UI.Composition.ExpressionAnimation Windows.UI.Composition.Interactions.InteractionTrackerInertiaNaturalMotion::get_Condition()
     @_property
     def condition(self) -> windows_ui_composition.ExpressionAnimation: ...
+    # System.Void Windows.UI.Composition.Interactions.InteractionTrackerInertiaNaturalMotion::put_Condition(Windows.UI.Composition.ExpressionAnimation)
     @condition.setter
     def condition(self, value: windows_ui_composition.ExpressionAnimation) -> None: ...
 
 @typing.final
 class InteractionTrackerInertiaRestingValue_Static(InteractionTrackerInertiaModifier_Static):
+    # Windows.UI.Composition.Interactions.InteractionTrackerInertiaRestingValue Windows.UI.Composition.Interactions.InteractionTrackerInertiaRestingValue::Create(Windows.UI.Composition.Compositor)
     def create(cls, compositor: windows_ui_composition.Compositor, /) -> InteractionTrackerInertiaRestingValue: ...
 
 @typing.final
 class InteractionTrackerInertiaRestingValue(InteractionTrackerInertiaModifier, metaclass=InteractionTrackerInertiaRestingValue_Static):
+    # Windows.UI.Composition.ExpressionAnimation Windows.UI.Composition.Interactions.InteractionTrackerInertiaRestingValue::get_RestingValue()
     @_property
     def resting_value(self) -> windows_ui_composition.ExpressionAnimation: ...
+    # System.Void Windows.UI.Composition.Interactions.InteractionTrackerInertiaRestingValue::put_RestingValue(Windows.UI.Composition.ExpressionAnimation)
     @resting_value.setter
     def resting_value(self, value: windows_ui_composition.ExpressionAnimation) -> None: ...
+    # Windows.UI.Composition.ExpressionAnimation Windows.UI.Composition.Interactions.InteractionTrackerInertiaRestingValue::get_Condition()
     @_property
     def condition(self) -> windows_ui_composition.ExpressionAnimation: ...
+    # System.Void Windows.UI.Composition.Interactions.InteractionTrackerInertiaRestingValue::put_Condition(Windows.UI.Composition.ExpressionAnimation)
     @condition.setter
     def condition(self, value: windows_ui_composition.ExpressionAnimation) -> None: ...
 
 @typing.final
 class InteractionTrackerInertiaStateEnteredArgs(winrt.system.Object):
+    # Windows.Foundation.IReference`1<Windows.Foundation.Numerics.Vector3> Windows.UI.Composition.Interactions.InteractionTrackerInertiaStateEnteredArgs::get_ModifiedRestingPosition()
     @_property
     def modified_resting_position(self) -> typing.Optional[windows_foundation_numerics.Vector3]: ...
+    # Windows.Foundation.IReference`1<System.Single> Windows.UI.Composition.Interactions.InteractionTrackerInertiaStateEnteredArgs::get_ModifiedRestingScale()
     @_property
     def modified_resting_scale(self) -> typing.Optional[winrt.system.Single]: ...
+    # Windows.Foundation.Numerics.Vector3 Windows.UI.Composition.Interactions.InteractionTrackerInertiaStateEnteredArgs::get_NaturalRestingPosition()
     @_property
     def natural_resting_position(self) -> windows_foundation_numerics.Vector3: ...
+    # System.Single Windows.UI.Composition.Interactions.InteractionTrackerInertiaStateEnteredArgs::get_NaturalRestingScale()
     @_property
     def natural_resting_scale(self) -> winrt.system.Single: ...
+    # Windows.Foundation.Numerics.Vector3 Windows.UI.Composition.Interactions.InteractionTrackerInertiaStateEnteredArgs::get_PositionVelocityInPixelsPerSecond()
     @_property
     def position_velocity_in_pixels_per_second(self) -> windows_foundation_numerics.Vector3: ...
+    # System.Int32 Windows.UI.Composition.Interactions.InteractionTrackerInertiaStateEnteredArgs::get_RequestId()
     @_property
     def request_id(self) -> winrt.system.Int32: ...
+    # System.Single Windows.UI.Composition.Interactions.InteractionTrackerInertiaStateEnteredArgs::get_ScaleVelocityInPercentPerSecond()
     @_property
     def scale_velocity_in_percent_per_second(self) -> winrt.system.Single: ...
+    # System.Boolean Windows.UI.Composition.Interactions.InteractionTrackerInertiaStateEnteredArgs::get_IsInertiaFromImpulse()
     @_property
     def is_inertia_from_impulse(self) -> bool: ...
+    # System.Boolean Windows.UI.Composition.Interactions.InteractionTrackerInertiaStateEnteredArgs::get_IsFromBinding()
     @_property
     def is_from_binding(self) -> bool: ...
 
 @typing.final
 class InteractionTrackerInteractingStateEnteredArgs(winrt.system.Object):
+    # System.Int32 Windows.UI.Composition.Interactions.InteractionTrackerInteractingStateEnteredArgs::get_RequestId()
     @_property
     def request_id(self) -> winrt.system.Int32: ...
+    # System.Boolean Windows.UI.Composition.Interactions.InteractionTrackerInteractingStateEnteredArgs::get_IsFromBinding()
     @_property
     def is_from_binding(self) -> bool: ...
 
 @typing.final
 class InteractionTrackerRequestIgnoredArgs(winrt.system.Object):
+    # System.Int32 Windows.UI.Composition.Interactions.InteractionTrackerRequestIgnoredArgs::get_RequestId()
     @_property
     def request_id(self) -> winrt.system.Int32: ...
 
 @typing.final
 class InteractionTrackerValuesChangedArgs(winrt.system.Object):
+    # Windows.Foundation.Numerics.Vector3 Windows.UI.Composition.Interactions.InteractionTrackerValuesChangedArgs::get_Position()
     @_property
     def position(self) -> windows_foundation_numerics.Vector3: ...
+    # System.Int32 Windows.UI.Composition.Interactions.InteractionTrackerValuesChangedArgs::get_RequestId()
     @_property
     def request_id(self) -> winrt.system.Int32: ...
+    # System.Single Windows.UI.Composition.Interactions.InteractionTrackerValuesChangedArgs::get_Scale()
     @_property
     def scale(self) -> winrt.system.Single: ...
 
@@ -248,102 +342,141 @@ class InteractionTrackerVector2InertiaModifier(windows_ui_composition.Compositio
 
 @typing.final
 class InteractionTrackerVector2InertiaNaturalMotion_Static(InteractionTrackerVector2InertiaModifier_Static):
+    # Windows.UI.Composition.Interactions.InteractionTrackerVector2InertiaNaturalMotion Windows.UI.Composition.Interactions.InteractionTrackerVector2InertiaNaturalMotion::Create(Windows.UI.Composition.Compositor)
     def create(cls, compositor: windows_ui_composition.Compositor, /) -> InteractionTrackerVector2InertiaNaturalMotion: ...
 
 @typing.final
 class InteractionTrackerVector2InertiaNaturalMotion(InteractionTrackerVector2InertiaModifier, metaclass=InteractionTrackerVector2InertiaNaturalMotion_Static):
+    # Windows.UI.Composition.Vector2NaturalMotionAnimation Windows.UI.Composition.Interactions.InteractionTrackerVector2InertiaNaturalMotion::get_NaturalMotion()
     @_property
     def natural_motion(self) -> windows_ui_composition.Vector2NaturalMotionAnimation: ...
+    # System.Void Windows.UI.Composition.Interactions.InteractionTrackerVector2InertiaNaturalMotion::put_NaturalMotion(Windows.UI.Composition.Vector2NaturalMotionAnimation)
     @natural_motion.setter
     def natural_motion(self, value: windows_ui_composition.Vector2NaturalMotionAnimation) -> None: ...
+    # Windows.UI.Composition.ExpressionAnimation Windows.UI.Composition.Interactions.InteractionTrackerVector2InertiaNaturalMotion::get_Condition()
     @_property
     def condition(self) -> windows_ui_composition.ExpressionAnimation: ...
+    # System.Void Windows.UI.Composition.Interactions.InteractionTrackerVector2InertiaNaturalMotion::put_Condition(Windows.UI.Composition.ExpressionAnimation)
     @condition.setter
     def condition(self, value: windows_ui_composition.ExpressionAnimation) -> None: ...
 
 class VisualInteractionSource_Static(windows_ui_composition.CompositionObject_Static):
+    # Windows.UI.Composition.Interactions.VisualInteractionSource Windows.UI.Composition.Interactions.VisualInteractionSource::Create(Windows.UI.Composition.Visual)
     def create(cls, source: windows_ui_composition.Visual, /) -> VisualInteractionSource: ...
+    # Windows.UI.Composition.Interactions.VisualInteractionSource Windows.UI.Composition.Interactions.VisualInteractionSource::CreateFromIVisualElement(Windows.UI.Composition.IVisualElement)
     def create_from_ivisual_element(cls, source: windows_ui_composition.ImplementsIVisualElement, /) -> VisualInteractionSource: ...
 
 class VisualInteractionSource(windows_ui_composition.CompositionObject, ImplementsICompositionInteractionSource, metaclass=VisualInteractionSource_Static):
     @typing.final
+    # System.Void Windows.UI.Composition.Interactions.VisualInteractionSource::ConfigureCenterPointXModifiers(Windows.Foundation.Collections.IIterable`1<Windows.UI.Composition.Interactions.CompositionConditionalValue>)
     def configure_center_point_x_modifiers(self, conditional_values: typing.Iterable[CompositionConditionalValue], /) -> None: ...
     @typing.final
+    # System.Void Windows.UI.Composition.Interactions.VisualInteractionSource::ConfigureCenterPointYModifiers(Windows.Foundation.Collections.IIterable`1<Windows.UI.Composition.Interactions.CompositionConditionalValue>)
     def configure_center_point_y_modifiers(self, conditional_values: typing.Iterable[CompositionConditionalValue], /) -> None: ...
     @typing.final
+    # System.Void Windows.UI.Composition.Interactions.VisualInteractionSource::ConfigureDeltaPositionXModifiers(Windows.Foundation.Collections.IIterable`1<Windows.UI.Composition.Interactions.CompositionConditionalValue>)
     def configure_delta_position_x_modifiers(self, conditional_values: typing.Iterable[CompositionConditionalValue], /) -> None: ...
     @typing.final
+    # System.Void Windows.UI.Composition.Interactions.VisualInteractionSource::ConfigureDeltaPositionYModifiers(Windows.Foundation.Collections.IIterable`1<Windows.UI.Composition.Interactions.CompositionConditionalValue>)
     def configure_delta_position_y_modifiers(self, conditional_values: typing.Iterable[CompositionConditionalValue], /) -> None: ...
     @typing.final
+    # System.Void Windows.UI.Composition.Interactions.VisualInteractionSource::ConfigureDeltaScaleModifiers(Windows.Foundation.Collections.IIterable`1<Windows.UI.Composition.Interactions.CompositionConditionalValue>)
     def configure_delta_scale_modifiers(self, conditional_values: typing.Iterable[CompositionConditionalValue], /) -> None: ...
     @typing.final
+    # System.Void Windows.UI.Composition.Interactions.VisualInteractionSource::TryRedirectForManipulation(Windows.UI.Input.PointerPoint)
     def try_redirect_for_manipulation(self, pointer_point: windows_ui_input.PointerPoint, /) -> None: ...
+    # Windows.UI.Composition.Interactions.InteractionSourceMode Windows.UI.Composition.Interactions.VisualInteractionSource::get_ScaleSourceMode()
     @_property
     def scale_source_mode(self) -> InteractionSourceMode: ...
+    # System.Void Windows.UI.Composition.Interactions.VisualInteractionSource::put_ScaleSourceMode(Windows.UI.Composition.Interactions.InteractionSourceMode)
     @scale_source_mode.setter
     @typing.final
     def scale_source_mode(self, value: InteractionSourceMode) -> None: ...
+    # Windows.UI.Composition.Interactions.InteractionChainingMode Windows.UI.Composition.Interactions.VisualInteractionSource::get_ScaleChainingMode()
     @_property
     def scale_chaining_mode(self) -> InteractionChainingMode: ...
+    # System.Void Windows.UI.Composition.Interactions.VisualInteractionSource::put_ScaleChainingMode(Windows.UI.Composition.Interactions.InteractionChainingMode)
     @scale_chaining_mode.setter
     @typing.final
     def scale_chaining_mode(self, value: InteractionChainingMode) -> None: ...
+    # Windows.UI.Composition.Interactions.InteractionSourceMode Windows.UI.Composition.Interactions.VisualInteractionSource::get_PositionYSourceMode()
     @_property
     def position_y_source_mode(self) -> InteractionSourceMode: ...
+    # System.Void Windows.UI.Composition.Interactions.VisualInteractionSource::put_PositionYSourceMode(Windows.UI.Composition.Interactions.InteractionSourceMode)
     @position_y_source_mode.setter
     @typing.final
     def position_y_source_mode(self, value: InteractionSourceMode) -> None: ...
+    # Windows.UI.Composition.Interactions.InteractionChainingMode Windows.UI.Composition.Interactions.VisualInteractionSource::get_PositionYChainingMode()
     @_property
     def position_y_chaining_mode(self) -> InteractionChainingMode: ...
+    # System.Void Windows.UI.Composition.Interactions.VisualInteractionSource::put_PositionYChainingMode(Windows.UI.Composition.Interactions.InteractionChainingMode)
     @position_y_chaining_mode.setter
     @typing.final
     def position_y_chaining_mode(self, value: InteractionChainingMode) -> None: ...
+    # Windows.UI.Composition.Interactions.InteractionSourceMode Windows.UI.Composition.Interactions.VisualInteractionSource::get_PositionXSourceMode()
     @_property
     def position_x_source_mode(self) -> InteractionSourceMode: ...
+    # System.Void Windows.UI.Composition.Interactions.VisualInteractionSource::put_PositionXSourceMode(Windows.UI.Composition.Interactions.InteractionSourceMode)
     @position_x_source_mode.setter
     @typing.final
     def position_x_source_mode(self, value: InteractionSourceMode) -> None: ...
+    # Windows.UI.Composition.Interactions.InteractionChainingMode Windows.UI.Composition.Interactions.VisualInteractionSource::get_PositionXChainingMode()
     @_property
     def position_x_chaining_mode(self) -> InteractionChainingMode: ...
+    # System.Void Windows.UI.Composition.Interactions.VisualInteractionSource::put_PositionXChainingMode(Windows.UI.Composition.Interactions.InteractionChainingMode)
     @position_x_chaining_mode.setter
     @typing.final
     def position_x_chaining_mode(self, value: InteractionChainingMode) -> None: ...
+    # Windows.UI.Composition.Interactions.VisualInteractionSourceRedirectionMode Windows.UI.Composition.Interactions.VisualInteractionSource::get_ManipulationRedirectionMode()
     @_property
     def manipulation_redirection_mode(self) -> VisualInteractionSourceRedirectionMode: ...
+    # System.Void Windows.UI.Composition.Interactions.VisualInteractionSource::put_ManipulationRedirectionMode(Windows.UI.Composition.Interactions.VisualInteractionSourceRedirectionMode)
     @manipulation_redirection_mode.setter
     @typing.final
     def manipulation_redirection_mode(self, value: VisualInteractionSourceRedirectionMode) -> None: ...
+    # System.Boolean Windows.UI.Composition.Interactions.VisualInteractionSource::get_IsPositionYRailsEnabled()
     @_property
     def is_position_y_rails_enabled(self) -> bool: ...
+    # System.Void Windows.UI.Composition.Interactions.VisualInteractionSource::put_IsPositionYRailsEnabled(System.Boolean)
     @is_position_y_rails_enabled.setter
     @typing.final
     def is_position_y_rails_enabled(self, value: bool) -> None: ...
+    # System.Boolean Windows.UI.Composition.Interactions.VisualInteractionSource::get_IsPositionXRailsEnabled()
     @_property
     def is_position_x_rails_enabled(self) -> bool: ...
+    # System.Void Windows.UI.Composition.Interactions.VisualInteractionSource::put_IsPositionXRailsEnabled(System.Boolean)
     @is_position_x_rails_enabled.setter
     @typing.final
     def is_position_x_rails_enabled(self, value: bool) -> None: ...
+    # Windows.UI.Composition.Visual Windows.UI.Composition.Interactions.VisualInteractionSource::get_Source()
     @_property
     @typing.final
     def source(self) -> windows_ui_composition.Visual: ...
+    # Windows.Foundation.Numerics.Vector3 Windows.UI.Composition.Interactions.VisualInteractionSource::get_DeltaPosition()
     @_property
     @typing.final
     def delta_position(self) -> windows_foundation_numerics.Vector3: ...
+    # System.Single Windows.UI.Composition.Interactions.VisualInteractionSource::get_DeltaScale()
     @_property
     @typing.final
     def delta_scale(self) -> winrt.system.Single: ...
+    # Windows.Foundation.Numerics.Vector3 Windows.UI.Composition.Interactions.VisualInteractionSource::get_Position()
     @_property
     @typing.final
     def position(self) -> windows_foundation_numerics.Vector3: ...
+    # Windows.Foundation.Numerics.Vector3 Windows.UI.Composition.Interactions.VisualInteractionSource::get_PositionVelocity()
     @_property
     @typing.final
     def position_velocity(self) -> windows_foundation_numerics.Vector3: ...
+    # System.Single Windows.UI.Composition.Interactions.VisualInteractionSource::get_Scale()
     @_property
     @typing.final
     def scale(self) -> winrt.system.Single: ...
+    # System.Single Windows.UI.Composition.Interactions.VisualInteractionSource::get_ScaleVelocity()
     @_property
     @typing.final
     def scale_velocity(self) -> winrt.system.Single: ...
+    # Windows.UI.Composition.Interactions.InteractionSourceConfiguration Windows.UI.Composition.Interactions.VisualInteractionSource::get_PointerWheelConfig()
     @_property
     @typing.final
     def pointer_wheel_config(self) -> InteractionSourceConfiguration: ...
@@ -360,10 +493,16 @@ class ImplementsIInteractionTrackerOwner():
 
 @typing.final
 class IInteractionTrackerOwner(winrt.system.Object, ImplementsIInteractionTrackerOwner):
+    # System.Void Windows.UI.Composition.Interactions.IInteractionTrackerOwner::CustomAnimationStateEntered(Windows.UI.Composition.Interactions.InteractionTracker,Windows.UI.Composition.Interactions.InteractionTrackerCustomAnimationStateEnteredArgs)
     def custom_animation_state_entered(self, sender: InteractionTracker, args: InteractionTrackerCustomAnimationStateEnteredArgs, /) -> None: ...
+    # System.Void Windows.UI.Composition.Interactions.IInteractionTrackerOwner::IdleStateEntered(Windows.UI.Composition.Interactions.InteractionTracker,Windows.UI.Composition.Interactions.InteractionTrackerIdleStateEnteredArgs)
     def idle_state_entered(self, sender: InteractionTracker, args: InteractionTrackerIdleStateEnteredArgs, /) -> None: ...
+    # System.Void Windows.UI.Composition.Interactions.IInteractionTrackerOwner::InertiaStateEntered(Windows.UI.Composition.Interactions.InteractionTracker,Windows.UI.Composition.Interactions.InteractionTrackerInertiaStateEnteredArgs)
     def inertia_state_entered(self, sender: InteractionTracker, args: InteractionTrackerInertiaStateEnteredArgs, /) -> None: ...
+    # System.Void Windows.UI.Composition.Interactions.IInteractionTrackerOwner::InteractingStateEntered(Windows.UI.Composition.Interactions.InteractionTracker,Windows.UI.Composition.Interactions.InteractionTrackerInteractingStateEnteredArgs)
     def interacting_state_entered(self, sender: InteractionTracker, args: InteractionTrackerInteractingStateEnteredArgs, /) -> None: ...
+    # System.Void Windows.UI.Composition.Interactions.IInteractionTrackerOwner::RequestIgnored(Windows.UI.Composition.Interactions.InteractionTracker,Windows.UI.Composition.Interactions.InteractionTrackerRequestIgnoredArgs)
     def request_ignored(self, sender: InteractionTracker, args: InteractionTrackerRequestIgnoredArgs, /) -> None: ...
+    # System.Void Windows.UI.Composition.Interactions.IInteractionTrackerOwner::ValuesChanged(Windows.UI.Composition.Interactions.InteractionTracker,Windows.UI.Composition.Interactions.InteractionTrackerValuesChangedArgs)
     def values_changed(self, sender: InteractionTracker, args: InteractionTrackerValuesChangedArgs, /) -> None: ...
 

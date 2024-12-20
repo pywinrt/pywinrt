@@ -21,6 +21,7 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class AppServiceCatalog_Static(type):
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.AppInfo>> Windows.ApplicationModel.AppService.AppServiceCatalog::FindAppServiceProvidersAsync(System.String)
     def find_app_service_providers_async(cls, app_service_name: str, /) -> windows_foundation.IAsyncOperation[typing.Sequence[windows_applicationmodel.AppInfo]]: ...
 
 @typing.final
@@ -29,11 +30,13 @@ class AppServiceCatalog(winrt.system.Object, metaclass=AppServiceCatalog_Static)
 
 @typing.final
 class AppServiceClosedEventArgs(winrt.system.Object):
+    # Windows.ApplicationModel.AppService.AppServiceClosedStatus Windows.ApplicationModel.AppService.AppServiceClosedEventArgs::get_Status()
     @_property
     def status(self) -> AppServiceClosedStatus: ...
 
 @typing.final
 class AppServiceConnection_Static(type):
+    # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.AppService.StatelessAppServiceResponse> Windows.ApplicationModel.AppService.AppServiceConnection::SendStatelessMessageAsync(Windows.ApplicationModel.AppService.AppServiceConnection,Windows.System.RemoteSystems.RemoteSystemConnectionRequest,Windows.Foundation.Collections.ValueSet)
     def send_stateless_message_async(cls, connection: AppServiceConnection, connection_request: windows_system_remotesystems.RemoteSystemConnectionRequest, message: windows_foundation_collections.ValueSet, /) -> windows_foundation.IAsyncOperation[StatelessAppServiceResponse]: ...
 
 @typing.final
@@ -41,68 +44,97 @@ class AppServiceConnection(winrt.system.Object, windows_foundation.ImplementsICl
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, exc_type: typing.Optional[typing.Type[BaseException]], exc_value: typing.Optional[BaseException], traceback: typing.Optional[types.TracebackType]) -> None: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Void Windows.ApplicationModel.AppService.AppServiceConnection::Close()
     def close(self) -> None: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.AppService.AppServiceConnectionStatus> Windows.ApplicationModel.AppService.AppServiceConnection::OpenAsync()
     def open_async(self) -> windows_foundation.IAsyncOperation[AppServiceConnectionStatus]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.AppService.AppServiceConnectionStatus> Windows.ApplicationModel.AppService.AppServiceConnection::OpenRemoteAsync(Windows.System.RemoteSystems.RemoteSystemConnectionRequest)
     def open_remote_async(self, remote_system_connection_request: windows_system_remotesystems.RemoteSystemConnectionRequest, /) -> windows_foundation.IAsyncOperation[AppServiceConnectionStatus]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.AppService.AppServiceResponse> Windows.ApplicationModel.AppService.AppServiceConnection::SendMessageAsync(Windows.Foundation.Collections.ValueSet)
     def send_message_async(self, message: windows_foundation_collections.ValueSet, /) -> windows_foundation.IAsyncOperation[AppServiceResponse]: ...
+    # Windows.Foundation.EventRegistrationToken Windows.ApplicationModel.AppService.AppServiceConnection::add_RequestReceived(Windows.Foundation.TypedEventHandler`2<Windows.ApplicationModel.AppService.AppServiceConnection,Windows.ApplicationModel.AppService.AppServiceRequestReceivedEventArgs>)
     def add_request_received(self, handler: windows_foundation.TypedEventHandler[AppServiceConnection, AppServiceRequestReceivedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.ApplicationModel.AppService.AppServiceConnection::remove_RequestReceived(Windows.Foundation.EventRegistrationToken)
     def remove_request_received(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.ApplicationModel.AppService.AppServiceConnection::add_ServiceClosed(Windows.Foundation.TypedEventHandler`2<Windows.ApplicationModel.AppService.AppServiceConnection,Windows.ApplicationModel.AppService.AppServiceClosedEventArgs>)
     def add_service_closed(self, handler: windows_foundation.TypedEventHandler[AppServiceConnection, AppServiceClosedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.ApplicationModel.AppService.AppServiceConnection::remove_ServiceClosed(Windows.Foundation.EventRegistrationToken)
     def remove_service_closed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.String Windows.ApplicationModel.AppService.AppServiceConnection::get_PackageFamilyName()
     @_property
     def package_family_name(self) -> str: ...
+    # System.Void Windows.ApplicationModel.AppService.AppServiceConnection::put_PackageFamilyName(System.String)
     @package_family_name.setter
     def package_family_name(self, value: str) -> None: ...
+    # System.String Windows.ApplicationModel.AppService.AppServiceConnection::get_AppServiceName()
     @_property
     def app_service_name(self) -> str: ...
+    # System.Void Windows.ApplicationModel.AppService.AppServiceConnection::put_AppServiceName(System.String)
     @app_service_name.setter
     def app_service_name(self, value: str) -> None: ...
+    # Windows.System.User Windows.ApplicationModel.AppService.AppServiceConnection::get_User()
     @_property
     def user(self) -> windows_system.User: ...
+    # System.Void Windows.ApplicationModel.AppService.AppServiceConnection::put_User(Windows.System.User)
     @user.setter
     def user(self, value: windows_system.User) -> None: ...
 
 @typing.final
 class AppServiceDeferral(winrt.system.Object):
+    # System.Void Windows.ApplicationModel.AppService.AppServiceDeferral::Complete()
     def complete(self) -> None: ...
 
 @typing.final
 class AppServiceRequest(winrt.system.Object):
+    # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.AppService.AppServiceResponseStatus> Windows.ApplicationModel.AppService.AppServiceRequest::SendResponseAsync(Windows.Foundation.Collections.ValueSet)
     def send_response_async(self, message: windows_foundation_collections.ValueSet, /) -> windows_foundation.IAsyncOperation[AppServiceResponseStatus]: ...
+    # Windows.Foundation.Collections.ValueSet Windows.ApplicationModel.AppService.AppServiceRequest::get_Message()
     @_property
     def message(self) -> windows_foundation_collections.ValueSet: ...
 
 @typing.final
 class AppServiceRequestReceivedEventArgs(winrt.system.Object):
+    # Windows.ApplicationModel.AppService.AppServiceDeferral Windows.ApplicationModel.AppService.AppServiceRequestReceivedEventArgs::GetDeferral()
     def get_deferral(self) -> AppServiceDeferral: ...
+    # Windows.ApplicationModel.AppService.AppServiceRequest Windows.ApplicationModel.AppService.AppServiceRequestReceivedEventArgs::get_Request()
     @_property
     def request(self) -> AppServiceRequest: ...
 
 @typing.final
 class AppServiceResponse(winrt.system.Object):
+    # Windows.Foundation.Collections.ValueSet Windows.ApplicationModel.AppService.AppServiceResponse::get_Message()
     @_property
     def message(self) -> windows_foundation_collections.ValueSet: ...
+    # Windows.ApplicationModel.AppService.AppServiceResponseStatus Windows.ApplicationModel.AppService.AppServiceResponse::get_Status()
     @_property
     def status(self) -> AppServiceResponseStatus: ...
 
 @typing.final
 class AppServiceTriggerDetails(winrt.system.Object):
+    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.ApplicationModel.AppService.AppServiceTriggerDetails::CheckCallerForCapabilityAsync(System.String)
     def check_caller_for_capability_async(self, capability_name: str, /) -> windows_foundation.IAsyncOperation[bool]: ...
+    # Windows.ApplicationModel.AppService.AppServiceConnection Windows.ApplicationModel.AppService.AppServiceTriggerDetails::get_AppServiceConnection()
     @_property
     def app_service_connection(self) -> AppServiceConnection: ...
+    # System.String Windows.ApplicationModel.AppService.AppServiceTriggerDetails::get_CallerPackageFamilyName()
     @_property
     def caller_package_family_name(self) -> str: ...
+    # System.String Windows.ApplicationModel.AppService.AppServiceTriggerDetails::get_Name()
     @_property
     def name(self) -> str: ...
+    # System.Boolean Windows.ApplicationModel.AppService.AppServiceTriggerDetails::get_IsRemoteSystemConnection()
     @_property
     def is_remote_system_connection(self) -> bool: ...
+    # System.String Windows.ApplicationModel.AppService.AppServiceTriggerDetails::get_CallerRemoteConnectionToken()
     @_property
     def caller_remote_connection_token(self) -> str: ...
 
 @typing.final
 class StatelessAppServiceResponse(winrt.system.Object):
+    # Windows.Foundation.Collections.ValueSet Windows.ApplicationModel.AppService.StatelessAppServiceResponse::get_Message()
     @_property
     def message(self) -> windows_foundation_collections.ValueSet: ...
+    # Windows.ApplicationModel.AppService.StatelessAppServiceResponseStatus Windows.ApplicationModel.AppService.StatelessAppServiceResponse::get_Status()
     @_property
     def status(self) -> StatelessAppServiceResponseStatus: ...
 

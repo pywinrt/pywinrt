@@ -16,14 +16,19 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class ThemeSettings_Static(type):
+    # Microsoft.UI.System.ThemeSettings Microsoft.UI.System.ThemeSettings::CreateForWindowId(Microsoft.UI.WindowId)
     def create_for_window_id(cls, window_id: microsoft_ui.WindowId, /) -> ThemeSettings: ...
 
 @typing.final
 class ThemeSettings(winrt.system.Object, metaclass=ThemeSettings_Static):
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.System.ThemeSettings::add_Changed(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.System.ThemeSettings,System.Object>)
     def add_changed(self, handler: windows_foundation.TypedEventHandler[ThemeSettings, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.UI.System.ThemeSettings::remove_Changed(Windows.Foundation.EventRegistrationToken)
     def remove_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.Boolean Microsoft.UI.System.ThemeSettings::get_HighContrast()
     @_property
     def high_contrast(self) -> bool: ...
+    # System.String Microsoft.UI.System.ThemeSettings::get_HighContrastScheme()
     @_property
     def high_contrast_scheme(self) -> str: ...
 

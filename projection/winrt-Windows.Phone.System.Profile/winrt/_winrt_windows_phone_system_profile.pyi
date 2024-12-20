@@ -14,6 +14,7 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class RetailMode_Static(type):
+    # System.Boolean Windows.Phone.System.Profile.RetailMode::get_RetailModeEnabled()
     @_property
     def retail_mode_enabled(cls) -> bool: ...
 

@@ -38,76 +38,107 @@ class PointerDeviceUsage:
 @typing.final
 class KeyboardCapabilities(winrt.system.Object):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Int32 Windows.Devices.Input.KeyboardCapabilities::get_KeyboardPresent()
     @_property
     def keyboard_present(self) -> winrt.system.Int32: ...
 
 @typing.final
 class MouseCapabilities(winrt.system.Object):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Int32 Windows.Devices.Input.MouseCapabilities::get_HorizontalWheelPresent()
     @_property
     def horizontal_wheel_present(self) -> winrt.system.Int32: ...
+    # System.Int32 Windows.Devices.Input.MouseCapabilities::get_MousePresent()
     @_property
     def mouse_present(self) -> winrt.system.Int32: ...
+    # System.UInt32 Windows.Devices.Input.MouseCapabilities::get_NumberOfButtons()
     @_property
     def number_of_buttons(self) -> winrt.system.UInt32: ...
+    # System.Int32 Windows.Devices.Input.MouseCapabilities::get_SwapButtons()
     @_property
     def swap_buttons(self) -> winrt.system.Int32: ...
+    # System.Int32 Windows.Devices.Input.MouseCapabilities::get_VerticalWheelPresent()
     @_property
     def vertical_wheel_present(self) -> winrt.system.Int32: ...
 
 @typing.final
 class MouseDevice_Static(type):
+    # Windows.Devices.Input.MouseDevice Windows.Devices.Input.MouseDevice::GetForCurrentView()
     def get_for_current_view(cls) -> MouseDevice: ...
 
 @typing.final
 class MouseDevice(winrt.system.Object, metaclass=MouseDevice_Static):
+    # Windows.Foundation.EventRegistrationToken Windows.Devices.Input.MouseDevice::add_MouseMoved(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Input.MouseDevice,Windows.Devices.Input.MouseEventArgs>)
     def add_mouse_moved(self, handler: windows_foundation.TypedEventHandler[MouseDevice, MouseEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Devices.Input.MouseDevice::remove_MouseMoved(Windows.Foundation.EventRegistrationToken)
     def remove_mouse_moved(self, cookie: windows_foundation.EventRegistrationToken, /) -> None: ...
 
 @typing.final
 class MouseEventArgs(winrt.system.Object):
+    # Windows.Devices.Input.MouseDelta Windows.Devices.Input.MouseEventArgs::get_MouseDelta()
     @_property
     def mouse_delta(self) -> MouseDelta: ...
 
 @typing.final
 class PenButtonListener_Static(type):
+    # Windows.Devices.Input.PenButtonListener Windows.Devices.Input.PenButtonListener::GetDefault()
     def get_default(cls) -> PenButtonListener: ...
 
 @typing.final
 class PenButtonListener(winrt.system.Object, metaclass=PenButtonListener_Static):
+    # System.Boolean Windows.Devices.Input.PenButtonListener::IsSupported()
     def is_supported(self) -> bool: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Devices.Input.PenButtonListener::add_IsSupportedChanged(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Input.PenButtonListener,System.Object>)
     def add_is_supported_changed(self, handler: windows_foundation.TypedEventHandler[PenButtonListener, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Devices.Input.PenButtonListener::remove_IsSupportedChanged(Windows.Foundation.EventRegistrationToken)
     def remove_is_supported_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Devices.Input.PenButtonListener::add_TailButtonClicked(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Input.PenButtonListener,Windows.Devices.Input.PenTailButtonClickedEventArgs>)
     def add_tail_button_clicked(self, handler: windows_foundation.TypedEventHandler[PenButtonListener, PenTailButtonClickedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Devices.Input.PenButtonListener::remove_TailButtonClicked(Windows.Foundation.EventRegistrationToken)
     def remove_tail_button_clicked(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Devices.Input.PenButtonListener::add_TailButtonDoubleClicked(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Input.PenButtonListener,Windows.Devices.Input.PenTailButtonDoubleClickedEventArgs>)
     def add_tail_button_double_clicked(self, handler: windows_foundation.TypedEventHandler[PenButtonListener, PenTailButtonDoubleClickedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Devices.Input.PenButtonListener::remove_TailButtonDoubleClicked(Windows.Foundation.EventRegistrationToken)
     def remove_tail_button_double_clicked(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Devices.Input.PenButtonListener::add_TailButtonLongPressed(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Input.PenButtonListener,Windows.Devices.Input.PenTailButtonLongPressedEventArgs>)
     def add_tail_button_long_pressed(self, handler: windows_foundation.TypedEventHandler[PenButtonListener, PenTailButtonLongPressedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Devices.Input.PenButtonListener::remove_TailButtonLongPressed(Windows.Foundation.EventRegistrationToken)
     def remove_tail_button_long_pressed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
 @typing.final
 class PenDevice_Static(type):
+    # Windows.Devices.Input.PenDevice Windows.Devices.Input.PenDevice::GetFromPointerId(System.UInt32)
     def get_from_pointer_id(cls, pointer_id: winrt.system.UInt32, /) -> PenDevice: ...
 
 @typing.final
 class PenDevice(winrt.system.Object, metaclass=PenDevice_Static):
+    # System.Guid Windows.Devices.Input.PenDevice::get_PenId()
     @_property
     def pen_id(self) -> _uuid.UUID: ...
+    # Windows.Devices.Haptics.SimpleHapticsController Windows.Devices.Input.PenDevice::get_SimpleHapticsController()
     @_property
     def simple_haptics_controller(self) -> windows_devices_haptics.SimpleHapticsController: ...
 
 @typing.final
 class PenDockListener_Static(type):
+    # Windows.Devices.Input.PenDockListener Windows.Devices.Input.PenDockListener::GetDefault()
     def get_default(cls) -> PenDockListener: ...
 
 @typing.final
 class PenDockListener(winrt.system.Object, metaclass=PenDockListener_Static):
+    # System.Boolean Windows.Devices.Input.PenDockListener::IsSupported()
     def is_supported(self) -> bool: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Devices.Input.PenDockListener::add_Docked(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Input.PenDockListener,Windows.Devices.Input.PenDockedEventArgs>)
     def add_docked(self, handler: windows_foundation.TypedEventHandler[PenDockListener, PenDockedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Devices.Input.PenDockListener::remove_Docked(Windows.Foundation.EventRegistrationToken)
     def remove_docked(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Devices.Input.PenDockListener::add_IsSupportedChanged(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Input.PenDockListener,System.Object>)
     def add_is_supported_changed(self, handler: windows_foundation.TypedEventHandler[PenDockListener, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Devices.Input.PenDockListener::remove_IsSupportedChanged(Windows.Foundation.EventRegistrationToken)
     def remove_is_supported_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Devices.Input.PenDockListener::add_Undocked(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Input.PenDockListener,Windows.Devices.Input.PenUndockedEventArgs>)
     def add_undocked(self, handler: windows_foundation.TypedEventHandler[PenDockListener, PenUndockedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Devices.Input.PenDockListener::remove_Undocked(Windows.Foundation.EventRegistrationToken)
     def remove_undocked(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
 @typing.final
@@ -132,31 +163,42 @@ class PenUndockedEventArgs(winrt.system.Object):
 
 @typing.final
 class PointerDevice_Static(type):
+    # Windows.Devices.Input.PointerDevice Windows.Devices.Input.PointerDevice::GetPointerDevice(System.UInt32)
     def get_pointer_device(cls, pointer_id: winrt.system.UInt32, /) -> PointerDevice: ...
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Input.PointerDevice> Windows.Devices.Input.PointerDevice::GetPointerDevices()
     def get_pointer_devices(cls) -> typing.Sequence[PointerDevice]: ...
 
 @typing.final
 class PointerDevice(winrt.system.Object, metaclass=PointerDevice_Static):
+    # System.Boolean Windows.Devices.Input.PointerDevice::get_IsIntegrated()
     @_property
     def is_integrated(self) -> bool: ...
+    # System.UInt32 Windows.Devices.Input.PointerDevice::get_MaxContacts()
     @_property
     def max_contacts(self) -> winrt.system.UInt32: ...
+    # Windows.Foundation.Rect Windows.Devices.Input.PointerDevice::get_PhysicalDeviceRect()
     @_property
     def physical_device_rect(self) -> windows_foundation.Rect: ...
+    # Windows.Devices.Input.PointerDeviceType Windows.Devices.Input.PointerDevice::get_PointerDeviceType()
     @_property
     def pointer_device_type(self) -> PointerDeviceType: ...
+    # Windows.Foundation.Rect Windows.Devices.Input.PointerDevice::get_ScreenRect()
     @_property
     def screen_rect(self) -> windows_foundation.Rect: ...
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Input.PointerDeviceUsage> Windows.Devices.Input.PointerDevice::get_SupportedUsages()
     @_property
     def supported_usages(self) -> typing.Sequence[PointerDeviceUsage]: ...
+    # System.UInt32 Windows.Devices.Input.PointerDevice::get_MaxPointersWithZDistance()
     @_property
     def max_pointers_with_z_distance(self) -> winrt.system.UInt32: ...
 
 @typing.final
 class TouchCapabilities(winrt.system.Object):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.UInt32 Windows.Devices.Input.TouchCapabilities::get_Contacts()
     @_property
     def contacts(self) -> winrt.system.UInt32: ...
+    # System.Int32 Windows.Devices.Input.TouchCapabilities::get_TouchPresent()
     @_property
     def touch_present(self) -> winrt.system.Int32: ...
 

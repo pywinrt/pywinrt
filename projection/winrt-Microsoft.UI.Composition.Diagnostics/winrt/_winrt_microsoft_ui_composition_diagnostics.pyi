@@ -17,17 +17,23 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class CompositionDebugHeatMaps(winrt.system.Object):
+    # System.Void Microsoft.UI.Composition.Diagnostics.CompositionDebugHeatMaps::Hide(Microsoft.UI.Composition.Visual)
     def hide(self, subtree: microsoft_ui_composition.Visual, /) -> None: ...
+    # System.Void Microsoft.UI.Composition.Diagnostics.CompositionDebugHeatMaps::ShowMemoryUsage(Microsoft.UI.Composition.Visual)
     def show_memory_usage(self, subtree: microsoft_ui_composition.Visual, /) -> None: ...
+    # System.Void Microsoft.UI.Composition.Diagnostics.CompositionDebugHeatMaps::ShowOverdraw(Microsoft.UI.Composition.Visual,Microsoft.UI.Composition.Diagnostics.CompositionDebugOverdrawContentKinds)
     def show_overdraw(self, subtree: microsoft_ui_composition.Visual, content_kinds: CompositionDebugOverdrawContentKinds, /) -> None: ...
+    # System.Void Microsoft.UI.Composition.Diagnostics.CompositionDebugHeatMaps::ShowRedraw(Microsoft.UI.Composition.Visual)
     def show_redraw(self, subtree: microsoft_ui_composition.Visual, /) -> None: ...
 
 @typing.final
 class CompositionDebugSettings_Static(type):
+    # Microsoft.UI.Composition.Diagnostics.CompositionDebugSettings Microsoft.UI.Composition.Diagnostics.CompositionDebugSettings::TryGetSettings(Microsoft.UI.Composition.Compositor)
     def try_get_settings(cls, compositor: microsoft_ui_composition.Compositor, /) -> CompositionDebugSettings: ...
 
 @typing.final
 class CompositionDebugSettings(winrt.system.Object, metaclass=CompositionDebugSettings_Static):
+    # Microsoft.UI.Composition.Diagnostics.CompositionDebugHeatMaps Microsoft.UI.Composition.Diagnostics.CompositionDebugSettings::get_HeatMaps()
     @_property
     def heat_maps(self) -> CompositionDebugHeatMaps: ...
 

@@ -19,73 +19,101 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class AppRecordingManager_Static(type):
+    # Windows.Media.AppRecording.AppRecordingManager Windows.Media.AppRecording.AppRecordingManager::GetDefault()
     def get_default(cls) -> AppRecordingManager: ...
 
 @typing.final
 class AppRecordingManager(winrt.system.Object, metaclass=AppRecordingManager_Static):
+    # Windows.Media.AppRecording.AppRecordingStatus Windows.Media.AppRecording.AppRecordingManager::GetStatus()
     def get_status(self) -> AppRecordingStatus: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Media.AppRecording.AppRecordingResult> Windows.Media.AppRecording.AppRecordingManager::RecordTimeSpanToFileAsync(Windows.Foundation.DateTime,Windows.Foundation.TimeSpan,Windows.Storage.StorageFile)
     def record_time_span_to_file_async(self, start_time: datetime.datetime, duration: datetime.timedelta, file: windows_storage.StorageFile, /) -> windows_foundation.IAsyncOperation[AppRecordingResult]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Media.AppRecording.AppRecordingSaveScreenshotResult> Windows.Media.AppRecording.AppRecordingManager::SaveScreenshotToFilesAsync(Windows.Storage.StorageFolder,System.String,Windows.Media.AppRecording.AppRecordingSaveScreenshotOption,Windows.Foundation.Collections.IIterable`1<System.String>)
     def save_screenshot_to_files_async(self, folder: windows_storage.StorageFolder, filename_prefix: str, option: AppRecordingSaveScreenshotOption, requested_formats: typing.Iterable[str], /) -> windows_foundation.IAsyncOperation[AppRecordingSaveScreenshotResult]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Media.AppRecording.AppRecordingResult> Windows.Media.AppRecording.AppRecordingManager::StartRecordingToFileAsync(Windows.Storage.StorageFile)
     def start_recording_to_file_async(self, file: windows_storage.StorageFile, /) -> windows_foundation.IAsyncOperation[AppRecordingResult]: ...
+    # Windows.Foundation.Collections.IVectorView`1<System.String> Windows.Media.AppRecording.AppRecordingManager::get_SupportedScreenshotMediaEncodingSubtypes()
     @_property
     def supported_screenshot_media_encoding_subtypes(self) -> typing.Sequence[str]: ...
 
 @typing.final
 class AppRecordingResult(winrt.system.Object):
+    # Windows.Foundation.TimeSpan Windows.Media.AppRecording.AppRecordingResult::get_Duration()
     @_property
     def duration(self) -> datetime.timedelta: ...
+    # Windows.Foundation.HResult Windows.Media.AppRecording.AppRecordingResult::get_ExtendedError()
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
+    # System.Boolean Windows.Media.AppRecording.AppRecordingResult::get_IsFileTruncated()
     @_property
     def is_file_truncated(self) -> bool: ...
+    # System.Boolean Windows.Media.AppRecording.AppRecordingResult::get_Succeeded()
     @_property
     def succeeded(self) -> bool: ...
 
 @typing.final
 class AppRecordingSaveScreenshotResult(winrt.system.Object):
+    # Windows.Foundation.HResult Windows.Media.AppRecording.AppRecordingSaveScreenshotResult::get_ExtendedError()
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Media.AppRecording.AppRecordingSavedScreenshotInfo> Windows.Media.AppRecording.AppRecordingSaveScreenshotResult::get_SavedScreenshotInfos()
     @_property
     def saved_screenshot_infos(self) -> typing.Sequence[AppRecordingSavedScreenshotInfo]: ...
+    # System.Boolean Windows.Media.AppRecording.AppRecordingSaveScreenshotResult::get_Succeeded()
     @_property
     def succeeded(self) -> bool: ...
 
 @typing.final
 class AppRecordingSavedScreenshotInfo(winrt.system.Object):
+    # Windows.Storage.StorageFile Windows.Media.AppRecording.AppRecordingSavedScreenshotInfo::get_File()
     @_property
     def file(self) -> windows_storage.StorageFile: ...
+    # System.String Windows.Media.AppRecording.AppRecordingSavedScreenshotInfo::get_MediaEncodingSubtype()
     @_property
     def media_encoding_subtype(self) -> str: ...
 
 @typing.final
 class AppRecordingStatus(winrt.system.Object):
+    # System.Boolean Windows.Media.AppRecording.AppRecordingStatus::get_CanRecord()
     @_property
     def can_record(self) -> bool: ...
+    # System.Boolean Windows.Media.AppRecording.AppRecordingStatus::get_CanRecordTimeSpan()
     @_property
     def can_record_time_span(self) -> bool: ...
+    # Windows.Media.AppRecording.AppRecordingStatusDetails Windows.Media.AppRecording.AppRecordingStatus::get_Details()
     @_property
     def details(self) -> AppRecordingStatusDetails: ...
+    # Windows.Foundation.TimeSpan Windows.Media.AppRecording.AppRecordingStatus::get_HistoricalBufferDuration()
     @_property
     def historical_buffer_duration(self) -> datetime.timedelta: ...
 
 @typing.final
 class AppRecordingStatusDetails(winrt.system.Object):
+    # System.Boolean Windows.Media.AppRecording.AppRecordingStatusDetails::get_IsAnyAppBroadcasting()
     @_property
     def is_any_app_broadcasting(self) -> bool: ...
+    # System.Boolean Windows.Media.AppRecording.AppRecordingStatusDetails::get_IsAppInactive()
     @_property
     def is_app_inactive(self) -> bool: ...
+    # System.Boolean Windows.Media.AppRecording.AppRecordingStatusDetails::get_IsBlockedForApp()
     @_property
     def is_blocked_for_app(self) -> bool: ...
+    # System.Boolean Windows.Media.AppRecording.AppRecordingStatusDetails::get_IsCaptureResourceUnavailable()
     @_property
     def is_capture_resource_unavailable(self) -> bool: ...
+    # System.Boolean Windows.Media.AppRecording.AppRecordingStatusDetails::get_IsDisabledBySystem()
     @_property
     def is_disabled_by_system(self) -> bool: ...
+    # System.Boolean Windows.Media.AppRecording.AppRecordingStatusDetails::get_IsDisabledByUser()
     @_property
     def is_disabled_by_user(self) -> bool: ...
+    # System.Boolean Windows.Media.AppRecording.AppRecordingStatusDetails::get_IsGameStreamInProgress()
     @_property
     def is_game_stream_in_progress(self) -> bool: ...
+    # System.Boolean Windows.Media.AppRecording.AppRecordingStatusDetails::get_IsGpuConstrained()
     @_property
     def is_gpu_constrained(self) -> bool: ...
+    # System.Boolean Windows.Media.AppRecording.AppRecordingStatusDetails::get_IsTimeSpanRecordingDisabled()
     @_property
     def is_time_span_recording_disabled(self) -> bool: ...
 

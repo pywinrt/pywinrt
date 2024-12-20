@@ -19,100 +19,136 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class SecondaryAuthenticationFactorAuthentication_Static(type):
+    # Windows.Foundation.IAsyncOperation`1<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationStageInfo> Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthentication::GetAuthenticationStageInfoAsync()
     # @deprecated("SecondaryAuthenticationFactorAuthentication is deprecated and might not work on all platforms. For more info, see MSDN.")
     def get_authentication_stage_info_async(cls) -> windows_foundation.IAsyncOperation[SecondaryAuthenticationFactorAuthenticationStageInfo]: ...
+    # Windows.Foundation.IAsyncAction Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthentication::ShowNotificationMessageAsync(System.String,Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationMessage)
     # @deprecated("SecondaryAuthenticationFactorAuthentication is deprecated and might not work on all platforms. For more info, see MSDN.")
     def show_notification_message_async(cls, device_name: str, message: SecondaryAuthenticationFactorAuthenticationMessage, /) -> windows_foundation.IAsyncAction: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationResult> Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthentication::StartAuthenticationAsync(System.String,Windows.Storage.Streams.IBuffer)
     # @deprecated("SecondaryAuthenticationFactorAuthentication is deprecated and might not work on all platforms. For more info, see MSDN.")
     def start_authentication_async(cls, device_id: str, service_authentication_nonce: windows_storage_streams.ImplementsIBuffer, /) -> windows_foundation.IAsyncOperation[SecondaryAuthenticationFactorAuthenticationResult]: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthentication::add_AuthenticationStageChanged(Windows.Foundation.EventHandler`1<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs>)
     # @deprecated("SecondaryAuthenticationFactorAuthentication is deprecated and might not work on all platforms. For more info, see MSDN.")
     def add_authentication_stage_changed(cls, handler: windows_foundation.EventHandler[SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthentication::remove_AuthenticationStageChanged(Windows.Foundation.EventRegistrationToken)
     # @deprecated("SecondaryAuthenticationFactorAuthentication is deprecated and might not work on all platforms. For more info, see MSDN.")
     def remove_authentication_stage_changed(cls, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
 @typing.final
 class SecondaryAuthenticationFactorAuthentication(winrt.system.Object, metaclass=SecondaryAuthenticationFactorAuthentication_Static):
+    # Windows.Foundation.IAsyncAction Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthentication::AbortAuthenticationAsync(System.String)
     # @deprecated("SecondaryAuthenticationFactorAuthentication is deprecated and might not work on all platforms. For more info, see MSDN.")
     def abort_authentication_async(self, error_log_message: str, /) -> windows_foundation.IAsyncAction: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorFinishAuthenticationStatus> Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthentication::FinishAuthenticationAsync(Windows.Storage.Streams.IBuffer,Windows.Storage.Streams.IBuffer)
     # @deprecated("SecondaryAuthenticationFactorAuthentication is deprecated and might not work on all platforms. For more info, see MSDN.")
     def finish_authentication_async(self, device_hmac: windows_storage_streams.ImplementsIBuffer, session_hmac: windows_storage_streams.ImplementsIBuffer, /) -> windows_foundation.IAsyncOperation[SecondaryAuthenticationFactorFinishAuthenticationStatus]: ...
+    # Windows.Storage.Streams.IBuffer Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthentication::get_DeviceConfigurationData()
     @_property
     def device_configuration_data(self) -> windows_storage_streams.IBuffer: ...
+    # Windows.Storage.Streams.IBuffer Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthentication::get_DeviceNonce()
     @_property
     def device_nonce(self) -> windows_storage_streams.IBuffer: ...
+    # Windows.Storage.Streams.IBuffer Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthentication::get_ServiceAuthenticationHmac()
     @_property
     def service_authentication_hmac(self) -> windows_storage_streams.IBuffer: ...
+    # Windows.Storage.Streams.IBuffer Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthentication::get_SessionNonce()
     @_property
     def session_nonce(self) -> windows_storage_streams.IBuffer: ...
 
 @typing.final
 class SecondaryAuthenticationFactorAuthenticationResult(winrt.system.Object):
+    # Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthentication Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationResult::get_Authentication()
     @_property
     def authentication(self) -> SecondaryAuthenticationFactorAuthentication: ...
+    # Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationStatus Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationResult::get_Status()
     @_property
     def status(self) -> SecondaryAuthenticationFactorAuthenticationStatus: ...
 
 @typing.final
 class SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs(winrt.system.Object):
+    # Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationStageInfo Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs::get_StageInfo()
     @_property
     def stage_info(self) -> SecondaryAuthenticationFactorAuthenticationStageInfo: ...
 
 @typing.final
 class SecondaryAuthenticationFactorAuthenticationStageInfo(winrt.system.Object):
+    # System.String Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationStageInfo::get_DeviceId()
     @_property
     def device_id(self) -> str: ...
+    # Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationScenario Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationStageInfo::get_Scenario()
     @_property
     def scenario(self) -> SecondaryAuthenticationFactorAuthenticationScenario: ...
+    # Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationStage Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationStageInfo::get_Stage()
     @_property
     def stage(self) -> SecondaryAuthenticationFactorAuthenticationStage: ...
 
 @typing.final
 class SecondaryAuthenticationFactorInfo(winrt.system.Object):
+    # Windows.Foundation.IAsyncAction Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo::UpdateDevicePresenceAsync(Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorDevicePresence)
     # @deprecated("UpdateDevicePresenceAsync is deprecated and might not work on all platforms. For more info, see MSDN.")
     def update_device_presence_async(self, presence_state: SecondaryAuthenticationFactorDevicePresence, /) -> windows_foundation.IAsyncAction: ...
+    # Windows.Storage.Streams.IBuffer Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo::get_DeviceConfigurationData()
     @_property
     def device_configuration_data(self) -> windows_storage_streams.IBuffer: ...
+    # System.String Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo::get_DeviceFriendlyName()
     @_property
     def device_friendly_name(self) -> str: ...
+    # System.String Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo::get_DeviceId()
     @_property
     def device_id(self) -> str: ...
+    # System.String Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo::get_DeviceModelNumber()
     @_property
     def device_model_number(self) -> str: ...
+    # System.Boolean Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo::get_IsAuthenticationSupported()
     @_property
     def is_authentication_supported(self) -> bool: ...
+    # Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorDevicePresenceMonitoringMode Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo::get_PresenceMonitoringMode()
     @_property
     def presence_monitoring_mode(self) -> SecondaryAuthenticationFactorDevicePresenceMonitoringMode: ...
 
 @typing.final
 class SecondaryAuthenticationFactorRegistration_Static(type):
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo>> Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistration::FindAllRegisteredDeviceInfoAsync(Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorDeviceFindScope)
     # @deprecated("SecondaryAuthenticationFactorRegistration is deprecated and might not work on all platforms. For more info, see MSDN.")
     def find_all_registered_device_info_async(cls, query_type: SecondaryAuthenticationFactorDeviceFindScope, /) -> windows_foundation.IAsyncOperation[typing.Sequence[SecondaryAuthenticationFactorInfo]]: ...
+    # System.Boolean Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistration::IsDevicePresenceMonitoringSupported()
     # @deprecated("IsDevicePresenceMonitoringSupported is deprecated and might not work on all platforms. For more info, see MSDN.")
     def is_device_presence_monitoring_supported(cls) -> bool: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatus> Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistration::RegisterDevicePresenceMonitoringAsync(System.String,System.String,Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorDevicePresenceMonitoringMode)
     # @deprecated("RegisterDevicePresenceMonitoringAsync is deprecated and might not work on all platforms. For more info, see MSDN.")
     def register_device_presence_monitoring_async(cls, device_id: str, device_instance_path: str, monitoring_mode: SecondaryAuthenticationFactorDevicePresenceMonitoringMode, /) -> windows_foundation.IAsyncOperation[SecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatus]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatus> Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistration::RegisterDevicePresenceMonitoringAsync(System.String,System.String,Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorDevicePresenceMonitoringMode,System.String,System.String,Windows.Storage.Streams.IBuffer)
     # @deprecated("RegisterDevicePresenceMonitoringWithNewDeviceAsync is deprecated and might not work on all platforms. For more info, see MSDN.")
     def register_device_presence_monitoring_with_new_device_async(cls, device_id: str, device_instance_path: str, monitoring_mode: SecondaryAuthenticationFactorDevicePresenceMonitoringMode, device_friendly_name: str, device_model_number: str, device_configuration_data: windows_storage_streams.ImplementsIBuffer, /) -> windows_foundation.IAsyncOperation[SecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatus]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistrationResult> Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistration::RequestStartRegisteringDeviceAsync(System.String,Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorDeviceCapabilities,System.String,System.String,Windows.Storage.Streams.IBuffer,Windows.Storage.Streams.IBuffer)
     # @deprecated("SecondaryAuthenticationFactorRegistration is deprecated and might not work on all platforms. For more info, see MSDN.")
     def request_start_registering_device_async(cls, device_id: str, capabilities: SecondaryAuthenticationFactorDeviceCapabilities, device_friendly_name: str, device_model_number: str, device_key: windows_storage_streams.ImplementsIBuffer, mutual_authentication_key: windows_storage_streams.ImplementsIBuffer, /) -> windows_foundation.IAsyncOperation[SecondaryAuthenticationFactorRegistrationResult]: ...
+    # Windows.Foundation.IAsyncAction Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistration::UnregisterDeviceAsync(System.String)
     # @deprecated("SecondaryAuthenticationFactorRegistration is deprecated and might not work on all platforms. For more info, see MSDN.")
     def unregister_device_async(cls, device_id: str, /) -> windows_foundation.IAsyncAction: ...
+    # Windows.Foundation.IAsyncAction Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistration::UnregisterDevicePresenceMonitoringAsync(System.String)
     # @deprecated("UnregisterDevicePresenceMonitoringAsync is deprecated and might not work on all platforms. For more info, see MSDN.")
     def unregister_device_presence_monitoring_async(cls, device_id: str, /) -> windows_foundation.IAsyncAction: ...
+    # Windows.Foundation.IAsyncAction Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistration::UpdateDeviceConfigurationDataAsync(System.String,Windows.Storage.Streams.IBuffer)
     # @deprecated("SecondaryAuthenticationFactorRegistration is deprecated and might not work on all platforms. For more info, see MSDN.")
     def update_device_configuration_data_async(cls, device_id: str, device_configuration_data: windows_storage_streams.ImplementsIBuffer, /) -> windows_foundation.IAsyncAction: ...
 
 @typing.final
 class SecondaryAuthenticationFactorRegistration(winrt.system.Object, metaclass=SecondaryAuthenticationFactorRegistration_Static):
+    # Windows.Foundation.IAsyncAction Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistration::AbortRegisteringDeviceAsync(System.String)
     # @deprecated("SecondaryAuthenticationFactorRegistration is deprecated and might not work on all platforms. For more info, see MSDN.")
     def abort_registering_device_async(self, error_log_message: str, /) -> windows_foundation.IAsyncAction: ...
+    # Windows.Foundation.IAsyncAction Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistration::FinishRegisteringDeviceAsync(Windows.Storage.Streams.IBuffer)
     # @deprecated("SecondaryAuthenticationFactorRegistration is deprecated and might not work on all platforms. For more info, see MSDN.")
     def finish_registering_device_async(self, device_configuration_data: windows_storage_streams.ImplementsIBuffer, /) -> windows_foundation.IAsyncAction: ...
 
 @typing.final
 class SecondaryAuthenticationFactorRegistrationResult(winrt.system.Object):
+    # Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistration Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistrationResult::get_Registration()
     @_property
     def registration(self) -> SecondaryAuthenticationFactorRegistration: ...
+    # Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistrationStatus Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistrationResult::get_Status()
     @_property
     def status(self) -> SecondaryAuthenticationFactorRegistrationStatus: ...
 

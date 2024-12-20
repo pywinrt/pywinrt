@@ -22,6 +22,7 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class CachedFileUpdater_Static(type):
+    # System.Void Windows.Storage.Provider.CachedFileUpdater::SetUpdateInformation(Windows.Storage.IStorageFile,System.String,Windows.Storage.Provider.ReadActivationMode,Windows.Storage.Provider.WriteActivationMode,Windows.Storage.Provider.CachedFileOptions)
     def set_update_information(cls, file: windows_storage.ImplementsIStorageFile, content_id: str, read_mode: ReadActivationMode, write_mode: WriteActivationMode, options: CachedFileOptions, /) -> None: ...
 
 @typing.final
@@ -30,86 +31,119 @@ class CachedFileUpdater(winrt.system.Object, metaclass=CachedFileUpdater_Static)
 
 @typing.final
 class CachedFileUpdaterUI(winrt.system.Object):
+    # Windows.Storage.Provider.FileUpdateRequestDeferral Windows.Storage.Provider.CachedFileUpdaterUI::GetDeferral()
     def get_deferral(self) -> FileUpdateRequestDeferral: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Storage.Provider.CachedFileUpdaterUI::add_FileUpdateRequested(Windows.Foundation.TypedEventHandler`2<Windows.Storage.Provider.CachedFileUpdaterUI,Windows.Storage.Provider.FileUpdateRequestedEventArgs>)
     def add_file_update_requested(self, handler: windows_foundation.TypedEventHandler[CachedFileUpdaterUI, FileUpdateRequestedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Storage.Provider.CachedFileUpdaterUI::remove_FileUpdateRequested(Windows.Foundation.EventRegistrationToken)
     def remove_file_update_requested(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Storage.Provider.CachedFileUpdaterUI::add_UIRequested(Windows.Foundation.TypedEventHandler`2<Windows.Storage.Provider.CachedFileUpdaterUI,System.Object>)
     def add_ui_requested(self, handler: windows_foundation.TypedEventHandler[CachedFileUpdaterUI, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Storage.Provider.CachedFileUpdaterUI::remove_UIRequested(Windows.Foundation.EventRegistrationToken)
     def remove_ui_requested(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.String Windows.Storage.Provider.CachedFileUpdaterUI::get_Title()
     @_property
     def title(self) -> str: ...
+    # System.Void Windows.Storage.Provider.CachedFileUpdaterUI::put_Title(System.String)
     @title.setter
     def title(self, value: str) -> None: ...
+    # Windows.Storage.Provider.UIStatus Windows.Storage.Provider.CachedFileUpdaterUI::get_UIStatus()
     @_property
     def ui_status(self) -> UIStatus: ...
+    # Windows.Storage.Provider.CachedFileTarget Windows.Storage.Provider.CachedFileUpdaterUI::get_UpdateTarget()
     @_property
     def update_target(self) -> CachedFileTarget: ...
+    # Windows.Storage.Provider.FileUpdateRequest Windows.Storage.Provider.CachedFileUpdaterUI::get_UpdateRequest()
     @_property
     def update_request(self) -> FileUpdateRequest: ...
 
 @typing.final
 class FileUpdateRequest(winrt.system.Object):
+    # Windows.Storage.Provider.FileUpdateRequestDeferral Windows.Storage.Provider.FileUpdateRequest::GetDeferral()
     def get_deferral(self) -> FileUpdateRequestDeferral: ...
+    # System.Void Windows.Storage.Provider.FileUpdateRequest::UpdateLocalFile(Windows.Storage.IStorageFile)
     def update_local_file(self, value: windows_storage.ImplementsIStorageFile, /) -> None: ...
+    # Windows.Storage.Provider.FileUpdateStatus Windows.Storage.Provider.FileUpdateRequest::get_Status()
     @_property
     def status(self) -> FileUpdateStatus: ...
+    # System.Void Windows.Storage.Provider.FileUpdateRequest::put_Status(Windows.Storage.Provider.FileUpdateStatus)
     @status.setter
     def status(self, value: FileUpdateStatus) -> None: ...
+    # System.String Windows.Storage.Provider.FileUpdateRequest::get_ContentId()
     @_property
     def content_id(self) -> str: ...
+    # Windows.Storage.StorageFile Windows.Storage.Provider.FileUpdateRequest::get_File()
     @_property
     def file(self) -> windows_storage.StorageFile: ...
+    # System.String Windows.Storage.Provider.FileUpdateRequest::get_UserInputNeededMessage()
     @_property
     def user_input_needed_message(self) -> str: ...
+    # System.Void Windows.Storage.Provider.FileUpdateRequest::put_UserInputNeededMessage(System.String)
     @user_input_needed_message.setter
     def user_input_needed_message(self, value: str) -> None: ...
 
 @typing.final
 class FileUpdateRequestDeferral(winrt.system.Object):
+    # System.Void Windows.Storage.Provider.FileUpdateRequestDeferral::Complete()
     def complete(self) -> None: ...
 
 @typing.final
 class FileUpdateRequestedEventArgs(winrt.system.Object):
+    # Windows.Storage.Provider.FileUpdateRequest Windows.Storage.Provider.FileUpdateRequestedEventArgs::get_Request()
     @_property
     def request(self) -> FileUpdateRequest: ...
 
 @typing.final
 class StorageProviderFileTypeInfo(winrt.system.Object):
     def __new__(cls: typing.Type[Self], file_extension: str, icon_resource: str) -> Self: ...
+    # System.String Windows.Storage.Provider.StorageProviderFileTypeInfo::get_FileExtension()
     @_property
     def file_extension(self) -> str: ...
+    # System.String Windows.Storage.Provider.StorageProviderFileTypeInfo::get_IconResource()
     @_property
     def icon_resource(self) -> str: ...
 
 @typing.final
 class StorageProviderGetContentInfoForPathResult(winrt.system.Object):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Windows.Storage.Provider.StorageProviderUriSourceStatus Windows.Storage.Provider.StorageProviderGetContentInfoForPathResult::get_Status()
     @_property
     def status(self) -> StorageProviderUriSourceStatus: ...
+    # System.Void Windows.Storage.Provider.StorageProviderGetContentInfoForPathResult::put_Status(Windows.Storage.Provider.StorageProviderUriSourceStatus)
     @status.setter
     def status(self, value: StorageProviderUriSourceStatus) -> None: ...
+    # System.String Windows.Storage.Provider.StorageProviderGetContentInfoForPathResult::get_ContentUri()
     @_property
     def content_uri(self) -> str: ...
+    # System.Void Windows.Storage.Provider.StorageProviderGetContentInfoForPathResult::put_ContentUri(System.String)
     @content_uri.setter
     def content_uri(self, value: str) -> None: ...
+    # System.String Windows.Storage.Provider.StorageProviderGetContentInfoForPathResult::get_ContentId()
     @_property
     def content_id(self) -> str: ...
+    # System.Void Windows.Storage.Provider.StorageProviderGetContentInfoForPathResult::put_ContentId(System.String)
     @content_id.setter
     def content_id(self, value: str) -> None: ...
 
 @typing.final
 class StorageProviderGetPathForContentUriResult(winrt.system.Object):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Windows.Storage.Provider.StorageProviderUriSourceStatus Windows.Storage.Provider.StorageProviderGetPathForContentUriResult::get_Status()
     @_property
     def status(self) -> StorageProviderUriSourceStatus: ...
+    # System.Void Windows.Storage.Provider.StorageProviderGetPathForContentUriResult::put_Status(Windows.Storage.Provider.StorageProviderUriSourceStatus)
     @status.setter
     def status(self, value: StorageProviderUriSourceStatus) -> None: ...
+    # System.String Windows.Storage.Provider.StorageProviderGetPathForContentUriResult::get_Path()
     @_property
     def path(self) -> str: ...
+    # System.Void Windows.Storage.Provider.StorageProviderGetPathForContentUriResult::put_Path(System.String)
     @path.setter
     def path(self, value: str) -> None: ...
 
 @typing.final
 class StorageProviderItemProperties_Static(type):
+    # Windows.Foundation.IAsyncAction Windows.Storage.Provider.StorageProviderItemProperties::SetAsync(Windows.Storage.IStorageItem,Windows.Foundation.Collections.IIterable`1<Windows.Storage.Provider.StorageProviderItemProperty>)
     def set_async(cls, item: windows_storage.ImplementsIStorageItem, item_properties: typing.Iterable[StorageProviderItemProperty], /) -> windows_foundation.IAsyncAction: ...
 
 @typing.final
@@ -119,211 +153,300 @@ class StorageProviderItemProperties(winrt.system.Object, metaclass=StorageProvid
 @typing.final
 class StorageProviderItemProperty(winrt.system.Object):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.String Windows.Storage.Provider.StorageProviderItemProperty::get_Value()
     @_property
     def value(self) -> str: ...
+    # System.Void Windows.Storage.Provider.StorageProviderItemProperty::put_Value(System.String)
     @value.setter
     def value(self, value: str) -> None: ...
+    # System.Int32 Windows.Storage.Provider.StorageProviderItemProperty::get_Id()
     @_property
     def id(self) -> winrt.system.Int32: ...
+    # System.Void Windows.Storage.Provider.StorageProviderItemProperty::put_Id(System.Int32)
     @id.setter
     def id(self, value: winrt.system.Int32) -> None: ...
+    # System.String Windows.Storage.Provider.StorageProviderItemProperty::get_IconResource()
     @_property
     def icon_resource(self) -> str: ...
+    # System.Void Windows.Storage.Provider.StorageProviderItemProperty::put_IconResource(System.String)
     @icon_resource.setter
     def icon_resource(self, value: str) -> None: ...
 
 @typing.final
 class StorageProviderItemPropertyDefinition(winrt.system.Object):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Int32 Windows.Storage.Provider.StorageProviderItemPropertyDefinition::get_Id()
     @_property
     def id(self) -> winrt.system.Int32: ...
+    # System.Void Windows.Storage.Provider.StorageProviderItemPropertyDefinition::put_Id(System.Int32)
     @id.setter
     def id(self, value: winrt.system.Int32) -> None: ...
+    # System.String Windows.Storage.Provider.StorageProviderItemPropertyDefinition::get_DisplayNameResource()
     @_property
     def display_name_resource(self) -> str: ...
+    # System.Void Windows.Storage.Provider.StorageProviderItemPropertyDefinition::put_DisplayNameResource(System.String)
     @display_name_resource.setter
     def display_name_resource(self, value: str) -> None: ...
 
 @typing.final
 class StorageProviderKnownFolderEntry(winrt.system.Object):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Windows.Storage.Provider.StorageProviderKnownFolderSyncStatus Windows.Storage.Provider.StorageProviderKnownFolderEntry::get_Status()
     @_property
     def status(self) -> StorageProviderKnownFolderSyncStatus: ...
+    # System.Void Windows.Storage.Provider.StorageProviderKnownFolderEntry::put_Status(Windows.Storage.Provider.StorageProviderKnownFolderSyncStatus)
     @status.setter
     def status(self, value: StorageProviderKnownFolderSyncStatus) -> None: ...
+    # System.Guid Windows.Storage.Provider.StorageProviderKnownFolderEntry::get_KnownFolderId()
     @_property
     def known_folder_id(self) -> _uuid.UUID: ...
+    # System.Void Windows.Storage.Provider.StorageProviderKnownFolderEntry::put_KnownFolderId(System.Guid)
     @known_folder_id.setter
     def known_folder_id(self, value: _uuid.UUID) -> None: ...
 
 @typing.final
 class StorageProviderKnownFolderSyncInfo(winrt.system.Object):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Windows.Storage.Provider.StorageProviderKnownFolderSyncRequestedHandler Windows.Storage.Provider.StorageProviderKnownFolderSyncInfo::get_SyncRequested()
     @_property
     def sync_requested(self) -> StorageProviderKnownFolderSyncRequestedHandler: ...
+    # System.Void Windows.Storage.Provider.StorageProviderKnownFolderSyncInfo::put_SyncRequested(Windows.Storage.Provider.StorageProviderKnownFolderSyncRequestedHandler)
     @sync_requested.setter
     def sync_requested(self, value: StorageProviderKnownFolderSyncRequestedHandler) -> None: ...
+    # System.String Windows.Storage.Provider.StorageProviderKnownFolderSyncInfo::get_ProviderDisplayName()
     @_property
     def provider_display_name(self) -> str: ...
+    # System.Void Windows.Storage.Provider.StorageProviderKnownFolderSyncInfo::put_ProviderDisplayName(System.String)
     @provider_display_name.setter
     def provider_display_name(self, value: str) -> None: ...
+    # Windows.Foundation.Collections.IVector`1<Windows.Storage.Provider.StorageProviderKnownFolderEntry> Windows.Storage.Provider.StorageProviderKnownFolderSyncInfo::get_KnownFolderEntries()
     @_property
     def known_folder_entries(self) -> typing.MutableSequence[StorageProviderKnownFolderEntry]: ...
 
 @typing.final
 class StorageProviderKnownFolderSyncRequestArgs(winrt.system.Object):
+    # Windows.Foundation.Collections.IVectorView`1<System.Guid> Windows.Storage.Provider.StorageProviderKnownFolderSyncRequestArgs::get_KnownFolders()
     @_property
     def known_folders(self) -> typing.Sequence[_uuid.UUID]: ...
+    # Windows.Storage.StorageFolder Windows.Storage.Provider.StorageProviderKnownFolderSyncRequestArgs::get_Source()
     @_property
     def source(self) -> windows_storage.StorageFolder: ...
 
 @typing.final
 class StorageProviderMoreInfoUI(winrt.system.Object):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.String Windows.Storage.Provider.StorageProviderMoreInfoUI::get_Message()
     @_property
     def message(self) -> str: ...
+    # System.Void Windows.Storage.Provider.StorageProviderMoreInfoUI::put_Message(System.String)
     @message.setter
     def message(self, value: str) -> None: ...
+    # Windows.Storage.Provider.IStorageProviderUICommand Windows.Storage.Provider.StorageProviderMoreInfoUI::get_Command()
     @_property
     def command(self) -> IStorageProviderUICommand: ...
+    # System.Void Windows.Storage.Provider.StorageProviderMoreInfoUI::put_Command(Windows.Storage.Provider.IStorageProviderUICommand)
     @command.setter
     def command(self, value: ImplementsIStorageProviderUICommand) -> None: ...
 
 @typing.final
 class StorageProviderQuotaUI(winrt.system.Object):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.String Windows.Storage.Provider.StorageProviderQuotaUI::get_QuotaUsedLabel()
     @_property
     def quota_used_label(self) -> str: ...
+    # System.Void Windows.Storage.Provider.StorageProviderQuotaUI::put_QuotaUsedLabel(System.String)
     @quota_used_label.setter
     def quota_used_label(self, value: str) -> None: ...
+    # System.UInt64 Windows.Storage.Provider.StorageProviderQuotaUI::get_QuotaUsedInBytes()
     @_property
     def quota_used_in_bytes(self) -> winrt.system.UInt64: ...
+    # System.Void Windows.Storage.Provider.StorageProviderQuotaUI::put_QuotaUsedInBytes(System.UInt64)
     @quota_used_in_bytes.setter
     def quota_used_in_bytes(self, value: winrt.system.UInt64) -> None: ...
+    # Windows.Foundation.IReference`1<Windows.UI.Color> Windows.Storage.Provider.StorageProviderQuotaUI::get_QuotaUsedColor()
     @_property
     def quota_used_color(self) -> typing.Optional[windows_ui.Color]: ...
+    # System.Void Windows.Storage.Provider.StorageProviderQuotaUI::put_QuotaUsedColor(Windows.Foundation.IReference`1<Windows.UI.Color>)
     @quota_used_color.setter
     def quota_used_color(self, value: typing.Optional[windows_ui.Color]) -> None: ...
+    # System.UInt64 Windows.Storage.Provider.StorageProviderQuotaUI::get_QuotaTotalInBytes()
     @_property
     def quota_total_in_bytes(self) -> winrt.system.UInt64: ...
+    # System.Void Windows.Storage.Provider.StorageProviderQuotaUI::put_QuotaTotalInBytes(System.UInt64)
     @quota_total_in_bytes.setter
     def quota_total_in_bytes(self, value: winrt.system.UInt64) -> None: ...
 
 @typing.final
 class StorageProviderStatusUI(winrt.system.Object):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Windows.Storage.Provider.IStorageProviderUICommand Windows.Storage.Provider.StorageProviderStatusUI::get_SyncStatusCommand()
     @_property
     def sync_status_command(self) -> IStorageProviderUICommand: ...
+    # System.Void Windows.Storage.Provider.StorageProviderStatusUI::put_SyncStatusCommand(Windows.Storage.Provider.IStorageProviderUICommand)
     @sync_status_command.setter
     def sync_status_command(self, value: ImplementsIStorageProviderUICommand) -> None: ...
+    # Windows.Storage.Provider.StorageProviderQuotaUI Windows.Storage.Provider.StorageProviderStatusUI::get_QuotaUI()
     @_property
     def quota_ui(self) -> StorageProviderQuotaUI: ...
+    # System.Void Windows.Storage.Provider.StorageProviderStatusUI::put_QuotaUI(Windows.Storage.Provider.StorageProviderQuotaUI)
     @quota_ui.setter
     def quota_ui(self, value: StorageProviderQuotaUI) -> None: ...
+    # System.String Windows.Storage.Provider.StorageProviderStatusUI::get_ProviderStateLabel()
     @_property
     def provider_state_label(self) -> str: ...
+    # System.Void Windows.Storage.Provider.StorageProviderStatusUI::put_ProviderStateLabel(System.String)
     @provider_state_label.setter
     def provider_state_label(self, value: str) -> None: ...
+    # Windows.Foundation.Uri Windows.Storage.Provider.StorageProviderStatusUI::get_ProviderStateIcon()
     @_property
     def provider_state_icon(self) -> windows_foundation.Uri: ...
+    # System.Void Windows.Storage.Provider.StorageProviderStatusUI::put_ProviderStateIcon(Windows.Foundation.Uri)
     @provider_state_icon.setter
     def provider_state_icon(self, value: windows_foundation.Uri) -> None: ...
+    # Windows.Storage.Provider.StorageProviderState Windows.Storage.Provider.StorageProviderStatusUI::get_ProviderState()
     @_property
     def provider_state(self) -> StorageProviderState: ...
+    # System.Void Windows.Storage.Provider.StorageProviderStatusUI::put_ProviderState(Windows.Storage.Provider.StorageProviderState)
     @provider_state.setter
     def provider_state(self, value: StorageProviderState) -> None: ...
+    # Windows.Foundation.Collections.IVector`1<Windows.Storage.Provider.IStorageProviderUICommand> Windows.Storage.Provider.StorageProviderStatusUI::get_ProviderSecondaryCommands()
     @_property
     def provider_secondary_commands(self) -> typing.MutableSequence[IStorageProviderUICommand]: ...
+    # System.Void Windows.Storage.Provider.StorageProviderStatusUI::put_ProviderSecondaryCommands(Windows.Foundation.Collections.IVector`1<Windows.Storage.Provider.IStorageProviderUICommand>)
     @provider_secondary_commands.setter
     def provider_secondary_commands(self, value: typing.MutableSequence[ImplementsIStorageProviderUICommand]) -> None: ...
+    # Windows.Storage.Provider.IStorageProviderUICommand Windows.Storage.Provider.StorageProviderStatusUI::get_ProviderPrimaryCommand()
     @_property
     def provider_primary_command(self) -> IStorageProviderUICommand: ...
+    # System.Void Windows.Storage.Provider.StorageProviderStatusUI::put_ProviderPrimaryCommand(Windows.Storage.Provider.IStorageProviderUICommand)
     @provider_primary_command.setter
     def provider_primary_command(self, value: ImplementsIStorageProviderUICommand) -> None: ...
+    # Windows.Storage.Provider.StorageProviderMoreInfoUI Windows.Storage.Provider.StorageProviderStatusUI::get_MoreInfoUI()
     @_property
     def more_info_ui(self) -> StorageProviderMoreInfoUI: ...
+    # System.Void Windows.Storage.Provider.StorageProviderStatusUI::put_MoreInfoUI(Windows.Storage.Provider.StorageProviderMoreInfoUI)
     @more_info_ui.setter
     def more_info_ui(self, value: StorageProviderMoreInfoUI) -> None: ...
 
 @typing.final
 class StorageProviderSyncRootInfo(winrt.system.Object):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.String Windows.Storage.Provider.StorageProviderSyncRootInfo::get_Version()
     @_property
     def version(self) -> str: ...
+    # System.Void Windows.Storage.Provider.StorageProviderSyncRootInfo::put_Version(System.String)
     @version.setter
     def version(self, value: str) -> None: ...
+    # System.Boolean Windows.Storage.Provider.StorageProviderSyncRootInfo::get_ShowSiblingsAsGroup()
     @_property
     def show_siblings_as_group(self) -> bool: ...
+    # System.Void Windows.Storage.Provider.StorageProviderSyncRootInfo::put_ShowSiblingsAsGroup(System.Boolean)
     @show_siblings_as_group.setter
     def show_siblings_as_group(self, value: bool) -> None: ...
+    # Windows.Foundation.Uri Windows.Storage.Provider.StorageProviderSyncRootInfo::get_RecycleBinUri()
     @_property
     def recycle_bin_uri(self) -> windows_foundation.Uri: ...
+    # System.Void Windows.Storage.Provider.StorageProviderSyncRootInfo::put_RecycleBinUri(Windows.Foundation.Uri)
     @recycle_bin_uri.setter
     def recycle_bin_uri(self, value: windows_foundation.Uri) -> None: ...
+    # Windows.Storage.Provider.StorageProviderProtectionMode Windows.Storage.Provider.StorageProviderSyncRootInfo::get_ProtectionMode()
     @_property
     def protection_mode(self) -> StorageProviderProtectionMode: ...
+    # System.Void Windows.Storage.Provider.StorageProviderSyncRootInfo::put_ProtectionMode(Windows.Storage.Provider.StorageProviderProtectionMode)
     @protection_mode.setter
     def protection_mode(self, value: StorageProviderProtectionMode) -> None: ...
+    # Windows.Storage.Provider.StorageProviderPopulationPolicy Windows.Storage.Provider.StorageProviderSyncRootInfo::get_PopulationPolicy()
     @_property
     def population_policy(self) -> StorageProviderPopulationPolicy: ...
+    # System.Void Windows.Storage.Provider.StorageProviderSyncRootInfo::put_PopulationPolicy(Windows.Storage.Provider.StorageProviderPopulationPolicy)
     @population_policy.setter
     def population_policy(self, value: StorageProviderPopulationPolicy) -> None: ...
+    # Windows.Storage.IStorageFolder Windows.Storage.Provider.StorageProviderSyncRootInfo::get_Path()
     @_property
     def path(self) -> windows_storage.IStorageFolder: ...
+    # System.Void Windows.Storage.Provider.StorageProviderSyncRootInfo::put_Path(Windows.Storage.IStorageFolder)
     @path.setter
     def path(self, value: windows_storage.ImplementsIStorageFolder) -> None: ...
+    # Windows.Storage.Provider.StorageProviderInSyncPolicy Windows.Storage.Provider.StorageProviderSyncRootInfo::get_InSyncPolicy()
     @_property
     def in_sync_policy(self) -> StorageProviderInSyncPolicy: ...
+    # System.Void Windows.Storage.Provider.StorageProviderSyncRootInfo::put_InSyncPolicy(Windows.Storage.Provider.StorageProviderInSyncPolicy)
     @in_sync_policy.setter
     def in_sync_policy(self, value: StorageProviderInSyncPolicy) -> None: ...
+    # System.String Windows.Storage.Provider.StorageProviderSyncRootInfo::get_Id()
     @_property
     def id(self) -> str: ...
+    # System.Void Windows.Storage.Provider.StorageProviderSyncRootInfo::put_Id(System.String)
     @id.setter
     def id(self, value: str) -> None: ...
+    # System.String Windows.Storage.Provider.StorageProviderSyncRootInfo::get_IconResource()
     @_property
     def icon_resource(self) -> str: ...
+    # System.Void Windows.Storage.Provider.StorageProviderSyncRootInfo::put_IconResource(System.String)
     @icon_resource.setter
     def icon_resource(self, value: str) -> None: ...
+    # Windows.Storage.Provider.StorageProviderHydrationPolicyModifier Windows.Storage.Provider.StorageProviderSyncRootInfo::get_HydrationPolicyModifier()
     @_property
     def hydration_policy_modifier(self) -> StorageProviderHydrationPolicyModifier: ...
+    # System.Void Windows.Storage.Provider.StorageProviderSyncRootInfo::put_HydrationPolicyModifier(Windows.Storage.Provider.StorageProviderHydrationPolicyModifier)
     @hydration_policy_modifier.setter
     def hydration_policy_modifier(self, value: StorageProviderHydrationPolicyModifier) -> None: ...
+    # Windows.Storage.Provider.StorageProviderHydrationPolicy Windows.Storage.Provider.StorageProviderSyncRootInfo::get_HydrationPolicy()
     @_property
     def hydration_policy(self) -> StorageProviderHydrationPolicy: ...
+    # System.Void Windows.Storage.Provider.StorageProviderSyncRootInfo::put_HydrationPolicy(Windows.Storage.Provider.StorageProviderHydrationPolicy)
     @hydration_policy.setter
     def hydration_policy(self, value: StorageProviderHydrationPolicy) -> None: ...
+    # Windows.Storage.Provider.StorageProviderHardlinkPolicy Windows.Storage.Provider.StorageProviderSyncRootInfo::get_HardlinkPolicy()
     @_property
     def hardlink_policy(self) -> StorageProviderHardlinkPolicy: ...
+    # System.Void Windows.Storage.Provider.StorageProviderSyncRootInfo::put_HardlinkPolicy(Windows.Storage.Provider.StorageProviderHardlinkPolicy)
     @hardlink_policy.setter
     def hardlink_policy(self, value: StorageProviderHardlinkPolicy) -> None: ...
+    # System.String Windows.Storage.Provider.StorageProviderSyncRootInfo::get_DisplayNameResource()
     @_property
     def display_name_resource(self) -> str: ...
+    # System.Void Windows.Storage.Provider.StorageProviderSyncRootInfo::put_DisplayNameResource(System.String)
     @display_name_resource.setter
     def display_name_resource(self, value: str) -> None: ...
+    # Windows.Storage.Streams.IBuffer Windows.Storage.Provider.StorageProviderSyncRootInfo::get_Context()
     @_property
     def context(self) -> windows_storage_streams.IBuffer: ...
+    # System.Void Windows.Storage.Provider.StorageProviderSyncRootInfo::put_Context(Windows.Storage.Streams.IBuffer)
     @context.setter
     def context(self, value: windows_storage_streams.ImplementsIBuffer) -> None: ...
+    # System.Boolean Windows.Storage.Provider.StorageProviderSyncRootInfo::get_AllowPinning()
     @_property
     def allow_pinning(self) -> bool: ...
+    # System.Void Windows.Storage.Provider.StorageProviderSyncRootInfo::put_AllowPinning(System.Boolean)
     @allow_pinning.setter
     def allow_pinning(self, value: bool) -> None: ...
+    # Windows.Foundation.Collections.IVector`1<Windows.Storage.Provider.StorageProviderItemPropertyDefinition> Windows.Storage.Provider.StorageProviderSyncRootInfo::get_StorageProviderItemPropertyDefinitions()
     @_property
     def storage_provider_item_property_definitions(self) -> typing.MutableSequence[StorageProviderItemPropertyDefinition]: ...
+    # System.Guid Windows.Storage.Provider.StorageProviderSyncRootInfo::get_ProviderId()
     @_property
     def provider_id(self) -> _uuid.UUID: ...
+    # System.Void Windows.Storage.Provider.StorageProviderSyncRootInfo::put_ProviderId(System.Guid)
     @provider_id.setter
     def provider_id(self, value: _uuid.UUID) -> None: ...
+    # Windows.Foundation.Collections.IVector`1<Windows.Storage.Provider.StorageProviderFileTypeInfo> Windows.Storage.Provider.StorageProviderSyncRootInfo::get_FallbackFileTypeInfo()
     @_property
     def fallback_file_type_info(self) -> typing.MutableSequence[StorageProviderFileTypeInfo]: ...
 
 @typing.final
 class StorageProviderSyncRootManager_Static(type):
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Storage.Provider.StorageProviderSyncRootInfo> Windows.Storage.Provider.StorageProviderSyncRootManager::GetCurrentSyncRoots()
     def get_current_sync_roots(cls) -> typing.Sequence[StorageProviderSyncRootInfo]: ...
+    # Windows.Storage.Provider.StorageProviderSyncRootInfo Windows.Storage.Provider.StorageProviderSyncRootManager::GetSyncRootInformationForFolder(Windows.Storage.IStorageFolder)
     def get_sync_root_information_for_folder(cls, folder: windows_storage.ImplementsIStorageFolder, /) -> StorageProviderSyncRootInfo: ...
+    # Windows.Storage.Provider.StorageProviderSyncRootInfo Windows.Storage.Provider.StorageProviderSyncRootManager::GetSyncRootInformationForId(System.String)
     def get_sync_root_information_for_id(cls, id: str, /) -> StorageProviderSyncRootInfo: ...
+    # System.Boolean Windows.Storage.Provider.StorageProviderSyncRootManager::IsSupported()
     def is_supported(cls) -> bool: ...
+    # System.Void Windows.Storage.Provider.StorageProviderSyncRootManager::Register(Windows.Storage.Provider.StorageProviderSyncRootInfo)
     def register(cls, sync_root_information: StorageProviderSyncRootInfo, /) -> None: ...
+    # System.Void Windows.Storage.Provider.StorageProviderSyncRootManager::Unregister(System.String)
     def unregister(cls, id: str, /) -> None: ...
 
 @typing.final
@@ -335,6 +458,7 @@ class ImplementsIStorageProviderItemPropertySource():
 
 @typing.final
 class IStorageProviderItemPropertySource(winrt.system.Object, ImplementsIStorageProviderItemPropertySource):
+    # Windows.Foundation.Collections.IIterable`1<Windows.Storage.Provider.StorageProviderItemProperty> Windows.Storage.Provider.IStorageProviderItemPropertySource::GetItemProperties(System.String)
     def get_item_properties(self, item_path: str, /) -> typing.Iterable[StorageProviderItemProperty]: ...
 
 class ImplementsIStorageProviderKnownFolderSyncInfoSource():
@@ -342,8 +466,11 @@ class ImplementsIStorageProviderKnownFolderSyncInfoSource():
 
 @typing.final
 class IStorageProviderKnownFolderSyncInfoSource(winrt.system.Object, ImplementsIStorageProviderKnownFolderSyncInfoSource):
+    # Windows.Storage.Provider.StorageProviderKnownFolderSyncInfo Windows.Storage.Provider.IStorageProviderKnownFolderSyncInfoSource::GetKnownFolderSyncInfo()
     def get_known_folder_sync_info(self) -> StorageProviderKnownFolderSyncInfo: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Storage.Provider.IStorageProviderKnownFolderSyncInfoSource::add_KnownFolderSyncInfoChanged(Windows.Foundation.TypedEventHandler`2<Windows.Storage.Provider.IStorageProviderKnownFolderSyncInfoSource,System.Object>)
     def add_known_folder_sync_info_changed(self, handler: windows_foundation.TypedEventHandler[IStorageProviderKnownFolderSyncInfoSource, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Storage.Provider.IStorageProviderKnownFolderSyncInfoSource::remove_KnownFolderSyncInfoChanged(Windows.Foundation.EventRegistrationToken)
     def remove_known_folder_sync_info_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
 class ImplementsIStorageProviderKnownFolderSyncInfoSourceFactory():
@@ -351,6 +478,7 @@ class ImplementsIStorageProviderKnownFolderSyncInfoSourceFactory():
 
 @typing.final
 class IStorageProviderKnownFolderSyncInfoSourceFactory(winrt.system.Object, ImplementsIStorageProviderKnownFolderSyncInfoSourceFactory):
+    # Windows.Storage.Provider.IStorageProviderKnownFolderSyncInfoSource Windows.Storage.Provider.IStorageProviderKnownFolderSyncInfoSourceFactory::GetKnownFolderSyncInfoSource()
     def get_known_folder_sync_info_source(self) -> IStorageProviderKnownFolderSyncInfoSource: ...
 
 class ImplementsIStorageProviderPropertyCapabilities():
@@ -358,6 +486,7 @@ class ImplementsIStorageProviderPropertyCapabilities():
 
 @typing.final
 class IStorageProviderPropertyCapabilities(winrt.system.Object, ImplementsIStorageProviderPropertyCapabilities):
+    # System.Boolean Windows.Storage.Provider.IStorageProviderPropertyCapabilities::IsPropertySupported(System.String)
     def is_property_supported(self, property_canonical_name: str, /) -> bool: ...
 
 class ImplementsIStorageProviderShareLinkSource():
@@ -365,8 +494,11 @@ class ImplementsIStorageProviderShareLinkSource():
 
 @typing.final
 class IStorageProviderShareLinkSource(winrt.system.Object, ImplementsIStorageProviderShareLinkSource):
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Uri> Windows.Storage.Provider.IStorageProviderShareLinkSource::CreateLinkAsync(Windows.Foundation.Collections.IVectorView`1<Windows.Storage.IStorageItem>)
     def create_link_async(self, storage_item_list: typing.Sequence[windows_storage.ImplementsIStorageItem], /) -> windows_foundation.IAsyncOperation[windows_foundation.Uri]: ...
+    # Windows.Foundation.IAsyncOperation`1<System.String> Windows.Storage.Provider.IStorageProviderShareLinkSource::GetDefaultAccessControlStringAsync(Windows.Foundation.Collections.IVectorView`1<Windows.Storage.IStorageItem>)
     def get_default_access_control_string_async(self, storage_item_list: typing.Sequence[windows_storage.ImplementsIStorageItem], /) -> windows_foundation.IAsyncOperation[str]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Provider.StorageProviderShareLinkState> Windows.Storage.Provider.IStorageProviderShareLinkSource::GetState(Windows.Foundation.Collections.IVectorView`1<Windows.Storage.IStorageItem>)
     def get_state(self, storage_item_list: typing.Sequence[windows_storage.ImplementsIStorageItem], /) -> windows_foundation.IAsyncOperation[StorageProviderShareLinkState]: ...
 
 class ImplementsIStorageProviderStatusUISource():
@@ -374,8 +506,11 @@ class ImplementsIStorageProviderStatusUISource():
 
 @typing.final
 class IStorageProviderStatusUISource(winrt.system.Object, ImplementsIStorageProviderStatusUISource):
+    # Windows.Storage.Provider.StorageProviderStatusUI Windows.Storage.Provider.IStorageProviderStatusUISource::GetStatusUI()
     def get_status_ui(self) -> StorageProviderStatusUI: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Storage.Provider.IStorageProviderStatusUISource::add_StatusUIChanged(Windows.Foundation.TypedEventHandler`2<Windows.Storage.Provider.IStorageProviderStatusUISource,System.Object>)
     def add_status_ui_changed(self, handler: windows_foundation.TypedEventHandler[IStorageProviderStatusUISource, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Storage.Provider.IStorageProviderStatusUISource::remove_StatusUIChanged(Windows.Foundation.EventRegistrationToken)
     def remove_status_ui_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
 class ImplementsIStorageProviderStatusUISourceFactory():
@@ -383,6 +518,7 @@ class ImplementsIStorageProviderStatusUISourceFactory():
 
 @typing.final
 class IStorageProviderStatusUISourceFactory(winrt.system.Object, ImplementsIStorageProviderStatusUISourceFactory):
+    # Windows.Storage.Provider.IStorageProviderStatusUISource Windows.Storage.Provider.IStorageProviderStatusUISourceFactory::GetStatusUISource(System.String)
     def get_status_ui_source(self, sync_root_id: str, /) -> IStorageProviderStatusUISource: ...
 
 class ImplementsIStorageProviderUICommand():
@@ -390,13 +526,18 @@ class ImplementsIStorageProviderUICommand():
 
 @typing.final
 class IStorageProviderUICommand(winrt.system.Object, ImplementsIStorageProviderUICommand):
+    # System.Void Windows.Storage.Provider.IStorageProviderUICommand::Invoke()
     def invoke(self) -> None: ...
+    # System.String Windows.Storage.Provider.IStorageProviderUICommand::get_Description()
     @_property
     def description(self) -> str: ...
+    # Windows.Foundation.Uri Windows.Storage.Provider.IStorageProviderUICommand::get_Icon()
     @_property
     def icon(self) -> windows_foundation.Uri: ...
+    # System.String Windows.Storage.Provider.IStorageProviderUICommand::get_Label()
     @_property
     def label(self) -> str: ...
+    # Windows.Storage.Provider.StorageProviderUICommandState Windows.Storage.Provider.IStorageProviderUICommand::get_State()
     @_property
     def state(self) -> StorageProviderUICommandState: ...
 
@@ -405,6 +546,8 @@ class ImplementsIStorageProviderUriSource():
 
 @typing.final
 class IStorageProviderUriSource(winrt.system.Object, ImplementsIStorageProviderUriSource):
+    # System.Void Windows.Storage.Provider.IStorageProviderUriSource::GetContentInfoForPath(System.String,Windows.Storage.Provider.StorageProviderGetContentInfoForPathResult)
     def get_content_info_for_path(self, path: str, result: StorageProviderGetContentInfoForPathResult, /) -> None: ...
+    # System.Void Windows.Storage.Provider.IStorageProviderUriSource::GetPathForContentUri(System.String,Windows.Storage.Provider.StorageProviderGetPathForContentUriResult)
     def get_path_for_content_uri(self, content_uri: str, result: StorageProviderGetPathForContentUriResult, /) -> None: ...
 

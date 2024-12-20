@@ -302,138 +302,183 @@ from winrt.windows.ui.xaml.controls import BackClickEventHandler, CalendarViewDa
 Self = typing.TypeVar('Self')
 
 class AppBarButton_Static(Button_Static):
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.AppBarButton::get_IconProperty()
     @_property
     @typing.final
     def icon_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.AppBarButton::get_IsCompactProperty()
     @_property
     @typing.final
     def is_compact_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.AppBarButton::get_LabelProperty()
     @_property
     @typing.final
     def label_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.AppBarButton::get_DynamicOverflowOrderProperty()
     @_property
     @typing.final
     def dynamic_overflow_order_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.AppBarButton::get_IsInOverflowProperty()
     @_property
     @typing.final
     def is_in_overflow_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.AppBarButton::get_LabelPositionProperty()
     @_property
     @typing.final
     def label_position_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.AppBarButton::get_KeyboardAcceleratorTextOverrideProperty()
     @_property
     @typing.final
     def keyboard_accelerator_text_override_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class AppBarButton(Button, ImplementsICommandBarElement2, ImplementsICommandBarElement, metaclass=AppBarButton_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.String Windows.UI.Xaml.Controls.AppBarButton::get_Label()
     @_property
     def label(self) -> str: ...
+    # System.Void Windows.UI.Xaml.Controls.AppBarButton::put_Label(System.String)
     @label.setter
     @typing.final
     def label(self, value: str) -> None: ...
+    # Windows.UI.Xaml.Controls.IconElement Windows.UI.Xaml.Controls.AppBarButton::get_Icon()
     @_property
     def icon(self) -> IconElement: ...
+    # System.Void Windows.UI.Xaml.Controls.AppBarButton::put_Icon(Windows.UI.Xaml.Controls.IconElement)
     @icon.setter
     @typing.final
     def icon(self, value: IconElement) -> None: ...
+    # Windows.UI.Xaml.Controls.CommandBarLabelPosition Windows.UI.Xaml.Controls.AppBarButton::get_LabelPosition()
     @_property
     def label_position(self) -> CommandBarLabelPosition: ...
+    # System.Void Windows.UI.Xaml.Controls.AppBarButton::put_LabelPosition(Windows.UI.Xaml.Controls.CommandBarLabelPosition)
     @label_position.setter
     @typing.final
     def label_position(self, value: CommandBarLabelPosition) -> None: ...
+    # System.String Windows.UI.Xaml.Controls.AppBarButton::get_KeyboardAcceleratorTextOverride()
     @_property
     def keyboard_accelerator_text_override(self) -> str: ...
+    # System.Void Windows.UI.Xaml.Controls.AppBarButton::put_KeyboardAcceleratorTextOverride(System.String)
     @keyboard_accelerator_text_override.setter
     @typing.final
     def keyboard_accelerator_text_override(self, value: str) -> None: ...
+    # Windows.UI.Xaml.Controls.Primitives.AppBarButtonTemplateSettings Windows.UI.Xaml.Controls.AppBarButton::get_TemplateSettings()
     @_property
     @typing.final
     def template_settings(self) -> windows_ui_xaml_controls_primitives.AppBarButtonTemplateSettings: ...
+    # System.Boolean Windows.UI.Xaml.Controls.AppBarButton::get_IsCompact()
     @_property
     def is_compact(self) -> bool: ...
+    # System.Void Windows.UI.Xaml.Controls.AppBarButton::put_IsCompact(System.Boolean)
     @is_compact.setter
     @typing.final
     def is_compact(self, value: bool) -> None: ...
+    # System.Int32 Windows.UI.Xaml.Controls.AppBarButton::get_DynamicOverflowOrder()
     @_property
     def dynamic_overflow_order(self) -> winrt.system.Int32: ...
+    # System.Void Windows.UI.Xaml.Controls.AppBarButton::put_DynamicOverflowOrder(System.Int32)
     @dynamic_overflow_order.setter
     @typing.final
     def dynamic_overflow_order(self, value: winrt.system.Int32) -> None: ...
+    # System.Boolean Windows.UI.Xaml.Controls.AppBarButton::get_IsInOverflow()
     @_property
     @typing.final
     def is_in_overflow(self) -> bool: ...
 
 class AppBarToggleButton_Static(windows_ui_xaml_controls_primitives.ToggleButton_Static):
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.AppBarToggleButton::get_IconProperty()
     @_property
     @typing.final
     def icon_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.AppBarToggleButton::get_IsCompactProperty()
     @_property
     @typing.final
     def is_compact_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.AppBarToggleButton::get_LabelProperty()
     @_property
     @typing.final
     def label_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.AppBarToggleButton::get_DynamicOverflowOrderProperty()
     @_property
     @typing.final
     def dynamic_overflow_order_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.AppBarToggleButton::get_IsInOverflowProperty()
     @_property
     @typing.final
     def is_in_overflow_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.AppBarToggleButton::get_LabelPositionProperty()
     @_property
     @typing.final
     def label_position_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.AppBarToggleButton::get_KeyboardAcceleratorTextOverrideProperty()
     @_property
     @typing.final
     def keyboard_accelerator_text_override_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class AppBarToggleButton(windows_ui_xaml_controls_primitives.ToggleButton, ImplementsICommandBarElement2, ImplementsICommandBarElement, metaclass=AppBarToggleButton_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.String Windows.UI.Xaml.Controls.AppBarToggleButton::get_Label()
     @_property
     def label(self) -> str: ...
+    # System.Void Windows.UI.Xaml.Controls.AppBarToggleButton::put_Label(System.String)
     @label.setter
     @typing.final
     def label(self, value: str) -> None: ...
+    # Windows.UI.Xaml.Controls.IconElement Windows.UI.Xaml.Controls.AppBarToggleButton::get_Icon()
     @_property
     def icon(self) -> IconElement: ...
+    # System.Void Windows.UI.Xaml.Controls.AppBarToggleButton::put_Icon(Windows.UI.Xaml.Controls.IconElement)
     @icon.setter
     @typing.final
     def icon(self, value: IconElement) -> None: ...
+    # Windows.UI.Xaml.Controls.CommandBarLabelPosition Windows.UI.Xaml.Controls.AppBarToggleButton::get_LabelPosition()
     @_property
     def label_position(self) -> CommandBarLabelPosition: ...
+    # System.Void Windows.UI.Xaml.Controls.AppBarToggleButton::put_LabelPosition(Windows.UI.Xaml.Controls.CommandBarLabelPosition)
     @label_position.setter
     @typing.final
     def label_position(self, value: CommandBarLabelPosition) -> None: ...
+    # System.String Windows.UI.Xaml.Controls.AppBarToggleButton::get_KeyboardAcceleratorTextOverride()
     @_property
     def keyboard_accelerator_text_override(self) -> str: ...
+    # System.Void Windows.UI.Xaml.Controls.AppBarToggleButton::put_KeyboardAcceleratorTextOverride(System.String)
     @keyboard_accelerator_text_override.setter
     @typing.final
     def keyboard_accelerator_text_override(self, value: str) -> None: ...
+    # Windows.UI.Xaml.Controls.Primitives.AppBarToggleButtonTemplateSettings Windows.UI.Xaml.Controls.AppBarToggleButton::get_TemplateSettings()
     @_property
     @typing.final
     def template_settings(self) -> windows_ui_xaml_controls_primitives.AppBarToggleButtonTemplateSettings: ...
+    # System.Boolean Windows.UI.Xaml.Controls.AppBarToggleButton::get_IsCompact()
     @_property
     def is_compact(self) -> bool: ...
+    # System.Void Windows.UI.Xaml.Controls.AppBarToggleButton::put_IsCompact(System.Boolean)
     @is_compact.setter
     @typing.final
     def is_compact(self, value: bool) -> None: ...
+    # System.Int32 Windows.UI.Xaml.Controls.AppBarToggleButton::get_DynamicOverflowOrder()
     @_property
     def dynamic_overflow_order(self) -> winrt.system.Int32: ...
+    # System.Void Windows.UI.Xaml.Controls.AppBarToggleButton::put_DynamicOverflowOrder(System.Int32)
     @dynamic_overflow_order.setter
     @typing.final
     def dynamic_overflow_order(self, value: winrt.system.Int32) -> None: ...
+    # System.Boolean Windows.UI.Xaml.Controls.AppBarToggleButton::get_IsInOverflow()
     @_property
     @typing.final
     def is_in_overflow(self) -> bool: ...
 
 class Button_Static(windows_ui_xaml_controls_primitives.ButtonBase_Static):
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.Button::get_FlyoutProperty()
     @_property
     @typing.final
     def flyout_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class Button(windows_ui_xaml_controls_primitives.ButtonBase, metaclass=Button_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Windows.UI.Xaml.Controls.Primitives.FlyoutBase Windows.UI.Xaml.Controls.Button::get_Flyout()
     @_property
     def flyout(self) -> windows_ui_xaml_controls_primitives.FlyoutBase: ...
+    # System.Void Windows.UI.Xaml.Controls.Button::put_Flyout(Windows.UI.Xaml.Controls.Primitives.FlyoutBase)
     @flyout.setter
     @typing.final
     def flyout(self, value: windows_ui_xaml_controls_primitives.FlyoutBase) -> None: ...
@@ -445,136 +490,187 @@ class CheckBox(windows_ui_xaml_controls_primitives.ToggleButton, metaclass=Check
     def __new__(cls: typing.Type[Self]) -> Self: ...
 
 class ComboBox_Static(windows_ui_xaml_controls_primitives.Selector_Static):
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.ComboBox::get_IsDropDownOpenProperty()
     @_property
     @typing.final
     def is_drop_down_open_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.ComboBox::get_MaxDropDownHeightProperty()
     @_property
     @typing.final
     def max_drop_down_height_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.ComboBox::get_HeaderProperty()
     @_property
     @typing.final
     def header_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.ComboBox::get_HeaderTemplateProperty()
     @_property
     @typing.final
     def header_template_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.ComboBox::get_PlaceholderTextProperty()
     @_property
     @typing.final
     def placeholder_text_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.ComboBox::get_IsTextSearchEnabledProperty()
     @_property
     @typing.final
     def is_text_search_enabled_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.ComboBox::get_LightDismissOverlayModeProperty()
     @_property
     @typing.final
     def light_dismiss_overlay_mode_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.ComboBox::get_SelectionChangedTriggerProperty()
     @_property
     @typing.final
     def selection_changed_trigger_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.ComboBox::get_PlaceholderForegroundProperty()
     @_property
     @typing.final
     def placeholder_foreground_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.ComboBox::get_DescriptionProperty()
     @_property
     @typing.final
     def description_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.ComboBox::get_IsEditableProperty()
     @_property
     @typing.final
     def is_editable_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.ComboBox::get_TextBoxStyleProperty()
     @_property
     @typing.final
     def text_box_style_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.ComboBox::get_TextProperty()
     @_property
     @typing.final
     def text_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class ComboBox(windows_ui_xaml_controls_primitives.Selector, metaclass=ComboBox_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Void Windows.UI.Xaml.Controls.ComboBox::OnDropDownClosed(System.Object)
     def _on_drop_down_closed(self, e: winrt.system.Object, /) -> None: ...
+    # System.Void Windows.UI.Xaml.Controls.ComboBox::OnDropDownOpened(System.Object)
     def _on_drop_down_opened(self, e: winrt.system.Object, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Windows.UI.Xaml.Controls.ComboBox::add_DropDownClosed(Windows.Foundation.EventHandler`1<System.Object>)
     def add_drop_down_closed(self, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Windows.UI.Xaml.Controls.ComboBox::remove_DropDownClosed(Windows.Foundation.EventRegistrationToken)
     def remove_drop_down_closed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Windows.UI.Xaml.Controls.ComboBox::add_DropDownOpened(Windows.Foundation.EventHandler`1<System.Object>)
     def add_drop_down_opened(self, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Windows.UI.Xaml.Controls.ComboBox::remove_DropDownOpened(Windows.Foundation.EventRegistrationToken)
     def remove_drop_down_opened(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Windows.UI.Xaml.Controls.ComboBox::add_TextSubmitted(Windows.Foundation.TypedEventHandler`2<Windows.UI.Xaml.Controls.ComboBox,Windows.UI.Xaml.Controls.ComboBoxTextSubmittedEventArgs>)
     def add_text_submitted(self, handler: windows_foundation.TypedEventHandler[ComboBox, ComboBoxTextSubmittedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Windows.UI.Xaml.Controls.ComboBox::remove_TextSubmitted(Windows.Foundation.EventRegistrationToken)
     def remove_text_submitted(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.Double Windows.UI.Xaml.Controls.ComboBox::get_MaxDropDownHeight()
     @_property
     def max_drop_down_height(self) -> winrt.system.Double: ...
+    # System.Void Windows.UI.Xaml.Controls.ComboBox::put_MaxDropDownHeight(System.Double)
     @max_drop_down_height.setter
     @typing.final
     def max_drop_down_height(self, value: winrt.system.Double) -> None: ...
+    # System.Boolean Windows.UI.Xaml.Controls.ComboBox::get_IsEditable()
     @_property
     def is_editable(self) -> bool: ...
+    # System.Void Windows.UI.Xaml.Controls.ComboBox::put_IsEditable(System.Boolean)
     @is_editable.setter
     @typing.final
     def is_editable(self, value: bool) -> None: ...
+    # System.Boolean Windows.UI.Xaml.Controls.ComboBox::get_IsDropDownOpen()
     @_property
     def is_drop_down_open(self) -> bool: ...
+    # System.Void Windows.UI.Xaml.Controls.ComboBox::put_IsDropDownOpen(System.Boolean)
     @is_drop_down_open.setter
     @typing.final
     def is_drop_down_open(self, value: bool) -> None: ...
+    # System.Boolean Windows.UI.Xaml.Controls.ComboBox::get_IsSelectionBoxHighlighted()
     @_property
     @typing.final
     def is_selection_box_highlighted(self) -> bool: ...
+    # System.Object Windows.UI.Xaml.Controls.ComboBox::get_SelectionBoxItem()
     @_property
     @typing.final
     def selection_box_item(self) -> winrt.system.Object: ...
+    # Windows.UI.Xaml.DataTemplate Windows.UI.Xaml.Controls.ComboBox::get_SelectionBoxItemTemplate()
     @_property
     @typing.final
     def selection_box_item_template(self) -> windows_ui_xaml.DataTemplate: ...
+    # Windows.UI.Xaml.Controls.Primitives.ComboBoxTemplateSettings Windows.UI.Xaml.Controls.ComboBox::get_TemplateSettings()
     @_property
     @typing.final
     def template_settings(self) -> windows_ui_xaml_controls_primitives.ComboBoxTemplateSettings: ...
+    # System.String Windows.UI.Xaml.Controls.ComboBox::get_PlaceholderText()
     @_property
     def placeholder_text(self) -> str: ...
+    # System.Void Windows.UI.Xaml.Controls.ComboBox::put_PlaceholderText(System.String)
     @placeholder_text.setter
     @typing.final
     def placeholder_text(self, value: str) -> None: ...
+    # Windows.UI.Xaml.DataTemplate Windows.UI.Xaml.Controls.ComboBox::get_HeaderTemplate()
     @_property
     def header_template(self) -> windows_ui_xaml.DataTemplate: ...
+    # System.Void Windows.UI.Xaml.Controls.ComboBox::put_HeaderTemplate(Windows.UI.Xaml.DataTemplate)
     @header_template.setter
     @typing.final
     def header_template(self, value: windows_ui_xaml.DataTemplate) -> None: ...
+    # System.Object Windows.UI.Xaml.Controls.ComboBox::get_Header()
     @_property
     def header(self) -> winrt.system.Object: ...
+    # System.Void Windows.UI.Xaml.Controls.ComboBox::put_Header(System.Object)
     @header.setter
     @typing.final
     def header(self, value: winrt.system.Object) -> None: ...
+    # Windows.UI.Xaml.Controls.LightDismissOverlayMode Windows.UI.Xaml.Controls.ComboBox::get_LightDismissOverlayMode()
     @_property
     def light_dismiss_overlay_mode(self) -> LightDismissOverlayMode: ...
+    # System.Void Windows.UI.Xaml.Controls.ComboBox::put_LightDismissOverlayMode(Windows.UI.Xaml.Controls.LightDismissOverlayMode)
     @light_dismiss_overlay_mode.setter
     @typing.final
     def light_dismiss_overlay_mode(self, value: LightDismissOverlayMode) -> None: ...
+    # System.Boolean Windows.UI.Xaml.Controls.ComboBox::get_IsTextSearchEnabled()
     @_property
     def is_text_search_enabled(self) -> bool: ...
+    # System.Void Windows.UI.Xaml.Controls.ComboBox::put_IsTextSearchEnabled(System.Boolean)
     @is_text_search_enabled.setter
     @typing.final
     def is_text_search_enabled(self, value: bool) -> None: ...
+    # Windows.UI.Xaml.Controls.ComboBoxSelectionChangedTrigger Windows.UI.Xaml.Controls.ComboBox::get_SelectionChangedTrigger()
     @_property
     def selection_changed_trigger(self) -> ComboBoxSelectionChangedTrigger: ...
+    # System.Void Windows.UI.Xaml.Controls.ComboBox::put_SelectionChangedTrigger(Windows.UI.Xaml.Controls.ComboBoxSelectionChangedTrigger)
     @selection_changed_trigger.setter
     @typing.final
     def selection_changed_trigger(self, value: ComboBoxSelectionChangedTrigger) -> None: ...
+    # Windows.UI.Xaml.Media.Brush Windows.UI.Xaml.Controls.ComboBox::get_PlaceholderForeground()
     @_property
     def placeholder_foreground(self) -> windows_ui_xaml_media.Brush: ...
+    # System.Void Windows.UI.Xaml.Controls.ComboBox::put_PlaceholderForeground(Windows.UI.Xaml.Media.Brush)
     @placeholder_foreground.setter
     @typing.final
     def placeholder_foreground(self, value: windows_ui_xaml_media.Brush) -> None: ...
+    # Windows.UI.Xaml.Style Windows.UI.Xaml.Controls.ComboBox::get_TextBoxStyle()
     @_property
     def text_box_style(self) -> windows_ui_xaml.Style: ...
+    # System.Void Windows.UI.Xaml.Controls.ComboBox::put_TextBoxStyle(Windows.UI.Xaml.Style)
     @text_box_style.setter
     @typing.final
     def text_box_style(self, value: windows_ui_xaml.Style) -> None: ...
+    # System.String Windows.UI.Xaml.Controls.ComboBox::get_Text()
     @_property
     def text(self) -> str: ...
+    # System.Void Windows.UI.Xaml.Controls.ComboBox::put_Text(System.String)
     @text.setter
     @typing.final
     def text(self, value: str) -> None: ...
+    # System.Object Windows.UI.Xaml.Controls.ComboBox::get_Description()
     @_property
     def description(self) -> winrt.system.Object: ...
+    # System.Void Windows.UI.Xaml.Controls.ComboBox::put_Description(System.Object)
     @description.setter
     @typing.final
     def description(self, value: winrt.system.Object) -> None: ...
@@ -590,80 +686,115 @@ class CommandBarFlyout_Static(windows_ui_xaml_controls_primitives.FlyoutBase_Sta
 
 class CommandBarFlyout(windows_ui_xaml_controls_primitives.FlyoutBase, metaclass=CommandBarFlyout_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Windows.Foundation.Collections.IObservableVector`1<Windows.UI.Xaml.Controls.ICommandBarElement> Windows.UI.Xaml.Controls.CommandBarFlyout::get_PrimaryCommands()
     @_property
     @typing.final
     def primary_commands(self) -> windows_foundation_collections.IObservableVector[ICommandBarElement]: ...
+    # Windows.Foundation.Collections.IObservableVector`1<Windows.UI.Xaml.Controls.ICommandBarElement> Windows.UI.Xaml.Controls.CommandBarFlyout::get_SecondaryCommands()
     @_property
     @typing.final
     def secondary_commands(self) -> windows_foundation_collections.IObservableVector[ICommandBarElement]: ...
 
 @typing.final
 class DatePickerFlyout_Static(windows_ui_xaml_controls_primitives.PickerFlyoutBase_Static):
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.DatePickerFlyout::get_CalendarIdentifierProperty()
     @_property
     def calendar_identifier_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.DatePickerFlyout::get_DateProperty()
     @_property
     def date_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.DatePickerFlyout::get_DayVisibleProperty()
     @_property
     def day_visible_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.DatePickerFlyout::get_MaxYearProperty()
     @_property
     def max_year_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.DatePickerFlyout::get_MinYearProperty()
     @_property
     def min_year_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.DatePickerFlyout::get_MonthVisibleProperty()
     @_property
     def month_visible_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.DatePickerFlyout::get_YearVisibleProperty()
     @_property
     def year_visible_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.DatePickerFlyout::get_DayFormatProperty()
     @_property
     def day_format_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.DatePickerFlyout::get_MonthFormatProperty()
     @_property
     def month_format_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.DatePickerFlyout::get_YearFormatProperty()
     @_property
     def year_format_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 @typing.final
 class DatePickerFlyout(windows_ui_xaml_controls_primitives.PickerFlyoutBase, metaclass=DatePickerFlyout_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.IReference`1<Windows.Foundation.DateTime>> Windows.UI.Xaml.Controls.DatePickerFlyout::ShowAtAsync(Windows.UI.Xaml.FrameworkElement)
     def show_at_async(self, target: windows_ui_xaml.FrameworkElement, /) -> windows_foundation.IAsyncOperation[typing.Optional[datetime.datetime]]: ...
+    # Windows.Foundation.EventRegistrationToken Windows.UI.Xaml.Controls.DatePickerFlyout::add_DatePicked(Windows.Foundation.TypedEventHandler`2<Windows.UI.Xaml.Controls.DatePickerFlyout,Windows.UI.Xaml.Controls.DatePickedEventArgs>)
     def add_date_picked(self, handler: windows_foundation.TypedEventHandler[DatePickerFlyout, DatePickedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.UI.Xaml.Controls.DatePickerFlyout::remove_DatePicked(Windows.Foundation.EventRegistrationToken)
     def remove_date_picked(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.Boolean Windows.UI.Xaml.Controls.DatePickerFlyout::get_YearVisible()
     @_property
     def year_visible(self) -> bool: ...
+    # System.Void Windows.UI.Xaml.Controls.DatePickerFlyout::put_YearVisible(System.Boolean)
     @year_visible.setter
     def year_visible(self, value: bool) -> None: ...
+    # System.Boolean Windows.UI.Xaml.Controls.DatePickerFlyout::get_MonthVisible()
     @_property
     def month_visible(self) -> bool: ...
+    # System.Void Windows.UI.Xaml.Controls.DatePickerFlyout::put_MonthVisible(System.Boolean)
     @month_visible.setter
     def month_visible(self, value: bool) -> None: ...
+    # Windows.Foundation.DateTime Windows.UI.Xaml.Controls.DatePickerFlyout::get_MinYear()
     @_property
     def min_year(self) -> datetime.datetime: ...
+    # System.Void Windows.UI.Xaml.Controls.DatePickerFlyout::put_MinYear(Windows.Foundation.DateTime)
     @min_year.setter
     def min_year(self, value: datetime.datetime) -> None: ...
+    # Windows.Foundation.DateTime Windows.UI.Xaml.Controls.DatePickerFlyout::get_MaxYear()
     @_property
     def max_year(self) -> datetime.datetime: ...
+    # System.Void Windows.UI.Xaml.Controls.DatePickerFlyout::put_MaxYear(Windows.Foundation.DateTime)
     @max_year.setter
     def max_year(self, value: datetime.datetime) -> None: ...
+    # System.Boolean Windows.UI.Xaml.Controls.DatePickerFlyout::get_DayVisible()
     @_property
     def day_visible(self) -> bool: ...
+    # System.Void Windows.UI.Xaml.Controls.DatePickerFlyout::put_DayVisible(System.Boolean)
     @day_visible.setter
     def day_visible(self, value: bool) -> None: ...
+    # Windows.Foundation.DateTime Windows.UI.Xaml.Controls.DatePickerFlyout::get_Date()
     @_property
     def date(self) -> datetime.datetime: ...
+    # System.Void Windows.UI.Xaml.Controls.DatePickerFlyout::put_Date(Windows.Foundation.DateTime)
     @date.setter
     def date(self, value: datetime.datetime) -> None: ...
+    # System.String Windows.UI.Xaml.Controls.DatePickerFlyout::get_CalendarIdentifier()
     @_property
     def calendar_identifier(self) -> str: ...
+    # System.Void Windows.UI.Xaml.Controls.DatePickerFlyout::put_CalendarIdentifier(System.String)
     @calendar_identifier.setter
     def calendar_identifier(self, value: str) -> None: ...
+    # System.String Windows.UI.Xaml.Controls.DatePickerFlyout::get_YearFormat()
     @_property
     def year_format(self) -> str: ...
+    # System.Void Windows.UI.Xaml.Controls.DatePickerFlyout::put_YearFormat(System.String)
     @year_format.setter
     def year_format(self, value: str) -> None: ...
+    # System.String Windows.UI.Xaml.Controls.DatePickerFlyout::get_MonthFormat()
     @_property
     def month_format(self) -> str: ...
+    # System.Void Windows.UI.Xaml.Controls.DatePickerFlyout::put_MonthFormat(System.String)
     @month_format.setter
     def month_format(self, value: str) -> None: ...
+    # System.String Windows.UI.Xaml.Controls.DatePickerFlyout::get_DayFormat()
     @_property
     def day_format(self) -> str: ...
+    # System.Void Windows.UI.Xaml.Controls.DatePickerFlyout::put_DayFormat(System.String)
     @day_format.setter
     def day_format(self, value: str) -> None: ...
 
@@ -674,14 +805,17 @@ class DropDownButton(Button, metaclass=DropDownButton_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
 
 class FlipView_Static(windows_ui_xaml_controls_primitives.Selector_Static):
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.FlipView::get_UseTouchAnimationsForAllNavigationProperty()
     @_property
     @typing.final
     def use_touch_animations_for_all_navigation_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class FlipView(windows_ui_xaml_controls_primitives.Selector, metaclass=FlipView_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Boolean Windows.UI.Xaml.Controls.FlipView::get_UseTouchAnimationsForAllNavigation()
     @_property
     def use_touch_animations_for_all_navigation(self) -> bool: ...
+    # System.Void Windows.UI.Xaml.Controls.FlipView::put_UseTouchAnimationsForAllNavigation(System.Boolean)
     @use_touch_animations_for_all_navigation.setter
     @typing.final
     def use_touch_animations_for_all_navigation(self, value: bool) -> None: ...
@@ -693,22 +827,28 @@ class FlipViewItem(windows_ui_xaml_controls_primitives.SelectorItem, metaclass=F
     def __new__(cls: typing.Type[Self]) -> Self: ...
 
 class Flyout_Static(windows_ui_xaml_controls_primitives.FlyoutBase_Static):
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.Flyout::get_ContentProperty()
     @_property
     @typing.final
     def content_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.Flyout::get_FlyoutPresenterStyleProperty()
     @_property
     @typing.final
     def flyout_presenter_style_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class Flyout(windows_ui_xaml_controls_primitives.FlyoutBase, metaclass=Flyout_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Windows.UI.Xaml.Style Windows.UI.Xaml.Controls.Flyout::get_FlyoutPresenterStyle()
     @_property
     def flyout_presenter_style(self) -> windows_ui_xaml.Style: ...
+    # System.Void Windows.UI.Xaml.Controls.Flyout::put_FlyoutPresenterStyle(Windows.UI.Xaml.Style)
     @flyout_presenter_style.setter
     @typing.final
     def flyout_presenter_style(self, value: windows_ui_xaml.Style) -> None: ...
+    # Windows.UI.Xaml.UIElement Windows.UI.Xaml.Controls.Flyout::get_Content()
     @_property
     def content(self) -> windows_ui_xaml.UIElement: ...
+    # System.Void Windows.UI.Xaml.Controls.Flyout::put_Content(Windows.UI.Xaml.UIElement)
     @content.setter
     @typing.final
     def content(self, value: windows_ui_xaml.UIElement) -> None: ...
@@ -724,19 +864,23 @@ class GridViewItem_Static(windows_ui_xaml_controls_primitives.SelectorItem_Stati
 
 class GridViewItem(windows_ui_xaml_controls_primitives.SelectorItem, metaclass=GridViewItem_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Windows.UI.Xaml.Controls.Primitives.GridViewItemTemplateSettings Windows.UI.Xaml.Controls.GridViewItem::get_TemplateSettings()
     @_property
     @typing.final
     def template_settings(self) -> windows_ui_xaml_controls_primitives.GridViewItemTemplateSettings: ...
 
 class HyperlinkButton_Static(windows_ui_xaml_controls_primitives.ButtonBase_Static):
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.HyperlinkButton::get_NavigateUriProperty()
     @_property
     @typing.final
     def navigate_uri_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class HyperlinkButton(windows_ui_xaml_controls_primitives.ButtonBase, metaclass=HyperlinkButton_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Windows.Foundation.Uri Windows.UI.Xaml.Controls.HyperlinkButton::get_NavigateUri()
     @_property
     def navigate_uri(self) -> windows_foundation.Uri: ...
+    # System.Void Windows.UI.Xaml.Controls.HyperlinkButton::put_NavigateUri(Windows.Foundation.Uri)
     @navigate_uri.setter
     @typing.final
     def navigate_uri(self, value: windows_foundation.Uri) -> None: ...
@@ -748,22 +892,28 @@ class InkToolbarBallpointPenButton(InkToolbarPenButton, metaclass=InkToolbarBall
     def __new__(cls: typing.Type[Self]) -> Self: ...
 
 class InkToolbarCustomPenButton_Static(InkToolbarPenButton_Static):
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.InkToolbarCustomPenButton::get_ConfigurationContentProperty()
     @_property
     @typing.final
     def configuration_content_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.InkToolbarCustomPenButton::get_CustomPenProperty()
     @_property
     @typing.final
     def custom_pen_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class InkToolbarCustomPenButton(InkToolbarPenButton, metaclass=InkToolbarCustomPenButton_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Windows.UI.Xaml.Controls.InkToolbarCustomPen Windows.UI.Xaml.Controls.InkToolbarCustomPenButton::get_CustomPen()
     @_property
     def custom_pen(self) -> InkToolbarCustomPen: ...
+    # System.Void Windows.UI.Xaml.Controls.InkToolbarCustomPenButton::put_CustomPen(Windows.UI.Xaml.Controls.InkToolbarCustomPen)
     @custom_pen.setter
     @typing.final
     def custom_pen(self, value: InkToolbarCustomPen) -> None: ...
+    # Windows.UI.Xaml.UIElement Windows.UI.Xaml.Controls.InkToolbarCustomPenButton::get_ConfigurationContent()
     @_property
     def configuration_content(self) -> windows_ui_xaml.UIElement: ...
+    # System.Void Windows.UI.Xaml.Controls.InkToolbarCustomPenButton::put_ConfigurationContent(Windows.UI.Xaml.UIElement)
     @configuration_content.setter
     @typing.final
     def configuration_content(self, value: windows_ui_xaml.UIElement) -> None: ...
@@ -775,35 +925,43 @@ class InkToolbarCustomToggleButton(InkToolbarToggleButton, metaclass=InkToolbarC
     def __new__(cls: typing.Type[Self]) -> Self: ...
 
 class InkToolbarCustomToolButton_Static(InkToolbarToolButton_Static):
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.InkToolbarCustomToolButton::get_ConfigurationContentProperty()
     @_property
     @typing.final
     def configuration_content_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class InkToolbarCustomToolButton(InkToolbarToolButton, metaclass=InkToolbarCustomToolButton_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Windows.UI.Xaml.UIElement Windows.UI.Xaml.Controls.InkToolbarCustomToolButton::get_ConfigurationContent()
     @_property
     def configuration_content(self) -> windows_ui_xaml.UIElement: ...
+    # System.Void Windows.UI.Xaml.Controls.InkToolbarCustomToolButton::put_ConfigurationContent(Windows.UI.Xaml.UIElement)
     @configuration_content.setter
     @typing.final
     def configuration_content(self, value: windows_ui_xaml.UIElement) -> None: ...
 
 class InkToolbarEraserButton_Static(InkToolbarToolButton_Static):
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.InkToolbarEraserButton::get_IsClearAllVisibleProperty()
     @_property
     @typing.final
     def is_clear_all_visible_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class InkToolbarEraserButton(InkToolbarToolButton, metaclass=InkToolbarEraserButton_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Boolean Windows.UI.Xaml.Controls.InkToolbarEraserButton::get_IsClearAllVisible()
     @_property
     def is_clear_all_visible(self) -> bool: ...
+    # System.Void Windows.UI.Xaml.Controls.InkToolbarEraserButton::put_IsClearAllVisible(System.Boolean)
     @is_clear_all_visible.setter
     @typing.final
     def is_clear_all_visible(self, value: bool) -> None: ...
 
 class InkToolbarFlyoutItem_Static(windows_ui_xaml_controls_primitives.ButtonBase_Static):
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.InkToolbarFlyoutItem::get_IsCheckedProperty()
     @_property
     @typing.final
     def is_checked_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.InkToolbarFlyoutItem::get_KindProperty()
     @_property
     @typing.final
     def kind_property(cls) -> windows_ui_xaml.DependencyProperty: ...
@@ -811,20 +969,28 @@ class InkToolbarFlyoutItem_Static(windows_ui_xaml_controls_primitives.ButtonBase
 class InkToolbarFlyoutItem(windows_ui_xaml_controls_primitives.ButtonBase, metaclass=InkToolbarFlyoutItem_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Windows.UI.Xaml.Controls.InkToolbarFlyoutItem::add_Checked(Windows.Foundation.TypedEventHandler`2<Windows.UI.Xaml.Controls.InkToolbarFlyoutItem,System.Object>)
     def add_checked(self, handler: windows_foundation.TypedEventHandler[InkToolbarFlyoutItem, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Windows.UI.Xaml.Controls.InkToolbarFlyoutItem::remove_Checked(Windows.Foundation.EventRegistrationToken)
     def remove_checked(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Windows.UI.Xaml.Controls.InkToolbarFlyoutItem::add_Unchecked(Windows.Foundation.TypedEventHandler`2<Windows.UI.Xaml.Controls.InkToolbarFlyoutItem,System.Object>)
     def add_unchecked(self, handler: windows_foundation.TypedEventHandler[InkToolbarFlyoutItem, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Windows.UI.Xaml.Controls.InkToolbarFlyoutItem::remove_Unchecked(Windows.Foundation.EventRegistrationToken)
     def remove_unchecked(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.UI.Xaml.Controls.InkToolbarFlyoutItemKind Windows.UI.Xaml.Controls.InkToolbarFlyoutItem::get_Kind()
     @_property
     def kind(self) -> InkToolbarFlyoutItemKind: ...
+    # System.Void Windows.UI.Xaml.Controls.InkToolbarFlyoutItem::put_Kind(Windows.UI.Xaml.Controls.InkToolbarFlyoutItemKind)
     @kind.setter
     @typing.final
     def kind(self, value: InkToolbarFlyoutItemKind) -> None: ...
+    # System.Boolean Windows.UI.Xaml.Controls.InkToolbarFlyoutItem::get_IsChecked()
     @_property
     def is_checked(self) -> bool: ...
+    # System.Void Windows.UI.Xaml.Controls.InkToolbarFlyoutItem::put_IsChecked(System.Boolean)
     @is_checked.setter
     @typing.final
     def is_checked(self, value: bool) -> None: ...
@@ -836,66 +1002,87 @@ class InkToolbarHighlighterButton(InkToolbarPenButton, metaclass=InkToolbarHighl
     def __new__(cls: typing.Type[Self]) -> Self: ...
 
 class InkToolbarMenuButton_Static(windows_ui_xaml_controls_primitives.ToggleButton_Static):
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.InkToolbarMenuButton::get_IsExtensionGlyphShownProperty()
     @_property
     @typing.final
     def is_extension_glyph_shown_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class InkToolbarMenuButton(windows_ui_xaml_controls_primitives.ToggleButton, metaclass=InkToolbarMenuButton_Static):
+    # System.Boolean Windows.UI.Xaml.Controls.InkToolbarMenuButton::get_IsExtensionGlyphShown()
     @_property
     def is_extension_glyph_shown(self) -> bool: ...
+    # System.Void Windows.UI.Xaml.Controls.InkToolbarMenuButton::put_IsExtensionGlyphShown(System.Boolean)
     @is_extension_glyph_shown.setter
     @typing.final
     def is_extension_glyph_shown(self, value: bool) -> None: ...
+    # Windows.UI.Xaml.Controls.InkToolbarMenuKind Windows.UI.Xaml.Controls.InkToolbarMenuButton::get_MenuKind()
     @_property
     @typing.final
     def menu_kind(self) -> InkToolbarMenuKind: ...
 
 class InkToolbarPenButton_Static(InkToolbarToolButton_Static):
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.InkToolbarPenButton::get_MaxStrokeWidthProperty()
     @_property
     @typing.final
     def max_stroke_width_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.InkToolbarPenButton::get_MinStrokeWidthProperty()
     @_property
     @typing.final
     def min_stroke_width_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.InkToolbarPenButton::get_PaletteProperty()
     @_property
     @typing.final
     def palette_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.InkToolbarPenButton::get_SelectedBrushIndexProperty()
     @_property
     @typing.final
     def selected_brush_index_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.InkToolbarPenButton::get_SelectedBrushProperty()
     @_property
     @typing.final
     def selected_brush_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.InkToolbarPenButton::get_SelectedStrokeWidthProperty()
     @_property
     @typing.final
     def selected_stroke_width_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class InkToolbarPenButton(InkToolbarToolButton, metaclass=InkToolbarPenButton_Static):
+    # System.Double Windows.UI.Xaml.Controls.InkToolbarPenButton::get_SelectedStrokeWidth()
     @_property
     def selected_stroke_width(self) -> winrt.system.Double: ...
+    # System.Void Windows.UI.Xaml.Controls.InkToolbarPenButton::put_SelectedStrokeWidth(System.Double)
     @selected_stroke_width.setter
     @typing.final
     def selected_stroke_width(self, value: winrt.system.Double) -> None: ...
+    # System.Int32 Windows.UI.Xaml.Controls.InkToolbarPenButton::get_SelectedBrushIndex()
     @_property
     def selected_brush_index(self) -> winrt.system.Int32: ...
+    # System.Void Windows.UI.Xaml.Controls.InkToolbarPenButton::put_SelectedBrushIndex(System.Int32)
     @selected_brush_index.setter
     @typing.final
     def selected_brush_index(self, value: winrt.system.Int32) -> None: ...
+    # Windows.Foundation.Collections.IVector`1<Windows.UI.Xaml.Media.Brush> Windows.UI.Xaml.Controls.InkToolbarPenButton::get_Palette()
     @_property
     def palette(self) -> typing.MutableSequence[windows_ui_xaml_media.Brush]: ...
+    # System.Void Windows.UI.Xaml.Controls.InkToolbarPenButton::put_Palette(Windows.Foundation.Collections.IVector`1<Windows.UI.Xaml.Media.Brush>)
     @palette.setter
     @typing.final
     def palette(self, value: typing.MutableSequence[windows_ui_xaml_media.Brush]) -> None: ...
+    # System.Double Windows.UI.Xaml.Controls.InkToolbarPenButton::get_MinStrokeWidth()
     @_property
     def min_stroke_width(self) -> winrt.system.Double: ...
+    # System.Void Windows.UI.Xaml.Controls.InkToolbarPenButton::put_MinStrokeWidth(System.Double)
     @min_stroke_width.setter
     @typing.final
     def min_stroke_width(self, value: winrt.system.Double) -> None: ...
+    # System.Double Windows.UI.Xaml.Controls.InkToolbarPenButton::get_MaxStrokeWidth()
     @_property
     def max_stroke_width(self) -> winrt.system.Double: ...
+    # System.Void Windows.UI.Xaml.Controls.InkToolbarPenButton::put_MaxStrokeWidth(System.Double)
     @max_stroke_width.setter
     @typing.final
     def max_stroke_width(self, value: winrt.system.Double) -> None: ...
+    # Windows.UI.Xaml.Media.Brush Windows.UI.Xaml.Controls.InkToolbarPenButton::get_SelectedBrush()
     @_property
     @typing.final
     def selected_brush(self) -> windows_ui_xaml_media.Brush: ...
@@ -907,53 +1094,68 @@ class InkToolbarPencilButton(InkToolbarPenButton, metaclass=InkToolbarPencilButt
     def __new__(cls: typing.Type[Self]) -> Self: ...
 
 class InkToolbarRulerButton_Static(InkToolbarToggleButton_Static):
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.InkToolbarRulerButton::get_RulerProperty()
     @_property
     @typing.final
     def ruler_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class InkToolbarRulerButton(InkToolbarToggleButton, metaclass=InkToolbarRulerButton_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Windows.UI.Input.Inking.InkPresenterRuler Windows.UI.Xaml.Controls.InkToolbarRulerButton::get_Ruler()
     @_property
     @typing.final
     def ruler(self) -> windows_ui_input_inking.InkPresenterRuler: ...
 
 class InkToolbarStencilButton_Static(InkToolbarMenuButton_Static):
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.InkToolbarStencilButton::get_IsProtractorItemVisibleProperty()
     @_property
     @typing.final
     def is_protractor_item_visible_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.InkToolbarStencilButton::get_IsRulerItemVisibleProperty()
     @_property
     @typing.final
     def is_ruler_item_visible_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.InkToolbarStencilButton::get_ProtractorProperty()
     @_property
     @typing.final
     def protractor_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.InkToolbarStencilButton::get_RulerProperty()
     @_property
     @typing.final
     def ruler_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.InkToolbarStencilButton::get_SelectedStencilProperty()
     @_property
     @typing.final
     def selected_stencil_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class InkToolbarStencilButton(InkToolbarMenuButton, metaclass=InkToolbarStencilButton_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Windows.UI.Xaml.Controls.InkToolbarStencilKind Windows.UI.Xaml.Controls.InkToolbarStencilButton::get_SelectedStencil()
     @_property
     def selected_stencil(self) -> InkToolbarStencilKind: ...
+    # System.Void Windows.UI.Xaml.Controls.InkToolbarStencilButton::put_SelectedStencil(Windows.UI.Xaml.Controls.InkToolbarStencilKind)
     @selected_stencil.setter
     @typing.final
     def selected_stencil(self, value: InkToolbarStencilKind) -> None: ...
+    # System.Boolean Windows.UI.Xaml.Controls.InkToolbarStencilButton::get_IsRulerItemVisible()
     @_property
     def is_ruler_item_visible(self) -> bool: ...
+    # System.Void Windows.UI.Xaml.Controls.InkToolbarStencilButton::put_IsRulerItemVisible(System.Boolean)
     @is_ruler_item_visible.setter
     @typing.final
     def is_ruler_item_visible(self, value: bool) -> None: ...
+    # System.Boolean Windows.UI.Xaml.Controls.InkToolbarStencilButton::get_IsProtractorItemVisible()
     @_property
     def is_protractor_item_visible(self) -> bool: ...
+    # System.Void Windows.UI.Xaml.Controls.InkToolbarStencilButton::put_IsProtractorItemVisible(System.Boolean)
     @is_protractor_item_visible.setter
     @typing.final
     def is_protractor_item_visible(self, value: bool) -> None: ...
+    # Windows.UI.Input.Inking.InkPresenterProtractor Windows.UI.Xaml.Controls.InkToolbarStencilButton::get_Protractor()
     @_property
     @typing.final
     def protractor(self) -> windows_ui_input_inking.InkPresenterProtractor: ...
+    # Windows.UI.Input.Inking.InkPresenterRuler Windows.UI.Xaml.Controls.InkToolbarStencilButton::get_Ruler()
     @_property
     @typing.final
     def ruler(self) -> windows_ui_input_inking.InkPresenterRuler: ...
@@ -962,29 +1164,36 @@ class InkToolbarToggleButton_Static(CheckBox_Static):
     pass
 
 class InkToolbarToggleButton(CheckBox, metaclass=InkToolbarToggleButton_Static):
+    # Windows.UI.Xaml.Controls.InkToolbarToggle Windows.UI.Xaml.Controls.InkToolbarToggleButton::get_ToggleKind()
     @_property
     @typing.final
     def toggle_kind(self) -> InkToolbarToggle: ...
 
 class InkToolbarToolButton_Static(RadioButton_Static):
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.InkToolbarToolButton::get_IsExtensionGlyphShownProperty()
     @_property
     @typing.final
     def is_extension_glyph_shown_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class InkToolbarToolButton(RadioButton, metaclass=InkToolbarToolButton_Static):
+    # System.Boolean Windows.UI.Xaml.Controls.InkToolbarToolButton::get_IsExtensionGlyphShown()
     @_property
     def is_extension_glyph_shown(self) -> bool: ...
+    # System.Void Windows.UI.Xaml.Controls.InkToolbarToolButton::put_IsExtensionGlyphShown(System.Boolean)
     @is_extension_glyph_shown.setter
     @typing.final
     def is_extension_glyph_shown(self, value: bool) -> None: ...
+    # Windows.UI.Xaml.Controls.InkToolbarTool Windows.UI.Xaml.Controls.InkToolbarToolButton::get_ToolKind()
     @_property
     @typing.final
     def tool_kind(self) -> InkToolbarTool: ...
 
 class ListBox_Static(windows_ui_xaml_controls_primitives.Selector_Static):
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.ListBox::get_SelectionModeProperty()
     @_property
     @typing.final
     def selection_mode_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.ListBox::get_SingleSelectionFollowsFocusProperty()
     @_property
     @typing.final
     def single_selection_follows_focus_property(cls) -> windows_ui_xaml.DependencyProperty: ...
@@ -992,19 +1201,26 @@ class ListBox_Static(windows_ui_xaml_controls_primitives.Selector_Static):
 class ListBox(windows_ui_xaml_controls_primitives.Selector, metaclass=ListBox_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.final
+    # System.Void Windows.UI.Xaml.Controls.ListBox::ScrollIntoView(System.Object)
     def scroll_into_view(self, item: winrt.system.Object, /) -> None: ...
     @typing.final
+    # System.Void Windows.UI.Xaml.Controls.ListBox::SelectAll()
     def select_all(self) -> None: ...
+    # Windows.UI.Xaml.Controls.SelectionMode Windows.UI.Xaml.Controls.ListBox::get_SelectionMode()
     @_property
     def selection_mode(self) -> SelectionMode: ...
+    # System.Void Windows.UI.Xaml.Controls.ListBox::put_SelectionMode(Windows.UI.Xaml.Controls.SelectionMode)
     @selection_mode.setter
     @typing.final
     def selection_mode(self, value: SelectionMode) -> None: ...
+    # Windows.Foundation.Collections.IVector`1<System.Object> Windows.UI.Xaml.Controls.ListBox::get_SelectedItems()
     @_property
     @typing.final
     def selected_items(self) -> typing.MutableSequence[winrt.system.Object]: ...
+    # System.Boolean Windows.UI.Xaml.Controls.ListBox::get_SingleSelectionFollowsFocus()
     @_property
     def single_selection_follows_focus(self) -> bool: ...
+    # System.Void Windows.UI.Xaml.Controls.ListBox::put_SingleSelectionFollowsFocus(System.Boolean)
     @single_selection_follows_focus.setter
     @typing.final
     def single_selection_follows_focus(self, value: bool) -> None: ...
@@ -1017,61 +1233,89 @@ class ListBoxItem(windows_ui_xaml_controls_primitives.SelectorItem, metaclass=Li
 
 @typing.final
 class ListPickerFlyout_Static(windows_ui_xaml_controls_primitives.PickerFlyoutBase_Static):
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.ListPickerFlyout::get_DisplayMemberPathProperty()
     @_property
     def display_member_path_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.ListPickerFlyout::get_ItemTemplateProperty()
     @_property
     def item_template_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.ListPickerFlyout::get_ItemsSourceProperty()
     @_property
     def items_source_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.ListPickerFlyout::get_SelectedIndexProperty()
     @_property
     def selected_index_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.ListPickerFlyout::get_SelectedItemProperty()
     @_property
     def selected_item_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.ListPickerFlyout::get_SelectedValuePathProperty()
     @_property
     def selected_value_path_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.ListPickerFlyout::get_SelectedValueProperty()
     @_property
     def selected_value_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.ListPickerFlyout::get_SelectionModeProperty()
     @_property
     def selection_mode_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 @typing.final
 class ListPickerFlyout(windows_ui_xaml_controls_primitives.PickerFlyoutBase, metaclass=ListPickerFlyout_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<System.Object>> Windows.UI.Xaml.Controls.ListPickerFlyout::ShowAtAsync(Windows.UI.Xaml.FrameworkElement)
     def show_at_async(self, target: windows_ui_xaml.FrameworkElement, /) -> windows_foundation.IAsyncOperation[typing.Sequence[winrt.system.Object]]: ...
+    # Windows.Foundation.EventRegistrationToken Windows.UI.Xaml.Controls.ListPickerFlyout::add_ItemsPicked(Windows.Foundation.TypedEventHandler`2<Windows.UI.Xaml.Controls.ListPickerFlyout,Windows.UI.Xaml.Controls.ItemsPickedEventArgs>)
     def add_items_picked(self, handler: windows_foundation.TypedEventHandler[ListPickerFlyout, ItemsPickedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.UI.Xaml.Controls.ListPickerFlyout::remove_ItemsPicked(Windows.Foundation.EventRegistrationToken)
     def remove_items_picked(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.UI.Xaml.Controls.ListPickerFlyoutSelectionMode Windows.UI.Xaml.Controls.ListPickerFlyout::get_SelectionMode()
     @_property
     def selection_mode(self) -> ListPickerFlyoutSelectionMode: ...
+    # System.Void Windows.UI.Xaml.Controls.ListPickerFlyout::put_SelectionMode(Windows.UI.Xaml.Controls.ListPickerFlyoutSelectionMode)
     @selection_mode.setter
     def selection_mode(self, value: ListPickerFlyoutSelectionMode) -> None: ...
+    # System.String Windows.UI.Xaml.Controls.ListPickerFlyout::get_SelectedValuePath()
     @_property
     def selected_value_path(self) -> str: ...
+    # System.Void Windows.UI.Xaml.Controls.ListPickerFlyout::put_SelectedValuePath(System.String)
     @selected_value_path.setter
     def selected_value_path(self, value: str) -> None: ...
+    # System.Object Windows.UI.Xaml.Controls.ListPickerFlyout::get_SelectedValue()
     @_property
     def selected_value(self) -> winrt.system.Object: ...
+    # System.Void Windows.UI.Xaml.Controls.ListPickerFlyout::put_SelectedValue(System.Object)
     @selected_value.setter
     def selected_value(self, value: winrt.system.Object) -> None: ...
+    # System.Object Windows.UI.Xaml.Controls.ListPickerFlyout::get_SelectedItem()
     @_property
     def selected_item(self) -> winrt.system.Object: ...
+    # System.Void Windows.UI.Xaml.Controls.ListPickerFlyout::put_SelectedItem(System.Object)
     @selected_item.setter
     def selected_item(self, value: winrt.system.Object) -> None: ...
+    # System.Int32 Windows.UI.Xaml.Controls.ListPickerFlyout::get_SelectedIndex()
     @_property
     def selected_index(self) -> winrt.system.Int32: ...
+    # System.Void Windows.UI.Xaml.Controls.ListPickerFlyout::put_SelectedIndex(System.Int32)
     @selected_index.setter
     def selected_index(self, value: winrt.system.Int32) -> None: ...
+    # System.Object Windows.UI.Xaml.Controls.ListPickerFlyout::get_ItemsSource()
     @_property
     def items_source(self) -> winrt.system.Object: ...
+    # System.Void Windows.UI.Xaml.Controls.ListPickerFlyout::put_ItemsSource(System.Object)
     @items_source.setter
     def items_source(self, value: winrt.system.Object) -> None: ...
+    # Windows.UI.Xaml.DataTemplate Windows.UI.Xaml.Controls.ListPickerFlyout::get_ItemTemplate()
     @_property
     def item_template(self) -> windows_ui_xaml.DataTemplate: ...
+    # System.Void Windows.UI.Xaml.Controls.ListPickerFlyout::put_ItemTemplate(Windows.UI.Xaml.DataTemplate)
     @item_template.setter
     def item_template(self, value: windows_ui_xaml.DataTemplate) -> None: ...
+    # System.String Windows.UI.Xaml.Controls.ListPickerFlyout::get_DisplayMemberPath()
     @_property
     def display_member_path(self) -> str: ...
+    # System.Void Windows.UI.Xaml.Controls.ListPickerFlyout::put_DisplayMemberPath(System.String)
     @display_member_path.setter
     def display_member_path(self, value: str) -> None: ...
+    # Windows.Foundation.Collections.IVector`1<System.Object> Windows.UI.Xaml.Controls.ListPickerFlyout::get_SelectedItems()
     @_property
     def selected_items(self) -> typing.MutableSequence[winrt.system.Object]: ...
 
@@ -1082,230 +1326,324 @@ class ListView(ListViewBase, metaclass=ListView_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
 
 class ListViewBase_Static(windows_ui_xaml_controls_primitives.Selector_Static):
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.ListViewBase::get_CanDragItemsProperty()
     @_property
     @typing.final
     def can_drag_items_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.ListViewBase::get_CanReorderItemsProperty()
     @_property
     @typing.final
     def can_reorder_items_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.ListViewBase::get_DataFetchSizeProperty()
     @_property
     @typing.final
     def data_fetch_size_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.ListViewBase::get_HeaderProperty()
     @_property
     @typing.final
     def header_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.ListViewBase::get_HeaderTemplateProperty()
     @_property
     @typing.final
     def header_template_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.ListViewBase::get_HeaderTransitionsProperty()
     @_property
     @typing.final
     def header_transitions_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.ListViewBase::get_IncrementalLoadingThresholdProperty()
     @_property
     @typing.final
     def incremental_loading_threshold_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.ListViewBase::get_IncrementalLoadingTriggerProperty()
     @_property
     @typing.final
     def incremental_loading_trigger_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.ListViewBase::get_IsActiveViewProperty()
     @_property
     @typing.final
     def is_active_view_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.ListViewBase::get_IsItemClickEnabledProperty()
     @_property
     @typing.final
     def is_item_click_enabled_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.ListViewBase::get_IsSwipeEnabledProperty()
     @_property
     @typing.final
     def is_swipe_enabled_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.ListViewBase::get_IsZoomedInViewProperty()
     @_property
     @typing.final
     def is_zoomed_in_view_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.ListViewBase::get_SelectionModeProperty()
     @_property
     @typing.final
     def selection_mode_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.ListViewBase::get_SemanticZoomOwnerProperty()
     @_property
     @typing.final
     def semantic_zoom_owner_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.ListViewBase::get_FooterProperty()
     @_property
     @typing.final
     def footer_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.ListViewBase::get_FooterTemplateProperty()
     @_property
     @typing.final
     def footer_template_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.ListViewBase::get_FooterTransitionsProperty()
     @_property
     @typing.final
     def footer_transitions_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.ListViewBase::get_ShowsScrollingPlaceholdersProperty()
     @_property
     @typing.final
     def shows_scrolling_placeholders_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.ListViewBase::get_ReorderModeProperty()
     @_property
     @typing.final
     def reorder_mode_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.ListViewBase::get_IsMultiSelectCheckBoxEnabledProperty()
     @_property
     @typing.final
     def is_multi_select_check_box_enabled_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.ListViewBase::get_SingleSelectionFollowsFocusProperty()
     @_property
     @typing.final
     def single_selection_follows_focus_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class ListViewBase(windows_ui_xaml_controls_primitives.Selector, ImplementsISemanticZoomInformation, metaclass=ListViewBase_Static):
+    # System.Void Windows.UI.Xaml.Controls.ListViewBase::CompleteViewChange()
     def complete_view_change(self) -> None: ...
+    # System.Void Windows.UI.Xaml.Controls.ListViewBase::CompleteViewChangeFrom(Windows.UI.Xaml.Controls.SemanticZoomLocation,Windows.UI.Xaml.Controls.SemanticZoomLocation)
     def complete_view_change_from(self, source: SemanticZoomLocation, destination: SemanticZoomLocation, /) -> None: ...
+    # System.Void Windows.UI.Xaml.Controls.ListViewBase::CompleteViewChangeTo(Windows.UI.Xaml.Controls.SemanticZoomLocation,Windows.UI.Xaml.Controls.SemanticZoomLocation)
     def complete_view_change_to(self, source: SemanticZoomLocation, destination: SemanticZoomLocation, /) -> None: ...
     @typing.final
+    # System.Void Windows.UI.Xaml.Controls.ListViewBase::DeselectRange(Windows.UI.Xaml.Data.ItemIndexRange)
     def deselect_range(self, item_index_range: windows_ui_xaml_data.ItemIndexRange, /) -> None: ...
+    # System.Void Windows.UI.Xaml.Controls.ListViewBase::InitializeViewChange()
     def initialize_view_change(self) -> None: ...
     @typing.final
+    # System.Boolean Windows.UI.Xaml.Controls.ListViewBase::IsDragSource()
     def is_drag_source(self) -> bool: ...
     @typing.final
+    # Windows.Foundation.IAsyncOperation`1<Windows.UI.Xaml.Data.LoadMoreItemsResult> Windows.UI.Xaml.Controls.ListViewBase::LoadMoreItemsAsync()
     def load_more_items_async(self) -> windows_foundation.IAsyncOperation[windows_ui_xaml_data.LoadMoreItemsResult]: ...
+    # System.Void Windows.UI.Xaml.Controls.ListViewBase::MakeVisible(Windows.UI.Xaml.Controls.SemanticZoomLocation)
     def make_visible(self, item: SemanticZoomLocation, /) -> None: ...
     @typing.final
+    # Windows.UI.Xaml.Media.Animation.ConnectedAnimation Windows.UI.Xaml.Controls.ListViewBase::PrepareConnectedAnimation(System.String,System.Object,System.String)
     def prepare_connected_animation(self, key: str, item: winrt.system.Object, element_name: str, /) -> windows_ui_xaml_media_animation.ConnectedAnimation: ...
     @typing.final
+    # System.Void Windows.UI.Xaml.Controls.ListViewBase::ScrollIntoView(System.Object)
     def scroll_into_view(self, item: winrt.system.Object, /) -> None: ...
     @typing.final
+    # System.Void Windows.UI.Xaml.Controls.ListViewBase::ScrollIntoView(System.Object,Windows.UI.Xaml.Controls.ScrollIntoViewAlignment)
     def scroll_into_view_with_alignment(self, item: winrt.system.Object, alignment: ScrollIntoViewAlignment, /) -> None: ...
     @typing.final
+    # System.Void Windows.UI.Xaml.Controls.ListViewBase::SelectAll()
     def select_all(self) -> None: ...
     @typing.final
+    # System.Void Windows.UI.Xaml.Controls.ListViewBase::SelectRange(Windows.UI.Xaml.Data.ItemIndexRange)
     def select_range(self, item_index_range: windows_ui_xaml_data.ItemIndexRange, /) -> None: ...
     @typing.final
+    # System.Void Windows.UI.Xaml.Controls.ListViewBase::SetDesiredContainerUpdateDuration(Windows.Foundation.TimeSpan)
     def set_desired_container_update_duration(self, duration: datetime.timedelta, /) -> None: ...
+    # System.Void Windows.UI.Xaml.Controls.ListViewBase::StartViewChangeFrom(Windows.UI.Xaml.Controls.SemanticZoomLocation,Windows.UI.Xaml.Controls.SemanticZoomLocation)
     def start_view_change_from(self, source: SemanticZoomLocation, destination: SemanticZoomLocation, /) -> None: ...
+    # System.Void Windows.UI.Xaml.Controls.ListViewBase::StartViewChangeTo(Windows.UI.Xaml.Controls.SemanticZoomLocation,Windows.UI.Xaml.Controls.SemanticZoomLocation)
     def start_view_change_to(self, source: SemanticZoomLocation, destination: SemanticZoomLocation, /) -> None: ...
     @typing.final
+    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.UI.Xaml.Controls.ListViewBase::TryStartConnectedAnimationAsync(Windows.UI.Xaml.Media.Animation.ConnectedAnimation,System.Object,System.String)
     def try_start_connected_animation_async(self, animation: windows_ui_xaml_media_animation.ConnectedAnimation, item: winrt.system.Object, element_name: str, /) -> windows_foundation.IAsyncOperation[bool]: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Windows.UI.Xaml.Controls.ListViewBase::add_DragItemsStarting(Windows.UI.Xaml.Controls.DragItemsStartingEventHandler)
     def add_drag_items_starting(self, handler: DragItemsStartingEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Windows.UI.Xaml.Controls.ListViewBase::remove_DragItemsStarting(Windows.Foundation.EventRegistrationToken)
     def remove_drag_items_starting(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Windows.UI.Xaml.Controls.ListViewBase::add_ItemClick(Windows.UI.Xaml.Controls.ItemClickEventHandler)
     def add_item_click(self, handler: ItemClickEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Windows.UI.Xaml.Controls.ListViewBase::remove_ItemClick(Windows.Foundation.EventRegistrationToken)
     def remove_item_click(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Windows.UI.Xaml.Controls.ListViewBase::add_ContainerContentChanging(Windows.Foundation.TypedEventHandler`2<Windows.UI.Xaml.Controls.ListViewBase,Windows.UI.Xaml.Controls.ContainerContentChangingEventArgs>)
     def add_container_content_changing(self, handler: windows_foundation.TypedEventHandler[ListViewBase, ContainerContentChangingEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Windows.UI.Xaml.Controls.ListViewBase::remove_ContainerContentChanging(Windows.Foundation.EventRegistrationToken)
     def remove_container_content_changing(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Windows.UI.Xaml.Controls.ListViewBase::add_ChoosingGroupHeaderContainer(Windows.Foundation.TypedEventHandler`2<Windows.UI.Xaml.Controls.ListViewBase,Windows.UI.Xaml.Controls.ChoosingGroupHeaderContainerEventArgs>)
     def add_choosing_group_header_container(self, handler: windows_foundation.TypedEventHandler[ListViewBase, ChoosingGroupHeaderContainerEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Windows.UI.Xaml.Controls.ListViewBase::remove_ChoosingGroupHeaderContainer(Windows.Foundation.EventRegistrationToken)
     def remove_choosing_group_header_container(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Windows.UI.Xaml.Controls.ListViewBase::add_ChoosingItemContainer(Windows.Foundation.TypedEventHandler`2<Windows.UI.Xaml.Controls.ListViewBase,Windows.UI.Xaml.Controls.ChoosingItemContainerEventArgs>)
     def add_choosing_item_container(self, handler: windows_foundation.TypedEventHandler[ListViewBase, ChoosingItemContainerEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Windows.UI.Xaml.Controls.ListViewBase::remove_ChoosingItemContainer(Windows.Foundation.EventRegistrationToken)
     def remove_choosing_item_container(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Windows.UI.Xaml.Controls.ListViewBase::add_DragItemsCompleted(Windows.Foundation.TypedEventHandler`2<Windows.UI.Xaml.Controls.ListViewBase,Windows.UI.Xaml.Controls.DragItemsCompletedEventArgs>)
     def add_drag_items_completed(self, handler: windows_foundation.TypedEventHandler[ListViewBase, DragItemsCompletedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Windows.UI.Xaml.Controls.ListViewBase::remove_DragItemsCompleted(Windows.Foundation.EventRegistrationToken)
     def remove_drag_items_completed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.UI.Xaml.Controls.ListViewSelectionMode Windows.UI.Xaml.Controls.ListViewBase::get_SelectionMode()
     @_property
     def selection_mode(self) -> ListViewSelectionMode: ...
+    # System.Void Windows.UI.Xaml.Controls.ListViewBase::put_SelectionMode(Windows.UI.Xaml.Controls.ListViewSelectionMode)
     @selection_mode.setter
     @typing.final
     def selection_mode(self, value: ListViewSelectionMode) -> None: ...
+    # System.Boolean Windows.UI.Xaml.Controls.ListViewBase::get_IsSwipeEnabled()
     @_property
     def is_swipe_enabled(self) -> bool: ...
+    # System.Void Windows.UI.Xaml.Controls.ListViewBase::put_IsSwipeEnabled(System.Boolean)
     @is_swipe_enabled.setter
     @typing.final
     def is_swipe_enabled(self, value: bool) -> None: ...
+    # System.Boolean Windows.UI.Xaml.Controls.ListViewBase::get_IsItemClickEnabled()
     @_property
     def is_item_click_enabled(self) -> bool: ...
+    # System.Void Windows.UI.Xaml.Controls.ListViewBase::put_IsItemClickEnabled(System.Boolean)
     @is_item_click_enabled.setter
     @typing.final
     def is_item_click_enabled(self, value: bool) -> None: ...
+    # Windows.UI.Xaml.Controls.IncrementalLoadingTrigger Windows.UI.Xaml.Controls.ListViewBase::get_IncrementalLoadingTrigger()
     @_property
     def incremental_loading_trigger(self) -> IncrementalLoadingTrigger: ...
+    # System.Void Windows.UI.Xaml.Controls.ListViewBase::put_IncrementalLoadingTrigger(Windows.UI.Xaml.Controls.IncrementalLoadingTrigger)
     @incremental_loading_trigger.setter
     @typing.final
     def incremental_loading_trigger(self, value: IncrementalLoadingTrigger) -> None: ...
+    # System.Double Windows.UI.Xaml.Controls.ListViewBase::get_IncrementalLoadingThreshold()
     @_property
     def incremental_loading_threshold(self) -> winrt.system.Double: ...
+    # System.Void Windows.UI.Xaml.Controls.ListViewBase::put_IncrementalLoadingThreshold(System.Double)
     @incremental_loading_threshold.setter
     @typing.final
     def incremental_loading_threshold(self, value: winrt.system.Double) -> None: ...
+    # Windows.UI.Xaml.Media.Animation.TransitionCollection Windows.UI.Xaml.Controls.ListViewBase::get_HeaderTransitions()
     @_property
     def header_transitions(self) -> windows_ui_xaml_media_animation.TransitionCollection: ...
+    # System.Void Windows.UI.Xaml.Controls.ListViewBase::put_HeaderTransitions(Windows.UI.Xaml.Media.Animation.TransitionCollection)
     @header_transitions.setter
     @typing.final
     def header_transitions(self, value: windows_ui_xaml_media_animation.TransitionCollection) -> None: ...
+    # Windows.UI.Xaml.DataTemplate Windows.UI.Xaml.Controls.ListViewBase::get_HeaderTemplate()
     @_property
     def header_template(self) -> windows_ui_xaml.DataTemplate: ...
+    # System.Void Windows.UI.Xaml.Controls.ListViewBase::put_HeaderTemplate(Windows.UI.Xaml.DataTemplate)
     @header_template.setter
     @typing.final
     def header_template(self, value: windows_ui_xaml.DataTemplate) -> None: ...
+    # System.Object Windows.UI.Xaml.Controls.ListViewBase::get_Header()
     @_property
     def header(self) -> winrt.system.Object: ...
+    # System.Void Windows.UI.Xaml.Controls.ListViewBase::put_Header(System.Object)
     @header.setter
     @typing.final
     def header(self, value: winrt.system.Object) -> None: ...
+    # System.Double Windows.UI.Xaml.Controls.ListViewBase::get_DataFetchSize()
     @_property
     def data_fetch_size(self) -> winrt.system.Double: ...
+    # System.Void Windows.UI.Xaml.Controls.ListViewBase::put_DataFetchSize(System.Double)
     @data_fetch_size.setter
     @typing.final
     def data_fetch_size(self, value: winrt.system.Double) -> None: ...
+    # System.Boolean Windows.UI.Xaml.Controls.ListViewBase::get_CanReorderItems()
     @_property
     def can_reorder_items(self) -> bool: ...
+    # System.Void Windows.UI.Xaml.Controls.ListViewBase::put_CanReorderItems(System.Boolean)
     @can_reorder_items.setter
     @typing.final
     def can_reorder_items(self, value: bool) -> None: ...
+    # System.Boolean Windows.UI.Xaml.Controls.ListViewBase::get_CanDragItems()
     @_property
     def can_drag_items(self) -> bool: ...
+    # System.Void Windows.UI.Xaml.Controls.ListViewBase::put_CanDragItems(System.Boolean)
     @can_drag_items.setter
     @typing.final
     def can_drag_items(self, value: bool) -> None: ...
+    # Windows.Foundation.Collections.IVector`1<System.Object> Windows.UI.Xaml.Controls.ListViewBase::get_SelectedItems()
     @_property
     @typing.final
     def selected_items(self) -> typing.MutableSequence[winrt.system.Object]: ...
+    # System.Boolean Windows.UI.Xaml.Controls.ListViewBase::get_ShowsScrollingPlaceholders()
     @_property
     def shows_scrolling_placeholders(self) -> bool: ...
+    # System.Void Windows.UI.Xaml.Controls.ListViewBase::put_ShowsScrollingPlaceholders(System.Boolean)
     @shows_scrolling_placeholders.setter
     @typing.final
     def shows_scrolling_placeholders(self, value: bool) -> None: ...
+    # Windows.UI.Xaml.Media.Animation.TransitionCollection Windows.UI.Xaml.Controls.ListViewBase::get_FooterTransitions()
     @_property
     def footer_transitions(self) -> windows_ui_xaml_media_animation.TransitionCollection: ...
+    # System.Void Windows.UI.Xaml.Controls.ListViewBase::put_FooterTransitions(Windows.UI.Xaml.Media.Animation.TransitionCollection)
     @footer_transitions.setter
     @typing.final
     def footer_transitions(self, value: windows_ui_xaml_media_animation.TransitionCollection) -> None: ...
+    # Windows.UI.Xaml.DataTemplate Windows.UI.Xaml.Controls.ListViewBase::get_FooterTemplate()
     @_property
     def footer_template(self) -> windows_ui_xaml.DataTemplate: ...
+    # System.Void Windows.UI.Xaml.Controls.ListViewBase::put_FooterTemplate(Windows.UI.Xaml.DataTemplate)
     @footer_template.setter
     @typing.final
     def footer_template(self, value: windows_ui_xaml.DataTemplate) -> None: ...
+    # System.Object Windows.UI.Xaml.Controls.ListViewBase::get_Footer()
     @_property
     def footer(self) -> winrt.system.Object: ...
+    # System.Void Windows.UI.Xaml.Controls.ListViewBase::put_Footer(System.Object)
     @footer.setter
     @typing.final
     def footer(self, value: winrt.system.Object) -> None: ...
+    # Windows.UI.Xaml.Controls.ListViewReorderMode Windows.UI.Xaml.Controls.ListViewBase::get_ReorderMode()
     @_property
     def reorder_mode(self) -> ListViewReorderMode: ...
+    # System.Void Windows.UI.Xaml.Controls.ListViewBase::put_ReorderMode(Windows.UI.Xaml.Controls.ListViewReorderMode)
     @reorder_mode.setter
     @typing.final
     def reorder_mode(self, value: ListViewReorderMode) -> None: ...
+    # System.Boolean Windows.UI.Xaml.Controls.ListViewBase::get_IsMultiSelectCheckBoxEnabled()
     @_property
     def is_multi_select_check_box_enabled(self) -> bool: ...
+    # System.Void Windows.UI.Xaml.Controls.ListViewBase::put_IsMultiSelectCheckBoxEnabled(System.Boolean)
     @is_multi_select_check_box_enabled.setter
     @typing.final
     def is_multi_select_check_box_enabled(self, value: bool) -> None: ...
+    # Windows.Foundation.Collections.IVectorView`1<Windows.UI.Xaml.Data.ItemIndexRange> Windows.UI.Xaml.Controls.ListViewBase::get_SelectedRanges()
     @_property
     @typing.final
     def selected_ranges(self) -> typing.Sequence[windows_ui_xaml_data.ItemIndexRange]: ...
+    # System.Boolean Windows.UI.Xaml.Controls.ListViewBase::get_SingleSelectionFollowsFocus()
     @_property
     def single_selection_follows_focus(self) -> bool: ...
+    # System.Void Windows.UI.Xaml.Controls.ListViewBase::put_SingleSelectionFollowsFocus(System.Boolean)
     @single_selection_follows_focus.setter
     @typing.final
     def single_selection_follows_focus(self, value: bool) -> None: ...
+    # Windows.UI.Xaml.Controls.SemanticZoom Windows.UI.Xaml.Controls.ListViewBase::get_SemanticZoomOwner()
     @_property
     def semantic_zoom_owner(self) -> SemanticZoom: ...
+    # System.Void Windows.UI.Xaml.Controls.ListViewBase::put_SemanticZoomOwner(Windows.UI.Xaml.Controls.SemanticZoom)
     @semantic_zoom_owner.setter
     @typing.final
     def semantic_zoom_owner(self, value: SemanticZoom) -> None: ...
+    # System.Boolean Windows.UI.Xaml.Controls.ListViewBase::get_IsZoomedInView()
     @_property
     def is_zoomed_in_view(self) -> bool: ...
+    # System.Void Windows.UI.Xaml.Controls.ListViewBase::put_IsZoomedInView(System.Boolean)
     @is_zoomed_in_view.setter
     @typing.final
     def is_zoomed_in_view(self, value: bool) -> None: ...
+    # System.Boolean Windows.UI.Xaml.Controls.ListViewBase::get_IsActiveView()
     @_property
     def is_active_view(self) -> bool: ...
+    # System.Void Windows.UI.Xaml.Controls.ListViewBase::put_IsActiveView(System.Boolean)
     @is_active_view.setter
     @typing.final
     def is_active_view(self, value: bool) -> None: ...
@@ -1315,6 +1653,7 @@ class ListViewItem_Static(windows_ui_xaml_controls_primitives.SelectorItem_Stati
 
 class ListViewItem(windows_ui_xaml_controls_primitives.SelectorItem, metaclass=ListViewItem_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Windows.UI.Xaml.Controls.Primitives.ListViewItemTemplateSettings Windows.UI.Xaml.Controls.ListViewItem::get_TemplateSettings()
     @_property
     @typing.final
     def template_settings(self) -> windows_ui_xaml_controls_primitives.ListViewItemTemplateSettings: ...
@@ -1326,6 +1665,7 @@ class MenuBarItemFlyout(MenuFlyout, metaclass=MenuBarItemFlyout_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
 
 class MenuFlyout_Static(windows_ui_xaml_controls_primitives.FlyoutBase_Static):
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.MenuFlyout::get_MenuFlyoutPresenterStyleProperty()
     @_property
     @typing.final
     def menu_flyout_presenter_style_property(cls) -> windows_ui_xaml.DependencyProperty: ...
@@ -1333,39 +1673,51 @@ class MenuFlyout_Static(windows_ui_xaml_controls_primitives.FlyoutBase_Static):
 class MenuFlyout(windows_ui_xaml_controls_primitives.FlyoutBase, metaclass=MenuFlyout_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.final  # type: ignore[misc]
+    # System.Void Windows.UI.Xaml.Controls.MenuFlyout::ShowAt(Windows.UI.Xaml.UIElement,Windows.Foundation.Point)
     def show_at(self, target_element: windows_ui_xaml.UIElement, point: windows_foundation.Point, /) -> None: ...  # type: ignore[misc,override]
+    # Windows.UI.Xaml.Style Windows.UI.Xaml.Controls.MenuFlyout::get_MenuFlyoutPresenterStyle()
     @_property
     def menu_flyout_presenter_style(self) -> windows_ui_xaml.Style: ...
+    # System.Void Windows.UI.Xaml.Controls.MenuFlyout::put_MenuFlyoutPresenterStyle(Windows.UI.Xaml.Style)
     @menu_flyout_presenter_style.setter
     @typing.final
     def menu_flyout_presenter_style(self, value: windows_ui_xaml.Style) -> None: ...
+    # Windows.Foundation.Collections.IVector`1<Windows.UI.Xaml.Controls.MenuFlyoutItemBase> Windows.UI.Xaml.Controls.MenuFlyout::get_Items()
     @_property
     @typing.final
     def items(self) -> typing.MutableSequence[MenuFlyoutItemBase]: ...
 
 class NavigationViewItem_Static(NavigationViewItemBase_Static):
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.NavigationViewItem::get_CompactPaneLengthProperty()
     @_property
     @typing.final
     def compact_pane_length_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.NavigationViewItem::get_IconProperty()
     @_property
     @typing.final
     def icon_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.NavigationViewItem::get_SelectsOnInvokedProperty()
     @_property
     @typing.final
     def selects_on_invoked_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class NavigationViewItem(NavigationViewItemBase, metaclass=NavigationViewItem_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Windows.UI.Xaml.Controls.IconElement Windows.UI.Xaml.Controls.NavigationViewItem::get_Icon()
     @_property
     def icon(self) -> IconElement: ...
+    # System.Void Windows.UI.Xaml.Controls.NavigationViewItem::put_Icon(Windows.UI.Xaml.Controls.IconElement)
     @icon.setter
     @typing.final
     def icon(self, value: IconElement) -> None: ...
+    # System.Double Windows.UI.Xaml.Controls.NavigationViewItem::get_CompactPaneLength()
     @_property
     @typing.final
     def compact_pane_length(self) -> winrt.system.Double: ...
+    # System.Boolean Windows.UI.Xaml.Controls.NavigationViewItem::get_SelectsOnInvoked()
     @_property
     def selects_on_invoked(self) -> bool: ...
+    # System.Void Windows.UI.Xaml.Controls.NavigationViewItem::put_SelectsOnInvoked(System.Boolean)
     @selects_on_invoked.setter
     @typing.final
     def selects_on_invoked(self, value: bool) -> None: ...
@@ -1396,160 +1748,215 @@ class NavigationViewList(ListView, metaclass=NavigationViewList_Static):
 
 @typing.final
 class PickerFlyout_Static(windows_ui_xaml_controls_primitives.PickerFlyoutBase_Static):
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.PickerFlyout::get_ConfirmationButtonsVisibleProperty()
     @_property
     def confirmation_buttons_visible_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.PickerFlyout::get_ContentProperty()
     @_property
     def content_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 @typing.final
 class PickerFlyout(windows_ui_xaml_controls_primitives.PickerFlyoutBase, metaclass=PickerFlyout_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.UI.Xaml.Controls.PickerFlyout::ShowAtAsync(Windows.UI.Xaml.FrameworkElement)
     def show_at_async(self, target: windows_ui_xaml.FrameworkElement, /) -> windows_foundation.IAsyncOperation[bool]: ...
+    # Windows.Foundation.EventRegistrationToken Windows.UI.Xaml.Controls.PickerFlyout::add_Confirmed(Windows.Foundation.TypedEventHandler`2<Windows.UI.Xaml.Controls.PickerFlyout,Windows.UI.Xaml.Controls.PickerConfirmedEventArgs>)
     def add_confirmed(self, handler: windows_foundation.TypedEventHandler[PickerFlyout, PickerConfirmedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.UI.Xaml.Controls.PickerFlyout::remove_Confirmed(Windows.Foundation.EventRegistrationToken)
     def remove_confirmed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.UI.Xaml.UIElement Windows.UI.Xaml.Controls.PickerFlyout::get_Content()
     @_property
     def content(self) -> windows_ui_xaml.UIElement: ...
+    # System.Void Windows.UI.Xaml.Controls.PickerFlyout::put_Content(Windows.UI.Xaml.UIElement)
     @content.setter
     def content(self, value: windows_ui_xaml.UIElement) -> None: ...
+    # System.Boolean Windows.UI.Xaml.Controls.PickerFlyout::get_ConfirmationButtonsVisible()
     @_property
     def confirmation_buttons_visible(self) -> bool: ...
+    # System.Void Windows.UI.Xaml.Controls.PickerFlyout::put_ConfirmationButtonsVisible(System.Boolean)
     @confirmation_buttons_visible.setter
     def confirmation_buttons_visible(self, value: bool) -> None: ...
 
 class ProgressBar_Static(windows_ui_xaml_controls_primitives.RangeBase_Static):
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.ProgressBar::get_IsIndeterminateProperty()
     @_property
     @typing.final
     def is_indeterminate_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.ProgressBar::get_ShowErrorProperty()
     @_property
     @typing.final
     def show_error_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.ProgressBar::get_ShowPausedProperty()
     @_property
     @typing.final
     def show_paused_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class ProgressBar(windows_ui_xaml_controls_primitives.RangeBase, metaclass=ProgressBar_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Boolean Windows.UI.Xaml.Controls.ProgressBar::get_ShowPaused()
     @_property
     def show_paused(self) -> bool: ...
+    # System.Void Windows.UI.Xaml.Controls.ProgressBar::put_ShowPaused(System.Boolean)
     @show_paused.setter
     @typing.final
     def show_paused(self, value: bool) -> None: ...
+    # System.Boolean Windows.UI.Xaml.Controls.ProgressBar::get_ShowError()
     @_property
     def show_error(self) -> bool: ...
+    # System.Void Windows.UI.Xaml.Controls.ProgressBar::put_ShowError(System.Boolean)
     @show_error.setter
     @typing.final
     def show_error(self, value: bool) -> None: ...
+    # System.Boolean Windows.UI.Xaml.Controls.ProgressBar::get_IsIndeterminate()
     @_property
     def is_indeterminate(self) -> bool: ...
+    # System.Void Windows.UI.Xaml.Controls.ProgressBar::put_IsIndeterminate(System.Boolean)
     @is_indeterminate.setter
     @typing.final
     def is_indeterminate(self, value: bool) -> None: ...
+    # Windows.UI.Xaml.Controls.Primitives.ProgressBarTemplateSettings Windows.UI.Xaml.Controls.ProgressBar::get_TemplateSettings()
     @_property
     @typing.final
     def template_settings(self) -> windows_ui_xaml_controls_primitives.ProgressBarTemplateSettings: ...
 
 class RadioButton_Static(windows_ui_xaml_controls_primitives.ToggleButton_Static):
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.RadioButton::get_GroupNameProperty()
     @_property
     @typing.final
     def group_name_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class RadioButton(windows_ui_xaml_controls_primitives.ToggleButton, metaclass=RadioButton_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.String Windows.UI.Xaml.Controls.RadioButton::get_GroupName()
     @_property
     def group_name(self) -> str: ...
+    # System.Void Windows.UI.Xaml.Controls.RadioButton::put_GroupName(System.String)
     @group_name.setter
     @typing.final
     def group_name(self, value: str) -> None: ...
 
 class Slider_Static(windows_ui_xaml_controls_primitives.RangeBase_Static):
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.Slider::get_IntermediateValueProperty()
     @_property
     @typing.final
     def intermediate_value_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.Slider::get_IsDirectionReversedProperty()
     @_property
     @typing.final
     def is_direction_reversed_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.Slider::get_IsThumbToolTipEnabledProperty()
     @_property
     @typing.final
     def is_thumb_tool_tip_enabled_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.Slider::get_OrientationProperty()
     @_property
     @typing.final
     def orientation_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.Slider::get_SnapsToProperty()
     @_property
     @typing.final
     def snaps_to_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.Slider::get_StepFrequencyProperty()
     @_property
     @typing.final
     def step_frequency_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.Slider::get_ThumbToolTipValueConverterProperty()
     @_property
     @typing.final
     def thumb_tool_tip_value_converter_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.Slider::get_TickFrequencyProperty()
     @_property
     @typing.final
     def tick_frequency_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.Slider::get_TickPlacementProperty()
     @_property
     @typing.final
     def tick_placement_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.Slider::get_HeaderProperty()
     @_property
     @typing.final
     def header_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.Slider::get_HeaderTemplateProperty()
     @_property
     @typing.final
     def header_template_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class Slider(windows_ui_xaml_controls_primitives.RangeBase, metaclass=Slider_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Windows.UI.Xaml.Controls.Primitives.TickPlacement Windows.UI.Xaml.Controls.Slider::get_TickPlacement()
     @_property
     def tick_placement(self) -> windows_ui_xaml_controls_primitives.TickPlacement: ...
+    # System.Void Windows.UI.Xaml.Controls.Slider::put_TickPlacement(Windows.UI.Xaml.Controls.Primitives.TickPlacement)
     @tick_placement.setter
     @typing.final
     def tick_placement(self, value: windows_ui_xaml_controls_primitives.TickPlacement) -> None: ...
+    # System.Double Windows.UI.Xaml.Controls.Slider::get_TickFrequency()
     @_property
     def tick_frequency(self) -> winrt.system.Double: ...
+    # System.Void Windows.UI.Xaml.Controls.Slider::put_TickFrequency(System.Double)
     @tick_frequency.setter
     @typing.final
     def tick_frequency(self, value: winrt.system.Double) -> None: ...
+    # Windows.UI.Xaml.Data.IValueConverter Windows.UI.Xaml.Controls.Slider::get_ThumbToolTipValueConverter()
     @_property
     def thumb_tool_tip_value_converter(self) -> windows_ui_xaml_data.IValueConverter: ...
+    # System.Void Windows.UI.Xaml.Controls.Slider::put_ThumbToolTipValueConverter(Windows.UI.Xaml.Data.IValueConverter)
     @thumb_tool_tip_value_converter.setter
     @typing.final
     def thumb_tool_tip_value_converter(self, value: windows_ui_xaml_data.ImplementsIValueConverter) -> None: ...
+    # System.Double Windows.UI.Xaml.Controls.Slider::get_StepFrequency()
     @_property
     def step_frequency(self) -> winrt.system.Double: ...
+    # System.Void Windows.UI.Xaml.Controls.Slider::put_StepFrequency(System.Double)
     @step_frequency.setter
     @typing.final
     def step_frequency(self, value: winrt.system.Double) -> None: ...
+    # Windows.UI.Xaml.Controls.Primitives.SliderSnapsTo Windows.UI.Xaml.Controls.Slider::get_SnapsTo()
     @_property
     def snaps_to(self) -> windows_ui_xaml_controls_primitives.SliderSnapsTo: ...
+    # System.Void Windows.UI.Xaml.Controls.Slider::put_SnapsTo(Windows.UI.Xaml.Controls.Primitives.SliderSnapsTo)
     @snaps_to.setter
     @typing.final
     def snaps_to(self, value: windows_ui_xaml_controls_primitives.SliderSnapsTo) -> None: ...
+    # Windows.UI.Xaml.Controls.Orientation Windows.UI.Xaml.Controls.Slider::get_Orientation()
     @_property
     def orientation(self) -> Orientation: ...
+    # System.Void Windows.UI.Xaml.Controls.Slider::put_Orientation(Windows.UI.Xaml.Controls.Orientation)
     @orientation.setter
     @typing.final
     def orientation(self, value: Orientation) -> None: ...
+    # System.Boolean Windows.UI.Xaml.Controls.Slider::get_IsThumbToolTipEnabled()
     @_property
     def is_thumb_tool_tip_enabled(self) -> bool: ...
+    # System.Void Windows.UI.Xaml.Controls.Slider::put_IsThumbToolTipEnabled(System.Boolean)
     @is_thumb_tool_tip_enabled.setter
     @typing.final
     def is_thumb_tool_tip_enabled(self, value: bool) -> None: ...
+    # System.Boolean Windows.UI.Xaml.Controls.Slider::get_IsDirectionReversed()
     @_property
     def is_direction_reversed(self) -> bool: ...
+    # System.Void Windows.UI.Xaml.Controls.Slider::put_IsDirectionReversed(System.Boolean)
     @is_direction_reversed.setter
     @typing.final
     def is_direction_reversed(self, value: bool) -> None: ...
+    # System.Double Windows.UI.Xaml.Controls.Slider::get_IntermediateValue()
     @_property
     def intermediate_value(self) -> winrt.system.Double: ...
+    # System.Void Windows.UI.Xaml.Controls.Slider::put_IntermediateValue(System.Double)
     @intermediate_value.setter
     @typing.final
     def intermediate_value(self, value: winrt.system.Double) -> None: ...
+    # Windows.UI.Xaml.DataTemplate Windows.UI.Xaml.Controls.Slider::get_HeaderTemplate()
     @_property
     def header_template(self) -> windows_ui_xaml.DataTemplate: ...
+    # System.Void Windows.UI.Xaml.Controls.Slider::put_HeaderTemplate(Windows.UI.Xaml.DataTemplate)
     @header_template.setter
     @typing.final
     def header_template(self, value: windows_ui_xaml.DataTemplate) -> None: ...
+    # System.Object Windows.UI.Xaml.Controls.Slider::get_Header()
     @_property
     def header(self) -> winrt.system.Object: ...
+    # System.Void Windows.UI.Xaml.Controls.Slider::put_Header(System.Object)
     @header.setter
     @typing.final
     def header(self, value: winrt.system.Object) -> None: ...
@@ -1562,103 +1969,141 @@ class TextCommandBarFlyout(CommandBarFlyout, metaclass=TextCommandBarFlyout_Stat
 
 @typing.final
 class TimePickerFlyout_Static(windows_ui_xaml_controls_primitives.PickerFlyoutBase_Static):
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.TimePickerFlyout::get_ClockIdentifierProperty()
     @_property
     def clock_identifier_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.TimePickerFlyout::get_MinuteIncrementProperty()
     @_property
     def minute_increment_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.TimePickerFlyout::get_TimeProperty()
     @_property
     def time_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 @typing.final
 class TimePickerFlyout(windows_ui_xaml_controls_primitives.PickerFlyoutBase, metaclass=TimePickerFlyout_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.IReference`1<Windows.Foundation.TimeSpan>> Windows.UI.Xaml.Controls.TimePickerFlyout::ShowAtAsync(Windows.UI.Xaml.FrameworkElement)
     def show_at_async(self, target: windows_ui_xaml.FrameworkElement, /) -> windows_foundation.IAsyncOperation[typing.Optional[datetime.timedelta]]: ...
+    # Windows.Foundation.EventRegistrationToken Windows.UI.Xaml.Controls.TimePickerFlyout::add_TimePicked(Windows.Foundation.TypedEventHandler`2<Windows.UI.Xaml.Controls.TimePickerFlyout,Windows.UI.Xaml.Controls.TimePickedEventArgs>)
     def add_time_picked(self, handler: windows_foundation.TypedEventHandler[TimePickerFlyout, TimePickedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.UI.Xaml.Controls.TimePickerFlyout::remove_TimePicked(Windows.Foundation.EventRegistrationToken)
     def remove_time_picked(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.TimeSpan Windows.UI.Xaml.Controls.TimePickerFlyout::get_Time()
     @_property
     def time(self) -> datetime.timedelta: ...
+    # System.Void Windows.UI.Xaml.Controls.TimePickerFlyout::put_Time(Windows.Foundation.TimeSpan)
     @time.setter
     def time(self, value: datetime.timedelta) -> None: ...
+    # System.Int32 Windows.UI.Xaml.Controls.TimePickerFlyout::get_MinuteIncrement()
     @_property
     def minute_increment(self) -> winrt.system.Int32: ...
+    # System.Void Windows.UI.Xaml.Controls.TimePickerFlyout::put_MinuteIncrement(System.Int32)
     @minute_increment.setter
     def minute_increment(self, value: winrt.system.Int32) -> None: ...
+    # System.String Windows.UI.Xaml.Controls.TimePickerFlyout::get_ClockIdentifier()
     @_property
     def clock_identifier(self) -> str: ...
+    # System.Void Windows.UI.Xaml.Controls.TimePickerFlyout::put_ClockIdentifier(System.String)
     @clock_identifier.setter
     def clock_identifier(self, value: str) -> None: ...
 
 class TreeViewItem_Static(ListViewItem_Static):
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.TreeViewItem::get_CollapsedGlyphProperty()
     @_property
     @typing.final
     def collapsed_glyph_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.TreeViewItem::get_ExpandedGlyphProperty()
     @_property
     @typing.final
     def expanded_glyph_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.TreeViewItem::get_GlyphBrushProperty()
     @_property
     @typing.final
     def glyph_brush_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.TreeViewItem::get_GlyphOpacityProperty()
     @_property
     @typing.final
     def glyph_opacity_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.TreeViewItem::get_GlyphSizeProperty()
     @_property
     @typing.final
     def glyph_size_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.TreeViewItem::get_IsExpandedProperty()
     @_property
     @typing.final
     def is_expanded_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.TreeViewItem::get_TreeViewItemTemplateSettingsProperty()
     @_property
     @typing.final
     def tree_view_item_template_settings_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.TreeViewItem::get_HasUnrealizedChildrenProperty()
     @_property
     @typing.final
     def has_unrealized_children_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.TreeViewItem::get_ItemsSourceProperty()
     @_property
     @typing.final
     def items_source_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class TreeViewItem(ListViewItem, metaclass=TreeViewItem_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Boolean Windows.UI.Xaml.Controls.TreeViewItem::get_IsExpanded()
     @_property
     def is_expanded(self) -> bool: ...
+    # System.Void Windows.UI.Xaml.Controls.TreeViewItem::put_IsExpanded(System.Boolean)
     @is_expanded.setter
     @typing.final
     def is_expanded(self, value: bool) -> None: ...
+    # System.Double Windows.UI.Xaml.Controls.TreeViewItem::get_GlyphSize()
     @_property
     def glyph_size(self) -> winrt.system.Double: ...
+    # System.Void Windows.UI.Xaml.Controls.TreeViewItem::put_GlyphSize(System.Double)
     @glyph_size.setter
     @typing.final
     def glyph_size(self, value: winrt.system.Double) -> None: ...
+    # System.Double Windows.UI.Xaml.Controls.TreeViewItem::get_GlyphOpacity()
     @_property
     def glyph_opacity(self) -> winrt.system.Double: ...
+    # System.Void Windows.UI.Xaml.Controls.TreeViewItem::put_GlyphOpacity(System.Double)
     @glyph_opacity.setter
     @typing.final
     def glyph_opacity(self, value: winrt.system.Double) -> None: ...
+    # Windows.UI.Xaml.Media.Brush Windows.UI.Xaml.Controls.TreeViewItem::get_GlyphBrush()
     @_property
     def glyph_brush(self) -> windows_ui_xaml_media.Brush: ...
+    # System.Void Windows.UI.Xaml.Controls.TreeViewItem::put_GlyphBrush(Windows.UI.Xaml.Media.Brush)
     @glyph_brush.setter
     @typing.final
     def glyph_brush(self, value: windows_ui_xaml_media.Brush) -> None: ...
+    # System.String Windows.UI.Xaml.Controls.TreeViewItem::get_ExpandedGlyph()
     @_property
     def expanded_glyph(self) -> str: ...
+    # System.Void Windows.UI.Xaml.Controls.TreeViewItem::put_ExpandedGlyph(System.String)
     @expanded_glyph.setter
     @typing.final
     def expanded_glyph(self, value: str) -> None: ...
+    # System.String Windows.UI.Xaml.Controls.TreeViewItem::get_CollapsedGlyph()
     @_property
     def collapsed_glyph(self) -> str: ...
+    # System.Void Windows.UI.Xaml.Controls.TreeViewItem::put_CollapsedGlyph(System.String)
     @collapsed_glyph.setter
     @typing.final
     def collapsed_glyph(self, value: str) -> None: ...
+    # Windows.UI.Xaml.Controls.TreeViewItemTemplateSettings Windows.UI.Xaml.Controls.TreeViewItem::get_TreeViewItemTemplateSettings()
     @_property
     @typing.final
     def tree_view_item_template_settings(self) -> TreeViewItemTemplateSettings: ...
+    # System.Object Windows.UI.Xaml.Controls.TreeViewItem::get_ItemsSource()
     @_property
     def items_source(self) -> winrt.system.Object: ...
+    # System.Void Windows.UI.Xaml.Controls.TreeViewItem::put_ItemsSource(System.Object)
     @items_source.setter
     @typing.final
     def items_source(self, value: winrt.system.Object) -> None: ...
+    # System.Boolean Windows.UI.Xaml.Controls.TreeViewItem::get_HasUnrealizedChildren()
     @_property
     def has_unrealized_children(self) -> bool: ...
+    # System.Void Windows.UI.Xaml.Controls.TreeViewItem::put_HasUnrealizedChildren(System.Boolean)
     @has_unrealized_children.setter
     @typing.final
     def has_unrealized_children(self, value: bool) -> None: ...
@@ -1671,73 +2116,105 @@ class TreeViewList(ListView, metaclass=TreeViewList_Static):
 
 @typing.final
 class VirtualizingStackPanel_Static(windows_ui_xaml_controls_primitives.OrientedVirtualizingPanel_Static):
+    # System.Boolean Windows.UI.Xaml.Controls.VirtualizingStackPanel::GetIsVirtualizing(Windows.UI.Xaml.DependencyObject)
     def get_is_virtualizing(cls, o: windows_ui_xaml.DependencyObject, /) -> bool: ...
+    # Windows.UI.Xaml.Controls.VirtualizationMode Windows.UI.Xaml.Controls.VirtualizingStackPanel::GetVirtualizationMode(Windows.UI.Xaml.DependencyObject)
     def get_virtualization_mode(cls, element: windows_ui_xaml.DependencyObject, /) -> VirtualizationMode: ...
+    # System.Void Windows.UI.Xaml.Controls.VirtualizingStackPanel::SetVirtualizationMode(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.Controls.VirtualizationMode)
     def set_virtualization_mode(cls, element: windows_ui_xaml.DependencyObject, value: VirtualizationMode, /) -> None: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.VirtualizingStackPanel::get_AreScrollSnapPointsRegularProperty()
     @_property
     def are_scroll_snap_points_regular_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.VirtualizingStackPanel::get_IsVirtualizingProperty()
     @_property
     def is_virtualizing_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.VirtualizingStackPanel::get_OrientationProperty()
     @_property
     def orientation_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.VirtualizingStackPanel::get_VirtualizationModeProperty()
     @_property
     def virtualization_mode_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 @typing.final
 class VirtualizingStackPanel(windows_ui_xaml_controls_primitives.OrientedVirtualizingPanel, metaclass=VirtualizingStackPanel_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Void Windows.UI.Xaml.Controls.VirtualizingStackPanel::OnCleanUpVirtualizedItem(Windows.UI.Xaml.Controls.CleanUpVirtualizedItemEventArgs)
     def _on_clean_up_virtualized_item(self, e: CleanUpVirtualizedItemEventArgs, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.UI.Xaml.Controls.VirtualizingStackPanel::add_CleanUpVirtualizedItemEvent(Windows.UI.Xaml.Controls.CleanUpVirtualizedItemEventHandler)
     def add_clean_up_virtualized_item_event(self, handler: CleanUpVirtualizedItemEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.UI.Xaml.Controls.VirtualizingStackPanel::remove_CleanUpVirtualizedItemEvent(Windows.Foundation.EventRegistrationToken)
     def remove_clean_up_virtualized_item_event(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.UI.Xaml.Controls.Orientation Windows.UI.Xaml.Controls.VirtualizingStackPanel::get_Orientation()
     @_property
     def orientation(self) -> Orientation: ...
+    # System.Void Windows.UI.Xaml.Controls.VirtualizingStackPanel::put_Orientation(Windows.UI.Xaml.Controls.Orientation)
     @orientation.setter
     def orientation(self, value: Orientation) -> None: ...
+    # System.Boolean Windows.UI.Xaml.Controls.VirtualizingStackPanel::get_AreScrollSnapPointsRegular()
     @_property
     def are_scroll_snap_points_regular(self) -> bool: ...
+    # System.Void Windows.UI.Xaml.Controls.VirtualizingStackPanel::put_AreScrollSnapPointsRegular(System.Boolean)
     @are_scroll_snap_points_regular.setter
     def are_scroll_snap_points_regular(self, value: bool) -> None: ...
 
 @typing.final
 class WrapGrid_Static(windows_ui_xaml_controls_primitives.OrientedVirtualizingPanel_Static):
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.WrapGrid::get_HorizontalChildrenAlignmentProperty()
     @_property
     def horizontal_children_alignment_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.WrapGrid::get_ItemHeightProperty()
     @_property
     def item_height_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.WrapGrid::get_ItemWidthProperty()
     @_property
     def item_width_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.WrapGrid::get_MaximumRowsOrColumnsProperty()
     @_property
     def maximum_rows_or_columns_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.WrapGrid::get_OrientationProperty()
     @_property
     def orientation_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.WrapGrid::get_VerticalChildrenAlignmentProperty()
     @_property
     def vertical_children_alignment_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 @typing.final
 class WrapGrid(windows_ui_xaml_controls_primitives.OrientedVirtualizingPanel, metaclass=WrapGrid_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Windows.UI.Xaml.VerticalAlignment Windows.UI.Xaml.Controls.WrapGrid::get_VerticalChildrenAlignment()
     @_property
     def vertical_children_alignment(self) -> windows_ui_xaml.VerticalAlignment: ...
+    # System.Void Windows.UI.Xaml.Controls.WrapGrid::put_VerticalChildrenAlignment(Windows.UI.Xaml.VerticalAlignment)
     @vertical_children_alignment.setter
     def vertical_children_alignment(self, value: windows_ui_xaml.VerticalAlignment) -> None: ...
+    # Windows.UI.Xaml.Controls.Orientation Windows.UI.Xaml.Controls.WrapGrid::get_Orientation()
     @_property
     def orientation(self) -> Orientation: ...
+    # System.Void Windows.UI.Xaml.Controls.WrapGrid::put_Orientation(Windows.UI.Xaml.Controls.Orientation)
     @orientation.setter
     def orientation(self, value: Orientation) -> None: ...
+    # System.Int32 Windows.UI.Xaml.Controls.WrapGrid::get_MaximumRowsOrColumns()
     @_property
     def maximum_rows_or_columns(self) -> winrt.system.Int32: ...
+    # System.Void Windows.UI.Xaml.Controls.WrapGrid::put_MaximumRowsOrColumns(System.Int32)
     @maximum_rows_or_columns.setter
     def maximum_rows_or_columns(self, value: winrt.system.Int32) -> None: ...
+    # System.Double Windows.UI.Xaml.Controls.WrapGrid::get_ItemWidth()
     @_property
     def item_width(self) -> winrt.system.Double: ...
+    # System.Void Windows.UI.Xaml.Controls.WrapGrid::put_ItemWidth(System.Double)
     @item_width.setter
     def item_width(self, value: winrt.system.Double) -> None: ...
+    # System.Double Windows.UI.Xaml.Controls.WrapGrid::get_ItemHeight()
     @_property
     def item_height(self) -> winrt.system.Double: ...
+    # System.Void Windows.UI.Xaml.Controls.WrapGrid::put_ItemHeight(System.Double)
     @item_height.setter
     def item_height(self, value: winrt.system.Double) -> None: ...
+    # Windows.UI.Xaml.HorizontalAlignment Windows.UI.Xaml.Controls.WrapGrid::get_HorizontalChildrenAlignment()
     @_property
     def horizontal_children_alignment(self) -> windows_ui_xaml.HorizontalAlignment: ...
+    # System.Void Windows.UI.Xaml.Controls.WrapGrid::put_HorizontalChildrenAlignment(Windows.UI.Xaml.HorizontalAlignment)
     @horizontal_children_alignment.setter
     def horizontal_children_alignment(self, value: windows_ui_xaml.HorizontalAlignment) -> None: ...
 

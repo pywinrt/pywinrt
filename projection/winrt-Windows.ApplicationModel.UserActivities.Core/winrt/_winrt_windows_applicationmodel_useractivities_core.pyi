@@ -16,7 +16,9 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class CoreUserActivityManager_Static(type):
+    # Windows.ApplicationModel.UserActivities.UserActivitySession Windows.ApplicationModel.UserActivities.Core.CoreUserActivityManager::CreateUserActivitySessionInBackground(Windows.ApplicationModel.UserActivities.UserActivity)
     def create_user_activity_session_in_background(cls, activity: windows_applicationmodel_useractivities.UserActivity, /) -> windows_applicationmodel_useractivities.UserActivitySession: ...
+    # Windows.Foundation.IAsyncAction Windows.ApplicationModel.UserActivities.Core.CoreUserActivityManager::DeleteUserActivitySessionsInTimeRangeAsync(Windows.ApplicationModel.UserActivities.UserActivityChannel,Windows.Foundation.DateTime,Windows.Foundation.DateTime)
     def delete_user_activity_sessions_in_time_range_async(cls, channel: windows_applicationmodel_useractivities.UserActivityChannel, start_time: datetime.datetime, end_time: datetime.datetime, /) -> windows_foundation.IAsyncAction: ...
 
 @typing.final

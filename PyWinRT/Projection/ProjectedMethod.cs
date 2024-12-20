@@ -47,6 +47,11 @@ class ProjectedMethod(
         + GetName(method).ToPythonIdentifier(isTypeMethod: method.IsStatic);
 
     /// <summary>
+    /// Gets the signature of the method.
+    /// </summary>
+    public string Signature { get; } = method.ToString();
+
+    /// <summary>
     /// Gets the inherence chain of the method.
     /// </summary>
     /// <remarks>

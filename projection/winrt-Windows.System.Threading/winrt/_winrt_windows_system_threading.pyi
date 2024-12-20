@@ -18,8 +18,11 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class ThreadPool_Static(type):
+    # Windows.Foundation.IAsyncAction Windows.System.Threading.ThreadPool::RunAsync(Windows.System.Threading.WorkItemHandler)
     def run_async(cls, handler: WorkItemHandler, /) -> windows_foundation.IAsyncAction: ...
+    # Windows.Foundation.IAsyncAction Windows.System.Threading.ThreadPool::RunAsync(Windows.System.Threading.WorkItemHandler,Windows.System.Threading.WorkItemPriority,Windows.System.Threading.WorkItemOptions)
     def run_with_priority_and_options_async(cls, handler: WorkItemHandler, priority: WorkItemPriority, options: WorkItemOptions, /) -> windows_foundation.IAsyncAction: ...
+    # Windows.Foundation.IAsyncAction Windows.System.Threading.ThreadPool::RunAsync(Windows.System.Threading.WorkItemHandler,Windows.System.Threading.WorkItemPriority)
     def run_with_priority_async(cls, handler: WorkItemHandler, priority: WorkItemPriority, /) -> windows_foundation.IAsyncAction: ...
 
 @typing.final
@@ -28,16 +31,23 @@ class ThreadPool(winrt.system.Object, metaclass=ThreadPool_Static):
 
 @typing.final
 class ThreadPoolTimer_Static(type):
+    # Windows.System.Threading.ThreadPoolTimer Windows.System.Threading.ThreadPoolTimer::CreatePeriodicTimer(Windows.System.Threading.TimerElapsedHandler,Windows.Foundation.TimeSpan)
     def create_periodic_timer(cls, handler: TimerElapsedHandler, period: datetime.timedelta, /) -> ThreadPoolTimer: ...
+    # Windows.System.Threading.ThreadPoolTimer Windows.System.Threading.ThreadPoolTimer::CreatePeriodicTimer(Windows.System.Threading.TimerElapsedHandler,Windows.Foundation.TimeSpan,Windows.System.Threading.TimerDestroyedHandler)
     def create_periodic_timer_with_completion(cls, handler: TimerElapsedHandler, period: datetime.timedelta, destroyed: TimerDestroyedHandler, /) -> ThreadPoolTimer: ...
+    # Windows.System.Threading.ThreadPoolTimer Windows.System.Threading.ThreadPoolTimer::CreateTimer(Windows.System.Threading.TimerElapsedHandler,Windows.Foundation.TimeSpan)
     def create_timer(cls, handler: TimerElapsedHandler, delay: datetime.timedelta, /) -> ThreadPoolTimer: ...
+    # Windows.System.Threading.ThreadPoolTimer Windows.System.Threading.ThreadPoolTimer::CreateTimer(Windows.System.Threading.TimerElapsedHandler,Windows.Foundation.TimeSpan,Windows.System.Threading.TimerDestroyedHandler)
     def create_timer_with_completion(cls, handler: TimerElapsedHandler, delay: datetime.timedelta, destroyed: TimerDestroyedHandler, /) -> ThreadPoolTimer: ...
 
 @typing.final
 class ThreadPoolTimer(winrt.system.Object, metaclass=ThreadPoolTimer_Static):
+    # System.Void Windows.System.Threading.ThreadPoolTimer::Cancel()
     def cancel(self) -> None: ...
+    # Windows.Foundation.TimeSpan Windows.System.Threading.ThreadPoolTimer::get_Delay()
     @_property
     def delay(self) -> datetime.timedelta: ...
+    # Windows.Foundation.TimeSpan Windows.System.Threading.ThreadPoolTimer::get_Period()
     @_property
     def period(self) -> datetime.timedelta: ...
 

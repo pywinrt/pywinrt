@@ -24,72 +24,97 @@ class FrameNavigationOptions_Static(type):
 
 class FrameNavigationOptions(winrt.system.Object, metaclass=FrameNavigationOptions_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Windows.UI.Xaml.Media.Animation.NavigationTransitionInfo Windows.UI.Xaml.Navigation.FrameNavigationOptions::get_TransitionInfoOverride()
     @_property
     def transition_info_override(self) -> windows_ui_xaml_media_animation.NavigationTransitionInfo: ...
+    # System.Void Windows.UI.Xaml.Navigation.FrameNavigationOptions::put_TransitionInfoOverride(Windows.UI.Xaml.Media.Animation.NavigationTransitionInfo)
     @transition_info_override.setter
     @typing.final
     def transition_info_override(self, value: windows_ui_xaml_media_animation.NavigationTransitionInfo) -> None: ...
+    # System.Boolean Windows.UI.Xaml.Navigation.FrameNavigationOptions::get_IsNavigationStackEnabled()
     @_property
     def is_navigation_stack_enabled(self) -> bool: ...
+    # System.Void Windows.UI.Xaml.Navigation.FrameNavigationOptions::put_IsNavigationStackEnabled(System.Boolean)
     @is_navigation_stack_enabled.setter
     @typing.final
     def is_navigation_stack_enabled(self, value: bool) -> None: ...
 
 @typing.final
 class NavigatingCancelEventArgs(winrt.system.Object):
+    # System.Boolean Windows.UI.Xaml.Navigation.NavigatingCancelEventArgs::get_Cancel()
     @_property
     def cancel(self) -> bool: ...
+    # System.Void Windows.UI.Xaml.Navigation.NavigatingCancelEventArgs::put_Cancel(System.Boolean)
     @cancel.setter
     def cancel(self, value: bool) -> None: ...
+    # Windows.UI.Xaml.Navigation.NavigationMode Windows.UI.Xaml.Navigation.NavigatingCancelEventArgs::get_NavigationMode()
     @_property
     def navigation_mode(self) -> NavigationMode: ...
+    # Windows.UI.Xaml.Interop.TypeName Windows.UI.Xaml.Navigation.NavigatingCancelEventArgs::get_SourcePageType()
     @_property
     def source_page_type(self) -> windows_ui_xaml_interop.TypeName: ...
+    # Windows.UI.Xaml.Media.Animation.NavigationTransitionInfo Windows.UI.Xaml.Navigation.NavigatingCancelEventArgs::get_NavigationTransitionInfo()
     @_property
     def navigation_transition_info(self) -> windows_ui_xaml_media_animation.NavigationTransitionInfo: ...
+    # System.Object Windows.UI.Xaml.Navigation.NavigatingCancelEventArgs::get_Parameter()
     @_property
     def parameter(self) -> winrt.system.Object: ...
 
 @typing.final
 class NavigationEventArgs(winrt.system.Object):
+    # Windows.Foundation.Uri Windows.UI.Xaml.Navigation.NavigationEventArgs::get_Uri()
     @_property
     def uri(self) -> windows_foundation.Uri: ...
+    # System.Void Windows.UI.Xaml.Navigation.NavigationEventArgs::put_Uri(Windows.Foundation.Uri)
     @uri.setter
     def uri(self, value: windows_foundation.Uri) -> None: ...
+    # System.Object Windows.UI.Xaml.Navigation.NavigationEventArgs::get_Content()
     @_property
     def content(self) -> winrt.system.Object: ...
+    # Windows.UI.Xaml.Navigation.NavigationMode Windows.UI.Xaml.Navigation.NavigationEventArgs::get_NavigationMode()
     @_property
     def navigation_mode(self) -> NavigationMode: ...
+    # System.Object Windows.UI.Xaml.Navigation.NavigationEventArgs::get_Parameter()
     @_property
     def parameter(self) -> winrt.system.Object: ...
+    # Windows.UI.Xaml.Interop.TypeName Windows.UI.Xaml.Navigation.NavigationEventArgs::get_SourcePageType()
     @_property
     def source_page_type(self) -> windows_ui_xaml_interop.TypeName: ...
+    # Windows.UI.Xaml.Media.Animation.NavigationTransitionInfo Windows.UI.Xaml.Navigation.NavigationEventArgs::get_NavigationTransitionInfo()
     @_property
     def navigation_transition_info(self) -> windows_ui_xaml_media_animation.NavigationTransitionInfo: ...
 
 @typing.final
 class NavigationFailedEventArgs(winrt.system.Object):
+    # System.Boolean Windows.UI.Xaml.Navigation.NavigationFailedEventArgs::get_Handled()
     @_property
     def handled(self) -> bool: ...
+    # System.Void Windows.UI.Xaml.Navigation.NavigationFailedEventArgs::put_Handled(System.Boolean)
     @handled.setter
     def handled(self, value: bool) -> None: ...
+    # Windows.Foundation.HResult Windows.UI.Xaml.Navigation.NavigationFailedEventArgs::get_Exception()
     @_property
     def exception(self) -> windows_foundation.HResult: ...
+    # Windows.UI.Xaml.Interop.TypeName Windows.UI.Xaml.Navigation.NavigationFailedEventArgs::get_SourcePageType()
     @_property
     def source_page_type(self) -> windows_ui_xaml_interop.TypeName: ...
 
 @typing.final
 class PageStackEntry_Static(windows_ui_xaml.DependencyObject_Static):
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Navigation.PageStackEntry::get_SourcePageTypeProperty()
     @_property
     def source_page_type_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 @typing.final
 class PageStackEntry(windows_ui_xaml.DependencyObject, metaclass=PageStackEntry_Static):
     def __new__(cls: typing.Type[Self], source_page_type: windows_ui_xaml_interop.TypeName, parameter: winrt.system.Object, navigation_transition_info: windows_ui_xaml_media_animation.NavigationTransitionInfo) -> Self: ...
+    # Windows.UI.Xaml.Media.Animation.NavigationTransitionInfo Windows.UI.Xaml.Navigation.PageStackEntry::get_NavigationTransitionInfo()
     @_property
     def navigation_transition_info(self) -> windows_ui_xaml_media_animation.NavigationTransitionInfo: ...
+    # System.Object Windows.UI.Xaml.Navigation.PageStackEntry::get_Parameter()
     @_property
     def parameter(self) -> winrt.system.Object: ...
+    # Windows.UI.Xaml.Interop.TypeName Windows.UI.Xaml.Navigation.PageStackEntry::get_SourcePageType()
     @_property
     def source_page_type(self) -> windows_ui_xaml_interop.TypeName: ...
 

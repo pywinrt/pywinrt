@@ -16,23 +16,30 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class EnterpriseKeyCredentialRegistrationInfo(winrt.system.Object):
+    # System.String Windows.Security.Authentication.Identity.EnterpriseKeyCredentialRegistrationInfo::get_KeyId()
     @_property
     def key_id(self) -> str: ...
+    # System.String Windows.Security.Authentication.Identity.EnterpriseKeyCredentialRegistrationInfo::get_KeyName()
     @_property
     def key_name(self) -> str: ...
+    # System.String Windows.Security.Authentication.Identity.EnterpriseKeyCredentialRegistrationInfo::get_Subject()
     @_property
     def subject(self) -> str: ...
+    # System.String Windows.Security.Authentication.Identity.EnterpriseKeyCredentialRegistrationInfo::get_TenantId()
     @_property
     def tenant_id(self) -> str: ...
+    # System.String Windows.Security.Authentication.Identity.EnterpriseKeyCredentialRegistrationInfo::get_TenantName()
     @_property
     def tenant_name(self) -> str: ...
 
 @typing.final
 class EnterpriseKeyCredentialRegistrationManager_Static(type):
+    # Windows.Security.Authentication.Identity.EnterpriseKeyCredentialRegistrationManager Windows.Security.Authentication.Identity.EnterpriseKeyCredentialRegistrationManager::get_Current()
     @_property
     def current(cls) -> EnterpriseKeyCredentialRegistrationManager: ...
 
 @typing.final
 class EnterpriseKeyCredentialRegistrationManager(winrt.system.Object, metaclass=EnterpriseKeyCredentialRegistrationManager_Static):
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Security.Authentication.Identity.EnterpriseKeyCredentialRegistrationInfo>> Windows.Security.Authentication.Identity.EnterpriseKeyCredentialRegistrationManager::GetRegistrationsAsync()
     def get_registrations_async(self) -> windows_foundation.IAsyncOperation[typing.Sequence[EnterpriseKeyCredentialRegistrationInfo]]: ...
 

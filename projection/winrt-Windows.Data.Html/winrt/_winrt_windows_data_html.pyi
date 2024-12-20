@@ -14,6 +14,7 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class HtmlUtilities_Static(type):
+    # System.String Windows.Data.Html.HtmlUtilities::ConvertToText(System.String)
     def convert_to_text(cls, html: str, /) -> str: ...
 
 @typing.final

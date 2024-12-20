@@ -14,10 +14,13 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class BackgroundEnergyDiagnostics_Static(type):
+    # System.UInt64 Windows.System.Power.Diagnostics.BackgroundEnergyDiagnostics::ComputeTotalEnergyUsage()
     # @deprecated("Background Energy Diagnostics has been deprecated. For more info, see MSDN.")
     def compute_total_energy_usage(cls) -> winrt.system.UInt64: ...
+    # System.Void Windows.System.Power.Diagnostics.BackgroundEnergyDiagnostics::ResetTotalEnergyUsage()
     # @deprecated("Background Energy Diagnostics has been deprecated. For more info, see MSDN.")
     def reset_total_energy_usage(cls) -> None: ...
+    # System.Double Windows.System.Power.Diagnostics.BackgroundEnergyDiagnostics::get_DeviceSpecificConversionFactor()
     @_property
     def device_specific_conversion_factor(cls) -> winrt.system.Double: ...
 
@@ -27,10 +30,13 @@ class BackgroundEnergyDiagnostics(winrt.system.Object, metaclass=BackgroundEnerg
 
 @typing.final
 class ForegroundEnergyDiagnostics_Static(type):
+    # System.UInt64 Windows.System.Power.Diagnostics.ForegroundEnergyDiagnostics::ComputeTotalEnergyUsage()
     # @deprecated("Background Energy Diagnostics has been deprecated. For more info, see MSDN.")
     def compute_total_energy_usage(cls) -> winrt.system.UInt64: ...
+    # System.Void Windows.System.Power.Diagnostics.ForegroundEnergyDiagnostics::ResetTotalEnergyUsage()
     # @deprecated("Background Energy Diagnostics has been deprecated. For more info, see MSDN.")
     def reset_total_energy_usage(cls) -> None: ...
+    # System.Double Windows.System.Power.Diagnostics.ForegroundEnergyDiagnostics::get_DeviceSpecificConversionFactor()
     @_property
     def device_specific_conversion_factor(cls) -> winrt.system.Double: ...
 

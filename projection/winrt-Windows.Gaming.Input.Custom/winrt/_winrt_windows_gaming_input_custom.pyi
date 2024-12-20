@@ -33,9 +33,13 @@ class GipFirmwareUpdateProgress:
 
 @typing.final
 class GameControllerFactoryManager_Static(type):
+    # System.Void Windows.Gaming.Input.Custom.GameControllerFactoryManager::RegisterCustomFactoryForGipInterface(Windows.Gaming.Input.Custom.ICustomGameControllerFactory,System.Guid)
     def register_custom_factory_for_gip_interface(cls, factory: ImplementsICustomGameControllerFactory, interface_id: _uuid.UUID, /) -> None: ...
+    # System.Void Windows.Gaming.Input.Custom.GameControllerFactoryManager::RegisterCustomFactoryForHardwareId(Windows.Gaming.Input.Custom.ICustomGameControllerFactory,System.UInt16,System.UInt16)
     def register_custom_factory_for_hardware_id(cls, factory: ImplementsICustomGameControllerFactory, hardware_vendor_id: winrt.system.UInt16, hardware_product_id: winrt.system.UInt16, /) -> None: ...
+    # System.Void Windows.Gaming.Input.Custom.GameControllerFactoryManager::RegisterCustomFactoryForXusbType(Windows.Gaming.Input.Custom.ICustomGameControllerFactory,Windows.Gaming.Input.Custom.XusbDeviceType,Windows.Gaming.Input.Custom.XusbDeviceSubtype)
     def register_custom_factory_for_xusb_type(cls, factory: ImplementsICustomGameControllerFactory, xusb_type: XusbDeviceType, xusb_subtype: XusbDeviceSubtype, /) -> None: ...
+    # Windows.Gaming.Input.IGameController Windows.Gaming.Input.Custom.GameControllerFactoryManager::TryGetFactoryControllerFromGameController(Windows.Gaming.Input.Custom.ICustomGameControllerFactory,Windows.Gaming.Input.IGameController)
     def try_get_factory_controller_from_game_controller(cls, factory: ImplementsICustomGameControllerFactory, game_controller: windows_gaming_input.ImplementsIGameController, /) -> windows_gaming_input.IGameController: ...
 
 @typing.final
@@ -44,60 +48,87 @@ class GameControllerFactoryManager(winrt.system.Object, metaclass=GameController
 
 @typing.final
 class GipFirmwareUpdateResult(winrt.system.Object):
+    # System.UInt32 Windows.Gaming.Input.Custom.GipFirmwareUpdateResult::get_ExtendedErrorCode()
     @_property
     def extended_error_code(self) -> winrt.system.UInt32: ...
+    # System.UInt32 Windows.Gaming.Input.Custom.GipFirmwareUpdateResult::get_FinalComponentId()
     @_property
     def final_component_id(self) -> winrt.system.UInt32: ...
+    # Windows.Gaming.Input.Custom.GipFirmwareUpdateStatus Windows.Gaming.Input.Custom.GipFirmwareUpdateResult::get_Status()
     @_property
     def status(self) -> GipFirmwareUpdateStatus: ...
 
 @typing.final
 class GipGameControllerProvider(winrt.system.Object, ImplementsIGameControllerProvider):
+    # System.Void Windows.Gaming.Input.Custom.GipGameControllerProvider::SendMessage(Windows.Gaming.Input.Custom.GipMessageClass,System.Byte,System.Byte[])
     def send_message(self, message_class: GipMessageClass, message_id: winrt.system.UInt8, message_buffer: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], /) -> None: ...
+    # System.Void Windows.Gaming.Input.Custom.GipGameControllerProvider::SendReceiveMessage(Windows.Gaming.Input.Custom.GipMessageClass,System.Byte,System.Byte[],System.Byte[])
     def send_receive_message(self, message_class: GipMessageClass, message_id: winrt.system.UInt8, request_message_buffer: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], response_message_buffer: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.WriteableBuffer], /) -> None: ...
+    # Windows.Foundation.IAsyncOperationWithProgress`2<Windows.Gaming.Input.Custom.GipFirmwareUpdateResult,Windows.Gaming.Input.Custom.GipFirmwareUpdateProgress> Windows.Gaming.Input.Custom.GipGameControllerProvider::UpdateFirmwareAsync(Windows.Storage.Streams.IInputStream)
     def update_firmware_async(self, firmware_image: windows_storage_streams.ImplementsIInputStream, /) -> windows_foundation.IAsyncOperationWithProgress[GipFirmwareUpdateResult, GipFirmwareUpdateProgress]: ...
+    # Windows.Gaming.Input.Custom.GameControllerVersionInfo Windows.Gaming.Input.Custom.GipGameControllerProvider::get_FirmwareVersionInfo()
     @_property
     def firmware_version_info(self) -> GameControllerVersionInfo: ...
+    # System.UInt16 Windows.Gaming.Input.Custom.GipGameControllerProvider::get_HardwareProductId()
     @_property
     def hardware_product_id(self) -> winrt.system.UInt16: ...
+    # System.UInt16 Windows.Gaming.Input.Custom.GipGameControllerProvider::get_HardwareVendorId()
     @_property
     def hardware_vendor_id(self) -> winrt.system.UInt16: ...
+    # Windows.Gaming.Input.Custom.GameControllerVersionInfo Windows.Gaming.Input.Custom.GipGameControllerProvider::get_HardwareVersionInfo()
     @_property
     def hardware_version_info(self) -> GameControllerVersionInfo: ...
+    # System.Boolean Windows.Gaming.Input.Custom.GipGameControllerProvider::get_IsConnected()
     @_property
     def is_connected(self) -> bool: ...
 
 @typing.final
 class HidGameControllerProvider(winrt.system.Object, ImplementsIGameControllerProvider):
+    # System.Void Windows.Gaming.Input.Custom.HidGameControllerProvider::GetFeatureReport(System.Byte,System.Byte[])
     def get_feature_report(self, report_id: winrt.system.UInt8, report_buffer: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.WriteableBuffer], /) -> None: ...
+    # System.Void Windows.Gaming.Input.Custom.HidGameControllerProvider::SendFeatureReport(System.Byte,System.Byte[])
     def send_feature_report(self, report_id: winrt.system.UInt8, report_buffer: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], /) -> None: ...
+    # System.Void Windows.Gaming.Input.Custom.HidGameControllerProvider::SendOutputReport(System.Byte,System.Byte[])
     def send_output_report(self, report_id: winrt.system.UInt8, report_buffer: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], /) -> None: ...
+    # Windows.Gaming.Input.Custom.GameControllerVersionInfo Windows.Gaming.Input.Custom.HidGameControllerProvider::get_FirmwareVersionInfo()
     @_property
     def firmware_version_info(self) -> GameControllerVersionInfo: ...
+    # System.UInt16 Windows.Gaming.Input.Custom.HidGameControllerProvider::get_HardwareProductId()
     @_property
     def hardware_product_id(self) -> winrt.system.UInt16: ...
+    # System.UInt16 Windows.Gaming.Input.Custom.HidGameControllerProvider::get_HardwareVendorId()
     @_property
     def hardware_vendor_id(self) -> winrt.system.UInt16: ...
+    # Windows.Gaming.Input.Custom.GameControllerVersionInfo Windows.Gaming.Input.Custom.HidGameControllerProvider::get_HardwareVersionInfo()
     @_property
     def hardware_version_info(self) -> GameControllerVersionInfo: ...
+    # System.Boolean Windows.Gaming.Input.Custom.HidGameControllerProvider::get_IsConnected()
     @_property
     def is_connected(self) -> bool: ...
+    # System.UInt16 Windows.Gaming.Input.Custom.HidGameControllerProvider::get_UsageId()
     @_property
     def usage_id(self) -> winrt.system.UInt16: ...
+    # System.UInt16 Windows.Gaming.Input.Custom.HidGameControllerProvider::get_UsagePage()
     @_property
     def usage_page(self) -> winrt.system.UInt16: ...
 
 @typing.final
 class XusbGameControllerProvider(winrt.system.Object, ImplementsIGameControllerProvider):
+    # System.Void Windows.Gaming.Input.Custom.XusbGameControllerProvider::SetVibration(System.Double,System.Double)
     def set_vibration(self, low_frequency_motor_speed: winrt.system.Double, high_frequency_motor_speed: winrt.system.Double, /) -> None: ...
+    # Windows.Gaming.Input.Custom.GameControllerVersionInfo Windows.Gaming.Input.Custom.XusbGameControllerProvider::get_FirmwareVersionInfo()
     @_property
     def firmware_version_info(self) -> GameControllerVersionInfo: ...
+    # System.UInt16 Windows.Gaming.Input.Custom.XusbGameControllerProvider::get_HardwareProductId()
     @_property
     def hardware_product_id(self) -> winrt.system.UInt16: ...
+    # System.UInt16 Windows.Gaming.Input.Custom.XusbGameControllerProvider::get_HardwareVendorId()
     @_property
     def hardware_vendor_id(self) -> winrt.system.UInt16: ...
+    # Windows.Gaming.Input.Custom.GameControllerVersionInfo Windows.Gaming.Input.Custom.XusbGameControllerProvider::get_HardwareVersionInfo()
     @_property
     def hardware_version_info(self) -> GameControllerVersionInfo: ...
+    # System.Boolean Windows.Gaming.Input.Custom.XusbGameControllerProvider::get_IsConnected()
     @_property
     def is_connected(self) -> bool: ...
 
@@ -106,8 +137,11 @@ class ImplementsICustomGameControllerFactory():
 
 @typing.final
 class ICustomGameControllerFactory(winrt.system.Object, ImplementsICustomGameControllerFactory):
+    # System.Object Windows.Gaming.Input.Custom.ICustomGameControllerFactory::CreateGameController(Windows.Gaming.Input.Custom.IGameControllerProvider)
     def create_game_controller(self, provider: ImplementsIGameControllerProvider, /) -> winrt.system.Object: ...
+    # System.Void Windows.Gaming.Input.Custom.ICustomGameControllerFactory::OnGameControllerAdded(Windows.Gaming.Input.IGameController)
     def on_game_controller_added(self, value: windows_gaming_input.ImplementsIGameController, /) -> None: ...
+    # System.Void Windows.Gaming.Input.Custom.ICustomGameControllerFactory::OnGameControllerRemoved(Windows.Gaming.Input.IGameController)
     def on_game_controller_removed(self, value: windows_gaming_input.ImplementsIGameController, /) -> None: ...
 
 class ImplementsIGameControllerInputSink():
@@ -115,7 +149,9 @@ class ImplementsIGameControllerInputSink():
 
 @typing.final
 class IGameControllerInputSink(winrt.system.Object, ImplementsIGameControllerInputSink):
+    # System.Void Windows.Gaming.Input.Custom.IGameControllerInputSink::OnInputResumed(System.UInt64)
     def on_input_resumed(self, timestamp: winrt.system.UInt64, /) -> None: ...
+    # System.Void Windows.Gaming.Input.Custom.IGameControllerInputSink::OnInputSuspended(System.UInt64)
     def on_input_suspended(self, timestamp: winrt.system.UInt64, /) -> None: ...
 
 class ImplementsIGameControllerProvider():
@@ -123,14 +159,19 @@ class ImplementsIGameControllerProvider():
 
 @typing.final
 class IGameControllerProvider(winrt.system.Object, ImplementsIGameControllerProvider):
+    # Windows.Gaming.Input.Custom.GameControllerVersionInfo Windows.Gaming.Input.Custom.IGameControllerProvider::get_FirmwareVersionInfo()
     @_property
     def firmware_version_info(self) -> GameControllerVersionInfo: ...
+    # System.UInt16 Windows.Gaming.Input.Custom.IGameControllerProvider::get_HardwareProductId()
     @_property
     def hardware_product_id(self) -> winrt.system.UInt16: ...
+    # System.UInt16 Windows.Gaming.Input.Custom.IGameControllerProvider::get_HardwareVendorId()
     @_property
     def hardware_vendor_id(self) -> winrt.system.UInt16: ...
+    # Windows.Gaming.Input.Custom.GameControllerVersionInfo Windows.Gaming.Input.Custom.IGameControllerProvider::get_HardwareVersionInfo()
     @_property
     def hardware_version_info(self) -> GameControllerVersionInfo: ...
+    # System.Boolean Windows.Gaming.Input.Custom.IGameControllerProvider::get_IsConnected()
     @_property
     def is_connected(self) -> bool: ...
 
@@ -139,9 +180,13 @@ class ImplementsIGipGameControllerInputSink():
 
 @typing.final
 class IGipGameControllerInputSink(winrt.system.Object, ImplementsIGipGameControllerInputSink, ImplementsIGameControllerInputSink):
+    # System.Void Windows.Gaming.Input.Custom.IGameControllerInputSink::OnInputResumed(System.UInt64)
     def on_input_resumed(self, timestamp: winrt.system.UInt64, /) -> None: ...
+    # System.Void Windows.Gaming.Input.Custom.IGameControllerInputSink::OnInputSuspended(System.UInt64)
     def on_input_suspended(self, timestamp: winrt.system.UInt64, /) -> None: ...
+    # System.Void Windows.Gaming.Input.Custom.IGipGameControllerInputSink::OnKeyReceived(System.UInt64,System.Byte,System.Boolean)
     def on_key_received(self, timestamp: winrt.system.UInt64, key_code: winrt.system.UInt8, is_pressed: bool, /) -> None: ...
+    # System.Void Windows.Gaming.Input.Custom.IGipGameControllerInputSink::OnMessageReceived(System.UInt64,Windows.Gaming.Input.Custom.GipMessageClass,System.Byte,System.Byte,System.Byte[])
     def on_message_received(self, timestamp: winrt.system.UInt64, message_class: GipMessageClass, message_id: winrt.system.UInt8, sequence_id: winrt.system.UInt8, message_buffer: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], /) -> None: ...
 
 class ImplementsIHidGameControllerInputSink():
@@ -149,8 +194,11 @@ class ImplementsIHidGameControllerInputSink():
 
 @typing.final
 class IHidGameControllerInputSink(winrt.system.Object, ImplementsIHidGameControllerInputSink, ImplementsIGameControllerInputSink):
+    # System.Void Windows.Gaming.Input.Custom.IHidGameControllerInputSink::OnInputReportReceived(System.UInt64,System.Byte,System.Byte[])
     def on_input_report_received(self, timestamp: winrt.system.UInt64, report_id: winrt.system.UInt8, report_buffer: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], /) -> None: ...
+    # System.Void Windows.Gaming.Input.Custom.IGameControllerInputSink::OnInputResumed(System.UInt64)
     def on_input_resumed(self, timestamp: winrt.system.UInt64, /) -> None: ...
+    # System.Void Windows.Gaming.Input.Custom.IGameControllerInputSink::OnInputSuspended(System.UInt64)
     def on_input_suspended(self, timestamp: winrt.system.UInt64, /) -> None: ...
 
 class ImplementsIXusbGameControllerInputSink():
@@ -158,7 +206,10 @@ class ImplementsIXusbGameControllerInputSink():
 
 @typing.final
 class IXusbGameControllerInputSink(winrt.system.Object, ImplementsIXusbGameControllerInputSink, ImplementsIGameControllerInputSink):
+    # System.Void Windows.Gaming.Input.Custom.IXusbGameControllerInputSink::OnInputReceived(System.UInt64,System.Byte,System.Byte[])
     def on_input_received(self, timestamp: winrt.system.UInt64, report_id: winrt.system.UInt8, input_buffer: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], /) -> None: ...
+    # System.Void Windows.Gaming.Input.Custom.IGameControllerInputSink::OnInputResumed(System.UInt64)
     def on_input_resumed(self, timestamp: winrt.system.UInt64, /) -> None: ...
+    # System.Void Windows.Gaming.Input.Custom.IGameControllerInputSink::OnInputSuspended(System.UInt64)
     def on_input_suspended(self, timestamp: winrt.system.UInt64, /) -> None: ...
 

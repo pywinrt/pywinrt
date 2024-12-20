@@ -15,10 +15,13 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class VibrationDevice_Static(type):
+    # Windows.Phone.Devices.Notification.VibrationDevice Windows.Phone.Devices.Notification.VibrationDevice::GetDefault()
     def get_default(cls) -> VibrationDevice: ...
 
 @typing.final
 class VibrationDevice(winrt.system.Object, metaclass=VibrationDevice_Static):
+    # System.Void Windows.Phone.Devices.Notification.VibrationDevice::Cancel()
     def cancel(self) -> None: ...
+    # System.Void Windows.Phone.Devices.Notification.VibrationDevice::Vibrate(Windows.Foundation.TimeSpan)
     def vibrate(self, duration: datetime.timedelta, /) -> None: ...
 

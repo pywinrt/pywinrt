@@ -17,47 +17,65 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class PaymentAppCanMakePaymentTriggerDetails(winrt.system.Object):
+    # System.Void Windows.ApplicationModel.Payments.Provider.PaymentAppCanMakePaymentTriggerDetails::ReportCanMakePaymentResult(Windows.ApplicationModel.Payments.PaymentCanMakePaymentResult)
     def report_can_make_payment_result(self, value: windows_applicationmodel_payments.PaymentCanMakePaymentResult, /) -> None: ...
+    # Windows.ApplicationModel.Payments.PaymentRequest Windows.ApplicationModel.Payments.Provider.PaymentAppCanMakePaymentTriggerDetails::get_Request()
     @_property
     def request(self) -> windows_applicationmodel_payments.PaymentRequest: ...
 
 @typing.final
 class PaymentAppManager_Static(type):
+    # Windows.ApplicationModel.Payments.Provider.PaymentAppManager Windows.ApplicationModel.Payments.Provider.PaymentAppManager::get_Current()
     @_property
     def current(cls) -> PaymentAppManager: ...
 
 @typing.final
 class PaymentAppManager(winrt.system.Object, metaclass=PaymentAppManager_Static):
+    # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Payments.Provider.PaymentAppManager::RegisterAsync(Windows.Foundation.Collections.IIterable`1<System.String>)
     def register_async(self, supported_payment_method_ids: typing.Iterable[str], /) -> windows_foundation.IAsyncAction: ...
+    # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Payments.Provider.PaymentAppManager::UnregisterAsync()
     def unregister_async(self) -> windows_foundation.IAsyncAction: ...
 
 @typing.final
 class PaymentTransaction_Static(type):
+    # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Payments.Provider.PaymentTransaction> Windows.ApplicationModel.Payments.Provider.PaymentTransaction::FromIdAsync(System.String)
     def from_id_async(cls, id: str, /) -> windows_foundation.IAsyncOperation[PaymentTransaction]: ...
 
 @typing.final
 class PaymentTransaction(winrt.system.Object, metaclass=PaymentTransaction_Static):
+    # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Payments.Provider.PaymentTransactionAcceptResult> Windows.ApplicationModel.Payments.Provider.PaymentTransaction::AcceptAsync(Windows.ApplicationModel.Payments.PaymentToken)
     def accept_async(self, payment_token: windows_applicationmodel_payments.PaymentToken, /) -> windows_foundation.IAsyncOperation[PaymentTransactionAcceptResult]: ...
+    # System.Void Windows.ApplicationModel.Payments.Provider.PaymentTransaction::Reject()
     def reject(self) -> None: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Payments.PaymentRequestChangedResult> Windows.ApplicationModel.Payments.Provider.PaymentTransaction::UpdateSelectedShippingOptionAsync(Windows.ApplicationModel.Payments.PaymentShippingOption)
     def update_selected_shipping_option_async(self, selected_shipping_option: windows_applicationmodel_payments.PaymentShippingOption, /) -> windows_foundation.IAsyncOperation[windows_applicationmodel_payments.PaymentRequestChangedResult]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Payments.PaymentRequestChangedResult> Windows.ApplicationModel.Payments.Provider.PaymentTransaction::UpdateShippingAddressAsync(Windows.ApplicationModel.Payments.PaymentAddress)
     def update_shipping_address_async(self, shipping_address: windows_applicationmodel_payments.PaymentAddress, /) -> windows_foundation.IAsyncOperation[windows_applicationmodel_payments.PaymentRequestChangedResult]: ...
+    # System.String Windows.ApplicationModel.Payments.Provider.PaymentTransaction::get_PayerPhoneNumber()
     @_property
     def payer_phone_number(self) -> str: ...
+    # System.Void Windows.ApplicationModel.Payments.Provider.PaymentTransaction::put_PayerPhoneNumber(System.String)
     @payer_phone_number.setter
     def payer_phone_number(self, value: str) -> None: ...
+    # System.String Windows.ApplicationModel.Payments.Provider.PaymentTransaction::get_PayerName()
     @_property
     def payer_name(self) -> str: ...
+    # System.Void Windows.ApplicationModel.Payments.Provider.PaymentTransaction::put_PayerName(System.String)
     @payer_name.setter
     def payer_name(self, value: str) -> None: ...
+    # System.String Windows.ApplicationModel.Payments.Provider.PaymentTransaction::get_PayerEmail()
     @_property
     def payer_email(self) -> str: ...
+    # System.Void Windows.ApplicationModel.Payments.Provider.PaymentTransaction::put_PayerEmail(System.String)
     @payer_email.setter
     def payer_email(self, value: str) -> None: ...
+    # Windows.ApplicationModel.Payments.PaymentRequest Windows.ApplicationModel.Payments.Provider.PaymentTransaction::get_PaymentRequest()
     @_property
     def payment_request(self) -> windows_applicationmodel_payments.PaymentRequest: ...
 
 @typing.final
 class PaymentTransactionAcceptResult(winrt.system.Object):
+    # Windows.ApplicationModel.Payments.PaymentRequestCompletionStatus Windows.ApplicationModel.Payments.Provider.PaymentTransactionAcceptResult::get_Status()
     @_property
     def status(self) -> windows_applicationmodel_payments.PaymentRequestCompletionStatus: ...
 

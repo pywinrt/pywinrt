@@ -18,40 +18,54 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class OcrEngine_Static(type):
+    # System.Boolean Windows.Media.Ocr.OcrEngine::IsLanguageSupported(Windows.Globalization.Language)
     def is_language_supported(cls, language: windows_globalization.Language, /) -> bool: ...
+    # Windows.Media.Ocr.OcrEngine Windows.Media.Ocr.OcrEngine::TryCreateFromLanguage(Windows.Globalization.Language)
     def try_create_from_language(cls, language: windows_globalization.Language, /) -> OcrEngine: ...
+    # Windows.Media.Ocr.OcrEngine Windows.Media.Ocr.OcrEngine::TryCreateFromUserProfileLanguages()
     def try_create_from_user_profile_languages(cls) -> OcrEngine: ...
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Globalization.Language> Windows.Media.Ocr.OcrEngine::get_AvailableRecognizerLanguages()
     @_property
     def available_recognizer_languages(cls) -> typing.Sequence[windows_globalization.Language]: ...
+    # System.UInt32 Windows.Media.Ocr.OcrEngine::get_MaxImageDimension()
     @_property
     def max_image_dimension(cls) -> winrt.system.UInt32: ...
 
 @typing.final
 class OcrEngine(winrt.system.Object, metaclass=OcrEngine_Static):
+    # Windows.Foundation.IAsyncOperation`1<Windows.Media.Ocr.OcrResult> Windows.Media.Ocr.OcrEngine::RecognizeAsync(Windows.Graphics.Imaging.SoftwareBitmap)
     def recognize_async(self, bitmap: windows_graphics_imaging.SoftwareBitmap, /) -> windows_foundation.IAsyncOperation[OcrResult]: ...
+    # Windows.Globalization.Language Windows.Media.Ocr.OcrEngine::get_RecognizerLanguage()
     @_property
     def recognizer_language(self) -> windows_globalization.Language: ...
 
 @typing.final
 class OcrLine(winrt.system.Object):
+    # System.String Windows.Media.Ocr.OcrLine::get_Text()
     @_property
     def text(self) -> str: ...
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Media.Ocr.OcrWord> Windows.Media.Ocr.OcrLine::get_Words()
     @_property
     def words(self) -> typing.Sequence[OcrWord]: ...
 
 @typing.final
 class OcrResult(winrt.system.Object):
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Media.Ocr.OcrLine> Windows.Media.Ocr.OcrResult::get_Lines()
     @_property
     def lines(self) -> typing.Sequence[OcrLine]: ...
+    # System.String Windows.Media.Ocr.OcrResult::get_Text()
     @_property
     def text(self) -> str: ...
+    # Windows.Foundation.IReference`1<System.Double> Windows.Media.Ocr.OcrResult::get_TextAngle()
     @_property
     def text_angle(self) -> typing.Optional[winrt.system.Double]: ...
 
 @typing.final
 class OcrWord(winrt.system.Object):
+    # Windows.Foundation.Rect Windows.Media.Ocr.OcrWord::get_BoundingRect()
     @_property
     def bounding_rect(self) -> windows_foundation.Rect: ...
+    # System.String Windows.Media.Ocr.OcrWord::get_Text()
     @_property
     def text(self) -> str: ...
 

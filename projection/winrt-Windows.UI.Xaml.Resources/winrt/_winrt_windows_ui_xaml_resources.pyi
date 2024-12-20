@@ -13,13 +13,16 @@ import winrt.system
 Self = typing.TypeVar('Self')
 
 class CustomXamlResourceLoader_Static(type):
+    # Windows.UI.Xaml.Resources.CustomXamlResourceLoader Windows.UI.Xaml.Resources.CustomXamlResourceLoader::get_Current()
     @_property
     def current(cls) -> CustomXamlResourceLoader: ...
+    # System.Void Windows.UI.Xaml.Resources.CustomXamlResourceLoader::put_Current(Windows.UI.Xaml.Resources.CustomXamlResourceLoader)
     @current.setter
     @typing.final
     def current(cls, value: CustomXamlResourceLoader) -> None: ...
 
 class CustomXamlResourceLoader(winrt.system.Object, metaclass=CustomXamlResourceLoader_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Object Windows.UI.Xaml.Resources.CustomXamlResourceLoader::GetResource(System.String,System.String,System.String,System.String)
     def _get_resource(self, resource_id: str, object_type: str, property_name: str, property_type: str, /) -> winrt.system.Object: ...
 

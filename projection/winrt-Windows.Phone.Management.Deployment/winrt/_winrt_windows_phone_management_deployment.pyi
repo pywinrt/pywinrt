@@ -20,26 +20,37 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class Enterprise(winrt.system.Object):
+    # Windows.Foundation.DateTime Windows.Phone.Management.Deployment.Enterprise::get_EnrollmentValidFrom()
     @_property
     def enrollment_valid_from(self) -> datetime.datetime: ...
+    # Windows.Foundation.DateTime Windows.Phone.Management.Deployment.Enterprise::get_EnrollmentValidTo()
     @_property
     def enrollment_valid_to(self) -> datetime.datetime: ...
+    # System.Guid Windows.Phone.Management.Deployment.Enterprise::get_Id()
     @_property
     def id(self) -> _uuid.UUID: ...
+    # System.String Windows.Phone.Management.Deployment.Enterprise::get_Name()
     @_property
     def name(self) -> str: ...
+    # Windows.Phone.Management.Deployment.EnterpriseStatus Windows.Phone.Management.Deployment.Enterprise::get_Status()
     @_property
     def status(self) -> EnterpriseStatus: ...
+    # System.Int32 Windows.Phone.Management.Deployment.Enterprise::get_WorkplaceId()
     @_property
     def workplace_id(self) -> winrt.system.Int32: ...
 
 @typing.final
 class EnterpriseEnrollmentManager_Static(type):
+    # Windows.Foundation.IAsyncOperation`1<Windows.Phone.Management.Deployment.EnterpriseEnrollmentResult> Windows.Phone.Management.Deployment.EnterpriseEnrollmentManager::RequestEnrollmentAsync(System.String)
     def request_enrollment_async(cls, enrollment_token: str, /) -> windows_foundation.IAsyncOperation[EnterpriseEnrollmentResult]: ...
+    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Phone.Management.Deployment.EnterpriseEnrollmentManager::RequestUnenrollmentAsync(Windows.Phone.Management.Deployment.Enterprise)
     def request_unenrollment_async(cls, enterprise: Enterprise, /) -> windows_foundation.IAsyncOperation[bool]: ...
+    # Windows.Foundation.IAsyncAction Windows.Phone.Management.Deployment.EnterpriseEnrollmentManager::ValidateEnterprisesAsync()
     def validate_enterprises_async(cls) -> windows_foundation.IAsyncAction: ...
+    # Windows.Phone.Management.Deployment.Enterprise Windows.Phone.Management.Deployment.EnterpriseEnrollmentManager::get_CurrentEnterprise()
     @_property
     def current_enterprise(cls) -> Enterprise: ...
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Phone.Management.Deployment.Enterprise> Windows.Phone.Management.Deployment.EnterpriseEnrollmentManager::get_EnrolledEnterprises()
     @_property
     def enrolled_enterprises(cls) -> typing.Sequence[Enterprise]: ...
 
@@ -49,20 +60,30 @@ class EnterpriseEnrollmentManager(winrt.system.Object, metaclass=EnterpriseEnrol
 
 @typing.final
 class EnterpriseEnrollmentResult(winrt.system.Object):
+    # Windows.Phone.Management.Deployment.Enterprise Windows.Phone.Management.Deployment.EnterpriseEnrollmentResult::get_EnrolledEnterprise()
     @_property
     def enrolled_enterprise(self) -> Enterprise: ...
+    # Windows.Phone.Management.Deployment.EnterpriseEnrollmentStatus Windows.Phone.Management.Deployment.EnterpriseEnrollmentResult::get_Status()
     @_property
     def status(self) -> EnterpriseEnrollmentStatus: ...
 
 @typing.final
 class InstallationManager_Static(type):
+    # Windows.Foundation.IAsyncOperationWithProgress`2<Windows.Phone.Management.Deployment.PackageInstallResult,System.UInt32> Windows.Phone.Management.Deployment.InstallationManager::AddPackageAsync(System.String,Windows.Foundation.Uri)
     def add_package_async(cls, title: str, source_location: windows_foundation.Uri, /) -> windows_foundation.IAsyncOperationWithProgress[PackageInstallResult, winrt.system.UInt32]: ...
+    # Windows.Foundation.IAsyncOperationWithProgress`2<Windows.Phone.Management.Deployment.PackageInstallResult,System.UInt32> Windows.Phone.Management.Deployment.InstallationManager::AddPackageAsync(System.String,Windows.Foundation.Uri,System.String,System.String,Windows.Foundation.Uri)
     def add_package_preloaded_async(cls, title: str, source_location: windows_foundation.Uri, instance_id: str, offer_id: str, license: windows_foundation.Uri, /) -> windows_foundation.IAsyncOperationWithProgress[PackageInstallResult, winrt.system.UInt32]: ...
+    # Windows.Foundation.Collections.IIterable`1<Windows.ApplicationModel.Package> Windows.Phone.Management.Deployment.InstallationManager::FindPackages()
     def find_packages(cls) -> typing.Iterable[windows_applicationmodel.Package]: ...
+    # Windows.Foundation.Collections.IIterable`1<Windows.ApplicationModel.Package> Windows.Phone.Management.Deployment.InstallationManager::FindPackages(System.String,System.String)
     def find_packages_by_name_publisher(cls, package_name: str, package_publisher: str, /) -> typing.Iterable[windows_applicationmodel.Package]: ...
+    # Windows.Foundation.Collections.IIterable`1<Windows.ApplicationModel.Package> Windows.Phone.Management.Deployment.InstallationManager::FindPackagesForCurrentPublisher()
     def find_packages_for_current_publisher(cls) -> typing.Iterable[windows_applicationmodel.Package]: ...
+    # Windows.Foundation.Collections.IIterable`1<Windows.Foundation.IAsyncOperationWithProgress`2<Windows.Phone.Management.Deployment.PackageInstallResult,System.UInt32>> Windows.Phone.Management.Deployment.InstallationManager::GetPendingPackageInstalls()
     def get_pending_package_installs(cls) -> typing.Iterable[windows_foundation.IAsyncOperationWithProgress[PackageInstallResult, winrt.system.UInt32]]: ...
+    # Windows.Foundation.IAsyncOperationWithProgress`2<Windows.Phone.Management.Deployment.PackageInstallResult,System.UInt32> Windows.Phone.Management.Deployment.InstallationManager::RegisterPackageAsync(Windows.Foundation.Uri,Windows.Foundation.Collections.IIterable`1<Windows.Foundation.Uri>,Windows.Management.Deployment.DeploymentOptions)
     def register_package_async(cls, manifest_uri: windows_foundation.Uri, dependency_package_uris: typing.Iterable[windows_foundation.Uri], deployment_options: windows_management_deployment.DeploymentOptions, /) -> windows_foundation.IAsyncOperationWithProgress[PackageInstallResult, winrt.system.UInt32]: ...
+    # Windows.Foundation.IAsyncOperationWithProgress`2<Windows.Phone.Management.Deployment.PackageInstallResult,System.UInt32> Windows.Phone.Management.Deployment.InstallationManager::RemovePackageAsync(System.String,Windows.Management.Deployment.RemovalOptions)
     def remove_package_async(cls, package_full_name: str, removal_options: windows_management_deployment.RemovalOptions, /) -> windows_foundation.IAsyncOperationWithProgress[PackageInstallResult, winrt.system.UInt32]: ...
 
 @typing.final
@@ -71,10 +92,13 @@ class InstallationManager(winrt.system.Object, metaclass=InstallationManager_Sta
 
 @typing.final
 class PackageInstallResult(winrt.system.Object):
+    # Windows.Management.Deployment.PackageInstallState Windows.Phone.Management.Deployment.PackageInstallResult::get_InstallState()
     @_property
     def install_state(self) -> windows_management_deployment.PackageInstallState: ...
+    # System.String Windows.Phone.Management.Deployment.PackageInstallResult::get_ProductId()
     @_property
     def product_id(self) -> str: ...
+    # System.String Windows.Phone.Management.Deployment.PackageInstallResult::get_ErrorText()
     @_property
     def error_text(self) -> str: ...
 

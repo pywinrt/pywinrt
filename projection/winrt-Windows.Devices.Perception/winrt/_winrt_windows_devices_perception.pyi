@@ -23,12 +23,16 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class KnownCameraIntrinsicsProperties_Static(type):
+    # System.String Windows.Devices.Perception.KnownCameraIntrinsicsProperties::get_FocalLength()
     @_property
     def focal_length(cls) -> str: ...
+    # System.String Windows.Devices.Perception.KnownCameraIntrinsicsProperties::get_PrincipalPoint()
     @_property
     def principal_point(cls) -> str: ...
+    # System.String Windows.Devices.Perception.KnownCameraIntrinsicsProperties::get_RadialDistortion()
     @_property
     def radial_distortion(cls) -> str: ...
+    # System.String Windows.Devices.Perception.KnownCameraIntrinsicsProperties::get_TangentialDistortion()
     @_property
     def tangential_distortion(cls) -> str: ...
 
@@ -38,10 +42,13 @@ class KnownCameraIntrinsicsProperties(winrt.system.Object, metaclass=KnownCamera
 
 @typing.final
 class KnownPerceptionColorFrameSourceProperties_Static(type):
+    # System.String Windows.Devices.Perception.KnownPerceptionColorFrameSourceProperties::get_AutoExposureEnabled()
     @_property
     def auto_exposure_enabled(cls) -> str: ...
+    # System.String Windows.Devices.Perception.KnownPerceptionColorFrameSourceProperties::get_Exposure()
     @_property
     def exposure(cls) -> str: ...
+    # System.String Windows.Devices.Perception.KnownPerceptionColorFrameSourceProperties::get_ExposureCompensation()
     @_property
     def exposure_compensation(cls) -> str: ...
 
@@ -51,8 +58,10 @@ class KnownPerceptionColorFrameSourceProperties(winrt.system.Object, metaclass=K
 
 @typing.final
 class KnownPerceptionDepthFrameSourceProperties_Static(type):
+    # System.String Windows.Devices.Perception.KnownPerceptionDepthFrameSourceProperties::get_MaxDepth()
     @_property
     def max_depth(cls) -> str: ...
+    # System.String Windows.Devices.Perception.KnownPerceptionDepthFrameSourceProperties::get_MinDepth()
     @_property
     def min_depth(cls) -> str: ...
 
@@ -62,16 +71,22 @@ class KnownPerceptionDepthFrameSourceProperties(winrt.system.Object, metaclass=K
 
 @typing.final
 class KnownPerceptionFrameSourceProperties_Static(type):
+    # System.String Windows.Devices.Perception.KnownPerceptionFrameSourceProperties::get_DeviceModelVersion()
     @_property
     def device_model_version(cls) -> str: ...
+    # System.String Windows.Devices.Perception.KnownPerceptionFrameSourceProperties::get_EnclosureLocation()
     @_property
     def enclosure_location(cls) -> str: ...
+    # System.String Windows.Devices.Perception.KnownPerceptionFrameSourceProperties::get_FrameKind()
     @_property
     def frame_kind(cls) -> str: ...
+    # System.String Windows.Devices.Perception.KnownPerceptionFrameSourceProperties::get_Id()
     @_property
     def id(cls) -> str: ...
+    # System.String Windows.Devices.Perception.KnownPerceptionFrameSourceProperties::get_PhysicalDeviceIds()
     @_property
     def physical_device_ids(cls) -> str: ...
+    # System.String Windows.Devices.Perception.KnownPerceptionFrameSourceProperties::get_DeviceId()
     @_property
     def device_id(cls) -> str: ...
 
@@ -81,18 +96,25 @@ class KnownPerceptionFrameSourceProperties(winrt.system.Object, metaclass=KnownP
 
 @typing.final
 class KnownPerceptionInfraredFrameSourceProperties_Static(type):
+    # System.String Windows.Devices.Perception.KnownPerceptionInfraredFrameSourceProperties::get_ActiveIlluminationEnabled()
     @_property
     def active_illumination_enabled(cls) -> str: ...
+    # System.String Windows.Devices.Perception.KnownPerceptionInfraredFrameSourceProperties::get_AmbientSubtractionEnabled()
     @_property
     def ambient_subtraction_enabled(cls) -> str: ...
+    # System.String Windows.Devices.Perception.KnownPerceptionInfraredFrameSourceProperties::get_AutoExposureEnabled()
     @_property
     def auto_exposure_enabled(cls) -> str: ...
+    # System.String Windows.Devices.Perception.KnownPerceptionInfraredFrameSourceProperties::get_Exposure()
     @_property
     def exposure(cls) -> str: ...
+    # System.String Windows.Devices.Perception.KnownPerceptionInfraredFrameSourceProperties::get_ExposureCompensation()
     @_property
     def exposure_compensation(cls) -> str: ...
+    # System.String Windows.Devices.Perception.KnownPerceptionInfraredFrameSourceProperties::get_InterleavedIlluminationEnabled()
     @_property
     def interleaved_illumination_enabled(cls) -> str: ...
+    # System.String Windows.Devices.Perception.KnownPerceptionInfraredFrameSourceProperties::get_StructureLightPatternEnabled()
     @_property
     def structure_light_pattern_enabled(cls) -> str: ...
 
@@ -102,14 +124,19 @@ class KnownPerceptionInfraredFrameSourceProperties(winrt.system.Object, metaclas
 
 @typing.final
 class KnownPerceptionVideoFrameSourceProperties_Static(type):
+    # System.String Windows.Devices.Perception.KnownPerceptionVideoFrameSourceProperties::get_AvailableVideoProfiles()
     @_property
     def available_video_profiles(cls) -> str: ...
+    # System.String Windows.Devices.Perception.KnownPerceptionVideoFrameSourceProperties::get_CameraIntrinsics()
     @_property
     def camera_intrinsics(cls) -> str: ...
+    # System.String Windows.Devices.Perception.KnownPerceptionVideoFrameSourceProperties::get_IsMirrored()
     @_property
     def is_mirrored(cls) -> str: ...
+    # System.String Windows.Devices.Perception.KnownPerceptionVideoFrameSourceProperties::get_SupportedVideoProfiles()
     @_property
     def supported_video_profiles(cls) -> str: ...
+    # System.String Windows.Devices.Perception.KnownPerceptionVideoFrameSourceProperties::get_VideoProfile()
     @_property
     def video_profile(cls) -> str: ...
 
@@ -119,14 +146,19 @@ class KnownPerceptionVideoFrameSourceProperties(winrt.system.Object, metaclass=K
 
 @typing.final
 class KnownPerceptionVideoProfileProperties_Static(type):
+    # System.String Windows.Devices.Perception.KnownPerceptionVideoProfileProperties::get_BitmapAlphaMode()
     @_property
     def bitmap_alpha_mode(cls) -> str: ...
+    # System.String Windows.Devices.Perception.KnownPerceptionVideoProfileProperties::get_BitmapPixelFormat()
     @_property
     def bitmap_pixel_format(cls) -> str: ...
+    # System.String Windows.Devices.Perception.KnownPerceptionVideoProfileProperties::get_FrameDuration()
     @_property
     def frame_duration(cls) -> str: ...
+    # System.String Windows.Devices.Perception.KnownPerceptionVideoProfileProperties::get_Height()
     @_property
     def height(cls) -> str: ...
+    # System.String Windows.Devices.Perception.KnownPerceptionVideoProfileProperties::get_Width()
     @_property
     def width(cls) -> str: ...
 
@@ -138,14 +170,18 @@ class KnownPerceptionVideoProfileProperties(winrt.system.Object, metaclass=Known
 class PerceptionColorFrame(winrt.system.Object, windows_foundation.ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, exc_type: typing.Optional[typing.Type[BaseException]], exc_value: typing.Optional[BaseException], traceback: typing.Optional[types.TracebackType]) -> None: ...
+    # System.Void Windows.Devices.Perception.PerceptionColorFrame::Close()
     def close(self) -> None: ...
+    # Windows.Media.VideoFrame Windows.Devices.Perception.PerceptionColorFrame::get_VideoFrame()
     @_property
     def video_frame(self) -> windows_media.VideoFrame: ...
 
 @typing.final
 class PerceptionColorFrameArrivedEventArgs(winrt.system.Object):
+    # Windows.Devices.Perception.PerceptionColorFrame Windows.Devices.Perception.PerceptionColorFrameArrivedEventArgs::TryOpenFrame()
     # @deprecated("PerceptionColorFrameArrivedEventArgs may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameArrivedEventArgs instead.")
     def try_open_frame(self) -> PerceptionColorFrame: ...
+    # Windows.Foundation.TimeSpan Windows.Devices.Perception.PerceptionColorFrameArrivedEventArgs::get_RelativeTime()
     @_property
     def relative_time(self) -> datetime.timedelta: ...
 
@@ -153,126 +189,180 @@ class PerceptionColorFrameArrivedEventArgs(winrt.system.Object):
 class PerceptionColorFrameReader(winrt.system.Object, windows_foundation.ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, exc_type: typing.Optional[typing.Type[BaseException]], exc_value: typing.Optional[BaseException], traceback: typing.Optional[types.TracebackType]) -> None: ...
+    # System.Void Windows.Devices.Perception.PerceptionColorFrameReader::Close()
     def close(self) -> None: ...
+    # Windows.Devices.Perception.PerceptionColorFrame Windows.Devices.Perception.PerceptionColorFrameReader::TryReadLatestFrame()
     # @deprecated("PerceptionColorFrameReader may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameReader instead.")
     def try_read_latest_frame(self) -> PerceptionColorFrame: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Devices.Perception.PerceptionColorFrameReader::add_FrameArrived(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Perception.PerceptionColorFrameReader,Windows.Devices.Perception.PerceptionColorFrameArrivedEventArgs>)
     # @deprecated("PerceptionColorFrameReader may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameReader instead.")
     def add_frame_arrived(self, handler: windows_foundation.TypedEventHandler[PerceptionColorFrameReader, PerceptionColorFrameArrivedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Devices.Perception.PerceptionColorFrameReader::remove_FrameArrived(Windows.Foundation.EventRegistrationToken)
     # @deprecated("PerceptionColorFrameReader may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameReader instead.")
     def remove_frame_arrived(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.Boolean Windows.Devices.Perception.PerceptionColorFrameReader::get_IsPaused()
     @_property
     def is_paused(self) -> bool: ...
+    # System.Void Windows.Devices.Perception.PerceptionColorFrameReader::put_IsPaused(System.Boolean)
     @is_paused.setter
     def is_paused(self, value: bool) -> None: ...
+    # Windows.Devices.Perception.PerceptionColorFrameSource Windows.Devices.Perception.PerceptionColorFrameReader::get_Source()
     @_property
     def source(self) -> PerceptionColorFrameSource: ...
 
 @typing.final
 class PerceptionColorFrameSource_Static(type):
+    # Windows.Devices.Perception.PerceptionColorFrameSourceWatcher Windows.Devices.Perception.PerceptionColorFrameSource::CreateWatcher()
     # @deprecated("PerceptionColorFrameSource.CreateWatcher may be unavailable after Windows Creator Update.  Use Windows.Devices.Enumeration.DeviceInformation.CreateWatcher instead.")
     def create_watcher(cls) -> PerceptionColorFrameSourceWatcher: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Perception.PerceptionColorFrameSource>> Windows.Devices.Perception.PerceptionColorFrameSource::FindAllAsync()
     # @deprecated("PerceptionColorFrameSource.FindAllAsync may be unavailable after Windows Creator Update.  Use Windows.Devices.Enumeration.DeviceInformation.FindAllAsync instead.")
     def find_all_async(cls) -> windows_foundation.IAsyncOperation[typing.Sequence[PerceptionColorFrameSource]]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Perception.PerceptionColorFrameSource> Windows.Devices.Perception.PerceptionColorFrameSource::FromIdAsync(System.String)
     # @deprecated("PerceptionColorFrameSource.FromIdAsync may be unavailable after Windows Creator Update.  Use Windows.Devices.Enumeration.DeviceInformation.FromIdAsync instead.")
     def from_id_async(cls, id: str, /) -> windows_foundation.IAsyncOperation[PerceptionColorFrameSource]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Perception.PerceptionFrameSourceAccessStatus> Windows.Devices.Perception.PerceptionColorFrameSource::RequestAccessAsync()
     # @deprecated("PerceptionColorFrameSource.RequestAccessAsync may be unavailable after Windows Creator Update.  Please refer to Windows.Media.Capture.Frames APIs on MSDN.")
     def request_access_async(cls) -> windows_foundation.IAsyncOperation[PerceptionFrameSourceAccessStatus]: ...
 
 @typing.final
 class PerceptionColorFrameSource(winrt.system.Object, metaclass=PerceptionColorFrameSource_Static):
+    # Windows.Devices.Perception.PerceptionControlSession Windows.Devices.Perception.PerceptionColorFrameSource::AcquireControlSession()
     # @deprecated("PerceptionColorFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
     def acquire_control_session(self) -> PerceptionControlSession: ...
+    # System.Boolean Windows.Devices.Perception.PerceptionColorFrameSource::CanControlIndependentlyFrom(System.String)
     # @deprecated("PerceptionColorFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
     def can_control_independently_from(self, target_id: str, /) -> bool: ...
+    # System.Boolean Windows.Devices.Perception.PerceptionColorFrameSource::IsCorrelatedWith(System.String)
     # @deprecated("PerceptionColorFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
     def is_correlated_with(self, target_id: str, /) -> bool: ...
+    # Windows.Devices.Perception.PerceptionColorFrameReader Windows.Devices.Perception.PerceptionColorFrameSource::OpenReader()
     # @deprecated("PerceptionColorFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
     def open_reader(self) -> PerceptionColorFrameReader: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Perception.PerceptionDepthCorrelatedCameraIntrinsics> Windows.Devices.Perception.PerceptionColorFrameSource::TryGetDepthCorrelatedCameraIntrinsicsAsync(Windows.Devices.Perception.PerceptionDepthFrameSource)
     # @deprecated("PerceptionColorFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
     def try_get_depth_correlated_camera_intrinsics_async(self, correlated_depth_frame_source: PerceptionDepthFrameSource, /) -> windows_foundation.IAsyncOperation[PerceptionDepthCorrelatedCameraIntrinsics]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Perception.PerceptionDepthCorrelatedCoordinateMapper> Windows.Devices.Perception.PerceptionColorFrameSource::TryGetDepthCorrelatedCoordinateMapperAsync(System.String,Windows.Devices.Perception.PerceptionDepthFrameSource)
     # @deprecated("PerceptionColorFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
     def try_get_depth_correlated_coordinate_mapper_async(self, target_source_id: str, correlated_depth_frame_source: PerceptionDepthFrameSource, /) -> windows_foundation.IAsyncOperation[PerceptionDepthCorrelatedCoordinateMapper]: ...
+    # System.Boolean Windows.Devices.Perception.PerceptionColorFrameSource::TryGetTransformTo(System.String,Windows.Foundation.Numerics.Matrix4x4&)
     # @deprecated("PerceptionColorFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
     def try_get_transform_to(self, target_id: str, /) -> typing.Tuple[bool, windows_foundation_numerics.Matrix4x4]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Perception.PerceptionFrameSourcePropertyChangeResult> Windows.Devices.Perception.PerceptionColorFrameSource::TrySetVideoProfileAsync(Windows.Devices.Perception.PerceptionControlSession,Windows.Devices.Perception.PerceptionVideoProfile)
     # @deprecated("PerceptionColorFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
     def try_set_video_profile_async(self, control_session: PerceptionControlSession, profile: PerceptionVideoProfile, /) -> windows_foundation.IAsyncOperation[PerceptionFrameSourcePropertyChangeResult]: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Devices.Perception.PerceptionColorFrameSource::add_ActiveChanged(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Perception.PerceptionColorFrameSource,System.Object>)
     # @deprecated("PerceptionColorFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
     def add_active_changed(self, handler: windows_foundation.TypedEventHandler[PerceptionColorFrameSource, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Devices.Perception.PerceptionColorFrameSource::remove_ActiveChanged(Windows.Foundation.EventRegistrationToken)
     # @deprecated("PerceptionColorFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
     def remove_active_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Devices.Perception.PerceptionColorFrameSource::add_AvailableChanged(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Perception.PerceptionColorFrameSource,System.Object>)
     # @deprecated("PerceptionColorFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
     def add_available_changed(self, handler: windows_foundation.TypedEventHandler[PerceptionColorFrameSource, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Devices.Perception.PerceptionColorFrameSource::remove_AvailableChanged(Windows.Foundation.EventRegistrationToken)
     # @deprecated("PerceptionColorFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
     def remove_available_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Devices.Perception.PerceptionColorFrameSource::add_CameraIntrinsicsChanged(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Perception.PerceptionColorFrameSource,System.Object>)
     # @deprecated("PerceptionColorFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
     def add_camera_intrinsics_changed(self, handler: windows_foundation.TypedEventHandler[PerceptionColorFrameSource, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Devices.Perception.PerceptionColorFrameSource::remove_CameraIntrinsicsChanged(Windows.Foundation.EventRegistrationToken)
     # @deprecated("PerceptionColorFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
     def remove_camera_intrinsics_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Devices.Perception.PerceptionColorFrameSource::add_PropertiesChanged(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Perception.PerceptionColorFrameSource,Windows.Devices.Perception.PerceptionFrameSourcePropertiesChangedEventArgs>)
     # @deprecated("PerceptionColorFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
     def add_properties_changed(self, handler: windows_foundation.TypedEventHandler[PerceptionColorFrameSource, PerceptionFrameSourcePropertiesChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Devices.Perception.PerceptionColorFrameSource::remove_PropertiesChanged(Windows.Foundation.EventRegistrationToken)
     # @deprecated("PerceptionColorFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
     def remove_properties_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Devices.Perception.PerceptionColorFrameSource::add_VideoProfileChanged(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Perception.PerceptionColorFrameSource,System.Object>)
     # @deprecated("PerceptionColorFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
     def add_video_profile_changed(self, handler: windows_foundation.TypedEventHandler[PerceptionColorFrameSource, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Devices.Perception.PerceptionColorFrameSource::remove_VideoProfileChanged(Windows.Foundation.EventRegistrationToken)
     # @deprecated("PerceptionColorFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
     def remove_video_profile_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.Boolean Windows.Devices.Perception.PerceptionColorFrameSource::get_Active()
     @_property
     def active(self) -> bool: ...
+    # System.Boolean Windows.Devices.Perception.PerceptionColorFrameSource::get_Available()
     @_property
     def available(self) -> bool: ...
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Perception.PerceptionVideoProfile> Windows.Devices.Perception.PerceptionColorFrameSource::get_AvailableVideoProfiles()
     @_property
     def available_video_profiles(self) -> typing.Sequence[PerceptionVideoProfile]: ...
+    # Windows.Media.Devices.Core.CameraIntrinsics Windows.Devices.Perception.PerceptionColorFrameSource::get_CameraIntrinsics()
     @_property
     def camera_intrinsics(self) -> windows_media_devices_core.CameraIntrinsics: ...
+    # System.String Windows.Devices.Perception.PerceptionColorFrameSource::get_DeviceKind()
     @_property
     def device_kind(self) -> str: ...
+    # System.String Windows.Devices.Perception.PerceptionColorFrameSource::get_DisplayName()
     @_property
     def display_name(self) -> str: ...
+    # System.String Windows.Devices.Perception.PerceptionColorFrameSource::get_Id()
     @_property
     def id(self) -> str: ...
+    # System.Boolean Windows.Devices.Perception.PerceptionColorFrameSource::get_IsControlled()
     @_property
     def is_controlled(self) -> bool: ...
+    # Windows.Foundation.Collections.IMapView`2<System.String,System.Object> Windows.Devices.Perception.PerceptionColorFrameSource::get_Properties()
     @_property
     def properties(self) -> typing.Mapping[str, winrt.system.Object]: ...
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Perception.PerceptionVideoProfile> Windows.Devices.Perception.PerceptionColorFrameSource::get_SupportedVideoProfiles()
     @_property
     def supported_video_profiles(self) -> typing.Sequence[PerceptionVideoProfile]: ...
+    # Windows.Devices.Perception.PerceptionVideoProfile Windows.Devices.Perception.PerceptionColorFrameSource::get_VideoProfile()
     @_property
     def video_profile(self) -> PerceptionVideoProfile: ...
+    # System.String Windows.Devices.Perception.PerceptionColorFrameSource::get_DeviceId()
     @_property
     def device_id(self) -> str: ...
 
 @typing.final
 class PerceptionColorFrameSourceAddedEventArgs(winrt.system.Object):
+    # Windows.Devices.Perception.PerceptionColorFrameSource Windows.Devices.Perception.PerceptionColorFrameSourceAddedEventArgs::get_FrameSource()
     @_property
     def frame_source(self) -> PerceptionColorFrameSource: ...
 
 @typing.final
 class PerceptionColorFrameSourceRemovedEventArgs(winrt.system.Object):
+    # Windows.Devices.Perception.PerceptionColorFrameSource Windows.Devices.Perception.PerceptionColorFrameSourceRemovedEventArgs::get_FrameSource()
     @_property
     def frame_source(self) -> PerceptionColorFrameSource: ...
 
 @typing.final
 class PerceptionColorFrameSourceWatcher(winrt.system.Object):
+    # System.Void Windows.Devices.Perception.PerceptionColorFrameSourceWatcher::Start()
     # @deprecated("PerceptionColorFrameSourceWatcher may be unavailable after Windows Creator Update.  Use Windows.Devices.Enumeration.DeviceWatcher instead.")
     def start(self) -> None: ...
+    # System.Void Windows.Devices.Perception.PerceptionColorFrameSourceWatcher::Stop()
     # @deprecated("PerceptionColorFrameSourceWatcher may be unavailable after Windows Creator Update.  Use Windows.Devices.Enumeration.DeviceWatcher instead.")
     def stop(self) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Devices.Perception.PerceptionColorFrameSourceWatcher::add_EnumerationCompleted(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Perception.PerceptionColorFrameSourceWatcher,System.Object>)
     # @deprecated("PerceptionColorFrameSourceWatcher may be unavailable after Windows Creator Update.  Use Windows.Devices.Enumeration.DeviceWatcher instead.")
     def add_enumeration_completed(self, handler: windows_foundation.TypedEventHandler[PerceptionColorFrameSourceWatcher, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Devices.Perception.PerceptionColorFrameSourceWatcher::remove_EnumerationCompleted(Windows.Foundation.EventRegistrationToken)
     # @deprecated("PerceptionColorFrameSourceWatcher may be unavailable after Windows Creator Update.  Use Windows.Devices.Enumeration.DeviceWatcher instead.")
     def remove_enumeration_completed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Devices.Perception.PerceptionColorFrameSourceWatcher::add_SourceAdded(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Perception.PerceptionColorFrameSourceWatcher,Windows.Devices.Perception.PerceptionColorFrameSourceAddedEventArgs>)
     # @deprecated("PerceptionColorFrameSourceWatcher may be unavailable after Windows Creator Update.  Use Windows.Devices.Enumeration.DeviceWatcher instead.")
     def add_source_added(self, handler: windows_foundation.TypedEventHandler[PerceptionColorFrameSourceWatcher, PerceptionColorFrameSourceAddedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Devices.Perception.PerceptionColorFrameSourceWatcher::remove_SourceAdded(Windows.Foundation.EventRegistrationToken)
     # @deprecated("PerceptionColorFrameSourceWatcher may be unavailable after Windows Creator Update.  Use Windows.Devices.Enumeration.DeviceWatcher instead.")
     def remove_source_added(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Devices.Perception.PerceptionColorFrameSourceWatcher::add_SourceRemoved(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Perception.PerceptionColorFrameSourceWatcher,Windows.Devices.Perception.PerceptionColorFrameSourceRemovedEventArgs>)
     # @deprecated("PerceptionColorFrameSourceWatcher may be unavailable after Windows Creator Update.  Use Windows.Devices.Enumeration.DeviceWatcher instead.")
     def add_source_removed(self, handler: windows_foundation.TypedEventHandler[PerceptionColorFrameSourceWatcher, PerceptionColorFrameSourceRemovedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Devices.Perception.PerceptionColorFrameSourceWatcher::remove_SourceRemoved(Windows.Foundation.EventRegistrationToken)
     # @deprecated("PerceptionColorFrameSourceWatcher may be unavailable after Windows Creator Update.  Use Windows.Devices.Enumeration.DeviceWatcher instead.")
     def remove_source_removed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Devices.Perception.PerceptionColorFrameSourceWatcher::add_Stopped(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Perception.PerceptionColorFrameSourceWatcher,System.Object>)
     # @deprecated("PerceptionColorFrameSourceWatcher may be unavailable after Windows Creator Update.  Use Windows.Devices.Enumeration.DeviceWatcher instead.")
     def add_stopped(self, handler: windows_foundation.TypedEventHandler[PerceptionColorFrameSourceWatcher, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Devices.Perception.PerceptionColorFrameSourceWatcher::remove_Stopped(Windows.Foundation.EventRegistrationToken)
     # @deprecated("PerceptionColorFrameSourceWatcher may be unavailable after Windows Creator Update.  Use Windows.Devices.Enumeration.DeviceWatcher instead.")
     def remove_stopped(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Devices.Enumeration.DeviceWatcherStatus Windows.Devices.Perception.PerceptionColorFrameSourceWatcher::get_Status()
     @_property
     def status(self) -> windows_devices_enumeration.DeviceWatcherStatus: ...
 
@@ -280,33 +370,45 @@ class PerceptionColorFrameSourceWatcher(winrt.system.Object):
 class PerceptionControlSession(winrt.system.Object, windows_foundation.ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, exc_type: typing.Optional[typing.Type[BaseException]], exc_value: typing.Optional[BaseException], traceback: typing.Optional[types.TracebackType]) -> None: ...
+    # System.Void Windows.Devices.Perception.PerceptionControlSession::Close()
     def close(self) -> None: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Perception.PerceptionFrameSourcePropertyChangeResult> Windows.Devices.Perception.PerceptionControlSession::TrySetPropertyAsync(System.String,System.Object)
     # @deprecated("PerceptionControlSession may be unavailable after Windows Creator Update.  Please refer to Windows.Media.Capture.Frames APIs on MSDN.")
     def try_set_property_async(self, name: str, value: winrt.system.Object, /) -> windows_foundation.IAsyncOperation[PerceptionFrameSourcePropertyChangeResult]: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Devices.Perception.PerceptionControlSession::add_ControlLost(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Perception.PerceptionControlSession,System.Object>)
     # @deprecated("PerceptionControlSession may be unavailable after Windows Creator Update.  Please refer to Windows.Media.Capture.Frames APIs on MSDN.")
     def add_control_lost(self, handler: windows_foundation.TypedEventHandler[PerceptionControlSession, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Devices.Perception.PerceptionControlSession::remove_ControlLost(Windows.Foundation.EventRegistrationToken)
     # @deprecated("PerceptionControlSession may be unavailable after Windows Creator Update.  Please refer to Windows.Media.Capture.Frames APIs on MSDN.")
     def remove_control_lost(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
 @typing.final
 class PerceptionDepthCorrelatedCameraIntrinsics(winrt.system.Object):
+    # Windows.Foundation.IAsyncAction Windows.Devices.Perception.PerceptionDepthCorrelatedCameraIntrinsics::UnprojectAllPixelsAtCorrelatedDepthAsync(Windows.Devices.Perception.PerceptionDepthFrame,Windows.Foundation.Numerics.Vector3[])
     # @deprecated("PerceptionDepthCorrelatedCameraIntrinsics may be unavailable after Windows Creator Update.  Use Windows.Media.Devices.Core.DepthCorrelatedCoordinateMapper instead.")
     def unproject_all_pixels_at_correlated_depth_async(self, depth_frame: PerceptionDepthFrame, results: typing.Union[winrt.system.Array[windows_foundation_numerics.Vector3], winrt.system.WriteableBuffer], /) -> windows_foundation.IAsyncAction: ...
+    # Windows.Foundation.Numerics.Vector3 Windows.Devices.Perception.PerceptionDepthCorrelatedCameraIntrinsics::UnprojectPixelAtCorrelatedDepth(Windows.Foundation.Point,Windows.Devices.Perception.PerceptionDepthFrame)
     # @deprecated("PerceptionDepthCorrelatedCameraIntrinsics may be unavailable after Windows Creator Update.  Use Windows.Media.Devices.Core.DepthCorrelatedCoordinateMapper instead.")
     def unproject_pixel_at_correlated_depth(self, pixel_coordinate: windows_foundation.Point, depth_frame: PerceptionDepthFrame, /) -> windows_foundation_numerics.Vector3: ...
+    # System.Void Windows.Devices.Perception.PerceptionDepthCorrelatedCameraIntrinsics::UnprojectPixelsAtCorrelatedDepth(Windows.Foundation.Point[],Windows.Devices.Perception.PerceptionDepthFrame,Windows.Foundation.Numerics.Vector3[])
     # @deprecated("PerceptionDepthCorrelatedCameraIntrinsics may be unavailable after Windows Creator Update.  Use Windows.Media.Devices.Core.DepthCorrelatedCoordinateMapper instead.")
     def unproject_pixels_at_correlated_depth(self, source_coordinates: typing.Union[winrt.system.Array[windows_foundation.Point], winrt.system.ReadableBuffer], depth_frame: PerceptionDepthFrame, results: typing.Union[winrt.system.Array[windows_foundation_numerics.Vector3], winrt.system.WriteableBuffer], /) -> None: ...
+    # Windows.Foundation.IAsyncAction Windows.Devices.Perception.PerceptionDepthCorrelatedCameraIntrinsics::UnprojectRegionPixelsAtCorrelatedDepthAsync(Windows.Foundation.Rect,Windows.Devices.Perception.PerceptionDepthFrame,Windows.Foundation.Numerics.Vector3[])
     # @deprecated("PerceptionDepthCorrelatedCameraIntrinsics may be unavailable after Windows Creator Update.  Use Windows.Media.Devices.Core.DepthCorrelatedCoordinateMapper instead.")
     def unproject_region_pixels_at_correlated_depth_async(self, region: windows_foundation.Rect, depth_frame: PerceptionDepthFrame, results: typing.Union[winrt.system.Array[windows_foundation_numerics.Vector3], winrt.system.WriteableBuffer], /) -> windows_foundation.IAsyncAction: ...
 
 @typing.final
 class PerceptionDepthCorrelatedCoordinateMapper(winrt.system.Object):
+    # Windows.Foundation.IAsyncAction Windows.Devices.Perception.PerceptionDepthCorrelatedCoordinateMapper::MapAllPixelsToTargetAsync(Windows.Devices.Perception.PerceptionDepthFrame,Windows.Foundation.Point[])
     # @deprecated("PerceptionDepthCorrelatedCoordinateMapper may be unavailable after Windows Creator Update.  Use Windows.Media.Devices.Core.DepthCorrelatedCoordinateMapper instead.")
     def map_all_pixels_to_target_async(self, depth_frame: PerceptionDepthFrame, target_coordinates: typing.Union[winrt.system.Array[windows_foundation.Point], winrt.system.WriteableBuffer], /) -> windows_foundation.IAsyncAction: ...
+    # Windows.Foundation.Point Windows.Devices.Perception.PerceptionDepthCorrelatedCoordinateMapper::MapPixelToTarget(Windows.Foundation.Point,Windows.Devices.Perception.PerceptionDepthFrame)
     # @deprecated("PerceptionDepthCorrelatedCoordinateMapper may be unavailable after Windows Creator Update.  Use Windows.Media.Devices.Core.DepthCorrelatedCoordinateMapper instead.")
     def map_pixel_to_target(self, source_pixel_coordinate: windows_foundation.Point, depth_frame: PerceptionDepthFrame, /) -> windows_foundation.Point: ...
+    # System.Void Windows.Devices.Perception.PerceptionDepthCorrelatedCoordinateMapper::MapPixelsToTarget(Windows.Foundation.Point[],Windows.Devices.Perception.PerceptionDepthFrame,Windows.Foundation.Point[])
     # @deprecated("PerceptionDepthCorrelatedCoordinateMapper may be unavailable after Windows Creator Update.  Use Windows.Media.Devices.Core.DepthCorrelatedCoordinateMapper instead.")
     def map_pixels_to_target(self, source_coordinates: typing.Union[winrt.system.Array[windows_foundation.Point], winrt.system.ReadableBuffer], depth_frame: PerceptionDepthFrame, results: typing.Union[winrt.system.Array[windows_foundation.Point], winrt.system.WriteableBuffer], /) -> None: ...
+    # Windows.Foundation.IAsyncAction Windows.Devices.Perception.PerceptionDepthCorrelatedCoordinateMapper::MapRegionOfPixelsToTargetAsync(Windows.Foundation.Rect,Windows.Devices.Perception.PerceptionDepthFrame,Windows.Foundation.Point[])
     # @deprecated("PerceptionDepthCorrelatedCoordinateMapper may be unavailable after Windows Creator Update.  Use Windows.Media.Devices.Core.DepthCorrelatedCoordinateMapper instead.")
     def map_region_of_pixels_to_target_async(self, region: windows_foundation.Rect, depth_frame: PerceptionDepthFrame, target_coordinates: typing.Union[winrt.system.Array[windows_foundation.Point], winrt.system.WriteableBuffer], /) -> windows_foundation.IAsyncAction: ...
 
@@ -314,14 +416,18 @@ class PerceptionDepthCorrelatedCoordinateMapper(winrt.system.Object):
 class PerceptionDepthFrame(winrt.system.Object, windows_foundation.ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, exc_type: typing.Optional[typing.Type[BaseException]], exc_value: typing.Optional[BaseException], traceback: typing.Optional[types.TracebackType]) -> None: ...
+    # System.Void Windows.Devices.Perception.PerceptionDepthFrame::Close()
     def close(self) -> None: ...
+    # Windows.Media.VideoFrame Windows.Devices.Perception.PerceptionDepthFrame::get_VideoFrame()
     @_property
     def video_frame(self) -> windows_media.VideoFrame: ...
 
 @typing.final
 class PerceptionDepthFrameArrivedEventArgs(winrt.system.Object):
+    # Windows.Devices.Perception.PerceptionDepthFrame Windows.Devices.Perception.PerceptionDepthFrameArrivedEventArgs::TryOpenFrame()
     # @deprecated("PerceptionDepthFrameArrivedEventArgs may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameArrivedEventArgs instead.")
     def try_open_frame(self) -> PerceptionDepthFrame: ...
+    # Windows.Foundation.TimeSpan Windows.Devices.Perception.PerceptionDepthFrameArrivedEventArgs::get_RelativeTime()
     @_property
     def relative_time(self) -> datetime.timedelta: ...
 
@@ -329,140 +435,198 @@ class PerceptionDepthFrameArrivedEventArgs(winrt.system.Object):
 class PerceptionDepthFrameReader(winrt.system.Object, windows_foundation.ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, exc_type: typing.Optional[typing.Type[BaseException]], exc_value: typing.Optional[BaseException], traceback: typing.Optional[types.TracebackType]) -> None: ...
+    # System.Void Windows.Devices.Perception.PerceptionDepthFrameReader::Close()
     def close(self) -> None: ...
+    # Windows.Devices.Perception.PerceptionDepthFrame Windows.Devices.Perception.PerceptionDepthFrameReader::TryReadLatestFrame()
     # @deprecated("PerceptionDepthFrameReader may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameReader instead.")
     def try_read_latest_frame(self) -> PerceptionDepthFrame: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Devices.Perception.PerceptionDepthFrameReader::add_FrameArrived(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Perception.PerceptionDepthFrameReader,Windows.Devices.Perception.PerceptionDepthFrameArrivedEventArgs>)
     # @deprecated("PerceptionDepthFrameReader may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameReader instead.")
     def add_frame_arrived(self, handler: windows_foundation.TypedEventHandler[PerceptionDepthFrameReader, PerceptionDepthFrameArrivedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Devices.Perception.PerceptionDepthFrameReader::remove_FrameArrived(Windows.Foundation.EventRegistrationToken)
     # @deprecated("PerceptionDepthFrameReader may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameReader instead.")
     def remove_frame_arrived(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.Boolean Windows.Devices.Perception.PerceptionDepthFrameReader::get_IsPaused()
     @_property
     def is_paused(self) -> bool: ...
+    # System.Void Windows.Devices.Perception.PerceptionDepthFrameReader::put_IsPaused(System.Boolean)
     @is_paused.setter
     def is_paused(self, value: bool) -> None: ...
+    # Windows.Devices.Perception.PerceptionDepthFrameSource Windows.Devices.Perception.PerceptionDepthFrameReader::get_Source()
     @_property
     def source(self) -> PerceptionDepthFrameSource: ...
 
 @typing.final
 class PerceptionDepthFrameSource_Static(type):
+    # Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher Windows.Devices.Perception.PerceptionDepthFrameSource::CreateWatcher()
     # @deprecated("PerceptionDepthFrameSource.CreateWatcher may be unavailable after Windows Creator Update.  Use Windows.Devices.Enumeration.DeviceInformation.CreateWatcher instead.")
     def create_watcher(cls) -> PerceptionDepthFrameSourceWatcher: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Perception.PerceptionDepthFrameSource>> Windows.Devices.Perception.PerceptionDepthFrameSource::FindAllAsync()
     # @deprecated("PerceptionDepthFrameSource.FindAllAsync may be unavailable after Windows Creator Update.  Use Windows.Devices.Enumeration.DeviceInformation.FindAllAsync instead.")
     def find_all_async(cls) -> windows_foundation.IAsyncOperation[typing.Sequence[PerceptionDepthFrameSource]]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Perception.PerceptionDepthFrameSource> Windows.Devices.Perception.PerceptionDepthFrameSource::FromIdAsync(System.String)
     # @deprecated("PerceptionDepthFrameSource.FromIdAsync may be unavailable after Windows Creator Update.  Use Windows.Devices.Enumeration.DeviceInformation.FromIdAsync instead.")
     def from_id_async(cls, id: str, /) -> windows_foundation.IAsyncOperation[PerceptionDepthFrameSource]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Perception.PerceptionFrameSourceAccessStatus> Windows.Devices.Perception.PerceptionDepthFrameSource::RequestAccessAsync()
     # @deprecated("PerceptionDepthFrameSource.RequestAccessAsync may be unavailable after Windows Creator Update.  Please refer to Windows.Media.Capture.Frames APIs on MSDN.")
     def request_access_async(cls) -> windows_foundation.IAsyncOperation[PerceptionFrameSourceAccessStatus]: ...
 
 @typing.final
 class PerceptionDepthFrameSource(winrt.system.Object, metaclass=PerceptionDepthFrameSource_Static):
+    # Windows.Devices.Perception.PerceptionControlSession Windows.Devices.Perception.PerceptionDepthFrameSource::AcquireControlSession()
     # @deprecated("PerceptionDepthFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
     def acquire_control_session(self) -> PerceptionControlSession: ...
+    # System.Boolean Windows.Devices.Perception.PerceptionDepthFrameSource::CanControlIndependentlyFrom(System.String)
     # @deprecated("PerceptionDepthFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
     def can_control_independently_from(self, target_id: str, /) -> bool: ...
+    # System.Boolean Windows.Devices.Perception.PerceptionDepthFrameSource::IsCorrelatedWith(System.String)
     # @deprecated("PerceptionDepthFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
     def is_correlated_with(self, target_id: str, /) -> bool: ...
+    # Windows.Devices.Perception.PerceptionDepthFrameReader Windows.Devices.Perception.PerceptionDepthFrameSource::OpenReader()
     # @deprecated("PerceptionDepthFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
     def open_reader(self) -> PerceptionDepthFrameReader: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Perception.PerceptionDepthCorrelatedCameraIntrinsics> Windows.Devices.Perception.PerceptionDepthFrameSource::TryGetDepthCorrelatedCameraIntrinsicsAsync(Windows.Devices.Perception.PerceptionDepthFrameSource)
     # @deprecated("PerceptionDepthFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
     def try_get_depth_correlated_camera_intrinsics_async(self, target: PerceptionDepthFrameSource, /) -> windows_foundation.IAsyncOperation[PerceptionDepthCorrelatedCameraIntrinsics]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Perception.PerceptionDepthCorrelatedCoordinateMapper> Windows.Devices.Perception.PerceptionDepthFrameSource::TryGetDepthCorrelatedCoordinateMapperAsync(System.String,Windows.Devices.Perception.PerceptionDepthFrameSource)
     # @deprecated("PerceptionDepthFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
     def try_get_depth_correlated_coordinate_mapper_async(self, target_id: str, depth_frame_source_to_map_with: PerceptionDepthFrameSource, /) -> windows_foundation.IAsyncOperation[PerceptionDepthCorrelatedCoordinateMapper]: ...
+    # System.Boolean Windows.Devices.Perception.PerceptionDepthFrameSource::TryGetTransformTo(System.String,Windows.Foundation.Numerics.Matrix4x4&)
     # @deprecated("PerceptionDepthFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
     def try_get_transform_to(self, target_id: str, /) -> typing.Tuple[bool, windows_foundation_numerics.Matrix4x4]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Perception.PerceptionFrameSourcePropertyChangeResult> Windows.Devices.Perception.PerceptionDepthFrameSource::TrySetVideoProfileAsync(Windows.Devices.Perception.PerceptionControlSession,Windows.Devices.Perception.PerceptionVideoProfile)
     # @deprecated("PerceptionDepthFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
     def try_set_video_profile_async(self, control_session: PerceptionControlSession, profile: PerceptionVideoProfile, /) -> windows_foundation.IAsyncOperation[PerceptionFrameSourcePropertyChangeResult]: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Devices.Perception.PerceptionDepthFrameSource::add_ActiveChanged(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Perception.PerceptionDepthFrameSource,System.Object>)
     # @deprecated("PerceptionDepthFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
     def add_active_changed(self, handler: windows_foundation.TypedEventHandler[PerceptionDepthFrameSource, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Devices.Perception.PerceptionDepthFrameSource::remove_ActiveChanged(Windows.Foundation.EventRegistrationToken)
     # @deprecated("PerceptionDepthFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
     def remove_active_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Devices.Perception.PerceptionDepthFrameSource::add_AvailableChanged(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Perception.PerceptionDepthFrameSource,System.Object>)
     # @deprecated("PerceptionDepthFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
     def add_available_changed(self, handler: windows_foundation.TypedEventHandler[PerceptionDepthFrameSource, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Devices.Perception.PerceptionDepthFrameSource::remove_AvailableChanged(Windows.Foundation.EventRegistrationToken)
     # @deprecated("PerceptionDepthFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
     def remove_available_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Devices.Perception.PerceptionDepthFrameSource::add_CameraIntrinsicsChanged(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Perception.PerceptionDepthFrameSource,System.Object>)
     # @deprecated("PerceptionDepthFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
     def add_camera_intrinsics_changed(self, handler: windows_foundation.TypedEventHandler[PerceptionDepthFrameSource, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Devices.Perception.PerceptionDepthFrameSource::remove_CameraIntrinsicsChanged(Windows.Foundation.EventRegistrationToken)
     # @deprecated("PerceptionDepthFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
     def remove_camera_intrinsics_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Devices.Perception.PerceptionDepthFrameSource::add_PropertiesChanged(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Perception.PerceptionDepthFrameSource,Windows.Devices.Perception.PerceptionFrameSourcePropertiesChangedEventArgs>)
     # @deprecated("PerceptionDepthFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
     def add_properties_changed(self, handler: windows_foundation.TypedEventHandler[PerceptionDepthFrameSource, PerceptionFrameSourcePropertiesChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Devices.Perception.PerceptionDepthFrameSource::remove_PropertiesChanged(Windows.Foundation.EventRegistrationToken)
     # @deprecated("PerceptionDepthFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
     def remove_properties_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Devices.Perception.PerceptionDepthFrameSource::add_VideoProfileChanged(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Perception.PerceptionDepthFrameSource,System.Object>)
     # @deprecated("PerceptionDepthFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
     def add_video_profile_changed(self, handler: windows_foundation.TypedEventHandler[PerceptionDepthFrameSource, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Devices.Perception.PerceptionDepthFrameSource::remove_VideoProfileChanged(Windows.Foundation.EventRegistrationToken)
     # @deprecated("PerceptionDepthFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
     def remove_video_profile_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.Boolean Windows.Devices.Perception.PerceptionDepthFrameSource::get_Active()
     @_property
     def active(self) -> bool: ...
+    # System.Boolean Windows.Devices.Perception.PerceptionDepthFrameSource::get_Available()
     @_property
     def available(self) -> bool: ...
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Perception.PerceptionVideoProfile> Windows.Devices.Perception.PerceptionDepthFrameSource::get_AvailableVideoProfiles()
     @_property
     def available_video_profiles(self) -> typing.Sequence[PerceptionVideoProfile]: ...
+    # Windows.Media.Devices.Core.CameraIntrinsics Windows.Devices.Perception.PerceptionDepthFrameSource::get_CameraIntrinsics()
     @_property
     def camera_intrinsics(self) -> windows_media_devices_core.CameraIntrinsics: ...
+    # System.String Windows.Devices.Perception.PerceptionDepthFrameSource::get_DeviceKind()
     @_property
     def device_kind(self) -> str: ...
+    # System.String Windows.Devices.Perception.PerceptionDepthFrameSource::get_DisplayName()
     @_property
     def display_name(self) -> str: ...
+    # System.String Windows.Devices.Perception.PerceptionDepthFrameSource::get_Id()
     @_property
     def id(self) -> str: ...
+    # System.Boolean Windows.Devices.Perception.PerceptionDepthFrameSource::get_IsControlled()
     @_property
     def is_controlled(self) -> bool: ...
+    # Windows.Foundation.Collections.IMapView`2<System.String,System.Object> Windows.Devices.Perception.PerceptionDepthFrameSource::get_Properties()
     @_property
     def properties(self) -> typing.Mapping[str, winrt.system.Object]: ...
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Perception.PerceptionVideoProfile> Windows.Devices.Perception.PerceptionDepthFrameSource::get_SupportedVideoProfiles()
     @_property
     def supported_video_profiles(self) -> typing.Sequence[PerceptionVideoProfile]: ...
+    # Windows.Devices.Perception.PerceptionVideoProfile Windows.Devices.Perception.PerceptionDepthFrameSource::get_VideoProfile()
     @_property
     def video_profile(self) -> PerceptionVideoProfile: ...
+    # System.String Windows.Devices.Perception.PerceptionDepthFrameSource::get_DeviceId()
     @_property
     def device_id(self) -> str: ...
 
 @typing.final
 class PerceptionDepthFrameSourceAddedEventArgs(winrt.system.Object):
+    # Windows.Devices.Perception.PerceptionDepthFrameSource Windows.Devices.Perception.PerceptionDepthFrameSourceAddedEventArgs::get_FrameSource()
     @_property
     def frame_source(self) -> PerceptionDepthFrameSource: ...
 
 @typing.final
 class PerceptionDepthFrameSourceRemovedEventArgs(winrt.system.Object):
+    # Windows.Devices.Perception.PerceptionDepthFrameSource Windows.Devices.Perception.PerceptionDepthFrameSourceRemovedEventArgs::get_FrameSource()
     @_property
     def frame_source(self) -> PerceptionDepthFrameSource: ...
 
 @typing.final
 class PerceptionDepthFrameSourceWatcher(winrt.system.Object):
+    # System.Void Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher::Start()
     # @deprecated("PerceptionDepthFrameSourceWatcher may be unavailable after Windows Creator Update.  Use Windows.Devices.Enumeration.DeviceWatcher instead.")
     def start(self) -> None: ...
+    # System.Void Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher::Stop()
     # @deprecated("PerceptionDepthFrameSourceWatcher may be unavailable after Windows Creator Update.  Use Windows.Devices.Enumeration.DeviceWatcher instead.")
     def stop(self) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher::add_EnumerationCompleted(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher,System.Object>)
     # @deprecated("PerceptionDepthFrameSourceWatcher may be unavailable after Windows Creator Update.  Use Windows.Devices.Enumeration.DeviceWatcher instead.")
     def add_enumeration_completed(self, handler: windows_foundation.TypedEventHandler[PerceptionDepthFrameSourceWatcher, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher::remove_EnumerationCompleted(Windows.Foundation.EventRegistrationToken)
     # @deprecated("PerceptionDepthFrameSourceWatcher may be unavailable after Windows Creator Update.  Use Windows.Devices.Enumeration.DeviceWatcher instead.")
     def remove_enumeration_completed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher::add_SourceAdded(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher,Windows.Devices.Perception.PerceptionDepthFrameSourceAddedEventArgs>)
     # @deprecated("PerceptionDepthFrameSourceWatcher may be unavailable after Windows Creator Update.  Use Windows.Devices.Enumeration.DeviceWatcher instead.")
     def add_source_added(self, handler: windows_foundation.TypedEventHandler[PerceptionDepthFrameSourceWatcher, PerceptionDepthFrameSourceAddedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher::remove_SourceAdded(Windows.Foundation.EventRegistrationToken)
     # @deprecated("PerceptionDepthFrameSourceWatcher may be unavailable after Windows Creator Update.  Use Windows.Devices.Enumeration.DeviceWatcher instead.")
     def remove_source_added(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher::add_SourceRemoved(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher,Windows.Devices.Perception.PerceptionDepthFrameSourceRemovedEventArgs>)
     # @deprecated("PerceptionDepthFrameSourceWatcher may be unavailable after Windows Creator Update.  Use Windows.Devices.Enumeration.DeviceWatcher instead.")
     def add_source_removed(self, handler: windows_foundation.TypedEventHandler[PerceptionDepthFrameSourceWatcher, PerceptionDepthFrameSourceRemovedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher::remove_SourceRemoved(Windows.Foundation.EventRegistrationToken)
     # @deprecated("PerceptionDepthFrameSourceWatcher may be unavailable after Windows Creator Update.  Use Windows.Devices.Enumeration.DeviceWatcher instead.")
     def remove_source_removed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher::add_Stopped(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher,System.Object>)
     # @deprecated("PerceptionDepthFrameSourceWatcher may be unavailable after Windows Creator Update.  Use Windows.Devices.Enumeration.DeviceWatcher instead.")
     def add_stopped(self, handler: windows_foundation.TypedEventHandler[PerceptionDepthFrameSourceWatcher, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher::remove_Stopped(Windows.Foundation.EventRegistrationToken)
     # @deprecated("PerceptionDepthFrameSourceWatcher may be unavailable after Windows Creator Update.  Use Windows.Devices.Enumeration.DeviceWatcher instead.")
     def remove_stopped(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Devices.Enumeration.DeviceWatcherStatus Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher::get_Status()
     @_property
     def status(self) -> windows_devices_enumeration.DeviceWatcherStatus: ...
 
 @typing.final
 class PerceptionFrameSourcePropertiesChangedEventArgs(winrt.system.Object):
+    # Windows.Foundation.Collections.CollectionChange Windows.Devices.Perception.PerceptionFrameSourcePropertiesChangedEventArgs::get_CollectionChange()
     @_property
     def collection_change(self) -> windows_foundation_collections.CollectionChange: ...
+    # System.String Windows.Devices.Perception.PerceptionFrameSourcePropertiesChangedEventArgs::get_Key()
     @_property
     def key(self) -> str: ...
 
 @typing.final
 class PerceptionFrameSourcePropertyChangeResult(winrt.system.Object):
+    # System.Object Windows.Devices.Perception.PerceptionFrameSourcePropertyChangeResult::get_NewValue()
     @_property
     def new_value(self) -> winrt.system.Object: ...
+    # Windows.Devices.Perception.PerceptionFrameSourcePropertyChangeStatus Windows.Devices.Perception.PerceptionFrameSourcePropertyChangeResult::get_Status()
     @_property
     def status(self) -> PerceptionFrameSourcePropertyChangeStatus: ...
 
@@ -470,14 +634,18 @@ class PerceptionFrameSourcePropertyChangeResult(winrt.system.Object):
 class PerceptionInfraredFrame(winrt.system.Object, windows_foundation.ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, exc_type: typing.Optional[typing.Type[BaseException]], exc_value: typing.Optional[BaseException], traceback: typing.Optional[types.TracebackType]) -> None: ...
+    # System.Void Windows.Devices.Perception.PerceptionInfraredFrame::Close()
     def close(self) -> None: ...
+    # Windows.Media.VideoFrame Windows.Devices.Perception.PerceptionInfraredFrame::get_VideoFrame()
     @_property
     def video_frame(self) -> windows_media.VideoFrame: ...
 
 @typing.final
 class PerceptionInfraredFrameArrivedEventArgs(winrt.system.Object):
+    # Windows.Devices.Perception.PerceptionInfraredFrame Windows.Devices.Perception.PerceptionInfraredFrameArrivedEventArgs::TryOpenFrame()
     # @deprecated("PerceptionInfraredFrameArrivedEventArgs may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameArrivedEventArgs instead.")
     def try_open_frame(self) -> PerceptionInfraredFrame: ...
+    # Windows.Foundation.TimeSpan Windows.Devices.Perception.PerceptionInfraredFrameArrivedEventArgs::get_RelativeTime()
     @_property
     def relative_time(self) -> datetime.timedelta: ...
 
@@ -485,141 +653,201 @@ class PerceptionInfraredFrameArrivedEventArgs(winrt.system.Object):
 class PerceptionInfraredFrameReader(winrt.system.Object, windows_foundation.ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, exc_type: typing.Optional[typing.Type[BaseException]], exc_value: typing.Optional[BaseException], traceback: typing.Optional[types.TracebackType]) -> None: ...
+    # System.Void Windows.Devices.Perception.PerceptionInfraredFrameReader::Close()
     def close(self) -> None: ...
+    # Windows.Devices.Perception.PerceptionInfraredFrame Windows.Devices.Perception.PerceptionInfraredFrameReader::TryReadLatestFrame()
     # @deprecated("PerceptionInfraredFrameReader may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameReader instead.")
     def try_read_latest_frame(self) -> PerceptionInfraredFrame: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Devices.Perception.PerceptionInfraredFrameReader::add_FrameArrived(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Perception.PerceptionInfraredFrameReader,Windows.Devices.Perception.PerceptionInfraredFrameArrivedEventArgs>)
     # @deprecated("PerceptionInfraredFrameReader may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameReader instead.")
     def add_frame_arrived(self, handler: windows_foundation.TypedEventHandler[PerceptionInfraredFrameReader, PerceptionInfraredFrameArrivedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Devices.Perception.PerceptionInfraredFrameReader::remove_FrameArrived(Windows.Foundation.EventRegistrationToken)
     # @deprecated("PerceptionInfraredFrameReader may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameReader instead.")
     def remove_frame_arrived(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.Boolean Windows.Devices.Perception.PerceptionInfraredFrameReader::get_IsPaused()
     @_property
     def is_paused(self) -> bool: ...
+    # System.Void Windows.Devices.Perception.PerceptionInfraredFrameReader::put_IsPaused(System.Boolean)
     @is_paused.setter
     def is_paused(self, value: bool) -> None: ...
+    # Windows.Devices.Perception.PerceptionInfraredFrameSource Windows.Devices.Perception.PerceptionInfraredFrameReader::get_Source()
     @_property
     def source(self) -> PerceptionInfraredFrameSource: ...
 
 @typing.final
 class PerceptionInfraredFrameSource_Static(type):
+    # Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher Windows.Devices.Perception.PerceptionInfraredFrameSource::CreateWatcher()
     # @deprecated("PerceptionInfraredFrameSource.CreateWatcher may be unavailable after Windows Creator Update.  Use Windows.Devices.Enumeration.DeviceInformation.CreateWatcher instead.")
     def create_watcher(cls) -> PerceptionInfraredFrameSourceWatcher: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Perception.PerceptionInfraredFrameSource>> Windows.Devices.Perception.PerceptionInfraredFrameSource::FindAllAsync()
     # @deprecated("PerceptionInfraredFrameSource.FindAllAsync may be unavailable after Windows Creator Update.  Use Windows.Devices.Enumeration.DeviceInformation.FindAllAsync instead.")
     def find_all_async(cls) -> windows_foundation.IAsyncOperation[typing.Sequence[PerceptionInfraredFrameSource]]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Perception.PerceptionInfraredFrameSource> Windows.Devices.Perception.PerceptionInfraredFrameSource::FromIdAsync(System.String)
     # @deprecated("PerceptionInfraredFrameSource.FromIdAsync may be unavailable after Windows Creator Update.  Use Windows.Devices.Enumeration.DeviceInformation.FromIdAsync instead.")
     def from_id_async(cls, id: str, /) -> windows_foundation.IAsyncOperation[PerceptionInfraredFrameSource]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Perception.PerceptionFrameSourceAccessStatus> Windows.Devices.Perception.PerceptionInfraredFrameSource::RequestAccessAsync()
     # @deprecated("PerceptionInfraredFrameSource.RequestAccessAsync may be unavailable after Windows Creator Update.  Please refer to Windows.Media.Capture.Frames APIs on MSDN.")
     def request_access_async(cls) -> windows_foundation.IAsyncOperation[PerceptionFrameSourceAccessStatus]: ...
 
 @typing.final
 class PerceptionInfraredFrameSource(winrt.system.Object, metaclass=PerceptionInfraredFrameSource_Static):
+    # Windows.Devices.Perception.PerceptionControlSession Windows.Devices.Perception.PerceptionInfraredFrameSource::AcquireControlSession()
     # @deprecated("PerceptionInfraredFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
     def acquire_control_session(self) -> PerceptionControlSession: ...
+    # System.Boolean Windows.Devices.Perception.PerceptionInfraredFrameSource::CanControlIndependentlyFrom(System.String)
     # @deprecated("PerceptionInfraredFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
     def can_control_independently_from(self, target_id: str, /) -> bool: ...
+    # System.Boolean Windows.Devices.Perception.PerceptionInfraredFrameSource::IsCorrelatedWith(System.String)
     # @deprecated("PerceptionInfraredFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
     def is_correlated_with(self, target_id: str, /) -> bool: ...
+    # Windows.Devices.Perception.PerceptionInfraredFrameReader Windows.Devices.Perception.PerceptionInfraredFrameSource::OpenReader()
     # @deprecated("PerceptionInfraredFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
     def open_reader(self) -> PerceptionInfraredFrameReader: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Perception.PerceptionDepthCorrelatedCameraIntrinsics> Windows.Devices.Perception.PerceptionInfraredFrameSource::TryGetDepthCorrelatedCameraIntrinsicsAsync(Windows.Devices.Perception.PerceptionDepthFrameSource)
     # @deprecated("PerceptionInfraredFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
     def try_get_depth_correlated_camera_intrinsics_async(self, target: PerceptionDepthFrameSource, /) -> windows_foundation.IAsyncOperation[PerceptionDepthCorrelatedCameraIntrinsics]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Perception.PerceptionDepthCorrelatedCoordinateMapper> Windows.Devices.Perception.PerceptionInfraredFrameSource::TryGetDepthCorrelatedCoordinateMapperAsync(System.String,Windows.Devices.Perception.PerceptionDepthFrameSource)
     # @deprecated("PerceptionInfraredFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
     def try_get_depth_correlated_coordinate_mapper_async(self, target_id: str, depth_frame_source_to_map_with: PerceptionDepthFrameSource, /) -> windows_foundation.IAsyncOperation[PerceptionDepthCorrelatedCoordinateMapper]: ...
+    # System.Boolean Windows.Devices.Perception.PerceptionInfraredFrameSource::TryGetTransformTo(System.String,Windows.Foundation.Numerics.Matrix4x4&)
     # @deprecated("PerceptionInfraredFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
     def try_get_transform_to(self, target_id: str, /) -> typing.Tuple[bool, windows_foundation_numerics.Matrix4x4]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Perception.PerceptionFrameSourcePropertyChangeResult> Windows.Devices.Perception.PerceptionInfraredFrameSource::TrySetVideoProfileAsync(Windows.Devices.Perception.PerceptionControlSession,Windows.Devices.Perception.PerceptionVideoProfile)
     # @deprecated("PerceptionInfraredFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
     def try_set_video_profile_async(self, control_session: PerceptionControlSession, profile: PerceptionVideoProfile, /) -> windows_foundation.IAsyncOperation[PerceptionFrameSourcePropertyChangeResult]: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Devices.Perception.PerceptionInfraredFrameSource::add_ActiveChanged(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Perception.PerceptionInfraredFrameSource,System.Object>)
     # @deprecated("PerceptionInfraredFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
     def add_active_changed(self, handler: windows_foundation.TypedEventHandler[PerceptionInfraredFrameSource, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Devices.Perception.PerceptionInfraredFrameSource::remove_ActiveChanged(Windows.Foundation.EventRegistrationToken)
     # @deprecated("PerceptionInfraredFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
     def remove_active_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Devices.Perception.PerceptionInfraredFrameSource::add_AvailableChanged(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Perception.PerceptionInfraredFrameSource,System.Object>)
     # @deprecated("PerceptionInfraredFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
     def add_available_changed(self, handler: windows_foundation.TypedEventHandler[PerceptionInfraredFrameSource, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Devices.Perception.PerceptionInfraredFrameSource::remove_AvailableChanged(Windows.Foundation.EventRegistrationToken)
     # @deprecated("PerceptionInfraredFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
     def remove_available_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Devices.Perception.PerceptionInfraredFrameSource::add_CameraIntrinsicsChanged(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Perception.PerceptionInfraredFrameSource,System.Object>)
     # @deprecated("PerceptionInfraredFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
     def add_camera_intrinsics_changed(self, handler: windows_foundation.TypedEventHandler[PerceptionInfraredFrameSource, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Devices.Perception.PerceptionInfraredFrameSource::remove_CameraIntrinsicsChanged(Windows.Foundation.EventRegistrationToken)
     # @deprecated("PerceptionInfraredFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
     def remove_camera_intrinsics_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Devices.Perception.PerceptionInfraredFrameSource::add_PropertiesChanged(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Perception.PerceptionInfraredFrameSource,Windows.Devices.Perception.PerceptionFrameSourcePropertiesChangedEventArgs>)
     # @deprecated("PerceptionInfraredFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
     def add_properties_changed(self, handler: windows_foundation.TypedEventHandler[PerceptionInfraredFrameSource, PerceptionFrameSourcePropertiesChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Devices.Perception.PerceptionInfraredFrameSource::remove_PropertiesChanged(Windows.Foundation.EventRegistrationToken)
     # @deprecated("PerceptionInfraredFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
     def remove_properties_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Devices.Perception.PerceptionInfraredFrameSource::add_VideoProfileChanged(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Perception.PerceptionInfraredFrameSource,System.Object>)
     # @deprecated("PerceptionInfraredFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
     def add_video_profile_changed(self, handler: windows_foundation.TypedEventHandler[PerceptionInfraredFrameSource, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Devices.Perception.PerceptionInfraredFrameSource::remove_VideoProfileChanged(Windows.Foundation.EventRegistrationToken)
     # @deprecated("PerceptionInfraredFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
     def remove_video_profile_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.Boolean Windows.Devices.Perception.PerceptionInfraredFrameSource::get_Active()
     @_property
     def active(self) -> bool: ...
+    # System.Boolean Windows.Devices.Perception.PerceptionInfraredFrameSource::get_Available()
     @_property
     def available(self) -> bool: ...
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Perception.PerceptionVideoProfile> Windows.Devices.Perception.PerceptionInfraredFrameSource::get_AvailableVideoProfiles()
     @_property
     def available_video_profiles(self) -> typing.Sequence[PerceptionVideoProfile]: ...
+    # Windows.Media.Devices.Core.CameraIntrinsics Windows.Devices.Perception.PerceptionInfraredFrameSource::get_CameraIntrinsics()
     @_property
     def camera_intrinsics(self) -> windows_media_devices_core.CameraIntrinsics: ...
+    # System.String Windows.Devices.Perception.PerceptionInfraredFrameSource::get_DeviceKind()
     @_property
     def device_kind(self) -> str: ...
+    # System.String Windows.Devices.Perception.PerceptionInfraredFrameSource::get_DisplayName()
     @_property
     def display_name(self) -> str: ...
+    # System.String Windows.Devices.Perception.PerceptionInfraredFrameSource::get_Id()
     @_property
     def id(self) -> str: ...
+    # System.Boolean Windows.Devices.Perception.PerceptionInfraredFrameSource::get_IsControlled()
     @_property
     def is_controlled(self) -> bool: ...
+    # Windows.Foundation.Collections.IMapView`2<System.String,System.Object> Windows.Devices.Perception.PerceptionInfraredFrameSource::get_Properties()
     @_property
     def properties(self) -> typing.Mapping[str, winrt.system.Object]: ...
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Perception.PerceptionVideoProfile> Windows.Devices.Perception.PerceptionInfraredFrameSource::get_SupportedVideoProfiles()
     @_property
     def supported_video_profiles(self) -> typing.Sequence[PerceptionVideoProfile]: ...
+    # Windows.Devices.Perception.PerceptionVideoProfile Windows.Devices.Perception.PerceptionInfraredFrameSource::get_VideoProfile()
     @_property
     def video_profile(self) -> PerceptionVideoProfile: ...
+    # System.String Windows.Devices.Perception.PerceptionInfraredFrameSource::get_DeviceId()
     @_property
     def device_id(self) -> str: ...
 
 @typing.final
 class PerceptionInfraredFrameSourceAddedEventArgs(winrt.system.Object):
+    # Windows.Devices.Perception.PerceptionInfraredFrameSource Windows.Devices.Perception.PerceptionInfraredFrameSourceAddedEventArgs::get_FrameSource()
     @_property
     def frame_source(self) -> PerceptionInfraredFrameSource: ...
 
 @typing.final
 class PerceptionInfraredFrameSourceRemovedEventArgs(winrt.system.Object):
+    # Windows.Devices.Perception.PerceptionInfraredFrameSource Windows.Devices.Perception.PerceptionInfraredFrameSourceRemovedEventArgs::get_FrameSource()
     @_property
     def frame_source(self) -> PerceptionInfraredFrameSource: ...
 
 @typing.final
 class PerceptionInfraredFrameSourceWatcher(winrt.system.Object):
+    # System.Void Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher::Start()
     # @deprecated("PerceptionInfraredFrameSourceWatcher may be unavailable after Windows Creator Update.  Use Windows.Devices.Enumeration.DeviceWatcher instead.")
     def start(self) -> None: ...
+    # System.Void Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher::Stop()
     # @deprecated("PerceptionInfraredFrameSourceWatcher may be unavailable after Windows Creator Update.  Use Windows.Devices.Enumeration.DeviceWatcher instead.")
     def stop(self) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher::add_EnumerationCompleted(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher,System.Object>)
     # @deprecated("PerceptionInfraredFrameSourceWatcher may be unavailable after Windows Creator Update.  Use Windows.Devices.Enumeration.DeviceWatcher instead.")
     def add_enumeration_completed(self, handler: windows_foundation.TypedEventHandler[PerceptionInfraredFrameSourceWatcher, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher::remove_EnumerationCompleted(Windows.Foundation.EventRegistrationToken)
     # @deprecated("PerceptionInfraredFrameSourceWatcher may be unavailable after Windows Creator Update.  Use Windows.Devices.Enumeration.DeviceWatcher instead.")
     def remove_enumeration_completed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher::add_SourceAdded(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher,Windows.Devices.Perception.PerceptionInfraredFrameSourceAddedEventArgs>)
     # @deprecated("PerceptionInfraredFrameSourceWatcher may be unavailable after Windows Creator Update.  Use Windows.Devices.Enumeration.DeviceWatcher instead.")
     def add_source_added(self, handler: windows_foundation.TypedEventHandler[PerceptionInfraredFrameSourceWatcher, PerceptionInfraredFrameSourceAddedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher::remove_SourceAdded(Windows.Foundation.EventRegistrationToken)
     # @deprecated("PerceptionInfraredFrameSourceWatcher may be unavailable after Windows Creator Update.  Use Windows.Devices.Enumeration.DeviceWatcher instead.")
     def remove_source_added(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher::add_SourceRemoved(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher,Windows.Devices.Perception.PerceptionInfraredFrameSourceRemovedEventArgs>)
     # @deprecated("PerceptionInfraredFrameSourceWatcher may be unavailable after Windows Creator Update.  Use Windows.Devices.Enumeration.DeviceWatcher instead.")
     def add_source_removed(self, handler: windows_foundation.TypedEventHandler[PerceptionInfraredFrameSourceWatcher, PerceptionInfraredFrameSourceRemovedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher::remove_SourceRemoved(Windows.Foundation.EventRegistrationToken)
     # @deprecated("PerceptionInfraredFrameSourceWatcher may be unavailable after Windows Creator Update.  Use Windows.Devices.Enumeration.DeviceWatcher instead.")
     def remove_source_removed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher::add_Stopped(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher,System.Object>)
     # @deprecated("PerceptionInfraredFrameSourceWatcher may be unavailable after Windows Creator Update.  Use Windows.Devices.Enumeration.DeviceWatcher instead.")
     def add_stopped(self, handler: windows_foundation.TypedEventHandler[PerceptionInfraredFrameSourceWatcher, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher::remove_Stopped(Windows.Foundation.EventRegistrationToken)
     # @deprecated("PerceptionInfraredFrameSourceWatcher may be unavailable after Windows Creator Update.  Use Windows.Devices.Enumeration.DeviceWatcher instead.")
     def remove_stopped(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Devices.Enumeration.DeviceWatcherStatus Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher::get_Status()
     @_property
     def status(self) -> windows_devices_enumeration.DeviceWatcherStatus: ...
 
 @typing.final
 class PerceptionVideoProfile(winrt.system.Object):
+    # System.Boolean Windows.Devices.Perception.PerceptionVideoProfile::IsEqual(Windows.Devices.Perception.PerceptionVideoProfile)
     # @deprecated("PerceptionVideoProfile may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameFormat instead.")
     def is_equal(self, other: PerceptionVideoProfile, /) -> bool: ...
+    # Windows.Graphics.Imaging.BitmapAlphaMode Windows.Devices.Perception.PerceptionVideoProfile::get_BitmapAlphaMode()
     @_property
     def bitmap_alpha_mode(self) -> windows_graphics_imaging.BitmapAlphaMode: ...
+    # Windows.Graphics.Imaging.BitmapPixelFormat Windows.Devices.Perception.PerceptionVideoProfile::get_BitmapPixelFormat()
     @_property
     def bitmap_pixel_format(self) -> windows_graphics_imaging.BitmapPixelFormat: ...
+    # Windows.Foundation.TimeSpan Windows.Devices.Perception.PerceptionVideoProfile::get_FrameDuration()
     @_property
     def frame_duration(self) -> datetime.timedelta: ...
+    # System.Int32 Windows.Devices.Perception.PerceptionVideoProfile::get_Height()
     @_property
     def height(self) -> winrt.system.Int32: ...
+    # System.Int32 Windows.Devices.Perception.PerceptionVideoProfile::get_Width()
     @_property
     def width(self) -> winrt.system.Int32: ...
 

@@ -16,11 +16,17 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class CommunicationBlockingAccessManager_Static(type):
+    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAccessManager::IsBlockedNumberAsync(System.String)
     def is_blocked_number_async(cls, number: str, /) -> windows_foundation.IAsyncOperation[bool]: ...
+    # System.Boolean Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAccessManager::ShowBlockNumbersUI(Windows.Foundation.Collections.IIterable`1<System.String>)
     def show_block_numbers_ui(cls, phone_numbers: typing.Iterable[str], /) -> bool: ...
+    # System.Void Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAccessManager::ShowBlockedCallsUI()
     def show_blocked_calls_ui(cls) -> None: ...
+    # System.Void Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAccessManager::ShowBlockedMessagesUI()
     def show_blocked_messages_ui(cls) -> None: ...
+    # System.Boolean Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAccessManager::ShowUnblockNumbersUI(Windows.Foundation.Collections.IIterable`1<System.String>)
     def show_unblock_numbers_ui(cls, phone_numbers: typing.Iterable[str], /) -> bool: ...
+    # System.Boolean Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAccessManager::get_IsBlockingActive()
     @_property
     def is_blocking_active(cls) -> bool: ...
 
@@ -30,8 +36,11 @@ class CommunicationBlockingAccessManager(winrt.system.Object, metaclass=Communic
 
 @typing.final
 class CommunicationBlockingAppManager_Static(type):
+    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAppManager::RequestSetAsActiveBlockingAppAsync()
     def request_set_as_active_blocking_app_async(cls) -> windows_foundation.IAsyncOperation[bool]: ...
+    # System.Void Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAppManager::ShowCommunicationBlockingSettingsUI()
     def show_communication_blocking_settings_ui(cls) -> None: ...
+    # System.Boolean Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAppManager::get_IsCurrentAppActiveBlockingApp()
     @_property
     def is_current_app_active_blocking_app(cls) -> bool: ...
 

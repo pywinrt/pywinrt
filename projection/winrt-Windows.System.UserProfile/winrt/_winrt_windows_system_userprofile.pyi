@@ -22,7 +22,9 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class AdvertisingManager_Static(type):
+    # Windows.System.UserProfile.AdvertisingManagerForUser Windows.System.UserProfile.AdvertisingManager::GetForUser(Windows.System.User)
     def get_for_user(cls, user: windows_system.User, /) -> AdvertisingManagerForUser: ...
+    # System.String Windows.System.UserProfile.AdvertisingManager::get_AdvertisingId()
     @_property
     def advertising_id(cls) -> str: ...
 
@@ -32,39 +34,51 @@ class AdvertisingManager(winrt.system.Object, metaclass=AdvertisingManager_Stati
 
 @typing.final
 class AdvertisingManagerForUser(winrt.system.Object):
+    # System.String Windows.System.UserProfile.AdvertisingManagerForUser::get_AdvertisingId()
     @_property
     def advertising_id(self) -> str: ...
+    # Windows.System.User Windows.System.UserProfile.AdvertisingManagerForUser::get_User()
     @_property
     def user(self) -> windows_system.User: ...
 
 @typing.final
 class AssignedAccessSettings_Static(type):
+    # Windows.System.UserProfile.AssignedAccessSettings Windows.System.UserProfile.AssignedAccessSettings::GetDefault()
     def get_default(cls) -> AssignedAccessSettings: ...
+    # Windows.System.UserProfile.AssignedAccessSettings Windows.System.UserProfile.AssignedAccessSettings::GetForUser(Windows.System.User)
     def get_for_user(cls, user: windows_system.User, /) -> AssignedAccessSettings: ...
 
 @typing.final
 class AssignedAccessSettings(winrt.system.Object, metaclass=AssignedAccessSettings_Static):
+    # System.Boolean Windows.System.UserProfile.AssignedAccessSettings::get_IsEnabled()
     @_property
     def is_enabled(self) -> bool: ...
+    # System.Boolean Windows.System.UserProfile.AssignedAccessSettings::get_IsSingleAppKioskMode()
     @_property
     def is_single_app_kiosk_mode(self) -> bool: ...
+    # Windows.System.User Windows.System.UserProfile.AssignedAccessSettings::get_User()
     @_property
     def user(self) -> windows_system.User: ...
 
 @typing.final
 class DiagnosticsSettings_Static(type):
+    # Windows.System.UserProfile.DiagnosticsSettings Windows.System.UserProfile.DiagnosticsSettings::GetDefault()
     def get_default(cls) -> DiagnosticsSettings: ...
+    # Windows.System.UserProfile.DiagnosticsSettings Windows.System.UserProfile.DiagnosticsSettings::GetForUser(Windows.System.User)
     def get_for_user(cls, user: windows_system.User, /) -> DiagnosticsSettings: ...
 
 @typing.final
 class DiagnosticsSettings(winrt.system.Object, metaclass=DiagnosticsSettings_Static):
+    # System.Boolean Windows.System.UserProfile.DiagnosticsSettings::get_CanUseDiagnosticsToTailorExperiences()
     @_property
     def can_use_diagnostics_to_tailor_experiences(self) -> bool: ...
+    # Windows.System.User Windows.System.UserProfile.DiagnosticsSettings::get_User()
     @_property
     def user(self) -> windows_system.User: ...
 
 @typing.final
 class FirstSignInSettings_Static(type):
+    # Windows.System.UserProfile.FirstSignInSettings Windows.System.UserProfile.FirstSignInSettings::GetDefault()
     def get_default(cls) -> FirstSignInSettings: ...
 
 @typing.final
@@ -73,28 +87,42 @@ class FirstSignInSettings(winrt.system.Object, winrt._winrt.Mapping[str, winrt.s
     def __iter__(self) -> typing.Iterator[str]: ...
     def __contains__(self, key: object) -> bool: ...
     def __getitem__(self, key: str) -> winrt.system.Object: ...
+    # Windows.Foundation.Collections.IIterator`1<Windows.Foundation.Collections.IKeyValuePair`2<System.String,System.Object>> Windows.System.UserProfile.FirstSignInSettings::First()
     def first(self) -> windows_foundation_collections.IIterator[windows_foundation_collections.IKeyValuePair[str, winrt.system.Object]]: ...
+    # System.Boolean Windows.System.UserProfile.FirstSignInSettings::HasKey(System.String)
     def has_key(self, key: str, /) -> bool: ...
+    # System.Object Windows.System.UserProfile.FirstSignInSettings::Lookup(System.String)
     def lookup(self, key: str, /) -> winrt.system.Object: ...
+    # System.Void Windows.System.UserProfile.FirstSignInSettings::Split(Windows.Foundation.Collections.IMapView`2<System.String,System.Object>&,Windows.Foundation.Collections.IMapView`2<System.String,System.Object>&)
     def split(self) -> typing.Tuple[typing.Mapping[str, winrt.system.Object], typing.Mapping[str, winrt.system.Object]]: ...
+    # System.UInt32 Windows.System.UserProfile.FirstSignInSettings::get_Size()
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
 @typing.final
 class GlobalizationPreferences_Static(type):
+    # Windows.System.UserProfile.GlobalizationPreferencesForUser Windows.System.UserProfile.GlobalizationPreferences::GetForUser(Windows.System.User)
     def get_for_user(cls, user: windows_system.User, /) -> GlobalizationPreferencesForUser: ...
+    # System.Boolean Windows.System.UserProfile.GlobalizationPreferences::TrySetHomeGeographicRegion(System.String)
     def try_set_home_geographic_region(cls, region: str, /) -> bool: ...
+    # System.Boolean Windows.System.UserProfile.GlobalizationPreferences::TrySetLanguages(Windows.Foundation.Collections.IIterable`1<System.String>)
     def try_set_languages(cls, language_tags: typing.Iterable[str], /) -> bool: ...
+    # Windows.Foundation.Collections.IVectorView`1<System.String> Windows.System.UserProfile.GlobalizationPreferences::get_Calendars()
     @_property
     def calendars(cls) -> typing.Sequence[str]: ...
+    # Windows.Foundation.Collections.IVectorView`1<System.String> Windows.System.UserProfile.GlobalizationPreferences::get_Clocks()
     @_property
     def clocks(cls) -> typing.Sequence[str]: ...
+    # Windows.Foundation.Collections.IVectorView`1<System.String> Windows.System.UserProfile.GlobalizationPreferences::get_Currencies()
     @_property
     def currencies(cls) -> typing.Sequence[str]: ...
+    # System.String Windows.System.UserProfile.GlobalizationPreferences::get_HomeGeographicRegion()
     @_property
     def home_geographic_region(cls) -> str: ...
+    # Windows.Foundation.Collections.IVectorView`1<System.String> Windows.System.UserProfile.GlobalizationPreferences::get_Languages()
     @_property
     def languages(cls) -> typing.Sequence[str]: ...
+    # Windows.Globalization.DayOfWeek Windows.System.UserProfile.GlobalizationPreferences::get_WeekStartsOn()
     @_property
     def week_starts_on(cls) -> windows_globalization.DayOfWeek: ...
 
@@ -104,28 +132,41 @@ class GlobalizationPreferences(winrt.system.Object, metaclass=GlobalizationPrefe
 
 @typing.final
 class GlobalizationPreferencesForUser(winrt.system.Object):
+    # Windows.Foundation.Collections.IVectorView`1<System.String> Windows.System.UserProfile.GlobalizationPreferencesForUser::get_Calendars()
     @_property
     def calendars(self) -> typing.Sequence[str]: ...
+    # Windows.Foundation.Collections.IVectorView`1<System.String> Windows.System.UserProfile.GlobalizationPreferencesForUser::get_Clocks()
     @_property
     def clocks(self) -> typing.Sequence[str]: ...
+    # Windows.Foundation.Collections.IVectorView`1<System.String> Windows.System.UserProfile.GlobalizationPreferencesForUser::get_Currencies()
     @_property
     def currencies(self) -> typing.Sequence[str]: ...
+    # System.String Windows.System.UserProfile.GlobalizationPreferencesForUser::get_HomeGeographicRegion()
     @_property
     def home_geographic_region(self) -> str: ...
+    # Windows.Foundation.Collections.IVectorView`1<System.String> Windows.System.UserProfile.GlobalizationPreferencesForUser::get_Languages()
     @_property
     def languages(self) -> typing.Sequence[str]: ...
+    # Windows.System.User Windows.System.UserProfile.GlobalizationPreferencesForUser::get_User()
     @_property
     def user(self) -> windows_system.User: ...
+    # Windows.Globalization.DayOfWeek Windows.System.UserProfile.GlobalizationPreferencesForUser::get_WeekStartsOn()
     @_property
     def week_starts_on(self) -> windows_globalization.DayOfWeek: ...
 
 @typing.final
 class LockScreen_Static(type):
+    # Windows.Storage.Streams.IRandomAccessStream Windows.System.UserProfile.LockScreen::GetImageStream()
     def get_image_stream(cls) -> windows_storage_streams.IRandomAccessStream: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.System.UserProfile.SetImageFeedResult> Windows.System.UserProfile.LockScreen::RequestSetImageFeedAsync(Windows.Foundation.Uri)
     def request_set_image_feed_async(cls, syndication_feed_uri: windows_foundation.Uri, /) -> windows_foundation.IAsyncOperation[SetImageFeedResult]: ...
+    # Windows.Foundation.IAsyncAction Windows.System.UserProfile.LockScreen::SetImageFileAsync(Windows.Storage.IStorageFile)
     def set_image_file_async(cls, value: windows_storage.ImplementsIStorageFile, /) -> windows_foundation.IAsyncAction: ...
+    # Windows.Foundation.IAsyncAction Windows.System.UserProfile.LockScreen::SetImageStreamAsync(Windows.Storage.Streams.IRandomAccessStream)
     def set_image_stream_async(cls, value: windows_storage_streams.ImplementsIRandomAccessStream, /) -> windows_foundation.IAsyncAction: ...
+    # System.Boolean Windows.System.UserProfile.LockScreen::TryRemoveImageFeed()
     def try_remove_image_feed(cls) -> bool: ...
+    # Windows.Foundation.Uri Windows.System.UserProfile.LockScreen::get_OriginalImageFile()
     @_property
     def original_image_file(cls) -> windows_foundation.Uri: ...
 
@@ -135,34 +176,49 @@ class LockScreen(winrt.system.Object, metaclass=LockScreen_Static):
 
 @typing.final
 class UserInformation_Static(type):
+    # Windows.Storage.IStorageFile Windows.System.UserProfile.UserInformation::GetAccountPicture(Windows.System.UserProfile.AccountPictureKind)
     # @deprecated("Use User instead of UserInformation. For more info, see MSDN.")
     def get_account_picture(cls, kind: AccountPictureKind, /) -> windows_storage.IStorageFile: ...
+    # Windows.Foundation.IAsyncOperation`1<System.String> Windows.System.UserProfile.UserInformation::GetDisplayNameAsync()
     # @deprecated("Use User instead of UserInformation. For more info, see MSDN.")
     def get_display_name_async(cls) -> windows_foundation.IAsyncOperation[str]: ...
+    # Windows.Foundation.IAsyncOperation`1<System.String> Windows.System.UserProfile.UserInformation::GetDomainNameAsync()
     # @deprecated("Use User instead of UserInformation. For more info, see MSDN.")
     def get_domain_name_async(cls) -> windows_foundation.IAsyncOperation[str]: ...
+    # Windows.Foundation.IAsyncOperation`1<System.String> Windows.System.UserProfile.UserInformation::GetFirstNameAsync()
     # @deprecated("Use User instead of UserInformation. For more info, see MSDN.")
     def get_first_name_async(cls) -> windows_foundation.IAsyncOperation[str]: ...
+    # Windows.Foundation.IAsyncOperation`1<System.String> Windows.System.UserProfile.UserInformation::GetLastNameAsync()
     # @deprecated("Use User instead of UserInformation. For more info, see MSDN.")
     def get_last_name_async(cls) -> windows_foundation.IAsyncOperation[str]: ...
+    # Windows.Foundation.IAsyncOperation`1<System.String> Windows.System.UserProfile.UserInformation::GetPrincipalNameAsync()
     # @deprecated("Use User instead of UserInformation. For more info, see MSDN.")
     def get_principal_name_async(cls) -> windows_foundation.IAsyncOperation[str]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Uri> Windows.System.UserProfile.UserInformation::GetSessionInitiationProtocolUriAsync()
     # @deprecated("Use User instead of UserInformation. For more info, see MSDN.")
     def get_session_initiation_protocol_uri_async(cls) -> windows_foundation.IAsyncOperation[windows_foundation.Uri]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.System.UserProfile.SetAccountPictureResult> Windows.System.UserProfile.UserInformation::SetAccountPictureAsync(Windows.Storage.IStorageFile)
     # @deprecated("Use User instead of UserInformation. For more info, see MSDN.")
     def set_account_picture_async(cls, image: windows_storage.ImplementsIStorageFile, /) -> windows_foundation.IAsyncOperation[SetAccountPictureResult]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.System.UserProfile.SetAccountPictureResult> Windows.System.UserProfile.UserInformation::SetAccountPictureFromStreamAsync(Windows.Storage.Streams.IRandomAccessStream)
     # @deprecated("Use User instead of UserInformation. For more info, see MSDN.")
     def set_account_picture_from_stream_async(cls, image: windows_storage_streams.ImplementsIRandomAccessStream, /) -> windows_foundation.IAsyncOperation[SetAccountPictureResult]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.System.UserProfile.SetAccountPictureResult> Windows.System.UserProfile.UserInformation::SetAccountPicturesAsync(Windows.Storage.IStorageFile,Windows.Storage.IStorageFile,Windows.Storage.IStorageFile)
     # @deprecated("Use User instead of UserInformation. For more info, see MSDN.")
     def set_account_pictures_async(cls, small_image: windows_storage.ImplementsIStorageFile, large_image: windows_storage.ImplementsIStorageFile, video: windows_storage.ImplementsIStorageFile, /) -> windows_foundation.IAsyncOperation[SetAccountPictureResult]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.System.UserProfile.SetAccountPictureResult> Windows.System.UserProfile.UserInformation::SetAccountPicturesFromStreamsAsync(Windows.Storage.Streams.IRandomAccessStream,Windows.Storage.Streams.IRandomAccessStream,Windows.Storage.Streams.IRandomAccessStream)
     # @deprecated("Use User instead of UserInformation. For more info, see MSDN.")
     def set_account_pictures_from_streams_async(cls, small_image: windows_storage_streams.ImplementsIRandomAccessStream, large_image: windows_storage_streams.ImplementsIRandomAccessStream, video: windows_storage_streams.ImplementsIRandomAccessStream, /) -> windows_foundation.IAsyncOperation[SetAccountPictureResult]: ...
+    # Windows.Foundation.EventRegistrationToken Windows.System.UserProfile.UserInformation::add_AccountPictureChanged(Windows.Foundation.EventHandler`1<System.Object>)
     # @deprecated("Use User instead of UserInformation. For more info, see MSDN.")
     def add_account_picture_changed(cls, change_handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.System.UserProfile.UserInformation::remove_AccountPictureChanged(Windows.Foundation.EventRegistrationToken)
     # @deprecated("Use User instead of UserInformation. For more info, see MSDN.")
     def remove_account_picture_changed(cls, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.Boolean Windows.System.UserProfile.UserInformation::get_AccountPictureChangeEnabled()
     @_property
     def account_picture_change_enabled(cls) -> bool: ...
+    # System.Boolean Windows.System.UserProfile.UserInformation::get_NameAccessAllowed()
     @_property
     def name_access_allowed(cls) -> bool: ...
 
@@ -172,12 +228,16 @@ class UserInformation(winrt.system.Object, metaclass=UserInformation_Static):
 
 @typing.final
 class UserProfilePersonalizationSettings_Static(type):
+    # System.Boolean Windows.System.UserProfile.UserProfilePersonalizationSettings::IsSupported()
     def is_supported(cls) -> bool: ...
+    # Windows.System.UserProfile.UserProfilePersonalizationSettings Windows.System.UserProfile.UserProfilePersonalizationSettings::get_Current()
     @_property
     def current(cls) -> UserProfilePersonalizationSettings: ...
 
 @typing.final
 class UserProfilePersonalizationSettings(winrt.system.Object, metaclass=UserProfilePersonalizationSettings_Static):
+    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.System.UserProfile.UserProfilePersonalizationSettings::TrySetLockScreenImageAsync(Windows.Storage.StorageFile)
     def try_set_lock_screen_image_async(self, image_file: windows_storage.StorageFile, /) -> windows_foundation.IAsyncOperation[bool]: ...
+    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.System.UserProfile.UserProfilePersonalizationSettings::TrySetWallpaperImageAsync(Windows.Storage.StorageFile)
     def try_set_wallpaper_image_async(self, image_file: windows_storage.StorageFile, /) -> windows_foundation.IAsyncOperation[bool]: ...
 

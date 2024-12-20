@@ -16,7 +16,9 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class PlatformTelemetryClient_Static(type):
+    # Windows.System.Diagnostics.Telemetry.PlatformTelemetryRegistrationResult Windows.System.Diagnostics.Telemetry.PlatformTelemetryClient::Register(System.String)
     def register(cls, id: str, /) -> PlatformTelemetryRegistrationResult: ...
+    # Windows.System.Diagnostics.Telemetry.PlatformTelemetryRegistrationResult Windows.System.Diagnostics.Telemetry.PlatformTelemetryClient::Register(System.String,Windows.System.Diagnostics.Telemetry.PlatformTelemetryRegistrationSettings)
     def register_with_settings(cls, id: str, settings: PlatformTelemetryRegistrationSettings, /) -> PlatformTelemetryRegistrationResult: ...
 
 @typing.final
@@ -25,18 +27,23 @@ class PlatformTelemetryClient(winrt.system.Object, metaclass=PlatformTelemetryCl
 
 @typing.final
 class PlatformTelemetryRegistrationResult(winrt.system.Object):
+    # Windows.System.Diagnostics.Telemetry.PlatformTelemetryRegistrationStatus Windows.System.Diagnostics.Telemetry.PlatformTelemetryRegistrationResult::get_Status()
     @_property
     def status(self) -> PlatformTelemetryRegistrationStatus: ...
 
 @typing.final
 class PlatformTelemetryRegistrationSettings(winrt.system.Object):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.UInt32 Windows.System.Diagnostics.Telemetry.PlatformTelemetryRegistrationSettings::get_UploadQuotaSize()
     @_property
     def upload_quota_size(self) -> winrt.system.UInt32: ...
+    # System.Void Windows.System.Diagnostics.Telemetry.PlatformTelemetryRegistrationSettings::put_UploadQuotaSize(System.UInt32)
     @upload_quota_size.setter
     def upload_quota_size(self, value: winrt.system.UInt32) -> None: ...
+    # System.UInt32 Windows.System.Diagnostics.Telemetry.PlatformTelemetryRegistrationSettings::get_StorageSize()
     @_property
     def storage_size(self) -> winrt.system.UInt32: ...
+    # System.Void Windows.System.Diagnostics.Telemetry.PlatformTelemetryRegistrationSettings::put_StorageSize(System.UInt32)
     @storage_size.setter
     def storage_size(self, value: winrt.system.UInt32) -> None: ...
 

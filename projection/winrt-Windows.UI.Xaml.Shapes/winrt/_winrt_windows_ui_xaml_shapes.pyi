@@ -21,198 +21,266 @@ class Ellipse(Shape):
 
 @typing.final
 class Line_Static(Shape_Static):
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Shapes.Line::get_X1Property()
     @_property
     def x1_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Shapes.Line::get_X2Property()
     @_property
     def x2_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Shapes.Line::get_Y1Property()
     @_property
     def y1_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Shapes.Line::get_Y2Property()
     @_property
     def y2_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 @typing.final
 class Line(Shape, metaclass=Line_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Double Windows.UI.Xaml.Shapes.Line::get_Y2()
     @_property
     def y2(self) -> winrt.system.Double: ...
+    # System.Void Windows.UI.Xaml.Shapes.Line::put_Y2(System.Double)
     @y2.setter
     def y2(self, value: winrt.system.Double) -> None: ...
+    # System.Double Windows.UI.Xaml.Shapes.Line::get_Y1()
     @_property
     def y1(self) -> winrt.system.Double: ...
+    # System.Void Windows.UI.Xaml.Shapes.Line::put_Y1(System.Double)
     @y1.setter
     def y1(self, value: winrt.system.Double) -> None: ...
+    # System.Double Windows.UI.Xaml.Shapes.Line::get_X2()
     @_property
     def x2(self) -> winrt.system.Double: ...
+    # System.Void Windows.UI.Xaml.Shapes.Line::put_X2(System.Double)
     @x2.setter
     def x2(self, value: winrt.system.Double) -> None: ...
+    # System.Double Windows.UI.Xaml.Shapes.Line::get_X1()
     @_property
     def x1(self) -> winrt.system.Double: ...
+    # System.Void Windows.UI.Xaml.Shapes.Line::put_X1(System.Double)
     @x1.setter
     def x1(self, value: winrt.system.Double) -> None: ...
 
 class Path_Static(Shape_Static):
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Shapes.Path::get_DataProperty()
     @_property
     @typing.final
     def data_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class Path(Shape, metaclass=Path_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Windows.UI.Xaml.Media.Geometry Windows.UI.Xaml.Shapes.Path::get_Data()
     @_property
     def data(self) -> windows_ui_xaml_media.Geometry: ...
+    # System.Void Windows.UI.Xaml.Shapes.Path::put_Data(Windows.UI.Xaml.Media.Geometry)
     @data.setter
     @typing.final
     def data(self, value: windows_ui_xaml_media.Geometry) -> None: ...
 
 @typing.final
 class Polygon_Static(Shape_Static):
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Shapes.Polygon::get_FillRuleProperty()
     @_property
     def fill_rule_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Shapes.Polygon::get_PointsProperty()
     @_property
     def points_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 @typing.final
 class Polygon(Shape, metaclass=Polygon_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Windows.UI.Xaml.Media.PointCollection Windows.UI.Xaml.Shapes.Polygon::get_Points()
     @_property
     def points(self) -> windows_ui_xaml_media.PointCollection: ...
+    # System.Void Windows.UI.Xaml.Shapes.Polygon::put_Points(Windows.UI.Xaml.Media.PointCollection)
     @points.setter
     def points(self, value: windows_ui_xaml_media.PointCollection) -> None: ...
+    # Windows.UI.Xaml.Media.FillRule Windows.UI.Xaml.Shapes.Polygon::get_FillRule()
     @_property
     def fill_rule(self) -> windows_ui_xaml_media.FillRule: ...
+    # System.Void Windows.UI.Xaml.Shapes.Polygon::put_FillRule(Windows.UI.Xaml.Media.FillRule)
     @fill_rule.setter
     def fill_rule(self, value: windows_ui_xaml_media.FillRule) -> None: ...
 
 @typing.final
 class Polyline_Static(Shape_Static):
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Shapes.Polyline::get_FillRuleProperty()
     @_property
     def fill_rule_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Shapes.Polyline::get_PointsProperty()
     @_property
     def points_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 @typing.final
 class Polyline(Shape, metaclass=Polyline_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Windows.UI.Xaml.Media.PointCollection Windows.UI.Xaml.Shapes.Polyline::get_Points()
     @_property
     def points(self) -> windows_ui_xaml_media.PointCollection: ...
+    # System.Void Windows.UI.Xaml.Shapes.Polyline::put_Points(Windows.UI.Xaml.Media.PointCollection)
     @points.setter
     def points(self, value: windows_ui_xaml_media.PointCollection) -> None: ...
+    # Windows.UI.Xaml.Media.FillRule Windows.UI.Xaml.Shapes.Polyline::get_FillRule()
     @_property
     def fill_rule(self) -> windows_ui_xaml_media.FillRule: ...
+    # System.Void Windows.UI.Xaml.Shapes.Polyline::put_FillRule(Windows.UI.Xaml.Media.FillRule)
     @fill_rule.setter
     def fill_rule(self, value: windows_ui_xaml_media.FillRule) -> None: ...
 
 @typing.final
 class Rectangle_Static(Shape_Static):
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Shapes.Rectangle::get_RadiusXProperty()
     @_property
     def radius_x_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Shapes.Rectangle::get_RadiusYProperty()
     @_property
     def radius_y_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 @typing.final
 class Rectangle(Shape, metaclass=Rectangle_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Double Windows.UI.Xaml.Shapes.Rectangle::get_RadiusY()
     @_property
     def radius_y(self) -> winrt.system.Double: ...
+    # System.Void Windows.UI.Xaml.Shapes.Rectangle::put_RadiusY(System.Double)
     @radius_y.setter
     def radius_y(self, value: winrt.system.Double) -> None: ...
+    # System.Double Windows.UI.Xaml.Shapes.Rectangle::get_RadiusX()
     @_property
     def radius_x(self) -> winrt.system.Double: ...
+    # System.Void Windows.UI.Xaml.Shapes.Rectangle::put_RadiusX(System.Double)
     @radius_x.setter
     def radius_x(self, value: winrt.system.Double) -> None: ...
 
 class Shape_Static(windows_ui_xaml.FrameworkElement_Static):
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Shapes.Shape::get_FillProperty()
     @_property
     @typing.final
     def fill_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Shapes.Shape::get_StretchProperty()
     @_property
     @typing.final
     def stretch_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Shapes.Shape::get_StrokeDashArrayProperty()
     @_property
     @typing.final
     def stroke_dash_array_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Shapes.Shape::get_StrokeDashCapProperty()
     @_property
     @typing.final
     def stroke_dash_cap_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Shapes.Shape::get_StrokeDashOffsetProperty()
     @_property
     @typing.final
     def stroke_dash_offset_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Shapes.Shape::get_StrokeEndLineCapProperty()
     @_property
     @typing.final
     def stroke_end_line_cap_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Shapes.Shape::get_StrokeLineJoinProperty()
     @_property
     @typing.final
     def stroke_line_join_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Shapes.Shape::get_StrokeMiterLimitProperty()
     @_property
     @typing.final
     def stroke_miter_limit_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Shapes.Shape::get_StrokeProperty()
     @_property
     @typing.final
     def stroke_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Shapes.Shape::get_StrokeStartLineCapProperty()
     @_property
     @typing.final
     def stroke_start_line_cap_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Shapes.Shape::get_StrokeThicknessProperty()
     @_property
     @typing.final
     def stroke_thickness_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class Shape(windows_ui_xaml.FrameworkElement, metaclass=Shape_Static):
     @typing.final
+    # Windows.UI.Composition.CompositionBrush Windows.UI.Xaml.Shapes.Shape::GetAlphaMask()
     def get_alpha_mask(self) -> windows_ui_composition.CompositionBrush: ...
+    # System.Double Windows.UI.Xaml.Shapes.Shape::get_StrokeThickness()
     @_property
     def stroke_thickness(self) -> winrt.system.Double: ...
+    # System.Void Windows.UI.Xaml.Shapes.Shape::put_StrokeThickness(System.Double)
     @stroke_thickness.setter
     @typing.final
     def stroke_thickness(self, value: winrt.system.Double) -> None: ...
+    # Windows.UI.Xaml.Media.PenLineCap Windows.UI.Xaml.Shapes.Shape::get_StrokeStartLineCap()
     @_property
     def stroke_start_line_cap(self) -> windows_ui_xaml_media.PenLineCap: ...
+    # System.Void Windows.UI.Xaml.Shapes.Shape::put_StrokeStartLineCap(Windows.UI.Xaml.Media.PenLineCap)
     @stroke_start_line_cap.setter
     @typing.final
     def stroke_start_line_cap(self, value: windows_ui_xaml_media.PenLineCap) -> None: ...
+    # System.Double Windows.UI.Xaml.Shapes.Shape::get_StrokeMiterLimit()
     @_property
     def stroke_miter_limit(self) -> winrt.system.Double: ...
+    # System.Void Windows.UI.Xaml.Shapes.Shape::put_StrokeMiterLimit(System.Double)
     @stroke_miter_limit.setter
     @typing.final
     def stroke_miter_limit(self, value: winrt.system.Double) -> None: ...
+    # Windows.UI.Xaml.Media.PenLineJoin Windows.UI.Xaml.Shapes.Shape::get_StrokeLineJoin()
     @_property
     def stroke_line_join(self) -> windows_ui_xaml_media.PenLineJoin: ...
+    # System.Void Windows.UI.Xaml.Shapes.Shape::put_StrokeLineJoin(Windows.UI.Xaml.Media.PenLineJoin)
     @stroke_line_join.setter
     @typing.final
     def stroke_line_join(self, value: windows_ui_xaml_media.PenLineJoin) -> None: ...
+    # Windows.UI.Xaml.Media.PenLineCap Windows.UI.Xaml.Shapes.Shape::get_StrokeEndLineCap()
     @_property
     def stroke_end_line_cap(self) -> windows_ui_xaml_media.PenLineCap: ...
+    # System.Void Windows.UI.Xaml.Shapes.Shape::put_StrokeEndLineCap(Windows.UI.Xaml.Media.PenLineCap)
     @stroke_end_line_cap.setter
     @typing.final
     def stroke_end_line_cap(self, value: windows_ui_xaml_media.PenLineCap) -> None: ...
+    # System.Double Windows.UI.Xaml.Shapes.Shape::get_StrokeDashOffset()
     @_property
     def stroke_dash_offset(self) -> winrt.system.Double: ...
+    # System.Void Windows.UI.Xaml.Shapes.Shape::put_StrokeDashOffset(System.Double)
     @stroke_dash_offset.setter
     @typing.final
     def stroke_dash_offset(self, value: winrt.system.Double) -> None: ...
+    # Windows.UI.Xaml.Media.PenLineCap Windows.UI.Xaml.Shapes.Shape::get_StrokeDashCap()
     @_property
     def stroke_dash_cap(self) -> windows_ui_xaml_media.PenLineCap: ...
+    # System.Void Windows.UI.Xaml.Shapes.Shape::put_StrokeDashCap(Windows.UI.Xaml.Media.PenLineCap)
     @stroke_dash_cap.setter
     @typing.final
     def stroke_dash_cap(self, value: windows_ui_xaml_media.PenLineCap) -> None: ...
+    # Windows.UI.Xaml.Media.DoubleCollection Windows.UI.Xaml.Shapes.Shape::get_StrokeDashArray()
     @_property
     def stroke_dash_array(self) -> windows_ui_xaml_media.DoubleCollection: ...
+    # System.Void Windows.UI.Xaml.Shapes.Shape::put_StrokeDashArray(Windows.UI.Xaml.Media.DoubleCollection)
     @stroke_dash_array.setter
     @typing.final
     def stroke_dash_array(self, value: windows_ui_xaml_media.DoubleCollection) -> None: ...
+    # Windows.UI.Xaml.Media.Brush Windows.UI.Xaml.Shapes.Shape::get_Stroke()
     @_property
     def stroke(self) -> windows_ui_xaml_media.Brush: ...
+    # System.Void Windows.UI.Xaml.Shapes.Shape::put_Stroke(Windows.UI.Xaml.Media.Brush)
     @stroke.setter
     @typing.final
     def stroke(self, value: windows_ui_xaml_media.Brush) -> None: ...
+    # Windows.UI.Xaml.Media.Stretch Windows.UI.Xaml.Shapes.Shape::get_Stretch()
     @_property
     def stretch(self) -> windows_ui_xaml_media.Stretch: ...
+    # System.Void Windows.UI.Xaml.Shapes.Shape::put_Stretch(Windows.UI.Xaml.Media.Stretch)
     @stretch.setter
     @typing.final
     def stretch(self, value: windows_ui_xaml_media.Stretch) -> None: ...
+    # Windows.UI.Xaml.Media.Brush Windows.UI.Xaml.Shapes.Shape::get_Fill()
     @_property
     def fill(self) -> windows_ui_xaml_media.Brush: ...
+    # System.Void Windows.UI.Xaml.Shapes.Shape::put_Fill(Windows.UI.Xaml.Media.Brush)
     @fill.setter
     @typing.final
     def fill(self, value: windows_ui_xaml_media.Brush) -> None: ...
+    # Windows.UI.Xaml.Media.Transform Windows.UI.Xaml.Shapes.Shape::get_GeometryTransform()
     @_property
     @typing.final
     def geometry_transform(self) -> windows_ui_xaml_media.Transform: ...

@@ -18,63 +18,90 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class MicrosoftAccountMultiFactorAuthenticationManager_Static(type):
+    # Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager::get_Current()
     @_property
     def current(cls) -> MicrosoftAccountMultiFactorAuthenticationManager: ...
 
 @typing.final
 class MicrosoftAccountMultiFactorAuthenticationManager(winrt.system.Object, metaclass=MicrosoftAccountMultiFactorAuthenticationManager_Static):
+    # Windows.Foundation.IAsyncOperation`1<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorServiceResponse> Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager::AddDeviceAsync(System.String,System.String,System.String)
     def add_device_async(self, user_account_id: str, authentication_token: str, wns_channel_id: str, /) -> windows_foundation.IAsyncOperation[MicrosoftAccountMultiFactorServiceResponse]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorServiceResponse> Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager::ApproveSessionAsync(Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionAuthenticationStatus,System.String,System.String,Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationType)
     def approve_session_async(self, session_authentiction_status: MicrosoftAccountMultiFactorSessionAuthenticationStatus, user_account_id: str, session_id: str, session_authentication_type: MicrosoftAccountMultiFactorAuthenticationType, /) -> windows_foundation.IAsyncOperation[MicrosoftAccountMultiFactorServiceResponse]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorServiceResponse> Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager::ApproveSessionAsync(Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionAuthenticationStatus,Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo)
     def approve_session_using_auth_session_info_async(self, session_authentiction_status: MicrosoftAccountMultiFactorSessionAuthenticationStatus, authentication_session_info: MicrosoftAccountMultiFactorSessionInfo, /) -> windows_foundation.IAsyncOperation[MicrosoftAccountMultiFactorServiceResponse]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorServiceResponse> Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager::DenySessionAsync(System.String,System.String,Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationType)
     def deny_session_async(self, user_account_id: str, session_id: str, session_authentication_type: MicrosoftAccountMultiFactorAuthenticationType, /) -> windows_foundation.IAsyncOperation[MicrosoftAccountMultiFactorServiceResponse]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorServiceResponse> Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager::DenySessionAsync(Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo)
     def deny_session_using_auth_session_info_async(self, authentication_session_info: MicrosoftAccountMultiFactorSessionInfo, /) -> windows_foundation.IAsyncOperation[MicrosoftAccountMultiFactorServiceResponse]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorOneTimeCodedInfo> Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager::GetOneTimePassCodeAsync(System.String,System.UInt32)
     def get_one_time_pass_code_async(self, user_account_id: str, code_length: winrt.system.UInt32, /) -> windows_foundation.IAsyncOperation[MicrosoftAccountMultiFactorOneTimeCodedInfo]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo> Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager::GetSessionsAndUnregisteredAccountsAsync(Windows.Foundation.Collections.IIterable`1<System.String>)
     def get_sessions_and_unregistered_accounts_async(self, user_account_id_list: typing.Iterable[str], /) -> windows_foundation.IAsyncOperation[MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorGetSessionsResult> Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager::GetSessionsAsync(Windows.Foundation.Collections.IIterable`1<System.String>)
     def get_sessions_async(self, user_account_id_list: typing.Iterable[str], /) -> windows_foundation.IAsyncOperation[MicrosoftAccountMultiFactorGetSessionsResult]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorServiceResponse> Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager::RemoveDeviceAsync(System.String)
     def remove_device_async(self, user_account_id: str, /) -> windows_foundation.IAsyncOperation[MicrosoftAccountMultiFactorServiceResponse]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorServiceResponse> Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager::UpdateWnsChannelAsync(System.String,System.String)
     def update_wns_channel_async(self, user_account_id: str, channel_uri: str, /) -> windows_foundation.IAsyncOperation[MicrosoftAccountMultiFactorServiceResponse]: ...
 
 @typing.final
 class MicrosoftAccountMultiFactorGetSessionsResult(winrt.system.Object):
+    # Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorServiceResponse Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorGetSessionsResult::get_ServiceResponse()
     @_property
     def service_response(self) -> MicrosoftAccountMultiFactorServiceResponse: ...
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo> Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorGetSessionsResult::get_Sessions()
     @_property
     def sessions(self) -> typing.Sequence[MicrosoftAccountMultiFactorSessionInfo]: ...
 
 @typing.final
 class MicrosoftAccountMultiFactorOneTimeCodedInfo(winrt.system.Object):
+    # System.String Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorOneTimeCodedInfo::get_Code()
     @_property
     def code(self) -> str: ...
+    # Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorServiceResponse Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorOneTimeCodedInfo::get_ServiceResponse()
     @_property
     def service_response(self) -> MicrosoftAccountMultiFactorServiceResponse: ...
+    # Windows.Foundation.TimeSpan Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorOneTimeCodedInfo::get_TimeInterval()
     @_property
     def time_interval(self) -> datetime.timedelta: ...
+    # Windows.Foundation.TimeSpan Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorOneTimeCodedInfo::get_TimeToLive()
     @_property
     def time_to_live(self) -> datetime.timedelta: ...
 
 @typing.final
 class MicrosoftAccountMultiFactorSessionInfo(winrt.system.Object):
+    # Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionApprovalStatus Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo::get_ApprovalStatus()
     @_property
     def approval_status(self) -> MicrosoftAccountMultiFactorSessionApprovalStatus: ...
+    # Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationType Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo::get_AuthenticationType()
     @_property
     def authentication_type(self) -> MicrosoftAccountMultiFactorAuthenticationType: ...
+    # System.String Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo::get_DisplaySessionId()
     @_property
     def display_session_id(self) -> str: ...
+    # Windows.Foundation.DateTime Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo::get_ExpirationTime()
     @_property
     def expiration_time(self) -> datetime.datetime: ...
+    # Windows.Foundation.DateTime Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo::get_RequestTime()
     @_property
     def request_time(self) -> datetime.datetime: ...
+    # System.String Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo::get_SessionId()
     @_property
     def session_id(self) -> str: ...
+    # System.String Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo::get_UserAccountId()
     @_property
     def user_account_id(self) -> str: ...
 
 @typing.final
 class MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo(winrt.system.Object):
+    # Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorServiceResponse Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo::get_ServiceResponse()
     @_property
     def service_response(self) -> MicrosoftAccountMultiFactorServiceResponse: ...
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo> Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo::get_Sessions()
     @_property
     def sessions(self) -> typing.Sequence[MicrosoftAccountMultiFactorSessionInfo]: ...
+    # Windows.Foundation.Collections.IVectorView`1<System.String> Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo::get_UnregisteredAccounts()
     @_property
     def unregistered_accounts(self) -> typing.Sequence[str]: ...
 

@@ -14,7 +14,9 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class SystemProtection_Static(type):
+    # System.Void Windows.Phone.System.SystemProtection::RequestScreenUnlock()
     def request_screen_unlock(cls) -> None: ...
+    # System.Boolean Windows.Phone.System.SystemProtection::get_ScreenLocked()
     @_property
     def screen_locked(cls) -> bool: ...
 

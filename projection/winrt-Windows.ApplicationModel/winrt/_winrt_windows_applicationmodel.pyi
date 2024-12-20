@@ -36,90 +36,128 @@ class PackageVersion:
 
 @typing.final
 class AppDisplayInfo(winrt.system.Object):
+    # Windows.Storage.Streams.RandomAccessStreamReference Windows.ApplicationModel.AppDisplayInfo::GetLogo(Windows.Foundation.Size)
     def get_logo(self, size: windows_foundation.Size, /) -> windows_storage_streams.RandomAccessStreamReference: ...
+    # System.String Windows.ApplicationModel.AppDisplayInfo::get_Description()
     @_property
     def description(self) -> str: ...
+    # System.String Windows.ApplicationModel.AppDisplayInfo::get_DisplayName()
     @_property
     def display_name(self) -> str: ...
 
 @typing.final
 class AppInfo_Static(type):
+    # Windows.ApplicationModel.AppInfo Windows.ApplicationModel.AppInfo::GetFromAppUserModelId(System.String)
     def get_from_app_user_model_id(cls, app_user_model_id: str, /) -> AppInfo: ...
+    # Windows.ApplicationModel.AppInfo Windows.ApplicationModel.AppInfo::GetFromAppUserModelIdForUser(Windows.System.User,System.String)
     def get_from_app_user_model_id_for_user(cls, user: windows_system.User, app_user_model_id: str, /) -> AppInfo: ...
+    # Windows.ApplicationModel.AppInfo Windows.ApplicationModel.AppInfo::get_Current()
     @_property
     def current(cls) -> AppInfo: ...
 
 @typing.final
 class AppInfo(winrt.system.Object, metaclass=AppInfo_Static):
+    # System.String Windows.ApplicationModel.AppInfo::get_AppUserModelId()
     @_property
     def app_user_model_id(self) -> str: ...
+    # Windows.ApplicationModel.AppDisplayInfo Windows.ApplicationModel.AppInfo::get_DisplayInfo()
     @_property
     def display_info(self) -> AppDisplayInfo: ...
+    # System.String Windows.ApplicationModel.AppInfo::get_Id()
     @_property
     def id(self) -> str: ...
+    # System.String Windows.ApplicationModel.AppInfo::get_PackageFamilyName()
     @_property
     def package_family_name(self) -> str: ...
+    # Windows.ApplicationModel.Package Windows.ApplicationModel.AppInfo::get_Package()
     @_property
     def package(self) -> Package: ...
+    # Windows.ApplicationModel.AppExecutionContext Windows.ApplicationModel.AppInfo::get_ExecutionContext()
     @_property
     def execution_context(self) -> AppExecutionContext: ...
+    # System.String[] Windows.ApplicationModel.AppInfo::get_SupportedFileExtensions()
     @_property
     def supported_file_extensions(self) -> str: ...
 
 @typing.final
 class AppInstallerInfo(winrt.system.Object):
+    # Windows.Foundation.Uri Windows.ApplicationModel.AppInstallerInfo::get_Uri()
     @_property
     def uri(self) -> windows_foundation.Uri: ...
+    # System.Boolean Windows.ApplicationModel.AppInstallerInfo::get_AutomaticBackgroundTask()
     @_property
     def automatic_background_task(self) -> bool: ...
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Foundation.Uri> Windows.ApplicationModel.AppInstallerInfo::get_DependencyPackageUris()
     @_property
     def dependency_package_uris(self) -> typing.Sequence[windows_foundation.Uri]: ...
+    # System.Boolean Windows.ApplicationModel.AppInstallerInfo::get_ForceUpdateFromAnyVersion()
     @_property
     def force_update_from_any_version(self) -> bool: ...
+    # System.UInt32 Windows.ApplicationModel.AppInstallerInfo::get_HoursBetweenUpdateChecks()
     @_property
     def hours_between_update_checks(self) -> winrt.system.UInt32: ...
+    # System.Boolean Windows.ApplicationModel.AppInstallerInfo::get_IsAutoRepairEnabled()
     @_property
     def is_auto_repair_enabled(self) -> bool: ...
+    # Windows.Foundation.DateTime Windows.ApplicationModel.AppInstallerInfo::get_LastChecked()
     @_property
     def last_checked(self) -> datetime.datetime: ...
+    # System.Boolean Windows.ApplicationModel.AppInstallerInfo::get_OnLaunch()
     @_property
     def on_launch(self) -> bool: ...
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Foundation.Uri> Windows.ApplicationModel.AppInstallerInfo::get_OptionalPackageUris()
     @_property
     def optional_package_uris(self) -> typing.Sequence[windows_foundation.Uri]: ...
+    # Windows.Foundation.IReference`1<Windows.Foundation.DateTime> Windows.ApplicationModel.AppInstallerInfo::get_PausedUntil()
     @_property
     def paused_until(self) -> typing.Optional[datetime.datetime]: ...
+    # Windows.ApplicationModel.AppInstallerPolicySource Windows.ApplicationModel.AppInstallerInfo::get_PolicySource()
     @_property
     def policy_source(self) -> AppInstallerPolicySource: ...
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Foundation.Uri> Windows.ApplicationModel.AppInstallerInfo::get_RepairUris()
     @_property
     def repair_uris(self) -> typing.Sequence[windows_foundation.Uri]: ...
+    # System.Boolean Windows.ApplicationModel.AppInstallerInfo::get_ShowPrompt()
     @_property
     def show_prompt(self) -> bool: ...
+    # System.Boolean Windows.ApplicationModel.AppInstallerInfo::get_UpdateBlocksActivation()
     @_property
     def update_blocks_activation(self) -> bool: ...
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Foundation.Uri> Windows.ApplicationModel.AppInstallerInfo::get_UpdateUris()
     @_property
     def update_uris(self) -> typing.Sequence[windows_foundation.Uri]: ...
+    # Windows.ApplicationModel.PackageVersion Windows.ApplicationModel.AppInstallerInfo::get_Version()
     @_property
     def version(self) -> PackageVersion: ...
 
 @typing.final
 class AppInstance_Static(type):
+    # Windows.ApplicationModel.AppInstance Windows.ApplicationModel.AppInstance::FindOrRegisterInstanceForKey(System.String)
     def find_or_register_instance_for_key(cls, key: str, /) -> AppInstance: ...
+    # Windows.ApplicationModel.Activation.IActivatedEventArgs Windows.ApplicationModel.AppInstance::GetActivatedEventArgs()
     def get_activated_event_args(cls) -> windows_applicationmodel_activation.IActivatedEventArgs: ...
+    # Windows.Foundation.Collections.IVector`1<Windows.ApplicationModel.AppInstance> Windows.ApplicationModel.AppInstance::GetInstances()
     def get_instances(cls) -> typing.MutableSequence[AppInstance]: ...
+    # System.Void Windows.ApplicationModel.AppInstance::Unregister()
     def unregister(cls) -> None: ...
+    # Windows.ApplicationModel.AppInstance Windows.ApplicationModel.AppInstance::get_RecommendedInstance()
     @_property
     def recommended_instance(cls) -> AppInstance: ...
 
 @typing.final
 class AppInstance(winrt.system.Object, metaclass=AppInstance_Static):
+    # System.Void Windows.ApplicationModel.AppInstance::RedirectActivationTo()
     def redirect_activation_to(self) -> None: ...
+    # System.Boolean Windows.ApplicationModel.AppInstance::get_IsCurrentInstance()
     @_property
     def is_current_instance(self) -> bool: ...
+    # System.String Windows.ApplicationModel.AppInstance::get_Key()
     @_property
     def key(self) -> str: ...
 
 @typing.final
 class CameraApplicationManager_Static(type):
+    # System.Void Windows.ApplicationModel.CameraApplicationManager::ShowInstalledApplicationsUI()
     def show_installed_applications_ui(cls) -> None: ...
 
 @typing.final
@@ -128,8 +166,10 @@ class CameraApplicationManager(winrt.system.Object, metaclass=CameraApplicationM
 
 @typing.final
 class DesignMode_Static(type):
+    # System.Boolean Windows.ApplicationModel.DesignMode::get_DesignModeEnabled()
     @_property
     def design_mode_enabled(cls) -> bool: ...
+    # System.Boolean Windows.ApplicationModel.DesignMode::get_DesignMode2Enabled()
     @_property
     def design_mode2_enabled(cls) -> bool: ...
 
@@ -139,46 +179,65 @@ class DesignMode(winrt.system.Object, metaclass=DesignMode_Static):
 
 @typing.final
 class EnteredBackgroundEventArgs(winrt.system.Object, ImplementsIEnteredBackgroundEventArgs):
+    # Windows.Foundation.Deferral Windows.ApplicationModel.EnteredBackgroundEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
 
 @typing.final
 class FindRelatedPackagesOptions(winrt.system.Object):
     def __new__(cls: typing.Type[Self], relationship: PackageRelationship) -> Self: ...
+    # Windows.ApplicationModel.PackageRelationship Windows.ApplicationModel.FindRelatedPackagesOptions::get_Relationship()
     @_property
     def relationship(self) -> PackageRelationship: ...
+    # System.Void Windows.ApplicationModel.FindRelatedPackagesOptions::put_Relationship(Windows.ApplicationModel.PackageRelationship)
     @relationship.setter
     def relationship(self, value: PackageRelationship) -> None: ...
+    # System.Boolean Windows.ApplicationModel.FindRelatedPackagesOptions::get_IncludeResources()
     @_property
     def include_resources(self) -> bool: ...
+    # System.Void Windows.ApplicationModel.FindRelatedPackagesOptions::put_IncludeResources(System.Boolean)
     @include_resources.setter
     def include_resources(self, value: bool) -> None: ...
+    # System.Boolean Windows.ApplicationModel.FindRelatedPackagesOptions::get_IncludeOptionals()
     @_property
     def include_optionals(self) -> bool: ...
+    # System.Void Windows.ApplicationModel.FindRelatedPackagesOptions::put_IncludeOptionals(System.Boolean)
     @include_optionals.setter
     def include_optionals(self, value: bool) -> None: ...
+    # System.Boolean Windows.ApplicationModel.FindRelatedPackagesOptions::get_IncludeHostRuntimes()
     @_property
     def include_host_runtimes(self) -> bool: ...
+    # System.Void Windows.ApplicationModel.FindRelatedPackagesOptions::put_IncludeHostRuntimes(System.Boolean)
     @include_host_runtimes.setter
     def include_host_runtimes(self, value: bool) -> None: ...
+    # System.Boolean Windows.ApplicationModel.FindRelatedPackagesOptions::get_IncludeFrameworks()
     @_property
     def include_frameworks(self) -> bool: ...
+    # System.Void Windows.ApplicationModel.FindRelatedPackagesOptions::put_IncludeFrameworks(System.Boolean)
     @include_frameworks.setter
     def include_frameworks(self, value: bool) -> None: ...
 
 @typing.final
 class FullTrustProcessLaunchResult(winrt.system.Object):
+    # Windows.Foundation.HResult Windows.ApplicationModel.FullTrustProcessLaunchResult::get_ExtendedError()
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
+    # Windows.ApplicationModel.FullTrustLaunchResult Windows.ApplicationModel.FullTrustProcessLaunchResult::get_LaunchResult()
     @_property
     def launch_result(self) -> FullTrustLaunchResult: ...
 
 @typing.final
 class FullTrustProcessLauncher_Static(type):
+    # Windows.Foundation.IAsyncAction Windows.ApplicationModel.FullTrustProcessLauncher::LaunchFullTrustProcessForAppAsync(System.String)
     def launch_full_trust_process_for_app_async(cls, full_trust_package_relative_app_id: str, /) -> windows_foundation.IAsyncAction: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.FullTrustProcessLaunchResult> Windows.ApplicationModel.FullTrustProcessLauncher::LaunchFullTrustProcessForAppWithArgumentsAsync(System.String,System.String)
     def launch_full_trust_process_for_app_with_arguments_async(cls, full_trust_package_relative_app_id: str, command_line: str, /) -> windows_foundation.IAsyncOperation[FullTrustProcessLaunchResult]: ...
+    # Windows.Foundation.IAsyncAction Windows.ApplicationModel.FullTrustProcessLauncher::LaunchFullTrustProcessForAppAsync(System.String,System.String)
     def launch_full_trust_process_for_app_with_parameters_async(cls, full_trust_package_relative_app_id: str, parameter_group_id: str, /) -> windows_foundation.IAsyncAction: ...
+    # Windows.Foundation.IAsyncAction Windows.ApplicationModel.FullTrustProcessLauncher::LaunchFullTrustProcessForCurrentAppAsync()
     def launch_full_trust_process_for_current_app_async(cls) -> windows_foundation.IAsyncAction: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.FullTrustProcessLaunchResult> Windows.ApplicationModel.FullTrustProcessLauncher::LaunchFullTrustProcessForCurrentAppWithArgumentsAsync(System.String)
     def launch_full_trust_process_for_current_app_with_arguments_async(cls, command_line: str, /) -> windows_foundation.IAsyncOperation[FullTrustProcessLaunchResult]: ...
+    # Windows.Foundation.IAsyncAction Windows.ApplicationModel.FullTrustProcessLauncher::LaunchFullTrustProcessForCurrentAppAsync(System.String)
     def launch_full_trust_process_for_current_app_with_parameters_async(cls, parameter_group_id: str, /) -> windows_foundation.IAsyncAction: ...
 
 @typing.final
@@ -187,19 +246,24 @@ class FullTrustProcessLauncher(winrt.system.Object, metaclass=FullTrustProcessLa
 
 @typing.final
 class LeavingBackgroundEventArgs(winrt.system.Object, ImplementsILeavingBackgroundEventArgs):
+    # Windows.Foundation.Deferral Windows.ApplicationModel.LeavingBackgroundEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
 
 @typing.final
 class LimitedAccessFeatureRequestResult(winrt.system.Object):
+    # Windows.Foundation.IReference`1<Windows.Foundation.DateTime> Windows.ApplicationModel.LimitedAccessFeatureRequestResult::get_EstimatedRemovalDate()
     @_property
     def estimated_removal_date(self) -> typing.Optional[datetime.datetime]: ...
+    # System.String Windows.ApplicationModel.LimitedAccessFeatureRequestResult::get_FeatureId()
     @_property
     def feature_id(self) -> str: ...
+    # Windows.ApplicationModel.LimitedAccessFeatureStatus Windows.ApplicationModel.LimitedAccessFeatureRequestResult::get_Status()
     @_property
     def status(self) -> LimitedAccessFeatureStatus: ...
 
 @typing.final
 class LimitedAccessFeatures_Static(type):
+    # Windows.ApplicationModel.LimitedAccessFeatureRequestResult Windows.ApplicationModel.LimitedAccessFeatures::TryUnlockFeature(System.String,System.String,System.String)
     def try_unlock_feature(cls, feature_id: str, token: str, attestation: str, /) -> LimitedAccessFeatureRequestResult: ...
 
 @typing.final
@@ -208,316 +272,457 @@ class LimitedAccessFeatures(winrt.system.Object, metaclass=LimitedAccessFeatures
 
 @typing.final
 class Package_Static(type):
+    # Windows.ApplicationModel.Package Windows.ApplicationModel.Package::get_Current()
     @_property
     def current(cls) -> Package: ...
 
 @typing.final
 class Package(winrt.system.Object, metaclass=Package_Static):
+    # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.PackageUpdateAvailabilityResult> Windows.ApplicationModel.Package::CheckUpdateAvailabilityAsync()
     def check_update_availability_async(self) -> windows_foundation.IAsyncOperation[PackageUpdateAvailabilityResult]: ...
+    # Windows.Foundation.Collections.IVector`1<Windows.ApplicationModel.Package> Windows.ApplicationModel.Package::FindRelatedPackages(Windows.ApplicationModel.FindRelatedPackagesOptions)
     def find_related_packages(self, options: FindRelatedPackagesOptions, /) -> typing.MutableSequence[Package]: ...
+    # Windows.ApplicationModel.AppInstallerInfo Windows.ApplicationModel.Package::GetAppInstallerInfo()
     def get_app_installer_info(self) -> AppInstallerInfo: ...
+    # Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Core.AppListEntry> Windows.ApplicationModel.Package::GetAppListEntries()
     def get_app_list_entries(self) -> typing.Sequence[windows_applicationmodel_core.AppListEntry]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Core.AppListEntry>> Windows.ApplicationModel.Package::GetAppListEntriesAsync()
     def get_app_list_entries_async(self) -> windows_foundation.IAsyncOperation[typing.Sequence[windows_applicationmodel_core.AppListEntry]]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.PackageContentGroup> Windows.ApplicationModel.Package::GetContentGroupAsync(System.String)
     def get_content_group_async(self, name: str, /) -> windows_foundation.IAsyncOperation[PackageContentGroup]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVector`1<Windows.ApplicationModel.PackageContentGroup>> Windows.ApplicationModel.Package::GetContentGroupsAsync()
     def get_content_groups_async(self) -> windows_foundation.IAsyncOperation[typing.MutableSequence[PackageContentGroup]]: ...
+    # Windows.Storage.Streams.RandomAccessStreamReference Windows.ApplicationModel.Package::GetLogoAsRandomAccessStreamReference(Windows.Foundation.Size)
     def get_logo_as_random_access_stream_reference(self, size: windows_foundation.Size, /) -> windows_storage_streams.RandomAccessStreamReference: ...
+    # System.String Windows.ApplicationModel.Package::GetThumbnailToken()
     def get_thumbnail_token(self) -> str: ...
+    # System.Void Windows.ApplicationModel.Package::Launch(System.String)
     # @deprecated("Launch may be altered or unavailable for releases after Windows 8.1. Instead, for SmartCardTrigger scenarios use SmartCardTriggerDetails.TryLaunchSelfAsync")
     def launch(self, parameters: str, /) -> None: ...
+    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.ApplicationModel.Package::SetInUseAsync(System.Boolean)
     def set_in_use_async(self, in_use: bool, /) -> windows_foundation.IAsyncOperation[bool]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVector`1<Windows.ApplicationModel.PackageContentGroup>> Windows.ApplicationModel.Package::StageContentGroupsAsync(Windows.Foundation.Collections.IIterable`1<System.String>)
     def stage_content_groups_async(self, names: typing.Iterable[str], /) -> windows_foundation.IAsyncOperation[typing.MutableSequence[PackageContentGroup]]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVector`1<Windows.ApplicationModel.PackageContentGroup>> Windows.ApplicationModel.Package::StageContentGroupsAsync(Windows.Foundation.Collections.IIterable`1<System.String>,System.Boolean)
     def stage_content_groups_with_priority_async(self, names: typing.Iterable[str], move_to_head_of_queue: bool, /) -> windows_foundation.IAsyncOperation[typing.MutableSequence[PackageContentGroup]]: ...
+    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.ApplicationModel.Package::VerifyContentIntegrityAsync()
     def verify_content_integrity_async(self) -> windows_foundation.IAsyncOperation[bool]: ...
+    # Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Package> Windows.ApplicationModel.Package::get_Dependencies()
     @_property
     def dependencies(self) -> typing.Sequence[Package]: ...
+    # Windows.ApplicationModel.PackageId Windows.ApplicationModel.Package::get_Id()
     @_property
     def id(self) -> PackageId: ...
+    # Windows.Storage.StorageFolder Windows.ApplicationModel.Package::get_InstalledLocation()
     @_property
     def installed_location(self) -> windows_storage.StorageFolder: ...
+    # System.Boolean Windows.ApplicationModel.Package::get_IsFramework()
     @_property
     def is_framework(self) -> bool: ...
+    # System.String Windows.ApplicationModel.Package::get_Description()
     @_property
     def description(self) -> str: ...
+    # System.String Windows.ApplicationModel.Package::get_DisplayName()
     @_property
     def display_name(self) -> str: ...
+    # System.Boolean Windows.ApplicationModel.Package::get_IsBundle()
     @_property
     def is_bundle(self) -> bool: ...
+    # System.Boolean Windows.ApplicationModel.Package::get_IsDevelopmentMode()
     @_property
     def is_development_mode(self) -> bool: ...
+    # System.Boolean Windows.ApplicationModel.Package::get_IsResourcePackage()
     @_property
     def is_resource_package(self) -> bool: ...
+    # Windows.Foundation.Uri Windows.ApplicationModel.Package::get_Logo()
     @_property
     def logo(self) -> windows_foundation.Uri: ...
+    # System.String Windows.ApplicationModel.Package::get_PublisherDisplayName()
     @_property
     def publisher_display_name(self) -> str: ...
+    # Windows.Foundation.DateTime Windows.ApplicationModel.Package::get_InstalledDate()
     @_property
     def installed_date(self) -> datetime.datetime: ...
+    # Windows.ApplicationModel.PackageStatus Windows.ApplicationModel.Package::get_Status()
     @_property
     def status(self) -> PackageStatus: ...
+    # System.Boolean Windows.ApplicationModel.Package::get_IsOptional()
     @_property
     def is_optional(self) -> bool: ...
+    # Windows.ApplicationModel.PackageSignatureKind Windows.ApplicationModel.Package::get_SignatureKind()
     @_property
     def signature_kind(self) -> PackageSignatureKind: ...
+    # Windows.Storage.StorageFolder Windows.ApplicationModel.Package::get_EffectiveLocation()
     @_property
     def effective_location(self) -> windows_storage.StorageFolder: ...
+    # Windows.Storage.StorageFolder Windows.ApplicationModel.Package::get_MutableLocation()
     @_property
     def mutable_location(self) -> windows_storage.StorageFolder: ...
+    # Windows.Storage.StorageFolder Windows.ApplicationModel.Package::get_EffectiveExternalLocation()
     @_property
     def effective_external_location(self) -> windows_storage.StorageFolder: ...
+    # System.String Windows.ApplicationModel.Package::get_EffectiveExternalPath()
     @_property
     def effective_external_path(self) -> str: ...
+    # System.String Windows.ApplicationModel.Package::get_EffectivePath()
     @_property
     def effective_path(self) -> str: ...
+    # System.String Windows.ApplicationModel.Package::get_InstalledPath()
     @_property
     def installed_path(self) -> str: ...
+    # System.Boolean Windows.ApplicationModel.Package::get_IsStub()
     @_property
     def is_stub(self) -> bool: ...
+    # Windows.Storage.StorageFolder Windows.ApplicationModel.Package::get_MachineExternalLocation()
     @_property
     def machine_external_location(self) -> windows_storage.StorageFolder: ...
+    # System.String Windows.ApplicationModel.Package::get_MachineExternalPath()
     @_property
     def machine_external_path(self) -> str: ...
+    # System.String Windows.ApplicationModel.Package::get_MutablePath()
     @_property
     def mutable_path(self) -> str: ...
+    # Windows.Storage.StorageFolder Windows.ApplicationModel.Package::get_UserExternalLocation()
     @_property
     def user_external_location(self) -> windows_storage.StorageFolder: ...
+    # System.String Windows.ApplicationModel.Package::get_UserExternalPath()
     @_property
     def user_external_path(self) -> str: ...
+    # System.String Windows.ApplicationModel.Package::get_SourceUriSchemeName()
     @_property
     def source_uri_scheme_name(self) -> str: ...
+    # Windows.Foundation.DateTime Windows.ApplicationModel.Package::get_InstallDate()
     @_property
     def install_date(self) -> datetime.datetime: ...
 
 @typing.final
 class PackageCatalog_Static(type):
+    # Windows.ApplicationModel.PackageCatalog Windows.ApplicationModel.PackageCatalog::OpenForCurrentPackage()
     def open_for_current_package(cls) -> PackageCatalog: ...
+    # Windows.ApplicationModel.PackageCatalog Windows.ApplicationModel.PackageCatalog::OpenForCurrentUser()
     def open_for_current_user(cls) -> PackageCatalog: ...
+    # Windows.ApplicationModel.PackageCatalog Windows.ApplicationModel.PackageCatalog::OpenForPackage(Windows.ApplicationModel.Package)
     def open_for_package(cls, package: Package, /) -> PackageCatalog: ...
 
 @typing.final
 class PackageCatalog(winrt.system.Object, metaclass=PackageCatalog_Static):
+    # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.PackageCatalogAddOptionalPackageResult> Windows.ApplicationModel.PackageCatalog::AddOptionalPackageAsync(System.String)
     def add_optional_package_async(self, optional_package_family_name: str, /) -> windows_foundation.IAsyncOperation[PackageCatalogAddOptionalPackageResult]: ...
+    # Windows.Foundation.IAsyncOperationWithProgress`2<Windows.ApplicationModel.PackageCatalogAddResourcePackageResult,Windows.ApplicationModel.PackageInstallProgress> Windows.ApplicationModel.PackageCatalog::AddResourcePackageAsync(System.String,System.String,Windows.ApplicationModel.AddResourcePackageOptions)
     def add_resource_package_async(self, resource_package_family_name: str, resource_id: str, options: AddResourcePackageOptions, /) -> windows_foundation.IAsyncOperationWithProgress[PackageCatalogAddResourcePackageResult, PackageInstallProgress]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.PackageCatalogRemoveOptionalPackagesResult> Windows.ApplicationModel.PackageCatalog::RemoveOptionalPackagesAsync(Windows.Foundation.Collections.IIterable`1<System.String>)
     def remove_optional_packages_async(self, optional_package_family_names: typing.Iterable[str], /) -> windows_foundation.IAsyncOperation[PackageCatalogRemoveOptionalPackagesResult]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.PackageCatalogRemoveResourcePackagesResult> Windows.ApplicationModel.PackageCatalog::RemoveResourcePackagesAsync(Windows.Foundation.Collections.IIterable`1<Windows.ApplicationModel.Package>)
     def remove_resource_packages_async(self, resource_packages: typing.Iterable[Package], /) -> windows_foundation.IAsyncOperation[PackageCatalogRemoveResourcePackagesResult]: ...
+    # Windows.Foundation.EventRegistrationToken Windows.ApplicationModel.PackageCatalog::add_PackageInstalling(Windows.Foundation.TypedEventHandler`2<Windows.ApplicationModel.PackageCatalog,Windows.ApplicationModel.PackageInstallingEventArgs>)
     def add_package_installing(self, handler: windows_foundation.TypedEventHandler[PackageCatalog, PackageInstallingEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.ApplicationModel.PackageCatalog::remove_PackageInstalling(Windows.Foundation.EventRegistrationToken)
     def remove_package_installing(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.ApplicationModel.PackageCatalog::add_PackageStaging(Windows.Foundation.TypedEventHandler`2<Windows.ApplicationModel.PackageCatalog,Windows.ApplicationModel.PackageStagingEventArgs>)
     def add_package_staging(self, handler: windows_foundation.TypedEventHandler[PackageCatalog, PackageStagingEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.ApplicationModel.PackageCatalog::remove_PackageStaging(Windows.Foundation.EventRegistrationToken)
     def remove_package_staging(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.ApplicationModel.PackageCatalog::add_PackageStatusChanged(Windows.Foundation.TypedEventHandler`2<Windows.ApplicationModel.PackageCatalog,Windows.ApplicationModel.PackageStatusChangedEventArgs>)
     def add_package_status_changed(self, handler: windows_foundation.TypedEventHandler[PackageCatalog, PackageStatusChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.ApplicationModel.PackageCatalog::remove_PackageStatusChanged(Windows.Foundation.EventRegistrationToken)
     def remove_package_status_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.ApplicationModel.PackageCatalog::add_PackageUninstalling(Windows.Foundation.TypedEventHandler`2<Windows.ApplicationModel.PackageCatalog,Windows.ApplicationModel.PackageUninstallingEventArgs>)
     def add_package_uninstalling(self, handler: windows_foundation.TypedEventHandler[PackageCatalog, PackageUninstallingEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.ApplicationModel.PackageCatalog::remove_PackageUninstalling(Windows.Foundation.EventRegistrationToken)
     def remove_package_uninstalling(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.ApplicationModel.PackageCatalog::add_PackageUpdating(Windows.Foundation.TypedEventHandler`2<Windows.ApplicationModel.PackageCatalog,Windows.ApplicationModel.PackageUpdatingEventArgs>)
     def add_package_updating(self, handler: windows_foundation.TypedEventHandler[PackageCatalog, PackageUpdatingEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.ApplicationModel.PackageCatalog::remove_PackageUpdating(Windows.Foundation.EventRegistrationToken)
     def remove_package_updating(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.ApplicationModel.PackageCatalog::add_PackageContentGroupStaging(Windows.Foundation.TypedEventHandler`2<Windows.ApplicationModel.PackageCatalog,Windows.ApplicationModel.PackageContentGroupStagingEventArgs>)
     def add_package_content_group_staging(self, handler: windows_foundation.TypedEventHandler[PackageCatalog, PackageContentGroupStagingEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.ApplicationModel.PackageCatalog::remove_PackageContentGroupStaging(Windows.Foundation.EventRegistrationToken)
     def remove_package_content_group_staging(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
 @typing.final
 class PackageCatalogAddOptionalPackageResult(winrt.system.Object):
+    # Windows.Foundation.HResult Windows.ApplicationModel.PackageCatalogAddOptionalPackageResult::get_ExtendedError()
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
+    # Windows.ApplicationModel.Package Windows.ApplicationModel.PackageCatalogAddOptionalPackageResult::get_Package()
     @_property
     def package(self) -> Package: ...
 
 @typing.final
 class PackageCatalogAddResourcePackageResult(winrt.system.Object):
+    # Windows.Foundation.HResult Windows.ApplicationModel.PackageCatalogAddResourcePackageResult::get_ExtendedError()
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
+    # System.Boolean Windows.ApplicationModel.PackageCatalogAddResourcePackageResult::get_IsComplete()
     @_property
     def is_complete(self) -> bool: ...
+    # Windows.ApplicationModel.Package Windows.ApplicationModel.PackageCatalogAddResourcePackageResult::get_Package()
     @_property
     def package(self) -> Package: ...
 
 @typing.final
 class PackageCatalogRemoveOptionalPackagesResult(winrt.system.Object):
+    # Windows.Foundation.HResult Windows.ApplicationModel.PackageCatalogRemoveOptionalPackagesResult::get_ExtendedError()
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
+    # Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Package> Windows.ApplicationModel.PackageCatalogRemoveOptionalPackagesResult::get_PackagesRemoved()
     @_property
     def packages_removed(self) -> typing.Sequence[Package]: ...
 
 @typing.final
 class PackageCatalogRemoveResourcePackagesResult(winrt.system.Object):
+    # Windows.Foundation.HResult Windows.ApplicationModel.PackageCatalogRemoveResourcePackagesResult::get_ExtendedError()
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
+    # Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Package> Windows.ApplicationModel.PackageCatalogRemoveResourcePackagesResult::get_PackagesRemoved()
     @_property
     def packages_removed(self) -> typing.Sequence[Package]: ...
 
 @typing.final
 class PackageContentGroup_Static(type):
+    # System.String Windows.ApplicationModel.PackageContentGroup::get_RequiredGroupName()
     @_property
     def required_group_name(cls) -> str: ...
 
 @typing.final
 class PackageContentGroup(winrt.system.Object, metaclass=PackageContentGroup_Static):
+    # System.Boolean Windows.ApplicationModel.PackageContentGroup::get_IsRequired()
     @_property
     def is_required(self) -> bool: ...
+    # System.String Windows.ApplicationModel.PackageContentGroup::get_Name()
     @_property
     def name(self) -> str: ...
+    # Windows.ApplicationModel.Package Windows.ApplicationModel.PackageContentGroup::get_Package()
     @_property
     def package(self) -> Package: ...
+    # Windows.ApplicationModel.PackageContentGroupState Windows.ApplicationModel.PackageContentGroup::get_State()
     @_property
     def state(self) -> PackageContentGroupState: ...
 
 @typing.final
 class PackageContentGroupStagingEventArgs(winrt.system.Object):
+    # System.Guid Windows.ApplicationModel.PackageContentGroupStagingEventArgs::get_ActivityId()
     @_property
     def activity_id(self) -> _uuid.UUID: ...
+    # System.String Windows.ApplicationModel.PackageContentGroupStagingEventArgs::get_ContentGroupName()
     @_property
     def content_group_name(self) -> str: ...
+    # Windows.Foundation.HResult Windows.ApplicationModel.PackageContentGroupStagingEventArgs::get_ErrorCode()
     @_property
     def error_code(self) -> windows_foundation.HResult: ...
+    # System.Boolean Windows.ApplicationModel.PackageContentGroupStagingEventArgs::get_IsComplete()
     @_property
     def is_complete(self) -> bool: ...
+    # System.Boolean Windows.ApplicationModel.PackageContentGroupStagingEventArgs::get_IsContentGroupRequired()
     @_property
     def is_content_group_required(self) -> bool: ...
+    # Windows.ApplicationModel.Package Windows.ApplicationModel.PackageContentGroupStagingEventArgs::get_Package()
     @_property
     def package(self) -> Package: ...
+    # System.Double Windows.ApplicationModel.PackageContentGroupStagingEventArgs::get_Progress()
     @_property
     def progress(self) -> winrt.system.Double: ...
 
 @typing.final
 class PackageId(winrt.system.Object):
+    # Windows.System.ProcessorArchitecture Windows.ApplicationModel.PackageId::get_Architecture()
     @_property
     def architecture(self) -> windows_system.ProcessorArchitecture: ...
+    # System.String Windows.ApplicationModel.PackageId::get_FamilyName()
     @_property
     def family_name(self) -> str: ...
+    # System.String Windows.ApplicationModel.PackageId::get_FullName()
     @_property
     def full_name(self) -> str: ...
+    # System.String Windows.ApplicationModel.PackageId::get_Name()
     @_property
     def name(self) -> str: ...
+    # System.String Windows.ApplicationModel.PackageId::get_Publisher()
     @_property
     def publisher(self) -> str: ...
+    # System.String Windows.ApplicationModel.PackageId::get_PublisherId()
     @_property
     def publisher_id(self) -> str: ...
+    # System.String Windows.ApplicationModel.PackageId::get_ResourceId()
     @_property
     def resource_id(self) -> str: ...
+    # Windows.ApplicationModel.PackageVersion Windows.ApplicationModel.PackageId::get_Version()
     @_property
     def version(self) -> PackageVersion: ...
+    # System.String Windows.ApplicationModel.PackageId::get_Author()
     @_property
     def author(self) -> str: ...
+    # System.String Windows.ApplicationModel.PackageId::get_ProductId()
     @_property
     def product_id(self) -> str: ...
 
 @typing.final
 class PackageInstallingEventArgs(winrt.system.Object):
+    # System.Guid Windows.ApplicationModel.PackageInstallingEventArgs::get_ActivityId()
     @_property
     def activity_id(self) -> _uuid.UUID: ...
+    # Windows.Foundation.HResult Windows.ApplicationModel.PackageInstallingEventArgs::get_ErrorCode()
     @_property
     def error_code(self) -> windows_foundation.HResult: ...
+    # System.Boolean Windows.ApplicationModel.PackageInstallingEventArgs::get_IsComplete()
     @_property
     def is_complete(self) -> bool: ...
+    # Windows.ApplicationModel.Package Windows.ApplicationModel.PackageInstallingEventArgs::get_Package()
     @_property
     def package(self) -> Package: ...
+    # System.Double Windows.ApplicationModel.PackageInstallingEventArgs::get_Progress()
     @_property
     def progress(self) -> winrt.system.Double: ...
 
 @typing.final
 class PackageStagingEventArgs(winrt.system.Object):
+    # System.Guid Windows.ApplicationModel.PackageStagingEventArgs::get_ActivityId()
     @_property
     def activity_id(self) -> _uuid.UUID: ...
+    # Windows.Foundation.HResult Windows.ApplicationModel.PackageStagingEventArgs::get_ErrorCode()
     @_property
     def error_code(self) -> windows_foundation.HResult: ...
+    # System.Boolean Windows.ApplicationModel.PackageStagingEventArgs::get_IsComplete()
     @_property
     def is_complete(self) -> bool: ...
+    # Windows.ApplicationModel.Package Windows.ApplicationModel.PackageStagingEventArgs::get_Package()
     @_property
     def package(self) -> Package: ...
+    # System.Double Windows.ApplicationModel.PackageStagingEventArgs::get_Progress()
     @_property
     def progress(self) -> winrt.system.Double: ...
 
 @typing.final
 class PackageStatus(winrt.system.Object):
+    # System.Boolean Windows.ApplicationModel.PackageStatus::VerifyIsOK()
     def verify_is_ok(self) -> bool: ...
+    # System.Boolean Windows.ApplicationModel.PackageStatus::get_DataOffline()
     @_property
     def data_offline(self) -> bool: ...
+    # System.Boolean Windows.ApplicationModel.PackageStatus::get_DependencyIssue()
     @_property
     def dependency_issue(self) -> bool: ...
+    # System.Boolean Windows.ApplicationModel.PackageStatus::get_DeploymentInProgress()
     @_property
     def deployment_in_progress(self) -> bool: ...
+    # System.Boolean Windows.ApplicationModel.PackageStatus::get_Disabled()
     @_property
     def disabled(self) -> bool: ...
+    # System.Boolean Windows.ApplicationModel.PackageStatus::get_LicenseIssue()
     @_property
     def license_issue(self) -> bool: ...
+    # System.Boolean Windows.ApplicationModel.PackageStatus::get_Modified()
     @_property
     def modified(self) -> bool: ...
+    # System.Boolean Windows.ApplicationModel.PackageStatus::get_NeedsRemediation()
     @_property
     def needs_remediation(self) -> bool: ...
+    # System.Boolean Windows.ApplicationModel.PackageStatus::get_NotAvailable()
     @_property
     def not_available(self) -> bool: ...
+    # System.Boolean Windows.ApplicationModel.PackageStatus::get_PackageOffline()
     @_property
     def package_offline(self) -> bool: ...
+    # System.Boolean Windows.ApplicationModel.PackageStatus::get_Servicing()
     @_property
     def servicing(self) -> bool: ...
+    # System.Boolean Windows.ApplicationModel.PackageStatus::get_Tampered()
     @_property
     def tampered(self) -> bool: ...
+    # System.Boolean Windows.ApplicationModel.PackageStatus::get_IsPartiallyStaged()
     @_property
     def is_partially_staged(self) -> bool: ...
 
 @typing.final
 class PackageStatusChangedEventArgs(winrt.system.Object):
+    # Windows.ApplicationModel.Package Windows.ApplicationModel.PackageStatusChangedEventArgs::get_Package()
     @_property
     def package(self) -> Package: ...
 
 @typing.final
 class PackageUninstallingEventArgs(winrt.system.Object):
+    # System.Guid Windows.ApplicationModel.PackageUninstallingEventArgs::get_ActivityId()
     @_property
     def activity_id(self) -> _uuid.UUID: ...
+    # Windows.Foundation.HResult Windows.ApplicationModel.PackageUninstallingEventArgs::get_ErrorCode()
     @_property
     def error_code(self) -> windows_foundation.HResult: ...
+    # System.Boolean Windows.ApplicationModel.PackageUninstallingEventArgs::get_IsComplete()
     @_property
     def is_complete(self) -> bool: ...
+    # Windows.ApplicationModel.Package Windows.ApplicationModel.PackageUninstallingEventArgs::get_Package()
     @_property
     def package(self) -> Package: ...
+    # System.Double Windows.ApplicationModel.PackageUninstallingEventArgs::get_Progress()
     @_property
     def progress(self) -> winrt.system.Double: ...
 
 @typing.final
 class PackageUpdateAvailabilityResult(winrt.system.Object):
+    # Windows.ApplicationModel.PackageUpdateAvailability Windows.ApplicationModel.PackageUpdateAvailabilityResult::get_Availability()
     @_property
     def availability(self) -> PackageUpdateAvailability: ...
+    # Windows.Foundation.HResult Windows.ApplicationModel.PackageUpdateAvailabilityResult::get_ExtendedError()
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
 
 @typing.final
 class PackageUpdatingEventArgs(winrt.system.Object):
+    # System.Guid Windows.ApplicationModel.PackageUpdatingEventArgs::get_ActivityId()
     @_property
     def activity_id(self) -> _uuid.UUID: ...
+    # Windows.Foundation.HResult Windows.ApplicationModel.PackageUpdatingEventArgs::get_ErrorCode()
     @_property
     def error_code(self) -> windows_foundation.HResult: ...
+    # System.Boolean Windows.ApplicationModel.PackageUpdatingEventArgs::get_IsComplete()
     @_property
     def is_complete(self) -> bool: ...
+    # System.Double Windows.ApplicationModel.PackageUpdatingEventArgs::get_Progress()
     @_property
     def progress(self) -> winrt.system.Double: ...
+    # Windows.ApplicationModel.Package Windows.ApplicationModel.PackageUpdatingEventArgs::get_SourcePackage()
     @_property
     def source_package(self) -> Package: ...
+    # Windows.ApplicationModel.Package Windows.ApplicationModel.PackageUpdatingEventArgs::get_TargetPackage()
     @_property
     def target_package(self) -> Package: ...
 
 @typing.final
 class StartupTask_Static(type):
+    # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.StartupTask> Windows.ApplicationModel.StartupTask::GetAsync(System.String)
     def get_async(cls, task_id: str, /) -> windows_foundation.IAsyncOperation[StartupTask]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.StartupTask>> Windows.ApplicationModel.StartupTask::GetForCurrentPackageAsync()
     def get_for_current_package_async(cls) -> windows_foundation.IAsyncOperation[typing.Sequence[StartupTask]]: ...
 
 @typing.final
 class StartupTask(winrt.system.Object, metaclass=StartupTask_Static):
+    # System.Void Windows.ApplicationModel.StartupTask::Disable()
     def disable(self) -> None: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.StartupTaskState> Windows.ApplicationModel.StartupTask::RequestEnableAsync()
     def request_enable_async(self) -> windows_foundation.IAsyncOperation[StartupTaskState]: ...
+    # Windows.ApplicationModel.StartupTaskState Windows.ApplicationModel.StartupTask::get_State()
     @_property
     def state(self) -> StartupTaskState: ...
+    # System.String Windows.ApplicationModel.StartupTask::get_TaskId()
     @_property
     def task_id(self) -> str: ...
 
 @typing.final
 class SuspendingDeferral(winrt.system.Object, ImplementsISuspendingDeferral):
+    # System.Void Windows.ApplicationModel.SuspendingDeferral::Complete()
     def complete(self) -> None: ...
 
 @typing.final
 class SuspendingEventArgs(winrt.system.Object, ImplementsISuspendingEventArgs):
+    # Windows.ApplicationModel.SuspendingOperation Windows.ApplicationModel.SuspendingEventArgs::get_SuspendingOperation()
     @_property
     def suspending_operation(self) -> SuspendingOperation: ...
 
 @typing.final
 class SuspendingOperation(winrt.system.Object, ImplementsISuspendingOperation):
+    # Windows.ApplicationModel.SuspendingDeferral Windows.ApplicationModel.SuspendingOperation::GetDeferral()
     def get_deferral(self) -> SuspendingDeferral: ...
+    # Windows.Foundation.DateTime Windows.ApplicationModel.SuspendingOperation::get_Deadline()
     @_property
     def deadline(self) -> datetime.datetime: ...
 
@@ -526,6 +731,7 @@ class ImplementsIEnteredBackgroundEventArgs():
 
 @typing.final
 class IEnteredBackgroundEventArgs(winrt.system.Object, ImplementsIEnteredBackgroundEventArgs):
+    # Windows.Foundation.Deferral Windows.ApplicationModel.IEnteredBackgroundEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
 
 class ImplementsILeavingBackgroundEventArgs():
@@ -533,6 +739,7 @@ class ImplementsILeavingBackgroundEventArgs():
 
 @typing.final
 class ILeavingBackgroundEventArgs(winrt.system.Object, ImplementsILeavingBackgroundEventArgs):
+    # Windows.Foundation.Deferral Windows.ApplicationModel.ILeavingBackgroundEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
 
 class ImplementsIPackageCatalogStatics2():
@@ -540,6 +747,7 @@ class ImplementsIPackageCatalogStatics2():
 
 @typing.final
 class IPackageCatalogStatics2(winrt.system.Object, ImplementsIPackageCatalogStatics2):
+    # Windows.ApplicationModel.PackageCatalog Windows.ApplicationModel.IPackageCatalogStatics2::OpenForPackage(Windows.ApplicationModel.Package)
     def open_for_package(self, package: Package, /) -> PackageCatalog: ...
 
 class ImplementsISuspendingDeferral():
@@ -547,6 +755,7 @@ class ImplementsISuspendingDeferral():
 
 @typing.final
 class ISuspendingDeferral(winrt.system.Object, ImplementsISuspendingDeferral):
+    # System.Void Windows.ApplicationModel.ISuspendingDeferral::Complete()
     def complete(self) -> None: ...
 
 class ImplementsISuspendingEventArgs():
@@ -554,6 +763,7 @@ class ImplementsISuspendingEventArgs():
 
 @typing.final
 class ISuspendingEventArgs(winrt.system.Object, ImplementsISuspendingEventArgs):
+    # Windows.ApplicationModel.SuspendingOperation Windows.ApplicationModel.ISuspendingEventArgs::get_SuspendingOperation()
     @_property
     def suspending_operation(self) -> SuspendingOperation: ...
 
@@ -562,7 +772,9 @@ class ImplementsISuspendingOperation():
 
 @typing.final
 class ISuspendingOperation(winrt.system.Object, ImplementsISuspendingOperation):
+    # Windows.ApplicationModel.SuspendingDeferral Windows.ApplicationModel.ISuspendingOperation::GetDeferral()
     def get_deferral(self) -> SuspendingDeferral: ...
+    # Windows.Foundation.DateTime Windows.ApplicationModel.ISuspendingOperation::get_Deadline()
     @_property
     def deadline(self) -> datetime.datetime: ...
 

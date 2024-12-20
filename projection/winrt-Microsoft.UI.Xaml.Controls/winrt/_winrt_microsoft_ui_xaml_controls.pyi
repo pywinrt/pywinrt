@@ -82,104 +82,138 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class AnchorRequestedEventArgs(winrt.system.Object):
+    # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.Controls.AnchorRequestedEventArgs::get_Anchor()
     @_property
     def anchor(self) -> microsoft_ui_xaml.UIElement: ...
+    # System.Void Microsoft.UI.Xaml.Controls.AnchorRequestedEventArgs::put_Anchor(Microsoft.UI.Xaml.UIElement)
     @anchor.setter
     def anchor(self, value: microsoft_ui_xaml.UIElement) -> None: ...
+    # Windows.Foundation.Collections.IVector`1<Microsoft.UI.Xaml.UIElement> Microsoft.UI.Xaml.Controls.AnchorRequestedEventArgs::get_AnchorCandidates()
     @_property
     def anchor_candidates(self) -> typing.MutableSequence[microsoft_ui_xaml.UIElement]: ...
 
 class AnimatedIcon_Static(IconElement_Static):
+    # System.String Microsoft.UI.Xaml.Controls.AnimatedIcon::GetState(Microsoft.UI.Xaml.DependencyObject)
     def get_state(cls, object: microsoft_ui_xaml.DependencyObject, /) -> str: ...
+    # System.Void Microsoft.UI.Xaml.Controls.AnimatedIcon::SetState(Microsoft.UI.Xaml.DependencyObject,System.String)
     def set_state(cls, object: microsoft_ui_xaml.DependencyObject, value: str, /) -> None: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.AnimatedIcon::get_FallbackIconSourceProperty()
     @_property
     @typing.final
     def fallback_icon_source_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.AnimatedIcon::get_MirroredWhenRightToLeftProperty()
     @_property
     @typing.final
     def mirrored_when_right_to_left_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.AnimatedIcon::get_SourceProperty()
     @_property
     @typing.final
     def source_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.AnimatedIcon::get_StateProperty()
     @_property
     @typing.final
     def state_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class AnimatedIcon(IconElement, metaclass=AnimatedIcon_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Microsoft.UI.Xaml.Controls.IAnimatedVisualSource2 Microsoft.UI.Xaml.Controls.AnimatedIcon::get_Source()
     @_property
     def source(self) -> IAnimatedVisualSource2: ...
+    # System.Void Microsoft.UI.Xaml.Controls.AnimatedIcon::put_Source(Microsoft.UI.Xaml.Controls.IAnimatedVisualSource2)
     @source.setter
     @typing.final
     def source(self, value: ImplementsIAnimatedVisualSource2) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.AnimatedIcon::get_MirroredWhenRightToLeft()
     @_property
     def mirrored_when_right_to_left(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.AnimatedIcon::put_MirroredWhenRightToLeft(System.Boolean)
     @mirrored_when_right_to_left.setter
     @typing.final
     def mirrored_when_right_to_left(self, value: bool) -> None: ...
+    # Microsoft.UI.Xaml.Controls.IconSource Microsoft.UI.Xaml.Controls.AnimatedIcon::get_FallbackIconSource()
     @_property
     def fallback_icon_source(self) -> IconSource: ...
+    # System.Void Microsoft.UI.Xaml.Controls.AnimatedIcon::put_FallbackIconSource(Microsoft.UI.Xaml.Controls.IconSource)
     @fallback_icon_source.setter
     @typing.final
     def fallback_icon_source(self, value: IconSource) -> None: ...
 
 class AnimatedIconSource_Static(IconSource_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.AnimatedIconSource::get_FallbackIconSourceProperty()
     @_property
     @typing.final
     def fallback_icon_source_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.AnimatedIconSource::get_MirroredWhenRightToLeftProperty()
     @_property
     @typing.final
     def mirrored_when_right_to_left_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.AnimatedIconSource::get_SourceProperty()
     @_property
     @typing.final
     def source_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class AnimatedIconSource(IconSource, metaclass=AnimatedIconSource_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Microsoft.UI.Xaml.Controls.IAnimatedVisualSource2 Microsoft.UI.Xaml.Controls.AnimatedIconSource::get_Source()
     @_property
     def source(self) -> IAnimatedVisualSource2: ...
+    # System.Void Microsoft.UI.Xaml.Controls.AnimatedIconSource::put_Source(Microsoft.UI.Xaml.Controls.IAnimatedVisualSource2)
     @source.setter
     @typing.final
     def source(self, value: ImplementsIAnimatedVisualSource2) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.AnimatedIconSource::get_MirroredWhenRightToLeft()
     @_property
     def mirrored_when_right_to_left(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.AnimatedIconSource::put_MirroredWhenRightToLeft(System.Boolean)
     @mirrored_when_right_to_left.setter
     @typing.final
     def mirrored_when_right_to_left(self, value: bool) -> None: ...
+    # Microsoft.UI.Xaml.Controls.IconSource Microsoft.UI.Xaml.Controls.AnimatedIconSource::get_FallbackIconSource()
     @_property
     def fallback_icon_source(self) -> IconSource: ...
+    # System.Void Microsoft.UI.Xaml.Controls.AnimatedIconSource::put_FallbackIconSource(Microsoft.UI.Xaml.Controls.IconSource)
     @fallback_icon_source.setter
     @typing.final
     def fallback_icon_source(self, value: IconSource) -> None: ...
 
 class AnimatedVisualPlayer_Static(microsoft_ui_xaml.FrameworkElement_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.AnimatedVisualPlayer::get_AutoPlayProperty()
     @_property
     @typing.final
     def auto_play_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.AnimatedVisualPlayer::get_DiagnosticsProperty()
     @_property
     @typing.final
     def diagnostics_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.AnimatedVisualPlayer::get_DurationProperty()
     @_property
     @typing.final
     def duration_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.AnimatedVisualPlayer::get_FallbackContentProperty()
     @_property
     @typing.final
     def fallback_content_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.AnimatedVisualPlayer::get_IsAnimatedVisualLoadedProperty()
     @_property
     @typing.final
     def is_animated_visual_loaded_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.AnimatedVisualPlayer::get_IsPlayingProperty()
     @_property
     @typing.final
     def is_playing_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.AnimatedVisualPlayer::get_PlaybackRateProperty()
     @_property
     @typing.final
     def playback_rate_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.AnimatedVisualPlayer::get_SourceProperty()
     @_property
     @typing.final
     def source_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.AnimatedVisualPlayer::get_StretchProperty()
     @_property
     @typing.final
     def stretch_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.AnimatedVisualPlayer::get_AnimationOptimizationProperty()
     @_property
     @typing.final
     def animation_optimization_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
@@ -187,71 +221,97 @@ class AnimatedVisualPlayer_Static(microsoft_ui_xaml.FrameworkElement_Static):
 class AnimatedVisualPlayer(microsoft_ui_xaml.FrameworkElement, metaclass=AnimatedVisualPlayer_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.AnimatedVisualPlayer::Pause()
     def pause(self) -> None: ...
     @typing.final
+    # Windows.Foundation.IAsyncAction Microsoft.UI.Xaml.Controls.AnimatedVisualPlayer::PlayAsync(System.Double,System.Double,System.Boolean)
     def play_async(self, from_progress: winrt.system.Double, to_progress: winrt.system.Double, looped: bool, /) -> windows_foundation.IAsyncAction: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.AnimatedVisualPlayer::Resume()
     def resume(self) -> None: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.AnimatedVisualPlayer::SetProgress(System.Double)
     def set_progress(self, progress: winrt.system.Double, /) -> None: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.AnimatedVisualPlayer::Stop()
     def stop(self) -> None: ...
+    # Microsoft.UI.Xaml.Media.Stretch Microsoft.UI.Xaml.Controls.AnimatedVisualPlayer::get_Stretch()
     @_property
     def stretch(self) -> microsoft_ui_xaml_media.Stretch: ...
+    # System.Void Microsoft.UI.Xaml.Controls.AnimatedVisualPlayer::put_Stretch(Microsoft.UI.Xaml.Media.Stretch)
     @stretch.setter
     @typing.final
     def stretch(self, value: microsoft_ui_xaml_media.Stretch) -> None: ...
+    # Microsoft.UI.Xaml.Controls.IAnimatedVisualSource Microsoft.UI.Xaml.Controls.AnimatedVisualPlayer::get_Source()
     @_property
     def source(self) -> IAnimatedVisualSource: ...
+    # System.Void Microsoft.UI.Xaml.Controls.AnimatedVisualPlayer::put_Source(Microsoft.UI.Xaml.Controls.IAnimatedVisualSource)
     @source.setter
     @typing.final
     def source(self, value: ImplementsIAnimatedVisualSource) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.AnimatedVisualPlayer::get_PlaybackRate()
     @_property
     def playback_rate(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.AnimatedVisualPlayer::put_PlaybackRate(System.Double)
     @playback_rate.setter
     @typing.final
     def playback_rate(self, value: winrt.system.Double) -> None: ...
+    # Microsoft.UI.Xaml.DataTemplate Microsoft.UI.Xaml.Controls.AnimatedVisualPlayer::get_FallbackContent()
     @_property
     def fallback_content(self) -> microsoft_ui_xaml.DataTemplate: ...
+    # System.Void Microsoft.UI.Xaml.Controls.AnimatedVisualPlayer::put_FallbackContent(Microsoft.UI.Xaml.DataTemplate)
     @fallback_content.setter
     @typing.final
     def fallback_content(self, value: microsoft_ui_xaml.DataTemplate) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.AnimatedVisualPlayer::get_AutoPlay()
     @_property
     def auto_play(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.AnimatedVisualPlayer::put_AutoPlay(System.Boolean)
     @auto_play.setter
     @typing.final
     def auto_play(self, value: bool) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.AnimatedVisualPlayer::get_Diagnostics()
     @_property
     @typing.final
     def diagnostics(self) -> winrt.system.Object: ...
+    # Windows.Foundation.TimeSpan Microsoft.UI.Xaml.Controls.AnimatedVisualPlayer::get_Duration()
     @_property
     @typing.final
     def duration(self) -> datetime.timedelta: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.AnimatedVisualPlayer::get_IsAnimatedVisualLoaded()
     @_property
     @typing.final
     def is_animated_visual_loaded(self) -> bool: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.AnimatedVisualPlayer::get_IsPlaying()
     @_property
     @typing.final
     def is_playing(self) -> bool: ...
+    # Microsoft.UI.Composition.CompositionObject Microsoft.UI.Xaml.Controls.AnimatedVisualPlayer::get_ProgressObject()
     @_property
     @typing.final
     def progress_object(self) -> microsoft_ui_composition.CompositionObject: ...
+    # Microsoft.UI.Xaml.Controls.PlayerAnimationOptimization Microsoft.UI.Xaml.Controls.AnimatedVisualPlayer::get_AnimationOptimization()
     @_property
     def animation_optimization(self) -> PlayerAnimationOptimization: ...
+    # System.Void Microsoft.UI.Xaml.Controls.AnimatedVisualPlayer::put_AnimationOptimization(Microsoft.UI.Xaml.Controls.PlayerAnimationOptimization)
     @animation_optimization.setter
     @typing.final
     def animation_optimization(self, value: PlayerAnimationOptimization) -> None: ...
 
 class AnnotatedScrollBar_Static(Control_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.AnnotatedScrollBar::get_DetailLabelTemplateProperty()
     @_property
     @typing.final
     def detail_label_template_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.AnnotatedScrollBar::get_LabelTemplateProperty()
     @_property
     @typing.final
     def label_template_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.AnnotatedScrollBar::get_LabelsProperty()
     @_property
     @typing.final
     def labels_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.AnnotatedScrollBar::get_SmallChangeProperty()
     @_property
     @typing.final
     def small_change_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
@@ -259,395 +319,546 @@ class AnnotatedScrollBar_Static(Control_Static):
 class AnnotatedScrollBar(Control, metaclass=AnnotatedScrollBar_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.AnnotatedScrollBar::add_DetailLabelRequested(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.AnnotatedScrollBar,Microsoft.UI.Xaml.Controls.AnnotatedScrollBarDetailLabelRequestedEventArgs>)
     def add_detail_label_requested(self, handler: windows_foundation.TypedEventHandler[AnnotatedScrollBar, AnnotatedScrollBarDetailLabelRequestedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.AnnotatedScrollBar::remove_DetailLabelRequested(Windows.Foundation.EventRegistrationToken)
     def remove_detail_label_requested(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.AnnotatedScrollBar::add_Scrolling(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.AnnotatedScrollBar,Microsoft.UI.Xaml.Controls.AnnotatedScrollBarScrollingEventArgs>)
     def add_scrolling(self, handler: windows_foundation.TypedEventHandler[AnnotatedScrollBar, AnnotatedScrollBarScrollingEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.AnnotatedScrollBar::remove_Scrolling(Windows.Foundation.EventRegistrationToken)
     def remove_scrolling(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.AnnotatedScrollBar::get_SmallChange()
     @_property
     def small_change(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.AnnotatedScrollBar::put_SmallChange(System.Double)
     @small_change.setter
     @typing.final
     def small_change(self, value: winrt.system.Double) -> None: ...
+    # Windows.Foundation.Collections.IVector`1<Microsoft.UI.Xaml.Controls.AnnotatedScrollBarLabel> Microsoft.UI.Xaml.Controls.AnnotatedScrollBar::get_Labels()
     @_property
     def labels(self) -> typing.MutableSequence[AnnotatedScrollBarLabel]: ...
+    # System.Void Microsoft.UI.Xaml.Controls.AnnotatedScrollBar::put_Labels(Windows.Foundation.Collections.IVector`1<Microsoft.UI.Xaml.Controls.AnnotatedScrollBarLabel>)
     @labels.setter
     @typing.final
     def labels(self, value: typing.MutableSequence[AnnotatedScrollBarLabel]) -> None: ...
+    # Microsoft.UI.Xaml.IElementFactory Microsoft.UI.Xaml.Controls.AnnotatedScrollBar::get_LabelTemplate()
     @_property
     def label_template(self) -> microsoft_ui_xaml.IElementFactory: ...
+    # System.Void Microsoft.UI.Xaml.Controls.AnnotatedScrollBar::put_LabelTemplate(Microsoft.UI.Xaml.IElementFactory)
     @label_template.setter
     @typing.final
     def label_template(self, value: microsoft_ui_xaml.ImplementsIElementFactory) -> None: ...
+    # Microsoft.UI.Xaml.IElementFactory Microsoft.UI.Xaml.Controls.AnnotatedScrollBar::get_DetailLabelTemplate()
     @_property
     def detail_label_template(self) -> microsoft_ui_xaml.IElementFactory: ...
+    # System.Void Microsoft.UI.Xaml.Controls.AnnotatedScrollBar::put_DetailLabelTemplate(Microsoft.UI.Xaml.IElementFactory)
     @detail_label_template.setter
     @typing.final
     def detail_label_template(self, value: microsoft_ui_xaml.ImplementsIElementFactory) -> None: ...
+    # Microsoft.UI.Xaml.Controls.Primitives.IScrollController Microsoft.UI.Xaml.Controls.AnnotatedScrollBar::get_ScrollController()
     @_property
     @typing.final
     def scroll_controller(self) -> microsoft_ui_xaml_controls_primitives.IScrollController: ...
 
 @typing.final
 class AnnotatedScrollBarDetailLabelRequestedEventArgs(winrt.system.Object):
+    # System.Object Microsoft.UI.Xaml.Controls.AnnotatedScrollBarDetailLabelRequestedEventArgs::get_Content()
     @_property
     def content(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.AnnotatedScrollBarDetailLabelRequestedEventArgs::put_Content(System.Object)
     @content.setter
     def content(self, value: winrt.system.Object) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.AnnotatedScrollBarDetailLabelRequestedEventArgs::get_ScrollOffset()
     @_property
     def scroll_offset(self) -> winrt.system.Double: ...
 
 @typing.final
 class AnnotatedScrollBarLabel(winrt.system.Object):
     def __new__(cls: typing.Type[Self], content: winrt.system.Object, scroll_offset: winrt.system.Double) -> Self: ...
+    # System.Object Microsoft.UI.Xaml.Controls.AnnotatedScrollBarLabel::get_Content()
     @_property
     def content(self) -> winrt.system.Object: ...
+    # System.Double Microsoft.UI.Xaml.Controls.AnnotatedScrollBarLabel::get_ScrollOffset()
     @_property
     def scroll_offset(self) -> winrt.system.Double: ...
 
 @typing.final
 class AnnotatedScrollBarScrollingEventArgs(winrt.system.Object):
+    # System.Boolean Microsoft.UI.Xaml.Controls.AnnotatedScrollBarScrollingEventArgs::get_Cancel()
     @_property
     def cancel(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.AnnotatedScrollBarScrollingEventArgs::put_Cancel(System.Boolean)
     @cancel.setter
     def cancel(self, value: bool) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.AnnotatedScrollBarScrollingEventArgs::get_ScrollOffset()
     @_property
     def scroll_offset(self) -> winrt.system.Double: ...
+    # Microsoft.UI.Xaml.Controls.AnnotatedScrollBarScrollingEventKind Microsoft.UI.Xaml.Controls.AnnotatedScrollBarScrollingEventArgs::get_ScrollingEventKind()
     @_property
     def scrolling_event_kind(self) -> AnnotatedScrollBarScrollingEventKind: ...
 
 class AppBar_Static(ContentControl_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.AppBar::get_ClosedDisplayModeProperty()
     @_property
     @typing.final
     def closed_display_mode_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.AppBar::get_IsOpenProperty()
     @_property
     @typing.final
     def is_open_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.AppBar::get_IsStickyProperty()
     @_property
     @typing.final
     def is_sticky_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.AppBar::get_LightDismissOverlayModeProperty()
     @_property
     @typing.final
     def light_dismiss_overlay_mode_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class AppBar(ContentControl, metaclass=AppBar_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Void Microsoft.UI.Xaml.Controls.AppBar::OnClosed(System.Object)
     def _on_closed(self, e: winrt.system.Object, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.AppBar::OnClosing(System.Object)
     def _on_closing(self, e: winrt.system.Object, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.AppBar::OnOpened(System.Object)
     def _on_opened(self, e: winrt.system.Object, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.AppBar::OnOpening(System.Object)
     def _on_opening(self, e: winrt.system.Object, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.AppBar::add_Closed(Windows.Foundation.EventHandler`1<System.Object>)
     def add_closed(self, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.AppBar::remove_Closed(Windows.Foundation.EventRegistrationToken)
     def remove_closed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.AppBar::add_Closing(Windows.Foundation.EventHandler`1<System.Object>)
     def add_closing(self, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.AppBar::remove_Closing(Windows.Foundation.EventRegistrationToken)
     def remove_closing(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.AppBar::add_Opened(Windows.Foundation.EventHandler`1<System.Object>)
     def add_opened(self, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.AppBar::remove_Opened(Windows.Foundation.EventRegistrationToken)
     def remove_opened(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.AppBar::add_Opening(Windows.Foundation.EventHandler`1<System.Object>)
     def add_opening(self, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.AppBar::remove_Opening(Windows.Foundation.EventRegistrationToken)
     def remove_opening(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Microsoft.UI.Xaml.Controls.LightDismissOverlayMode Microsoft.UI.Xaml.Controls.AppBar::get_LightDismissOverlayMode()
     @_property
     def light_dismiss_overlay_mode(self) -> LightDismissOverlayMode: ...
+    # System.Void Microsoft.UI.Xaml.Controls.AppBar::put_LightDismissOverlayMode(Microsoft.UI.Xaml.Controls.LightDismissOverlayMode)
     @light_dismiss_overlay_mode.setter
     @typing.final
     def light_dismiss_overlay_mode(self, value: LightDismissOverlayMode) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.AppBar::get_IsSticky()
     @_property
     def is_sticky(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.AppBar::put_IsSticky(System.Boolean)
     @is_sticky.setter
     @typing.final
     def is_sticky(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.AppBar::get_IsOpen()
     @_property
     def is_open(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.AppBar::put_IsOpen(System.Boolean)
     @is_open.setter
     @typing.final
     def is_open(self, value: bool) -> None: ...
+    # Microsoft.UI.Xaml.Controls.AppBarClosedDisplayMode Microsoft.UI.Xaml.Controls.AppBar::get_ClosedDisplayMode()
     @_property
     def closed_display_mode(self) -> AppBarClosedDisplayMode: ...
+    # System.Void Microsoft.UI.Xaml.Controls.AppBar::put_ClosedDisplayMode(Microsoft.UI.Xaml.Controls.AppBarClosedDisplayMode)
     @closed_display_mode.setter
     @typing.final
     def closed_display_mode(self, value: AppBarClosedDisplayMode) -> None: ...
+    # Microsoft.UI.Xaml.Controls.Primitives.AppBarTemplateSettings Microsoft.UI.Xaml.Controls.AppBar::get_TemplateSettings()
     @_property
     @typing.final
     def template_settings(self) -> microsoft_ui_xaml_controls_primitives.AppBarTemplateSettings: ...
 
 class AppBarElementContainer_Static(ContentControl_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.AppBarElementContainer::get_DynamicOverflowOrderProperty()
     @_property
     @typing.final
     def dynamic_overflow_order_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.AppBarElementContainer::get_IsCompactProperty()
     @_property
     @typing.final
     def is_compact_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.AppBarElementContainer::get_IsInOverflowProperty()
     @_property
     @typing.final
     def is_in_overflow_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class AppBarElementContainer(ContentControl, ImplementsICommandBarElement, metaclass=AppBarElementContainer_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.AppBarElementContainer::get_IsCompact()
     @_property
     def is_compact(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.AppBarElementContainer::put_IsCompact(System.Boolean)
     @is_compact.setter
     @typing.final
     def is_compact(self, value: bool) -> None: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.AppBarElementContainer::get_DynamicOverflowOrder()
     @_property
     def dynamic_overflow_order(self) -> winrt.system.Int32: ...
+    # System.Void Microsoft.UI.Xaml.Controls.AppBarElementContainer::put_DynamicOverflowOrder(System.Int32)
     @dynamic_overflow_order.setter
     @typing.final
     def dynamic_overflow_order(self, value: winrt.system.Int32) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.AppBarElementContainer::get_IsInOverflow()
     @_property
     @typing.final
     def is_in_overflow(self) -> bool: ...
 
 class AppBarSeparator_Static(Control_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.AppBarSeparator::get_DynamicOverflowOrderProperty()
     @_property
     @typing.final
     def dynamic_overflow_order_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.AppBarSeparator::get_IsCompactProperty()
     @_property
     @typing.final
     def is_compact_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.AppBarSeparator::get_IsInOverflowProperty()
     @_property
     @typing.final
     def is_in_overflow_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class AppBarSeparator(Control, ImplementsICommandBarElement, metaclass=AppBarSeparator_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.AppBarSeparator::get_IsCompact()
     @_property
     def is_compact(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.AppBarSeparator::put_IsCompact(System.Boolean)
     @is_compact.setter
     @typing.final
     def is_compact(self, value: bool) -> None: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.AppBarSeparator::get_DynamicOverflowOrder()
     @_property
     def dynamic_overflow_order(self) -> winrt.system.Int32: ...
+    # System.Void Microsoft.UI.Xaml.Controls.AppBarSeparator::put_DynamicOverflowOrder(System.Int32)
     @dynamic_overflow_order.setter
     @typing.final
     def dynamic_overflow_order(self, value: winrt.system.Int32) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.AppBarSeparator::get_IsInOverflow()
     @_property
     @typing.final
     def is_in_overflow(self) -> bool: ...
 
 @typing.final
 class AutoSuggestBox_Static(ItemsControl_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.AutoSuggestBox::get_AutoMaximizeSuggestionAreaProperty()
     @_property
     def auto_maximize_suggestion_area_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.AutoSuggestBox::get_DescriptionProperty()
     @_property
     def description_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.AutoSuggestBox::get_HeaderProperty()
     @_property
     def header_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.AutoSuggestBox::get_IsSuggestionListOpenProperty()
     @_property
     def is_suggestion_list_open_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.AutoSuggestBox::get_LightDismissOverlayModeProperty()
     @_property
     def light_dismiss_overlay_mode_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.AutoSuggestBox::get_MaxSuggestionListHeightProperty()
     @_property
     def max_suggestion_list_height_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.AutoSuggestBox::get_PlaceholderTextProperty()
     @_property
     def placeholder_text_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.AutoSuggestBox::get_QueryIconProperty()
     @_property
     def query_icon_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.AutoSuggestBox::get_TextBoxStyleProperty()
     @_property
     def text_box_style_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.AutoSuggestBox::get_TextMemberPathProperty()
     @_property
     def text_member_path_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.AutoSuggestBox::get_TextProperty()
     @_property
     def text_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.AutoSuggestBox::get_UpdateTextOnSelectProperty()
     @_property
     def update_text_on_select_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
 class AutoSuggestBox(ItemsControl, metaclass=AutoSuggestBox_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.AutoSuggestBox::add_QuerySubmitted(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.AutoSuggestBox,Microsoft.UI.Xaml.Controls.AutoSuggestBoxQuerySubmittedEventArgs>)
     def add_query_submitted(self, handler: windows_foundation.TypedEventHandler[AutoSuggestBox, AutoSuggestBoxQuerySubmittedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.UI.Xaml.Controls.AutoSuggestBox::remove_QuerySubmitted(Windows.Foundation.EventRegistrationToken)
     def remove_query_submitted(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.AutoSuggestBox::add_SuggestionChosen(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.AutoSuggestBox,Microsoft.UI.Xaml.Controls.AutoSuggestBoxSuggestionChosenEventArgs>)
     def add_suggestion_chosen(self, handler: windows_foundation.TypedEventHandler[AutoSuggestBox, AutoSuggestBoxSuggestionChosenEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.UI.Xaml.Controls.AutoSuggestBox::remove_SuggestionChosen(Windows.Foundation.EventRegistrationToken)
     def remove_suggestion_chosen(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.AutoSuggestBox::add_TextChanged(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.AutoSuggestBox,Microsoft.UI.Xaml.Controls.AutoSuggestBoxTextChangedEventArgs>)
     def add_text_changed(self, handler: windows_foundation.TypedEventHandler[AutoSuggestBox, AutoSuggestBoxTextChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.UI.Xaml.Controls.AutoSuggestBox::remove_TextChanged(Windows.Foundation.EventRegistrationToken)
     def remove_text_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.AutoSuggestBox::get_UpdateTextOnSelect()
     @_property
     def update_text_on_select(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.AutoSuggestBox::put_UpdateTextOnSelect(System.Boolean)
     @update_text_on_select.setter
     def update_text_on_select(self, value: bool) -> None: ...
+    # System.String Microsoft.UI.Xaml.Controls.AutoSuggestBox::get_TextMemberPath()
     @_property
     def text_member_path(self) -> str: ...
+    # System.Void Microsoft.UI.Xaml.Controls.AutoSuggestBox::put_TextMemberPath(System.String)
     @text_member_path.setter
     def text_member_path(self, value: str) -> None: ...
+    # Microsoft.UI.Xaml.Style Microsoft.UI.Xaml.Controls.AutoSuggestBox::get_TextBoxStyle()
     @_property
     def text_box_style(self) -> microsoft_ui_xaml.Style: ...
+    # System.Void Microsoft.UI.Xaml.Controls.AutoSuggestBox::put_TextBoxStyle(Microsoft.UI.Xaml.Style)
     @text_box_style.setter
     def text_box_style(self, value: microsoft_ui_xaml.Style) -> None: ...
+    # System.String Microsoft.UI.Xaml.Controls.AutoSuggestBox::get_Text()
     @_property
     def text(self) -> str: ...
+    # System.Void Microsoft.UI.Xaml.Controls.AutoSuggestBox::put_Text(System.String)
     @text.setter
     def text(self, value: str) -> None: ...
+    # Microsoft.UI.Xaml.Controls.IconElement Microsoft.UI.Xaml.Controls.AutoSuggestBox::get_QueryIcon()
     @_property
     def query_icon(self) -> IconElement: ...
+    # System.Void Microsoft.UI.Xaml.Controls.AutoSuggestBox::put_QueryIcon(Microsoft.UI.Xaml.Controls.IconElement)
     @query_icon.setter
     def query_icon(self, value: IconElement) -> None: ...
+    # System.String Microsoft.UI.Xaml.Controls.AutoSuggestBox::get_PlaceholderText()
     @_property
     def placeholder_text(self) -> str: ...
+    # System.Void Microsoft.UI.Xaml.Controls.AutoSuggestBox::put_PlaceholderText(System.String)
     @placeholder_text.setter
     def placeholder_text(self, value: str) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.AutoSuggestBox::get_MaxSuggestionListHeight()
     @_property
     def max_suggestion_list_height(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.AutoSuggestBox::put_MaxSuggestionListHeight(System.Double)
     @max_suggestion_list_height.setter
     def max_suggestion_list_height(self, value: winrt.system.Double) -> None: ...
+    # Microsoft.UI.Xaml.Controls.LightDismissOverlayMode Microsoft.UI.Xaml.Controls.AutoSuggestBox::get_LightDismissOverlayMode()
     @_property
     def light_dismiss_overlay_mode(self) -> LightDismissOverlayMode: ...
+    # System.Void Microsoft.UI.Xaml.Controls.AutoSuggestBox::put_LightDismissOverlayMode(Microsoft.UI.Xaml.Controls.LightDismissOverlayMode)
     @light_dismiss_overlay_mode.setter
     def light_dismiss_overlay_mode(self, value: LightDismissOverlayMode) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.AutoSuggestBox::get_IsSuggestionListOpen()
     @_property
     def is_suggestion_list_open(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.AutoSuggestBox::put_IsSuggestionListOpen(System.Boolean)
     @is_suggestion_list_open.setter
     def is_suggestion_list_open(self, value: bool) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.AutoSuggestBox::get_Header()
     @_property
     def header(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.AutoSuggestBox::put_Header(System.Object)
     @header.setter
     def header(self, value: winrt.system.Object) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.AutoSuggestBox::get_Description()
     @_property
     def description(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.AutoSuggestBox::put_Description(System.Object)
     @description.setter
     def description(self, value: winrt.system.Object) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.AutoSuggestBox::get_AutoMaximizeSuggestionArea()
     @_property
     def auto_maximize_suggestion_area(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.AutoSuggestBox::put_AutoMaximizeSuggestionArea(System.Boolean)
     @auto_maximize_suggestion_area.setter
     def auto_maximize_suggestion_area(self, value: bool) -> None: ...
 
 @typing.final
 class AutoSuggestBoxQuerySubmittedEventArgs(microsoft_ui_xaml.DependencyObject):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Object Microsoft.UI.Xaml.Controls.AutoSuggestBoxQuerySubmittedEventArgs::get_ChosenSuggestion()
     @_property
     def chosen_suggestion(self) -> winrt.system.Object: ...
+    # System.String Microsoft.UI.Xaml.Controls.AutoSuggestBoxQuerySubmittedEventArgs::get_QueryText()
     @_property
     def query_text(self) -> str: ...
 
 @typing.final
 class AutoSuggestBoxSuggestionChosenEventArgs(microsoft_ui_xaml.DependencyObject):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Object Microsoft.UI.Xaml.Controls.AutoSuggestBoxSuggestionChosenEventArgs::get_SelectedItem()
     @_property
     def selected_item(self) -> winrt.system.Object: ...
 
 @typing.final
 class AutoSuggestBoxTextChangedEventArgs_Static(microsoft_ui_xaml.DependencyObject_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.AutoSuggestBoxTextChangedEventArgs::get_ReasonProperty()
     @_property
     def reason_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
 class AutoSuggestBoxTextChangedEventArgs(microsoft_ui_xaml.DependencyObject, metaclass=AutoSuggestBoxTextChangedEventArgs_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.AutoSuggestBoxTextChangedEventArgs::CheckCurrent()
     def check_current(self) -> bool: ...
+    # Microsoft.UI.Xaml.Controls.AutoSuggestionBoxTextChangeReason Microsoft.UI.Xaml.Controls.AutoSuggestBoxTextChangedEventArgs::get_Reason()
     @_property
     def reason(self) -> AutoSuggestionBoxTextChangeReason: ...
+    # System.Void Microsoft.UI.Xaml.Controls.AutoSuggestBoxTextChangedEventArgs::put_Reason(Microsoft.UI.Xaml.Controls.AutoSuggestionBoxTextChangeReason)
     @reason.setter
     def reason(self, value: AutoSuggestionBoxTextChangeReason) -> None: ...
 
 class BitmapIcon_Static(IconElement_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.BitmapIcon::get_ShowAsMonochromeProperty()
     @_property
     @typing.final
     def show_as_monochrome_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.BitmapIcon::get_UriSourceProperty()
     @_property
     @typing.final
     def uri_source_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class BitmapIcon(IconElement, metaclass=BitmapIcon_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Windows.Foundation.Uri Microsoft.UI.Xaml.Controls.BitmapIcon::get_UriSource()
     @_property
     def uri_source(self) -> windows_foundation.Uri: ...
+    # System.Void Microsoft.UI.Xaml.Controls.BitmapIcon::put_UriSource(Windows.Foundation.Uri)
     @uri_source.setter
     @typing.final
     def uri_source(self, value: windows_foundation.Uri) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.BitmapIcon::get_ShowAsMonochrome()
     @_property
     def show_as_monochrome(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.BitmapIcon::put_ShowAsMonochrome(System.Boolean)
     @show_as_monochrome.setter
     @typing.final
     def show_as_monochrome(self, value: bool) -> None: ...
 
 class BitmapIconSource_Static(IconSource_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.BitmapIconSource::get_ShowAsMonochromeProperty()
     @_property
     @typing.final
     def show_as_monochrome_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.BitmapIconSource::get_UriSourceProperty()
     @_property
     @typing.final
     def uri_source_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class BitmapIconSource(IconSource, metaclass=BitmapIconSource_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Windows.Foundation.Uri Microsoft.UI.Xaml.Controls.BitmapIconSource::get_UriSource()
     @_property
     def uri_source(self) -> windows_foundation.Uri: ...
+    # System.Void Microsoft.UI.Xaml.Controls.BitmapIconSource::put_UriSource(Windows.Foundation.Uri)
     @uri_source.setter
     @typing.final
     def uri_source(self, value: windows_foundation.Uri) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.BitmapIconSource::get_ShowAsMonochrome()
     @_property
     def show_as_monochrome(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.BitmapIconSource::put_ShowAsMonochrome(System.Boolean)
     @show_as_monochrome.setter
     @typing.final
     def show_as_monochrome(self, value: bool) -> None: ...
 
 @typing.final
 class Border_Static(microsoft_ui_xaml.FrameworkElement_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Border::get_BackgroundProperty()
     @_property
     def background_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Border::get_BackgroundSizingProperty()
     @_property
     def background_sizing_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Border::get_BorderBrushProperty()
     @_property
     def border_brush_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Border::get_BorderThicknessProperty()
     @_property
     def border_thickness_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Border::get_ChildTransitionsProperty()
     @_property
     def child_transitions_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Border::get_CornerRadiusProperty()
     @_property
     def corner_radius_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Border::get_PaddingProperty()
     @_property
     def padding_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
 class Border(microsoft_ui_xaml.FrameworkElement, metaclass=Border_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Microsoft.UI.Xaml.Thickness Microsoft.UI.Xaml.Controls.Border::get_Padding()
     @_property
     def padding(self) -> microsoft_ui_xaml.Thickness: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Border::put_Padding(Microsoft.UI.Xaml.Thickness)
     @padding.setter
     def padding(self, value: microsoft_ui_xaml.Thickness) -> None: ...
+    # Microsoft.UI.Xaml.CornerRadius Microsoft.UI.Xaml.Controls.Border::get_CornerRadius()
     @_property
     def corner_radius(self) -> microsoft_ui_xaml.CornerRadius: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Border::put_CornerRadius(Microsoft.UI.Xaml.CornerRadius)
     @corner_radius.setter
     def corner_radius(self, value: microsoft_ui_xaml.CornerRadius) -> None: ...
+    # Microsoft.UI.Xaml.Media.Animation.TransitionCollection Microsoft.UI.Xaml.Controls.Border::get_ChildTransitions()
     @_property
     def child_transitions(self) -> microsoft_ui_xaml_media_animation.TransitionCollection: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Border::put_ChildTransitions(Microsoft.UI.Xaml.Media.Animation.TransitionCollection)
     @child_transitions.setter
     def child_transitions(self, value: microsoft_ui_xaml_media_animation.TransitionCollection) -> None: ...
+    # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.Controls.Border::get_Child()
     @_property
     def child(self) -> microsoft_ui_xaml.UIElement: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Border::put_Child(Microsoft.UI.Xaml.UIElement)
     @child.setter
     def child(self, value: microsoft_ui_xaml.UIElement) -> None: ...
+    # Microsoft.UI.Xaml.Thickness Microsoft.UI.Xaml.Controls.Border::get_BorderThickness()
     @_property
     def border_thickness(self) -> microsoft_ui_xaml.Thickness: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Border::put_BorderThickness(Microsoft.UI.Xaml.Thickness)
     @border_thickness.setter
     def border_thickness(self, value: microsoft_ui_xaml.Thickness) -> None: ...
+    # Microsoft.UI.Xaml.Media.Brush Microsoft.UI.Xaml.Controls.Border::get_BorderBrush()
     @_property
     def border_brush(self) -> microsoft_ui_xaml_media.Brush: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Border::put_BorderBrush(Microsoft.UI.Xaml.Media.Brush)
     @border_brush.setter
     def border_brush(self, value: microsoft_ui_xaml_media.Brush) -> None: ...
+    # Microsoft.UI.Xaml.BrushTransition Microsoft.UI.Xaml.Controls.Border::get_BackgroundTransition()
     @_property
     def background_transition(self) -> microsoft_ui_xaml.BrushTransition: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Border::put_BackgroundTransition(Microsoft.UI.Xaml.BrushTransition)
     @background_transition.setter
     def background_transition(self, value: microsoft_ui_xaml.BrushTransition) -> None: ...
+    # Microsoft.UI.Xaml.Controls.BackgroundSizing Microsoft.UI.Xaml.Controls.Border::get_BackgroundSizing()
     @_property
     def background_sizing(self) -> BackgroundSizing: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Border::put_BackgroundSizing(Microsoft.UI.Xaml.Controls.BackgroundSizing)
     @background_sizing.setter
     def background_sizing(self, value: BackgroundSizing) -> None: ...
+    # Microsoft.UI.Xaml.Media.Brush Microsoft.UI.Xaml.Controls.Border::get_Background()
     @_property
     def background(self) -> microsoft_ui_xaml_media.Brush: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Border::put_Background(Microsoft.UI.Xaml.Media.Brush)
     @background.setter
     def background(self, value: microsoft_ui_xaml_media.Brush) -> None: ...
 
 class BreadcrumbBar_Static(Control_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.BreadcrumbBar::get_ItemTemplateProperty()
     @_property
     @typing.final
     def item_template_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.BreadcrumbBar::get_ItemsSourceProperty()
     @_property
     @typing.final
     def items_source_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
@@ -655,16 +866,22 @@ class BreadcrumbBar_Static(Control_Static):
 class BreadcrumbBar(Control, metaclass=BreadcrumbBar_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.BreadcrumbBar::add_ItemClicked(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.BreadcrumbBar,Microsoft.UI.Xaml.Controls.BreadcrumbBarItemClickedEventArgs>)
     def add_item_clicked(self, handler: windows_foundation.TypedEventHandler[BreadcrumbBar, BreadcrumbBarItemClickedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.BreadcrumbBar::remove_ItemClicked(Windows.Foundation.EventRegistrationToken)
     def remove_item_clicked(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.BreadcrumbBar::get_ItemsSource()
     @_property
     def items_source(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.BreadcrumbBar::put_ItemsSource(System.Object)
     @items_source.setter
     @typing.final
     def items_source(self, value: winrt.system.Object) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.BreadcrumbBar::get_ItemTemplate()
     @_property
     def item_template(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.BreadcrumbBar::put_ItemTemplate(System.Object)
     @item_template.setter
     @typing.final
     def item_template(self, value: winrt.system.Object) -> None: ...
@@ -677,63 +894,83 @@ class BreadcrumbBarItem(ContentControl, metaclass=BreadcrumbBarItem_Static):
 
 @typing.final
 class BreadcrumbBarItemClickedEventArgs(winrt.system.Object):
+    # System.Int32 Microsoft.UI.Xaml.Controls.BreadcrumbBarItemClickedEventArgs::get_Index()
     @_property
     def index(self) -> winrt.system.Int32: ...
+    # System.Object Microsoft.UI.Xaml.Controls.BreadcrumbBarItemClickedEventArgs::get_Item()
     @_property
     def item(self) -> winrt.system.Object: ...
 
 class CalendarDatePicker_Static(Control_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarDatePicker::get_CalendarIdentifierProperty()
     @_property
     @typing.final
     def calendar_identifier_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarDatePicker::get_CalendarViewStyleProperty()
     @_property
     @typing.final
     def calendar_view_style_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarDatePicker::get_DateFormatProperty()
     @_property
     @typing.final
     def date_format_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarDatePicker::get_DateProperty()
     @_property
     @typing.final
     def date_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarDatePicker::get_DayOfWeekFormatProperty()
     @_property
     @typing.final
     def day_of_week_format_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarDatePicker::get_DescriptionProperty()
     @_property
     @typing.final
     def description_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarDatePicker::get_DisplayModeProperty()
     @_property
     @typing.final
     def display_mode_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarDatePicker::get_FirstDayOfWeekProperty()
     @_property
     @typing.final
     def first_day_of_week_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarDatePicker::get_HeaderProperty()
     @_property
     @typing.final
     def header_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarDatePicker::get_HeaderTemplateProperty()
     @_property
     @typing.final
     def header_template_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarDatePicker::get_IsCalendarOpenProperty()
     @_property
     @typing.final
     def is_calendar_open_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarDatePicker::get_IsGroupLabelVisibleProperty()
     @_property
     @typing.final
     def is_group_label_visible_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarDatePicker::get_IsOutOfScopeEnabledProperty()
     @_property
     @typing.final
     def is_out_of_scope_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarDatePicker::get_IsTodayHighlightedProperty()
     @_property
     @typing.final
     def is_today_highlighted_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarDatePicker::get_LightDismissOverlayModeProperty()
     @_property
     @typing.final
     def light_dismiss_overlay_mode_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarDatePicker::get_MaxDateProperty()
     @_property
     @typing.final
     def max_date_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarDatePicker::get_MinDateProperty()
     @_property
     @typing.final
     def min_date_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarDatePicker::get_PlaceholderTextProperty()
     @_property
     @typing.final
     def placeholder_text_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
@@ -741,346 +978,469 @@ class CalendarDatePicker_Static(Control_Static):
 class CalendarDatePicker(Control, metaclass=CalendarDatePicker_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarDatePicker::SetDisplayDate(Windows.Foundation.DateTime)
     def set_display_date(self, date: datetime.datetime, /) -> None: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarDatePicker::SetYearDecadeDisplayDimensions(System.Int32,System.Int32)
     def set_year_decade_display_dimensions(self, columns: winrt.system.Int32, rows: winrt.system.Int32, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.CalendarDatePicker::add_CalendarViewDayItemChanging(Microsoft.UI.Xaml.Controls.CalendarViewDayItemChangingEventHandler)
     def add_calendar_view_day_item_changing(self, handler: CalendarViewDayItemChangingEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarDatePicker::remove_CalendarViewDayItemChanging(Windows.Foundation.EventRegistrationToken)
     def remove_calendar_view_day_item_changing(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.CalendarDatePicker::add_Closed(Windows.Foundation.EventHandler`1<System.Object>)
     def add_closed(self, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarDatePicker::remove_Closed(Windows.Foundation.EventRegistrationToken)
     def remove_closed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.CalendarDatePicker::add_DateChanged(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.CalendarDatePicker,Microsoft.UI.Xaml.Controls.CalendarDatePickerDateChangedEventArgs>)
     def add_date_changed(self, handler: windows_foundation.TypedEventHandler[CalendarDatePicker, CalendarDatePickerDateChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarDatePicker::remove_DateChanged(Windows.Foundation.EventRegistrationToken)
     def remove_date_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.CalendarDatePicker::add_Opened(Windows.Foundation.EventHandler`1<System.Object>)
     def add_opened(self, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarDatePicker::remove_Opened(Windows.Foundation.EventRegistrationToken)
     def remove_opened(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.String Microsoft.UI.Xaml.Controls.CalendarDatePicker::get_PlaceholderText()
     @_property
     def placeholder_text(self) -> str: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarDatePicker::put_PlaceholderText(System.String)
     @placeholder_text.setter
     @typing.final
     def placeholder_text(self, value: str) -> None: ...
+    # Windows.Foundation.DateTime Microsoft.UI.Xaml.Controls.CalendarDatePicker::get_MinDate()
     @_property
     def min_date(self) -> datetime.datetime: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarDatePicker::put_MinDate(Windows.Foundation.DateTime)
     @min_date.setter
     @typing.final
     def min_date(self, value: datetime.datetime) -> None: ...
+    # Windows.Foundation.DateTime Microsoft.UI.Xaml.Controls.CalendarDatePicker::get_MaxDate()
     @_property
     def max_date(self) -> datetime.datetime: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarDatePicker::put_MaxDate(Windows.Foundation.DateTime)
     @max_date.setter
     @typing.final
     def max_date(self, value: datetime.datetime) -> None: ...
+    # Microsoft.UI.Xaml.Controls.LightDismissOverlayMode Microsoft.UI.Xaml.Controls.CalendarDatePicker::get_LightDismissOverlayMode()
     @_property
     def light_dismiss_overlay_mode(self) -> LightDismissOverlayMode: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarDatePicker::put_LightDismissOverlayMode(Microsoft.UI.Xaml.Controls.LightDismissOverlayMode)
     @light_dismiss_overlay_mode.setter
     @typing.final
     def light_dismiss_overlay_mode(self, value: LightDismissOverlayMode) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.CalendarDatePicker::get_IsTodayHighlighted()
     @_property
     def is_today_highlighted(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarDatePicker::put_IsTodayHighlighted(System.Boolean)
     @is_today_highlighted.setter
     @typing.final
     def is_today_highlighted(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.CalendarDatePicker::get_IsOutOfScopeEnabled()
     @_property
     def is_out_of_scope_enabled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarDatePicker::put_IsOutOfScopeEnabled(System.Boolean)
     @is_out_of_scope_enabled.setter
     @typing.final
     def is_out_of_scope_enabled(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.CalendarDatePicker::get_IsGroupLabelVisible()
     @_property
     def is_group_label_visible(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarDatePicker::put_IsGroupLabelVisible(System.Boolean)
     @is_group_label_visible.setter
     @typing.final
     def is_group_label_visible(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.CalendarDatePicker::get_IsCalendarOpen()
     @_property
     def is_calendar_open(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarDatePicker::put_IsCalendarOpen(System.Boolean)
     @is_calendar_open.setter
     @typing.final
     def is_calendar_open(self, value: bool) -> None: ...
+    # Microsoft.UI.Xaml.DataTemplate Microsoft.UI.Xaml.Controls.CalendarDatePicker::get_HeaderTemplate()
     @_property
     def header_template(self) -> microsoft_ui_xaml.DataTemplate: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarDatePicker::put_HeaderTemplate(Microsoft.UI.Xaml.DataTemplate)
     @header_template.setter
     @typing.final
     def header_template(self, value: microsoft_ui_xaml.DataTemplate) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.CalendarDatePicker::get_Header()
     @_property
     def header(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarDatePicker::put_Header(System.Object)
     @header.setter
     @typing.final
     def header(self, value: winrt.system.Object) -> None: ...
+    # Windows.Globalization.DayOfWeek Microsoft.UI.Xaml.Controls.CalendarDatePicker::get_FirstDayOfWeek()
     @_property
     def first_day_of_week(self) -> windows_globalization.DayOfWeek: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarDatePicker::put_FirstDayOfWeek(Windows.Globalization.DayOfWeek)
     @first_day_of_week.setter
     @typing.final
     def first_day_of_week(self, value: windows_globalization.DayOfWeek) -> None: ...
+    # Microsoft.UI.Xaml.Controls.CalendarViewDisplayMode Microsoft.UI.Xaml.Controls.CalendarDatePicker::get_DisplayMode()
     @_property
     def display_mode(self) -> CalendarViewDisplayMode: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarDatePicker::put_DisplayMode(Microsoft.UI.Xaml.Controls.CalendarViewDisplayMode)
     @display_mode.setter
     @typing.final
     def display_mode(self, value: CalendarViewDisplayMode) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.CalendarDatePicker::get_Description()
     @_property
     def description(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarDatePicker::put_Description(System.Object)
     @description.setter
     @typing.final
     def description(self, value: winrt.system.Object) -> None: ...
+    # System.String Microsoft.UI.Xaml.Controls.CalendarDatePicker::get_DayOfWeekFormat()
     @_property
     def day_of_week_format(self) -> str: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarDatePicker::put_DayOfWeekFormat(System.String)
     @day_of_week_format.setter
     @typing.final
     def day_of_week_format(self, value: str) -> None: ...
+    # System.String Microsoft.UI.Xaml.Controls.CalendarDatePicker::get_DateFormat()
     @_property
     def date_format(self) -> str: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarDatePicker::put_DateFormat(System.String)
     @date_format.setter
     @typing.final
     def date_format(self, value: str) -> None: ...
+    # Windows.Foundation.IReference`1<Windows.Foundation.DateTime> Microsoft.UI.Xaml.Controls.CalendarDatePicker::get_Date()
     @_property
     def date(self) -> typing.Optional[datetime.datetime]: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarDatePicker::put_Date(Windows.Foundation.IReference`1<Windows.Foundation.DateTime>)
     @date.setter
     @typing.final
     def date(self, value: typing.Optional[datetime.datetime]) -> None: ...
+    # Microsoft.UI.Xaml.Style Microsoft.UI.Xaml.Controls.CalendarDatePicker::get_CalendarViewStyle()
     @_property
     def calendar_view_style(self) -> microsoft_ui_xaml.Style: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarDatePicker::put_CalendarViewStyle(Microsoft.UI.Xaml.Style)
     @calendar_view_style.setter
     @typing.final
     def calendar_view_style(self, value: microsoft_ui_xaml.Style) -> None: ...
+    # System.String Microsoft.UI.Xaml.Controls.CalendarDatePicker::get_CalendarIdentifier()
     @_property
     def calendar_identifier(self) -> str: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarDatePicker::put_CalendarIdentifier(System.String)
     @calendar_identifier.setter
     @typing.final
     def calendar_identifier(self, value: str) -> None: ...
 
 @typing.final
 class CalendarDatePickerDateChangedEventArgs(winrt.system.Object):
+    # Windows.Foundation.IReference`1<Windows.Foundation.DateTime> Microsoft.UI.Xaml.Controls.CalendarDatePickerDateChangedEventArgs::get_NewDate()
     @_property
     def new_date(self) -> typing.Optional[datetime.datetime]: ...
+    # Windows.Foundation.IReference`1<Windows.Foundation.DateTime> Microsoft.UI.Xaml.Controls.CalendarDatePickerDateChangedEventArgs::get_OldDate()
     @_property
     def old_date(self) -> typing.Optional[datetime.datetime]: ...
 
 class CalendarView_Static(Control_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_BlackoutBackgroundProperty()
     @_property
     @typing.final
     def blackout_background_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_BlackoutForegroundProperty()
     @_property
     @typing.final
     def blackout_foreground_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_BlackoutStrikethroughBrushProperty()
     @_property
     @typing.final
     def blackout_strikethrough_brush_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_CalendarIdentifierProperty()
     @_property
     @typing.final
     def calendar_identifier_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_CalendarItemBackgroundProperty()
     @_property
     @typing.final
     def calendar_item_background_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_CalendarItemBorderBrushProperty()
     @_property
     @typing.final
     def calendar_item_border_brush_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_CalendarItemBorderThicknessProperty()
     @_property
     @typing.final
     def calendar_item_border_thickness_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_CalendarItemCornerRadiusProperty()
     @_property
     @typing.final
     def calendar_item_corner_radius_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_CalendarItemDisabledBackgroundProperty()
     @_property
     @typing.final
     def calendar_item_disabled_background_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_CalendarItemForegroundProperty()
     @_property
     @typing.final
     def calendar_item_foreground_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_CalendarItemHoverBackgroundProperty()
     @_property
     @typing.final
     def calendar_item_hover_background_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_CalendarItemPressedBackgroundProperty()
     @_property
     @typing.final
     def calendar_item_pressed_background_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_CalendarViewDayItemStyleProperty()
     @_property
     @typing.final
     def calendar_view_day_item_style_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_DayItemFontFamilyProperty()
     @_property
     @typing.final
     def day_item_font_family_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_DayItemFontSizeProperty()
     @_property
     @typing.final
     def day_item_font_size_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_DayItemFontStyleProperty()
     @_property
     @typing.final
     def day_item_font_style_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_DayItemFontWeightProperty()
     @_property
     @typing.final
     def day_item_font_weight_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_DayItemMarginProperty()
     @_property
     @typing.final
     def day_item_margin_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_DayOfWeekFormatProperty()
     @_property
     @typing.final
     def day_of_week_format_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_DisabledForegroundProperty()
     @_property
     @typing.final
     def disabled_foreground_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_DisplayModeProperty()
     @_property
     @typing.final
     def display_mode_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_FirstDayOfWeekProperty()
     @_property
     @typing.final
     def first_day_of_week_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_FirstOfMonthLabelFontFamilyProperty()
     @_property
     @typing.final
     def first_of_month_label_font_family_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_FirstOfMonthLabelFontSizeProperty()
     @_property
     @typing.final
     def first_of_month_label_font_size_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_FirstOfMonthLabelFontStyleProperty()
     @_property
     @typing.final
     def first_of_month_label_font_style_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_FirstOfMonthLabelFontWeightProperty()
     @_property
     @typing.final
     def first_of_month_label_font_weight_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_FirstOfMonthLabelMarginProperty()
     @_property
     @typing.final
     def first_of_month_label_margin_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_FirstOfYearDecadeLabelFontFamilyProperty()
     @_property
     @typing.final
     def first_of_year_decade_label_font_family_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_FirstOfYearDecadeLabelFontSizeProperty()
     @_property
     @typing.final
     def first_of_year_decade_label_font_size_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_FirstOfYearDecadeLabelFontStyleProperty()
     @_property
     @typing.final
     def first_of_year_decade_label_font_style_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_FirstOfYearDecadeLabelFontWeightProperty()
     @_property
     @typing.final
     def first_of_year_decade_label_font_weight_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_FirstOfYearDecadeLabelMarginProperty()
     @_property
     @typing.final
     def first_of_year_decade_label_margin_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_FocusBorderBrushProperty()
     @_property
     @typing.final
     def focus_border_brush_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_HorizontalDayItemAlignmentProperty()
     @_property
     @typing.final
     def horizontal_day_item_alignment_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_HorizontalFirstOfMonthLabelAlignmentProperty()
     @_property
     @typing.final
     def horizontal_first_of_month_label_alignment_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_HoverBorderBrushProperty()
     @_property
     @typing.final
     def hover_border_brush_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_IsGroupLabelVisibleProperty()
     @_property
     @typing.final
     def is_group_label_visible_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_IsOutOfScopeEnabledProperty()
     @_property
     @typing.final
     def is_out_of_scope_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_IsTodayHighlightedProperty()
     @_property
     @typing.final
     def is_today_highlighted_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_MaxDateProperty()
     @_property
     @typing.final
     def max_date_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_MinDateProperty()
     @_property
     @typing.final
     def min_date_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_MonthYearItemFontFamilyProperty()
     @_property
     @typing.final
     def month_year_item_font_family_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_MonthYearItemFontSizeProperty()
     @_property
     @typing.final
     def month_year_item_font_size_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_MonthYearItemFontStyleProperty()
     @_property
     @typing.final
     def month_year_item_font_style_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_MonthYearItemFontWeightProperty()
     @_property
     @typing.final
     def month_year_item_font_weight_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_MonthYearItemMarginProperty()
     @_property
     @typing.final
     def month_year_item_margin_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_NumberOfWeeksInViewProperty()
     @_property
     @typing.final
     def number_of_weeks_in_view_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_OutOfScopeBackgroundProperty()
     @_property
     @typing.final
     def out_of_scope_background_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_OutOfScopeForegroundProperty()
     @_property
     @typing.final
     def out_of_scope_foreground_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_OutOfScopeHoverForegroundProperty()
     @_property
     @typing.final
     def out_of_scope_hover_foreground_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_OutOfScopePressedForegroundProperty()
     @_property
     @typing.final
     def out_of_scope_pressed_foreground_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_PressedBorderBrushProperty()
     @_property
     @typing.final
     def pressed_border_brush_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_PressedForegroundProperty()
     @_property
     @typing.final
     def pressed_foreground_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_SelectedBorderBrushProperty()
     @_property
     @typing.final
     def selected_border_brush_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_SelectedDatesProperty()
     @_property
     @typing.final
     def selected_dates_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_SelectedDisabledBorderBrushProperty()
     @_property
     @typing.final
     def selected_disabled_border_brush_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_SelectedDisabledForegroundProperty()
     @_property
     @typing.final
     def selected_disabled_foreground_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_SelectedForegroundProperty()
     @_property
     @typing.final
     def selected_foreground_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_SelectedHoverBorderBrushProperty()
     @_property
     @typing.final
     def selected_hover_border_brush_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_SelectedHoverForegroundProperty()
     @_property
     @typing.final
     def selected_hover_foreground_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_SelectedPressedBorderBrushProperty()
     @_property
     @typing.final
     def selected_pressed_border_brush_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_SelectedPressedForegroundProperty()
     @_property
     @typing.final
     def selected_pressed_foreground_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_SelectionModeProperty()
     @_property
     @typing.final
     def selection_mode_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_TemplateSettingsProperty()
     @_property
     @typing.final
     def template_settings_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_TodayBackgroundProperty()
     @_property
     @typing.final
     def today_background_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_TodayBlackoutBackgroundProperty()
     @_property
     @typing.final
     def today_blackout_background_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_TodayBlackoutForegroundProperty()
     @_property
     @typing.final
     def today_blackout_foreground_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_TodayDisabledBackgroundProperty()
     @_property
     @typing.final
     def today_disabled_background_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_TodayFontWeightProperty()
     @_property
     @typing.final
     def today_font_weight_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_TodayForegroundProperty()
     @_property
     @typing.final
     def today_foreground_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_TodayHoverBackgroundProperty()
     @_property
     @typing.final
     def today_hover_background_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_TodayPressedBackgroundProperty()
     @_property
     @typing.final
     def today_pressed_background_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_TodaySelectedInnerBorderBrushProperty()
     @_property
     @typing.final
     def today_selected_inner_border_brush_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_VerticalDayItemAlignmentProperty()
     @_property
     @typing.final
     def vertical_day_item_alignment_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarView::get_VerticalFirstOfMonthLabelAlignmentProperty()
     @_property
     @typing.final
     def vertical_first_of_month_label_alignment_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
@@ -1088,393 +1448,549 @@ class CalendarView_Static(Control_Static):
 class CalendarView(Control, metaclass=CalendarView_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::SetDisplayDate(Windows.Foundation.DateTime)
     def set_display_date(self, date: datetime.datetime, /) -> None: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::SetYearDecadeDisplayDimensions(System.Int32,System.Int32)
     def set_year_decade_display_dimensions(self, columns: winrt.system.Int32, rows: winrt.system.Int32, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.CalendarView::add_CalendarViewDayItemChanging(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.CalendarView,Microsoft.UI.Xaml.Controls.CalendarViewDayItemChangingEventArgs>)
     def add_calendar_view_day_item_changing(self, handler: windows_foundation.TypedEventHandler[CalendarView, CalendarViewDayItemChangingEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::remove_CalendarViewDayItemChanging(Windows.Foundation.EventRegistrationToken)
     def remove_calendar_view_day_item_changing(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.CalendarView::add_SelectedDatesChanged(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.CalendarView,Microsoft.UI.Xaml.Controls.CalendarViewSelectedDatesChangedEventArgs>)
     def add_selected_dates_changed(self, handler: windows_foundation.TypedEventHandler[CalendarView, CalendarViewSelectedDatesChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::remove_SelectedDatesChanged(Windows.Foundation.EventRegistrationToken)
     def remove_selected_dates_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Microsoft.UI.Xaml.Thickness Microsoft.UI.Xaml.Controls.CalendarView::get_DayItemMargin()
     @_property
     def day_item_margin(self) -> microsoft_ui_xaml.Thickness: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_DayItemMargin(Microsoft.UI.Xaml.Thickness)
     @day_item_margin.setter
     @typing.final
     def day_item_margin(self, value: microsoft_ui_xaml.Thickness) -> None: ...
+    # Windows.UI.Text.FontWeight Microsoft.UI.Xaml.Controls.CalendarView::get_DayItemFontWeight()
     @_property
     def day_item_font_weight(self) -> windows_ui_text.FontWeight: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_DayItemFontWeight(Windows.UI.Text.FontWeight)
     @day_item_font_weight.setter
     @typing.final
     def day_item_font_weight(self, value: windows_ui_text.FontWeight) -> None: ...
+    # Windows.UI.Text.FontStyle Microsoft.UI.Xaml.Controls.CalendarView::get_DayItemFontStyle()
     @_property
     def day_item_font_style(self) -> windows_ui_text.FontStyle: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_DayItemFontStyle(Windows.UI.Text.FontStyle)
     @day_item_font_style.setter
     @typing.final
     def day_item_font_style(self, value: windows_ui_text.FontStyle) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.CalendarView::get_DayItemFontSize()
     @_property
     def day_item_font_size(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_DayItemFontSize(System.Double)
     @day_item_font_size.setter
     @typing.final
     def day_item_font_size(self, value: winrt.system.Double) -> None: ...
+    # Microsoft.UI.Xaml.Media.FontFamily Microsoft.UI.Xaml.Controls.CalendarView::get_DayItemFontFamily()
     @_property
     def day_item_font_family(self) -> microsoft_ui_xaml_media.FontFamily: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_DayItemFontFamily(Microsoft.UI.Xaml.Media.FontFamily)
     @day_item_font_family.setter
     @typing.final
     def day_item_font_family(self, value: microsoft_ui_xaml_media.FontFamily) -> None: ...
+    # Microsoft.UI.Xaml.Style Microsoft.UI.Xaml.Controls.CalendarView::get_CalendarViewDayItemStyle()
     @_property
     def calendar_view_day_item_style(self) -> microsoft_ui_xaml.Style: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_CalendarViewDayItemStyle(Microsoft.UI.Xaml.Style)
     @calendar_view_day_item_style.setter
     @typing.final
     def calendar_view_day_item_style(self, value: microsoft_ui_xaml.Style) -> None: ...
+    # Microsoft.UI.Xaml.Media.Brush Microsoft.UI.Xaml.Controls.CalendarView::get_CalendarItemPressedBackground()
     @_property
     def calendar_item_pressed_background(self) -> microsoft_ui_xaml_media.Brush: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_CalendarItemPressedBackground(Microsoft.UI.Xaml.Media.Brush)
     @calendar_item_pressed_background.setter
     @typing.final
     def calendar_item_pressed_background(self, value: microsoft_ui_xaml_media.Brush) -> None: ...
+    # Microsoft.UI.Xaml.Media.Brush Microsoft.UI.Xaml.Controls.CalendarView::get_CalendarItemHoverBackground()
     @_property
     def calendar_item_hover_background(self) -> microsoft_ui_xaml_media.Brush: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_CalendarItemHoverBackground(Microsoft.UI.Xaml.Media.Brush)
     @calendar_item_hover_background.setter
     @typing.final
     def calendar_item_hover_background(self, value: microsoft_ui_xaml_media.Brush) -> None: ...
+    # Microsoft.UI.Xaml.Media.Brush Microsoft.UI.Xaml.Controls.CalendarView::get_TodayBlackoutBackground()
     @_property
     def today_blackout_background(self) -> microsoft_ui_xaml_media.Brush: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_TodayBlackoutBackground(Microsoft.UI.Xaml.Media.Brush)
     @today_blackout_background.setter
     @typing.final
     def today_blackout_background(self, value: microsoft_ui_xaml_media.Brush) -> None: ...
+    # Microsoft.UI.Xaml.Media.Brush Microsoft.UI.Xaml.Controls.CalendarView::get_CalendarItemDisabledBackground()
     @_property
     def calendar_item_disabled_background(self) -> microsoft_ui_xaml_media.Brush: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_CalendarItemDisabledBackground(Microsoft.UI.Xaml.Media.Brush)
     @calendar_item_disabled_background.setter
     @typing.final
     def calendar_item_disabled_background(self, value: microsoft_ui_xaml_media.Brush) -> None: ...
+    # Microsoft.UI.Xaml.CornerRadius Microsoft.UI.Xaml.Controls.CalendarView::get_CalendarItemCornerRadius()
     @_property
     def calendar_item_corner_radius(self) -> microsoft_ui_xaml.CornerRadius: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_CalendarItemCornerRadius(Microsoft.UI.Xaml.CornerRadius)
     @calendar_item_corner_radius.setter
     @typing.final
     def calendar_item_corner_radius(self, value: microsoft_ui_xaml.CornerRadius) -> None: ...
+    # Microsoft.UI.Xaml.Thickness Microsoft.UI.Xaml.Controls.CalendarView::get_CalendarItemBorderThickness()
     @_property
     def calendar_item_border_thickness(self) -> microsoft_ui_xaml.Thickness: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_CalendarItemBorderThickness(Microsoft.UI.Xaml.Thickness)
     @calendar_item_border_thickness.setter
     @typing.final
     def calendar_item_border_thickness(self, value: microsoft_ui_xaml.Thickness) -> None: ...
+    # Microsoft.UI.Xaml.Media.Brush Microsoft.UI.Xaml.Controls.CalendarView::get_CalendarItemBorderBrush()
     @_property
     def calendar_item_border_brush(self) -> microsoft_ui_xaml_media.Brush: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_CalendarItemBorderBrush(Microsoft.UI.Xaml.Media.Brush)
     @calendar_item_border_brush.setter
     @typing.final
     def calendar_item_border_brush(self, value: microsoft_ui_xaml_media.Brush) -> None: ...
+    # Microsoft.UI.Xaml.Media.Brush Microsoft.UI.Xaml.Controls.CalendarView::get_CalendarItemBackground()
     @_property
     def calendar_item_background(self) -> microsoft_ui_xaml_media.Brush: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_CalendarItemBackground(Microsoft.UI.Xaml.Media.Brush)
     @calendar_item_background.setter
     @typing.final
     def calendar_item_background(self, value: microsoft_ui_xaml_media.Brush) -> None: ...
+    # System.String Microsoft.UI.Xaml.Controls.CalendarView::get_CalendarIdentifier()
     @_property
     def calendar_identifier(self) -> str: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_CalendarIdentifier(System.String)
     @calendar_identifier.setter
     @typing.final
     def calendar_identifier(self, value: str) -> None: ...
+    # Microsoft.UI.Xaml.Media.Brush Microsoft.UI.Xaml.Controls.CalendarView::get_BlackoutStrikethroughBrush()
     @_property
     def blackout_strikethrough_brush(self) -> microsoft_ui_xaml_media.Brush: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_BlackoutStrikethroughBrush(Microsoft.UI.Xaml.Media.Brush)
     @blackout_strikethrough_brush.setter
     @typing.final
     def blackout_strikethrough_brush(self, value: microsoft_ui_xaml_media.Brush) -> None: ...
+    # Microsoft.UI.Xaml.Media.Brush Microsoft.UI.Xaml.Controls.CalendarView::get_BlackoutForeground()
     @_property
     def blackout_foreground(self) -> microsoft_ui_xaml_media.Brush: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_BlackoutForeground(Microsoft.UI.Xaml.Media.Brush)
     @blackout_foreground.setter
     @typing.final
     def blackout_foreground(self, value: microsoft_ui_xaml_media.Brush) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.CalendarView::get_IsGroupLabelVisible()
     @_property
     def is_group_label_visible(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_IsGroupLabelVisible(System.Boolean)
     @is_group_label_visible.setter
     @typing.final
     def is_group_label_visible(self, value: bool) -> None: ...
+    # Microsoft.UI.Xaml.Media.Brush Microsoft.UI.Xaml.Controls.CalendarView::get_BlackoutBackground()
     @_property
     def blackout_background(self) -> microsoft_ui_xaml_media.Brush: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_BlackoutBackground(Microsoft.UI.Xaml.Media.Brush)
     @blackout_background.setter
     @typing.final
     def blackout_background(self, value: microsoft_ui_xaml_media.Brush) -> None: ...
+    # System.String Microsoft.UI.Xaml.Controls.CalendarView::get_DayOfWeekFormat()
     @_property
     def day_of_week_format(self) -> str: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_DayOfWeekFormat(System.String)
     @day_of_week_format.setter
     @typing.final
     def day_of_week_format(self, value: str) -> None: ...
+    # Microsoft.UI.Xaml.Media.Brush Microsoft.UI.Xaml.Controls.CalendarView::get_HoverBorderBrush()
     @_property
     def hover_border_brush(self) -> microsoft_ui_xaml_media.Brush: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_HoverBorderBrush(Microsoft.UI.Xaml.Media.Brush)
     @hover_border_brush.setter
     @typing.final
     def hover_border_brush(self, value: microsoft_ui_xaml_media.Brush) -> None: ...
+    # Microsoft.UI.Xaml.HorizontalAlignment Microsoft.UI.Xaml.Controls.CalendarView::get_HorizontalFirstOfMonthLabelAlignment()
     @_property
     def horizontal_first_of_month_label_alignment(self) -> microsoft_ui_xaml.HorizontalAlignment: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_HorizontalFirstOfMonthLabelAlignment(Microsoft.UI.Xaml.HorizontalAlignment)
     @horizontal_first_of_month_label_alignment.setter
     @typing.final
     def horizontal_first_of_month_label_alignment(self, value: microsoft_ui_xaml.HorizontalAlignment) -> None: ...
+    # Microsoft.UI.Xaml.HorizontalAlignment Microsoft.UI.Xaml.Controls.CalendarView::get_HorizontalDayItemAlignment()
     @_property
     def horizontal_day_item_alignment(self) -> microsoft_ui_xaml.HorizontalAlignment: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_HorizontalDayItemAlignment(Microsoft.UI.Xaml.HorizontalAlignment)
     @horizontal_day_item_alignment.setter
     @typing.final
     def horizontal_day_item_alignment(self, value: microsoft_ui_xaml.HorizontalAlignment) -> None: ...
+    # Microsoft.UI.Xaml.Media.Brush Microsoft.UI.Xaml.Controls.CalendarView::get_FocusBorderBrush()
     @_property
     def focus_border_brush(self) -> microsoft_ui_xaml_media.Brush: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_FocusBorderBrush(Microsoft.UI.Xaml.Media.Brush)
     @focus_border_brush.setter
     @typing.final
     def focus_border_brush(self, value: microsoft_ui_xaml_media.Brush) -> None: ...
+    # Microsoft.UI.Xaml.Thickness Microsoft.UI.Xaml.Controls.CalendarView::get_FirstOfYearDecadeLabelMargin()
     @_property
     def first_of_year_decade_label_margin(self) -> microsoft_ui_xaml.Thickness: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_FirstOfYearDecadeLabelMargin(Microsoft.UI.Xaml.Thickness)
     @first_of_year_decade_label_margin.setter
     @typing.final
     def first_of_year_decade_label_margin(self, value: microsoft_ui_xaml.Thickness) -> None: ...
+    # Windows.UI.Text.FontWeight Microsoft.UI.Xaml.Controls.CalendarView::get_FirstOfYearDecadeLabelFontWeight()
     @_property
     def first_of_year_decade_label_font_weight(self) -> windows_ui_text.FontWeight: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_FirstOfYearDecadeLabelFontWeight(Windows.UI.Text.FontWeight)
     @first_of_year_decade_label_font_weight.setter
     @typing.final
     def first_of_year_decade_label_font_weight(self, value: windows_ui_text.FontWeight) -> None: ...
+    # Windows.UI.Text.FontStyle Microsoft.UI.Xaml.Controls.CalendarView::get_FirstOfYearDecadeLabelFontStyle()
     @_property
     def first_of_year_decade_label_font_style(self) -> windows_ui_text.FontStyle: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_FirstOfYearDecadeLabelFontStyle(Windows.UI.Text.FontStyle)
     @first_of_year_decade_label_font_style.setter
     @typing.final
     def first_of_year_decade_label_font_style(self, value: windows_ui_text.FontStyle) -> None: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.CalendarView::get_NumberOfWeeksInView()
     @_property
     def number_of_weeks_in_view(self) -> winrt.system.Int32: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_NumberOfWeeksInView(System.Int32)
     @number_of_weeks_in_view.setter
     @typing.final
     def number_of_weeks_in_view(self, value: winrt.system.Int32) -> None: ...
+    # Microsoft.UI.Xaml.Media.FontFamily Microsoft.UI.Xaml.Controls.CalendarView::get_FirstOfYearDecadeLabelFontFamily()
     @_property
     def first_of_year_decade_label_font_family(self) -> microsoft_ui_xaml_media.FontFamily: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_FirstOfYearDecadeLabelFontFamily(Microsoft.UI.Xaml.Media.FontFamily)
     @first_of_year_decade_label_font_family.setter
     @typing.final
     def first_of_year_decade_label_font_family(self, value: microsoft_ui_xaml_media.FontFamily) -> None: ...
+    # Microsoft.UI.Xaml.Thickness Microsoft.UI.Xaml.Controls.CalendarView::get_FirstOfMonthLabelMargin()
     @_property
     def first_of_month_label_margin(self) -> microsoft_ui_xaml.Thickness: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_FirstOfMonthLabelMargin(Microsoft.UI.Xaml.Thickness)
     @first_of_month_label_margin.setter
     @typing.final
     def first_of_month_label_margin(self, value: microsoft_ui_xaml.Thickness) -> None: ...
+    # Windows.UI.Text.FontWeight Microsoft.UI.Xaml.Controls.CalendarView::get_FirstOfMonthLabelFontWeight()
     @_property
     def first_of_month_label_font_weight(self) -> windows_ui_text.FontWeight: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_FirstOfMonthLabelFontWeight(Windows.UI.Text.FontWeight)
     @first_of_month_label_font_weight.setter
     @typing.final
     def first_of_month_label_font_weight(self, value: windows_ui_text.FontWeight) -> None: ...
+    # Windows.UI.Text.FontStyle Microsoft.UI.Xaml.Controls.CalendarView::get_FirstOfMonthLabelFontStyle()
     @_property
     def first_of_month_label_font_style(self) -> windows_ui_text.FontStyle: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_FirstOfMonthLabelFontStyle(Windows.UI.Text.FontStyle)
     @first_of_month_label_font_style.setter
     @typing.final
     def first_of_month_label_font_style(self, value: windows_ui_text.FontStyle) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.CalendarView::get_FirstOfMonthLabelFontSize()
     @_property
     def first_of_month_label_font_size(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_FirstOfMonthLabelFontSize(System.Double)
     @first_of_month_label_font_size.setter
     @typing.final
     def first_of_month_label_font_size(self, value: winrt.system.Double) -> None: ...
+    # Microsoft.UI.Xaml.Media.FontFamily Microsoft.UI.Xaml.Controls.CalendarView::get_FirstOfMonthLabelFontFamily()
     @_property
     def first_of_month_label_font_family(self) -> microsoft_ui_xaml_media.FontFamily: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_FirstOfMonthLabelFontFamily(Microsoft.UI.Xaml.Media.FontFamily)
     @first_of_month_label_font_family.setter
     @typing.final
     def first_of_month_label_font_family(self, value: microsoft_ui_xaml_media.FontFamily) -> None: ...
+    # Windows.Globalization.DayOfWeek Microsoft.UI.Xaml.Controls.CalendarView::get_FirstDayOfWeek()
     @_property
     def first_day_of_week(self) -> windows_globalization.DayOfWeek: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_FirstDayOfWeek(Windows.Globalization.DayOfWeek)
     @first_day_of_week.setter
     @typing.final
     def first_day_of_week(self, value: windows_globalization.DayOfWeek) -> None: ...
+    # Microsoft.UI.Xaml.Controls.CalendarViewDisplayMode Microsoft.UI.Xaml.Controls.CalendarView::get_DisplayMode()
     @_property
     def display_mode(self) -> CalendarViewDisplayMode: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_DisplayMode(Microsoft.UI.Xaml.Controls.CalendarViewDisplayMode)
     @display_mode.setter
     @typing.final
     def display_mode(self, value: CalendarViewDisplayMode) -> None: ...
+    # Microsoft.UI.Xaml.Media.Brush Microsoft.UI.Xaml.Controls.CalendarView::get_DisabledForeground()
     @_property
     def disabled_foreground(self) -> microsoft_ui_xaml_media.Brush: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_DisabledForeground(Microsoft.UI.Xaml.Media.Brush)
     @disabled_foreground.setter
     @typing.final
     def disabled_foreground(self, value: microsoft_ui_xaml_media.Brush) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.CalendarView::get_IsOutOfScopeEnabled()
     @_property
     def is_out_of_scope_enabled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_IsOutOfScopeEnabled(System.Boolean)
     @is_out_of_scope_enabled.setter
     @typing.final
     def is_out_of_scope_enabled(self, value: bool) -> None: ...
+    # Microsoft.UI.Xaml.Media.Brush Microsoft.UI.Xaml.Controls.CalendarView::get_SelectedDisabledBorderBrush()
     @_property
     def selected_disabled_border_brush(self) -> microsoft_ui_xaml_media.Brush: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_SelectedDisabledBorderBrush(Microsoft.UI.Xaml.Media.Brush)
     @selected_disabled_border_brush.setter
     @typing.final
     def selected_disabled_border_brush(self, value: microsoft_ui_xaml_media.Brush) -> None: ...
+    # Microsoft.UI.Xaml.Media.Brush Microsoft.UI.Xaml.Controls.CalendarView::get_SelectedBorderBrush()
     @_property
     def selected_border_brush(self) -> microsoft_ui_xaml_media.Brush: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_SelectedBorderBrush(Microsoft.UI.Xaml.Media.Brush)
     @selected_border_brush.setter
     @typing.final
     def selected_border_brush(self, value: microsoft_ui_xaml_media.Brush) -> None: ...
+    # Microsoft.UI.Xaml.Media.Brush Microsoft.UI.Xaml.Controls.CalendarView::get_PressedForeground()
     @_property
     def pressed_foreground(self) -> microsoft_ui_xaml_media.Brush: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_PressedForeground(Microsoft.UI.Xaml.Media.Brush)
     @pressed_foreground.setter
     @typing.final
     def pressed_foreground(self, value: microsoft_ui_xaml_media.Brush) -> None: ...
+    # Microsoft.UI.Xaml.Media.Brush Microsoft.UI.Xaml.Controls.CalendarView::get_PressedBorderBrush()
     @_property
     def pressed_border_brush(self) -> microsoft_ui_xaml_media.Brush: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_PressedBorderBrush(Microsoft.UI.Xaml.Media.Brush)
     @pressed_border_brush.setter
     @typing.final
     def pressed_border_brush(self, value: microsoft_ui_xaml_media.Brush) -> None: ...
+    # Microsoft.UI.Xaml.Media.Brush Microsoft.UI.Xaml.Controls.CalendarView::get_OutOfScopePressedForeground()
     @_property
     def out_of_scope_pressed_foreground(self) -> microsoft_ui_xaml_media.Brush: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_OutOfScopePressedForeground(Microsoft.UI.Xaml.Media.Brush)
     @out_of_scope_pressed_foreground.setter
     @typing.final
     def out_of_scope_pressed_foreground(self, value: microsoft_ui_xaml_media.Brush) -> None: ...
+    # Microsoft.UI.Xaml.Media.Brush Microsoft.UI.Xaml.Controls.CalendarView::get_OutOfScopeHoverForeground()
     @_property
     def out_of_scope_hover_foreground(self) -> microsoft_ui_xaml_media.Brush: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_OutOfScopeHoverForeground(Microsoft.UI.Xaml.Media.Brush)
     @out_of_scope_hover_foreground.setter
     @typing.final
     def out_of_scope_hover_foreground(self, value: microsoft_ui_xaml_media.Brush) -> None: ...
+    # Microsoft.UI.Xaml.Media.Brush Microsoft.UI.Xaml.Controls.CalendarView::get_OutOfScopeForeground()
     @_property
     def out_of_scope_foreground(self) -> microsoft_ui_xaml_media.Brush: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_OutOfScopeForeground(Microsoft.UI.Xaml.Media.Brush)
     @out_of_scope_foreground.setter
     @typing.final
     def out_of_scope_foreground(self, value: microsoft_ui_xaml_media.Brush) -> None: ...
+    # Microsoft.UI.Xaml.Media.Brush Microsoft.UI.Xaml.Controls.CalendarView::get_OutOfScopeBackground()
     @_property
     def out_of_scope_background(self) -> microsoft_ui_xaml_media.Brush: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_OutOfScopeBackground(Microsoft.UI.Xaml.Media.Brush)
     @out_of_scope_background.setter
     @typing.final
     def out_of_scope_background(self, value: microsoft_ui_xaml_media.Brush) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.CalendarView::get_FirstOfYearDecadeLabelFontSize()
     @_property
     def first_of_year_decade_label_font_size(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_FirstOfYearDecadeLabelFontSize(System.Double)
     @first_of_year_decade_label_font_size.setter
     @typing.final
     def first_of_year_decade_label_font_size(self, value: winrt.system.Double) -> None: ...
+    # Microsoft.UI.Xaml.Thickness Microsoft.UI.Xaml.Controls.CalendarView::get_MonthYearItemMargin()
     @_property
     def month_year_item_margin(self) -> microsoft_ui_xaml.Thickness: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_MonthYearItemMargin(Microsoft.UI.Xaml.Thickness)
     @month_year_item_margin.setter
     @typing.final
     def month_year_item_margin(self, value: microsoft_ui_xaml.Thickness) -> None: ...
+    # Windows.UI.Text.FontWeight Microsoft.UI.Xaml.Controls.CalendarView::get_MonthYearItemFontWeight()
     @_property
     def month_year_item_font_weight(self) -> windows_ui_text.FontWeight: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_MonthYearItemFontWeight(Windows.UI.Text.FontWeight)
     @month_year_item_font_weight.setter
     @typing.final
     def month_year_item_font_weight(self, value: windows_ui_text.FontWeight) -> None: ...
+    # Windows.UI.Text.FontStyle Microsoft.UI.Xaml.Controls.CalendarView::get_MonthYearItemFontStyle()
     @_property
     def month_year_item_font_style(self) -> windows_ui_text.FontStyle: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_MonthYearItemFontStyle(Windows.UI.Text.FontStyle)
     @month_year_item_font_style.setter
     @typing.final
     def month_year_item_font_style(self, value: windows_ui_text.FontStyle) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.CalendarView::get_MonthYearItemFontSize()
     @_property
     def month_year_item_font_size(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_MonthYearItemFontSize(System.Double)
     @month_year_item_font_size.setter
     @typing.final
     def month_year_item_font_size(self, value: winrt.system.Double) -> None: ...
+    # Microsoft.UI.Xaml.Media.FontFamily Microsoft.UI.Xaml.Controls.CalendarView::get_MonthYearItemFontFamily()
     @_property
     def month_year_item_font_family(self) -> microsoft_ui_xaml_media.FontFamily: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_MonthYearItemFontFamily(Microsoft.UI.Xaml.Media.FontFamily)
     @month_year_item_font_family.setter
     @typing.final
     def month_year_item_font_family(self, value: microsoft_ui_xaml_media.FontFamily) -> None: ...
+    # Windows.Foundation.DateTime Microsoft.UI.Xaml.Controls.CalendarView::get_MinDate()
     @_property
     def min_date(self) -> datetime.datetime: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_MinDate(Windows.Foundation.DateTime)
     @min_date.setter
     @typing.final
     def min_date(self, value: datetime.datetime) -> None: ...
+    # Windows.Foundation.DateTime Microsoft.UI.Xaml.Controls.CalendarView::get_MaxDate()
     @_property
     def max_date(self) -> datetime.datetime: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_MaxDate(Windows.Foundation.DateTime)
     @max_date.setter
     @typing.final
     def max_date(self, value: datetime.datetime) -> None: ...
+    # Microsoft.UI.Xaml.Media.Brush Microsoft.UI.Xaml.Controls.CalendarView::get_SelectedDisabledForeground()
     @_property
     def selected_disabled_foreground(self) -> microsoft_ui_xaml_media.Brush: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_SelectedDisabledForeground(Microsoft.UI.Xaml.Media.Brush)
     @selected_disabled_foreground.setter
     @typing.final
     def selected_disabled_foreground(self, value: microsoft_ui_xaml_media.Brush) -> None: ...
+    # Microsoft.UI.Xaml.VerticalAlignment Microsoft.UI.Xaml.Controls.CalendarView::get_VerticalFirstOfMonthLabelAlignment()
     @_property
     def vertical_first_of_month_label_alignment(self) -> microsoft_ui_xaml.VerticalAlignment: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_VerticalFirstOfMonthLabelAlignment(Microsoft.UI.Xaml.VerticalAlignment)
     @vertical_first_of_month_label_alignment.setter
     @typing.final
     def vertical_first_of_month_label_alignment(self, value: microsoft_ui_xaml.VerticalAlignment) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.CalendarView::get_IsTodayHighlighted()
     @_property
     def is_today_highlighted(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_IsTodayHighlighted(System.Boolean)
     @is_today_highlighted.setter
     @typing.final
     def is_today_highlighted(self, value: bool) -> None: ...
+    # Microsoft.UI.Xaml.VerticalAlignment Microsoft.UI.Xaml.Controls.CalendarView::get_VerticalDayItemAlignment()
     @_property
     def vertical_day_item_alignment(self) -> microsoft_ui_xaml.VerticalAlignment: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_VerticalDayItemAlignment(Microsoft.UI.Xaml.VerticalAlignment)
     @vertical_day_item_alignment.setter
     @typing.final
     def vertical_day_item_alignment(self, value: microsoft_ui_xaml.VerticalAlignment) -> None: ...
+    # Microsoft.UI.Xaml.Media.Brush Microsoft.UI.Xaml.Controls.CalendarView::get_TodaySelectedInnerBorderBrush()
     @_property
     def today_selected_inner_border_brush(self) -> microsoft_ui_xaml_media.Brush: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_TodaySelectedInnerBorderBrush(Microsoft.UI.Xaml.Media.Brush)
     @today_selected_inner_border_brush.setter
     @typing.final
     def today_selected_inner_border_brush(self, value: microsoft_ui_xaml_media.Brush) -> None: ...
+    # Microsoft.UI.Xaml.Media.Brush Microsoft.UI.Xaml.Controls.CalendarView::get_TodayPressedBackground()
     @_property
     def today_pressed_background(self) -> microsoft_ui_xaml_media.Brush: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_TodayPressedBackground(Microsoft.UI.Xaml.Media.Brush)
     @today_pressed_background.setter
     @typing.final
     def today_pressed_background(self, value: microsoft_ui_xaml_media.Brush) -> None: ...
+    # Microsoft.UI.Xaml.Media.Brush Microsoft.UI.Xaml.Controls.CalendarView::get_TodayHoverBackground()
     @_property
     def today_hover_background(self) -> microsoft_ui_xaml_media.Brush: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_TodayHoverBackground(Microsoft.UI.Xaml.Media.Brush)
     @today_hover_background.setter
     @typing.final
     def today_hover_background(self, value: microsoft_ui_xaml_media.Brush) -> None: ...
+    # Microsoft.UI.Xaml.Media.Brush Microsoft.UI.Xaml.Controls.CalendarView::get_TodayForeground()
     @_property
     def today_foreground(self) -> microsoft_ui_xaml_media.Brush: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_TodayForeground(Microsoft.UI.Xaml.Media.Brush)
     @today_foreground.setter
     @typing.final
     def today_foreground(self, value: microsoft_ui_xaml_media.Brush) -> None: ...
+    # Windows.UI.Text.FontWeight Microsoft.UI.Xaml.Controls.CalendarView::get_TodayFontWeight()
     @_property
     def today_font_weight(self) -> windows_ui_text.FontWeight: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_TodayFontWeight(Windows.UI.Text.FontWeight)
     @today_font_weight.setter
     @typing.final
     def today_font_weight(self, value: windows_ui_text.FontWeight) -> None: ...
+    # Microsoft.UI.Xaml.Media.Brush Microsoft.UI.Xaml.Controls.CalendarView::get_TodayDisabledBackground()
     @_property
     def today_disabled_background(self) -> microsoft_ui_xaml_media.Brush: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_TodayDisabledBackground(Microsoft.UI.Xaml.Media.Brush)
     @today_disabled_background.setter
     @typing.final
     def today_disabled_background(self, value: microsoft_ui_xaml_media.Brush) -> None: ...
+    # Microsoft.UI.Xaml.Media.Brush Microsoft.UI.Xaml.Controls.CalendarView::get_TodayBlackoutForeground()
     @_property
     def today_blackout_foreground(self) -> microsoft_ui_xaml_media.Brush: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_TodayBlackoutForeground(Microsoft.UI.Xaml.Media.Brush)
     @today_blackout_foreground.setter
     @typing.final
     def today_blackout_foreground(self, value: microsoft_ui_xaml_media.Brush) -> None: ...
+    # Microsoft.UI.Xaml.Media.Brush Microsoft.UI.Xaml.Controls.CalendarView::get_CalendarItemForeground()
     @_property
     def calendar_item_foreground(self) -> microsoft_ui_xaml_media.Brush: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_CalendarItemForeground(Microsoft.UI.Xaml.Media.Brush)
     @calendar_item_foreground.setter
     @typing.final
     def calendar_item_foreground(self, value: microsoft_ui_xaml_media.Brush) -> None: ...
+    # Microsoft.UI.Xaml.Media.Brush Microsoft.UI.Xaml.Controls.CalendarView::get_TodayBackground()
     @_property
     def today_background(self) -> microsoft_ui_xaml_media.Brush: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_TodayBackground(Microsoft.UI.Xaml.Media.Brush)
     @today_background.setter
     @typing.final
     def today_background(self, value: microsoft_ui_xaml_media.Brush) -> None: ...
+    # Microsoft.UI.Xaml.Controls.CalendarViewSelectionMode Microsoft.UI.Xaml.Controls.CalendarView::get_SelectionMode()
     @_property
     def selection_mode(self) -> CalendarViewSelectionMode: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_SelectionMode(Microsoft.UI.Xaml.Controls.CalendarViewSelectionMode)
     @selection_mode.setter
     @typing.final
     def selection_mode(self, value: CalendarViewSelectionMode) -> None: ...
+    # Microsoft.UI.Xaml.Media.Brush Microsoft.UI.Xaml.Controls.CalendarView::get_SelectedPressedForeground()
     @_property
     def selected_pressed_foreground(self) -> microsoft_ui_xaml_media.Brush: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_SelectedPressedForeground(Microsoft.UI.Xaml.Media.Brush)
     @selected_pressed_foreground.setter
     @typing.final
     def selected_pressed_foreground(self, value: microsoft_ui_xaml_media.Brush) -> None: ...
+    # Microsoft.UI.Xaml.Media.Brush Microsoft.UI.Xaml.Controls.CalendarView::get_SelectedPressedBorderBrush()
     @_property
     def selected_pressed_border_brush(self) -> microsoft_ui_xaml_media.Brush: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_SelectedPressedBorderBrush(Microsoft.UI.Xaml.Media.Brush)
     @selected_pressed_border_brush.setter
     @typing.final
     def selected_pressed_border_brush(self, value: microsoft_ui_xaml_media.Brush) -> None: ...
+    # Microsoft.UI.Xaml.Media.Brush Microsoft.UI.Xaml.Controls.CalendarView::get_SelectedHoverForeground()
     @_property
     def selected_hover_foreground(self) -> microsoft_ui_xaml_media.Brush: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_SelectedHoverForeground(Microsoft.UI.Xaml.Media.Brush)
     @selected_hover_foreground.setter
     @typing.final
     def selected_hover_foreground(self, value: microsoft_ui_xaml_media.Brush) -> None: ...
+    # Microsoft.UI.Xaml.Media.Brush Microsoft.UI.Xaml.Controls.CalendarView::get_SelectedHoverBorderBrush()
     @_property
     def selected_hover_border_brush(self) -> microsoft_ui_xaml_media.Brush: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_SelectedHoverBorderBrush(Microsoft.UI.Xaml.Media.Brush)
     @selected_hover_border_brush.setter
     @typing.final
     def selected_hover_border_brush(self, value: microsoft_ui_xaml_media.Brush) -> None: ...
+    # Microsoft.UI.Xaml.Media.Brush Microsoft.UI.Xaml.Controls.CalendarView::get_SelectedForeground()
     @_property
     def selected_foreground(self) -> microsoft_ui_xaml_media.Brush: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarView::put_SelectedForeground(Microsoft.UI.Xaml.Media.Brush)
     @selected_foreground.setter
     @typing.final
     def selected_foreground(self, value: microsoft_ui_xaml_media.Brush) -> None: ...
+    # Windows.Foundation.Collections.IVector`1<Windows.Foundation.DateTime> Microsoft.UI.Xaml.Controls.CalendarView::get_SelectedDates()
     @_property
     @typing.final
     def selected_dates(self) -> typing.MutableSequence[datetime.datetime]: ...
+    # Microsoft.UI.Xaml.Controls.Primitives.CalendarViewTemplateSettings Microsoft.UI.Xaml.Controls.CalendarView::get_TemplateSettings()
     @_property
     @typing.final
     def template_settings(self) -> microsoft_ui_xaml_controls_primitives.CalendarViewTemplateSettings: ...
 
 class CalendarViewDayItem_Static(Control_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarViewDayItem::get_DateProperty()
     @_property
     @typing.final
     def date_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CalendarViewDayItem::get_IsBlackoutProperty()
     @_property
     @typing.final
     def is_blackout_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
@@ -1482,52 +1998,73 @@ class CalendarViewDayItem_Static(Control_Static):
 class CalendarViewDayItem(Control, metaclass=CalendarViewDayItem_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarViewDayItem::SetDensityColors(Windows.Foundation.Collections.IIterable`1<Windows.UI.Color>)
     def set_density_colors(self, colors: typing.Iterable[windows_ui.Color], /) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.CalendarViewDayItem::get_IsBlackout()
     @_property
     def is_blackout(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarViewDayItem::put_IsBlackout(System.Boolean)
     @is_blackout.setter
     @typing.final
     def is_blackout(self, value: bool) -> None: ...
+    # Windows.Foundation.DateTime Microsoft.UI.Xaml.Controls.CalendarViewDayItem::get_Date()
     @_property
     @typing.final
     def date(self) -> datetime.datetime: ...
 
 @typing.final
 class CalendarViewDayItemChangingEventArgs(winrt.system.Object):
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarViewDayItemChangingEventArgs::RegisterUpdateCallback(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.CalendarView,Microsoft.UI.Xaml.Controls.CalendarViewDayItemChangingEventArgs>)
     def register_update_callback(self, callback: windows_foundation.TypedEventHandler[CalendarView, CalendarViewDayItemChangingEventArgs], /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CalendarViewDayItemChangingEventArgs::RegisterUpdateCallback(System.UInt32,Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.CalendarView,Microsoft.UI.Xaml.Controls.CalendarViewDayItemChangingEventArgs>)
     def register_update_callback_with_phase(self, callback_phase: winrt.system.UInt32, callback: windows_foundation.TypedEventHandler[CalendarView, CalendarViewDayItemChangingEventArgs], /) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.CalendarViewDayItemChangingEventArgs::get_InRecycleQueue()
     @_property
     def in_recycle_queue(self) -> bool: ...
+    # Microsoft.UI.Xaml.Controls.CalendarViewDayItem Microsoft.UI.Xaml.Controls.CalendarViewDayItemChangingEventArgs::get_Item()
     @_property
     def item(self) -> CalendarViewDayItem: ...
+    # System.UInt32 Microsoft.UI.Xaml.Controls.CalendarViewDayItemChangingEventArgs::get_Phase()
     @_property
     def phase(self) -> winrt.system.UInt32: ...
 
 @typing.final
 class CalendarViewSelectedDatesChangedEventArgs(winrt.system.Object):
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Foundation.DateTime> Microsoft.UI.Xaml.Controls.CalendarViewSelectedDatesChangedEventArgs::get_AddedDates()
     @_property
     def added_dates(self) -> typing.Sequence[datetime.datetime]: ...
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Foundation.DateTime> Microsoft.UI.Xaml.Controls.CalendarViewSelectedDatesChangedEventArgs::get_RemovedDates()
     @_property
     def removed_dates(self) -> typing.Sequence[datetime.datetime]: ...
 
 @typing.final
 class CandidateWindowBoundsChangedEventArgs(winrt.system.Object):
+    # Windows.Foundation.Rect Microsoft.UI.Xaml.Controls.CandidateWindowBoundsChangedEventArgs::get_Bounds()
     @_property
     def bounds(self) -> windows_foundation.Rect: ...
 
 class Canvas_Static(Panel_Static):
+    # System.Double Microsoft.UI.Xaml.Controls.Canvas::GetLeft(Microsoft.UI.Xaml.UIElement)
     def get_left(cls, element: microsoft_ui_xaml.UIElement, /) -> winrt.system.Double: ...
+    # System.Double Microsoft.UI.Xaml.Controls.Canvas::GetTop(Microsoft.UI.Xaml.UIElement)
     def get_top(cls, element: microsoft_ui_xaml.UIElement, /) -> winrt.system.Double: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.Canvas::GetZIndex(Microsoft.UI.Xaml.UIElement)
     def get_z_index(cls, element: microsoft_ui_xaml.UIElement, /) -> winrt.system.Int32: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Canvas::SetLeft(Microsoft.UI.Xaml.UIElement,System.Double)
     def set_left(cls, element: microsoft_ui_xaml.UIElement, length: winrt.system.Double, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Canvas::SetTop(Microsoft.UI.Xaml.UIElement,System.Double)
     def set_top(cls, element: microsoft_ui_xaml.UIElement, length: winrt.system.Double, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Canvas::SetZIndex(Microsoft.UI.Xaml.UIElement,System.Int32)
     def set_z_index(cls, element: microsoft_ui_xaml.UIElement, value: winrt.system.Int32, /) -> None: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Canvas::get_LeftProperty()
     @_property
     @typing.final
     def left_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Canvas::get_TopProperty()
     @_property
     @typing.final
     def top_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Canvas::get_ZIndexProperty()
     @_property
     @typing.final
     def z_index_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
@@ -1538,107 +2075,143 @@ class Canvas(Panel, metaclass=Canvas_Static):
 @typing.final
 class ChoosingGroupHeaderContainerEventArgs(winrt.system.Object):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Microsoft.UI.Xaml.Controls.ListViewBaseHeaderItem Microsoft.UI.Xaml.Controls.ChoosingGroupHeaderContainerEventArgs::get_GroupHeaderContainer()
     @_property
     def group_header_container(self) -> ListViewBaseHeaderItem: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ChoosingGroupHeaderContainerEventArgs::put_GroupHeaderContainer(Microsoft.UI.Xaml.Controls.ListViewBaseHeaderItem)
     @group_header_container.setter
     def group_header_container(self, value: ListViewBaseHeaderItem) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.ChoosingGroupHeaderContainerEventArgs::get_Group()
     @_property
     def group(self) -> winrt.system.Object: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.ChoosingGroupHeaderContainerEventArgs::get_GroupIndex()
     @_property
     def group_index(self) -> winrt.system.Int32: ...
 
 @typing.final
 class ChoosingItemContainerEventArgs(winrt.system.Object):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Microsoft.UI.Xaml.Controls.Primitives.SelectorItem Microsoft.UI.Xaml.Controls.ChoosingItemContainerEventArgs::get_ItemContainer()
     @_property
     def item_container(self) -> microsoft_ui_xaml_controls_primitives.SelectorItem: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ChoosingItemContainerEventArgs::put_ItemContainer(Microsoft.UI.Xaml.Controls.Primitives.SelectorItem)
     @item_container.setter
     def item_container(self, value: microsoft_ui_xaml_controls_primitives.SelectorItem) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ChoosingItemContainerEventArgs::get_IsContainerPrepared()
     @_property
     def is_container_prepared(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ChoosingItemContainerEventArgs::put_IsContainerPrepared(System.Boolean)
     @is_container_prepared.setter
     def is_container_prepared(self, value: bool) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.ChoosingItemContainerEventArgs::get_Item()
     @_property
     def item(self) -> winrt.system.Object: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.ChoosingItemContainerEventArgs::get_ItemIndex()
     @_property
     def item_index(self) -> winrt.system.Int32: ...
 
 @typing.final
 class CleanUpVirtualizedItemEventArgs(microsoft_ui_xaml.RoutedEventArgs):
+    # System.Boolean Microsoft.UI.Xaml.Controls.CleanUpVirtualizedItemEventArgs::get_Cancel()
     @_property
     def cancel(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CleanUpVirtualizedItemEventArgs::put_Cancel(System.Boolean)
     @cancel.setter
     def cancel(self, value: bool) -> None: ...
+    # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.Controls.CleanUpVirtualizedItemEventArgs::get_UIElement()
     @_property
     def ui_element(self) -> microsoft_ui_xaml.UIElement: ...
+    # System.Object Microsoft.UI.Xaml.Controls.CleanUpVirtualizedItemEventArgs::get_Value()
     @_property
     def value(self) -> winrt.system.Object: ...
 
 @typing.final
 class ColorChangedEventArgs(winrt.system.Object):
+    # Windows.UI.Color Microsoft.UI.Xaml.Controls.ColorChangedEventArgs::get_NewColor()
     @_property
     def new_color(self) -> windows_ui.Color: ...
+    # Windows.UI.Color Microsoft.UI.Xaml.Controls.ColorChangedEventArgs::get_OldColor()
     @_property
     def old_color(self) -> windows_ui.Color: ...
 
 class ColorPicker_Static(Control_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ColorPicker::get_ColorProperty()
     @_property
     @typing.final
     def color_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ColorPicker::get_ColorSpectrumComponentsProperty()
     @_property
     @typing.final
     def color_spectrum_components_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ColorPicker::get_ColorSpectrumShapeProperty()
     @_property
     @typing.final
     def color_spectrum_shape_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ColorPicker::get_IsAlphaEnabledProperty()
     @_property
     @typing.final
     def is_alpha_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ColorPicker::get_IsAlphaSliderVisibleProperty()
     @_property
     @typing.final
     def is_alpha_slider_visible_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ColorPicker::get_IsAlphaTextInputVisibleProperty()
     @_property
     @typing.final
     def is_alpha_text_input_visible_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ColorPicker::get_IsColorChannelTextInputVisibleProperty()
     @_property
     @typing.final
     def is_color_channel_text_input_visible_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ColorPicker::get_IsColorPreviewVisibleProperty()
     @_property
     @typing.final
     def is_color_preview_visible_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ColorPicker::get_IsColorSliderVisibleProperty()
     @_property
     @typing.final
     def is_color_slider_visible_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ColorPicker::get_IsColorSpectrumVisibleProperty()
     @_property
     @typing.final
     def is_color_spectrum_visible_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ColorPicker::get_IsHexInputVisibleProperty()
     @_property
     @typing.final
     def is_hex_input_visible_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ColorPicker::get_IsMoreButtonVisibleProperty()
     @_property
     @typing.final
     def is_more_button_visible_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ColorPicker::get_MaxHueProperty()
     @_property
     @typing.final
     def max_hue_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ColorPicker::get_MaxSaturationProperty()
     @_property
     @typing.final
     def max_saturation_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ColorPicker::get_MaxValueProperty()
     @_property
     @typing.final
     def max_value_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ColorPicker::get_MinHueProperty()
     @_property
     @typing.final
     def min_hue_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ColorPicker::get_MinSaturationProperty()
     @_property
     @typing.final
     def min_saturation_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ColorPicker::get_MinValueProperty()
     @_property
     @typing.final
     def min_value_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ColorPicker::get_PreviousColorProperty()
     @_property
     @typing.final
     def previous_color_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ColorPicker::get_OrientationProperty()
     @_property
     @typing.final
     def orientation_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
@@ -1646,134 +2219,186 @@ class ColorPicker_Static(Control_Static):
 class ColorPicker(Control, metaclass=ColorPicker_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.ColorPicker::add_ColorChanged(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.ColorPicker,Microsoft.UI.Xaml.Controls.ColorChangedEventArgs>)
     def add_color_changed(self, handler: windows_foundation.TypedEventHandler[ColorPicker, ColorChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.ColorPicker::remove_ColorChanged(Windows.Foundation.EventRegistrationToken)
     def remove_color_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.IReference`1<Windows.UI.Color> Microsoft.UI.Xaml.Controls.ColorPicker::get_PreviousColor()
     @_property
     def previous_color(self) -> typing.Optional[windows_ui.Color]: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ColorPicker::put_PreviousColor(Windows.Foundation.IReference`1<Windows.UI.Color>)
     @previous_color.setter
     @typing.final
     def previous_color(self, value: typing.Optional[windows_ui.Color]) -> None: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.ColorPicker::get_MinValue()
     @_property
     def min_value(self) -> winrt.system.Int32: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ColorPicker::put_MinValue(System.Int32)
     @min_value.setter
     @typing.final
     def min_value(self, value: winrt.system.Int32) -> None: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.ColorPicker::get_MinSaturation()
     @_property
     def min_saturation(self) -> winrt.system.Int32: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ColorPicker::put_MinSaturation(System.Int32)
     @min_saturation.setter
     @typing.final
     def min_saturation(self, value: winrt.system.Int32) -> None: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.ColorPicker::get_MinHue()
     @_property
     def min_hue(self) -> winrt.system.Int32: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ColorPicker::put_MinHue(System.Int32)
     @min_hue.setter
     @typing.final
     def min_hue(self, value: winrt.system.Int32) -> None: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.ColorPicker::get_MaxValue()
     @_property
     def max_value(self) -> winrt.system.Int32: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ColorPicker::put_MaxValue(System.Int32)
     @max_value.setter
     @typing.final
     def max_value(self, value: winrt.system.Int32) -> None: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.ColorPicker::get_MaxSaturation()
     @_property
     def max_saturation(self) -> winrt.system.Int32: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ColorPicker::put_MaxSaturation(System.Int32)
     @max_saturation.setter
     @typing.final
     def max_saturation(self, value: winrt.system.Int32) -> None: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.ColorPicker::get_MaxHue()
     @_property
     def max_hue(self) -> winrt.system.Int32: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ColorPicker::put_MaxHue(System.Int32)
     @max_hue.setter
     @typing.final
     def max_hue(self, value: winrt.system.Int32) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ColorPicker::get_IsMoreButtonVisible()
     @_property
     def is_more_button_visible(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ColorPicker::put_IsMoreButtonVisible(System.Boolean)
     @is_more_button_visible.setter
     @typing.final
     def is_more_button_visible(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ColorPicker::get_IsHexInputVisible()
     @_property
     def is_hex_input_visible(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ColorPicker::put_IsHexInputVisible(System.Boolean)
     @is_hex_input_visible.setter
     @typing.final
     def is_hex_input_visible(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ColorPicker::get_IsColorSpectrumVisible()
     @_property
     def is_color_spectrum_visible(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ColorPicker::put_IsColorSpectrumVisible(System.Boolean)
     @is_color_spectrum_visible.setter
     @typing.final
     def is_color_spectrum_visible(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ColorPicker::get_IsColorSliderVisible()
     @_property
     def is_color_slider_visible(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ColorPicker::put_IsColorSliderVisible(System.Boolean)
     @is_color_slider_visible.setter
     @typing.final
     def is_color_slider_visible(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ColorPicker::get_IsColorPreviewVisible()
     @_property
     def is_color_preview_visible(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ColorPicker::put_IsColorPreviewVisible(System.Boolean)
     @is_color_preview_visible.setter
     @typing.final
     def is_color_preview_visible(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ColorPicker::get_IsColorChannelTextInputVisible()
     @_property
     def is_color_channel_text_input_visible(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ColorPicker::put_IsColorChannelTextInputVisible(System.Boolean)
     @is_color_channel_text_input_visible.setter
     @typing.final
     def is_color_channel_text_input_visible(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ColorPicker::get_IsAlphaTextInputVisible()
     @_property
     def is_alpha_text_input_visible(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ColorPicker::put_IsAlphaTextInputVisible(System.Boolean)
     @is_alpha_text_input_visible.setter
     @typing.final
     def is_alpha_text_input_visible(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ColorPicker::get_IsAlphaSliderVisible()
     @_property
     def is_alpha_slider_visible(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ColorPicker::put_IsAlphaSliderVisible(System.Boolean)
     @is_alpha_slider_visible.setter
     @typing.final
     def is_alpha_slider_visible(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ColorPicker::get_IsAlphaEnabled()
     @_property
     def is_alpha_enabled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ColorPicker::put_IsAlphaEnabled(System.Boolean)
     @is_alpha_enabled.setter
     @typing.final
     def is_alpha_enabled(self, value: bool) -> None: ...
+    # Microsoft.UI.Xaml.Controls.ColorSpectrumShape Microsoft.UI.Xaml.Controls.ColorPicker::get_ColorSpectrumShape()
     @_property
     def color_spectrum_shape(self) -> ColorSpectrumShape: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ColorPicker::put_ColorSpectrumShape(Microsoft.UI.Xaml.Controls.ColorSpectrumShape)
     @color_spectrum_shape.setter
     @typing.final
     def color_spectrum_shape(self, value: ColorSpectrumShape) -> None: ...
+    # Microsoft.UI.Xaml.Controls.ColorSpectrumComponents Microsoft.UI.Xaml.Controls.ColorPicker::get_ColorSpectrumComponents()
     @_property
     def color_spectrum_components(self) -> ColorSpectrumComponents: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ColorPicker::put_ColorSpectrumComponents(Microsoft.UI.Xaml.Controls.ColorSpectrumComponents)
     @color_spectrum_components.setter
     @typing.final
     def color_spectrum_components(self, value: ColorSpectrumComponents) -> None: ...
+    # Windows.UI.Color Microsoft.UI.Xaml.Controls.ColorPicker::get_Color()
     @_property
     def color(self) -> windows_ui.Color: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ColorPicker::put_Color(Windows.UI.Color)
     @color.setter
     @typing.final
     def color(self, value: windows_ui.Color) -> None: ...
+    # Microsoft.UI.Xaml.Controls.Orientation Microsoft.UI.Xaml.Controls.ColorPicker::get_Orientation()
     @_property
     def orientation(self) -> Orientation: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ColorPicker::put_Orientation(Microsoft.UI.Xaml.Controls.Orientation)
     @orientation.setter
     @typing.final
     def orientation(self, value: Orientation) -> None: ...
 
 @typing.final
 class ColumnDefinition_Static(microsoft_ui_xaml.DependencyObject_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ColumnDefinition::get_MaxWidthProperty()
     @_property
     def max_width_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ColumnDefinition::get_MinWidthProperty()
     @_property
     def min_width_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ColumnDefinition::get_WidthProperty()
     @_property
     def width_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
 class ColumnDefinition(microsoft_ui_xaml.DependencyObject, metaclass=ColumnDefinition_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Microsoft.UI.Xaml.GridLength Microsoft.UI.Xaml.Controls.ColumnDefinition::get_Width()
     @_property
     def width(self) -> microsoft_ui_xaml.GridLength: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ColumnDefinition::put_Width(Microsoft.UI.Xaml.GridLength)
     @width.setter
     def width(self, value: microsoft_ui_xaml.GridLength) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ColumnDefinition::get_MinWidth()
     @_property
     def min_width(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ColumnDefinition::put_MinWidth(System.Double)
     @min_width.setter
     def min_width(self, value: winrt.system.Double) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ColumnDefinition::get_MaxWidth()
     @_property
     def max_width(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ColumnDefinition::put_MaxWidth(System.Double)
     @max_width.setter
     def max_width(self, value: winrt.system.Double) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ColumnDefinition::get_ActualWidth()
     @_property
     def actual_width(self) -> winrt.system.Double: ...
 
@@ -1793,46 +2418,68 @@ class ColumnDefinitionCollection(winrt.system.Object, winrt._winrt.MutableSequen
     def __setitem__(self, index: typing.SupportsIndex, value: ColumnDefinition) -> None: ...
     @typing.overload
     def __setitem__(self, index: slice, value: typing.Iterable[ColumnDefinition]) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ColumnDefinitionCollection::Append(Microsoft.UI.Xaml.Controls.ColumnDefinition)
     def append(self, value: ColumnDefinition, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ColumnDefinitionCollection::Clear()
     def clear(self) -> None: ...
+    # Windows.Foundation.Collections.IIterator`1<Microsoft.UI.Xaml.Controls.ColumnDefinition> Microsoft.UI.Xaml.Controls.ColumnDefinitionCollection::First()
     def first(self) -> windows_foundation_collections.IIterator[ColumnDefinition]: ...
+    # Microsoft.UI.Xaml.Controls.ColumnDefinition Microsoft.UI.Xaml.Controls.ColumnDefinitionCollection::GetAt(System.UInt32)
     def get_at(self, index: winrt.system.UInt32, /) -> ColumnDefinition: ...
+    # System.UInt32 Microsoft.UI.Xaml.Controls.ColumnDefinitionCollection::GetMany(System.UInt32,Microsoft.UI.Xaml.Controls.ColumnDefinition[])
     def get_many(self, start_index: winrt.system.UInt32, items: typing.Union[winrt.system.Array[ColumnDefinition], winrt.system.WriteableBuffer], /) -> winrt.system.UInt32: ...
+    # Windows.Foundation.Collections.IVectorView`1<Microsoft.UI.Xaml.Controls.ColumnDefinition> Microsoft.UI.Xaml.Controls.ColumnDefinitionCollection::GetView()
     def get_view(self) -> typing.Sequence[ColumnDefinition]: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ColumnDefinitionCollection::IndexOf(Microsoft.UI.Xaml.Controls.ColumnDefinition,System.UInt32&)
     def index_of(self, value: ColumnDefinition, /) -> typing.Tuple[bool, winrt.system.UInt32]: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ColumnDefinitionCollection::InsertAt(System.UInt32,Microsoft.UI.Xaml.Controls.ColumnDefinition)
     def insert_at(self, index: winrt.system.UInt32, value: ColumnDefinition, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ColumnDefinitionCollection::RemoveAt(System.UInt32)
     def remove_at(self, index: winrt.system.UInt32, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ColumnDefinitionCollection::RemoveAtEnd()
     def remove_at_end(self) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ColumnDefinitionCollection::ReplaceAll(Microsoft.UI.Xaml.Controls.ColumnDefinition[])
     def replace_all(self, items: typing.Union[winrt.system.Array[ColumnDefinition], winrt.system.ReadableBuffer], /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ColumnDefinitionCollection::SetAt(System.UInt32,Microsoft.UI.Xaml.Controls.ColumnDefinition)
     def set_at(self, index: winrt.system.UInt32, value: ColumnDefinition, /) -> None: ...
+    # System.UInt32 Microsoft.UI.Xaml.Controls.ColumnDefinitionCollection::get_Size()
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
 @typing.final
 class ComboBoxTextSubmittedEventArgs(winrt.system.Object):
+    # System.Boolean Microsoft.UI.Xaml.Controls.ComboBoxTextSubmittedEventArgs::get_Handled()
     @_property
     def handled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ComboBoxTextSubmittedEventArgs::put_Handled(System.Boolean)
     @handled.setter
     def handled(self, value: bool) -> None: ...
+    # System.String Microsoft.UI.Xaml.Controls.ComboBoxTextSubmittedEventArgs::get_Text()
     @_property
     def text(self) -> str: ...
 
 class CommandBar_Static(AppBar_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CommandBar::get_CommandBarOverflowPresenterStyleProperty()
     @_property
     @typing.final
     def command_bar_overflow_presenter_style_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CommandBar::get_DefaultLabelPositionProperty()
     @_property
     @typing.final
     def default_label_position_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CommandBar::get_IsDynamicOverflowEnabledProperty()
     @_property
     @typing.final
     def is_dynamic_overflow_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CommandBar::get_OverflowButtonVisibilityProperty()
     @_property
     @typing.final
     def overflow_button_visibility_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CommandBar::get_PrimaryCommandsProperty()
     @_property
     @typing.final
     def primary_commands_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.CommandBar::get_SecondaryCommandsProperty()
     @_property
     @typing.final
     def secondary_commands_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
@@ -1840,35 +2487,48 @@ class CommandBar_Static(AppBar_Static):
 class CommandBar(AppBar, metaclass=CommandBar_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.CommandBar::add_DynamicOverflowItemsChanging(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.CommandBar,Microsoft.UI.Xaml.Controls.DynamicOverflowItemsChangingEventArgs>)
     def add_dynamic_overflow_items_changing(self, handler: windows_foundation.TypedEventHandler[CommandBar, DynamicOverflowItemsChangingEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.CommandBar::remove_DynamicOverflowItemsChanging(Windows.Foundation.EventRegistrationToken)
     def remove_dynamic_overflow_items_changing(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Microsoft.UI.Xaml.Controls.CommandBarOverflowButtonVisibility Microsoft.UI.Xaml.Controls.CommandBar::get_OverflowButtonVisibility()
     @_property
     def overflow_button_visibility(self) -> CommandBarOverflowButtonVisibility: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CommandBar::put_OverflowButtonVisibility(Microsoft.UI.Xaml.Controls.CommandBarOverflowButtonVisibility)
     @overflow_button_visibility.setter
     @typing.final
     def overflow_button_visibility(self, value: CommandBarOverflowButtonVisibility) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.CommandBar::get_IsDynamicOverflowEnabled()
     @_property
     def is_dynamic_overflow_enabled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CommandBar::put_IsDynamicOverflowEnabled(System.Boolean)
     @is_dynamic_overflow_enabled.setter
     @typing.final
     def is_dynamic_overflow_enabled(self, value: bool) -> None: ...
+    # Microsoft.UI.Xaml.Controls.CommandBarDefaultLabelPosition Microsoft.UI.Xaml.Controls.CommandBar::get_DefaultLabelPosition()
     @_property
     def default_label_position(self) -> CommandBarDefaultLabelPosition: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CommandBar::put_DefaultLabelPosition(Microsoft.UI.Xaml.Controls.CommandBarDefaultLabelPosition)
     @default_label_position.setter
     @typing.final
     def default_label_position(self, value: CommandBarDefaultLabelPosition) -> None: ...
+    # Microsoft.UI.Xaml.Style Microsoft.UI.Xaml.Controls.CommandBar::get_CommandBarOverflowPresenterStyle()
     @_property
     def command_bar_overflow_presenter_style(self) -> microsoft_ui_xaml.Style: ...
+    # System.Void Microsoft.UI.Xaml.Controls.CommandBar::put_CommandBarOverflowPresenterStyle(Microsoft.UI.Xaml.Style)
     @command_bar_overflow_presenter_style.setter
     @typing.final
     def command_bar_overflow_presenter_style(self, value: microsoft_ui_xaml.Style) -> None: ...
+    # Microsoft.UI.Xaml.Controls.Primitives.CommandBarTemplateSettings Microsoft.UI.Xaml.Controls.CommandBar::get_CommandBarTemplateSettings()
     @_property
     @typing.final
     def command_bar_template_settings(self) -> microsoft_ui_xaml_controls_primitives.CommandBarTemplateSettings: ...
+    # Windows.Foundation.Collections.IObservableVector`1<Microsoft.UI.Xaml.Controls.ICommandBarElement> Microsoft.UI.Xaml.Controls.CommandBar::get_PrimaryCommands()
     @_property
     @typing.final
     def primary_commands(self) -> windows_foundation_collections.IObservableVector[ICommandBarElement]: ...
+    # Windows.Foundation.Collections.IObservableVector`1<Microsoft.UI.Xaml.Controls.ICommandBarElement> Microsoft.UI.Xaml.Controls.CommandBar::get_SecondaryCommands()
     @_property
     @typing.final
     def secondary_commands(self) -> windows_foundation_collections.IObservableVector[ICommandBarElement]: ...
@@ -1882,118 +2542,161 @@ class CommandBarOverflowPresenter(ItemsControl, metaclass=CommandBarOverflowPres
 @typing.final
 class ContainerContentChangingEventArgs(winrt.system.Object):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ContainerContentChangingEventArgs::RegisterUpdateCallback(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.ListViewBase,Microsoft.UI.Xaml.Controls.ContainerContentChangingEventArgs>)
     def register_update_callback(self, callback: windows_foundation.TypedEventHandler[ListViewBase, ContainerContentChangingEventArgs], /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ContainerContentChangingEventArgs::RegisterUpdateCallback(System.UInt32,Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.ListViewBase,Microsoft.UI.Xaml.Controls.ContainerContentChangingEventArgs>)
     def register_update_callback_with_phase(self, callback_phase: winrt.system.UInt32, callback: windows_foundation.TypedEventHandler[ListViewBase, ContainerContentChangingEventArgs], /) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ContainerContentChangingEventArgs::get_Handled()
     @_property
     def handled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ContainerContentChangingEventArgs::put_Handled(System.Boolean)
     @handled.setter
     def handled(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ContainerContentChangingEventArgs::get_InRecycleQueue()
     @_property
     def in_recycle_queue(self) -> bool: ...
+    # System.Object Microsoft.UI.Xaml.Controls.ContainerContentChangingEventArgs::get_Item()
     @_property
     def item(self) -> winrt.system.Object: ...
+    # Microsoft.UI.Xaml.Controls.Primitives.SelectorItem Microsoft.UI.Xaml.Controls.ContainerContentChangingEventArgs::get_ItemContainer()
     @_property
     def item_container(self) -> microsoft_ui_xaml_controls_primitives.SelectorItem: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.ContainerContentChangingEventArgs::get_ItemIndex()
     @_property
     def item_index(self) -> winrt.system.Int32: ...
+    # System.UInt32 Microsoft.UI.Xaml.Controls.ContainerContentChangingEventArgs::get_Phase()
     @_property
     def phase(self) -> winrt.system.UInt32: ...
 
 class ContentControl_Static(Control_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ContentControl::get_ContentProperty()
     @_property
     @typing.final
     def content_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ContentControl::get_ContentTemplateProperty()
     @_property
     @typing.final
     def content_template_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ContentControl::get_ContentTemplateSelectorProperty()
     @_property
     @typing.final
     def content_template_selector_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ContentControl::get_ContentTransitionsProperty()
     @_property
     @typing.final
     def content_transitions_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class ContentControl(Control, metaclass=ContentControl_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ContentControl::OnContentChanged(System.Object,System.Object)
     def _on_content_changed(self, old_content: winrt.system.Object, new_content: winrt.system.Object, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ContentControl::OnContentTemplateChanged(Microsoft.UI.Xaml.DataTemplate,Microsoft.UI.Xaml.DataTemplate)
     def _on_content_template_changed(self, old_content_template: microsoft_ui_xaml.DataTemplate, new_content_template: microsoft_ui_xaml.DataTemplate, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ContentControl::OnContentTemplateSelectorChanged(Microsoft.UI.Xaml.Controls.DataTemplateSelector,Microsoft.UI.Xaml.Controls.DataTemplateSelector)
     def _on_content_template_selector_changed(self, old_content_template_selector: DataTemplateSelector, new_content_template_selector: DataTemplateSelector, /) -> None: ...
+    # Microsoft.UI.Xaml.Media.Animation.TransitionCollection Microsoft.UI.Xaml.Controls.ContentControl::get_ContentTransitions()
     @_property
     def content_transitions(self) -> microsoft_ui_xaml_media_animation.TransitionCollection: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ContentControl::put_ContentTransitions(Microsoft.UI.Xaml.Media.Animation.TransitionCollection)
     @content_transitions.setter
     @typing.final
     def content_transitions(self, value: microsoft_ui_xaml_media_animation.TransitionCollection) -> None: ...
+    # Microsoft.UI.Xaml.Controls.DataTemplateSelector Microsoft.UI.Xaml.Controls.ContentControl::get_ContentTemplateSelector()
     @_property
     def content_template_selector(self) -> DataTemplateSelector: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ContentControl::put_ContentTemplateSelector(Microsoft.UI.Xaml.Controls.DataTemplateSelector)
     @content_template_selector.setter
     @typing.final
     def content_template_selector(self, value: DataTemplateSelector) -> None: ...
+    # Microsoft.UI.Xaml.DataTemplate Microsoft.UI.Xaml.Controls.ContentControl::get_ContentTemplate()
     @_property
     def content_template(self) -> microsoft_ui_xaml.DataTemplate: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ContentControl::put_ContentTemplate(Microsoft.UI.Xaml.DataTemplate)
     @content_template.setter
     @typing.final
     def content_template(self, value: microsoft_ui_xaml.DataTemplate) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.ContentControl::get_Content()
     @_property
     def content(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ContentControl::put_Content(System.Object)
     @content.setter
     @typing.final
     def content(self, value: winrt.system.Object) -> None: ...
+    # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.Controls.ContentControl::get_ContentTemplateRoot()
     @_property
     @typing.final
     def content_template_root(self) -> microsoft_ui_xaml.UIElement: ...
 
 class ContentDialog_Static(ContentControl_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ContentDialog::get_CloseButtonCommandParameterProperty()
     @_property
     @typing.final
     def close_button_command_parameter_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ContentDialog::get_CloseButtonCommandProperty()
     @_property
     @typing.final
     def close_button_command_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ContentDialog::get_CloseButtonStyleProperty()
     @_property
     @typing.final
     def close_button_style_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ContentDialog::get_CloseButtonTextProperty()
     @_property
     @typing.final
     def close_button_text_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ContentDialog::get_DefaultButtonProperty()
     @_property
     @typing.final
     def default_button_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ContentDialog::get_FullSizeDesiredProperty()
     @_property
     @typing.final
     def full_size_desired_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ContentDialog::get_IsPrimaryButtonEnabledProperty()
     @_property
     @typing.final
     def is_primary_button_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ContentDialog::get_IsSecondaryButtonEnabledProperty()
     @_property
     @typing.final
     def is_secondary_button_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ContentDialog::get_PrimaryButtonCommandParameterProperty()
     @_property
     @typing.final
     def primary_button_command_parameter_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ContentDialog::get_PrimaryButtonCommandProperty()
     @_property
     @typing.final
     def primary_button_command_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ContentDialog::get_PrimaryButtonStyleProperty()
     @_property
     @typing.final
     def primary_button_style_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ContentDialog::get_PrimaryButtonTextProperty()
     @_property
     @typing.final
     def primary_button_text_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ContentDialog::get_SecondaryButtonCommandParameterProperty()
     @_property
     @typing.final
     def secondary_button_command_parameter_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ContentDialog::get_SecondaryButtonCommandProperty()
     @_property
     @typing.final
     def secondary_button_command_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ContentDialog::get_SecondaryButtonStyleProperty()
     @_property
     @typing.final
     def secondary_button_style_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ContentDialog::get_SecondaryButtonTextProperty()
     @_property
     @typing.final
     def secondary_button_text_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ContentDialog::get_TitleProperty()
     @_property
     @typing.final
     def title_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ContentDialog::get_TitleTemplateProperty()
     @_property
     @typing.final
     def title_template_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
@@ -2001,154 +2704,215 @@ class ContentDialog_Static(ContentControl_Static):
 class ContentDialog(ContentControl, metaclass=ContentDialog_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.ContentDialog::Hide()
     def hide(self) -> None: ...
     @typing.final
+    # Windows.Foundation.IAsyncOperation`1<Microsoft.UI.Xaml.Controls.ContentDialogResult> Microsoft.UI.Xaml.Controls.ContentDialog::ShowAsync()
     def show_async(self) -> windows_foundation.IAsyncOperation[ContentDialogResult]: ...
     @typing.final
+    # Windows.Foundation.IAsyncOperation`1<Microsoft.UI.Xaml.Controls.ContentDialogResult> Microsoft.UI.Xaml.Controls.ContentDialog::ShowAsync(Microsoft.UI.Xaml.Controls.ContentDialogPlacement)
     def show_async_with_placement(self, placement: ContentDialogPlacement, /) -> windows_foundation.IAsyncOperation[ContentDialogResult]: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.ContentDialog::add_CloseButtonClick(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.ContentDialog,Microsoft.UI.Xaml.Controls.ContentDialogButtonClickEventArgs>)
     def add_close_button_click(self, handler: windows_foundation.TypedEventHandler[ContentDialog, ContentDialogButtonClickEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.ContentDialog::remove_CloseButtonClick(Windows.Foundation.EventRegistrationToken)
     def remove_close_button_click(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.ContentDialog::add_Closed(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.ContentDialog,Microsoft.UI.Xaml.Controls.ContentDialogClosedEventArgs>)
     def add_closed(self, handler: windows_foundation.TypedEventHandler[ContentDialog, ContentDialogClosedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.ContentDialog::remove_Closed(Windows.Foundation.EventRegistrationToken)
     def remove_closed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.ContentDialog::add_Closing(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.ContentDialog,Microsoft.UI.Xaml.Controls.ContentDialogClosingEventArgs>)
     def add_closing(self, handler: windows_foundation.TypedEventHandler[ContentDialog, ContentDialogClosingEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.ContentDialog::remove_Closing(Windows.Foundation.EventRegistrationToken)
     def remove_closing(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.ContentDialog::add_Opened(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.ContentDialog,Microsoft.UI.Xaml.Controls.ContentDialogOpenedEventArgs>)
     def add_opened(self, handler: windows_foundation.TypedEventHandler[ContentDialog, ContentDialogOpenedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.ContentDialog::remove_Opened(Windows.Foundation.EventRegistrationToken)
     def remove_opened(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.ContentDialog::add_PrimaryButtonClick(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.ContentDialog,Microsoft.UI.Xaml.Controls.ContentDialogButtonClickEventArgs>)
     def add_primary_button_click(self, handler: windows_foundation.TypedEventHandler[ContentDialog, ContentDialogButtonClickEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.ContentDialog::remove_PrimaryButtonClick(Windows.Foundation.EventRegistrationToken)
     def remove_primary_button_click(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.ContentDialog::add_SecondaryButtonClick(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.ContentDialog,Microsoft.UI.Xaml.Controls.ContentDialogButtonClickEventArgs>)
     def add_secondary_button_click(self, handler: windows_foundation.TypedEventHandler[ContentDialog, ContentDialogButtonClickEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.ContentDialog::remove_SecondaryButtonClick(Windows.Foundation.EventRegistrationToken)
     def remove_secondary_button_click(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Microsoft.UI.Xaml.DataTemplate Microsoft.UI.Xaml.Controls.ContentDialog::get_TitleTemplate()
     @_property
     def title_template(self) -> microsoft_ui_xaml.DataTemplate: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ContentDialog::put_TitleTemplate(Microsoft.UI.Xaml.DataTemplate)
     @title_template.setter
     @typing.final
     def title_template(self, value: microsoft_ui_xaml.DataTemplate) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.ContentDialog::get_Title()
     @_property
     def title(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ContentDialog::put_Title(System.Object)
     @title.setter
     @typing.final
     def title(self, value: winrt.system.Object) -> None: ...
+    # System.String Microsoft.UI.Xaml.Controls.ContentDialog::get_SecondaryButtonText()
     @_property
     def secondary_button_text(self) -> str: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ContentDialog::put_SecondaryButtonText(System.String)
     @secondary_button_text.setter
     @typing.final
     def secondary_button_text(self, value: str) -> None: ...
+    # Microsoft.UI.Xaml.Style Microsoft.UI.Xaml.Controls.ContentDialog::get_SecondaryButtonStyle()
     @_property
     def secondary_button_style(self) -> microsoft_ui_xaml.Style: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ContentDialog::put_SecondaryButtonStyle(Microsoft.UI.Xaml.Style)
     @secondary_button_style.setter
     @typing.final
     def secondary_button_style(self, value: microsoft_ui_xaml.Style) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.ContentDialog::get_SecondaryButtonCommandParameter()
     @_property
     def secondary_button_command_parameter(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ContentDialog::put_SecondaryButtonCommandParameter(System.Object)
     @secondary_button_command_parameter.setter
     @typing.final
     def secondary_button_command_parameter(self, value: winrt.system.Object) -> None: ...
+    # Microsoft.UI.Xaml.Input.ICommand Microsoft.UI.Xaml.Controls.ContentDialog::get_SecondaryButtonCommand()
     @_property
     def secondary_button_command(self) -> microsoft_ui_xaml_input.ICommand: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ContentDialog::put_SecondaryButtonCommand(Microsoft.UI.Xaml.Input.ICommand)
     @secondary_button_command.setter
     @typing.final
     def secondary_button_command(self, value: microsoft_ui_xaml_input.ImplementsICommand) -> None: ...
+    # System.String Microsoft.UI.Xaml.Controls.ContentDialog::get_PrimaryButtonText()
     @_property
     def primary_button_text(self) -> str: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ContentDialog::put_PrimaryButtonText(System.String)
     @primary_button_text.setter
     @typing.final
     def primary_button_text(self, value: str) -> None: ...
+    # Microsoft.UI.Xaml.Style Microsoft.UI.Xaml.Controls.ContentDialog::get_PrimaryButtonStyle()
     @_property
     def primary_button_style(self) -> microsoft_ui_xaml.Style: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ContentDialog::put_PrimaryButtonStyle(Microsoft.UI.Xaml.Style)
     @primary_button_style.setter
     @typing.final
     def primary_button_style(self, value: microsoft_ui_xaml.Style) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.ContentDialog::get_PrimaryButtonCommandParameter()
     @_property
     def primary_button_command_parameter(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ContentDialog::put_PrimaryButtonCommandParameter(System.Object)
     @primary_button_command_parameter.setter
     @typing.final
     def primary_button_command_parameter(self, value: winrt.system.Object) -> None: ...
+    # Microsoft.UI.Xaml.Input.ICommand Microsoft.UI.Xaml.Controls.ContentDialog::get_PrimaryButtonCommand()
     @_property
     def primary_button_command(self) -> microsoft_ui_xaml_input.ICommand: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ContentDialog::put_PrimaryButtonCommand(Microsoft.UI.Xaml.Input.ICommand)
     @primary_button_command.setter
     @typing.final
     def primary_button_command(self, value: microsoft_ui_xaml_input.ImplementsICommand) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ContentDialog::get_IsSecondaryButtonEnabled()
     @_property
     def is_secondary_button_enabled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ContentDialog::put_IsSecondaryButtonEnabled(System.Boolean)
     @is_secondary_button_enabled.setter
     @typing.final
     def is_secondary_button_enabled(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ContentDialog::get_IsPrimaryButtonEnabled()
     @_property
     def is_primary_button_enabled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ContentDialog::put_IsPrimaryButtonEnabled(System.Boolean)
     @is_primary_button_enabled.setter
     @typing.final
     def is_primary_button_enabled(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ContentDialog::get_FullSizeDesired()
     @_property
     def full_size_desired(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ContentDialog::put_FullSizeDesired(System.Boolean)
     @full_size_desired.setter
     @typing.final
     def full_size_desired(self, value: bool) -> None: ...
+    # Microsoft.UI.Xaml.Controls.ContentDialogButton Microsoft.UI.Xaml.Controls.ContentDialog::get_DefaultButton()
     @_property
     def default_button(self) -> ContentDialogButton: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ContentDialog::put_DefaultButton(Microsoft.UI.Xaml.Controls.ContentDialogButton)
     @default_button.setter
     @typing.final
     def default_button(self, value: ContentDialogButton) -> None: ...
+    # System.String Microsoft.UI.Xaml.Controls.ContentDialog::get_CloseButtonText()
     @_property
     def close_button_text(self) -> str: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ContentDialog::put_CloseButtonText(System.String)
     @close_button_text.setter
     @typing.final
     def close_button_text(self, value: str) -> None: ...
+    # Microsoft.UI.Xaml.Style Microsoft.UI.Xaml.Controls.ContentDialog::get_CloseButtonStyle()
     @_property
     def close_button_style(self) -> microsoft_ui_xaml.Style: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ContentDialog::put_CloseButtonStyle(Microsoft.UI.Xaml.Style)
     @close_button_style.setter
     @typing.final
     def close_button_style(self, value: microsoft_ui_xaml.Style) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.ContentDialog::get_CloseButtonCommandParameter()
     @_property
     def close_button_command_parameter(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ContentDialog::put_CloseButtonCommandParameter(System.Object)
     @close_button_command_parameter.setter
     @typing.final
     def close_button_command_parameter(self, value: winrt.system.Object) -> None: ...
+    # Microsoft.UI.Xaml.Input.ICommand Microsoft.UI.Xaml.Controls.ContentDialog::get_CloseButtonCommand()
     @_property
     def close_button_command(self) -> microsoft_ui_xaml_input.ICommand: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ContentDialog::put_CloseButtonCommand(Microsoft.UI.Xaml.Input.ICommand)
     @close_button_command.setter
     @typing.final
     def close_button_command(self, value: microsoft_ui_xaml_input.ImplementsICommand) -> None: ...
 
 @typing.final
 class ContentDialogButtonClickDeferral(winrt.system.Object):
+    # System.Void Microsoft.UI.Xaml.Controls.ContentDialogButtonClickDeferral::Complete()
     def complete(self) -> None: ...
 
 @typing.final
 class ContentDialogButtonClickEventArgs(winrt.system.Object):
+    # Microsoft.UI.Xaml.Controls.ContentDialogButtonClickDeferral Microsoft.UI.Xaml.Controls.ContentDialogButtonClickEventArgs::GetDeferral()
     def get_deferral(self) -> ContentDialogButtonClickDeferral: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ContentDialogButtonClickEventArgs::get_Cancel()
     @_property
     def cancel(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ContentDialogButtonClickEventArgs::put_Cancel(System.Boolean)
     @cancel.setter
     def cancel(self, value: bool) -> None: ...
 
 @typing.final
 class ContentDialogClosedEventArgs(winrt.system.Object):
+    # Microsoft.UI.Xaml.Controls.ContentDialogResult Microsoft.UI.Xaml.Controls.ContentDialogClosedEventArgs::get_Result()
     @_property
     def result(self) -> ContentDialogResult: ...
 
 @typing.final
 class ContentDialogClosingDeferral(winrt.system.Object):
+    # System.Void Microsoft.UI.Xaml.Controls.ContentDialogClosingDeferral::Complete()
     def complete(self) -> None: ...
 
 @typing.final
 class ContentDialogClosingEventArgs(winrt.system.Object):
+    # Microsoft.UI.Xaml.Controls.ContentDialogClosingDeferral Microsoft.UI.Xaml.Controls.ContentDialogClosingEventArgs::GetDeferral()
     def get_deferral(self) -> ContentDialogClosingDeferral: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ContentDialogClosingEventArgs::get_Cancel()
     @_property
     def cancel(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ContentDialogClosingEventArgs::put_Cancel(System.Boolean)
     @cancel.setter
     def cancel(self, value: bool) -> None: ...
+    # Microsoft.UI.Xaml.Controls.ContentDialogResult Microsoft.UI.Xaml.Controls.ContentDialogClosingEventArgs::get_Result()
     @_property
     def result(self) -> ContentDialogResult: ...
 
@@ -2157,487 +2921,689 @@ class ContentDialogOpenedEventArgs(winrt.system.Object):
     pass
 
 class ContentPresenter_Static(microsoft_ui_xaml.FrameworkElement_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ContentPresenter::get_BackgroundProperty()
     @_property
     @typing.final
     def background_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ContentPresenter::get_BackgroundSizingProperty()
     @_property
     @typing.final
     def background_sizing_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ContentPresenter::get_BorderBrushProperty()
     @_property
     @typing.final
     def border_brush_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ContentPresenter::get_BorderThicknessProperty()
     @_property
     @typing.final
     def border_thickness_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ContentPresenter::get_CharacterSpacingProperty()
     @_property
     @typing.final
     def character_spacing_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ContentPresenter::get_ContentProperty()
     @_property
     @typing.final
     def content_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ContentPresenter::get_ContentTemplateProperty()
     @_property
     @typing.final
     def content_template_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ContentPresenter::get_ContentTemplateSelectorProperty()
     @_property
     @typing.final
     def content_template_selector_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ContentPresenter::get_ContentTransitionsProperty()
     @_property
     @typing.final
     def content_transitions_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ContentPresenter::get_CornerRadiusProperty()
     @_property
     @typing.final
     def corner_radius_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ContentPresenter::get_FontFamilyProperty()
     @_property
     @typing.final
     def font_family_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ContentPresenter::get_FontSizeProperty()
     @_property
     @typing.final
     def font_size_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ContentPresenter::get_FontStretchProperty()
     @_property
     @typing.final
     def font_stretch_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ContentPresenter::get_FontStyleProperty()
     @_property
     @typing.final
     def font_style_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ContentPresenter::get_FontWeightProperty()
     @_property
     @typing.final
     def font_weight_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ContentPresenter::get_ForegroundProperty()
     @_property
     @typing.final
     def foreground_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ContentPresenter::get_HorizontalContentAlignmentProperty()
     @_property
     @typing.final
     def horizontal_content_alignment_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ContentPresenter::get_IsTextScaleFactorEnabledProperty()
     @_property
     @typing.final
     def is_text_scale_factor_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ContentPresenter::get_LineHeightProperty()
     @_property
     @typing.final
     def line_height_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ContentPresenter::get_LineStackingStrategyProperty()
     @_property
     @typing.final
     def line_stacking_strategy_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ContentPresenter::get_MaxLinesProperty()
     @_property
     @typing.final
     def max_lines_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ContentPresenter::get_OpticalMarginAlignmentProperty()
     @_property
     @typing.final
     def optical_margin_alignment_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ContentPresenter::get_PaddingProperty()
     @_property
     @typing.final
     def padding_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ContentPresenter::get_TextLineBoundsProperty()
     @_property
     @typing.final
     def text_line_bounds_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ContentPresenter::get_TextWrappingProperty()
     @_property
     @typing.final
     def text_wrapping_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ContentPresenter::get_VerticalContentAlignmentProperty()
     @_property
     @typing.final
     def vertical_content_alignment_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class ContentPresenter(microsoft_ui_xaml.FrameworkElement, metaclass=ContentPresenter_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ContentPresenter::OnContentTemplateChanged(Microsoft.UI.Xaml.DataTemplate,Microsoft.UI.Xaml.DataTemplate)
     def _on_content_template_changed(self, old_content_template: microsoft_ui_xaml.DataTemplate, new_content_template: microsoft_ui_xaml.DataTemplate, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ContentPresenter::OnContentTemplateSelectorChanged(Microsoft.UI.Xaml.Controls.DataTemplateSelector,Microsoft.UI.Xaml.Controls.DataTemplateSelector)
     def _on_content_template_selector_changed(self, old_content_template_selector: DataTemplateSelector, new_content_template_selector: DataTemplateSelector, /) -> None: ...
+    # Microsoft.UI.Xaml.VerticalAlignment Microsoft.UI.Xaml.Controls.ContentPresenter::get_VerticalContentAlignment()
     @_property
     def vertical_content_alignment(self) -> microsoft_ui_xaml.VerticalAlignment: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ContentPresenter::put_VerticalContentAlignment(Microsoft.UI.Xaml.VerticalAlignment)
     @vertical_content_alignment.setter
     @typing.final
     def vertical_content_alignment(self, value: microsoft_ui_xaml.VerticalAlignment) -> None: ...
+    # Microsoft.UI.Xaml.TextWrapping Microsoft.UI.Xaml.Controls.ContentPresenter::get_TextWrapping()
     @_property
     def text_wrapping(self) -> microsoft_ui_xaml.TextWrapping: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ContentPresenter::put_TextWrapping(Microsoft.UI.Xaml.TextWrapping)
     @text_wrapping.setter
     @typing.final
     def text_wrapping(self, value: microsoft_ui_xaml.TextWrapping) -> None: ...
+    # Microsoft.UI.Xaml.TextLineBounds Microsoft.UI.Xaml.Controls.ContentPresenter::get_TextLineBounds()
     @_property
     def text_line_bounds(self) -> microsoft_ui_xaml.TextLineBounds: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ContentPresenter::put_TextLineBounds(Microsoft.UI.Xaml.TextLineBounds)
     @text_line_bounds.setter
     @typing.final
     def text_line_bounds(self, value: microsoft_ui_xaml.TextLineBounds) -> None: ...
+    # Microsoft.UI.Xaml.Thickness Microsoft.UI.Xaml.Controls.ContentPresenter::get_Padding()
     @_property
     def padding(self) -> microsoft_ui_xaml.Thickness: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ContentPresenter::put_Padding(Microsoft.UI.Xaml.Thickness)
     @padding.setter
     @typing.final
     def padding(self, value: microsoft_ui_xaml.Thickness) -> None: ...
+    # Microsoft.UI.Xaml.OpticalMarginAlignment Microsoft.UI.Xaml.Controls.ContentPresenter::get_OpticalMarginAlignment()
     @_property
     def optical_margin_alignment(self) -> microsoft_ui_xaml.OpticalMarginAlignment: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ContentPresenter::put_OpticalMarginAlignment(Microsoft.UI.Xaml.OpticalMarginAlignment)
     @optical_margin_alignment.setter
     @typing.final
     def optical_margin_alignment(self, value: microsoft_ui_xaml.OpticalMarginAlignment) -> None: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.ContentPresenter::get_MaxLines()
     @_property
     def max_lines(self) -> winrt.system.Int32: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ContentPresenter::put_MaxLines(System.Int32)
     @max_lines.setter
     @typing.final
     def max_lines(self, value: winrt.system.Int32) -> None: ...
+    # Microsoft.UI.Xaml.LineStackingStrategy Microsoft.UI.Xaml.Controls.ContentPresenter::get_LineStackingStrategy()
     @_property
     def line_stacking_strategy(self) -> microsoft_ui_xaml.LineStackingStrategy: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ContentPresenter::put_LineStackingStrategy(Microsoft.UI.Xaml.LineStackingStrategy)
     @line_stacking_strategy.setter
     @typing.final
     def line_stacking_strategy(self, value: microsoft_ui_xaml.LineStackingStrategy) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ContentPresenter::get_LineHeight()
     @_property
     def line_height(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ContentPresenter::put_LineHeight(System.Double)
     @line_height.setter
     @typing.final
     def line_height(self, value: winrt.system.Double) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ContentPresenter::get_IsTextScaleFactorEnabled()
     @_property
     def is_text_scale_factor_enabled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ContentPresenter::put_IsTextScaleFactorEnabled(System.Boolean)
     @is_text_scale_factor_enabled.setter
     @typing.final
     def is_text_scale_factor_enabled(self, value: bool) -> None: ...
+    # Microsoft.UI.Xaml.HorizontalAlignment Microsoft.UI.Xaml.Controls.ContentPresenter::get_HorizontalContentAlignment()
     @_property
     def horizontal_content_alignment(self) -> microsoft_ui_xaml.HorizontalAlignment: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ContentPresenter::put_HorizontalContentAlignment(Microsoft.UI.Xaml.HorizontalAlignment)
     @horizontal_content_alignment.setter
     @typing.final
     def horizontal_content_alignment(self, value: microsoft_ui_xaml.HorizontalAlignment) -> None: ...
+    # Microsoft.UI.Xaml.Media.Brush Microsoft.UI.Xaml.Controls.ContentPresenter::get_Foreground()
     @_property
     def foreground(self) -> microsoft_ui_xaml_media.Brush: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ContentPresenter::put_Foreground(Microsoft.UI.Xaml.Media.Brush)
     @foreground.setter
     @typing.final
     def foreground(self, value: microsoft_ui_xaml_media.Brush) -> None: ...
+    # Windows.UI.Text.FontWeight Microsoft.UI.Xaml.Controls.ContentPresenter::get_FontWeight()
     @_property
     def font_weight(self) -> windows_ui_text.FontWeight: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ContentPresenter::put_FontWeight(Windows.UI.Text.FontWeight)
     @font_weight.setter
     @typing.final
     def font_weight(self, value: windows_ui_text.FontWeight) -> None: ...
+    # Windows.UI.Text.FontStyle Microsoft.UI.Xaml.Controls.ContentPresenter::get_FontStyle()
     @_property
     def font_style(self) -> windows_ui_text.FontStyle: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ContentPresenter::put_FontStyle(Windows.UI.Text.FontStyle)
     @font_style.setter
     @typing.final
     def font_style(self, value: windows_ui_text.FontStyle) -> None: ...
+    # Windows.UI.Text.FontStretch Microsoft.UI.Xaml.Controls.ContentPresenter::get_FontStretch()
     @_property
     def font_stretch(self) -> windows_ui_text.FontStretch: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ContentPresenter::put_FontStretch(Windows.UI.Text.FontStretch)
     @font_stretch.setter
     @typing.final
     def font_stretch(self, value: windows_ui_text.FontStretch) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ContentPresenter::get_FontSize()
     @_property
     def font_size(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ContentPresenter::put_FontSize(System.Double)
     @font_size.setter
     @typing.final
     def font_size(self, value: winrt.system.Double) -> None: ...
+    # Microsoft.UI.Xaml.Media.FontFamily Microsoft.UI.Xaml.Controls.ContentPresenter::get_FontFamily()
     @_property
     def font_family(self) -> microsoft_ui_xaml_media.FontFamily: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ContentPresenter::put_FontFamily(Microsoft.UI.Xaml.Media.FontFamily)
     @font_family.setter
     @typing.final
     def font_family(self, value: microsoft_ui_xaml_media.FontFamily) -> None: ...
+    # Microsoft.UI.Xaml.CornerRadius Microsoft.UI.Xaml.Controls.ContentPresenter::get_CornerRadius()
     @_property
     def corner_radius(self) -> microsoft_ui_xaml.CornerRadius: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ContentPresenter::put_CornerRadius(Microsoft.UI.Xaml.CornerRadius)
     @corner_radius.setter
     @typing.final
     def corner_radius(self, value: microsoft_ui_xaml.CornerRadius) -> None: ...
+    # Microsoft.UI.Xaml.Media.Animation.TransitionCollection Microsoft.UI.Xaml.Controls.ContentPresenter::get_ContentTransitions()
     @_property
     def content_transitions(self) -> microsoft_ui_xaml_media_animation.TransitionCollection: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ContentPresenter::put_ContentTransitions(Microsoft.UI.Xaml.Media.Animation.TransitionCollection)
     @content_transitions.setter
     @typing.final
     def content_transitions(self, value: microsoft_ui_xaml_media_animation.TransitionCollection) -> None: ...
+    # Microsoft.UI.Xaml.Controls.DataTemplateSelector Microsoft.UI.Xaml.Controls.ContentPresenter::get_ContentTemplateSelector()
     @_property
     def content_template_selector(self) -> DataTemplateSelector: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ContentPresenter::put_ContentTemplateSelector(Microsoft.UI.Xaml.Controls.DataTemplateSelector)
     @content_template_selector.setter
     @typing.final
     def content_template_selector(self, value: DataTemplateSelector) -> None: ...
+    # Microsoft.UI.Xaml.DataTemplate Microsoft.UI.Xaml.Controls.ContentPresenter::get_ContentTemplate()
     @_property
     def content_template(self) -> microsoft_ui_xaml.DataTemplate: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ContentPresenter::put_ContentTemplate(Microsoft.UI.Xaml.DataTemplate)
     @content_template.setter
     @typing.final
     def content_template(self, value: microsoft_ui_xaml.DataTemplate) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.ContentPresenter::get_Content()
     @_property
     def content(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ContentPresenter::put_Content(System.Object)
     @content.setter
     @typing.final
     def content(self, value: winrt.system.Object) -> None: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.ContentPresenter::get_CharacterSpacing()
     @_property
     def character_spacing(self) -> winrt.system.Int32: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ContentPresenter::put_CharacterSpacing(System.Int32)
     @character_spacing.setter
     @typing.final
     def character_spacing(self, value: winrt.system.Int32) -> None: ...
+    # Microsoft.UI.Xaml.Thickness Microsoft.UI.Xaml.Controls.ContentPresenter::get_BorderThickness()
     @_property
     def border_thickness(self) -> microsoft_ui_xaml.Thickness: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ContentPresenter::put_BorderThickness(Microsoft.UI.Xaml.Thickness)
     @border_thickness.setter
     @typing.final
     def border_thickness(self, value: microsoft_ui_xaml.Thickness) -> None: ...
+    # Microsoft.UI.Xaml.Media.Brush Microsoft.UI.Xaml.Controls.ContentPresenter::get_BorderBrush()
     @_property
     def border_brush(self) -> microsoft_ui_xaml_media.Brush: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ContentPresenter::put_BorderBrush(Microsoft.UI.Xaml.Media.Brush)
     @border_brush.setter
     @typing.final
     def border_brush(self, value: microsoft_ui_xaml_media.Brush) -> None: ...
+    # Microsoft.UI.Xaml.BrushTransition Microsoft.UI.Xaml.Controls.ContentPresenter::get_BackgroundTransition()
     @_property
     def background_transition(self) -> microsoft_ui_xaml.BrushTransition: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ContentPresenter::put_BackgroundTransition(Microsoft.UI.Xaml.BrushTransition)
     @background_transition.setter
     @typing.final
     def background_transition(self, value: microsoft_ui_xaml.BrushTransition) -> None: ...
+    # Microsoft.UI.Xaml.Controls.BackgroundSizing Microsoft.UI.Xaml.Controls.ContentPresenter::get_BackgroundSizing()
     @_property
     def background_sizing(self) -> BackgroundSizing: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ContentPresenter::put_BackgroundSizing(Microsoft.UI.Xaml.Controls.BackgroundSizing)
     @background_sizing.setter
     @typing.final
     def background_sizing(self, value: BackgroundSizing) -> None: ...
+    # Microsoft.UI.Xaml.Media.Brush Microsoft.UI.Xaml.Controls.ContentPresenter::get_Background()
     @_property
     def background(self) -> microsoft_ui_xaml_media.Brush: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ContentPresenter::put_Background(Microsoft.UI.Xaml.Media.Brush)
     @background.setter
     @typing.final
     def background(self, value: microsoft_ui_xaml_media.Brush) -> None: ...
 
 @typing.final
 class ContextMenuEventArgs(microsoft_ui_xaml.RoutedEventArgs):
+    # System.Boolean Microsoft.UI.Xaml.Controls.ContextMenuEventArgs::get_Handled()
     @_property
     def handled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ContextMenuEventArgs::put_Handled(System.Boolean)
     @handled.setter
     def handled(self, value: bool) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ContextMenuEventArgs::get_CursorLeft()
     @_property
     def cursor_left(self) -> winrt.system.Double: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ContextMenuEventArgs::get_CursorTop()
     @_property
     def cursor_top(self) -> winrt.system.Double: ...
 
 class Control_Static(microsoft_ui_xaml.FrameworkElement_Static):
+    # System.Boolean Microsoft.UI.Xaml.Controls.Control::GetIsTemplateFocusTarget(Microsoft.UI.Xaml.FrameworkElement)
     def get_is_template_focus_target(cls, element: microsoft_ui_xaml.FrameworkElement, /) -> bool: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.Control::GetIsTemplateKeyTipTarget(Microsoft.UI.Xaml.DependencyObject)
     def get_is_template_key_tip_target(cls, element: microsoft_ui_xaml.DependencyObject, /) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Control::SetIsTemplateFocusTarget(Microsoft.UI.Xaml.FrameworkElement,System.Boolean)
     def set_is_template_focus_target(cls, element: microsoft_ui_xaml.FrameworkElement, value: bool, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Control::SetIsTemplateKeyTipTarget(Microsoft.UI.Xaml.DependencyObject,System.Boolean)
     def set_is_template_key_tip_target(cls, element: microsoft_ui_xaml.DependencyObject, value: bool, /) -> None: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Control::get_BackgroundProperty()
     @_property
     @typing.final
     def background_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Control::get_BackgroundSizingProperty()
     @_property
     @typing.final
     def background_sizing_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Control::get_BorderBrushProperty()
     @_property
     @typing.final
     def border_brush_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Control::get_BorderThicknessProperty()
     @_property
     @typing.final
     def border_thickness_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Control::get_CharacterSpacingProperty()
     @_property
     @typing.final
     def character_spacing_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Control::get_CornerRadiusProperty()
     @_property
     @typing.final
     def corner_radius_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Control::get_DefaultStyleKeyProperty()
     @_property
     @typing.final
     def default_style_key_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Control::get_DefaultStyleResourceUriProperty()
     @_property
     @typing.final
     def default_style_resource_uri_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Control::get_ElementSoundModeProperty()
     @_property
     @typing.final
     def element_sound_mode_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Control::get_FontFamilyProperty()
     @_property
     @typing.final
     def font_family_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Control::get_FontSizeProperty()
     @_property
     @typing.final
     def font_size_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Control::get_FontStretchProperty()
     @_property
     @typing.final
     def font_stretch_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Control::get_FontStyleProperty()
     @_property
     @typing.final
     def font_style_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Control::get_FontWeightProperty()
     @_property
     @typing.final
     def font_weight_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Control::get_ForegroundProperty()
     @_property
     @typing.final
     def foreground_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Control::get_HorizontalContentAlignmentProperty()
     @_property
     @typing.final
     def horizontal_content_alignment_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Control::get_IsEnabledProperty()
     @_property
     @typing.final
     def is_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Control::get_IsFocusEngagedProperty()
     @_property
     @typing.final
     def is_focus_engaged_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Control::get_IsFocusEngagementEnabledProperty()
     @_property
     @typing.final
     def is_focus_engagement_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Control::get_IsTemplateFocusTargetProperty()
     @_property
     @typing.final
     def is_template_focus_target_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Control::get_IsTemplateKeyTipTargetProperty()
     @_property
     @typing.final
     def is_template_key_tip_target_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Control::get_IsTextScaleFactorEnabledProperty()
     @_property
     @typing.final
     def is_text_scale_factor_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Control::get_PaddingProperty()
     @_property
     @typing.final
     def padding_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Control::get_RequiresPointerProperty()
     @_property
     @typing.final
     def requires_pointer_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Control::get_TabNavigationProperty()
     @_property
     @typing.final
     def tab_navigation_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Control::get_TemplateProperty()
     @_property
     @typing.final
     def template_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Control::get_VerticalContentAlignmentProperty()
     @_property
     @typing.final
     def vertical_content_alignment_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class Control(microsoft_ui_xaml.FrameworkElement, metaclass=Control_Static):
     @typing.final
+    # System.Boolean Microsoft.UI.Xaml.Controls.Control::ApplyTemplate()
     def apply_template(self) -> bool: ...
     @typing.final
+    # Microsoft.UI.Xaml.DependencyObject Microsoft.UI.Xaml.Controls.Control::GetTemplateChild(System.String)
     def _get_template_child(self, child_name: str, /) -> microsoft_ui_xaml.DependencyObject: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Control::OnCharacterReceived(Microsoft.UI.Xaml.Input.CharacterReceivedRoutedEventArgs)
     def _on_character_received(self, e: microsoft_ui_xaml_input.CharacterReceivedRoutedEventArgs, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Control::OnDoubleTapped(Microsoft.UI.Xaml.Input.DoubleTappedRoutedEventArgs)
     def _on_double_tapped(self, e: microsoft_ui_xaml_input.DoubleTappedRoutedEventArgs, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Control::OnDragEnter(Microsoft.UI.Xaml.DragEventArgs)
     def _on_drag_enter(self, e: microsoft_ui_xaml.DragEventArgs, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Control::OnDragLeave(Microsoft.UI.Xaml.DragEventArgs)
     def _on_drag_leave(self, e: microsoft_ui_xaml.DragEventArgs, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Control::OnDragOver(Microsoft.UI.Xaml.DragEventArgs)
     def _on_drag_over(self, e: microsoft_ui_xaml.DragEventArgs, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Control::OnDrop(Microsoft.UI.Xaml.DragEventArgs)
     def _on_drop(self, e: microsoft_ui_xaml.DragEventArgs, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Control::OnGotFocus(Microsoft.UI.Xaml.RoutedEventArgs)
     def _on_got_focus(self, e: microsoft_ui_xaml.RoutedEventArgs, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Control::OnHolding(Microsoft.UI.Xaml.Input.HoldingRoutedEventArgs)
     def _on_holding(self, e: microsoft_ui_xaml_input.HoldingRoutedEventArgs, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Control::OnKeyDown(Microsoft.UI.Xaml.Input.KeyRoutedEventArgs)
     def _on_key_down(self, e: microsoft_ui_xaml_input.KeyRoutedEventArgs, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Control::OnKeyUp(Microsoft.UI.Xaml.Input.KeyRoutedEventArgs)
     def _on_key_up(self, e: microsoft_ui_xaml_input.KeyRoutedEventArgs, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Control::OnLostFocus(Microsoft.UI.Xaml.RoutedEventArgs)
     def _on_lost_focus(self, e: microsoft_ui_xaml.RoutedEventArgs, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Control::OnManipulationCompleted(Microsoft.UI.Xaml.Input.ManipulationCompletedRoutedEventArgs)
     def _on_manipulation_completed(self, e: microsoft_ui_xaml_input.ManipulationCompletedRoutedEventArgs, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Control::OnManipulationDelta(Microsoft.UI.Xaml.Input.ManipulationDeltaRoutedEventArgs)
     def _on_manipulation_delta(self, e: microsoft_ui_xaml_input.ManipulationDeltaRoutedEventArgs, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Control::OnManipulationInertiaStarting(Microsoft.UI.Xaml.Input.ManipulationInertiaStartingRoutedEventArgs)
     def _on_manipulation_inertia_starting(self, e: microsoft_ui_xaml_input.ManipulationInertiaStartingRoutedEventArgs, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Control::OnManipulationStarted(Microsoft.UI.Xaml.Input.ManipulationStartedRoutedEventArgs)
     def _on_manipulation_started(self, e: microsoft_ui_xaml_input.ManipulationStartedRoutedEventArgs, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Control::OnManipulationStarting(Microsoft.UI.Xaml.Input.ManipulationStartingRoutedEventArgs)
     def _on_manipulation_starting(self, e: microsoft_ui_xaml_input.ManipulationStartingRoutedEventArgs, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Control::OnPointerCanceled(Microsoft.UI.Xaml.Input.PointerRoutedEventArgs)
     def _on_pointer_canceled(self, e: microsoft_ui_xaml_input.PointerRoutedEventArgs, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Control::OnPointerCaptureLost(Microsoft.UI.Xaml.Input.PointerRoutedEventArgs)
     def _on_pointer_capture_lost(self, e: microsoft_ui_xaml_input.PointerRoutedEventArgs, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Control::OnPointerEntered(Microsoft.UI.Xaml.Input.PointerRoutedEventArgs)
     def _on_pointer_entered(self, e: microsoft_ui_xaml_input.PointerRoutedEventArgs, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Control::OnPointerExited(Microsoft.UI.Xaml.Input.PointerRoutedEventArgs)
     def _on_pointer_exited(self, e: microsoft_ui_xaml_input.PointerRoutedEventArgs, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Control::OnPointerMoved(Microsoft.UI.Xaml.Input.PointerRoutedEventArgs)
     def _on_pointer_moved(self, e: microsoft_ui_xaml_input.PointerRoutedEventArgs, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Control::OnPointerPressed(Microsoft.UI.Xaml.Input.PointerRoutedEventArgs)
     def _on_pointer_pressed(self, e: microsoft_ui_xaml_input.PointerRoutedEventArgs, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Control::OnPointerReleased(Microsoft.UI.Xaml.Input.PointerRoutedEventArgs)
     def _on_pointer_released(self, e: microsoft_ui_xaml_input.PointerRoutedEventArgs, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Control::OnPointerWheelChanged(Microsoft.UI.Xaml.Input.PointerRoutedEventArgs)
     def _on_pointer_wheel_changed(self, e: microsoft_ui_xaml_input.PointerRoutedEventArgs, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Control::OnPreviewKeyDown(Microsoft.UI.Xaml.Input.KeyRoutedEventArgs)
     def _on_preview_key_down(self, e: microsoft_ui_xaml_input.KeyRoutedEventArgs, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Control::OnPreviewKeyUp(Microsoft.UI.Xaml.Input.KeyRoutedEventArgs)
     def _on_preview_key_up(self, e: microsoft_ui_xaml_input.KeyRoutedEventArgs, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Control::OnRightTapped(Microsoft.UI.Xaml.Input.RightTappedRoutedEventArgs)
     def _on_right_tapped(self, e: microsoft_ui_xaml_input.RightTappedRoutedEventArgs, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Control::OnTapped(Microsoft.UI.Xaml.Input.TappedRoutedEventArgs)
     def _on_tapped(self, e: microsoft_ui_xaml_input.TappedRoutedEventArgs, /) -> None: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.Control::RemoveFocusEngagement()
     def remove_focus_engagement(self) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.Control::add_FocusDisengaged(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.Control,Microsoft.UI.Xaml.Controls.FocusDisengagedEventArgs>)
     def add_focus_disengaged(self, handler: windows_foundation.TypedEventHandler[Control, FocusDisengagedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.Control::remove_FocusDisengaged(Windows.Foundation.EventRegistrationToken)
     def remove_focus_disengaged(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.Control::add_FocusEngaged(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.Control,Microsoft.UI.Xaml.Controls.FocusEngagedEventArgs>)
     def add_focus_engaged(self, handler: windows_foundation.TypedEventHandler[Control, FocusEngagedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.Control::remove_FocusEngaged(Windows.Foundation.EventRegistrationToken)
     def remove_focus_engaged(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.Control::add_IsEnabledChanged(Microsoft.UI.Xaml.DependencyPropertyChangedEventHandler)
     def add_is_enabled_changed(self, handler: microsoft_ui_xaml.DependencyPropertyChangedEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.Control::remove_IsEnabledChanged(Windows.Foundation.EventRegistrationToken)
     def remove_is_enabled_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Microsoft.UI.Xaml.VerticalAlignment Microsoft.UI.Xaml.Controls.Control::get_VerticalContentAlignment()
     @_property
     def vertical_content_alignment(self) -> microsoft_ui_xaml.VerticalAlignment: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Control::put_VerticalContentAlignment(Microsoft.UI.Xaml.VerticalAlignment)
     @vertical_content_alignment.setter
     @typing.final
     def vertical_content_alignment(self, value: microsoft_ui_xaml.VerticalAlignment) -> None: ...
+    # Microsoft.UI.Xaml.Controls.ControlTemplate Microsoft.UI.Xaml.Controls.Control::get_Template()
     @_property
     def template(self) -> ControlTemplate: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Control::put_Template(Microsoft.UI.Xaml.Controls.ControlTemplate)
     @template.setter
     @typing.final
     def template(self, value: ControlTemplate) -> None: ...
+    # Microsoft.UI.Xaml.Input.KeyboardNavigationMode Microsoft.UI.Xaml.Controls.Control::get_TabNavigation()
     @_property
     def tab_navigation(self) -> microsoft_ui_xaml_input.KeyboardNavigationMode: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Control::put_TabNavigation(Microsoft.UI.Xaml.Input.KeyboardNavigationMode)
     @tab_navigation.setter
     @typing.final
     def tab_navigation(self, value: microsoft_ui_xaml_input.KeyboardNavigationMode) -> None: ...
+    # Microsoft.UI.Xaml.Controls.RequiresPointer Microsoft.UI.Xaml.Controls.Control::get_RequiresPointer()
     @_property
     def requires_pointer(self) -> RequiresPointer: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Control::put_RequiresPointer(Microsoft.UI.Xaml.Controls.RequiresPointer)
     @requires_pointer.setter
     @typing.final
     def requires_pointer(self, value: RequiresPointer) -> None: ...
+    # Microsoft.UI.Xaml.Thickness Microsoft.UI.Xaml.Controls.Control::get_Padding()
     @_property
     def padding(self) -> microsoft_ui_xaml.Thickness: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Control::put_Padding(Microsoft.UI.Xaml.Thickness)
     @padding.setter
     @typing.final
     def padding(self, value: microsoft_ui_xaml.Thickness) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.Control::get_IsTextScaleFactorEnabled()
     @_property
     def is_text_scale_factor_enabled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Control::put_IsTextScaleFactorEnabled(System.Boolean)
     @is_text_scale_factor_enabled.setter
     @typing.final
     def is_text_scale_factor_enabled(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.Control::get_IsFocusEngagementEnabled()
     @_property
     def is_focus_engagement_enabled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Control::put_IsFocusEngagementEnabled(System.Boolean)
     @is_focus_engagement_enabled.setter
     @typing.final
     def is_focus_engagement_enabled(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.Control::get_IsFocusEngaged()
     @_property
     def is_focus_engaged(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Control::put_IsFocusEngaged(System.Boolean)
     @is_focus_engaged.setter
     @typing.final
     def is_focus_engaged(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.Control::get_IsEnabled()
     @_property
     def is_enabled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Control::put_IsEnabled(System.Boolean)
     @is_enabled.setter
     @typing.final
     def is_enabled(self, value: bool) -> None: ...
+    # Microsoft.UI.Xaml.HorizontalAlignment Microsoft.UI.Xaml.Controls.Control::get_HorizontalContentAlignment()
     @_property
     def horizontal_content_alignment(self) -> microsoft_ui_xaml.HorizontalAlignment: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Control::put_HorizontalContentAlignment(Microsoft.UI.Xaml.HorizontalAlignment)
     @horizontal_content_alignment.setter
     @typing.final
     def horizontal_content_alignment(self, value: microsoft_ui_xaml.HorizontalAlignment) -> None: ...
+    # Microsoft.UI.Xaml.Media.Brush Microsoft.UI.Xaml.Controls.Control::get_Foreground()
     @_property
     def foreground(self) -> microsoft_ui_xaml_media.Brush: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Control::put_Foreground(Microsoft.UI.Xaml.Media.Brush)
     @foreground.setter
     @typing.final
     def foreground(self, value: microsoft_ui_xaml_media.Brush) -> None: ...
+    # Windows.UI.Text.FontWeight Microsoft.UI.Xaml.Controls.Control::get_FontWeight()
     @_property
     def font_weight(self) -> windows_ui_text.FontWeight: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Control::put_FontWeight(Windows.UI.Text.FontWeight)
     @font_weight.setter
     @typing.final
     def font_weight(self, value: windows_ui_text.FontWeight) -> None: ...
+    # Windows.UI.Text.FontStyle Microsoft.UI.Xaml.Controls.Control::get_FontStyle()
     @_property
     def font_style(self) -> windows_ui_text.FontStyle: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Control::put_FontStyle(Windows.UI.Text.FontStyle)
     @font_style.setter
     @typing.final
     def font_style(self, value: windows_ui_text.FontStyle) -> None: ...
+    # Windows.UI.Text.FontStretch Microsoft.UI.Xaml.Controls.Control::get_FontStretch()
     @_property
     def font_stretch(self) -> windows_ui_text.FontStretch: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Control::put_FontStretch(Windows.UI.Text.FontStretch)
     @font_stretch.setter
     @typing.final
     def font_stretch(self, value: windows_ui_text.FontStretch) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.Control::get_FontSize()
     @_property
     def font_size(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Control::put_FontSize(System.Double)
     @font_size.setter
     @typing.final
     def font_size(self, value: winrt.system.Double) -> None: ...
+    # Microsoft.UI.Xaml.Media.FontFamily Microsoft.UI.Xaml.Controls.Control::get_FontFamily()
     @_property
     def font_family(self) -> microsoft_ui_xaml_media.FontFamily: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Control::put_FontFamily(Microsoft.UI.Xaml.Media.FontFamily)
     @font_family.setter
     @typing.final
     def font_family(self, value: microsoft_ui_xaml_media.FontFamily) -> None: ...
+    # Microsoft.UI.Xaml.ElementSoundMode Microsoft.UI.Xaml.Controls.Control::get_ElementSoundMode()
     @_property
     def element_sound_mode(self) -> microsoft_ui_xaml.ElementSoundMode: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Control::put_ElementSoundMode(Microsoft.UI.Xaml.ElementSoundMode)
     @element_sound_mode.setter
     @typing.final
     def element_sound_mode(self, value: microsoft_ui_xaml.ElementSoundMode) -> None: ...
+    # Windows.Foundation.Uri Microsoft.UI.Xaml.Controls.Control::get_DefaultStyleResourceUri()
     @_property
     def default_style_resource_uri(self) -> windows_foundation.Uri: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Control::put_DefaultStyleResourceUri(Windows.Foundation.Uri)
     @default_style_resource_uri.setter
     @typing.final
     def default_style_resource_uri(self, value: windows_foundation.Uri) -> None: ...
+    # Microsoft.UI.Xaml.CornerRadius Microsoft.UI.Xaml.Controls.Control::get_CornerRadius()
     @_property
     def corner_radius(self) -> microsoft_ui_xaml.CornerRadius: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Control::put_CornerRadius(Microsoft.UI.Xaml.CornerRadius)
     @corner_radius.setter
     @typing.final
     def corner_radius(self, value: microsoft_ui_xaml.CornerRadius) -> None: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.Control::get_CharacterSpacing()
     @_property
     def character_spacing(self) -> winrt.system.Int32: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Control::put_CharacterSpacing(System.Int32)
     @character_spacing.setter
     @typing.final
     def character_spacing(self, value: winrt.system.Int32) -> None: ...
+    # Microsoft.UI.Xaml.Thickness Microsoft.UI.Xaml.Controls.Control::get_BorderThickness()
     @_property
     def border_thickness(self) -> microsoft_ui_xaml.Thickness: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Control::put_BorderThickness(Microsoft.UI.Xaml.Thickness)
     @border_thickness.setter
     @typing.final
     def border_thickness(self, value: microsoft_ui_xaml.Thickness) -> None: ...
+    # Microsoft.UI.Xaml.Media.Brush Microsoft.UI.Xaml.Controls.Control::get_BorderBrush()
     @_property
     def border_brush(self) -> microsoft_ui_xaml_media.Brush: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Control::put_BorderBrush(Microsoft.UI.Xaml.Media.Brush)
     @border_brush.setter
     @typing.final
     def border_brush(self, value: microsoft_ui_xaml_media.Brush) -> None: ...
+    # Microsoft.UI.Xaml.Controls.BackgroundSizing Microsoft.UI.Xaml.Controls.Control::get_BackgroundSizing()
     @_property
     def background_sizing(self) -> BackgroundSizing: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Control::put_BackgroundSizing(Microsoft.UI.Xaml.Controls.BackgroundSizing)
     @background_sizing.setter
     @typing.final
     def background_sizing(self, value: BackgroundSizing) -> None: ...
+    # Microsoft.UI.Xaml.Media.Brush Microsoft.UI.Xaml.Controls.Control::get_Background()
     @_property
     def background(self) -> microsoft_ui_xaml_media.Brush: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Control::put_Background(Microsoft.UI.Xaml.Media.Brush)
     @background.setter
     @typing.final
     def background(self, value: microsoft_ui_xaml_media.Brush) -> None: ...
@@ -2645,13 +3611,16 @@ class Control(microsoft_ui_xaml.FrameworkElement, metaclass=Control_Static):
 @typing.final
 class ControlTemplate(microsoft_ui_xaml.FrameworkTemplate):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Windows.UI.Xaml.Interop.TypeName Microsoft.UI.Xaml.Controls.ControlTemplate::get_TargetType()
     @_property
     def target_type(self) -> windows_ui_xaml_interop.TypeName: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ControlTemplate::put_TargetType(Windows.UI.Xaml.Interop.TypeName)
     @target_type.setter
     def target_type(self, value: windows_ui_xaml_interop.TypeName) -> None: ...
 
 @typing.final
 class CoreWebView2InitializedEventArgs(winrt.system.Object):
+    # Windows.Foundation.HResult Microsoft.UI.Xaml.Controls.CoreWebView2InitializedEventArgs::get_Exception()
     @_property
     def exception(self) -> windows_foundation.HResult: ...
 
@@ -2660,66 +3629,89 @@ class DataTemplateSelector_Static(type):
 
 class DataTemplateSelector(winrt.system.Object, microsoft_ui_xaml.ImplementsIElementFactory, metaclass=DataTemplateSelector_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.Controls.DataTemplateSelector::GetElement(Microsoft.UI.Xaml.ElementFactoryGetArgs)
     def get_element(self, args: microsoft_ui_xaml.ElementFactoryGetArgs, /) -> microsoft_ui_xaml.UIElement: ...
+    # System.Void Microsoft.UI.Xaml.Controls.DataTemplateSelector::RecycleElement(Microsoft.UI.Xaml.ElementFactoryRecycleArgs)
     def recycle_element(self, args: microsoft_ui_xaml.ElementFactoryRecycleArgs, /) -> None: ...
     @typing.final
+    # Microsoft.UI.Xaml.DataTemplate Microsoft.UI.Xaml.Controls.DataTemplateSelector::SelectTemplate(System.Object,Microsoft.UI.Xaml.DependencyObject)
     def select_template(self, item: winrt.system.Object, container: microsoft_ui_xaml.DependencyObject, /) -> microsoft_ui_xaml.DataTemplate: ...
+    # Microsoft.UI.Xaml.DataTemplate Microsoft.UI.Xaml.Controls.DataTemplateSelector::SelectTemplateCore(System.Object,Microsoft.UI.Xaml.DependencyObject)
     def _select_template_core(self, item: winrt.system.Object, container: microsoft_ui_xaml.DependencyObject, /) -> microsoft_ui_xaml.DataTemplate: ...
     @typing.final
+    # Microsoft.UI.Xaml.DataTemplate Microsoft.UI.Xaml.Controls.DataTemplateSelector::SelectTemplate(System.Object)
     def select_template_for_item(self, item: winrt.system.Object, /) -> microsoft_ui_xaml.DataTemplate: ...
+    # Microsoft.UI.Xaml.DataTemplate Microsoft.UI.Xaml.Controls.DataTemplateSelector::SelectTemplateCore(System.Object)
     def _select_template_for_item_core(self, item: winrt.system.Object, /) -> microsoft_ui_xaml.DataTemplate: ...
 
 @typing.final
 class DatePickedEventArgs(microsoft_ui_xaml.DependencyObject):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Windows.Foundation.DateTime Microsoft.UI.Xaml.Controls.DatePickedEventArgs::get_NewDate()
     @_property
     def new_date(self) -> datetime.datetime: ...
+    # Windows.Foundation.DateTime Microsoft.UI.Xaml.Controls.DatePickedEventArgs::get_OldDate()
     @_property
     def old_date(self) -> datetime.datetime: ...
 
 class DatePicker_Static(Control_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.DatePicker::get_CalendarIdentifierProperty()
     @_property
     @typing.final
     def calendar_identifier_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.DatePicker::get_DateProperty()
     @_property
     @typing.final
     def date_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.DatePicker::get_DayFormatProperty()
     @_property
     @typing.final
     def day_format_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.DatePicker::get_DayVisibleProperty()
     @_property
     @typing.final
     def day_visible_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.DatePicker::get_HeaderProperty()
     @_property
     @typing.final
     def header_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.DatePicker::get_HeaderTemplateProperty()
     @_property
     @typing.final
     def header_template_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.DatePicker::get_LightDismissOverlayModeProperty()
     @_property
     @typing.final
     def light_dismiss_overlay_mode_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.DatePicker::get_MaxYearProperty()
     @_property
     @typing.final
     def max_year_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.DatePicker::get_MinYearProperty()
     @_property
     @typing.final
     def min_year_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.DatePicker::get_MonthFormatProperty()
     @_property
     @typing.final
     def month_format_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.DatePicker::get_MonthVisibleProperty()
     @_property
     @typing.final
     def month_visible_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.DatePicker::get_OrientationProperty()
     @_property
     @typing.final
     def orientation_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.DatePicker::get_SelectedDateProperty()
     @_property
     @typing.final
     def selected_date_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.DatePicker::get_YearFormatProperty()
     @_property
     @typing.final
     def year_format_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.DatePicker::get_YearVisibleProperty()
     @_property
     @typing.final
     def year_visible_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
@@ -2727,176 +3719,239 @@ class DatePicker_Static(Control_Static):
 class DatePicker(Control, metaclass=DatePicker_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.DatePicker::add_DateChanged(Windows.Foundation.EventHandler`1<Microsoft.UI.Xaml.Controls.DatePickerValueChangedEventArgs>)
     def add_date_changed(self, handler: windows_foundation.EventHandler[DatePickerValueChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.DatePicker::remove_DateChanged(Windows.Foundation.EventRegistrationToken)
     def remove_date_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.DatePicker::add_SelectedDateChanged(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.DatePicker,Microsoft.UI.Xaml.Controls.DatePickerSelectedValueChangedEventArgs>)
     def add_selected_date_changed(self, handler: windows_foundation.TypedEventHandler[DatePicker, DatePickerSelectedValueChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.DatePicker::remove_SelectedDateChanged(Windows.Foundation.EventRegistrationToken)
     def remove_selected_date_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.DatePicker::get_YearVisible()
     @_property
     def year_visible(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.DatePicker::put_YearVisible(System.Boolean)
     @year_visible.setter
     @typing.final
     def year_visible(self, value: bool) -> None: ...
+    # System.String Microsoft.UI.Xaml.Controls.DatePicker::get_YearFormat()
     @_property
     def year_format(self) -> str: ...
+    # System.Void Microsoft.UI.Xaml.Controls.DatePicker::put_YearFormat(System.String)
     @year_format.setter
     @typing.final
     def year_format(self, value: str) -> None: ...
+    # Windows.Foundation.IReference`1<Windows.Foundation.DateTime> Microsoft.UI.Xaml.Controls.DatePicker::get_SelectedDate()
     @_property
     def selected_date(self) -> typing.Optional[datetime.datetime]: ...
+    # System.Void Microsoft.UI.Xaml.Controls.DatePicker::put_SelectedDate(Windows.Foundation.IReference`1<Windows.Foundation.DateTime>)
     @selected_date.setter
     @typing.final
     def selected_date(self, value: typing.Optional[datetime.datetime]) -> None: ...
+    # Microsoft.UI.Xaml.Controls.Orientation Microsoft.UI.Xaml.Controls.DatePicker::get_Orientation()
     @_property
     def orientation(self) -> Orientation: ...
+    # System.Void Microsoft.UI.Xaml.Controls.DatePicker::put_Orientation(Microsoft.UI.Xaml.Controls.Orientation)
     @orientation.setter
     @typing.final
     def orientation(self, value: Orientation) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.DatePicker::get_MonthVisible()
     @_property
     def month_visible(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.DatePicker::put_MonthVisible(System.Boolean)
     @month_visible.setter
     @typing.final
     def month_visible(self, value: bool) -> None: ...
+    # System.String Microsoft.UI.Xaml.Controls.DatePicker::get_MonthFormat()
     @_property
     def month_format(self) -> str: ...
+    # System.Void Microsoft.UI.Xaml.Controls.DatePicker::put_MonthFormat(System.String)
     @month_format.setter
     @typing.final
     def month_format(self, value: str) -> None: ...
+    # Windows.Foundation.DateTime Microsoft.UI.Xaml.Controls.DatePicker::get_MinYear()
     @_property
     def min_year(self) -> datetime.datetime: ...
+    # System.Void Microsoft.UI.Xaml.Controls.DatePicker::put_MinYear(Windows.Foundation.DateTime)
     @min_year.setter
     @typing.final
     def min_year(self, value: datetime.datetime) -> None: ...
+    # Windows.Foundation.DateTime Microsoft.UI.Xaml.Controls.DatePicker::get_MaxYear()
     @_property
     def max_year(self) -> datetime.datetime: ...
+    # System.Void Microsoft.UI.Xaml.Controls.DatePicker::put_MaxYear(Windows.Foundation.DateTime)
     @max_year.setter
     @typing.final
     def max_year(self, value: datetime.datetime) -> None: ...
+    # Microsoft.UI.Xaml.Controls.LightDismissOverlayMode Microsoft.UI.Xaml.Controls.DatePicker::get_LightDismissOverlayMode()
     @_property
     def light_dismiss_overlay_mode(self) -> LightDismissOverlayMode: ...
+    # System.Void Microsoft.UI.Xaml.Controls.DatePicker::put_LightDismissOverlayMode(Microsoft.UI.Xaml.Controls.LightDismissOverlayMode)
     @light_dismiss_overlay_mode.setter
     @typing.final
     def light_dismiss_overlay_mode(self, value: LightDismissOverlayMode) -> None: ...
+    # Microsoft.UI.Xaml.DataTemplate Microsoft.UI.Xaml.Controls.DatePicker::get_HeaderTemplate()
     @_property
     def header_template(self) -> microsoft_ui_xaml.DataTemplate: ...
+    # System.Void Microsoft.UI.Xaml.Controls.DatePicker::put_HeaderTemplate(Microsoft.UI.Xaml.DataTemplate)
     @header_template.setter
     @typing.final
     def header_template(self, value: microsoft_ui_xaml.DataTemplate) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.DatePicker::get_Header()
     @_property
     def header(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.DatePicker::put_Header(System.Object)
     @header.setter
     @typing.final
     def header(self, value: winrt.system.Object) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.DatePicker::get_DayVisible()
     @_property
     def day_visible(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.DatePicker::put_DayVisible(System.Boolean)
     @day_visible.setter
     @typing.final
     def day_visible(self, value: bool) -> None: ...
+    # System.String Microsoft.UI.Xaml.Controls.DatePicker::get_DayFormat()
     @_property
     def day_format(self) -> str: ...
+    # System.Void Microsoft.UI.Xaml.Controls.DatePicker::put_DayFormat(System.String)
     @day_format.setter
     @typing.final
     def day_format(self, value: str) -> None: ...
+    # Windows.Foundation.DateTime Microsoft.UI.Xaml.Controls.DatePicker::get_Date()
     @_property
     def date(self) -> datetime.datetime: ...
+    # System.Void Microsoft.UI.Xaml.Controls.DatePicker::put_Date(Windows.Foundation.DateTime)
     @date.setter
     @typing.final
     def date(self, value: datetime.datetime) -> None: ...
+    # System.String Microsoft.UI.Xaml.Controls.DatePicker::get_CalendarIdentifier()
     @_property
     def calendar_identifier(self) -> str: ...
+    # System.Void Microsoft.UI.Xaml.Controls.DatePicker::put_CalendarIdentifier(System.String)
     @calendar_identifier.setter
     @typing.final
     def calendar_identifier(self, value: str) -> None: ...
 
 @typing.final
 class DatePickerFlyoutItem_Static(microsoft_ui_xaml.DependencyObject_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.DatePickerFlyoutItem::get_PrimaryTextProperty()
     @_property
     def primary_text_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.DatePickerFlyoutItem::get_SecondaryTextProperty()
     @_property
     def secondary_text_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
 class DatePickerFlyoutItem(microsoft_ui_xaml.DependencyObject, microsoft_ui_xaml_data.ImplementsICustomPropertyProvider, metaclass=DatePickerFlyoutItem_Static):
+    # Microsoft.UI.Xaml.Data.ICustomProperty Microsoft.UI.Xaml.Controls.DatePickerFlyoutItem::GetCustomProperty(System.String)
     def get_custom_property(self, name: str, /) -> microsoft_ui_xaml_data.ICustomProperty: ...
+    # Microsoft.UI.Xaml.Data.ICustomProperty Microsoft.UI.Xaml.Controls.DatePickerFlyoutItem::GetIndexedProperty(System.String,Windows.UI.Xaml.Interop.TypeName)
     def get_indexed_property(self, name: str, type: windows_ui_xaml_interop.TypeName, /) -> microsoft_ui_xaml_data.ICustomProperty: ...
+    # System.String Microsoft.UI.Xaml.Controls.DatePickerFlyoutItem::GetStringRepresentation()
     def get_string_representation(self) -> str: ...
+    # System.String Microsoft.UI.Xaml.Controls.DatePickerFlyoutItem::get_SecondaryText()
     @_property
     def secondary_text(self) -> str: ...
+    # System.Void Microsoft.UI.Xaml.Controls.DatePickerFlyoutItem::put_SecondaryText(System.String)
     @secondary_text.setter
     def secondary_text(self, value: str) -> None: ...
+    # System.String Microsoft.UI.Xaml.Controls.DatePickerFlyoutItem::get_PrimaryText()
     @_property
     def primary_text(self) -> str: ...
+    # System.Void Microsoft.UI.Xaml.Controls.DatePickerFlyoutItem::put_PrimaryText(System.String)
     @primary_text.setter
     def primary_text(self, value: str) -> None: ...
+    # Windows.UI.Xaml.Interop.TypeName Microsoft.UI.Xaml.Controls.DatePickerFlyoutItem::get_Type()
     @_property
     def type(self) -> windows_ui_xaml_interop.TypeName: ...
 
 @typing.final
 class DatePickerFlyoutPresenter_Static(Control_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.DatePickerFlyoutPresenter::get_IsDefaultShadowEnabledProperty()
     @_property
     def is_default_shadow_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
 class DatePickerFlyoutPresenter(Control, metaclass=DatePickerFlyoutPresenter_Static):
+    # System.Boolean Microsoft.UI.Xaml.Controls.DatePickerFlyoutPresenter::get_IsDefaultShadowEnabled()
     @_property
     def is_default_shadow_enabled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.DatePickerFlyoutPresenter::put_IsDefaultShadowEnabled(System.Boolean)
     @is_default_shadow_enabled.setter
     def is_default_shadow_enabled(self, value: bool) -> None: ...
 
 @typing.final
 class DatePickerSelectedValueChangedEventArgs(winrt.system.Object):
+    # Windows.Foundation.IReference`1<Windows.Foundation.DateTime> Microsoft.UI.Xaml.Controls.DatePickerSelectedValueChangedEventArgs::get_NewDate()
     @_property
     def new_date(self) -> typing.Optional[datetime.datetime]: ...
+    # Windows.Foundation.IReference`1<Windows.Foundation.DateTime> Microsoft.UI.Xaml.Controls.DatePickerSelectedValueChangedEventArgs::get_OldDate()
     @_property
     def old_date(self) -> typing.Optional[datetime.datetime]: ...
 
 @typing.final
 class DatePickerValueChangedEventArgs(winrt.system.Object):
+    # Windows.Foundation.DateTime Microsoft.UI.Xaml.Controls.DatePickerValueChangedEventArgs::get_NewDate()
     @_property
     def new_date(self) -> datetime.datetime: ...
+    # Windows.Foundation.DateTime Microsoft.UI.Xaml.Controls.DatePickerValueChangedEventArgs::get_OldDate()
     @_property
     def old_date(self) -> datetime.datetime: ...
 
 @typing.final
 class DragItemsCompletedEventArgs(winrt.system.Object):
+    # Windows.ApplicationModel.DataTransfer.DataPackageOperation Microsoft.UI.Xaml.Controls.DragItemsCompletedEventArgs::get_DropResult()
     @_property
     def drop_result(self) -> windows_applicationmodel_datatransfer.DataPackageOperation: ...
+    # Windows.Foundation.Collections.IVectorView`1<System.Object> Microsoft.UI.Xaml.Controls.DragItemsCompletedEventArgs::get_Items()
     @_property
     def items(self) -> typing.Sequence[winrt.system.Object]: ...
 
 @typing.final
 class DragItemsStartingEventArgs(winrt.system.Object):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.DragItemsStartingEventArgs::get_Cancel()
     @_property
     def cancel(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.DragItemsStartingEventArgs::put_Cancel(System.Boolean)
     @cancel.setter
     def cancel(self, value: bool) -> None: ...
+    # Windows.ApplicationModel.DataTransfer.DataPackage Microsoft.UI.Xaml.Controls.DragItemsStartingEventArgs::get_Data()
     @_property
     def data(self) -> windows_applicationmodel_datatransfer.DataPackage: ...
+    # Windows.Foundation.Collections.IVector`1<System.Object> Microsoft.UI.Xaml.Controls.DragItemsStartingEventArgs::get_Items()
     @_property
     def items(self) -> typing.MutableSequence[winrt.system.Object]: ...
 
 @typing.final
 class DynamicOverflowItemsChangingEventArgs(winrt.system.Object):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Microsoft.UI.Xaml.Controls.CommandBarDynamicOverflowAction Microsoft.UI.Xaml.Controls.DynamicOverflowItemsChangingEventArgs::get_Action()
     @_property
     def action(self) -> CommandBarDynamicOverflowAction: ...
 
 class Expander_Static(ContentControl_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Expander::get_ExpandDirectionProperty()
     @_property
     @typing.final
     def expand_direction_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Expander::get_HeaderProperty()
     @_property
     @typing.final
     def header_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Expander::get_HeaderTemplateProperty()
     @_property
     @typing.final
     def header_template_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Expander::get_HeaderTemplateSelectorProperty()
     @_property
     @typing.final
     def header_template_selector_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Expander::get_IsExpandedProperty()
     @_property
     @typing.final
     def is_expanded_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
@@ -2904,38 +3959,53 @@ class Expander_Static(ContentControl_Static):
 class Expander(ContentControl, metaclass=Expander_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.Expander::add_Collapsed(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.Expander,Microsoft.UI.Xaml.Controls.ExpanderCollapsedEventArgs>)
     def add_collapsed(self, handler: windows_foundation.TypedEventHandler[Expander, ExpanderCollapsedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.Expander::remove_Collapsed(Windows.Foundation.EventRegistrationToken)
     def remove_collapsed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.Expander::add_Expanding(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.Expander,Microsoft.UI.Xaml.Controls.ExpanderExpandingEventArgs>)
     def add_expanding(self, handler: windows_foundation.TypedEventHandler[Expander, ExpanderExpandingEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.Expander::remove_Expanding(Windows.Foundation.EventRegistrationToken)
     def remove_expanding(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.Expander::get_IsExpanded()
     @_property
     def is_expanded(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Expander::put_IsExpanded(System.Boolean)
     @is_expanded.setter
     @typing.final
     def is_expanded(self, value: bool) -> None: ...
+    # Microsoft.UI.Xaml.Controls.DataTemplateSelector Microsoft.UI.Xaml.Controls.Expander::get_HeaderTemplateSelector()
     @_property
     def header_template_selector(self) -> DataTemplateSelector: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Expander::put_HeaderTemplateSelector(Microsoft.UI.Xaml.Controls.DataTemplateSelector)
     @header_template_selector.setter
     @typing.final
     def header_template_selector(self, value: DataTemplateSelector) -> None: ...
+    # Microsoft.UI.Xaml.DataTemplate Microsoft.UI.Xaml.Controls.Expander::get_HeaderTemplate()
     @_property
     def header_template(self) -> microsoft_ui_xaml.DataTemplate: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Expander::put_HeaderTemplate(Microsoft.UI.Xaml.DataTemplate)
     @header_template.setter
     @typing.final
     def header_template(self, value: microsoft_ui_xaml.DataTemplate) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.Expander::get_Header()
     @_property
     def header(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Expander::put_Header(System.Object)
     @header.setter
     @typing.final
     def header(self, value: winrt.system.Object) -> None: ...
+    # Microsoft.UI.Xaml.Controls.ExpandDirection Microsoft.UI.Xaml.Controls.Expander::get_ExpandDirection()
     @_property
     def expand_direction(self) -> ExpandDirection: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Expander::put_ExpandDirection(Microsoft.UI.Xaml.Controls.ExpandDirection)
     @expand_direction.setter
     @typing.final
     def expand_direction(self, value: ExpandDirection) -> None: ...
+    # Microsoft.UI.Xaml.Controls.ExpanderTemplateSettings Microsoft.UI.Xaml.Controls.Expander::get_TemplateSettings()
     @_property
     @typing.final
     def template_settings(self) -> ExpanderTemplateSettings: ...
@@ -2950,20 +4020,25 @@ class ExpanderExpandingEventArgs(winrt.system.Object):
 
 @typing.final
 class ExpanderTemplateSettings(microsoft_ui_xaml.DependencyObject):
+    # System.Double Microsoft.UI.Xaml.Controls.ExpanderTemplateSettings::get_ContentHeight()
     @_property
     def content_height(self) -> winrt.system.Double: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ExpanderTemplateSettings::get_NegativeContentHeight()
     @_property
     def negative_content_height(self) -> winrt.system.Double: ...
 
 class FlyoutPresenter_Static(ContentControl_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.FlyoutPresenter::get_IsDefaultShadowEnabledProperty()
     @_property
     @typing.final
     def is_default_shadow_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class FlyoutPresenter(ContentControl, metaclass=FlyoutPresenter_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.FlyoutPresenter::get_IsDefaultShadowEnabled()
     @_property
     def is_default_shadow_enabled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.FlyoutPresenter::put_IsDefaultShadowEnabled(System.Boolean)
     @is_default_shadow_enabled.setter
     @typing.final
     def is_default_shadow_enabled(self, value: bool) -> None: ...
@@ -2974,158 +4049,211 @@ class FocusDisengagedEventArgs(microsoft_ui_xaml.RoutedEventArgs):
 
 @typing.final
 class FocusEngagedEventArgs(microsoft_ui_xaml.RoutedEventArgs):
+    # System.Boolean Microsoft.UI.Xaml.Controls.FocusEngagedEventArgs::get_Handled()
     @_property
     def handled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.FocusEngagedEventArgs::put_Handled(System.Boolean)
     @handled.setter
     def handled(self, value: bool) -> None: ...
 
 class FontIcon_Static(IconElement_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.FontIcon::get_FontFamilyProperty()
     @_property
     @typing.final
     def font_family_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.FontIcon::get_FontSizeProperty()
     @_property
     @typing.final
     def font_size_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.FontIcon::get_FontStyleProperty()
     @_property
     @typing.final
     def font_style_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.FontIcon::get_FontWeightProperty()
     @_property
     @typing.final
     def font_weight_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.FontIcon::get_GlyphProperty()
     @_property
     @typing.final
     def glyph_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.FontIcon::get_IsTextScaleFactorEnabledProperty()
     @_property
     @typing.final
     def is_text_scale_factor_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.FontIcon::get_MirroredWhenRightToLeftProperty()
     @_property
     @typing.final
     def mirrored_when_right_to_left_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class FontIcon(IconElement, metaclass=FontIcon_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.FontIcon::get_MirroredWhenRightToLeft()
     @_property
     def mirrored_when_right_to_left(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.FontIcon::put_MirroredWhenRightToLeft(System.Boolean)
     @mirrored_when_right_to_left.setter
     @typing.final
     def mirrored_when_right_to_left(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.FontIcon::get_IsTextScaleFactorEnabled()
     @_property
     def is_text_scale_factor_enabled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.FontIcon::put_IsTextScaleFactorEnabled(System.Boolean)
     @is_text_scale_factor_enabled.setter
     @typing.final
     def is_text_scale_factor_enabled(self, value: bool) -> None: ...
+    # System.String Microsoft.UI.Xaml.Controls.FontIcon::get_Glyph()
     @_property
     def glyph(self) -> str: ...
+    # System.Void Microsoft.UI.Xaml.Controls.FontIcon::put_Glyph(System.String)
     @glyph.setter
     @typing.final
     def glyph(self, value: str) -> None: ...
+    # Windows.UI.Text.FontWeight Microsoft.UI.Xaml.Controls.FontIcon::get_FontWeight()
     @_property
     def font_weight(self) -> windows_ui_text.FontWeight: ...
+    # System.Void Microsoft.UI.Xaml.Controls.FontIcon::put_FontWeight(Windows.UI.Text.FontWeight)
     @font_weight.setter
     @typing.final
     def font_weight(self, value: windows_ui_text.FontWeight) -> None: ...
+    # Windows.UI.Text.FontStyle Microsoft.UI.Xaml.Controls.FontIcon::get_FontStyle()
     @_property
     def font_style(self) -> windows_ui_text.FontStyle: ...
+    # System.Void Microsoft.UI.Xaml.Controls.FontIcon::put_FontStyle(Windows.UI.Text.FontStyle)
     @font_style.setter
     @typing.final
     def font_style(self, value: windows_ui_text.FontStyle) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.FontIcon::get_FontSize()
     @_property
     def font_size(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.FontIcon::put_FontSize(System.Double)
     @font_size.setter
     @typing.final
     def font_size(self, value: winrt.system.Double) -> None: ...
+    # Microsoft.UI.Xaml.Media.FontFamily Microsoft.UI.Xaml.Controls.FontIcon::get_FontFamily()
     @_property
     def font_family(self) -> microsoft_ui_xaml_media.FontFamily: ...
+    # System.Void Microsoft.UI.Xaml.Controls.FontIcon::put_FontFamily(Microsoft.UI.Xaml.Media.FontFamily)
     @font_family.setter
     @typing.final
     def font_family(self, value: microsoft_ui_xaml_media.FontFamily) -> None: ...
 
 class FontIconSource_Static(IconSource_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.FontIconSource::get_FontFamilyProperty()
     @_property
     @typing.final
     def font_family_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.FontIconSource::get_FontSizeProperty()
     @_property
     @typing.final
     def font_size_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.FontIconSource::get_FontStyleProperty()
     @_property
     @typing.final
     def font_style_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.FontIconSource::get_FontWeightProperty()
     @_property
     @typing.final
     def font_weight_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.FontIconSource::get_GlyphProperty()
     @_property
     @typing.final
     def glyph_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.FontIconSource::get_IsTextScaleFactorEnabledProperty()
     @_property
     @typing.final
     def is_text_scale_factor_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.FontIconSource::get_MirroredWhenRightToLeftProperty()
     @_property
     @typing.final
     def mirrored_when_right_to_left_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class FontIconSource(IconSource, metaclass=FontIconSource_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.FontIconSource::get_MirroredWhenRightToLeft()
     @_property
     def mirrored_when_right_to_left(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.FontIconSource::put_MirroredWhenRightToLeft(System.Boolean)
     @mirrored_when_right_to_left.setter
     @typing.final
     def mirrored_when_right_to_left(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.FontIconSource::get_IsTextScaleFactorEnabled()
     @_property
     def is_text_scale_factor_enabled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.FontIconSource::put_IsTextScaleFactorEnabled(System.Boolean)
     @is_text_scale_factor_enabled.setter
     @typing.final
     def is_text_scale_factor_enabled(self, value: bool) -> None: ...
+    # System.String Microsoft.UI.Xaml.Controls.FontIconSource::get_Glyph()
     @_property
     def glyph(self) -> str: ...
+    # System.Void Microsoft.UI.Xaml.Controls.FontIconSource::put_Glyph(System.String)
     @glyph.setter
     @typing.final
     def glyph(self, value: str) -> None: ...
+    # Windows.UI.Text.FontWeight Microsoft.UI.Xaml.Controls.FontIconSource::get_FontWeight()
     @_property
     def font_weight(self) -> windows_ui_text.FontWeight: ...
+    # System.Void Microsoft.UI.Xaml.Controls.FontIconSource::put_FontWeight(Windows.UI.Text.FontWeight)
     @font_weight.setter
     @typing.final
     def font_weight(self, value: windows_ui_text.FontWeight) -> None: ...
+    # Windows.UI.Text.FontStyle Microsoft.UI.Xaml.Controls.FontIconSource::get_FontStyle()
     @_property
     def font_style(self) -> windows_ui_text.FontStyle: ...
+    # System.Void Microsoft.UI.Xaml.Controls.FontIconSource::put_FontStyle(Windows.UI.Text.FontStyle)
     @font_style.setter
     @typing.final
     def font_style(self, value: windows_ui_text.FontStyle) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.FontIconSource::get_FontSize()
     @_property
     def font_size(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.FontIconSource::put_FontSize(System.Double)
     @font_size.setter
     @typing.final
     def font_size(self, value: winrt.system.Double) -> None: ...
+    # Microsoft.UI.Xaml.Media.FontFamily Microsoft.UI.Xaml.Controls.FontIconSource::get_FontFamily()
     @_property
     def font_family(self) -> microsoft_ui_xaml_media.FontFamily: ...
+    # System.Void Microsoft.UI.Xaml.Controls.FontIconSource::put_FontFamily(Microsoft.UI.Xaml.Media.FontFamily)
     @font_family.setter
     @typing.final
     def font_family(self, value: microsoft_ui_xaml_media.FontFamily) -> None: ...
 
 class Frame_Static(ContentControl_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Frame::get_BackStackDepthProperty()
     @_property
     @typing.final
     def back_stack_depth_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Frame::get_BackStackProperty()
     @_property
     @typing.final
     def back_stack_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Frame::get_CacheSizeProperty()
     @_property
     @typing.final
     def cache_size_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Frame::get_CanGoBackProperty()
     @_property
     @typing.final
     def can_go_back_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Frame::get_CanGoForwardProperty()
     @_property
     @typing.final
     def can_go_forward_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Frame::get_CurrentSourcePageTypeProperty()
     @_property
     @typing.final
     def current_source_page_type_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Frame::get_ForwardStackProperty()
     @_property
     @typing.final
     def forward_stack_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Frame::get_IsNavigationStackEnabledProperty()
     @_property
     @typing.final
     def is_navigation_stack_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Frame::get_SourcePageTypeProperty()
     @_property
     @typing.final
     def source_page_type_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
@@ -3133,158 +4261,223 @@ class Frame_Static(ContentControl_Static):
 class Frame(ContentControl, ImplementsINavigate, metaclass=Frame_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.final
+    # System.String Microsoft.UI.Xaml.Controls.Frame::GetNavigationState()
     def get_navigation_state(self) -> str: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.Frame::GoBack()
     def go_back(self) -> None: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.Frame::GoBack(Microsoft.UI.Xaml.Media.Animation.NavigationTransitionInfo)
     def go_back_with_transition_info(self, transition_info_override: microsoft_ui_xaml_media_animation.NavigationTransitionInfo, /) -> None: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.Frame::GoForward()
     def go_forward(self) -> None: ...
     @typing.overload
+    # System.Boolean Microsoft.UI.Xaml.Controls.Frame::Navigate(Windows.UI.Xaml.Interop.TypeName)
     def navigate(self, source_page_type: windows_ui_xaml_interop.TypeName, /) -> bool: ...
     @typing.overload
+    # System.Boolean Microsoft.UI.Xaml.Controls.Frame::Navigate(Windows.UI.Xaml.Interop.TypeName,System.Object)
     def navigate(self, source_page_type: windows_ui_xaml_interop.TypeName, parameter: winrt.system.Object, /) -> bool: ...
     @typing.final
+    # System.Boolean Microsoft.UI.Xaml.Controls.Frame::NavigateToType(Windows.UI.Xaml.Interop.TypeName,System.Object,Microsoft.UI.Xaml.Navigation.FrameNavigationOptions)
     def navigate_to_type(self, source_page_type: windows_ui_xaml_interop.TypeName, parameter: winrt.system.Object, navigation_options: microsoft_ui_xaml_navigation.FrameNavigationOptions, /) -> bool: ...
     @typing.final
+    # System.Boolean Microsoft.UI.Xaml.Controls.Frame::Navigate(Windows.UI.Xaml.Interop.TypeName,System.Object,Microsoft.UI.Xaml.Media.Animation.NavigationTransitionInfo)
     def navigate_with_transition_info(self, source_page_type: windows_ui_xaml_interop.TypeName, parameter: winrt.system.Object, info_override: microsoft_ui_xaml_media_animation.NavigationTransitionInfo, /) -> bool: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.Frame::SetNavigationState(System.String)
     def set_navigation_state(self, navigation_state: str, /) -> None: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.Frame::SetNavigationState(System.String,System.Boolean)
     def set_navigation_state_with_navigation_control(self, navigation_state: str, suppress_navigate: bool, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.Frame::add_Navigated(Microsoft.UI.Xaml.Navigation.NavigatedEventHandler)
     def add_navigated(self, handler: microsoft_ui_xaml_navigation.NavigatedEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.Frame::remove_Navigated(Windows.Foundation.EventRegistrationToken)
     def remove_navigated(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.Frame::add_Navigating(Microsoft.UI.Xaml.Navigation.NavigatingCancelEventHandler)
     def add_navigating(self, handler: microsoft_ui_xaml_navigation.NavigatingCancelEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.Frame::remove_Navigating(Windows.Foundation.EventRegistrationToken)
     def remove_navigating(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.Frame::add_NavigationFailed(Microsoft.UI.Xaml.Navigation.NavigationFailedEventHandler)
     def add_navigation_failed(self, handler: microsoft_ui_xaml_navigation.NavigationFailedEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.Frame::remove_NavigationFailed(Windows.Foundation.EventRegistrationToken)
     def remove_navigation_failed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.Frame::add_NavigationStopped(Microsoft.UI.Xaml.Navigation.NavigationStoppedEventHandler)
     def add_navigation_stopped(self, handler: microsoft_ui_xaml_navigation.NavigationStoppedEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.Frame::remove_NavigationStopped(Windows.Foundation.EventRegistrationToken)
     def remove_navigation_stopped(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.UI.Xaml.Interop.TypeName Microsoft.UI.Xaml.Controls.Frame::get_SourcePageType()
     @_property
     def source_page_type(self) -> windows_ui_xaml_interop.TypeName: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Frame::put_SourcePageType(Windows.UI.Xaml.Interop.TypeName)
     @source_page_type.setter
     @typing.final
     def source_page_type(self, value: windows_ui_xaml_interop.TypeName) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.Frame::get_IsNavigationStackEnabled()
     @_property
     def is_navigation_stack_enabled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Frame::put_IsNavigationStackEnabled(System.Boolean)
     @is_navigation_stack_enabled.setter
     @typing.final
     def is_navigation_stack_enabled(self, value: bool) -> None: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.Frame::get_CacheSize()
     @_property
     def cache_size(self) -> winrt.system.Int32: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Frame::put_CacheSize(System.Int32)
     @cache_size.setter
     @typing.final
     def cache_size(self, value: winrt.system.Int32) -> None: ...
+    # Windows.Foundation.Collections.IVector`1<Microsoft.UI.Xaml.Navigation.PageStackEntry> Microsoft.UI.Xaml.Controls.Frame::get_BackStack()
     @_property
     @typing.final
     def back_stack(self) -> typing.MutableSequence[microsoft_ui_xaml_navigation.PageStackEntry]: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.Frame::get_BackStackDepth()
     @_property
     @typing.final
     def back_stack_depth(self) -> winrt.system.Int32: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.Frame::get_CanGoBack()
     @_property
     @typing.final
     def can_go_back(self) -> bool: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.Frame::get_CanGoForward()
     @_property
     @typing.final
     def can_go_forward(self) -> bool: ...
+    # Windows.UI.Xaml.Interop.TypeName Microsoft.UI.Xaml.Controls.Frame::get_CurrentSourcePageType()
     @_property
     @typing.final
     def current_source_page_type(self) -> windows_ui_xaml_interop.TypeName: ...
+    # Windows.Foundation.Collections.IVector`1<Microsoft.UI.Xaml.Navigation.PageStackEntry> Microsoft.UI.Xaml.Controls.Frame::get_ForwardStack()
     @_property
     @typing.final
     def forward_stack(self) -> typing.MutableSequence[microsoft_ui_xaml_navigation.PageStackEntry]: ...
 
 class Grid_Static(Panel_Static):
+    # System.Int32 Microsoft.UI.Xaml.Controls.Grid::GetColumn(Microsoft.UI.Xaml.FrameworkElement)
     def get_column(cls, element: microsoft_ui_xaml.FrameworkElement, /) -> winrt.system.Int32: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.Grid::GetColumnSpan(Microsoft.UI.Xaml.FrameworkElement)
     def get_column_span(cls, element: microsoft_ui_xaml.FrameworkElement, /) -> winrt.system.Int32: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.Grid::GetRow(Microsoft.UI.Xaml.FrameworkElement)
     def get_row(cls, element: microsoft_ui_xaml.FrameworkElement, /) -> winrt.system.Int32: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.Grid::GetRowSpan(Microsoft.UI.Xaml.FrameworkElement)
     def get_row_span(cls, element: microsoft_ui_xaml.FrameworkElement, /) -> winrt.system.Int32: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Grid::SetColumn(Microsoft.UI.Xaml.FrameworkElement,System.Int32)
     def set_column(cls, element: microsoft_ui_xaml.FrameworkElement, value: winrt.system.Int32, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Grid::SetColumnSpan(Microsoft.UI.Xaml.FrameworkElement,System.Int32)
     def set_column_span(cls, element: microsoft_ui_xaml.FrameworkElement, value: winrt.system.Int32, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Grid::SetRow(Microsoft.UI.Xaml.FrameworkElement,System.Int32)
     def set_row(cls, element: microsoft_ui_xaml.FrameworkElement, value: winrt.system.Int32, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Grid::SetRowSpan(Microsoft.UI.Xaml.FrameworkElement,System.Int32)
     def set_row_span(cls, element: microsoft_ui_xaml.FrameworkElement, value: winrt.system.Int32, /) -> None: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Grid::get_BackgroundSizingProperty()
     @_property
     @typing.final
     def background_sizing_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Grid::get_BorderBrushProperty()
     @_property
     @typing.final
     def border_brush_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Grid::get_BorderThicknessProperty()
     @_property
     @typing.final
     def border_thickness_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Grid::get_ColumnProperty()
     @_property
     @typing.final
     def column_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Grid::get_ColumnSpacingProperty()
     @_property
     @typing.final
     def column_spacing_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Grid::get_ColumnSpanProperty()
     @_property
     @typing.final
     def column_span_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Grid::get_CornerRadiusProperty()
     @_property
     @typing.final
     def corner_radius_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Grid::get_PaddingProperty()
     @_property
     @typing.final
     def padding_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Grid::get_RowProperty()
     @_property
     @typing.final
     def row_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Grid::get_RowSpacingProperty()
     @_property
     @typing.final
     def row_spacing_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Grid::get_RowSpanProperty()
     @_property
     @typing.final
     def row_span_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class Grid(Panel, metaclass=Grid_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Double Microsoft.UI.Xaml.Controls.Grid::get_RowSpacing()
     @_property
     def row_spacing(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Grid::put_RowSpacing(System.Double)
     @row_spacing.setter
     @typing.final
     def row_spacing(self, value: winrt.system.Double) -> None: ...
+    # Microsoft.UI.Xaml.Thickness Microsoft.UI.Xaml.Controls.Grid::get_Padding()
     @_property
     def padding(self) -> microsoft_ui_xaml.Thickness: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Grid::put_Padding(Microsoft.UI.Xaml.Thickness)
     @padding.setter
     @typing.final
     def padding(self, value: microsoft_ui_xaml.Thickness) -> None: ...
+    # Microsoft.UI.Xaml.CornerRadius Microsoft.UI.Xaml.Controls.Grid::get_CornerRadius()
     @_property
     def corner_radius(self) -> microsoft_ui_xaml.CornerRadius: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Grid::put_CornerRadius(Microsoft.UI.Xaml.CornerRadius)
     @corner_radius.setter
     @typing.final
     def corner_radius(self, value: microsoft_ui_xaml.CornerRadius) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.Grid::get_ColumnSpacing()
     @_property
     def column_spacing(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Grid::put_ColumnSpacing(System.Double)
     @column_spacing.setter
     @typing.final
     def column_spacing(self, value: winrt.system.Double) -> None: ...
+    # Microsoft.UI.Xaml.Thickness Microsoft.UI.Xaml.Controls.Grid::get_BorderThickness()
     @_property
     def border_thickness(self) -> microsoft_ui_xaml.Thickness: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Grid::put_BorderThickness(Microsoft.UI.Xaml.Thickness)
     @border_thickness.setter
     @typing.final
     def border_thickness(self, value: microsoft_ui_xaml.Thickness) -> None: ...
+    # Microsoft.UI.Xaml.Media.Brush Microsoft.UI.Xaml.Controls.Grid::get_BorderBrush()
     @_property
     def border_brush(self) -> microsoft_ui_xaml_media.Brush: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Grid::put_BorderBrush(Microsoft.UI.Xaml.Media.Brush)
     @border_brush.setter
     @typing.final
     def border_brush(self, value: microsoft_ui_xaml_media.Brush) -> None: ...
+    # Microsoft.UI.Xaml.Controls.BackgroundSizing Microsoft.UI.Xaml.Controls.Grid::get_BackgroundSizing()
     @_property
     def background_sizing(self) -> BackgroundSizing: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Grid::put_BackgroundSizing(Microsoft.UI.Xaml.Controls.BackgroundSizing)
     @background_sizing.setter
     @typing.final
     def background_sizing(self, value: BackgroundSizing) -> None: ...
+    # Microsoft.UI.Xaml.Controls.ColumnDefinitionCollection Microsoft.UI.Xaml.Controls.Grid::get_ColumnDefinitions()
     @_property
     @typing.final
     def column_definitions(self) -> ColumnDefinitionCollection: ...
+    # Microsoft.UI.Xaml.Controls.RowDefinitionCollection Microsoft.UI.Xaml.Controls.Grid::get_RowDefinitions()
     @_property
     @typing.final
     def row_definitions(self) -> RowDefinitionCollection: ...
@@ -3307,41 +4500,57 @@ class GroupStyle_Static(type):
 class GroupStyle(winrt.system.Object, microsoft_ui_xaml_data.ImplementsINotifyPropertyChanged, metaclass=GroupStyle_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.GroupStyle::add_PropertyChanged(Microsoft.UI.Xaml.Data.PropertyChangedEventHandler)
     def add_property_changed(self, handler: microsoft_ui_xaml_data.PropertyChangedEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.GroupStyle::remove_PropertyChanged(Windows.Foundation.EventRegistrationToken)
     def remove_property_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Microsoft.UI.Xaml.Controls.ItemsPanelTemplate Microsoft.UI.Xaml.Controls.GroupStyle::get_Panel()
     @_property
     def panel(self) -> ItemsPanelTemplate: ...
+    # System.Void Microsoft.UI.Xaml.Controls.GroupStyle::put_Panel(Microsoft.UI.Xaml.Controls.ItemsPanelTemplate)
     @panel.setter
     @typing.final
     def panel(self, value: ItemsPanelTemplate) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.GroupStyle::get_HidesIfEmpty()
     @_property
     def hides_if_empty(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.GroupStyle::put_HidesIfEmpty(System.Boolean)
     @hides_if_empty.setter
     @typing.final
     def hides_if_empty(self, value: bool) -> None: ...
+    # Microsoft.UI.Xaml.Controls.DataTemplateSelector Microsoft.UI.Xaml.Controls.GroupStyle::get_HeaderTemplateSelector()
     @_property
     def header_template_selector(self) -> DataTemplateSelector: ...
+    # System.Void Microsoft.UI.Xaml.Controls.GroupStyle::put_HeaderTemplateSelector(Microsoft.UI.Xaml.Controls.DataTemplateSelector)
     @header_template_selector.setter
     @typing.final
     def header_template_selector(self, value: DataTemplateSelector) -> None: ...
+    # Microsoft.UI.Xaml.DataTemplate Microsoft.UI.Xaml.Controls.GroupStyle::get_HeaderTemplate()
     @_property
     def header_template(self) -> microsoft_ui_xaml.DataTemplate: ...
+    # System.Void Microsoft.UI.Xaml.Controls.GroupStyle::put_HeaderTemplate(Microsoft.UI.Xaml.DataTemplate)
     @header_template.setter
     @typing.final
     def header_template(self, value: microsoft_ui_xaml.DataTemplate) -> None: ...
+    # Microsoft.UI.Xaml.Style Microsoft.UI.Xaml.Controls.GroupStyle::get_HeaderContainerStyle()
     @_property
     def header_container_style(self) -> microsoft_ui_xaml.Style: ...
+    # System.Void Microsoft.UI.Xaml.Controls.GroupStyle::put_HeaderContainerStyle(Microsoft.UI.Xaml.Style)
     @header_container_style.setter
     @typing.final
     def header_container_style(self, value: microsoft_ui_xaml.Style) -> None: ...
+    # Microsoft.UI.Xaml.Controls.StyleSelector Microsoft.UI.Xaml.Controls.GroupStyle::get_ContainerStyleSelector()
     @_property
     def container_style_selector(self) -> StyleSelector: ...
+    # System.Void Microsoft.UI.Xaml.Controls.GroupStyle::put_ContainerStyleSelector(Microsoft.UI.Xaml.Controls.StyleSelector)
     @container_style_selector.setter
     @typing.final
     def container_style_selector(self, value: StyleSelector) -> None: ...
+    # Microsoft.UI.Xaml.Style Microsoft.UI.Xaml.Controls.GroupStyle::get_ContainerStyle()
     @_property
     def container_style(self) -> microsoft_ui_xaml.Style: ...
+    # System.Void Microsoft.UI.Xaml.Controls.GroupStyle::put_ContainerStyle(Microsoft.UI.Xaml.Style)
     @container_style.setter
     @typing.final
     def container_style(self, value: microsoft_ui_xaml.Style) -> None: ...
@@ -3352,134 +4561,185 @@ class GroupStyleSelector_Static(type):
 class GroupStyleSelector(winrt.system.Object, metaclass=GroupStyleSelector_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.final
+    # Microsoft.UI.Xaml.Controls.GroupStyle Microsoft.UI.Xaml.Controls.GroupStyleSelector::SelectGroupStyle(System.Object,System.UInt32)
     def select_group_style(self, group: winrt.system.Object, level: winrt.system.UInt32, /) -> GroupStyle: ...
+    # Microsoft.UI.Xaml.Controls.GroupStyle Microsoft.UI.Xaml.Controls.GroupStyleSelector::SelectGroupStyleCore(System.Object,System.UInt32)
     def _select_group_style_core(self, group: winrt.system.Object, level: winrt.system.UInt32, /) -> GroupStyle: ...
 
 @typing.final
 class HasValidationErrorsChangedEventArgs(winrt.system.Object):
+    # System.Boolean Microsoft.UI.Xaml.Controls.HasValidationErrorsChangedEventArgs::get_NewValue()
     @_property
     def new_value(self) -> bool: ...
 
 class Hub_Static(Control_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Hub::get_DefaultSectionIndexProperty()
     @_property
     @typing.final
     def default_section_index_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Hub::get_HeaderProperty()
     @_property
     @typing.final
     def header_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Hub::get_HeaderTemplateProperty()
     @_property
     @typing.final
     def header_template_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Hub::get_IsActiveViewProperty()
     @_property
     @typing.final
     def is_active_view_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Hub::get_IsZoomedInViewProperty()
     @_property
     @typing.final
     def is_zoomed_in_view_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Hub::get_OrientationProperty()
     @_property
     @typing.final
     def orientation_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Hub::get_SemanticZoomOwnerProperty()
     @_property
     @typing.final
     def semantic_zoom_owner_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class Hub(Control, ImplementsISemanticZoomInformation, metaclass=Hub_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Hub::CompleteViewChange()
     def complete_view_change(self) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Hub::CompleteViewChangeFrom(Microsoft.UI.Xaml.Controls.SemanticZoomLocation,Microsoft.UI.Xaml.Controls.SemanticZoomLocation)
     def complete_view_change_from(self, source: SemanticZoomLocation, destination: SemanticZoomLocation, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Hub::CompleteViewChangeTo(Microsoft.UI.Xaml.Controls.SemanticZoomLocation,Microsoft.UI.Xaml.Controls.SemanticZoomLocation)
     def complete_view_change_to(self, source: SemanticZoomLocation, destination: SemanticZoomLocation, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Hub::InitializeViewChange()
     def initialize_view_change(self) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Hub::MakeVisible(Microsoft.UI.Xaml.Controls.SemanticZoomLocation)
     def make_visible(self, item: SemanticZoomLocation, /) -> None: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.Hub::ScrollToSection(Microsoft.UI.Xaml.Controls.HubSection)
     def scroll_to_section(self, section: HubSection, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Hub::StartViewChangeFrom(Microsoft.UI.Xaml.Controls.SemanticZoomLocation,Microsoft.UI.Xaml.Controls.SemanticZoomLocation)
     def start_view_change_from(self, source: SemanticZoomLocation, destination: SemanticZoomLocation, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Hub::StartViewChangeTo(Microsoft.UI.Xaml.Controls.SemanticZoomLocation,Microsoft.UI.Xaml.Controls.SemanticZoomLocation)
     def start_view_change_to(self, source: SemanticZoomLocation, destination: SemanticZoomLocation, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.Hub::add_SectionHeaderClick(Microsoft.UI.Xaml.Controls.HubSectionHeaderClickEventHandler)
     def add_section_header_click(self, handler: HubSectionHeaderClickEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.Hub::remove_SectionHeaderClick(Windows.Foundation.EventRegistrationToken)
     def remove_section_header_click(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.Hub::add_SectionsInViewChanged(Microsoft.UI.Xaml.Controls.SectionsInViewChangedEventHandler)
     def add_sections_in_view_changed(self, handler: SectionsInViewChangedEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.Hub::remove_SectionsInViewChanged(Windows.Foundation.EventRegistrationToken)
     def remove_sections_in_view_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Microsoft.UI.Xaml.Controls.Orientation Microsoft.UI.Xaml.Controls.Hub::get_Orientation()
     @_property
     def orientation(self) -> Orientation: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Hub::put_Orientation(Microsoft.UI.Xaml.Controls.Orientation)
     @orientation.setter
     @typing.final
     def orientation(self, value: Orientation) -> None: ...
+    # Microsoft.UI.Xaml.DataTemplate Microsoft.UI.Xaml.Controls.Hub::get_HeaderTemplate()
     @_property
     def header_template(self) -> microsoft_ui_xaml.DataTemplate: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Hub::put_HeaderTemplate(Microsoft.UI.Xaml.DataTemplate)
     @header_template.setter
     @typing.final
     def header_template(self, value: microsoft_ui_xaml.DataTemplate) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.Hub::get_Header()
     @_property
     def header(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Hub::put_Header(System.Object)
     @header.setter
     @typing.final
     def header(self, value: winrt.system.Object) -> None: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.Hub::get_DefaultSectionIndex()
     @_property
     def default_section_index(self) -> winrt.system.Int32: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Hub::put_DefaultSectionIndex(System.Int32)
     @default_section_index.setter
     @typing.final
     def default_section_index(self, value: winrt.system.Int32) -> None: ...
+    # Windows.Foundation.Collections.IObservableVector`1<System.Object> Microsoft.UI.Xaml.Controls.Hub::get_SectionHeaders()
     @_property
     @typing.final
     def section_headers(self) -> windows_foundation_collections.IObservableVector[winrt.system.Object]: ...
+    # Windows.Foundation.Collections.IVector`1<Microsoft.UI.Xaml.Controls.HubSection> Microsoft.UI.Xaml.Controls.Hub::get_Sections()
     @_property
     @typing.final
     def sections(self) -> typing.MutableSequence[HubSection]: ...
+    # Windows.Foundation.Collections.IVector`1<Microsoft.UI.Xaml.Controls.HubSection> Microsoft.UI.Xaml.Controls.Hub::get_SectionsInView()
     @_property
     @typing.final
     def sections_in_view(self) -> typing.MutableSequence[HubSection]: ...
+    # Microsoft.UI.Xaml.Controls.SemanticZoom Microsoft.UI.Xaml.Controls.Hub::get_SemanticZoomOwner()
     @_property
     def semantic_zoom_owner(self) -> SemanticZoom: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Hub::put_SemanticZoomOwner(Microsoft.UI.Xaml.Controls.SemanticZoom)
     @semantic_zoom_owner.setter
     @typing.final
     def semantic_zoom_owner(self, value: SemanticZoom) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.Hub::get_IsZoomedInView()
     @_property
     def is_zoomed_in_view(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Hub::put_IsZoomedInView(System.Boolean)
     @is_zoomed_in_view.setter
     @typing.final
     def is_zoomed_in_view(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.Hub::get_IsActiveView()
     @_property
     def is_active_view(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Hub::put_IsActiveView(System.Boolean)
     @is_active_view.setter
     @typing.final
     def is_active_view(self, value: bool) -> None: ...
 
 class HubSection_Static(Control_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.HubSection::get_ContentTemplateProperty()
     @_property
     @typing.final
     def content_template_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.HubSection::get_HeaderProperty()
     @_property
     @typing.final
     def header_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.HubSection::get_HeaderTemplateProperty()
     @_property
     @typing.final
     def header_template_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.HubSection::get_IsHeaderInteractiveProperty()
     @_property
     @typing.final
     def is_header_interactive_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class HubSection(Control, metaclass=HubSection_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.HubSection::get_IsHeaderInteractive()
     @_property
     def is_header_interactive(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.HubSection::put_IsHeaderInteractive(System.Boolean)
     @is_header_interactive.setter
     @typing.final
     def is_header_interactive(self, value: bool) -> None: ...
+    # Microsoft.UI.Xaml.DataTemplate Microsoft.UI.Xaml.Controls.HubSection::get_HeaderTemplate()
     @_property
     def header_template(self) -> microsoft_ui_xaml.DataTemplate: ...
+    # System.Void Microsoft.UI.Xaml.Controls.HubSection::put_HeaderTemplate(Microsoft.UI.Xaml.DataTemplate)
     @header_template.setter
     @typing.final
     def header_template(self, value: microsoft_ui_xaml.DataTemplate) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.HubSection::get_Header()
     @_property
     def header(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.HubSection::put_Header(System.Object)
     @header.setter
     @typing.final
     def header(self, value: winrt.system.Object) -> None: ...
+    # Microsoft.UI.Xaml.DataTemplate Microsoft.UI.Xaml.Controls.HubSection::get_ContentTemplate()
     @_property
     def content_template(self) -> microsoft_ui_xaml.DataTemplate: ...
+    # System.Void Microsoft.UI.Xaml.Controls.HubSection::put_ContentTemplate(Microsoft.UI.Xaml.DataTemplate)
     @content_template.setter
     @typing.final
     def content_template(self, value: microsoft_ui_xaml.DataTemplate) -> None: ...
@@ -3500,213 +4760,288 @@ class HubSectionCollection(winrt.system.Object, winrt._winrt.MutableSequence[Hub
     def __setitem__(self, index: typing.SupportsIndex, value: HubSection) -> None: ...
     @typing.overload
     def __setitem__(self, index: slice, value: typing.Iterable[HubSection]) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.HubSectionCollection::Append(Microsoft.UI.Xaml.Controls.HubSection)
     def append(self, value: HubSection, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.HubSectionCollection::Clear()
     def clear(self) -> None: ...
+    # Windows.Foundation.Collections.IIterator`1<Microsoft.UI.Xaml.Controls.HubSection> Microsoft.UI.Xaml.Controls.HubSectionCollection::First()
     def first(self) -> windows_foundation_collections.IIterator[HubSection]: ...
+    # Microsoft.UI.Xaml.Controls.HubSection Microsoft.UI.Xaml.Controls.HubSectionCollection::GetAt(System.UInt32)
     def get_at(self, index: winrt.system.UInt32, /) -> HubSection: ...
+    # System.UInt32 Microsoft.UI.Xaml.Controls.HubSectionCollection::GetMany(System.UInt32,Microsoft.UI.Xaml.Controls.HubSection[])
     def get_many(self, start_index: winrt.system.UInt32, items: typing.Union[winrt.system.Array[HubSection], winrt.system.WriteableBuffer], /) -> winrt.system.UInt32: ...
+    # Windows.Foundation.Collections.IVectorView`1<Microsoft.UI.Xaml.Controls.HubSection> Microsoft.UI.Xaml.Controls.HubSectionCollection::GetView()
     def get_view(self) -> typing.Sequence[HubSection]: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.HubSectionCollection::IndexOf(Microsoft.UI.Xaml.Controls.HubSection,System.UInt32&)
     def index_of(self, value: HubSection, /) -> typing.Tuple[bool, winrt.system.UInt32]: ...
+    # System.Void Microsoft.UI.Xaml.Controls.HubSectionCollection::InsertAt(System.UInt32,Microsoft.UI.Xaml.Controls.HubSection)
     def insert_at(self, index: winrt.system.UInt32, value: HubSection, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.HubSectionCollection::RemoveAt(System.UInt32)
     def remove_at(self, index: winrt.system.UInt32, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.HubSectionCollection::RemoveAtEnd()
     def remove_at_end(self) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.HubSectionCollection::ReplaceAll(Microsoft.UI.Xaml.Controls.HubSection[])
     def replace_all(self, items: typing.Union[winrt.system.Array[HubSection], winrt.system.ReadableBuffer], /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.HubSectionCollection::SetAt(System.UInt32,Microsoft.UI.Xaml.Controls.HubSection)
     def set_at(self, index: winrt.system.UInt32, value: HubSection, /) -> None: ...
+    # System.UInt32 Microsoft.UI.Xaml.Controls.HubSectionCollection::get_Size()
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
 @typing.final
 class HubSectionHeaderClickEventArgs(winrt.system.Object):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Microsoft.UI.Xaml.Controls.HubSection Microsoft.UI.Xaml.Controls.HubSectionHeaderClickEventArgs::get_Section()
     @_property
     def section(self) -> HubSection: ...
 
 class IconElement_Static(microsoft_ui_xaml.FrameworkElement_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.IconElement::get_ForegroundProperty()
     @_property
     @typing.final
     def foreground_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class IconElement(microsoft_ui_xaml.FrameworkElement, metaclass=IconElement_Static):
+    # Microsoft.UI.Xaml.Media.Brush Microsoft.UI.Xaml.Controls.IconElement::get_Foreground()
     @_property
     def foreground(self) -> microsoft_ui_xaml_media.Brush: ...
+    # System.Void Microsoft.UI.Xaml.Controls.IconElement::put_Foreground(Microsoft.UI.Xaml.Media.Brush)
     @foreground.setter
     @typing.final
     def foreground(self, value: microsoft_ui_xaml_media.Brush) -> None: ...
 
 class IconSource_Static(microsoft_ui_xaml.DependencyObject_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.IconSource::get_ForegroundProperty()
     @_property
     @typing.final
     def foreground_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class IconSource(microsoft_ui_xaml.DependencyObject, metaclass=IconSource_Static):
     @typing.final
+    # Microsoft.UI.Xaml.Controls.IconElement Microsoft.UI.Xaml.Controls.IconSource::CreateIconElement()
     def create_icon_element(self) -> IconElement: ...
+    # Microsoft.UI.Xaml.Controls.IconElement Microsoft.UI.Xaml.Controls.IconSource::CreateIconElementCore()
     def _create_icon_element_core(self) -> IconElement: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.IconSource::GetIconElementPropertyCore(Microsoft.UI.Xaml.DependencyProperty)
     def _get_icon_element_property_core(self, icon_source_property: microsoft_ui_xaml.DependencyProperty, /) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.Media.Brush Microsoft.UI.Xaml.Controls.IconSource::get_Foreground()
     @_property
     def foreground(self) -> microsoft_ui_xaml_media.Brush: ...
+    # System.Void Microsoft.UI.Xaml.Controls.IconSource::put_Foreground(Microsoft.UI.Xaml.Media.Brush)
     @foreground.setter
     @typing.final
     def foreground(self, value: microsoft_ui_xaml_media.Brush) -> None: ...
 
 class IconSourceElement_Static(IconElement_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.IconSourceElement::get_IconSourceProperty()
     @_property
     @typing.final
     def icon_source_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class IconSourceElement(IconElement, metaclass=IconSourceElement_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Microsoft.UI.Xaml.Controls.IconSource Microsoft.UI.Xaml.Controls.IconSourceElement::get_IconSource()
     @_property
     def icon_source(self) -> IconSource: ...
+    # System.Void Microsoft.UI.Xaml.Controls.IconSourceElement::put_IconSource(Microsoft.UI.Xaml.Controls.IconSource)
     @icon_source.setter
     @typing.final
     def icon_source(self, value: IconSource) -> None: ...
 
 @typing.final
 class Image_Static(microsoft_ui_xaml.FrameworkElement_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Image::get_NineGridProperty()
     @_property
     def nine_grid_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Image::get_SourceProperty()
     @_property
     def source_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Image::get_StretchProperty()
     @_property
     def stretch_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
 class Image(microsoft_ui_xaml.FrameworkElement, metaclass=Image_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Microsoft.UI.Composition.CompositionBrush Microsoft.UI.Xaml.Controls.Image::GetAlphaMask()
     def get_alpha_mask(self) -> microsoft_ui_composition.CompositionBrush: ...
+    # Windows.Media.Casting.CastingSource Microsoft.UI.Xaml.Controls.Image::GetAsCastingSource()
     def get_as_casting_source(self) -> windows_media_casting.CastingSource: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.Image::add_ImageFailed(Microsoft.UI.Xaml.ExceptionRoutedEventHandler)
     def add_image_failed(self, handler: microsoft_ui_xaml.ExceptionRoutedEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Image::remove_ImageFailed(Windows.Foundation.EventRegistrationToken)
     def remove_image_failed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.Image::add_ImageOpened(Microsoft.UI.Xaml.RoutedEventHandler)
     def add_image_opened(self, handler: microsoft_ui_xaml.RoutedEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Image::remove_ImageOpened(Windows.Foundation.EventRegistrationToken)
     def remove_image_opened(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Microsoft.UI.Xaml.Media.Stretch Microsoft.UI.Xaml.Controls.Image::get_Stretch()
     @_property
     def stretch(self) -> microsoft_ui_xaml_media.Stretch: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Image::put_Stretch(Microsoft.UI.Xaml.Media.Stretch)
     @stretch.setter
     def stretch(self, value: microsoft_ui_xaml_media.Stretch) -> None: ...
+    # Microsoft.UI.Xaml.Media.ImageSource Microsoft.UI.Xaml.Controls.Image::get_Source()
     @_property
     def source(self) -> microsoft_ui_xaml_media.ImageSource: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Image::put_Source(Microsoft.UI.Xaml.Media.ImageSource)
     @source.setter
     def source(self, value: microsoft_ui_xaml_media.ImageSource) -> None: ...
+    # Microsoft.UI.Xaml.Thickness Microsoft.UI.Xaml.Controls.Image::get_NineGrid()
     @_property
     def nine_grid(self) -> microsoft_ui_xaml.Thickness: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Image::put_NineGrid(Microsoft.UI.Xaml.Thickness)
     @nine_grid.setter
     def nine_grid(self, value: microsoft_ui_xaml.Thickness) -> None: ...
 
 class ImageIcon_Static(IconElement_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ImageIcon::get_SourceProperty()
     @_property
     @typing.final
     def source_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class ImageIcon(IconElement, metaclass=ImageIcon_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Microsoft.UI.Xaml.Media.ImageSource Microsoft.UI.Xaml.Controls.ImageIcon::get_Source()
     @_property
     def source(self) -> microsoft_ui_xaml_media.ImageSource: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ImageIcon::put_Source(Microsoft.UI.Xaml.Media.ImageSource)
     @source.setter
     @typing.final
     def source(self, value: microsoft_ui_xaml_media.ImageSource) -> None: ...
 
 class ImageIconSource_Static(IconSource_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ImageIconSource::get_ImageSourceProperty()
     @_property
     @typing.final
     def image_source_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class ImageIconSource(IconSource, metaclass=ImageIconSource_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Microsoft.UI.Xaml.Media.ImageSource Microsoft.UI.Xaml.Controls.ImageIconSource::get_ImageSource()
     @_property
     def image_source(self) -> microsoft_ui_xaml_media.ImageSource: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ImageIconSource::put_ImageSource(Microsoft.UI.Xaml.Media.ImageSource)
     @image_source.setter
     @typing.final
     def image_source(self, value: microsoft_ui_xaml_media.ImageSource) -> None: ...
 
 class InfoBadge_Static(Control_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.InfoBadge::get_IconSourceProperty()
     @_property
     @typing.final
     def icon_source_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.InfoBadge::get_TemplateSettingsProperty()
     @_property
     @typing.final
     def template_settings_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.InfoBadge::get_ValueProperty()
     @_property
     @typing.final
     def value_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class InfoBadge(Control, metaclass=InfoBadge_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.InfoBadge::get_Value()
     @_property
     def value(self) -> winrt.system.Int32: ...
+    # System.Void Microsoft.UI.Xaml.Controls.InfoBadge::put_Value(System.Int32)
     @value.setter
     @typing.final
     def value(self, value: winrt.system.Int32) -> None: ...
+    # Microsoft.UI.Xaml.Controls.IconSource Microsoft.UI.Xaml.Controls.InfoBadge::get_IconSource()
     @_property
     def icon_source(self) -> IconSource: ...
+    # System.Void Microsoft.UI.Xaml.Controls.InfoBadge::put_IconSource(Microsoft.UI.Xaml.Controls.IconSource)
     @icon_source.setter
     @typing.final
     def icon_source(self, value: IconSource) -> None: ...
+    # Microsoft.UI.Xaml.Controls.InfoBadgeTemplateSettings Microsoft.UI.Xaml.Controls.InfoBadge::get_TemplateSettings()
     @_property
     @typing.final
     def template_settings(self) -> InfoBadgeTemplateSettings: ...
 
 class InfoBadgeTemplateSettings_Static(microsoft_ui_xaml.DependencyObject_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.InfoBadgeTemplateSettings::get_IconElementProperty()
     @_property
     @typing.final
     def icon_element_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.InfoBadgeTemplateSettings::get_InfoBadgeCornerRadiusProperty()
     @_property
     @typing.final
     def info_badge_corner_radius_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class InfoBadgeTemplateSettings(microsoft_ui_xaml.DependencyObject, metaclass=InfoBadgeTemplateSettings_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Microsoft.UI.Xaml.CornerRadius Microsoft.UI.Xaml.Controls.InfoBadgeTemplateSettings::get_InfoBadgeCornerRadius()
     @_property
     def info_badge_corner_radius(self) -> microsoft_ui_xaml.CornerRadius: ...
+    # System.Void Microsoft.UI.Xaml.Controls.InfoBadgeTemplateSettings::put_InfoBadgeCornerRadius(Microsoft.UI.Xaml.CornerRadius)
     @info_badge_corner_radius.setter
     @typing.final
     def info_badge_corner_radius(self, value: microsoft_ui_xaml.CornerRadius) -> None: ...
+    # Microsoft.UI.Xaml.Controls.IconElement Microsoft.UI.Xaml.Controls.InfoBadgeTemplateSettings::get_IconElement()
     @_property
     def icon_element(self) -> IconElement: ...
+    # System.Void Microsoft.UI.Xaml.Controls.InfoBadgeTemplateSettings::put_IconElement(Microsoft.UI.Xaml.Controls.IconElement)
     @icon_element.setter
     @typing.final
     def icon_element(self, value: IconElement) -> None: ...
 
 class InfoBar_Static(Control_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.InfoBar::get_ActionButtonProperty()
     @_property
     @typing.final
     def action_button_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.InfoBar::get_CloseButtonCommandParameterProperty()
     @_property
     @typing.final
     def close_button_command_parameter_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.InfoBar::get_CloseButtonCommandProperty()
     @_property
     @typing.final
     def close_button_command_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.InfoBar::get_CloseButtonStyleProperty()
     @_property
     @typing.final
     def close_button_style_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.InfoBar::get_ContentProperty()
     @_property
     @typing.final
     def content_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.InfoBar::get_ContentTemplateProperty()
     @_property
     @typing.final
     def content_template_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.InfoBar::get_IconSourceProperty()
     @_property
     @typing.final
     def icon_source_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.InfoBar::get_IsClosableProperty()
     @_property
     @typing.final
     def is_closable_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.InfoBar::get_IsIconVisibleProperty()
     @_property
     @typing.final
     def is_icon_visible_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.InfoBar::get_IsOpenProperty()
     @_property
     @typing.final
     def is_open_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.InfoBar::get_MessageProperty()
     @_property
     @typing.final
     def message_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.InfoBar::get_SeverityProperty()
     @_property
     @typing.final
     def severity_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.InfoBar::get_TemplateSettingsProperty()
     @_property
     @typing.final
     def template_settings_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.InfoBar::get_TitleProperty()
     @_property
     @typing.final
     def title_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
@@ -3714,82 +5049,115 @@ class InfoBar_Static(Control_Static):
 class InfoBar(Control, metaclass=InfoBar_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.InfoBar::add_CloseButtonClick(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.InfoBar,System.Object>)
     def add_close_button_click(self, handler: windows_foundation.TypedEventHandler[InfoBar, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.InfoBar::remove_CloseButtonClick(Windows.Foundation.EventRegistrationToken)
     def remove_close_button_click(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.InfoBar::add_Closed(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.InfoBar,Microsoft.UI.Xaml.Controls.InfoBarClosedEventArgs>)
     def add_closed(self, handler: windows_foundation.TypedEventHandler[InfoBar, InfoBarClosedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.InfoBar::remove_Closed(Windows.Foundation.EventRegistrationToken)
     def remove_closed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.InfoBar::add_Closing(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.InfoBar,Microsoft.UI.Xaml.Controls.InfoBarClosingEventArgs>)
     def add_closing(self, handler: windows_foundation.TypedEventHandler[InfoBar, InfoBarClosingEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.InfoBar::remove_Closing(Windows.Foundation.EventRegistrationToken)
     def remove_closing(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.String Microsoft.UI.Xaml.Controls.InfoBar::get_Title()
     @_property
     def title(self) -> str: ...
+    # System.Void Microsoft.UI.Xaml.Controls.InfoBar::put_Title(System.String)
     @title.setter
     @typing.final
     def title(self, value: str) -> None: ...
+    # Microsoft.UI.Xaml.Controls.InfoBarSeverity Microsoft.UI.Xaml.Controls.InfoBar::get_Severity()
     @_property
     def severity(self) -> InfoBarSeverity: ...
+    # System.Void Microsoft.UI.Xaml.Controls.InfoBar::put_Severity(Microsoft.UI.Xaml.Controls.InfoBarSeverity)
     @severity.setter
     @typing.final
     def severity(self, value: InfoBarSeverity) -> None: ...
+    # System.String Microsoft.UI.Xaml.Controls.InfoBar::get_Message()
     @_property
     def message(self) -> str: ...
+    # System.Void Microsoft.UI.Xaml.Controls.InfoBar::put_Message(System.String)
     @message.setter
     @typing.final
     def message(self, value: str) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.InfoBar::get_IsOpen()
     @_property
     def is_open(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.InfoBar::put_IsOpen(System.Boolean)
     @is_open.setter
     @typing.final
     def is_open(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.InfoBar::get_IsIconVisible()
     @_property
     def is_icon_visible(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.InfoBar::put_IsIconVisible(System.Boolean)
     @is_icon_visible.setter
     @typing.final
     def is_icon_visible(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.InfoBar::get_IsClosable()
     @_property
     def is_closable(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.InfoBar::put_IsClosable(System.Boolean)
     @is_closable.setter
     @typing.final
     def is_closable(self, value: bool) -> None: ...
+    # Microsoft.UI.Xaml.Controls.IconSource Microsoft.UI.Xaml.Controls.InfoBar::get_IconSource()
     @_property
     def icon_source(self) -> IconSource: ...
+    # System.Void Microsoft.UI.Xaml.Controls.InfoBar::put_IconSource(Microsoft.UI.Xaml.Controls.IconSource)
     @icon_source.setter
     @typing.final
     def icon_source(self, value: IconSource) -> None: ...
+    # Microsoft.UI.Xaml.DataTemplate Microsoft.UI.Xaml.Controls.InfoBar::get_ContentTemplate()
     @_property
     def content_template(self) -> microsoft_ui_xaml.DataTemplate: ...
+    # System.Void Microsoft.UI.Xaml.Controls.InfoBar::put_ContentTemplate(Microsoft.UI.Xaml.DataTemplate)
     @content_template.setter
     @typing.final
     def content_template(self, value: microsoft_ui_xaml.DataTemplate) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.InfoBar::get_Content()
     @_property
     def content(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.InfoBar::put_Content(System.Object)
     @content.setter
     @typing.final
     def content(self, value: winrt.system.Object) -> None: ...
+    # Microsoft.UI.Xaml.Style Microsoft.UI.Xaml.Controls.InfoBar::get_CloseButtonStyle()
     @_property
     def close_button_style(self) -> microsoft_ui_xaml.Style: ...
+    # System.Void Microsoft.UI.Xaml.Controls.InfoBar::put_CloseButtonStyle(Microsoft.UI.Xaml.Style)
     @close_button_style.setter
     @typing.final
     def close_button_style(self, value: microsoft_ui_xaml.Style) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.InfoBar::get_CloseButtonCommandParameter()
     @_property
     def close_button_command_parameter(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.InfoBar::put_CloseButtonCommandParameter(System.Object)
     @close_button_command_parameter.setter
     @typing.final
     def close_button_command_parameter(self, value: winrt.system.Object) -> None: ...
+    # Microsoft.UI.Xaml.Input.ICommand Microsoft.UI.Xaml.Controls.InfoBar::get_CloseButtonCommand()
     @_property
     def close_button_command(self) -> microsoft_ui_xaml_input.ICommand: ...
+    # System.Void Microsoft.UI.Xaml.Controls.InfoBar::put_CloseButtonCommand(Microsoft.UI.Xaml.Input.ICommand)
     @close_button_command.setter
     @typing.final
     def close_button_command(self, value: microsoft_ui_xaml_input.ImplementsICommand) -> None: ...
+    # Microsoft.UI.Xaml.Controls.Primitives.ButtonBase Microsoft.UI.Xaml.Controls.InfoBar::get_ActionButton()
     @_property
     def action_button(self) -> microsoft_ui_xaml_controls_primitives.ButtonBase: ...
+    # System.Void Microsoft.UI.Xaml.Controls.InfoBar::put_ActionButton(Microsoft.UI.Xaml.Controls.Primitives.ButtonBase)
     @action_button.setter
     @typing.final
     def action_button(self, value: microsoft_ui_xaml_controls_primitives.ButtonBase) -> None: ...
+    # Microsoft.UI.Xaml.Controls.InfoBarTemplateSettings Microsoft.UI.Xaml.Controls.InfoBar::get_TemplateSettings()
     @_property
     @typing.final
     def template_settings(self) -> InfoBarTemplateSettings: ...
@@ -3798,6 +5166,7 @@ class InfoBarClosedEventArgs_Static(type):
     pass
 
 class InfoBarClosedEventArgs(winrt.system.Object, metaclass=InfoBarClosedEventArgs_Static):
+    # Microsoft.UI.Xaml.Controls.InfoBarCloseReason Microsoft.UI.Xaml.Controls.InfoBarClosedEventArgs::get_Reason()
     @_property
     @typing.final
     def reason(self) -> InfoBarCloseReason: ...
@@ -3806,24 +5175,30 @@ class InfoBarClosingEventArgs_Static(type):
     pass
 
 class InfoBarClosingEventArgs(winrt.system.Object, metaclass=InfoBarClosingEventArgs_Static):
+    # System.Boolean Microsoft.UI.Xaml.Controls.InfoBarClosingEventArgs::get_Cancel()
     @_property
     def cancel(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.InfoBarClosingEventArgs::put_Cancel(System.Boolean)
     @cancel.setter
     @typing.final
     def cancel(self, value: bool) -> None: ...
+    # Microsoft.UI.Xaml.Controls.InfoBarCloseReason Microsoft.UI.Xaml.Controls.InfoBarClosingEventArgs::get_Reason()
     @_property
     @typing.final
     def reason(self) -> InfoBarCloseReason: ...
 
 class InfoBarTemplateSettings_Static(microsoft_ui_xaml.DependencyObject_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.InfoBarTemplateSettings::get_IconElementProperty()
     @_property
     @typing.final
     def icon_element_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class InfoBarTemplateSettings(microsoft_ui_xaml.DependencyObject, metaclass=InfoBarTemplateSettings_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Microsoft.UI.Xaml.Controls.IconElement Microsoft.UI.Xaml.Controls.InfoBarTemplateSettings::get_IconElement()
     @_property
     def icon_element(self) -> IconElement: ...
+    # System.Void Microsoft.UI.Xaml.Controls.InfoBarTemplateSettings::put_IconElement(Microsoft.UI.Xaml.Controls.IconElement)
     @icon_element.setter
     @typing.final
     def icon_element(self, value: IconElement) -> None: ...
@@ -3835,6 +5210,7 @@ class IsTextTrimmedChangedEventArgs(winrt.system.Object):
 @typing.final
 class ItemClickEventArgs(microsoft_ui_xaml.RoutedEventArgs):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Object Microsoft.UI.Xaml.Controls.ItemClickEventArgs::get_ClickedItem()
     @_property
     def clicked_item(self) -> winrt.system.Object: ...
 
@@ -3854,49 +5230,75 @@ class ItemCollection(winrt.system.Object, windows_foundation_collections.Impleme
     def __setitem__(self, index: typing.SupportsIndex, value: winrt.system.Object) -> None: ...
     @typing.overload
     def __setitem__(self, index: slice, value: typing.Iterable[winrt.system.Object]) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemCollection::Append(System.Object)
     def append(self, value: winrt.system.Object, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemCollection::Clear()
     def clear(self) -> None: ...
+    # Windows.Foundation.Collections.IIterator`1<System.Object> Microsoft.UI.Xaml.Controls.ItemCollection::First()
     def first(self) -> windows_foundation_collections.IIterator[winrt.system.Object]: ...
+    # System.Object Microsoft.UI.Xaml.Controls.ItemCollection::GetAt(System.UInt32)
     def get_at(self, index: winrt.system.UInt32, /) -> winrt.system.Object: ...
+    # System.UInt32 Microsoft.UI.Xaml.Controls.ItemCollection::GetMany(System.UInt32,System.Object[])
     def get_many(self, start_index: winrt.system.UInt32, items: typing.Union[winrt.system.Array[winrt.system.Object], winrt.system.WriteableBuffer], /) -> winrt.system.UInt32: ...
+    # Windows.Foundation.Collections.IVectorView`1<System.Object> Microsoft.UI.Xaml.Controls.ItemCollection::GetView()
     def get_view(self) -> typing.Sequence[winrt.system.Object]: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ItemCollection::IndexOf(System.Object,System.UInt32&)
     def index_of(self, value: winrt.system.Object, /) -> typing.Tuple[bool, winrt.system.UInt32]: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemCollection::InsertAt(System.UInt32,System.Object)
     def insert_at(self, index: winrt.system.UInt32, value: winrt.system.Object, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemCollection::RemoveAt(System.UInt32)
     def remove_at(self, index: winrt.system.UInt32, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemCollection::RemoveAtEnd()
     def remove_at_end(self) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemCollection::ReplaceAll(System.Object[])
     def replace_all(self, items: typing.Union[winrt.system.Array[winrt.system.Object], winrt.system.ReadableBuffer], /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemCollection::SetAt(System.UInt32,System.Object)
     def set_at(self, index: winrt.system.UInt32, value: winrt.system.Object, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.ItemCollection::add_VectorChanged(Windows.Foundation.Collections.VectorChangedEventHandler`1<System.Object>)
     def add_vector_changed(self, vhnd: windows_foundation_collections.VectorChangedEventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemCollection::remove_VectorChanged(Windows.Foundation.EventRegistrationToken)
     def remove_vector_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.UInt32 Microsoft.UI.Xaml.Controls.ItemCollection::get_Size()
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
 @typing.final
 class ItemCollectionTransition(winrt.system.Object):
+    # Microsoft.UI.Xaml.Controls.ItemCollectionTransitionProgress Microsoft.UI.Xaml.Controls.ItemCollectionTransition::Start()
     def start(self) -> ItemCollectionTransitionProgress: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ItemCollectionTransition::get_HasStarted()
     @_property
     def has_started(self) -> bool: ...
+    # Windows.Foundation.Rect Microsoft.UI.Xaml.Controls.ItemCollectionTransition::get_NewBounds()
     @_property
     def new_bounds(self) -> windows_foundation.Rect: ...
+    # Windows.Foundation.Rect Microsoft.UI.Xaml.Controls.ItemCollectionTransition::get_OldBounds()
     @_property
     def old_bounds(self) -> windows_foundation.Rect: ...
+    # Microsoft.UI.Xaml.Controls.ItemCollectionTransitionOperation Microsoft.UI.Xaml.Controls.ItemCollectionTransition::get_Operation()
     @_property
     def operation(self) -> ItemCollectionTransitionOperation: ...
+    # Microsoft.UI.Xaml.Controls.ItemCollectionTransitionTriggers Microsoft.UI.Xaml.Controls.ItemCollectionTransition::get_Triggers()
     @_property
     def triggers(self) -> ItemCollectionTransitionTriggers: ...
 
 @typing.final
 class ItemCollectionTransitionCompletedEventArgs(winrt.system.Object):
+    # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.Controls.ItemCollectionTransitionCompletedEventArgs::get_Element()
     @_property
     def element(self) -> microsoft_ui_xaml.UIElement: ...
+    # Microsoft.UI.Xaml.Controls.ItemCollectionTransition Microsoft.UI.Xaml.Controls.ItemCollectionTransitionCompletedEventArgs::get_Transition()
     @_property
     def transition(self) -> ItemCollectionTransition: ...
 
 @typing.final
 class ItemCollectionTransitionProgress(winrt.system.Object):
+    # System.Void Microsoft.UI.Xaml.Controls.ItemCollectionTransitionProgress::Complete()
     def complete(self) -> None: ...
+    # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.Controls.ItemCollectionTransitionProgress::get_Element()
     @_property
     def element(self) -> microsoft_ui_xaml.UIElement: ...
+    # Microsoft.UI.Xaml.Controls.ItemCollectionTransition Microsoft.UI.Xaml.Controls.ItemCollectionTransitionProgress::get_Transition()
     @_property
     def transition(self) -> ItemCollectionTransition: ...
 
@@ -3906,169 +5308,247 @@ class ItemCollectionTransitionProvider_Static(type):
 class ItemCollectionTransitionProvider(winrt.system.Object, metaclass=ItemCollectionTransitionProvider_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.ItemCollectionTransitionProvider::QueueTransition(Microsoft.UI.Xaml.Controls.ItemCollectionTransition)
     def queue_transition(self, transition: ItemCollectionTransition, /) -> None: ...
     @typing.final
+    # System.Boolean Microsoft.UI.Xaml.Controls.ItemCollectionTransitionProvider::ShouldAnimate(Microsoft.UI.Xaml.Controls.ItemCollectionTransition)
     def should_animate(self, transition: ItemCollectionTransition, /) -> bool: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ItemCollectionTransitionProvider::ShouldAnimateCore(Microsoft.UI.Xaml.Controls.ItemCollectionTransition)
     def _should_animate_core(self, transition: ItemCollectionTransition, /) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemCollectionTransitionProvider::StartTransitions(Windows.Foundation.Collections.IVector`1<Microsoft.UI.Xaml.Controls.ItemCollectionTransition>)
     def _start_transitions(self, transitions: typing.MutableSequence[ItemCollectionTransition], /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.ItemCollectionTransitionProvider::add_TransitionCompleted(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.ItemCollectionTransitionProvider,Microsoft.UI.Xaml.Controls.ItemCollectionTransitionCompletedEventArgs>)
     def add_transition_completed(self, handler: windows_foundation.TypedEventHandler[ItemCollectionTransitionProvider, ItemCollectionTransitionCompletedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.ItemCollectionTransitionProvider::remove_TransitionCompleted(Windows.Foundation.EventRegistrationToken)
     def remove_transition_completed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
 class ItemContainer_Static(Control_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ItemContainer::get_ChildProperty()
     @_property
     @typing.final
     def child_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ItemContainer::get_IsSelectedProperty()
     @_property
     @typing.final
     def is_selected_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class ItemContainer(Control, metaclass=ItemContainer_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ItemContainer::get_IsSelected()
     @_property
     def is_selected(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemContainer::put_IsSelected(System.Boolean)
     @is_selected.setter
     @typing.final
     def is_selected(self, value: bool) -> None: ...
+    # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.Controls.ItemContainer::get_Child()
     @_property
     def child(self) -> microsoft_ui_xaml.UIElement: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemContainer::put_Child(Microsoft.UI.Xaml.UIElement)
     @child.setter
     @typing.final
     def child(self, value: microsoft_ui_xaml.UIElement) -> None: ...
 
 @typing.final
 class ItemContainerGenerator(winrt.system.Object):
+    # Microsoft.UI.Xaml.DependencyObject Microsoft.UI.Xaml.Controls.ItemContainerGenerator::ContainerFromIndex(System.Int32)
     # @deprecated("ContainerFromIndex may be altered or unavailable for releases after Windows 8.1. Instead, use ItemsControl.ContainerFromIndex.")
     def container_from_index(self, index: winrt.system.Int32, /) -> microsoft_ui_xaml.DependencyObject: ...
+    # Microsoft.UI.Xaml.DependencyObject Microsoft.UI.Xaml.Controls.ItemContainerGenerator::ContainerFromItem(System.Object)
     # @deprecated("ContainerFromItem may be altered or unavailable for releases after Windows 8.1. Instead, use ItemsControl.ContainerFromItem.")
     def container_from_item(self, item: winrt.system.Object, /) -> microsoft_ui_xaml.DependencyObject: ...
+    # Microsoft.UI.Xaml.DependencyObject Microsoft.UI.Xaml.Controls.ItemContainerGenerator::GenerateNext(System.Boolean&)
     def generate_next(self) -> typing.Tuple[microsoft_ui_xaml.DependencyObject, bool]: ...
+    # Microsoft.UI.Xaml.Controls.Primitives.GeneratorPosition Microsoft.UI.Xaml.Controls.ItemContainerGenerator::GeneratorPositionFromIndex(System.Int32)
     def generator_position_from_index(self, item_index: winrt.system.Int32, /) -> microsoft_ui_xaml_controls_primitives.GeneratorPosition: ...
+    # Microsoft.UI.Xaml.Controls.ItemContainerGenerator Microsoft.UI.Xaml.Controls.ItemContainerGenerator::GetItemContainerGeneratorForPanel(Microsoft.UI.Xaml.Controls.Panel)
     def get_item_container_generator_for_panel(self, panel: Panel, /) -> ItemContainerGenerator: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.ItemContainerGenerator::IndexFromContainer(Microsoft.UI.Xaml.DependencyObject)
     # @deprecated("IndexFromContainer may be altered or unavailable for releases after Windows 8.1. Instead, use ItemsControl.IndexFromContainer.")
     def index_from_container(self, container: microsoft_ui_xaml.DependencyObject, /) -> winrt.system.Int32: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.ItemContainerGenerator::IndexFromGeneratorPosition(Microsoft.UI.Xaml.Controls.Primitives.GeneratorPosition)
     def index_from_generator_position(self, position: microsoft_ui_xaml_controls_primitives.GeneratorPosition, /) -> winrt.system.Int32: ...
+    # System.Object Microsoft.UI.Xaml.Controls.ItemContainerGenerator::ItemFromContainer(Microsoft.UI.Xaml.DependencyObject)
     # @deprecated("ItemFromContainer may be altered or unavailable for releases after Windows 8.1. Instead, use ItemsControl.ItemFromContainer.")
     def item_from_container(self, container: microsoft_ui_xaml.DependencyObject, /) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemContainerGenerator::PrepareItemContainer(Microsoft.UI.Xaml.DependencyObject)
     def prepare_item_container(self, container: microsoft_ui_xaml.DependencyObject, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemContainerGenerator::Recycle(Microsoft.UI.Xaml.Controls.Primitives.GeneratorPosition,System.Int32)
     def recycle(self, position: microsoft_ui_xaml_controls_primitives.GeneratorPosition, count: winrt.system.Int32, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemContainerGenerator::Remove(Microsoft.UI.Xaml.Controls.Primitives.GeneratorPosition,System.Int32)
     def remove(self, position: microsoft_ui_xaml_controls_primitives.GeneratorPosition, count: winrt.system.Int32, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemContainerGenerator::RemoveAll()
     def remove_all(self) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemContainerGenerator::StartAt(Microsoft.UI.Xaml.Controls.Primitives.GeneratorPosition,Microsoft.UI.Xaml.Controls.Primitives.GeneratorDirection,System.Boolean)
     def start_at(self, position: microsoft_ui_xaml_controls_primitives.GeneratorPosition, direction: microsoft_ui_xaml_controls_primitives.GeneratorDirection, allow_start_at_realized_item: bool, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemContainerGenerator::Stop()
     def stop(self) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.ItemContainerGenerator::add_ItemsChanged(Microsoft.UI.Xaml.Controls.Primitives.ItemsChangedEventHandler)
     def add_items_changed(self, handler: microsoft_ui_xaml_controls_primitives.ItemsChangedEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemContainerGenerator::remove_ItemsChanged(Windows.Foundation.EventRegistrationToken)
     def remove_items_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
 class ItemsControl_Static(Control_Static):
+    # Microsoft.UI.Xaml.Controls.ItemsControl Microsoft.UI.Xaml.Controls.ItemsControl::GetItemsOwner(Microsoft.UI.Xaml.DependencyObject)
     def get_items_owner(cls, element: microsoft_ui_xaml.DependencyObject, /) -> ItemsControl: ...
+    # Microsoft.UI.Xaml.Controls.ItemsControl Microsoft.UI.Xaml.Controls.ItemsControl::ItemsControlFromItemContainer(Microsoft.UI.Xaml.DependencyObject)
     def items_control_from_item_container(cls, container: microsoft_ui_xaml.DependencyObject, /) -> ItemsControl: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ItemsControl::get_DisplayMemberPathProperty()
     @_property
     @typing.final
     def display_member_path_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ItemsControl::get_GroupStyleSelectorProperty()
     @_property
     @typing.final
     def group_style_selector_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ItemsControl::get_IsGroupingProperty()
     @_property
     @typing.final
     def is_grouping_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ItemsControl::get_ItemContainerStyleProperty()
     @_property
     @typing.final
     def item_container_style_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ItemsControl::get_ItemContainerStyleSelectorProperty()
     @_property
     @typing.final
     def item_container_style_selector_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ItemsControl::get_ItemContainerTransitionsProperty()
     @_property
     @typing.final
     def item_container_transitions_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ItemsControl::get_ItemTemplateProperty()
     @_property
     @typing.final
     def item_template_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ItemsControl::get_ItemTemplateSelectorProperty()
     @_property
     @typing.final
     def item_template_selector_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ItemsControl::get_ItemsPanelProperty()
     @_property
     @typing.final
     def items_panel_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ItemsControl::get_ItemsSourceProperty()
     @_property
     @typing.final
     def items_source_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class ItemsControl(Control, ImplementsIItemContainerMapping, metaclass=ItemsControl_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsControl::ClearContainerForItemOverride(Microsoft.UI.Xaml.DependencyObject,System.Object)
     def _clear_container_for_item_override(self, element: microsoft_ui_xaml.DependencyObject, item: winrt.system.Object, /) -> None: ...
+    # Microsoft.UI.Xaml.DependencyObject Microsoft.UI.Xaml.Controls.ItemsControl::ContainerFromIndex(System.Int32)
     def container_from_index(self, index: winrt.system.Int32, /) -> microsoft_ui_xaml.DependencyObject: ...
+    # Microsoft.UI.Xaml.DependencyObject Microsoft.UI.Xaml.Controls.ItemsControl::ContainerFromItem(System.Object)
     def container_from_item(self, item: winrt.system.Object, /) -> microsoft_ui_xaml.DependencyObject: ...
+    # Microsoft.UI.Xaml.DependencyObject Microsoft.UI.Xaml.Controls.ItemsControl::GetContainerForItemOverride()
     def _get_container_for_item_override(self) -> microsoft_ui_xaml.DependencyObject: ...
     @typing.final
+    # Microsoft.UI.Xaml.DependencyObject Microsoft.UI.Xaml.Controls.ItemsControl::GroupHeaderContainerFromItemContainer(Microsoft.UI.Xaml.DependencyObject)
     def group_header_container_from_item_container(self, item_container: microsoft_ui_xaml.DependencyObject, /) -> microsoft_ui_xaml.DependencyObject: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.ItemsControl::IndexFromContainer(Microsoft.UI.Xaml.DependencyObject)
     def index_from_container(self, container: microsoft_ui_xaml.DependencyObject, /) -> winrt.system.Int32: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ItemsControl::IsItemItsOwnContainerOverride(System.Object)
     def _is_item_its_own_container_override(self, item: winrt.system.Object, /) -> bool: ...
+    # System.Object Microsoft.UI.Xaml.Controls.ItemsControl::ItemFromContainer(Microsoft.UI.Xaml.DependencyObject)
     def item_from_container(self, container: microsoft_ui_xaml.DependencyObject, /) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsControl::OnGroupStyleSelectorChanged(Microsoft.UI.Xaml.Controls.GroupStyleSelector,Microsoft.UI.Xaml.Controls.GroupStyleSelector)
     def _on_group_style_selector_changed(self, old_group_style_selector: GroupStyleSelector, new_group_style_selector: GroupStyleSelector, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsControl::OnItemContainerStyleChanged(Microsoft.UI.Xaml.Style,Microsoft.UI.Xaml.Style)
     def _on_item_container_style_changed(self, old_item_container_style: microsoft_ui_xaml.Style, new_item_container_style: microsoft_ui_xaml.Style, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsControl::OnItemContainerStyleSelectorChanged(Microsoft.UI.Xaml.Controls.StyleSelector,Microsoft.UI.Xaml.Controls.StyleSelector)
     def _on_item_container_style_selector_changed(self, old_item_container_style_selector: StyleSelector, new_item_container_style_selector: StyleSelector, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsControl::OnItemTemplateChanged(Microsoft.UI.Xaml.DataTemplate,Microsoft.UI.Xaml.DataTemplate)
     def _on_item_template_changed(self, old_item_template: microsoft_ui_xaml.DataTemplate, new_item_template: microsoft_ui_xaml.DataTemplate, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsControl::OnItemTemplateSelectorChanged(Microsoft.UI.Xaml.Controls.DataTemplateSelector,Microsoft.UI.Xaml.Controls.DataTemplateSelector)
     def _on_item_template_selector_changed(self, old_item_template_selector: DataTemplateSelector, new_item_template_selector: DataTemplateSelector, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsControl::OnItemsChanged(System.Object)
     def _on_items_changed(self, e: winrt.system.Object, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsControl::PrepareContainerForItemOverride(Microsoft.UI.Xaml.DependencyObject,System.Object)
     def _prepare_container_for_item_override(self, element: microsoft_ui_xaml.DependencyObject, item: winrt.system.Object, /) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.ItemsControl::get_ItemsSource()
     @_property
     def items_source(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsControl::put_ItemsSource(System.Object)
     @items_source.setter
     @typing.final
     def items_source(self, value: winrt.system.Object) -> None: ...
+    # Microsoft.UI.Xaml.Controls.ItemsPanelTemplate Microsoft.UI.Xaml.Controls.ItemsControl::get_ItemsPanel()
     @_property
     def items_panel(self) -> ItemsPanelTemplate: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsControl::put_ItemsPanel(Microsoft.UI.Xaml.Controls.ItemsPanelTemplate)
     @items_panel.setter
     @typing.final
     def items_panel(self, value: ItemsPanelTemplate) -> None: ...
+    # Microsoft.UI.Xaml.Controls.DataTemplateSelector Microsoft.UI.Xaml.Controls.ItemsControl::get_ItemTemplateSelector()
     @_property
     def item_template_selector(self) -> DataTemplateSelector: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsControl::put_ItemTemplateSelector(Microsoft.UI.Xaml.Controls.DataTemplateSelector)
     @item_template_selector.setter
     @typing.final
     def item_template_selector(self, value: DataTemplateSelector) -> None: ...
+    # Microsoft.UI.Xaml.DataTemplate Microsoft.UI.Xaml.Controls.ItemsControl::get_ItemTemplate()
     @_property
     def item_template(self) -> microsoft_ui_xaml.DataTemplate: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsControl::put_ItemTemplate(Microsoft.UI.Xaml.DataTemplate)
     @item_template.setter
     @typing.final
     def item_template(self, value: microsoft_ui_xaml.DataTemplate) -> None: ...
+    # Microsoft.UI.Xaml.Media.Animation.TransitionCollection Microsoft.UI.Xaml.Controls.ItemsControl::get_ItemContainerTransitions()
     @_property
     def item_container_transitions(self) -> microsoft_ui_xaml_media_animation.TransitionCollection: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsControl::put_ItemContainerTransitions(Microsoft.UI.Xaml.Media.Animation.TransitionCollection)
     @item_container_transitions.setter
     @typing.final
     def item_container_transitions(self, value: microsoft_ui_xaml_media_animation.TransitionCollection) -> None: ...
+    # Microsoft.UI.Xaml.Controls.StyleSelector Microsoft.UI.Xaml.Controls.ItemsControl::get_ItemContainerStyleSelector()
     @_property
     def item_container_style_selector(self) -> StyleSelector: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsControl::put_ItemContainerStyleSelector(Microsoft.UI.Xaml.Controls.StyleSelector)
     @item_container_style_selector.setter
     @typing.final
     def item_container_style_selector(self, value: StyleSelector) -> None: ...
+    # Microsoft.UI.Xaml.Style Microsoft.UI.Xaml.Controls.ItemsControl::get_ItemContainerStyle()
     @_property
     def item_container_style(self) -> microsoft_ui_xaml.Style: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsControl::put_ItemContainerStyle(Microsoft.UI.Xaml.Style)
     @item_container_style.setter
     @typing.final
     def item_container_style(self, value: microsoft_ui_xaml.Style) -> None: ...
+    # Microsoft.UI.Xaml.Controls.GroupStyleSelector Microsoft.UI.Xaml.Controls.ItemsControl::get_GroupStyleSelector()
     @_property
     def group_style_selector(self) -> GroupStyleSelector: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsControl::put_GroupStyleSelector(Microsoft.UI.Xaml.Controls.GroupStyleSelector)
     @group_style_selector.setter
     @typing.final
     def group_style_selector(self, value: GroupStyleSelector) -> None: ...
+    # System.String Microsoft.UI.Xaml.Controls.ItemsControl::get_DisplayMemberPath()
     @_property
     def display_member_path(self) -> str: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsControl::put_DisplayMemberPath(System.String)
     @display_member_path.setter
     @typing.final
     def display_member_path(self, value: str) -> None: ...
+    # Windows.Foundation.Collections.IObservableVector`1<Microsoft.UI.Xaml.Controls.GroupStyle> Microsoft.UI.Xaml.Controls.ItemsControl::get_GroupStyle()
     @_property
     @typing.final
     def group_style(self) -> windows_foundation_collections.IObservableVector[GroupStyle]: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ItemsControl::get_IsGrouping()
     @_property
     @typing.final
     def is_grouping(self) -> bool: ...
+    # Microsoft.UI.Xaml.Controls.ItemContainerGenerator Microsoft.UI.Xaml.Controls.ItemsControl::get_ItemContainerGenerator()
     @_property
     @typing.final
     def item_container_generator(self) -> ItemContainerGenerator: ...
+    # Microsoft.UI.Xaml.Controls.ItemCollection Microsoft.UI.Xaml.Controls.ItemsControl::get_Items()
     @_property
     @typing.final
     def items(self) -> ItemCollection: ...
+    # Microsoft.UI.Xaml.Controls.Panel Microsoft.UI.Xaml.Controls.ItemsControl::get_ItemsPanelRoot()
     @_property
     @typing.final
     def items_panel_root(self) -> Panel: ...
@@ -4080,89 +5560,127 @@ class ItemsPanelTemplate(microsoft_ui_xaml.FrameworkTemplate):
 @typing.final
 class ItemsPickedEventArgs(microsoft_ui_xaml.DependencyObject):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Windows.Foundation.Collections.IVector`1<System.Object> Microsoft.UI.Xaml.Controls.ItemsPickedEventArgs::get_AddedItems()
     @_property
     def added_items(self) -> typing.MutableSequence[winrt.system.Object]: ...
+    # Windows.Foundation.Collections.IVector`1<System.Object> Microsoft.UI.Xaml.Controls.ItemsPickedEventArgs::get_RemovedItems()
     @_property
     def removed_items(self) -> typing.MutableSequence[winrt.system.Object]: ...
 
 @typing.final
 class ItemsPresenter_Static(microsoft_ui_xaml.FrameworkElement_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ItemsPresenter::get_FooterProperty()
     @_property
     def footer_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ItemsPresenter::get_FooterTemplateProperty()
     @_property
     def footer_template_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ItemsPresenter::get_FooterTransitionsProperty()
     @_property
     def footer_transitions_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ItemsPresenter::get_HeaderProperty()
     @_property
     def header_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ItemsPresenter::get_HeaderTemplateProperty()
     @_property
     def header_template_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ItemsPresenter::get_HeaderTransitionsProperty()
     @_property
     def header_transitions_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ItemsPresenter::get_PaddingProperty()
     @_property
     def padding_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
 class ItemsPresenter(microsoft_ui_xaml.FrameworkElement, microsoft_ui_xaml_controls_primitives.ImplementsIScrollSnapPointsInfo, metaclass=ItemsPresenter_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Windows.Foundation.Collections.IVectorView`1<System.Single> Microsoft.UI.Xaml.Controls.ItemsPresenter::GetIrregularSnapPoints(Microsoft.UI.Xaml.Controls.Orientation,Microsoft.UI.Xaml.Controls.Primitives.SnapPointsAlignment)
     def get_irregular_snap_points(self, orientation: Orientation, alignment: microsoft_ui_xaml_controls_primitives.SnapPointsAlignment, /) -> typing.Sequence[winrt.system.Single]: ...
+    # System.Single Microsoft.UI.Xaml.Controls.ItemsPresenter::GetRegularSnapPoints(Microsoft.UI.Xaml.Controls.Orientation,Microsoft.UI.Xaml.Controls.Primitives.SnapPointsAlignment,System.Single&)
     def get_regular_snap_points(self, orientation: Orientation, alignment: microsoft_ui_xaml_controls_primitives.SnapPointsAlignment, /) -> typing.Tuple[winrt.system.Single, winrt.system.Single]: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.ItemsPresenter::add_HorizontalSnapPointsChanged(Windows.Foundation.EventHandler`1<System.Object>)
     def add_horizontal_snap_points_changed(self, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsPresenter::remove_HorizontalSnapPointsChanged(Windows.Foundation.EventRegistrationToken)
     def remove_horizontal_snap_points_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.ItemsPresenter::add_VerticalSnapPointsChanged(Windows.Foundation.EventHandler`1<System.Object>)
     def add_vertical_snap_points_changed(self, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsPresenter::remove_VerticalSnapPointsChanged(Windows.Foundation.EventRegistrationToken)
     def remove_vertical_snap_points_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Microsoft.UI.Xaml.Thickness Microsoft.UI.Xaml.Controls.ItemsPresenter::get_Padding()
     @_property
     def padding(self) -> microsoft_ui_xaml.Thickness: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsPresenter::put_Padding(Microsoft.UI.Xaml.Thickness)
     @padding.setter
     def padding(self, value: microsoft_ui_xaml.Thickness) -> None: ...
+    # Microsoft.UI.Xaml.Media.Animation.TransitionCollection Microsoft.UI.Xaml.Controls.ItemsPresenter::get_HeaderTransitions()
     @_property
     def header_transitions(self) -> microsoft_ui_xaml_media_animation.TransitionCollection: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsPresenter::put_HeaderTransitions(Microsoft.UI.Xaml.Media.Animation.TransitionCollection)
     @header_transitions.setter
     def header_transitions(self, value: microsoft_ui_xaml_media_animation.TransitionCollection) -> None: ...
+    # Microsoft.UI.Xaml.DataTemplate Microsoft.UI.Xaml.Controls.ItemsPresenter::get_HeaderTemplate()
     @_property
     def header_template(self) -> microsoft_ui_xaml.DataTemplate: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsPresenter::put_HeaderTemplate(Microsoft.UI.Xaml.DataTemplate)
     @header_template.setter
     def header_template(self, value: microsoft_ui_xaml.DataTemplate) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.ItemsPresenter::get_Header()
     @_property
     def header(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsPresenter::put_Header(System.Object)
     @header.setter
     def header(self, value: winrt.system.Object) -> None: ...
+    # Microsoft.UI.Xaml.Media.Animation.TransitionCollection Microsoft.UI.Xaml.Controls.ItemsPresenter::get_FooterTransitions()
     @_property
     def footer_transitions(self) -> microsoft_ui_xaml_media_animation.TransitionCollection: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsPresenter::put_FooterTransitions(Microsoft.UI.Xaml.Media.Animation.TransitionCollection)
     @footer_transitions.setter
     def footer_transitions(self, value: microsoft_ui_xaml_media_animation.TransitionCollection) -> None: ...
+    # Microsoft.UI.Xaml.DataTemplate Microsoft.UI.Xaml.Controls.ItemsPresenter::get_FooterTemplate()
     @_property
     def footer_template(self) -> microsoft_ui_xaml.DataTemplate: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsPresenter::put_FooterTemplate(Microsoft.UI.Xaml.DataTemplate)
     @footer_template.setter
     def footer_template(self, value: microsoft_ui_xaml.DataTemplate) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.ItemsPresenter::get_Footer()
     @_property
     def footer(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsPresenter::put_Footer(System.Object)
     @footer.setter
     def footer(self, value: winrt.system.Object) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ItemsPresenter::get_AreHorizontalSnapPointsRegular()
     @_property
     def are_horizontal_snap_points_regular(self) -> bool: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ItemsPresenter::get_AreVerticalSnapPointsRegular()
     @_property
     def are_vertical_snap_points_regular(self) -> bool: ...
 
 class ItemsRepeater_Static(microsoft_ui_xaml.FrameworkElement_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ItemsRepeater::get_BackgroundProperty()
     @_property
     @typing.final
     def background_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ItemsRepeater::get_HorizontalCacheLengthProperty()
     @_property
     @typing.final
     def horizontal_cache_length_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ItemsRepeater::get_ItemTemplateProperty()
     @_property
     @typing.final
     def item_template_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ItemsRepeater::get_ItemsSourceProperty()
     @_property
     @typing.final
     def items_source_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ItemsRepeater::get_LayoutProperty()
     @_property
     @typing.final
     def layout_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ItemsRepeater::get_VerticalCacheLengthProperty()
     @_property
     @typing.final
     def vertical_cache_length_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ItemsRepeater::get_ItemTransitionProviderProperty()
     @_property
     @typing.final
     def item_transition_provider_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
@@ -4170,98 +5688,135 @@ class ItemsRepeater_Static(microsoft_ui_xaml.FrameworkElement_Static):
 class ItemsRepeater(microsoft_ui_xaml.FrameworkElement, metaclass=ItemsRepeater_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.final
+    # System.Int32 Microsoft.UI.Xaml.Controls.ItemsRepeater::GetElementIndex(Microsoft.UI.Xaml.UIElement)
     def get_element_index(self, element: microsoft_ui_xaml.UIElement, /) -> winrt.system.Int32: ...
     @typing.final
+    # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.Controls.ItemsRepeater::GetOrCreateElement(System.Int32)
     def get_or_create_element(self, index: winrt.system.Int32, /) -> microsoft_ui_xaml.UIElement: ...
     @typing.final
+    # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.Controls.ItemsRepeater::TryGetElement(System.Int32)
     def try_get_element(self, index: winrt.system.Int32, /) -> microsoft_ui_xaml.UIElement: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.ItemsRepeater::add_ElementClearing(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.ItemsRepeater,Microsoft.UI.Xaml.Controls.ItemsRepeaterElementClearingEventArgs>)
     def add_element_clearing(self, handler: windows_foundation.TypedEventHandler[ItemsRepeater, ItemsRepeaterElementClearingEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsRepeater::remove_ElementClearing(Windows.Foundation.EventRegistrationToken)
     def remove_element_clearing(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.ItemsRepeater::add_ElementIndexChanged(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.ItemsRepeater,Microsoft.UI.Xaml.Controls.ItemsRepeaterElementIndexChangedEventArgs>)
     def add_element_index_changed(self, handler: windows_foundation.TypedEventHandler[ItemsRepeater, ItemsRepeaterElementIndexChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsRepeater::remove_ElementIndexChanged(Windows.Foundation.EventRegistrationToken)
     def remove_element_index_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.ItemsRepeater::add_ElementPrepared(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.ItemsRepeater,Microsoft.UI.Xaml.Controls.ItemsRepeaterElementPreparedEventArgs>)
     def add_element_prepared(self, handler: windows_foundation.TypedEventHandler[ItemsRepeater, ItemsRepeaterElementPreparedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsRepeater::remove_ElementPrepared(Windows.Foundation.EventRegistrationToken)
     def remove_element_prepared(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ItemsRepeater::get_VerticalCacheLength()
     @_property
     def vertical_cache_length(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsRepeater::put_VerticalCacheLength(System.Double)
     @vertical_cache_length.setter
     @typing.final
     def vertical_cache_length(self, value: winrt.system.Double) -> None: ...
+    # Microsoft.UI.Xaml.Controls.Layout Microsoft.UI.Xaml.Controls.ItemsRepeater::get_Layout()
     @_property
     def layout(self) -> Layout: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsRepeater::put_Layout(Microsoft.UI.Xaml.Controls.Layout)
     @layout.setter
     @typing.final
     def layout(self, value: Layout) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.ItemsRepeater::get_ItemsSource()
     @_property
     def items_source(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsRepeater::put_ItemsSource(System.Object)
     @items_source.setter
     @typing.final
     def items_source(self, value: winrt.system.Object) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.ItemsRepeater::get_ItemTemplate()
     @_property
     def item_template(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsRepeater::put_ItemTemplate(System.Object)
     @item_template.setter
     @typing.final
     def item_template(self, value: winrt.system.Object) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ItemsRepeater::get_HorizontalCacheLength()
     @_property
     def horizontal_cache_length(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsRepeater::put_HorizontalCacheLength(System.Double)
     @horizontal_cache_length.setter
     @typing.final
     def horizontal_cache_length(self, value: winrt.system.Double) -> None: ...
+    # Microsoft.UI.Xaml.Media.Brush Microsoft.UI.Xaml.Controls.ItemsRepeater::get_Background()
     @_property
     def background(self) -> microsoft_ui_xaml_media.Brush: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsRepeater::put_Background(Microsoft.UI.Xaml.Media.Brush)
     @background.setter
     @typing.final
     def background(self, value: microsoft_ui_xaml_media.Brush) -> None: ...
+    # Microsoft.UI.Xaml.Controls.ItemsSourceView Microsoft.UI.Xaml.Controls.ItemsRepeater::get_ItemsSourceView()
     @_property
     @typing.final
     def items_source_view(self) -> ItemsSourceView: ...
+    # Microsoft.UI.Xaml.Controls.ItemCollectionTransitionProvider Microsoft.UI.Xaml.Controls.ItemsRepeater::get_ItemTransitionProvider()
     @_property
     def item_transition_provider(self) -> ItemCollectionTransitionProvider: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsRepeater::put_ItemTransitionProvider(Microsoft.UI.Xaml.Controls.ItemCollectionTransitionProvider)
     @item_transition_provider.setter
     @typing.final
     def item_transition_provider(self, value: ItemCollectionTransitionProvider) -> None: ...
 
 @typing.final
 class ItemsRepeaterElementClearingEventArgs(winrt.system.Object):
+    # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.Controls.ItemsRepeaterElementClearingEventArgs::get_Element()
     @_property
     def element(self) -> microsoft_ui_xaml.UIElement: ...
 
 @typing.final
 class ItemsRepeaterElementIndexChangedEventArgs(winrt.system.Object):
+    # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.Controls.ItemsRepeaterElementIndexChangedEventArgs::get_Element()
     @_property
     def element(self) -> microsoft_ui_xaml.UIElement: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.ItemsRepeaterElementIndexChangedEventArgs::get_NewIndex()
     @_property
     def new_index(self) -> winrt.system.Int32: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.ItemsRepeaterElementIndexChangedEventArgs::get_OldIndex()
     @_property
     def old_index(self) -> winrt.system.Int32: ...
 
 @typing.final
 class ItemsRepeaterElementPreparedEventArgs(winrt.system.Object):
+    # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.Controls.ItemsRepeaterElementPreparedEventArgs::get_Element()
     @_property
     def element(self) -> microsoft_ui_xaml.UIElement: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.ItemsRepeaterElementPreparedEventArgs::get_Index()
     @_property
     def index(self) -> winrt.system.Int32: ...
 
 @typing.final
 class ItemsRepeaterScrollHost(microsoft_ui_xaml.FrameworkElement):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ItemsRepeaterScrollHost::get_VerticalAnchorRatio()
     @_property
     def vertical_anchor_ratio(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsRepeaterScrollHost::put_VerticalAnchorRatio(System.Double)
     @vertical_anchor_ratio.setter
     def vertical_anchor_ratio(self, value: winrt.system.Double) -> None: ...
+    # Microsoft.UI.Xaml.Controls.ScrollViewer Microsoft.UI.Xaml.Controls.ItemsRepeaterScrollHost::get_ScrollViewer()
     @_property
     def scroll_viewer(self) -> ScrollViewer: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsRepeaterScrollHost::put_ScrollViewer(Microsoft.UI.Xaml.Controls.ScrollViewer)
     @scroll_viewer.setter
     def scroll_viewer(self, value: ScrollViewer) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ItemsRepeaterScrollHost::get_HorizontalAnchorRatio()
     @_property
     def horizontal_anchor_ratio(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsRepeaterScrollHost::put_HorizontalAnchorRatio(System.Double)
     @horizontal_anchor_ratio.setter
     def horizontal_anchor_ratio(self, value: winrt.system.Double) -> None: ...
+    # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.Controls.ItemsRepeaterScrollHost::get_CurrentAnchor()
     @_property
     def current_anchor(self) -> microsoft_ui_xaml.UIElement: ...
 
@@ -4271,103 +5826,143 @@ class ItemsSourceView_Static(type):
 class ItemsSourceView(winrt.system.Object, microsoft_ui_xaml_interop.ImplementsINotifyCollectionChanged, metaclass=ItemsSourceView_Static):
     def __new__(cls: typing.Type[Self], source: winrt.system.Object) -> Self: ...
     @typing.final
+    # System.Object Microsoft.UI.Xaml.Controls.ItemsSourceView::GetAt(System.Int32)
     def get_at(self, index: winrt.system.Int32, /) -> winrt.system.Object: ...
     @typing.final
+    # System.Int32 Microsoft.UI.Xaml.Controls.ItemsSourceView::IndexFromKey(System.String)
     def index_from_key(self, key: str, /) -> winrt.system.Int32: ...
     @typing.final
+    # System.Int32 Microsoft.UI.Xaml.Controls.ItemsSourceView::IndexOf(System.Object)
     def index_of(self, item: winrt.system.Object, /) -> winrt.system.Int32: ...
     @typing.final
+    # System.String Microsoft.UI.Xaml.Controls.ItemsSourceView::KeyFromIndex(System.Int32)
     def key_from_index(self, index: winrt.system.Int32, /) -> str: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.ItemsSourceView::add_CollectionChanged(Microsoft.UI.Xaml.Interop.NotifyCollectionChangedEventHandler)
     def add_collection_changed(self, handler: microsoft_ui_xaml_interop.NotifyCollectionChangedEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsSourceView::remove_CollectionChanged(Windows.Foundation.EventRegistrationToken)
     def remove_collection_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.ItemsSourceView::get_Count()
     @_property
     @typing.final
     def count(self) -> winrt.system.Int32: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ItemsSourceView::get_HasKeyIndexMapping()
     @_property
     @typing.final
     def has_key_index_mapping(self) -> bool: ...
 
 @typing.final
 class ItemsStackPanel_Static(Panel_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ItemsStackPanel::get_AreStickyGroupHeadersEnabledProperty()
     @_property
     def are_sticky_group_headers_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ItemsStackPanel::get_CacheLengthProperty()
     @_property
     def cache_length_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ItemsStackPanel::get_GroupHeaderPlacementProperty()
     @_property
     def group_header_placement_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ItemsStackPanel::get_GroupPaddingProperty()
     @_property
     def group_padding_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ItemsStackPanel::get_OrientationProperty()
     @_property
     def orientation_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
 class ItemsStackPanel(Panel, metaclass=ItemsStackPanel_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Microsoft.UI.Xaml.Controls.Orientation Microsoft.UI.Xaml.Controls.ItemsStackPanel::get_Orientation()
     @_property
     def orientation(self) -> Orientation: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsStackPanel::put_Orientation(Microsoft.UI.Xaml.Controls.Orientation)
     @orientation.setter
     def orientation(self, value: Orientation) -> None: ...
+    # Microsoft.UI.Xaml.Controls.ItemsUpdatingScrollMode Microsoft.UI.Xaml.Controls.ItemsStackPanel::get_ItemsUpdatingScrollMode()
     @_property
     def items_updating_scroll_mode(self) -> ItemsUpdatingScrollMode: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsStackPanel::put_ItemsUpdatingScrollMode(Microsoft.UI.Xaml.Controls.ItemsUpdatingScrollMode)
     @items_updating_scroll_mode.setter
     def items_updating_scroll_mode(self, value: ItemsUpdatingScrollMode) -> None: ...
+    # Microsoft.UI.Xaml.Thickness Microsoft.UI.Xaml.Controls.ItemsStackPanel::get_GroupPadding()
     @_property
     def group_padding(self) -> microsoft_ui_xaml.Thickness: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsStackPanel::put_GroupPadding(Microsoft.UI.Xaml.Thickness)
     @group_padding.setter
     def group_padding(self, value: microsoft_ui_xaml.Thickness) -> None: ...
+    # Microsoft.UI.Xaml.Controls.Primitives.GroupHeaderPlacement Microsoft.UI.Xaml.Controls.ItemsStackPanel::get_GroupHeaderPlacement()
     @_property
     def group_header_placement(self) -> microsoft_ui_xaml_controls_primitives.GroupHeaderPlacement: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsStackPanel::put_GroupHeaderPlacement(Microsoft.UI.Xaml.Controls.Primitives.GroupHeaderPlacement)
     @group_header_placement.setter
     def group_header_placement(self, value: microsoft_ui_xaml_controls_primitives.GroupHeaderPlacement) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ItemsStackPanel::get_CacheLength()
     @_property
     def cache_length(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsStackPanel::put_CacheLength(System.Double)
     @cache_length.setter
     def cache_length(self, value: winrt.system.Double) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ItemsStackPanel::get_AreStickyGroupHeadersEnabled()
     @_property
     def are_sticky_group_headers_enabled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsStackPanel::put_AreStickyGroupHeadersEnabled(System.Boolean)
     @are_sticky_group_headers_enabled.setter
     def are_sticky_group_headers_enabled(self, value: bool) -> None: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.ItemsStackPanel::get_FirstCacheIndex()
     @_property
     def first_cache_index(self) -> winrt.system.Int32: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.ItemsStackPanel::get_FirstVisibleIndex()
     @_property
     def first_visible_index(self) -> winrt.system.Int32: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.ItemsStackPanel::get_LastCacheIndex()
     @_property
     def last_cache_index(self) -> winrt.system.Int32: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.ItemsStackPanel::get_LastVisibleIndex()
     @_property
     def last_visible_index(self) -> winrt.system.Int32: ...
+    # Microsoft.UI.Xaml.Controls.PanelScrollingDirection Microsoft.UI.Xaml.Controls.ItemsStackPanel::get_ScrollingDirection()
     @_property
     def scrolling_direction(self) -> PanelScrollingDirection: ...
 
 class ItemsView_Static(Control_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ItemsView::get_CurrentItemIndexProperty()
     @_property
     @typing.final
     def current_item_index_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ItemsView::get_IsItemInvokedEnabledProperty()
     @_property
     @typing.final
     def is_item_invoked_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ItemsView::get_ItemTemplateProperty()
     @_property
     @typing.final
     def item_template_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ItemsView::get_ItemTransitionProviderProperty()
     @_property
     @typing.final
     def item_transition_provider_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ItemsView::get_ItemsSourceProperty()
     @_property
     @typing.final
     def items_source_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ItemsView::get_LayoutProperty()
     @_property
     @typing.final
     def layout_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ItemsView::get_ScrollViewProperty()
     @_property
     @typing.final
     def scroll_view_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ItemsView::get_SelectedItemProperty()
     @_property
     @typing.final
     def selected_item_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ItemsView::get_SelectionModeProperty()
     @_property
     @typing.final
     def selection_mode_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ItemsView::get_VerticalScrollControllerProperty()
     @_property
     @typing.final
     def vertical_scroll_controller_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
@@ -4375,79 +5970,110 @@ class ItemsView_Static(Control_Static):
 class ItemsView(Control, metaclass=ItemsView_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsView::Deselect(System.Int32)
     def deselect(self, item_index: winrt.system.Int32, /) -> None: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsView::DeselectAll()
     def deselect_all(self) -> None: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsView::InvertSelection()
     def invert_selection(self) -> None: ...
     @typing.final
+    # System.Boolean Microsoft.UI.Xaml.Controls.ItemsView::IsSelected(System.Int32)
     def is_selected(self, item_index: winrt.system.Int32, /) -> bool: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsView::Select(System.Int32)
     def select(self, item_index: winrt.system.Int32, /) -> None: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsView::SelectAll()
     def select_all(self) -> None: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsView::StartBringItemIntoView(System.Int32,Microsoft.UI.Xaml.BringIntoViewOptions)
     def start_bring_item_into_view(self, index: winrt.system.Int32, options: microsoft_ui_xaml.BringIntoViewOptions, /) -> None: ...
     @typing.final
+    # System.Boolean Microsoft.UI.Xaml.Controls.ItemsView::TryGetItemIndex(System.Double,System.Double,System.Int32&)
     def try_get_item_index(self, horizontal_viewport_ratio: winrt.system.Double, vertical_viewport_ratio: winrt.system.Double, /) -> typing.Tuple[bool, winrt.system.Int32]: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.ItemsView::add_ItemInvoked(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.ItemsView,Microsoft.UI.Xaml.Controls.ItemsViewItemInvokedEventArgs>)
     def add_item_invoked(self, handler: windows_foundation.TypedEventHandler[ItemsView, ItemsViewItemInvokedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsView::remove_ItemInvoked(Windows.Foundation.EventRegistrationToken)
     def remove_item_invoked(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.ItemsView::add_SelectionChanged(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.ItemsView,Microsoft.UI.Xaml.Controls.ItemsViewSelectionChangedEventArgs>)
     def add_selection_changed(self, handler: windows_foundation.TypedEventHandler[ItemsView, ItemsViewSelectionChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsView::remove_SelectionChanged(Windows.Foundation.EventRegistrationToken)
     def remove_selection_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Microsoft.UI.Xaml.Controls.Primitives.IScrollController Microsoft.UI.Xaml.Controls.ItemsView::get_VerticalScrollController()
     @_property
     def vertical_scroll_controller(self) -> microsoft_ui_xaml_controls_primitives.IScrollController: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsView::put_VerticalScrollController(Microsoft.UI.Xaml.Controls.Primitives.IScrollController)
     @vertical_scroll_controller.setter
     @typing.final
     def vertical_scroll_controller(self, value: microsoft_ui_xaml_controls_primitives.ImplementsIScrollController) -> None: ...
+    # Microsoft.UI.Xaml.Controls.ItemsViewSelectionMode Microsoft.UI.Xaml.Controls.ItemsView::get_SelectionMode()
     @_property
     def selection_mode(self) -> ItemsViewSelectionMode: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsView::put_SelectionMode(Microsoft.UI.Xaml.Controls.ItemsViewSelectionMode)
     @selection_mode.setter
     @typing.final
     def selection_mode(self, value: ItemsViewSelectionMode) -> None: ...
+    # Microsoft.UI.Xaml.Controls.Layout Microsoft.UI.Xaml.Controls.ItemsView::get_Layout()
     @_property
     def layout(self) -> Layout: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsView::put_Layout(Microsoft.UI.Xaml.Controls.Layout)
     @layout.setter
     @typing.final
     def layout(self, value: Layout) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.ItemsView::get_ItemsSource()
     @_property
     def items_source(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsView::put_ItemsSource(System.Object)
     @items_source.setter
     @typing.final
     def items_source(self, value: winrt.system.Object) -> None: ...
+    # Microsoft.UI.Xaml.Controls.ItemCollectionTransitionProvider Microsoft.UI.Xaml.Controls.ItemsView::get_ItemTransitionProvider()
     @_property
     def item_transition_provider(self) -> ItemCollectionTransitionProvider: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsView::put_ItemTransitionProvider(Microsoft.UI.Xaml.Controls.ItemCollectionTransitionProvider)
     @item_transition_provider.setter
     @typing.final
     def item_transition_provider(self, value: ItemCollectionTransitionProvider) -> None: ...
+    # Microsoft.UI.Xaml.IElementFactory Microsoft.UI.Xaml.Controls.ItemsView::get_ItemTemplate()
     @_property
     def item_template(self) -> microsoft_ui_xaml.IElementFactory: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsView::put_ItemTemplate(Microsoft.UI.Xaml.IElementFactory)
     @item_template.setter
     @typing.final
     def item_template(self, value: microsoft_ui_xaml.ImplementsIElementFactory) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ItemsView::get_IsItemInvokedEnabled()
     @_property
     def is_item_invoked_enabled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsView::put_IsItemInvokedEnabled(System.Boolean)
     @is_item_invoked_enabled.setter
     @typing.final
     def is_item_invoked_enabled(self, value: bool) -> None: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.ItemsView::get_CurrentItemIndex()
     @_property
     @typing.final
     def current_item_index(self) -> winrt.system.Int32: ...
+    # Microsoft.UI.Xaml.Controls.ScrollView Microsoft.UI.Xaml.Controls.ItemsView::get_ScrollView()
     @_property
     @typing.final
     def scroll_view(self) -> ScrollView: ...
+    # System.Object Microsoft.UI.Xaml.Controls.ItemsView::get_SelectedItem()
     @_property
     @typing.final
     def selected_item(self) -> winrt.system.Object: ...
+    # Windows.Foundation.Collections.IVectorView`1<System.Object> Microsoft.UI.Xaml.Controls.ItemsView::get_SelectedItems()
     @_property
     @typing.final
     def selected_items(self) -> typing.Sequence[winrt.system.Object]: ...
 
 @typing.final
 class ItemsViewItemInvokedEventArgs(winrt.system.Object):
+    # System.Object Microsoft.UI.Xaml.Controls.ItemsViewItemInvokedEventArgs::get_InvokedItem()
     @_property
     def invoked_item(self) -> winrt.system.Object: ...
 
@@ -4456,85 +6082,114 @@ class ItemsViewSelectionChangedEventArgs(winrt.system.Object):
     pass
 
 class ItemsWrapGrid_Static(Panel_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ItemsWrapGrid::get_AreStickyGroupHeadersEnabledProperty()
     @_property
     @typing.final
     def are_sticky_group_headers_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ItemsWrapGrid::get_CacheLengthProperty()
     @_property
     @typing.final
     def cache_length_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ItemsWrapGrid::get_GroupHeaderPlacementProperty()
     @_property
     @typing.final
     def group_header_placement_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ItemsWrapGrid::get_GroupPaddingProperty()
     @_property
     @typing.final
     def group_padding_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ItemsWrapGrid::get_ItemHeightProperty()
     @_property
     @typing.final
     def item_height_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ItemsWrapGrid::get_ItemWidthProperty()
     @_property
     @typing.final
     def item_width_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ItemsWrapGrid::get_MaximumRowsOrColumnsProperty()
     @_property
     @typing.final
     def maximum_rows_or_columns_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ItemsWrapGrid::get_OrientationProperty()
     @_property
     @typing.final
     def orientation_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class ItemsWrapGrid(Panel, metaclass=ItemsWrapGrid_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Microsoft.UI.Xaml.Controls.Orientation Microsoft.UI.Xaml.Controls.ItemsWrapGrid::get_Orientation()
     @_property
     def orientation(self) -> Orientation: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsWrapGrid::put_Orientation(Microsoft.UI.Xaml.Controls.Orientation)
     @orientation.setter
     @typing.final
     def orientation(self, value: Orientation) -> None: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.ItemsWrapGrid::get_MaximumRowsOrColumns()
     @_property
     def maximum_rows_or_columns(self) -> winrt.system.Int32: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsWrapGrid::put_MaximumRowsOrColumns(System.Int32)
     @maximum_rows_or_columns.setter
     @typing.final
     def maximum_rows_or_columns(self, value: winrt.system.Int32) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ItemsWrapGrid::get_ItemWidth()
     @_property
     def item_width(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsWrapGrid::put_ItemWidth(System.Double)
     @item_width.setter
     @typing.final
     def item_width(self, value: winrt.system.Double) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ItemsWrapGrid::get_ItemHeight()
     @_property
     def item_height(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsWrapGrid::put_ItemHeight(System.Double)
     @item_height.setter
     @typing.final
     def item_height(self, value: winrt.system.Double) -> None: ...
+    # Microsoft.UI.Xaml.Thickness Microsoft.UI.Xaml.Controls.ItemsWrapGrid::get_GroupPadding()
     @_property
     def group_padding(self) -> microsoft_ui_xaml.Thickness: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsWrapGrid::put_GroupPadding(Microsoft.UI.Xaml.Thickness)
     @group_padding.setter
     @typing.final
     def group_padding(self, value: microsoft_ui_xaml.Thickness) -> None: ...
+    # Microsoft.UI.Xaml.Controls.Primitives.GroupHeaderPlacement Microsoft.UI.Xaml.Controls.ItemsWrapGrid::get_GroupHeaderPlacement()
     @_property
     def group_header_placement(self) -> microsoft_ui_xaml_controls_primitives.GroupHeaderPlacement: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsWrapGrid::put_GroupHeaderPlacement(Microsoft.UI.Xaml.Controls.Primitives.GroupHeaderPlacement)
     @group_header_placement.setter
     @typing.final
     def group_header_placement(self, value: microsoft_ui_xaml_controls_primitives.GroupHeaderPlacement) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ItemsWrapGrid::get_CacheLength()
     @_property
     def cache_length(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsWrapGrid::put_CacheLength(System.Double)
     @cache_length.setter
     @typing.final
     def cache_length(self, value: winrt.system.Double) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ItemsWrapGrid::get_AreStickyGroupHeadersEnabled()
     @_property
     def are_sticky_group_headers_enabled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ItemsWrapGrid::put_AreStickyGroupHeadersEnabled(System.Boolean)
     @are_sticky_group_headers_enabled.setter
     @typing.final
     def are_sticky_group_headers_enabled(self, value: bool) -> None: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.ItemsWrapGrid::get_FirstCacheIndex()
     @_property
     @typing.final
     def first_cache_index(self) -> winrt.system.Int32: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.ItemsWrapGrid::get_FirstVisibleIndex()
     @_property
     @typing.final
     def first_visible_index(self) -> winrt.system.Int32: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.ItemsWrapGrid::get_LastCacheIndex()
     @_property
     @typing.final
     def last_cache_index(self) -> winrt.system.Int32: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.ItemsWrapGrid::get_LastVisibleIndex()
     @_property
     @typing.final
     def last_visible_index(self) -> winrt.system.Int32: ...
+    # Microsoft.UI.Xaml.Controls.PanelScrollingDirection Microsoft.UI.Xaml.Controls.ItemsWrapGrid::get_ScrollingDirection()
     @_property
     @typing.final
     def scrolling_direction(self) -> PanelScrollingDirection: ...
@@ -4544,28 +6199,41 @@ class Layout_Static(microsoft_ui_xaml.DependencyObject_Static):
 
 class Layout(microsoft_ui_xaml.DependencyObject, metaclass=Layout_Static):
     @typing.final
+    # Windows.Foundation.Size Microsoft.UI.Xaml.Controls.Layout::Arrange(Microsoft.UI.Xaml.Controls.LayoutContext,Windows.Foundation.Size)
     def arrange(self, context: LayoutContext, final_size: windows_foundation.Size, /) -> windows_foundation.Size: ...
+    # Microsoft.UI.Xaml.Controls.ItemCollectionTransitionProvider Microsoft.UI.Xaml.Controls.Layout::CreateDefaultItemTransitionProvider()
     def _create_default_item_transition_provider(self) -> ItemCollectionTransitionProvider: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.Layout::InitializeForContext(Microsoft.UI.Xaml.Controls.LayoutContext)
     def initialize_for_context(self, context: LayoutContext, /) -> None: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.Layout::InvalidateArrange()
     def _invalidate_arrange(self) -> None: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.Layout::InvalidateMeasure()
     def _invalidate_measure(self) -> None: ...
     @typing.final
+    # Windows.Foundation.Size Microsoft.UI.Xaml.Controls.Layout::Measure(Microsoft.UI.Xaml.Controls.LayoutContext,Windows.Foundation.Size)
     def measure(self, context: LayoutContext, available_size: windows_foundation.Size, /) -> windows_foundation.Size: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.Layout::SetIndexBasedLayoutOrientation(Microsoft.UI.Xaml.Controls.IndexBasedLayoutOrientation)
     def _set_index_based_layout_orientation(self, orientation: IndexBasedLayoutOrientation, /) -> None: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.Layout::UninitializeForContext(Microsoft.UI.Xaml.Controls.LayoutContext)
     def uninitialize_for_context(self, context: LayoutContext, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.Layout::add_ArrangeInvalidated(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.Layout,System.Object>)
     def add_arrange_invalidated(self, handler: windows_foundation.TypedEventHandler[Layout, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.Layout::remove_ArrangeInvalidated(Windows.Foundation.EventRegistrationToken)
     def remove_arrange_invalidated(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.Layout::add_MeasureInvalidated(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.Layout,System.Object>)
     def add_measure_invalidated(self, handler: windows_foundation.TypedEventHandler[Layout, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.Layout::remove_MeasureInvalidated(Windows.Foundation.EventRegistrationToken)
     def remove_measure_invalidated(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Microsoft.UI.Xaml.Controls.IndexBasedLayoutOrientation Microsoft.UI.Xaml.Controls.Layout::get_IndexBasedLayoutOrientation()
     @_property
     @typing.final
     def index_based_layout_orientation(self) -> IndexBasedLayoutOrientation: ...
@@ -4574,28 +6242,36 @@ class LayoutContext_Static(microsoft_ui_xaml.DependencyObject_Static):
     pass
 
 class LayoutContext(microsoft_ui_xaml.DependencyObject, metaclass=LayoutContext_Static):
+    # System.Object Microsoft.UI.Xaml.Controls.LayoutContext::get_LayoutState()
     @_property
     def layout_state(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.LayoutContext::put_LayoutState(System.Object)
     @layout_state.setter
     @typing.final
     def layout_state(self, value: winrt.system.Object) -> None: ...
 
 class LinedFlowLayout_Static(VirtualizingLayout_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.LinedFlowLayout::get_ActualLineHeightProperty()
     @_property
     @typing.final
     def actual_line_height_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.LinedFlowLayout::get_ItemsJustificationProperty()
     @_property
     @typing.final
     def items_justification_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.LinedFlowLayout::get_ItemsStretchProperty()
     @_property
     @typing.final
     def items_stretch_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.LinedFlowLayout::get_LineHeightProperty()
     @_property
     @typing.final
     def line_height_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.LinedFlowLayout::get_LineSpacingProperty()
     @_property
     @typing.final
     def line_spacing_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.LinedFlowLayout::get_MinItemSpacingProperty()
     @_property
     @typing.final
     def min_item_spacing_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
@@ -4603,48 +6279,67 @@ class LinedFlowLayout_Static(VirtualizingLayout_Static):
 class LinedFlowLayout(VirtualizingLayout, metaclass=LinedFlowLayout_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.LinedFlowLayout::InvalidateItemsInfo()
     def invalidate_items_info(self) -> None: ...
     @typing.final
+    # System.Int32 Microsoft.UI.Xaml.Controls.LinedFlowLayout::LockItemToLine(System.Int32)
     def lock_item_to_line(self, item_index: winrt.system.Int32, /) -> winrt.system.Int32: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.LinedFlowLayout::add_ItemsInfoRequested(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.LinedFlowLayout,Microsoft.UI.Xaml.Controls.LinedFlowLayoutItemsInfoRequestedEventArgs>)
     def add_items_info_requested(self, handler: windows_foundation.TypedEventHandler[LinedFlowLayout, LinedFlowLayoutItemsInfoRequestedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.LinedFlowLayout::remove_ItemsInfoRequested(Windows.Foundation.EventRegistrationToken)
     def remove_items_info_requested(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.LinedFlowLayout::add_ItemsUnlocked(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.LinedFlowLayout,System.Object>)
     def add_items_unlocked(self, handler: windows_foundation.TypedEventHandler[LinedFlowLayout, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.LinedFlowLayout::remove_ItemsUnlocked(Windows.Foundation.EventRegistrationToken)
     def remove_items_unlocked(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.LinedFlowLayout::get_MinItemSpacing()
     @_property
     def min_item_spacing(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.LinedFlowLayout::put_MinItemSpacing(System.Double)
     @min_item_spacing.setter
     @typing.final
     def min_item_spacing(self, value: winrt.system.Double) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.LinedFlowLayout::get_LineSpacing()
     @_property
     def line_spacing(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.LinedFlowLayout::put_LineSpacing(System.Double)
     @line_spacing.setter
     @typing.final
     def line_spacing(self, value: winrt.system.Double) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.LinedFlowLayout::get_LineHeight()
     @_property
     def line_height(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.LinedFlowLayout::put_LineHeight(System.Double)
     @line_height.setter
     @typing.final
     def line_height(self, value: winrt.system.Double) -> None: ...
+    # Microsoft.UI.Xaml.Controls.LinedFlowLayoutItemsStretch Microsoft.UI.Xaml.Controls.LinedFlowLayout::get_ItemsStretch()
     @_property
     def items_stretch(self) -> LinedFlowLayoutItemsStretch: ...
+    # System.Void Microsoft.UI.Xaml.Controls.LinedFlowLayout::put_ItemsStretch(Microsoft.UI.Xaml.Controls.LinedFlowLayoutItemsStretch)
     @items_stretch.setter
     @typing.final
     def items_stretch(self, value: LinedFlowLayoutItemsStretch) -> None: ...
+    # Microsoft.UI.Xaml.Controls.LinedFlowLayoutItemsJustification Microsoft.UI.Xaml.Controls.LinedFlowLayout::get_ItemsJustification()
     @_property
     def items_justification(self) -> LinedFlowLayoutItemsJustification: ...
+    # System.Void Microsoft.UI.Xaml.Controls.LinedFlowLayout::put_ItemsJustification(Microsoft.UI.Xaml.Controls.LinedFlowLayoutItemsJustification)
     @items_justification.setter
     @typing.final
     def items_justification(self, value: LinedFlowLayoutItemsJustification) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.LinedFlowLayout::get_ActualLineHeight()
     @_property
     @typing.final
     def actual_line_height(self) -> winrt.system.Double: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.LinedFlowLayout::get_RequestedRangeLength()
     @_property
     @typing.final
     def requested_range_length(self) -> winrt.system.Int32: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.LinedFlowLayout::get_RequestedRangeStartIndex()
     @_property
     @typing.final
     def requested_range_start_index(self) -> winrt.system.Int32: ...
@@ -4657,21 +6352,31 @@ class LinedFlowLayoutItemCollectionTransitionProvider(ItemCollectionTransitionPr
 
 @typing.final
 class LinedFlowLayoutItemsInfoRequestedEventArgs(winrt.system.Object):
+    # System.Void Microsoft.UI.Xaml.Controls.LinedFlowLayoutItemsInfoRequestedEventArgs::SetDesiredAspectRatios(System.Double[])
     def set_desired_aspect_ratios(self, values: typing.Union[winrt.system.Array[winrt.system.Double], winrt.system.ReadableBuffer], /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.LinedFlowLayoutItemsInfoRequestedEventArgs::SetMaxWidths(System.Double[])
     def set_max_widths(self, values: typing.Union[winrt.system.Array[winrt.system.Double], winrt.system.ReadableBuffer], /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.LinedFlowLayoutItemsInfoRequestedEventArgs::SetMinWidths(System.Double[])
     def set_min_widths(self, values: typing.Union[winrt.system.Array[winrt.system.Double], winrt.system.ReadableBuffer], /) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.LinedFlowLayoutItemsInfoRequestedEventArgs::get_MinWidth()
     @_property
     def min_width(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.LinedFlowLayoutItemsInfoRequestedEventArgs::put_MinWidth(System.Double)
     @min_width.setter
     def min_width(self, value: winrt.system.Double) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.LinedFlowLayoutItemsInfoRequestedEventArgs::get_MaxWidth()
     @_property
     def max_width(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.LinedFlowLayoutItemsInfoRequestedEventArgs::put_MaxWidth(System.Double)
     @max_width.setter
     def max_width(self, value: winrt.system.Double) -> None: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.LinedFlowLayoutItemsInfoRequestedEventArgs::get_ItemsRangeStartIndex()
     @_property
     def items_range_start_index(self) -> winrt.system.Int32: ...
+    # System.Void Microsoft.UI.Xaml.Controls.LinedFlowLayoutItemsInfoRequestedEventArgs::put_ItemsRangeStartIndex(System.Int32)
     @items_range_start_index.setter
     def items_range_start_index(self, value: winrt.system.Int32) -> None: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.LinedFlowLayoutItemsInfoRequestedEventArgs::get_ItemsRangeRequestedLength()
     @_property
     def items_range_requested_length(self) -> winrt.system.Int32: ...
 
@@ -4693,7 +6398,9 @@ class ListViewHeaderItem(ListViewBaseHeaderItem, metaclass=ListViewHeaderItem_St
 
 @typing.final
 class ListViewPersistenceHelper_Static(type):
+    # System.String Microsoft.UI.Xaml.Controls.ListViewPersistenceHelper::GetRelativeScrollPosition(Microsoft.UI.Xaml.Controls.ListViewBase,Microsoft.UI.Xaml.Controls.ListViewItemToKeyHandler)
     def get_relative_scroll_position(cls, list_view_base: ListViewBase, item_to_key_handler: ListViewItemToKeyHandler, /) -> str: ...
+    # Windows.Foundation.IAsyncAction Microsoft.UI.Xaml.Controls.ListViewPersistenceHelper::SetRelativeScrollPositionAsync(Microsoft.UI.Xaml.Controls.ListViewBase,System.String,Microsoft.UI.Xaml.Controls.ListViewKeyToItemHandler)
     def set_relative_scroll_position_async(cls, list_view_base: ListViewBase, relative_scroll_position: str, key_to_item_handler: ListViewKeyToItemHandler, /) -> windows_foundation.IAsyncAction: ...
 
 @typing.final
@@ -4701,18 +6408,23 @@ class ListViewPersistenceHelper(winrt.system.Object, metaclass=ListViewPersisten
     pass
 
 class MapControl_Static(Control_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.MapControl::get_CenterProperty()
     @_property
     @typing.final
     def center_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.MapControl::get_InteractiveControlsVisibleProperty()
     @_property
     @typing.final
     def interactive_controls_visible_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.MapControl::get_LayersProperty()
     @_property
     @typing.final
     def layers_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.MapControl::get_MapServiceTokenProperty()
     @_property
     @typing.final
     def map_service_token_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.MapControl::get_ZoomLevelProperty()
     @_property
     @typing.final
     def zoom_level_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
@@ -4720,41 +6432,56 @@ class MapControl_Static(Control_Static):
 class MapControl(Control, metaclass=MapControl_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.MapControl::add_MapElementClick(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.MapControl,Microsoft.UI.Xaml.Controls.MapElementClickEventArgs>)
     def add_map_element_click(self, handler: windows_foundation.TypedEventHandler[MapControl, MapElementClickEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.MapControl::remove_MapElementClick(Windows.Foundation.EventRegistrationToken)
     def remove_map_element_click(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.MapControl::add_MapServiceErrorOccurred(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.MapControl,Microsoft.UI.Xaml.Controls.MapControlMapServiceErrorOccurredEventArgs>)
     def add_map_service_error_occurred(self, handler: windows_foundation.TypedEventHandler[MapControl, MapControlMapServiceErrorOccurredEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.MapControl::remove_MapServiceErrorOccurred(Windows.Foundation.EventRegistrationToken)
     def remove_map_service_error_occurred(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.MapControl::get_ZoomLevel()
     @_property
     def zoom_level(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.MapControl::put_ZoomLevel(System.Double)
     @zoom_level.setter
     @typing.final
     def zoom_level(self, value: winrt.system.Double) -> None: ...
+    # System.String Microsoft.UI.Xaml.Controls.MapControl::get_MapServiceToken()
     @_property
     def map_service_token(self) -> str: ...
+    # System.Void Microsoft.UI.Xaml.Controls.MapControl::put_MapServiceToken(System.String)
     @map_service_token.setter
     @typing.final
     def map_service_token(self, value: str) -> None: ...
+    # Windows.Foundation.Collections.IVector`1<Microsoft.UI.Xaml.Controls.MapLayer> Microsoft.UI.Xaml.Controls.MapControl::get_Layers()
     @_property
     def layers(self) -> typing.MutableSequence[MapLayer]: ...
+    # System.Void Microsoft.UI.Xaml.Controls.MapControl::put_Layers(Windows.Foundation.Collections.IVector`1<Microsoft.UI.Xaml.Controls.MapLayer>)
     @layers.setter
     @typing.final
     def layers(self, value: typing.MutableSequence[MapLayer]) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.MapControl::get_InteractiveControlsVisible()
     @_property
     def interactive_controls_visible(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.MapControl::put_InteractiveControlsVisible(System.Boolean)
     @interactive_controls_visible.setter
     @typing.final
     def interactive_controls_visible(self, value: bool) -> None: ...
+    # Windows.Devices.Geolocation.Geopoint Microsoft.UI.Xaml.Controls.MapControl::get_Center()
     @_property
     def center(self) -> windows_devices_geolocation.Geopoint: ...
+    # System.Void Microsoft.UI.Xaml.Controls.MapControl::put_Center(Windows.Devices.Geolocation.Geopoint)
     @center.setter
     @typing.final
     def center(self, value: windows_devices_geolocation.Geopoint) -> None: ...
 
 @typing.final
 class MapControlMapServiceErrorOccurredEventArgs(winrt.system.Object):
+    # System.String Microsoft.UI.Xaml.Controls.MapControlMapServiceErrorOccurredEventArgs::get_DiagnosticMessage()
     @_property
     def diagnostic_message(self) -> str: ...
 
@@ -4766,12 +6493,15 @@ class MapElement(microsoft_ui_xaml.DependencyObject, metaclass=MapElement_Static
 
 @typing.final
 class MapElementClickEventArgs(winrt.system.Object):
+    # Microsoft.UI.Xaml.Controls.MapElement Microsoft.UI.Xaml.Controls.MapElementClickEventArgs::get_Element()
     @_property
     def element(self) -> MapElement: ...
+    # Windows.Devices.Geolocation.Geopoint Microsoft.UI.Xaml.Controls.MapElementClickEventArgs::get_Location()
     @_property
     def location(self) -> windows_devices_geolocation.Geopoint: ...
 
 class MapElementsLayer_Static(MapLayer_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.MapElementsLayer::get_MapElementsProperty()
     @_property
     @typing.final
     def map_elements_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
@@ -4779,24 +6509,31 @@ class MapElementsLayer_Static(MapLayer_Static):
 class MapElementsLayer(MapLayer, metaclass=MapElementsLayer_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.MapElementsLayer::add_MapElementClick(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.MapElementsLayer,Microsoft.UI.Xaml.Controls.MapElementClickEventArgs>)
     def add_map_element_click(self, handler: windows_foundation.TypedEventHandler[MapElementsLayer, MapElementClickEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.MapElementsLayer::remove_MapElementClick(Windows.Foundation.EventRegistrationToken)
     def remove_map_element_click(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.Collections.IVector`1<Microsoft.UI.Xaml.Controls.MapElement> Microsoft.UI.Xaml.Controls.MapElementsLayer::get_MapElements()
     @_property
     def map_elements(self) -> typing.MutableSequence[MapElement]: ...
+    # System.Void Microsoft.UI.Xaml.Controls.MapElementsLayer::put_MapElements(Windows.Foundation.Collections.IVector`1<Microsoft.UI.Xaml.Controls.MapElement>)
     @map_elements.setter
     @typing.final
     def map_elements(self, value: typing.MutableSequence[MapElement]) -> None: ...
 
 class MapIcon_Static(MapElement_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.MapIcon::get_LocationProperty()
     @_property
     @typing.final
     def location_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class MapIcon(MapElement, metaclass=MapIcon_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Windows.Devices.Geolocation.Geopoint Microsoft.UI.Xaml.Controls.MapIcon::get_Location()
     @_property
     def location(self) -> windows_devices_geolocation.Geopoint: ...
+    # System.Void Microsoft.UI.Xaml.Controls.MapIcon::put_Location(Windows.Devices.Geolocation.Geopoint)
     @location.setter
     @typing.final
     def location(self, value: windows_devices_geolocation.Geopoint) -> None: ...
@@ -4808,24 +6545,31 @@ class MapLayer(microsoft_ui_xaml.DependencyObject, metaclass=MapLayer_Static):
     pass
 
 class MediaPlayerElement_Static(Control_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.MediaPlayerElement::get_AreTransportControlsEnabledProperty()
     @_property
     @typing.final
     def are_transport_controls_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.MediaPlayerElement::get_AutoPlayProperty()
     @_property
     @typing.final
     def auto_play_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.MediaPlayerElement::get_IsFullWindowProperty()
     @_property
     @typing.final
     def is_full_window_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.MediaPlayerElement::get_MediaPlayerProperty()
     @_property
     @typing.final
     def media_player_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.MediaPlayerElement::get_PosterSourceProperty()
     @_property
     @typing.final
     def poster_source_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.MediaPlayerElement::get_SourceProperty()
     @_property
     @typing.final
     def source_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.MediaPlayerElement::get_StretchProperty()
     @_property
     @typing.final
     def stretch_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
@@ -4833,148 +6577,198 @@ class MediaPlayerElement_Static(Control_Static):
 class MediaPlayerElement(Control, metaclass=MediaPlayerElement_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.MediaPlayerElement::SetMediaPlayer(Windows.Media.Playback.MediaPlayer)
     def set_media_player(self, media_player: windows_media_playback.MediaPlayer, /) -> None: ...
+    # Microsoft.UI.Xaml.Controls.MediaTransportControls Microsoft.UI.Xaml.Controls.MediaPlayerElement::get_TransportControls()
     @_property
     def transport_controls(self) -> MediaTransportControls: ...
+    # System.Void Microsoft.UI.Xaml.Controls.MediaPlayerElement::put_TransportControls(Microsoft.UI.Xaml.Controls.MediaTransportControls)
     @transport_controls.setter
     @typing.final
     def transport_controls(self, value: MediaTransportControls) -> None: ...
+    # Microsoft.UI.Xaml.Media.Stretch Microsoft.UI.Xaml.Controls.MediaPlayerElement::get_Stretch()
     @_property
     def stretch(self) -> microsoft_ui_xaml_media.Stretch: ...
+    # System.Void Microsoft.UI.Xaml.Controls.MediaPlayerElement::put_Stretch(Microsoft.UI.Xaml.Media.Stretch)
     @stretch.setter
     @typing.final
     def stretch(self, value: microsoft_ui_xaml_media.Stretch) -> None: ...
+    # Windows.Media.Playback.IMediaPlaybackSource Microsoft.UI.Xaml.Controls.MediaPlayerElement::get_Source()
     @_property
     def source(self) -> windows_media_playback.IMediaPlaybackSource: ...
+    # System.Void Microsoft.UI.Xaml.Controls.MediaPlayerElement::put_Source(Windows.Media.Playback.IMediaPlaybackSource)
     @source.setter
     @typing.final
     def source(self, value: windows_media_playback.ImplementsIMediaPlaybackSource) -> None: ...
+    # Microsoft.UI.Xaml.Media.ImageSource Microsoft.UI.Xaml.Controls.MediaPlayerElement::get_PosterSource()
     @_property
     def poster_source(self) -> microsoft_ui_xaml_media.ImageSource: ...
+    # System.Void Microsoft.UI.Xaml.Controls.MediaPlayerElement::put_PosterSource(Microsoft.UI.Xaml.Media.ImageSource)
     @poster_source.setter
     @typing.final
     def poster_source(self, value: microsoft_ui_xaml_media.ImageSource) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.MediaPlayerElement::get_IsFullWindow()
     @_property
     def is_full_window(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.MediaPlayerElement::put_IsFullWindow(System.Boolean)
     @is_full_window.setter
     @typing.final
     def is_full_window(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.MediaPlayerElement::get_AutoPlay()
     @_property
     def auto_play(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.MediaPlayerElement::put_AutoPlay(System.Boolean)
     @auto_play.setter
     @typing.final
     def auto_play(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.MediaPlayerElement::get_AreTransportControlsEnabled()
     @_property
     def are_transport_controls_enabled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.MediaPlayerElement::put_AreTransportControlsEnabled(System.Boolean)
     @are_transport_controls_enabled.setter
     @typing.final
     def are_transport_controls_enabled(self, value: bool) -> None: ...
+    # Windows.Media.Playback.MediaPlayer Microsoft.UI.Xaml.Controls.MediaPlayerElement::get_MediaPlayer()
     @_property
     @typing.final
     def media_player(self) -> windows_media_playback.MediaPlayer: ...
 
 class MediaPlayerPresenter_Static(microsoft_ui_xaml.FrameworkElement_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.MediaPlayerPresenter::get_IsFullWindowProperty()
     @_property
     @typing.final
     def is_full_window_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.MediaPlayerPresenter::get_MediaPlayerProperty()
     @_property
     @typing.final
     def media_player_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.MediaPlayerPresenter::get_StretchProperty()
     @_property
     @typing.final
     def stretch_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class MediaPlayerPresenter(microsoft_ui_xaml.FrameworkElement, metaclass=MediaPlayerPresenter_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Microsoft.UI.Xaml.Media.Stretch Microsoft.UI.Xaml.Controls.MediaPlayerPresenter::get_Stretch()
     @_property
     def stretch(self) -> microsoft_ui_xaml_media.Stretch: ...
+    # System.Void Microsoft.UI.Xaml.Controls.MediaPlayerPresenter::put_Stretch(Microsoft.UI.Xaml.Media.Stretch)
     @stretch.setter
     @typing.final
     def stretch(self, value: microsoft_ui_xaml_media.Stretch) -> None: ...
+    # Windows.Media.Playback.MediaPlayer Microsoft.UI.Xaml.Controls.MediaPlayerPresenter::get_MediaPlayer()
     @_property
     def media_player(self) -> windows_media_playback.MediaPlayer: ...
+    # System.Void Microsoft.UI.Xaml.Controls.MediaPlayerPresenter::put_MediaPlayer(Windows.Media.Playback.MediaPlayer)
     @media_player.setter
     @typing.final
     def media_player(self, value: windows_media_playback.MediaPlayer) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.MediaPlayerPresenter::get_IsFullWindow()
     @_property
     def is_full_window(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.MediaPlayerPresenter::put_IsFullWindow(System.Boolean)
     @is_full_window.setter
     @typing.final
     def is_full_window(self, value: bool) -> None: ...
 
 class MediaTransportControls_Static(Control_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.MediaTransportControls::get_FastPlayFallbackBehaviourProperty()
     @_property
     @typing.final
     def fast_play_fallback_behaviour_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.MediaTransportControls::get_IsCompactProperty()
     @_property
     @typing.final
     def is_compact_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.MediaTransportControls::get_IsFastForwardButtonVisibleProperty()
     @_property
     @typing.final
     def is_fast_forward_button_visible_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.MediaTransportControls::get_IsFastForwardEnabledProperty()
     @_property
     @typing.final
     def is_fast_forward_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.MediaTransportControls::get_IsFastRewindButtonVisibleProperty()
     @_property
     @typing.final
     def is_fast_rewind_button_visible_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.MediaTransportControls::get_IsFastRewindEnabledProperty()
     @_property
     @typing.final
     def is_fast_rewind_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.MediaTransportControls::get_IsNextTrackButtonVisibleProperty()
     @_property
     @typing.final
     def is_next_track_button_visible_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.MediaTransportControls::get_IsPlaybackRateButtonVisibleProperty()
     @_property
     @typing.final
     def is_playback_rate_button_visible_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.MediaTransportControls::get_IsPlaybackRateEnabledProperty()
     @_property
     @typing.final
     def is_playback_rate_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.MediaTransportControls::get_IsPreviousTrackButtonVisibleProperty()
     @_property
     @typing.final
     def is_previous_track_button_visible_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.MediaTransportControls::get_IsRepeatButtonVisibleProperty()
     @_property
     @typing.final
     def is_repeat_button_visible_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.MediaTransportControls::get_IsRepeatEnabledProperty()
     @_property
     @typing.final
     def is_repeat_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.MediaTransportControls::get_IsSeekBarVisibleProperty()
     @_property
     @typing.final
     def is_seek_bar_visible_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.MediaTransportControls::get_IsSeekEnabledProperty()
     @_property
     @typing.final
     def is_seek_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.MediaTransportControls::get_IsSkipBackwardButtonVisibleProperty()
     @_property
     @typing.final
     def is_skip_backward_button_visible_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.MediaTransportControls::get_IsSkipBackwardEnabledProperty()
     @_property
     @typing.final
     def is_skip_backward_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.MediaTransportControls::get_IsSkipForwardButtonVisibleProperty()
     @_property
     @typing.final
     def is_skip_forward_button_visible_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.MediaTransportControls::get_IsSkipForwardEnabledProperty()
     @_property
     @typing.final
     def is_skip_forward_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.MediaTransportControls::get_IsStopButtonVisibleProperty()
     @_property
     @typing.final
     def is_stop_button_visible_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.MediaTransportControls::get_IsStopEnabledProperty()
     @_property
     @typing.final
     def is_stop_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.MediaTransportControls::get_IsVolumeButtonVisibleProperty()
     @_property
     @typing.final
     def is_volume_button_visible_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.MediaTransportControls::get_IsVolumeEnabledProperty()
     @_property
     @typing.final
     def is_volume_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.MediaTransportControls::get_IsZoomButtonVisibleProperty()
     @_property
     @typing.final
     def is_zoom_button_visible_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.MediaTransportControls::get_IsZoomEnabledProperty()
     @_property
     @typing.final
     def is_zoom_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.MediaTransportControls::get_ShowAndHideAutomaticallyProperty()
     @_property
     @typing.final
     def show_and_hide_automatically_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
@@ -4982,143 +6776,200 @@ class MediaTransportControls_Static(Control_Static):
 class MediaTransportControls(Control, metaclass=MediaTransportControls_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.MediaTransportControls::Hide()
     def hide(self) -> None: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.MediaTransportControls::Show()
     def show(self) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.MediaTransportControls::add_ThumbnailRequested(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.MediaTransportControls,Microsoft.UI.Xaml.Media.MediaTransportControlsThumbnailRequestedEventArgs>)
     def add_thumbnail_requested(self, handler: windows_foundation.TypedEventHandler[MediaTransportControls, microsoft_ui_xaml_media.MediaTransportControlsThumbnailRequestedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.MediaTransportControls::remove_ThumbnailRequested(Windows.Foundation.EventRegistrationToken)
     def remove_thumbnail_requested(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.MediaTransportControls::get_ShowAndHideAutomatically()
     @_property
     def show_and_hide_automatically(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.MediaTransportControls::put_ShowAndHideAutomatically(System.Boolean)
     @show_and_hide_automatically.setter
     @typing.final
     def show_and_hide_automatically(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.MediaTransportControls::get_IsZoomEnabled()
     @_property
     def is_zoom_enabled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.MediaTransportControls::put_IsZoomEnabled(System.Boolean)
     @is_zoom_enabled.setter
     @typing.final
     def is_zoom_enabled(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.MediaTransportControls::get_IsZoomButtonVisible()
     @_property
     def is_zoom_button_visible(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.MediaTransportControls::put_IsZoomButtonVisible(System.Boolean)
     @is_zoom_button_visible.setter
     @typing.final
     def is_zoom_button_visible(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.MediaTransportControls::get_IsVolumeEnabled()
     @_property
     def is_volume_enabled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.MediaTransportControls::put_IsVolumeEnabled(System.Boolean)
     @is_volume_enabled.setter
     @typing.final
     def is_volume_enabled(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.MediaTransportControls::get_IsVolumeButtonVisible()
     @_property
     def is_volume_button_visible(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.MediaTransportControls::put_IsVolumeButtonVisible(System.Boolean)
     @is_volume_button_visible.setter
     @typing.final
     def is_volume_button_visible(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.MediaTransportControls::get_IsStopEnabled()
     @_property
     def is_stop_enabled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.MediaTransportControls::put_IsStopEnabled(System.Boolean)
     @is_stop_enabled.setter
     @typing.final
     def is_stop_enabled(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.MediaTransportControls::get_IsStopButtonVisible()
     @_property
     def is_stop_button_visible(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.MediaTransportControls::put_IsStopButtonVisible(System.Boolean)
     @is_stop_button_visible.setter
     @typing.final
     def is_stop_button_visible(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.MediaTransportControls::get_IsSkipForwardEnabled()
     @_property
     def is_skip_forward_enabled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.MediaTransportControls::put_IsSkipForwardEnabled(System.Boolean)
     @is_skip_forward_enabled.setter
     @typing.final
     def is_skip_forward_enabled(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.MediaTransportControls::get_IsSkipForwardButtonVisible()
     @_property
     def is_skip_forward_button_visible(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.MediaTransportControls::put_IsSkipForwardButtonVisible(System.Boolean)
     @is_skip_forward_button_visible.setter
     @typing.final
     def is_skip_forward_button_visible(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.MediaTransportControls::get_IsSkipBackwardEnabled()
     @_property
     def is_skip_backward_enabled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.MediaTransportControls::put_IsSkipBackwardEnabled(System.Boolean)
     @is_skip_backward_enabled.setter
     @typing.final
     def is_skip_backward_enabled(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.MediaTransportControls::get_IsSkipBackwardButtonVisible()
     @_property
     def is_skip_backward_button_visible(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.MediaTransportControls::put_IsSkipBackwardButtonVisible(System.Boolean)
     @is_skip_backward_button_visible.setter
     @typing.final
     def is_skip_backward_button_visible(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.MediaTransportControls::get_IsSeekEnabled()
     @_property
     def is_seek_enabled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.MediaTransportControls::put_IsSeekEnabled(System.Boolean)
     @is_seek_enabled.setter
     @typing.final
     def is_seek_enabled(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.MediaTransportControls::get_IsSeekBarVisible()
     @_property
     def is_seek_bar_visible(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.MediaTransportControls::put_IsSeekBarVisible(System.Boolean)
     @is_seek_bar_visible.setter
     @typing.final
     def is_seek_bar_visible(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.MediaTransportControls::get_IsRepeatEnabled()
     @_property
     def is_repeat_enabled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.MediaTransportControls::put_IsRepeatEnabled(System.Boolean)
     @is_repeat_enabled.setter
     @typing.final
     def is_repeat_enabled(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.MediaTransportControls::get_IsRepeatButtonVisible()
     @_property
     def is_repeat_button_visible(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.MediaTransportControls::put_IsRepeatButtonVisible(System.Boolean)
     @is_repeat_button_visible.setter
     @typing.final
     def is_repeat_button_visible(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.MediaTransportControls::get_IsPreviousTrackButtonVisible()
     @_property
     def is_previous_track_button_visible(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.MediaTransportControls::put_IsPreviousTrackButtonVisible(System.Boolean)
     @is_previous_track_button_visible.setter
     @typing.final
     def is_previous_track_button_visible(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.MediaTransportControls::get_IsPlaybackRateEnabled()
     @_property
     def is_playback_rate_enabled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.MediaTransportControls::put_IsPlaybackRateEnabled(System.Boolean)
     @is_playback_rate_enabled.setter
     @typing.final
     def is_playback_rate_enabled(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.MediaTransportControls::get_IsPlaybackRateButtonVisible()
     @_property
     def is_playback_rate_button_visible(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.MediaTransportControls::put_IsPlaybackRateButtonVisible(System.Boolean)
     @is_playback_rate_button_visible.setter
     @typing.final
     def is_playback_rate_button_visible(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.MediaTransportControls::get_IsNextTrackButtonVisible()
     @_property
     def is_next_track_button_visible(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.MediaTransportControls::put_IsNextTrackButtonVisible(System.Boolean)
     @is_next_track_button_visible.setter
     @typing.final
     def is_next_track_button_visible(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.MediaTransportControls::get_IsFastRewindEnabled()
     @_property
     def is_fast_rewind_enabled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.MediaTransportControls::put_IsFastRewindEnabled(System.Boolean)
     @is_fast_rewind_enabled.setter
     @typing.final
     def is_fast_rewind_enabled(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.MediaTransportControls::get_IsFastRewindButtonVisible()
     @_property
     def is_fast_rewind_button_visible(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.MediaTransportControls::put_IsFastRewindButtonVisible(System.Boolean)
     @is_fast_rewind_button_visible.setter
     @typing.final
     def is_fast_rewind_button_visible(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.MediaTransportControls::get_IsFastForwardEnabled()
     @_property
     def is_fast_forward_enabled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.MediaTransportControls::put_IsFastForwardEnabled(System.Boolean)
     @is_fast_forward_enabled.setter
     @typing.final
     def is_fast_forward_enabled(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.MediaTransportControls::get_IsFastForwardButtonVisible()
     @_property
     def is_fast_forward_button_visible(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.MediaTransportControls::put_IsFastForwardButtonVisible(System.Boolean)
     @is_fast_forward_button_visible.setter
     @typing.final
     def is_fast_forward_button_visible(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.MediaTransportControls::get_IsCompact()
     @_property
     def is_compact(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.MediaTransportControls::put_IsCompact(System.Boolean)
     @is_compact.setter
     @typing.final
     def is_compact(self, value: bool) -> None: ...
+    # Microsoft.UI.Xaml.Media.FastPlayFallbackBehaviour Microsoft.UI.Xaml.Controls.MediaTransportControls::get_FastPlayFallbackBehaviour()
     @_property
     def fast_play_fallback_behaviour(self) -> microsoft_ui_xaml_media.FastPlayFallbackBehaviour: ...
+    # System.Void Microsoft.UI.Xaml.Controls.MediaTransportControls::put_FastPlayFallbackBehaviour(Microsoft.UI.Xaml.Media.FastPlayFallbackBehaviour)
     @fast_play_fallback_behaviour.setter
     @typing.final
     def fast_play_fallback_behaviour(self, value: microsoft_ui_xaml_media.FastPlayFallbackBehaviour) -> None: ...
 
 @typing.final
 class MediaTransportControlsHelper_Static(type):
+    # Windows.Foundation.IReference`1<System.Int32> Microsoft.UI.Xaml.Controls.MediaTransportControlsHelper::GetDropoutOrder(Microsoft.UI.Xaml.UIElement)
     def get_dropout_order(cls, element: microsoft_ui_xaml.UIElement, /) -> typing.Optional[winrt.system.Int32]: ...
+    # System.Void Microsoft.UI.Xaml.Controls.MediaTransportControlsHelper::SetDropoutOrder(Microsoft.UI.Xaml.UIElement,Windows.Foundation.IReference`1<System.Int32>)
     def set_dropout_order(cls, element: microsoft_ui_xaml.UIElement, value: typing.Optional[winrt.system.Int32], /) -> None: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.MediaTransportControlsHelper::get_DropoutOrderProperty()
     @_property
     def dropout_order_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
@@ -5127,48 +6978,60 @@ class MediaTransportControlsHelper(winrt.system.Object, metaclass=MediaTransport
     pass
 
 class MenuBar_Static(Control_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.MenuBar::get_ItemsProperty()
     @_property
     @typing.final
     def items_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class MenuBar(Control, metaclass=MenuBar_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Windows.Foundation.Collections.IVector`1<Microsoft.UI.Xaml.Controls.MenuBarItem> Microsoft.UI.Xaml.Controls.MenuBar::get_Items()
     @_property
     @typing.final
     def items(self) -> typing.MutableSequence[MenuBarItem]: ...
 
 class MenuBarItem_Static(Control_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.MenuBarItem::get_ItemsProperty()
     @_property
     @typing.final
     def items_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.MenuBarItem::get_TitleProperty()
     @_property
     @typing.final
     def title_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class MenuBarItem(Control, metaclass=MenuBarItem_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.String Microsoft.UI.Xaml.Controls.MenuBarItem::get_Title()
     @_property
     def title(self) -> str: ...
+    # System.Void Microsoft.UI.Xaml.Controls.MenuBarItem::put_Title(System.String)
     @title.setter
     @typing.final
     def title(self, value: str) -> None: ...
+    # Windows.Foundation.Collections.IVector`1<Microsoft.UI.Xaml.Controls.MenuFlyoutItemBase> Microsoft.UI.Xaml.Controls.MenuBarItem::get_Items()
     @_property
     @typing.final
     def items(self) -> typing.MutableSequence[MenuFlyoutItemBase]: ...
 
 class MenuFlyoutItem_Static(MenuFlyoutItemBase_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.MenuFlyoutItem::get_CommandParameterProperty()
     @_property
     @typing.final
     def command_parameter_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.MenuFlyoutItem::get_CommandProperty()
     @_property
     @typing.final
     def command_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.MenuFlyoutItem::get_IconProperty()
     @_property
     @typing.final
     def icon_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.MenuFlyoutItem::get_KeyboardAcceleratorTextOverrideProperty()
     @_property
     @typing.final
     def keyboard_accelerator_text_override_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.MenuFlyoutItem::get_TextProperty()
     @_property
     @typing.final
     def text_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
@@ -5176,34 +7039,47 @@ class MenuFlyoutItem_Static(MenuFlyoutItemBase_Static):
 class MenuFlyoutItem(MenuFlyoutItemBase, metaclass=MenuFlyoutItem_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.MenuFlyoutItem::add_Click(Microsoft.UI.Xaml.RoutedEventHandler)
     def add_click(self, handler: microsoft_ui_xaml.RoutedEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.MenuFlyoutItem::remove_Click(Windows.Foundation.EventRegistrationToken)
     def remove_click(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.String Microsoft.UI.Xaml.Controls.MenuFlyoutItem::get_Text()
     @_property
     def text(self) -> str: ...
+    # System.Void Microsoft.UI.Xaml.Controls.MenuFlyoutItem::put_Text(System.String)
     @text.setter
     @typing.final
     def text(self, value: str) -> None: ...
+    # System.String Microsoft.UI.Xaml.Controls.MenuFlyoutItem::get_KeyboardAcceleratorTextOverride()
     @_property
     def keyboard_accelerator_text_override(self) -> str: ...
+    # System.Void Microsoft.UI.Xaml.Controls.MenuFlyoutItem::put_KeyboardAcceleratorTextOverride(System.String)
     @keyboard_accelerator_text_override.setter
     @typing.final
     def keyboard_accelerator_text_override(self, value: str) -> None: ...
+    # Microsoft.UI.Xaml.Controls.IconElement Microsoft.UI.Xaml.Controls.MenuFlyoutItem::get_Icon()
     @_property
     def icon(self) -> IconElement: ...
+    # System.Void Microsoft.UI.Xaml.Controls.MenuFlyoutItem::put_Icon(Microsoft.UI.Xaml.Controls.IconElement)
     @icon.setter
     @typing.final
     def icon(self, value: IconElement) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.MenuFlyoutItem::get_CommandParameter()
     @_property
     def command_parameter(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.MenuFlyoutItem::put_CommandParameter(System.Object)
     @command_parameter.setter
     @typing.final
     def command_parameter(self, value: winrt.system.Object) -> None: ...
+    # Microsoft.UI.Xaml.Input.ICommand Microsoft.UI.Xaml.Controls.MenuFlyoutItem::get_Command()
     @_property
     def command(self) -> microsoft_ui_xaml_input.ICommand: ...
+    # System.Void Microsoft.UI.Xaml.Controls.MenuFlyoutItem::put_Command(Microsoft.UI.Xaml.Input.ICommand)
     @command.setter
     @typing.final
     def command(self, value: microsoft_ui_xaml_input.ImplementsICommand) -> None: ...
+    # Microsoft.UI.Xaml.Controls.Primitives.MenuFlyoutItemTemplateSettings Microsoft.UI.Xaml.Controls.MenuFlyoutItem::get_TemplateSettings()
     @_property
     @typing.final
     def template_settings(self) -> microsoft_ui_xaml_controls_primitives.MenuFlyoutItemTemplateSettings: ...
@@ -5215,25 +7091,32 @@ class MenuFlyoutItemBase(Control, metaclass=MenuFlyoutItemBase_Static):
     pass
 
 class MenuFlyoutPresenter_Static(ItemsControl_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.MenuFlyoutPresenter::get_IsDefaultShadowEnabledProperty()
     @_property
     @typing.final
     def is_default_shadow_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.MenuFlyoutPresenter::get_SystemBackdropProperty()
     @_property
     @typing.final
     def system_backdrop_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class MenuFlyoutPresenter(ItemsControl, metaclass=MenuFlyoutPresenter_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.MenuFlyoutPresenter::get_IsDefaultShadowEnabled()
     @_property
     def is_default_shadow_enabled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.MenuFlyoutPresenter::put_IsDefaultShadowEnabled(System.Boolean)
     @is_default_shadow_enabled.setter
     @typing.final
     def is_default_shadow_enabled(self, value: bool) -> None: ...
+    # Microsoft.UI.Xaml.Controls.Primitives.MenuFlyoutPresenterTemplateSettings Microsoft.UI.Xaml.Controls.MenuFlyoutPresenter::get_TemplateSettings()
     @_property
     @typing.final
     def template_settings(self) -> microsoft_ui_xaml_controls_primitives.MenuFlyoutPresenterTemplateSettings: ...
+    # Microsoft.UI.Xaml.Media.SystemBackdrop Microsoft.UI.Xaml.Controls.MenuFlyoutPresenter::get_SystemBackdrop()
     @_property
     def system_backdrop(self) -> microsoft_ui_xaml_media.SystemBackdrop: ...
+    # System.Void Microsoft.UI.Xaml.Controls.MenuFlyoutPresenter::put_SystemBackdrop(Microsoft.UI.Xaml.Media.SystemBackdrop)
     @system_backdrop.setter
     @typing.final
     def system_backdrop(self, value: microsoft_ui_xaml_media.SystemBackdrop) -> None: ...
@@ -5246,134 +7129,178 @@ class MenuFlyoutSeparator(MenuFlyoutItemBase, metaclass=MenuFlyoutSeparator_Stat
 
 @typing.final
 class MenuFlyoutSubItem_Static(MenuFlyoutItemBase_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.MenuFlyoutSubItem::get_IconProperty()
     @_property
     def icon_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.MenuFlyoutSubItem::get_TextProperty()
     @_property
     def text_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
 class MenuFlyoutSubItem(MenuFlyoutItemBase, metaclass=MenuFlyoutSubItem_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.String Microsoft.UI.Xaml.Controls.MenuFlyoutSubItem::get_Text()
     @_property
     def text(self) -> str: ...
+    # System.Void Microsoft.UI.Xaml.Controls.MenuFlyoutSubItem::put_Text(System.String)
     @text.setter
     def text(self, value: str) -> None: ...
+    # Microsoft.UI.Xaml.Controls.IconElement Microsoft.UI.Xaml.Controls.MenuFlyoutSubItem::get_Icon()
     @_property
     def icon(self) -> IconElement: ...
+    # System.Void Microsoft.UI.Xaml.Controls.MenuFlyoutSubItem::put_Icon(Microsoft.UI.Xaml.Controls.IconElement)
     @icon.setter
     def icon(self, value: IconElement) -> None: ...
+    # Windows.Foundation.Collections.IVector`1<Microsoft.UI.Xaml.Controls.MenuFlyoutItemBase> Microsoft.UI.Xaml.Controls.MenuFlyoutSubItem::get_Items()
     @_property
     def items(self) -> typing.MutableSequence[MenuFlyoutItemBase]: ...
 
 class NavigationView_Static(ContentControl_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NavigationView::get_FooterMenuItemsProperty()
     @_property
     @typing.final
     def footer_menu_items_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NavigationView::get_IsTitleBarAutoPaddingEnabledProperty()
     @_property
     @typing.final
     def is_title_bar_auto_padding_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NavigationView::get_MenuItemContainerStyleProperty()
     @_property
     @typing.final
     def menu_item_container_style_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NavigationView::get_MenuItemContainerStyleSelectorProperty()
     @_property
     @typing.final
     def menu_item_container_style_selector_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NavigationView::get_MenuItemTemplateProperty()
     @_property
     @typing.final
     def menu_item_template_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NavigationView::get_MenuItemTemplateSelectorProperty()
     @_property
     @typing.final
     def menu_item_template_selector_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NavigationView::get_MenuItemsProperty()
     @_property
     @typing.final
     def menu_items_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NavigationView::get_MenuItemsSourceProperty()
     @_property
     @typing.final
     def menu_items_source_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NavigationView::get_OpenPaneLengthProperty()
     @_property
     @typing.final
     def open_pane_length_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NavigationView::get_PaneFooterProperty()
     @_property
     @typing.final
     def pane_footer_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NavigationView::get_PaneToggleButtonStyleProperty()
     @_property
     @typing.final
     def pane_toggle_button_style_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NavigationView::get_SelectedItemProperty()
     @_property
     @typing.final
     def selected_item_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NavigationView::get_AlwaysShowHeaderProperty()
     @_property
     @typing.final
     def always_show_header_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NavigationView::get_AutoSuggestBoxProperty()
     @_property
     @typing.final
     def auto_suggest_box_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NavigationView::get_CompactModeThresholdWidthProperty()
     @_property
     @typing.final
     def compact_mode_threshold_width_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NavigationView::get_CompactPaneLengthProperty()
     @_property
     @typing.final
     def compact_pane_length_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NavigationView::get_DisplayModeProperty()
     @_property
     @typing.final
     def display_mode_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NavigationView::get_ExpandedModeThresholdWidthProperty()
     @_property
     @typing.final
     def expanded_mode_threshold_width_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NavigationView::get_SettingsItemProperty()
     @_property
     @typing.final
     def settings_item_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NavigationView::get_FooterMenuItemsSourceProperty()
     @_property
     @typing.final
     def footer_menu_items_source_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NavigationView::get_HeaderProperty()
     @_property
     @typing.final
     def header_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NavigationView::get_HeaderTemplateProperty()
     @_property
     @typing.final
     def header_template_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NavigationView::get_IsPaneOpenProperty()
     @_property
     @typing.final
     def is_pane_open_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NavigationView::get_IsPaneToggleButtonVisibleProperty()
     @_property
     @typing.final
     def is_pane_toggle_button_visible_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NavigationView::get_IsSettingsVisibleProperty()
     @_property
     @typing.final
     def is_settings_visible_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NavigationView::get_IsBackButtonVisibleProperty()
     @_property
     @typing.final
     def is_back_button_visible_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NavigationView::get_IsBackEnabledProperty()
     @_property
     @typing.final
     def is_back_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NavigationView::get_IsPaneVisibleProperty()
     @_property
     @typing.final
     def is_pane_visible_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NavigationView::get_OverflowLabelModeProperty()
     @_property
     @typing.final
     def overflow_label_mode_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NavigationView::get_PaneCustomContentProperty()
     @_property
     @typing.final
     def pane_custom_content_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NavigationView::get_PaneDisplayModeProperty()
     @_property
     @typing.final
     def pane_display_mode_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NavigationView::get_PaneHeaderProperty()
     @_property
     @typing.final
     def pane_header_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NavigationView::get_PaneTitleProperty()
     @_property
     @typing.final
     def pane_title_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NavigationView::get_SelectionFollowsFocusProperty()
     @_property
     @typing.final
     def selection_follows_focus_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NavigationView::get_ShoulderNavigationEnabledProperty()
     @_property
     @typing.final
     def shoulder_navigation_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NavigationView::get_TemplateSettingsProperty()
     @_property
     @typing.final
     def template_settings_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NavigationView::get_ContentOverlayProperty()
     @_property
     @typing.final
     def content_overlay_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
@@ -5381,225 +7308,318 @@ class NavigationView_Static(ContentControl_Static):
 class NavigationView(ContentControl, metaclass=NavigationView_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.NavigationView::Collapse(Microsoft.UI.Xaml.Controls.NavigationViewItem)
     def collapse(self, item: NavigationViewItem, /) -> None: ...
     @typing.final
+    # Microsoft.UI.Xaml.DependencyObject Microsoft.UI.Xaml.Controls.NavigationView::ContainerFromMenuItem(System.Object)
     def container_from_menu_item(self, item: winrt.system.Object, /) -> microsoft_ui_xaml.DependencyObject: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.NavigationView::Expand(Microsoft.UI.Xaml.Controls.NavigationViewItem)
     def expand(self, item: NavigationViewItem, /) -> None: ...
     @typing.final
+    # System.Object Microsoft.UI.Xaml.Controls.NavigationView::MenuItemFromContainer(Microsoft.UI.Xaml.DependencyObject)
     def menu_item_from_container(self, container: microsoft_ui_xaml.DependencyObject, /) -> winrt.system.Object: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.NavigationView::add_DisplayModeChanged(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.NavigationView,Microsoft.UI.Xaml.Controls.NavigationViewDisplayModeChangedEventArgs>)
     def add_display_mode_changed(self, handler: windows_foundation.TypedEventHandler[NavigationView, NavigationViewDisplayModeChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.NavigationView::remove_DisplayModeChanged(Windows.Foundation.EventRegistrationToken)
     def remove_display_mode_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.NavigationView::add_ItemInvoked(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.NavigationView,Microsoft.UI.Xaml.Controls.NavigationViewItemInvokedEventArgs>)
     def add_item_invoked(self, handler: windows_foundation.TypedEventHandler[NavigationView, NavigationViewItemInvokedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.NavigationView::remove_ItemInvoked(Windows.Foundation.EventRegistrationToken)
     def remove_item_invoked(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.NavigationView::add_SelectionChanged(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.NavigationView,Microsoft.UI.Xaml.Controls.NavigationViewSelectionChangedEventArgs>)
     def add_selection_changed(self, handler: windows_foundation.TypedEventHandler[NavigationView, NavigationViewSelectionChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.NavigationView::remove_SelectionChanged(Windows.Foundation.EventRegistrationToken)
     def remove_selection_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.NavigationView::add_BackRequested(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.NavigationView,Microsoft.UI.Xaml.Controls.NavigationViewBackRequestedEventArgs>)
     def add_back_requested(self, handler: windows_foundation.TypedEventHandler[NavigationView, NavigationViewBackRequestedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.NavigationView::remove_BackRequested(Windows.Foundation.EventRegistrationToken)
     def remove_back_requested(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.NavigationView::add_Collapsed(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.NavigationView,Microsoft.UI.Xaml.Controls.NavigationViewItemCollapsedEventArgs>)
     def add_collapsed(self, handler: windows_foundation.TypedEventHandler[NavigationView, NavigationViewItemCollapsedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.NavigationView::remove_Collapsed(Windows.Foundation.EventRegistrationToken)
     def remove_collapsed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.NavigationView::add_Expanding(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.NavigationView,Microsoft.UI.Xaml.Controls.NavigationViewItemExpandingEventArgs>)
     def add_expanding(self, handler: windows_foundation.TypedEventHandler[NavigationView, NavigationViewItemExpandingEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.NavigationView::remove_Expanding(Windows.Foundation.EventRegistrationToken)
     def remove_expanding(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.NavigationView::add_PaneClosed(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.NavigationView,System.Object>)
     def add_pane_closed(self, handler: windows_foundation.TypedEventHandler[NavigationView, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.NavigationView::remove_PaneClosed(Windows.Foundation.EventRegistrationToken)
     def remove_pane_closed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.NavigationView::add_PaneClosing(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.NavigationView,Microsoft.UI.Xaml.Controls.NavigationViewPaneClosingEventArgs>)
     def add_pane_closing(self, handler: windows_foundation.TypedEventHandler[NavigationView, NavigationViewPaneClosingEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.NavigationView::remove_PaneClosing(Windows.Foundation.EventRegistrationToken)
     def remove_pane_closing(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.NavigationView::add_PaneOpened(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.NavigationView,System.Object>)
     def add_pane_opened(self, handler: windows_foundation.TypedEventHandler[NavigationView, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.NavigationView::remove_PaneOpened(Windows.Foundation.EventRegistrationToken)
     def remove_pane_opened(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.NavigationView::add_PaneOpening(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.NavigationView,System.Object>)
     def add_pane_opening(self, handler: windows_foundation.TypedEventHandler[NavigationView, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.NavigationView::remove_PaneOpening(Windows.Foundation.EventRegistrationToken)
     def remove_pane_opening(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.NavigationView::get_SelectedItem()
     @_property
     def selected_item(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.NavigationView::put_SelectedItem(System.Object)
     @selected_item.setter
     @typing.final
     def selected_item(self, value: winrt.system.Object) -> None: ...
+    # Microsoft.UI.Xaml.Style Microsoft.UI.Xaml.Controls.NavigationView::get_PaneToggleButtonStyle()
     @_property
     def pane_toggle_button_style(self) -> microsoft_ui_xaml.Style: ...
+    # System.Void Microsoft.UI.Xaml.Controls.NavigationView::put_PaneToggleButtonStyle(Microsoft.UI.Xaml.Style)
     @pane_toggle_button_style.setter
     @typing.final
     def pane_toggle_button_style(self, value: microsoft_ui_xaml.Style) -> None: ...
+    # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.Controls.NavigationView::get_PaneFooter()
     @_property
     def pane_footer(self) -> microsoft_ui_xaml.UIElement: ...
+    # System.Void Microsoft.UI.Xaml.Controls.NavigationView::put_PaneFooter(Microsoft.UI.Xaml.UIElement)
     @pane_footer.setter
     @typing.final
     def pane_footer(self, value: microsoft_ui_xaml.UIElement) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.NavigationView::get_OpenPaneLength()
     @_property
     def open_pane_length(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.NavigationView::put_OpenPaneLength(System.Double)
     @open_pane_length.setter
     @typing.final
     def open_pane_length(self, value: winrt.system.Double) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.NavigationView::get_MenuItemsSource()
     @_property
     def menu_items_source(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.NavigationView::put_MenuItemsSource(System.Object)
     @menu_items_source.setter
     @typing.final
     def menu_items_source(self, value: winrt.system.Object) -> None: ...
+    # Microsoft.UI.Xaml.Controls.StyleSelector Microsoft.UI.Xaml.Controls.NavigationView::get_MenuItemContainerStyleSelector()
     @_property
     def menu_item_container_style_selector(self) -> StyleSelector: ...
+    # System.Void Microsoft.UI.Xaml.Controls.NavigationView::put_MenuItemContainerStyleSelector(Microsoft.UI.Xaml.Controls.StyleSelector)
     @menu_item_container_style_selector.setter
     @typing.final
     def menu_item_container_style_selector(self, value: StyleSelector) -> None: ...
+    # Microsoft.UI.Xaml.Style Microsoft.UI.Xaml.Controls.NavigationView::get_MenuItemContainerStyle()
     @_property
     def menu_item_container_style(self) -> microsoft_ui_xaml.Style: ...
+    # System.Void Microsoft.UI.Xaml.Controls.NavigationView::put_MenuItemContainerStyle(Microsoft.UI.Xaml.Style)
     @menu_item_container_style.setter
     @typing.final
     def menu_item_container_style(self, value: microsoft_ui_xaml.Style) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.NavigationView::get_IsTitleBarAutoPaddingEnabled()
     @_property
     def is_title_bar_auto_padding_enabled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.NavigationView::put_IsTitleBarAutoPaddingEnabled(System.Boolean)
     @is_title_bar_auto_padding_enabled.setter
     @typing.final
     def is_title_bar_auto_padding_enabled(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.NavigationView::get_IsSettingsVisible()
     @_property
     def is_settings_visible(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.NavigationView::put_IsSettingsVisible(System.Boolean)
     @is_settings_visible.setter
     @typing.final
     def is_settings_visible(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.NavigationView::get_IsPaneToggleButtonVisible()
     @_property
     def is_pane_toggle_button_visible(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.NavigationView::put_IsPaneToggleButtonVisible(System.Boolean)
     @is_pane_toggle_button_visible.setter
     @typing.final
     def is_pane_toggle_button_visible(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.NavigationView::get_IsPaneOpen()
     @_property
     def is_pane_open(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.NavigationView::put_IsPaneOpen(System.Boolean)
     @is_pane_open.setter
     @typing.final
     def is_pane_open(self, value: bool) -> None: ...
+    # Microsoft.UI.Xaml.DataTemplate Microsoft.UI.Xaml.Controls.NavigationView::get_HeaderTemplate()
     @_property
     def header_template(self) -> microsoft_ui_xaml.DataTemplate: ...
+    # System.Void Microsoft.UI.Xaml.Controls.NavigationView::put_HeaderTemplate(Microsoft.UI.Xaml.DataTemplate)
     @header_template.setter
     @typing.final
     def header_template(self, value: microsoft_ui_xaml.DataTemplate) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.NavigationView::get_Header()
     @_property
     def header(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.NavigationView::put_Header(System.Object)
     @header.setter
     @typing.final
     def header(self, value: winrt.system.Object) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.NavigationView::get_FooterMenuItemsSource()
     @_property
     def footer_menu_items_source(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.NavigationView::put_FooterMenuItemsSource(System.Object)
     @footer_menu_items_source.setter
     @typing.final
     def footer_menu_items_source(self, value: winrt.system.Object) -> None: ...
+    # Microsoft.UI.Xaml.Controls.DataTemplateSelector Microsoft.UI.Xaml.Controls.NavigationView::get_MenuItemTemplateSelector()
     @_property
     def menu_item_template_selector(self) -> DataTemplateSelector: ...
+    # System.Void Microsoft.UI.Xaml.Controls.NavigationView::put_MenuItemTemplateSelector(Microsoft.UI.Xaml.Controls.DataTemplateSelector)
     @menu_item_template_selector.setter
     @typing.final
     def menu_item_template_selector(self, value: DataTemplateSelector) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.NavigationView::get_ExpandedModeThresholdWidth()
     @_property
     def expanded_mode_threshold_width(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.NavigationView::put_ExpandedModeThresholdWidth(System.Double)
     @expanded_mode_threshold_width.setter
     @typing.final
     def expanded_mode_threshold_width(self, value: winrt.system.Double) -> None: ...
+    # Microsoft.UI.Xaml.DataTemplate Microsoft.UI.Xaml.Controls.NavigationView::get_MenuItemTemplate()
     @_property
     def menu_item_template(self) -> microsoft_ui_xaml.DataTemplate: ...
+    # System.Void Microsoft.UI.Xaml.Controls.NavigationView::put_MenuItemTemplate(Microsoft.UI.Xaml.DataTemplate)
     @menu_item_template.setter
     @typing.final
     def menu_item_template(self, value: microsoft_ui_xaml.DataTemplate) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.NavigationView::get_CompactPaneLength()
     @_property
     def compact_pane_length(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.NavigationView::put_CompactPaneLength(System.Double)
     @compact_pane_length.setter
     @typing.final
     def compact_pane_length(self, value: winrt.system.Double) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.NavigationView::get_CompactModeThresholdWidth()
     @_property
     def compact_mode_threshold_width(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.NavigationView::put_CompactModeThresholdWidth(System.Double)
     @compact_mode_threshold_width.setter
     @typing.final
     def compact_mode_threshold_width(self, value: winrt.system.Double) -> None: ...
+    # Microsoft.UI.Xaml.Controls.AutoSuggestBox Microsoft.UI.Xaml.Controls.NavigationView::get_AutoSuggestBox()
     @_property
     def auto_suggest_box(self) -> AutoSuggestBox: ...
+    # System.Void Microsoft.UI.Xaml.Controls.NavigationView::put_AutoSuggestBox(Microsoft.UI.Xaml.Controls.AutoSuggestBox)
     @auto_suggest_box.setter
     @typing.final
     def auto_suggest_box(self, value: AutoSuggestBox) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.NavigationView::get_AlwaysShowHeader()
     @_property
     def always_show_header(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.NavigationView::put_AlwaysShowHeader(System.Boolean)
     @always_show_header.setter
     @typing.final
     def always_show_header(self, value: bool) -> None: ...
+    # Windows.Foundation.Collections.IVector`1<System.Object> Microsoft.UI.Xaml.Controls.NavigationView::get_MenuItems()
     @_property
     @typing.final
     def menu_items(self) -> typing.MutableSequence[winrt.system.Object]: ...
+    # Microsoft.UI.Xaml.Controls.NavigationViewDisplayMode Microsoft.UI.Xaml.Controls.NavigationView::get_DisplayMode()
     @_property
     @typing.final
     def display_mode(self) -> NavigationViewDisplayMode: ...
+    # Windows.Foundation.Collections.IVector`1<System.Object> Microsoft.UI.Xaml.Controls.NavigationView::get_FooterMenuItems()
     @_property
     @typing.final
     def footer_menu_items(self) -> typing.MutableSequence[winrt.system.Object]: ...
+    # System.Object Microsoft.UI.Xaml.Controls.NavigationView::get_SettingsItem()
     @_property
     @typing.final
     def settings_item(self) -> winrt.system.Object: ...
+    # Microsoft.UI.Xaml.Controls.NavigationViewShoulderNavigationEnabled Microsoft.UI.Xaml.Controls.NavigationView::get_ShoulderNavigationEnabled()
     @_property
     def shoulder_navigation_enabled(self) -> NavigationViewShoulderNavigationEnabled: ...
+    # System.Void Microsoft.UI.Xaml.Controls.NavigationView::put_ShoulderNavigationEnabled(Microsoft.UI.Xaml.Controls.NavigationViewShoulderNavigationEnabled)
     @shoulder_navigation_enabled.setter
     @typing.final
     def shoulder_navigation_enabled(self, value: NavigationViewShoulderNavigationEnabled) -> None: ...
+    # Microsoft.UI.Xaml.Controls.NavigationViewSelectionFollowsFocus Microsoft.UI.Xaml.Controls.NavigationView::get_SelectionFollowsFocus()
     @_property
     def selection_follows_focus(self) -> NavigationViewSelectionFollowsFocus: ...
+    # System.Void Microsoft.UI.Xaml.Controls.NavigationView::put_SelectionFollowsFocus(Microsoft.UI.Xaml.Controls.NavigationViewSelectionFollowsFocus)
     @selection_follows_focus.setter
     @typing.final
     def selection_follows_focus(self, value: NavigationViewSelectionFollowsFocus) -> None: ...
+    # System.String Microsoft.UI.Xaml.Controls.NavigationView::get_PaneTitle()
     @_property
     def pane_title(self) -> str: ...
+    # System.Void Microsoft.UI.Xaml.Controls.NavigationView::put_PaneTitle(System.String)
     @pane_title.setter
     @typing.final
     def pane_title(self, value: str) -> None: ...
+    # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.Controls.NavigationView::get_PaneHeader()
     @_property
     def pane_header(self) -> microsoft_ui_xaml.UIElement: ...
+    # System.Void Microsoft.UI.Xaml.Controls.NavigationView::put_PaneHeader(Microsoft.UI.Xaml.UIElement)
     @pane_header.setter
     @typing.final
     def pane_header(self, value: microsoft_ui_xaml.UIElement) -> None: ...
+    # Microsoft.UI.Xaml.Controls.NavigationViewPaneDisplayMode Microsoft.UI.Xaml.Controls.NavigationView::get_PaneDisplayMode()
     @_property
     def pane_display_mode(self) -> NavigationViewPaneDisplayMode: ...
+    # System.Void Microsoft.UI.Xaml.Controls.NavigationView::put_PaneDisplayMode(Microsoft.UI.Xaml.Controls.NavigationViewPaneDisplayMode)
     @pane_display_mode.setter
     @typing.final
     def pane_display_mode(self, value: NavigationViewPaneDisplayMode) -> None: ...
+    # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.Controls.NavigationView::get_PaneCustomContent()
     @_property
     def pane_custom_content(self) -> microsoft_ui_xaml.UIElement: ...
+    # System.Void Microsoft.UI.Xaml.Controls.NavigationView::put_PaneCustomContent(Microsoft.UI.Xaml.UIElement)
     @pane_custom_content.setter
     @typing.final
     def pane_custom_content(self, value: microsoft_ui_xaml.UIElement) -> None: ...
+    # Microsoft.UI.Xaml.Controls.NavigationViewOverflowLabelMode Microsoft.UI.Xaml.Controls.NavigationView::get_OverflowLabelMode()
     @_property
     def overflow_label_mode(self) -> NavigationViewOverflowLabelMode: ...
+    # System.Void Microsoft.UI.Xaml.Controls.NavigationView::put_OverflowLabelMode(Microsoft.UI.Xaml.Controls.NavigationViewOverflowLabelMode)
     @overflow_label_mode.setter
     @typing.final
     def overflow_label_mode(self, value: NavigationViewOverflowLabelMode) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.NavigationView::get_IsPaneVisible()
     @_property
     def is_pane_visible(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.NavigationView::put_IsPaneVisible(System.Boolean)
     @is_pane_visible.setter
     @typing.final
     def is_pane_visible(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.NavigationView::get_IsBackEnabled()
     @_property
     def is_back_enabled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.NavigationView::put_IsBackEnabled(System.Boolean)
     @is_back_enabled.setter
     @typing.final
     def is_back_enabled(self, value: bool) -> None: ...
+    # Microsoft.UI.Xaml.Controls.NavigationViewBackButtonVisible Microsoft.UI.Xaml.Controls.NavigationView::get_IsBackButtonVisible()
     @_property
     def is_back_button_visible(self) -> NavigationViewBackButtonVisible: ...
+    # System.Void Microsoft.UI.Xaml.Controls.NavigationView::put_IsBackButtonVisible(Microsoft.UI.Xaml.Controls.NavigationViewBackButtonVisible)
     @is_back_button_visible.setter
     @typing.final
     def is_back_button_visible(self, value: NavigationViewBackButtonVisible) -> None: ...
+    # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.Controls.NavigationView::get_ContentOverlay()
     @_property
     def content_overlay(self) -> microsoft_ui_xaml.UIElement: ...
+    # System.Void Microsoft.UI.Xaml.Controls.NavigationView::put_ContentOverlay(Microsoft.UI.Xaml.UIElement)
     @content_overlay.setter
     @typing.final
     def content_overlay(self, value: microsoft_ui_xaml.UIElement) -> None: ...
+    # Microsoft.UI.Xaml.Controls.NavigationViewTemplateSettings Microsoft.UI.Xaml.Controls.NavigationView::get_TemplateSettings()
     @_property
     @typing.final
     def template_settings(self) -> NavigationViewTemplateSettings: ...
@@ -5610,105 +7630,138 @@ class NavigationViewBackRequestedEventArgs(winrt.system.Object):
 
 @typing.final
 class NavigationViewDisplayModeChangedEventArgs(winrt.system.Object):
+    # Microsoft.UI.Xaml.Controls.NavigationViewDisplayMode Microsoft.UI.Xaml.Controls.NavigationViewDisplayModeChangedEventArgs::get_DisplayMode()
     @_property
     def display_mode(self) -> NavigationViewDisplayMode: ...
 
 class NavigationViewItem_Static(NavigationViewItemBase_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NavigationViewItem::get_CompactPaneLengthProperty()
     @_property
     @typing.final
     def compact_pane_length_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NavigationViewItem::get_IconProperty()
     @_property
     @typing.final
     def icon_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NavigationViewItem::get_HasUnrealizedChildrenProperty()
     @_property
     @typing.final
     def has_unrealized_children_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NavigationViewItem::get_IsChildSelectedProperty()
     @_property
     @typing.final
     def is_child_selected_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NavigationViewItem::get_IsExpandedProperty()
     @_property
     @typing.final
     def is_expanded_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NavigationViewItem::get_MenuItemsProperty()
     @_property
     @typing.final
     def menu_items_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NavigationViewItem::get_MenuItemsSourceProperty()
     @_property
     @typing.final
     def menu_items_source_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NavigationViewItem::get_SelectsOnInvokedProperty()
     @_property
     @typing.final
     def selects_on_invoked_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NavigationViewItem::get_InfoBadgeProperty()
     @_property
     @typing.final
     def info_badge_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class NavigationViewItem(NavigationViewItemBase, metaclass=NavigationViewItem_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Microsoft.UI.Xaml.Controls.IconElement Microsoft.UI.Xaml.Controls.NavigationViewItem::get_Icon()
     @_property
     def icon(self) -> IconElement: ...
+    # System.Void Microsoft.UI.Xaml.Controls.NavigationViewItem::put_Icon(Microsoft.UI.Xaml.Controls.IconElement)
     @icon.setter
     @typing.final
     def icon(self, value: IconElement) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.NavigationViewItem::get_CompactPaneLength()
     @_property
     @typing.final
     def compact_pane_length(self) -> winrt.system.Double: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.NavigationViewItem::get_SelectsOnInvoked()
     @_property
     def selects_on_invoked(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.NavigationViewItem::put_SelectsOnInvoked(System.Boolean)
     @selects_on_invoked.setter
     @typing.final
     def selects_on_invoked(self, value: bool) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.NavigationViewItem::get_MenuItemsSource()
     @_property
     def menu_items_source(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.NavigationViewItem::put_MenuItemsSource(System.Object)
     @menu_items_source.setter
     @typing.final
     def menu_items_source(self, value: winrt.system.Object) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.NavigationViewItem::get_IsExpanded()
     @_property
     def is_expanded(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.NavigationViewItem::put_IsExpanded(System.Boolean)
     @is_expanded.setter
     @typing.final
     def is_expanded(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.NavigationViewItem::get_IsChildSelected()
     @_property
     def is_child_selected(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.NavigationViewItem::put_IsChildSelected(System.Boolean)
     @is_child_selected.setter
     @typing.final
     def is_child_selected(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.NavigationViewItem::get_HasUnrealizedChildren()
     @_property
     def has_unrealized_children(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.NavigationViewItem::put_HasUnrealizedChildren(System.Boolean)
     @has_unrealized_children.setter
     @typing.final
     def has_unrealized_children(self, value: bool) -> None: ...
+    # Windows.Foundation.Collections.IVector`1<System.Object> Microsoft.UI.Xaml.Controls.NavigationViewItem::get_MenuItems()
     @_property
     @typing.final
     def menu_items(self) -> typing.MutableSequence[winrt.system.Object]: ...
+    # Microsoft.UI.Xaml.Controls.InfoBadge Microsoft.UI.Xaml.Controls.NavigationViewItem::get_InfoBadge()
     @_property
     def info_badge(self) -> InfoBadge: ...
+    # System.Void Microsoft.UI.Xaml.Controls.NavigationViewItem::put_InfoBadge(Microsoft.UI.Xaml.Controls.InfoBadge)
     @info_badge.setter
     @typing.final
     def info_badge(self, value: InfoBadge) -> None: ...
 
 class NavigationViewItemBase_Static(ContentControl_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NavigationViewItemBase::get_IsSelectedProperty()
     @_property
     @typing.final
     def is_selected_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class NavigationViewItemBase(ContentControl, metaclass=NavigationViewItemBase_Static):
+    # System.Boolean Microsoft.UI.Xaml.Controls.NavigationViewItemBase::get_IsSelected()
     @_property
     def is_selected(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.NavigationViewItemBase::put_IsSelected(System.Boolean)
     @is_selected.setter
     @typing.final
     def is_selected(self, value: bool) -> None: ...
 
 @typing.final
 class NavigationViewItemCollapsedEventArgs(winrt.system.Object):
+    # System.Object Microsoft.UI.Xaml.Controls.NavigationViewItemCollapsedEventArgs::get_CollapsedItem()
     @_property
     def collapsed_item(self) -> winrt.system.Object: ...
+    # Microsoft.UI.Xaml.Controls.NavigationViewItemBase Microsoft.UI.Xaml.Controls.NavigationViewItemCollapsedEventArgs::get_CollapsedItemContainer()
     @_property
     def collapsed_item_container(self) -> NavigationViewItemBase: ...
 
 @typing.final
 class NavigationViewItemExpandingEventArgs(winrt.system.Object):
+    # System.Object Microsoft.UI.Xaml.Controls.NavigationViewItemExpandingEventArgs::get_ExpandingItem()
     @_property
     def expanding_item(self) -> winrt.system.Object: ...
+    # Microsoft.UI.Xaml.Controls.NavigationViewItemBase Microsoft.UI.Xaml.Controls.NavigationViewItemExpandingEventArgs::get_ExpandingItemContainer()
     @_property
     def expanding_item_container(self) -> NavigationViewItemBase: ...
 
@@ -5721,12 +7774,16 @@ class NavigationViewItemHeader(NavigationViewItemBase, metaclass=NavigationViewI
 @typing.final
 class NavigationViewItemInvokedEventArgs(winrt.system.Object):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Object Microsoft.UI.Xaml.Controls.NavigationViewItemInvokedEventArgs::get_InvokedItem()
     @_property
     def invoked_item(self) -> winrt.system.Object: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.NavigationViewItemInvokedEventArgs::get_IsSettingsInvoked()
     @_property
     def is_settings_invoked(self) -> bool: ...
+    # Microsoft.UI.Xaml.Controls.NavigationViewItemBase Microsoft.UI.Xaml.Controls.NavigationViewItemInvokedEventArgs::get_InvokedItemContainer()
     @_property
     def invoked_item_container(self) -> NavigationViewItemBase: ...
+    # Microsoft.UI.Xaml.Media.Animation.NavigationTransitionInfo Microsoft.UI.Xaml.Controls.NavigationViewItemInvokedEventArgs::get_RecommendedNavigationTransitionInfo()
     @_property
     def recommended_navigation_transition_info(self) -> microsoft_ui_xaml_media_animation.NavigationTransitionInfo: ...
 
@@ -5738,83 +7795,109 @@ class NavigationViewItemSeparator(NavigationViewItemBase, metaclass=NavigationVi
 
 @typing.final
 class NavigationViewPaneClosingEventArgs(winrt.system.Object):
+    # System.Boolean Microsoft.UI.Xaml.Controls.NavigationViewPaneClosingEventArgs::get_Cancel()
     @_property
     def cancel(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.NavigationViewPaneClosingEventArgs::put_Cancel(System.Boolean)
     @cancel.setter
     def cancel(self, value: bool) -> None: ...
 
 @typing.final
 class NavigationViewSelectionChangedEventArgs(winrt.system.Object):
+    # System.Boolean Microsoft.UI.Xaml.Controls.NavigationViewSelectionChangedEventArgs::get_IsSettingsSelected()
     @_property
     def is_settings_selected(self) -> bool: ...
+    # System.Object Microsoft.UI.Xaml.Controls.NavigationViewSelectionChangedEventArgs::get_SelectedItem()
     @_property
     def selected_item(self) -> winrt.system.Object: ...
+    # Microsoft.UI.Xaml.Media.Animation.NavigationTransitionInfo Microsoft.UI.Xaml.Controls.NavigationViewSelectionChangedEventArgs::get_RecommendedNavigationTransitionInfo()
     @_property
     def recommended_navigation_transition_info(self) -> microsoft_ui_xaml_media_animation.NavigationTransitionInfo: ...
+    # Microsoft.UI.Xaml.Controls.NavigationViewItemBase Microsoft.UI.Xaml.Controls.NavigationViewSelectionChangedEventArgs::get_SelectedItemContainer()
     @_property
     def selected_item_container(self) -> NavigationViewItemBase: ...
 
 class NavigationViewTemplateSettings_Static(microsoft_ui_xaml.DependencyObject_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NavigationViewTemplateSettings::get_BackButtonVisibilityProperty()
     @_property
     @typing.final
     def back_button_visibility_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NavigationViewTemplateSettings::get_LeftPaneVisibilityProperty()
     @_property
     @typing.final
     def left_pane_visibility_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NavigationViewTemplateSettings::get_OverflowButtonVisibilityProperty()
     @_property
     @typing.final
     def overflow_button_visibility_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NavigationViewTemplateSettings::get_PaneToggleButtonVisibilityProperty()
     @_property
     @typing.final
     def pane_toggle_button_visibility_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NavigationViewTemplateSettings::get_PaneToggleButtonWidthProperty()
     @_property
     @typing.final
     def pane_toggle_button_width_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NavigationViewTemplateSettings::get_SingleSelectionFollowsFocusProperty()
     @_property
     @typing.final
     def single_selection_follows_focus_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NavigationViewTemplateSettings::get_SmallerPaneToggleButtonWidthProperty()
     @_property
     @typing.final
     def smaller_pane_toggle_button_width_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NavigationViewTemplateSettings::get_TopPaddingProperty()
     @_property
     @typing.final
     def top_padding_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NavigationViewTemplateSettings::get_TopPaneVisibilityProperty()
     @_property
     @typing.final
     def top_pane_visibility_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NavigationViewTemplateSettings::get_OpenPaneLengthProperty()
     @_property
     @typing.final
     def open_pane_length_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class NavigationViewTemplateSettings(microsoft_ui_xaml.DependencyObject, metaclass=NavigationViewTemplateSettings_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Microsoft.UI.Xaml.Visibility Microsoft.UI.Xaml.Controls.NavigationViewTemplateSettings::get_BackButtonVisibility()
     @_property
     @typing.final
     def back_button_visibility(self) -> microsoft_ui_xaml.Visibility: ...
+    # Microsoft.UI.Xaml.Visibility Microsoft.UI.Xaml.Controls.NavigationViewTemplateSettings::get_LeftPaneVisibility()
     @_property
     @typing.final
     def left_pane_visibility(self) -> microsoft_ui_xaml.Visibility: ...
+    # Microsoft.UI.Xaml.Visibility Microsoft.UI.Xaml.Controls.NavigationViewTemplateSettings::get_OverflowButtonVisibility()
     @_property
     @typing.final
     def overflow_button_visibility(self) -> microsoft_ui_xaml.Visibility: ...
+    # Microsoft.UI.Xaml.Visibility Microsoft.UI.Xaml.Controls.NavigationViewTemplateSettings::get_PaneToggleButtonVisibility()
     @_property
     @typing.final
     def pane_toggle_button_visibility(self) -> microsoft_ui_xaml.Visibility: ...
+    # System.Double Microsoft.UI.Xaml.Controls.NavigationViewTemplateSettings::get_PaneToggleButtonWidth()
     @_property
     @typing.final
     def pane_toggle_button_width(self) -> winrt.system.Double: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.NavigationViewTemplateSettings::get_SingleSelectionFollowsFocus()
     @_property
     @typing.final
     def single_selection_follows_focus(self) -> bool: ...
+    # System.Double Microsoft.UI.Xaml.Controls.NavigationViewTemplateSettings::get_SmallerPaneToggleButtonWidth()
     @_property
     @typing.final
     def smaller_pane_toggle_button_width(self) -> winrt.system.Double: ...
+    # System.Double Microsoft.UI.Xaml.Controls.NavigationViewTemplateSettings::get_TopPadding()
     @_property
     @typing.final
     def top_padding(self) -> winrt.system.Double: ...
+    # Microsoft.UI.Xaml.Visibility Microsoft.UI.Xaml.Controls.NavigationViewTemplateSettings::get_TopPaneVisibility()
     @_property
     @typing.final
     def top_pane_visibility(self) -> microsoft_ui_xaml.Visibility: ...
+    # System.Double Microsoft.UI.Xaml.Controls.NavigationViewTemplateSettings::get_OpenPaneLength()
     @_property
     @typing.final
     def open_pane_length(self) -> winrt.system.Double: ...
@@ -5824,9 +7907,13 @@ class NonVirtualizingLayout_Static(Layout_Static):
 
 class NonVirtualizingLayout(Layout, metaclass=NonVirtualizingLayout_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Windows.Foundation.Size Microsoft.UI.Xaml.Controls.NonVirtualizingLayout::ArrangeOverride(Microsoft.UI.Xaml.Controls.NonVirtualizingLayoutContext,Windows.Foundation.Size)
     def _arrange_override(self, context: NonVirtualizingLayoutContext, final_size: windows_foundation.Size, /) -> windows_foundation.Size: ...
+    # System.Void Microsoft.UI.Xaml.Controls.NonVirtualizingLayout::InitializeForContextCore(Microsoft.UI.Xaml.Controls.NonVirtualizingLayoutContext)
     def _initialize_for_context_core(self, context: NonVirtualizingLayoutContext, /) -> None: ...
+    # Windows.Foundation.Size Microsoft.UI.Xaml.Controls.NonVirtualizingLayout::MeasureOverride(Microsoft.UI.Xaml.Controls.NonVirtualizingLayoutContext,Windows.Foundation.Size)
     def _measure_override(self, context: NonVirtualizingLayoutContext, available_size: windows_foundation.Size, /) -> windows_foundation.Size: ...
+    # System.Void Microsoft.UI.Xaml.Controls.NonVirtualizingLayout::UninitializeForContextCore(Microsoft.UI.Xaml.Controls.NonVirtualizingLayoutContext)
     def _uninitialize_for_context_core(self, context: NonVirtualizingLayoutContext, /) -> None: ...
 
 class NonVirtualizingLayoutContext_Static(LayoutContext_Static):
@@ -5834,65 +7921,85 @@ class NonVirtualizingLayoutContext_Static(LayoutContext_Static):
 
 class NonVirtualizingLayoutContext(LayoutContext, metaclass=NonVirtualizingLayoutContext_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Windows.Foundation.Collections.IVectorView`1<Microsoft.UI.Xaml.UIElement> Microsoft.UI.Xaml.Controls.NonVirtualizingLayoutContext::get_Children()
     @_property
     @typing.final
     def children(self) -> typing.Sequence[microsoft_ui_xaml.UIElement]: ...
 
 class NumberBox_Static(Control_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NumberBox::get_AcceptsExpressionProperty()
     @_property
     @typing.final
     def accepts_expression_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NumberBox::get_DescriptionProperty()
     @_property
     @typing.final
     def description_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NumberBox::get_HeaderProperty()
     @_property
     @typing.final
     def header_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NumberBox::get_HeaderTemplateProperty()
     @_property
     @typing.final
     def header_template_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NumberBox::get_IsWrapEnabledProperty()
     @_property
     @typing.final
     def is_wrap_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NumberBox::get_LargeChangeProperty()
     @_property
     @typing.final
     def large_change_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NumberBox::get_MaximumProperty()
     @_property
     @typing.final
     def maximum_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NumberBox::get_MinimumProperty()
     @_property
     @typing.final
     def minimum_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NumberBox::get_NumberFormatterProperty()
     @_property
     @typing.final
     def number_formatter_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NumberBox::get_PlaceholderTextProperty()
     @_property
     @typing.final
     def placeholder_text_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NumberBox::get_PreventKeyboardDisplayOnProgrammaticFocusProperty()
     @_property
     @typing.final
     def prevent_keyboard_display_on_programmatic_focus_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NumberBox::get_SelectionFlyoutProperty()
     @_property
     @typing.final
     def selection_flyout_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NumberBox::get_SelectionHighlightColorProperty()
     @_property
     @typing.final
     def selection_highlight_color_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NumberBox::get_SmallChangeProperty()
     @_property
     @typing.final
     def small_change_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NumberBox::get_SpinButtonPlacementModeProperty()
     @_property
     @typing.final
     def spin_button_placement_mode_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NumberBox::get_TextProperty()
     @_property
     @typing.final
     def text_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NumberBox::get_TextReadingOrderProperty()
     @_property
     @typing.final
     def text_reading_order_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NumberBox::get_ValidationModeProperty()
     @_property
     @typing.final
     def validation_mode_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NumberBox::get_ValueProperty()
     @_property
     @typing.final
     def value_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
@@ -5900,221 +8007,301 @@ class NumberBox_Static(Control_Static):
 class NumberBox(Control, metaclass=NumberBox_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.NumberBox::add_ValueChanged(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.NumberBox,Microsoft.UI.Xaml.Controls.NumberBoxValueChangedEventArgs>)
     def add_value_changed(self, handler: windows_foundation.TypedEventHandler[NumberBox, NumberBoxValueChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.NumberBox::remove_ValueChanged(Windows.Foundation.EventRegistrationToken)
     def remove_value_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.NumberBox::get_Value()
     @_property
     def value(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.NumberBox::put_Value(System.Double)
     @value.setter
     @typing.final
     def value(self, value: winrt.system.Double) -> None: ...
+    # Microsoft.UI.Xaml.Controls.NumberBoxValidationMode Microsoft.UI.Xaml.Controls.NumberBox::get_ValidationMode()
     @_property
     def validation_mode(self) -> NumberBoxValidationMode: ...
+    # System.Void Microsoft.UI.Xaml.Controls.NumberBox::put_ValidationMode(Microsoft.UI.Xaml.Controls.NumberBoxValidationMode)
     @validation_mode.setter
     @typing.final
     def validation_mode(self, value: NumberBoxValidationMode) -> None: ...
+    # Microsoft.UI.Xaml.TextReadingOrder Microsoft.UI.Xaml.Controls.NumberBox::get_TextReadingOrder()
     @_property
     def text_reading_order(self) -> microsoft_ui_xaml.TextReadingOrder: ...
+    # System.Void Microsoft.UI.Xaml.Controls.NumberBox::put_TextReadingOrder(Microsoft.UI.Xaml.TextReadingOrder)
     @text_reading_order.setter
     @typing.final
     def text_reading_order(self, value: microsoft_ui_xaml.TextReadingOrder) -> None: ...
+    # System.String Microsoft.UI.Xaml.Controls.NumberBox::get_Text()
     @_property
     def text(self) -> str: ...
+    # System.Void Microsoft.UI.Xaml.Controls.NumberBox::put_Text(System.String)
     @text.setter
     @typing.final
     def text(self, value: str) -> None: ...
+    # Microsoft.UI.Xaml.Controls.NumberBoxSpinButtonPlacementMode Microsoft.UI.Xaml.Controls.NumberBox::get_SpinButtonPlacementMode()
     @_property
     def spin_button_placement_mode(self) -> NumberBoxSpinButtonPlacementMode: ...
+    # System.Void Microsoft.UI.Xaml.Controls.NumberBox::put_SpinButtonPlacementMode(Microsoft.UI.Xaml.Controls.NumberBoxSpinButtonPlacementMode)
     @spin_button_placement_mode.setter
     @typing.final
     def spin_button_placement_mode(self, value: NumberBoxSpinButtonPlacementMode) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.NumberBox::get_SmallChange()
     @_property
     def small_change(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.NumberBox::put_SmallChange(System.Double)
     @small_change.setter
     @typing.final
     def small_change(self, value: winrt.system.Double) -> None: ...
+    # Microsoft.UI.Xaml.Media.SolidColorBrush Microsoft.UI.Xaml.Controls.NumberBox::get_SelectionHighlightColor()
     @_property
     def selection_highlight_color(self) -> microsoft_ui_xaml_media.SolidColorBrush: ...
+    # System.Void Microsoft.UI.Xaml.Controls.NumberBox::put_SelectionHighlightColor(Microsoft.UI.Xaml.Media.SolidColorBrush)
     @selection_highlight_color.setter
     @typing.final
     def selection_highlight_color(self, value: microsoft_ui_xaml_media.SolidColorBrush) -> None: ...
+    # Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase Microsoft.UI.Xaml.Controls.NumberBox::get_SelectionFlyout()
     @_property
     def selection_flyout(self) -> microsoft_ui_xaml_controls_primitives.FlyoutBase: ...
+    # System.Void Microsoft.UI.Xaml.Controls.NumberBox::put_SelectionFlyout(Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase)
     @selection_flyout.setter
     @typing.final
     def selection_flyout(self, value: microsoft_ui_xaml_controls_primitives.FlyoutBase) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.NumberBox::get_PreventKeyboardDisplayOnProgrammaticFocus()
     @_property
     def prevent_keyboard_display_on_programmatic_focus(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.NumberBox::put_PreventKeyboardDisplayOnProgrammaticFocus(System.Boolean)
     @prevent_keyboard_display_on_programmatic_focus.setter
     @typing.final
     def prevent_keyboard_display_on_programmatic_focus(self, value: bool) -> None: ...
+    # System.String Microsoft.UI.Xaml.Controls.NumberBox::get_PlaceholderText()
     @_property
     def placeholder_text(self) -> str: ...
+    # System.Void Microsoft.UI.Xaml.Controls.NumberBox::put_PlaceholderText(System.String)
     @placeholder_text.setter
     @typing.final
     def placeholder_text(self, value: str) -> None: ...
+    # Windows.Globalization.NumberFormatting.INumberFormatter2 Microsoft.UI.Xaml.Controls.NumberBox::get_NumberFormatter()
     @_property
     def number_formatter(self) -> windows_globalization_numberformatting.INumberFormatter2: ...
+    # System.Void Microsoft.UI.Xaml.Controls.NumberBox::put_NumberFormatter(Windows.Globalization.NumberFormatting.INumberFormatter2)
     @number_formatter.setter
     @typing.final
     def number_formatter(self, value: windows_globalization_numberformatting.ImplementsINumberFormatter2) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.NumberBox::get_Minimum()
     @_property
     def minimum(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.NumberBox::put_Minimum(System.Double)
     @minimum.setter
     @typing.final
     def minimum(self, value: winrt.system.Double) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.NumberBox::get_Maximum()
     @_property
     def maximum(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.NumberBox::put_Maximum(System.Double)
     @maximum.setter
     @typing.final
     def maximum(self, value: winrt.system.Double) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.NumberBox::get_LargeChange()
     @_property
     def large_change(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.NumberBox::put_LargeChange(System.Double)
     @large_change.setter
     @typing.final
     def large_change(self, value: winrt.system.Double) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.NumberBox::get_IsWrapEnabled()
     @_property
     def is_wrap_enabled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.NumberBox::put_IsWrapEnabled(System.Boolean)
     @is_wrap_enabled.setter
     @typing.final
     def is_wrap_enabled(self, value: bool) -> None: ...
+    # Microsoft.UI.Xaml.DataTemplate Microsoft.UI.Xaml.Controls.NumberBox::get_HeaderTemplate()
     @_property
     def header_template(self) -> microsoft_ui_xaml.DataTemplate: ...
+    # System.Void Microsoft.UI.Xaml.Controls.NumberBox::put_HeaderTemplate(Microsoft.UI.Xaml.DataTemplate)
     @header_template.setter
     @typing.final
     def header_template(self, value: microsoft_ui_xaml.DataTemplate) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.NumberBox::get_Header()
     @_property
     def header(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.NumberBox::put_Header(System.Object)
     @header.setter
     @typing.final
     def header(self, value: winrt.system.Object) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.NumberBox::get_Description()
     @_property
     def description(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.NumberBox::put_Description(System.Object)
     @description.setter
     @typing.final
     def description(self, value: winrt.system.Object) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.NumberBox::get_AcceptsExpression()
     @_property
     def accepts_expression(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.NumberBox::put_AcceptsExpression(System.Boolean)
     @accepts_expression.setter
     @typing.final
     def accepts_expression(self, value: bool) -> None: ...
 
 @typing.final
 class NumberBoxValueChangedEventArgs(winrt.system.Object):
+    # System.Double Microsoft.UI.Xaml.Controls.NumberBoxValueChangedEventArgs::get_NewValue()
     @_property
     def new_value(self) -> winrt.system.Double: ...
+    # System.Double Microsoft.UI.Xaml.Controls.NumberBoxValueChangedEventArgs::get_OldValue()
     @_property
     def old_value(self) -> winrt.system.Double: ...
 
 class Page_Static(UserControl_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Page::get_BottomAppBarProperty()
     @_property
     @typing.final
     def bottom_app_bar_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Page::get_FrameProperty()
     @_property
     @typing.final
     def frame_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Page::get_TopAppBarProperty()
     @_property
     @typing.final
     def top_app_bar_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class Page(UserControl, metaclass=Page_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Page::OnNavigatedFrom(Microsoft.UI.Xaml.Navigation.NavigationEventArgs)
     def _on_navigated_from(self, e: microsoft_ui_xaml_navigation.NavigationEventArgs, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Page::OnNavigatedTo(Microsoft.UI.Xaml.Navigation.NavigationEventArgs)
     def _on_navigated_to(self, e: microsoft_ui_xaml_navigation.NavigationEventArgs, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Page::OnNavigatingFrom(Microsoft.UI.Xaml.Navigation.NavigatingCancelEventArgs)
     def _on_navigating_from(self, e: microsoft_ui_xaml_navigation.NavigatingCancelEventArgs, /) -> None: ...
+    # Microsoft.UI.Xaml.Controls.AppBar Microsoft.UI.Xaml.Controls.Page::get_TopAppBar()
     @_property
     def top_app_bar(self) -> AppBar: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Page::put_TopAppBar(Microsoft.UI.Xaml.Controls.AppBar)
     @top_app_bar.setter
     @typing.final
     def top_app_bar(self, value: AppBar) -> None: ...
+    # Microsoft.UI.Xaml.Navigation.NavigationCacheMode Microsoft.UI.Xaml.Controls.Page::get_NavigationCacheMode()
     @_property
     def navigation_cache_mode(self) -> microsoft_ui_xaml_navigation.NavigationCacheMode: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Page::put_NavigationCacheMode(Microsoft.UI.Xaml.Navigation.NavigationCacheMode)
     @navigation_cache_mode.setter
     @typing.final
     def navigation_cache_mode(self, value: microsoft_ui_xaml_navigation.NavigationCacheMode) -> None: ...
+    # Microsoft.UI.Xaml.Controls.AppBar Microsoft.UI.Xaml.Controls.Page::get_BottomAppBar()
     @_property
     def bottom_app_bar(self) -> AppBar: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Page::put_BottomAppBar(Microsoft.UI.Xaml.Controls.AppBar)
     @bottom_app_bar.setter
     @typing.final
     def bottom_app_bar(self, value: AppBar) -> None: ...
+    # Microsoft.UI.Xaml.Controls.Frame Microsoft.UI.Xaml.Controls.Page::get_Frame()
     @_property
     @typing.final
     def frame(self) -> Frame: ...
 
 class Panel_Static(microsoft_ui_xaml.FrameworkElement_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Panel::get_BackgroundProperty()
     @_property
     @typing.final
     def background_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Panel::get_ChildrenTransitionsProperty()
     @_property
     @typing.final
     def children_transitions_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Panel::get_IsItemsHostProperty()
     @_property
     @typing.final
     def is_items_host_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class Panel(microsoft_ui_xaml.FrameworkElement, metaclass=Panel_Static):
+    # Microsoft.UI.Xaml.Media.Animation.TransitionCollection Microsoft.UI.Xaml.Controls.Panel::get_ChildrenTransitions()
     @_property
     def children_transitions(self) -> microsoft_ui_xaml_media_animation.TransitionCollection: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Panel::put_ChildrenTransitions(Microsoft.UI.Xaml.Media.Animation.TransitionCollection)
     @children_transitions.setter
     @typing.final
     def children_transitions(self, value: microsoft_ui_xaml_media_animation.TransitionCollection) -> None: ...
+    # Microsoft.UI.Xaml.BrushTransition Microsoft.UI.Xaml.Controls.Panel::get_BackgroundTransition()
     @_property
     def background_transition(self) -> microsoft_ui_xaml.BrushTransition: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Panel::put_BackgroundTransition(Microsoft.UI.Xaml.BrushTransition)
     @background_transition.setter
     @typing.final
     def background_transition(self, value: microsoft_ui_xaml.BrushTransition) -> None: ...
+    # Microsoft.UI.Xaml.Media.Brush Microsoft.UI.Xaml.Controls.Panel::get_Background()
     @_property
     def background(self) -> microsoft_ui_xaml_media.Brush: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Panel::put_Background(Microsoft.UI.Xaml.Media.Brush)
     @background.setter
     @typing.final
     def background(self, value: microsoft_ui_xaml_media.Brush) -> None: ...
+    # Microsoft.UI.Xaml.Controls.UIElementCollection Microsoft.UI.Xaml.Controls.Panel::get_Children()
     @_property
     @typing.final
     def children(self) -> UIElementCollection: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.Panel::get_IsItemsHost()
     @_property
     @typing.final
     def is_items_host(self) -> bool: ...
 
 class ParallaxView_Static(microsoft_ui_xaml.FrameworkElement_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ParallaxView::get_ChildProperty()
     @_property
     @typing.final
     def child_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ParallaxView::get_HorizontalShiftProperty()
     @_property
     @typing.final
     def horizontal_shift_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ParallaxView::get_HorizontalSourceEndOffsetProperty()
     @_property
     @typing.final
     def horizontal_source_end_offset_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ParallaxView::get_HorizontalSourceOffsetKindProperty()
     @_property
     @typing.final
     def horizontal_source_offset_kind_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ParallaxView::get_HorizontalSourceStartOffsetProperty()
     @_property
     @typing.final
     def horizontal_source_start_offset_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ParallaxView::get_IsHorizontalShiftClampedProperty()
     @_property
     @typing.final
     def is_horizontal_shift_clamped_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ParallaxView::get_IsVerticalShiftClampedProperty()
     @_property
     @typing.final
     def is_vertical_shift_clamped_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ParallaxView::get_MaxHorizontalShiftRatioProperty()
     @_property
     @typing.final
     def max_horizontal_shift_ratio_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ParallaxView::get_MaxVerticalShiftRatioProperty()
     @_property
     @typing.final
     def max_vertical_shift_ratio_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ParallaxView::get_SourceProperty()
     @_property
     @typing.final
     def source_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ParallaxView::get_VerticalShiftProperty()
     @_property
     @typing.final
     def vertical_shift_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ParallaxView::get_VerticalSourceEndOffsetProperty()
     @_property
     @typing.final
     def vertical_source_end_offset_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ParallaxView::get_VerticalSourceOffsetKindProperty()
     @_property
     @typing.final
     def vertical_source_offset_kind_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ParallaxView::get_VerticalSourceStartOffsetProperty()
     @_property
     @typing.final
     def vertical_source_start_offset_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
@@ -6122,308 +8309,432 @@ class ParallaxView_Static(microsoft_ui_xaml.FrameworkElement_Static):
 class ParallaxView(microsoft_ui_xaml.FrameworkElement, metaclass=ParallaxView_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.ParallaxView::RefreshAutomaticHorizontalOffsets()
     def refresh_automatic_horizontal_offsets(self) -> None: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.ParallaxView::RefreshAutomaticVerticalOffsets()
     def refresh_automatic_vertical_offsets(self) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ParallaxView::get_VerticalSourceStartOffset()
     @_property
     def vertical_source_start_offset(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ParallaxView::put_VerticalSourceStartOffset(System.Double)
     @vertical_source_start_offset.setter
     @typing.final
     def vertical_source_start_offset(self, value: winrt.system.Double) -> None: ...
+    # Microsoft.UI.Xaml.Controls.ParallaxSourceOffsetKind Microsoft.UI.Xaml.Controls.ParallaxView::get_VerticalSourceOffsetKind()
     @_property
     def vertical_source_offset_kind(self) -> ParallaxSourceOffsetKind: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ParallaxView::put_VerticalSourceOffsetKind(Microsoft.UI.Xaml.Controls.ParallaxSourceOffsetKind)
     @vertical_source_offset_kind.setter
     @typing.final
     def vertical_source_offset_kind(self, value: ParallaxSourceOffsetKind) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ParallaxView::get_VerticalSourceEndOffset()
     @_property
     def vertical_source_end_offset(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ParallaxView::put_VerticalSourceEndOffset(System.Double)
     @vertical_source_end_offset.setter
     @typing.final
     def vertical_source_end_offset(self, value: winrt.system.Double) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ParallaxView::get_VerticalShift()
     @_property
     def vertical_shift(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ParallaxView::put_VerticalShift(System.Double)
     @vertical_shift.setter
     @typing.final
     def vertical_shift(self, value: winrt.system.Double) -> None: ...
+    # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.Controls.ParallaxView::get_Source()
     @_property
     def source(self) -> microsoft_ui_xaml.UIElement: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ParallaxView::put_Source(Microsoft.UI.Xaml.UIElement)
     @source.setter
     @typing.final
     def source(self, value: microsoft_ui_xaml.UIElement) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ParallaxView::get_MaxVerticalShiftRatio()
     @_property
     def max_vertical_shift_ratio(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ParallaxView::put_MaxVerticalShiftRatio(System.Double)
     @max_vertical_shift_ratio.setter
     @typing.final
     def max_vertical_shift_ratio(self, value: winrt.system.Double) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ParallaxView::get_MaxHorizontalShiftRatio()
     @_property
     def max_horizontal_shift_ratio(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ParallaxView::put_MaxHorizontalShiftRatio(System.Double)
     @max_horizontal_shift_ratio.setter
     @typing.final
     def max_horizontal_shift_ratio(self, value: winrt.system.Double) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ParallaxView::get_IsVerticalShiftClamped()
     @_property
     def is_vertical_shift_clamped(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ParallaxView::put_IsVerticalShiftClamped(System.Boolean)
     @is_vertical_shift_clamped.setter
     @typing.final
     def is_vertical_shift_clamped(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ParallaxView::get_IsHorizontalShiftClamped()
     @_property
     def is_horizontal_shift_clamped(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ParallaxView::put_IsHorizontalShiftClamped(System.Boolean)
     @is_horizontal_shift_clamped.setter
     @typing.final
     def is_horizontal_shift_clamped(self, value: bool) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ParallaxView::get_HorizontalSourceStartOffset()
     @_property
     def horizontal_source_start_offset(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ParallaxView::put_HorizontalSourceStartOffset(System.Double)
     @horizontal_source_start_offset.setter
     @typing.final
     def horizontal_source_start_offset(self, value: winrt.system.Double) -> None: ...
+    # Microsoft.UI.Xaml.Controls.ParallaxSourceOffsetKind Microsoft.UI.Xaml.Controls.ParallaxView::get_HorizontalSourceOffsetKind()
     @_property
     def horizontal_source_offset_kind(self) -> ParallaxSourceOffsetKind: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ParallaxView::put_HorizontalSourceOffsetKind(Microsoft.UI.Xaml.Controls.ParallaxSourceOffsetKind)
     @horizontal_source_offset_kind.setter
     @typing.final
     def horizontal_source_offset_kind(self, value: ParallaxSourceOffsetKind) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ParallaxView::get_HorizontalSourceEndOffset()
     @_property
     def horizontal_source_end_offset(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ParallaxView::put_HorizontalSourceEndOffset(System.Double)
     @horizontal_source_end_offset.setter
     @typing.final
     def horizontal_source_end_offset(self, value: winrt.system.Double) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ParallaxView::get_HorizontalShift()
     @_property
     def horizontal_shift(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ParallaxView::put_HorizontalShift(System.Double)
     @horizontal_shift.setter
     @typing.final
     def horizontal_shift(self, value: winrt.system.Double) -> None: ...
+    # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.Controls.ParallaxView::get_Child()
     @_property
     def child(self) -> microsoft_ui_xaml.UIElement: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ParallaxView::put_Child(Microsoft.UI.Xaml.UIElement)
     @child.setter
     @typing.final
     def child(self, value: microsoft_ui_xaml.UIElement) -> None: ...
 
 @typing.final
 class PasswordBox_Static(Control_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.PasswordBox::get_CanPasteClipboardContentProperty()
     @_property
     def can_paste_clipboard_content_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.PasswordBox::get_DescriptionProperty()
     @_property
     def description_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.PasswordBox::get_HeaderProperty()
     @_property
     def header_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.PasswordBox::get_HeaderTemplateProperty()
     @_property
     def header_template_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.PasswordBox::get_InputScopeProperty()
     @_property
     def input_scope_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.PasswordBox::get_IsPasswordRevealButtonEnabledProperty()
     @_property
     def is_password_reveal_button_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.PasswordBox::get_MaxLengthProperty()
     @_property
     def max_length_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.PasswordBox::get_PasswordCharProperty()
     @_property
     def password_char_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.PasswordBox::get_PasswordProperty()
     @_property
     def password_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.PasswordBox::get_PasswordRevealModeProperty()
     @_property
     def password_reveal_mode_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.PasswordBox::get_PlaceholderTextProperty()
     @_property
     def placeholder_text_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.PasswordBox::get_PreventKeyboardDisplayOnProgrammaticFocusProperty()
     @_property
     def prevent_keyboard_display_on_programmatic_focus_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.PasswordBox::get_SelectionFlyoutProperty()
     @_property
     def selection_flyout_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.PasswordBox::get_SelectionHighlightColorProperty()
     @_property
     def selection_highlight_color_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.PasswordBox::get_TextReadingOrderProperty()
     @_property
     def text_reading_order_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
 class PasswordBox(Control, metaclass=PasswordBox_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Void Microsoft.UI.Xaml.Controls.PasswordBox::PasteFromClipboard()
     def paste_from_clipboard(self) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.PasswordBox::SelectAll()
     def select_all(self) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.PasswordBox::add_ContextMenuOpening(Microsoft.UI.Xaml.Controls.ContextMenuOpeningEventHandler)
     def add_context_menu_opening(self, handler: ContextMenuOpeningEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.UI.Xaml.Controls.PasswordBox::remove_ContextMenuOpening(Windows.Foundation.EventRegistrationToken)
     def remove_context_menu_opening(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.PasswordBox::add_PasswordChanged(Microsoft.UI.Xaml.RoutedEventHandler)
     def add_password_changed(self, handler: microsoft_ui_xaml.RoutedEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.UI.Xaml.Controls.PasswordBox::remove_PasswordChanged(Windows.Foundation.EventRegistrationToken)
     def remove_password_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.PasswordBox::add_PasswordChanging(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.PasswordBox,Microsoft.UI.Xaml.Controls.PasswordBoxPasswordChangingEventArgs>)
     def add_password_changing(self, handler: windows_foundation.TypedEventHandler[PasswordBox, PasswordBoxPasswordChangingEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.UI.Xaml.Controls.PasswordBox::remove_PasswordChanging(Windows.Foundation.EventRegistrationToken)
     def remove_password_changing(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.PasswordBox::add_Paste(Microsoft.UI.Xaml.Controls.TextControlPasteEventHandler)
     def add_paste(self, handler: TextControlPasteEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.UI.Xaml.Controls.PasswordBox::remove_Paste(Windows.Foundation.EventRegistrationToken)
     def remove_paste(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Microsoft.UI.Xaml.TextReadingOrder Microsoft.UI.Xaml.Controls.PasswordBox::get_TextReadingOrder()
     @_property
     def text_reading_order(self) -> microsoft_ui_xaml.TextReadingOrder: ...
+    # System.Void Microsoft.UI.Xaml.Controls.PasswordBox::put_TextReadingOrder(Microsoft.UI.Xaml.TextReadingOrder)
     @text_reading_order.setter
     def text_reading_order(self, value: microsoft_ui_xaml.TextReadingOrder) -> None: ...
+    # Microsoft.UI.Xaml.Media.SolidColorBrush Microsoft.UI.Xaml.Controls.PasswordBox::get_SelectionHighlightColor()
     @_property
     def selection_highlight_color(self) -> microsoft_ui_xaml_media.SolidColorBrush: ...
+    # System.Void Microsoft.UI.Xaml.Controls.PasswordBox::put_SelectionHighlightColor(Microsoft.UI.Xaml.Media.SolidColorBrush)
     @selection_highlight_color.setter
     def selection_highlight_color(self, value: microsoft_ui_xaml_media.SolidColorBrush) -> None: ...
+    # Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase Microsoft.UI.Xaml.Controls.PasswordBox::get_SelectionFlyout()
     @_property
     def selection_flyout(self) -> microsoft_ui_xaml_controls_primitives.FlyoutBase: ...
+    # System.Void Microsoft.UI.Xaml.Controls.PasswordBox::put_SelectionFlyout(Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase)
     @selection_flyout.setter
     def selection_flyout(self, value: microsoft_ui_xaml_controls_primitives.FlyoutBase) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.PasswordBox::get_PreventKeyboardDisplayOnProgrammaticFocus()
     @_property
     def prevent_keyboard_display_on_programmatic_focus(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.PasswordBox::put_PreventKeyboardDisplayOnProgrammaticFocus(System.Boolean)
     @prevent_keyboard_display_on_programmatic_focus.setter
     def prevent_keyboard_display_on_programmatic_focus(self, value: bool) -> None: ...
+    # System.String Microsoft.UI.Xaml.Controls.PasswordBox::get_PlaceholderText()
     @_property
     def placeholder_text(self) -> str: ...
+    # System.Void Microsoft.UI.Xaml.Controls.PasswordBox::put_PlaceholderText(System.String)
     @placeholder_text.setter
     def placeholder_text(self, value: str) -> None: ...
+    # Microsoft.UI.Xaml.Controls.PasswordRevealMode Microsoft.UI.Xaml.Controls.PasswordBox::get_PasswordRevealMode()
     @_property
     def password_reveal_mode(self) -> PasswordRevealMode: ...
+    # System.Void Microsoft.UI.Xaml.Controls.PasswordBox::put_PasswordRevealMode(Microsoft.UI.Xaml.Controls.PasswordRevealMode)
     @password_reveal_mode.setter
     def password_reveal_mode(self, value: PasswordRevealMode) -> None: ...
+    # System.String Microsoft.UI.Xaml.Controls.PasswordBox::get_PasswordChar()
     @_property
     def password_char(self) -> str: ...
+    # System.Void Microsoft.UI.Xaml.Controls.PasswordBox::put_PasswordChar(System.String)
     @password_char.setter
     def password_char(self, value: str) -> None: ...
+    # System.String Microsoft.UI.Xaml.Controls.PasswordBox::get_Password()
     @_property
     def password(self) -> str: ...
+    # System.Void Microsoft.UI.Xaml.Controls.PasswordBox::put_Password(System.String)
     @password.setter
     def password(self, value: str) -> None: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.PasswordBox::get_MaxLength()
     @_property
     def max_length(self) -> winrt.system.Int32: ...
+    # System.Void Microsoft.UI.Xaml.Controls.PasswordBox::put_MaxLength(System.Int32)
     @max_length.setter
     def max_length(self, value: winrt.system.Int32) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.PasswordBox::get_IsPasswordRevealButtonEnabled()
     @_property
     def is_password_reveal_button_enabled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.PasswordBox::put_IsPasswordRevealButtonEnabled(System.Boolean)
     @is_password_reveal_button_enabled.setter
     def is_password_reveal_button_enabled(self, value: bool) -> None: ...
+    # Microsoft.UI.Xaml.Input.InputScope Microsoft.UI.Xaml.Controls.PasswordBox::get_InputScope()
     @_property
     def input_scope(self) -> microsoft_ui_xaml_input.InputScope: ...
+    # System.Void Microsoft.UI.Xaml.Controls.PasswordBox::put_InputScope(Microsoft.UI.Xaml.Input.InputScope)
     @input_scope.setter
     def input_scope(self, value: microsoft_ui_xaml_input.InputScope) -> None: ...
+    # Microsoft.UI.Xaml.DataTemplate Microsoft.UI.Xaml.Controls.PasswordBox::get_HeaderTemplate()
     @_property
     def header_template(self) -> microsoft_ui_xaml.DataTemplate: ...
+    # System.Void Microsoft.UI.Xaml.Controls.PasswordBox::put_HeaderTemplate(Microsoft.UI.Xaml.DataTemplate)
     @header_template.setter
     def header_template(self, value: microsoft_ui_xaml.DataTemplate) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.PasswordBox::get_Header()
     @_property
     def header(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.PasswordBox::put_Header(System.Object)
     @header.setter
     def header(self, value: winrt.system.Object) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.PasswordBox::get_Description()
     @_property
     def description(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.PasswordBox::put_Description(System.Object)
     @description.setter
     def description(self, value: winrt.system.Object) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.PasswordBox::get_CanPasteClipboardContent()
     @_property
     def can_paste_clipboard_content(self) -> bool: ...
 
 @typing.final
 class PasswordBoxPasswordChangingEventArgs(winrt.system.Object):
+    # System.Boolean Microsoft.UI.Xaml.Controls.PasswordBoxPasswordChangingEventArgs::get_IsContentChanging()
     @_property
     def is_content_changing(self) -> bool: ...
 
 class PathIcon_Static(IconElement_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.PathIcon::get_DataProperty()
     @_property
     @typing.final
     def data_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class PathIcon(IconElement, metaclass=PathIcon_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Microsoft.UI.Xaml.Media.Geometry Microsoft.UI.Xaml.Controls.PathIcon::get_Data()
     @_property
     def data(self) -> microsoft_ui_xaml_media.Geometry: ...
+    # System.Void Microsoft.UI.Xaml.Controls.PathIcon::put_Data(Microsoft.UI.Xaml.Media.Geometry)
     @data.setter
     @typing.final
     def data(self, value: microsoft_ui_xaml_media.Geometry) -> None: ...
 
 class PathIconSource_Static(IconSource_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.PathIconSource::get_DataProperty()
     @_property
     @typing.final
     def data_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class PathIconSource(IconSource, metaclass=PathIconSource_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Microsoft.UI.Xaml.Media.Geometry Microsoft.UI.Xaml.Controls.PathIconSource::get_Data()
     @_property
     def data(self) -> microsoft_ui_xaml_media.Geometry: ...
+    # System.Void Microsoft.UI.Xaml.Controls.PathIconSource::put_Data(Microsoft.UI.Xaml.Media.Geometry)
     @data.setter
     @typing.final
     def data(self, value: microsoft_ui_xaml_media.Geometry) -> None: ...
 
 class PersonPicture_Static(Control_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.PersonPicture::get_BadgeGlyphProperty()
     @_property
     @typing.final
     def badge_glyph_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.PersonPicture::get_BadgeImageSourceProperty()
     @_property
     @typing.final
     def badge_image_source_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.PersonPicture::get_BadgeNumberProperty()
     @_property
     @typing.final
     def badge_number_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.PersonPicture::get_BadgeTextProperty()
     @_property
     @typing.final
     def badge_text_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.PersonPicture::get_ContactProperty()
     @_property
     @typing.final
     def contact_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.PersonPicture::get_DisplayNameProperty()
     @_property
     @typing.final
     def display_name_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.PersonPicture::get_InitialsProperty()
     @_property
     @typing.final
     def initials_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.PersonPicture::get_IsGroupProperty()
     @_property
     @typing.final
     def is_group_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.PersonPicture::get_PreferSmallImageProperty()
     @_property
     @typing.final
     def prefer_small_image_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.PersonPicture::get_ProfilePictureProperty()
     @_property
     @typing.final
     def profile_picture_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class PersonPicture(Control, metaclass=PersonPicture_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Microsoft.UI.Xaml.Media.ImageSource Microsoft.UI.Xaml.Controls.PersonPicture::get_ProfilePicture()
     @_property
     def profile_picture(self) -> microsoft_ui_xaml_media.ImageSource: ...
+    # System.Void Microsoft.UI.Xaml.Controls.PersonPicture::put_ProfilePicture(Microsoft.UI.Xaml.Media.ImageSource)
     @profile_picture.setter
     @typing.final
     def profile_picture(self, value: microsoft_ui_xaml_media.ImageSource) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.PersonPicture::get_PreferSmallImage()
     @_property
     def prefer_small_image(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.PersonPicture::put_PreferSmallImage(System.Boolean)
     @prefer_small_image.setter
     @typing.final
     def prefer_small_image(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.PersonPicture::get_IsGroup()
     @_property
     def is_group(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.PersonPicture::put_IsGroup(System.Boolean)
     @is_group.setter
     @typing.final
     def is_group(self, value: bool) -> None: ...
+    # System.String Microsoft.UI.Xaml.Controls.PersonPicture::get_Initials()
     @_property
     def initials(self) -> str: ...
+    # System.Void Microsoft.UI.Xaml.Controls.PersonPicture::put_Initials(System.String)
     @initials.setter
     @typing.final
     def initials(self, value: str) -> None: ...
+    # System.String Microsoft.UI.Xaml.Controls.PersonPicture::get_DisplayName()
     @_property
     def display_name(self) -> str: ...
+    # System.Void Microsoft.UI.Xaml.Controls.PersonPicture::put_DisplayName(System.String)
     @display_name.setter
     @typing.final
     def display_name(self, value: str) -> None: ...
+    # Windows.ApplicationModel.Contacts.Contact Microsoft.UI.Xaml.Controls.PersonPicture::get_Contact()
     @_property
     def contact(self) -> windows_applicationmodel_contacts.Contact: ...
+    # System.Void Microsoft.UI.Xaml.Controls.PersonPicture::put_Contact(Windows.ApplicationModel.Contacts.Contact)
     @contact.setter
     @typing.final
     def contact(self, value: windows_applicationmodel_contacts.Contact) -> None: ...
+    # System.String Microsoft.UI.Xaml.Controls.PersonPicture::get_BadgeText()
     @_property
     def badge_text(self) -> str: ...
+    # System.Void Microsoft.UI.Xaml.Controls.PersonPicture::put_BadgeText(System.String)
     @badge_text.setter
     @typing.final
     def badge_text(self, value: str) -> None: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.PersonPicture::get_BadgeNumber()
     @_property
     def badge_number(self) -> winrt.system.Int32: ...
+    # System.Void Microsoft.UI.Xaml.Controls.PersonPicture::put_BadgeNumber(System.Int32)
     @badge_number.setter
     @typing.final
     def badge_number(self, value: winrt.system.Int32) -> None: ...
+    # Microsoft.UI.Xaml.Media.ImageSource Microsoft.UI.Xaml.Controls.PersonPicture::get_BadgeImageSource()
     @_property
     def badge_image_source(self) -> microsoft_ui_xaml_media.ImageSource: ...
+    # System.Void Microsoft.UI.Xaml.Controls.PersonPicture::put_BadgeImageSource(Microsoft.UI.Xaml.Media.ImageSource)
     @badge_image_source.setter
     @typing.final
     def badge_image_source(self, value: microsoft_ui_xaml_media.ImageSource) -> None: ...
+    # System.String Microsoft.UI.Xaml.Controls.PersonPicture::get_BadgeGlyph()
     @_property
     def badge_glyph(self) -> str: ...
+    # System.Void Microsoft.UI.Xaml.Controls.PersonPicture::put_BadgeGlyph(System.String)
     @badge_glyph.setter
     @typing.final
     def badge_glyph(self, value: str) -> None: ...
+    # Microsoft.UI.Xaml.Controls.PersonPictureTemplateSettings Microsoft.UI.Xaml.Controls.PersonPicture::get_TemplateSettings()
     @_property
     @typing.final
     def template_settings(self) -> PersonPictureTemplateSettings: ...
 
 @typing.final
 class PersonPictureTemplateSettings(microsoft_ui_xaml.DependencyObject):
+    # Microsoft.UI.Xaml.Media.ImageBrush Microsoft.UI.Xaml.Controls.PersonPictureTemplateSettings::get_ActualImageBrush()
     @_property
     def actual_image_brush(self) -> microsoft_ui_xaml_media.ImageBrush: ...
+    # System.String Microsoft.UI.Xaml.Controls.PersonPictureTemplateSettings::get_ActualInitials()
     @_property
     def actual_initials(self) -> str: ...
 
@@ -6436,36 +8747,47 @@ class PickerFlyoutPresenter(ContentControl):
     pass
 
 class PipsPager_Static(Control_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.PipsPager::get_MaxVisiblePipsProperty()
     @_property
     @typing.final
     def max_visible_pips_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.PipsPager::get_NextButtonStyleProperty()
     @_property
     @typing.final
     def next_button_style_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.PipsPager::get_NextButtonVisibilityProperty()
     @_property
     @typing.final
     def next_button_visibility_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.PipsPager::get_NormalPipStyleProperty()
     @_property
     @typing.final
     def normal_pip_style_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.PipsPager::get_NumberOfPagesProperty()
     @_property
     @typing.final
     def number_of_pages_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.PipsPager::get_OrientationProperty()
     @_property
     @typing.final
     def orientation_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.PipsPager::get_PreviousButtonStyleProperty()
     @_property
     @typing.final
     def previous_button_style_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.PipsPager::get_PreviousButtonVisibilityProperty()
     @_property
     @typing.final
     def previous_button_visibility_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.PipsPager::get_SelectedPageIndexProperty()
     @_property
     @typing.final
     def selected_page_index_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.PipsPager::get_SelectedPipStyleProperty()
     @_property
     @typing.final
     def selected_pip_style_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.PipsPager::get_WrapModeProperty()
     @_property
     @typing.final
     def wrap_mode_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
@@ -6473,64 +8795,89 @@ class PipsPager_Static(Control_Static):
 class PipsPager(Control, metaclass=PipsPager_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.PipsPager::add_SelectedIndexChanged(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.PipsPager,Microsoft.UI.Xaml.Controls.PipsPagerSelectedIndexChangedEventArgs>)
     def add_selected_index_changed(self, handler: windows_foundation.TypedEventHandler[PipsPager, PipsPagerSelectedIndexChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.PipsPager::remove_SelectedIndexChanged(Windows.Foundation.EventRegistrationToken)
     def remove_selected_index_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Microsoft.UI.Xaml.Style Microsoft.UI.Xaml.Controls.PipsPager::get_SelectedPipStyle()
     @_property
     def selected_pip_style(self) -> microsoft_ui_xaml.Style: ...
+    # System.Void Microsoft.UI.Xaml.Controls.PipsPager::put_SelectedPipStyle(Microsoft.UI.Xaml.Style)
     @selected_pip_style.setter
     @typing.final
     def selected_pip_style(self, value: microsoft_ui_xaml.Style) -> None: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.PipsPager::get_SelectedPageIndex()
     @_property
     def selected_page_index(self) -> winrt.system.Int32: ...
+    # System.Void Microsoft.UI.Xaml.Controls.PipsPager::put_SelectedPageIndex(System.Int32)
     @selected_page_index.setter
     @typing.final
     def selected_page_index(self, value: winrt.system.Int32) -> None: ...
+    # Microsoft.UI.Xaml.Controls.PipsPagerButtonVisibility Microsoft.UI.Xaml.Controls.PipsPager::get_PreviousButtonVisibility()
     @_property
     def previous_button_visibility(self) -> PipsPagerButtonVisibility: ...
+    # System.Void Microsoft.UI.Xaml.Controls.PipsPager::put_PreviousButtonVisibility(Microsoft.UI.Xaml.Controls.PipsPagerButtonVisibility)
     @previous_button_visibility.setter
     @typing.final
     def previous_button_visibility(self, value: PipsPagerButtonVisibility) -> None: ...
+    # Microsoft.UI.Xaml.Style Microsoft.UI.Xaml.Controls.PipsPager::get_PreviousButtonStyle()
     @_property
     def previous_button_style(self) -> microsoft_ui_xaml.Style: ...
+    # System.Void Microsoft.UI.Xaml.Controls.PipsPager::put_PreviousButtonStyle(Microsoft.UI.Xaml.Style)
     @previous_button_style.setter
     @typing.final
     def previous_button_style(self, value: microsoft_ui_xaml.Style) -> None: ...
+    # Microsoft.UI.Xaml.Controls.Orientation Microsoft.UI.Xaml.Controls.PipsPager::get_Orientation()
     @_property
     def orientation(self) -> Orientation: ...
+    # System.Void Microsoft.UI.Xaml.Controls.PipsPager::put_Orientation(Microsoft.UI.Xaml.Controls.Orientation)
     @orientation.setter
     @typing.final
     def orientation(self, value: Orientation) -> None: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.PipsPager::get_NumberOfPages()
     @_property
     def number_of_pages(self) -> winrt.system.Int32: ...
+    # System.Void Microsoft.UI.Xaml.Controls.PipsPager::put_NumberOfPages(System.Int32)
     @number_of_pages.setter
     @typing.final
     def number_of_pages(self, value: winrt.system.Int32) -> None: ...
+    # Microsoft.UI.Xaml.Style Microsoft.UI.Xaml.Controls.PipsPager::get_NormalPipStyle()
     @_property
     def normal_pip_style(self) -> microsoft_ui_xaml.Style: ...
+    # System.Void Microsoft.UI.Xaml.Controls.PipsPager::put_NormalPipStyle(Microsoft.UI.Xaml.Style)
     @normal_pip_style.setter
     @typing.final
     def normal_pip_style(self, value: microsoft_ui_xaml.Style) -> None: ...
+    # Microsoft.UI.Xaml.Controls.PipsPagerButtonVisibility Microsoft.UI.Xaml.Controls.PipsPager::get_NextButtonVisibility()
     @_property
     def next_button_visibility(self) -> PipsPagerButtonVisibility: ...
+    # System.Void Microsoft.UI.Xaml.Controls.PipsPager::put_NextButtonVisibility(Microsoft.UI.Xaml.Controls.PipsPagerButtonVisibility)
     @next_button_visibility.setter
     @typing.final
     def next_button_visibility(self, value: PipsPagerButtonVisibility) -> None: ...
+    # Microsoft.UI.Xaml.Style Microsoft.UI.Xaml.Controls.PipsPager::get_NextButtonStyle()
     @_property
     def next_button_style(self) -> microsoft_ui_xaml.Style: ...
+    # System.Void Microsoft.UI.Xaml.Controls.PipsPager::put_NextButtonStyle(Microsoft.UI.Xaml.Style)
     @next_button_style.setter
     @typing.final
     def next_button_style(self, value: microsoft_ui_xaml.Style) -> None: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.PipsPager::get_MaxVisiblePips()
     @_property
     def max_visible_pips(self) -> winrt.system.Int32: ...
+    # System.Void Microsoft.UI.Xaml.Controls.PipsPager::put_MaxVisiblePips(System.Int32)
     @max_visible_pips.setter
     @typing.final
     def max_visible_pips(self, value: winrt.system.Int32) -> None: ...
+    # Microsoft.UI.Xaml.Controls.PipsPagerTemplateSettings Microsoft.UI.Xaml.Controls.PipsPager::get_TemplateSettings()
     @_property
     @typing.final
     def template_settings(self) -> PipsPagerTemplateSettings: ...
+    # Microsoft.UI.Xaml.Controls.PipsPagerWrapMode Microsoft.UI.Xaml.Controls.PipsPager::get_WrapMode()
     @_property
     def wrap_mode(self) -> PipsPagerWrapMode: ...
+    # System.Void Microsoft.UI.Xaml.Controls.PipsPager::put_WrapMode(Microsoft.UI.Xaml.Controls.PipsPagerWrapMode)
     @wrap_mode.setter
     @typing.final
     def wrap_mode(self, value: PipsPagerWrapMode) -> None: ...
@@ -6541,48 +8888,64 @@ class PipsPagerSelectedIndexChangedEventArgs(winrt.system.Object):
 
 @typing.final
 class PipsPagerTemplateSettings(microsoft_ui_xaml.DependencyObject):
+    # Windows.Foundation.Collections.IVector`1<System.Int32> Microsoft.UI.Xaml.Controls.PipsPagerTemplateSettings::get_PipsPagerItems()
     @_property
     def pips_pager_items(self) -> typing.MutableSequence[winrt.system.Int32]: ...
 
 class Pivot_Static(ItemsControl_Static):
+    # Microsoft.UI.Xaml.Controls.PivotSlideInAnimationGroup Microsoft.UI.Xaml.Controls.Pivot::GetSlideInAnimationGroup(Microsoft.UI.Xaml.FrameworkElement)
     def get_slide_in_animation_group(cls, element: microsoft_ui_xaml.FrameworkElement, /) -> PivotSlideInAnimationGroup: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Pivot::SetSlideInAnimationGroup(Microsoft.UI.Xaml.FrameworkElement,Microsoft.UI.Xaml.Controls.PivotSlideInAnimationGroup)
     def set_slide_in_animation_group(cls, element: microsoft_ui_xaml.FrameworkElement, value: PivotSlideInAnimationGroup, /) -> None: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Pivot::get_HeaderFocusVisualPlacementProperty()
     @_property
     @typing.final
     def header_focus_visual_placement_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Pivot::get_HeaderTemplateProperty()
     @_property
     @typing.final
     def header_template_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Pivot::get_IsHeaderItemsCarouselEnabledProperty()
     @_property
     @typing.final
     def is_header_items_carousel_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Pivot::get_IsLockedProperty()
     @_property
     @typing.final
     def is_locked_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Pivot::get_LeftHeaderProperty()
     @_property
     @typing.final
     def left_header_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Pivot::get_LeftHeaderTemplateProperty()
     @_property
     @typing.final
     def left_header_template_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Pivot::get_RightHeaderProperty()
     @_property
     @typing.final
     def right_header_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Pivot::get_RightHeaderTemplateProperty()
     @_property
     @typing.final
     def right_header_template_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Pivot::get_SelectedIndexProperty()
     @_property
     @typing.final
     def selected_index_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Pivot::get_SelectedItemProperty()
     @_property
     @typing.final
     def selected_item_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Pivot::get_SlideInAnimationGroupProperty()
     @_property
     @typing.final
     def slide_in_animation_group_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Pivot::get_TitleProperty()
     @_property
     @typing.final
     def title_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Pivot::get_TitleTemplateProperty()
     @_property
     @typing.final
     def title_template_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
@@ -6590,95 +8953,132 @@ class Pivot_Static(ItemsControl_Static):
 class Pivot(ItemsControl, metaclass=Pivot_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.Pivot::add_PivotItemLoaded(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.Pivot,Microsoft.UI.Xaml.Controls.PivotItemEventArgs>)
     def add_pivot_item_loaded(self, handler: windows_foundation.TypedEventHandler[Pivot, PivotItemEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.Pivot::remove_PivotItemLoaded(Windows.Foundation.EventRegistrationToken)
     def remove_pivot_item_loaded(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.Pivot::add_PivotItemLoading(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.Pivot,Microsoft.UI.Xaml.Controls.PivotItemEventArgs>)
     def add_pivot_item_loading(self, handler: windows_foundation.TypedEventHandler[Pivot, PivotItemEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.Pivot::remove_PivotItemLoading(Windows.Foundation.EventRegistrationToken)
     def remove_pivot_item_loading(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.Pivot::add_PivotItemUnloaded(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.Pivot,Microsoft.UI.Xaml.Controls.PivotItemEventArgs>)
     def add_pivot_item_unloaded(self, handler: windows_foundation.TypedEventHandler[Pivot, PivotItemEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.Pivot::remove_PivotItemUnloaded(Windows.Foundation.EventRegistrationToken)
     def remove_pivot_item_unloaded(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.Pivot::add_PivotItemUnloading(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.Pivot,Microsoft.UI.Xaml.Controls.PivotItemEventArgs>)
     def add_pivot_item_unloading(self, handler: windows_foundation.TypedEventHandler[Pivot, PivotItemEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.Pivot::remove_PivotItemUnloading(Windows.Foundation.EventRegistrationToken)
     def remove_pivot_item_unloading(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.Pivot::add_SelectionChanged(Microsoft.UI.Xaml.Controls.SelectionChangedEventHandler)
     def add_selection_changed(self, handler: SelectionChangedEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.Pivot::remove_SelectionChanged(Windows.Foundation.EventRegistrationToken)
     def remove_selection_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Microsoft.UI.Xaml.DataTemplate Microsoft.UI.Xaml.Controls.Pivot::get_TitleTemplate()
     @_property
     def title_template(self) -> microsoft_ui_xaml.DataTemplate: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Pivot::put_TitleTemplate(Microsoft.UI.Xaml.DataTemplate)
     @title_template.setter
     @typing.final
     def title_template(self, value: microsoft_ui_xaml.DataTemplate) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.Pivot::get_Title()
     @_property
     def title(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Pivot::put_Title(System.Object)
     @title.setter
     @typing.final
     def title(self, value: winrt.system.Object) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.Pivot::get_SelectedItem()
     @_property
     def selected_item(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Pivot::put_SelectedItem(System.Object)
     @selected_item.setter
     @typing.final
     def selected_item(self, value: winrt.system.Object) -> None: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.Pivot::get_SelectedIndex()
     @_property
     def selected_index(self) -> winrt.system.Int32: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Pivot::put_SelectedIndex(System.Int32)
     @selected_index.setter
     @typing.final
     def selected_index(self, value: winrt.system.Int32) -> None: ...
+    # Microsoft.UI.Xaml.DataTemplate Microsoft.UI.Xaml.Controls.Pivot::get_RightHeaderTemplate()
     @_property
     def right_header_template(self) -> microsoft_ui_xaml.DataTemplate: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Pivot::put_RightHeaderTemplate(Microsoft.UI.Xaml.DataTemplate)
     @right_header_template.setter
     @typing.final
     def right_header_template(self, value: microsoft_ui_xaml.DataTemplate) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.Pivot::get_RightHeader()
     @_property
     def right_header(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Pivot::put_RightHeader(System.Object)
     @right_header.setter
     @typing.final
     def right_header(self, value: winrt.system.Object) -> None: ...
+    # Microsoft.UI.Xaml.DataTemplate Microsoft.UI.Xaml.Controls.Pivot::get_LeftHeaderTemplate()
     @_property
     def left_header_template(self) -> microsoft_ui_xaml.DataTemplate: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Pivot::put_LeftHeaderTemplate(Microsoft.UI.Xaml.DataTemplate)
     @left_header_template.setter
     @typing.final
     def left_header_template(self, value: microsoft_ui_xaml.DataTemplate) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.Pivot::get_LeftHeader()
     @_property
     def left_header(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Pivot::put_LeftHeader(System.Object)
     @left_header.setter
     @typing.final
     def left_header(self, value: winrt.system.Object) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.Pivot::get_IsLocked()
     @_property
     def is_locked(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Pivot::put_IsLocked(System.Boolean)
     @is_locked.setter
     @typing.final
     def is_locked(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.Pivot::get_IsHeaderItemsCarouselEnabled()
     @_property
     def is_header_items_carousel_enabled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Pivot::put_IsHeaderItemsCarouselEnabled(System.Boolean)
     @is_header_items_carousel_enabled.setter
     @typing.final
     def is_header_items_carousel_enabled(self, value: bool) -> None: ...
+    # Microsoft.UI.Xaml.DataTemplate Microsoft.UI.Xaml.Controls.Pivot::get_HeaderTemplate()
     @_property
     def header_template(self) -> microsoft_ui_xaml.DataTemplate: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Pivot::put_HeaderTemplate(Microsoft.UI.Xaml.DataTemplate)
     @header_template.setter
     @typing.final
     def header_template(self, value: microsoft_ui_xaml.DataTemplate) -> None: ...
+    # Microsoft.UI.Xaml.Controls.PivotHeaderFocusVisualPlacement Microsoft.UI.Xaml.Controls.Pivot::get_HeaderFocusVisualPlacement()
     @_property
     def header_focus_visual_placement(self) -> PivotHeaderFocusVisualPlacement: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Pivot::put_HeaderFocusVisualPlacement(Microsoft.UI.Xaml.Controls.PivotHeaderFocusVisualPlacement)
     @header_focus_visual_placement.setter
     @typing.final
     def header_focus_visual_placement(self, value: PivotHeaderFocusVisualPlacement) -> None: ...
 
 class PivotItem_Static(ContentControl_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.PivotItem::get_HeaderProperty()
     @_property
     @typing.final
     def header_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class PivotItem(ContentControl, metaclass=PivotItem_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Object Microsoft.UI.Xaml.Controls.PivotItem::get_Header()
     @_property
     def header(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.PivotItem::put_Header(System.Object)
     @header.setter
     @typing.final
     def header(self, value: winrt.system.Object) -> None: ...
@@ -6686,115 +9086,155 @@ class PivotItem(ContentControl, metaclass=PivotItem_Static):
 @typing.final
 class PivotItemEventArgs(winrt.system.Object):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Microsoft.UI.Xaml.Controls.PivotItem Microsoft.UI.Xaml.Controls.PivotItemEventArgs::get_Item()
     @_property
     def item(self) -> PivotItem: ...
+    # System.Void Microsoft.UI.Xaml.Controls.PivotItemEventArgs::put_Item(Microsoft.UI.Xaml.Controls.PivotItem)
     @item.setter
     def item(self, value: PivotItem) -> None: ...
 
 @typing.final
 class ProgressBarTemplateSettings(microsoft_ui_xaml.DependencyObject):
+    # Microsoft.UI.Xaml.Media.RectangleGeometry Microsoft.UI.Xaml.Controls.ProgressBarTemplateSettings::get_ClipRect()
     @_property
     def clip_rect(self) -> microsoft_ui_xaml_media.RectangleGeometry: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ProgressBarTemplateSettings::get_Container2AnimationEndPosition()
     @_property
     def container2_animation_end_position(self) -> winrt.system.Double: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ProgressBarTemplateSettings::get_Container2AnimationStartPosition()
     @_property
     def container2_animation_start_position(self) -> winrt.system.Double: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ProgressBarTemplateSettings::get_ContainerAnimationEndPosition()
     @_property
     def container_animation_end_position(self) -> winrt.system.Double: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ProgressBarTemplateSettings::get_ContainerAnimationMidPosition()
     @_property
     def container_animation_mid_position(self) -> winrt.system.Double: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ProgressBarTemplateSettings::get_ContainerAnimationStartPosition()
     @_property
     def container_animation_start_position(self) -> winrt.system.Double: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ProgressBarTemplateSettings::get_EllipseAnimationEndPosition()
     @_property
     def ellipse_animation_end_position(self) -> winrt.system.Double: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ProgressBarTemplateSettings::get_EllipseAnimationWellPosition()
     @_property
     def ellipse_animation_well_position(self) -> winrt.system.Double: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ProgressBarTemplateSettings::get_EllipseDiameter()
     @_property
     def ellipse_diameter(self) -> winrt.system.Double: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ProgressBarTemplateSettings::get_EllipseOffset()
     @_property
     def ellipse_offset(self) -> winrt.system.Double: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ProgressBarTemplateSettings::get_IndicatorLengthDelta()
     @_property
     def indicator_length_delta(self) -> winrt.system.Double: ...
 
 class ProgressRing_Static(Control_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ProgressRing::get_IsActiveProperty()
     @_property
     @typing.final
     def is_active_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ProgressRing::get_IsIndeterminateProperty()
     @_property
     @typing.final
     def is_indeterminate_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ProgressRing::get_MaximumProperty()
     @_property
     @typing.final
     def maximum_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ProgressRing::get_MinimumProperty()
     @_property
     @typing.final
     def minimum_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ProgressRing::get_ValueProperty()
     @_property
     @typing.final
     def value_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class ProgressRing(Control, metaclass=ProgressRing_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ProgressRing::get_Value()
     @_property
     def value(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ProgressRing::put_Value(System.Double)
     @value.setter
     @typing.final
     def value(self, value: winrt.system.Double) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ProgressRing::get_Minimum()
     @_property
     def minimum(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ProgressRing::put_Minimum(System.Double)
     @minimum.setter
     @typing.final
     def minimum(self, value: winrt.system.Double) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ProgressRing::get_Maximum()
     @_property
     def maximum(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ProgressRing::put_Maximum(System.Double)
     @maximum.setter
     @typing.final
     def maximum(self, value: winrt.system.Double) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ProgressRing::get_IsIndeterminate()
     @_property
     def is_indeterminate(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ProgressRing::put_IsIndeterminate(System.Boolean)
     @is_indeterminate.setter
     @typing.final
     def is_indeterminate(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ProgressRing::get_IsActive()
     @_property
     def is_active(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ProgressRing::put_IsActive(System.Boolean)
     @is_active.setter
     @typing.final
     def is_active(self, value: bool) -> None: ...
+    # Microsoft.UI.Xaml.Controls.ProgressRingTemplateSettings Microsoft.UI.Xaml.Controls.ProgressRing::get_TemplateSettings()
     @_property
     @typing.final
     def template_settings(self) -> ProgressRingTemplateSettings: ...
 
 @typing.final
 class ProgressRingTemplateSettings(microsoft_ui_xaml.DependencyObject):
+    # System.Double Microsoft.UI.Xaml.Controls.ProgressRingTemplateSettings::get_EllipseDiameter()
     @_property
     def ellipse_diameter(self) -> winrt.system.Double: ...
+    # Microsoft.UI.Xaml.Thickness Microsoft.UI.Xaml.Controls.ProgressRingTemplateSettings::get_EllipseOffset()
     @_property
     def ellipse_offset(self) -> microsoft_ui_xaml.Thickness: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ProgressRingTemplateSettings::get_MaxSideLength()
     @_property
     def max_side_length(self) -> winrt.system.Double: ...
 
 class RadioButtons_Static(Control_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RadioButtons::get_HeaderProperty()
     @_property
     @typing.final
     def header_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RadioButtons::get_HeaderTemplateProperty()
     @_property
     @typing.final
     def header_template_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RadioButtons::get_ItemTemplateProperty()
     @_property
     @typing.final
     def item_template_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RadioButtons::get_ItemsProperty()
     @_property
     @typing.final
     def items_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RadioButtons::get_ItemsSourceProperty()
     @_property
     @typing.final
     def items_source_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RadioButtons::get_MaxColumnsProperty()
     @_property
     @typing.final
     def max_columns_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RadioButtons::get_SelectedIndexProperty()
     @_property
     @typing.final
     def selected_index_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RadioButtons::get_SelectedItemProperty()
     @_property
     @typing.final
     def selected_item_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
@@ -6802,98 +9242,133 @@ class RadioButtons_Static(Control_Static):
 class RadioButtons(Control, metaclass=RadioButtons_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.final
+    # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.Controls.RadioButtons::ContainerFromIndex(System.Int32)
     def container_from_index(self, index: winrt.system.Int32, /) -> microsoft_ui_xaml.UIElement: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.RadioButtons::add_SelectionChanged(Microsoft.UI.Xaml.Controls.SelectionChangedEventHandler)
     def add_selection_changed(self, handler: SelectionChangedEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.RadioButtons::remove_SelectionChanged(Windows.Foundation.EventRegistrationToken)
     def remove_selection_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.RadioButtons::get_SelectedItem()
     @_property
     def selected_item(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RadioButtons::put_SelectedItem(System.Object)
     @selected_item.setter
     @typing.final
     def selected_item(self, value: winrt.system.Object) -> None: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.RadioButtons::get_SelectedIndex()
     @_property
     def selected_index(self) -> winrt.system.Int32: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RadioButtons::put_SelectedIndex(System.Int32)
     @selected_index.setter
     @typing.final
     def selected_index(self, value: winrt.system.Int32) -> None: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.RadioButtons::get_MaxColumns()
     @_property
     def max_columns(self) -> winrt.system.Int32: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RadioButtons::put_MaxColumns(System.Int32)
     @max_columns.setter
     @typing.final
     def max_columns(self, value: winrt.system.Int32) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.RadioButtons::get_ItemsSource()
     @_property
     def items_source(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RadioButtons::put_ItemsSource(System.Object)
     @items_source.setter
     @typing.final
     def items_source(self, value: winrt.system.Object) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.RadioButtons::get_ItemTemplate()
     @_property
     def item_template(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RadioButtons::put_ItemTemplate(System.Object)
     @item_template.setter
     @typing.final
     def item_template(self, value: winrt.system.Object) -> None: ...
+    # Microsoft.UI.Xaml.DataTemplate Microsoft.UI.Xaml.Controls.RadioButtons::get_HeaderTemplate()
     @_property
     def header_template(self) -> microsoft_ui_xaml.DataTemplate: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RadioButtons::put_HeaderTemplate(Microsoft.UI.Xaml.DataTemplate)
     @header_template.setter
     @typing.final
     def header_template(self, value: microsoft_ui_xaml.DataTemplate) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.RadioButtons::get_Header()
     @_property
     def header(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RadioButtons::put_Header(System.Object)
     @header.setter
     @typing.final
     def header(self, value: winrt.system.Object) -> None: ...
+    # Windows.Foundation.Collections.IVector`1<System.Object> Microsoft.UI.Xaml.Controls.RadioButtons::get_Items()
     @_property
     @typing.final
     def items(self) -> typing.MutableSequence[winrt.system.Object]: ...
 
 class RadioMenuFlyoutItem_Static(MenuFlyoutItem_Static):
+    # System.Boolean Microsoft.UI.Xaml.Controls.RadioMenuFlyoutItem::GetAreCheckStatesEnabled(Microsoft.UI.Xaml.Controls.MenuFlyoutSubItem)
     def get_are_check_states_enabled(cls, object: MenuFlyoutSubItem, /) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RadioMenuFlyoutItem::SetAreCheckStatesEnabled(Microsoft.UI.Xaml.Controls.MenuFlyoutSubItem,System.Boolean)
     def set_are_check_states_enabled(cls, object: MenuFlyoutSubItem, value: bool, /) -> None: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RadioMenuFlyoutItem::get_GroupNameProperty()
     @_property
     @typing.final
     def group_name_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RadioMenuFlyoutItem::get_IsCheckedProperty()
     @_property
     @typing.final
     def is_checked_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RadioMenuFlyoutItem::get_AreCheckStatesEnabledProperty()
     @_property
     @typing.final
     def are_check_states_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class RadioMenuFlyoutItem(MenuFlyoutItem, metaclass=RadioMenuFlyoutItem_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.RadioMenuFlyoutItem::get_IsChecked()
     @_property
     def is_checked(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RadioMenuFlyoutItem::put_IsChecked(System.Boolean)
     @is_checked.setter
     @typing.final
     def is_checked(self, value: bool) -> None: ...
+    # System.String Microsoft.UI.Xaml.Controls.RadioMenuFlyoutItem::get_GroupName()
     @_property
     def group_name(self) -> str: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RadioMenuFlyoutItem::put_GroupName(System.String)
     @group_name.setter
     @typing.final
     def group_name(self, value: str) -> None: ...
 
 class RatingControl_Static(Control_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RatingControl::get_CaptionProperty()
     @_property
     @typing.final
     def caption_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RatingControl::get_InitialSetValueProperty()
     @_property
     @typing.final
     def initial_set_value_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RatingControl::get_IsClearEnabledProperty()
     @_property
     @typing.final
     def is_clear_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RatingControl::get_IsReadOnlyProperty()
     @_property
     @typing.final
     def is_read_only_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RatingControl::get_ItemInfoProperty()
     @_property
     @typing.final
     def item_info_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RatingControl::get_MaxRatingProperty()
     @_property
     @typing.final
     def max_rating_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RatingControl::get_PlaceholderValueProperty()
     @_property
     @typing.final
     def placeholder_value_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RatingControl::get_ValueProperty()
     @_property
     @typing.final
     def value_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
@@ -6901,152 +9376,206 @@ class RatingControl_Static(Control_Static):
 class RatingControl(Control, metaclass=RatingControl_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.RatingControl::add_ValueChanged(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.RatingControl,System.Object>)
     def add_value_changed(self, handler: windows_foundation.TypedEventHandler[RatingControl, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.RatingControl::remove_ValueChanged(Windows.Foundation.EventRegistrationToken)
     def remove_value_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.RatingControl::get_Value()
     @_property
     def value(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RatingControl::put_Value(System.Double)
     @value.setter
     @typing.final
     def value(self, value: winrt.system.Double) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.RatingControl::get_PlaceholderValue()
     @_property
     def placeholder_value(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RatingControl::put_PlaceholderValue(System.Double)
     @placeholder_value.setter
     @typing.final
     def placeholder_value(self, value: winrt.system.Double) -> None: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.RatingControl::get_MaxRating()
     @_property
     def max_rating(self) -> winrt.system.Int32: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RatingControl::put_MaxRating(System.Int32)
     @max_rating.setter
     @typing.final
     def max_rating(self, value: winrt.system.Int32) -> None: ...
+    # Microsoft.UI.Xaml.Controls.RatingItemInfo Microsoft.UI.Xaml.Controls.RatingControl::get_ItemInfo()
     @_property
     def item_info(self) -> RatingItemInfo: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RatingControl::put_ItemInfo(Microsoft.UI.Xaml.Controls.RatingItemInfo)
     @item_info.setter
     @typing.final
     def item_info(self, value: RatingItemInfo) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.RatingControl::get_IsReadOnly()
     @_property
     def is_read_only(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RatingControl::put_IsReadOnly(System.Boolean)
     @is_read_only.setter
     @typing.final
     def is_read_only(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.RatingControl::get_IsClearEnabled()
     @_property
     def is_clear_enabled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RatingControl::put_IsClearEnabled(System.Boolean)
     @is_clear_enabled.setter
     @typing.final
     def is_clear_enabled(self, value: bool) -> None: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.RatingControl::get_InitialSetValue()
     @_property
     def initial_set_value(self) -> winrt.system.Int32: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RatingControl::put_InitialSetValue(System.Int32)
     @initial_set_value.setter
     @typing.final
     def initial_set_value(self, value: winrt.system.Int32) -> None: ...
+    # System.String Microsoft.UI.Xaml.Controls.RatingControl::get_Caption()
     @_property
     def caption(self) -> str: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RatingControl::put_Caption(System.String)
     @caption.setter
     @typing.final
     def caption(self, value: str) -> None: ...
 
 class RatingItemFontInfo_Static(RatingItemInfo_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RatingItemFontInfo::get_DisabledGlyphProperty()
     @_property
     @typing.final
     def disabled_glyph_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RatingItemFontInfo::get_GlyphProperty()
     @_property
     @typing.final
     def glyph_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RatingItemFontInfo::get_PlaceholderGlyphProperty()
     @_property
     @typing.final
     def placeholder_glyph_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RatingItemFontInfo::get_PointerOverGlyphProperty()
     @_property
     @typing.final
     def pointer_over_glyph_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RatingItemFontInfo::get_PointerOverPlaceholderGlyphProperty()
     @_property
     @typing.final
     def pointer_over_placeholder_glyph_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RatingItemFontInfo::get_UnsetGlyphProperty()
     @_property
     @typing.final
     def unset_glyph_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class RatingItemFontInfo(RatingItemInfo, metaclass=RatingItemFontInfo_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.String Microsoft.UI.Xaml.Controls.RatingItemFontInfo::get_UnsetGlyph()
     @_property
     def unset_glyph(self) -> str: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RatingItemFontInfo::put_UnsetGlyph(System.String)
     @unset_glyph.setter
     @typing.final
     def unset_glyph(self, value: str) -> None: ...
+    # System.String Microsoft.UI.Xaml.Controls.RatingItemFontInfo::get_PointerOverPlaceholderGlyph()
     @_property
     def pointer_over_placeholder_glyph(self) -> str: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RatingItemFontInfo::put_PointerOverPlaceholderGlyph(System.String)
     @pointer_over_placeholder_glyph.setter
     @typing.final
     def pointer_over_placeholder_glyph(self, value: str) -> None: ...
+    # System.String Microsoft.UI.Xaml.Controls.RatingItemFontInfo::get_PointerOverGlyph()
     @_property
     def pointer_over_glyph(self) -> str: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RatingItemFontInfo::put_PointerOverGlyph(System.String)
     @pointer_over_glyph.setter
     @typing.final
     def pointer_over_glyph(self, value: str) -> None: ...
+    # System.String Microsoft.UI.Xaml.Controls.RatingItemFontInfo::get_PlaceholderGlyph()
     @_property
     def placeholder_glyph(self) -> str: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RatingItemFontInfo::put_PlaceholderGlyph(System.String)
     @placeholder_glyph.setter
     @typing.final
     def placeholder_glyph(self, value: str) -> None: ...
+    # System.String Microsoft.UI.Xaml.Controls.RatingItemFontInfo::get_Glyph()
     @_property
     def glyph(self) -> str: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RatingItemFontInfo::put_Glyph(System.String)
     @glyph.setter
     @typing.final
     def glyph(self, value: str) -> None: ...
+    # System.String Microsoft.UI.Xaml.Controls.RatingItemFontInfo::get_DisabledGlyph()
     @_property
     def disabled_glyph(self) -> str: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RatingItemFontInfo::put_DisabledGlyph(System.String)
     @disabled_glyph.setter
     @typing.final
     def disabled_glyph(self, value: str) -> None: ...
 
 class RatingItemImageInfo_Static(RatingItemInfo_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RatingItemImageInfo::get_DisabledImageProperty()
     @_property
     @typing.final
     def disabled_image_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RatingItemImageInfo::get_ImageProperty()
     @_property
     @typing.final
     def image_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RatingItemImageInfo::get_PlaceholderImageProperty()
     @_property
     @typing.final
     def placeholder_image_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RatingItemImageInfo::get_PointerOverImageProperty()
     @_property
     @typing.final
     def pointer_over_image_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RatingItemImageInfo::get_PointerOverPlaceholderImageProperty()
     @_property
     @typing.final
     def pointer_over_placeholder_image_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RatingItemImageInfo::get_UnsetImageProperty()
     @_property
     @typing.final
     def unset_image_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class RatingItemImageInfo(RatingItemInfo, metaclass=RatingItemImageInfo_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Microsoft.UI.Xaml.Media.ImageSource Microsoft.UI.Xaml.Controls.RatingItemImageInfo::get_UnsetImage()
     @_property
     def unset_image(self) -> microsoft_ui_xaml_media.ImageSource: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RatingItemImageInfo::put_UnsetImage(Microsoft.UI.Xaml.Media.ImageSource)
     @unset_image.setter
     @typing.final
     def unset_image(self, value: microsoft_ui_xaml_media.ImageSource) -> None: ...
+    # Microsoft.UI.Xaml.Media.ImageSource Microsoft.UI.Xaml.Controls.RatingItemImageInfo::get_PointerOverPlaceholderImage()
     @_property
     def pointer_over_placeholder_image(self) -> microsoft_ui_xaml_media.ImageSource: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RatingItemImageInfo::put_PointerOverPlaceholderImage(Microsoft.UI.Xaml.Media.ImageSource)
     @pointer_over_placeholder_image.setter
     @typing.final
     def pointer_over_placeholder_image(self, value: microsoft_ui_xaml_media.ImageSource) -> None: ...
+    # Microsoft.UI.Xaml.Media.ImageSource Microsoft.UI.Xaml.Controls.RatingItemImageInfo::get_PointerOverImage()
     @_property
     def pointer_over_image(self) -> microsoft_ui_xaml_media.ImageSource: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RatingItemImageInfo::put_PointerOverImage(Microsoft.UI.Xaml.Media.ImageSource)
     @pointer_over_image.setter
     @typing.final
     def pointer_over_image(self, value: microsoft_ui_xaml_media.ImageSource) -> None: ...
+    # Microsoft.UI.Xaml.Media.ImageSource Microsoft.UI.Xaml.Controls.RatingItemImageInfo::get_PlaceholderImage()
     @_property
     def placeholder_image(self) -> microsoft_ui_xaml_media.ImageSource: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RatingItemImageInfo::put_PlaceholderImage(Microsoft.UI.Xaml.Media.ImageSource)
     @placeholder_image.setter
     @typing.final
     def placeholder_image(self, value: microsoft_ui_xaml_media.ImageSource) -> None: ...
+    # Microsoft.UI.Xaml.Media.ImageSource Microsoft.UI.Xaml.Controls.RatingItemImageInfo::get_Image()
     @_property
     def image(self) -> microsoft_ui_xaml_media.ImageSource: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RatingItemImageInfo::put_Image(Microsoft.UI.Xaml.Media.ImageSource)
     @image.setter
     @typing.final
     def image(self, value: microsoft_ui_xaml_media.ImageSource) -> None: ...
+    # Microsoft.UI.Xaml.Media.ImageSource Microsoft.UI.Xaml.Controls.RatingItemImageInfo::get_DisabledImage()
     @_property
     def disabled_image(self) -> microsoft_ui_xaml_media.ImageSource: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RatingItemImageInfo::put_DisabledImage(Microsoft.UI.Xaml.Media.ImageSource)
     @disabled_image.setter
     @typing.final
     def disabled_image(self, value: microsoft_ui_xaml_media.ImageSource) -> None: ...
@@ -7058,9 +9587,11 @@ class RatingItemInfo(microsoft_ui_xaml.DependencyObject, metaclass=RatingItemInf
     def __new__(cls: typing.Type[Self]) -> Self: ...
 
 class RefreshContainer_Static(ContentControl_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RefreshContainer::get_PullDirectionProperty()
     @_property
     @typing.final
     def pull_direction_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RefreshContainer::get_VisualizerProperty()
     @_property
     @typing.final
     def visualizer_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
@@ -7068,48 +9599,63 @@ class RefreshContainer_Static(ContentControl_Static):
 class RefreshContainer(ContentControl, metaclass=RefreshContainer_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.RefreshContainer::RequestRefresh()
     def request_refresh(self) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.RefreshContainer::add_RefreshRequested(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.RefreshContainer,Microsoft.UI.Xaml.Controls.RefreshRequestedEventArgs>)
     def add_refresh_requested(self, handler: windows_foundation.TypedEventHandler[RefreshContainer, RefreshRequestedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.RefreshContainer::remove_RefreshRequested(Windows.Foundation.EventRegistrationToken)
     def remove_refresh_requested(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Microsoft.UI.Xaml.Controls.RefreshVisualizer Microsoft.UI.Xaml.Controls.RefreshContainer::get_Visualizer()
     @_property
     def visualizer(self) -> RefreshVisualizer: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RefreshContainer::put_Visualizer(Microsoft.UI.Xaml.Controls.RefreshVisualizer)
     @visualizer.setter
     @typing.final
     def visualizer(self, value: RefreshVisualizer) -> None: ...
+    # Microsoft.UI.Xaml.Controls.RefreshPullDirection Microsoft.UI.Xaml.Controls.RefreshContainer::get_PullDirection()
     @_property
     def pull_direction(self) -> RefreshPullDirection: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RefreshContainer::put_PullDirection(Microsoft.UI.Xaml.Controls.RefreshPullDirection)
     @pull_direction.setter
     @typing.final
     def pull_direction(self, value: RefreshPullDirection) -> None: ...
 
 @typing.final
 class RefreshInteractionRatioChangedEventArgs(winrt.system.Object):
+    # System.Double Microsoft.UI.Xaml.Controls.RefreshInteractionRatioChangedEventArgs::get_InteractionRatio()
     @_property
     def interaction_ratio(self) -> winrt.system.Double: ...
 
 @typing.final
 class RefreshRequestedEventArgs(winrt.system.Object):
+    # Windows.Foundation.Deferral Microsoft.UI.Xaml.Controls.RefreshRequestedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
 
 @typing.final
 class RefreshStateChangedEventArgs(winrt.system.Object):
+    # Microsoft.UI.Xaml.Controls.RefreshVisualizerState Microsoft.UI.Xaml.Controls.RefreshStateChangedEventArgs::get_NewState()
     @_property
     def new_state(self) -> RefreshVisualizerState: ...
+    # Microsoft.UI.Xaml.Controls.RefreshVisualizerState Microsoft.UI.Xaml.Controls.RefreshStateChangedEventArgs::get_OldState()
     @_property
     def old_state(self) -> RefreshVisualizerState: ...
 
 class RefreshVisualizer_Static(Control_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RefreshVisualizer::get_ContentProperty()
     @_property
     @typing.final
     def content_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RefreshVisualizer::get_InfoProviderProperty()
     @_property
     @typing.final
     def info_provider_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RefreshVisualizer::get_OrientationProperty()
     @_property
     @typing.final
     def orientation_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RefreshVisualizer::get_StateProperty()
     @_property
     @typing.final
     def state_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
@@ -7117,224 +9663,321 @@ class RefreshVisualizer_Static(Control_Static):
 class RefreshVisualizer(Control, metaclass=RefreshVisualizer_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.RefreshVisualizer::RequestRefresh()
     def request_refresh(self) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.RefreshVisualizer::add_RefreshRequested(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.RefreshVisualizer,Microsoft.UI.Xaml.Controls.RefreshRequestedEventArgs>)
     def add_refresh_requested(self, handler: windows_foundation.TypedEventHandler[RefreshVisualizer, RefreshRequestedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.RefreshVisualizer::remove_RefreshRequested(Windows.Foundation.EventRegistrationToken)
     def remove_refresh_requested(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.RefreshVisualizer::add_RefreshStateChanged(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.RefreshVisualizer,Microsoft.UI.Xaml.Controls.RefreshStateChangedEventArgs>)
     def add_refresh_state_changed(self, handler: windows_foundation.TypedEventHandler[RefreshVisualizer, RefreshStateChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.RefreshVisualizer::remove_RefreshStateChanged(Windows.Foundation.EventRegistrationToken)
     def remove_refresh_state_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Microsoft.UI.Xaml.Controls.RefreshVisualizerOrientation Microsoft.UI.Xaml.Controls.RefreshVisualizer::get_Orientation()
     @_property
     def orientation(self) -> RefreshVisualizerOrientation: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RefreshVisualizer::put_Orientation(Microsoft.UI.Xaml.Controls.RefreshVisualizerOrientation)
     @orientation.setter
     @typing.final
     def orientation(self, value: RefreshVisualizerOrientation) -> None: ...
+    # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.Controls.RefreshVisualizer::get_Content()
     @_property
     def content(self) -> microsoft_ui_xaml.UIElement: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RefreshVisualizer::put_Content(Microsoft.UI.Xaml.UIElement)
     @content.setter
     @typing.final
     def content(self, value: microsoft_ui_xaml.UIElement) -> None: ...
+    # Microsoft.UI.Xaml.Controls.RefreshVisualizerState Microsoft.UI.Xaml.Controls.RefreshVisualizer::get_State()
     @_property
     @typing.final
     def state(self) -> RefreshVisualizerState: ...
 
 class RelativePanel_Static(Panel_Static):
+    # System.Object Microsoft.UI.Xaml.Controls.RelativePanel::GetAbove(Microsoft.UI.Xaml.UIElement)
     def get_above(cls, element: microsoft_ui_xaml.UIElement, /) -> winrt.system.Object: ...
+    # System.Object Microsoft.UI.Xaml.Controls.RelativePanel::GetAlignBottomWith(Microsoft.UI.Xaml.UIElement)
     def get_align_bottom_with(cls, element: microsoft_ui_xaml.UIElement, /) -> winrt.system.Object: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.RelativePanel::GetAlignBottomWithPanel(Microsoft.UI.Xaml.UIElement)
     def get_align_bottom_with_panel(cls, element: microsoft_ui_xaml.UIElement, /) -> bool: ...
+    # System.Object Microsoft.UI.Xaml.Controls.RelativePanel::GetAlignHorizontalCenterWith(Microsoft.UI.Xaml.UIElement)
     def get_align_horizontal_center_with(cls, element: microsoft_ui_xaml.UIElement, /) -> winrt.system.Object: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.RelativePanel::GetAlignHorizontalCenterWithPanel(Microsoft.UI.Xaml.UIElement)
     def get_align_horizontal_center_with_panel(cls, element: microsoft_ui_xaml.UIElement, /) -> bool: ...
+    # System.Object Microsoft.UI.Xaml.Controls.RelativePanel::GetAlignLeftWith(Microsoft.UI.Xaml.UIElement)
     def get_align_left_with(cls, element: microsoft_ui_xaml.UIElement, /) -> winrt.system.Object: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.RelativePanel::GetAlignLeftWithPanel(Microsoft.UI.Xaml.UIElement)
     def get_align_left_with_panel(cls, element: microsoft_ui_xaml.UIElement, /) -> bool: ...
+    # System.Object Microsoft.UI.Xaml.Controls.RelativePanel::GetAlignRightWith(Microsoft.UI.Xaml.UIElement)
     def get_align_right_with(cls, element: microsoft_ui_xaml.UIElement, /) -> winrt.system.Object: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.RelativePanel::GetAlignRightWithPanel(Microsoft.UI.Xaml.UIElement)
     def get_align_right_with_panel(cls, element: microsoft_ui_xaml.UIElement, /) -> bool: ...
+    # System.Object Microsoft.UI.Xaml.Controls.RelativePanel::GetAlignTopWith(Microsoft.UI.Xaml.UIElement)
     def get_align_top_with(cls, element: microsoft_ui_xaml.UIElement, /) -> winrt.system.Object: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.RelativePanel::GetAlignTopWithPanel(Microsoft.UI.Xaml.UIElement)
     def get_align_top_with_panel(cls, element: microsoft_ui_xaml.UIElement, /) -> bool: ...
+    # System.Object Microsoft.UI.Xaml.Controls.RelativePanel::GetAlignVerticalCenterWith(Microsoft.UI.Xaml.UIElement)
     def get_align_vertical_center_with(cls, element: microsoft_ui_xaml.UIElement, /) -> winrt.system.Object: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.RelativePanel::GetAlignVerticalCenterWithPanel(Microsoft.UI.Xaml.UIElement)
     def get_align_vertical_center_with_panel(cls, element: microsoft_ui_xaml.UIElement, /) -> bool: ...
+    # System.Object Microsoft.UI.Xaml.Controls.RelativePanel::GetBelow(Microsoft.UI.Xaml.UIElement)
     def get_below(cls, element: microsoft_ui_xaml.UIElement, /) -> winrt.system.Object: ...
+    # System.Object Microsoft.UI.Xaml.Controls.RelativePanel::GetLeftOf(Microsoft.UI.Xaml.UIElement)
     def get_left_of(cls, element: microsoft_ui_xaml.UIElement, /) -> winrt.system.Object: ...
+    # System.Object Microsoft.UI.Xaml.Controls.RelativePanel::GetRightOf(Microsoft.UI.Xaml.UIElement)
     def get_right_of(cls, element: microsoft_ui_xaml.UIElement, /) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RelativePanel::SetAbove(Microsoft.UI.Xaml.UIElement,System.Object)
     def set_above(cls, element: microsoft_ui_xaml.UIElement, value: winrt.system.Object, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RelativePanel::SetAlignBottomWith(Microsoft.UI.Xaml.UIElement,System.Object)
     def set_align_bottom_with(cls, element: microsoft_ui_xaml.UIElement, value: winrt.system.Object, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RelativePanel::SetAlignBottomWithPanel(Microsoft.UI.Xaml.UIElement,System.Boolean)
     def set_align_bottom_with_panel(cls, element: microsoft_ui_xaml.UIElement, value: bool, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RelativePanel::SetAlignHorizontalCenterWith(Microsoft.UI.Xaml.UIElement,System.Object)
     def set_align_horizontal_center_with(cls, element: microsoft_ui_xaml.UIElement, value: winrt.system.Object, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RelativePanel::SetAlignHorizontalCenterWithPanel(Microsoft.UI.Xaml.UIElement,System.Boolean)
     def set_align_horizontal_center_with_panel(cls, element: microsoft_ui_xaml.UIElement, value: bool, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RelativePanel::SetAlignLeftWith(Microsoft.UI.Xaml.UIElement,System.Object)
     def set_align_left_with(cls, element: microsoft_ui_xaml.UIElement, value: winrt.system.Object, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RelativePanel::SetAlignLeftWithPanel(Microsoft.UI.Xaml.UIElement,System.Boolean)
     def set_align_left_with_panel(cls, element: microsoft_ui_xaml.UIElement, value: bool, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RelativePanel::SetAlignRightWith(Microsoft.UI.Xaml.UIElement,System.Object)
     def set_align_right_with(cls, element: microsoft_ui_xaml.UIElement, value: winrt.system.Object, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RelativePanel::SetAlignRightWithPanel(Microsoft.UI.Xaml.UIElement,System.Boolean)
     def set_align_right_with_panel(cls, element: microsoft_ui_xaml.UIElement, value: bool, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RelativePanel::SetAlignTopWith(Microsoft.UI.Xaml.UIElement,System.Object)
     def set_align_top_with(cls, element: microsoft_ui_xaml.UIElement, value: winrt.system.Object, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RelativePanel::SetAlignTopWithPanel(Microsoft.UI.Xaml.UIElement,System.Boolean)
     def set_align_top_with_panel(cls, element: microsoft_ui_xaml.UIElement, value: bool, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RelativePanel::SetAlignVerticalCenterWith(Microsoft.UI.Xaml.UIElement,System.Object)
     def set_align_vertical_center_with(cls, element: microsoft_ui_xaml.UIElement, value: winrt.system.Object, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RelativePanel::SetAlignVerticalCenterWithPanel(Microsoft.UI.Xaml.UIElement,System.Boolean)
     def set_align_vertical_center_with_panel(cls, element: microsoft_ui_xaml.UIElement, value: bool, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RelativePanel::SetBelow(Microsoft.UI.Xaml.UIElement,System.Object)
     def set_below(cls, element: microsoft_ui_xaml.UIElement, value: winrt.system.Object, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RelativePanel::SetLeftOf(Microsoft.UI.Xaml.UIElement,System.Object)
     def set_left_of(cls, element: microsoft_ui_xaml.UIElement, value: winrt.system.Object, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RelativePanel::SetRightOf(Microsoft.UI.Xaml.UIElement,System.Object)
     def set_right_of(cls, element: microsoft_ui_xaml.UIElement, value: winrt.system.Object, /) -> None: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RelativePanel::get_AboveProperty()
     @_property
     @typing.final
     def above_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RelativePanel::get_AlignBottomWithPanelProperty()
     @_property
     @typing.final
     def align_bottom_with_panel_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RelativePanel::get_AlignBottomWithProperty()
     @_property
     @typing.final
     def align_bottom_with_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RelativePanel::get_AlignHorizontalCenterWithPanelProperty()
     @_property
     @typing.final
     def align_horizontal_center_with_panel_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RelativePanel::get_AlignHorizontalCenterWithProperty()
     @_property
     @typing.final
     def align_horizontal_center_with_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RelativePanel::get_AlignLeftWithPanelProperty()
     @_property
     @typing.final
     def align_left_with_panel_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RelativePanel::get_AlignLeftWithProperty()
     @_property
     @typing.final
     def align_left_with_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RelativePanel::get_AlignRightWithPanelProperty()
     @_property
     @typing.final
     def align_right_with_panel_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RelativePanel::get_AlignRightWithProperty()
     @_property
     @typing.final
     def align_right_with_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RelativePanel::get_AlignTopWithPanelProperty()
     @_property
     @typing.final
     def align_top_with_panel_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RelativePanel::get_AlignTopWithProperty()
     @_property
     @typing.final
     def align_top_with_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RelativePanel::get_AlignVerticalCenterWithPanelProperty()
     @_property
     @typing.final
     def align_vertical_center_with_panel_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RelativePanel::get_AlignVerticalCenterWithProperty()
     @_property
     @typing.final
     def align_vertical_center_with_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RelativePanel::get_BackgroundSizingProperty()
     @_property
     @typing.final
     def background_sizing_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RelativePanel::get_BelowProperty()
     @_property
     @typing.final
     def below_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RelativePanel::get_BorderBrushProperty()
     @_property
     @typing.final
     def border_brush_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RelativePanel::get_BorderThicknessProperty()
     @_property
     @typing.final
     def border_thickness_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RelativePanel::get_CornerRadiusProperty()
     @_property
     @typing.final
     def corner_radius_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RelativePanel::get_LeftOfProperty()
     @_property
     @typing.final
     def left_of_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RelativePanel::get_PaddingProperty()
     @_property
     @typing.final
     def padding_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RelativePanel::get_RightOfProperty()
     @_property
     @typing.final
     def right_of_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class RelativePanel(Panel, metaclass=RelativePanel_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Microsoft.UI.Xaml.Thickness Microsoft.UI.Xaml.Controls.RelativePanel::get_Padding()
     @_property
     def padding(self) -> microsoft_ui_xaml.Thickness: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RelativePanel::put_Padding(Microsoft.UI.Xaml.Thickness)
     @padding.setter
     @typing.final
     def padding(self, value: microsoft_ui_xaml.Thickness) -> None: ...
+    # Microsoft.UI.Xaml.CornerRadius Microsoft.UI.Xaml.Controls.RelativePanel::get_CornerRadius()
     @_property
     def corner_radius(self) -> microsoft_ui_xaml.CornerRadius: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RelativePanel::put_CornerRadius(Microsoft.UI.Xaml.CornerRadius)
     @corner_radius.setter
     @typing.final
     def corner_radius(self, value: microsoft_ui_xaml.CornerRadius) -> None: ...
+    # Microsoft.UI.Xaml.Thickness Microsoft.UI.Xaml.Controls.RelativePanel::get_BorderThickness()
     @_property
     def border_thickness(self) -> microsoft_ui_xaml.Thickness: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RelativePanel::put_BorderThickness(Microsoft.UI.Xaml.Thickness)
     @border_thickness.setter
     @typing.final
     def border_thickness(self, value: microsoft_ui_xaml.Thickness) -> None: ...
+    # Microsoft.UI.Xaml.Media.Brush Microsoft.UI.Xaml.Controls.RelativePanel::get_BorderBrush()
     @_property
     def border_brush(self) -> microsoft_ui_xaml_media.Brush: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RelativePanel::put_BorderBrush(Microsoft.UI.Xaml.Media.Brush)
     @border_brush.setter
     @typing.final
     def border_brush(self, value: microsoft_ui_xaml_media.Brush) -> None: ...
+    # Microsoft.UI.Xaml.Controls.BackgroundSizing Microsoft.UI.Xaml.Controls.RelativePanel::get_BackgroundSizing()
     @_property
     def background_sizing(self) -> BackgroundSizing: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RelativePanel::put_BackgroundSizing(Microsoft.UI.Xaml.Controls.BackgroundSizing)
     @background_sizing.setter
     @typing.final
     def background_sizing(self, value: BackgroundSizing) -> None: ...
 
 class RichEditBox_Static(Control_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RichEditBox::get_AcceptsReturnProperty()
     @_property
     @typing.final
     def accepts_return_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RichEditBox::get_CharacterCasingProperty()
     @_property
     @typing.final
     def character_casing_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RichEditBox::get_ClipboardCopyFormatProperty()
     @_property
     @typing.final
     def clipboard_copy_format_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RichEditBox::get_DescriptionProperty()
     @_property
     @typing.final
     def description_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RichEditBox::get_DesiredCandidateWindowAlignmentProperty()
     @_property
     @typing.final
     def desired_candidate_window_alignment_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RichEditBox::get_DisabledFormattingAcceleratorsProperty()
     @_property
     @typing.final
     def disabled_formatting_accelerators_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RichEditBox::get_HeaderProperty()
     @_property
     @typing.final
     def header_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RichEditBox::get_HeaderTemplateProperty()
     @_property
     @typing.final
     def header_template_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RichEditBox::get_HorizontalTextAlignmentProperty()
     @_property
     @typing.final
     def horizontal_text_alignment_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RichEditBox::get_InputScopeProperty()
     @_property
     @typing.final
     def input_scope_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RichEditBox::get_IsColorFontEnabledProperty()
     @_property
     @typing.final
     def is_color_font_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RichEditBox::get_IsReadOnlyProperty()
     @_property
     @typing.final
     def is_read_only_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RichEditBox::get_IsSpellCheckEnabledProperty()
     @_property
     @typing.final
     def is_spell_check_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RichEditBox::get_IsTextPredictionEnabledProperty()
     @_property
     @typing.final
     def is_text_prediction_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RichEditBox::get_MaxLengthProperty()
     @_property
     @typing.final
     def max_length_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RichEditBox::get_PlaceholderTextProperty()
     @_property
     @typing.final
     def placeholder_text_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RichEditBox::get_PreventKeyboardDisplayOnProgrammaticFocusProperty()
     @_property
     @typing.final
     def prevent_keyboard_display_on_programmatic_focus_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RichEditBox::get_ProofingMenuFlyoutProperty()
     @_property
     @typing.final
     def proofing_menu_flyout_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RichEditBox::get_SelectionFlyoutProperty()
     @_property
     @typing.final
     def selection_flyout_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RichEditBox::get_SelectionHighlightColorProperty()
     @_property
     @typing.final
     def selection_highlight_color_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RichEditBox::get_SelectionHighlightColorWhenNotFocusedProperty()
     @_property
     @typing.final
     def selection_highlight_color_when_not_focused_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RichEditBox::get_TextAlignmentProperty()
     @_property
     @typing.final
     def text_alignment_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RichEditBox::get_TextReadingOrderProperty()
     @_property
     @typing.final
     def text_reading_order_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RichEditBox::get_TextWrappingProperty()
     @_property
     @typing.final
     def text_wrapping_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
@@ -7342,463 +9985,673 @@ class RichEditBox_Static(Control_Static):
 class RichEditBox(Control, metaclass=RichEditBox_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.final
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<System.String>> Microsoft.UI.Xaml.Controls.RichEditBox::GetLinguisticAlternativesAsync()
     def get_linguistic_alternatives_async(self) -> windows_foundation.IAsyncOperation[typing.Sequence[str]]: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.RichEditBox::add_CandidateWindowBoundsChanged(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.RichEditBox,Microsoft.UI.Xaml.Controls.CandidateWindowBoundsChangedEventArgs>)
     def add_candidate_window_bounds_changed(self, handler: windows_foundation.TypedEventHandler[RichEditBox, CandidateWindowBoundsChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.RichEditBox::remove_CandidateWindowBoundsChanged(Windows.Foundation.EventRegistrationToken)
     def remove_candidate_window_bounds_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.RichEditBox::add_ContextMenuOpening(Microsoft.UI.Xaml.Controls.ContextMenuOpeningEventHandler)
     def add_context_menu_opening(self, handler: ContextMenuOpeningEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.RichEditBox::remove_ContextMenuOpening(Windows.Foundation.EventRegistrationToken)
     def remove_context_menu_opening(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.RichEditBox::add_CopyingToClipboard(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.RichEditBox,Microsoft.UI.Xaml.Controls.TextControlCopyingToClipboardEventArgs>)
     def add_copying_to_clipboard(self, handler: windows_foundation.TypedEventHandler[RichEditBox, TextControlCopyingToClipboardEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.RichEditBox::remove_CopyingToClipboard(Windows.Foundation.EventRegistrationToken)
     def remove_copying_to_clipboard(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.RichEditBox::add_CuttingToClipboard(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.RichEditBox,Microsoft.UI.Xaml.Controls.TextControlCuttingToClipboardEventArgs>)
     def add_cutting_to_clipboard(self, handler: windows_foundation.TypedEventHandler[RichEditBox, TextControlCuttingToClipboardEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.RichEditBox::remove_CuttingToClipboard(Windows.Foundation.EventRegistrationToken)
     def remove_cutting_to_clipboard(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.RichEditBox::add_Paste(Microsoft.UI.Xaml.Controls.TextControlPasteEventHandler)
     def add_paste(self, handler: TextControlPasteEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.RichEditBox::remove_Paste(Windows.Foundation.EventRegistrationToken)
     def remove_paste(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.RichEditBox::add_SelectionChanged(Microsoft.UI.Xaml.RoutedEventHandler)
     def add_selection_changed(self, handler: microsoft_ui_xaml.RoutedEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.RichEditBox::remove_SelectionChanged(Windows.Foundation.EventRegistrationToken)
     def remove_selection_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.RichEditBox::add_SelectionChanging(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.RichEditBox,Microsoft.UI.Xaml.Controls.RichEditBoxSelectionChangingEventArgs>)
     def add_selection_changing(self, handler: windows_foundation.TypedEventHandler[RichEditBox, RichEditBoxSelectionChangingEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.RichEditBox::remove_SelectionChanging(Windows.Foundation.EventRegistrationToken)
     def remove_selection_changing(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.RichEditBox::add_TextChanged(Microsoft.UI.Xaml.RoutedEventHandler)
     def add_text_changed(self, handler: microsoft_ui_xaml.RoutedEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.RichEditBox::remove_TextChanged(Windows.Foundation.EventRegistrationToken)
     def remove_text_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.RichEditBox::add_TextChanging(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.RichEditBox,Microsoft.UI.Xaml.Controls.RichEditBoxTextChangingEventArgs>)
     def add_text_changing(self, handler: windows_foundation.TypedEventHandler[RichEditBox, RichEditBoxTextChangingEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.RichEditBox::remove_TextChanging(Windows.Foundation.EventRegistrationToken)
     def remove_text_changing(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.RichEditBox::add_TextCompositionChanged(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.RichEditBox,Microsoft.UI.Xaml.Controls.TextCompositionChangedEventArgs>)
     def add_text_composition_changed(self, handler: windows_foundation.TypedEventHandler[RichEditBox, TextCompositionChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.RichEditBox::remove_TextCompositionChanged(Windows.Foundation.EventRegistrationToken)
     def remove_text_composition_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.RichEditBox::add_TextCompositionEnded(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.RichEditBox,Microsoft.UI.Xaml.Controls.TextCompositionEndedEventArgs>)
     def add_text_composition_ended(self, handler: windows_foundation.TypedEventHandler[RichEditBox, TextCompositionEndedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.RichEditBox::remove_TextCompositionEnded(Windows.Foundation.EventRegistrationToken)
     def remove_text_composition_ended(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.RichEditBox::add_TextCompositionStarted(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.RichEditBox,Microsoft.UI.Xaml.Controls.TextCompositionStartedEventArgs>)
     def add_text_composition_started(self, handler: windows_foundation.TypedEventHandler[RichEditBox, TextCompositionStartedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.RichEditBox::remove_TextCompositionStarted(Windows.Foundation.EventRegistrationToken)
     def remove_text_composition_started(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Microsoft.UI.Xaml.TextWrapping Microsoft.UI.Xaml.Controls.RichEditBox::get_TextWrapping()
     @_property
     def text_wrapping(self) -> microsoft_ui_xaml.TextWrapping: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RichEditBox::put_TextWrapping(Microsoft.UI.Xaml.TextWrapping)
     @text_wrapping.setter
     @typing.final
     def text_wrapping(self, value: microsoft_ui_xaml.TextWrapping) -> None: ...
+    # Microsoft.UI.Xaml.TextReadingOrder Microsoft.UI.Xaml.Controls.RichEditBox::get_TextReadingOrder()
     @_property
     def text_reading_order(self) -> microsoft_ui_xaml.TextReadingOrder: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RichEditBox::put_TextReadingOrder(Microsoft.UI.Xaml.TextReadingOrder)
     @text_reading_order.setter
     @typing.final
     def text_reading_order(self, value: microsoft_ui_xaml.TextReadingOrder) -> None: ...
+    # Microsoft.UI.Xaml.TextAlignment Microsoft.UI.Xaml.Controls.RichEditBox::get_TextAlignment()
     @_property
     def text_alignment(self) -> microsoft_ui_xaml.TextAlignment: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RichEditBox::put_TextAlignment(Microsoft.UI.Xaml.TextAlignment)
     @text_alignment.setter
     @typing.final
     def text_alignment(self, value: microsoft_ui_xaml.TextAlignment) -> None: ...
+    # Microsoft.UI.Xaml.Media.SolidColorBrush Microsoft.UI.Xaml.Controls.RichEditBox::get_SelectionHighlightColorWhenNotFocused()
     @_property
     def selection_highlight_color_when_not_focused(self) -> microsoft_ui_xaml_media.SolidColorBrush: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RichEditBox::put_SelectionHighlightColorWhenNotFocused(Microsoft.UI.Xaml.Media.SolidColorBrush)
     @selection_highlight_color_when_not_focused.setter
     @typing.final
     def selection_highlight_color_when_not_focused(self, value: microsoft_ui_xaml_media.SolidColorBrush) -> None: ...
+    # Microsoft.UI.Xaml.Media.SolidColorBrush Microsoft.UI.Xaml.Controls.RichEditBox::get_SelectionHighlightColor()
     @_property
     def selection_highlight_color(self) -> microsoft_ui_xaml_media.SolidColorBrush: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RichEditBox::put_SelectionHighlightColor(Microsoft.UI.Xaml.Media.SolidColorBrush)
     @selection_highlight_color.setter
     @typing.final
     def selection_highlight_color(self, value: microsoft_ui_xaml_media.SolidColorBrush) -> None: ...
+    # Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase Microsoft.UI.Xaml.Controls.RichEditBox::get_SelectionFlyout()
     @_property
     def selection_flyout(self) -> microsoft_ui_xaml_controls_primitives.FlyoutBase: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RichEditBox::put_SelectionFlyout(Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase)
     @selection_flyout.setter
     @typing.final
     def selection_flyout(self, value: microsoft_ui_xaml_controls_primitives.FlyoutBase) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.RichEditBox::get_PreventKeyboardDisplayOnProgrammaticFocus()
     @_property
     def prevent_keyboard_display_on_programmatic_focus(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RichEditBox::put_PreventKeyboardDisplayOnProgrammaticFocus(System.Boolean)
     @prevent_keyboard_display_on_programmatic_focus.setter
     @typing.final
     def prevent_keyboard_display_on_programmatic_focus(self, value: bool) -> None: ...
+    # System.String Microsoft.UI.Xaml.Controls.RichEditBox::get_PlaceholderText()
     @_property
     def placeholder_text(self) -> str: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RichEditBox::put_PlaceholderText(System.String)
     @placeholder_text.setter
     @typing.final
     def placeholder_text(self, value: str) -> None: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.RichEditBox::get_MaxLength()
     @_property
     def max_length(self) -> winrt.system.Int32: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RichEditBox::put_MaxLength(System.Int32)
     @max_length.setter
     @typing.final
     def max_length(self, value: winrt.system.Int32) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.RichEditBox::get_IsTextPredictionEnabled()
     @_property
     def is_text_prediction_enabled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RichEditBox::put_IsTextPredictionEnabled(System.Boolean)
     @is_text_prediction_enabled.setter
     @typing.final
     def is_text_prediction_enabled(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.RichEditBox::get_IsSpellCheckEnabled()
     @_property
     def is_spell_check_enabled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RichEditBox::put_IsSpellCheckEnabled(System.Boolean)
     @is_spell_check_enabled.setter
     @typing.final
     def is_spell_check_enabled(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.RichEditBox::get_IsReadOnly()
     @_property
     def is_read_only(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RichEditBox::put_IsReadOnly(System.Boolean)
     @is_read_only.setter
     @typing.final
     def is_read_only(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.RichEditBox::get_IsColorFontEnabled()
     @_property
     def is_color_font_enabled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RichEditBox::put_IsColorFontEnabled(System.Boolean)
     @is_color_font_enabled.setter
     @typing.final
     def is_color_font_enabled(self, value: bool) -> None: ...
+    # Microsoft.UI.Xaml.Input.InputScope Microsoft.UI.Xaml.Controls.RichEditBox::get_InputScope()
     @_property
     def input_scope(self) -> microsoft_ui_xaml_input.InputScope: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RichEditBox::put_InputScope(Microsoft.UI.Xaml.Input.InputScope)
     @input_scope.setter
     @typing.final
     def input_scope(self, value: microsoft_ui_xaml_input.InputScope) -> None: ...
+    # Microsoft.UI.Xaml.TextAlignment Microsoft.UI.Xaml.Controls.RichEditBox::get_HorizontalTextAlignment()
     @_property
     def horizontal_text_alignment(self) -> microsoft_ui_xaml.TextAlignment: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RichEditBox::put_HorizontalTextAlignment(Microsoft.UI.Xaml.TextAlignment)
     @horizontal_text_alignment.setter
     @typing.final
     def horizontal_text_alignment(self, value: microsoft_ui_xaml.TextAlignment) -> None: ...
+    # Microsoft.UI.Xaml.DataTemplate Microsoft.UI.Xaml.Controls.RichEditBox::get_HeaderTemplate()
     @_property
     def header_template(self) -> microsoft_ui_xaml.DataTemplate: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RichEditBox::put_HeaderTemplate(Microsoft.UI.Xaml.DataTemplate)
     @header_template.setter
     @typing.final
     def header_template(self, value: microsoft_ui_xaml.DataTemplate) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.RichEditBox::get_Header()
     @_property
     def header(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RichEditBox::put_Header(System.Object)
     @header.setter
     @typing.final
     def header(self, value: winrt.system.Object) -> None: ...
+    # Microsoft.UI.Xaml.Controls.DisabledFormattingAccelerators Microsoft.UI.Xaml.Controls.RichEditBox::get_DisabledFormattingAccelerators()
     @_property
     def disabled_formatting_accelerators(self) -> DisabledFormattingAccelerators: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RichEditBox::put_DisabledFormattingAccelerators(Microsoft.UI.Xaml.Controls.DisabledFormattingAccelerators)
     @disabled_formatting_accelerators.setter
     @typing.final
     def disabled_formatting_accelerators(self, value: DisabledFormattingAccelerators) -> None: ...
+    # Microsoft.UI.Xaml.Controls.CandidateWindowAlignment Microsoft.UI.Xaml.Controls.RichEditBox::get_DesiredCandidateWindowAlignment()
     @_property
     def desired_candidate_window_alignment(self) -> CandidateWindowAlignment: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RichEditBox::put_DesiredCandidateWindowAlignment(Microsoft.UI.Xaml.Controls.CandidateWindowAlignment)
     @desired_candidate_window_alignment.setter
     @typing.final
     def desired_candidate_window_alignment(self, value: CandidateWindowAlignment) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.RichEditBox::get_Description()
     @_property
     def description(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RichEditBox::put_Description(System.Object)
     @description.setter
     @typing.final
     def description(self, value: winrt.system.Object) -> None: ...
+    # Microsoft.UI.Xaml.Controls.RichEditClipboardFormat Microsoft.UI.Xaml.Controls.RichEditBox::get_ClipboardCopyFormat()
     @_property
     def clipboard_copy_format(self) -> RichEditClipboardFormat: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RichEditBox::put_ClipboardCopyFormat(Microsoft.UI.Xaml.Controls.RichEditClipboardFormat)
     @clipboard_copy_format.setter
     @typing.final
     def clipboard_copy_format(self, value: RichEditClipboardFormat) -> None: ...
+    # Microsoft.UI.Xaml.Controls.CharacterCasing Microsoft.UI.Xaml.Controls.RichEditBox::get_CharacterCasing()
     @_property
     def character_casing(self) -> CharacterCasing: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RichEditBox::put_CharacterCasing(Microsoft.UI.Xaml.Controls.CharacterCasing)
     @character_casing.setter
     @typing.final
     def character_casing(self, value: CharacterCasing) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.RichEditBox::get_AcceptsReturn()
     @_property
     def accepts_return(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RichEditBox::put_AcceptsReturn(System.Boolean)
     @accepts_return.setter
     @typing.final
     def accepts_return(self, value: bool) -> None: ...
+    # Microsoft.UI.Text.RichEditTextDocument Microsoft.UI.Xaml.Controls.RichEditBox::get_Document()
     @_property
     @typing.final
     def document(self) -> microsoft_ui_text.RichEditTextDocument: ...
+    # Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase Microsoft.UI.Xaml.Controls.RichEditBox::get_ProofingMenuFlyout()
     @_property
     @typing.final
     def proofing_menu_flyout(self) -> microsoft_ui_xaml_controls_primitives.FlyoutBase: ...
+    # Microsoft.UI.Text.RichEditTextDocument Microsoft.UI.Xaml.Controls.RichEditBox::get_TextDocument()
     @_property
     @typing.final
     def text_document(self) -> microsoft_ui_text.RichEditTextDocument: ...
 
 @typing.final
 class RichEditBoxSelectionChangingEventArgs(winrt.system.Object):
+    # System.Boolean Microsoft.UI.Xaml.Controls.RichEditBoxSelectionChangingEventArgs::get_Cancel()
     @_property
     def cancel(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RichEditBoxSelectionChangingEventArgs::put_Cancel(System.Boolean)
     @cancel.setter
     def cancel(self, value: bool) -> None: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.RichEditBoxSelectionChangingEventArgs::get_SelectionLength()
     @_property
     def selection_length(self) -> winrt.system.Int32: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.RichEditBoxSelectionChangingEventArgs::get_SelectionStart()
     @_property
     def selection_start(self) -> winrt.system.Int32: ...
 
 @typing.final
 class RichEditBoxTextChangingEventArgs(winrt.system.Object):
+    # System.Boolean Microsoft.UI.Xaml.Controls.RichEditBoxTextChangingEventArgs::get_IsContentChanging()
     @_property
     def is_content_changing(self) -> bool: ...
 
 @typing.final
 class RichTextBlock_Static(microsoft_ui_xaml.FrameworkElement_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RichTextBlock::get_CharacterSpacingProperty()
     @_property
     def character_spacing_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RichTextBlock::get_FontFamilyProperty()
     @_property
     def font_family_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RichTextBlock::get_FontSizeProperty()
     @_property
     def font_size_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RichTextBlock::get_FontStretchProperty()
     @_property
     def font_stretch_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RichTextBlock::get_FontStyleProperty()
     @_property
     def font_style_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RichTextBlock::get_FontWeightProperty()
     @_property
     def font_weight_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RichTextBlock::get_ForegroundProperty()
     @_property
     def foreground_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RichTextBlock::get_HasOverflowContentProperty()
     @_property
     def has_overflow_content_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RichTextBlock::get_HorizontalTextAlignmentProperty()
     @_property
     def horizontal_text_alignment_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RichTextBlock::get_IsColorFontEnabledProperty()
     @_property
     def is_color_font_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RichTextBlock::get_IsTextScaleFactorEnabledProperty()
     @_property
     def is_text_scale_factor_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RichTextBlock::get_IsTextSelectionEnabledProperty()
     @_property
     def is_text_selection_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RichTextBlock::get_IsTextTrimmedProperty()
     @_property
     def is_text_trimmed_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RichTextBlock::get_LineHeightProperty()
     @_property
     def line_height_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RichTextBlock::get_LineStackingStrategyProperty()
     @_property
     def line_stacking_strategy_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RichTextBlock::get_MaxLinesProperty()
     @_property
     def max_lines_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RichTextBlock::get_OpticalMarginAlignmentProperty()
     @_property
     def optical_margin_alignment_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RichTextBlock::get_OverflowContentTargetProperty()
     @_property
     def overflow_content_target_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RichTextBlock::get_PaddingProperty()
     @_property
     def padding_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RichTextBlock::get_SelectedTextProperty()
     @_property
     def selected_text_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RichTextBlock::get_SelectionFlyoutProperty()
     @_property
     def selection_flyout_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RichTextBlock::get_SelectionHighlightColorProperty()
     @_property
     def selection_highlight_color_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RichTextBlock::get_TextAlignmentProperty()
     @_property
     def text_alignment_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RichTextBlock::get_TextDecorationsProperty()
     @_property
     def text_decorations_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RichTextBlock::get_TextIndentProperty()
     @_property
     def text_indent_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RichTextBlock::get_TextLineBoundsProperty()
     @_property
     def text_line_bounds_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RichTextBlock::get_TextReadingOrderProperty()
     @_property
     def text_reading_order_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RichTextBlock::get_TextTrimmingProperty()
     @_property
     def text_trimming_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RichTextBlock::get_TextWrappingProperty()
     @_property
     def text_wrapping_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
 class RichTextBlock(microsoft_ui_xaml.FrameworkElement, metaclass=RichTextBlock_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RichTextBlock::CopySelectionToClipboard()
     def copy_selection_to_clipboard(self) -> None: ...
+    # Microsoft.UI.Xaml.Documents.TextPointer Microsoft.UI.Xaml.Controls.RichTextBlock::GetPositionFromPoint(Windows.Foundation.Point)
     def get_position_from_point(self, point: windows_foundation.Point, /) -> microsoft_ui_xaml_documents.TextPointer: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RichTextBlock::Select(Microsoft.UI.Xaml.Documents.TextPointer,Microsoft.UI.Xaml.Documents.TextPointer)
     def select(self, start: microsoft_ui_xaml_documents.TextPointer, end: microsoft_ui_xaml_documents.TextPointer, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RichTextBlock::SelectAll()
     def select_all(self) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.RichTextBlock::add_ContextMenuOpening(Microsoft.UI.Xaml.Controls.ContextMenuOpeningEventHandler)
     def add_context_menu_opening(self, handler: ContextMenuOpeningEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RichTextBlock::remove_ContextMenuOpening(Windows.Foundation.EventRegistrationToken)
     def remove_context_menu_opening(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.RichTextBlock::add_IsTextTrimmedChanged(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.RichTextBlock,Microsoft.UI.Xaml.Controls.IsTextTrimmedChangedEventArgs>)
     def add_is_text_trimmed_changed(self, handler: windows_foundation.TypedEventHandler[RichTextBlock, IsTextTrimmedChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RichTextBlock::remove_IsTextTrimmedChanged(Windows.Foundation.EventRegistrationToken)
     def remove_is_text_trimmed_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.RichTextBlock::add_SelectionChanged(Microsoft.UI.Xaml.RoutedEventHandler)
     def add_selection_changed(self, handler: microsoft_ui_xaml.RoutedEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RichTextBlock::remove_SelectionChanged(Windows.Foundation.EventRegistrationToken)
     def remove_selection_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Microsoft.UI.Xaml.TextAlignment Microsoft.UI.Xaml.Controls.RichTextBlock::get_HorizontalTextAlignment()
     @_property
     def horizontal_text_alignment(self) -> microsoft_ui_xaml.TextAlignment: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RichTextBlock::put_HorizontalTextAlignment(Microsoft.UI.Xaml.TextAlignment)
     @horizontal_text_alignment.setter
     def horizontal_text_alignment(self, value: microsoft_ui_xaml.TextAlignment) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.RichTextBlock::get_LineHeight()
     @_property
     def line_height(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RichTextBlock::put_LineHeight(System.Double)
     @line_height.setter
     def line_height(self, value: winrt.system.Double) -> None: ...
+    # Microsoft.UI.Xaml.Media.Brush Microsoft.UI.Xaml.Controls.RichTextBlock::get_Foreground()
     @_property
     def foreground(self) -> microsoft_ui_xaml_media.Brush: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RichTextBlock::put_Foreground(Microsoft.UI.Xaml.Media.Brush)
     @foreground.setter
     def foreground(self, value: microsoft_ui_xaml_media.Brush) -> None: ...
+    # Windows.UI.Text.FontWeight Microsoft.UI.Xaml.Controls.RichTextBlock::get_FontWeight()
     @_property
     def font_weight(self) -> windows_ui_text.FontWeight: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RichTextBlock::put_FontWeight(Windows.UI.Text.FontWeight)
     @font_weight.setter
     def font_weight(self, value: windows_ui_text.FontWeight) -> None: ...
+    # Windows.UI.Text.FontStyle Microsoft.UI.Xaml.Controls.RichTextBlock::get_FontStyle()
     @_property
     def font_style(self) -> windows_ui_text.FontStyle: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RichTextBlock::put_FontStyle(Windows.UI.Text.FontStyle)
     @font_style.setter
     def font_style(self, value: windows_ui_text.FontStyle) -> None: ...
+    # Windows.UI.Text.FontStretch Microsoft.UI.Xaml.Controls.RichTextBlock::get_FontStretch()
     @_property
     def font_stretch(self) -> windows_ui_text.FontStretch: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RichTextBlock::put_FontStretch(Windows.UI.Text.FontStretch)
     @font_stretch.setter
     def font_stretch(self, value: windows_ui_text.FontStretch) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.RichTextBlock::get_FontSize()
     @_property
     def font_size(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RichTextBlock::put_FontSize(System.Double)
     @font_size.setter
     def font_size(self, value: winrt.system.Double) -> None: ...
+    # Microsoft.UI.Xaml.Media.FontFamily Microsoft.UI.Xaml.Controls.RichTextBlock::get_FontFamily()
     @_property
     def font_family(self) -> microsoft_ui_xaml_media.FontFamily: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RichTextBlock::put_FontFamily(Microsoft.UI.Xaml.Media.FontFamily)
     @font_family.setter
     def font_family(self, value: microsoft_ui_xaml_media.FontFamily) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.RichTextBlock::get_IsTextSelectionEnabled()
     @_property
     def is_text_selection_enabled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RichTextBlock::put_IsTextSelectionEnabled(System.Boolean)
     @is_text_selection_enabled.setter
     def is_text_selection_enabled(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.RichTextBlock::get_IsTextScaleFactorEnabled()
     @_property
     def is_text_scale_factor_enabled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RichTextBlock::put_IsTextScaleFactorEnabled(System.Boolean)
     @is_text_scale_factor_enabled.setter
     def is_text_scale_factor_enabled(self, value: bool) -> None: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.RichTextBlock::get_CharacterSpacing()
     @_property
     def character_spacing(self) -> winrt.system.Int32: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RichTextBlock::put_CharacterSpacing(System.Int32)
     @character_spacing.setter
     def character_spacing(self, value: winrt.system.Int32) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.RichTextBlock::get_IsColorFontEnabled()
     @_property
     def is_color_font_enabled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RichTextBlock::put_IsColorFontEnabled(System.Boolean)
     @is_color_font_enabled.setter
     def is_color_font_enabled(self, value: bool) -> None: ...
+    # Microsoft.UI.Xaml.TextWrapping Microsoft.UI.Xaml.Controls.RichTextBlock::get_TextWrapping()
     @_property
     def text_wrapping(self) -> microsoft_ui_xaml.TextWrapping: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RichTextBlock::put_TextWrapping(Microsoft.UI.Xaml.TextWrapping)
     @text_wrapping.setter
     def text_wrapping(self, value: microsoft_ui_xaml.TextWrapping) -> None: ...
+    # Microsoft.UI.Xaml.LineStackingStrategy Microsoft.UI.Xaml.Controls.RichTextBlock::get_LineStackingStrategy()
     @_property
     def line_stacking_strategy(self) -> microsoft_ui_xaml.LineStackingStrategy: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RichTextBlock::put_LineStackingStrategy(Microsoft.UI.Xaml.LineStackingStrategy)
     @line_stacking_strategy.setter
     def line_stacking_strategy(self, value: microsoft_ui_xaml.LineStackingStrategy) -> None: ...
+    # Microsoft.UI.Xaml.TextTrimming Microsoft.UI.Xaml.Controls.RichTextBlock::get_TextTrimming()
     @_property
     def text_trimming(self) -> microsoft_ui_xaml.TextTrimming: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RichTextBlock::put_TextTrimming(Microsoft.UI.Xaml.TextTrimming)
     @text_trimming.setter
     def text_trimming(self, value: microsoft_ui_xaml.TextTrimming) -> None: ...
+    # Microsoft.UI.Xaml.TextReadingOrder Microsoft.UI.Xaml.Controls.RichTextBlock::get_TextReadingOrder()
     @_property
     def text_reading_order(self) -> microsoft_ui_xaml.TextReadingOrder: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RichTextBlock::put_TextReadingOrder(Microsoft.UI.Xaml.TextReadingOrder)
     @text_reading_order.setter
     def text_reading_order(self, value: microsoft_ui_xaml.TextReadingOrder) -> None: ...
+    # Microsoft.UI.Xaml.TextLineBounds Microsoft.UI.Xaml.Controls.RichTextBlock::get_TextLineBounds()
     @_property
     def text_line_bounds(self) -> microsoft_ui_xaml.TextLineBounds: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RichTextBlock::put_TextLineBounds(Microsoft.UI.Xaml.TextLineBounds)
     @text_line_bounds.setter
     def text_line_bounds(self, value: microsoft_ui_xaml.TextLineBounds) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.RichTextBlock::get_TextIndent()
     @_property
     def text_indent(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RichTextBlock::put_TextIndent(System.Double)
     @text_indent.setter
     def text_indent(self, value: winrt.system.Double) -> None: ...
+    # Windows.UI.Text.TextDecorations Microsoft.UI.Xaml.Controls.RichTextBlock::get_TextDecorations()
     @_property
     def text_decorations(self) -> windows_ui_text.TextDecorations: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RichTextBlock::put_TextDecorations(Windows.UI.Text.TextDecorations)
     @text_decorations.setter
     def text_decorations(self, value: windows_ui_text.TextDecorations) -> None: ...
+    # Microsoft.UI.Xaml.TextAlignment Microsoft.UI.Xaml.Controls.RichTextBlock::get_TextAlignment()
     @_property
     def text_alignment(self) -> microsoft_ui_xaml.TextAlignment: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RichTextBlock::put_TextAlignment(Microsoft.UI.Xaml.TextAlignment)
     @text_alignment.setter
     def text_alignment(self, value: microsoft_ui_xaml.TextAlignment) -> None: ...
+    # Microsoft.UI.Xaml.Media.SolidColorBrush Microsoft.UI.Xaml.Controls.RichTextBlock::get_SelectionHighlightColor()
     @_property
     def selection_highlight_color(self) -> microsoft_ui_xaml_media.SolidColorBrush: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RichTextBlock::put_SelectionHighlightColor(Microsoft.UI.Xaml.Media.SolidColorBrush)
     @selection_highlight_color.setter
     def selection_highlight_color(self, value: microsoft_ui_xaml_media.SolidColorBrush) -> None: ...
+    # Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase Microsoft.UI.Xaml.Controls.RichTextBlock::get_SelectionFlyout()
     @_property
     def selection_flyout(self) -> microsoft_ui_xaml_controls_primitives.FlyoutBase: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RichTextBlock::put_SelectionFlyout(Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase)
     @selection_flyout.setter
     def selection_flyout(self, value: microsoft_ui_xaml_controls_primitives.FlyoutBase) -> None: ...
+    # Microsoft.UI.Xaml.Thickness Microsoft.UI.Xaml.Controls.RichTextBlock::get_Padding()
     @_property
     def padding(self) -> microsoft_ui_xaml.Thickness: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RichTextBlock::put_Padding(Microsoft.UI.Xaml.Thickness)
     @padding.setter
     def padding(self, value: microsoft_ui_xaml.Thickness) -> None: ...
+    # Microsoft.UI.Xaml.Controls.RichTextBlockOverflow Microsoft.UI.Xaml.Controls.RichTextBlock::get_OverflowContentTarget()
     @_property
     def overflow_content_target(self) -> RichTextBlockOverflow: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RichTextBlock::put_OverflowContentTarget(Microsoft.UI.Xaml.Controls.RichTextBlockOverflow)
     @overflow_content_target.setter
     def overflow_content_target(self, value: RichTextBlockOverflow) -> None: ...
+    # Microsoft.UI.Xaml.OpticalMarginAlignment Microsoft.UI.Xaml.Controls.RichTextBlock::get_OpticalMarginAlignment()
     @_property
     def optical_margin_alignment(self) -> microsoft_ui_xaml.OpticalMarginAlignment: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RichTextBlock::put_OpticalMarginAlignment(Microsoft.UI.Xaml.OpticalMarginAlignment)
     @optical_margin_alignment.setter
     def optical_margin_alignment(self, value: microsoft_ui_xaml.OpticalMarginAlignment) -> None: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.RichTextBlock::get_MaxLines()
     @_property
     def max_lines(self) -> winrt.system.Int32: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RichTextBlock::put_MaxLines(System.Int32)
     @max_lines.setter
     def max_lines(self, value: winrt.system.Int32) -> None: ...
+    # Microsoft.UI.Xaml.Documents.BlockCollection Microsoft.UI.Xaml.Controls.RichTextBlock::get_Blocks()
     @_property
     def blocks(self) -> microsoft_ui_xaml_documents.BlockCollection: ...
+    # Microsoft.UI.Xaml.Documents.TextPointer Microsoft.UI.Xaml.Controls.RichTextBlock::get_ContentEnd()
     @_property
     def content_end(self) -> microsoft_ui_xaml_documents.TextPointer: ...
+    # Microsoft.UI.Xaml.Documents.TextPointer Microsoft.UI.Xaml.Controls.RichTextBlock::get_ContentStart()
     @_property
     def content_start(self) -> microsoft_ui_xaml_documents.TextPointer: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.RichTextBlock::get_HasOverflowContent()
     @_property
     def has_overflow_content(self) -> bool: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.RichTextBlock::get_IsTextTrimmed()
     @_property
     def is_text_trimmed(self) -> bool: ...
+    # System.String Microsoft.UI.Xaml.Controls.RichTextBlock::get_SelectedText()
     @_property
     def selected_text(self) -> str: ...
+    # Microsoft.UI.Xaml.Documents.TextPointer Microsoft.UI.Xaml.Controls.RichTextBlock::get_SelectionEnd()
     @_property
     def selection_end(self) -> microsoft_ui_xaml_documents.TextPointer: ...
+    # Microsoft.UI.Xaml.Documents.TextPointer Microsoft.UI.Xaml.Controls.RichTextBlock::get_SelectionStart()
     @_property
     def selection_start(self) -> microsoft_ui_xaml_documents.TextPointer: ...
+    # Windows.Foundation.Collections.IVector`1<Microsoft.UI.Xaml.Documents.TextHighlighter> Microsoft.UI.Xaml.Controls.RichTextBlock::get_TextHighlighters()
     @_property
     def text_highlighters(self) -> typing.MutableSequence[microsoft_ui_xaml_documents.TextHighlighter]: ...
+    # System.Double Microsoft.UI.Xaml.Controls.RichTextBlock::get_BaselineOffset()
     @_property
     def baseline_offset(self) -> winrt.system.Double: ...
 
 @typing.final
 class RichTextBlockOverflow_Static(microsoft_ui_xaml.FrameworkElement_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RichTextBlockOverflow::get_HasOverflowContentProperty()
     @_property
     def has_overflow_content_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RichTextBlockOverflow::get_IsTextTrimmedProperty()
     @_property
     def is_text_trimmed_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RichTextBlockOverflow::get_MaxLinesProperty()
     @_property
     def max_lines_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RichTextBlockOverflow::get_OverflowContentTargetProperty()
     @_property
     def overflow_content_target_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RichTextBlockOverflow::get_PaddingProperty()
     @_property
     def padding_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
 class RichTextBlockOverflow(microsoft_ui_xaml.FrameworkElement, metaclass=RichTextBlockOverflow_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Microsoft.UI.Xaml.Documents.TextPointer Microsoft.UI.Xaml.Controls.RichTextBlockOverflow::GetPositionFromPoint(Windows.Foundation.Point)
     def get_position_from_point(self, point: windows_foundation.Point, /) -> microsoft_ui_xaml_documents.TextPointer: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.RichTextBlockOverflow::add_IsTextTrimmedChanged(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.RichTextBlockOverflow,Microsoft.UI.Xaml.Controls.IsTextTrimmedChangedEventArgs>)
     def add_is_text_trimmed_changed(self, handler: windows_foundation.TypedEventHandler[RichTextBlockOverflow, IsTextTrimmedChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RichTextBlockOverflow::remove_IsTextTrimmedChanged(Windows.Foundation.EventRegistrationToken)
     def remove_is_text_trimmed_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Microsoft.UI.Xaml.Thickness Microsoft.UI.Xaml.Controls.RichTextBlockOverflow::get_Padding()
     @_property
     def padding(self) -> microsoft_ui_xaml.Thickness: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RichTextBlockOverflow::put_Padding(Microsoft.UI.Xaml.Thickness)
     @padding.setter
     def padding(self, value: microsoft_ui_xaml.Thickness) -> None: ...
+    # Microsoft.UI.Xaml.Controls.RichTextBlockOverflow Microsoft.UI.Xaml.Controls.RichTextBlockOverflow::get_OverflowContentTarget()
     @_property
     def overflow_content_target(self) -> RichTextBlockOverflow: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RichTextBlockOverflow::put_OverflowContentTarget(Microsoft.UI.Xaml.Controls.RichTextBlockOverflow)
     @overflow_content_target.setter
     def overflow_content_target(self, value: RichTextBlockOverflow) -> None: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.RichTextBlockOverflow::get_MaxLines()
     @_property
     def max_lines(self) -> winrt.system.Int32: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RichTextBlockOverflow::put_MaxLines(System.Int32)
     @max_lines.setter
     def max_lines(self, value: winrt.system.Int32) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.RichTextBlockOverflow::get_BaselineOffset()
     @_property
     def baseline_offset(self) -> winrt.system.Double: ...
+    # Microsoft.UI.Xaml.Documents.TextPointer Microsoft.UI.Xaml.Controls.RichTextBlockOverflow::get_ContentEnd()
     @_property
     def content_end(self) -> microsoft_ui_xaml_documents.TextPointer: ...
+    # Microsoft.UI.Xaml.Controls.RichTextBlock Microsoft.UI.Xaml.Controls.RichTextBlockOverflow::get_ContentSource()
     @_property
     def content_source(self) -> RichTextBlock: ...
+    # Microsoft.UI.Xaml.Documents.TextPointer Microsoft.UI.Xaml.Controls.RichTextBlockOverflow::get_ContentStart()
     @_property
     def content_start(self) -> microsoft_ui_xaml_documents.TextPointer: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.RichTextBlockOverflow::get_HasOverflowContent()
     @_property
     def has_overflow_content(self) -> bool: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.RichTextBlockOverflow::get_IsTextTrimmed()
     @_property
     def is_text_trimmed(self) -> bool: ...
 
 @typing.final
 class RowDefinition_Static(microsoft_ui_xaml.DependencyObject_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RowDefinition::get_HeightProperty()
     @_property
     def height_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RowDefinition::get_MaxHeightProperty()
     @_property
     def max_height_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.RowDefinition::get_MinHeightProperty()
     @_property
     def min_height_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
 class RowDefinition(microsoft_ui_xaml.DependencyObject, metaclass=RowDefinition_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Double Microsoft.UI.Xaml.Controls.RowDefinition::get_MinHeight()
     @_property
     def min_height(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RowDefinition::put_MinHeight(System.Double)
     @min_height.setter
     def min_height(self, value: winrt.system.Double) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.RowDefinition::get_MaxHeight()
     @_property
     def max_height(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RowDefinition::put_MaxHeight(System.Double)
     @max_height.setter
     def max_height(self, value: winrt.system.Double) -> None: ...
+    # Microsoft.UI.Xaml.GridLength Microsoft.UI.Xaml.Controls.RowDefinition::get_Height()
     @_property
     def height(self) -> microsoft_ui_xaml.GridLength: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RowDefinition::put_Height(Microsoft.UI.Xaml.GridLength)
     @height.setter
     def height(self, value: microsoft_ui_xaml.GridLength) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.RowDefinition::get_ActualHeight()
     @_property
     def actual_height(self) -> winrt.system.Double: ...
 
@@ -7818,143 +10671,211 @@ class RowDefinitionCollection(winrt.system.Object, winrt._winrt.MutableSequence[
     def __setitem__(self, index: typing.SupportsIndex, value: RowDefinition) -> None: ...
     @typing.overload
     def __setitem__(self, index: slice, value: typing.Iterable[RowDefinition]) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RowDefinitionCollection::Append(Microsoft.UI.Xaml.Controls.RowDefinition)
     def append(self, value: RowDefinition, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RowDefinitionCollection::Clear()
     def clear(self) -> None: ...
+    # Windows.Foundation.Collections.IIterator`1<Microsoft.UI.Xaml.Controls.RowDefinition> Microsoft.UI.Xaml.Controls.RowDefinitionCollection::First()
     def first(self) -> windows_foundation_collections.IIterator[RowDefinition]: ...
+    # Microsoft.UI.Xaml.Controls.RowDefinition Microsoft.UI.Xaml.Controls.RowDefinitionCollection::GetAt(System.UInt32)
     def get_at(self, index: winrt.system.UInt32, /) -> RowDefinition: ...
+    # System.UInt32 Microsoft.UI.Xaml.Controls.RowDefinitionCollection::GetMany(System.UInt32,Microsoft.UI.Xaml.Controls.RowDefinition[])
     def get_many(self, start_index: winrt.system.UInt32, items: typing.Union[winrt.system.Array[RowDefinition], winrt.system.WriteableBuffer], /) -> winrt.system.UInt32: ...
+    # Windows.Foundation.Collections.IVectorView`1<Microsoft.UI.Xaml.Controls.RowDefinition> Microsoft.UI.Xaml.Controls.RowDefinitionCollection::GetView()
     def get_view(self) -> typing.Sequence[RowDefinition]: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.RowDefinitionCollection::IndexOf(Microsoft.UI.Xaml.Controls.RowDefinition,System.UInt32&)
     def index_of(self, value: RowDefinition, /) -> typing.Tuple[bool, winrt.system.UInt32]: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RowDefinitionCollection::InsertAt(System.UInt32,Microsoft.UI.Xaml.Controls.RowDefinition)
     def insert_at(self, index: winrt.system.UInt32, value: RowDefinition, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RowDefinitionCollection::RemoveAt(System.UInt32)
     def remove_at(self, index: winrt.system.UInt32, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RowDefinitionCollection::RemoveAtEnd()
     def remove_at_end(self) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RowDefinitionCollection::ReplaceAll(Microsoft.UI.Xaml.Controls.RowDefinition[])
     def replace_all(self, items: typing.Union[winrt.system.Array[RowDefinition], winrt.system.ReadableBuffer], /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.RowDefinitionCollection::SetAt(System.UInt32,Microsoft.UI.Xaml.Controls.RowDefinition)
     def set_at(self, index: winrt.system.UInt32, value: RowDefinition, /) -> None: ...
+    # System.UInt32 Microsoft.UI.Xaml.Controls.RowDefinitionCollection::get_Size()
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
 @typing.final
 class ScrollContentPresenter_Static(ContentPresenter_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ScrollContentPresenter::get_CanContentRenderOutsideBoundsProperty()
     @_property
     def can_content_render_outside_bounds_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ScrollContentPresenter::get_SizesContentToTemplatedParentProperty()
     @_property
     def sizes_content_to_templated_parent_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
 class ScrollContentPresenter(ContentPresenter, metaclass=ScrollContentPresenter_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollContentPresenter::LineDown()
     def line_down(self) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollContentPresenter::LineLeft()
     def line_left(self) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollContentPresenter::LineRight()
     def line_right(self) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollContentPresenter::LineUp()
     def line_up(self) -> None: ...
+    # Windows.Foundation.Rect Microsoft.UI.Xaml.Controls.ScrollContentPresenter::MakeVisible(Microsoft.UI.Xaml.UIElement,Windows.Foundation.Rect)
     def make_visible(self, visual: microsoft_ui_xaml.UIElement, rectangle: windows_foundation.Rect, /) -> windows_foundation.Rect: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollContentPresenter::MouseWheelDown()
     def mouse_wheel_down(self) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollContentPresenter::MouseWheelLeft()
     def mouse_wheel_left(self) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollContentPresenter::MouseWheelRight()
     def mouse_wheel_right(self) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollContentPresenter::MouseWheelUp()
     def mouse_wheel_up(self) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollContentPresenter::PageDown()
     def page_down(self) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollContentPresenter::PageLeft()
     def page_left(self) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollContentPresenter::PageRight()
     def page_right(self) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollContentPresenter::PageUp()
     def page_up(self) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollContentPresenter::SetHorizontalOffset(System.Double)
     def set_horizontal_offset(self, offset: winrt.system.Double, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollContentPresenter::SetVerticalOffset(System.Double)
     def set_vertical_offset(self, offset: winrt.system.Double, /) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ScrollContentPresenter::get_SizesContentToTemplatedParent()
     @_property
     def sizes_content_to_templated_parent(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollContentPresenter::put_SizesContentToTemplatedParent(System.Boolean)
     @sizes_content_to_templated_parent.setter
     def sizes_content_to_templated_parent(self, value: bool) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.ScrollContentPresenter::get_ScrollOwner()
     @_property
     def scroll_owner(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollContentPresenter::put_ScrollOwner(System.Object)
     @scroll_owner.setter
     def scroll_owner(self, value: winrt.system.Object) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ScrollContentPresenter::get_CanVerticallyScroll()
     @_property
     def can_vertically_scroll(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollContentPresenter::put_CanVerticallyScroll(System.Boolean)
     @can_vertically_scroll.setter
     def can_vertically_scroll(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ScrollContentPresenter::get_CanHorizontallyScroll()
     @_property
     def can_horizontally_scroll(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollContentPresenter::put_CanHorizontallyScroll(System.Boolean)
     @can_horizontally_scroll.setter
     def can_horizontally_scroll(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ScrollContentPresenter::get_CanContentRenderOutsideBounds()
     @_property
     def can_content_render_outside_bounds(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollContentPresenter::put_CanContentRenderOutsideBounds(System.Boolean)
     @can_content_render_outside_bounds.setter
     def can_content_render_outside_bounds(self, value: bool) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ScrollContentPresenter::get_ExtentHeight()
     @_property
     def extent_height(self) -> winrt.system.Double: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ScrollContentPresenter::get_ExtentWidth()
     @_property
     def extent_width(self) -> winrt.system.Double: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ScrollContentPresenter::get_HorizontalOffset()
     @_property
     def horizontal_offset(self) -> winrt.system.Double: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ScrollContentPresenter::get_VerticalOffset()
     @_property
     def vertical_offset(self) -> winrt.system.Double: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ScrollContentPresenter::get_ViewportHeight()
     @_property
     def viewport_height(self) -> winrt.system.Double: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ScrollContentPresenter::get_ViewportWidth()
     @_property
     def viewport_width(self) -> winrt.system.Double: ...
 
 class ScrollView_Static(Control_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ScrollView::get_ComputedHorizontalScrollBarVisibilityProperty()
     @_property
     @typing.final
     def computed_horizontal_scroll_bar_visibility_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ScrollView::get_ComputedHorizontalScrollModeProperty()
     @_property
     @typing.final
     def computed_horizontal_scroll_mode_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ScrollView::get_ComputedVerticalScrollBarVisibilityProperty()
     @_property
     @typing.final
     def computed_vertical_scroll_bar_visibility_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ScrollView::get_ComputedVerticalScrollModeProperty()
     @_property
     @typing.final
     def computed_vertical_scroll_mode_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ScrollView::get_ContentOrientationProperty()
     @_property
     @typing.final
     def content_orientation_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ScrollView::get_ContentProperty()
     @_property
     @typing.final
     def content_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ScrollView::get_HorizontalAnchorRatioProperty()
     @_property
     @typing.final
     def horizontal_anchor_ratio_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ScrollView::get_HorizontalScrollBarVisibilityProperty()
     @_property
     @typing.final
     def horizontal_scroll_bar_visibility_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ScrollView::get_HorizontalScrollChainModeProperty()
     @_property
     @typing.final
     def horizontal_scroll_chain_mode_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ScrollView::get_HorizontalScrollModeProperty()
     @_property
     @typing.final
     def horizontal_scroll_mode_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ScrollView::get_HorizontalScrollRailModeProperty()
     @_property
     @typing.final
     def horizontal_scroll_rail_mode_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ScrollView::get_IgnoredInputKindsProperty()
     @_property
     @typing.final
     def ignored_input_kinds_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ScrollView::get_MaxZoomFactorProperty()
     @_property
     @typing.final
     def max_zoom_factor_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ScrollView::get_MinZoomFactorProperty()
     @_property
     @typing.final
     def min_zoom_factor_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ScrollView::get_ScrollPresenterProperty()
     @_property
     @typing.final
     def scroll_presenter_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ScrollView::get_VerticalAnchorRatioProperty()
     @_property
     @typing.final
     def vertical_anchor_ratio_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ScrollView::get_VerticalScrollBarVisibilityProperty()
     @_property
     @typing.final
     def vertical_scroll_bar_visibility_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ScrollView::get_VerticalScrollChainModeProperty()
     @_property
     @typing.final
     def vertical_scroll_chain_mode_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ScrollView::get_VerticalScrollModeProperty()
     @_property
     @typing.final
     def vertical_scroll_mode_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ScrollView::get_VerticalScrollRailModeProperty()
     @_property
     @typing.final
     def vertical_scroll_rail_mode_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ScrollView::get_ZoomChainModeProperty()
     @_property
     @typing.final
     def zoom_chain_mode_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ScrollView::get_ZoomModeProperty()
     @_property
     @typing.final
     def zoom_mode_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
@@ -7962,545 +10883,807 @@ class ScrollView_Static(Control_Static):
 class ScrollView(Control, metaclass=ScrollView_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.final
+    # System.Int32 Microsoft.UI.Xaml.Controls.ScrollView::AddScrollVelocity(Windows.Foundation.Numerics.Vector2,Windows.Foundation.IReference`1<Windows.Foundation.Numerics.Vector2>)
     def add_scroll_velocity(self, offsets_velocity: windows_foundation_numerics.Vector2, inertia_decay_rate: typing.Optional[windows_foundation_numerics.Vector2], /) -> winrt.system.Int32: ...
     @typing.final
+    # System.Int32 Microsoft.UI.Xaml.Controls.ScrollView::AddZoomVelocity(System.Single,Windows.Foundation.IReference`1<Windows.Foundation.Numerics.Vector2>,Windows.Foundation.IReference`1<System.Single>)
     def add_zoom_velocity(self, zoom_factor_velocity: winrt.system.Single, center_point: typing.Optional[windows_foundation_numerics.Vector2], inertia_decay_rate: typing.Optional[winrt.system.Single], /) -> winrt.system.Int32: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollView::RegisterAnchorCandidate(Microsoft.UI.Xaml.UIElement)
     def register_anchor_candidate(self, element: microsoft_ui_xaml.UIElement, /) -> None: ...
     @typing.final
+    # System.Int32 Microsoft.UI.Xaml.Controls.ScrollView::ScrollBy(System.Double,System.Double)
     def scroll_by(self, horizontal_offset_delta: winrt.system.Double, vertical_offset_delta: winrt.system.Double, /) -> winrt.system.Int32: ...
     @typing.final
+    # System.Int32 Microsoft.UI.Xaml.Controls.ScrollView::ScrollBy(System.Double,System.Double,Microsoft.UI.Xaml.Controls.ScrollingScrollOptions)
     def scroll_by_with_options(self, horizontal_offset_delta: winrt.system.Double, vertical_offset_delta: winrt.system.Double, options: ScrollingScrollOptions, /) -> winrt.system.Int32: ...
     @typing.final
+    # System.Int32 Microsoft.UI.Xaml.Controls.ScrollView::ScrollTo(System.Double,System.Double)
     def scroll_to(self, horizontal_offset: winrt.system.Double, vertical_offset: winrt.system.Double, /) -> winrt.system.Int32: ...
     @typing.final
+    # System.Int32 Microsoft.UI.Xaml.Controls.ScrollView::ScrollTo(System.Double,System.Double,Microsoft.UI.Xaml.Controls.ScrollingScrollOptions)
     def scroll_to_with_options(self, horizontal_offset: winrt.system.Double, vertical_offset: winrt.system.Double, options: ScrollingScrollOptions, /) -> winrt.system.Int32: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollView::UnregisterAnchorCandidate(Microsoft.UI.Xaml.UIElement)
     def unregister_anchor_candidate(self, element: microsoft_ui_xaml.UIElement, /) -> None: ...
     @typing.final
+    # System.Int32 Microsoft.UI.Xaml.Controls.ScrollView::ZoomBy(System.Single,Windows.Foundation.IReference`1<Windows.Foundation.Numerics.Vector2>)
     def zoom_by(self, zoom_factor_delta: winrt.system.Single, center_point: typing.Optional[windows_foundation_numerics.Vector2], /) -> winrt.system.Int32: ...
     @typing.final
+    # System.Int32 Microsoft.UI.Xaml.Controls.ScrollView::ZoomBy(System.Single,Windows.Foundation.IReference`1<Windows.Foundation.Numerics.Vector2>,Microsoft.UI.Xaml.Controls.ScrollingZoomOptions)
     def zoom_by_with_options(self, zoom_factor_delta: winrt.system.Single, center_point: typing.Optional[windows_foundation_numerics.Vector2], options: ScrollingZoomOptions, /) -> winrt.system.Int32: ...
     @typing.final
+    # System.Int32 Microsoft.UI.Xaml.Controls.ScrollView::ZoomTo(System.Single,Windows.Foundation.IReference`1<Windows.Foundation.Numerics.Vector2>)
     def zoom_to(self, zoom_factor: winrt.system.Single, center_point: typing.Optional[windows_foundation_numerics.Vector2], /) -> winrt.system.Int32: ...
     @typing.final
+    # System.Int32 Microsoft.UI.Xaml.Controls.ScrollView::ZoomTo(System.Single,Windows.Foundation.IReference`1<Windows.Foundation.Numerics.Vector2>,Microsoft.UI.Xaml.Controls.ScrollingZoomOptions)
     def zoom_to_with_options(self, zoom_factor: winrt.system.Single, center_point: typing.Optional[windows_foundation_numerics.Vector2], options: ScrollingZoomOptions, /) -> winrt.system.Int32: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.ScrollView::add_AnchorRequested(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.ScrollView,Microsoft.UI.Xaml.Controls.ScrollingAnchorRequestedEventArgs>)
     def add_anchor_requested(self, handler: windows_foundation.TypedEventHandler[ScrollView, ScrollingAnchorRequestedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollView::remove_AnchorRequested(Windows.Foundation.EventRegistrationToken)
     def remove_anchor_requested(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.ScrollView::add_BringingIntoView(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.ScrollView,Microsoft.UI.Xaml.Controls.ScrollingBringingIntoViewEventArgs>)
     def add_bringing_into_view(self, handler: windows_foundation.TypedEventHandler[ScrollView, ScrollingBringingIntoViewEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollView::remove_BringingIntoView(Windows.Foundation.EventRegistrationToken)
     def remove_bringing_into_view(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.ScrollView::add_ExtentChanged(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.ScrollView,System.Object>)
     def add_extent_changed(self, handler: windows_foundation.TypedEventHandler[ScrollView, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollView::remove_ExtentChanged(Windows.Foundation.EventRegistrationToken)
     def remove_extent_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.ScrollView::add_ScrollAnimationStarting(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.ScrollView,Microsoft.UI.Xaml.Controls.ScrollingScrollAnimationStartingEventArgs>)
     def add_scroll_animation_starting(self, handler: windows_foundation.TypedEventHandler[ScrollView, ScrollingScrollAnimationStartingEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollView::remove_ScrollAnimationStarting(Windows.Foundation.EventRegistrationToken)
     def remove_scroll_animation_starting(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.ScrollView::add_ScrollCompleted(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.ScrollView,Microsoft.UI.Xaml.Controls.ScrollingScrollCompletedEventArgs>)
     def add_scroll_completed(self, handler: windows_foundation.TypedEventHandler[ScrollView, ScrollingScrollCompletedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollView::remove_ScrollCompleted(Windows.Foundation.EventRegistrationToken)
     def remove_scroll_completed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.ScrollView::add_StateChanged(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.ScrollView,System.Object>)
     def add_state_changed(self, handler: windows_foundation.TypedEventHandler[ScrollView, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollView::remove_StateChanged(Windows.Foundation.EventRegistrationToken)
     def remove_state_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.ScrollView::add_ViewChanged(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.ScrollView,System.Object>)
     def add_view_changed(self, handler: windows_foundation.TypedEventHandler[ScrollView, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollView::remove_ViewChanged(Windows.Foundation.EventRegistrationToken)
     def remove_view_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.ScrollView::add_ZoomAnimationStarting(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.ScrollView,Microsoft.UI.Xaml.Controls.ScrollingZoomAnimationStartingEventArgs>)
     def add_zoom_animation_starting(self, handler: windows_foundation.TypedEventHandler[ScrollView, ScrollingZoomAnimationStartingEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollView::remove_ZoomAnimationStarting(Windows.Foundation.EventRegistrationToken)
     def remove_zoom_animation_starting(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.ScrollView::add_ZoomCompleted(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.ScrollView,Microsoft.UI.Xaml.Controls.ScrollingZoomCompletedEventArgs>)
     def add_zoom_completed(self, handler: windows_foundation.TypedEventHandler[ScrollView, ScrollingZoomCompletedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollView::remove_ZoomCompleted(Windows.Foundation.EventRegistrationToken)
     def remove_zoom_completed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Microsoft.UI.Xaml.Controls.ScrollingScrollMode Microsoft.UI.Xaml.Controls.ScrollView::get_HorizontalScrollMode()
     @_property
     def horizontal_scroll_mode(self) -> ScrollingScrollMode: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollView::put_HorizontalScrollMode(Microsoft.UI.Xaml.Controls.ScrollingScrollMode)
     @horizontal_scroll_mode.setter
     @typing.final
     def horizontal_scroll_mode(self, value: ScrollingScrollMode) -> None: ...
+    # Microsoft.UI.Xaml.Controls.ScrollingChainMode Microsoft.UI.Xaml.Controls.ScrollView::get_HorizontalScrollChainMode()
     @_property
     def horizontal_scroll_chain_mode(self) -> ScrollingChainMode: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollView::put_HorizontalScrollChainMode(Microsoft.UI.Xaml.Controls.ScrollingChainMode)
     @horizontal_scroll_chain_mode.setter
     @typing.final
     def horizontal_scroll_chain_mode(self, value: ScrollingChainMode) -> None: ...
+    # Microsoft.UI.Xaml.Controls.ScrollingScrollBarVisibility Microsoft.UI.Xaml.Controls.ScrollView::get_HorizontalScrollBarVisibility()
     @_property
     def horizontal_scroll_bar_visibility(self) -> ScrollingScrollBarVisibility: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollView::put_HorizontalScrollBarVisibility(Microsoft.UI.Xaml.Controls.ScrollingScrollBarVisibility)
     @horizontal_scroll_bar_visibility.setter
     @typing.final
     def horizontal_scroll_bar_visibility(self, value: ScrollingScrollBarVisibility) -> None: ...
+    # Microsoft.UI.Xaml.Controls.ScrollingContentOrientation Microsoft.UI.Xaml.Controls.ScrollView::get_ContentOrientation()
     @_property
     def content_orientation(self) -> ScrollingContentOrientation: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollView::put_ContentOrientation(Microsoft.UI.Xaml.Controls.ScrollingContentOrientation)
     @content_orientation.setter
     @typing.final
     def content_orientation(self, value: ScrollingContentOrientation) -> None: ...
+    # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.Controls.ScrollView::get_Content()
     @_property
     def content(self) -> microsoft_ui_xaml.UIElement: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollView::put_Content(Microsoft.UI.Xaml.UIElement)
     @content.setter
     @typing.final
     def content(self, value: microsoft_ui_xaml.UIElement) -> None: ...
+    # Microsoft.UI.Xaml.Controls.ScrollingInputKinds Microsoft.UI.Xaml.Controls.ScrollView::get_IgnoredInputKinds()
     @_property
     def ignored_input_kinds(self) -> ScrollingInputKinds: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollView::put_IgnoredInputKinds(Microsoft.UI.Xaml.Controls.ScrollingInputKinds)
     @ignored_input_kinds.setter
     @typing.final
     def ignored_input_kinds(self, value: ScrollingInputKinds) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ScrollView::get_HorizontalAnchorRatio()
     @_property
     def horizontal_anchor_ratio(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollView::put_HorizontalAnchorRatio(System.Double)
     @horizontal_anchor_ratio.setter
     @typing.final
     def horizontal_anchor_ratio(self, value: winrt.system.Double) -> None: ...
+    # Microsoft.UI.Xaml.Controls.ScrollingRailMode Microsoft.UI.Xaml.Controls.ScrollView::get_HorizontalScrollRailMode()
     @_property
     def horizontal_scroll_rail_mode(self) -> ScrollingRailMode: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollView::put_HorizontalScrollRailMode(Microsoft.UI.Xaml.Controls.ScrollingRailMode)
     @horizontal_scroll_rail_mode.setter
     @typing.final
     def horizontal_scroll_rail_mode(self, value: ScrollingRailMode) -> None: ...
+    # Microsoft.UI.Xaml.Controls.ScrollingZoomMode Microsoft.UI.Xaml.Controls.ScrollView::get_ZoomMode()
     @_property
     def zoom_mode(self) -> ScrollingZoomMode: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollView::put_ZoomMode(Microsoft.UI.Xaml.Controls.ScrollingZoomMode)
     @zoom_mode.setter
     @typing.final
     def zoom_mode(self, value: ScrollingZoomMode) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ScrollView::get_MaxZoomFactor()
     @_property
     def max_zoom_factor(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollView::put_MaxZoomFactor(System.Double)
     @max_zoom_factor.setter
     @typing.final
     def max_zoom_factor(self, value: winrt.system.Double) -> None: ...
+    # Microsoft.UI.Xaml.Controls.ScrollingChainMode Microsoft.UI.Xaml.Controls.ScrollView::get_ZoomChainMode()
     @_property
     def zoom_chain_mode(self) -> ScrollingChainMode: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollView::put_ZoomChainMode(Microsoft.UI.Xaml.Controls.ScrollingChainMode)
     @zoom_chain_mode.setter
     @typing.final
     def zoom_chain_mode(self, value: ScrollingChainMode) -> None: ...
+    # Microsoft.UI.Xaml.Controls.ScrollingRailMode Microsoft.UI.Xaml.Controls.ScrollView::get_VerticalScrollRailMode()
     @_property
     def vertical_scroll_rail_mode(self) -> ScrollingRailMode: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollView::put_VerticalScrollRailMode(Microsoft.UI.Xaml.Controls.ScrollingRailMode)
     @vertical_scroll_rail_mode.setter
     @typing.final
     def vertical_scroll_rail_mode(self, value: ScrollingRailMode) -> None: ...
+    # Microsoft.UI.Xaml.Controls.ScrollingScrollMode Microsoft.UI.Xaml.Controls.ScrollView::get_VerticalScrollMode()
     @_property
     def vertical_scroll_mode(self) -> ScrollingScrollMode: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollView::put_VerticalScrollMode(Microsoft.UI.Xaml.Controls.ScrollingScrollMode)
     @vertical_scroll_mode.setter
     @typing.final
     def vertical_scroll_mode(self, value: ScrollingScrollMode) -> None: ...
+    # Microsoft.UI.Xaml.Controls.ScrollingChainMode Microsoft.UI.Xaml.Controls.ScrollView::get_VerticalScrollChainMode()
     @_property
     def vertical_scroll_chain_mode(self) -> ScrollingChainMode: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollView::put_VerticalScrollChainMode(Microsoft.UI.Xaml.Controls.ScrollingChainMode)
     @vertical_scroll_chain_mode.setter
     @typing.final
     def vertical_scroll_chain_mode(self, value: ScrollingChainMode) -> None: ...
+    # Microsoft.UI.Xaml.Controls.ScrollingScrollBarVisibility Microsoft.UI.Xaml.Controls.ScrollView::get_VerticalScrollBarVisibility()
     @_property
     def vertical_scroll_bar_visibility(self) -> ScrollingScrollBarVisibility: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollView::put_VerticalScrollBarVisibility(Microsoft.UI.Xaml.Controls.ScrollingScrollBarVisibility)
     @vertical_scroll_bar_visibility.setter
     @typing.final
     def vertical_scroll_bar_visibility(self, value: ScrollingScrollBarVisibility) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ScrollView::get_VerticalAnchorRatio()
     @_property
     def vertical_anchor_ratio(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollView::put_VerticalAnchorRatio(System.Double)
     @vertical_anchor_ratio.setter
     @typing.final
     def vertical_anchor_ratio(self, value: winrt.system.Double) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ScrollView::get_MinZoomFactor()
     @_property
     def min_zoom_factor(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollView::put_MinZoomFactor(System.Double)
     @min_zoom_factor.setter
     @typing.final
     def min_zoom_factor(self, value: winrt.system.Double) -> None: ...
+    # Microsoft.UI.Xaml.Controls.ScrollingScrollMode Microsoft.UI.Xaml.Controls.ScrollView::get_ComputedHorizontalScrollMode()
     @_property
     @typing.final
     def computed_horizontal_scroll_mode(self) -> ScrollingScrollMode: ...
+    # Microsoft.UI.Xaml.Visibility Microsoft.UI.Xaml.Controls.ScrollView::get_ComputedVerticalScrollBarVisibility()
     @_property
     @typing.final
     def computed_vertical_scroll_bar_visibility(self) -> microsoft_ui_xaml.Visibility: ...
+    # Microsoft.UI.Xaml.Controls.ScrollingScrollMode Microsoft.UI.Xaml.Controls.ScrollView::get_ComputedVerticalScrollMode()
     @_property
     @typing.final
     def computed_vertical_scroll_mode(self) -> ScrollingScrollMode: ...
+    # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.Controls.ScrollView::get_CurrentAnchor()
     @_property
     @typing.final
     def current_anchor(self) -> microsoft_ui_xaml.UIElement: ...
+    # Microsoft.UI.Composition.CompositionPropertySet Microsoft.UI.Xaml.Controls.ScrollView::get_ExpressionAnimationSources()
     @_property
     @typing.final
     def expression_animation_sources(self) -> microsoft_ui_composition.CompositionPropertySet: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ScrollView::get_ExtentHeight()
     @_property
     @typing.final
     def extent_height(self) -> winrt.system.Double: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ScrollView::get_ExtentWidth()
     @_property
     @typing.final
     def extent_width(self) -> winrt.system.Double: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ScrollView::get_HorizontalOffset()
     @_property
     @typing.final
     def horizontal_offset(self) -> winrt.system.Double: ...
+    # Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter Microsoft.UI.Xaml.Controls.ScrollView::get_ScrollPresenter()
     @_property
     @typing.final
     def scroll_presenter(self) -> microsoft_ui_xaml_controls_primitives.ScrollPresenter: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ScrollView::get_ScrollableHeight()
     @_property
     @typing.final
     def scrollable_height(self) -> winrt.system.Double: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ScrollView::get_ScrollableWidth()
     @_property
     @typing.final
     def scrollable_width(self) -> winrt.system.Double: ...
+    # Microsoft.UI.Xaml.Controls.ScrollingInteractionState Microsoft.UI.Xaml.Controls.ScrollView::get_State()
     @_property
     @typing.final
     def state(self) -> ScrollingInteractionState: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ScrollView::get_VerticalOffset()
     @_property
     @typing.final
     def vertical_offset(self) -> winrt.system.Double: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ScrollView::get_ViewportHeight()
     @_property
     @typing.final
     def viewport_height(self) -> winrt.system.Double: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ScrollView::get_ViewportWidth()
     @_property
     @typing.final
     def viewport_width(self) -> winrt.system.Double: ...
+    # System.Single Microsoft.UI.Xaml.Controls.ScrollView::get_ZoomFactor()
     @_property
     @typing.final
     def zoom_factor(self) -> winrt.system.Single: ...
+    # Microsoft.UI.Xaml.Visibility Microsoft.UI.Xaml.Controls.ScrollView::get_ComputedHorizontalScrollBarVisibility()
     @_property
     @typing.final
     def computed_horizontal_scroll_bar_visibility(self) -> microsoft_ui_xaml.Visibility: ...
 
 @typing.final
 class ScrollViewer_Static(ContentControl_Static):
+    # System.Boolean Microsoft.UI.Xaml.Controls.ScrollViewer::GetBringIntoViewOnFocusChange(Microsoft.UI.Xaml.DependencyObject)
     def get_bring_into_view_on_focus_change(cls, element: microsoft_ui_xaml.DependencyObject, /) -> bool: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ScrollViewer::GetCanContentRenderOutsideBounds(Microsoft.UI.Xaml.DependencyObject)
     def get_can_content_render_outside_bounds(cls, element: microsoft_ui_xaml.DependencyObject, /) -> bool: ...
+    # Microsoft.UI.Xaml.Controls.ScrollBarVisibility Microsoft.UI.Xaml.Controls.ScrollViewer::GetHorizontalScrollBarVisibility(Microsoft.UI.Xaml.DependencyObject)
     def get_horizontal_scroll_bar_visibility(cls, element: microsoft_ui_xaml.DependencyObject, /) -> ScrollBarVisibility: ...
+    # Microsoft.UI.Xaml.Controls.ScrollMode Microsoft.UI.Xaml.Controls.ScrollViewer::GetHorizontalScrollMode(Microsoft.UI.Xaml.DependencyObject)
     def get_horizontal_scroll_mode(cls, element: microsoft_ui_xaml.DependencyObject, /) -> ScrollMode: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ScrollViewer::GetIsDeferredScrollingEnabled(Microsoft.UI.Xaml.DependencyObject)
     def get_is_deferred_scrolling_enabled(cls, element: microsoft_ui_xaml.DependencyObject, /) -> bool: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ScrollViewer::GetIsHorizontalRailEnabled(Microsoft.UI.Xaml.DependencyObject)
     def get_is_horizontal_rail_enabled(cls, element: microsoft_ui_xaml.DependencyObject, /) -> bool: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ScrollViewer::GetIsHorizontalScrollChainingEnabled(Microsoft.UI.Xaml.DependencyObject)
     def get_is_horizontal_scroll_chaining_enabled(cls, element: microsoft_ui_xaml.DependencyObject, /) -> bool: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ScrollViewer::GetIsScrollInertiaEnabled(Microsoft.UI.Xaml.DependencyObject)
     def get_is_scroll_inertia_enabled(cls, element: microsoft_ui_xaml.DependencyObject, /) -> bool: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ScrollViewer::GetIsVerticalRailEnabled(Microsoft.UI.Xaml.DependencyObject)
     def get_is_vertical_rail_enabled(cls, element: microsoft_ui_xaml.DependencyObject, /) -> bool: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ScrollViewer::GetIsVerticalScrollChainingEnabled(Microsoft.UI.Xaml.DependencyObject)
     def get_is_vertical_scroll_chaining_enabled(cls, element: microsoft_ui_xaml.DependencyObject, /) -> bool: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ScrollViewer::GetIsZoomChainingEnabled(Microsoft.UI.Xaml.DependencyObject)
     def get_is_zoom_chaining_enabled(cls, element: microsoft_ui_xaml.DependencyObject, /) -> bool: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ScrollViewer::GetIsZoomInertiaEnabled(Microsoft.UI.Xaml.DependencyObject)
     def get_is_zoom_inertia_enabled(cls, element: microsoft_ui_xaml.DependencyObject, /) -> bool: ...
+    # Microsoft.UI.Xaml.Controls.ScrollBarVisibility Microsoft.UI.Xaml.Controls.ScrollViewer::GetVerticalScrollBarVisibility(Microsoft.UI.Xaml.DependencyObject)
     def get_vertical_scroll_bar_visibility(cls, element: microsoft_ui_xaml.DependencyObject, /) -> ScrollBarVisibility: ...
+    # Microsoft.UI.Xaml.Controls.ScrollMode Microsoft.UI.Xaml.Controls.ScrollViewer::GetVerticalScrollMode(Microsoft.UI.Xaml.DependencyObject)
     def get_vertical_scroll_mode(cls, element: microsoft_ui_xaml.DependencyObject, /) -> ScrollMode: ...
+    # Microsoft.UI.Xaml.Controls.ZoomMode Microsoft.UI.Xaml.Controls.ScrollViewer::GetZoomMode(Microsoft.UI.Xaml.DependencyObject)
     def get_zoom_mode(cls, element: microsoft_ui_xaml.DependencyObject, /) -> ZoomMode: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollViewer::SetBringIntoViewOnFocusChange(Microsoft.UI.Xaml.DependencyObject,System.Boolean)
     def set_bring_into_view_on_focus_change(cls, element: microsoft_ui_xaml.DependencyObject, bring_into_view_on_focus_change: bool, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollViewer::SetCanContentRenderOutsideBounds(Microsoft.UI.Xaml.DependencyObject,System.Boolean)
     def set_can_content_render_outside_bounds(cls, element: microsoft_ui_xaml.DependencyObject, can_content_render_outside_bounds: bool, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollViewer::SetHorizontalScrollBarVisibility(Microsoft.UI.Xaml.DependencyObject,Microsoft.UI.Xaml.Controls.ScrollBarVisibility)
     def set_horizontal_scroll_bar_visibility(cls, element: microsoft_ui_xaml.DependencyObject, horizontal_scroll_bar_visibility: ScrollBarVisibility, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollViewer::SetHorizontalScrollMode(Microsoft.UI.Xaml.DependencyObject,Microsoft.UI.Xaml.Controls.ScrollMode)
     def set_horizontal_scroll_mode(cls, element: microsoft_ui_xaml.DependencyObject, horizontal_scroll_mode: ScrollMode, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollViewer::SetIsDeferredScrollingEnabled(Microsoft.UI.Xaml.DependencyObject,System.Boolean)
     def set_is_deferred_scrolling_enabled(cls, element: microsoft_ui_xaml.DependencyObject, is_deferred_scrolling_enabled: bool, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollViewer::SetIsHorizontalRailEnabled(Microsoft.UI.Xaml.DependencyObject,System.Boolean)
     def set_is_horizontal_rail_enabled(cls, element: microsoft_ui_xaml.DependencyObject, is_horizontal_rail_enabled: bool, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollViewer::SetIsHorizontalScrollChainingEnabled(Microsoft.UI.Xaml.DependencyObject,System.Boolean)
     def set_is_horizontal_scroll_chaining_enabled(cls, element: microsoft_ui_xaml.DependencyObject, is_horizontal_scroll_chaining_enabled: bool, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollViewer::SetIsScrollInertiaEnabled(Microsoft.UI.Xaml.DependencyObject,System.Boolean)
     def set_is_scroll_inertia_enabled(cls, element: microsoft_ui_xaml.DependencyObject, is_scroll_inertia_enabled: bool, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollViewer::SetIsVerticalRailEnabled(Microsoft.UI.Xaml.DependencyObject,System.Boolean)
     def set_is_vertical_rail_enabled(cls, element: microsoft_ui_xaml.DependencyObject, is_vertical_rail_enabled: bool, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollViewer::SetIsVerticalScrollChainingEnabled(Microsoft.UI.Xaml.DependencyObject,System.Boolean)
     def set_is_vertical_scroll_chaining_enabled(cls, element: microsoft_ui_xaml.DependencyObject, is_vertical_scroll_chaining_enabled: bool, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollViewer::SetIsZoomChainingEnabled(Microsoft.UI.Xaml.DependencyObject,System.Boolean)
     def set_is_zoom_chaining_enabled(cls, element: microsoft_ui_xaml.DependencyObject, is_zoom_chaining_enabled: bool, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollViewer::SetIsZoomInertiaEnabled(Microsoft.UI.Xaml.DependencyObject,System.Boolean)
     def set_is_zoom_inertia_enabled(cls, element: microsoft_ui_xaml.DependencyObject, is_zoom_inertia_enabled: bool, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollViewer::SetVerticalScrollBarVisibility(Microsoft.UI.Xaml.DependencyObject,Microsoft.UI.Xaml.Controls.ScrollBarVisibility)
     def set_vertical_scroll_bar_visibility(cls, element: microsoft_ui_xaml.DependencyObject, vertical_scroll_bar_visibility: ScrollBarVisibility, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollViewer::SetVerticalScrollMode(Microsoft.UI.Xaml.DependencyObject,Microsoft.UI.Xaml.Controls.ScrollMode)
     def set_vertical_scroll_mode(cls, element: microsoft_ui_xaml.DependencyObject, vertical_scroll_mode: ScrollMode, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollViewer::SetZoomMode(Microsoft.UI.Xaml.DependencyObject,Microsoft.UI.Xaml.Controls.ZoomMode)
     def set_zoom_mode(cls, element: microsoft_ui_xaml.DependencyObject, zoom_mode: ZoomMode, /) -> None: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ScrollViewer::get_BringIntoViewOnFocusChangeProperty()
     @_property
     def bring_into_view_on_focus_change_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ScrollViewer::get_CanContentRenderOutsideBoundsProperty()
     @_property
     def can_content_render_outside_bounds_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ScrollViewer::get_ComputedHorizontalScrollBarVisibilityProperty()
     @_property
     def computed_horizontal_scroll_bar_visibility_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ScrollViewer::get_ComputedVerticalScrollBarVisibilityProperty()
     @_property
     def computed_vertical_scroll_bar_visibility_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ScrollViewer::get_ExtentHeightProperty()
     @_property
     def extent_height_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ScrollViewer::get_ExtentWidthProperty()
     @_property
     def extent_width_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ScrollViewer::get_HorizontalAnchorRatioProperty()
     @_property
     def horizontal_anchor_ratio_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ScrollViewer::get_HorizontalOffsetProperty()
     @_property
     def horizontal_offset_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ScrollViewer::get_HorizontalScrollBarVisibilityProperty()
     @_property
     def horizontal_scroll_bar_visibility_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ScrollViewer::get_HorizontalScrollModeProperty()
     @_property
     def horizontal_scroll_mode_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ScrollViewer::get_HorizontalSnapPointsAlignmentProperty()
     @_property
     def horizontal_snap_points_alignment_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ScrollViewer::get_HorizontalSnapPointsTypeProperty()
     @_property
     def horizontal_snap_points_type_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ScrollViewer::get_IsDeferredScrollingEnabledProperty()
     @_property
     def is_deferred_scrolling_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ScrollViewer::get_IsHorizontalRailEnabledProperty()
     @_property
     def is_horizontal_rail_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ScrollViewer::get_IsHorizontalScrollChainingEnabledProperty()
     @_property
     def is_horizontal_scroll_chaining_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ScrollViewer::get_IsScrollInertiaEnabledProperty()
     @_property
     def is_scroll_inertia_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ScrollViewer::get_IsVerticalRailEnabledProperty()
     @_property
     def is_vertical_rail_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ScrollViewer::get_IsVerticalScrollChainingEnabledProperty()
     @_property
     def is_vertical_scroll_chaining_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ScrollViewer::get_IsZoomChainingEnabledProperty()
     @_property
     def is_zoom_chaining_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ScrollViewer::get_IsZoomInertiaEnabledProperty()
     @_property
     def is_zoom_inertia_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ScrollViewer::get_LeftHeaderProperty()
     @_property
     def left_header_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ScrollViewer::get_MaxZoomFactorProperty()
     @_property
     def max_zoom_factor_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ScrollViewer::get_MinZoomFactorProperty()
     @_property
     def min_zoom_factor_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ScrollViewer::get_ReduceViewportForCoreInputViewOcclusionsProperty()
     @_property
     def reduce_viewport_for_core_input_view_occlusions_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ScrollViewer::get_ScrollableHeightProperty()
     @_property
     def scrollable_height_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ScrollViewer::get_ScrollableWidthProperty()
     @_property
     def scrollable_width_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ScrollViewer::get_TopHeaderProperty()
     @_property
     def top_header_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ScrollViewer::get_TopLeftHeaderProperty()
     @_property
     def top_left_header_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ScrollViewer::get_VerticalAnchorRatioProperty()
     @_property
     def vertical_anchor_ratio_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ScrollViewer::get_VerticalOffsetProperty()
     @_property
     def vertical_offset_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ScrollViewer::get_VerticalScrollBarVisibilityProperty()
     @_property
     def vertical_scroll_bar_visibility_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ScrollViewer::get_VerticalScrollModeProperty()
     @_property
     def vertical_scroll_mode_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ScrollViewer::get_VerticalSnapPointsAlignmentProperty()
     @_property
     def vertical_snap_points_alignment_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ScrollViewer::get_VerticalSnapPointsTypeProperty()
     @_property
     def vertical_snap_points_type_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ScrollViewer::get_ViewportHeightProperty()
     @_property
     def viewport_height_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ScrollViewer::get_ViewportWidthProperty()
     @_property
     def viewport_width_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ScrollViewer::get_ZoomFactorProperty()
     @_property
     def zoom_factor_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ScrollViewer::get_ZoomModeProperty()
     @_property
     def zoom_mode_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ScrollViewer::get_ZoomSnapPointsProperty()
     @_property
     def zoom_snap_points_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ScrollViewer::get_ZoomSnapPointsTypeProperty()
     @_property
     def zoom_snap_points_type_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
 class ScrollViewer(ContentControl, ImplementsIScrollAnchorProvider, metaclass=ScrollViewer_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ScrollViewer::ChangeView(Windows.Foundation.IReference`1<System.Double>,Windows.Foundation.IReference`1<System.Double>,Windows.Foundation.IReference`1<System.Single>)
     def change_view(self, horizontal_offset: typing.Optional[winrt.system.Double], vertical_offset: typing.Optional[winrt.system.Double], zoom_factor: typing.Optional[winrt.system.Single], /) -> bool: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ScrollViewer::ChangeView(Windows.Foundation.IReference`1<System.Double>,Windows.Foundation.IReference`1<System.Double>,Windows.Foundation.IReference`1<System.Single>,System.Boolean)
     def change_view_with_optional_animation(self, horizontal_offset: typing.Optional[winrt.system.Double], vertical_offset: typing.Optional[winrt.system.Double], zoom_factor: typing.Optional[winrt.system.Single], disable_animation: bool, /) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollViewer::InvalidateScrollInfo()
     def invalidate_scroll_info(self) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollViewer::RegisterAnchorCandidate(Microsoft.UI.Xaml.UIElement)
     def register_anchor_candidate(self, element: microsoft_ui_xaml.UIElement, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollViewer::ScrollToHorizontalOffset(System.Double)
     # @deprecated("ScrollToHorizontalOffset may be altered or unavailable for releases after Windows 8.1. Instead, use ChangeView.")
     def scroll_to_horizontal_offset(self, offset: winrt.system.Double, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollViewer::ScrollToVerticalOffset(System.Double)
     # @deprecated("ScrollToVerticalOffset may be altered or unavailable for releases after Windows 8.1. Instead, use ChangeView.")
     def scroll_to_vertical_offset(self, offset: winrt.system.Double, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollViewer::UnregisterAnchorCandidate(Microsoft.UI.Xaml.UIElement)
     def unregister_anchor_candidate(self, element: microsoft_ui_xaml.UIElement, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollViewer::ZoomToFactor(System.Single)
     # @deprecated("ZoomToFactor may be altered or unavailable for releases after Windows 8.1. Instead, use ChangeView.")
     def zoom_to_factor(self, factor: winrt.system.Single, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.ScrollViewer::add_AnchorRequested(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.ScrollViewer,Microsoft.UI.Xaml.Controls.AnchorRequestedEventArgs>)
     def add_anchor_requested(self, handler: windows_foundation.TypedEventHandler[ScrollViewer, AnchorRequestedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollViewer::remove_AnchorRequested(Windows.Foundation.EventRegistrationToken)
     def remove_anchor_requested(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.ScrollViewer::add_DirectManipulationCompleted(Windows.Foundation.EventHandler`1<System.Object>)
     def add_direct_manipulation_completed(self, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollViewer::remove_DirectManipulationCompleted(Windows.Foundation.EventRegistrationToken)
     def remove_direct_manipulation_completed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.ScrollViewer::add_DirectManipulationStarted(Windows.Foundation.EventHandler`1<System.Object>)
     def add_direct_manipulation_started(self, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollViewer::remove_DirectManipulationStarted(Windows.Foundation.EventRegistrationToken)
     def remove_direct_manipulation_started(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.ScrollViewer::add_ViewChanged(Windows.Foundation.EventHandler`1<Microsoft.UI.Xaml.Controls.ScrollViewerViewChangedEventArgs>)
     def add_view_changed(self, handler: windows_foundation.EventHandler[ScrollViewerViewChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollViewer::remove_ViewChanged(Windows.Foundation.EventRegistrationToken)
     def remove_view_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.ScrollViewer::add_ViewChanging(Windows.Foundation.EventHandler`1<Microsoft.UI.Xaml.Controls.ScrollViewerViewChangingEventArgs>)
     def add_view_changing(self, handler: windows_foundation.EventHandler[ScrollViewerViewChangingEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollViewer::remove_ViewChanging(Windows.Foundation.EventRegistrationToken)
     def remove_view_changing(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.Controls.ScrollViewer::get_CurrentAnchor()
     @_property
     def current_anchor(self) -> microsoft_ui_xaml.UIElement: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ScrollViewer::get_IsHorizontalScrollChainingEnabled()
     @_property
     def is_horizontal_scroll_chaining_enabled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollViewer::put_IsHorizontalScrollChainingEnabled(System.Boolean)
     @is_horizontal_scroll_chaining_enabled.setter
     def is_horizontal_scroll_chaining_enabled(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ScrollViewer::get_IsHorizontalRailEnabled()
     @_property
     def is_horizontal_rail_enabled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollViewer::put_IsHorizontalRailEnabled(System.Boolean)
     @is_horizontal_rail_enabled.setter
     def is_horizontal_rail_enabled(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ScrollViewer::get_IsDeferredScrollingEnabled()
     @_property
     def is_deferred_scrolling_enabled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollViewer::put_IsDeferredScrollingEnabled(System.Boolean)
     @is_deferred_scrolling_enabled.setter
     def is_deferred_scrolling_enabled(self, value: bool) -> None: ...
+    # Microsoft.UI.Xaml.Controls.SnapPointsType Microsoft.UI.Xaml.Controls.ScrollViewer::get_HorizontalSnapPointsType()
     @_property
     def horizontal_snap_points_type(self) -> SnapPointsType: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollViewer::put_HorizontalSnapPointsType(Microsoft.UI.Xaml.Controls.SnapPointsType)
     @horizontal_snap_points_type.setter
     def horizontal_snap_points_type(self, value: SnapPointsType) -> None: ...
+    # Microsoft.UI.Xaml.Controls.Primitives.SnapPointsAlignment Microsoft.UI.Xaml.Controls.ScrollViewer::get_HorizontalSnapPointsAlignment()
     @_property
     def horizontal_snap_points_alignment(self) -> microsoft_ui_xaml_controls_primitives.SnapPointsAlignment: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollViewer::put_HorizontalSnapPointsAlignment(Microsoft.UI.Xaml.Controls.Primitives.SnapPointsAlignment)
     @horizontal_snap_points_alignment.setter
     def horizontal_snap_points_alignment(self, value: microsoft_ui_xaml_controls_primitives.SnapPointsAlignment) -> None: ...
+    # Microsoft.UI.Xaml.Controls.ScrollMode Microsoft.UI.Xaml.Controls.ScrollViewer::get_HorizontalScrollMode()
     @_property
     def horizontal_scroll_mode(self) -> ScrollMode: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollViewer::put_HorizontalScrollMode(Microsoft.UI.Xaml.Controls.ScrollMode)
     @horizontal_scroll_mode.setter
     def horizontal_scroll_mode(self, value: ScrollMode) -> None: ...
+    # Microsoft.UI.Xaml.Controls.ScrollBarVisibility Microsoft.UI.Xaml.Controls.ScrollViewer::get_HorizontalScrollBarVisibility()
     @_property
     def horizontal_scroll_bar_visibility(self) -> ScrollBarVisibility: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollViewer::put_HorizontalScrollBarVisibility(Microsoft.UI.Xaml.Controls.ScrollBarVisibility)
     @horizontal_scroll_bar_visibility.setter
     def horizontal_scroll_bar_visibility(self, value: ScrollBarVisibility) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ScrollViewer::get_IsZoomInertiaEnabled()
     @_property
     def is_zoom_inertia_enabled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollViewer::put_IsZoomInertiaEnabled(System.Boolean)
     @is_zoom_inertia_enabled.setter
     def is_zoom_inertia_enabled(self, value: bool) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ScrollViewer::get_HorizontalAnchorRatio()
     @_property
     def horizontal_anchor_ratio(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollViewer::put_HorizontalAnchorRatio(System.Double)
     @horizontal_anchor_ratio.setter
     def horizontal_anchor_ratio(self, value: winrt.system.Double) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ScrollViewer::get_IsZoomChainingEnabled()
     @_property
     def is_zoom_chaining_enabled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollViewer::put_IsZoomChainingEnabled(System.Boolean)
     @is_zoom_chaining_enabled.setter
     def is_zoom_chaining_enabled(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ScrollViewer::get_IsVerticalScrollChainingEnabled()
     @_property
     def is_vertical_scroll_chaining_enabled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollViewer::put_IsVerticalScrollChainingEnabled(System.Boolean)
     @is_vertical_scroll_chaining_enabled.setter
     def is_vertical_scroll_chaining_enabled(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ScrollViewer::get_IsVerticalRailEnabled()
     @_property
     def is_vertical_rail_enabled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollViewer::put_IsVerticalRailEnabled(System.Boolean)
     @is_vertical_rail_enabled.setter
     def is_vertical_rail_enabled(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ScrollViewer::get_IsScrollInertiaEnabled()
     @_property
     def is_scroll_inertia_enabled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollViewer::put_IsScrollInertiaEnabled(System.Boolean)
     @is_scroll_inertia_enabled.setter
     def is_scroll_inertia_enabled(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ScrollViewer::get_CanContentRenderOutsideBounds()
     @_property
     def can_content_render_outside_bounds(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollViewer::put_CanContentRenderOutsideBounds(System.Boolean)
     @can_content_render_outside_bounds.setter
     def can_content_render_outside_bounds(self, value: bool) -> None: ...
+    # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.Controls.ScrollViewer::get_LeftHeader()
     @_property
     def left_header(self) -> microsoft_ui_xaml.UIElement: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollViewer::put_LeftHeader(Microsoft.UI.Xaml.UIElement)
     @left_header.setter
     def left_header(self, value: microsoft_ui_xaml.UIElement) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ScrollViewer::get_BringIntoViewOnFocusChange()
     @_property
     def bring_into_view_on_focus_change(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollViewer::put_BringIntoViewOnFocusChange(System.Boolean)
     @bring_into_view_on_focus_change.setter
     def bring_into_view_on_focus_change(self, value: bool) -> None: ...
+    # Microsoft.UI.Xaml.Controls.SnapPointsType Microsoft.UI.Xaml.Controls.ScrollViewer::get_ZoomSnapPointsType()
     @_property
     def zoom_snap_points_type(self) -> SnapPointsType: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollViewer::put_ZoomSnapPointsType(Microsoft.UI.Xaml.Controls.SnapPointsType)
     @zoom_snap_points_type.setter
     def zoom_snap_points_type(self, value: SnapPointsType) -> None: ...
+    # Microsoft.UI.Xaml.Controls.ZoomMode Microsoft.UI.Xaml.Controls.ScrollViewer::get_ZoomMode()
     @_property
     def zoom_mode(self) -> ZoomMode: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollViewer::put_ZoomMode(Microsoft.UI.Xaml.Controls.ZoomMode)
     @zoom_mode.setter
     def zoom_mode(self, value: ZoomMode) -> None: ...
+    # Microsoft.UI.Xaml.Controls.SnapPointsType Microsoft.UI.Xaml.Controls.ScrollViewer::get_VerticalSnapPointsType()
     @_property
     def vertical_snap_points_type(self) -> SnapPointsType: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollViewer::put_VerticalSnapPointsType(Microsoft.UI.Xaml.Controls.SnapPointsType)
     @vertical_snap_points_type.setter
     def vertical_snap_points_type(self, value: SnapPointsType) -> None: ...
+    # Microsoft.UI.Xaml.Controls.Primitives.SnapPointsAlignment Microsoft.UI.Xaml.Controls.ScrollViewer::get_VerticalSnapPointsAlignment()
     @_property
     def vertical_snap_points_alignment(self) -> microsoft_ui_xaml_controls_primitives.SnapPointsAlignment: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollViewer::put_VerticalSnapPointsAlignment(Microsoft.UI.Xaml.Controls.Primitives.SnapPointsAlignment)
     @vertical_snap_points_alignment.setter
     def vertical_snap_points_alignment(self, value: microsoft_ui_xaml_controls_primitives.SnapPointsAlignment) -> None: ...
+    # Microsoft.UI.Xaml.Controls.ScrollMode Microsoft.UI.Xaml.Controls.ScrollViewer::get_VerticalScrollMode()
     @_property
     def vertical_scroll_mode(self) -> ScrollMode: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollViewer::put_VerticalScrollMode(Microsoft.UI.Xaml.Controls.ScrollMode)
     @vertical_scroll_mode.setter
     def vertical_scroll_mode(self, value: ScrollMode) -> None: ...
+    # Microsoft.UI.Xaml.Controls.ScrollBarVisibility Microsoft.UI.Xaml.Controls.ScrollViewer::get_VerticalScrollBarVisibility()
     @_property
     def vertical_scroll_bar_visibility(self) -> ScrollBarVisibility: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollViewer::put_VerticalScrollBarVisibility(Microsoft.UI.Xaml.Controls.ScrollBarVisibility)
     @vertical_scroll_bar_visibility.setter
     def vertical_scroll_bar_visibility(self, value: ScrollBarVisibility) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ScrollViewer::get_VerticalAnchorRatio()
     @_property
     def vertical_anchor_ratio(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollViewer::put_VerticalAnchorRatio(System.Double)
     @vertical_anchor_ratio.setter
     def vertical_anchor_ratio(self, value: winrt.system.Double) -> None: ...
+    # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.Controls.ScrollViewer::get_TopLeftHeader()
     @_property
     def top_left_header(self) -> microsoft_ui_xaml.UIElement: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollViewer::put_TopLeftHeader(Microsoft.UI.Xaml.UIElement)
     @top_left_header.setter
     def top_left_header(self, value: microsoft_ui_xaml.UIElement) -> None: ...
+    # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.Controls.ScrollViewer::get_TopHeader()
     @_property
     def top_header(self) -> microsoft_ui_xaml.UIElement: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollViewer::put_TopHeader(Microsoft.UI.Xaml.UIElement)
     @top_header.setter
     def top_header(self, value: microsoft_ui_xaml.UIElement) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ScrollViewer::get_ReduceViewportForCoreInputViewOcclusions()
     @_property
     def reduce_viewport_for_core_input_view_occlusions(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollViewer::put_ReduceViewportForCoreInputViewOcclusions(System.Boolean)
     @reduce_viewport_for_core_input_view_occlusions.setter
     def reduce_viewport_for_core_input_view_occlusions(self, value: bool) -> None: ...
+    # System.Single Microsoft.UI.Xaml.Controls.ScrollViewer::get_MinZoomFactor()
     @_property
     def min_zoom_factor(self) -> winrt.system.Single: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollViewer::put_MinZoomFactor(System.Single)
     @min_zoom_factor.setter
     def min_zoom_factor(self, value: winrt.system.Single) -> None: ...
+    # System.Single Microsoft.UI.Xaml.Controls.ScrollViewer::get_MaxZoomFactor()
     @_property
     def max_zoom_factor(self) -> winrt.system.Single: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollViewer::put_MaxZoomFactor(System.Single)
     @max_zoom_factor.setter
     def max_zoom_factor(self, value: winrt.system.Single) -> None: ...
+    # Microsoft.UI.Xaml.Visibility Microsoft.UI.Xaml.Controls.ScrollViewer::get_ComputedHorizontalScrollBarVisibility()
     @_property
     def computed_horizontal_scroll_bar_visibility(self) -> microsoft_ui_xaml.Visibility: ...
+    # Microsoft.UI.Xaml.Visibility Microsoft.UI.Xaml.Controls.ScrollViewer::get_ComputedVerticalScrollBarVisibility()
     @_property
     def computed_vertical_scroll_bar_visibility(self) -> microsoft_ui_xaml.Visibility: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ScrollViewer::get_ExtentHeight()
     @_property
     def extent_height(self) -> winrt.system.Double: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ScrollViewer::get_ExtentWidth()
     @_property
     def extent_width(self) -> winrt.system.Double: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ScrollViewer::get_HorizontalOffset()
     @_property
     def horizontal_offset(self) -> winrt.system.Double: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ScrollViewer::get_ScrollableHeight()
     @_property
     def scrollable_height(self) -> winrt.system.Double: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ScrollViewer::get_ScrollableWidth()
     @_property
     def scrollable_width(self) -> winrt.system.Double: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ScrollViewer::get_VerticalOffset()
     @_property
     def vertical_offset(self) -> winrt.system.Double: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ScrollViewer::get_ViewportHeight()
     @_property
     def viewport_height(self) -> winrt.system.Double: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ScrollViewer::get_ViewportWidth()
     @_property
     def viewport_width(self) -> winrt.system.Double: ...
+    # System.Single Microsoft.UI.Xaml.Controls.ScrollViewer::get_ZoomFactor()
     @_property
     def zoom_factor(self) -> winrt.system.Single: ...
+    # Windows.Foundation.Collections.IVector`1<System.Single> Microsoft.UI.Xaml.Controls.ScrollViewer::get_ZoomSnapPoints()
     @_property
     def zoom_snap_points(self) -> typing.MutableSequence[winrt.system.Single]: ...
 
 @typing.final
 class ScrollViewerView(winrt.system.Object):
+    # System.Double Microsoft.UI.Xaml.Controls.ScrollViewerView::get_HorizontalOffset()
     @_property
     def horizontal_offset(self) -> winrt.system.Double: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ScrollViewerView::get_VerticalOffset()
     @_property
     def vertical_offset(self) -> winrt.system.Double: ...
+    # System.Single Microsoft.UI.Xaml.Controls.ScrollViewerView::get_ZoomFactor()
     @_property
     def zoom_factor(self) -> winrt.system.Single: ...
 
 @typing.final
 class ScrollViewerViewChangedEventArgs(winrt.system.Object):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ScrollViewerViewChangedEventArgs::get_IsIntermediate()
     @_property
     def is_intermediate(self) -> bool: ...
 
 @typing.final
 class ScrollViewerViewChangingEventArgs(winrt.system.Object):
+    # Microsoft.UI.Xaml.Controls.ScrollViewerView Microsoft.UI.Xaml.Controls.ScrollViewerViewChangingEventArgs::get_FinalView()
     @_property
     def final_view(self) -> ScrollViewerView: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ScrollViewerViewChangingEventArgs::get_IsInertial()
     @_property
     def is_inertial(self) -> bool: ...
+    # Microsoft.UI.Xaml.Controls.ScrollViewerView Microsoft.UI.Xaml.Controls.ScrollViewerViewChangingEventArgs::get_NextView()
     @_property
     def next_view(self) -> ScrollViewerView: ...
 
 @typing.final
 class ScrollingAnchorRequestedEventArgs(winrt.system.Object):
+    # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.Controls.ScrollingAnchorRequestedEventArgs::get_AnchorElement()
     @_property
     def anchor_element(self) -> microsoft_ui_xaml.UIElement: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollingAnchorRequestedEventArgs::put_AnchorElement(Microsoft.UI.Xaml.UIElement)
     @anchor_element.setter
     def anchor_element(self, value: microsoft_ui_xaml.UIElement) -> None: ...
+    # Windows.Foundation.Collections.IVector`1<Microsoft.UI.Xaml.UIElement> Microsoft.UI.Xaml.Controls.ScrollingAnchorRequestedEventArgs::get_AnchorCandidates()
     @_property
     def anchor_candidates(self) -> typing.MutableSequence[microsoft_ui_xaml.UIElement]: ...
 
 @typing.final
 class ScrollingBringingIntoViewEventArgs(winrt.system.Object):
+    # Microsoft.UI.Xaml.Controls.ScrollingSnapPointsMode Microsoft.UI.Xaml.Controls.ScrollingBringingIntoViewEventArgs::get_SnapPointsMode()
     @_property
     def snap_points_mode(self) -> ScrollingSnapPointsMode: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollingBringingIntoViewEventArgs::put_SnapPointsMode(Microsoft.UI.Xaml.Controls.ScrollingSnapPointsMode)
     @snap_points_mode.setter
     def snap_points_mode(self, value: ScrollingSnapPointsMode) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ScrollingBringingIntoViewEventArgs::get_Cancel()
     @_property
     def cancel(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollingBringingIntoViewEventArgs::put_Cancel(System.Boolean)
     @cancel.setter
     def cancel(self, value: bool) -> None: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.ScrollingBringingIntoViewEventArgs::get_CorrelationId()
     @_property
     def correlation_id(self) -> winrt.system.Int32: ...
+    # Microsoft.UI.Xaml.BringIntoViewRequestedEventArgs Microsoft.UI.Xaml.Controls.ScrollingBringingIntoViewEventArgs::get_RequestEventArgs()
     @_property
     def request_event_args(self) -> microsoft_ui_xaml.BringIntoViewRequestedEventArgs: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ScrollingBringingIntoViewEventArgs::get_TargetHorizontalOffset()
     @_property
     def target_horizontal_offset(self) -> winrt.system.Double: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ScrollingBringingIntoViewEventArgs::get_TargetVerticalOffset()
     @_property
     def target_vertical_offset(self) -> winrt.system.Double: ...
 
 @typing.final
 class ScrollingScrollAnimationStartingEventArgs(winrt.system.Object):
+    # Microsoft.UI.Composition.CompositionAnimation Microsoft.UI.Xaml.Controls.ScrollingScrollAnimationStartingEventArgs::get_Animation()
     @_property
     def animation(self) -> microsoft_ui_composition.CompositionAnimation: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollingScrollAnimationStartingEventArgs::put_Animation(Microsoft.UI.Composition.CompositionAnimation)
     @animation.setter
     def animation(self, value: microsoft_ui_composition.CompositionAnimation) -> None: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.ScrollingScrollAnimationStartingEventArgs::get_CorrelationId()
     @_property
     def correlation_id(self) -> winrt.system.Int32: ...
+    # Windows.Foundation.Numerics.Vector2 Microsoft.UI.Xaml.Controls.ScrollingScrollAnimationStartingEventArgs::get_EndPosition()
     @_property
     def end_position(self) -> windows_foundation_numerics.Vector2: ...
+    # Windows.Foundation.Numerics.Vector2 Microsoft.UI.Xaml.Controls.ScrollingScrollAnimationStartingEventArgs::get_StartPosition()
     @_property
     def start_position(self) -> windows_foundation_numerics.Vector2: ...
 
 @typing.final
 class ScrollingScrollCompletedEventArgs(winrt.system.Object):
+    # System.Int32 Microsoft.UI.Xaml.Controls.ScrollingScrollCompletedEventArgs::get_CorrelationId()
     @_property
     def correlation_id(self) -> winrt.system.Int32: ...
 
@@ -8512,34 +11695,45 @@ class ScrollingScrollOptions(winrt.system.Object, metaclass=ScrollingScrollOptio
     def __new__(cls: typing.Type[Self], animation_mode: ScrollingAnimationMode) -> Self: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], animation_mode: ScrollingAnimationMode, snap_points_mode: ScrollingSnapPointsMode) -> Self: ...
+    # Microsoft.UI.Xaml.Controls.ScrollingSnapPointsMode Microsoft.UI.Xaml.Controls.ScrollingScrollOptions::get_SnapPointsMode()
     @_property
     def snap_points_mode(self) -> ScrollingSnapPointsMode: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollingScrollOptions::put_SnapPointsMode(Microsoft.UI.Xaml.Controls.ScrollingSnapPointsMode)
     @snap_points_mode.setter
     @typing.final
     def snap_points_mode(self, value: ScrollingSnapPointsMode) -> None: ...
+    # Microsoft.UI.Xaml.Controls.ScrollingAnimationMode Microsoft.UI.Xaml.Controls.ScrollingScrollOptions::get_AnimationMode()
     @_property
     def animation_mode(self) -> ScrollingAnimationMode: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollingScrollOptions::put_AnimationMode(Microsoft.UI.Xaml.Controls.ScrollingAnimationMode)
     @animation_mode.setter
     @typing.final
     def animation_mode(self, value: ScrollingAnimationMode) -> None: ...
 
 @typing.final
 class ScrollingZoomAnimationStartingEventArgs(winrt.system.Object):
+    # Microsoft.UI.Composition.CompositionAnimation Microsoft.UI.Xaml.Controls.ScrollingZoomAnimationStartingEventArgs::get_Animation()
     @_property
     def animation(self) -> microsoft_ui_composition.CompositionAnimation: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollingZoomAnimationStartingEventArgs::put_Animation(Microsoft.UI.Composition.CompositionAnimation)
     @animation.setter
     def animation(self, value: microsoft_ui_composition.CompositionAnimation) -> None: ...
+    # Windows.Foundation.Numerics.Vector2 Microsoft.UI.Xaml.Controls.ScrollingZoomAnimationStartingEventArgs::get_CenterPoint()
     @_property
     def center_point(self) -> windows_foundation_numerics.Vector2: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.ScrollingZoomAnimationStartingEventArgs::get_CorrelationId()
     @_property
     def correlation_id(self) -> winrt.system.Int32: ...
+    # System.Single Microsoft.UI.Xaml.Controls.ScrollingZoomAnimationStartingEventArgs::get_EndZoomFactor()
     @_property
     def end_zoom_factor(self) -> winrt.system.Single: ...
+    # System.Single Microsoft.UI.Xaml.Controls.ScrollingZoomAnimationStartingEventArgs::get_StartZoomFactor()
     @_property
     def start_zoom_factor(self) -> winrt.system.Single: ...
 
 @typing.final
 class ScrollingZoomCompletedEventArgs(winrt.system.Object):
+    # System.Int32 Microsoft.UI.Xaml.Controls.ScrollingZoomCompletedEventArgs::get_CorrelationId()
     @_property
     def correlation_id(self) -> winrt.system.Int32: ...
 
@@ -8551,13 +11745,17 @@ class ScrollingZoomOptions(winrt.system.Object, metaclass=ScrollingZoomOptions_S
     def __new__(cls: typing.Type[Self], animation_mode: ScrollingAnimationMode) -> Self: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], animation_mode: ScrollingAnimationMode, snap_points_mode: ScrollingSnapPointsMode) -> Self: ...
+    # Microsoft.UI.Xaml.Controls.ScrollingSnapPointsMode Microsoft.UI.Xaml.Controls.ScrollingZoomOptions::get_SnapPointsMode()
     @_property
     def snap_points_mode(self) -> ScrollingSnapPointsMode: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollingZoomOptions::put_SnapPointsMode(Microsoft.UI.Xaml.Controls.ScrollingSnapPointsMode)
     @snap_points_mode.setter
     @typing.final
     def snap_points_mode(self, value: ScrollingSnapPointsMode) -> None: ...
+    # Microsoft.UI.Xaml.Controls.ScrollingAnimationMode Microsoft.UI.Xaml.Controls.ScrollingZoomOptions::get_AnimationMode()
     @_property
     def animation_mode(self) -> ScrollingAnimationMode: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ScrollingZoomOptions::put_AnimationMode(Microsoft.UI.Xaml.Controls.ScrollingAnimationMode)
     @animation_mode.setter
     @typing.final
     def animation_mode(self, value: ScrollingAnimationMode) -> None: ...
@@ -8566,9 +11764,11 @@ class SectionsInViewChangedEventArgs_Static(type):
     pass
 
 class SectionsInViewChangedEventArgs(winrt.system.Object, metaclass=SectionsInViewChangedEventArgs_Static):
+    # Windows.Foundation.Collections.IVector`1<Microsoft.UI.Xaml.Controls.HubSection> Microsoft.UI.Xaml.Controls.SectionsInViewChangedEventArgs::get_AddedSections()
     @_property
     @typing.final
     def added_sections(self) -> typing.MutableSequence[HubSection]: ...
+    # Windows.Foundation.Collections.IVector`1<Microsoft.UI.Xaml.Controls.HubSection> Microsoft.UI.Xaml.Controls.SectionsInViewChangedEventArgs::get_RemovedSections()
     @_property
     @typing.final
     def removed_sections(self) -> typing.MutableSequence[HubSection]: ...
@@ -8578,17 +11778,21 @@ class SelectionChangedEventArgs_Static(microsoft_ui_xaml.RoutedEventArgs_Static)
 
 class SelectionChangedEventArgs(microsoft_ui_xaml.RoutedEventArgs, metaclass=SelectionChangedEventArgs_Static):
     def __new__(cls: typing.Type[Self], removed_items: typing.MutableSequence[winrt.system.Object], added_items: typing.MutableSequence[winrt.system.Object]) -> Self: ...
+    # Windows.Foundation.Collections.IVector`1<System.Object> Microsoft.UI.Xaml.Controls.SelectionChangedEventArgs::get_AddedItems()
     @_property
     @typing.final
     def added_items(self) -> typing.MutableSequence[winrt.system.Object]: ...
+    # Windows.Foundation.Collections.IVector`1<System.Object> Microsoft.UI.Xaml.Controls.SelectionChangedEventArgs::get_RemovedItems()
     @_property
     @typing.final
     def removed_items(self) -> typing.MutableSequence[winrt.system.Object]: ...
 
 class SelectorBar_Static(Control_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.SelectorBar::get_ItemsProperty()
     @_property
     @typing.final
     def items_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.SelectorBar::get_SelectedItemProperty()
     @_property
     @typing.final
     def selected_item_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
@@ -8596,35 +11800,46 @@ class SelectorBar_Static(Control_Static):
 class SelectorBar(Control, metaclass=SelectorBar_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.SelectorBar::add_SelectionChanged(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.SelectorBar,Microsoft.UI.Xaml.Controls.SelectorBarSelectionChangedEventArgs>)
     def add_selection_changed(self, handler: windows_foundation.TypedEventHandler[SelectorBar, SelectorBarSelectionChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.SelectorBar::remove_SelectionChanged(Windows.Foundation.EventRegistrationToken)
     def remove_selection_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Microsoft.UI.Xaml.Controls.SelectorBarItem Microsoft.UI.Xaml.Controls.SelectorBar::get_SelectedItem()
     @_property
     def selected_item(self) -> SelectorBarItem: ...
+    # System.Void Microsoft.UI.Xaml.Controls.SelectorBar::put_SelectedItem(Microsoft.UI.Xaml.Controls.SelectorBarItem)
     @selected_item.setter
     @typing.final
     def selected_item(self, value: SelectorBarItem) -> None: ...
+    # Windows.Foundation.Collections.IVector`1<Microsoft.UI.Xaml.Controls.SelectorBarItem> Microsoft.UI.Xaml.Controls.SelectorBar::get_Items()
     @_property
     @typing.final
     def items(self) -> typing.MutableSequence[SelectorBarItem]: ...
 
 class SelectorBarItem_Static(ItemContainer_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.SelectorBarItem::get_IconProperty()
     @_property
     @typing.final
     def icon_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.SelectorBarItem::get_TextProperty()
     @_property
     @typing.final
     def text_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class SelectorBarItem(ItemContainer, metaclass=SelectorBarItem_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.String Microsoft.UI.Xaml.Controls.SelectorBarItem::get_Text()
     @_property
     def text(self) -> str: ...
+    # System.Void Microsoft.UI.Xaml.Controls.SelectorBarItem::put_Text(System.String)
     @text.setter
     @typing.final
     def text(self, value: str) -> None: ...
+    # Microsoft.UI.Xaml.Controls.IconElement Microsoft.UI.Xaml.Controls.SelectorBarItem::get_Icon()
     @_property
     def icon(self) -> IconElement: ...
+    # System.Void Microsoft.UI.Xaml.Controls.SelectorBarItem::put_Icon(Microsoft.UI.Xaml.Controls.IconElement)
     @icon.setter
     @typing.final
     def icon(self, value: IconElement) -> None: ...
@@ -8635,81 +11850,114 @@ class SelectorBarSelectionChangedEventArgs(winrt.system.Object):
 
 @typing.final
 class SemanticZoom_Static(Control_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.SemanticZoom::get_CanChangeViewsProperty()
     @_property
     def can_change_views_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.SemanticZoom::get_IsZoomOutButtonEnabledProperty()
     @_property
     def is_zoom_out_button_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.SemanticZoom::get_IsZoomedInViewActiveProperty()
     @_property
     def is_zoomed_in_view_active_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.SemanticZoom::get_ZoomedInViewProperty()
     @_property
     def zoomed_in_view_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.SemanticZoom::get_ZoomedOutViewProperty()
     @_property
     def zoomed_out_view_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
 class SemanticZoom(Control, metaclass=SemanticZoom_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Void Microsoft.UI.Xaml.Controls.SemanticZoom::ToggleActiveView()
     def toggle_active_view(self) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.SemanticZoom::add_ViewChangeCompleted(Microsoft.UI.Xaml.Controls.SemanticZoomViewChangedEventHandler)
     def add_view_change_completed(self, handler: SemanticZoomViewChangedEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.UI.Xaml.Controls.SemanticZoom::remove_ViewChangeCompleted(Windows.Foundation.EventRegistrationToken)
     def remove_view_change_completed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.SemanticZoom::add_ViewChangeStarted(Microsoft.UI.Xaml.Controls.SemanticZoomViewChangedEventHandler)
     def add_view_change_started(self, handler: SemanticZoomViewChangedEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.UI.Xaml.Controls.SemanticZoom::remove_ViewChangeStarted(Windows.Foundation.EventRegistrationToken)
     def remove_view_change_started(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Microsoft.UI.Xaml.Controls.ISemanticZoomInformation Microsoft.UI.Xaml.Controls.SemanticZoom::get_ZoomedOutView()
     @_property
     def zoomed_out_view(self) -> ISemanticZoomInformation: ...
+    # System.Void Microsoft.UI.Xaml.Controls.SemanticZoom::put_ZoomedOutView(Microsoft.UI.Xaml.Controls.ISemanticZoomInformation)
     @zoomed_out_view.setter
     def zoomed_out_view(self, value: ImplementsISemanticZoomInformation) -> None: ...
+    # Microsoft.UI.Xaml.Controls.ISemanticZoomInformation Microsoft.UI.Xaml.Controls.SemanticZoom::get_ZoomedInView()
     @_property
     def zoomed_in_view(self) -> ISemanticZoomInformation: ...
+    # System.Void Microsoft.UI.Xaml.Controls.SemanticZoom::put_ZoomedInView(Microsoft.UI.Xaml.Controls.ISemanticZoomInformation)
     @zoomed_in_view.setter
     def zoomed_in_view(self, value: ImplementsISemanticZoomInformation) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.SemanticZoom::get_IsZoomedInViewActive()
     @_property
     def is_zoomed_in_view_active(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.SemanticZoom::put_IsZoomedInViewActive(System.Boolean)
     @is_zoomed_in_view_active.setter
     def is_zoomed_in_view_active(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.SemanticZoom::get_IsZoomOutButtonEnabled()
     @_property
     def is_zoom_out_button_enabled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.SemanticZoom::put_IsZoomOutButtonEnabled(System.Boolean)
     @is_zoom_out_button_enabled.setter
     def is_zoom_out_button_enabled(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.SemanticZoom::get_CanChangeViews()
     @_property
     def can_change_views(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.SemanticZoom::put_CanChangeViews(System.Boolean)
     @can_change_views.setter
     def can_change_views(self, value: bool) -> None: ...
 
 @typing.final
 class SemanticZoomLocation(winrt.system.Object):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Object Microsoft.UI.Xaml.Controls.SemanticZoomLocation::get_Item()
     @_property
     def item(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.SemanticZoomLocation::put_Item(System.Object)
     @item.setter
     def item(self, value: winrt.system.Object) -> None: ...
+    # Windows.Foundation.Rect Microsoft.UI.Xaml.Controls.SemanticZoomLocation::get_Bounds()
     @_property
     def bounds(self) -> windows_foundation.Rect: ...
+    # System.Void Microsoft.UI.Xaml.Controls.SemanticZoomLocation::put_Bounds(Windows.Foundation.Rect)
     @bounds.setter
     def bounds(self, value: windows_foundation.Rect) -> None: ...
 
 @typing.final
 class SemanticZoomViewChangedEventArgs(winrt.system.Object):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Microsoft.UI.Xaml.Controls.SemanticZoomLocation Microsoft.UI.Xaml.Controls.SemanticZoomViewChangedEventArgs::get_SourceItem()
     @_property
     def source_item(self) -> SemanticZoomLocation: ...
+    # System.Void Microsoft.UI.Xaml.Controls.SemanticZoomViewChangedEventArgs::put_SourceItem(Microsoft.UI.Xaml.Controls.SemanticZoomLocation)
     @source_item.setter
     def source_item(self, value: SemanticZoomLocation) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.SemanticZoomViewChangedEventArgs::get_IsSourceZoomedInView()
     @_property
     def is_source_zoomed_in_view(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.SemanticZoomViewChangedEventArgs::put_IsSourceZoomedInView(System.Boolean)
     @is_source_zoomed_in_view.setter
     def is_source_zoomed_in_view(self, value: bool) -> None: ...
+    # Microsoft.UI.Xaml.Controls.SemanticZoomLocation Microsoft.UI.Xaml.Controls.SemanticZoomViewChangedEventArgs::get_DestinationItem()
     @_property
     def destination_item(self) -> SemanticZoomLocation: ...
+    # System.Void Microsoft.UI.Xaml.Controls.SemanticZoomViewChangedEventArgs::put_DestinationItem(Microsoft.UI.Xaml.Controls.SemanticZoomLocation)
     @destination_item.setter
     def destination_item(self, value: SemanticZoomLocation) -> None: ...
 
 class SplitButton_Static(ContentControl_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.SplitButton::get_CommandParameterProperty()
     @_property
     @typing.final
     def command_parameter_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.SplitButton::get_CommandProperty()
     @_property
     @typing.final
     def command_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.SplitButton::get_FlyoutProperty()
     @_property
     @typing.final
     def flyout_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
@@ -8717,21 +11965,29 @@ class SplitButton_Static(ContentControl_Static):
 class SplitButton(ContentControl, metaclass=SplitButton_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.SplitButton::add_Click(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.SplitButton,Microsoft.UI.Xaml.Controls.SplitButtonClickEventArgs>)
     def add_click(self, handler: windows_foundation.TypedEventHandler[SplitButton, SplitButtonClickEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.SplitButton::remove_Click(Windows.Foundation.EventRegistrationToken)
     def remove_click(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase Microsoft.UI.Xaml.Controls.SplitButton::get_Flyout()
     @_property
     def flyout(self) -> microsoft_ui_xaml_controls_primitives.FlyoutBase: ...
+    # System.Void Microsoft.UI.Xaml.Controls.SplitButton::put_Flyout(Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase)
     @flyout.setter
     @typing.final
     def flyout(self, value: microsoft_ui_xaml_controls_primitives.FlyoutBase) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.SplitButton::get_CommandParameter()
     @_property
     def command_parameter(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.SplitButton::put_CommandParameter(System.Object)
     @command_parameter.setter
     @typing.final
     def command_parameter(self, value: winrt.system.Object) -> None: ...
+    # Microsoft.UI.Xaml.Input.ICommand Microsoft.UI.Xaml.Controls.SplitButton::get_Command()
     @_property
     def command(self) -> microsoft_ui_xaml_input.ICommand: ...
+    # System.Void Microsoft.UI.Xaml.Controls.SplitButton::put_Command(Microsoft.UI.Xaml.Input.ICommand)
     @command.setter
     @typing.final
     def command(self, value: microsoft_ui_xaml_input.ImplementsICommand) -> None: ...
@@ -8741,33 +11997,43 @@ class SplitButtonClickEventArgs(winrt.system.Object):
     pass
 
 class SplitView_Static(Control_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.SplitView::get_CompactPaneLengthProperty()
     @_property
     @typing.final
     def compact_pane_length_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.SplitView::get_ContentProperty()
     @_property
     @typing.final
     def content_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.SplitView::get_DisplayModeProperty()
     @_property
     @typing.final
     def display_mode_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.SplitView::get_IsPaneOpenProperty()
     @_property
     @typing.final
     def is_pane_open_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.SplitView::get_LightDismissOverlayModeProperty()
     @_property
     @typing.final
     def light_dismiss_overlay_mode_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.SplitView::get_OpenPaneLengthProperty()
     @_property
     @typing.final
     def open_pane_length_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.SplitView::get_PaneBackgroundProperty()
     @_property
     @typing.final
     def pane_background_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.SplitView::get_PanePlacementProperty()
     @_property
     @typing.final
     def pane_placement_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.SplitView::get_PaneProperty()
     @_property
     @typing.final
     def pane_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.SplitView::get_TemplateSettingsProperty()
     @_property
     @typing.final
     def template_settings_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
@@ -8775,180 +12041,248 @@ class SplitView_Static(Control_Static):
 class SplitView(Control, metaclass=SplitView_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.SplitView::add_PaneClosed(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.SplitView,System.Object>)
     def add_pane_closed(self, handler: windows_foundation.TypedEventHandler[SplitView, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.SplitView::remove_PaneClosed(Windows.Foundation.EventRegistrationToken)
     def remove_pane_closed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.SplitView::add_PaneClosing(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.SplitView,Microsoft.UI.Xaml.Controls.SplitViewPaneClosingEventArgs>)
     def add_pane_closing(self, handler: windows_foundation.TypedEventHandler[SplitView, SplitViewPaneClosingEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.SplitView::remove_PaneClosing(Windows.Foundation.EventRegistrationToken)
     def remove_pane_closing(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.SplitView::add_PaneOpened(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.SplitView,System.Object>)
     def add_pane_opened(self, handler: windows_foundation.TypedEventHandler[SplitView, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.SplitView::remove_PaneOpened(Windows.Foundation.EventRegistrationToken)
     def remove_pane_opened(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.SplitView::add_PaneOpening(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.SplitView,System.Object>)
     def add_pane_opening(self, handler: windows_foundation.TypedEventHandler[SplitView, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.SplitView::remove_PaneOpening(Windows.Foundation.EventRegistrationToken)
     def remove_pane_opening(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Microsoft.UI.Xaml.Controls.SplitViewPanePlacement Microsoft.UI.Xaml.Controls.SplitView::get_PanePlacement()
     @_property
     def pane_placement(self) -> SplitViewPanePlacement: ...
+    # System.Void Microsoft.UI.Xaml.Controls.SplitView::put_PanePlacement(Microsoft.UI.Xaml.Controls.SplitViewPanePlacement)
     @pane_placement.setter
     @typing.final
     def pane_placement(self, value: SplitViewPanePlacement) -> None: ...
+    # Microsoft.UI.Xaml.Media.Brush Microsoft.UI.Xaml.Controls.SplitView::get_PaneBackground()
     @_property
     def pane_background(self) -> microsoft_ui_xaml_media.Brush: ...
+    # System.Void Microsoft.UI.Xaml.Controls.SplitView::put_PaneBackground(Microsoft.UI.Xaml.Media.Brush)
     @pane_background.setter
     @typing.final
     def pane_background(self, value: microsoft_ui_xaml_media.Brush) -> None: ...
+    # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.Controls.SplitView::get_Pane()
     @_property
     def pane(self) -> microsoft_ui_xaml.UIElement: ...
+    # System.Void Microsoft.UI.Xaml.Controls.SplitView::put_Pane(Microsoft.UI.Xaml.UIElement)
     @pane.setter
     @typing.final
     def pane(self, value: microsoft_ui_xaml.UIElement) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.SplitView::get_OpenPaneLength()
     @_property
     def open_pane_length(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.SplitView::put_OpenPaneLength(System.Double)
     @open_pane_length.setter
     @typing.final
     def open_pane_length(self, value: winrt.system.Double) -> None: ...
+    # Microsoft.UI.Xaml.Controls.LightDismissOverlayMode Microsoft.UI.Xaml.Controls.SplitView::get_LightDismissOverlayMode()
     @_property
     def light_dismiss_overlay_mode(self) -> LightDismissOverlayMode: ...
+    # System.Void Microsoft.UI.Xaml.Controls.SplitView::put_LightDismissOverlayMode(Microsoft.UI.Xaml.Controls.LightDismissOverlayMode)
     @light_dismiss_overlay_mode.setter
     @typing.final
     def light_dismiss_overlay_mode(self, value: LightDismissOverlayMode) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.SplitView::get_IsPaneOpen()
     @_property
     def is_pane_open(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.SplitView::put_IsPaneOpen(System.Boolean)
     @is_pane_open.setter
     @typing.final
     def is_pane_open(self, value: bool) -> None: ...
+    # Microsoft.UI.Xaml.Controls.SplitViewDisplayMode Microsoft.UI.Xaml.Controls.SplitView::get_DisplayMode()
     @_property
     def display_mode(self) -> SplitViewDisplayMode: ...
+    # System.Void Microsoft.UI.Xaml.Controls.SplitView::put_DisplayMode(Microsoft.UI.Xaml.Controls.SplitViewDisplayMode)
     @display_mode.setter
     @typing.final
     def display_mode(self, value: SplitViewDisplayMode) -> None: ...
+    # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.Controls.SplitView::get_Content()
     @_property
     def content(self) -> microsoft_ui_xaml.UIElement: ...
+    # System.Void Microsoft.UI.Xaml.Controls.SplitView::put_Content(Microsoft.UI.Xaml.UIElement)
     @content.setter
     @typing.final
     def content(self, value: microsoft_ui_xaml.UIElement) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.SplitView::get_CompactPaneLength()
     @_property
     def compact_pane_length(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.SplitView::put_CompactPaneLength(System.Double)
     @compact_pane_length.setter
     @typing.final
     def compact_pane_length(self, value: winrt.system.Double) -> None: ...
+    # Microsoft.UI.Xaml.Controls.Primitives.SplitViewTemplateSettings Microsoft.UI.Xaml.Controls.SplitView::get_TemplateSettings()
     @_property
     @typing.final
     def template_settings(self) -> microsoft_ui_xaml_controls_primitives.SplitViewTemplateSettings: ...
 
 @typing.final
 class SplitViewPaneClosingEventArgs(winrt.system.Object):
+    # System.Boolean Microsoft.UI.Xaml.Controls.SplitViewPaneClosingEventArgs::get_Cancel()
     @_property
     def cancel(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.SplitViewPaneClosingEventArgs::put_Cancel(System.Boolean)
     @cancel.setter
     def cancel(self, value: bool) -> None: ...
 
 class StackLayout_Static(VirtualizingLayout_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.StackLayout::get_OrientationProperty()
     @_property
     @typing.final
     def orientation_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.StackLayout::get_SpacingProperty()
     @_property
     @typing.final
     def spacing_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class StackLayout(VirtualizingLayout, metaclass=StackLayout_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Double Microsoft.UI.Xaml.Controls.StackLayout::get_Spacing()
     @_property
     def spacing(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.StackLayout::put_Spacing(System.Double)
     @spacing.setter
     @typing.final
     def spacing(self, value: winrt.system.Double) -> None: ...
+    # Microsoft.UI.Xaml.Controls.Orientation Microsoft.UI.Xaml.Controls.StackLayout::get_Orientation()
     @_property
     def orientation(self) -> Orientation: ...
+    # System.Void Microsoft.UI.Xaml.Controls.StackLayout::put_Orientation(Microsoft.UI.Xaml.Controls.Orientation)
     @orientation.setter
     @typing.final
     def orientation(self, value: Orientation) -> None: ...
 
 class StackPanel_Static(Panel_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.StackPanel::get_AreScrollSnapPointsRegularProperty()
     @_property
     @typing.final
     def are_scroll_snap_points_regular_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.StackPanel::get_BackgroundSizingProperty()
     @_property
     @typing.final
     def background_sizing_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.StackPanel::get_BorderBrushProperty()
     @_property
     @typing.final
     def border_brush_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.StackPanel::get_BorderThicknessProperty()
     @_property
     @typing.final
     def border_thickness_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.StackPanel::get_CornerRadiusProperty()
     @_property
     @typing.final
     def corner_radius_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.StackPanel::get_OrientationProperty()
     @_property
     @typing.final
     def orientation_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.StackPanel::get_PaddingProperty()
     @_property
     @typing.final
     def padding_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.StackPanel::get_SpacingProperty()
     @_property
     @typing.final
     def spacing_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class StackPanel(Panel, ImplementsIInsertionPanel, microsoft_ui_xaml_controls_primitives.ImplementsIScrollSnapPointsInfo, metaclass=StackPanel_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Void Microsoft.UI.Xaml.Controls.StackPanel::GetInsertionIndexes(Windows.Foundation.Point,System.Int32&,System.Int32&)
     def get_insertion_indexes(self, position: windows_foundation.Point, /) -> typing.Tuple[winrt.system.Int32, winrt.system.Int32]: ...
+    # Windows.Foundation.Collections.IVectorView`1<System.Single> Microsoft.UI.Xaml.Controls.StackPanel::GetIrregularSnapPoints(Microsoft.UI.Xaml.Controls.Orientation,Microsoft.UI.Xaml.Controls.Primitives.SnapPointsAlignment)
     def get_irregular_snap_points(self, orientation: Orientation, alignment: microsoft_ui_xaml_controls_primitives.SnapPointsAlignment, /) -> typing.Sequence[winrt.system.Single]: ...
+    # System.Single Microsoft.UI.Xaml.Controls.StackPanel::GetRegularSnapPoints(Microsoft.UI.Xaml.Controls.Orientation,Microsoft.UI.Xaml.Controls.Primitives.SnapPointsAlignment,System.Single&)
     def get_regular_snap_points(self, orientation: Orientation, alignment: microsoft_ui_xaml_controls_primitives.SnapPointsAlignment, /) -> typing.Tuple[winrt.system.Single, winrt.system.Single]: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.StackPanel::add_HorizontalSnapPointsChanged(Windows.Foundation.EventHandler`1<System.Object>)
     def add_horizontal_snap_points_changed(self, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.StackPanel::remove_HorizontalSnapPointsChanged(Windows.Foundation.EventRegistrationToken)
     def remove_horizontal_snap_points_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.StackPanel::add_VerticalSnapPointsChanged(Windows.Foundation.EventHandler`1<System.Object>)
     def add_vertical_snap_points_changed(self, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.StackPanel::remove_VerticalSnapPointsChanged(Windows.Foundation.EventRegistrationToken)
     def remove_vertical_snap_points_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.StackPanel::get_Spacing()
     @_property
     def spacing(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.StackPanel::put_Spacing(System.Double)
     @spacing.setter
     @typing.final
     def spacing(self, value: winrt.system.Double) -> None: ...
+    # Microsoft.UI.Xaml.Thickness Microsoft.UI.Xaml.Controls.StackPanel::get_Padding()
     @_property
     def padding(self) -> microsoft_ui_xaml.Thickness: ...
+    # System.Void Microsoft.UI.Xaml.Controls.StackPanel::put_Padding(Microsoft.UI.Xaml.Thickness)
     @padding.setter
     @typing.final
     def padding(self, value: microsoft_ui_xaml.Thickness) -> None: ...
+    # Microsoft.UI.Xaml.Controls.Orientation Microsoft.UI.Xaml.Controls.StackPanel::get_Orientation()
     @_property
     def orientation(self) -> Orientation: ...
+    # System.Void Microsoft.UI.Xaml.Controls.StackPanel::put_Orientation(Microsoft.UI.Xaml.Controls.Orientation)
     @orientation.setter
     @typing.final
     def orientation(self, value: Orientation) -> None: ...
+    # Microsoft.UI.Xaml.CornerRadius Microsoft.UI.Xaml.Controls.StackPanel::get_CornerRadius()
     @_property
     def corner_radius(self) -> microsoft_ui_xaml.CornerRadius: ...
+    # System.Void Microsoft.UI.Xaml.Controls.StackPanel::put_CornerRadius(Microsoft.UI.Xaml.CornerRadius)
     @corner_radius.setter
     @typing.final
     def corner_radius(self, value: microsoft_ui_xaml.CornerRadius) -> None: ...
+    # Microsoft.UI.Xaml.Thickness Microsoft.UI.Xaml.Controls.StackPanel::get_BorderThickness()
     @_property
     def border_thickness(self) -> microsoft_ui_xaml.Thickness: ...
+    # System.Void Microsoft.UI.Xaml.Controls.StackPanel::put_BorderThickness(Microsoft.UI.Xaml.Thickness)
     @border_thickness.setter
     @typing.final
     def border_thickness(self, value: microsoft_ui_xaml.Thickness) -> None: ...
+    # Microsoft.UI.Xaml.Media.Brush Microsoft.UI.Xaml.Controls.StackPanel::get_BorderBrush()
     @_property
     def border_brush(self) -> microsoft_ui_xaml_media.Brush: ...
+    # System.Void Microsoft.UI.Xaml.Controls.StackPanel::put_BorderBrush(Microsoft.UI.Xaml.Media.Brush)
     @border_brush.setter
     @typing.final
     def border_brush(self, value: microsoft_ui_xaml_media.Brush) -> None: ...
+    # Microsoft.UI.Xaml.Controls.BackgroundSizing Microsoft.UI.Xaml.Controls.StackPanel::get_BackgroundSizing()
     @_property
     def background_sizing(self) -> BackgroundSizing: ...
+    # System.Void Microsoft.UI.Xaml.Controls.StackPanel::put_BackgroundSizing(Microsoft.UI.Xaml.Controls.BackgroundSizing)
     @background_sizing.setter
     @typing.final
     def background_sizing(self, value: BackgroundSizing) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.StackPanel::get_AreScrollSnapPointsRegular()
     @_property
     def are_scroll_snap_points_regular(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.StackPanel::put_AreScrollSnapPointsRegular(System.Boolean)
     @are_scroll_snap_points_regular.setter
     @typing.final
     def are_scroll_snap_points_regular(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.StackPanel::get_AreHorizontalSnapPointsRegular()
     @_property
     @typing.final
     def are_horizontal_snap_points_regular(self) -> bool: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.StackPanel::get_AreVerticalSnapPointsRegular()
     @_property
     @typing.final
     def are_vertical_snap_points_regular(self) -> bool: ...
@@ -8959,7 +12293,9 @@ class StyleSelector_Static(type):
 class StyleSelector(winrt.system.Object, metaclass=StyleSelector_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.final
+    # Microsoft.UI.Xaml.Style Microsoft.UI.Xaml.Controls.StyleSelector::SelectStyle(System.Object,Microsoft.UI.Xaml.DependencyObject)
     def select_style(self, item: winrt.system.Object, container: microsoft_ui_xaml.DependencyObject, /) -> microsoft_ui_xaml.Style: ...
+    # Microsoft.UI.Xaml.Style Microsoft.UI.Xaml.Controls.StyleSelector::SelectStyleCore(System.Object,Microsoft.UI.Xaml.DependencyObject)
     def _select_style_core(self, item: winrt.system.Object, container: microsoft_ui_xaml.DependencyObject, /) -> microsoft_ui_xaml.Style: ...
 
 class SwapChainBackgroundPanel_Static(Grid_Static):
@@ -8969,9 +12305,11 @@ class SwapChainBackgroundPanel(Grid, metaclass=SwapChainBackgroundPanel_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
 
 class SwapChainPanel_Static(Grid_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.SwapChainPanel::get_CompositionScaleXProperty()
     @_property
     @typing.final
     def composition_scale_x_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.SwapChainPanel::get_CompositionScaleYProperty()
     @_property
     @typing.final
     def composition_scale_y_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
@@ -8979,28 +12317,37 @@ class SwapChainPanel_Static(Grid_Static):
 class SwapChainPanel(Grid, metaclass=SwapChainPanel_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.final
+    # Microsoft.UI.Input.InputPointerSource Microsoft.UI.Xaml.Controls.SwapChainPanel::CreateCoreIndependentInputSource(Microsoft.UI.Input.InputPointerSourceDeviceKinds)
     def create_core_independent_input_source(self, device_kinds: microsoft_ui_input.InputPointerSourceDeviceKinds, /) -> microsoft_ui_input.InputPointerSource: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.SwapChainPanel::add_CompositionScaleChanged(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.SwapChainPanel,System.Object>)
     def add_composition_scale_changed(self, handler: windows_foundation.TypedEventHandler[SwapChainPanel, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.SwapChainPanel::remove_CompositionScaleChanged(Windows.Foundation.EventRegistrationToken)
     def remove_composition_scale_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.Single Microsoft.UI.Xaml.Controls.SwapChainPanel::get_CompositionScaleX()
     @_property
     @typing.final
     def composition_scale_x(self) -> winrt.system.Single: ...
+    # System.Single Microsoft.UI.Xaml.Controls.SwapChainPanel::get_CompositionScaleY()
     @_property
     @typing.final
     def composition_scale_y(self) -> winrt.system.Single: ...
 
 class SwipeControl_Static(ContentControl_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.SwipeControl::get_BottomItemsProperty()
     @_property
     @typing.final
     def bottom_items_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.SwipeControl::get_LeftItemsProperty()
     @_property
     @typing.final
     def left_items_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.SwipeControl::get_RightItemsProperty()
     @_property
     @typing.final
     def right_items_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.SwipeControl::get_TopItemsProperty()
     @_property
     @typing.final
     def top_items_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
@@ -9008,47 +12355,63 @@ class SwipeControl_Static(ContentControl_Static):
 class SwipeControl(ContentControl, metaclass=SwipeControl_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.SwipeControl::Close()
     def close(self) -> None: ...
+    # Microsoft.UI.Xaml.Controls.SwipeItems Microsoft.UI.Xaml.Controls.SwipeControl::get_TopItems()
     @_property
     def top_items(self) -> SwipeItems: ...
+    # System.Void Microsoft.UI.Xaml.Controls.SwipeControl::put_TopItems(Microsoft.UI.Xaml.Controls.SwipeItems)
     @top_items.setter
     @typing.final
     def top_items(self, value: SwipeItems) -> None: ...
+    # Microsoft.UI.Xaml.Controls.SwipeItems Microsoft.UI.Xaml.Controls.SwipeControl::get_RightItems()
     @_property
     def right_items(self) -> SwipeItems: ...
+    # System.Void Microsoft.UI.Xaml.Controls.SwipeControl::put_RightItems(Microsoft.UI.Xaml.Controls.SwipeItems)
     @right_items.setter
     @typing.final
     def right_items(self, value: SwipeItems) -> None: ...
+    # Microsoft.UI.Xaml.Controls.SwipeItems Microsoft.UI.Xaml.Controls.SwipeControl::get_LeftItems()
     @_property
     def left_items(self) -> SwipeItems: ...
+    # System.Void Microsoft.UI.Xaml.Controls.SwipeControl::put_LeftItems(Microsoft.UI.Xaml.Controls.SwipeItems)
     @left_items.setter
     @typing.final
     def left_items(self, value: SwipeItems) -> None: ...
+    # Microsoft.UI.Xaml.Controls.SwipeItems Microsoft.UI.Xaml.Controls.SwipeControl::get_BottomItems()
     @_property
     def bottom_items(self) -> SwipeItems: ...
+    # System.Void Microsoft.UI.Xaml.Controls.SwipeControl::put_BottomItems(Microsoft.UI.Xaml.Controls.SwipeItems)
     @bottom_items.setter
     @typing.final
     def bottom_items(self, value: SwipeItems) -> None: ...
 
 class SwipeItem_Static(microsoft_ui_xaml.DependencyObject_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.SwipeItem::get_BackgroundProperty()
     @_property
     @typing.final
     def background_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.SwipeItem::get_BehaviorOnInvokedProperty()
     @_property
     @typing.final
     def behavior_on_invoked_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.SwipeItem::get_CommandParameterProperty()
     @_property
     @typing.final
     def command_parameter_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.SwipeItem::get_CommandProperty()
     @_property
     @typing.final
     def command_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.SwipeItem::get_ForegroundProperty()
     @_property
     @typing.final
     def foreground_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.SwipeItem::get_IconSourceProperty()
     @_property
     @typing.final
     def icon_source_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.SwipeItem::get_TextProperty()
     @_property
     @typing.final
     def text_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
@@ -9056,51 +12419,69 @@ class SwipeItem_Static(microsoft_ui_xaml.DependencyObject_Static):
 class SwipeItem(microsoft_ui_xaml.DependencyObject, metaclass=SwipeItem_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.SwipeItem::add_Invoked(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.SwipeItem,Microsoft.UI.Xaml.Controls.SwipeItemInvokedEventArgs>)
     def add_invoked(self, handler: windows_foundation.TypedEventHandler[SwipeItem, SwipeItemInvokedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.SwipeItem::remove_Invoked(Windows.Foundation.EventRegistrationToken)
     def remove_invoked(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.String Microsoft.UI.Xaml.Controls.SwipeItem::get_Text()
     @_property
     def text(self) -> str: ...
+    # System.Void Microsoft.UI.Xaml.Controls.SwipeItem::put_Text(System.String)
     @text.setter
     @typing.final
     def text(self, value: str) -> None: ...
+    # Microsoft.UI.Xaml.Controls.IconSource Microsoft.UI.Xaml.Controls.SwipeItem::get_IconSource()
     @_property
     def icon_source(self) -> IconSource: ...
+    # System.Void Microsoft.UI.Xaml.Controls.SwipeItem::put_IconSource(Microsoft.UI.Xaml.Controls.IconSource)
     @icon_source.setter
     @typing.final
     def icon_source(self, value: IconSource) -> None: ...
+    # Microsoft.UI.Xaml.Media.Brush Microsoft.UI.Xaml.Controls.SwipeItem::get_Foreground()
     @_property
     def foreground(self) -> microsoft_ui_xaml_media.Brush: ...
+    # System.Void Microsoft.UI.Xaml.Controls.SwipeItem::put_Foreground(Microsoft.UI.Xaml.Media.Brush)
     @foreground.setter
     @typing.final
     def foreground(self, value: microsoft_ui_xaml_media.Brush) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.SwipeItem::get_CommandParameter()
     @_property
     def command_parameter(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.SwipeItem::put_CommandParameter(System.Object)
     @command_parameter.setter
     @typing.final
     def command_parameter(self, value: winrt.system.Object) -> None: ...
+    # Microsoft.UI.Xaml.Input.ICommand Microsoft.UI.Xaml.Controls.SwipeItem::get_Command()
     @_property
     def command(self) -> microsoft_ui_xaml_input.ICommand: ...
+    # System.Void Microsoft.UI.Xaml.Controls.SwipeItem::put_Command(Microsoft.UI.Xaml.Input.ICommand)
     @command.setter
     @typing.final
     def command(self, value: microsoft_ui_xaml_input.ImplementsICommand) -> None: ...
+    # Microsoft.UI.Xaml.Controls.SwipeBehaviorOnInvoked Microsoft.UI.Xaml.Controls.SwipeItem::get_BehaviorOnInvoked()
     @_property
     def behavior_on_invoked(self) -> SwipeBehaviorOnInvoked: ...
+    # System.Void Microsoft.UI.Xaml.Controls.SwipeItem::put_BehaviorOnInvoked(Microsoft.UI.Xaml.Controls.SwipeBehaviorOnInvoked)
     @behavior_on_invoked.setter
     @typing.final
     def behavior_on_invoked(self, value: SwipeBehaviorOnInvoked) -> None: ...
+    # Microsoft.UI.Xaml.Media.Brush Microsoft.UI.Xaml.Controls.SwipeItem::get_Background()
     @_property
     def background(self) -> microsoft_ui_xaml_media.Brush: ...
+    # System.Void Microsoft.UI.Xaml.Controls.SwipeItem::put_Background(Microsoft.UI.Xaml.Media.Brush)
     @background.setter
     @typing.final
     def background(self, value: microsoft_ui_xaml_media.Brush) -> None: ...
 
 @typing.final
 class SwipeItemInvokedEventArgs(winrt.system.Object):
+    # Microsoft.UI.Xaml.Controls.SwipeControl Microsoft.UI.Xaml.Controls.SwipeItemInvokedEventArgs::get_SwipeControl()
     @_property
     def swipe_control(self) -> SwipeControl: ...
 
 class SwipeItems_Static(microsoft_ui_xaml.DependencyObject_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.SwipeItems::get_ModeProperty()
     @_property
     @typing.final
     def mode_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
@@ -9121,29 +12502,45 @@ class SwipeItems(microsoft_ui_xaml.DependencyObject, winrt._winrt.MutableSequenc
     @typing.overload
     def __setitem__(self, index: slice, value: typing.Iterable[SwipeItem]) -> None: ...
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Void Microsoft.UI.Xaml.Controls.SwipeItems::Append(Microsoft.UI.Xaml.Controls.SwipeItem)
     def append(self, value: SwipeItem, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.SwipeItems::Clear()
     def clear(self) -> None: ...
+    # Windows.Foundation.Collections.IIterator`1<Microsoft.UI.Xaml.Controls.SwipeItem> Microsoft.UI.Xaml.Controls.SwipeItems::First()
     def first(self) -> windows_foundation_collections.IIterator[SwipeItem]: ...
+    # Microsoft.UI.Xaml.Controls.SwipeItem Microsoft.UI.Xaml.Controls.SwipeItems::GetAt(System.UInt32)
     def get_at(self, index: winrt.system.UInt32, /) -> SwipeItem: ...
+    # System.UInt32 Microsoft.UI.Xaml.Controls.SwipeItems::GetMany(System.UInt32,Microsoft.UI.Xaml.Controls.SwipeItem[])
     def get_many(self, start_index: winrt.system.UInt32, items: typing.Union[winrt.system.Array[SwipeItem], winrt.system.WriteableBuffer], /) -> winrt.system.UInt32: ...
+    # Windows.Foundation.Collections.IVectorView`1<Microsoft.UI.Xaml.Controls.SwipeItem> Microsoft.UI.Xaml.Controls.SwipeItems::GetView()
     def get_view(self) -> typing.Sequence[SwipeItem]: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.SwipeItems::IndexOf(Microsoft.UI.Xaml.Controls.SwipeItem,System.UInt32&)
     def index_of(self, value: SwipeItem, /) -> typing.Tuple[bool, winrt.system.UInt32]: ...
+    # System.Void Microsoft.UI.Xaml.Controls.SwipeItems::InsertAt(System.UInt32,Microsoft.UI.Xaml.Controls.SwipeItem)
     def insert_at(self, index: winrt.system.UInt32, value: SwipeItem, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.SwipeItems::RemoveAt(System.UInt32)
     def remove_at(self, index: winrt.system.UInt32, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.SwipeItems::RemoveAtEnd()
     def remove_at_end(self) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.SwipeItems::ReplaceAll(Microsoft.UI.Xaml.Controls.SwipeItem[])
     def replace_all(self, items: typing.Union[winrt.system.Array[SwipeItem], winrt.system.ReadableBuffer], /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.SwipeItems::SetAt(System.UInt32,Microsoft.UI.Xaml.Controls.SwipeItem)
     def set_at(self, index: winrt.system.UInt32, value: SwipeItem, /) -> None: ...
+    # Microsoft.UI.Xaml.Controls.SwipeMode Microsoft.UI.Xaml.Controls.SwipeItems::get_Mode()
     @_property
     def mode(self) -> SwipeMode: ...
+    # System.Void Microsoft.UI.Xaml.Controls.SwipeItems::put_Mode(Microsoft.UI.Xaml.Controls.SwipeMode)
     @mode.setter
     @typing.final
     def mode(self, value: SwipeMode) -> None: ...
+    # System.UInt32 Microsoft.UI.Xaml.Controls.SwipeItems::get_Size()
     @_property
     @typing.final
     def size(self) -> winrt.system.UInt32: ...
 
 @typing.final
 class SymbolIcon_Static(IconElement_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.SymbolIcon::get_SymbolProperty()
     @_property
     def symbol_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
@@ -9153,79 +12550,103 @@ class SymbolIcon(IconElement, metaclass=SymbolIcon_Static):
     def __new__(cls: typing.Type[Self], symbol: Symbol) -> Self: ...
     @typing.overload
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Microsoft.UI.Xaml.Controls.Symbol Microsoft.UI.Xaml.Controls.SymbolIcon::get_Symbol()
     @_property
     def symbol(self) -> Symbol: ...
+    # System.Void Microsoft.UI.Xaml.Controls.SymbolIcon::put_Symbol(Microsoft.UI.Xaml.Controls.Symbol)
     @symbol.setter
     def symbol(self, value: Symbol) -> None: ...
 
 class SymbolIconSource_Static(IconSource_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.SymbolIconSource::get_SymbolProperty()
     @_property
     @typing.final
     def symbol_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class SymbolIconSource(IconSource, metaclass=SymbolIconSource_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Microsoft.UI.Xaml.Controls.Symbol Microsoft.UI.Xaml.Controls.SymbolIconSource::get_Symbol()
     @_property
     def symbol(self) -> Symbol: ...
+    # System.Void Microsoft.UI.Xaml.Controls.SymbolIconSource::put_Symbol(Microsoft.UI.Xaml.Controls.Symbol)
     @symbol.setter
     @typing.final
     def symbol(self, value: Symbol) -> None: ...
 
 class TabView_Static(Control_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TabView::get_AddTabButtonCommandParameterProperty()
     @_property
     @typing.final
     def add_tab_button_command_parameter_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TabView::get_AddTabButtonCommandProperty()
     @_property
     @typing.final
     def add_tab_button_command_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TabView::get_AllowDropTabsProperty()
     @_property
     @typing.final
     def allow_drop_tabs_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TabView::get_CanDragTabsProperty()
     @_property
     @typing.final
     def can_drag_tabs_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TabView::get_CanReorderTabsProperty()
     @_property
     @typing.final
     def can_reorder_tabs_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TabView::get_CloseButtonOverlayModeProperty()
     @_property
     @typing.final
     def close_button_overlay_mode_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TabView::get_IsAddTabButtonVisibleProperty()
     @_property
     @typing.final
     def is_add_tab_button_visible_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TabView::get_SelectedIndexProperty()
     @_property
     @typing.final
     def selected_index_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TabView::get_SelectedItemProperty()
     @_property
     @typing.final
     def selected_item_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TabView::get_TabItemTemplateProperty()
     @_property
     @typing.final
     def tab_item_template_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TabView::get_TabItemTemplateSelectorProperty()
     @_property
     @typing.final
     def tab_item_template_selector_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TabView::get_TabItemsProperty()
     @_property
     @typing.final
     def tab_items_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TabView::get_TabItemsSourceProperty()
     @_property
     @typing.final
     def tab_items_source_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TabView::get_TabStripFooterProperty()
     @_property
     @typing.final
     def tab_strip_footer_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TabView::get_TabStripFooterTemplateProperty()
     @_property
     @typing.final
     def tab_strip_footer_template_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TabView::get_TabStripHeaderProperty()
     @_property
     @typing.final
     def tab_strip_header_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TabView::get_TabStripHeaderTemplateProperty()
     @_property
     @typing.final
     def tab_strip_header_template_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TabView::get_TabWidthModeProperty()
     @_property
     @typing.final
     def tab_width_mode_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TabView::get_CanTearOutTabsProperty()
     @_property
     @typing.final
     def can_tear_out_tabs_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
@@ -9233,315 +12654,434 @@ class TabView_Static(Control_Static):
 class TabView(Control, metaclass=TabView_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.final
+    # Microsoft.UI.Xaml.DependencyObject Microsoft.UI.Xaml.Controls.TabView::ContainerFromIndex(System.Int32)
     def container_from_index(self, index: winrt.system.Int32, /) -> microsoft_ui_xaml.DependencyObject: ...
     @typing.final
+    # Microsoft.UI.Xaml.DependencyObject Microsoft.UI.Xaml.Controls.TabView::ContainerFromItem(System.Object)
     def container_from_item(self, item: winrt.system.Object, /) -> microsoft_ui_xaml.DependencyObject: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.TabView::add_AddTabButtonClick(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.TabView,System.Object>)
     def add_add_tab_button_click(self, handler: windows_foundation.TypedEventHandler[TabView, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.TabView::remove_AddTabButtonClick(Windows.Foundation.EventRegistrationToken)
     def remove_add_tab_button_click(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.TabView::add_SelectionChanged(Microsoft.UI.Xaml.Controls.SelectionChangedEventHandler)
     def add_selection_changed(self, handler: SelectionChangedEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.TabView::remove_SelectionChanged(Windows.Foundation.EventRegistrationToken)
     def remove_selection_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.TabView::add_TabCloseRequested(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.TabView,Microsoft.UI.Xaml.Controls.TabViewTabCloseRequestedEventArgs>)
     def add_tab_close_requested(self, handler: windows_foundation.TypedEventHandler[TabView, TabViewTabCloseRequestedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.TabView::remove_TabCloseRequested(Windows.Foundation.EventRegistrationToken)
     def remove_tab_close_requested(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.TabView::add_TabDragCompleted(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.TabView,Microsoft.UI.Xaml.Controls.TabViewTabDragCompletedEventArgs>)
     def add_tab_drag_completed(self, handler: windows_foundation.TypedEventHandler[TabView, TabViewTabDragCompletedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.TabView::remove_TabDragCompleted(Windows.Foundation.EventRegistrationToken)
     def remove_tab_drag_completed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.TabView::add_TabDragStarting(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.TabView,Microsoft.UI.Xaml.Controls.TabViewTabDragStartingEventArgs>)
     def add_tab_drag_starting(self, handler: windows_foundation.TypedEventHandler[TabView, TabViewTabDragStartingEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.TabView::remove_TabDragStarting(Windows.Foundation.EventRegistrationToken)
     def remove_tab_drag_starting(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.TabView::add_TabDroppedOutside(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.TabView,Microsoft.UI.Xaml.Controls.TabViewTabDroppedOutsideEventArgs>)
     def add_tab_dropped_outside(self, handler: windows_foundation.TypedEventHandler[TabView, TabViewTabDroppedOutsideEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.TabView::remove_TabDroppedOutside(Windows.Foundation.EventRegistrationToken)
     def remove_tab_dropped_outside(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.TabView::add_TabItemsChanged(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.TabView,Windows.Foundation.Collections.IVectorChangedEventArgs>)
     def add_tab_items_changed(self, handler: windows_foundation.TypedEventHandler[TabView, windows_foundation_collections.IVectorChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.TabView::remove_TabItemsChanged(Windows.Foundation.EventRegistrationToken)
     def remove_tab_items_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.TabView::add_TabStripDragOver(Microsoft.UI.Xaml.DragEventHandler)
     def add_tab_strip_drag_over(self, handler: microsoft_ui_xaml.DragEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.TabView::remove_TabStripDragOver(Windows.Foundation.EventRegistrationToken)
     def remove_tab_strip_drag_over(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.TabView::add_TabStripDrop(Microsoft.UI.Xaml.DragEventHandler)
     def add_tab_strip_drop(self, handler: microsoft_ui_xaml.DragEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.TabView::remove_TabStripDrop(Windows.Foundation.EventRegistrationToken)
     def remove_tab_strip_drop(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.TabView::add_ExternalTornOutTabsDropped(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.TabView,Microsoft.UI.Xaml.Controls.TabViewExternalTornOutTabsDroppedEventArgs>)
     def add_external_torn_out_tabs_dropped(self, handler: windows_foundation.TypedEventHandler[TabView, TabViewExternalTornOutTabsDroppedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.TabView::remove_ExternalTornOutTabsDropped(Windows.Foundation.EventRegistrationToken)
     def remove_external_torn_out_tabs_dropped(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.TabView::add_ExternalTornOutTabsDropping(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.TabView,Microsoft.UI.Xaml.Controls.TabViewExternalTornOutTabsDroppingEventArgs>)
     def add_external_torn_out_tabs_dropping(self, handler: windows_foundation.TypedEventHandler[TabView, TabViewExternalTornOutTabsDroppingEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.TabView::remove_ExternalTornOutTabsDropping(Windows.Foundation.EventRegistrationToken)
     def remove_external_torn_out_tabs_dropping(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.TabView::add_TabTearOutRequested(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.TabView,Microsoft.UI.Xaml.Controls.TabViewTabTearOutRequestedEventArgs>)
     def add_tab_tear_out_requested(self, handler: windows_foundation.TypedEventHandler[TabView, TabViewTabTearOutRequestedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.TabView::remove_TabTearOutRequested(Windows.Foundation.EventRegistrationToken)
     def remove_tab_tear_out_requested(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.TabView::add_TabTearOutWindowRequested(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.TabView,Microsoft.UI.Xaml.Controls.TabViewTabTearOutWindowRequestedEventArgs>)
     def add_tab_tear_out_window_requested(self, handler: windows_foundation.TypedEventHandler[TabView, TabViewTabTearOutWindowRequestedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.TabView::remove_TabTearOutWindowRequested(Windows.Foundation.EventRegistrationToken)
     def remove_tab_tear_out_window_requested(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Microsoft.UI.Xaml.Controls.TabViewWidthMode Microsoft.UI.Xaml.Controls.TabView::get_TabWidthMode()
     @_property
     def tab_width_mode(self) -> TabViewWidthMode: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TabView::put_TabWidthMode(Microsoft.UI.Xaml.Controls.TabViewWidthMode)
     @tab_width_mode.setter
     @typing.final
     def tab_width_mode(self, value: TabViewWidthMode) -> None: ...
+    # Microsoft.UI.Xaml.DataTemplate Microsoft.UI.Xaml.Controls.TabView::get_TabStripHeaderTemplate()
     @_property
     def tab_strip_header_template(self) -> microsoft_ui_xaml.DataTemplate: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TabView::put_TabStripHeaderTemplate(Microsoft.UI.Xaml.DataTemplate)
     @tab_strip_header_template.setter
     @typing.final
     def tab_strip_header_template(self, value: microsoft_ui_xaml.DataTemplate) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.TabView::get_TabStripHeader()
     @_property
     def tab_strip_header(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TabView::put_TabStripHeader(System.Object)
     @tab_strip_header.setter
     @typing.final
     def tab_strip_header(self, value: winrt.system.Object) -> None: ...
+    # Microsoft.UI.Xaml.DataTemplate Microsoft.UI.Xaml.Controls.TabView::get_TabStripFooterTemplate()
     @_property
     def tab_strip_footer_template(self) -> microsoft_ui_xaml.DataTemplate: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TabView::put_TabStripFooterTemplate(Microsoft.UI.Xaml.DataTemplate)
     @tab_strip_footer_template.setter
     @typing.final
     def tab_strip_footer_template(self, value: microsoft_ui_xaml.DataTemplate) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.TabView::get_TabStripFooter()
     @_property
     def tab_strip_footer(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TabView::put_TabStripFooter(System.Object)
     @tab_strip_footer.setter
     @typing.final
     def tab_strip_footer(self, value: winrt.system.Object) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.TabView::get_TabItemsSource()
     @_property
     def tab_items_source(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TabView::put_TabItemsSource(System.Object)
     @tab_items_source.setter
     @typing.final
     def tab_items_source(self, value: winrt.system.Object) -> None: ...
+    # Microsoft.UI.Xaml.Controls.DataTemplateSelector Microsoft.UI.Xaml.Controls.TabView::get_TabItemTemplateSelector()
     @_property
     def tab_item_template_selector(self) -> DataTemplateSelector: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TabView::put_TabItemTemplateSelector(Microsoft.UI.Xaml.Controls.DataTemplateSelector)
     @tab_item_template_selector.setter
     @typing.final
     def tab_item_template_selector(self, value: DataTemplateSelector) -> None: ...
+    # Microsoft.UI.Xaml.DataTemplate Microsoft.UI.Xaml.Controls.TabView::get_TabItemTemplate()
     @_property
     def tab_item_template(self) -> microsoft_ui_xaml.DataTemplate: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TabView::put_TabItemTemplate(Microsoft.UI.Xaml.DataTemplate)
     @tab_item_template.setter
     @typing.final
     def tab_item_template(self, value: microsoft_ui_xaml.DataTemplate) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.TabView::get_SelectedItem()
     @_property
     def selected_item(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TabView::put_SelectedItem(System.Object)
     @selected_item.setter
     @typing.final
     def selected_item(self, value: winrt.system.Object) -> None: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.TabView::get_SelectedIndex()
     @_property
     def selected_index(self) -> winrt.system.Int32: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TabView::put_SelectedIndex(System.Int32)
     @selected_index.setter
     @typing.final
     def selected_index(self, value: winrt.system.Int32) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.TabView::get_IsAddTabButtonVisible()
     @_property
     def is_add_tab_button_visible(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TabView::put_IsAddTabButtonVisible(System.Boolean)
     @is_add_tab_button_visible.setter
     @typing.final
     def is_add_tab_button_visible(self, value: bool) -> None: ...
+    # Microsoft.UI.Xaml.Controls.TabViewCloseButtonOverlayMode Microsoft.UI.Xaml.Controls.TabView::get_CloseButtonOverlayMode()
     @_property
     def close_button_overlay_mode(self) -> TabViewCloseButtonOverlayMode: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TabView::put_CloseButtonOverlayMode(Microsoft.UI.Xaml.Controls.TabViewCloseButtonOverlayMode)
     @close_button_overlay_mode.setter
     @typing.final
     def close_button_overlay_mode(self, value: TabViewCloseButtonOverlayMode) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.TabView::get_CanReorderTabs()
     @_property
     def can_reorder_tabs(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TabView::put_CanReorderTabs(System.Boolean)
     @can_reorder_tabs.setter
     @typing.final
     def can_reorder_tabs(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.TabView::get_CanDragTabs()
     @_property
     def can_drag_tabs(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TabView::put_CanDragTabs(System.Boolean)
     @can_drag_tabs.setter
     @typing.final
     def can_drag_tabs(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.TabView::get_AllowDropTabs()
     @_property
     def allow_drop_tabs(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TabView::put_AllowDropTabs(System.Boolean)
     @allow_drop_tabs.setter
     @typing.final
     def allow_drop_tabs(self, value: bool) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.TabView::get_AddTabButtonCommandParameter()
     @_property
     def add_tab_button_command_parameter(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TabView::put_AddTabButtonCommandParameter(System.Object)
     @add_tab_button_command_parameter.setter
     @typing.final
     def add_tab_button_command_parameter(self, value: winrt.system.Object) -> None: ...
+    # Microsoft.UI.Xaml.Input.ICommand Microsoft.UI.Xaml.Controls.TabView::get_AddTabButtonCommand()
     @_property
     def add_tab_button_command(self) -> microsoft_ui_xaml_input.ICommand: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TabView::put_AddTabButtonCommand(Microsoft.UI.Xaml.Input.ICommand)
     @add_tab_button_command.setter
     @typing.final
     def add_tab_button_command(self, value: microsoft_ui_xaml_input.ImplementsICommand) -> None: ...
+    # Windows.Foundation.Collections.IVector`1<System.Object> Microsoft.UI.Xaml.Controls.TabView::get_TabItems()
     @_property
     @typing.final
     def tab_items(self) -> typing.MutableSequence[winrt.system.Object]: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.TabView::get_CanTearOutTabs()
     @_property
     def can_tear_out_tabs(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TabView::put_CanTearOutTabs(System.Boolean)
     @can_tear_out_tabs.setter
     @typing.final
     def can_tear_out_tabs(self, value: bool) -> None: ...
 
 @typing.final
 class TabViewExternalTornOutTabsDroppedEventArgs(winrt.system.Object):
+    # System.Int32 Microsoft.UI.Xaml.Controls.TabViewExternalTornOutTabsDroppedEventArgs::get_DropIndex()
     @_property
     def drop_index(self) -> winrt.system.Int32: ...
+    # System.Object[] Microsoft.UI.Xaml.Controls.TabViewExternalTornOutTabsDroppedEventArgs::get_Items()
     @_property
     def items(self) -> winrt.system.Object: ...
+    # Microsoft.UI.Xaml.UIElement[] Microsoft.UI.Xaml.Controls.TabViewExternalTornOutTabsDroppedEventArgs::get_Tabs()
     @_property
     def tabs(self) -> microsoft_ui_xaml.UIElement: ...
 
 @typing.final
 class TabViewExternalTornOutTabsDroppingEventArgs(winrt.system.Object):
+    # System.Boolean Microsoft.UI.Xaml.Controls.TabViewExternalTornOutTabsDroppingEventArgs::get_AllowDrop()
     @_property
     def allow_drop(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TabViewExternalTornOutTabsDroppingEventArgs::put_AllowDrop(System.Boolean)
     @allow_drop.setter
     def allow_drop(self, value: bool) -> None: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.TabViewExternalTornOutTabsDroppingEventArgs::get_DropIndex()
     @_property
     def drop_index(self) -> winrt.system.Int32: ...
+    # System.Object[] Microsoft.UI.Xaml.Controls.TabViewExternalTornOutTabsDroppingEventArgs::get_Items()
     @_property
     def items(self) -> winrt.system.Object: ...
+    # Microsoft.UI.Xaml.UIElement[] Microsoft.UI.Xaml.Controls.TabViewExternalTornOutTabsDroppingEventArgs::get_Tabs()
     @_property
     def tabs(self) -> microsoft_ui_xaml.UIElement: ...
 
 class TabViewItemTemplateSettings_Static(microsoft_ui_xaml.DependencyObject_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TabViewItemTemplateSettings::get_IconElementProperty()
     @_property
     @typing.final
     def icon_element_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TabViewItemTemplateSettings::get_TabGeometryProperty()
     @_property
     @typing.final
     def tab_geometry_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class TabViewItemTemplateSettings(microsoft_ui_xaml.DependencyObject, metaclass=TabViewItemTemplateSettings_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Microsoft.UI.Xaml.Controls.IconElement Microsoft.UI.Xaml.Controls.TabViewItemTemplateSettings::get_IconElement()
     @_property
     def icon_element(self) -> IconElement: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TabViewItemTemplateSettings::put_IconElement(Microsoft.UI.Xaml.Controls.IconElement)
     @icon_element.setter
     @typing.final
     def icon_element(self, value: IconElement) -> None: ...
+    # Microsoft.UI.Xaml.Media.Geometry Microsoft.UI.Xaml.Controls.TabViewItemTemplateSettings::get_TabGeometry()
     @_property
     def tab_geometry(self) -> microsoft_ui_xaml_media.Geometry: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TabViewItemTemplateSettings::put_TabGeometry(Microsoft.UI.Xaml.Media.Geometry)
     @tab_geometry.setter
     @typing.final
     def tab_geometry(self, value: microsoft_ui_xaml_media.Geometry) -> None: ...
 
 @typing.final
 class TabViewTabCloseRequestedEventArgs(winrt.system.Object):
+    # System.Object Microsoft.UI.Xaml.Controls.TabViewTabCloseRequestedEventArgs::get_Item()
     @_property
     def item(self) -> winrt.system.Object: ...
+    # Microsoft.UI.Xaml.Controls.TabViewItem Microsoft.UI.Xaml.Controls.TabViewTabCloseRequestedEventArgs::get_Tab()
     @_property
     def tab(self) -> TabViewItem: ...
 
 @typing.final
 class TabViewTabDragCompletedEventArgs(winrt.system.Object):
+    # Windows.ApplicationModel.DataTransfer.DataPackageOperation Microsoft.UI.Xaml.Controls.TabViewTabDragCompletedEventArgs::get_DropResult()
     @_property
     def drop_result(self) -> windows_applicationmodel_datatransfer.DataPackageOperation: ...
+    # System.Object Microsoft.UI.Xaml.Controls.TabViewTabDragCompletedEventArgs::get_Item()
     @_property
     def item(self) -> winrt.system.Object: ...
+    # Microsoft.UI.Xaml.Controls.TabViewItem Microsoft.UI.Xaml.Controls.TabViewTabDragCompletedEventArgs::get_Tab()
     @_property
     def tab(self) -> TabViewItem: ...
 
 @typing.final
 class TabViewTabDragStartingEventArgs(winrt.system.Object):
+    # System.Boolean Microsoft.UI.Xaml.Controls.TabViewTabDragStartingEventArgs::get_Cancel()
     @_property
     def cancel(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TabViewTabDragStartingEventArgs::put_Cancel(System.Boolean)
     @cancel.setter
     def cancel(self, value: bool) -> None: ...
+    # Windows.ApplicationModel.DataTransfer.DataPackage Microsoft.UI.Xaml.Controls.TabViewTabDragStartingEventArgs::get_Data()
     @_property
     def data(self) -> windows_applicationmodel_datatransfer.DataPackage: ...
+    # System.Object Microsoft.UI.Xaml.Controls.TabViewTabDragStartingEventArgs::get_Item()
     @_property
     def item(self) -> winrt.system.Object: ...
+    # Microsoft.UI.Xaml.Controls.TabViewItem Microsoft.UI.Xaml.Controls.TabViewTabDragStartingEventArgs::get_Tab()
     @_property
     def tab(self) -> TabViewItem: ...
 
 @typing.final
 class TabViewTabDroppedOutsideEventArgs(winrt.system.Object):
+    # System.Object Microsoft.UI.Xaml.Controls.TabViewTabDroppedOutsideEventArgs::get_Item()
     @_property
     def item(self) -> winrt.system.Object: ...
+    # Microsoft.UI.Xaml.Controls.TabViewItem Microsoft.UI.Xaml.Controls.TabViewTabDroppedOutsideEventArgs::get_Tab()
     @_property
     def tab(self) -> TabViewItem: ...
 
 @typing.final
 class TabViewTabTearOutRequestedEventArgs(winrt.system.Object):
+    # System.Object[] Microsoft.UI.Xaml.Controls.TabViewTabTearOutRequestedEventArgs::get_Items()
     @_property
     def items(self) -> winrt.system.Object: ...
+    # Microsoft.UI.WindowId Microsoft.UI.Xaml.Controls.TabViewTabTearOutRequestedEventArgs::get_NewWindowId()
     @_property
     def new_window_id(self) -> microsoft_ui.WindowId: ...
+    # Microsoft.UI.Xaml.UIElement[] Microsoft.UI.Xaml.Controls.TabViewTabTearOutRequestedEventArgs::get_Tabs()
     @_property
     def tabs(self) -> microsoft_ui_xaml.UIElement: ...
 
 @typing.final
 class TabViewTabTearOutWindowRequestedEventArgs(winrt.system.Object):
+    # Microsoft.UI.WindowId Microsoft.UI.Xaml.Controls.TabViewTabTearOutWindowRequestedEventArgs::get_NewWindowId()
     @_property
     def new_window_id(self) -> microsoft_ui.WindowId: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TabViewTabTearOutWindowRequestedEventArgs::put_NewWindowId(Microsoft.UI.WindowId)
     @new_window_id.setter
     def new_window_id(self, value: microsoft_ui.WindowId) -> None: ...
+    # System.Object[] Microsoft.UI.Xaml.Controls.TabViewTabTearOutWindowRequestedEventArgs::get_Items()
     @_property
     def items(self) -> winrt.system.Object: ...
+    # Microsoft.UI.Xaml.UIElement[] Microsoft.UI.Xaml.Controls.TabViewTabTearOutWindowRequestedEventArgs::get_Tabs()
     @_property
     def tabs(self) -> microsoft_ui_xaml.UIElement: ...
 
 class TeachingTip_Static(ContentControl_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TeachingTip::get_ActionButtonCommandParameterProperty()
     @_property
     @typing.final
     def action_button_command_parameter_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TeachingTip::get_ActionButtonCommandProperty()
     @_property
     @typing.final
     def action_button_command_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TeachingTip::get_ActionButtonContentProperty()
     @_property
     @typing.final
     def action_button_content_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TeachingTip::get_ActionButtonStyleProperty()
     @_property
     @typing.final
     def action_button_style_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TeachingTip::get_CloseButtonCommandParameterProperty()
     @_property
     @typing.final
     def close_button_command_parameter_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TeachingTip::get_CloseButtonCommandProperty()
     @_property
     @typing.final
     def close_button_command_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TeachingTip::get_CloseButtonContentProperty()
     @_property
     @typing.final
     def close_button_content_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TeachingTip::get_CloseButtonStyleProperty()
     @_property
     @typing.final
     def close_button_style_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TeachingTip::get_HeroContentPlacementProperty()
     @_property
     @typing.final
     def hero_content_placement_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TeachingTip::get_HeroContentProperty()
     @_property
     @typing.final
     def hero_content_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TeachingTip::get_IconSourceProperty()
     @_property
     @typing.final
     def icon_source_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TeachingTip::get_IsLightDismissEnabledProperty()
     @_property
     @typing.final
     def is_light_dismiss_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TeachingTip::get_IsOpenProperty()
     @_property
     @typing.final
     def is_open_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TeachingTip::get_PlacementMarginProperty()
     @_property
     @typing.final
     def placement_margin_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TeachingTip::get_PreferredPlacementProperty()
     @_property
     @typing.final
     def preferred_placement_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TeachingTip::get_ShouldConstrainToRootBoundsProperty()
     @_property
     @typing.final
     def should_constrain_to_root_bounds_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TeachingTip::get_SubtitleProperty()
     @_property
     @typing.final
     def subtitle_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TeachingTip::get_TailVisibilityProperty()
     @_property
     @typing.final
     def tail_visibility_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TeachingTip::get_TargetProperty()
     @_property
     @typing.final
     def target_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TeachingTip::get_TemplateSettingsProperty()
     @_property
     @typing.final
     def template_settings_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TeachingTip::get_TitleProperty()
     @_property
     @typing.final
     def title_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
@@ -9549,437 +13089,623 @@ class TeachingTip_Static(ContentControl_Static):
 class TeachingTip(ContentControl, metaclass=TeachingTip_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.TeachingTip::add_ActionButtonClick(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.TeachingTip,System.Object>)
     def add_action_button_click(self, handler: windows_foundation.TypedEventHandler[TeachingTip, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.TeachingTip::remove_ActionButtonClick(Windows.Foundation.EventRegistrationToken)
     def remove_action_button_click(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.TeachingTip::add_CloseButtonClick(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.TeachingTip,System.Object>)
     def add_close_button_click(self, handler: windows_foundation.TypedEventHandler[TeachingTip, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.TeachingTip::remove_CloseButtonClick(Windows.Foundation.EventRegistrationToken)
     def remove_close_button_click(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.TeachingTip::add_Closed(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.TeachingTip,Microsoft.UI.Xaml.Controls.TeachingTipClosedEventArgs>)
     def add_closed(self, handler: windows_foundation.TypedEventHandler[TeachingTip, TeachingTipClosedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.TeachingTip::remove_Closed(Windows.Foundation.EventRegistrationToken)
     def remove_closed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.TeachingTip::add_Closing(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.TeachingTip,Microsoft.UI.Xaml.Controls.TeachingTipClosingEventArgs>)
     def add_closing(self, handler: windows_foundation.TypedEventHandler[TeachingTip, TeachingTipClosingEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.TeachingTip::remove_Closing(Windows.Foundation.EventRegistrationToken)
     def remove_closing(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.String Microsoft.UI.Xaml.Controls.TeachingTip::get_Title()
     @_property
     def title(self) -> str: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TeachingTip::put_Title(System.String)
     @title.setter
     @typing.final
     def title(self, value: str) -> None: ...
+    # Microsoft.UI.Xaml.FrameworkElement Microsoft.UI.Xaml.Controls.TeachingTip::get_Target()
     @_property
     def target(self) -> microsoft_ui_xaml.FrameworkElement: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TeachingTip::put_Target(Microsoft.UI.Xaml.FrameworkElement)
     @target.setter
     @typing.final
     def target(self, value: microsoft_ui_xaml.FrameworkElement) -> None: ...
+    # Microsoft.UI.Xaml.Controls.TeachingTipTailVisibility Microsoft.UI.Xaml.Controls.TeachingTip::get_TailVisibility()
     @_property
     def tail_visibility(self) -> TeachingTipTailVisibility: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TeachingTip::put_TailVisibility(Microsoft.UI.Xaml.Controls.TeachingTipTailVisibility)
     @tail_visibility.setter
     @typing.final
     def tail_visibility(self, value: TeachingTipTailVisibility) -> None: ...
+    # System.String Microsoft.UI.Xaml.Controls.TeachingTip::get_Subtitle()
     @_property
     def subtitle(self) -> str: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TeachingTip::put_Subtitle(System.String)
     @subtitle.setter
     @typing.final
     def subtitle(self, value: str) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.TeachingTip::get_ShouldConstrainToRootBounds()
     @_property
     def should_constrain_to_root_bounds(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TeachingTip::put_ShouldConstrainToRootBounds(System.Boolean)
     @should_constrain_to_root_bounds.setter
     @typing.final
     def should_constrain_to_root_bounds(self, value: bool) -> None: ...
+    # Microsoft.UI.Xaml.Controls.TeachingTipPlacementMode Microsoft.UI.Xaml.Controls.TeachingTip::get_PreferredPlacement()
     @_property
     def preferred_placement(self) -> TeachingTipPlacementMode: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TeachingTip::put_PreferredPlacement(Microsoft.UI.Xaml.Controls.TeachingTipPlacementMode)
     @preferred_placement.setter
     @typing.final
     def preferred_placement(self, value: TeachingTipPlacementMode) -> None: ...
+    # Microsoft.UI.Xaml.Thickness Microsoft.UI.Xaml.Controls.TeachingTip::get_PlacementMargin()
     @_property
     def placement_margin(self) -> microsoft_ui_xaml.Thickness: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TeachingTip::put_PlacementMargin(Microsoft.UI.Xaml.Thickness)
     @placement_margin.setter
     @typing.final
     def placement_margin(self, value: microsoft_ui_xaml.Thickness) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.TeachingTip::get_IsOpen()
     @_property
     def is_open(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TeachingTip::put_IsOpen(System.Boolean)
     @is_open.setter
     @typing.final
     def is_open(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.TeachingTip::get_IsLightDismissEnabled()
     @_property
     def is_light_dismiss_enabled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TeachingTip::put_IsLightDismissEnabled(System.Boolean)
     @is_light_dismiss_enabled.setter
     @typing.final
     def is_light_dismiss_enabled(self, value: bool) -> None: ...
+    # Microsoft.UI.Xaml.Controls.IconSource Microsoft.UI.Xaml.Controls.TeachingTip::get_IconSource()
     @_property
     def icon_source(self) -> IconSource: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TeachingTip::put_IconSource(Microsoft.UI.Xaml.Controls.IconSource)
     @icon_source.setter
     @typing.final
     def icon_source(self, value: IconSource) -> None: ...
+    # Microsoft.UI.Xaml.Controls.TeachingTipHeroContentPlacementMode Microsoft.UI.Xaml.Controls.TeachingTip::get_HeroContentPlacement()
     @_property
     def hero_content_placement(self) -> TeachingTipHeroContentPlacementMode: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TeachingTip::put_HeroContentPlacement(Microsoft.UI.Xaml.Controls.TeachingTipHeroContentPlacementMode)
     @hero_content_placement.setter
     @typing.final
     def hero_content_placement(self, value: TeachingTipHeroContentPlacementMode) -> None: ...
+    # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.Controls.TeachingTip::get_HeroContent()
     @_property
     def hero_content(self) -> microsoft_ui_xaml.UIElement: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TeachingTip::put_HeroContent(Microsoft.UI.Xaml.UIElement)
     @hero_content.setter
     @typing.final
     def hero_content(self, value: microsoft_ui_xaml.UIElement) -> None: ...
+    # Microsoft.UI.Xaml.Style Microsoft.UI.Xaml.Controls.TeachingTip::get_CloseButtonStyle()
     @_property
     def close_button_style(self) -> microsoft_ui_xaml.Style: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TeachingTip::put_CloseButtonStyle(Microsoft.UI.Xaml.Style)
     @close_button_style.setter
     @typing.final
     def close_button_style(self, value: microsoft_ui_xaml.Style) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.TeachingTip::get_CloseButtonContent()
     @_property
     def close_button_content(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TeachingTip::put_CloseButtonContent(System.Object)
     @close_button_content.setter
     @typing.final
     def close_button_content(self, value: winrt.system.Object) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.TeachingTip::get_CloseButtonCommandParameter()
     @_property
     def close_button_command_parameter(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TeachingTip::put_CloseButtonCommandParameter(System.Object)
     @close_button_command_parameter.setter
     @typing.final
     def close_button_command_parameter(self, value: winrt.system.Object) -> None: ...
+    # Microsoft.UI.Xaml.Input.ICommand Microsoft.UI.Xaml.Controls.TeachingTip::get_CloseButtonCommand()
     @_property
     def close_button_command(self) -> microsoft_ui_xaml_input.ICommand: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TeachingTip::put_CloseButtonCommand(Microsoft.UI.Xaml.Input.ICommand)
     @close_button_command.setter
     @typing.final
     def close_button_command(self, value: microsoft_ui_xaml_input.ImplementsICommand) -> None: ...
+    # Microsoft.UI.Xaml.Style Microsoft.UI.Xaml.Controls.TeachingTip::get_ActionButtonStyle()
     @_property
     def action_button_style(self) -> microsoft_ui_xaml.Style: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TeachingTip::put_ActionButtonStyle(Microsoft.UI.Xaml.Style)
     @action_button_style.setter
     @typing.final
     def action_button_style(self, value: microsoft_ui_xaml.Style) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.TeachingTip::get_ActionButtonContent()
     @_property
     def action_button_content(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TeachingTip::put_ActionButtonContent(System.Object)
     @action_button_content.setter
     @typing.final
     def action_button_content(self, value: winrt.system.Object) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.TeachingTip::get_ActionButtonCommandParameter()
     @_property
     def action_button_command_parameter(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TeachingTip::put_ActionButtonCommandParameter(System.Object)
     @action_button_command_parameter.setter
     @typing.final
     def action_button_command_parameter(self, value: winrt.system.Object) -> None: ...
+    # Microsoft.UI.Xaml.Input.ICommand Microsoft.UI.Xaml.Controls.TeachingTip::get_ActionButtonCommand()
     @_property
     def action_button_command(self) -> microsoft_ui_xaml_input.ICommand: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TeachingTip::put_ActionButtonCommand(Microsoft.UI.Xaml.Input.ICommand)
     @action_button_command.setter
     @typing.final
     def action_button_command(self, value: microsoft_ui_xaml_input.ImplementsICommand) -> None: ...
+    # Microsoft.UI.Xaml.Controls.TeachingTipTemplateSettings Microsoft.UI.Xaml.Controls.TeachingTip::get_TemplateSettings()
     @_property
     @typing.final
     def template_settings(self) -> TeachingTipTemplateSettings: ...
 
 @typing.final
 class TeachingTipClosedEventArgs(winrt.system.Object):
+    # Microsoft.UI.Xaml.Controls.TeachingTipCloseReason Microsoft.UI.Xaml.Controls.TeachingTipClosedEventArgs::get_Reason()
     @_property
     def reason(self) -> TeachingTipCloseReason: ...
 
 @typing.final
 class TeachingTipClosingEventArgs(winrt.system.Object):
+    # Windows.Foundation.Deferral Microsoft.UI.Xaml.Controls.TeachingTipClosingEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.TeachingTipClosingEventArgs::get_Cancel()
     @_property
     def cancel(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TeachingTipClosingEventArgs::put_Cancel(System.Boolean)
     @cancel.setter
     def cancel(self, value: bool) -> None: ...
+    # Microsoft.UI.Xaml.Controls.TeachingTipCloseReason Microsoft.UI.Xaml.Controls.TeachingTipClosingEventArgs::get_Reason()
     @_property
     def reason(self) -> TeachingTipCloseReason: ...
 
 class TeachingTipTemplateSettings_Static(microsoft_ui_xaml.DependencyObject_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TeachingTipTemplateSettings::get_IconElementProperty()
     @_property
     @typing.final
     def icon_element_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TeachingTipTemplateSettings::get_TopLeftHighlightMarginProperty()
     @_property
     @typing.final
     def top_left_highlight_margin_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TeachingTipTemplateSettings::get_TopRightHighlightMarginProperty()
     @_property
     @typing.final
     def top_right_highlight_margin_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class TeachingTipTemplateSettings(microsoft_ui_xaml.DependencyObject, metaclass=TeachingTipTemplateSettings_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Microsoft.UI.Xaml.Thickness Microsoft.UI.Xaml.Controls.TeachingTipTemplateSettings::get_TopRightHighlightMargin()
     @_property
     def top_right_highlight_margin(self) -> microsoft_ui_xaml.Thickness: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TeachingTipTemplateSettings::put_TopRightHighlightMargin(Microsoft.UI.Xaml.Thickness)
     @top_right_highlight_margin.setter
     @typing.final
     def top_right_highlight_margin(self, value: microsoft_ui_xaml.Thickness) -> None: ...
+    # Microsoft.UI.Xaml.Thickness Microsoft.UI.Xaml.Controls.TeachingTipTemplateSettings::get_TopLeftHighlightMargin()
     @_property
     def top_left_highlight_margin(self) -> microsoft_ui_xaml.Thickness: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TeachingTipTemplateSettings::put_TopLeftHighlightMargin(Microsoft.UI.Xaml.Thickness)
     @top_left_highlight_margin.setter
     @typing.final
     def top_left_highlight_margin(self, value: microsoft_ui_xaml.Thickness) -> None: ...
+    # Microsoft.UI.Xaml.Controls.IconElement Microsoft.UI.Xaml.Controls.TeachingTipTemplateSettings::get_IconElement()
     @_property
     def icon_element(self) -> IconElement: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TeachingTipTemplateSettings::put_IconElement(Microsoft.UI.Xaml.Controls.IconElement)
     @icon_element.setter
     @typing.final
     def icon_element(self, value: IconElement) -> None: ...
 
 @typing.final
 class TextBlock_Static(microsoft_ui_xaml.FrameworkElement_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TextBlock::get_CharacterSpacingProperty()
     @_property
     def character_spacing_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TextBlock::get_FontFamilyProperty()
     @_property
     def font_family_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TextBlock::get_FontSizeProperty()
     @_property
     def font_size_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TextBlock::get_FontStretchProperty()
     @_property
     def font_stretch_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TextBlock::get_FontStyleProperty()
     @_property
     def font_style_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TextBlock::get_FontWeightProperty()
     @_property
     def font_weight_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TextBlock::get_ForegroundProperty()
     @_property
     def foreground_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TextBlock::get_HorizontalTextAlignmentProperty()
     @_property
     def horizontal_text_alignment_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TextBlock::get_IsColorFontEnabledProperty()
     @_property
     def is_color_font_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TextBlock::get_IsTextScaleFactorEnabledProperty()
     @_property
     def is_text_scale_factor_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TextBlock::get_IsTextSelectionEnabledProperty()
     @_property
     def is_text_selection_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TextBlock::get_IsTextTrimmedProperty()
     @_property
     def is_text_trimmed_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TextBlock::get_LineHeightProperty()
     @_property
     def line_height_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TextBlock::get_LineStackingStrategyProperty()
     @_property
     def line_stacking_strategy_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TextBlock::get_MaxLinesProperty()
     @_property
     def max_lines_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TextBlock::get_OpticalMarginAlignmentProperty()
     @_property
     def optical_margin_alignment_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TextBlock::get_PaddingProperty()
     @_property
     def padding_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TextBlock::get_SelectedTextProperty()
     @_property
     def selected_text_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TextBlock::get_SelectionFlyoutProperty()
     @_property
     def selection_flyout_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TextBlock::get_SelectionHighlightColorProperty()
     @_property
     def selection_highlight_color_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TextBlock::get_TextAlignmentProperty()
     @_property
     def text_alignment_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TextBlock::get_TextDecorationsProperty()
     @_property
     def text_decorations_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TextBlock::get_TextLineBoundsProperty()
     @_property
     def text_line_bounds_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TextBlock::get_TextProperty()
     @_property
     def text_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TextBlock::get_TextReadingOrderProperty()
     @_property
     def text_reading_order_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TextBlock::get_TextTrimmingProperty()
     @_property
     def text_trimming_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TextBlock::get_TextWrappingProperty()
     @_property
     def text_wrapping_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
 class TextBlock(microsoft_ui_xaml.FrameworkElement, metaclass=TextBlock_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TextBlock::CopySelectionToClipboard()
     def copy_selection_to_clipboard(self) -> None: ...
+    # Microsoft.UI.Composition.CompositionBrush Microsoft.UI.Xaml.Controls.TextBlock::GetAlphaMask()
     def get_alpha_mask(self) -> microsoft_ui_composition.CompositionBrush: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TextBlock::Select(Microsoft.UI.Xaml.Documents.TextPointer,Microsoft.UI.Xaml.Documents.TextPointer)
     def select(self, start: microsoft_ui_xaml_documents.TextPointer, end: microsoft_ui_xaml_documents.TextPointer, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TextBlock::SelectAll()
     def select_all(self) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.TextBlock::add_ContextMenuOpening(Microsoft.UI.Xaml.Controls.ContextMenuOpeningEventHandler)
     def add_context_menu_opening(self, handler: ContextMenuOpeningEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TextBlock::remove_ContextMenuOpening(Windows.Foundation.EventRegistrationToken)
     def remove_context_menu_opening(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.TextBlock::add_IsTextTrimmedChanged(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.TextBlock,Microsoft.UI.Xaml.Controls.IsTextTrimmedChangedEventArgs>)
     def add_is_text_trimmed_changed(self, handler: windows_foundation.TypedEventHandler[TextBlock, IsTextTrimmedChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TextBlock::remove_IsTextTrimmedChanged(Windows.Foundation.EventRegistrationToken)
     def remove_is_text_trimmed_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.TextBlock::add_SelectionChanged(Microsoft.UI.Xaml.RoutedEventHandler)
     def add_selection_changed(self, handler: microsoft_ui_xaml.RoutedEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TextBlock::remove_SelectionChanged(Windows.Foundation.EventRegistrationToken)
     def remove_selection_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.TextBlock::get_IsColorFontEnabled()
     @_property
     def is_color_font_enabled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TextBlock::put_IsColorFontEnabled(System.Boolean)
     @is_color_font_enabled.setter
     def is_color_font_enabled(self, value: bool) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.TextBlock::get_LineHeight()
     @_property
     def line_height(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TextBlock::put_LineHeight(System.Double)
     @line_height.setter
     def line_height(self, value: winrt.system.Double) -> None: ...
+    # Microsoft.UI.Xaml.TextAlignment Microsoft.UI.Xaml.Controls.TextBlock::get_HorizontalTextAlignment()
     @_property
     def horizontal_text_alignment(self) -> microsoft_ui_xaml.TextAlignment: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TextBlock::put_HorizontalTextAlignment(Microsoft.UI.Xaml.TextAlignment)
     @horizontal_text_alignment.setter
     def horizontal_text_alignment(self, value: microsoft_ui_xaml.TextAlignment) -> None: ...
+    # Microsoft.UI.Xaml.Media.Brush Microsoft.UI.Xaml.Controls.TextBlock::get_Foreground()
     @_property
     def foreground(self) -> microsoft_ui_xaml_media.Brush: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TextBlock::put_Foreground(Microsoft.UI.Xaml.Media.Brush)
     @foreground.setter
     def foreground(self, value: microsoft_ui_xaml_media.Brush) -> None: ...
+    # Windows.UI.Text.FontWeight Microsoft.UI.Xaml.Controls.TextBlock::get_FontWeight()
     @_property
     def font_weight(self) -> windows_ui_text.FontWeight: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TextBlock::put_FontWeight(Windows.UI.Text.FontWeight)
     @font_weight.setter
     def font_weight(self, value: windows_ui_text.FontWeight) -> None: ...
+    # Windows.UI.Text.FontStyle Microsoft.UI.Xaml.Controls.TextBlock::get_FontStyle()
     @_property
     def font_style(self) -> windows_ui_text.FontStyle: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TextBlock::put_FontStyle(Windows.UI.Text.FontStyle)
     @font_style.setter
     def font_style(self, value: windows_ui_text.FontStyle) -> None: ...
+    # Windows.UI.Text.FontStretch Microsoft.UI.Xaml.Controls.TextBlock::get_FontStretch()
     @_property
     def font_stretch(self) -> windows_ui_text.FontStretch: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TextBlock::put_FontStretch(Windows.UI.Text.FontStretch)
     @font_stretch.setter
     def font_stretch(self, value: windows_ui_text.FontStretch) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.TextBlock::get_FontSize()
     @_property
     def font_size(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TextBlock::put_FontSize(System.Double)
     @font_size.setter
     def font_size(self, value: winrt.system.Double) -> None: ...
+    # Microsoft.UI.Xaml.Media.FontFamily Microsoft.UI.Xaml.Controls.TextBlock::get_FontFamily()
     @_property
     def font_family(self) -> microsoft_ui_xaml_media.FontFamily: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TextBlock::put_FontFamily(Microsoft.UI.Xaml.Media.FontFamily)
     @font_family.setter
     def font_family(self, value: microsoft_ui_xaml_media.FontFamily) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.TextBlock::get_IsTextSelectionEnabled()
     @_property
     def is_text_selection_enabled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TextBlock::put_IsTextSelectionEnabled(System.Boolean)
     @is_text_selection_enabled.setter
     def is_text_selection_enabled(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.TextBlock::get_IsTextScaleFactorEnabled()
     @_property
     def is_text_scale_factor_enabled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TextBlock::put_IsTextScaleFactorEnabled(System.Boolean)
     @is_text_scale_factor_enabled.setter
     def is_text_scale_factor_enabled(self, value: bool) -> None: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.TextBlock::get_CharacterSpacing()
     @_property
     def character_spacing(self) -> winrt.system.Int32: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TextBlock::put_CharacterSpacing(System.Int32)
     @character_spacing.setter
     def character_spacing(self, value: winrt.system.Int32) -> None: ...
+    # Microsoft.UI.Xaml.TextWrapping Microsoft.UI.Xaml.Controls.TextBlock::get_TextWrapping()
     @_property
     def text_wrapping(self) -> microsoft_ui_xaml.TextWrapping: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TextBlock::put_TextWrapping(Microsoft.UI.Xaml.TextWrapping)
     @text_wrapping.setter
     def text_wrapping(self, value: microsoft_ui_xaml.TextWrapping) -> None: ...
+    # Microsoft.UI.Xaml.LineStackingStrategy Microsoft.UI.Xaml.Controls.TextBlock::get_LineStackingStrategy()
     @_property
     def line_stacking_strategy(self) -> microsoft_ui_xaml.LineStackingStrategy: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TextBlock::put_LineStackingStrategy(Microsoft.UI.Xaml.LineStackingStrategy)
     @line_stacking_strategy.setter
     def line_stacking_strategy(self, value: microsoft_ui_xaml.LineStackingStrategy) -> None: ...
+    # Microsoft.UI.Xaml.TextTrimming Microsoft.UI.Xaml.Controls.TextBlock::get_TextTrimming()
     @_property
     def text_trimming(self) -> microsoft_ui_xaml.TextTrimming: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TextBlock::put_TextTrimming(Microsoft.UI.Xaml.TextTrimming)
     @text_trimming.setter
     def text_trimming(self, value: microsoft_ui_xaml.TextTrimming) -> None: ...
+    # Microsoft.UI.Xaml.TextReadingOrder Microsoft.UI.Xaml.Controls.TextBlock::get_TextReadingOrder()
     @_property
     def text_reading_order(self) -> microsoft_ui_xaml.TextReadingOrder: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TextBlock::put_TextReadingOrder(Microsoft.UI.Xaml.TextReadingOrder)
     @text_reading_order.setter
     def text_reading_order(self, value: microsoft_ui_xaml.TextReadingOrder) -> None: ...
+    # Microsoft.UI.Xaml.TextLineBounds Microsoft.UI.Xaml.Controls.TextBlock::get_TextLineBounds()
     @_property
     def text_line_bounds(self) -> microsoft_ui_xaml.TextLineBounds: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TextBlock::put_TextLineBounds(Microsoft.UI.Xaml.TextLineBounds)
     @text_line_bounds.setter
     def text_line_bounds(self, value: microsoft_ui_xaml.TextLineBounds) -> None: ...
+    # Windows.UI.Text.TextDecorations Microsoft.UI.Xaml.Controls.TextBlock::get_TextDecorations()
     @_property
     def text_decorations(self) -> windows_ui_text.TextDecorations: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TextBlock::put_TextDecorations(Windows.UI.Text.TextDecorations)
     @text_decorations.setter
     def text_decorations(self, value: windows_ui_text.TextDecorations) -> None: ...
+    # Microsoft.UI.Xaml.TextAlignment Microsoft.UI.Xaml.Controls.TextBlock::get_TextAlignment()
     @_property
     def text_alignment(self) -> microsoft_ui_xaml.TextAlignment: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TextBlock::put_TextAlignment(Microsoft.UI.Xaml.TextAlignment)
     @text_alignment.setter
     def text_alignment(self, value: microsoft_ui_xaml.TextAlignment) -> None: ...
+    # System.String Microsoft.UI.Xaml.Controls.TextBlock::get_Text()
     @_property
     def text(self) -> str: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TextBlock::put_Text(System.String)
     @text.setter
     def text(self, value: str) -> None: ...
+    # Microsoft.UI.Xaml.Media.SolidColorBrush Microsoft.UI.Xaml.Controls.TextBlock::get_SelectionHighlightColor()
     @_property
     def selection_highlight_color(self) -> microsoft_ui_xaml_media.SolidColorBrush: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TextBlock::put_SelectionHighlightColor(Microsoft.UI.Xaml.Media.SolidColorBrush)
     @selection_highlight_color.setter
     def selection_highlight_color(self, value: microsoft_ui_xaml_media.SolidColorBrush) -> None: ...
+    # Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase Microsoft.UI.Xaml.Controls.TextBlock::get_SelectionFlyout()
     @_property
     def selection_flyout(self) -> microsoft_ui_xaml_controls_primitives.FlyoutBase: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TextBlock::put_SelectionFlyout(Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase)
     @selection_flyout.setter
     def selection_flyout(self, value: microsoft_ui_xaml_controls_primitives.FlyoutBase) -> None: ...
+    # Microsoft.UI.Xaml.Thickness Microsoft.UI.Xaml.Controls.TextBlock::get_Padding()
     @_property
     def padding(self) -> microsoft_ui_xaml.Thickness: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TextBlock::put_Padding(Microsoft.UI.Xaml.Thickness)
     @padding.setter
     def padding(self, value: microsoft_ui_xaml.Thickness) -> None: ...
+    # Microsoft.UI.Xaml.OpticalMarginAlignment Microsoft.UI.Xaml.Controls.TextBlock::get_OpticalMarginAlignment()
     @_property
     def optical_margin_alignment(self) -> microsoft_ui_xaml.OpticalMarginAlignment: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TextBlock::put_OpticalMarginAlignment(Microsoft.UI.Xaml.OpticalMarginAlignment)
     @optical_margin_alignment.setter
     def optical_margin_alignment(self, value: microsoft_ui_xaml.OpticalMarginAlignment) -> None: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.TextBlock::get_MaxLines()
     @_property
     def max_lines(self) -> winrt.system.Int32: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TextBlock::put_MaxLines(System.Int32)
     @max_lines.setter
     def max_lines(self, value: winrt.system.Int32) -> None: ...
+    # Microsoft.UI.Xaml.Documents.TextPointer Microsoft.UI.Xaml.Controls.TextBlock::get_ContentEnd()
     @_property
     def content_end(self) -> microsoft_ui_xaml_documents.TextPointer: ...
+    # Microsoft.UI.Xaml.Documents.TextPointer Microsoft.UI.Xaml.Controls.TextBlock::get_ContentStart()
     @_property
     def content_start(self) -> microsoft_ui_xaml_documents.TextPointer: ...
+    # Microsoft.UI.Xaml.Documents.InlineCollection Microsoft.UI.Xaml.Controls.TextBlock::get_Inlines()
     @_property
     def inlines(self) -> microsoft_ui_xaml_documents.InlineCollection: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.TextBlock::get_IsTextTrimmed()
     @_property
     def is_text_trimmed(self) -> bool: ...
+    # System.String Microsoft.UI.Xaml.Controls.TextBlock::get_SelectedText()
     @_property
     def selected_text(self) -> str: ...
+    # Microsoft.UI.Xaml.Documents.TextPointer Microsoft.UI.Xaml.Controls.TextBlock::get_SelectionEnd()
     @_property
     def selection_end(self) -> microsoft_ui_xaml_documents.TextPointer: ...
+    # Microsoft.UI.Xaml.Documents.TextPointer Microsoft.UI.Xaml.Controls.TextBlock::get_SelectionStart()
     @_property
     def selection_start(self) -> microsoft_ui_xaml_documents.TextPointer: ...
+    # Windows.Foundation.Collections.IVector`1<Microsoft.UI.Xaml.Documents.TextHighlighter> Microsoft.UI.Xaml.Controls.TextBlock::get_TextHighlighters()
     @_property
     def text_highlighters(self) -> typing.MutableSequence[microsoft_ui_xaml_documents.TextHighlighter]: ...
+    # System.Double Microsoft.UI.Xaml.Controls.TextBlock::get_BaselineOffset()
     @_property
     def baseline_offset(self) -> winrt.system.Double: ...
 
 class TextBox_Static(Control_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TextBox::get_AcceptsReturnProperty()
     @_property
     @typing.final
     def accepts_return_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TextBox::get_CanPasteClipboardContentProperty()
     @_property
     @typing.final
     def can_paste_clipboard_content_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TextBox::get_CanRedoProperty()
     @_property
     @typing.final
     def can_redo_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TextBox::get_CanUndoProperty()
     @_property
     @typing.final
     def can_undo_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TextBox::get_CharacterCasingProperty()
     @_property
     @typing.final
     def character_casing_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TextBox::get_DescriptionProperty()
     @_property
     @typing.final
     def description_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TextBox::get_DesiredCandidateWindowAlignmentProperty()
     @_property
     @typing.final
     def desired_candidate_window_alignment_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TextBox::get_HeaderProperty()
     @_property
     @typing.final
     def header_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TextBox::get_HeaderTemplateProperty()
     @_property
     @typing.final
     def header_template_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TextBox::get_HorizontalTextAlignmentProperty()
     @_property
     @typing.final
     def horizontal_text_alignment_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TextBox::get_InputScopeProperty()
     @_property
     @typing.final
     def input_scope_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TextBox::get_IsColorFontEnabledProperty()
     @_property
     @typing.final
     def is_color_font_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TextBox::get_IsReadOnlyProperty()
     @_property
     @typing.final
     def is_read_only_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TextBox::get_IsSpellCheckEnabledProperty()
     @_property
     @typing.final
     def is_spell_check_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TextBox::get_IsTextPredictionEnabledProperty()
     @_property
     @typing.final
     def is_text_prediction_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TextBox::get_MaxLengthProperty()
     @_property
     @typing.final
     def max_length_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TextBox::get_PlaceholderForegroundProperty()
     @_property
     @typing.final
     def placeholder_foreground_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TextBox::get_PlaceholderTextProperty()
     @_property
     @typing.final
     def placeholder_text_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TextBox::get_PreventKeyboardDisplayOnProgrammaticFocusProperty()
     @_property
     @typing.final
     def prevent_keyboard_display_on_programmatic_focus_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TextBox::get_ProofingMenuFlyoutProperty()
     @_property
     @typing.final
     def proofing_menu_flyout_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TextBox::get_SelectionFlyoutProperty()
     @_property
     @typing.final
     def selection_flyout_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TextBox::get_SelectionHighlightColorProperty()
     @_property
     @typing.final
     def selection_highlight_color_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TextBox::get_SelectionHighlightColorWhenNotFocusedProperty()
     @_property
     @typing.final
     def selection_highlight_color_when_not_focused_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TextBox::get_TextAlignmentProperty()
     @_property
     @typing.final
     def text_alignment_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TextBox::get_TextProperty()
     @_property
     @typing.final
     def text_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TextBox::get_TextReadingOrderProperty()
     @_property
     @typing.final
     def text_reading_order_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TextBox::get_TextWrappingProperty()
     @_property
     @typing.final
     def text_wrapping_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
@@ -9987,242 +13713,342 @@ class TextBox_Static(Control_Static):
 class TextBox(Control, metaclass=TextBox_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.TextBox::ClearUndoRedoHistory()
     def clear_undo_redo_history(self) -> None: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.TextBox::CopySelectionToClipboard()
     def copy_selection_to_clipboard(self) -> None: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.TextBox::CutSelectionToClipboard()
     def cut_selection_to_clipboard(self) -> None: ...
     @typing.final
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<System.String>> Microsoft.UI.Xaml.Controls.TextBox::GetLinguisticAlternativesAsync()
     def get_linguistic_alternatives_async(self) -> windows_foundation.IAsyncOperation[typing.Sequence[str]]: ...
     @typing.final
+    # Windows.Foundation.Rect Microsoft.UI.Xaml.Controls.TextBox::GetRectFromCharacterIndex(System.Int32,System.Boolean)
     def get_rect_from_character_index(self, char_index: winrt.system.Int32, trailing_edge: bool, /) -> windows_foundation.Rect: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.TextBox::PasteFromClipboard()
     def paste_from_clipboard(self) -> None: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.TextBox::Redo()
     def redo(self) -> None: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.TextBox::Select(System.Int32,System.Int32)
     def select(self, start: winrt.system.Int32, length: winrt.system.Int32, /) -> None: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.TextBox::SelectAll()
     def select_all(self) -> None: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.TextBox::Undo()
     def undo(self) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.TextBox::add_BeforeTextChanging(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.TextBox,Microsoft.UI.Xaml.Controls.TextBoxBeforeTextChangingEventArgs>)
     def add_before_text_changing(self, handler: windows_foundation.TypedEventHandler[TextBox, TextBoxBeforeTextChangingEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.TextBox::remove_BeforeTextChanging(Windows.Foundation.EventRegistrationToken)
     def remove_before_text_changing(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.TextBox::add_CandidateWindowBoundsChanged(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.TextBox,Microsoft.UI.Xaml.Controls.CandidateWindowBoundsChangedEventArgs>)
     def add_candidate_window_bounds_changed(self, handler: windows_foundation.TypedEventHandler[TextBox, CandidateWindowBoundsChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.TextBox::remove_CandidateWindowBoundsChanged(Windows.Foundation.EventRegistrationToken)
     def remove_candidate_window_bounds_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.TextBox::add_ContextMenuOpening(Microsoft.UI.Xaml.Controls.ContextMenuOpeningEventHandler)
     def add_context_menu_opening(self, handler: ContextMenuOpeningEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.TextBox::remove_ContextMenuOpening(Windows.Foundation.EventRegistrationToken)
     def remove_context_menu_opening(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.TextBox::add_CopyingToClipboard(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.TextBox,Microsoft.UI.Xaml.Controls.TextControlCopyingToClipboardEventArgs>)
     def add_copying_to_clipboard(self, handler: windows_foundation.TypedEventHandler[TextBox, TextControlCopyingToClipboardEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.TextBox::remove_CopyingToClipboard(Windows.Foundation.EventRegistrationToken)
     def remove_copying_to_clipboard(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.TextBox::add_CuttingToClipboard(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.TextBox,Microsoft.UI.Xaml.Controls.TextControlCuttingToClipboardEventArgs>)
     def add_cutting_to_clipboard(self, handler: windows_foundation.TypedEventHandler[TextBox, TextControlCuttingToClipboardEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.TextBox::remove_CuttingToClipboard(Windows.Foundation.EventRegistrationToken)
     def remove_cutting_to_clipboard(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.TextBox::add_Paste(Microsoft.UI.Xaml.Controls.TextControlPasteEventHandler)
     def add_paste(self, handler: TextControlPasteEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.TextBox::remove_Paste(Windows.Foundation.EventRegistrationToken)
     def remove_paste(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.TextBox::add_SelectionChanged(Microsoft.UI.Xaml.RoutedEventHandler)
     def add_selection_changed(self, handler: microsoft_ui_xaml.RoutedEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.TextBox::remove_SelectionChanged(Windows.Foundation.EventRegistrationToken)
     def remove_selection_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.TextBox::add_SelectionChanging(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.TextBox,Microsoft.UI.Xaml.Controls.TextBoxSelectionChangingEventArgs>)
     def add_selection_changing(self, handler: windows_foundation.TypedEventHandler[TextBox, TextBoxSelectionChangingEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.TextBox::remove_SelectionChanging(Windows.Foundation.EventRegistrationToken)
     def remove_selection_changing(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.TextBox::add_TextChanged(Microsoft.UI.Xaml.Controls.TextChangedEventHandler)
     def add_text_changed(self, handler: TextChangedEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.TextBox::remove_TextChanged(Windows.Foundation.EventRegistrationToken)
     def remove_text_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.TextBox::add_TextChanging(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.TextBox,Microsoft.UI.Xaml.Controls.TextBoxTextChangingEventArgs>)
     def add_text_changing(self, handler: windows_foundation.TypedEventHandler[TextBox, TextBoxTextChangingEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.TextBox::remove_TextChanging(Windows.Foundation.EventRegistrationToken)
     def remove_text_changing(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.TextBox::add_TextCompositionChanged(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.TextBox,Microsoft.UI.Xaml.Controls.TextCompositionChangedEventArgs>)
     def add_text_composition_changed(self, handler: windows_foundation.TypedEventHandler[TextBox, TextCompositionChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.TextBox::remove_TextCompositionChanged(Windows.Foundation.EventRegistrationToken)
     def remove_text_composition_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.TextBox::add_TextCompositionEnded(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.TextBox,Microsoft.UI.Xaml.Controls.TextCompositionEndedEventArgs>)
     def add_text_composition_ended(self, handler: windows_foundation.TypedEventHandler[TextBox, TextCompositionEndedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.TextBox::remove_TextCompositionEnded(Windows.Foundation.EventRegistrationToken)
     def remove_text_composition_ended(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.TextBox::add_TextCompositionStarted(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.TextBox,Microsoft.UI.Xaml.Controls.TextCompositionStartedEventArgs>)
     def add_text_composition_started(self, handler: windows_foundation.TypedEventHandler[TextBox, TextCompositionStartedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.TextBox::remove_TextCompositionStarted(Windows.Foundation.EventRegistrationToken)
     def remove_text_composition_started(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Microsoft.UI.Xaml.TextWrapping Microsoft.UI.Xaml.Controls.TextBox::get_TextWrapping()
     @_property
     def text_wrapping(self) -> microsoft_ui_xaml.TextWrapping: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TextBox::put_TextWrapping(Microsoft.UI.Xaml.TextWrapping)
     @text_wrapping.setter
     @typing.final
     def text_wrapping(self, value: microsoft_ui_xaml.TextWrapping) -> None: ...
+    # Microsoft.UI.Xaml.TextReadingOrder Microsoft.UI.Xaml.Controls.TextBox::get_TextReadingOrder()
     @_property
     def text_reading_order(self) -> microsoft_ui_xaml.TextReadingOrder: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TextBox::put_TextReadingOrder(Microsoft.UI.Xaml.TextReadingOrder)
     @text_reading_order.setter
     @typing.final
     def text_reading_order(self, value: microsoft_ui_xaml.TextReadingOrder) -> None: ...
+    # Microsoft.UI.Xaml.TextAlignment Microsoft.UI.Xaml.Controls.TextBox::get_TextAlignment()
     @_property
     def text_alignment(self) -> microsoft_ui_xaml.TextAlignment: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TextBox::put_TextAlignment(Microsoft.UI.Xaml.TextAlignment)
     @text_alignment.setter
     @typing.final
     def text_alignment(self, value: microsoft_ui_xaml.TextAlignment) -> None: ...
+    # System.String Microsoft.UI.Xaml.Controls.TextBox::get_Text()
     @_property
     def text(self) -> str: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TextBox::put_Text(System.String)
     @text.setter
     @typing.final
     def text(self, value: str) -> None: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.TextBox::get_SelectionStart()
     @_property
     def selection_start(self) -> winrt.system.Int32: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TextBox::put_SelectionStart(System.Int32)
     @selection_start.setter
     @typing.final
     def selection_start(self, value: winrt.system.Int32) -> None: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.TextBox::get_SelectionLength()
     @_property
     def selection_length(self) -> winrt.system.Int32: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TextBox::put_SelectionLength(System.Int32)
     @selection_length.setter
     @typing.final
     def selection_length(self, value: winrt.system.Int32) -> None: ...
+    # Microsoft.UI.Xaml.Media.SolidColorBrush Microsoft.UI.Xaml.Controls.TextBox::get_SelectionHighlightColorWhenNotFocused()
     @_property
     def selection_highlight_color_when_not_focused(self) -> microsoft_ui_xaml_media.SolidColorBrush: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TextBox::put_SelectionHighlightColorWhenNotFocused(Microsoft.UI.Xaml.Media.SolidColorBrush)
     @selection_highlight_color_when_not_focused.setter
     @typing.final
     def selection_highlight_color_when_not_focused(self, value: microsoft_ui_xaml_media.SolidColorBrush) -> None: ...
+    # Microsoft.UI.Xaml.Media.SolidColorBrush Microsoft.UI.Xaml.Controls.TextBox::get_SelectionHighlightColor()
     @_property
     def selection_highlight_color(self) -> microsoft_ui_xaml_media.SolidColorBrush: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TextBox::put_SelectionHighlightColor(Microsoft.UI.Xaml.Media.SolidColorBrush)
     @selection_highlight_color.setter
     @typing.final
     def selection_highlight_color(self, value: microsoft_ui_xaml_media.SolidColorBrush) -> None: ...
+    # Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase Microsoft.UI.Xaml.Controls.TextBox::get_SelectionFlyout()
     @_property
     def selection_flyout(self) -> microsoft_ui_xaml_controls_primitives.FlyoutBase: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TextBox::put_SelectionFlyout(Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase)
     @selection_flyout.setter
     @typing.final
     def selection_flyout(self, value: microsoft_ui_xaml_controls_primitives.FlyoutBase) -> None: ...
+    # System.String Microsoft.UI.Xaml.Controls.TextBox::get_SelectedText()
     @_property
     def selected_text(self) -> str: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TextBox::put_SelectedText(System.String)
     @selected_text.setter
     @typing.final
     def selected_text(self, value: str) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.TextBox::get_PreventKeyboardDisplayOnProgrammaticFocus()
     @_property
     def prevent_keyboard_display_on_programmatic_focus(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TextBox::put_PreventKeyboardDisplayOnProgrammaticFocus(System.Boolean)
     @prevent_keyboard_display_on_programmatic_focus.setter
     @typing.final
     def prevent_keyboard_display_on_programmatic_focus(self, value: bool) -> None: ...
+    # System.String Microsoft.UI.Xaml.Controls.TextBox::get_PlaceholderText()
     @_property
     def placeholder_text(self) -> str: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TextBox::put_PlaceholderText(System.String)
     @placeholder_text.setter
     @typing.final
     def placeholder_text(self, value: str) -> None: ...
+    # Microsoft.UI.Xaml.Media.Brush Microsoft.UI.Xaml.Controls.TextBox::get_PlaceholderForeground()
     @_property
     def placeholder_foreground(self) -> microsoft_ui_xaml_media.Brush: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TextBox::put_PlaceholderForeground(Microsoft.UI.Xaml.Media.Brush)
     @placeholder_foreground.setter
     @typing.final
     def placeholder_foreground(self, value: microsoft_ui_xaml_media.Brush) -> None: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.TextBox::get_MaxLength()
     @_property
     def max_length(self) -> winrt.system.Int32: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TextBox::put_MaxLength(System.Int32)
     @max_length.setter
     @typing.final
     def max_length(self, value: winrt.system.Int32) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.TextBox::get_IsTextPredictionEnabled()
     @_property
     def is_text_prediction_enabled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TextBox::put_IsTextPredictionEnabled(System.Boolean)
     @is_text_prediction_enabled.setter
     @typing.final
     def is_text_prediction_enabled(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.TextBox::get_IsSpellCheckEnabled()
     @_property
     def is_spell_check_enabled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TextBox::put_IsSpellCheckEnabled(System.Boolean)
     @is_spell_check_enabled.setter
     @typing.final
     def is_spell_check_enabled(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.TextBox::get_IsReadOnly()
     @_property
     def is_read_only(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TextBox::put_IsReadOnly(System.Boolean)
     @is_read_only.setter
     @typing.final
     def is_read_only(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.TextBox::get_IsColorFontEnabled()
     @_property
     def is_color_font_enabled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TextBox::put_IsColorFontEnabled(System.Boolean)
     @is_color_font_enabled.setter
     @typing.final
     def is_color_font_enabled(self, value: bool) -> None: ...
+    # Microsoft.UI.Xaml.Input.InputScope Microsoft.UI.Xaml.Controls.TextBox::get_InputScope()
     @_property
     def input_scope(self) -> microsoft_ui_xaml_input.InputScope: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TextBox::put_InputScope(Microsoft.UI.Xaml.Input.InputScope)
     @input_scope.setter
     @typing.final
     def input_scope(self, value: microsoft_ui_xaml_input.InputScope) -> None: ...
+    # Microsoft.UI.Xaml.TextAlignment Microsoft.UI.Xaml.Controls.TextBox::get_HorizontalTextAlignment()
     @_property
     def horizontal_text_alignment(self) -> microsoft_ui_xaml.TextAlignment: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TextBox::put_HorizontalTextAlignment(Microsoft.UI.Xaml.TextAlignment)
     @horizontal_text_alignment.setter
     @typing.final
     def horizontal_text_alignment(self, value: microsoft_ui_xaml.TextAlignment) -> None: ...
+    # Microsoft.UI.Xaml.DataTemplate Microsoft.UI.Xaml.Controls.TextBox::get_HeaderTemplate()
     @_property
     def header_template(self) -> microsoft_ui_xaml.DataTemplate: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TextBox::put_HeaderTemplate(Microsoft.UI.Xaml.DataTemplate)
     @header_template.setter
     @typing.final
     def header_template(self, value: microsoft_ui_xaml.DataTemplate) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.TextBox::get_Header()
     @_property
     def header(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TextBox::put_Header(System.Object)
     @header.setter
     @typing.final
     def header(self, value: winrt.system.Object) -> None: ...
+    # Microsoft.UI.Xaml.Controls.CandidateWindowAlignment Microsoft.UI.Xaml.Controls.TextBox::get_DesiredCandidateWindowAlignment()
     @_property
     def desired_candidate_window_alignment(self) -> CandidateWindowAlignment: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TextBox::put_DesiredCandidateWindowAlignment(Microsoft.UI.Xaml.Controls.CandidateWindowAlignment)
     @desired_candidate_window_alignment.setter
     @typing.final
     def desired_candidate_window_alignment(self, value: CandidateWindowAlignment) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.TextBox::get_Description()
     @_property
     def description(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TextBox::put_Description(System.Object)
     @description.setter
     @typing.final
     def description(self, value: winrt.system.Object) -> None: ...
+    # Microsoft.UI.Xaml.Controls.CharacterCasing Microsoft.UI.Xaml.Controls.TextBox::get_CharacterCasing()
     @_property
     def character_casing(self) -> CharacterCasing: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TextBox::put_CharacterCasing(Microsoft.UI.Xaml.Controls.CharacterCasing)
     @character_casing.setter
     @typing.final
     def character_casing(self, value: CharacterCasing) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.TextBox::get_AcceptsReturn()
     @_property
     def accepts_return(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TextBox::put_AcceptsReturn(System.Boolean)
     @accepts_return.setter
     @typing.final
     def accepts_return(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.TextBox::get_CanPasteClipboardContent()
     @_property
     @typing.final
     def can_paste_clipboard_content(self) -> bool: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.TextBox::get_CanRedo()
     @_property
     @typing.final
     def can_redo(self) -> bool: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.TextBox::get_CanUndo()
     @_property
     @typing.final
     def can_undo(self) -> bool: ...
+    # Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase Microsoft.UI.Xaml.Controls.TextBox::get_ProofingMenuFlyout()
     @_property
     @typing.final
     def proofing_menu_flyout(self) -> microsoft_ui_xaml_controls_primitives.FlyoutBase: ...
 
 @typing.final
 class TextBoxBeforeTextChangingEventArgs(winrt.system.Object):
+    # System.Boolean Microsoft.UI.Xaml.Controls.TextBoxBeforeTextChangingEventArgs::get_Cancel()
     @_property
     def cancel(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TextBoxBeforeTextChangingEventArgs::put_Cancel(System.Boolean)
     @cancel.setter
     def cancel(self, value: bool) -> None: ...
+    # System.String Microsoft.UI.Xaml.Controls.TextBoxBeforeTextChangingEventArgs::get_NewText()
     @_property
     def new_text(self) -> str: ...
 
 @typing.final
 class TextBoxSelectionChangingEventArgs(winrt.system.Object):
+    # System.Boolean Microsoft.UI.Xaml.Controls.TextBoxSelectionChangingEventArgs::get_Cancel()
     @_property
     def cancel(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TextBoxSelectionChangingEventArgs::put_Cancel(System.Boolean)
     @cancel.setter
     def cancel(self, value: bool) -> None: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.TextBoxSelectionChangingEventArgs::get_SelectionLength()
     @_property
     def selection_length(self) -> winrt.system.Int32: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.TextBoxSelectionChangingEventArgs::get_SelectionStart()
     @_property
     def selection_start(self) -> winrt.system.Int32: ...
 
 @typing.final
 class TextBoxTextChangingEventArgs(winrt.system.Object):
+    # System.Boolean Microsoft.UI.Xaml.Controls.TextBoxTextChangingEventArgs::get_IsContentChanging()
     @_property
     def is_content_changing(self) -> bool: ...
 
@@ -10232,73 +14058,94 @@ class TextChangedEventArgs(microsoft_ui_xaml.RoutedEventArgs):
 
 @typing.final
 class TextCompositionChangedEventArgs(winrt.system.Object):
+    # System.Int32 Microsoft.UI.Xaml.Controls.TextCompositionChangedEventArgs::get_Length()
     @_property
     def length(self) -> winrt.system.Int32: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.TextCompositionChangedEventArgs::get_StartIndex()
     @_property
     def start_index(self) -> winrt.system.Int32: ...
 
 @typing.final
 class TextCompositionEndedEventArgs(winrt.system.Object):
+    # System.Int32 Microsoft.UI.Xaml.Controls.TextCompositionEndedEventArgs::get_Length()
     @_property
     def length(self) -> winrt.system.Int32: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.TextCompositionEndedEventArgs::get_StartIndex()
     @_property
     def start_index(self) -> winrt.system.Int32: ...
 
 @typing.final
 class TextCompositionStartedEventArgs(winrt.system.Object):
+    # System.Int32 Microsoft.UI.Xaml.Controls.TextCompositionStartedEventArgs::get_Length()
     @_property
     def length(self) -> winrt.system.Int32: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.TextCompositionStartedEventArgs::get_StartIndex()
     @_property
     def start_index(self) -> winrt.system.Int32: ...
 
 @typing.final
 class TextControlCopyingToClipboardEventArgs(winrt.system.Object):
+    # System.Boolean Microsoft.UI.Xaml.Controls.TextControlCopyingToClipboardEventArgs::get_Handled()
     @_property
     def handled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TextControlCopyingToClipboardEventArgs::put_Handled(System.Boolean)
     @handled.setter
     def handled(self, value: bool) -> None: ...
 
 @typing.final
 class TextControlCuttingToClipboardEventArgs(winrt.system.Object):
+    # System.Boolean Microsoft.UI.Xaml.Controls.TextControlCuttingToClipboardEventArgs::get_Handled()
     @_property
     def handled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TextControlCuttingToClipboardEventArgs::put_Handled(System.Boolean)
     @handled.setter
     def handled(self, value: bool) -> None: ...
 
 @typing.final
 class TextControlPasteEventArgs(winrt.system.Object):
+    # System.Boolean Microsoft.UI.Xaml.Controls.TextControlPasteEventArgs::get_Handled()
     @_property
     def handled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TextControlPasteEventArgs::put_Handled(System.Boolean)
     @handled.setter
     def handled(self, value: bool) -> None: ...
 
 @typing.final
 class TimePickedEventArgs(microsoft_ui_xaml.DependencyObject):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Windows.Foundation.TimeSpan Microsoft.UI.Xaml.Controls.TimePickedEventArgs::get_NewTime()
     @_property
     def new_time(self) -> datetime.timedelta: ...
+    # Windows.Foundation.TimeSpan Microsoft.UI.Xaml.Controls.TimePickedEventArgs::get_OldTime()
     @_property
     def old_time(self) -> datetime.timedelta: ...
 
 class TimePicker_Static(Control_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TimePicker::get_ClockIdentifierProperty()
     @_property
     @typing.final
     def clock_identifier_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TimePicker::get_HeaderProperty()
     @_property
     @typing.final
     def header_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TimePicker::get_HeaderTemplateProperty()
     @_property
     @typing.final
     def header_template_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TimePicker::get_LightDismissOverlayModeProperty()
     @_property
     @typing.final
     def light_dismiss_overlay_mode_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TimePicker::get_MinuteIncrementProperty()
     @_property
     @typing.final
     def minute_increment_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TimePicker::get_SelectedTimeProperty()
     @_property
     @typing.final
     def selected_time_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TimePicker::get_TimeProperty()
     @_property
     @typing.final
     def time_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
@@ -10306,89 +14153,118 @@ class TimePicker_Static(Control_Static):
 class TimePicker(Control, metaclass=TimePicker_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.TimePicker::add_SelectedTimeChanged(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.TimePicker,Microsoft.UI.Xaml.Controls.TimePickerSelectedValueChangedEventArgs>)
     def add_selected_time_changed(self, handler: windows_foundation.TypedEventHandler[TimePicker, TimePickerSelectedValueChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.TimePicker::remove_SelectedTimeChanged(Windows.Foundation.EventRegistrationToken)
     def remove_selected_time_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.TimePicker::add_TimeChanged(Windows.Foundation.EventHandler`1<Microsoft.UI.Xaml.Controls.TimePickerValueChangedEventArgs>)
     def add_time_changed(self, handler: windows_foundation.EventHandler[TimePickerValueChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.TimePicker::remove_TimeChanged(Windows.Foundation.EventRegistrationToken)
     def remove_time_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.TimeSpan Microsoft.UI.Xaml.Controls.TimePicker::get_Time()
     @_property
     def time(self) -> datetime.timedelta: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TimePicker::put_Time(Windows.Foundation.TimeSpan)
     @time.setter
     @typing.final
     def time(self, value: datetime.timedelta) -> None: ...
+    # Windows.Foundation.IReference`1<Windows.Foundation.TimeSpan> Microsoft.UI.Xaml.Controls.TimePicker::get_SelectedTime()
     @_property
     def selected_time(self) -> typing.Optional[datetime.timedelta]: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TimePicker::put_SelectedTime(Windows.Foundation.IReference`1<Windows.Foundation.TimeSpan>)
     @selected_time.setter
     @typing.final
     def selected_time(self, value: typing.Optional[datetime.timedelta]) -> None: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.TimePicker::get_MinuteIncrement()
     @_property
     def minute_increment(self) -> winrt.system.Int32: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TimePicker::put_MinuteIncrement(System.Int32)
     @minute_increment.setter
     @typing.final
     def minute_increment(self, value: winrt.system.Int32) -> None: ...
+    # Microsoft.UI.Xaml.Controls.LightDismissOverlayMode Microsoft.UI.Xaml.Controls.TimePicker::get_LightDismissOverlayMode()
     @_property
     def light_dismiss_overlay_mode(self) -> LightDismissOverlayMode: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TimePicker::put_LightDismissOverlayMode(Microsoft.UI.Xaml.Controls.LightDismissOverlayMode)
     @light_dismiss_overlay_mode.setter
     @typing.final
     def light_dismiss_overlay_mode(self, value: LightDismissOverlayMode) -> None: ...
+    # Microsoft.UI.Xaml.DataTemplate Microsoft.UI.Xaml.Controls.TimePicker::get_HeaderTemplate()
     @_property
     def header_template(self) -> microsoft_ui_xaml.DataTemplate: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TimePicker::put_HeaderTemplate(Microsoft.UI.Xaml.DataTemplate)
     @header_template.setter
     @typing.final
     def header_template(self, value: microsoft_ui_xaml.DataTemplate) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.TimePicker::get_Header()
     @_property
     def header(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TimePicker::put_Header(System.Object)
     @header.setter
     @typing.final
     def header(self, value: winrt.system.Object) -> None: ...
+    # System.String Microsoft.UI.Xaml.Controls.TimePicker::get_ClockIdentifier()
     @_property
     def clock_identifier(self) -> str: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TimePicker::put_ClockIdentifier(System.String)
     @clock_identifier.setter
     @typing.final
     def clock_identifier(self, value: str) -> None: ...
 
 @typing.final
 class TimePickerFlyoutPresenter_Static(Control_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TimePickerFlyoutPresenter::get_IsDefaultShadowEnabledProperty()
     @_property
     def is_default_shadow_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
 class TimePickerFlyoutPresenter(Control, metaclass=TimePickerFlyoutPresenter_Static):
+    # System.Boolean Microsoft.UI.Xaml.Controls.TimePickerFlyoutPresenter::get_IsDefaultShadowEnabled()
     @_property
     def is_default_shadow_enabled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TimePickerFlyoutPresenter::put_IsDefaultShadowEnabled(System.Boolean)
     @is_default_shadow_enabled.setter
     def is_default_shadow_enabled(self, value: bool) -> None: ...
 
 @typing.final
 class TimePickerSelectedValueChangedEventArgs(winrt.system.Object):
+    # Windows.Foundation.IReference`1<Windows.Foundation.TimeSpan> Microsoft.UI.Xaml.Controls.TimePickerSelectedValueChangedEventArgs::get_NewTime()
     @_property
     def new_time(self) -> typing.Optional[datetime.timedelta]: ...
+    # Windows.Foundation.IReference`1<Windows.Foundation.TimeSpan> Microsoft.UI.Xaml.Controls.TimePickerSelectedValueChangedEventArgs::get_OldTime()
     @_property
     def old_time(self) -> typing.Optional[datetime.timedelta]: ...
 
 @typing.final
 class TimePickerValueChangedEventArgs(winrt.system.Object):
+    # Windows.Foundation.TimeSpan Microsoft.UI.Xaml.Controls.TimePickerValueChangedEventArgs::get_NewTime()
     @_property
     def new_time(self) -> datetime.timedelta: ...
+    # Windows.Foundation.TimeSpan Microsoft.UI.Xaml.Controls.TimePickerValueChangedEventArgs::get_OldTime()
     @_property
     def old_time(self) -> datetime.timedelta: ...
 
 class ToggleMenuFlyoutItem_Static(MenuFlyoutItem_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ToggleMenuFlyoutItem::get_IsCheckedProperty()
     @_property
     @typing.final
     def is_checked_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class ToggleMenuFlyoutItem(MenuFlyoutItem, metaclass=ToggleMenuFlyoutItem_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ToggleMenuFlyoutItem::get_IsChecked()
     @_property
     def is_checked(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ToggleMenuFlyoutItem::put_IsChecked(System.Boolean)
     @is_checked.setter
     @typing.final
     def is_checked(self, value: bool) -> None: ...
 
 class ToggleSplitButton_Static(SplitButton_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ToggleSplitButton::get_IsCheckedProperty()
     @_property
     @typing.final
     def is_checked_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
@@ -10396,11 +14272,15 @@ class ToggleSplitButton_Static(SplitButton_Static):
 class ToggleSplitButton(SplitButton, metaclass=ToggleSplitButton_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.ToggleSplitButton::add_IsCheckedChanged(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.ToggleSplitButton,Microsoft.UI.Xaml.Controls.ToggleSplitButtonIsCheckedChangedEventArgs>)
     def add_is_checked_changed(self, handler: windows_foundation.TypedEventHandler[ToggleSplitButton, ToggleSplitButtonIsCheckedChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.ToggleSplitButton::remove_IsCheckedChanged(Windows.Foundation.EventRegistrationToken)
     def remove_is_checked_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ToggleSplitButton::get_IsChecked()
     @_property
     def is_checked(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ToggleSplitButton::put_IsChecked(System.Boolean)
     @is_checked.setter
     @typing.final
     def is_checked(self, value: bool) -> None: ...
@@ -10411,77 +14291,111 @@ class ToggleSplitButtonIsCheckedChangedEventArgs(winrt.system.Object):
 
 @typing.final
 class ToggleSwitch_Static(Control_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ToggleSwitch::get_HeaderProperty()
     @_property
     def header_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ToggleSwitch::get_HeaderTemplateProperty()
     @_property
     def header_template_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ToggleSwitch::get_IsOnProperty()
     @_property
     def is_on_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ToggleSwitch::get_OffContentProperty()
     @_property
     def off_content_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ToggleSwitch::get_OffContentTemplateProperty()
     @_property
     def off_content_template_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ToggleSwitch::get_OnContentProperty()
     @_property
     def on_content_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ToggleSwitch::get_OnContentTemplateProperty()
     @_property
     def on_content_template_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
 class ToggleSwitch(Control, metaclass=ToggleSwitch_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ToggleSwitch::OnHeaderChanged(System.Object,System.Object)
     def _on_header_changed(self, old_content: winrt.system.Object, new_content: winrt.system.Object, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ToggleSwitch::OnOffContentChanged(System.Object,System.Object)
     def _on_off_content_changed(self, old_content: winrt.system.Object, new_content: winrt.system.Object, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ToggleSwitch::OnOnContentChanged(System.Object,System.Object)
     def _on_on_content_changed(self, old_content: winrt.system.Object, new_content: winrt.system.Object, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ToggleSwitch::OnToggled()
     def _on_toggled(self) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.ToggleSwitch::add_Toggled(Microsoft.UI.Xaml.RoutedEventHandler)
     def add_toggled(self, handler: microsoft_ui_xaml.RoutedEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ToggleSwitch::remove_Toggled(Windows.Foundation.EventRegistrationToken)
     def remove_toggled(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Microsoft.UI.Xaml.DataTemplate Microsoft.UI.Xaml.Controls.ToggleSwitch::get_OnContentTemplate()
     @_property
     def on_content_template(self) -> microsoft_ui_xaml.DataTemplate: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ToggleSwitch::put_OnContentTemplate(Microsoft.UI.Xaml.DataTemplate)
     @on_content_template.setter
     def on_content_template(self, value: microsoft_ui_xaml.DataTemplate) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.ToggleSwitch::get_OnContent()
     @_property
     def on_content(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ToggleSwitch::put_OnContent(System.Object)
     @on_content.setter
     def on_content(self, value: winrt.system.Object) -> None: ...
+    # Microsoft.UI.Xaml.DataTemplate Microsoft.UI.Xaml.Controls.ToggleSwitch::get_OffContentTemplate()
     @_property
     def off_content_template(self) -> microsoft_ui_xaml.DataTemplate: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ToggleSwitch::put_OffContentTemplate(Microsoft.UI.Xaml.DataTemplate)
     @off_content_template.setter
     def off_content_template(self, value: microsoft_ui_xaml.DataTemplate) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.ToggleSwitch::get_OffContent()
     @_property
     def off_content(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ToggleSwitch::put_OffContent(System.Object)
     @off_content.setter
     def off_content(self, value: winrt.system.Object) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ToggleSwitch::get_IsOn()
     @_property
     def is_on(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ToggleSwitch::put_IsOn(System.Boolean)
     @is_on.setter
     def is_on(self, value: bool) -> None: ...
+    # Microsoft.UI.Xaml.DataTemplate Microsoft.UI.Xaml.Controls.ToggleSwitch::get_HeaderTemplate()
     @_property
     def header_template(self) -> microsoft_ui_xaml.DataTemplate: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ToggleSwitch::put_HeaderTemplate(Microsoft.UI.Xaml.DataTemplate)
     @header_template.setter
     def header_template(self, value: microsoft_ui_xaml.DataTemplate) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.ToggleSwitch::get_Header()
     @_property
     def header(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ToggleSwitch::put_Header(System.Object)
     @header.setter
     def header(self, value: winrt.system.Object) -> None: ...
+    # Microsoft.UI.Xaml.Controls.Primitives.ToggleSwitchTemplateSettings Microsoft.UI.Xaml.Controls.ToggleSwitch::get_TemplateSettings()
     @_property
     def template_settings(self) -> microsoft_ui_xaml_controls_primitives.ToggleSwitchTemplateSettings: ...
 
 class ToolTip_Static(ContentControl_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ToolTip::get_HorizontalOffsetProperty()
     @_property
     @typing.final
     def horizontal_offset_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ToolTip::get_IsOpenProperty()
     @_property
     @typing.final
     def is_open_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ToolTip::get_PlacementProperty()
     @_property
     @typing.final
     def placement_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ToolTip::get_PlacementRectProperty()
     @_property
     @typing.final
     def placement_rect_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ToolTip::get_PlacementTargetProperty()
     @_property
     @typing.final
     def placement_target_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ToolTip::get_VerticalOffsetProperty()
     @_property
     @typing.final
     def vertical_offset_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
@@ -10489,59 +14403,85 @@ class ToolTip_Static(ContentControl_Static):
 class ToolTip(ContentControl, metaclass=ToolTip_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.ToolTip::add_Closed(Microsoft.UI.Xaml.RoutedEventHandler)
     def add_closed(self, handler: microsoft_ui_xaml.RoutedEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.ToolTip::remove_Closed(Windows.Foundation.EventRegistrationToken)
     def remove_closed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.ToolTip::add_Opened(Microsoft.UI.Xaml.RoutedEventHandler)
     def add_opened(self, handler: microsoft_ui_xaml.RoutedEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.ToolTip::remove_Opened(Windows.Foundation.EventRegistrationToken)
     def remove_opened(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ToolTip::get_VerticalOffset()
     @_property
     def vertical_offset(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ToolTip::put_VerticalOffset(System.Double)
     @vertical_offset.setter
     @typing.final
     def vertical_offset(self, value: winrt.system.Double) -> None: ...
+    # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.Controls.ToolTip::get_PlacementTarget()
     @_property
     def placement_target(self) -> microsoft_ui_xaml.UIElement: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ToolTip::put_PlacementTarget(Microsoft.UI.Xaml.UIElement)
     @placement_target.setter
     @typing.final
     def placement_target(self, value: microsoft_ui_xaml.UIElement) -> None: ...
+    # Windows.Foundation.IReference`1<Windows.Foundation.Rect> Microsoft.UI.Xaml.Controls.ToolTip::get_PlacementRect()
     @_property
     def placement_rect(self) -> typing.Optional[windows_foundation.Rect]: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ToolTip::put_PlacementRect(Windows.Foundation.IReference`1<Windows.Foundation.Rect>)
     @placement_rect.setter
     @typing.final
     def placement_rect(self, value: typing.Optional[windows_foundation.Rect]) -> None: ...
+    # Microsoft.UI.Xaml.Controls.Primitives.PlacementMode Microsoft.UI.Xaml.Controls.ToolTip::get_Placement()
     @_property
     def placement(self) -> microsoft_ui_xaml_controls_primitives.PlacementMode: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ToolTip::put_Placement(Microsoft.UI.Xaml.Controls.Primitives.PlacementMode)
     @placement.setter
     @typing.final
     def placement(self, value: microsoft_ui_xaml_controls_primitives.PlacementMode) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ToolTip::get_IsOpen()
     @_property
     def is_open(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ToolTip::put_IsOpen(System.Boolean)
     @is_open.setter
     @typing.final
     def is_open(self, value: bool) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.ToolTip::get_HorizontalOffset()
     @_property
     def horizontal_offset(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ToolTip::put_HorizontalOffset(System.Double)
     @horizontal_offset.setter
     @typing.final
     def horizontal_offset(self, value: winrt.system.Double) -> None: ...
+    # Microsoft.UI.Xaml.Controls.Primitives.ToolTipTemplateSettings Microsoft.UI.Xaml.Controls.ToolTip::get_TemplateSettings()
     @_property
     @typing.final
     def template_settings(self) -> microsoft_ui_xaml_controls_primitives.ToolTipTemplateSettings: ...
 
 @typing.final
 class ToolTipService_Static(type):
+    # Microsoft.UI.Xaml.Controls.Primitives.PlacementMode Microsoft.UI.Xaml.Controls.ToolTipService::GetPlacement(Microsoft.UI.Xaml.DependencyObject)
     def get_placement(cls, element: microsoft_ui_xaml.DependencyObject, /) -> microsoft_ui_xaml_controls_primitives.PlacementMode: ...
+    # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.Controls.ToolTipService::GetPlacementTarget(Microsoft.UI.Xaml.DependencyObject)
     def get_placement_target(cls, element: microsoft_ui_xaml.DependencyObject, /) -> microsoft_ui_xaml.UIElement: ...
+    # System.Object Microsoft.UI.Xaml.Controls.ToolTipService::GetToolTip(Microsoft.UI.Xaml.DependencyObject)
     def get_tool_tip(cls, element: microsoft_ui_xaml.DependencyObject, /) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ToolTipService::SetPlacement(Microsoft.UI.Xaml.DependencyObject,Microsoft.UI.Xaml.Controls.Primitives.PlacementMode)
     def set_placement(cls, element: microsoft_ui_xaml.DependencyObject, value: microsoft_ui_xaml_controls_primitives.PlacementMode, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ToolTipService::SetPlacementTarget(Microsoft.UI.Xaml.DependencyObject,Microsoft.UI.Xaml.UIElement)
     def set_placement_target(cls, element: microsoft_ui_xaml.DependencyObject, value: microsoft_ui_xaml.UIElement, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ToolTipService::SetToolTip(Microsoft.UI.Xaml.DependencyObject,System.Object)
     def set_tool_tip(cls, element: microsoft_ui_xaml.DependencyObject, value: winrt.system.Object, /) -> None: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ToolTipService::get_PlacementProperty()
     @_property
     def placement_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ToolTipService::get_PlacementTargetProperty()
     @_property
     def placement_target_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ToolTipService::get_ToolTipProperty()
     @_property
     def tool_tip_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
@@ -10550,33 +14490,43 @@ class ToolTipService(winrt.system.Object, metaclass=ToolTipService_Static):
     pass
 
 class TreeView_Static(Control_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TreeView::get_SelectedItemProperty()
     @_property
     @typing.final
     def selected_item_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TreeView::get_SelectionModeProperty()
     @_property
     @typing.final
     def selection_mode_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TreeView::get_CanDragItemsProperty()
     @_property
     @typing.final
     def can_drag_items_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TreeView::get_CanReorderItemsProperty()
     @_property
     @typing.final
     def can_reorder_items_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TreeView::get_ItemContainerStyleProperty()
     @_property
     @typing.final
     def item_container_style_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TreeView::get_ItemContainerStyleSelectorProperty()
     @_property
     @typing.final
     def item_container_style_selector_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TreeView::get_ItemContainerTransitionsProperty()
     @_property
     @typing.final
     def item_container_transitions_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TreeView::get_ItemTemplateProperty()
     @_property
     @typing.final
     def item_template_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TreeView::get_ItemTemplateSelectorProperty()
     @_property
     @typing.final
     def item_template_selector_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TreeView::get_ItemsSourceProperty()
     @_property
     @typing.final
     def items_source_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
@@ -10584,259 +14534,351 @@ class TreeView_Static(Control_Static):
 class TreeView(Control, metaclass=TreeView_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.TreeView::Collapse(Microsoft.UI.Xaml.Controls.TreeViewNode)
     def collapse(self, value: TreeViewNode, /) -> None: ...
     @typing.final
+    # Microsoft.UI.Xaml.DependencyObject Microsoft.UI.Xaml.Controls.TreeView::ContainerFromItem(System.Object)
     def container_from_item(self, item: winrt.system.Object, /) -> microsoft_ui_xaml.DependencyObject: ...
     @typing.final
+    # Microsoft.UI.Xaml.DependencyObject Microsoft.UI.Xaml.Controls.TreeView::ContainerFromNode(Microsoft.UI.Xaml.Controls.TreeViewNode)
     def container_from_node(self, node: TreeViewNode, /) -> microsoft_ui_xaml.DependencyObject: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.TreeView::Expand(Microsoft.UI.Xaml.Controls.TreeViewNode)
     def expand(self, value: TreeViewNode, /) -> None: ...
     @typing.final
+    # System.Object Microsoft.UI.Xaml.Controls.TreeView::ItemFromContainer(Microsoft.UI.Xaml.DependencyObject)
     def item_from_container(self, container: microsoft_ui_xaml.DependencyObject, /) -> winrt.system.Object: ...
     @typing.final
+    # Microsoft.UI.Xaml.Controls.TreeViewNode Microsoft.UI.Xaml.Controls.TreeView::NodeFromContainer(Microsoft.UI.Xaml.DependencyObject)
     def node_from_container(self, container: microsoft_ui_xaml.DependencyObject, /) -> TreeViewNode: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.TreeView::SelectAll()
     def select_all(self) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.TreeView::add_Collapsed(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.TreeView,Microsoft.UI.Xaml.Controls.TreeViewCollapsedEventArgs>)
     def add_collapsed(self, handler: windows_foundation.TypedEventHandler[TreeView, TreeViewCollapsedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.TreeView::remove_Collapsed(Windows.Foundation.EventRegistrationToken)
     def remove_collapsed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.TreeView::add_Expanding(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.TreeView,Microsoft.UI.Xaml.Controls.TreeViewExpandingEventArgs>)
     def add_expanding(self, handler: windows_foundation.TypedEventHandler[TreeView, TreeViewExpandingEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.TreeView::remove_Expanding(Windows.Foundation.EventRegistrationToken)
     def remove_expanding(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.TreeView::add_ItemInvoked(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.TreeView,Microsoft.UI.Xaml.Controls.TreeViewItemInvokedEventArgs>)
     def add_item_invoked(self, handler: windows_foundation.TypedEventHandler[TreeView, TreeViewItemInvokedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.TreeView::remove_ItemInvoked(Windows.Foundation.EventRegistrationToken)
     def remove_item_invoked(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.TreeView::add_DragItemsCompleted(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.TreeView,Microsoft.UI.Xaml.Controls.TreeViewDragItemsCompletedEventArgs>)
     def add_drag_items_completed(self, handler: windows_foundation.TypedEventHandler[TreeView, TreeViewDragItemsCompletedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.TreeView::remove_DragItemsCompleted(Windows.Foundation.EventRegistrationToken)
     def remove_drag_items_completed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.TreeView::add_DragItemsStarting(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.TreeView,Microsoft.UI.Xaml.Controls.TreeViewDragItemsStartingEventArgs>)
     def add_drag_items_starting(self, handler: windows_foundation.TypedEventHandler[TreeView, TreeViewDragItemsStartingEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.TreeView::remove_DragItemsStarting(Windows.Foundation.EventRegistrationToken)
     def remove_drag_items_starting(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.TreeView::add_SelectionChanged(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.TreeView,Microsoft.UI.Xaml.Controls.TreeViewSelectionChangedEventArgs>)
     def add_selection_changed(self, handler: windows_foundation.TypedEventHandler[TreeView, TreeViewSelectionChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.TreeView::remove_SelectionChanged(Windows.Foundation.EventRegistrationToken)
     def remove_selection_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Microsoft.UI.Xaml.Controls.TreeViewSelectionMode Microsoft.UI.Xaml.Controls.TreeView::get_SelectionMode()
     @_property
     def selection_mode(self) -> TreeViewSelectionMode: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TreeView::put_SelectionMode(Microsoft.UI.Xaml.Controls.TreeViewSelectionMode)
     @selection_mode.setter
     @typing.final
     def selection_mode(self, value: TreeViewSelectionMode) -> None: ...
+    # Windows.Foundation.Collections.IVector`1<Microsoft.UI.Xaml.Controls.TreeViewNode> Microsoft.UI.Xaml.Controls.TreeView::get_RootNodes()
     @_property
     @typing.final
     def root_nodes(self) -> typing.MutableSequence[TreeViewNode]: ...
+    # Windows.Foundation.Collections.IVector`1<Microsoft.UI.Xaml.Controls.TreeViewNode> Microsoft.UI.Xaml.Controls.TreeView::get_SelectedNodes()
     @_property
     @typing.final
     def selected_nodes(self) -> typing.MutableSequence[TreeViewNode]: ...
+    # Microsoft.UI.Xaml.Controls.TreeViewNode Microsoft.UI.Xaml.Controls.TreeView::get_SelectedNode()
     @_property
     def selected_node(self) -> TreeViewNode: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TreeView::put_SelectedNode(Microsoft.UI.Xaml.Controls.TreeViewNode)
     @selected_node.setter
     @typing.final
     def selected_node(self, value: TreeViewNode) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.TreeView::get_SelectedItem()
     @_property
     def selected_item(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TreeView::put_SelectedItem(System.Object)
     @selected_item.setter
     @typing.final
     def selected_item(self, value: winrt.system.Object) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.TreeView::get_ItemsSource()
     @_property
     def items_source(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TreeView::put_ItemsSource(System.Object)
     @items_source.setter
     @typing.final
     def items_source(self, value: winrt.system.Object) -> None: ...
+    # Microsoft.UI.Xaml.Controls.DataTemplateSelector Microsoft.UI.Xaml.Controls.TreeView::get_ItemTemplateSelector()
     @_property
     def item_template_selector(self) -> DataTemplateSelector: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TreeView::put_ItemTemplateSelector(Microsoft.UI.Xaml.Controls.DataTemplateSelector)
     @item_template_selector.setter
     @typing.final
     def item_template_selector(self, value: DataTemplateSelector) -> None: ...
+    # Microsoft.UI.Xaml.DataTemplate Microsoft.UI.Xaml.Controls.TreeView::get_ItemTemplate()
     @_property
     def item_template(self) -> microsoft_ui_xaml.DataTemplate: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TreeView::put_ItemTemplate(Microsoft.UI.Xaml.DataTemplate)
     @item_template.setter
     @typing.final
     def item_template(self, value: microsoft_ui_xaml.DataTemplate) -> None: ...
+    # Microsoft.UI.Xaml.Media.Animation.TransitionCollection Microsoft.UI.Xaml.Controls.TreeView::get_ItemContainerTransitions()
     @_property
     def item_container_transitions(self) -> microsoft_ui_xaml_media_animation.TransitionCollection: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TreeView::put_ItemContainerTransitions(Microsoft.UI.Xaml.Media.Animation.TransitionCollection)
     @item_container_transitions.setter
     @typing.final
     def item_container_transitions(self, value: microsoft_ui_xaml_media_animation.TransitionCollection) -> None: ...
+    # Microsoft.UI.Xaml.Controls.StyleSelector Microsoft.UI.Xaml.Controls.TreeView::get_ItemContainerStyleSelector()
     @_property
     def item_container_style_selector(self) -> StyleSelector: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TreeView::put_ItemContainerStyleSelector(Microsoft.UI.Xaml.Controls.StyleSelector)
     @item_container_style_selector.setter
     @typing.final
     def item_container_style_selector(self, value: StyleSelector) -> None: ...
+    # Microsoft.UI.Xaml.Style Microsoft.UI.Xaml.Controls.TreeView::get_ItemContainerStyle()
     @_property
     def item_container_style(self) -> microsoft_ui_xaml.Style: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TreeView::put_ItemContainerStyle(Microsoft.UI.Xaml.Style)
     @item_container_style.setter
     @typing.final
     def item_container_style(self, value: microsoft_ui_xaml.Style) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.TreeView::get_CanReorderItems()
     @_property
     def can_reorder_items(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TreeView::put_CanReorderItems(System.Boolean)
     @can_reorder_items.setter
     @typing.final
     def can_reorder_items(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.TreeView::get_CanDragItems()
     @_property
     def can_drag_items(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TreeView::put_CanDragItems(System.Boolean)
     @can_drag_items.setter
     @typing.final
     def can_drag_items(self, value: bool) -> None: ...
+    # Windows.Foundation.Collections.IVector`1<System.Object> Microsoft.UI.Xaml.Controls.TreeView::get_SelectedItems()
     @_property
     @typing.final
     def selected_items(self) -> typing.MutableSequence[winrt.system.Object]: ...
 
 @typing.final
 class TreeViewCollapsedEventArgs(winrt.system.Object):
+    # Microsoft.UI.Xaml.Controls.TreeViewNode Microsoft.UI.Xaml.Controls.TreeViewCollapsedEventArgs::get_Node()
     @_property
     def node(self) -> TreeViewNode: ...
+    # System.Object Microsoft.UI.Xaml.Controls.TreeViewCollapsedEventArgs::get_Item()
     @_property
     def item(self) -> winrt.system.Object: ...
 
 @typing.final
 class TreeViewDragItemsCompletedEventArgs(winrt.system.Object):
+    # Windows.ApplicationModel.DataTransfer.DataPackageOperation Microsoft.UI.Xaml.Controls.TreeViewDragItemsCompletedEventArgs::get_DropResult()
     @_property
     def drop_result(self) -> windows_applicationmodel_datatransfer.DataPackageOperation: ...
+    # Windows.Foundation.Collections.IVectorView`1<System.Object> Microsoft.UI.Xaml.Controls.TreeViewDragItemsCompletedEventArgs::get_Items()
     @_property
     def items(self) -> typing.Sequence[winrt.system.Object]: ...
+    # System.Object Microsoft.UI.Xaml.Controls.TreeViewDragItemsCompletedEventArgs::get_NewParentItem()
     @_property
     def new_parent_item(self) -> winrt.system.Object: ...
 
 @typing.final
 class TreeViewDragItemsStartingEventArgs(winrt.system.Object):
+    # System.Boolean Microsoft.UI.Xaml.Controls.TreeViewDragItemsStartingEventArgs::get_Cancel()
     @_property
     def cancel(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TreeViewDragItemsStartingEventArgs::put_Cancel(System.Boolean)
     @cancel.setter
     def cancel(self, value: bool) -> None: ...
+    # Windows.ApplicationModel.DataTransfer.DataPackage Microsoft.UI.Xaml.Controls.TreeViewDragItemsStartingEventArgs::get_Data()
     @_property
     def data(self) -> windows_applicationmodel_datatransfer.DataPackage: ...
+    # Windows.Foundation.Collections.IVector`1<System.Object> Microsoft.UI.Xaml.Controls.TreeViewDragItemsStartingEventArgs::get_Items()
     @_property
     def items(self) -> typing.MutableSequence[winrt.system.Object]: ...
 
 @typing.final
 class TreeViewExpandingEventArgs(winrt.system.Object):
+    # Microsoft.UI.Xaml.Controls.TreeViewNode Microsoft.UI.Xaml.Controls.TreeViewExpandingEventArgs::get_Node()
     @_property
     def node(self) -> TreeViewNode: ...
+    # System.Object Microsoft.UI.Xaml.Controls.TreeViewExpandingEventArgs::get_Item()
     @_property
     def item(self) -> winrt.system.Object: ...
 
 @typing.final
 class TreeViewItemInvokedEventArgs(winrt.system.Object):
+    # System.Boolean Microsoft.UI.Xaml.Controls.TreeViewItemInvokedEventArgs::get_Handled()
     @_property
     def handled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TreeViewItemInvokedEventArgs::put_Handled(System.Boolean)
     @handled.setter
     def handled(self, value: bool) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.TreeViewItemInvokedEventArgs::get_InvokedItem()
     @_property
     def invoked_item(self) -> winrt.system.Object: ...
 
 class TreeViewItemTemplateSettings_Static(microsoft_ui_xaml.DependencyObject_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TreeViewItemTemplateSettings::get_CollapsedGlyphVisibilityProperty()
     @_property
     @typing.final
     def collapsed_glyph_visibility_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TreeViewItemTemplateSettings::get_DragItemsCountProperty()
     @_property
     @typing.final
     def drag_items_count_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TreeViewItemTemplateSettings::get_ExpandedGlyphVisibilityProperty()
     @_property
     @typing.final
     def expanded_glyph_visibility_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TreeViewItemTemplateSettings::get_IndentationProperty()
     @_property
     @typing.final
     def indentation_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class TreeViewItemTemplateSettings(microsoft_ui_xaml.DependencyObject, metaclass=TreeViewItemTemplateSettings_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Microsoft.UI.Xaml.Visibility Microsoft.UI.Xaml.Controls.TreeViewItemTemplateSettings::get_CollapsedGlyphVisibility()
     @_property
     @typing.final
     def collapsed_glyph_visibility(self) -> microsoft_ui_xaml.Visibility: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.TreeViewItemTemplateSettings::get_DragItemsCount()
     @_property
     @typing.final
     def drag_items_count(self) -> winrt.system.Int32: ...
+    # Microsoft.UI.Xaml.Visibility Microsoft.UI.Xaml.Controls.TreeViewItemTemplateSettings::get_ExpandedGlyphVisibility()
     @_property
     @typing.final
     def expanded_glyph_visibility(self) -> microsoft_ui_xaml.Visibility: ...
+    # Microsoft.UI.Xaml.Thickness Microsoft.UI.Xaml.Controls.TreeViewItemTemplateSettings::get_Indentation()
     @_property
     @typing.final
     def indentation(self) -> microsoft_ui_xaml.Thickness: ...
 
 class TreeViewNode_Static(microsoft_ui_xaml.DependencyObject_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TreeViewNode::get_ContentProperty()
     @_property
     @typing.final
     def content_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TreeViewNode::get_DepthProperty()
     @_property
     @typing.final
     def depth_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TreeViewNode::get_HasChildrenProperty()
     @_property
     @typing.final
     def has_children_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TreeViewNode::get_IsExpandedProperty()
     @_property
     @typing.final
     def is_expanded_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class TreeViewNode(microsoft_ui_xaml.DependencyObject, metaclass=TreeViewNode_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.TreeViewNode::get_IsExpanded()
     @_property
     def is_expanded(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TreeViewNode::put_IsExpanded(System.Boolean)
     @is_expanded.setter
     @typing.final
     def is_expanded(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.TreeViewNode::get_HasUnrealizedChildren()
     @_property
     def has_unrealized_children(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TreeViewNode::put_HasUnrealizedChildren(System.Boolean)
     @has_unrealized_children.setter
     @typing.final
     def has_unrealized_children(self, value: bool) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.TreeViewNode::get_Content()
     @_property
     def content(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TreeViewNode::put_Content(System.Object)
     @content.setter
     @typing.final
     def content(self, value: winrt.system.Object) -> None: ...
+    # Windows.Foundation.Collections.IVector`1<Microsoft.UI.Xaml.Controls.TreeViewNode> Microsoft.UI.Xaml.Controls.TreeViewNode::get_Children()
     @_property
     @typing.final
     def children(self) -> typing.MutableSequence[TreeViewNode]: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.TreeViewNode::get_Depth()
     @_property
     @typing.final
     def depth(self) -> winrt.system.Int32: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.TreeViewNode::get_HasChildren()
     @_property
     @typing.final
     def has_children(self) -> bool: ...
+    # Microsoft.UI.Xaml.Controls.TreeViewNode Microsoft.UI.Xaml.Controls.TreeViewNode::get_Parent()
     @_property
     @typing.final
     def parent(self) -> TreeViewNode: ...
 
 @typing.final
 class TreeViewSelectionChangedEventArgs(winrt.system.Object):
+    # Windows.Foundation.Collections.IVector`1<System.Object> Microsoft.UI.Xaml.Controls.TreeViewSelectionChangedEventArgs::get_AddedItems()
     @_property
     def added_items(self) -> typing.MutableSequence[winrt.system.Object]: ...
+    # Windows.Foundation.Collections.IVector`1<System.Object> Microsoft.UI.Xaml.Controls.TreeViewSelectionChangedEventArgs::get_RemovedItems()
     @_property
     def removed_items(self) -> typing.MutableSequence[winrt.system.Object]: ...
 
 class TwoPaneView_Static(Control_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TwoPaneView::get_MinTallModeHeightProperty()
     @_property
     @typing.final
     def min_tall_mode_height_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TwoPaneView::get_MinWideModeWidthProperty()
     @_property
     @typing.final
     def min_wide_mode_width_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TwoPaneView::get_ModeProperty()
     @_property
     @typing.final
     def mode_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TwoPaneView::get_Pane1LengthProperty()
     @_property
     @typing.final
     def pane1_length_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TwoPaneView::get_Pane1Property()
     @_property
     @typing.final
     def pane1_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TwoPaneView::get_Pane2LengthProperty()
     @_property
     @typing.final
     def pane2_length_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TwoPaneView::get_Pane2Property()
     @_property
     @typing.final
     def pane2_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TwoPaneView::get_PanePriorityProperty()
     @_property
     @typing.final
     def pane_priority_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TwoPaneView::get_TallModeConfigurationProperty()
     @_property
     @typing.final
     def tall_mode_configuration_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TwoPaneView::get_WideModeConfigurationProperty()
     @_property
     @typing.final
     def wide_mode_configuration_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
@@ -10844,54 +14886,75 @@ class TwoPaneView_Static(Control_Static):
 class TwoPaneView(Control, metaclass=TwoPaneView_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.TwoPaneView::add_ModeChanged(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.TwoPaneView,System.Object>)
     def add_mode_changed(self, handler: windows_foundation.TypedEventHandler[TwoPaneView, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.TwoPaneView::remove_ModeChanged(Windows.Foundation.EventRegistrationToken)
     def remove_mode_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Microsoft.UI.Xaml.Controls.TwoPaneViewWideModeConfiguration Microsoft.UI.Xaml.Controls.TwoPaneView::get_WideModeConfiguration()
     @_property
     def wide_mode_configuration(self) -> TwoPaneViewWideModeConfiguration: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TwoPaneView::put_WideModeConfiguration(Microsoft.UI.Xaml.Controls.TwoPaneViewWideModeConfiguration)
     @wide_mode_configuration.setter
     @typing.final
     def wide_mode_configuration(self, value: TwoPaneViewWideModeConfiguration) -> None: ...
+    # Microsoft.UI.Xaml.Controls.TwoPaneViewTallModeConfiguration Microsoft.UI.Xaml.Controls.TwoPaneView::get_TallModeConfiguration()
     @_property
     def tall_mode_configuration(self) -> TwoPaneViewTallModeConfiguration: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TwoPaneView::put_TallModeConfiguration(Microsoft.UI.Xaml.Controls.TwoPaneViewTallModeConfiguration)
     @tall_mode_configuration.setter
     @typing.final
     def tall_mode_configuration(self, value: TwoPaneViewTallModeConfiguration) -> None: ...
+    # Microsoft.UI.Xaml.Controls.TwoPaneViewPriority Microsoft.UI.Xaml.Controls.TwoPaneView::get_PanePriority()
     @_property
     def pane_priority(self) -> TwoPaneViewPriority: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TwoPaneView::put_PanePriority(Microsoft.UI.Xaml.Controls.TwoPaneViewPriority)
     @pane_priority.setter
     @typing.final
     def pane_priority(self, value: TwoPaneViewPriority) -> None: ...
+    # Microsoft.UI.Xaml.GridLength Microsoft.UI.Xaml.Controls.TwoPaneView::get_Pane2Length()
     @_property
     def pane2_length(self) -> microsoft_ui_xaml.GridLength: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TwoPaneView::put_Pane2Length(Microsoft.UI.Xaml.GridLength)
     @pane2_length.setter
     @typing.final
     def pane2_length(self, value: microsoft_ui_xaml.GridLength) -> None: ...
+    # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.Controls.TwoPaneView::get_Pane2()
     @_property
     def pane2(self) -> microsoft_ui_xaml.UIElement: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TwoPaneView::put_Pane2(Microsoft.UI.Xaml.UIElement)
     @pane2.setter
     @typing.final
     def pane2(self, value: microsoft_ui_xaml.UIElement) -> None: ...
+    # Microsoft.UI.Xaml.GridLength Microsoft.UI.Xaml.Controls.TwoPaneView::get_Pane1Length()
     @_property
     def pane1_length(self) -> microsoft_ui_xaml.GridLength: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TwoPaneView::put_Pane1Length(Microsoft.UI.Xaml.GridLength)
     @pane1_length.setter
     @typing.final
     def pane1_length(self, value: microsoft_ui_xaml.GridLength) -> None: ...
+    # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.Controls.TwoPaneView::get_Pane1()
     @_property
     def pane1(self) -> microsoft_ui_xaml.UIElement: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TwoPaneView::put_Pane1(Microsoft.UI.Xaml.UIElement)
     @pane1.setter
     @typing.final
     def pane1(self, value: microsoft_ui_xaml.UIElement) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.TwoPaneView::get_MinWideModeWidth()
     @_property
     def min_wide_mode_width(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TwoPaneView::put_MinWideModeWidth(System.Double)
     @min_wide_mode_width.setter
     @typing.final
     def min_wide_mode_width(self, value: winrt.system.Double) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.TwoPaneView::get_MinTallModeHeight()
     @_property
     def min_tall_mode_height(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TwoPaneView::put_MinTallModeHeight(System.Double)
     @min_tall_mode_height.setter
     @typing.final
     def min_tall_mode_height(self, value: winrt.system.Double) -> None: ...
+    # Microsoft.UI.Xaml.Controls.TwoPaneViewMode Microsoft.UI.Xaml.Controls.TwoPaneView::get_Mode()
     @_property
     @typing.final
     def mode(self) -> TwoPaneViewMode: ...
@@ -10912,175 +14975,248 @@ class UIElementCollection(winrt.system.Object, winrt._winrt.MutableSequence[micr
     def __setitem__(self, index: typing.SupportsIndex, value: microsoft_ui_xaml.UIElement) -> None: ...
     @typing.overload
     def __setitem__(self, index: slice, value: typing.Iterable[microsoft_ui_xaml.UIElement]) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.UIElementCollection::Append(Microsoft.UI.Xaml.UIElement)
     def append(self, value: microsoft_ui_xaml.UIElement, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.UIElementCollection::Clear()
     def clear(self) -> None: ...
+    # Windows.Foundation.Collections.IIterator`1<Microsoft.UI.Xaml.UIElement> Microsoft.UI.Xaml.Controls.UIElementCollection::First()
     def first(self) -> windows_foundation_collections.IIterator[microsoft_ui_xaml.UIElement]: ...
+    # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.Controls.UIElementCollection::GetAt(System.UInt32)
     def get_at(self, index: winrt.system.UInt32, /) -> microsoft_ui_xaml.UIElement: ...
+    # System.UInt32 Microsoft.UI.Xaml.Controls.UIElementCollection::GetMany(System.UInt32,Microsoft.UI.Xaml.UIElement[])
     def get_many(self, start_index: winrt.system.UInt32, items: typing.Union[winrt.system.Array[microsoft_ui_xaml.UIElement], winrt.system.WriteableBuffer], /) -> winrt.system.UInt32: ...
+    # Windows.Foundation.Collections.IVectorView`1<Microsoft.UI.Xaml.UIElement> Microsoft.UI.Xaml.Controls.UIElementCollection::GetView()
     def get_view(self) -> typing.Sequence[microsoft_ui_xaml.UIElement]: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.UIElementCollection::IndexOf(Microsoft.UI.Xaml.UIElement,System.UInt32&)
     def index_of(self, value: microsoft_ui_xaml.UIElement, /) -> typing.Tuple[bool, winrt.system.UInt32]: ...
+    # System.Void Microsoft.UI.Xaml.Controls.UIElementCollection::InsertAt(System.UInt32,Microsoft.UI.Xaml.UIElement)
     def insert_at(self, index: winrt.system.UInt32, value: microsoft_ui_xaml.UIElement, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.UIElementCollection::Move(System.UInt32,System.UInt32)
     def move(self, old_index: winrt.system.UInt32, new_index: winrt.system.UInt32, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.UIElementCollection::RemoveAt(System.UInt32)
     def remove_at(self, index: winrt.system.UInt32, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.UIElementCollection::RemoveAtEnd()
     def remove_at_end(self) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.UIElementCollection::ReplaceAll(Microsoft.UI.Xaml.UIElement[])
     def replace_all(self, items: typing.Union[winrt.system.Array[microsoft_ui_xaml.UIElement], winrt.system.ReadableBuffer], /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.UIElementCollection::SetAt(System.UInt32,Microsoft.UI.Xaml.UIElement)
     def set_at(self, index: winrt.system.UInt32, value: microsoft_ui_xaml.UIElement, /) -> None: ...
+    # System.UInt32 Microsoft.UI.Xaml.Controls.UIElementCollection::get_Size()
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
 class UniformGridLayout_Static(VirtualizingLayout_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.UniformGridLayout::get_ItemsJustificationProperty()
     @_property
     @typing.final
     def items_justification_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.UniformGridLayout::get_ItemsStretchProperty()
     @_property
     @typing.final
     def items_stretch_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.UniformGridLayout::get_MaximumRowsOrColumnsProperty()
     @_property
     @typing.final
     def maximum_rows_or_columns_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.UniformGridLayout::get_MinColumnSpacingProperty()
     @_property
     @typing.final
     def min_column_spacing_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.UniformGridLayout::get_MinItemHeightProperty()
     @_property
     @typing.final
     def min_item_height_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.UniformGridLayout::get_MinItemWidthProperty()
     @_property
     @typing.final
     def min_item_width_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.UniformGridLayout::get_MinRowSpacingProperty()
     @_property
     @typing.final
     def min_row_spacing_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.UniformGridLayout::get_OrientationProperty()
     @_property
     @typing.final
     def orientation_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class UniformGridLayout(VirtualizingLayout, metaclass=UniformGridLayout_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Microsoft.UI.Xaml.Controls.Orientation Microsoft.UI.Xaml.Controls.UniformGridLayout::get_Orientation()
     @_property
     def orientation(self) -> Orientation: ...
+    # System.Void Microsoft.UI.Xaml.Controls.UniformGridLayout::put_Orientation(Microsoft.UI.Xaml.Controls.Orientation)
     @orientation.setter
     @typing.final
     def orientation(self, value: Orientation) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.UniformGridLayout::get_MinRowSpacing()
     @_property
     def min_row_spacing(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.UniformGridLayout::put_MinRowSpacing(System.Double)
     @min_row_spacing.setter
     @typing.final
     def min_row_spacing(self, value: winrt.system.Double) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.UniformGridLayout::get_MinItemWidth()
     @_property
     def min_item_width(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.UniformGridLayout::put_MinItemWidth(System.Double)
     @min_item_width.setter
     @typing.final
     def min_item_width(self, value: winrt.system.Double) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.UniformGridLayout::get_MinItemHeight()
     @_property
     def min_item_height(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.UniformGridLayout::put_MinItemHeight(System.Double)
     @min_item_height.setter
     @typing.final
     def min_item_height(self, value: winrt.system.Double) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.UniformGridLayout::get_MinColumnSpacing()
     @_property
     def min_column_spacing(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.UniformGridLayout::put_MinColumnSpacing(System.Double)
     @min_column_spacing.setter
     @typing.final
     def min_column_spacing(self, value: winrt.system.Double) -> None: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.UniformGridLayout::get_MaximumRowsOrColumns()
     @_property
     def maximum_rows_or_columns(self) -> winrt.system.Int32: ...
+    # System.Void Microsoft.UI.Xaml.Controls.UniformGridLayout::put_MaximumRowsOrColumns(System.Int32)
     @maximum_rows_or_columns.setter
     @typing.final
     def maximum_rows_or_columns(self, value: winrt.system.Int32) -> None: ...
+    # Microsoft.UI.Xaml.Controls.UniformGridLayoutItemsStretch Microsoft.UI.Xaml.Controls.UniformGridLayout::get_ItemsStretch()
     @_property
     def items_stretch(self) -> UniformGridLayoutItemsStretch: ...
+    # System.Void Microsoft.UI.Xaml.Controls.UniformGridLayout::put_ItemsStretch(Microsoft.UI.Xaml.Controls.UniformGridLayoutItemsStretch)
     @items_stretch.setter
     @typing.final
     def items_stretch(self, value: UniformGridLayoutItemsStretch) -> None: ...
+    # Microsoft.UI.Xaml.Controls.UniformGridLayoutItemsJustification Microsoft.UI.Xaml.Controls.UniformGridLayout::get_ItemsJustification()
     @_property
     def items_justification(self) -> UniformGridLayoutItemsJustification: ...
+    # System.Void Microsoft.UI.Xaml.Controls.UniformGridLayout::put_ItemsJustification(Microsoft.UI.Xaml.Controls.UniformGridLayoutItemsJustification)
     @items_justification.setter
     @typing.final
     def items_justification(self, value: UniformGridLayoutItemsJustification) -> None: ...
 
 class UserControl_Static(Control_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.UserControl::get_ContentProperty()
     @_property
     @typing.final
     def content_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class UserControl(Control, metaclass=UserControl_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.Controls.UserControl::get_Content()
     @_property
     def content(self) -> microsoft_ui_xaml.UIElement: ...
+    # System.Void Microsoft.UI.Xaml.Controls.UserControl::put_Content(Microsoft.UI.Xaml.UIElement)
     @content.setter
     @typing.final
     def content(self, value: microsoft_ui_xaml.UIElement) -> None: ...
 
 @typing.final
 class VariableSizedWrapGrid_Static(Panel_Static):
+    # System.Int32 Microsoft.UI.Xaml.Controls.VariableSizedWrapGrid::GetColumnSpan(Microsoft.UI.Xaml.UIElement)
     def get_column_span(cls, element: microsoft_ui_xaml.UIElement, /) -> winrt.system.Int32: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.VariableSizedWrapGrid::GetRowSpan(Microsoft.UI.Xaml.UIElement)
     def get_row_span(cls, element: microsoft_ui_xaml.UIElement, /) -> winrt.system.Int32: ...
+    # System.Void Microsoft.UI.Xaml.Controls.VariableSizedWrapGrid::SetColumnSpan(Microsoft.UI.Xaml.UIElement,System.Int32)
     def set_column_span(cls, element: microsoft_ui_xaml.UIElement, value: winrt.system.Int32, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.VariableSizedWrapGrid::SetRowSpan(Microsoft.UI.Xaml.UIElement,System.Int32)
     def set_row_span(cls, element: microsoft_ui_xaml.UIElement, value: winrt.system.Int32, /) -> None: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.VariableSizedWrapGrid::get_ColumnSpanProperty()
     @_property
     def column_span_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.VariableSizedWrapGrid::get_HorizontalChildrenAlignmentProperty()
     @_property
     def horizontal_children_alignment_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.VariableSizedWrapGrid::get_ItemHeightProperty()
     @_property
     def item_height_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.VariableSizedWrapGrid::get_ItemWidthProperty()
     @_property
     def item_width_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.VariableSizedWrapGrid::get_MaximumRowsOrColumnsProperty()
     @_property
     def maximum_rows_or_columns_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.VariableSizedWrapGrid::get_OrientationProperty()
     @_property
     def orientation_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.VariableSizedWrapGrid::get_RowSpanProperty()
     @_property
     def row_span_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.VariableSizedWrapGrid::get_VerticalChildrenAlignmentProperty()
     @_property
     def vertical_children_alignment_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
 class VariableSizedWrapGrid(Panel, metaclass=VariableSizedWrapGrid_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Microsoft.UI.Xaml.VerticalAlignment Microsoft.UI.Xaml.Controls.VariableSizedWrapGrid::get_VerticalChildrenAlignment()
     @_property
     def vertical_children_alignment(self) -> microsoft_ui_xaml.VerticalAlignment: ...
+    # System.Void Microsoft.UI.Xaml.Controls.VariableSizedWrapGrid::put_VerticalChildrenAlignment(Microsoft.UI.Xaml.VerticalAlignment)
     @vertical_children_alignment.setter
     def vertical_children_alignment(self, value: microsoft_ui_xaml.VerticalAlignment) -> None: ...
+    # Microsoft.UI.Xaml.Controls.Orientation Microsoft.UI.Xaml.Controls.VariableSizedWrapGrid::get_Orientation()
     @_property
     def orientation(self) -> Orientation: ...
+    # System.Void Microsoft.UI.Xaml.Controls.VariableSizedWrapGrid::put_Orientation(Microsoft.UI.Xaml.Controls.Orientation)
     @orientation.setter
     def orientation(self, value: Orientation) -> None: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.VariableSizedWrapGrid::get_MaximumRowsOrColumns()
     @_property
     def maximum_rows_or_columns(self) -> winrt.system.Int32: ...
+    # System.Void Microsoft.UI.Xaml.Controls.VariableSizedWrapGrid::put_MaximumRowsOrColumns(System.Int32)
     @maximum_rows_or_columns.setter
     def maximum_rows_or_columns(self, value: winrt.system.Int32) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.VariableSizedWrapGrid::get_ItemWidth()
     @_property
     def item_width(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.VariableSizedWrapGrid::put_ItemWidth(System.Double)
     @item_width.setter
     def item_width(self, value: winrt.system.Double) -> None: ...
+    # System.Double Microsoft.UI.Xaml.Controls.VariableSizedWrapGrid::get_ItemHeight()
     @_property
     def item_height(self) -> winrt.system.Double: ...
+    # System.Void Microsoft.UI.Xaml.Controls.VariableSizedWrapGrid::put_ItemHeight(System.Double)
     @item_height.setter
     def item_height(self, value: winrt.system.Double) -> None: ...
+    # Microsoft.UI.Xaml.HorizontalAlignment Microsoft.UI.Xaml.Controls.VariableSizedWrapGrid::get_HorizontalChildrenAlignment()
     @_property
     def horizontal_children_alignment(self) -> microsoft_ui_xaml.HorizontalAlignment: ...
+    # System.Void Microsoft.UI.Xaml.Controls.VariableSizedWrapGrid::put_HorizontalChildrenAlignment(Microsoft.UI.Xaml.HorizontalAlignment)
     @horizontal_children_alignment.setter
     def horizontal_children_alignment(self, value: microsoft_ui_xaml.HorizontalAlignment) -> None: ...
 
 @typing.final
 class Viewbox_Static(microsoft_ui_xaml.FrameworkElement_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Viewbox::get_StretchDirectionProperty()
     @_property
     def stretch_direction_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Viewbox::get_StretchProperty()
     @_property
     def stretch_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
 class Viewbox(microsoft_ui_xaml.FrameworkElement, metaclass=Viewbox_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Microsoft.UI.Xaml.Controls.StretchDirection Microsoft.UI.Xaml.Controls.Viewbox::get_StretchDirection()
     @_property
     def stretch_direction(self) -> StretchDirection: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Viewbox::put_StretchDirection(Microsoft.UI.Xaml.Controls.StretchDirection)
     @stretch_direction.setter
     def stretch_direction(self, value: StretchDirection) -> None: ...
+    # Microsoft.UI.Xaml.Media.Stretch Microsoft.UI.Xaml.Controls.Viewbox::get_Stretch()
     @_property
     def stretch(self) -> microsoft_ui_xaml_media.Stretch: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Viewbox::put_Stretch(Microsoft.UI.Xaml.Media.Stretch)
     @stretch.setter
     def stretch(self, value: microsoft_ui_xaml_media.Stretch) -> None: ...
+    # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.Controls.Viewbox::get_Child()
     @_property
     def child(self) -> microsoft_ui_xaml.UIElement: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Viewbox::put_Child(Microsoft.UI.Xaml.UIElement)
     @child.setter
     def child(self, value: microsoft_ui_xaml.UIElement) -> None: ...
 
@@ -11089,10 +15225,15 @@ class VirtualizingLayout_Static(Layout_Static):
 
 class VirtualizingLayout(Layout, metaclass=VirtualizingLayout_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Windows.Foundation.Size Microsoft.UI.Xaml.Controls.VirtualizingLayout::ArrangeOverride(Microsoft.UI.Xaml.Controls.VirtualizingLayoutContext,Windows.Foundation.Size)
     def _arrange_override(self, context: VirtualizingLayoutContext, final_size: windows_foundation.Size, /) -> windows_foundation.Size: ...
+    # System.Void Microsoft.UI.Xaml.Controls.VirtualizingLayout::InitializeForContextCore(Microsoft.UI.Xaml.Controls.VirtualizingLayoutContext)
     def _initialize_for_context_core(self, context: VirtualizingLayoutContext, /) -> None: ...
+    # Windows.Foundation.Size Microsoft.UI.Xaml.Controls.VirtualizingLayout::MeasureOverride(Microsoft.UI.Xaml.Controls.VirtualizingLayoutContext,Windows.Foundation.Size)
     def _measure_override(self, context: VirtualizingLayoutContext, available_size: windows_foundation.Size, /) -> windows_foundation.Size: ...
+    # System.Void Microsoft.UI.Xaml.Controls.VirtualizingLayout::OnItemsChangedCore(Microsoft.UI.Xaml.Controls.VirtualizingLayoutContext,System.Object,Microsoft.UI.Xaml.Interop.NotifyCollectionChangedEventArgs)
     def _on_items_changed_core(self, context: VirtualizingLayoutContext, source: winrt.system.Object, args: microsoft_ui_xaml_interop.NotifyCollectionChangedEventArgs, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.VirtualizingLayout::UninitializeForContextCore(Microsoft.UI.Xaml.Controls.VirtualizingLayoutContext)
     def _uninitialize_for_context_core(self, context: VirtualizingLayoutContext, /) -> None: ...
 
 class VirtualizingLayoutContext_Static(LayoutContext_Static):
@@ -11101,33 +15242,49 @@ class VirtualizingLayoutContext_Static(LayoutContext_Static):
 class VirtualizingLayoutContext(LayoutContext, metaclass=VirtualizingLayoutContext_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.final
+    # System.Object Microsoft.UI.Xaml.Controls.VirtualizingLayoutContext::GetItemAt(System.Int32)
     def get_item_at(self, index: winrt.system.Int32, /) -> winrt.system.Object: ...
+    # System.Object Microsoft.UI.Xaml.Controls.VirtualizingLayoutContext::GetItemAtCore(System.Int32)
     def _get_item_at_core(self, index: winrt.system.Int32, /) -> winrt.system.Object: ...
     @typing.final
+    # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.Controls.VirtualizingLayoutContext::GetOrCreateElementAt(System.Int32)
     def get_or_create_element_at(self, index: winrt.system.Int32, /) -> microsoft_ui_xaml.UIElement: ...
     @typing.final
+    # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.Controls.VirtualizingLayoutContext::GetOrCreateElementAt(System.Int32,Microsoft.UI.Xaml.Controls.ElementRealizationOptions)
     def get_or_create_element_at2(self, index: winrt.system.Int32, options: ElementRealizationOptions, /) -> microsoft_ui_xaml.UIElement: ...
+    # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.Controls.VirtualizingLayoutContext::GetOrCreateElementAtCore(System.Int32,Microsoft.UI.Xaml.Controls.ElementRealizationOptions)
     def _get_or_create_element_at_core(self, index: winrt.system.Int32, options: ElementRealizationOptions, /) -> microsoft_ui_xaml.UIElement: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.VirtualizingLayoutContext::ItemCountCore()
     def _item_count_core(self) -> winrt.system.Int32: ...
+    # Windows.Foundation.Rect Microsoft.UI.Xaml.Controls.VirtualizingLayoutContext::RealizationRectCore()
     def _realization_rect_core(self) -> windows_foundation.Rect: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.VirtualizingLayoutContext::RecycleElement(Microsoft.UI.Xaml.UIElement)
     def recycle_element(self, element: microsoft_ui_xaml.UIElement, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.VirtualizingLayoutContext::RecycleElementCore(Microsoft.UI.Xaml.UIElement)
     def _recycle_element_core(self, element: microsoft_ui_xaml.UIElement, /) -> None: ...
+    # Windows.Foundation.Rect Microsoft.UI.Xaml.Controls.VirtualizingLayoutContext::VisibleRectCore()
     def _visible_rect_core(self) -> windows_foundation.Rect: ...
+    # Windows.Foundation.Point Microsoft.UI.Xaml.Controls.VirtualizingLayoutContext::get_LayoutOrigin()
     @_property
     def layout_origin(self) -> windows_foundation.Point: ...
+    # System.Void Microsoft.UI.Xaml.Controls.VirtualizingLayoutContext::put_LayoutOrigin(Windows.Foundation.Point)
     @layout_origin.setter
     @typing.final
     def layout_origin(self, value: windows_foundation.Point) -> None: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.VirtualizingLayoutContext::get_ItemCount()
     @_property
     @typing.final
     def item_count(self) -> winrt.system.Int32: ...
+    # Windows.Foundation.Rect Microsoft.UI.Xaml.Controls.VirtualizingLayoutContext::get_RealizationRect()
     @_property
     @typing.final
     def realization_rect(self) -> windows_foundation.Rect: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.VirtualizingLayoutContext::get_RecommendedAnchorIndex()
     @_property
     @typing.final
     def recommended_anchor_index(self) -> winrt.system.Int32: ...
+    # Windows.Foundation.Rect Microsoft.UI.Xaml.Controls.VirtualizingLayoutContext::get_VisibleRect()
     @_property
     @typing.final
     def visible_rect(self) -> windows_foundation.Rect: ...
@@ -11137,28 +15294,39 @@ class VirtualizingPanel_Static(Panel_Static):
 
 class VirtualizingPanel(Panel, metaclass=VirtualizingPanel_Static):
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.VirtualizingPanel::AddInternalChild(Microsoft.UI.Xaml.UIElement)
     def _add_internal_child(self, child: microsoft_ui_xaml.UIElement, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.VirtualizingPanel::BringIndexIntoView(System.Int32)
     def _bring_index_into_view(self, index: winrt.system.Int32, /) -> None: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.VirtualizingPanel::InsertInternalChild(System.Int32,Microsoft.UI.Xaml.UIElement)
     def _insert_internal_child(self, index: winrt.system.Int32, child: microsoft_ui_xaml.UIElement, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.VirtualizingPanel::OnClearChildren()
     def _on_clear_children(self) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.VirtualizingPanel::OnItemsChanged(System.Object,Microsoft.UI.Xaml.Controls.Primitives.ItemsChangedEventArgs)
     def _on_items_changed(self, sender: winrt.system.Object, args: microsoft_ui_xaml_controls_primitives.ItemsChangedEventArgs, /) -> None: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.VirtualizingPanel::RemoveInternalChildRange(System.Int32,System.Int32)
     def _remove_internal_child_range(self, index: winrt.system.Int32, range: winrt.system.Int32, /) -> None: ...
+    # Microsoft.UI.Xaml.Controls.ItemContainerGenerator Microsoft.UI.Xaml.Controls.VirtualizingPanel::get_ItemContainerGenerator()
     @_property
     @typing.final
     def item_container_generator(self) -> ItemContainerGenerator: ...
 
 class WebView2_Static(microsoft_ui_xaml.FrameworkElement_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.WebView2::get_CanGoBackProperty()
     @_property
     @typing.final
     def can_go_back_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.WebView2::get_CanGoForwardProperty()
     @_property
     @typing.final
     def can_go_forward_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.WebView2::get_DefaultBackgroundColorProperty()
     @_property
     @typing.final
     def default_background_color_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.WebView2::get_SourceProperty()
     @_property
     @typing.final
     def source_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
@@ -11166,78 +15334,110 @@ class WebView2_Static(microsoft_ui_xaml.FrameworkElement_Static):
 class WebView2(microsoft_ui_xaml.FrameworkElement, metaclass=WebView2_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.WebView2::Close()
     def close(self) -> None: ...
     @typing.final
+    # Windows.Foundation.IAsyncAction Microsoft.UI.Xaml.Controls.WebView2::EnsureCoreWebView2Async()
     def ensure_core_webview2_async(self) -> windows_foundation.IAsyncAction: ...
     @typing.final
+    # Windows.Foundation.IAsyncAction Microsoft.UI.Xaml.Controls.WebView2::EnsureCoreWebView2Async(Microsoft.Web.WebView2.Core.CoreWebView2Environment,Microsoft.Web.WebView2.Core.CoreWebView2ControllerOptions)
     def ensure_core_webview2_with_environment_and_options_async(self, environment: microsoft_web_webview2_core.CoreWebView2Environment, controller_options: microsoft_web_webview2_core.CoreWebView2ControllerOptions, /) -> windows_foundation.IAsyncAction: ...
     @typing.final
+    # Windows.Foundation.IAsyncAction Microsoft.UI.Xaml.Controls.WebView2::EnsureCoreWebView2Async(Microsoft.Web.WebView2.Core.CoreWebView2Environment)
     def ensure_core_webview2_with_environment_async(self, environment: microsoft_web_webview2_core.CoreWebView2Environment, /) -> windows_foundation.IAsyncAction: ...
     @typing.final
+    # Windows.Foundation.IAsyncOperation`1<System.String> Microsoft.UI.Xaml.Controls.WebView2::ExecuteScriptAsync(System.String)
     def execute_script_async(self, javascript_code: str, /) -> windows_foundation.IAsyncOperation[str]: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.WebView2::GoBack()
     def go_back(self) -> None: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.WebView2::GoForward()
     def go_forward(self) -> None: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.WebView2::NavigateToString(System.String)
     def navigate_to_string(self, html_content: str, /) -> None: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.WebView2::Reload()
     def reload(self) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.WebView2::add_CoreProcessFailed(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.WebView2,Microsoft.Web.WebView2.Core.CoreWebView2ProcessFailedEventArgs>)
     def add_core_process_failed(self, handler: windows_foundation.TypedEventHandler[WebView2, microsoft_web_webview2_core.CoreWebView2ProcessFailedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.WebView2::remove_CoreProcessFailed(Windows.Foundation.EventRegistrationToken)
     def remove_core_process_failed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.WebView2::add_CoreWebView2Initialized(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.WebView2,Microsoft.UI.Xaml.Controls.CoreWebView2InitializedEventArgs>)
     def add_core_webview2_initialized(self, handler: windows_foundation.TypedEventHandler[WebView2, CoreWebView2InitializedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.WebView2::remove_CoreWebView2Initialized(Windows.Foundation.EventRegistrationToken)
     def remove_core_webview2_initialized(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.WebView2::add_NavigationCompleted(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.WebView2,Microsoft.Web.WebView2.Core.CoreWebView2NavigationCompletedEventArgs>)
     def add_navigation_completed(self, handler: windows_foundation.TypedEventHandler[WebView2, microsoft_web_webview2_core.CoreWebView2NavigationCompletedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.WebView2::remove_NavigationCompleted(Windows.Foundation.EventRegistrationToken)
     def remove_navigation_completed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.WebView2::add_NavigationStarting(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.WebView2,Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs>)
     def add_navigation_starting(self, handler: windows_foundation.TypedEventHandler[WebView2, microsoft_web_webview2_core.CoreWebView2NavigationStartingEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.WebView2::remove_NavigationStarting(Windows.Foundation.EventRegistrationToken)
     def remove_navigation_starting(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.WebView2::add_WebMessageReceived(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.WebView2,Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs>)
     def add_web_message_received(self, handler: windows_foundation.TypedEventHandler[WebView2, microsoft_web_webview2_core.CoreWebView2WebMessageReceivedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.WebView2::remove_WebMessageReceived(Windows.Foundation.EventRegistrationToken)
     def remove_web_message_received(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.Uri Microsoft.UI.Xaml.Controls.WebView2::get_Source()
     @_property
     def source(self) -> windows_foundation.Uri: ...
+    # System.Void Microsoft.UI.Xaml.Controls.WebView2::put_Source(Windows.Foundation.Uri)
     @source.setter
     @typing.final
     def source(self, value: windows_foundation.Uri) -> None: ...
+    # Windows.UI.Color Microsoft.UI.Xaml.Controls.WebView2::get_DefaultBackgroundColor()
     @_property
     def default_background_color(self) -> windows_ui.Color: ...
+    # System.Void Microsoft.UI.Xaml.Controls.WebView2::put_DefaultBackgroundColor(Windows.UI.Color)
     @default_background_color.setter
     @typing.final
     def default_background_color(self, value: windows_ui.Color) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.WebView2::get_CanGoForward()
     @_property
     def can_go_forward(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.WebView2::put_CanGoForward(System.Boolean)
     @can_go_forward.setter
     @typing.final
     def can_go_forward(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.WebView2::get_CanGoBack()
     @_property
     def can_go_back(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.WebView2::put_CanGoBack(System.Boolean)
     @can_go_back.setter
     @typing.final
     def can_go_back(self, value: bool) -> None: ...
+    # Microsoft.Web.WebView2.Core.CoreWebView2 Microsoft.UI.Xaml.Controls.WebView2::get_CoreWebView2()
     @_property
     @typing.final
     def core_webview2(self) -> microsoft_web_webview2_core.CoreWebView2: ...
 
 @typing.final
 class XamlControlsResources_Static(microsoft_ui_xaml.ResourceDictionary_Static):
+    # System.Void Microsoft.UI.Xaml.Controls.XamlControlsResources::EnsureRevealLights(Microsoft.UI.Xaml.UIElement)
     def ensure_reveal_lights(cls, element: microsoft_ui_xaml.UIElement, /) -> None: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.XamlControlsResources::get_UseCompactResourcesProperty()
     @_property
     def use_compact_resources_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
 class XamlControlsResources(microsoft_ui_xaml.ResourceDictionary, metaclass=XamlControlsResources_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.XamlControlsResources::get_UseCompactResources()
     @_property
     def use_compact_resources(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.XamlControlsResources::put_UseCompactResources(System.Boolean)
     @use_compact_resources.setter
     def use_compact_resources(self, value: bool) -> None: ...
 
@@ -11248,11 +15448,15 @@ class ImplementsIAnimatedVisual():
 class IAnimatedVisual(winrt.system.Object, ImplementsIAnimatedVisual, windows_foundation.ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, exc_type: typing.Optional[typing.Type[BaseException]], exc_value: typing.Optional[BaseException], traceback: typing.Optional[types.TracebackType]) -> None: ...
+    # System.Void Windows.Foundation.IClosable::Close()
     def close(self) -> None: ...
+    # Windows.Foundation.TimeSpan Microsoft.UI.Xaml.Controls.IAnimatedVisual::get_Duration()
     @_property
     def duration(self) -> datetime.timedelta: ...
+    # Microsoft.UI.Composition.Visual Microsoft.UI.Xaml.Controls.IAnimatedVisual::get_RootVisual()
     @_property
     def root_visual(self) -> microsoft_ui_composition.Visual: ...
+    # Windows.Foundation.Numerics.Vector2 Microsoft.UI.Xaml.Controls.IAnimatedVisual::get_Size()
     @_property
     def size(self) -> windows_foundation_numerics.Vector2: ...
 
@@ -11263,13 +15467,19 @@ class ImplementsIAnimatedVisual2():
 class IAnimatedVisual2(winrt.system.Object, ImplementsIAnimatedVisual2, ImplementsIAnimatedVisual, windows_foundation.ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, exc_type: typing.Optional[typing.Type[BaseException]], exc_value: typing.Optional[BaseException], traceback: typing.Optional[types.TracebackType]) -> None: ...
+    # System.Void Windows.Foundation.IClosable::Close()
     def close(self) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.IAnimatedVisual2::CreateAnimations()
     def create_animations(self) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.IAnimatedVisual2::DestroyAnimations()
     def destroy_animations(self) -> None: ...
+    # Windows.Foundation.TimeSpan Microsoft.UI.Xaml.Controls.IAnimatedVisual::get_Duration()
     @_property
     def duration(self) -> datetime.timedelta: ...
+    # Microsoft.UI.Composition.Visual Microsoft.UI.Xaml.Controls.IAnimatedVisual::get_RootVisual()
     @_property
     def root_visual(self) -> microsoft_ui_composition.Visual: ...
+    # Windows.Foundation.Numerics.Vector2 Microsoft.UI.Xaml.Controls.IAnimatedVisual::get_Size()
     @_property
     def size(self) -> windows_foundation_numerics.Vector2: ...
 
@@ -11278,6 +15488,7 @@ class ImplementsIAnimatedVisualSource():
 
 @typing.final
 class IAnimatedVisualSource(winrt.system.Object, ImplementsIAnimatedVisualSource):
+    # Microsoft.UI.Xaml.Controls.IAnimatedVisual Microsoft.UI.Xaml.Controls.IAnimatedVisualSource::TryCreateAnimatedVisual(Microsoft.UI.Composition.Compositor,System.Object&)
     def try_create_animated_visual(self, compositor: microsoft_ui_composition.Compositor, /) -> typing.Tuple[IAnimatedVisual, winrt.system.Object]: ...
 
 class ImplementsIAnimatedVisualSource2():
@@ -11285,8 +15496,11 @@ class ImplementsIAnimatedVisualSource2():
 
 @typing.final
 class IAnimatedVisualSource2(winrt.system.Object, ImplementsIAnimatedVisualSource2, ImplementsIAnimatedVisualSource):
+    # System.Void Microsoft.UI.Xaml.Controls.IAnimatedVisualSource2::SetColorProperty(System.String,Windows.UI.Color)
     def set_color_property(self, property_name: str, value: windows_ui.Color, /) -> None: ...
+    # Microsoft.UI.Xaml.Controls.IAnimatedVisual Microsoft.UI.Xaml.Controls.IAnimatedVisualSource::TryCreateAnimatedVisual(Microsoft.UI.Composition.Compositor,System.Object&)
     def try_create_animated_visual(self, compositor: microsoft_ui_composition.Compositor, /) -> typing.Tuple[IAnimatedVisual, winrt.system.Object]: ...
+    # Windows.Foundation.Collections.IMapView`2<System.String,System.Double> Microsoft.UI.Xaml.Controls.IAnimatedVisualSource2::get_Markers()
     @_property
     def markers(self) -> typing.Mapping[str, winrt.system.Double]: ...
 
@@ -11295,6 +15509,7 @@ class ImplementsIAnimatedVisualSource3():
 
 @typing.final
 class IAnimatedVisualSource3(winrt.system.Object, ImplementsIAnimatedVisualSource3):
+    # Microsoft.UI.Xaml.Controls.IAnimatedVisual2 Microsoft.UI.Xaml.Controls.IAnimatedVisualSource3::TryCreateAnimatedVisual(Microsoft.UI.Composition.Compositor,System.Object&,System.Boolean)
     def try_create_animated_visual(self, compositor: microsoft_ui_composition.Compositor, create_animations: bool, /) -> typing.Tuple[IAnimatedVisual2, winrt.system.Object]: ...
 
 class ImplementsICommandBarElement():
@@ -11302,14 +15517,19 @@ class ImplementsICommandBarElement():
 
 @typing.final
 class ICommandBarElement(winrt.system.Object, ImplementsICommandBarElement):
+    # System.Int32 Microsoft.UI.Xaml.Controls.ICommandBarElement::get_DynamicOverflowOrder()
     @_property
     def dynamic_overflow_order(self) -> winrt.system.Int32: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ICommandBarElement::put_DynamicOverflowOrder(System.Int32)
     @dynamic_overflow_order.setter
     def dynamic_overflow_order(self, value: winrt.system.Int32) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ICommandBarElement::get_IsCompact()
     @_property
     def is_compact(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ICommandBarElement::put_IsCompact(System.Boolean)
     @is_compact.setter
     def is_compact(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ICommandBarElement::get_IsInOverflow()
     @_property
     def is_in_overflow(self) -> bool: ...
 
@@ -11318,8 +15538,11 @@ class ImplementsIDynamicAnimatedVisualSource():
 
 @typing.final
 class IDynamicAnimatedVisualSource(winrt.system.Object, ImplementsIDynamicAnimatedVisualSource, ImplementsIAnimatedVisualSource):
+    # Microsoft.UI.Xaml.Controls.IAnimatedVisual Microsoft.UI.Xaml.Controls.IAnimatedVisualSource::TryCreateAnimatedVisual(Microsoft.UI.Composition.Compositor,System.Object&)
     def try_create_animated_visual(self, compositor: microsoft_ui_composition.Compositor, /) -> typing.Tuple[IAnimatedVisual, winrt.system.Object]: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.IDynamicAnimatedVisualSource::add_AnimatedVisualInvalidated(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.IDynamicAnimatedVisualSource,System.Object>)
     def add_animated_visual_invalidated(self, handler: windows_foundation.TypedEventHandler[IDynamicAnimatedVisualSource, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.UI.Xaml.Controls.IDynamicAnimatedVisualSource::remove_AnimatedVisualInvalidated(Windows.Foundation.EventRegistrationToken)
     def remove_animated_visual_invalidated(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
 class ImplementsIInsertionPanel():
@@ -11327,6 +15550,7 @@ class ImplementsIInsertionPanel():
 
 @typing.final
 class IInsertionPanel(winrt.system.Object, ImplementsIInsertionPanel):
+    # System.Void Microsoft.UI.Xaml.Controls.IInsertionPanel::GetInsertionIndexes(Windows.Foundation.Point,System.Int32&,System.Int32&)
     def get_insertion_indexes(self, position: windows_foundation.Point, /) -> typing.Tuple[winrt.system.Int32, winrt.system.Int32]: ...
 
 class ImplementsIItemContainerMapping():
@@ -11334,9 +15558,13 @@ class ImplementsIItemContainerMapping():
 
 @typing.final
 class IItemContainerMapping(winrt.system.Object, ImplementsIItemContainerMapping):
+    # Microsoft.UI.Xaml.DependencyObject Microsoft.UI.Xaml.Controls.IItemContainerMapping::ContainerFromIndex(System.Int32)
     def container_from_index(self, index: winrt.system.Int32, /) -> microsoft_ui_xaml.DependencyObject: ...
+    # Microsoft.UI.Xaml.DependencyObject Microsoft.UI.Xaml.Controls.IItemContainerMapping::ContainerFromItem(System.Object)
     def container_from_item(self, item: winrt.system.Object, /) -> microsoft_ui_xaml.DependencyObject: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.IItemContainerMapping::IndexFromContainer(Microsoft.UI.Xaml.DependencyObject)
     def index_from_container(self, container: microsoft_ui_xaml.DependencyObject, /) -> winrt.system.Int32: ...
+    # System.Object Microsoft.UI.Xaml.Controls.IItemContainerMapping::ItemFromContainer(Microsoft.UI.Xaml.DependencyObject)
     def item_from_container(self, container: microsoft_ui_xaml.DependencyObject, /) -> winrt.system.Object: ...
 
 class ImplementsIKeyIndexMapping():
@@ -11344,7 +15572,9 @@ class ImplementsIKeyIndexMapping():
 
 @typing.final
 class IKeyIndexMapping(winrt.system.Object, ImplementsIKeyIndexMapping):
+    # System.Int32 Microsoft.UI.Xaml.Controls.IKeyIndexMapping::IndexFromKey(System.String)
     def index_from_key(self, key: str, /) -> winrt.system.Int32: ...
+    # System.String Microsoft.UI.Xaml.Controls.IKeyIndexMapping::KeyFromIndex(System.Int32)
     def key_from_index(self, index: winrt.system.Int32, /) -> str: ...
 
 class ImplementsINavigate():
@@ -11352,6 +15582,7 @@ class ImplementsINavigate():
 
 @typing.final
 class INavigate(winrt.system.Object, ImplementsINavigate):
+    # System.Boolean Microsoft.UI.Xaml.Controls.INavigate::Navigate(Windows.UI.Xaml.Interop.TypeName)
     def navigate(self, source_page_type: windows_ui_xaml_interop.TypeName, /) -> bool: ...
 
 class ImplementsIScrollAnchorProvider():
@@ -11359,8 +15590,11 @@ class ImplementsIScrollAnchorProvider():
 
 @typing.final
 class IScrollAnchorProvider(winrt.system.Object, ImplementsIScrollAnchorProvider):
+    # System.Void Microsoft.UI.Xaml.Controls.IScrollAnchorProvider::RegisterAnchorCandidate(Microsoft.UI.Xaml.UIElement)
     def register_anchor_candidate(self, element: microsoft_ui_xaml.UIElement, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.IScrollAnchorProvider::UnregisterAnchorCandidate(Microsoft.UI.Xaml.UIElement)
     def unregister_anchor_candidate(self, element: microsoft_ui_xaml.UIElement, /) -> None: ...
+    # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.Controls.IScrollAnchorProvider::get_CurrentAnchor()
     @_property
     def current_anchor(self) -> microsoft_ui_xaml.UIElement: ...
 
@@ -11369,23 +15603,36 @@ class ImplementsISemanticZoomInformation():
 
 @typing.final
 class ISemanticZoomInformation(winrt.system.Object, ImplementsISemanticZoomInformation):
+    # System.Void Microsoft.UI.Xaml.Controls.ISemanticZoomInformation::CompleteViewChange()
     def complete_view_change(self) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ISemanticZoomInformation::CompleteViewChangeFrom(Microsoft.UI.Xaml.Controls.SemanticZoomLocation,Microsoft.UI.Xaml.Controls.SemanticZoomLocation)
     def complete_view_change_from(self, source: SemanticZoomLocation, destination: SemanticZoomLocation, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ISemanticZoomInformation::CompleteViewChangeTo(Microsoft.UI.Xaml.Controls.SemanticZoomLocation,Microsoft.UI.Xaml.Controls.SemanticZoomLocation)
     def complete_view_change_to(self, source: SemanticZoomLocation, destination: SemanticZoomLocation, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ISemanticZoomInformation::InitializeViewChange()
     def initialize_view_change(self) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ISemanticZoomInformation::MakeVisible(Microsoft.UI.Xaml.Controls.SemanticZoomLocation)
     def make_visible(self, item: SemanticZoomLocation, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ISemanticZoomInformation::StartViewChangeFrom(Microsoft.UI.Xaml.Controls.SemanticZoomLocation,Microsoft.UI.Xaml.Controls.SemanticZoomLocation)
     def start_view_change_from(self, source: SemanticZoomLocation, destination: SemanticZoomLocation, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ISemanticZoomInformation::StartViewChangeTo(Microsoft.UI.Xaml.Controls.SemanticZoomLocation,Microsoft.UI.Xaml.Controls.SemanticZoomLocation)
     def start_view_change_to(self, source: SemanticZoomLocation, destination: SemanticZoomLocation, /) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ISemanticZoomInformation::get_IsActiveView()
     @_property
     def is_active_view(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ISemanticZoomInformation::put_IsActiveView(System.Boolean)
     @is_active_view.setter
     def is_active_view(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.ISemanticZoomInformation::get_IsZoomedInView()
     @_property
     def is_zoomed_in_view(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ISemanticZoomInformation::put_IsZoomedInView(System.Boolean)
     @is_zoomed_in_view.setter
     def is_zoomed_in_view(self, value: bool) -> None: ...
+    # Microsoft.UI.Xaml.Controls.SemanticZoom Microsoft.UI.Xaml.Controls.ISemanticZoomInformation::get_SemanticZoomOwner()
     @_property
     def semantic_zoom_owner(self) -> SemanticZoom: ...
+    # System.Void Microsoft.UI.Xaml.Controls.ISemanticZoomInformation::put_SemanticZoomOwner(Microsoft.UI.Xaml.Controls.SemanticZoom)
     @semantic_zoom_owner.setter
     def semantic_zoom_owner(self, value: SemanticZoom) -> None: ...
 

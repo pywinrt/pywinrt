@@ -15,12 +15,16 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class ApplicationLanguages_Static(type):
+    # System.String Microsoft.Windows.Globalization.ApplicationLanguages::get_PrimaryLanguageOverride()
     @_property
     def primary_language_override(cls) -> str: ...
+    # System.Void Microsoft.Windows.Globalization.ApplicationLanguages::put_PrimaryLanguageOverride(System.String)
     @primary_language_override.setter
     def primary_language_override(cls, value: str) -> None: ...
+    # Windows.Foundation.Collections.IVectorView`1<System.String> Microsoft.Windows.Globalization.ApplicationLanguages::get_Languages()
     @_property
     def languages(cls) -> typing.Sequence[str]: ...
+    # Windows.Foundation.Collections.IVectorView`1<System.String> Microsoft.Windows.Globalization.ApplicationLanguages::get_ManifestLanguages()
     @_property
     def manifest_languages(cls) -> typing.Sequence[str]: ...
 

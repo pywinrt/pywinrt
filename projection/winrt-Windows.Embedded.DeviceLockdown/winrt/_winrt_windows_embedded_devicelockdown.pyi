@@ -16,9 +16,13 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class DeviceLockdownProfile_Static(type):
+    # Windows.Foundation.IAsyncAction Windows.Embedded.DeviceLockdown.DeviceLockdownProfile::ApplyLockdownProfileAsync(System.Guid)
     def apply_lockdown_profile_async(cls, profile_id: _uuid.UUID, /) -> windows_foundation.IAsyncAction: ...
+    # System.Guid Windows.Embedded.DeviceLockdown.DeviceLockdownProfile::GetCurrentLockdownProfile()
     def get_current_lockdown_profile(cls) -> _uuid.UUID: ...
+    # Windows.Embedded.DeviceLockdown.DeviceLockdownProfileInformation Windows.Embedded.DeviceLockdown.DeviceLockdownProfile::GetLockdownProfileInformation(System.Guid)
     def get_lockdown_profile_information(cls, profile_id: _uuid.UUID, /) -> DeviceLockdownProfileInformation: ...
+    # Windows.Foundation.Collections.IVectorView`1<System.Guid> Windows.Embedded.DeviceLockdown.DeviceLockdownProfile::GetSupportedLockdownProfiles()
     def get_supported_lockdown_profiles(cls) -> typing.Sequence[_uuid.UUID]: ...
 
 @typing.final
@@ -27,6 +31,7 @@ class DeviceLockdownProfile(winrt.system.Object, metaclass=DeviceLockdownProfile
 
 @typing.final
 class DeviceLockdownProfileInformation(winrt.system.Object):
+    # System.String Windows.Embedded.DeviceLockdown.DeviceLockdownProfileInformation::get_Name()
     @_property
     def name(self) -> str: ...
 

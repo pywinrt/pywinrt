@@ -20,95 +20,133 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class GameSaveBlobGetResult(winrt.system.Object):
+    # Windows.Gaming.XboxLive.Storage.GameSaveErrorStatus Windows.Gaming.XboxLive.Storage.GameSaveBlobGetResult::get_Status()
     @_property
     def status(self) -> GameSaveErrorStatus: ...
+    # Windows.Foundation.Collections.IMapView`2<System.String,Windows.Storage.Streams.IBuffer> Windows.Gaming.XboxLive.Storage.GameSaveBlobGetResult::get_Value()
     @_property
     def value(self) -> typing.Mapping[str, windows_storage_streams.IBuffer]: ...
 
 @typing.final
 class GameSaveBlobInfo(winrt.system.Object):
+    # System.String Windows.Gaming.XboxLive.Storage.GameSaveBlobInfo::get_Name()
     @_property
     def name(self) -> str: ...
+    # System.UInt32 Windows.Gaming.XboxLive.Storage.GameSaveBlobInfo::get_Size()
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
 @typing.final
 class GameSaveBlobInfoGetResult(winrt.system.Object):
+    # Windows.Gaming.XboxLive.Storage.GameSaveErrorStatus Windows.Gaming.XboxLive.Storage.GameSaveBlobInfoGetResult::get_Status()
     @_property
     def status(self) -> GameSaveErrorStatus: ...
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Gaming.XboxLive.Storage.GameSaveBlobInfo> Windows.Gaming.XboxLive.Storage.GameSaveBlobInfoGetResult::get_Value()
     @_property
     def value(self) -> typing.Sequence[GameSaveBlobInfo]: ...
 
 @typing.final
 class GameSaveBlobInfoQuery(winrt.system.Object):
+    # Windows.Foundation.IAsyncOperation`1<Windows.Gaming.XboxLive.Storage.GameSaveBlobInfoGetResult> Windows.Gaming.XboxLive.Storage.GameSaveBlobInfoQuery::GetBlobInfoAsync()
     def get_blob_info_async(self) -> windows_foundation.IAsyncOperation[GameSaveBlobInfoGetResult]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Gaming.XboxLive.Storage.GameSaveBlobInfoGetResult> Windows.Gaming.XboxLive.Storage.GameSaveBlobInfoQuery::GetBlobInfoAsync(System.UInt32,System.UInt32)
     def get_blob_info_with_index_and_max_async(self, start_index: winrt.system.UInt32, max_number_of_items: winrt.system.UInt32, /) -> windows_foundation.IAsyncOperation[GameSaveBlobInfoGetResult]: ...
+    # Windows.Foundation.IAsyncOperation`1<System.UInt32> Windows.Gaming.XboxLive.Storage.GameSaveBlobInfoQuery::GetItemCountAsync()
     def get_item_count_async(self) -> windows_foundation.IAsyncOperation[winrt.system.UInt32]: ...
 
 @typing.final
 class GameSaveContainer(winrt.system.Object):
+    # Windows.Gaming.XboxLive.Storage.GameSaveBlobInfoQuery Windows.Gaming.XboxLive.Storage.GameSaveContainer::CreateBlobInfoQuery(System.String)
     def create_blob_info_query(self, blob_name_prefix: str, /) -> GameSaveBlobInfoQuery: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Gaming.XboxLive.Storage.GameSaveBlobGetResult> Windows.Gaming.XboxLive.Storage.GameSaveContainer::GetAsync(Windows.Foundation.Collections.IIterable`1<System.String>)
     def get_async(self, blobs_to_read: typing.Iterable[str], /) -> windows_foundation.IAsyncOperation[GameSaveBlobGetResult]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Gaming.XboxLive.Storage.GameSaveOperationResult> Windows.Gaming.XboxLive.Storage.GameSaveContainer::ReadAsync(Windows.Foundation.Collections.IMapView`2<System.String,Windows.Storage.Streams.IBuffer>)
     def read_async(self, blobs_to_read: typing.Mapping[str, windows_storage_streams.IBuffer], /) -> windows_foundation.IAsyncOperation[GameSaveOperationResult]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Gaming.XboxLive.Storage.GameSaveOperationResult> Windows.Gaming.XboxLive.Storage.GameSaveContainer::SubmitPropertySetUpdatesAsync(Windows.Foundation.Collections.IPropertySet,Windows.Foundation.Collections.IIterable`1<System.String>,System.String)
     def submit_property_set_updates_async(self, blobs_to_write: windows_foundation_collections.ImplementsIPropertySet, blobs_to_delete: typing.Iterable[str], display_name: str, /) -> windows_foundation.IAsyncOperation[GameSaveOperationResult]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Gaming.XboxLive.Storage.GameSaveOperationResult> Windows.Gaming.XboxLive.Storage.GameSaveContainer::SubmitUpdatesAsync(Windows.Foundation.Collections.IMapView`2<System.String,Windows.Storage.Streams.IBuffer>,Windows.Foundation.Collections.IIterable`1<System.String>,System.String)
     def submit_updates_async(self, blobs_to_write: typing.Mapping[str, windows_storage_streams.IBuffer], blobs_to_delete: typing.Iterable[str], display_name: str, /) -> windows_foundation.IAsyncOperation[GameSaveOperationResult]: ...
+    # System.String Windows.Gaming.XboxLive.Storage.GameSaveContainer::get_Name()
     @_property
     def name(self) -> str: ...
+    # Windows.Gaming.XboxLive.Storage.GameSaveProvider Windows.Gaming.XboxLive.Storage.GameSaveContainer::get_Provider()
     @_property
     def provider(self) -> GameSaveProvider: ...
 
 @typing.final
 class GameSaveContainerInfo(winrt.system.Object):
+    # System.String Windows.Gaming.XboxLive.Storage.GameSaveContainerInfo::get_DisplayName()
     @_property
     def display_name(self) -> str: ...
+    # Windows.Foundation.DateTime Windows.Gaming.XboxLive.Storage.GameSaveContainerInfo::get_LastModifiedTime()
     @_property
     def last_modified_time(self) -> datetime.datetime: ...
+    # System.String Windows.Gaming.XboxLive.Storage.GameSaveContainerInfo::get_Name()
     @_property
     def name(self) -> str: ...
+    # System.Boolean Windows.Gaming.XboxLive.Storage.GameSaveContainerInfo::get_NeedsSync()
     @_property
     def needs_sync(self) -> bool: ...
+    # System.UInt64 Windows.Gaming.XboxLive.Storage.GameSaveContainerInfo::get_TotalSize()
     @_property
     def total_size(self) -> winrt.system.UInt64: ...
 
 @typing.final
 class GameSaveContainerInfoGetResult(winrt.system.Object):
+    # Windows.Gaming.XboxLive.Storage.GameSaveErrorStatus Windows.Gaming.XboxLive.Storage.GameSaveContainerInfoGetResult::get_Status()
     @_property
     def status(self) -> GameSaveErrorStatus: ...
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Gaming.XboxLive.Storage.GameSaveContainerInfo> Windows.Gaming.XboxLive.Storage.GameSaveContainerInfoGetResult::get_Value()
     @_property
     def value(self) -> typing.Sequence[GameSaveContainerInfo]: ...
 
 @typing.final
 class GameSaveContainerInfoQuery(winrt.system.Object):
+    # Windows.Foundation.IAsyncOperation`1<Windows.Gaming.XboxLive.Storage.GameSaveContainerInfoGetResult> Windows.Gaming.XboxLive.Storage.GameSaveContainerInfoQuery::GetContainerInfoAsync()
     def get_container_info_async(self) -> windows_foundation.IAsyncOperation[GameSaveContainerInfoGetResult]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Gaming.XboxLive.Storage.GameSaveContainerInfoGetResult> Windows.Gaming.XboxLive.Storage.GameSaveContainerInfoQuery::GetContainerInfoAsync(System.UInt32,System.UInt32)
     def get_container_info_with_index_and_max_async(self, start_index: winrt.system.UInt32, max_number_of_items: winrt.system.UInt32, /) -> windows_foundation.IAsyncOperation[GameSaveContainerInfoGetResult]: ...
+    # Windows.Foundation.IAsyncOperation`1<System.UInt32> Windows.Gaming.XboxLive.Storage.GameSaveContainerInfoQuery::GetItemCountAsync()
     def get_item_count_async(self) -> windows_foundation.IAsyncOperation[winrt.system.UInt32]: ...
 
 @typing.final
 class GameSaveOperationResult(winrt.system.Object):
+    # Windows.Gaming.XboxLive.Storage.GameSaveErrorStatus Windows.Gaming.XboxLive.Storage.GameSaveOperationResult::get_Status()
     @_property
     def status(self) -> GameSaveErrorStatus: ...
 
 @typing.final
 class GameSaveProvider_Static(type):
+    # Windows.Foundation.IAsyncOperation`1<Windows.Gaming.XboxLive.Storage.GameSaveProviderGetResult> Windows.Gaming.XboxLive.Storage.GameSaveProvider::GetForUserAsync(Windows.System.User,System.String)
     def get_for_user_async(cls, user: windows_system.User, service_config_id: str, /) -> windows_foundation.IAsyncOperation[GameSaveProviderGetResult]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Gaming.XboxLive.Storage.GameSaveProviderGetResult> Windows.Gaming.XboxLive.Storage.GameSaveProvider::GetSyncOnDemandForUserAsync(Windows.System.User,System.String)
     def get_sync_on_demand_for_user_async(cls, user: windows_system.User, service_config_id: str, /) -> windows_foundation.IAsyncOperation[GameSaveProviderGetResult]: ...
 
 @typing.final
 class GameSaveProvider(winrt.system.Object, metaclass=GameSaveProvider_Static):
+    # Windows.Gaming.XboxLive.Storage.GameSaveContainer Windows.Gaming.XboxLive.Storage.GameSaveProvider::CreateContainer(System.String)
     def create_container(self, name: str, /) -> GameSaveContainer: ...
+    # Windows.Gaming.XboxLive.Storage.GameSaveContainerInfoQuery Windows.Gaming.XboxLive.Storage.GameSaveProvider::CreateContainerInfoQuery()
     def create_container_info_query(self) -> GameSaveContainerInfoQuery: ...
+    # Windows.Gaming.XboxLive.Storage.GameSaveContainerInfoQuery Windows.Gaming.XboxLive.Storage.GameSaveProvider::CreateContainerInfoQuery(System.String)
     def create_container_info_query_with_name(self, container_name_prefix: str, /) -> GameSaveContainerInfoQuery: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Gaming.XboxLive.Storage.GameSaveOperationResult> Windows.Gaming.XboxLive.Storage.GameSaveProvider::DeleteContainerAsync(System.String)
     def delete_container_async(self, name: str, /) -> windows_foundation.IAsyncOperation[GameSaveOperationResult]: ...
+    # Windows.Foundation.IAsyncOperation`1<System.Int64> Windows.Gaming.XboxLive.Storage.GameSaveProvider::GetRemainingBytesInQuotaAsync()
     def get_remaining_bytes_in_quota_async(self) -> windows_foundation.IAsyncOperation[winrt.system.Int64]: ...
+    # Windows.Foundation.Collections.IVectorView`1<System.String> Windows.Gaming.XboxLive.Storage.GameSaveProvider::get_ContainersChangedSinceLastSync()
     @_property
     def containers_changed_since_last_sync(self) -> typing.Sequence[str]: ...
+    # Windows.System.User Windows.Gaming.XboxLive.Storage.GameSaveProvider::get_User()
     @_property
     def user(self) -> windows_system.User: ...
 
 @typing.final
 class GameSaveProviderGetResult(winrt.system.Object):
+    # Windows.Gaming.XboxLive.Storage.GameSaveErrorStatus Windows.Gaming.XboxLive.Storage.GameSaveProviderGetResult::get_Status()
     @_property
     def status(self) -> GameSaveErrorStatus: ...
+    # Windows.Gaming.XboxLive.Storage.GameSaveProvider Windows.Gaming.XboxLive.Storage.GameSaveProviderGetResult::get_Value()
     @_property
     def value(self) -> GameSaveProvider: ...
 

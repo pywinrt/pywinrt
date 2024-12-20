@@ -18,21 +18,28 @@ Self = typing.TypeVar('Self')
 @typing.final
 class DeploymentInitializeOptions(winrt.system.Object):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Boolean Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentInitializeOptions::get_ForceDeployment()
     @_property
     def force_deployment(self) -> bool: ...
+    # System.Void Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentInitializeOptions::put_ForceDeployment(System.Boolean)
     @force_deployment.setter
     def force_deployment(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentInitializeOptions::get_OnErrorShowUI()
     @_property
     def on_error_show_ui(self) -> bool: ...
+    # System.Void Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentInitializeOptions::put_OnErrorShowUI(System.Boolean)
     @on_error_show_ui.setter
     def on_error_show_ui(self, value: bool) -> None: ...
 
 @typing.final
 class DeploymentManager_Static(type):
+    # Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentResult Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentManager::GetStatus()
     def get_status(cls) -> DeploymentResult: ...
     @typing.overload
+    # Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentResult Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentManager::Initialize()
     def initialize(cls) -> DeploymentResult: ...
     @typing.overload
+    # Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentResult Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentManager::Initialize(Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentInitializeOptions)
     def initialize(cls, deployment_initialize_options: DeploymentInitializeOptions, /) -> DeploymentResult: ...
 
 @typing.final
@@ -42,8 +49,10 @@ class DeploymentManager(winrt.system.Object, metaclass=DeploymentManager_Static)
 @typing.final
 class DeploymentResult(winrt.system.Object):
     def __new__(cls: typing.Type[Self], status: DeploymentStatus, extended_error: windows_foundation.HResult) -> Self: ...
+    # Windows.Foundation.HResult Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentResult::get_ExtendedError()
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
+    # Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentStatus Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentResult::get_Status()
     @_property
     def status(self) -> DeploymentStatus: ...
 

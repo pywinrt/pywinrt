@@ -21,24 +21,29 @@ Self = typing.TypeVar('Self')
 @typing.final
 class AddPagesEventArgs(winrt.system.Object):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Windows.Graphics.Printing.PrintTaskOptions Microsoft.UI.Xaml.Printing.AddPagesEventArgs::get_PrintTaskOptions()
     @_property
     def print_task_options(self) -> windows_graphics_printing.PrintTaskOptions: ...
 
 @typing.final
 class GetPreviewPageEventArgs(winrt.system.Object):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Int32 Microsoft.UI.Xaml.Printing.GetPreviewPageEventArgs::get_PageNumber()
     @_property
     def page_number(self) -> winrt.system.Int32: ...
 
 @typing.final
 class PaginateEventArgs(winrt.system.Object):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Int32 Microsoft.UI.Xaml.Printing.PaginateEventArgs::get_CurrentPreviewPageNumber()
     @_property
     def current_preview_page_number(self) -> winrt.system.Int32: ...
+    # Windows.Graphics.Printing.PrintTaskOptions Microsoft.UI.Xaml.Printing.PaginateEventArgs::get_PrintTaskOptions()
     @_property
     def print_task_options(self) -> windows_graphics_printing.PrintTaskOptions: ...
 
 class PrintDocument_Static(microsoft_ui_xaml.DependencyObject_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Printing.PrintDocument::get_DocumentSourceProperty()
     @_property
     @typing.final
     def document_source_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
@@ -46,27 +51,39 @@ class PrintDocument_Static(microsoft_ui_xaml.DependencyObject_Static):
 class PrintDocument(microsoft_ui_xaml.DependencyObject, metaclass=PrintDocument_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Printing.PrintDocument::AddPage(Microsoft.UI.Xaml.UIElement)
     def add_page(self, page_visual: microsoft_ui_xaml.UIElement, /) -> None: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Printing.PrintDocument::AddPagesComplete()
     def add_pages_complete(self) -> None: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Printing.PrintDocument::InvalidatePreview()
     def invalidate_preview(self) -> None: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Printing.PrintDocument::SetPreviewPage(System.Int32,Microsoft.UI.Xaml.UIElement)
     def set_preview_page(self, page_number: winrt.system.Int32, page_visual: microsoft_ui_xaml.UIElement, /) -> None: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Printing.PrintDocument::SetPreviewPageCount(System.Int32,Microsoft.UI.Xaml.Printing.PreviewPageCountType)
     def set_preview_page_count(self, count: winrt.system.Int32, type: PreviewPageCountType, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Printing.PrintDocument::add_AddPages(Microsoft.UI.Xaml.Printing.AddPagesEventHandler)
     def add_add_pages(self, handler: AddPagesEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Printing.PrintDocument::remove_AddPages(Windows.Foundation.EventRegistrationToken)
     def remove_add_pages(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Printing.PrintDocument::add_GetPreviewPage(Microsoft.UI.Xaml.Printing.GetPreviewPageEventHandler)
     def add_get_preview_page(self, handler: GetPreviewPageEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Printing.PrintDocument::remove_GetPreviewPage(Windows.Foundation.EventRegistrationToken)
     def remove_get_preview_page(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Printing.PrintDocument::add_Paginate(Microsoft.UI.Xaml.Printing.PaginateEventHandler)
     def add_paginate(self, handler: PaginateEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
+    # System.Void Microsoft.UI.Xaml.Printing.PrintDocument::remove_Paginate(Windows.Foundation.EventRegistrationToken)
     def remove_paginate(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Graphics.Printing.IPrintDocumentSource Microsoft.UI.Xaml.Printing.PrintDocument::get_DocumentSource()
     @_property
     @typing.final
     def document_source(self) -> windows_graphics_printing.IPrintDocumentSource: ...

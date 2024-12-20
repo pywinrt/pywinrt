@@ -25,41 +25,59 @@ class PushNotificationCreateChannelStatus:
 
 @typing.final
 class PushNotificationChannel(winrt.system.Object):
+    # System.Void Microsoft.Windows.PushNotifications.PushNotificationChannel::Close()
     def close(self) -> None: ...
+    # Windows.Foundation.DateTime Microsoft.Windows.PushNotifications.PushNotificationChannel::get_ExpirationTime()
     @_property
     def expiration_time(self) -> datetime.datetime: ...
+    # Windows.Foundation.Uri Microsoft.Windows.PushNotifications.PushNotificationChannel::get_Uri()
     @_property
     def uri(self) -> windows_foundation.Uri: ...
 
 @typing.final
 class PushNotificationCreateChannelResult(winrt.system.Object):
+    # Microsoft.Windows.PushNotifications.PushNotificationChannel Microsoft.Windows.PushNotifications.PushNotificationCreateChannelResult::get_Channel()
     @_property
     def channel(self) -> PushNotificationChannel: ...
+    # Windows.Foundation.HResult Microsoft.Windows.PushNotifications.PushNotificationCreateChannelResult::get_ExtendedError()
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
+    # Microsoft.Windows.PushNotifications.PushNotificationChannelStatus Microsoft.Windows.PushNotifications.PushNotificationCreateChannelResult::get_Status()
     @_property
     def status(self) -> PushNotificationChannelStatus: ...
 
 @typing.final
 class PushNotificationManager_Static(type):
+    # System.Boolean Microsoft.Windows.PushNotifications.PushNotificationManager::IsSupported()
     def is_supported(cls) -> bool: ...
+    # Microsoft.Windows.PushNotifications.PushNotificationManager Microsoft.Windows.PushNotifications.PushNotificationManager::get_Default()
     @_property
     def default(cls) -> PushNotificationManager: ...
 
 @typing.final
 class PushNotificationManager(winrt.system.Object, metaclass=PushNotificationManager_Static):
+    # Windows.Foundation.IAsyncOperationWithProgress`2<Microsoft.Windows.PushNotifications.PushNotificationCreateChannelResult,Microsoft.Windows.PushNotifications.PushNotificationCreateChannelStatus> Microsoft.Windows.PushNotifications.PushNotificationManager::CreateChannelAsync(System.Guid)
     def create_channel_async(self, remote_id: _uuid.UUID, /) -> windows_foundation.IAsyncOperationWithProgress[PushNotificationCreateChannelResult, PushNotificationCreateChannelStatus]: ...
+    # System.Void Microsoft.Windows.PushNotifications.PushNotificationManager::Register()
     def register(self) -> None: ...
+    # System.Void Microsoft.Windows.PushNotifications.PushNotificationManager::Unregister()
     def unregister(self) -> None: ...
+    # System.Void Microsoft.Windows.PushNotifications.PushNotificationManager::UnregisterAll()
     def unregister_all(self) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.Windows.PushNotifications.PushNotificationManager::add_PushReceived(Windows.Foundation.TypedEventHandler`2<Microsoft.Windows.PushNotifications.PushNotificationManager,Microsoft.Windows.PushNotifications.PushNotificationReceivedEventArgs>)
     def add_push_received(self, handler: windows_foundation.TypedEventHandler[PushNotificationManager, PushNotificationReceivedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.Windows.PushNotifications.PushNotificationManager::remove_PushReceived(Windows.Foundation.EventRegistrationToken)
     def remove_push_received(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
 @typing.final
 class PushNotificationReceivedEventArgs(winrt.system.Object):
+    # Windows.ApplicationModel.Background.BackgroundTaskDeferral Microsoft.Windows.PushNotifications.PushNotificationReceivedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_applicationmodel_background.BackgroundTaskDeferral: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.Windows.PushNotifications.PushNotificationReceivedEventArgs::add_Canceled(Windows.ApplicationModel.Background.BackgroundTaskCanceledEventHandler)
     def add_canceled(self, handler: windows_applicationmodel_background.BackgroundTaskCanceledEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.Windows.PushNotifications.PushNotificationReceivedEventArgs::remove_Canceled(Windows.Foundation.EventRegistrationToken)
     def remove_canceled(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # System.Byte[] Microsoft.Windows.PushNotifications.PushNotificationReceivedEventArgs::get_Payload()
     @_property
     def payload(self) -> winrt.system.UInt8: ...
 

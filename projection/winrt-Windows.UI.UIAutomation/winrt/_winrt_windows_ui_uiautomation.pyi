@@ -14,24 +14,31 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class AutomationConnection(winrt.system.Object):
+    # System.String Windows.UI.UIAutomation.AutomationConnection::get_AppUserModelId()
     @_property
     def app_user_model_id(self) -> str: ...
+    # System.String Windows.UI.UIAutomation.AutomationConnection::get_ExecutableFileName()
     @_property
     def executable_file_name(self) -> str: ...
+    # System.Boolean Windows.UI.UIAutomation.AutomationConnection::get_IsRemoteSystem()
     @_property
     def is_remote_system(self) -> bool: ...
 
 @typing.final
 class AutomationConnectionBoundObject(winrt.system.Object):
+    # Windows.UI.UIAutomation.AutomationConnection Windows.UI.UIAutomation.AutomationConnectionBoundObject::get_Connection()
     @_property
     def connection(self) -> AutomationConnection: ...
 
 @typing.final
 class AutomationElement(winrt.system.Object):
+    # System.String Windows.UI.UIAutomation.AutomationElement::get_AppUserModelId()
     @_property
     def app_user_model_id(self) -> str: ...
+    # System.String Windows.UI.UIAutomation.AutomationElement::get_ExecutableFileName()
     @_property
     def executable_file_name(self) -> str: ...
+    # System.Boolean Windows.UI.UIAutomation.AutomationElement::get_IsRemoteSystem()
     @_property
     def is_remote_system(self) -> bool: ...
 

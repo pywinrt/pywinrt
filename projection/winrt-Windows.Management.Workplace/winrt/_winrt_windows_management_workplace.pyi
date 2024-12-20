@@ -16,10 +16,15 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class MdmPolicy_Static(type):
+    # Windows.Management.Workplace.MessagingSyncPolicy Windows.Management.Workplace.MdmPolicy::GetMessagingSyncPolicy()
     def get_messaging_sync_policy(cls) -> MessagingSyncPolicy: ...
+    # System.Boolean Windows.Management.Workplace.MdmPolicy::IsBrowserAllowed()
     def is_browser_allowed(cls) -> bool: ...
+    # System.Boolean Windows.Management.Workplace.MdmPolicy::IsCameraAllowed()
     def is_camera_allowed(cls) -> bool: ...
+    # System.Boolean Windows.Management.Workplace.MdmPolicy::IsMicrosoftAccountAllowed()
     def is_microsoft_account_allowed(cls) -> bool: ...
+    # System.Boolean Windows.Management.Workplace.MdmPolicy::IsStoreAllowed()
     def is_store_allowed(cls) -> bool: ...
 
 @typing.final
@@ -28,6 +33,7 @@ class MdmPolicy(winrt.system.Object, metaclass=MdmPolicy_Static):
 
 @typing.final
 class WorkplaceSettings_Static(type):
+    # System.Boolean Windows.Management.Workplace.WorkplaceSettings::get_IsMicrosoftAccountOptional()
     @_property
     def is_microsoft_account_optional(cls) -> bool: ...
 

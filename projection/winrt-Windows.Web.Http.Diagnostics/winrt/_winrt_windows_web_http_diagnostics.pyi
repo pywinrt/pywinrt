@@ -20,89 +20,127 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class HttpDiagnosticProvider_Static(type):
+    # Windows.Web.Http.Diagnostics.HttpDiagnosticProvider Windows.Web.Http.Diagnostics.HttpDiagnosticProvider::CreateFromProcessDiagnosticInfo(Windows.System.Diagnostics.ProcessDiagnosticInfo)
     def create_from_process_diagnostic_info(cls, process_diagnostic_info: windows_system_diagnostics.ProcessDiagnosticInfo, /) -> HttpDiagnosticProvider: ...
 
 @typing.final
 class HttpDiagnosticProvider(winrt.system.Object, metaclass=HttpDiagnosticProvider_Static):
+    # System.Void Windows.Web.Http.Diagnostics.HttpDiagnosticProvider::Start()
     def start(self) -> None: ...
+    # System.Void Windows.Web.Http.Diagnostics.HttpDiagnosticProvider::Stop()
     def stop(self) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Web.Http.Diagnostics.HttpDiagnosticProvider::add_RequestResponseCompleted(Windows.Foundation.TypedEventHandler`2<Windows.Web.Http.Diagnostics.HttpDiagnosticProvider,Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs>)
     def add_request_response_completed(self, handler: windows_foundation.TypedEventHandler[HttpDiagnosticProvider, HttpDiagnosticProviderRequestResponseCompletedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Web.Http.Diagnostics.HttpDiagnosticProvider::remove_RequestResponseCompleted(Windows.Foundation.EventRegistrationToken)
     def remove_request_response_completed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Web.Http.Diagnostics.HttpDiagnosticProvider::add_RequestSent(Windows.Foundation.TypedEventHandler`2<Windows.Web.Http.Diagnostics.HttpDiagnosticProvider,Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs>)
     def add_request_sent(self, handler: windows_foundation.TypedEventHandler[HttpDiagnosticProvider, HttpDiagnosticProviderRequestSentEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Web.Http.Diagnostics.HttpDiagnosticProvider::remove_RequestSent(Windows.Foundation.EventRegistrationToken)
     def remove_request_sent(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Web.Http.Diagnostics.HttpDiagnosticProvider::add_ResponseReceived(Windows.Foundation.TypedEventHandler`2<Windows.Web.Http.Diagnostics.HttpDiagnosticProvider,Windows.Web.Http.Diagnostics.HttpDiagnosticProviderResponseReceivedEventArgs>)
     def add_response_received(self, handler: windows_foundation.TypedEventHandler[HttpDiagnosticProvider, HttpDiagnosticProviderResponseReceivedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Web.Http.Diagnostics.HttpDiagnosticProvider::remove_ResponseReceived(Windows.Foundation.EventRegistrationToken)
     def remove_response_received(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
 @typing.final
 class HttpDiagnosticProviderRequestResponseCompletedEventArgs(winrt.system.Object):
+    # System.Guid Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs::get_ActivityId()
     @_property
     def activity_id(self) -> _uuid.UUID: ...
+    # Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs::get_Initiator()
     @_property
     def initiator(self) -> HttpDiagnosticRequestInitiator: ...
+    # System.UInt32 Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs::get_ProcessId()
     @_property
     def process_id(self) -> winrt.system.UInt32: ...
+    # Windows.Foundation.Uri Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs::get_RequestedUri()
     @_property
     def requested_uri(self) -> windows_foundation.Uri: ...
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Web.Http.Diagnostics.HttpDiagnosticSourceLocation> Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs::get_SourceLocations()
     @_property
     def source_locations(self) -> typing.Sequence[HttpDiagnosticSourceLocation]: ...
+    # System.UInt32 Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs::get_ThreadId()
     @_property
     def thread_id(self) -> winrt.system.UInt32: ...
+    # Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs::get_Timestamps()
     @_property
     def timestamps(self) -> HttpDiagnosticProviderRequestResponseTimestamps: ...
 
 @typing.final
 class HttpDiagnosticProviderRequestResponseTimestamps(winrt.system.Object):
+    # Windows.Foundation.IReference`1<Windows.Foundation.DateTime> Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps::get_CacheCheckedTimestamp()
     @_property
     def cache_checked_timestamp(self) -> typing.Optional[datetime.datetime]: ...
+    # Windows.Foundation.IReference`1<Windows.Foundation.DateTime> Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps::get_ConnectionCompletedTimestamp()
     @_property
     def connection_completed_timestamp(self) -> typing.Optional[datetime.datetime]: ...
+    # Windows.Foundation.IReference`1<Windows.Foundation.DateTime> Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps::get_ConnectionInitiatedTimestamp()
     @_property
     def connection_initiated_timestamp(self) -> typing.Optional[datetime.datetime]: ...
+    # Windows.Foundation.IReference`1<Windows.Foundation.DateTime> Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps::get_NameResolvedTimestamp()
     @_property
     def name_resolved_timestamp(self) -> typing.Optional[datetime.datetime]: ...
+    # Windows.Foundation.IReference`1<Windows.Foundation.DateTime> Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps::get_RequestCompletedTimestamp()
     @_property
     def request_completed_timestamp(self) -> typing.Optional[datetime.datetime]: ...
+    # Windows.Foundation.IReference`1<Windows.Foundation.DateTime> Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps::get_RequestSentTimestamp()
     @_property
     def request_sent_timestamp(self) -> typing.Optional[datetime.datetime]: ...
+    # Windows.Foundation.IReference`1<Windows.Foundation.DateTime> Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps::get_ResponseCompletedTimestamp()
     @_property
     def response_completed_timestamp(self) -> typing.Optional[datetime.datetime]: ...
+    # Windows.Foundation.IReference`1<Windows.Foundation.DateTime> Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps::get_ResponseReceivedTimestamp()
     @_property
     def response_received_timestamp(self) -> typing.Optional[datetime.datetime]: ...
+    # Windows.Foundation.IReference`1<Windows.Foundation.DateTime> Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps::get_SslNegotiatedTimestamp()
     @_property
     def ssl_negotiated_timestamp(self) -> typing.Optional[datetime.datetime]: ...
 
 @typing.final
 class HttpDiagnosticProviderRequestSentEventArgs(winrt.system.Object):
+    # System.Guid Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs::get_ActivityId()
     @_property
     def activity_id(self) -> _uuid.UUID: ...
+    # Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs::get_Initiator()
     @_property
     def initiator(self) -> HttpDiagnosticRequestInitiator: ...
+    # Windows.Web.Http.HttpRequestMessage Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs::get_Message()
     @_property
     def message(self) -> windows_web_http.HttpRequestMessage: ...
+    # System.UInt32 Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs::get_ProcessId()
     @_property
     def process_id(self) -> winrt.system.UInt32: ...
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Web.Http.Diagnostics.HttpDiagnosticSourceLocation> Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs::get_SourceLocations()
     @_property
     def source_locations(self) -> typing.Sequence[HttpDiagnosticSourceLocation]: ...
+    # System.UInt32 Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs::get_ThreadId()
     @_property
     def thread_id(self) -> winrt.system.UInt32: ...
+    # Windows.Foundation.DateTime Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs::get_Timestamp()
     @_property
     def timestamp(self) -> datetime.datetime: ...
 
 @typing.final
 class HttpDiagnosticProviderResponseReceivedEventArgs(winrt.system.Object):
+    # System.Guid Windows.Web.Http.Diagnostics.HttpDiagnosticProviderResponseReceivedEventArgs::get_ActivityId()
     @_property
     def activity_id(self) -> _uuid.UUID: ...
+    # Windows.Web.Http.HttpResponseMessage Windows.Web.Http.Diagnostics.HttpDiagnosticProviderResponseReceivedEventArgs::get_Message()
     @_property
     def message(self) -> windows_web_http.HttpResponseMessage: ...
+    # Windows.Foundation.DateTime Windows.Web.Http.Diagnostics.HttpDiagnosticProviderResponseReceivedEventArgs::get_Timestamp()
     @_property
     def timestamp(self) -> datetime.datetime: ...
 
 @typing.final
 class HttpDiagnosticSourceLocation(winrt.system.Object):
+    # System.UInt64 Windows.Web.Http.Diagnostics.HttpDiagnosticSourceLocation::get_ColumnNumber()
     @_property
     def column_number(self) -> winrt.system.UInt64: ...
+    # System.UInt64 Windows.Web.Http.Diagnostics.HttpDiagnosticSourceLocation::get_LineNumber()
     @_property
     def line_number(self) -> winrt.system.UInt64: ...
+    # Windows.Foundation.Uri Windows.Web.Http.Diagnostics.HttpDiagnosticSourceLocation::get_SourceUri()
     @_property
     def source_uri(self) -> windows_foundation.Uri: ...
 

@@ -15,6 +15,7 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class DesktopWindowTarget(windows_ui_composition.CompositionTarget):
+    # System.Boolean Windows.UI.Composition.Desktop.DesktopWindowTarget::get_IsTopmost()
     @_property
     def is_topmost(self) -> bool: ...
 
