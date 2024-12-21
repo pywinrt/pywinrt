@@ -22,6 +22,7 @@ static class FileWriters
         DirectoryInfo outputPath,
         DirectoryInfo? headerPath,
         string ns,
+        NamespaceNullabilityInfo nullabilityInfo,
         IEnumerable<TypeDefinition> typeDefinitions,
         bool componentDlls
     )
@@ -51,6 +52,15 @@ static class FileWriters
         )
         {
             return;
+        }
+
+        foreach (var type in members.Classes.Concat(members.Interfaces).Concat(members.Delegates))
+        {
+            nullabilityInfo.AddOrUpdateType(
+                type.Type,
+                () => new TypeNullabilityInfo(type.Type),
+                old => new TypeNullabilityInfo(type.Type, old)
+            );
         }
 
         WriteNamespaceCpp(nsPackageDir, ns, members, componentDlls, 0);

@@ -1,7 +1,12 @@
-﻿using System.CommandLine;
+﻿using System.Collections.Concurrent;
+using System.CommandLine;
 using System.CommandLine.Builder;
 using System.CommandLine.Help;
+using System.CommandLine.Invocation;
 using System.CommandLine.Parsing;
+using System.Text.Encodings.Web;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 using Mono.Cecil;
 
 var inputOption = new Option<string[]>(
@@ -60,6 +65,15 @@ var headerPathOption = new Option<DirectoryInfo?>("--header-path", "Install head
     ArgumentHelpName = "path",
 };
 
+var nullabilityJsonPathOption = new Option<FileInfo?>(
+    "--nullability-json",
+    "Nullability information JSON file"
+)
+{
+    Arity = ArgumentArity.ZeroOrOne,
+    ArgumentHelpName = "path",
+};
+
 var componentDllsOption = new Option<bool>(
     "--component-dlls",
     "Set this flag when generating projection for user components that will ship with the required .dlls in the Python package"
@@ -74,14 +88,27 @@ rootCommand.AddOption(outputOption);
 rootCommand.AddOption(includeOption);
 rootCommand.AddOption(excludeOption);
 rootCommand.AddOption(headerPathOption);
+rootCommand.AddOption(nullabilityJsonPathOption);
 rootCommand.AddOption(componentDllsOption);
 rootCommand.AddOption(verboseOption);
 
 rootCommand.SetHandler(
-    async (input, reference, output, include, exclude, headerPath, componentDlls, verbose) =>
+    async (InvocationContext invocationContext) =>
     {
         var resolver = new MetadataResolver();
         var types = new List<TypeDefinition>();
+
+        var input = invocationContext.ParseResult.GetValueForOption(inputOption)!;
+        var reference = invocationContext.ParseResult.GetValueForOption(referenceOption)!;
+        var output = invocationContext.ParseResult.GetValueForOption(outputOption)!;
+        var include = invocationContext.ParseResult.GetValueForOption(includeOption)!;
+        var exclude = invocationContext.ParseResult.GetValueForOption(excludeOption)!;
+        var headerPath = invocationContext.ParseResult.GetValueForOption(headerPathOption);
+        var nullabilityInfoPath = invocationContext.ParseResult.GetValueForOption(
+            nullabilityJsonPathOption
+        );
+        var componentDlls = invocationContext.ParseResult.GetValueForOption(componentDllsOption);
+        var verbose = invocationContext.ParseResult.GetValueForOption(verboseOption);
 
         foreach (var file in input)
         {
@@ -144,6 +171,30 @@ rootCommand.SetHandler(
             );
         }
 
+        var oldNullabilityInfo = default(List<NamespaceNullabilityInfo>);
+
+        if (nullabilityInfoPath is not null && nullabilityInfoPath.Exists)
+        {
+            using var stream = nullabilityInfoPath.OpenRead();
+            oldNullabilityInfo = JsonSerializer.Deserialize<List<NamespaceNullabilityInfo>>(
+                stream,
+                new JsonSerializerOptions
+                {
+                    PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+                    Converters = { new JsonStringEnumConverter(JsonNamingPolicy.CamelCase) }
+                }
+            );
+        }
+
+        if (oldNullabilityInfo is null)
+        {
+            oldNullabilityInfo = new();
+        }
+
+        var nullabilityInfo = new ConcurrentDictionary<string, NamespaceNullabilityInfo>(
+            oldNullabilityInfo.ToDictionary(i => i.Namespace)
+        );
+
         foreach (var group in types.GroupBy(t => t.Namespace))
         {
             tasks.Add(
@@ -153,6 +204,10 @@ rootCommand.SetHandler(
                         output,
                         headerPath,
                         group.Key,
+                        nullabilityInfo.GetOrAdd(
+                            group.Key,
+                            _ => new NamespaceNullabilityInfo(group.Key, [])
+                        ),
                         group,
                         componentDlls
                     );
@@ -161,15 +216,27 @@ rootCommand.SetHandler(
         }
 
         await Task.WhenAll(tasks);
-    },
-    inputOption,
-    referenceOption,
-    outputOption,
-    includeOption,
-    excludeOption,
-    headerPathOption,
-    componentDllsOption,
-    verboseOption
+
+        if (nullabilityInfoPath is not null)
+        {
+            using var stream = nullabilityInfoPath.Create();
+
+            JsonSerializer.Serialize(
+                stream,
+                nullabilityInfo
+                    .OrderBy(i => i.Key, StringComparer.Ordinal)
+                    .Select(i => i.Value)
+                    .ToList(),
+                new JsonSerializerOptions
+                {
+                    WriteIndented = true,
+                    PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+                    Converters = { new JsonStringEnumConverter(JsonNamingPolicy.CamelCase) },
+                    Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping,
+                }
+            );
+        }
+    }
 );
 
 var parser = new CommandLineBuilder(rootCommand)
