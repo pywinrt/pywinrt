@@ -45,6 +45,7 @@ MINIMAL_NAMESPACES = [
 ]
 WINDOWS_SDK = "10.0.26100.0+"
 SDK_PACKAGE_PATH = PROJECTION_PATH / "winrt-sdk" / "src" / "winrt_sdk" / "pywinrt"
+WINDOWS_SDK_NULLABILITY_JSON_PATH = REPO_ROOT_PATH / "nullability" / "windows-sdk.json"
 
 include_args = []
 
@@ -62,6 +63,8 @@ subprocess.check_call(
         PROJECTION_PATH,
         "--header-path",
         SDK_PACKAGE_PATH,
+        "--nullability-json",
+        WINDOWS_SDK_NULLABILITY_JSON_PATH,
     ]
     + include_args
 )
@@ -75,6 +78,7 @@ WEBVIEW2_PACKAGE_METADATA = (
     / "lib"
     / "Microsoft.Web.WebView2.Core.winmd"
 )
+WEBVIEW2_NULLABILITY_JSON_PATH = REPO_ROOT_PATH / "nullability" / "webview2.json"
 
 subprocess.check_call(
     DOTNET
@@ -86,6 +90,8 @@ subprocess.check_call(
         WINDOWS_SDK,
         "--output",
         PROJECTION_PATH,
+        "--nullability-json",
+        WEBVIEW2_NULLABILITY_JSON_PATH,
         "--component-dlls",
     ]
 )
@@ -105,6 +111,9 @@ WINDOWS_APP_SDK_PACKAGE_PATH = (
     / "winrt_windows_app_sdk"
     / "pywinrt"
 )
+WINDOWS_APP_SDK_NULLABILITY_JSON_PATH = (
+    REPO_ROOT_PATH / "nullability" / "windows-app-sdk.json"
+)
 
 subprocess.check_call(
     DOTNET
@@ -122,6 +131,8 @@ subprocess.check_call(
         PROJECTION_PATH,
         "--header-path",
         WINDOWS_APP_SDK_PACKAGE_PATH,
+        "--nullability-json",
+        WINDOWS_APP_SDK_NULLABILITY_JSON_PATH,
     ]
 )
 
@@ -136,6 +147,8 @@ TEST_PACKAGE_METADATA = (
     / "TestComponent.winmd"
 )
 
+TEST_PACKAGE_NULLABILITY_JSON = REPO_ROOT_PATH / "nullability" / "test-component.json"
+
 subprocess.check_call(
     DOTNET
     + [
@@ -146,6 +159,8 @@ subprocess.check_call(
         WINDOWS_SDK,
         "--output",
         PROJECTION_PATH,
+        "--nullability-json",
+        TEST_PACKAGE_NULLABILITY_JSON,
         "--component-dlls",
     ]
 )

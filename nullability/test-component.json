@@ -1,0 +1,5284 @@
+[
+  {
+    "namespace": "TestComponent",
+    "types": [
+      {
+        "name": "Array10Handler",
+        "methods": [
+          {
+            "signature": "System.Double[] TestComponent.Array10Handler::Invoke(System.Double[],System.Double[],System.Double[]&)",
+            "name": "Invoke",
+            "return": {
+              "type": {
+                "name": "System.Double[]"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "passArray",
+                "type": {
+                  "name": "System.Double"
+                }
+              },
+              {
+                "name": "b",
+                "kind": "fillArray",
+                "type": {
+                  "name": "System.Double"
+                }
+              },
+              {
+                "name": "c",
+                "kind": "receiveArray",
+                "type": {
+                  "name": "System.Double"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Array11Handler",
+        "methods": [
+          {
+            "signature": "System.Char[] TestComponent.Array11Handler::Invoke(System.Char[],System.Char[],System.Char[]&)",
+            "name": "Invoke",
+            "return": {
+              "type": {
+                "name": "System.Char[]"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "passArray",
+                "type": {
+                  "name": "System.Char"
+                }
+              },
+              {
+                "name": "b",
+                "kind": "fillArray",
+                "type": {
+                  "name": "System.Char"
+                }
+              },
+              {
+                "name": "c",
+                "kind": "receiveArray",
+                "type": {
+                  "name": "System.Char"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Array12Handler",
+        "methods": [
+          {
+            "signature": "System.String[] TestComponent.Array12Handler::Invoke(System.String[],System.String[],System.String[]&)",
+            "name": "Invoke",
+            "return": {
+              "type": {
+                "name": "System.String[]"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "passArray",
+                "type": {
+                  "name": "System.String"
+                }
+              },
+              {
+                "name": "b",
+                "kind": "fillArray",
+                "type": {
+                  "name": "System.String"
+                }
+              },
+              {
+                "name": "c",
+                "kind": "receiveArray",
+                "type": {
+                  "name": "System.String"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Array13Handler",
+        "methods": [
+          {
+            "signature": "TestComponent.Blittable[] TestComponent.Array13Handler::Invoke(TestComponent.Blittable[],TestComponent.Blittable[],TestComponent.Blittable[]&)",
+            "name": "Invoke",
+            "return": {
+              "type": {
+                "name": "TestComponent.Blittable[]"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "passArray",
+                "type": {
+                  "name": "TestComponent.Blittable"
+                }
+              },
+              {
+                "name": "b",
+                "kind": "fillArray",
+                "type": {
+                  "name": "TestComponent.Blittable"
+                }
+              },
+              {
+                "name": "c",
+                "kind": "receiveArray",
+                "type": {
+                  "name": "TestComponent.Blittable"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Array14Handler",
+        "methods": [
+          {
+            "signature": "TestComponent.NonBlittable[] TestComponent.Array14Handler::Invoke(TestComponent.NonBlittable[],TestComponent.NonBlittable[],TestComponent.NonBlittable[]&)",
+            "name": "Invoke",
+            "return": {
+              "type": {
+                "name": "TestComponent.NonBlittable[]"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "passArray",
+                "type": {
+                  "name": "TestComponent.NonBlittable"
+                }
+              },
+              {
+                "name": "b",
+                "kind": "fillArray",
+                "type": {
+                  "name": "TestComponent.NonBlittable"
+                }
+              },
+              {
+                "name": "c",
+                "kind": "receiveArray",
+                "type": {
+                  "name": "TestComponent.NonBlittable"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Array15Handler",
+        "methods": [
+          {
+            "signature": "TestComponent.Nested[] TestComponent.Array15Handler::Invoke(TestComponent.Nested[],TestComponent.Nested[],TestComponent.Nested[]&)",
+            "name": "Invoke",
+            "return": {
+              "type": {
+                "name": "TestComponent.Nested[]"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "passArray",
+                "type": {
+                  "name": "TestComponent.Nested"
+                }
+              },
+              {
+                "name": "b",
+                "kind": "fillArray",
+                "type": {
+                  "name": "TestComponent.Nested"
+                }
+              },
+              {
+                "name": "c",
+                "kind": "receiveArray",
+                "type": {
+                  "name": "TestComponent.Nested"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Array16Handler",
+        "methods": [
+          {
+            "signature": "Windows.Foundation.IStringable[] TestComponent.Array16Handler::Invoke(Windows.Foundation.IStringable[],Windows.Foundation.IStringable[],Windows.Foundation.IStringable[]&)",
+            "name": "Invoke",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.IStringable[]"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "passArray",
+                "type": {
+                  "name": "Windows.Foundation.IStringable"
+                }
+              },
+              {
+                "name": "b",
+                "kind": "fillArray",
+                "type": {
+                  "name": "Windows.Foundation.IStringable"
+                }
+              },
+              {
+                "name": "c",
+                "kind": "receiveArray",
+                "type": {
+                  "name": "Windows.Foundation.IStringable"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Array1Handler",
+        "methods": [
+          {
+            "signature": "System.Boolean[] TestComponent.Array1Handler::Invoke(System.Boolean[],System.Boolean[],System.Boolean[]&)",
+            "name": "Invoke",
+            "return": {
+              "type": {
+                "name": "System.Boolean[]"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "passArray",
+                "type": {
+                  "name": "System.Boolean"
+                }
+              },
+              {
+                "name": "b",
+                "kind": "fillArray",
+                "type": {
+                  "name": "System.Boolean"
+                }
+              },
+              {
+                "name": "c",
+                "kind": "receiveArray",
+                "type": {
+                  "name": "System.Boolean"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Array2Handler",
+        "methods": [
+          {
+            "signature": "System.Byte[] TestComponent.Array2Handler::Invoke(System.Byte[],System.Byte[],System.Byte[]&)",
+            "name": "Invoke",
+            "return": {
+              "type": {
+                "name": "System.Byte[]"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "passArray",
+                "type": {
+                  "name": "System.Byte"
+                }
+              },
+              {
+                "name": "b",
+                "kind": "fillArray",
+                "type": {
+                  "name": "System.Byte"
+                }
+              },
+              {
+                "name": "c",
+                "kind": "receiveArray",
+                "type": {
+                  "name": "System.Byte"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Array3Handler",
+        "methods": [
+          {
+            "signature": "System.UInt16[] TestComponent.Array3Handler::Invoke(System.UInt16[],System.UInt16[],System.UInt16[]&)",
+            "name": "Invoke",
+            "return": {
+              "type": {
+                "name": "System.UInt16[]"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "passArray",
+                "type": {
+                  "name": "System.UInt16"
+                }
+              },
+              {
+                "name": "b",
+                "kind": "fillArray",
+                "type": {
+                  "name": "System.UInt16"
+                }
+              },
+              {
+                "name": "c",
+                "kind": "receiveArray",
+                "type": {
+                  "name": "System.UInt16"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Array4Handler",
+        "methods": [
+          {
+            "signature": "System.UInt32[] TestComponent.Array4Handler::Invoke(System.UInt32[],System.UInt32[],System.UInt32[]&)",
+            "name": "Invoke",
+            "return": {
+              "type": {
+                "name": "System.UInt32[]"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "passArray",
+                "type": {
+                  "name": "System.UInt32"
+                }
+              },
+              {
+                "name": "b",
+                "kind": "fillArray",
+                "type": {
+                  "name": "System.UInt32"
+                }
+              },
+              {
+                "name": "c",
+                "kind": "receiveArray",
+                "type": {
+                  "name": "System.UInt32"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Array5Handler",
+        "methods": [
+          {
+            "signature": "System.UInt64[] TestComponent.Array5Handler::Invoke(System.UInt64[],System.UInt64[],System.UInt64[]&)",
+            "name": "Invoke",
+            "return": {
+              "type": {
+                "name": "System.UInt64[]"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "passArray",
+                "type": {
+                  "name": "System.UInt64"
+                }
+              },
+              {
+                "name": "b",
+                "kind": "fillArray",
+                "type": {
+                  "name": "System.UInt64"
+                }
+              },
+              {
+                "name": "c",
+                "kind": "receiveArray",
+                "type": {
+                  "name": "System.UInt64"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Array6Handler",
+        "methods": [
+          {
+            "signature": "System.Int16[] TestComponent.Array6Handler::Invoke(System.Int16[],System.Int16[],System.Int16[]&)",
+            "name": "Invoke",
+            "return": {
+              "type": {
+                "name": "System.Int16[]"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "passArray",
+                "type": {
+                  "name": "System.Int16"
+                }
+              },
+              {
+                "name": "b",
+                "kind": "fillArray",
+                "type": {
+                  "name": "System.Int16"
+                }
+              },
+              {
+                "name": "c",
+                "kind": "receiveArray",
+                "type": {
+                  "name": "System.Int16"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Array7Handler",
+        "methods": [
+          {
+            "signature": "System.Int32[] TestComponent.Array7Handler::Invoke(System.Int32[],System.Int32[],System.Int32[]&)",
+            "name": "Invoke",
+            "return": {
+              "type": {
+                "name": "System.Int32[]"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "passArray",
+                "type": {
+                  "name": "System.Int32"
+                }
+              },
+              {
+                "name": "b",
+                "kind": "fillArray",
+                "type": {
+                  "name": "System.Int32"
+                }
+              },
+              {
+                "name": "c",
+                "kind": "receiveArray",
+                "type": {
+                  "name": "System.Int32"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Array8Handler",
+        "methods": [
+          {
+            "signature": "System.Int64[] TestComponent.Array8Handler::Invoke(System.Int64[],System.Int64[],System.Int64[]&)",
+            "name": "Invoke",
+            "return": {
+              "type": {
+                "name": "System.Int64[]"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "passArray",
+                "type": {
+                  "name": "System.Int64"
+                }
+              },
+              {
+                "name": "b",
+                "kind": "fillArray",
+                "type": {
+                  "name": "System.Int64"
+                }
+              },
+              {
+                "name": "c",
+                "kind": "receiveArray",
+                "type": {
+                  "name": "System.Int64"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Array9Handler",
+        "methods": [
+          {
+            "signature": "System.Single[] TestComponent.Array9Handler::Invoke(System.Single[],System.Single[],System.Single[]&)",
+            "name": "Invoke",
+            "return": {
+              "type": {
+                "name": "System.Single[]"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "passArray",
+                "type": {
+                  "name": "System.Single"
+                }
+              },
+              {
+                "name": "b",
+                "kind": "fillArray",
+                "type": {
+                  "name": "System.Single"
+                }
+              },
+              {
+                "name": "c",
+                "kind": "receiveArray",
+                "type": {
+                  "name": "System.Single"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Async1Handler",
+        "methods": [
+          {
+            "signature": "Windows.Foundation.IAsyncAction TestComponent.Async1Handler::Invoke(Windows.Foundation.IAsyncAction,System.Boolean)",
+            "name": "Invoke",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.IAsyncAction"
+              }
+            },
+            "parameters": [
+              {
+                "name": "suspend",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.IAsyncAction"
+                }
+              },
+              {
+                "name": "fail",
+                "kind": "in",
+                "type": {
+                  "name": "System.Boolean"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Async2Handler",
+        "methods": [
+          {
+            "signature": "Windows.Foundation.IAsyncActionWithProgress`1<System.Int32> TestComponent.Async2Handler::Invoke(Windows.Foundation.IAsyncAction,System.Boolean,System.Int32)",
+            "name": "Invoke",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.IAsyncActionWithProgress`1",
+                "args": [
+                  {
+                    "name": "System.Int32"
+                  }
+                ]
+              }
+            },
+            "parameters": [
+              {
+                "name": "suspend",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.IAsyncAction"
+                }
+              },
+              {
+                "name": "fail",
+                "kind": "in",
+                "type": {
+                  "name": "System.Boolean"
+                }
+              },
+              {
+                "name": "progress",
+                "kind": "in",
+                "type": {
+                  "name": "System.Int32"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Async3Handler",
+        "methods": [
+          {
+            "signature": "Windows.Foundation.IAsyncOperation`1<System.Int32> TestComponent.Async3Handler::Invoke(Windows.Foundation.IAsyncAction,System.Boolean,System.Int32)",
+            "name": "Invoke",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.IAsyncOperation`1",
+                "args": [
+                  {
+                    "name": "System.Int32"
+                  }
+                ]
+              }
+            },
+            "parameters": [
+              {
+                "name": "suspend",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.IAsyncAction"
+                }
+              },
+              {
+                "name": "fail",
+                "kind": "in",
+                "type": {
+                  "name": "System.Boolean"
+                }
+              },
+              {
+                "name": "result",
+                "kind": "in",
+                "type": {
+                  "name": "System.Int32"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Async4Handler",
+        "methods": [
+          {
+            "signature": "Windows.Foundation.IAsyncOperationWithProgress`2<System.Int32,System.Int32> TestComponent.Async4Handler::Invoke(Windows.Foundation.IAsyncAction,System.Boolean,System.Int32,System.Int32)",
+            "name": "Invoke",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.IAsyncOperationWithProgress`2",
+                "args": [
+                  {
+                    "name": "System.Int32"
+                  },
+                  {
+                    "name": "System.Int32"
+                  }
+                ]
+              }
+            },
+            "parameters": [
+              {
+                "name": "suspend",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.IAsyncAction"
+                }
+              },
+              {
+                "name": "fail",
+                "kind": "in",
+                "type": {
+                  "name": "System.Boolean"
+                }
+              },
+              {
+                "name": "result",
+                "kind": "in",
+                "type": {
+                  "name": "System.Int32"
+                }
+              },
+              {
+                "name": "progress",
+                "kind": "in",
+                "type": {
+                  "name": "System.Int32"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Class",
+        "methods": [
+          {
+            "signature": "System.Void TestComponent.Class::.ctor()",
+            "name": ".ctor",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.Int32 TestComponent.Class::One()",
+            "name": "One",
+            "return": {
+              "type": {
+                "name": "System.Int32"
+              }
+            },
+            "parameters": []
+          }
+        ]
+      },
+      {
+        "name": "Collection1Handler",
+        "methods": [
+          {
+            "signature": "Windows.Foundation.Collections.IIterable`1<System.String> TestComponent.Collection1Handler::Invoke(Windows.Foundation.Collections.IIterable`1<System.String>,Windows.Foundation.Collections.IIterable`1<System.String>&)",
+            "name": "Invoke",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.Collections.IIterable`1",
+                "args": [
+                  {
+                    "name": "System.String"
+                  }
+                ]
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.Collections.IIterable`1",
+                  "args": [
+                    {
+                      "name": "System.String"
+                    }
+                  ]
+                }
+              },
+              {
+                "name": "b",
+                "kind": "out",
+                "type": {
+                  "name": "Windows.Foundation.Collections.IIterable`1",
+                  "args": [
+                    {
+                      "name": "System.String"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Collection2Handler",
+        "methods": [
+          {
+            "signature": "Windows.Foundation.Collections.IIterable`1<Windows.Foundation.Collections.IKeyValuePair`2<System.String,System.String>> TestComponent.Collection2Handler::Invoke(Windows.Foundation.Collections.IIterable`1<Windows.Foundation.Collections.IKeyValuePair`2<System.String,System.String>>,Windows.Foundation.Collections.IIterable`1<Windows.Foundation.Collections.IKeyValuePair`2<System.String,System.String>>&)",
+            "name": "Invoke",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.Collections.IIterable`1",
+                "args": [
+                  {
+                    "name": "Windows.Foundation.Collections.IKeyValuePair`2",
+                    "args": [
+                      {
+                        "name": "System.String"
+                      },
+                      {
+                        "name": "System.String"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.Collections.IIterable`1",
+                  "args": [
+                    {
+                      "name": "Windows.Foundation.Collections.IKeyValuePair`2",
+                      "args": [
+                        {
+                          "name": "System.String"
+                        },
+                        {
+                          "name": "System.String"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "name": "b",
+                "kind": "out",
+                "type": {
+                  "name": "Windows.Foundation.Collections.IIterable`1",
+                  "args": [
+                    {
+                      "name": "Windows.Foundation.Collections.IKeyValuePair`2",
+                      "args": [
+                        {
+                          "name": "System.String"
+                        },
+                        {
+                          "name": "System.String"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Collection3Handler",
+        "methods": [
+          {
+            "signature": "Windows.Foundation.Collections.IMap`2<System.String,System.String> TestComponent.Collection3Handler::Invoke(Windows.Foundation.Collections.IMap`2<System.String,System.String>,Windows.Foundation.Collections.IMap`2<System.String,System.String>&)",
+            "name": "Invoke",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.Collections.IMap`2",
+                "args": [
+                  {
+                    "name": "System.String"
+                  },
+                  {
+                    "name": "System.String"
+                  }
+                ]
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.Collections.IMap`2",
+                  "args": [
+                    {
+                      "name": "System.String"
+                    },
+                    {
+                      "name": "System.String"
+                    }
+                  ]
+                }
+              },
+              {
+                "name": "b",
+                "kind": "out",
+                "type": {
+                  "name": "Windows.Foundation.Collections.IMap`2",
+                  "args": [
+                    {
+                      "name": "System.String"
+                    },
+                    {
+                      "name": "System.String"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Collection4Handler",
+        "methods": [
+          {
+            "signature": "Windows.Foundation.Collections.IMapView`2<System.String,System.String> TestComponent.Collection4Handler::Invoke(Windows.Foundation.Collections.IMapView`2<System.String,System.String>,Windows.Foundation.Collections.IMapView`2<System.String,System.String>&)",
+            "name": "Invoke",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.Collections.IMapView`2",
+                "args": [
+                  {
+                    "name": "System.String"
+                  },
+                  {
+                    "name": "System.String"
+                  }
+                ]
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.Collections.IMapView`2",
+                  "args": [
+                    {
+                      "name": "System.String"
+                    },
+                    {
+                      "name": "System.String"
+                    }
+                  ]
+                }
+              },
+              {
+                "name": "b",
+                "kind": "out",
+                "type": {
+                  "name": "Windows.Foundation.Collections.IMapView`2",
+                  "args": [
+                    {
+                      "name": "System.String"
+                    },
+                    {
+                      "name": "System.String"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Collection5Handler",
+        "methods": [
+          {
+            "signature": "Windows.Foundation.Collections.IVector`1<System.String> TestComponent.Collection5Handler::Invoke(Windows.Foundation.Collections.IVector`1<System.String>,Windows.Foundation.Collections.IVector`1<System.String>&)",
+            "name": "Invoke",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.Collections.IVector`1",
+                "args": [
+                  {
+                    "name": "System.String"
+                  }
+                ]
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.Collections.IVector`1",
+                  "args": [
+                    {
+                      "name": "System.String"
+                    }
+                  ]
+                }
+              },
+              {
+                "name": "b",
+                "kind": "out",
+                "type": {
+                  "name": "Windows.Foundation.Collections.IVector`1",
+                  "args": [
+                    {
+                      "name": "System.String"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Collection6Handler",
+        "methods": [
+          {
+            "signature": "Windows.Foundation.Collections.IVectorView`1<System.String> TestComponent.Collection6Handler::Invoke(Windows.Foundation.Collections.IVectorView`1<System.String>,Windows.Foundation.Collections.IVectorView`1<System.String>&)",
+            "name": "Invoke",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.Collections.IVectorView`1",
+                "args": [
+                  {
+                    "name": "System.String"
+                  }
+                ]
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.Collections.IVectorView`1",
+                  "args": [
+                    {
+                      "name": "System.String"
+                    }
+                  ]
+                }
+              },
+              {
+                "name": "b",
+                "kind": "out",
+                "type": {
+                  "name": "Windows.Foundation.Collections.IVectorView`1",
+                  "args": [
+                    {
+                      "name": "System.String"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Composable",
+        "methods": [
+          {
+            "signature": "System.Void TestComponent.Composable::.ctor()",
+            "name": ".ctor",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.Void TestComponent.Composable::.ctor(System.Int32)",
+            "name": ".ctor",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "init",
+                "kind": "in",
+                "type": {
+                  "name": "System.Int32"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Int32 TestComponent.Composable::ExpectComposable(TestComponent.Composable)",
+            "name": "ExpectComposable",
+            "return": {
+              "type": {
+                "name": "System.Int32"
+              }
+            },
+            "parameters": [
+              {
+                "name": "t",
+                "kind": "in",
+                "type": {
+                  "name": "TestComponent.Composable"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Int32 TestComponent.Composable::ExpectRequiredFour(TestComponent.IRequiredFour)",
+            "name": "ExpectRequiredFour",
+            "return": {
+              "type": {
+                "name": "System.Int32"
+              }
+            },
+            "parameters": [
+              {
+                "name": "t",
+                "kind": "in",
+                "type": {
+                  "name": "TestComponent.IRequiredFour"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Int32 TestComponent.Composable::ExpectRequiredOne(TestComponent.IRequiredOne)",
+            "name": "ExpectRequiredOne",
+            "return": {
+              "type": {
+                "name": "System.Int32"
+              }
+            },
+            "parameters": [
+              {
+                "name": "t",
+                "kind": "in",
+                "type": {
+                  "name": "TestComponent.IRequiredOne"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Int32 TestComponent.Composable::ExpectRequiredThree(TestComponent.IRequiredThree)",
+            "name": "ExpectRequiredThree",
+            "return": {
+              "type": {
+                "name": "System.Int32"
+              }
+            },
+            "parameters": [
+              {
+                "name": "t",
+                "kind": "in",
+                "type": {
+                  "name": "TestComponent.IRequiredThree"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Int32 TestComponent.Composable::ExpectRequiredTwo(TestComponent.IRequiredTwo)",
+            "name": "ExpectRequiredTwo",
+            "return": {
+              "type": {
+                "name": "System.Int32"
+              }
+            },
+            "parameters": [
+              {
+                "name": "t",
+                "kind": "in",
+                "type": {
+                  "name": "TestComponent.IRequiredTwo"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Int32 TestComponent.Composable::Four()",
+            "name": "Four",
+            "return": {
+              "type": {
+                "name": "System.Int32"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.Int32 TestComponent.Composable::One()",
+            "name": "One",
+            "return": {
+              "type": {
+                "name": "System.Int32"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.Int32 TestComponent.Composable::Three()",
+            "name": "Three",
+            "return": {
+              "type": {
+                "name": "System.Int32"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.Int32 TestComponent.Composable::Two()",
+            "name": "Two",
+            "return": {
+              "type": {
+                "name": "System.Int32"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.Int32 TestComponent.Composable::get_Value()",
+            "name": "get_Value",
+            "return": {
+              "type": {
+                "name": "System.Int32"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.Void TestComponent.Composable::put_Value(System.Int32)",
+            "name": "put_Value",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "value",
+                "kind": "in",
+                "type": {
+                  "name": "System.Int32"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Derived",
+        "methods": [
+          {
+            "signature": "System.Void TestComponent.Derived::.ctor()",
+            "name": ".ctor",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": []
+          }
+        ]
+      },
+      {
+        "name": "IRequiredFour",
+        "methods": [
+          {
+            "signature": "System.Int32 TestComponent.IRequiredFour::Four()",
+            "name": "Four",
+            "return": {
+              "type": {
+                "name": "System.Int32"
+              }
+            },
+            "parameters": []
+          }
+        ]
+      },
+      {
+        "name": "IRequiredOne",
+        "methods": [
+          {
+            "signature": "System.Int32 TestComponent.IRequiredOne::One()",
+            "name": "One",
+            "return": {
+              "type": {
+                "name": "System.Int32"
+              }
+            },
+            "parameters": []
+          }
+        ]
+      },
+      {
+        "name": "IRequiredThree",
+        "methods": [
+          {
+            "signature": "System.Int32 TestComponent.IRequiredThree::Three()",
+            "name": "Three",
+            "return": {
+              "type": {
+                "name": "System.Int32"
+              }
+            },
+            "parameters": []
+          }
+        ]
+      },
+      {
+        "name": "IRequiredTwo",
+        "methods": [
+          {
+            "signature": "System.Int32 TestComponent.IRequiredTwo::Two()",
+            "name": "Two",
+            "return": {
+              "type": {
+                "name": "System.Int32"
+              }
+            },
+            "parameters": []
+          }
+        ]
+      },
+      {
+        "name": "ITests",
+        "methods": [
+          {
+            "signature": "System.Boolean[] TestComponent.ITests::Array1(System.Boolean[],System.Boolean[],System.Boolean[]&)",
+            "name": "Array1",
+            "return": {
+              "type": {
+                "name": "System.Boolean[]"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "passArray",
+                "type": {
+                  "name": "System.Boolean"
+                }
+              },
+              {
+                "name": "b",
+                "kind": "fillArray",
+                "type": {
+                  "name": "System.Boolean"
+                }
+              },
+              {
+                "name": "c",
+                "kind": "receiveArray",
+                "type": {
+                  "name": "System.Boolean"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Double[] TestComponent.ITests::Array10(System.Double[],System.Double[],System.Double[]&)",
+            "name": "Array10",
+            "return": {
+              "type": {
+                "name": "System.Double[]"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "passArray",
+                "type": {
+                  "name": "System.Double"
+                }
+              },
+              {
+                "name": "b",
+                "kind": "fillArray",
+                "type": {
+                  "name": "System.Double"
+                }
+              },
+              {
+                "name": "c",
+                "kind": "receiveArray",
+                "type": {
+                  "name": "System.Double"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void TestComponent.ITests::Array10Call(TestComponent.Array10Handler)",
+            "name": "Array10Call",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "TestComponent.Array10Handler"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Char[] TestComponent.ITests::Array11(System.Char[],System.Char[],System.Char[]&)",
+            "name": "Array11",
+            "return": {
+              "type": {
+                "name": "System.Char[]"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "passArray",
+                "type": {
+                  "name": "System.Char"
+                }
+              },
+              {
+                "name": "b",
+                "kind": "fillArray",
+                "type": {
+                  "name": "System.Char"
+                }
+              },
+              {
+                "name": "c",
+                "kind": "receiveArray",
+                "type": {
+                  "name": "System.Char"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void TestComponent.ITests::Array11Call(TestComponent.Array11Handler)",
+            "name": "Array11Call",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "TestComponent.Array11Handler"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.String[] TestComponent.ITests::Array12(System.String[],System.String[],System.String[]&)",
+            "name": "Array12",
+            "return": {
+              "type": {
+                "name": "System.String[]"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "passArray",
+                "type": {
+                  "name": "System.String"
+                }
+              },
+              {
+                "name": "b",
+                "kind": "fillArray",
+                "type": {
+                  "name": "System.String"
+                }
+              },
+              {
+                "name": "c",
+                "kind": "receiveArray",
+                "type": {
+                  "name": "System.String"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void TestComponent.ITests::Array12Call(TestComponent.Array12Handler)",
+            "name": "Array12Call",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "TestComponent.Array12Handler"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "TestComponent.Blittable[] TestComponent.ITests::Array13(TestComponent.Blittable[],TestComponent.Blittable[],TestComponent.Blittable[]&)",
+            "name": "Array13",
+            "return": {
+              "type": {
+                "name": "TestComponent.Blittable[]"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "passArray",
+                "type": {
+                  "name": "TestComponent.Blittable"
+                }
+              },
+              {
+                "name": "b",
+                "kind": "fillArray",
+                "type": {
+                  "name": "TestComponent.Blittable"
+                }
+              },
+              {
+                "name": "c",
+                "kind": "receiveArray",
+                "type": {
+                  "name": "TestComponent.Blittable"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void TestComponent.ITests::Array13Call(TestComponent.Array13Handler)",
+            "name": "Array13Call",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "TestComponent.Array13Handler"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "TestComponent.NonBlittable[] TestComponent.ITests::Array14(TestComponent.NonBlittable[],TestComponent.NonBlittable[],TestComponent.NonBlittable[]&)",
+            "name": "Array14",
+            "return": {
+              "type": {
+                "name": "TestComponent.NonBlittable[]"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "passArray",
+                "type": {
+                  "name": "TestComponent.NonBlittable"
+                }
+              },
+              {
+                "name": "b",
+                "kind": "fillArray",
+                "type": {
+                  "name": "TestComponent.NonBlittable"
+                }
+              },
+              {
+                "name": "c",
+                "kind": "receiveArray",
+                "type": {
+                  "name": "TestComponent.NonBlittable"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void TestComponent.ITests::Array14Call(TestComponent.Array14Handler)",
+            "name": "Array14Call",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "TestComponent.Array14Handler"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "TestComponent.Nested[] TestComponent.ITests::Array15(TestComponent.Nested[],TestComponent.Nested[],TestComponent.Nested[]&)",
+            "name": "Array15",
+            "return": {
+              "type": {
+                "name": "TestComponent.Nested[]"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "passArray",
+                "type": {
+                  "name": "TestComponent.Nested"
+                }
+              },
+              {
+                "name": "b",
+                "kind": "fillArray",
+                "type": {
+                  "name": "TestComponent.Nested"
+                }
+              },
+              {
+                "name": "c",
+                "kind": "receiveArray",
+                "type": {
+                  "name": "TestComponent.Nested"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void TestComponent.ITests::Array15Call(TestComponent.Array15Handler)",
+            "name": "Array15Call",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "TestComponent.Array15Handler"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "Windows.Foundation.IStringable[] TestComponent.ITests::Array16(Windows.Foundation.IStringable[],Windows.Foundation.IStringable[],Windows.Foundation.IStringable[]&)",
+            "name": "Array16",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.IStringable[]"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "passArray",
+                "type": {
+                  "name": "Windows.Foundation.IStringable"
+                }
+              },
+              {
+                "name": "b",
+                "kind": "fillArray",
+                "type": {
+                  "name": "Windows.Foundation.IStringable"
+                }
+              },
+              {
+                "name": "c",
+                "kind": "receiveArray",
+                "type": {
+                  "name": "Windows.Foundation.IStringable"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void TestComponent.ITests::Array16Call(TestComponent.Array16Handler)",
+            "name": "Array16Call",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "TestComponent.Array16Handler"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void TestComponent.ITests::Array1Call(TestComponent.Array1Handler)",
+            "name": "Array1Call",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "TestComponent.Array1Handler"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Byte[] TestComponent.ITests::Array2(System.Byte[],System.Byte[],System.Byte[]&)",
+            "name": "Array2",
+            "return": {
+              "type": {
+                "name": "System.Byte[]"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "passArray",
+                "type": {
+                  "name": "System.Byte"
+                }
+              },
+              {
+                "name": "b",
+                "kind": "fillArray",
+                "type": {
+                  "name": "System.Byte"
+                }
+              },
+              {
+                "name": "c",
+                "kind": "receiveArray",
+                "type": {
+                  "name": "System.Byte"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void TestComponent.ITests::Array2Call(TestComponent.Array2Handler)",
+            "name": "Array2Call",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "TestComponent.Array2Handler"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.UInt16[] TestComponent.ITests::Array3(System.UInt16[],System.UInt16[],System.UInt16[]&)",
+            "name": "Array3",
+            "return": {
+              "type": {
+                "name": "System.UInt16[]"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "passArray",
+                "type": {
+                  "name": "System.UInt16"
+                }
+              },
+              {
+                "name": "b",
+                "kind": "fillArray",
+                "type": {
+                  "name": "System.UInt16"
+                }
+              },
+              {
+                "name": "c",
+                "kind": "receiveArray",
+                "type": {
+                  "name": "System.UInt16"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void TestComponent.ITests::Array3Call(TestComponent.Array3Handler)",
+            "name": "Array3Call",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "TestComponent.Array3Handler"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.UInt32[] TestComponent.ITests::Array4(System.UInt32[],System.UInt32[],System.UInt32[]&)",
+            "name": "Array4",
+            "return": {
+              "type": {
+                "name": "System.UInt32[]"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "passArray",
+                "type": {
+                  "name": "System.UInt32"
+                }
+              },
+              {
+                "name": "b",
+                "kind": "fillArray",
+                "type": {
+                  "name": "System.UInt32"
+                }
+              },
+              {
+                "name": "c",
+                "kind": "receiveArray",
+                "type": {
+                  "name": "System.UInt32"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void TestComponent.ITests::Array4Call(TestComponent.Array4Handler)",
+            "name": "Array4Call",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "TestComponent.Array4Handler"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.UInt64[] TestComponent.ITests::Array5(System.UInt64[],System.UInt64[],System.UInt64[]&)",
+            "name": "Array5",
+            "return": {
+              "type": {
+                "name": "System.UInt64[]"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "passArray",
+                "type": {
+                  "name": "System.UInt64"
+                }
+              },
+              {
+                "name": "b",
+                "kind": "fillArray",
+                "type": {
+                  "name": "System.UInt64"
+                }
+              },
+              {
+                "name": "c",
+                "kind": "receiveArray",
+                "type": {
+                  "name": "System.UInt64"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void TestComponent.ITests::Array5Call(TestComponent.Array5Handler)",
+            "name": "Array5Call",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "TestComponent.Array5Handler"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Int16[] TestComponent.ITests::Array6(System.Int16[],System.Int16[],System.Int16[]&)",
+            "name": "Array6",
+            "return": {
+              "type": {
+                "name": "System.Int16[]"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "passArray",
+                "type": {
+                  "name": "System.Int16"
+                }
+              },
+              {
+                "name": "b",
+                "kind": "fillArray",
+                "type": {
+                  "name": "System.Int16"
+                }
+              },
+              {
+                "name": "c",
+                "kind": "receiveArray",
+                "type": {
+                  "name": "System.Int16"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void TestComponent.ITests::Array6Call(TestComponent.Array6Handler)",
+            "name": "Array6Call",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "TestComponent.Array6Handler"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Int32[] TestComponent.ITests::Array7(System.Int32[],System.Int32[],System.Int32[]&)",
+            "name": "Array7",
+            "return": {
+              "type": {
+                "name": "System.Int32[]"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "passArray",
+                "type": {
+                  "name": "System.Int32"
+                }
+              },
+              {
+                "name": "b",
+                "kind": "fillArray",
+                "type": {
+                  "name": "System.Int32"
+                }
+              },
+              {
+                "name": "c",
+                "kind": "receiveArray",
+                "type": {
+                  "name": "System.Int32"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void TestComponent.ITests::Array7Call(TestComponent.Array7Handler)",
+            "name": "Array7Call",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "TestComponent.Array7Handler"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Int64[] TestComponent.ITests::Array8(System.Int64[],System.Int64[],System.Int64[]&)",
+            "name": "Array8",
+            "return": {
+              "type": {
+                "name": "System.Int64[]"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "passArray",
+                "type": {
+                  "name": "System.Int64"
+                }
+              },
+              {
+                "name": "b",
+                "kind": "fillArray",
+                "type": {
+                  "name": "System.Int64"
+                }
+              },
+              {
+                "name": "c",
+                "kind": "receiveArray",
+                "type": {
+                  "name": "System.Int64"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void TestComponent.ITests::Array8Call(TestComponent.Array8Handler)",
+            "name": "Array8Call",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "TestComponent.Array8Handler"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Single[] TestComponent.ITests::Array9(System.Single[],System.Single[],System.Single[]&)",
+            "name": "Array9",
+            "return": {
+              "type": {
+                "name": "System.Single[]"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "passArray",
+                "type": {
+                  "name": "System.Single"
+                }
+              },
+              {
+                "name": "b",
+                "kind": "fillArray",
+                "type": {
+                  "name": "System.Single"
+                }
+              },
+              {
+                "name": "c",
+                "kind": "receiveArray",
+                "type": {
+                  "name": "System.Single"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void TestComponent.ITests::Array9Call(TestComponent.Array9Handler)",
+            "name": "Array9Call",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "TestComponent.Array9Handler"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "Windows.Foundation.IAsyncAction TestComponent.ITests::Async1(Windows.Foundation.IAsyncAction,System.Boolean)",
+            "name": "Async1",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.IAsyncAction"
+              }
+            },
+            "parameters": [
+              {
+                "name": "suspend",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.IAsyncAction"
+                }
+              },
+              {
+                "name": "fail",
+                "kind": "in",
+                "type": {
+                  "name": "System.Boolean"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void TestComponent.ITests::Async1Call(TestComponent.Async1Handler)",
+            "name": "Async1Call",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "TestComponent.Async1Handler"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "Windows.Foundation.IAsyncActionWithProgress`1<System.Int32> TestComponent.ITests::Async2(Windows.Foundation.IAsyncAction,System.Boolean,System.Int32)",
+            "name": "Async2",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.IAsyncActionWithProgress`1",
+                "args": [
+                  {
+                    "name": "System.Int32"
+                  }
+                ]
+              }
+            },
+            "parameters": [
+              {
+                "name": "suspend",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.IAsyncAction"
+                }
+              },
+              {
+                "name": "fail",
+                "kind": "in",
+                "type": {
+                  "name": "System.Boolean"
+                }
+              },
+              {
+                "name": "progress",
+                "kind": "in",
+                "type": {
+                  "name": "System.Int32"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void TestComponent.ITests::Async2Call(TestComponent.Async2Handler)",
+            "name": "Async2Call",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "TestComponent.Async2Handler"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "Windows.Foundation.IAsyncOperation`1<System.Int32> TestComponent.ITests::Async3(Windows.Foundation.IAsyncAction,System.Boolean,System.Int32)",
+            "name": "Async3",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.IAsyncOperation`1",
+                "args": [
+                  {
+                    "name": "System.Int32"
+                  }
+                ]
+              }
+            },
+            "parameters": [
+              {
+                "name": "suspend",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.IAsyncAction"
+                }
+              },
+              {
+                "name": "fail",
+                "kind": "in",
+                "type": {
+                  "name": "System.Boolean"
+                }
+              },
+              {
+                "name": "result",
+                "kind": "in",
+                "type": {
+                  "name": "System.Int32"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void TestComponent.ITests::Async3Call(TestComponent.Async3Handler)",
+            "name": "Async3Call",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "TestComponent.Async3Handler"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "Windows.Foundation.IAsyncOperationWithProgress`2<System.Int32,System.Int32> TestComponent.ITests::Async4(Windows.Foundation.IAsyncAction,System.Boolean,System.Int32,System.Int32)",
+            "name": "Async4",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.IAsyncOperationWithProgress`2",
+                "args": [
+                  {
+                    "name": "System.Int32"
+                  },
+                  {
+                    "name": "System.Int32"
+                  }
+                ]
+              }
+            },
+            "parameters": [
+              {
+                "name": "suspend",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.IAsyncAction"
+                }
+              },
+              {
+                "name": "fail",
+                "kind": "in",
+                "type": {
+                  "name": "System.Boolean"
+                }
+              },
+              {
+                "name": "result",
+                "kind": "in",
+                "type": {
+                  "name": "System.Int32"
+                }
+              },
+              {
+                "name": "progress",
+                "kind": "in",
+                "type": {
+                  "name": "System.Int32"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void TestComponent.ITests::Async4Call(TestComponent.Async4Handler)",
+            "name": "Async4Call",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "TestComponent.Async4Handler"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Object TestComponent.ITests::Box1(System.Byte,System.Object)",
+            "name": "Box1",
+            "return": {
+              "type": {
+                "name": "System.Object"
+              }
+            },
+            "parameters": [
+              {
+                "name": "param",
+                "kind": "in",
+                "type": {
+                  "name": "System.Byte"
+                }
+              },
+              {
+                "name": "boxedParam",
+                "kind": "in",
+                "type": {
+                  "name": "System.Object"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Object TestComponent.ITests::Box10(System.Double,System.Object)",
+            "name": "Box10",
+            "return": {
+              "type": {
+                "name": "System.Object"
+              }
+            },
+            "parameters": [
+              {
+                "name": "param",
+                "kind": "in",
+                "type": {
+                  "name": "System.Double"
+                }
+              },
+              {
+                "name": "boxedParam",
+                "kind": "in",
+                "type": {
+                  "name": "System.Object"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Object TestComponent.ITests::Box11(System.Guid,System.Object)",
+            "name": "Box11",
+            "return": {
+              "type": {
+                "name": "System.Object"
+              }
+            },
+            "parameters": [
+              {
+                "name": "param",
+                "kind": "in",
+                "type": {
+                  "name": "System.Guid"
+                }
+              },
+              {
+                "name": "boxedParam",
+                "kind": "in",
+                "type": {
+                  "name": "System.Object"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Object TestComponent.ITests::Box12(System.Char,System.Object)",
+            "name": "Box12",
+            "return": {
+              "type": {
+                "name": "System.Object"
+              }
+            },
+            "parameters": [
+              {
+                "name": "param",
+                "kind": "in",
+                "type": {
+                  "name": "System.Char"
+                }
+              },
+              {
+                "name": "boxedParam",
+                "kind": "in",
+                "type": {
+                  "name": "System.Object"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Object TestComponent.ITests::Box13(System.String,System.Object)",
+            "name": "Box13",
+            "return": {
+              "type": {
+                "name": "System.Object"
+              }
+            },
+            "parameters": [
+              {
+                "name": "param",
+                "kind": "in",
+                "type": {
+                  "name": "System.String"
+                }
+              },
+              {
+                "name": "boxedParam",
+                "kind": "in",
+                "type": {
+                  "name": "System.Object"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Object TestComponent.ITests::Box14(Windows.Foundation.TimeSpan,System.Object)",
+            "name": "Box14",
+            "return": {
+              "type": {
+                "name": "System.Object"
+              }
+            },
+            "parameters": [
+              {
+                "name": "param",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.TimeSpan"
+                }
+              },
+              {
+                "name": "boxedParam",
+                "kind": "in",
+                "type": {
+                  "name": "System.Object"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Object TestComponent.ITests::Box15(TestComponent.Blittable,System.Object)",
+            "name": "Box15",
+            "return": {
+              "type": {
+                "name": "System.Object"
+              }
+            },
+            "parameters": [
+              {
+                "name": "param",
+                "kind": "in",
+                "type": {
+                  "name": "TestComponent.Blittable"
+                }
+              },
+              {
+                "name": "boxedParam",
+                "kind": "in",
+                "type": {
+                  "name": "System.Object"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Object TestComponent.ITests::Box16(TestComponent.NonBlittable,System.Object)",
+            "name": "Box16",
+            "return": {
+              "type": {
+                "name": "System.Object"
+              }
+            },
+            "parameters": [
+              {
+                "name": "param",
+                "kind": "in",
+                "type": {
+                  "name": "TestComponent.NonBlittable"
+                }
+              },
+              {
+                "name": "boxedParam",
+                "kind": "in",
+                "type": {
+                  "name": "System.Object"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Object TestComponent.ITests::Box17(Windows.Foundation.DateTime,System.Object)",
+            "name": "Box17",
+            "return": {
+              "type": {
+                "name": "System.Object"
+              }
+            },
+            "parameters": [
+              {
+                "name": "param",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.DateTime"
+                }
+              },
+              {
+                "name": "boxedParam",
+                "kind": "in",
+                "type": {
+                  "name": "System.Object"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Object TestComponent.ITests::Box18(System.Int64[],System.Object)",
+            "name": "Box18",
+            "return": {
+              "type": {
+                "name": "System.Object"
+              }
+            },
+            "parameters": [
+              {
+                "name": "param",
+                "kind": "passArray",
+                "type": {
+                  "name": "System.Int64"
+                }
+              },
+              {
+                "name": "boxedParam",
+                "kind": "in",
+                "type": {
+                  "name": "System.Object"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Object TestComponent.ITests::Box19(System.Boolean[],System.Object)",
+            "name": "Box19",
+            "return": {
+              "type": {
+                "name": "System.Object"
+              }
+            },
+            "parameters": [
+              {
+                "name": "param",
+                "kind": "passArray",
+                "type": {
+                  "name": "System.Boolean"
+                }
+              },
+              {
+                "name": "boxedParam",
+                "kind": "in",
+                "type": {
+                  "name": "System.Object"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Object TestComponent.ITests::Box2(System.UInt16,System.Object)",
+            "name": "Box2",
+            "return": {
+              "type": {
+                "name": "System.Object"
+              }
+            },
+            "parameters": [
+              {
+                "name": "param",
+                "kind": "in",
+                "type": {
+                  "name": "System.UInt16"
+                }
+              },
+              {
+                "name": "boxedParam",
+                "kind": "in",
+                "type": {
+                  "name": "System.Object"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Object TestComponent.ITests::Box20(System.String[],System.Object)",
+            "name": "Box20",
+            "return": {
+              "type": {
+                "name": "System.Object"
+              }
+            },
+            "parameters": [
+              {
+                "name": "param",
+                "kind": "passArray",
+                "type": {
+                  "name": "System.String"
+                }
+              },
+              {
+                "name": "boxedParam",
+                "kind": "in",
+                "type": {
+                  "name": "System.Object"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Object TestComponent.ITests::Box21(Windows.Foundation.TimeSpan[],System.Object)",
+            "name": "Box21",
+            "return": {
+              "type": {
+                "name": "System.Object"
+              }
+            },
+            "parameters": [
+              {
+                "name": "param",
+                "kind": "passArray",
+                "type": {
+                  "name": "Windows.Foundation.TimeSpan"
+                }
+              },
+              {
+                "name": "boxedParam",
+                "kind": "in",
+                "type": {
+                  "name": "System.Object"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Object TestComponent.ITests::Box3(System.UInt32,System.Object)",
+            "name": "Box3",
+            "return": {
+              "type": {
+                "name": "System.Object"
+              }
+            },
+            "parameters": [
+              {
+                "name": "param",
+                "kind": "in",
+                "type": {
+                  "name": "System.UInt32"
+                }
+              },
+              {
+                "name": "boxedParam",
+                "kind": "in",
+                "type": {
+                  "name": "System.Object"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Object TestComponent.ITests::Box4(System.UInt64,System.Object)",
+            "name": "Box4",
+            "return": {
+              "type": {
+                "name": "System.Object"
+              }
+            },
+            "parameters": [
+              {
+                "name": "param",
+                "kind": "in",
+                "type": {
+                  "name": "System.UInt64"
+                }
+              },
+              {
+                "name": "boxedParam",
+                "kind": "in",
+                "type": {
+                  "name": "System.Object"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Object TestComponent.ITests::Box5(System.Int16,System.Object)",
+            "name": "Box5",
+            "return": {
+              "type": {
+                "name": "System.Object"
+              }
+            },
+            "parameters": [
+              {
+                "name": "param",
+                "kind": "in",
+                "type": {
+                  "name": "System.Int16"
+                }
+              },
+              {
+                "name": "boxedParam",
+                "kind": "in",
+                "type": {
+                  "name": "System.Object"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Object TestComponent.ITests::Box6(System.Int32,System.Object)",
+            "name": "Box6",
+            "return": {
+              "type": {
+                "name": "System.Object"
+              }
+            },
+            "parameters": [
+              {
+                "name": "param",
+                "kind": "in",
+                "type": {
+                  "name": "System.Int32"
+                }
+              },
+              {
+                "name": "boxedParam",
+                "kind": "in",
+                "type": {
+                  "name": "System.Object"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Object TestComponent.ITests::Box7(System.Int64,System.Object)",
+            "name": "Box7",
+            "return": {
+              "type": {
+                "name": "System.Object"
+              }
+            },
+            "parameters": [
+              {
+                "name": "param",
+                "kind": "in",
+                "type": {
+                  "name": "System.Int64"
+                }
+              },
+              {
+                "name": "boxedParam",
+                "kind": "in",
+                "type": {
+                  "name": "System.Object"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Object TestComponent.ITests::Box8(System.Boolean,System.Object)",
+            "name": "Box8",
+            "return": {
+              "type": {
+                "name": "System.Object"
+              }
+            },
+            "parameters": [
+              {
+                "name": "param",
+                "kind": "in",
+                "type": {
+                  "name": "System.Boolean"
+                }
+              },
+              {
+                "name": "boxedParam",
+                "kind": "in",
+                "type": {
+                  "name": "System.Object"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Object TestComponent.ITests::Box9(System.Single,System.Object)",
+            "name": "Box9",
+            "return": {
+              "type": {
+                "name": "System.Object"
+              }
+            },
+            "parameters": [
+              {
+                "name": "param",
+                "kind": "in",
+                "type": {
+                  "name": "System.Single"
+                }
+              },
+              {
+                "name": "boxedParam",
+                "kind": "in",
+                "type": {
+                  "name": "System.Object"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "Windows.Foundation.Collections.IIterable`1<System.String> TestComponent.ITests::Collection1(Windows.Foundation.Collections.IIterable`1<System.String>,Windows.Foundation.Collections.IIterable`1<System.String>&)",
+            "name": "Collection1",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.Collections.IIterable`1",
+                "args": [
+                  {
+                    "name": "System.String"
+                  }
+                ]
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.Collections.IIterable`1",
+                  "args": [
+                    {
+                      "name": "System.String"
+                    }
+                  ]
+                }
+              },
+              {
+                "name": "b",
+                "kind": "out",
+                "type": {
+                  "name": "Windows.Foundation.Collections.IIterable`1",
+                  "args": [
+                    {
+                      "name": "System.String"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void TestComponent.ITests::Collection1Call(TestComponent.Collection1Handler)",
+            "name": "Collection1Call",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "TestComponent.Collection1Handler"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "Windows.Foundation.Collections.IIterable`1<Windows.Foundation.Collections.IKeyValuePair`2<System.String,System.String>> TestComponent.ITests::Collection2(Windows.Foundation.Collections.IIterable`1<Windows.Foundation.Collections.IKeyValuePair`2<System.String,System.String>>,Windows.Foundation.Collections.IIterable`1<Windows.Foundation.Collections.IKeyValuePair`2<System.String,System.String>>&)",
+            "name": "Collection2",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.Collections.IIterable`1",
+                "args": [
+                  {
+                    "name": "Windows.Foundation.Collections.IKeyValuePair`2",
+                    "args": [
+                      {
+                        "name": "System.String"
+                      },
+                      {
+                        "name": "System.String"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.Collections.IIterable`1",
+                  "args": [
+                    {
+                      "name": "Windows.Foundation.Collections.IKeyValuePair`2",
+                      "args": [
+                        {
+                          "name": "System.String"
+                        },
+                        {
+                          "name": "System.String"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "name": "b",
+                "kind": "out",
+                "type": {
+                  "name": "Windows.Foundation.Collections.IIterable`1",
+                  "args": [
+                    {
+                      "name": "Windows.Foundation.Collections.IKeyValuePair`2",
+                      "args": [
+                        {
+                          "name": "System.String"
+                        },
+                        {
+                          "name": "System.String"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void TestComponent.ITests::Collection2Call(TestComponent.Collection2Handler)",
+            "name": "Collection2Call",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "TestComponent.Collection2Handler"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "Windows.Foundation.Collections.IMap`2<System.String,System.String> TestComponent.ITests::Collection3(Windows.Foundation.Collections.IMap`2<System.String,System.String>,Windows.Foundation.Collections.IMap`2<System.String,System.String>&)",
+            "name": "Collection3",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.Collections.IMap`2",
+                "args": [
+                  {
+                    "name": "System.String"
+                  },
+                  {
+                    "name": "System.String"
+                  }
+                ]
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.Collections.IMap`2",
+                  "args": [
+                    {
+                      "name": "System.String"
+                    },
+                    {
+                      "name": "System.String"
+                    }
+                  ]
+                }
+              },
+              {
+                "name": "b",
+                "kind": "out",
+                "type": {
+                  "name": "Windows.Foundation.Collections.IMap`2",
+                  "args": [
+                    {
+                      "name": "System.String"
+                    },
+                    {
+                      "name": "System.String"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void TestComponent.ITests::Collection3Call(TestComponent.Collection3Handler)",
+            "name": "Collection3Call",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "TestComponent.Collection3Handler"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "Windows.Foundation.Collections.IMapView`2<System.String,System.String> TestComponent.ITests::Collection4(Windows.Foundation.Collections.IMapView`2<System.String,System.String>,Windows.Foundation.Collections.IMapView`2<System.String,System.String>&)",
+            "name": "Collection4",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.Collections.IMapView`2",
+                "args": [
+                  {
+                    "name": "System.String"
+                  },
+                  {
+                    "name": "System.String"
+                  }
+                ]
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.Collections.IMapView`2",
+                  "args": [
+                    {
+                      "name": "System.String"
+                    },
+                    {
+                      "name": "System.String"
+                    }
+                  ]
+                }
+              },
+              {
+                "name": "b",
+                "kind": "out",
+                "type": {
+                  "name": "Windows.Foundation.Collections.IMapView`2",
+                  "args": [
+                    {
+                      "name": "System.String"
+                    },
+                    {
+                      "name": "System.String"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void TestComponent.ITests::Collection4Call(TestComponent.Collection4Handler)",
+            "name": "Collection4Call",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "TestComponent.Collection4Handler"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "Windows.Foundation.Collections.IVector`1<System.String> TestComponent.ITests::Collection5(Windows.Foundation.Collections.IVector`1<System.String>,Windows.Foundation.Collections.IVector`1<System.String>&)",
+            "name": "Collection5",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.Collections.IVector`1",
+                "args": [
+                  {
+                    "name": "System.String"
+                  }
+                ]
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.Collections.IVector`1",
+                  "args": [
+                    {
+                      "name": "System.String"
+                    }
+                  ]
+                }
+              },
+              {
+                "name": "b",
+                "kind": "out",
+                "type": {
+                  "name": "Windows.Foundation.Collections.IVector`1",
+                  "args": [
+                    {
+                      "name": "System.String"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void TestComponent.ITests::Collection5Call(TestComponent.Collection5Handler)",
+            "name": "Collection5Call",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "TestComponent.Collection5Handler"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "Windows.Foundation.Collections.IVectorView`1<System.String> TestComponent.ITests::Collection6(Windows.Foundation.Collections.IVectorView`1<System.String>,Windows.Foundation.Collections.IVectorView`1<System.String>&)",
+            "name": "Collection6",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.Collections.IVectorView`1",
+                "args": [
+                  {
+                    "name": "System.String"
+                  }
+                ]
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.Collections.IVectorView`1",
+                  "args": [
+                    {
+                      "name": "System.String"
+                    }
+                  ]
+                }
+              },
+              {
+                "name": "b",
+                "kind": "out",
+                "type": {
+                  "name": "Windows.Foundation.Collections.IVectorView`1",
+                  "args": [
+                    {
+                      "name": "System.String"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void TestComponent.ITests::Collection6Call(TestComponent.Collection6Handler)",
+            "name": "Collection6Call",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "TestComponent.Collection6Handler"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void TestComponent.ITests::Event1Call(System.Int32)",
+            "name": "Event1Call",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "value",
+                "kind": "in",
+                "type": {
+                  "name": "System.Int32"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void TestComponent.ITests::Event2Call(System.Int32)",
+            "name": "Event2Call",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "value",
+                "kind": "in",
+                "type": {
+                  "name": "System.Int32"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "Windows.Foundation.Collections.IVectorView`1<TestComponent.Blittable> TestComponent.ITests::GetBlittableVectorSubset(Windows.Foundation.Collections.IVectorView`1<TestComponent.Blittable>,System.Int32)",
+            "name": "GetBlittableVectorSubset",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.Collections.IVectorView`1",
+                "args": [
+                  {
+                    "name": "TestComponent.Blittable"
+                  }
+                ]
+              }
+            },
+            "parameters": [
+              {
+                "name": "blittableVector",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.Collections.IVectorView`1",
+                  "args": [
+                    {
+                      "name": "TestComponent.Blittable"
+                    }
+                  ]
+                }
+              },
+              {
+                "name": "startIndex",
+                "kind": "in",
+                "type": {
+                  "name": "System.Int32"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "Windows.Foundation.Collections.IVectorView`1<System.Boolean> TestComponent.ITests::GetBooleanVectorSubset(Windows.Foundation.Collections.IVectorView`1<System.Boolean>,System.Int32)",
+            "name": "GetBooleanVectorSubset",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.Collections.IVectorView`1",
+                "args": [
+                  {
+                    "name": "System.Boolean"
+                  }
+                ]
+              }
+            },
+            "parameters": [
+              {
+                "name": "booleanVector",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.Collections.IVectorView`1",
+                  "args": [
+                    {
+                      "name": "System.Boolean"
+                    }
+                  ]
+                }
+              },
+              {
+                "name": "startIndex",
+                "kind": "in",
+                "type": {
+                  "name": "System.Int32"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "Windows.Foundation.Collections.IVectorView`1<TestComponent.Class> TestComponent.ITests::GetClassVectorSubset(Windows.Foundation.Collections.IVectorView`1<TestComponent.Class>,System.Int32)",
+            "name": "GetClassVectorSubset",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.Collections.IVectorView`1",
+                "args": [
+                  {
+                    "name": "TestComponent.Class"
+                  }
+                ]
+              }
+            },
+            "parameters": [
+              {
+                "name": "classVector",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.Collections.IVectorView`1",
+                  "args": [
+                    {
+                      "name": "TestComponent.Class"
+                    }
+                  ]
+                }
+              },
+              {
+                "name": "startIndex",
+                "kind": "in",
+                "type": {
+                  "name": "System.Int32"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "Windows.Foundation.Collections.IVectorView`1<TestComponent.Composable> TestComponent.ITests::GetComposableClassVectorSubset(Windows.Foundation.Collections.IVectorView`1<TestComponent.Composable>,System.Int32)",
+            "name": "GetComposableClassVectorSubset",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.Collections.IVectorView`1",
+                "args": [
+                  {
+                    "name": "TestComponent.Composable"
+                  }
+                ]
+              }
+            },
+            "parameters": [
+              {
+                "name": "classVector",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.Collections.IVectorView`1",
+                  "args": [
+                    {
+                      "name": "TestComponent.Composable"
+                    }
+                  ]
+                }
+              },
+              {
+                "name": "startIndex",
+                "kind": "in",
+                "type": {
+                  "name": "System.Int32"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "Windows.Foundation.Collections.IVectorView`1<TestComponent.IRequiredOne> TestComponent.ITests::GetInterfaceVectorSubset(Windows.Foundation.Collections.IVectorView`1<TestComponent.IRequiredOne>,System.Int32)",
+            "name": "GetInterfaceVectorSubset",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.Collections.IVectorView`1",
+                "args": [
+                  {
+                    "name": "TestComponent.IRequiredOne"
+                  }
+                ]
+              }
+            },
+            "parameters": [
+              {
+                "name": "interfaceVector",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.Collections.IVectorView`1",
+                  "args": [
+                    {
+                      "name": "TestComponent.IRequiredOne"
+                    }
+                  ]
+                }
+              },
+              {
+                "name": "startIndex",
+                "kind": "in",
+                "type": {
+                  "name": "System.Int32"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "Windows.Foundation.Collections.IVectorView`1<TestComponent.NonBlittable> TestComponent.ITests::GetNonBlittableVectorSubset(Windows.Foundation.Collections.IVectorView`1<TestComponent.NonBlittable>,System.Int32)",
+            "name": "GetNonBlittableVectorSubset",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.Collections.IVectorView`1",
+                "args": [
+                  {
+                    "name": "TestComponent.NonBlittable"
+                  }
+                ]
+              }
+            },
+            "parameters": [
+              {
+                "name": "nonBlittableVector",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.Collections.IVectorView`1",
+                  "args": [
+                    {
+                      "name": "TestComponent.NonBlittable"
+                    }
+                  ]
+                }
+              },
+              {
+                "name": "startIndex",
+                "kind": "in",
+                "type": {
+                  "name": "System.Int32"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "Windows.Foundation.Collections.IVectorView`1<System.Object> TestComponent.ITests::GetObjectVectorSubset(Windows.Foundation.Collections.IVectorView`1<System.Object>,System.Int32)",
+            "name": "GetObjectVectorSubset",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.Collections.IVectorView`1",
+                "args": [
+                  {
+                    "name": "System.Object"
+                  }
+                ]
+              }
+            },
+            "parameters": [
+              {
+                "name": "objectVector",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.Collections.IVectorView`1",
+                  "args": [
+                    {
+                      "name": "System.Object"
+                    }
+                  ]
+                }
+              },
+              {
+                "name": "startIndex",
+                "kind": "in",
+                "type": {
+                  "name": "System.Int32"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "Windows.Foundation.Collections.IVectorView`1<System.String> TestComponent.ITests::GetStringVectorSubset(Windows.Foundation.Collections.IVectorView`1<System.String>,System.Int32)",
+            "name": "GetStringVectorSubset",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.Collections.IVectorView`1",
+                "args": [
+                  {
+                    "name": "System.String"
+                  }
+                ]
+              }
+            },
+            "parameters": [
+              {
+                "name": "stringVector",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.Collections.IVectorView`1",
+                  "args": [
+                    {
+                      "name": "System.String"
+                    }
+                  ]
+                }
+              },
+              {
+                "name": "startIndex",
+                "kind": "in",
+                "type": {
+                  "name": "System.Int32"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Boolean TestComponent.ITests::Param1(System.Boolean,System.Boolean&)",
+            "name": "Param1",
+            "return": {
+              "type": {
+                "name": "System.Boolean"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "in",
+                "type": {
+                  "name": "System.Boolean"
+                }
+              },
+              {
+                "name": "b",
+                "kind": "out",
+                "type": {
+                  "name": "System.Boolean"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Double TestComponent.ITests::Param10(System.Double,System.Double&)",
+            "name": "Param10",
+            "return": {
+              "type": {
+                "name": "System.Double"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "in",
+                "type": {
+                  "name": "System.Double"
+                }
+              },
+              {
+                "name": "b",
+                "kind": "out",
+                "type": {
+                  "name": "System.Double"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void TestComponent.ITests::Param10Call(TestComponent.Param10Handler)",
+            "name": "Param10Call",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "TestComponent.Param10Handler"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Char TestComponent.ITests::Param11(System.Char,System.Char&)",
+            "name": "Param11",
+            "return": {
+              "type": {
+                "name": "System.Char"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "in",
+                "type": {
+                  "name": "System.Char"
+                }
+              },
+              {
+                "name": "b",
+                "kind": "out",
+                "type": {
+                  "name": "System.Char"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void TestComponent.ITests::Param11Call(TestComponent.Param11Handler)",
+            "name": "Param11Call",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "TestComponent.Param11Handler"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.String TestComponent.ITests::Param12(System.String,System.String&)",
+            "name": "Param12",
+            "return": {
+              "type": {
+                "name": "System.String"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "in",
+                "type": {
+                  "name": "System.String"
+                }
+              },
+              {
+                "name": "b",
+                "kind": "out",
+                "type": {
+                  "name": "System.String"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void TestComponent.ITests::Param12Call(TestComponent.Param12Handler)",
+            "name": "Param12Call",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "TestComponent.Param12Handler"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "TestComponent.Blittable TestComponent.ITests::Param13(TestComponent.Blittable,TestComponent.Blittable& modopt(System.Runtime.CompilerServices.IsConst),TestComponent.Blittable&)",
+            "name": "Param13",
+            "return": {
+              "type": {
+                "name": "TestComponent.Blittable"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "in",
+                "type": {
+                  "name": "TestComponent.Blittable"
+                }
+              },
+              {
+                "name": "b",
+                "kind": "in",
+                "type": {
+                  "name": "TestComponent.Blittable& modopt(System.Runtime.CompilerServices.IsConst)"
+                }
+              },
+              {
+                "name": "c",
+                "kind": "out",
+                "type": {
+                  "name": "TestComponent.Blittable"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void TestComponent.ITests::Param13Call(TestComponent.Param13Handler)",
+            "name": "Param13Call",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "TestComponent.Param13Handler"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "TestComponent.NonBlittable TestComponent.ITests::Param14(TestComponent.NonBlittable,TestComponent.NonBlittable& modopt(System.Runtime.CompilerServices.IsConst),TestComponent.NonBlittable&)",
+            "name": "Param14",
+            "return": {
+              "type": {
+                "name": "TestComponent.NonBlittable"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "in",
+                "type": {
+                  "name": "TestComponent.NonBlittable"
+                }
+              },
+              {
+                "name": "b",
+                "kind": "in",
+                "type": {
+                  "name": "TestComponent.NonBlittable& modopt(System.Runtime.CompilerServices.IsConst)"
+                }
+              },
+              {
+                "name": "c",
+                "kind": "out",
+                "type": {
+                  "name": "TestComponent.NonBlittable"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void TestComponent.ITests::Param14Call(TestComponent.Param14Handler)",
+            "name": "Param14Call",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "TestComponent.Param14Handler"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "TestComponent.Nested TestComponent.ITests::Param15(TestComponent.Nested,TestComponent.Nested& modopt(System.Runtime.CompilerServices.IsConst),TestComponent.Nested&)",
+            "name": "Param15",
+            "return": {
+              "type": {
+                "name": "TestComponent.Nested"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "in",
+                "type": {
+                  "name": "TestComponent.Nested"
+                }
+              },
+              {
+                "name": "b",
+                "kind": "in",
+                "type": {
+                  "name": "TestComponent.Nested& modopt(System.Runtime.CompilerServices.IsConst)"
+                }
+              },
+              {
+                "name": "c",
+                "kind": "out",
+                "type": {
+                  "name": "TestComponent.Nested"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void TestComponent.ITests::Param15Call(TestComponent.Param15Handler)",
+            "name": "Param15Call",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "TestComponent.Param15Handler"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void TestComponent.ITests::Param1Call(TestComponent.Param1Handler)",
+            "name": "Param1Call",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "TestComponent.Param1Handler"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Byte TestComponent.ITests::Param2(System.Byte,System.Byte&)",
+            "name": "Param2",
+            "return": {
+              "type": {
+                "name": "System.Byte"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "in",
+                "type": {
+                  "name": "System.Byte"
+                }
+              },
+              {
+                "name": "b",
+                "kind": "out",
+                "type": {
+                  "name": "System.Byte"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void TestComponent.ITests::Param2Call(TestComponent.Param2Handler)",
+            "name": "Param2Call",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "TestComponent.Param2Handler"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.UInt16 TestComponent.ITests::Param3(System.UInt16,System.UInt16&)",
+            "name": "Param3",
+            "return": {
+              "type": {
+                "name": "System.UInt16"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "in",
+                "type": {
+                  "name": "System.UInt16"
+                }
+              },
+              {
+                "name": "b",
+                "kind": "out",
+                "type": {
+                  "name": "System.UInt16"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void TestComponent.ITests::Param3Call(TestComponent.Param3Handler)",
+            "name": "Param3Call",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "TestComponent.Param3Handler"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.UInt32 TestComponent.ITests::Param4(System.UInt32,System.UInt32&)",
+            "name": "Param4",
+            "return": {
+              "type": {
+                "name": "System.UInt32"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "in",
+                "type": {
+                  "name": "System.UInt32"
+                }
+              },
+              {
+                "name": "b",
+                "kind": "out",
+                "type": {
+                  "name": "System.UInt32"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void TestComponent.ITests::Param4Call(TestComponent.Param4Handler)",
+            "name": "Param4Call",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "TestComponent.Param4Handler"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.UInt64 TestComponent.ITests::Param5(System.UInt64,System.UInt64&)",
+            "name": "Param5",
+            "return": {
+              "type": {
+                "name": "System.UInt64"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "in",
+                "type": {
+                  "name": "System.UInt64"
+                }
+              },
+              {
+                "name": "b",
+                "kind": "out",
+                "type": {
+                  "name": "System.UInt64"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void TestComponent.ITests::Param5Call(TestComponent.Param5Handler)",
+            "name": "Param5Call",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "TestComponent.Param5Handler"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Int16 TestComponent.ITests::Param6(System.Int16,System.Int16&)",
+            "name": "Param6",
+            "return": {
+              "type": {
+                "name": "System.Int16"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "in",
+                "type": {
+                  "name": "System.Int16"
+                }
+              },
+              {
+                "name": "b",
+                "kind": "out",
+                "type": {
+                  "name": "System.Int16"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void TestComponent.ITests::Param6Call(TestComponent.Param6Handler)",
+            "name": "Param6Call",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "TestComponent.Param6Handler"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Int32 TestComponent.ITests::Param7(System.Int32,System.Int32&)",
+            "name": "Param7",
+            "return": {
+              "type": {
+                "name": "System.Int32"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "in",
+                "type": {
+                  "name": "System.Int32"
+                }
+              },
+              {
+                "name": "b",
+                "kind": "out",
+                "type": {
+                  "name": "System.Int32"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void TestComponent.ITests::Param7Call(TestComponent.Param7Handler)",
+            "name": "Param7Call",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "TestComponent.Param7Handler"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Int64 TestComponent.ITests::Param8(System.Int64,System.Int64&)",
+            "name": "Param8",
+            "return": {
+              "type": {
+                "name": "System.Int64"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "in",
+                "type": {
+                  "name": "System.Int64"
+                }
+              },
+              {
+                "name": "b",
+                "kind": "out",
+                "type": {
+                  "name": "System.Int64"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void TestComponent.ITests::Param8Call(TestComponent.Param8Handler)",
+            "name": "Param8Call",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "TestComponent.Param8Handler"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Single TestComponent.ITests::Param9(System.Single,System.Single&)",
+            "name": "Param9",
+            "return": {
+              "type": {
+                "name": "System.Single"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "in",
+                "type": {
+                  "name": "System.Single"
+                }
+              },
+              {
+                "name": "b",
+                "kind": "out",
+                "type": {
+                  "name": "System.Single"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void TestComponent.ITests::Param9Call(TestComponent.Param9Handler)",
+            "name": "Param9Call",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "TestComponent.Param9Handler"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void TestComponent.ITests::Simple()",
+            "name": "Simple",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "Windows.Foundation.EventRegistrationToken TestComponent.ITests::add_Event1(Windows.Foundation.EventHandler`1<System.Int32>)",
+            "name": "add_Event1",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.EventRegistrationToken"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.EventHandler`1",
+                  "args": [
+                    {
+                      "name": "System.Int32"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "signature": "Windows.Foundation.EventRegistrationToken TestComponent.ITests::add_Event2(Windows.Foundation.TypedEventHandler`2<TestComponent.ITests,System.Int32>)",
+            "name": "add_Event2",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.EventRegistrationToken"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.TypedEventHandler`2",
+                  "args": [
+                    {
+                      "name": "TestComponent.ITests"
+                    },
+                    {
+                      "name": "System.Int32"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.UInt32 TestComponent.ITests::get_Percentage()",
+            "name": "get_Percentage",
+            "return": {
+              "type": {
+                "name": "System.UInt32"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.Void TestComponent.ITests::remove_Event1(Windows.Foundation.EventRegistrationToken)",
+            "name": "remove_Event1",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "token",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.EventRegistrationToken"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void TestComponent.ITests::remove_Event2(Windows.Foundation.EventRegistrationToken)",
+            "name": "remove_Event2",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "token",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.EventRegistrationToken"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "OverloadClass",
+        "methods": [
+          {
+            "signature": "System.Void TestComponent.OverloadClass::.ctor()",
+            "name": ".ctor",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.Void TestComponent.OverloadClass::Overload()",
+            "name": "Overload",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.Void TestComponent.OverloadClass::Overload(System.Int32)",
+            "name": "Overload",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "in",
+                "type": {
+                  "name": "System.Int32"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void TestComponent.OverloadClass::Overload(System.Int32,System.Int32)",
+            "name": "Overload",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "in",
+                "type": {
+                  "name": "System.Int32"
+                }
+              },
+              {
+                "name": "b",
+                "kind": "in",
+                "type": {
+                  "name": "System.Int32"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void TestComponent.OverloadClass::Overload(System.Int32,System.Int32,System.Int32)",
+            "name": "Overload",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "in",
+                "type": {
+                  "name": "System.Int32"
+                }
+              },
+              {
+                "name": "b",
+                "kind": "in",
+                "type": {
+                  "name": "System.Int32"
+                }
+              },
+              {
+                "name": "c",
+                "kind": "in",
+                "type": {
+                  "name": "System.Int32"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Override",
+        "methods": [
+          {
+            "signature": "System.Void TestComponent.Override::.ctor()",
+            "name": ".ctor",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.Void TestComponent.Override::CallOverridable()",
+            "name": "CallOverridable",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.Void TestComponent.Override::CallProtected()",
+            "name": "CallProtected",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.Void TestComponent.Override::OnOverridable()",
+            "name": "OnOverridable",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.Void TestComponent.Override::OnProtected()",
+            "name": "OnProtected",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "Windows.Foundation.EventRegistrationToken TestComponent.Override::add_OverridableCalled(Windows.Foundation.EventHandler`1<System.Object>)",
+            "name": "add_OverridableCalled",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.EventRegistrationToken"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.EventHandler`1",
+                  "args": [
+                    {
+                      "name": "System.Object"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "signature": "Windows.Foundation.EventRegistrationToken TestComponent.Override::add_ProtectedCalled(Windows.Foundation.EventHandler`1<System.Object>)",
+            "name": "add_ProtectedCalled",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.EventRegistrationToken"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.EventHandler`1",
+                  "args": [
+                    {
+                      "name": "System.Object"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void TestComponent.Override::remove_OverridableCalled(Windows.Foundation.EventRegistrationToken)",
+            "name": "remove_OverridableCalled",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "token",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.EventRegistrationToken"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void TestComponent.Override::remove_ProtectedCalled(Windows.Foundation.EventRegistrationToken)",
+            "name": "remove_ProtectedCalled",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "token",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.EventRegistrationToken"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Param10Handler",
+        "methods": [
+          {
+            "signature": "System.Double TestComponent.Param10Handler::Invoke(System.Double,System.Double&)",
+            "name": "Invoke",
+            "return": {
+              "type": {
+                "name": "System.Double"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "in",
+                "type": {
+                  "name": "System.Double"
+                }
+              },
+              {
+                "name": "b",
+                "kind": "out",
+                "type": {
+                  "name": "System.Double"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Param11Handler",
+        "methods": [
+          {
+            "signature": "System.Char TestComponent.Param11Handler::Invoke(System.Char,System.Char&)",
+            "name": "Invoke",
+            "return": {
+              "type": {
+                "name": "System.Char"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "in",
+                "type": {
+                  "name": "System.Char"
+                }
+              },
+              {
+                "name": "b",
+                "kind": "out",
+                "type": {
+                  "name": "System.Char"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Param12Handler",
+        "methods": [
+          {
+            "signature": "System.String TestComponent.Param12Handler::Invoke(System.String,System.String&)",
+            "name": "Invoke",
+            "return": {
+              "type": {
+                "name": "System.String"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "in",
+                "type": {
+                  "name": "System.String"
+                }
+              },
+              {
+                "name": "b",
+                "kind": "out",
+                "type": {
+                  "name": "System.String"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Param13Handler",
+        "methods": [
+          {
+            "signature": "TestComponent.Blittable TestComponent.Param13Handler::Invoke(TestComponent.Blittable,TestComponent.Blittable& modopt(System.Runtime.CompilerServices.IsConst),TestComponent.Blittable&)",
+            "name": "Invoke",
+            "return": {
+              "type": {
+                "name": "TestComponent.Blittable"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "in",
+                "type": {
+                  "name": "TestComponent.Blittable"
+                }
+              },
+              {
+                "name": "b",
+                "kind": "in",
+                "type": {
+                  "name": "TestComponent.Blittable& modopt(System.Runtime.CompilerServices.IsConst)"
+                }
+              },
+              {
+                "name": "c",
+                "kind": "out",
+                "type": {
+                  "name": "TestComponent.Blittable"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Param14Handler",
+        "methods": [
+          {
+            "signature": "TestComponent.NonBlittable TestComponent.Param14Handler::Invoke(TestComponent.NonBlittable,TestComponent.NonBlittable& modopt(System.Runtime.CompilerServices.IsConst),TestComponent.NonBlittable&)",
+            "name": "Invoke",
+            "return": {
+              "type": {
+                "name": "TestComponent.NonBlittable"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "in",
+                "type": {
+                  "name": "TestComponent.NonBlittable"
+                }
+              },
+              {
+                "name": "b",
+                "kind": "in",
+                "type": {
+                  "name": "TestComponent.NonBlittable& modopt(System.Runtime.CompilerServices.IsConst)"
+                }
+              },
+              {
+                "name": "c",
+                "kind": "out",
+                "type": {
+                  "name": "TestComponent.NonBlittable"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Param15Handler",
+        "methods": [
+          {
+            "signature": "TestComponent.Nested TestComponent.Param15Handler::Invoke(TestComponent.Nested,TestComponent.Nested& modopt(System.Runtime.CompilerServices.IsConst),TestComponent.Nested&)",
+            "name": "Invoke",
+            "return": {
+              "type": {
+                "name": "TestComponent.Nested"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "in",
+                "type": {
+                  "name": "TestComponent.Nested"
+                }
+              },
+              {
+                "name": "b",
+                "kind": "in",
+                "type": {
+                  "name": "TestComponent.Nested& modopt(System.Runtime.CompilerServices.IsConst)"
+                }
+              },
+              {
+                "name": "c",
+                "kind": "out",
+                "type": {
+                  "name": "TestComponent.Nested"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Param1Handler",
+        "methods": [
+          {
+            "signature": "System.Boolean TestComponent.Param1Handler::Invoke(System.Boolean,System.Boolean&)",
+            "name": "Invoke",
+            "return": {
+              "type": {
+                "name": "System.Boolean"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "in",
+                "type": {
+                  "name": "System.Boolean"
+                }
+              },
+              {
+                "name": "b",
+                "kind": "out",
+                "type": {
+                  "name": "System.Boolean"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Param2Handler",
+        "methods": [
+          {
+            "signature": "System.Byte TestComponent.Param2Handler::Invoke(System.Byte,System.Byte&)",
+            "name": "Invoke",
+            "return": {
+              "type": {
+                "name": "System.Byte"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "in",
+                "type": {
+                  "name": "System.Byte"
+                }
+              },
+              {
+                "name": "b",
+                "kind": "out",
+                "type": {
+                  "name": "System.Byte"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Param3Handler",
+        "methods": [
+          {
+            "signature": "System.UInt16 TestComponent.Param3Handler::Invoke(System.UInt16,System.UInt16&)",
+            "name": "Invoke",
+            "return": {
+              "type": {
+                "name": "System.UInt16"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "in",
+                "type": {
+                  "name": "System.UInt16"
+                }
+              },
+              {
+                "name": "b",
+                "kind": "out",
+                "type": {
+                  "name": "System.UInt16"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Param4Handler",
+        "methods": [
+          {
+            "signature": "System.UInt32 TestComponent.Param4Handler::Invoke(System.UInt32,System.UInt32&)",
+            "name": "Invoke",
+            "return": {
+              "type": {
+                "name": "System.UInt32"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "in",
+                "type": {
+                  "name": "System.UInt32"
+                }
+              },
+              {
+                "name": "b",
+                "kind": "out",
+                "type": {
+                  "name": "System.UInt32"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Param5Handler",
+        "methods": [
+          {
+            "signature": "System.UInt64 TestComponent.Param5Handler::Invoke(System.UInt64,System.UInt64&)",
+            "name": "Invoke",
+            "return": {
+              "type": {
+                "name": "System.UInt64"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "in",
+                "type": {
+                  "name": "System.UInt64"
+                }
+              },
+              {
+                "name": "b",
+                "kind": "out",
+                "type": {
+                  "name": "System.UInt64"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Param6Handler",
+        "methods": [
+          {
+            "signature": "System.Int16 TestComponent.Param6Handler::Invoke(System.Int16,System.Int16&)",
+            "name": "Invoke",
+            "return": {
+              "type": {
+                "name": "System.Int16"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "in",
+                "type": {
+                  "name": "System.Int16"
+                }
+              },
+              {
+                "name": "b",
+                "kind": "out",
+                "type": {
+                  "name": "System.Int16"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Param7Handler",
+        "methods": [
+          {
+            "signature": "System.Int32 TestComponent.Param7Handler::Invoke(System.Int32,System.Int32&)",
+            "name": "Invoke",
+            "return": {
+              "type": {
+                "name": "System.Int32"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "in",
+                "type": {
+                  "name": "System.Int32"
+                }
+              },
+              {
+                "name": "b",
+                "kind": "out",
+                "type": {
+                  "name": "System.Int32"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Param8Handler",
+        "methods": [
+          {
+            "signature": "System.Int64 TestComponent.Param8Handler::Invoke(System.Int64,System.Int64&)",
+            "name": "Invoke",
+            "return": {
+              "type": {
+                "name": "System.Int64"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "in",
+                "type": {
+                  "name": "System.Int64"
+                }
+              },
+              {
+                "name": "b",
+                "kind": "out",
+                "type": {
+                  "name": "System.Int64"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Param9Handler",
+        "methods": [
+          {
+            "signature": "System.Single TestComponent.Param9Handler::Invoke(System.Single,System.Single&)",
+            "name": "Invoke",
+            "return": {
+              "type": {
+                "name": "System.Single"
+              }
+            },
+            "parameters": [
+              {
+                "name": "a",
+                "kind": "in",
+                "type": {
+                  "name": "System.Single"
+                }
+              },
+              {
+                "name": "b",
+                "kind": "out",
+                "type": {
+                  "name": "System.Single"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "TestHandler",
+        "methods": [
+          {
+            "signature": "System.Void TestComponent.TestHandler::Invoke(TestComponent.ITests)",
+            "name": "Invoke",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "tests",
+                "kind": "in",
+                "type": {
+                  "name": "TestComponent.ITests"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "TestRunner",
+        "methods": [
+          {
+            "signature": "Windows.Foundation.IAsyncAction TestComponent.TestRunner::CreateAsyncAction(System.UInt32)",
+            "name": "CreateAsyncAction",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.IAsyncAction"
+              }
+            },
+            "parameters": [
+              {
+                "name": "milliseconds",
+                "kind": "in",
+                "type": {
+                  "name": "System.UInt32"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "Windows.Foundation.Collections.IVector`1<System.Int32> TestComponent.TestRunner::CreateInt32Vector()",
+            "name": "CreateInt32Vector",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.Collections.IVector`1",
+                "args": [
+                  {
+                    "name": "System.Int32"
+                  }
+                ]
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "Windows.Foundation.Collections.IVector`1<System.String> TestComponent.TestRunner::CreateStringVector()",
+            "name": "CreateStringVector",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.Collections.IVector`1",
+                "args": [
+                  {
+                    "name": "System.String"
+                  }
+                ]
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "Windows.Foundation.Collections.IVector`1<Windows.Foundation.IStringable> TestComponent.TestRunner::CreateStringableVector()",
+            "name": "CreateStringableVector",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.Collections.IVector`1",
+                "args": [
+                  {
+                    "name": "Windows.Foundation.IStringable"
+                  }
+                ]
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "Windows.Foundation.TimeSpan TestComponent.TestRunner::CreateTimeSpan(System.UInt32)",
+            "name": "CreateTimeSpan",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.TimeSpan"
+              }
+            },
+            "parameters": [
+              {
+                "name": "milliseconds",
+                "kind": "in",
+                "type": {
+                  "name": "System.UInt32"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.String TestComponent.TestRunner::ExpectObject(System.Object)",
+            "name": "ExpectObject",
+            "return": {
+              "type": {
+                "name": "System.String"
+              }
+            },
+            "parameters": [
+              {
+                "name": "value",
+                "kind": "in",
+                "type": {
+                  "name": "System.Object"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "TestComponent.ITests TestComponent.TestRunner::MakeTests()",
+            "name": "MakeTests",
+            "return": {
+              "type": {
+                "name": "TestComponent.ITests"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.UInt32 TestComponent.TestRunner::TestConsumer(TestComponent.TestHandler)",
+            "name": "TestConsumer",
+            "return": {
+              "type": {
+                "name": "System.UInt32"
+              }
+            },
+            "parameters": [
+              {
+                "name": "caller",
+                "kind": "in",
+                "type": {
+                  "name": "TestComponent.TestHandler"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void TestComponent.TestRunner::TestProducer(TestComponent.ITests)",
+            "name": "TestProducer",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "callee",
+                "kind": "in",
+                "type": {
+                  "name": "TestComponent.ITests"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void TestComponent.TestRunner::TestSelf()",
+            "name": "TestSelf",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": []
+          }
+        ]
+      }
+    ]
+  }
+]
