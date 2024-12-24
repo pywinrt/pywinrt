@@ -50,7 +50,10 @@ static class ParamCategoryExtensions
             { ParameterType.IsArray: true } => throw new NotImplementedException(),
             { IsIn: true } => ParamCategory.In,
             { IsOut: true } => ParamCategory.Out,
-            _ => throw new NotImplementedException(),
+            _
+                => throw new NotImplementedException(
+                    $"Unknown parameter category for '{param.Name}' in method {param.Method}"
+                ),
         };
     }
 }
