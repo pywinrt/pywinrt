@@ -1,4 +1,5 @@
 using System.CodeDom.Compiler;
+using System.Collections.ObjectModel;
 using Mono.Cecil;
 
 static class FileWriters
@@ -63,12 +64,18 @@ static class FileWriters
             );
         }
 
+        var nullabilityMap = new Dictionary<string, MethodNullabilityInfo>(
+            nullabilityInfo
+                .Types.SelectMany(t => t.Methods)
+                .Select(m => new KeyValuePair<string, MethodNullabilityInfo>(m.Signature, m))
+        ).AsReadOnly();
+
         WriteNamespaceCpp(nsPackageDir, ns, members, componentDlls, 0);
         WriteNamespaceCpp(nsPackageDir, ns, members, componentDlls, 1);
         WriteNamespaceH(headerDir, ns, members, componentDlls);
-        WriteNamespaceDunderInitPy(nsDir, ns, members, componentDlls);
-        WriteNamespacePyi(nsWinrtDir, ns, members, 0);
-        WriteNamespacePyi(nsWinrtDir, ns, members, 1);
+        WriteNamespaceDunderInitPy(nsDir, ns, nullabilityMap, members, componentDlls);
+        WriteNamespacePyi(nsWinrtDir, ns, nullabilityMap, members, 0);
+        WriteNamespacePyi(nsWinrtDir, ns, nullabilityMap, members, 1);
         WritePyWinRTVersionTxt(nsPackageDir);
         WriteRequirementsTxt(nsPackageDir, members);
 
@@ -124,6 +131,7 @@ static class FileWriters
     private static void WriteNamespacePyi(
         DirectoryInfo nsWinrtDir,
         string ns,
+        ReadOnlyDictionary<string, MethodNullabilityInfo> nullabilityMap,
         Members members,
         int dependencyDepth
     )
@@ -245,7 +253,7 @@ static class FileWriters
                 .Where(t => t.CircularDependencyDepth == dependencyDepth)
         )
         {
-            w.WritePythonClassTyping(type, ns);
+            w.WritePythonClassTyping(type, ns, nullabilityMap);
             didWriteClass = true;
         }
 
@@ -262,6 +270,7 @@ static class FileWriters
     private static void WriteNamespaceDunderInitPy(
         DirectoryInfo nsDir,
         string ns,
+        ReadOnlyDictionary<string, MethodNullabilityInfo> nullabilityMap,
         Members members,
         bool componentDlls
     )
@@ -468,15 +477,25 @@ static class FileWriters
         foreach (var type in members.Delegates)
         {
             var invoke = type.Type.Methods.Single(m => m.Name == "Invoke");
+            var nullabilityInfo = nullabilityMap.GetValueOrDefault(
+                invoke.ToString(),
+                new MethodNullabilityInfo(invoke)
+            );
             var paramTypes = invoke
                 .Parameters.Where(p => p.IsPythonInParam())
-                .Select(p => p.ToPyCallbackInParamTyping(ns, quoteImportedTypes: true));
+                .Select(p =>
+                    p.ToPyCallbackInParamTyping(
+                        ns,
+                        nullabilityInfo.Parameters[p.Index].Type,
+                        quoteImportedTypes: true
+                    )
+                );
 
             // REVISIT: We will likely need to implement a ToPyCallbackInParamTyping()
             // instead of ToPyReturnTyping(). For now, this isn't a problem outside
             // of the TestComponent modules since most callbacks only return None or bool.
             w.WriteLine(
-                $"{type.Name} = typing.Callable[[{string.Join(", ", paramTypes)}], {invoke.ToPyReturnTyping(ns, quoteImportedTypes: true)}]"
+                $"{type.Name} = typing.Callable[[{string.Join(", ", paramTypes)}], {invoke.ToPyReturnTyping(ns, nullabilityInfo, quoteImportedTypes: true)}]"
             );
         }
 

@@ -42,11 +42,13 @@ static class StructWriterExtensions
 
         foreach (var field in type.Type.Fields)
         {
-            w.WriteLine($"{field.Name.ToPythonIdentifier()}: {field.FieldType.ToPyTypeName(ns)}");
+            w.WriteLine(
+                $"{field.Name.ToPythonIdentifier()}: {field.FieldType.ToPyTypeName(ns, new TypeRefNullabilityInfo(field.FieldType))}"
+            );
         }
 
         w.WriteLine(
-            $"def __init__(self, {string.Join(", ", type.Type.Fields.Select(f => $"{f.Name.ToPythonIdentifier()}: {f.FieldType.ToPyTypeName(ns)} = {f.FieldType.GetDefaultPyValue(ns)}"))}) -> None: ..."
+            $"def __init__(self, {string.Join(", ", type.Type.Fields.Select(f => $"{f.Name.ToPythonIdentifier()}: {f.FieldType.ToPyTypeName(ns, new TypeRefNullabilityInfo(f.FieldType))} = {f.FieldType.GetDefaultPyValue(ns)}"))}) -> None: ..."
         );
 
         if (type.Type.IsCustomNumeric())

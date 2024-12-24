@@ -29,7 +29,7 @@ class CompositionDebugHeatMaps(winrt.system.Object):
 @typing.final
 class CompositionDebugSettings_Static(type):
     # Windows.UI.Composition.Diagnostics.CompositionDebugSettings Windows.UI.Composition.Diagnostics.CompositionDebugSettings::TryGetSettings(Windows.UI.Composition.Compositor)
-    def try_get_settings(cls, compositor: windows_ui_composition.Compositor, /) -> CompositionDebugSettings: ...
+    def try_get_settings(cls, compositor: windows_ui_composition.Compositor, /) -> typing.Optional[CompositionDebugSettings]: ...
 
 @typing.final
 class CompositionDebugSettings(winrt.system.Object, metaclass=CompositionDebugSettings_Static):
