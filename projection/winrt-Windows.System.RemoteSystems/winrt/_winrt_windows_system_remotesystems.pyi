@@ -152,7 +152,7 @@ class RemoteSystemAuthorizationKindFilter(winrt.system.Object, ImplementsIRemote
 @typing.final
 class RemoteSystemConnectionInfo_Static(type):
     # Windows.System.RemoteSystems.RemoteSystemConnectionInfo Windows.System.RemoteSystems.RemoteSystemConnectionInfo::TryCreateFromAppServiceConnection(Windows.ApplicationModel.AppService.AppServiceConnection)
-    def try_create_from_app_service_connection(cls, connection: windows_applicationmodel_appservice.AppServiceConnection, /) -> RemoteSystemConnectionInfo: ...
+    def try_create_from_app_service_connection(cls, connection: windows_applicationmodel_appservice.AppServiceConnection, /) -> typing.Optional[RemoteSystemConnectionInfo]: ...
 
 @typing.final
 class RemoteSystemConnectionInfo(winrt.system.Object, metaclass=RemoteSystemConnectionInfo_Static):

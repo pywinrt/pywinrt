@@ -75,7 +75,10 @@ with contextlib.ExitStack() as stack:
         print("Timed out waiting for frame - is window minimized?")
         exit(1)
 
-    frame = stack.enter_context(frame_pool.try_get_next_frame())
+    frame = frame_pool.try_get_next_frame()
+    assert frame is not None, "This shouldn't happen since we waited for the event."
+
+    stack.enter_context(frame)
     bitmap = stack.enter_context(
         wait_for(SoftwareBitmap.create_copy_from_surface_async(frame.surface))
     )

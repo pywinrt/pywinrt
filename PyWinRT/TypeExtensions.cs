@@ -317,8 +317,9 @@ static class TypeExtensions
                     TypeDefinition t
                         => t switch
                         {
-                            { IsEnum: true } => $"{type.ToPyTypeName(ns)}(0)",
-                            _ => $"{type.ToPyTypeName(ns)}()",
+                            { IsEnum: true }
+                                => $"{type.ToPyTypeName(ns, new TypeRefNullabilityInfo(type))}(0)",
+                            _ => $"{type.ToPyTypeName(ns, new TypeRefNullabilityInfo(type))}()",
                         }
                 },
             _ => throw new NotImplementedException(),
@@ -327,68 +328,86 @@ static class TypeExtensions
     public static string ToPyTypeName(
         this TypeReference type,
         string ns,
+        TypeRefNullabilityInfo nullabilityInfo,
         IReadOnlyDictionary<GenericParameter, TypeReference>? map = default,
         bool quoteImportedTypes = false,
         bool implementsInterface = false
     ) =>
-        type switch
-        {
-            GenericParameter p
-                => map is null ? type.Name : map[p].ToPyTypeName(ns, default, quoteImportedTypes),
-            GenericInstanceType gen
-                when gen.ElementType.FullName == "Windows.Foundation.IReference`1"
-                => $"typing.Optional[{gen.GenericArguments[0].ToPyTypeName(ns, map, quoteImportedTypes)}]",
-            GenericInstanceType gen
-                when gen.ElementType.FullName == "Windows.Foundation.Collections.IIterable`1"
-                => $"typing.Iterable[{gen.GenericArguments[0].ToPyTypeName(ns, map, quoteImportedTypes, implementsInterface && (TryResolve(gen.GenericArguments[0])?.IsInterface ?? false))}]",
-            GenericInstanceType gen
-                when gen.ElementType.FullName == "Windows.Foundation.Collections.IVector`1"
-                => $"typing.MutableSequence[{gen.GenericArguments[0].ToPyTypeName(ns, map, quoteImportedTypes, implementsInterface && (TryResolve(gen.GenericArguments[0])?.IsInterface ?? false))}]",
-            GenericInstanceType gen
-                when gen.ElementType.FullName == "Windows.Foundation.Collections.IVectorView`1"
-                => $"typing.Sequence[{gen.GenericArguments[0].ToPyTypeName(ns, map, quoteImportedTypes, implementsInterface && (TryResolve(gen.GenericArguments[0])?.IsInterface ?? false))}]",
-            GenericInstanceType gen
-                when gen.ElementType.FullName == "Windows.Foundation.Collections.IMap`2"
-                => $"typing.MutableMapping[{string.Join(", ", gen.GenericArguments.Select(p => p.ToPyTypeName(ns, map, quoteImportedTypes, implementsInterface && (TryResolve(gen.GenericArguments[0])?.IsInterface ?? false))))}]",
-            GenericInstanceType gen
-                when gen.ElementType.FullName == "Windows.Foundation.Collections.IMapView`2"
-                => $"typing.Mapping[{string.Join(", ", gen.GenericArguments.Select(p => p.ToPyTypeName(ns, map, quoteImportedTypes, implementsInterface && (TryResolve(gen.GenericArguments[0])?.IsInterface ?? false))))}]",
-            GenericInstanceType gen
-                => $"{(gen.Namespace == ns ? "" : $"{(quoteImportedTypes ? "\"" : "")}{gen.Namespace.ToPyModuleAlias()}.")}{(implementsInterface ? "Implements" : "")}{gen.Name.ToNonGeneric()}[{string.Join(", ", gen.GenericArguments.Select(p => p.ToPyTypeName(ns, map)))}]{(gen.Namespace != ns && quoteImportedTypes ? "\"" : "")}",
-            ByReferenceType t => t.ElementType.ToPyTypeName(ns, map, quoteImportedTypes),
-            OptionalModifierType t => t.ElementType.ToPyTypeName(ns, map, quoteImportedTypes),
-            ArrayType t
-                => t.ElementType.ToPyTypeName(
-                    ns,
-                    map,
-                    quoteImportedTypes,
-                    implementsInterface && (TryResolve(t.ElementType)?.IsInterface ?? false)
-                ),
-            { FullName: "System.Void" } => "None",
-            { FullName: "System.Boolean" } => "bool",
-            { FullName: "System.SByte" } => "winrt.system.Int8",
-            { FullName: "System.Byte" } => "winrt.system.UInt8",
-            { FullName: "System.Char" } => "winrt.system.Char16",
-            { FullName: "System.Double" } => "winrt.system.Double",
-            { FullName: "System.Int16" } => "winrt.system.Int16",
-            { FullName: "System.Int32" } => "winrt.system.Int32",
-            { FullName: "System.Int64" } => "winrt.system.Int64",
-            { FullName: "System.Single" } => "winrt.system.Single",
-            { FullName: "System.UInt16" } => "winrt.system.UInt16",
-            { FullName: "System.UInt32" } => "winrt.system.UInt32",
-            { FullName: "System.UInt64" } => "winrt.system.UInt64",
-            { FullName: "System.String" } => "str",
-            { FullName: "System.Guid" } => "_uuid.UUID",
-            { FullName: "System.Object" } => "winrt.system.Object",
-            { FullName: "Windows.Foundation.DateTime" } => "datetime.datetime",
-            { FullName: "Windows.Foundation.TimeSpan" } => "datetime.timedelta",
-            _
-                => $"{(type.Namespace == ns ? "" : $"{(quoteImportedTypes ? "\"" : "")}{type.Namespace.ToPyModuleAlias()}.")}{(implementsInterface ? "Implements" : "")}{type.Name.ToNonGeneric()}{(type.Namespace != ns && quoteImportedTypes ? "\"" : "")}"
-        };
+        string.Format(
+            (nullabilityInfo.AllowNull || nullabilityInfo.MaybeNull)
+                ? "typing.Optional[{0}]"
+                : "{0}",
+            type switch
+            {
+                GenericParameter p
+                    => map is null
+                        ? type.Name
+                        : map[p]
+                            .ToPyTypeName(
+                                ns,
+                                new TypeRefNullabilityInfo(map[p]),
+                                default,
+                                quoteImportedTypes
+                            ),
+                GenericInstanceType gen
+                    when gen.ElementType.FullName == "Windows.Foundation.IReference`1"
+                    => $"typing.Optional[{gen.GenericArguments[0].ToPyTypeName(ns, nullabilityInfo.Args![0], map, quoteImportedTypes)}]",
+                GenericInstanceType gen
+                    when gen.ElementType.FullName == "Windows.Foundation.Collections.IIterable`1"
+                    => $"typing.Iterable[{gen.GenericArguments[0].ToPyTypeName(ns, nullabilityInfo.Args![0], map, quoteImportedTypes, implementsInterface && (TryResolve(gen.GenericArguments[0])?.IsInterface ?? false))}]",
+                GenericInstanceType gen
+                    when gen.ElementType.FullName == "Windows.Foundation.Collections.IVector`1"
+                    => $"typing.MutableSequence[{gen.GenericArguments[0].ToPyTypeName(ns, nullabilityInfo.Args![0], map, quoteImportedTypes, implementsInterface && (TryResolve(gen.GenericArguments[0])?.IsInterface ?? false))}]",
+                GenericInstanceType gen
+                    when gen.ElementType.FullName == "Windows.Foundation.Collections.IVectorView`1"
+                    => $"typing.Sequence[{gen.GenericArguments[0].ToPyTypeName(ns, nullabilityInfo.Args![0], map, quoteImportedTypes, implementsInterface && (TryResolve(gen.GenericArguments[0])?.IsInterface ?? false))}]",
+                GenericInstanceType gen
+                    when gen.ElementType.FullName == "Windows.Foundation.Collections.IMap`2"
+                    => $"typing.MutableMapping[{string.Join(", ", gen.GenericArguments.Select((p, i) => p.ToPyTypeName(ns, nullabilityInfo.Args![i], map, quoteImportedTypes, implementsInterface && (TryResolve(gen.GenericArguments[0])?.IsInterface ?? false))))}]",
+                GenericInstanceType gen
+                    when gen.ElementType.FullName == "Windows.Foundation.Collections.IMapView`2"
+                    => $"typing.Mapping[{string.Join(", ", gen.GenericArguments.Select((p, i) => p.ToPyTypeName(ns, nullabilityInfo.Args![i], map, quoteImportedTypes, implementsInterface && (TryResolve(gen.GenericArguments[0])?.IsInterface ?? false))))}]",
+                GenericInstanceType gen
+                    => $"{(gen.Namespace == ns ? "" : $"{(quoteImportedTypes ? "\"" : "")}{gen.Namespace.ToPyModuleAlias()}.")}{(implementsInterface ? "Implements" : "")}{gen.Name.ToNonGeneric()}[{string.Join(", ", gen.GenericArguments.Select((p, i) => p.ToPyTypeName(ns, nullabilityInfo.Args![i], map)))}]{(gen.Namespace != ns && quoteImportedTypes ? "\"" : "")}",
+                ByReferenceType t
+                    => t.ElementType.ToPyTypeName(ns, nullabilityInfo, map, quoteImportedTypes),
+                OptionalModifierType t
+                    => t.ElementType.ToPyTypeName(ns, nullabilityInfo, map, quoteImportedTypes),
+                ArrayType t
+                    => t.ElementType.ToPyTypeName(
+                        ns,
+                        nullabilityInfo,
+                        map,
+                        quoteImportedTypes,
+                        implementsInterface && (TryResolve(t.ElementType)?.IsInterface ?? false)
+                    ),
+                { FullName: "System.Void" } => "None",
+                { FullName: "System.Boolean" } => "bool",
+                { FullName: "System.SByte" } => "winrt.system.Int8",
+                { FullName: "System.Byte" } => "winrt.system.UInt8",
+                { FullName: "System.Char" } => "winrt.system.Char16",
+                { FullName: "System.Double" } => "winrt.system.Double",
+                { FullName: "System.Int16" } => "winrt.system.Int16",
+                { FullName: "System.Int32" } => "winrt.system.Int32",
+                { FullName: "System.Int64" } => "winrt.system.Int64",
+                { FullName: "System.Single" } => "winrt.system.Single",
+                { FullName: "System.UInt16" } => "winrt.system.UInt16",
+                { FullName: "System.UInt32" } => "winrt.system.UInt32",
+                { FullName: "System.UInt64" } => "winrt.system.UInt64",
+                { FullName: "System.String" } => "str",
+                { FullName: "System.Guid" } => "_uuid.UUID",
+                { FullName: "System.Object" } => "winrt.system.Object",
+                { FullName: "Windows.Foundation.DateTime" } => "datetime.datetime",
+                { FullName: "Windows.Foundation.TimeSpan" } => "datetime.timedelta",
+                _
+                    => $"{(type.Namespace == ns ? "" : $"{(quoteImportedTypes ? "\"" : "")}{type.Namespace.ToPyModuleAlias()}.")}{(implementsInterface ? "Implements" : "")}{type.Name.ToNonGeneric()}{(type.Namespace != ns && quoteImportedTypes ? "\"" : "")}"
+            }
+        );
 
     public static string ToPyInParamTyping(
         this ParameterDefinition param,
         string ns,
+        TypeRefNullabilityInfo nullabilityInfo,
         IReadOnlyDictionary<GenericParameter, TypeReference>? map = default,
         bool quoteImportedTypes = false
     ) =>
@@ -397,16 +416,17 @@ static class TypeExtensions
             ParamCategory.In
                 => param.ParameterType.ToPyTypeName(
                     ns,
+                    nullabilityInfo,
                     map,
                     quoteImportedTypes,
                     implementsInterface: TryResolve(param.ParameterType)?.IsInterface ?? false
                 ),
             ParamCategory.PassArray
-                => $"typing.Union[winrt.system.Array[{param.ParameterType.ToPyTypeName(ns, map, quoteImportedTypes, implementsInterface: TryResolve(param.ParameterType)?.IsInterface ?? false)}], winrt.system.ReadableBuffer]",
+                => $"typing.Union[winrt.system.Array[{param.ParameterType.ToPyTypeName(ns, nullabilityInfo, map, quoteImportedTypes, implementsInterface: TryResolve(param.ParameterType)?.IsInterface ?? false)}], winrt.system.ReadableBuffer]",
             ParamCategory.FillArray
-                => $"typing.Union[winrt.system.Array[{param.ParameterType.ToPyTypeName(ns, map, quoteImportedTypes)}], winrt.system.WriteableBuffer]",
+                => $"typing.Union[winrt.system.Array[{param.ParameterType.ToPyTypeName(ns, nullabilityInfo, map, quoteImportedTypes)}], winrt.system.WriteableBuffer]",
             ParamCategory.ReceiveArray
-                => param.ParameterType.ToPyTypeName(ns, map, quoteImportedTypes),
+                => param.ParameterType.ToPyTypeName(ns, nullabilityInfo, map, quoteImportedTypes),
             _ => throw new NotImplementedException(),
         };
 
@@ -427,39 +447,44 @@ static class TypeExtensions
     public static string ToPyCallbackInParamTyping(
         this ParameterDefinition param,
         string ns,
+        TypeRefNullabilityInfo nullabilityInfo,
         IReadOnlyDictionary<GenericParameter, TypeReference>? map = default,
         bool quoteImportedTypes = false
     ) =>
         param.GetCategory() switch
         {
-            ParamCategory.In => param.ParameterType.ToPyTypeName(ns, map, quoteImportedTypes),
+            ParamCategory.In
+                => param.ParameterType.ToPyTypeName(ns, nullabilityInfo, map, quoteImportedTypes),
             // REVISIT: Do we need a different type hint for the winrt::array_view wrapper?
             // REVISIT: Do we want separate types for read-only arrays (PassArray)?
             ParamCategory.PassArray
             or ParamCategory.FillArray
-                => $"winrt.system.Array[{param.ParameterType.ToPyTypeName(ns, map, quoteImportedTypes)}]",
+                => $"winrt.system.Array[{param.ParameterType.ToPyTypeName(ns, nullabilityInfo, map, quoteImportedTypes)}]",
             ParamCategory.ReceiveArray
-                => param.ParameterType.ToPyTypeName(ns, map, quoteImportedTypes),
+                => param.ParameterType.ToPyTypeName(ns, nullabilityInfo, map, quoteImportedTypes),
             _ => throw new NotImplementedException(),
         };
 
     public static string ToPyOutParamTyping(
         this ParameterDefinition param,
         string ns,
+        TypeRefNullabilityInfo nullabilityInfo,
         IReadOnlyDictionary<GenericParameter, TypeReference>? map = default,
         bool quoteImportedTypes = false
     ) =>
         param.GetCategory() switch
         {
-            ParamCategory.Out => param.ParameterType.ToPyTypeName(ns, map, quoteImportedTypes),
+            ParamCategory.Out
+                => param.ParameterType.ToPyTypeName(ns, nullabilityInfo, map, quoteImportedTypes),
             ParamCategory.ReceiveArray
-                => $"winrt.system.Array[{param.ParameterType.ToPyTypeName(ns, map, quoteImportedTypes)}]",
+                => $"winrt.system.Array[{param.ParameterType.ToPyTypeName(ns, nullabilityInfo, map, quoteImportedTypes)}]",
             _ => throw new NotImplementedException(),
         };
 
     public static string ToPyReturnTyping(
         this MethodDefinition method,
         string ns,
+        MethodNullabilityInfo nullabilityInfo,
         IReadOnlyDictionary<GenericParameter, TypeReference>? map = default,
         bool quoteImportedTypes = false
     )
@@ -467,7 +492,14 @@ static class TypeExtensions
         var returnType = "None";
         var outParams = method
             .Parameters.Where(p => p.IsPythonOutParam())
-            .Select(p => p.ToPyOutParamTyping(ns, map, quoteImportedTypes))
+            .Select(p =>
+                p.ToPyOutParamTyping(
+                    ns,
+                    nullabilityInfo.Parameters[p.Index].Type,
+                    map,
+                    quoteImportedTypes
+                )
+            )
             .ToList();
 
         if (method.ReturnType.FullName != "System.Void")
@@ -476,12 +508,20 @@ static class TypeExtensions
             {
                 outParams.Insert(
                     0,
-                    $"winrt.system.Array[{method.ReturnType.ToPyTypeName(ns, map, quoteImportedTypes)}]"
+                    $"winrt.system.Array[{method.ReturnType.ToPyTypeName(ns, nullabilityInfo.Return.Type, map, quoteImportedTypes)}]"
                 );
             }
             else
             {
-                outParams.Insert(0, method.ReturnType.ToPyTypeName(ns, map, quoteImportedTypes));
+                outParams.Insert(
+                    0,
+                    method.ReturnType.ToPyTypeName(
+                        ns,
+                        nullabilityInfo.Return.Type,
+                        map,
+                        quoteImportedTypes
+                    )
+                );
             }
         }
 

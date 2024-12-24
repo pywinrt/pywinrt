@@ -1,4 +1,5 @@
 using System.CodeDom.Compiler;
+using System.Collections.ObjectModel;
 using Mono.Cecil;
 
 static class ObjectWriterExtensions
@@ -6,7 +7,8 @@ static class ObjectWriterExtensions
     public static void WritePythonClassTyping(
         this IndentedTextWriter w,
         ProjectedType type,
-        string ns
+        string ns,
+        ReadOnlyDictionary<string, MethodNullabilityInfo> nullabilityMap
     )
     {
         var metaclass = "";
@@ -17,7 +19,7 @@ static class ObjectWriterExtensions
 
             if (type.Type.BaseType is TypeReference b && b.Namespace != "System")
             {
-                baseType = $"{b.ToPyTypeName(ns)}_Static";
+                baseType = $"{b.ToPyTypeName(ns, new TypeRefNullabilityInfo(b))}_Static";
             }
 
             if (!type.IsComposable)
@@ -48,7 +50,7 @@ static class ObjectWriterExtensions
                     w.WriteLine("@typing.final");
                 }
 
-                w.WritePythonMethodTyping(method, ns, "cls");
+                w.WritePythonMethodTyping(method, ns, nullabilityMap, "cls");
 
                 hasMembers = true;
             }
@@ -60,14 +62,14 @@ static class ObjectWriterExtensions
                     w.WriteLine("@typing.final");
                 }
 
-                w.WritePythonMethodTyping(evt.AddMethod, ns, "cls");
+                w.WritePythonMethodTyping(evt.AddMethod, ns, nullabilityMap, "cls");
 
                 if (type.IsComposable)
                 {
                     w.WriteLine("@typing.final");
                 }
 
-                w.WritePythonMethodTyping(evt.RemoveMethod, ns, "cls");
+                w.WritePythonMethodTyping(evt.RemoveMethod, ns, nullabilityMap, "cls");
 
                 hasMembers = true;
             }
@@ -75,7 +77,14 @@ static class ObjectWriterExtensions
             foreach (var prop in type.Properties.Where(p => p.GetMethod.IsStatic))
             {
                 var name = prop.Name.ToPythonIdentifier(isTypeMethod: true);
-                var propType = prop.Property.PropertyType.ToPyTypeName(ns);
+                var getterNullabilityInfo = nullabilityMap.GetValueOrDefault(
+                    prop.GetMethod.Signature,
+                    new MethodNullabilityInfo(prop.GetMethod.Method)
+                );
+                var propType = prop.Property.PropertyType.ToPyTypeName(
+                    ns,
+                    getterNullabilityInfo.Return.Type
+                );
 
                 w.WriteLine($"# {prop.GetMethod.Signature}");
 
@@ -100,7 +109,13 @@ static class ObjectWriterExtensions
 
                 if (prop.SetMethod is not null)
                 {
-                    var setType = prop.SetMethod.Method.Parameters[0].ToPyInParamTyping(ns);
+                    var setterNullabilityInfo = nullabilityMap.GetValueOrDefault(
+                        prop.SetMethod.Signature,
+                        new MethodNullabilityInfo(prop.SetMethod.Method)
+                    );
+                    var setType = prop
+                        .SetMethod.Method.Parameters[0]
+                        .ToPyInParamTyping(ns, setterNullabilityInfo.Parameters[0].Type);
 
                     w.WriteLine($"# {prop.SetMethod.Signature}");
 
@@ -135,7 +150,7 @@ static class ObjectWriterExtensions
             if (type.IsGeneric)
             {
                 generic2 =
-                    $"typing.Generic[{string.Join(", ", type.Type.GenericParameters.Select(p => p.ToPyTypeName(ns)))}]";
+                    $"typing.Generic[{string.Join(", ", type.Type.GenericParameters.Select(p => p.ToPyTypeName(ns, new TypeRefNullabilityInfo(p))))}]";
             }
 
             w.WriteLine($"class Implements{type.Name}({generic2}):");
@@ -150,8 +165,18 @@ static class ObjectWriterExtensions
         if (type.IsPyMapping)
         {
             var method = type.Methods.Single(m => m.Name == "Lookup");
-            var keyType = method.Method.Parameters[0].ToPyInParamTyping(ns, method.GenericArgMap);
-            var valueType = method.Method.ToPyReturnTyping(ns, method.GenericArgMap);
+            var nullabilityInfo = nullabilityMap.GetValueOrDefault(
+                method.Signature,
+                new MethodNullabilityInfo(method.Method)
+            );
+            var keyType = method
+                .Method.Parameters[0]
+                .ToPyInParamTyping(ns, nullabilityInfo.Parameters[0].Type, method.GenericArgMap);
+            var valueType = method.Method.ToPyReturnTyping(
+                ns,
+                nullabilityInfo,
+                method.GenericArgMap
+            );
 
             if (type.IsPyMutableMapping)
             {
@@ -165,7 +190,15 @@ static class ObjectWriterExtensions
         else if (type.IsPySequence)
         {
             var method = type.Methods.Single(m => m.Name == "GetAt");
-            var elementType = method.Method.ToPyReturnTyping(ns, method.GenericArgMap);
+            var nullabilityInfo = nullabilityMap.GetValueOrDefault(
+                method.Signature,
+                new MethodNullabilityInfo(method.Method)
+            );
+            var elementType = method.Method.ToPyReturnTyping(
+                ns,
+                nullabilityInfo,
+                method.GenericArgMap
+            );
 
             if (type.IsPyMutableSequence)
             {
@@ -186,7 +219,9 @@ static class ObjectWriterExtensions
 
         var interfaces = string.Join(
             "",
-            interfaceTypes.Select(i => $", {i.ToPyTypeName(ns, implementsInterface: true)}")
+            interfaceTypes.Select(i =>
+                $", {i.ToPyTypeName(ns, new TypeRefNullabilityInfo(i), implementsInterface: true)}"
+            )
         );
 
         var generic = "";
@@ -195,7 +230,7 @@ static class ObjectWriterExtensions
         if (type.IsGeneric && string.IsNullOrEmpty(collection))
         {
             generic =
-                $", typing.Generic[{string.Join(", ", type.Type.GenericParameters.Select(p => p.ToPyTypeName(ns)))}]";
+                $", typing.Generic[{string.Join(", ", type.Type.GenericParameters.Select(p => p.ToPyTypeName(ns, new TypeRefNullabilityInfo(p))))}]";
         }
 
         if (!type.IsComposable)
@@ -204,7 +239,7 @@ static class ObjectWriterExtensions
         }
 
         w.WriteLine(
-            $"class {type.Name}({type.Type.BaseType?.ToPyTypeName(ns) ?? "winrt.system.Object"}{interfaces}{collection}{generic}{metaclass}):"
+            $"class {type.Name}({type.Type.BaseType?.ToPyTypeName(ns, new TypeRefNullabilityInfo(type.Type.BaseType)) ?? "winrt.system.Object"}{interfaces}{collection}{generic}{metaclass}):"
         );
         w.Indent++;
 
@@ -249,10 +284,18 @@ static class ObjectWriterExtensions
         if (type.IsPyMapping)
         {
             var method = type.Methods.Single(m => m.Name == "Lookup");
+            var nullabilityInfo = nullabilityMap.GetValueOrDefault(
+                method.Signature,
+                new MethodNullabilityInfo(method.Method)
+            );
             var keyParamType = method
                 .Method.Parameters[0]
-                .ToPyInParamTyping(ns, method.GenericArgMap);
-            var valueReturnType = method.Method.ToPyReturnTyping(ns, method.GenericArgMap);
+                .ToPyInParamTyping(ns, nullabilityInfo.Parameters[0].Type, method.GenericArgMap);
+            var valueReturnType = method.Method.ToPyReturnTyping(
+                ns,
+                nullabilityInfo,
+                method.GenericArgMap
+            );
 
             w.WriteLine("def __len__(self) -> int: ...");
             w.WriteLine($"def __iter__(self) -> typing.Iterator[{keyParamType}]: ...");
@@ -262,9 +305,17 @@ static class ObjectWriterExtensions
             if (type.IsPyMutableMapping)
             {
                 var setMethod = type.Methods.Single(m => m.Name == "Insert");
+                var setNullabilityInfo = nullabilityMap.GetValueOrDefault(
+                    setMethod.Signature,
+                    new MethodNullabilityInfo(setMethod.Method)
+                );
                 var valParamType = setMethod
                     .Method.Parameters[1]
-                    .ToPyInParamTyping(ns, setMethod.GenericArgMap);
+                    .ToPyInParamTyping(
+                        ns,
+                        setNullabilityInfo.Parameters[1].Type,
+                        setMethod.GenericArgMap
+                    );
 
                 w.WriteLine(
                     $"def __setitem__(self, key: {keyParamType}, value: {valParamType}) -> None: ..."
@@ -276,9 +327,25 @@ static class ObjectWriterExtensions
         else if (type.IsPySequence)
         {
             var method = type.Methods.Single(m => m.Name == "First");
-            var iterType = method.Method.ToPyReturnTyping(ns, method.GenericArgMap);
+            var nullabilityInfo = nullabilityMap.GetValueOrDefault(
+                method.Signature,
+                new MethodNullabilityInfo(method.Method)
+            );
+            var iterType = method.Method.ToPyReturnTyping(
+                ns,
+                nullabilityInfo,
+                method.GenericArgMap
+            );
             method = type.Methods.Single(m => m.Name == "GetAt");
-            var elementType = method.Method.ToPyReturnTyping(ns, method.GenericArgMap);
+            nullabilityInfo = nullabilityMap.GetValueOrDefault(
+                method.Signature,
+                new MethodNullabilityInfo(method.Method)
+            );
+            var elementType = method.Method.ToPyReturnTyping(
+                ns,
+                nullabilityInfo,
+                method.GenericArgMap
+            );
 
             w.WriteLine("def __len__(self) -> int: ...");
             w.WriteLine($"def __iter__(self) -> {iterType}: ...");
@@ -294,9 +361,17 @@ static class ObjectWriterExtensions
             if (type.IsPyMutableSequence)
             {
                 var setMethod = type.Methods.Single(m => m.Name == "SetAt");
+                var setNullabilityInfo = nullabilityMap.GetValueOrDefault(
+                    setMethod.Signature,
+                    new MethodNullabilityInfo(setMethod.Method)
+                );
                 var valParamType = setMethod
                     .Method.Parameters[1]
-                    .ToPyInParamTyping(ns, setMethod.GenericArgMap);
+                    .ToPyInParamTyping(
+                        ns,
+                        setNullabilityInfo.Parameters[1].Type,
+                        setMethod.GenericArgMap
+                    );
 
                 w.WriteLine("@typing.overload");
                 w.WriteLine($"def __delitem__(self, index: typing.SupportsIndex) -> None: ...");
@@ -315,8 +390,12 @@ static class ObjectWriterExtensions
         }
         else if (type.IsPyIterator)
         {
-            var prop = type.Type.Properties.Single(p => p.Name == "Current");
-            var nextType = prop.PropertyType.ToPyTypeName(ns);
+            var prop = type.Properties.Single(p => p.Name == "Current");
+            var nullabilityInfo = nullabilityMap.GetValueOrDefault(
+                prop.GetMethod.Signature,
+                new MethodNullabilityInfo(prop.GetMethod.Method)
+            );
+            var nextType = prop.Property.PropertyType.ToPyTypeName(ns, nullabilityInfo.Return.Type);
             w.WriteLine("def __iter__(self: Self) -> Self: ...");
             w.WriteLine($"def __next__(self) -> {nextType}: ...");
             didWriteLine = true;
@@ -324,7 +403,15 @@ static class ObjectWriterExtensions
         else if (type.IsPyIterable)
         {
             var method = type.Methods.Single(m => m.Name == "First");
-            var iterType = method.Method.ToPyReturnTyping(ns, method.GenericArgMap);
+            var nullabilityInfo = nullabilityMap.GetValueOrDefault(
+                method.Signature,
+                new MethodNullabilityInfo(method.Method)
+            );
+            var iterType = method.Method.ToPyReturnTyping(
+                ns,
+                nullabilityInfo,
+                method.GenericArgMap
+            );
             w.WriteLine($"def __iter__(self) -> {iterType}: ...");
             didWriteLine = true;
         }
@@ -341,7 +428,9 @@ static class ObjectWriterExtensions
                 )
             )
             {
-                returnType = type.Type.GenericParameters[0].ToPyTypeName(ns);
+                returnType = type
+                    .Type.GenericParameters[0]
+                    .ToPyTypeName(ns, new TypeRefNullabilityInfo(type.Type.GenericParameters[0]));
             }
             else
             {
@@ -368,7 +457,12 @@ static class ObjectWriterExtensions
                         continue;
                     }
 
-                    returnType = genericInst.GenericArguments[0].ToPyTypeName(ns);
+                    returnType = genericInst
+                        .GenericArguments[0]
+                        .ToPyTypeName(
+                            ns,
+                            new TypeRefNullabilityInfo(genericInst.GenericArguments[0])
+                        );
 
                     break;
                 }
@@ -383,11 +477,15 @@ static class ObjectWriterExtensions
         foreach (var ctor in type.Constructors)
         {
             var paramList = "";
+            var nullabilityInfo = nullabilityMap.GetValueOrDefault(
+                ctor.Signature,
+                new MethodNullabilityInfo(ctor.Method)
+            );
 
             if (ctor.Method.Parameters.Any(p => p.IsPythonInParam()))
             {
                 paramList =
-                    $", {string.Join(", ", ctor.Method.Parameters.Where(p => p.IsPythonInParam()).Select(p => $"{p.Name.ToPythonIdentifier()}: {p.ToPyInParamTyping(ns)}"))}";
+                    $", {string.Join(", ", ctor.Method.Parameters.Where(p => p.IsPythonInParam()).Select(p => $"{p.Name.ToPythonIdentifier()}: {p.ToPyInParamTyping(ns, nullabilityInfo.Parameters[p.Index].Type)}"))}";
             }
 
             if (type.Constructors.Count(m => m.Name == ctor.Name) > 1)
@@ -422,7 +520,7 @@ static class ObjectWriterExtensions
                 w.WriteLine($"@typing.final{typeIgnore}");
             }
 
-            w.WritePythonMethodTyping(method, ns);
+            w.WritePythonMethodTyping(method, ns, nullabilityMap);
             didWriteLine = true;
         }
 
@@ -433,21 +531,29 @@ static class ObjectWriterExtensions
                 w.WriteLine("@typing.final");
             }
 
-            w.WritePythonMethodTyping(evt.AddMethod, ns);
+            w.WritePythonMethodTyping(evt.AddMethod, ns, nullabilityMap);
 
             if (type.IsComposable)
             {
                 w.WriteLine("@typing.final");
             }
 
-            w.WritePythonMethodTyping(evt.RemoveMethod, ns);
+            w.WritePythonMethodTyping(evt.RemoveMethod, ns, nullabilityMap);
             didWriteLine = true;
         }
 
         foreach (var prop in type.Properties.Where(p => !p.IsStatic))
         {
             var name = prop.Name.ToPythonIdentifier();
-            var propType = prop.Property.PropertyType.ToPyTypeName(ns, prop.GenericArgMap);
+            var getterNullabilityInfo = nullabilityMap.GetValueOrDefault(
+                prop.GetMethod.Signature,
+                new MethodNullabilityInfo(prop.GetMethod.Method)
+            );
+            var propType = prop.Property.PropertyType.ToPyTypeName(
+                ns,
+                getterNullabilityInfo.Return.Type,
+                prop.GenericArgMap
+            );
 
             // HACK: work around https://github.com/microsoft/cppwinrt/issues/1287
             // so far, this is the only case in the entire Windows SDK where
@@ -472,7 +578,13 @@ static class ObjectWriterExtensions
 
             if (prop.SetMethod is not null)
             {
-                var setType = prop.SetMethod.Method.Parameters[0].ToPyInParamTyping(ns);
+                var setterNullabilityInfo = nullabilityMap.GetValueOrDefault(
+                    prop.SetMethod.Signature,
+                    new MethodNullabilityInfo(prop.SetMethod.Method)
+                );
+                var setType = prop
+                    .SetMethod.Method.Parameters[0]
+                    .ToPyInParamTyping(ns, setterNullabilityInfo.Parameters[0].Type);
 
                 w.WriteLine($"# {prop.SetMethod.Signature}");
 

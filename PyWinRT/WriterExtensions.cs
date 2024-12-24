@@ -1,4 +1,5 @@
 using System.CodeDom.Compiler;
+using System.Collections.ObjectModel;
 using Mono.Cecil;
 
 static class WriterExtensions
@@ -2153,9 +2154,15 @@ static class WriterExtensions
         this IndentedTextWriter w,
         ProjectedMethod method,
         string ns,
+        ReadOnlyDictionary<string, MethodNullabilityInfo> nullabilityMap,
         string self = "self"
     )
     {
+        var nullabilityInfo = nullabilityMap.GetValueOrDefault(
+            method.Signature,
+            new MethodNullabilityInfo(method.Method)
+        );
+
         w.WriteLine($"# {method.Signature}");
 
         // REVISIT: can use @warning.deprecated in Python 3.13
@@ -2174,11 +2181,11 @@ static class WriterExtensions
         if (method.Method.Parameters.Any(p => p.IsPythonInParam()))
         {
             paramList =
-                $", {string.Join(", ", method.Method.Parameters.Where(p => p.IsPythonInParam()).Select(p => $"{p.Name.ToPythonIdentifier()}: {p.ToPyInParamTyping(ns, method.GenericArgMap)}"))}, /";
+                $", {string.Join(", ", method.Method.Parameters.Where(p => p.IsPythonInParam()).Select(p => $"{p.Name.ToPythonIdentifier()}: {p.ToPyInParamTyping(ns, nullabilityInfo.Parameters[p.Index].Type, method.GenericArgMap)}"))}, /";
         }
 
         w.WriteLine(
-            $"def {method.PyName}({self}{paramList}) -> {method.Method.ToPyReturnTyping(ns, method.GenericArgMap)}: ...{typeIgnore}"
+            $"def {method.PyName}({self}{paramList}) -> {method.Method.ToPyReturnTyping(ns, nullabilityInfo, method.GenericArgMap)}: ...{typeIgnore}"
         );
     }
 }
