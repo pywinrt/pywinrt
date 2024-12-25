@@ -6032,7 +6032,8 @@
                 "name": "options",
                 "kind": "in",
                 "type": {
-                  "name": "Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions"
+                  "name": "Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions",
+                  "allowNull": true
                 }
               }
             ]
