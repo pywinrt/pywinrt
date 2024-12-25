@@ -7,10 +7,11 @@ import sys
 REPO_ROOT_PATH = pathlib.Path(__file__).parent.parent.resolve()
 PROJECTION_PATH = REPO_ROOT_PATH / "projection"
 
-DOTNET = []
+DOTNET: list[str] = []
+PYWINRT_EXE: str | pathlib.Path
 
 if "--dotnet" in sys.argv:
-    DOTNET = ["dotnet"]
+    DOTNET.append("dotnet")
     PYWINRT_EXE = "pywinrt"
 
     subprocess.check_call(DOTNET + ["tool", "list", "PyWinRT"])
@@ -47,7 +48,7 @@ WINDOWS_SDK = "10.0.26100.0+"
 SDK_PACKAGE_PATH = PROJECTION_PATH / "winrt-sdk" / "src" / "winrt_sdk" / "pywinrt"
 WINDOWS_SDK_NULLABILITY_JSON_PATH = REPO_ROOT_PATH / "nullability" / "windows-sdk.json"
 
-include_args = []
+include_args: list[str] = []
 
 if "--minimal" in sys.argv:
     for ns in MINIMAL_NAMESPACES:

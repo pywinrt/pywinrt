@@ -55,7 +55,7 @@ data = subprocess.check_output(
     ]
 )
 
-properties: dict = json.loads(data)[0]
+properties: dict[str, str] = json.loads(data)[0]
 
 # get the path to msvcp140.dll
 msvcp140_dll = glob.glob(
