@@ -265,7 +265,7 @@ def write_project_files(
     module_name: str,
     ext_module_name: str,
     sources: List[str],
-    second_ext_source_file: str = None,
+    second_ext_source_file: str | None = None,
 ) -> None:
     package_name = package_path.name
     relative_package_path = package_path.relative_to(PROJECTION_PATH)
