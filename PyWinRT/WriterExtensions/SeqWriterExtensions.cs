@@ -5,34 +5,18 @@ static class SeqWriterExtensions
     public static void WriteSeqGenericInterfaceImpl(this IndentedTextWriter w, ProjectedType type)
     {
         w.WriteLine("Py_ssize_t seq_length() noexcept override");
-        w.WriteLine("{");
-        w.Indent++;
-        w.WriteSeqLengthBody(type);
-        w.Indent--;
-        w.WriteLine("}");
+        w.WriteBlock(() => w.WriteSeqLengthBody(type));
 
         w.WriteLine("PyObject* seq_item(Py_ssize_t i) noexcept override");
-        w.WriteLine("{");
-        w.Indent++;
-        w.WriteSeqItemBody(type);
-        w.Indent--;
-        w.WriteLine("}");
+        w.WriteBlock(() => w.WriteSeqItemBody(type));
 
         w.WriteLine("PyObject* seq_subscript(PyObject* slice) noexcept override");
-        w.WriteLine("{");
-        w.Indent++;
-        w.WriteSeqSubscriptBody(type);
-        w.Indent--;
-        w.WriteLine("}");
+        w.WriteBlock(() => w.WriteSeqSubscriptBody(type));
 
         if (type.IsPyMutableSequence)
         {
             w.WriteLine("int seq_assign(Py_ssize_t i, PyObject* value) noexcept override");
-            w.WriteLine("{");
-            w.Indent++;
-            w.WriteSeqAssignBody(type);
-            w.Indent--;
-            w.WriteLine("}");
+            w.WriteBlock(() => w.WriteSeqAssignBody(type));
         }
     }
 
@@ -93,12 +77,14 @@ static class SeqWriterExtensions
         w.WriteTryCatch(() =>
         {
             w.WriteLine("return py::convert([&]()");
-            w.WriteLine("{");
-            w.Indent++;
-            w.WriteLine("auto _gil = py::release_gil();");
-            w.WriteLine($"return {self}GetAt(static_cast<uint32_t>(i));");
-            w.Indent--;
-            w.WriteLine("}());");
+            w.WriteBlock(
+                () =>
+                {
+                    w.WriteLine("auto _gil = py::release_gil();");
+                    w.WriteLine($"return {self}GetAt(static_cast<uint32_t>(i));");
+                },
+                "());"
+            );
         });
     }
 
@@ -116,88 +102,76 @@ static class SeqWriterExtensions
         w.WriteTryCatch(() =>
         {
             w.WriteLine("if (PyIndex_Check(slice))");
-            w.WriteLine("{");
-            w.Indent++;
-            w.WriteLine("pyobj_handle index{PyNumber_Index(slice)};");
-            w.WriteBlankLine();
-            w.WriteLine("if (!index)");
-            w.WriteLine("{");
-            w.Indent++;
-            w.WriteLine("return nullptr;");
-            w.Indent--;
-            w.WriteLine("}");
-            w.WriteBlankLine();
-            w.WriteLine("auto i = PyNumber_AsSsize_t(index.get(), PyExc_IndexError);");
-            w.WriteBlankLine();
-            w.WriteLine("if (i == -1 && PyErr_Occurred())");
-            w.WriteLine("{");
-            w.Indent++;
-            w.WriteLine("return nullptr;");
-            w.Indent--;
-            w.WriteLine("}");
-            w.WriteBlankLine();
-            w.WriteLine($"return {seqItemInvoke};");
-            w.Indent--;
-            w.WriteLine("}");
+            w.WriteBlock(() =>
+            {
+                w.WriteLine("pyobj_handle index{PyNumber_Index(slice)};");
+                w.WriteBlankLine();
+                w.WriteLine("if (!index)");
+                w.WriteBlock(() => w.WriteLine("return nullptr;"));
+                w.WriteBlankLine();
+                w.WriteLine("auto i = PyNumber_AsSsize_t(index.get(), PyExc_IndexError);");
+                w.WriteBlankLine();
+                w.WriteLine("if (i == -1 && PyErr_Occurred())");
+                w.WriteBlock(() => w.WriteLine("return nullptr;"));
+                w.WriteBlankLine();
+                w.WriteLine($"return {seqItemInvoke};");
+            });
             w.WriteBlankLine();
             w.WriteLine("if (!PySlice_Check(slice))");
-            w.WriteLine("{");
-            w.Indent++;
-            w.WriteLine(
-                "PyErr_Format(PyExc_TypeError, \"indices must be integers, not '%s'\", Py_TYPE(slice)->tp_name);"
+            w.WriteBlock(
+                () =>
+                    w.WriteLine(
+                        "PyErr_Format(PyExc_TypeError, \"indices must be integers, not '%s'\", Py_TYPE(slice)->tp_name);"
+                    )
             );
-            w.Indent--;
-            w.WriteLine("}");
             w.WriteBlankLine();
             w.WriteLine("Py_ssize_t start, stop, step, length;");
             w.WriteBlankLine();
             w.WriteLine("auto size = [&]()");
-            w.WriteLine("{");
-            w.Indent++;
-            w.WriteLine("auto _gil = py::release_gil();");
-            w.WriteLine($"return {self}Size();");
-            w.Indent--;
-            w.WriteLine("}();");
+            w.WriteBlock(
+                () =>
+                {
+                    w.WriteLine("auto _gil = py::release_gil();");
+                    w.WriteLine($"return {self}Size();");
+                },
+                "();"
+            );
             w.WriteLine(
                 "if (PySlice_GetIndicesEx(slice, size, &start, &stop, &step, &length) < 0)"
             );
-            w.WriteLine("{");
-            w.Indent++;
-            w.WriteLine("return nullptr;");
-            w.Indent--;
-            w.WriteLine("}");
+            w.WriteBlock(() => w.WriteLine("return nullptr;"));
             w.WriteBlankLine();
             w.WriteLine("if (step != 1)");
-            w.WriteLine("{");
-            w.Indent++;
-            w.WriteLine(
-                "PyErr_SetString(PyExc_NotImplementedError, \"slices with step other than 1 are not implemented\");"
-            );
-            w.WriteLine("return nullptr;");
-            w.Indent--;
-            w.WriteLine("}");
+            w.WriteBlock(() =>
+            {
+                w.WriteLine(
+                    "PyErr_SetString(PyExc_NotImplementedError, \"slices with step other than 1 are not implemented\");"
+                );
+                w.WriteLine("return nullptr;");
+            });
             w.WriteBlankLine();
             w.WriteLine(
                 $"winrt::com_array<{collectionType}> items(static_cast<uint32_t>(length), empty_instance<{collectionType}>::get());"
             );
             w.WriteBlankLine();
             w.WriteLine("auto count = [&]()");
-            w.WriteLine("{");
-            w.Indent++;
-            w.WriteLine("auto _gil = py::release_gil();");
-            w.WriteLine($"return {self}GetMany(static_cast<uint32_t>(start), items);");
-            w.Indent--;
-            w.WriteLine("}();");
+            w.WriteBlock(
+                () =>
+                {
+                    w.WriteLine("auto _gil = py::release_gil();");
+                    w.WriteLine($"return {self}GetMany(static_cast<uint32_t>(start), items);");
+                },
+                "();"
+            );
             w.WriteBlankLine();
             w.WriteLine("if (count != static_cast<uint32_t>(length))");
-            w.WriteLine("{");
-            w.Indent++;
-            w.WriteLine(
-                "PyErr_Format(PyExc_RuntimeError, \"returned count %d did not match requested length %zd\", count, length);"
-            );
-            w.WriteLine("return nullptr;");
-            w.Indent--;
-            w.WriteLine("}");
+            w.WriteBlock(() =>
+            {
+                w.WriteLine(
+                    "PyErr_Format(PyExc_RuntimeError, \"returned count %d did not match requested length %zd\", count, length);"
+                );
+                w.WriteLine("return nullptr;");
+            });
             w.WriteBlankLine();
             w.WriteLine("return convert(items);");
         });
@@ -216,24 +190,21 @@ static class SeqWriterExtensions
             () =>
             {
                 w.WriteLine($"if (!value)");
-                w.WriteLine("{");
-                w.Indent++;
-                w.WriteLine("auto _gil = py::release_gil();");
-                w.WriteLine($"{self}RemoveAt(static_cast<uint32_t>(i));");
-                w.Indent--;
-                w.WriteLine("}");
+                w.WriteBlock(() =>
+                {
+                    w.WriteLine("auto _gil = py::release_gil();");
+                    w.WriteLine($"{self}RemoveAt(static_cast<uint32_t>(i));");
+                });
                 w.WriteLine("else");
-                w.WriteLine("{");
-                w.Indent++;
-                w.WriteLine($"auto _value = py::convert_to<{collectionType}>(value);");
-                w.WriteLine("{");
-                w.Indent++;
-                w.WriteLine("auto _gil = py::release_gil();");
-                w.WriteLine($"{self}SetAt(static_cast<uint32_t>(i), _value);");
-                w.Indent--;
-                w.WriteLine("}");
-                w.Indent--;
-                w.WriteLine("}");
+                w.WriteBlock(() =>
+                {
+                    w.WriteLine($"auto _value = py::convert_to<{collectionType}>(value);");
+                    w.WriteBlock(() =>
+                    {
+                        w.WriteLine("auto _gil = py::release_gil();");
+                        w.WriteLine($"{self}SetAt(static_cast<uint32_t>(i), _value);");
+                    });
+                });
                 w.WriteBlankLine();
                 w.WriteLine("return 0;");
             },

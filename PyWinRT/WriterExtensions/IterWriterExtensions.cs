@@ -5,20 +5,12 @@ static class IterWriterExtensions
     public static void WriteIterGenericInterfaceImpl(this IndentedTextWriter w, ProjectedType type)
     {
         w.WriteLine("PyObject* dunder_iter() noexcept override");
-        w.WriteLine("{");
-        w.Indent++;
-        w.WriteDunderIterBody(type);
-        w.Indent--;
-        w.WriteLine("}");
+        w.WriteBlock(() => w.WriteDunderIterBody(type));
 
         if (type.IsPyIterator)
         {
             w.WriteLine("PyObject* dunder_iternext() noexcept override");
-            w.WriteLine("{");
-            w.Indent++;
-            w.WriteDunderIterNextBody(type);
-            w.Indent--;
-            w.WriteLine("}");
+            w.WriteBlock(() => w.WriteDunderIterNextBody(type));
         }
     }
 
@@ -41,12 +33,14 @@ static class IterWriterExtensions
                 var self = type.GetMethodInvokeContext(method);
 
                 w.WriteLine("return py::convert([&]()");
-                w.WriteLine("{");
-                w.Indent++;
-                w.WriteLine("auto _gil = py::release_gil();");
-                w.WriteLine($"return {self}First();");
-                w.Indent--;
-                w.WriteLine("}());");
+                w.WriteBlock(
+                    () =>
+                    {
+                        w.WriteLine("auto _gil = py::release_gil();");
+                        w.WriteLine($"return {self}First();");
+                    },
+                    "());"
+                );
             });
         }
         else
@@ -63,25 +57,22 @@ static class IterWriterExtensions
             var self = type.GetMethodInvokeContext(method);
 
             w.WriteLine($"if ({self}HasCurrent())");
-            w.WriteLine("{");
-            w.Indent++;
-            w.WriteLine("return py::convert([&]()");
-            w.WriteLine("{");
-            w.Indent++;
-            w.WriteLine("auto _gil = py::release_gil();");
-            w.WriteLine($"auto cur = {self}Current();");
-            w.WriteLine($"{self}MoveNext();");
-            w.WriteLine("return cur;");
-            w.Indent--;
-            w.WriteLine("}());");
-            w.Indent--;
-            w.WriteLine("}");
+            w.WriteBlock(() =>
+            {
+                w.WriteLine("return py::convert([&]()");
+                w.WriteBlock(
+                    () =>
+                    {
+                        w.WriteLine("auto _gil = py::release_gil();");
+                        w.WriteLine($"auto cur = {self}Current();");
+                        w.WriteLine($"{self}MoveNext();");
+                        w.WriteLine("return cur;");
+                    },
+                    "());"
+                );
+            });
             w.WriteLine("else");
-            w.WriteLine("{");
-            w.Indent++;
-            w.WriteLine("return nullptr;");
-            w.Indent--;
-            w.WriteLine("}");
+            w.WriteBlock(() => w.WriteLine("return nullptr;"));
         });
     }
 }
