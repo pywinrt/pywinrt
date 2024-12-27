@@ -928,7 +928,7 @@ namespace py::cpp::Windows::Graphics::Display::Core
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -1015,7 +1015,7 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
     static int HdmiDisplayHdr2086Metadata_set_RedPrimaryX(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1048,7 +1048,7 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
     static int HdmiDisplayHdr2086Metadata_set_RedPrimaryY(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1081,7 +1081,7 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
     static int HdmiDisplayHdr2086Metadata_set_GreenPrimaryX(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1114,7 +1114,7 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
     static int HdmiDisplayHdr2086Metadata_set_GreenPrimaryY(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1147,7 +1147,7 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
     static int HdmiDisplayHdr2086Metadata_set_BluePrimaryX(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1180,7 +1180,7 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
     static int HdmiDisplayHdr2086Metadata_set_BluePrimaryY(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1213,7 +1213,7 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
     static int HdmiDisplayHdr2086Metadata_set_WhitePointX(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1246,7 +1246,7 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
     static int HdmiDisplayHdr2086Metadata_set_WhitePointY(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1279,7 +1279,7 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
     static int HdmiDisplayHdr2086Metadata_set_MaxMasteringLuminance(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1312,7 +1312,7 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
     static int HdmiDisplayHdr2086Metadata_set_MinMasteringLuminance(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1345,7 +1345,7 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
     static int HdmiDisplayHdr2086Metadata_set_MaxContentLightLevel(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1378,7 +1378,7 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
     static int HdmiDisplayHdr2086Metadata_set_MaxFrameAverageLightLevel(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

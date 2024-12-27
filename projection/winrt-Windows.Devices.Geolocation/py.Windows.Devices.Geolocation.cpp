@@ -229,7 +229,7 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* _new_GeoboundingBox(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -760,7 +760,7 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* _new_Geocircle(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1731,7 +1731,7 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* _new_Geolocator(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2047,7 +2047,7 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static int Geolocator_put_ReportInterval(py::wrapper::Windows::Devices::Geolocation::Geolocator* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2116,7 +2116,7 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static int Geolocator_put_MovementThreshold(py::wrapper::Windows::Devices::Geolocation::Geolocator* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2185,7 +2185,7 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static int Geolocator_put_DesiredAccuracy(py::wrapper::Windows::Devices::Geolocation::Geolocator* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2284,7 +2284,7 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static int Geolocator_put_DesiredAccuracyInMeters(py::wrapper::Windows::Devices::Geolocation::Geolocator* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2353,7 +2353,7 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static int Geolocator_put_DefaultGeoposition(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2645,7 +2645,7 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* _new_Geopath(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2892,7 +2892,7 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* _new_Geopoint(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3457,7 +3457,7 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* _new_GeovisitMonitor(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -4618,7 +4618,7 @@ namespace py::cpp::Windows::Devices::Geolocation
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -4687,7 +4687,7 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static int BasicGeoposition_set_Latitude(py::wrapper::Windows::Devices::Geolocation::BasicGeoposition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4720,7 +4720,7 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static int BasicGeoposition_set_Longitude(py::wrapper::Windows::Devices::Geolocation::BasicGeoposition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4753,7 +4753,7 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static int BasicGeoposition_set_Altitude(py::wrapper::Windows::Devices::Geolocation::BasicGeoposition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

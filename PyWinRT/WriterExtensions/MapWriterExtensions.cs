@@ -154,7 +154,7 @@ static class MapWriterExtensions
                 "();"
             );
             w.WriteBlankLine();
-            w.Write("if (!value) ");
+            w.WriteLine("if (!value)");
             w.WriteBlock(() =>
             {
                 // there isn't a way to differentiate between a failed lookup
@@ -203,7 +203,7 @@ static class MapWriterExtensions
             {
                 w.WriteLine($"auto _key = py::convert_to<{keyType}>(key);");
                 w.WriteBlankLine();
-                w.Write("if (value == nullptr) ");
+                w.WriteLine("if (!value)");
                 w.WriteBlock(() =>
                 {
                     w.WriteLine("bool did_remove;");
@@ -212,7 +212,7 @@ static class MapWriterExtensions
                         w.WriteLine("auto _gil = py::release_gil();");
                         w.WriteLine($"did_remove = {self}TryRemove(_key);");
                     });
-                    w.Write("if (!did_remove) ");
+                    w.WriteLine("if (!did_remove)");
                     w.WriteBlock(() =>
                     {
                         w.WriteLine("PyErr_SetObject(PyExc_KeyError, key);");

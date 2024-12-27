@@ -8,7 +8,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
 
     static PyObject* _new_CoreIncrementalInkStroke(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -393,7 +393,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
 
     static int CoreInkIndependentInputSource_put_PointerCursor(py::wrapper::Windows::UI::Input::Inking::Core::CoreInkIndependentInputSource* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -980,7 +980,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
 
     static PyObject* _new_CoreInkPresenterHost(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1047,7 +1047,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
 
     static int CoreInkPresenterHost_put_RootVisual(py::wrapper::Windows::UI::Input::Inking::Core::CoreInkPresenterHost* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1214,7 +1214,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
 
     static int CoreWetStrokeUpdateEventArgs_put_Disposition(py::wrapper::Windows::UI::Input::Inking::Core::CoreWetStrokeUpdateEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

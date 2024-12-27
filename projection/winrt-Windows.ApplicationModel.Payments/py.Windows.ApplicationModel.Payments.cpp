@@ -8,7 +8,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* _new_PaymentAddress(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -75,7 +75,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentAddress_put_SortingCode(py::wrapper::Windows::ApplicationModel::Payments::PaymentAddress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -144,7 +144,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentAddress_put_Region(py::wrapper::Windows::ApplicationModel::Payments::PaymentAddress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -213,7 +213,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentAddress_put_Recipient(py::wrapper::Windows::ApplicationModel::Payments::PaymentAddress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -282,7 +282,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentAddress_put_PostalCode(py::wrapper::Windows::ApplicationModel::Payments::PaymentAddress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -351,7 +351,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentAddress_put_PhoneNumber(py::wrapper::Windows::ApplicationModel::Payments::PaymentAddress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -420,7 +420,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentAddress_put_Organization(py::wrapper::Windows::ApplicationModel::Payments::PaymentAddress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -489,7 +489,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentAddress_put_LanguageCode(py::wrapper::Windows::ApplicationModel::Payments::PaymentAddress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -558,7 +558,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentAddress_put_DependentLocality(py::wrapper::Windows::ApplicationModel::Payments::PaymentAddress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -627,7 +627,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentAddress_put_Country(py::wrapper::Windows::ApplicationModel::Payments::PaymentAddress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -696,7 +696,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentAddress_put_City(py::wrapper::Windows::ApplicationModel::Payments::PaymentAddress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -765,7 +765,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentAddress_put_AddressLines(py::wrapper::Windows::ApplicationModel::Payments::PaymentAddress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -897,7 +897,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* _new_PaymentCanMakePaymentResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1018,7 +1018,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* _new_PaymentCurrencyAmount(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1105,7 +1105,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentCurrencyAmount_put_Value(py::wrapper::Windows::ApplicationModel::Payments::PaymentCurrencyAmount* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1174,7 +1174,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentCurrencyAmount_put_CurrencySystem(py::wrapper::Windows::ApplicationModel::Payments::PaymentCurrencyAmount* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1243,7 +1243,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentCurrencyAmount_put_Currency(py::wrapper::Windows::ApplicationModel::Payments::PaymentCurrencyAmount* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1336,7 +1336,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* _new_PaymentDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1434,7 +1434,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentDetails_put_Total(py::wrapper::Windows::ApplicationModel::Payments::PaymentDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1503,7 +1503,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentDetails_put_ShippingOptions(py::wrapper::Windows::ApplicationModel::Payments::PaymentDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1572,7 +1572,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentDetails_put_Modifiers(py::wrapper::Windows::ApplicationModel::Payments::PaymentDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1641,7 +1641,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentDetails_put_DisplayItems(py::wrapper::Windows::ApplicationModel::Payments::PaymentDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1735,7 +1735,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* _new_PaymentDetailsModifier(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1985,7 +1985,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* _new_PaymentItem(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2055,7 +2055,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentItem_put_Pending(py::wrapper::Windows::ApplicationModel::Payments::PaymentItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2124,7 +2124,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentItem_put_Label(py::wrapper::Windows::ApplicationModel::Payments::PaymentItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2193,7 +2193,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentItem_put_Amount(py::wrapper::Windows::ApplicationModel::Payments::PaymentItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2286,7 +2286,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* _new_PaymentMediator(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2545,7 +2545,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* _new_PaymentMerchantInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2710,7 +2710,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* _new_PaymentMethodData(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2878,7 +2878,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* _new_PaymentOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2945,7 +2945,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentOptions_put_ShippingType(py::wrapper::Windows::ApplicationModel::Payments::PaymentOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3014,7 +3014,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentOptions_put_RequestShipping(py::wrapper::Windows::ApplicationModel::Payments::PaymentOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3083,7 +3083,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentOptions_put_RequestPayerPhoneNumber(py::wrapper::Windows::ApplicationModel::Payments::PaymentOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3152,7 +3152,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentOptions_put_RequestPayerName(py::wrapper::Windows::ApplicationModel::Payments::PaymentOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3221,7 +3221,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentOptions_put_RequestPayerEmail(py::wrapper::Windows::ApplicationModel::Payments::PaymentOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3316,7 +3316,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* _new_PaymentRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3819,7 +3819,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* _new_PaymentRequestChangedResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3904,7 +3904,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentRequestChangedResult_put_UpdatedPaymentDetails(py::wrapper::Windows::ApplicationModel::Payments::PaymentRequestChangedResult* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3973,7 +3973,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentRequestChangedResult_put_Message(py::wrapper::Windows::ApplicationModel::Payments::PaymentRequestChangedResult* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4042,7 +4042,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentRequestChangedResult_put_ChangeAcceptedByMerchant(py::wrapper::Windows::ApplicationModel::Payments::PaymentRequestChangedResult* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4558,7 +4558,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* _new_PaymentShippingOption(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -4663,7 +4663,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentShippingOption_put_Tag(py::wrapper::Windows::ApplicationModel::Payments::PaymentShippingOption* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4732,7 +4732,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentShippingOption_put_Label(py::wrapper::Windows::ApplicationModel::Payments::PaymentShippingOption* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4801,7 +4801,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentShippingOption_put_IsSelected(py::wrapper::Windows::ApplicationModel::Payments::PaymentShippingOption* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4870,7 +4870,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static int PaymentShippingOption_put_Amount(py::wrapper::Windows::ApplicationModel::Payments::PaymentShippingOption* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4964,7 +4964,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* _new_PaymentToken(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;

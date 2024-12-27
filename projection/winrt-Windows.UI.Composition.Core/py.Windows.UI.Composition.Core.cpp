@@ -8,7 +8,7 @@ namespace py::cpp::Windows::UI::Composition::Core
 
     static PyObject* _new_CompositorController(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;

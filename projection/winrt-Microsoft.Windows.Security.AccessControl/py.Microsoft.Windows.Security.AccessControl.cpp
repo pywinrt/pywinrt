@@ -170,7 +170,7 @@ namespace py::cpp::Microsoft::Windows::Security::AccessControl
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -237,7 +237,7 @@ namespace py::cpp::Microsoft::Windows::Security::AccessControl
 
     static int AppContainerNameAndAccess_set_appContainerName(py::wrapper::Microsoft::Windows::Security::AccessControl::AppContainerNameAndAccess* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -270,7 +270,7 @@ namespace py::cpp::Microsoft::Windows::Security::AccessControl
 
     static int AppContainerNameAndAccess_set_accessMask(py::wrapper::Microsoft::Windows::Security::AccessControl::AppContainerNameAndAccess* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

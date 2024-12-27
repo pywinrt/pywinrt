@@ -136,7 +136,7 @@ namespace py::cpp::Windows::UI::Accessibility
 
     static PyObject* _new_ScreenReaderService(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;

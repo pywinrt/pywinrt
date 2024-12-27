@@ -796,7 +796,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static int ChatConversation_put_Subject(py::wrapper::Windows::ApplicationModel::Chat::ChatConversation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -865,7 +865,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static int ChatConversation_put_IsConversationMuted(py::wrapper::Windows::ApplicationModel::Chat::ChatConversation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1084,7 +1084,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static int ChatConversation_put_CanModifyParticipants(py::wrapper::Windows::ApplicationModel::Chat::ChatConversation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1437,7 +1437,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* _new_ChatConversationThreadingInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1504,7 +1504,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static int ChatConversationThreadingInfo_put_Kind(py::wrapper::Windows::ApplicationModel::Chat::ChatConversationThreadingInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1573,7 +1573,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static int ChatConversationThreadingInfo_put_Custom(py::wrapper::Windows::ApplicationModel::Chat::ChatConversationThreadingInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1642,7 +1642,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static int ChatConversationThreadingInfo_put_ConversationId(py::wrapper::Windows::ApplicationModel::Chat::ChatConversationThreadingInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1711,7 +1711,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static int ChatConversationThreadingInfo_put_ContactId(py::wrapper::Windows::ApplicationModel::Chat::ChatConversationThreadingInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1836,7 +1836,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* _new_ChatMessage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1933,7 +1933,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static int ChatMessage_put_IsIncoming(py::wrapper::Windows::ApplicationModel::Chat::ChatMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2002,7 +2002,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static int ChatMessage_put_IsForwardingDisabled(py::wrapper::Windows::ApplicationModel::Chat::ChatMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2071,7 +2071,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static int ChatMessage_put_TransportId(py::wrapper::Windows::ApplicationModel::Chat::ChatMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2140,7 +2140,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static int ChatMessage_put_Status(py::wrapper::Windows::ApplicationModel::Chat::ChatMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2209,7 +2209,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static int ChatMessage_put_From(py::wrapper::Windows::ApplicationModel::Chat::ChatMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2278,7 +2278,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static int ChatMessage_put_Body(py::wrapper::Windows::ApplicationModel::Chat::ChatMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2347,7 +2347,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static int ChatMessage_put_Subject(py::wrapper::Windows::ApplicationModel::Chat::ChatMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2416,7 +2416,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static int ChatMessage_put_IsRead(py::wrapper::Windows::ApplicationModel::Chat::ChatMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2485,7 +2485,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static int ChatMessage_put_NetworkTimestamp(py::wrapper::Windows::ApplicationModel::Chat::ChatMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2554,7 +2554,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static int ChatMessage_put_LocalTimestamp(py::wrapper::Windows::ApplicationModel::Chat::ChatMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2773,7 +2773,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static int ChatMessage_put_IsSeen(py::wrapper::Windows::ApplicationModel::Chat::ChatMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2842,7 +2842,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static int ChatMessage_put_MessageKind(py::wrapper::Windows::ApplicationModel::Chat::ChatMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2911,7 +2911,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static int ChatMessage_put_IsReceivedDuringQuietHours(py::wrapper::Windows::ApplicationModel::Chat::ChatMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2980,7 +2980,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static int ChatMessage_put_IsAutoReply(py::wrapper::Windows::ApplicationModel::Chat::ChatMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3049,7 +3049,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static int ChatMessage_put_EstimatedDownloadSize(py::wrapper::Windows::ApplicationModel::Chat::ChatMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3118,7 +3118,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static int ChatMessage_put_ThreadingInfo(py::wrapper::Windows::ApplicationModel::Chat::ChatMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3187,7 +3187,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static int ChatMessage_put_ShouldSuppressNotification(py::wrapper::Windows::ApplicationModel::Chat::ChatMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3256,7 +3256,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static int ChatMessage_put_RemoteId(py::wrapper::Windows::ApplicationModel::Chat::ChatMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3325,7 +3325,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static int ChatMessage_put_MessageOperatorKind(py::wrapper::Windows::ApplicationModel::Chat::ChatMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3484,7 +3484,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static int ChatMessage_put_SyncId(py::wrapper::Windows::ApplicationModel::Chat::ChatMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3603,7 +3603,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* _new_ChatMessageAttachment(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3673,7 +3673,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static int ChatMessageAttachment_put_Text(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageAttachment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3742,7 +3742,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static int ChatMessageAttachment_put_MimeType(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageAttachment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3811,7 +3811,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static int ChatMessageAttachment_put_GroupId(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageAttachment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3880,7 +3880,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static int ChatMessageAttachment_put_DataStreamReference(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageAttachment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3949,7 +3949,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static int ChatMessageAttachment_put_TransferProgress(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageAttachment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4018,7 +4018,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static int ChatMessageAttachment_put_Thumbnail(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageAttachment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4087,7 +4087,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static int ChatMessageAttachment_put_OriginalFileName(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageAttachment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7863,7 +7863,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* _new_ChatQueryOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -7930,7 +7930,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static int ChatQueryOptions_put_SearchString(py::wrapper::Windows::ApplicationModel::Chat::ChatQueryOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8021,7 +8021,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* _new_ChatRecipientDeliveryInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -8088,7 +8088,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static int ChatRecipientDeliveryInfo_put_TransportAddress(py::wrapper::Windows::ApplicationModel::Chat::ChatRecipientDeliveryInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8157,7 +8157,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static int ChatRecipientDeliveryInfo_put_ReadTime(py::wrapper::Windows::ApplicationModel::Chat::ChatRecipientDeliveryInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8226,7 +8226,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static int ChatRecipientDeliveryInfo_put_DeliveryTime(py::wrapper::Windows::ApplicationModel::Chat::ChatRecipientDeliveryInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8669,7 +8669,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static int ChatSyncConfiguration_put_RestoreHistorySpan(py::wrapper::Windows::ApplicationModel::Chat::ChatSyncConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8738,7 +8738,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static int ChatSyncConfiguration_put_IsSyncEnabled(py::wrapper::Windows::ApplicationModel::Chat::ChatSyncConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

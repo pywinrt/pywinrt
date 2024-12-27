@@ -213,7 +213,7 @@ namespace py::cpp::Windows::Management::Update
 
     static int PreviewBuildsManager_put_ArePreviewBuildsAllowed(py::wrapper::Windows::Management::Update::PreviewBuildsManager* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2382,7 +2382,7 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* _new_WindowsUpdateApprovalData(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2449,7 +2449,7 @@ namespace py::cpp::Windows::Management::Update
 
     static int WindowsUpdateApprovalData_put_Seeker(py::wrapper::Windows::Management::Update::WindowsUpdateApprovalData* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2518,7 +2518,7 @@ namespace py::cpp::Windows::Management::Update
 
     static int WindowsUpdateApprovalData_put_OptOutOfAutoReboot(py::wrapper::Windows::Management::Update::WindowsUpdateApprovalData* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2587,7 +2587,7 @@ namespace py::cpp::Windows::Management::Update
 
     static int WindowsUpdateApprovalData_put_ComplianceGracePeriodInDays(py::wrapper::Windows::Management::Update::WindowsUpdateApprovalData* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2656,7 +2656,7 @@ namespace py::cpp::Windows::Management::Update
 
     static int WindowsUpdateApprovalData_put_ComplianceDeadlineInDays(py::wrapper::Windows::Management::Update::WindowsUpdateApprovalData* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2725,7 +2725,7 @@ namespace py::cpp::Windows::Management::Update
 
     static int WindowsUpdateApprovalData_put_AllowDownloadOnMetered(py::wrapper::Windows::Management::Update::WindowsUpdateApprovalData* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3518,7 +3518,7 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* _new_WindowsUpdateManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -4402,7 +4402,7 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* _new_WindowsUpdateRestartRequestOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -4488,7 +4488,7 @@ namespace py::cpp::Windows::Management::Update
 
     static int WindowsUpdateRestartRequestOptions_put_Title(py::wrapper::Windows::Management::Update::WindowsUpdateRestartRequestOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4557,7 +4557,7 @@ namespace py::cpp::Windows::Management::Update
 
     static int WindowsUpdateRestartRequestOptions_put_OrganizationName(py::wrapper::Windows::Management::Update::WindowsUpdateRestartRequestOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4626,7 +4626,7 @@ namespace py::cpp::Windows::Management::Update
 
     static int WindowsUpdateRestartRequestOptions_put_OptOutOfAutoReboot(py::wrapper::Windows::Management::Update::WindowsUpdateRestartRequestOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4695,7 +4695,7 @@ namespace py::cpp::Windows::Management::Update
 
     static int WindowsUpdateRestartRequestOptions_put_MoreInfoUrl(py::wrapper::Windows::Management::Update::WindowsUpdateRestartRequestOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4764,7 +4764,7 @@ namespace py::cpp::Windows::Management::Update
 
     static int WindowsUpdateRestartRequestOptions_put_Description(py::wrapper::Windows::Management::Update::WindowsUpdateRestartRequestOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4833,7 +4833,7 @@ namespace py::cpp::Windows::Management::Update
 
     static int WindowsUpdateRestartRequestOptions_put_ComplianceGracePeriodInDays(py::wrapper::Windows::Management::Update::WindowsUpdateRestartRequestOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4902,7 +4902,7 @@ namespace py::cpp::Windows::Management::Update
 
     static int WindowsUpdateRestartRequestOptions_put_ComplianceDeadlineInDays(py::wrapper::Windows::Management::Update::WindowsUpdateRestartRequestOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

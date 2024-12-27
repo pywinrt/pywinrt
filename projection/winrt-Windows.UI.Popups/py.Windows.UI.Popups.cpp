@@ -8,7 +8,7 @@ namespace py::cpp::Windows::UI::Popups
 
     static PyObject* _new_MessageDialog(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -133,7 +133,7 @@ namespace py::cpp::Windows::UI::Popups
 
     static int MessageDialog_put_Title(py::wrapper::Windows::UI::Popups::MessageDialog* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -202,7 +202,7 @@ namespace py::cpp::Windows::UI::Popups
 
     static int MessageDialog_put_Options(py::wrapper::Windows::UI::Popups::MessageDialog* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -271,7 +271,7 @@ namespace py::cpp::Windows::UI::Popups
 
     static int MessageDialog_put_DefaultCommandIndex(py::wrapper::Windows::UI::Popups::MessageDialog* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -340,7 +340,7 @@ namespace py::cpp::Windows::UI::Popups
 
     static int MessageDialog_put_Content(py::wrapper::Windows::UI::Popups::MessageDialog* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -409,7 +409,7 @@ namespace py::cpp::Windows::UI::Popups
 
     static int MessageDialog_put_CancelCommandIndex(py::wrapper::Windows::UI::Popups::MessageDialog* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -536,7 +536,7 @@ namespace py::cpp::Windows::UI::Popups
 
     static PyObject* _new_PopupMenu(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -785,7 +785,7 @@ namespace py::cpp::Windows::UI::Popups
 
     static PyObject* _new_UICommand(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -900,7 +900,7 @@ namespace py::cpp::Windows::UI::Popups
 
     static int UICommand_put_Label(py::wrapper::Windows::UI::Popups::UICommand* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -969,7 +969,7 @@ namespace py::cpp::Windows::UI::Popups
 
     static int UICommand_put_Invoked(py::wrapper::Windows::UI::Popups::UICommand* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1038,7 +1038,7 @@ namespace py::cpp::Windows::UI::Popups
 
     static int UICommand_put_Id(py::wrapper::Windows::UI::Popups::UICommand* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1131,7 +1131,7 @@ namespace py::cpp::Windows::UI::Popups
 
     static PyObject* _new_UICommandSeparator(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1198,7 +1198,7 @@ namespace py::cpp::Windows::UI::Popups
 
     static int UICommandSeparator_put_Label(py::wrapper::Windows::UI::Popups::UICommandSeparator* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1267,7 +1267,7 @@ namespace py::cpp::Windows::UI::Popups
 
     static int UICommandSeparator_put_Invoked(py::wrapper::Windows::UI::Popups::UICommandSeparator* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1336,7 +1336,7 @@ namespace py::cpp::Windows::UI::Popups
 
     static int UICommandSeparator_put_Id(py::wrapper::Windows::UI::Popups::UICommandSeparator* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1474,7 +1474,7 @@ namespace py::cpp::Windows::UI::Popups
 
     static int IUICommand_put_Id(py::wrapper::Windows::UI::Popups::IUICommand* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1543,7 +1543,7 @@ namespace py::cpp::Windows::UI::Popups
 
     static int IUICommand_put_Invoked(py::wrapper::Windows::UI::Popups::IUICommand* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1612,7 +1612,7 @@ namespace py::cpp::Windows::UI::Popups
 
     static int IUICommand_put_Label(py::wrapper::Windows::UI::Popups::IUICommand* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

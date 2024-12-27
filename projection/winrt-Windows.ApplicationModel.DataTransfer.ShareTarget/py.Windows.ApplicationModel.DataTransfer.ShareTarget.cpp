@@ -8,7 +8,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
 
     static PyObject* _new_QuickLink(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -75,7 +75,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
 
     static int QuickLink_put_Title(py::wrapper::Windows::ApplicationModel::DataTransfer::ShareTarget::QuickLink* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -144,7 +144,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
 
     static int QuickLink_put_Thumbnail(py::wrapper::Windows::ApplicationModel::DataTransfer::ShareTarget::QuickLink* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -213,7 +213,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
 
     static int QuickLink_put_Id(py::wrapper::Windows::ApplicationModel::DataTransfer::ShareTarget::QuickLink* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

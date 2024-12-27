@@ -1084,7 +1084,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* _new_ResourceContext(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1655,7 +1655,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static int ResourceContext_put_Languages(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceContext* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3120,7 +3120,8 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 return self->obj.TryLookup(_key);
             }();
 
-            if (!value) {
+            if (!value)
+            {
                 if constexpr (std::is_base_of_v<winrt::Windows::Foundation::IUnknown, decltype(value)>)
                 {
                     auto has_key = [&]()
@@ -3747,7 +3748,8 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 return self->obj.TryLookup(_key);
             }();
 
-            if (!value) {
+            if (!value)
+            {
                 if constexpr (std::is_base_of_v<winrt::Windows::Foundation::IUnknown, decltype(value)>)
                 {
                     auto has_key = [&]()
@@ -4591,7 +4593,8 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 return self->obj.TryLookup(_key);
             }();
 
-            if (!value) {
+            if (!value)
+            {
                 if constexpr (std::is_base_of_v<winrt::Windows::Foundation::IUnknown, decltype(value)>)
                 {
                     auto has_key = [&]()
@@ -5146,7 +5149,8 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 return self->obj.TryLookup(_key);
             }();
 
-            if (!value) {
+            if (!value)
+            {
                 if constexpr (std::is_base_of_v<winrt::Windows::Foundation::IUnknown, decltype(value)>)
                 {
                     auto has_key = [&]()
@@ -5180,13 +5184,15 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         {
             auto _key = py::convert_to<winrt::hstring>(key);
 
-            if (value == nullptr) {
+            if (!value)
+            {
                 bool did_remove;
                 {
                     auto _gil = py::release_gil();
                     did_remove = self->obj.TryRemove(_key);
                 }
-                if (!did_remove) {
+                if (!did_remove)
+                {
                     PyErr_SetObject(PyExc_KeyError, key);
                     return -1;
                 }
@@ -5672,7 +5678,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -5745,7 +5751,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static int ResourceLayoutInfo_set_MajorVersion(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5778,7 +5784,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static int ResourceLayoutInfo_set_MinorVersion(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5811,7 +5817,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static int ResourceLayoutInfo_set_ResourceSubtreeCount(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5844,7 +5850,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static int ResourceLayoutInfo_set_NamedResourceCount(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5877,7 +5883,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static int ResourceLayoutInfo_set_Checksum(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

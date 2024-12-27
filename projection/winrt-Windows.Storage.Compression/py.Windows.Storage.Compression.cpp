@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Storage::Compression
 
     static PyObject* _new_Compressor(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -348,7 +348,7 @@ namespace py::cpp::Windows::Storage::Compression
 
     static PyObject* _new_Decompressor(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;

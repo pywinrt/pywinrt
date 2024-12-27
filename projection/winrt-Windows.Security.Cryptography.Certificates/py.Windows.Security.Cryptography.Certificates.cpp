@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* _new_Certificate(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -284,7 +284,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int Certificate_put_FriendlyName(py::wrapper::Windows::Security::Cryptography::Certificates::Certificate* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1416,7 +1416,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* _new_CertificateExtension(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1526,7 +1526,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateExtension_put_Value(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateExtension* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1595,7 +1595,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateExtension_put_ObjectId(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateExtension* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1664,7 +1664,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateExtension_put_IsCritical(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateExtension* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1758,7 +1758,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* _new_CertificateKeyUsages(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1825,7 +1825,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateKeyUsages_put_NonRepudiation(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateKeyUsages* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1894,7 +1894,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateKeyUsages_put_KeyEncipherment(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateKeyUsages* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1963,7 +1963,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateKeyUsages_put_KeyCertificateSign(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateKeyUsages* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2032,7 +2032,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateKeyUsages_put_KeyAgreement(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateKeyUsages* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2101,7 +2101,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateKeyUsages_put_EncipherOnly(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateKeyUsages* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2170,7 +2170,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateKeyUsages_put_DigitalSignature(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateKeyUsages* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2239,7 +2239,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateKeyUsages_put_DataEncipherment(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateKeyUsages* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2308,7 +2308,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateKeyUsages_put_CrlSign(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateKeyUsages* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2406,7 +2406,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* _new_CertificateQuery(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2473,7 +2473,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateQuery_put_Thumbprint(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateQuery* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2542,7 +2542,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateQuery_put_IssuerName(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateQuery* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2611,7 +2611,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateQuery_put_HardwareOnly(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateQuery* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2680,7 +2680,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateQuery_put_FriendlyName(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateQuery* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2779,7 +2779,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateQuery_put_StoreName(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateQuery* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2848,7 +2848,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateQuery_put_IncludeExpiredCertificates(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateQuery* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2917,7 +2917,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateQuery_put_IncludeDuplicates(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateQuery* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3015,7 +3015,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* _new_CertificateRequestProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3082,7 +3082,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateRequestProperties_put_Subject(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateRequestProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3151,7 +3151,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateRequestProperties_put_KeyUsages(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateRequestProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3220,7 +3220,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateRequestProperties_put_KeyStorageProviderName(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateRequestProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3289,7 +3289,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateRequestProperties_put_KeySize(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateRequestProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3358,7 +3358,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateRequestProperties_put_Exportable(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateRequestProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3427,7 +3427,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateRequestProperties_put_KeyProtectionLevel(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateRequestProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3496,7 +3496,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateRequestProperties_put_KeyAlgorithmName(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateRequestProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3565,7 +3565,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateRequestProperties_put_HashAlgorithmName(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateRequestProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3634,7 +3634,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateRequestProperties_put_FriendlyName(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateRequestProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3703,7 +3703,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateRequestProperties_put_AttestationCredentialCertificate(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateRequestProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3772,7 +3772,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateRequestProperties_put_SigningCertificate(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateRequestProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3841,7 +3841,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateRequestProperties_put_SmartcardReaderName(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateRequestProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3910,7 +3910,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateRequestProperties_put_UseExistingKey(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateRequestProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3979,7 +3979,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateRequestProperties_put_CurveParameters(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateRequestProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4048,7 +4048,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateRequestProperties_put_CurveName(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateRequestProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4117,7 +4117,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateRequestProperties_put_ContainerNamePrefix(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateRequestProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4186,7 +4186,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateRequestProperties_put_ContainerName(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateRequestProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4859,7 +4859,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* _new_ChainBuildingParameters(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -4926,7 +4926,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int ChainBuildingParameters_put_ValidationTimestamp(py::wrapper::Windows::Security::Cryptography::Certificates::ChainBuildingParameters* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4995,7 +4995,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int ChainBuildingParameters_put_RevocationCheckEnabled(py::wrapper::Windows::Security::Cryptography::Certificates::ChainBuildingParameters* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5064,7 +5064,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int ChainBuildingParameters_put_NetworkRetrievalEnabled(py::wrapper::Windows::Security::Cryptography::Certificates::ChainBuildingParameters* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5133,7 +5133,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int ChainBuildingParameters_put_CurrentTimeValidationEnabled(py::wrapper::Windows::Security::Cryptography::Certificates::ChainBuildingParameters* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5202,7 +5202,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int ChainBuildingParameters_put_AuthorityInformationAccessEnabled(py::wrapper::Windows::Security::Cryptography::Certificates::ChainBuildingParameters* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5359,7 +5359,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* _new_ChainValidationParameters(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -5426,7 +5426,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int ChainValidationParameters_put_ServerDnsName(py::wrapper::Windows::Security::Cryptography::Certificates::ChainValidationParameters* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5495,7 +5495,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int ChainValidationParameters_put_CertificateChainPolicy(py::wrapper::Windows::Security::Cryptography::Certificates::ChainValidationParameters* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5587,7 +5587,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* _new_CmsAttachedSignature(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -5881,7 +5881,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* _new_CmsDetachedSignature(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -6146,7 +6146,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* _new_CmsSignerInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -6213,7 +6213,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CmsSignerInfo_put_HashAlgorithmName(py::wrapper::Windows::Security::Cryptography::Certificates::CmsSignerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6282,7 +6282,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CmsSignerInfo_put_Certificate(py::wrapper::Windows::Security::Cryptography::Certificates::CmsSignerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7296,7 +7296,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* _new_PfxImportParameters(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -7363,7 +7363,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int PfxImportParameters_put_ReaderName(py::wrapper::Windows::Security::Cryptography::Certificates::PfxImportParameters* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7432,7 +7432,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int PfxImportParameters_put_KeyStorageProviderName(py::wrapper::Windows::Security::Cryptography::Certificates::PfxImportParameters* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7501,7 +7501,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int PfxImportParameters_put_KeyProtectionLevel(py::wrapper::Windows::Security::Cryptography::Certificates::PfxImportParameters* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7570,7 +7570,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int PfxImportParameters_put_InstallOptions(py::wrapper::Windows::Security::Cryptography::Certificates::PfxImportParameters* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7639,7 +7639,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int PfxImportParameters_put_FriendlyName(py::wrapper::Windows::Security::Cryptography::Certificates::PfxImportParameters* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7708,7 +7708,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int PfxImportParameters_put_Exportable(py::wrapper::Windows::Security::Cryptography::Certificates::PfxImportParameters* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7777,7 +7777,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int PfxImportParameters_put_ContainerNamePrefix(py::wrapper::Windows::Security::Cryptography::Certificates::PfxImportParameters* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8023,7 +8023,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* _new_SubjectAlternativeNameInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;

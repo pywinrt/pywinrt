@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* _new_AddPackageOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -75,7 +75,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static int AddPackageOptions_put_TargetVolume(py::wrapper::Windows::Management::Deployment::AddPackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -144,7 +144,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static int AddPackageOptions_put_StubPackageOption(py::wrapper::Windows::Management::Deployment::AddPackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -213,7 +213,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static int AddPackageOptions_put_StageInPlace(py::wrapper::Windows::Management::Deployment::AddPackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -282,7 +282,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static int AddPackageOptions_put_RetainFilesOnFailure(py::wrapper::Windows::Management::Deployment::AddPackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -351,7 +351,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static int AddPackageOptions_put_RequiredContentGroupOnly(py::wrapper::Windows::Management::Deployment::AddPackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -420,7 +420,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static int AddPackageOptions_put_InstallAllResources(py::wrapper::Windows::Management::Deployment::AddPackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -489,7 +489,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static int AddPackageOptions_put_ForceUpdateFromAnyVersion(py::wrapper::Windows::Management::Deployment::AddPackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -558,7 +558,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static int AddPackageOptions_put_ForceTargetAppShutdown(py::wrapper::Windows::Management::Deployment::AddPackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -627,7 +627,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static int AddPackageOptions_put_ForceAppShutdown(py::wrapper::Windows::Management::Deployment::AddPackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -696,7 +696,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static int AddPackageOptions_put_ExternalLocationUri(py::wrapper::Windows::Management::Deployment::AddPackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -765,7 +765,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static int AddPackageOptions_put_DeveloperMode(py::wrapper::Windows::Management::Deployment::AddPackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -834,7 +834,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static int AddPackageOptions_put_DeferRegistrationWhenPackagesAreInUse(py::wrapper::Windows::Management::Deployment::AddPackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -903,7 +903,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static int AddPackageOptions_put_AllowUnsigned(py::wrapper::Windows::Management::Deployment::AddPackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1092,7 +1092,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static int AddPackageOptions_put_LimitToExistingPackages(py::wrapper::Windows::Management::Deployment::AddPackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1538,7 +1538,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* _new_AutoUpdateSettingsOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1647,7 +1647,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static int AutoUpdateSettingsOptions_put_Version(py::wrapper::Windows::Management::Deployment::AutoUpdateSettingsOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1716,7 +1716,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static int AutoUpdateSettingsOptions_put_UpdateBlocksActivation(py::wrapper::Windows::Management::Deployment::AutoUpdateSettingsOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1785,7 +1785,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static int AutoUpdateSettingsOptions_put_ShowPrompt(py::wrapper::Windows::Management::Deployment::AutoUpdateSettingsOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1854,7 +1854,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static int AutoUpdateSettingsOptions_put_OnLaunch(py::wrapper::Windows::Management::Deployment::AutoUpdateSettingsOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1923,7 +1923,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static int AutoUpdateSettingsOptions_put_IsAutoRepairEnabled(py::wrapper::Windows::Management::Deployment::AutoUpdateSettingsOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1992,7 +1992,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static int AutoUpdateSettingsOptions_put_HoursBetweenUpdateChecks(py::wrapper::Windows::Management::Deployment::AutoUpdateSettingsOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2061,7 +2061,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static int AutoUpdateSettingsOptions_put_ForceUpdateFromAnyVersion(py::wrapper::Windows::Management::Deployment::AutoUpdateSettingsOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2130,7 +2130,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static int AutoUpdateSettingsOptions_put_AutomaticBackgroundTask(py::wrapper::Windows::Management::Deployment::AutoUpdateSettingsOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2199,7 +2199,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static int AutoUpdateSettingsOptions_put_AppInstallerUri(py::wrapper::Windows::Management::Deployment::AutoUpdateSettingsOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2448,7 +2448,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* _new_CreateSharedPackageContainerOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2515,7 +2515,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static int CreateSharedPackageContainerOptions_put_ForceAppShutdown(py::wrapper::Windows::Management::Deployment::CreateSharedPackageContainerOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2584,7 +2584,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static int CreateSharedPackageContainerOptions_put_CreateCollisionOption(py::wrapper::Windows::Management::Deployment::CreateSharedPackageContainerOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2866,7 +2866,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* _new_DeleteSharedPackageContainerOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2933,7 +2933,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static int DeleteSharedPackageContainerOptions_put_ForceAppShutdown(py::wrapper::Windows::Management::Deployment::DeleteSharedPackageContainerOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3002,7 +3002,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static int DeleteSharedPackageContainerOptions_put_AllUsers(py::wrapper::Windows::Management::Deployment::DeleteSharedPackageContainerOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3412,7 +3412,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* _new_FindSharedPackageContainerOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3479,7 +3479,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static int FindSharedPackageContainerOptions_put_PackageFamilyName(py::wrapper::Windows::Management::Deployment::FindSharedPackageContainerOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3548,7 +3548,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static int FindSharedPackageContainerOptions_put_Name(py::wrapper::Windows::Management::Deployment::FindSharedPackageContainerOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3640,7 +3640,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* _new_PackageAllUserProvisioningOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3767,7 +3767,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static int PackageAllUserProvisioningOptions_put_DeferAutomaticRegistration(py::wrapper::Windows::Management::Deployment::PackageAllUserProvisioningOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3860,7 +3860,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* _new_PackageManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -8158,7 +8158,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* _new_RegisterPackageOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -8225,7 +8225,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static int RegisterPackageOptions_put_StageInPlace(py::wrapper::Windows::Management::Deployment::RegisterPackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8294,7 +8294,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static int RegisterPackageOptions_put_InstallAllResources(py::wrapper::Windows::Management::Deployment::RegisterPackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8363,7 +8363,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static int RegisterPackageOptions_put_ForceUpdateFromAnyVersion(py::wrapper::Windows::Management::Deployment::RegisterPackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8432,7 +8432,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static int RegisterPackageOptions_put_ForceTargetAppShutdown(py::wrapper::Windows::Management::Deployment::RegisterPackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8501,7 +8501,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static int RegisterPackageOptions_put_ForceAppShutdown(py::wrapper::Windows::Management::Deployment::RegisterPackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8570,7 +8570,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static int RegisterPackageOptions_put_ExternalLocationUri(py::wrapper::Windows::Management::Deployment::RegisterPackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8639,7 +8639,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static int RegisterPackageOptions_put_DeveloperMode(py::wrapper::Windows::Management::Deployment::RegisterPackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8708,7 +8708,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static int RegisterPackageOptions_put_DeferRegistrationWhenPackagesAreInUse(py::wrapper::Windows::Management::Deployment::RegisterPackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8777,7 +8777,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static int RegisterPackageOptions_put_AppDataVolume(py::wrapper::Windows::Management::Deployment::RegisterPackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8846,7 +8846,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static int RegisterPackageOptions_put_AllowUnsigned(py::wrapper::Windows::Management::Deployment::RegisterPackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9039,7 +9039,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* _new_RemovePackageOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -9106,7 +9106,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static int RemovePackageOptions_put_RemoveForAllUsers(py::wrapper::Windows::Management::Deployment::RemovePackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9175,7 +9175,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static int RemovePackageOptions_put_PreserveRoamableApplicationData(py::wrapper::Windows::Management::Deployment::RemovePackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9244,7 +9244,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static int RemovePackageOptions_put_PreserveApplicationData(py::wrapper::Windows::Management::Deployment::RemovePackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9313,7 +9313,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static int RemovePackageOptions_put_DeferRemovalWhenPackagesAreInUse(py::wrapper::Windows::Management::Deployment::RemovePackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10092,7 +10092,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* _new_SharedPackageContainerMember(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -10213,7 +10213,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* _new_StagePackageOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -10280,7 +10280,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static int StagePackageOptions_put_TargetVolume(py::wrapper::Windows::Management::Deployment::StagePackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10349,7 +10349,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static int StagePackageOptions_put_StubPackageOption(py::wrapper::Windows::Management::Deployment::StagePackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10418,7 +10418,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static int StagePackageOptions_put_StageInPlace(py::wrapper::Windows::Management::Deployment::StagePackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10487,7 +10487,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static int StagePackageOptions_put_RequiredContentGroupOnly(py::wrapper::Windows::Management::Deployment::StagePackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10556,7 +10556,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static int StagePackageOptions_put_InstallAllResources(py::wrapper::Windows::Management::Deployment::StagePackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10625,7 +10625,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static int StagePackageOptions_put_ForceUpdateFromAnyVersion(py::wrapper::Windows::Management::Deployment::StagePackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10694,7 +10694,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static int StagePackageOptions_put_ExternalLocationUri(py::wrapper::Windows::Management::Deployment::StagePackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10763,7 +10763,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static int StagePackageOptions_put_DeveloperMode(py::wrapper::Windows::Management::Deployment::StagePackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10832,7 +10832,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static int StagePackageOptions_put_AllowUnsigned(py::wrapper::Windows::Management::Deployment::StagePackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11086,7 +11086,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* _new_UpdateSharedPackageContainerOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -11153,7 +11153,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static int UpdateSharedPackageContainerOptions_put_RequirePackagesPresent(py::wrapper::Windows::Management::Deployment::UpdateSharedPackageContainerOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11222,7 +11222,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static int UpdateSharedPackageContainerOptions_put_ForceAppShutdown(py::wrapper::Windows::Management::Deployment::UpdateSharedPackageContainerOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11458,7 +11458,7 @@ namespace py::cpp::Windows::Management::Deployment
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -11525,7 +11525,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static int DeploymentProgress_set_state(py::wrapper::Windows::Management::Deployment::DeploymentProgress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11558,7 +11558,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static int DeploymentProgress_set_percentage(py::wrapper::Windows::Management::Deployment::DeploymentProgress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

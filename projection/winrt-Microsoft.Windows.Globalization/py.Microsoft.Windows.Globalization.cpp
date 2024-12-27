@@ -45,7 +45,7 @@ namespace py::cpp::Microsoft::Windows::Globalization
 
     static int ApplicationLanguages_put_PrimaryLanguageOverride(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

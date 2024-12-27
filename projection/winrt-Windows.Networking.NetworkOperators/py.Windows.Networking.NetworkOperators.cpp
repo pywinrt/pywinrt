@@ -5830,7 +5830,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* _new_MobileBroadbandAccountWatcher(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -6368,7 +6368,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* _new_MobileBroadbandAntennaSar(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -12257,7 +12257,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* _new_MobileBroadbandModemIsolation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -17327,7 +17327,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* _new_NetworkOperatorTetheringAccessPointConfiguration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -17562,7 +17562,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static int NetworkOperatorTetheringAccessPointConfiguration_put_Ssid(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringAccessPointConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -17631,7 +17631,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static int NetworkOperatorTetheringAccessPointConfiguration_put_Passphrase(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringAccessPointConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -17700,7 +17700,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static int NetworkOperatorTetheringAccessPointConfiguration_put_Band(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringAccessPointConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -17769,7 +17769,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static int NetworkOperatorTetheringAccessPointConfiguration_put_AuthenticationKind(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringAccessPointConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -18968,7 +18968,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* _new_NetworkOperatorTetheringSessionAccessPointConfiguration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -19203,7 +19203,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static int NetworkOperatorTetheringSessionAccessPointConfiguration_put_Ssid(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringSessionAccessPointConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19272,7 +19272,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static int NetworkOperatorTetheringSessionAccessPointConfiguration_put_PerformancePriority(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringSessionAccessPointConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19341,7 +19341,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static int NetworkOperatorTetheringSessionAccessPointConfiguration_put_Passphrase(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringSessionAccessPointConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19410,7 +19410,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static int NetworkOperatorTetheringSessionAccessPointConfiguration_put_Band(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringSessionAccessPointConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19479,7 +19479,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static int NetworkOperatorTetheringSessionAccessPointConfiguration_put_AuthenticationKind(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringSessionAccessPointConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19860,7 +19860,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* _new_ProvisioningAgent(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -20286,7 +20286,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* _new_UssdMessage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -20438,7 +20438,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static int UssdMessage_put_PayloadAsText(py::wrapper::Windows::Networking::NetworkOperators::UssdMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -20507,7 +20507,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static int UssdMessage_put_DataCodingScheme(py::wrapper::Windows::Networking::NetworkOperators::UssdMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -21007,7 +21007,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -21074,7 +21074,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static int ESimProfileInstallProgress_set_TotalSizeInBytes(py::wrapper::Windows::Networking::NetworkOperators::ESimProfileInstallProgress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -21107,7 +21107,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static int ESimProfileInstallProgress_set_InstalledSizeInBytes(py::wrapper::Windows::Networking::NetworkOperators::ESimProfileInstallProgress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -21221,7 +21221,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -21288,7 +21288,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static int ProfileUsage_set_UsageInMegabytes(py::wrapper::Windows::Networking::NetworkOperators::ProfileUsage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -21321,7 +21321,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static int ProfileUsage_set_LastSyncTime(py::wrapper::Windows::Networking::NetworkOperators::ProfileUsage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

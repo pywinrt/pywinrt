@@ -173,7 +173,7 @@ namespace py::cpp::Windows::UI::Core
 
     static int AcceleratorKeyEventArgs_put_Handled(py::wrapper::Windows::UI::Core::AcceleratorKeyEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -313,7 +313,7 @@ namespace py::cpp::Windows::UI::Core
 
     static int AutomationProviderRequestedEventArgs_put_AutomationProvider(py::wrapper::Windows::UI::Core::AutomationProviderRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -382,7 +382,7 @@ namespace py::cpp::Windows::UI::Core
 
     static int AutomationProviderRequestedEventArgs_put_Handled(py::wrapper::Windows::UI::Core::AutomationProviderRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -519,7 +519,7 @@ namespace py::cpp::Windows::UI::Core
 
     static int BackRequestedEventArgs_put_Handled(py::wrapper::Windows::UI::Core::BackRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -715,7 +715,7 @@ namespace py::cpp::Windows::UI::Core
 
     static int CharacterReceivedEventArgs_put_Handled(py::wrapper::Windows::UI::Core::CharacterReceivedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -853,7 +853,7 @@ namespace py::cpp::Windows::UI::Core
 
     static int ClosestInteractiveBoundsRequestedEventArgs_put_ClosestInteractiveBounds(py::wrapper::Windows::UI::Core::ClosestInteractiveBoundsRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1378,7 +1378,7 @@ namespace py::cpp::Windows::UI::Core
 
     static int CoreComponentInputSource_put_IsInputEnabled(py::wrapper::Windows::UI::Core::CoreComponentInputSource* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1477,7 +1477,7 @@ namespace py::cpp::Windows::UI::Core
 
     static int CoreComponentInputSource_put_PointerCursor(py::wrapper::Windows::UI::Core::CoreComponentInputSource* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2673,7 +2673,7 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* _new_CoreCursor(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3237,7 +3237,7 @@ namespace py::cpp::Windows::UI::Core
 
     static int CoreDispatcher_put_CurrentPriority(py::wrapper::Windows::UI::Core::CoreDispatcher* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3531,7 +3531,7 @@ namespace py::cpp::Windows::UI::Core
 
     static int CoreIndependentInputSource_put_IsInputEnabled(py::wrapper::Windows::UI::Core::CoreIndependentInputSource* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3630,7 +3630,7 @@ namespace py::cpp::Windows::UI::Core
 
     static int CoreIndependentInputSource_put_PointerCursor(py::wrapper::Windows::UI::Core::CoreIndependentInputSource* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4813,7 +4813,7 @@ namespace py::cpp::Windows::UI::Core
 
     static int CoreIndependentInputSourceController_put_IsTransparentForUncontrolledInput(py::wrapper::Windows::UI::Core::CoreIndependentInputSourceController* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4882,7 +4882,7 @@ namespace py::cpp::Windows::UI::Core
 
     static int CoreIndependentInputSourceController_put_IsPalmRejectionEnabled(py::wrapper::Windows::UI::Core::CoreIndependentInputSourceController* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5433,7 +5433,7 @@ namespace py::cpp::Windows::UI::Core
 
     static int CoreWindow_put_PointerPosition(py::wrapper::Windows::UI::Core::CoreWindow* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5502,7 +5502,7 @@ namespace py::cpp::Windows::UI::Core
 
     static int CoreWindow_put_PointerCursor(py::wrapper::Windows::UI::Core::CoreWindow* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5571,7 +5571,7 @@ namespace py::cpp::Windows::UI::Core
 
     static int CoreWindow_put_FlowDirection(py::wrapper::Windows::UI::Core::CoreWindow* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5640,7 +5640,7 @@ namespace py::cpp::Windows::UI::Core
 
     static int CoreWindow_put_IsInputEnabled(py::wrapper::Windows::UI::Core::CoreWindow* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7556,7 +7556,7 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* _new_CoreWindowDialog(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -7678,7 +7678,7 @@ namespace py::cpp::Windows::UI::Core
 
     static int CoreWindowDialog_put_Title(py::wrapper::Windows::UI::Core::CoreWindowDialog* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7747,7 +7747,7 @@ namespace py::cpp::Windows::UI::Core
 
     static int CoreWindowDialog_put_IsInteractionDelayed(py::wrapper::Windows::UI::Core::CoreWindowDialog* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7816,7 +7816,7 @@ namespace py::cpp::Windows::UI::Core
 
     static int CoreWindowDialog_put_DefaultCommandIndex(py::wrapper::Windows::UI::Core::CoreWindowDialog* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7885,7 +7885,7 @@ namespace py::cpp::Windows::UI::Core
 
     static int CoreWindowDialog_put_CancelCommandIndex(py::wrapper::Windows::UI::Core::CoreWindowDialog* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7954,7 +7954,7 @@ namespace py::cpp::Windows::UI::Core
 
     static int CoreWindowDialog_put_BackButtonCommand(py::wrapper::Windows::UI::Core::CoreWindowDialog* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8255,7 +8255,7 @@ namespace py::cpp::Windows::UI::Core
 
     static int CoreWindowEventArgs_put_Handled(py::wrapper::Windows::UI::Core::CoreWindowEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8346,7 +8346,7 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* _new_CoreWindowFlyout(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -8471,7 +8471,7 @@ namespace py::cpp::Windows::UI::Core
 
     static int CoreWindowFlyout_put_Title(py::wrapper::Windows::UI::Core::CoreWindowFlyout* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8540,7 +8540,7 @@ namespace py::cpp::Windows::UI::Core
 
     static int CoreWindowFlyout_put_IsInteractionDelayed(py::wrapper::Windows::UI::Core::CoreWindowFlyout* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8609,7 +8609,7 @@ namespace py::cpp::Windows::UI::Core
 
     static int CoreWindowFlyout_put_DefaultCommandIndex(py::wrapper::Windows::UI::Core::CoreWindowFlyout* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8678,7 +8678,7 @@ namespace py::cpp::Windows::UI::Core
 
     static int CoreWindowFlyout_put_BackButtonCommand(py::wrapper::Windows::UI::Core::CoreWindowFlyout* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9169,7 +9169,7 @@ namespace py::cpp::Windows::UI::Core
 
     static int CoreWindowResizeManager_put_ShouldWaitForLayoutCompletion(py::wrapper::Windows::UI::Core::CoreWindowResizeManager* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9429,7 +9429,7 @@ namespace py::cpp::Windows::UI::Core
 
     static int InputEnabledEventArgs_put_Handled(py::wrapper::Windows::UI::Core::InputEnabledEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9596,7 +9596,7 @@ namespace py::cpp::Windows::UI::Core
 
     static int KeyEventArgs_put_Handled(py::wrapper::Windows::UI::Core::KeyEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9865,7 +9865,7 @@ namespace py::cpp::Windows::UI::Core
 
     static int PointerEventArgs_put_Handled(py::wrapper::Windows::UI::Core::PointerEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10104,7 +10104,7 @@ namespace py::cpp::Windows::UI::Core
 
     static int SystemNavigationManager_put_AppViewBackButtonVisibility(py::wrapper::Windows::UI::Core::SystemNavigationManager* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10417,7 +10417,7 @@ namespace py::cpp::Windows::UI::Core
 
     static int TouchHitTestingEventArgs_put_Handled(py::wrapper::Windows::UI::Core::TouchHitTestingEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10486,7 +10486,7 @@ namespace py::cpp::Windows::UI::Core
 
     static int TouchHitTestingEventArgs_put_ProximityEvaluation(py::wrapper::Windows::UI::Core::TouchHitTestingEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10687,7 +10687,7 @@ namespace py::cpp::Windows::UI::Core
 
     static int VisibilityChangedEventArgs_put_Handled(py::wrapper::Windows::UI::Core::VisibilityChangedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10854,7 +10854,7 @@ namespace py::cpp::Windows::UI::Core
 
     static int WindowActivatedEventArgs_put_Handled(py::wrapper::Windows::UI::Core::WindowActivatedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11021,7 +11021,7 @@ namespace py::cpp::Windows::UI::Core
 
     static int WindowSizeChangedEventArgs_put_Handled(py::wrapper::Windows::UI::Core::WindowSizeChangedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11475,7 +11475,7 @@ namespace py::cpp::Windows::UI::Core
 
     static int ICoreInputSourceBase_put_IsInputEnabled(py::wrapper::Windows::UI::Core::ICoreInputSourceBase* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11978,7 +11978,7 @@ namespace py::cpp::Windows::UI::Core
 
     static int ICorePointerInputSource_put_PointerCursor(py::wrapper::Windows::UI::Core::ICorePointerInputSource* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13386,7 +13386,7 @@ namespace py::cpp::Windows::UI::Core
 
     static int ICorePointerInputSource2_put_PointerCursor(py::wrapper::Windows::UI::Core::ICorePointerInputSource2* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15556,7 +15556,7 @@ namespace py::cpp::Windows::UI::Core
 
     static int ICoreWindow_put_FlowDirection(py::wrapper::Windows::UI::Core::ICoreWindow* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15625,7 +15625,7 @@ namespace py::cpp::Windows::UI::Core
 
     static int ICoreWindow_put_IsInputEnabled(py::wrapper::Windows::UI::Core::ICoreWindow* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15694,7 +15694,7 @@ namespace py::cpp::Windows::UI::Core
 
     static int ICoreWindow_put_PointerCursor(py::wrapper::Windows::UI::Core::ICoreWindow* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -18568,7 +18568,7 @@ namespace py::cpp::Windows::UI::Core
 
     static int ICoreWindowEventArgs_put_Handled(py::wrapper::Windows::UI::Core::ICoreWindowEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -18982,7 +18982,7 @@ namespace py::cpp::Windows::UI::Core
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -19057,7 +19057,7 @@ namespace py::cpp::Windows::UI::Core
 
     static int CorePhysicalKeyStatus_set_RepeatCount(py::wrapper::Windows::UI::Core::CorePhysicalKeyStatus* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19090,7 +19090,7 @@ namespace py::cpp::Windows::UI::Core
 
     static int CorePhysicalKeyStatus_set_ScanCode(py::wrapper::Windows::UI::Core::CorePhysicalKeyStatus* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19123,7 +19123,7 @@ namespace py::cpp::Windows::UI::Core
 
     static int CorePhysicalKeyStatus_set_IsExtendedKey(py::wrapper::Windows::UI::Core::CorePhysicalKeyStatus* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19156,7 +19156,7 @@ namespace py::cpp::Windows::UI::Core
 
     static int CorePhysicalKeyStatus_set_IsMenuKeyDown(py::wrapper::Windows::UI::Core::CorePhysicalKeyStatus* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19189,7 +19189,7 @@ namespace py::cpp::Windows::UI::Core
 
     static int CorePhysicalKeyStatus_set_WasKeyDown(py::wrapper::Windows::UI::Core::CorePhysicalKeyStatus* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19222,7 +19222,7 @@ namespace py::cpp::Windows::UI::Core
 
     static int CorePhysicalKeyStatus_set_IsKeyReleased(py::wrapper::Windows::UI::Core::CorePhysicalKeyStatus* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19364,7 +19364,7 @@ namespace py::cpp::Windows::UI::Core
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -19431,7 +19431,7 @@ namespace py::cpp::Windows::UI::Core
 
     static int CoreProximityEvaluation_set_Score(py::wrapper::Windows::UI::Core::CoreProximityEvaluation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19464,7 +19464,7 @@ namespace py::cpp::Windows::UI::Core
 
     static int CoreProximityEvaluation_set_AdjustedPoint(py::wrapper::Windows::UI::Core::CoreProximityEvaluation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

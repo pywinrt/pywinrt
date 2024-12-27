@@ -1803,7 +1803,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* _new_SpatialEntity(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -4207,7 +4207,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static int SpatialLocatorAttachedFrameOfReference_put_RelativePosition(py::wrapper::Windows::Perception::Spatial::SpatialLocatorAttachedFrameOfReference* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4276,7 +4276,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static int SpatialLocatorAttachedFrameOfReference_put_RelativeOrientation(py::wrapper::Windows::Perception::Spatial::SpatialLocatorAttachedFrameOfReference* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4416,7 +4416,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static int SpatialLocatorPositionalTrackingDeactivatingEventArgs_put_Canceled(py::wrapper::Windows::Perception::Spatial::SpatialLocatorPositionalTrackingDeactivatingEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5029,7 +5029,7 @@ namespace py::cpp::Windows::Perception::Spatial
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -5096,7 +5096,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static int SpatialBoundingBox_set_Center(py::wrapper::Windows::Perception::Spatial::SpatialBoundingBox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5129,7 +5129,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static int SpatialBoundingBox_set_Extents(py::wrapper::Windows::Perception::Spatial::SpatialBoundingBox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5243,7 +5243,7 @@ namespace py::cpp::Windows::Perception::Spatial
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -5318,7 +5318,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static int SpatialBoundingFrustum_set_Near(py::wrapper::Windows::Perception::Spatial::SpatialBoundingFrustum* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5351,7 +5351,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static int SpatialBoundingFrustum_set_Far(py::wrapper::Windows::Perception::Spatial::SpatialBoundingFrustum* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5384,7 +5384,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static int SpatialBoundingFrustum_set_Right(py::wrapper::Windows::Perception::Spatial::SpatialBoundingFrustum* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5417,7 +5417,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static int SpatialBoundingFrustum_set_Left(py::wrapper::Windows::Perception::Spatial::SpatialBoundingFrustum* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5450,7 +5450,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static int SpatialBoundingFrustum_set_Top(py::wrapper::Windows::Perception::Spatial::SpatialBoundingFrustum* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5483,7 +5483,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static int SpatialBoundingFrustum_set_Bottom(py::wrapper::Windows::Perception::Spatial::SpatialBoundingFrustum* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5625,7 +5625,7 @@ namespace py::cpp::Windows::Perception::Spatial
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -5694,7 +5694,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static int SpatialBoundingOrientedBox_set_Center(py::wrapper::Windows::Perception::Spatial::SpatialBoundingOrientedBox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5727,7 +5727,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static int SpatialBoundingOrientedBox_set_Extents(py::wrapper::Windows::Perception::Spatial::SpatialBoundingOrientedBox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5760,7 +5760,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static int SpatialBoundingOrientedBox_set_Orientation(py::wrapper::Windows::Perception::Spatial::SpatialBoundingOrientedBox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5881,7 +5881,7 @@ namespace py::cpp::Windows::Perception::Spatial
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -5948,7 +5948,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static int SpatialBoundingSphere_set_Center(py::wrapper::Windows::Perception::Spatial::SpatialBoundingSphere* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5981,7 +5981,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static int SpatialBoundingSphere_set_Radius(py::wrapper::Windows::Perception::Spatial::SpatialBoundingSphere* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6095,7 +6095,7 @@ namespace py::cpp::Windows::Perception::Spatial
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -6162,7 +6162,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static int SpatialRay_set_Origin(py::wrapper::Windows::Perception::Spatial::SpatialRay* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6195,7 +6195,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static int SpatialRay_set_Direction(py::wrapper::Windows::Perception::Spatial::SpatialRay* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

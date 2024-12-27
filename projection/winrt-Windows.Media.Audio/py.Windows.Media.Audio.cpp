@@ -523,7 +523,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioDeviceInputNode_put_OutgoingGain(py::wrapper::Windows::Media::Audio::AudioDeviceInputNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -592,7 +592,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioDeviceInputNode_put_ConsumeInput(py::wrapper::Windows::Media::Audio::AudioDeviceInputNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1108,7 +1108,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioDeviceOutputNode_put_OutgoingGain(py::wrapper::Windows::Media::Audio::AudioDeviceOutputNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1177,7 +1177,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioDeviceOutputNode_put_ConsumeInput(py::wrapper::Windows::Media::Audio::AudioDeviceOutputNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1306,7 +1306,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioDeviceOutputNode_put_Listener(py::wrapper::Windows::Media::Audio::AudioDeviceOutputNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2240,7 +2240,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioFileInputNode_put_PlaybackSpeedFactor(py::wrapper::Windows::Media::Audio::AudioFileInputNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2309,7 +2309,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioFileInputNode_put_LoopCount(py::wrapper::Windows::Media::Audio::AudioFileInputNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2378,7 +2378,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioFileInputNode_put_EndTime(py::wrapper::Windows::Media::Audio::AudioFileInputNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2447,7 +2447,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioFileInputNode_put_StartTime(py::wrapper::Windows::Media::Audio::AudioFileInputNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2666,7 +2666,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioFileInputNode_put_OutgoingGain(py::wrapper::Windows::Media::Audio::AudioFileInputNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2735,7 +2735,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioFileInputNode_put_ConsumeInput(py::wrapper::Windows::Media::Audio::AudioFileInputNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3395,7 +3395,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioFileOutputNode_put_OutgoingGain(py::wrapper::Windows::Media::Audio::AudioFileOutputNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3464,7 +3464,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioFileOutputNode_put_ConsumeInput(py::wrapper::Windows::Media::Audio::AudioFileOutputNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4258,7 +4258,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioFrameInputNode_put_PlaybackSpeedFactor(py::wrapper::Windows::Media::Audio::AudioFrameInputNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4417,7 +4417,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioFrameInputNode_put_OutgoingGain(py::wrapper::Windows::Media::Audio::AudioFrameInputNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4486,7 +4486,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioFrameInputNode_put_ConsumeInput(py::wrapper::Windows::Media::Audio::AudioFrameInputNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5149,7 +5149,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioFrameOutputNode_put_OutgoingGain(py::wrapper::Windows::Media::Audio::AudioFrameOutputNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5218,7 +5218,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioFrameOutputNode_put_ConsumeInput(py::wrapper::Windows::Media::Audio::AudioFrameOutputNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7157,7 +7157,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioGraphConnection_put_Gain(py::wrapper::Windows::Media::Audio::AudioGraphConnection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7279,7 +7279,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* _new_AudioGraphSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -7348,7 +7348,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioGraphSettings_put_QuantumSizeSelectionMode(py::wrapper::Windows::Media::Audio::AudioGraphSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7417,7 +7417,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioGraphSettings_put_PrimaryRenderDevice(py::wrapper::Windows::Media::Audio::AudioGraphSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7486,7 +7486,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioGraphSettings_put_EncodingProperties(py::wrapper::Windows::Media::Audio::AudioGraphSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7555,7 +7555,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioGraphSettings_put_DesiredSamplesPerQuantum(py::wrapper::Windows::Media::Audio::AudioGraphSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7624,7 +7624,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioGraphSettings_put_DesiredRenderDeviceAudioProcessing(py::wrapper::Windows::Media::Audio::AudioGraphSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7693,7 +7693,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioGraphSettings_put_AudioRenderCategory(py::wrapper::Windows::Media::Audio::AudioGraphSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7762,7 +7762,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioGraphSettings_put_MaxPlaybackSpeedFactor(py::wrapper::Windows::Media::Audio::AudioGraphSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7956,7 +7956,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* _new_AudioNodeEmitter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -8040,7 +8040,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioNodeEmitter_put_Position(py::wrapper::Windows::Media::Audio::AudioNodeEmitter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8109,7 +8109,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioNodeEmitter_put_Gain(py::wrapper::Windows::Media::Audio::AudioNodeEmitter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8178,7 +8178,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioNodeEmitter_put_DopplerVelocity(py::wrapper::Windows::Media::Audio::AudioNodeEmitter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8247,7 +8247,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioNodeEmitter_put_DopplerScale(py::wrapper::Windows::Media::Audio::AudioNodeEmitter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8316,7 +8316,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioNodeEmitter_put_DistanceScale(py::wrapper::Windows::Media::Audio::AudioNodeEmitter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8385,7 +8385,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioNodeEmitter_put_Direction(py::wrapper::Windows::Media::Audio::AudioNodeEmitter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8544,7 +8544,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioNodeEmitter_put_SpatialAudioModel(py::wrapper::Windows::Media::Audio::AudioNodeEmitter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9475,7 +9475,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* _new_AudioNodeListener(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -9542,7 +9542,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioNodeListener_put_SpeedOfSound(py::wrapper::Windows::Media::Audio::AudioNodeListener* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9611,7 +9611,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioNodeListener_put_Position(py::wrapper::Windows::Media::Audio::AudioNodeListener* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9680,7 +9680,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioNodeListener_put_Orientation(py::wrapper::Windows::Media::Audio::AudioNodeListener* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9749,7 +9749,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioNodeListener_put_DopplerVelocity(py::wrapper::Windows::Media::Audio::AudioNodeListener* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11525,7 +11525,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioSubmixNode_put_OutgoingGain(py::wrapper::Windows::Media::Audio::AudioSubmixNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11594,7 +11594,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioSubmixNode_put_ConsumeInput(py::wrapper::Windows::Media::Audio::AudioSubmixNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12738,7 +12738,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* _new_EchoEffectDefinition(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -12807,7 +12807,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int EchoEffectDefinition_put_WetDryMix(py::wrapper::Windows::Media::Audio::EchoEffectDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12876,7 +12876,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int EchoEffectDefinition_put_Feedback(py::wrapper::Windows::Media::Audio::EchoEffectDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12945,7 +12945,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int EchoEffectDefinition_put_Delay(py::wrapper::Windows::Media::Audio::EchoEffectDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13145,7 +13145,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int EqualizerBand_put_Gain(py::wrapper::Windows::Media::Audio::EqualizerBand* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13214,7 +13214,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int EqualizerBand_put_FrequencyCenter(py::wrapper::Windows::Media::Audio::EqualizerBand* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13283,7 +13283,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int EqualizerBand_put_Bandwidth(py::wrapper::Windows::Media::Audio::EqualizerBand* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13376,7 +13376,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* _new_EqualizerEffectDefinition(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -13656,7 +13656,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* _new_LimiterEffectDefinition(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -13725,7 +13725,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int LimiterEffectDefinition_put_Release(py::wrapper::Windows::Media::Audio::LimiterEffectDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13794,7 +13794,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int LimiterEffectDefinition_put_Loudness(py::wrapper::Windows::Media::Audio::LimiterEffectDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14476,7 +14476,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int MediaSourceAudioInputNode_put_OutgoingGain(py::wrapper::Windows::Media::Audio::MediaSourceAudioInputNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14545,7 +14545,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int MediaSourceAudioInputNode_put_ConsumeInput(py::wrapper::Windows::Media::Audio::MediaSourceAudioInputNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14674,7 +14674,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int MediaSourceAudioInputNode_put_StartTime(py::wrapper::Windows::Media::Audio::MediaSourceAudioInputNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14743,7 +14743,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int MediaSourceAudioInputNode_put_PlaybackSpeedFactor(py::wrapper::Windows::Media::Audio::MediaSourceAudioInputNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14812,7 +14812,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int MediaSourceAudioInputNode_put_LoopCount(py::wrapper::Windows::Media::Audio::MediaSourceAudioInputNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14881,7 +14881,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int MediaSourceAudioInputNode_put_EndTime(py::wrapper::Windows::Media::Audio::MediaSourceAudioInputNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15176,7 +15176,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* _new_ReverbEffectDefinition(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -15245,7 +15245,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int ReverbEffectDefinition_put_HighEQGain(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15314,7 +15314,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int ReverbEffectDefinition_put_HighEQCutoff(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15383,7 +15383,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int ReverbEffectDefinition_put_DisableLateField(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15452,7 +15452,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int ReverbEffectDefinition_put_Density(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15521,7 +15521,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int ReverbEffectDefinition_put_PositionRight(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15590,7 +15590,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int ReverbEffectDefinition_put_DecayTime(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15659,7 +15659,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int ReverbEffectDefinition_put_LateDiffusion(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15728,7 +15728,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int ReverbEffectDefinition_put_PositionMatrixRight(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15797,7 +15797,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int ReverbEffectDefinition_put_PositionMatrixLeft(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15866,7 +15866,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int ReverbEffectDefinition_put_PositionLeft(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15935,7 +15935,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int ReverbEffectDefinition_put_LowEQGain(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16004,7 +16004,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int ReverbEffectDefinition_put_LowEQCutoff(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16073,7 +16073,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int ReverbEffectDefinition_put_RoomFilterFreq(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16142,7 +16142,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int ReverbEffectDefinition_put_ReverbGain(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16211,7 +16211,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int ReverbEffectDefinition_put_ReverbDelay(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16280,7 +16280,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int ReverbEffectDefinition_put_ReflectionsGain(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16349,7 +16349,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int ReverbEffectDefinition_put_ReflectionsDelay(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16418,7 +16418,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int ReverbEffectDefinition_put_RearDelay(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16487,7 +16487,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int ReverbEffectDefinition_put_WetDryMix(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16556,7 +16556,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int ReverbEffectDefinition_put_EarlyDiffusion(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16625,7 +16625,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int ReverbEffectDefinition_put_RoomSize(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16694,7 +16694,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int ReverbEffectDefinition_put_RoomFilterMain(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16763,7 +16763,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int ReverbEffectDefinition_put_RoomFilterHF(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -17615,7 +17615,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int SpatialAudioFormatConfiguration_put_MixedRealityExclusiveModePolicy(py::wrapper::Windows::Media::Audio::SpatialAudioFormatConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -18462,7 +18462,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int IAudioInputNode_put_ConsumeInput(py::wrapper::Windows::Media::Audio::IAudioInputNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -18591,7 +18591,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int IAudioInputNode_put_OutgoingGain(py::wrapper::Windows::Media::Audio::IAudioInputNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19641,7 +19641,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int IAudioInputNode2_put_ConsumeInput(py::wrapper::Windows::Media::Audio::IAudioInputNode2* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19770,7 +19770,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int IAudioInputNode2_put_OutgoingGain(py::wrapper::Windows::Media::Audio::IAudioInputNode2* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -20711,7 +20711,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int IAudioNode_put_ConsumeInput(py::wrapper::Windows::Media::Audio::IAudioNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -20840,7 +20840,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int IAudioNode_put_OutgoingGain(py::wrapper::Windows::Media::Audio::IAudioNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -21604,7 +21604,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int IAudioNodeWithListener_put_Listener(py::wrapper::Windows::Media::Audio::IAudioNodeWithListener* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -21673,7 +21673,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int IAudioNodeWithListener_put_ConsumeInput(py::wrapper::Windows::Media::Audio::IAudioNodeWithListener* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -21802,7 +21802,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static int IAudioNodeWithListener_put_OutgoingGain(py::wrapper::Windows::Media::Audio::IAudioNodeWithListener* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

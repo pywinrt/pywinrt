@@ -8,7 +8,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static PyObject* _new_UserActivity(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -323,7 +323,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static int UserActivity_put_FallbackUri(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivity* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -392,7 +392,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static int UserActivity_put_ContentUri(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivity* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -461,7 +461,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static int UserActivity_put_ContentType(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivity* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -530,7 +530,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static int UserActivity_put_ContentInfo(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivity* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -599,7 +599,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static int UserActivity_put_ActivationUri(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivity* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -758,7 +758,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static int UserActivity_put_IsRoamable(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivity* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -888,7 +888,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static PyObject* _new_UserActivityAttribution(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -970,7 +970,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static int UserActivityAttribution_put_IconUri(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivityAttribution* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1039,7 +1039,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static int UserActivityAttribution_put_AlternateText(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivityAttribution* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1108,7 +1108,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static int UserActivityAttribution_put_AddImageQuery(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivityAttribution* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2665,7 +2665,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static int UserActivityVisualElements_put_DisplayText(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivityVisualElements* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2734,7 +2734,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static int UserActivityVisualElements_put_Description(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivityVisualElements* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2803,7 +2803,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static int UserActivityVisualElements_put_Content(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivityVisualElements* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2872,7 +2872,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static int UserActivityVisualElements_put_BackgroundColor(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivityVisualElements* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2941,7 +2941,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static int UserActivityVisualElements_put_Attribution(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivityVisualElements* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3010,7 +3010,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static int UserActivityVisualElements_put_AttributionDisplayText(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivityVisualElements* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

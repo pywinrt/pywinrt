@@ -38,7 +38,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
 
     static PyObject* _new_DesktopWindowXamlSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -261,7 +261,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
 
     static int DesktopWindowXamlSource_put_SystemBackdrop(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -330,7 +330,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
 
     static int DesktopWindowXamlSource_put_Content(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -459,7 +459,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
 
     static int DesktopWindowXamlSource_put_ShouldConstrainPopupsToWorkArea(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1792,7 +1792,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
 
     static PyObject* _new_XamlSourceFocusNavigationRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2008,7 +2008,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
 
     static PyObject* _new_XamlSourceFocusNavigationResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;

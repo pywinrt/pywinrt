@@ -105,7 +105,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
 
     static PyObject* _new_CustomQueryParametersUpdateOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1667,7 +1667,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
 
     static int FeedResourceRequest_put_Method(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::FeedResourceRequest* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1736,7 +1736,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
 
     static int FeedResourceRequest_put_Headers(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::FeedResourceRequest* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1805,7 +1805,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
 
     static int FeedResourceRequest_put_Content(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::FeedResourceRequest* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2014,7 +2014,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
 
     static int FeedResourceRequestedArgs_put_Response(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::FeedResourceRequestedArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2199,7 +2199,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
 
     static PyObject* _new_FeedResourceResponse(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2270,7 +2270,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
 
     static int FeedResourceResponse_put_Headers(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::FeedResourceResponse* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

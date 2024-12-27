@@ -95,7 +95,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static int CompositionConditionalValue_put_Value(py::wrapper::Windows::UI::Composition::Interactions::CompositionConditionalValue* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -164,7 +164,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static int CompositionConditionalValue_put_Condition(py::wrapper::Windows::UI::Composition::Interactions::CompositionConditionalValue* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -613,7 +613,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static int InteractionSourceConfiguration_put_ScaleSourceMode(py::wrapper::Windows::UI::Composition::Interactions::InteractionSourceConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -682,7 +682,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static int InteractionSourceConfiguration_put_PositionYSourceMode(py::wrapper::Windows::UI::Composition::Interactions::InteractionSourceConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -751,7 +751,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static int InteractionSourceConfiguration_put_PositionXSourceMode(py::wrapper::Windows::UI::Composition::Interactions::InteractionSourceConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1824,7 +1824,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static int InteractionTracker_put_ScaleInertiaDecayRate(py::wrapper::Windows::UI::Composition::Interactions::InteractionTracker* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1893,7 +1893,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static int InteractionTracker_put_PositionInertiaDecayRate(py::wrapper::Windows::UI::Composition::Interactions::InteractionTracker* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1962,7 +1962,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static int InteractionTracker_put_MinScale(py::wrapper::Windows::UI::Composition::Interactions::InteractionTracker* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2031,7 +2031,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static int InteractionTracker_put_MinPosition(py::wrapper::Windows::UI::Composition::Interactions::InteractionTracker* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2100,7 +2100,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static int InteractionTracker_put_MaxScale(py::wrapper::Windows::UI::Composition::Interactions::InteractionTracker* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2169,7 +2169,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static int InteractionTracker_put_MaxPosition(py::wrapper::Windows::UI::Composition::Interactions::InteractionTracker* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3055,7 +3055,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static int InteractionTrackerInertiaMotion_put_Motion(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerInertiaMotion* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3124,7 +3124,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static int InteractionTrackerInertiaMotion_put_Condition(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerInertiaMotion* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3329,7 +3329,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static int InteractionTrackerInertiaNaturalMotion_put_NaturalMotion(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerInertiaNaturalMotion* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3398,7 +3398,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static int InteractionTrackerInertiaNaturalMotion_put_Condition(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerInertiaNaturalMotion* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3603,7 +3603,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static int InteractionTrackerInertiaRestingValue_put_RestingValue(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerInertiaRestingValue* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3672,7 +3672,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static int InteractionTrackerInertiaRestingValue_put_Condition(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerInertiaRestingValue* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4697,7 +4697,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static int InteractionTrackerVector2InertiaNaturalMotion_put_NaturalMotion(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerVector2InertiaNaturalMotion* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4766,7 +4766,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static int InteractionTrackerVector2InertiaNaturalMotion_put_Condition(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerVector2InertiaNaturalMotion* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5271,7 +5271,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static int VisualInteractionSource_put_ScaleSourceMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5340,7 +5340,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static int VisualInteractionSource_put_ScaleChainingMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5409,7 +5409,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static int VisualInteractionSource_put_PositionYSourceMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5478,7 +5478,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static int VisualInteractionSource_put_PositionYChainingMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5547,7 +5547,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static int VisualInteractionSource_put_PositionXSourceMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5616,7 +5616,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static int VisualInteractionSource_put_PositionXChainingMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5685,7 +5685,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static int VisualInteractionSource_put_ManipulationRedirectionMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5754,7 +5754,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static int VisualInteractionSource_put_IsPositionYRailsEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5823,7 +5823,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static int VisualInteractionSource_put_IsPositionXRailsEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

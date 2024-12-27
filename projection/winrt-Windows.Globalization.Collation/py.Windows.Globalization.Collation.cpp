@@ -136,7 +136,7 @@ namespace py::cpp::Windows::Globalization::Collation
 
     static PyObject* _new_CharacterGroupings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;

@@ -157,7 +157,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
 
     static PyObject* _new_PerceptionControlGroup(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -278,7 +278,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
 
     static PyObject* _new_PerceptionCorrelation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -463,7 +463,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
 
     static PyObject* _new_PerceptionCorrelationGroup(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -584,7 +584,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
 
     static PyObject* _new_PerceptionFaceAuthenticationGroup(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -752,7 +752,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
 
     static int PerceptionFrame_put_RelativeTime(py::wrapper::Windows::Devices::Perception::Provider::PerceptionFrame* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -905,7 +905,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
 
     static PyObject* _new_PerceptionFrameProviderInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -972,7 +972,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
 
     static int PerceptionFrameProviderInfo_put_Id(py::wrapper::Windows::Devices::Perception::Provider::PerceptionFrameProviderInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1041,7 +1041,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
 
     static int PerceptionFrameProviderInfo_put_Hidden(py::wrapper::Windows::Devices::Perception::Provider::PerceptionFrameProviderInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1110,7 +1110,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
 
     static int PerceptionFrameProviderInfo_put_FrameKind(py::wrapper::Windows::Devices::Perception::Provider::PerceptionFrameProviderInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1179,7 +1179,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
 
     static int PerceptionFrameProviderInfo_put_DisplayName(py::wrapper::Windows::Devices::Perception::Provider::PerceptionFrameProviderInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1248,7 +1248,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
 
     static int PerceptionFrameProviderInfo_put_DeviceKind(py::wrapper::Windows::Devices::Perception::Provider::PerceptionFrameProviderInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1934,7 +1934,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
 
     static int PerceptionPropertyChangeRequest_put_Status(py::wrapper::Windows::Devices::Perception::Provider::PerceptionPropertyChangeRequest* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2088,7 +2088,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
 
     static PyObject* _new_PerceptionVideoFrameAllocator(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;

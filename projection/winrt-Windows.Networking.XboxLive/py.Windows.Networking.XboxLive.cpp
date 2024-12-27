@@ -2272,7 +2272,7 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* _new_XboxLiveQualityOfServiceMeasurement(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2632,7 +2632,7 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static int XboxLiveQualityOfServiceMeasurement_put_TimeoutInMilliseconds(py::wrapper::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2701,7 +2701,7 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static int XboxLiveQualityOfServiceMeasurement_put_ShouldRequestPrivatePayloads(py::wrapper::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2770,7 +2770,7 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static int XboxLiveQualityOfServiceMeasurement_put_NumberOfProbesToAttempt(py::wrapper::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2989,7 +2989,7 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static int XboxLiveQualityOfServiceMeasurement_put_PublishedPrivatePayload(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3058,7 +3058,7 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static int XboxLiveQualityOfServiceMeasurement_put_MaxSimultaneousProbeConnections(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3127,7 +3127,7 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static int XboxLiveQualityOfServiceMeasurement_put_IsSystemOutboundBandwidthConstrained(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3196,7 +3196,7 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static int XboxLiveQualityOfServiceMeasurement_put_IsSystemInboundBandwidthConstrained(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

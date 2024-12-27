@@ -6959,7 +6959,7 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* _new_BluetoothSignalStrengthFilter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -7026,7 +7026,7 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static int BluetoothSignalStrengthFilter_put_SamplingInterval(py::wrapper::Windows::Devices::Bluetooth::BluetoothSignalStrengthFilter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7095,7 +7095,7 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static int BluetoothSignalStrengthFilter_put_OutOfRangeTimeout(py::wrapper::Windows::Devices::Bluetooth::BluetoothSignalStrengthFilter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7164,7 +7164,7 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static int BluetoothSignalStrengthFilter_put_OutOfRangeThresholdInDBm(py::wrapper::Windows::Devices::Bluetooth::BluetoothSignalStrengthFilter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7233,7 +7233,7 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static int BluetoothSignalStrengthFilter_put_InRangeThresholdInDBm(py::wrapper::Windows::Devices::Bluetooth::BluetoothSignalStrengthFilter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

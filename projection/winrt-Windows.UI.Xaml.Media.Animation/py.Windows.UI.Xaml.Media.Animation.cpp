@@ -8,7 +8,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_AddDeleteThemeTransition(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -96,7 +96,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_BackEase(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -163,7 +163,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int BackEase_put_Amplitude(py::wrapper::Windows::UI::Xaml::Media::Animation::BackEase* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -340,7 +340,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_BasicConnectedAnimationConfiguration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -483,7 +483,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_BeginStoryboard(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -550,7 +550,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int BeginStoryboard_put_Storyboard(py::wrapper::Windows::UI::Xaml::Media::Animation::BeginStoryboard* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -697,7 +697,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_BounceEase(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -764,7 +764,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int BounceEase_put_Bounciness(py::wrapper::Windows::UI::Xaml::Media::Animation::BounceEase* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -833,7 +833,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int BounceEase_put_Bounces(py::wrapper::Windows::UI::Xaml::Media::Animation::BounceEase* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1012,7 +1012,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_CircleEase(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1100,7 +1100,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_ColorAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1167,7 +1167,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int ColorAnimation_put_To(py::wrapper::Windows::UI::Xaml::Media::Animation::ColorAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1236,7 +1236,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int ColorAnimation_put_From(py::wrapper::Windows::UI::Xaml::Media::Animation::ColorAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1305,7 +1305,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int ColorAnimation_put_EnableDependentAnimation(py::wrapper::Windows::UI::Xaml::Media::Animation::ColorAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1374,7 +1374,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int ColorAnimation_put_EasingFunction(py::wrapper::Windows::UI::Xaml::Media::Animation::ColorAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1443,7 +1443,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int ColorAnimation_put_By(py::wrapper::Windows::UI::Xaml::Media::Animation::ColorAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1718,7 +1718,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_ColorAnimationUsingKeyFrames(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1785,7 +1785,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int ColorAnimationUsingKeyFrames_put_EnableDependentAnimation(py::wrapper::Windows::UI::Xaml::Media::Animation::ColorAnimationUsingKeyFrames* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2037,7 +2037,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int ColorKeyFrame_put_Value(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2106,7 +2106,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int ColorKeyFrame_put_KeyTime(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2285,7 +2285,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_ColorKeyFrameCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3085,7 +3085,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_CommonNavigationTransitionInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3238,7 +3238,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int CommonNavigationTransitionInfo_put_IsStaggeringEnabled(py::wrapper::Windows::UI::Xaml::Media::Animation::CommonNavigationTransitionInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3633,7 +3633,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int ConnectedAnimation_put_IsScaleAnimationEnabled(py::wrapper::Windows::UI::Xaml::Media::Animation::ConnectedAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3702,7 +3702,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int ConnectedAnimation_put_Configuration(py::wrapper::Windows::UI::Xaml::Media::Animation::ConnectedAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4126,7 +4126,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int ConnectedAnimationService_put_DefaultEasingFunction(py::wrapper::Windows::UI::Xaml::Media::Animation::ConnectedAnimationService* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4195,7 +4195,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int ConnectedAnimationService_put_DefaultDuration(py::wrapper::Windows::UI::Xaml::Media::Animation::ConnectedAnimationService* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4315,7 +4315,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_ContentThemeTransition(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -4382,7 +4382,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int ContentThemeTransition_put_VerticalOffset(py::wrapper::Windows::UI::Xaml::Media::Animation::ContentThemeTransition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4451,7 +4451,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int ContentThemeTransition_put_HorizontalOffset(py::wrapper::Windows::UI::Xaml::Media::Animation::ContentThemeTransition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4630,7 +4630,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_ContinuumNavigationTransitionInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -4955,7 +4955,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int ContinuumNavigationTransitionInfo_put_ExitElement(py::wrapper::Windows::UI::Xaml::Media::Animation::ContinuumNavigationTransitionInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5201,7 +5201,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_CubicEase(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -5319,7 +5319,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_DirectConnectedAnimationConfiguration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -5462,7 +5462,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_DiscreteColorKeyFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -5550,7 +5550,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_DiscreteDoubleKeyFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -5638,7 +5638,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_DiscreteObjectKeyFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -5726,7 +5726,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_DiscretePointKeyFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -5814,7 +5814,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_DoubleAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -5881,7 +5881,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int DoubleAnimation_put_To(py::wrapper::Windows::UI::Xaml::Media::Animation::DoubleAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5950,7 +5950,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int DoubleAnimation_put_From(py::wrapper::Windows::UI::Xaml::Media::Animation::DoubleAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6019,7 +6019,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int DoubleAnimation_put_EnableDependentAnimation(py::wrapper::Windows::UI::Xaml::Media::Animation::DoubleAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6088,7 +6088,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int DoubleAnimation_put_EasingFunction(py::wrapper::Windows::UI::Xaml::Media::Animation::DoubleAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6157,7 +6157,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int DoubleAnimation_put_By(py::wrapper::Windows::UI::Xaml::Media::Animation::DoubleAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6432,7 +6432,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_DoubleAnimationUsingKeyFrames(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -6499,7 +6499,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int DoubleAnimationUsingKeyFrames_put_EnableDependentAnimation(py::wrapper::Windows::UI::Xaml::Media::Animation::DoubleAnimationUsingKeyFrames* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6751,7 +6751,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int DoubleKeyFrame_put_Value(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6820,7 +6820,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int DoubleKeyFrame_put_KeyTime(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6999,7 +6999,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_DoubleKeyFrameCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -7799,7 +7799,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_DragItemThemeAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -7866,7 +7866,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int DragItemThemeAnimation_put_TargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::DragItemThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8013,7 +8013,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_DragOverThemeAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -8080,7 +8080,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int DragOverThemeAnimation_put_ToOffset(py::wrapper::Windows::UI::Xaml::Media::Animation::DragOverThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8149,7 +8149,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int DragOverThemeAnimation_put_TargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::DragOverThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8218,7 +8218,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int DragOverThemeAnimation_put_Direction(py::wrapper::Windows::UI::Xaml::Media::Animation::DragOverThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8429,7 +8429,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_DrillInNavigationTransitionInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -8517,7 +8517,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_DrillInThemeAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -8584,7 +8584,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int DrillInThemeAnimation_put_ExitTargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::DrillInThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8653,7 +8653,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int DrillInThemeAnimation_put_ExitTarget(py::wrapper::Windows::UI::Xaml::Media::Animation::DrillInThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8722,7 +8722,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int DrillInThemeAnimation_put_EntranceTargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::DrillInThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8791,7 +8791,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int DrillInThemeAnimation_put_EntranceTarget(py::wrapper::Windows::UI::Xaml::Media::Animation::DrillInThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9034,7 +9034,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_DrillOutThemeAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -9101,7 +9101,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int DrillOutThemeAnimation_put_ExitTargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::DrillOutThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9170,7 +9170,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int DrillOutThemeAnimation_put_ExitTarget(py::wrapper::Windows::UI::Xaml::Media::Animation::DrillOutThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9239,7 +9239,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int DrillOutThemeAnimation_put_EntranceTargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::DrillOutThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9308,7 +9308,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int DrillOutThemeAnimation_put_EntranceTarget(py::wrapper::Windows::UI::Xaml::Media::Animation::DrillOutThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9551,7 +9551,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_DropTargetItemThemeAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -9618,7 +9618,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int DropTargetItemThemeAnimation_put_TargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::DropTargetItemThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9765,7 +9765,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_EasingColorKeyFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -9832,7 +9832,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int EasingColorKeyFrame_put_EasingFunction(py::wrapper::Windows::UI::Xaml::Media::Animation::EasingColorKeyFrame* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9979,7 +9979,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_EasingDoubleKeyFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -10046,7 +10046,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int EasingDoubleKeyFrame_put_EasingFunction(py::wrapper::Windows::UI::Xaml::Media::Animation::EasingDoubleKeyFrame* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10280,7 +10280,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int EasingFunctionBase_put_EasingMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10428,7 +10428,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_EasingPointKeyFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -10495,7 +10495,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int EasingPointKeyFrame_put_EasingFunction(py::wrapper::Windows::UI::Xaml::Media::Animation::EasingPointKeyFrame* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10642,7 +10642,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_EdgeUIThemeTransition(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -10709,7 +10709,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int EdgeUIThemeTransition_put_Edge(py::wrapper::Windows::UI::Xaml::Media::Animation::EdgeUIThemeTransition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10856,7 +10856,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_ElasticEase(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -10923,7 +10923,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int ElasticEase_put_Springiness(py::wrapper::Windows::UI::Xaml::Media::Animation::ElasticEase* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10992,7 +10992,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int ElasticEase_put_Oscillations(py::wrapper::Windows::UI::Xaml::Media::Animation::ElasticEase* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11171,7 +11171,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_EntranceNavigationTransitionInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -11403,7 +11403,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_EntranceThemeTransition(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -11470,7 +11470,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int EntranceThemeTransition_put_IsStaggeringEnabled(py::wrapper::Windows::UI::Xaml::Media::Animation::EntranceThemeTransition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11539,7 +11539,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int EntranceThemeTransition_put_FromVerticalOffset(py::wrapper::Windows::UI::Xaml::Media::Animation::EntranceThemeTransition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11608,7 +11608,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int EntranceThemeTransition_put_FromHorizontalOffset(py::wrapper::Windows::UI::Xaml::Media::Animation::EntranceThemeTransition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11819,7 +11819,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_ExponentialEase(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -11886,7 +11886,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int ExponentialEase_put_Exponent(py::wrapper::Windows::UI::Xaml::Media::Animation::ExponentialEase* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12033,7 +12033,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_FadeInThemeAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -12100,7 +12100,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int FadeInThemeAnimation_put_TargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::FadeInThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12247,7 +12247,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_FadeOutThemeAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -12314,7 +12314,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int FadeOutThemeAnimation_put_TargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::FadeOutThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12491,7 +12491,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_GravityConnectedAnimationConfiguration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -12588,7 +12588,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int GravityConnectedAnimationConfiguration_put_IsShadowEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12704,7 +12704,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_KeySpline(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -12771,7 +12771,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int KeySpline_put_ControlPoint2(py::wrapper::Windows::UI::Xaml::Media::Animation::KeySpline* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12840,7 +12840,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int KeySpline_put_ControlPoint1(py::wrapper::Windows::UI::Xaml::Media::Animation::KeySpline* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13066,7 +13066,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_LinearColorKeyFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -13154,7 +13154,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_LinearDoubleKeyFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -13242,7 +13242,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_LinearPointKeyFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -13330,7 +13330,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_NavigationThemeTransition(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -13397,7 +13397,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int NavigationThemeTransition_put_DefaultNavigationTransitionInfo(py::wrapper::Windows::UI::Xaml::Media::Animation::NavigationThemeTransition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13809,7 +13809,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_ObjectAnimationUsingKeyFrames(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -13876,7 +13876,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int ObjectAnimationUsingKeyFrames_put_EnableDependentAnimation(py::wrapper::Windows::UI::Xaml::Media::Animation::ObjectAnimationUsingKeyFrames* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14128,7 +14128,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int ObjectKeyFrame_put_Value(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14197,7 +14197,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int ObjectKeyFrame_put_KeyTime(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14376,7 +14376,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_ObjectKeyFrameCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -15176,7 +15176,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_PaneThemeTransition(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -15243,7 +15243,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int PaneThemeTransition_put_Edge(py::wrapper::Windows::UI::Xaml::Media::Animation::PaneThemeTransition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15390,7 +15390,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_PointAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -15457,7 +15457,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int PointAnimation_put_To(py::wrapper::Windows::UI::Xaml::Media::Animation::PointAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15526,7 +15526,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int PointAnimation_put_From(py::wrapper::Windows::UI::Xaml::Media::Animation::PointAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15595,7 +15595,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int PointAnimation_put_EnableDependentAnimation(py::wrapper::Windows::UI::Xaml::Media::Animation::PointAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15664,7 +15664,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int PointAnimation_put_EasingFunction(py::wrapper::Windows::UI::Xaml::Media::Animation::PointAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15733,7 +15733,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int PointAnimation_put_By(py::wrapper::Windows::UI::Xaml::Media::Animation::PointAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16008,7 +16008,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_PointAnimationUsingKeyFrames(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -16075,7 +16075,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int PointAnimationUsingKeyFrames_put_EnableDependentAnimation(py::wrapper::Windows::UI::Xaml::Media::Animation::PointAnimationUsingKeyFrames* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16327,7 +16327,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int PointKeyFrame_put_Value(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16396,7 +16396,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int PointKeyFrame_put_KeyTime(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16575,7 +16575,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_PointKeyFrameCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -17375,7 +17375,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_PointerDownThemeAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -17442,7 +17442,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int PointerDownThemeAnimation_put_TargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::PointerDownThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -17589,7 +17589,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_PointerUpThemeAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -17656,7 +17656,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int PointerUpThemeAnimation_put_TargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::PointerUpThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -17803,7 +17803,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_PopInThemeAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -17870,7 +17870,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int PopInThemeAnimation_put_TargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::PopInThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -17939,7 +17939,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int PopInThemeAnimation_put_FromVerticalOffset(py::wrapper::Windows::UI::Xaml::Media::Animation::PopInThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -18008,7 +18008,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int PopInThemeAnimation_put_FromHorizontalOffset(py::wrapper::Windows::UI::Xaml::Media::Animation::PopInThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -18219,7 +18219,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_PopOutThemeAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -18286,7 +18286,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int PopOutThemeAnimation_put_TargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::PopOutThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -18433,7 +18433,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_PopupThemeTransition(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -18500,7 +18500,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int PopupThemeTransition_put_FromVerticalOffset(py::wrapper::Windows::UI::Xaml::Media::Animation::PopupThemeTransition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -18569,7 +18569,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int PopupThemeTransition_put_FromHorizontalOffset(py::wrapper::Windows::UI::Xaml::Media::Animation::PopupThemeTransition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -18748,7 +18748,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_PowerEase(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -18815,7 +18815,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int PowerEase_put_Power(py::wrapper::Windows::UI::Xaml::Media::Animation::PowerEase* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -18962,7 +18962,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_QuadraticEase(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -19050,7 +19050,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_QuarticEase(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -19138,7 +19138,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_QuinticEase(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -19226,7 +19226,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_ReorderThemeTransition(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -19652,7 +19652,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_RepositionThemeAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -19719,7 +19719,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int RepositionThemeAnimation_put_TargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::RepositionThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19788,7 +19788,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int RepositionThemeAnimation_put_FromVerticalOffset(py::wrapper::Windows::UI::Xaml::Media::Animation::RepositionThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19857,7 +19857,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int RepositionThemeAnimation_put_FromHorizontalOffset(py::wrapper::Windows::UI::Xaml::Media::Animation::RepositionThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -20068,7 +20068,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_RepositionThemeTransition(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -20135,7 +20135,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int RepositionThemeTransition_put_IsStaggeringEnabled(py::wrapper::Windows::UI::Xaml::Media::Animation::RepositionThemeTransition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -20282,7 +20282,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_SineEase(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -20370,7 +20370,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_SlideNavigationTransitionInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -20437,7 +20437,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int SlideNavigationTransitionInfo_put_Effect(py::wrapper::Windows::UI::Xaml::Media::Animation::SlideNavigationTransitionInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -20584,7 +20584,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_SplineColorKeyFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -20651,7 +20651,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int SplineColorKeyFrame_put_KeySpline(py::wrapper::Windows::UI::Xaml::Media::Animation::SplineColorKeyFrame* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -20798,7 +20798,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_SplineDoubleKeyFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -20865,7 +20865,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int SplineDoubleKeyFrame_put_KeySpline(py::wrapper::Windows::UI::Xaml::Media::Animation::SplineDoubleKeyFrame* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -21012,7 +21012,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_SplinePointKeyFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -21079,7 +21079,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int SplinePointKeyFrame_put_KeySpline(py::wrapper::Windows::UI::Xaml::Media::Animation::SplinePointKeyFrame* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -21226,7 +21226,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_SplitCloseThemeAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -21293,7 +21293,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int SplitCloseThemeAnimation_put_OpenedTargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitCloseThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -21362,7 +21362,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int SplitCloseThemeAnimation_put_OpenedTarget(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitCloseThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -21431,7 +21431,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int SplitCloseThemeAnimation_put_OpenedLength(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitCloseThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -21500,7 +21500,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int SplitCloseThemeAnimation_put_OffsetFromCenter(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitCloseThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -21569,7 +21569,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int SplitCloseThemeAnimation_put_ContentTranslationOffset(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitCloseThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -21638,7 +21638,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int SplitCloseThemeAnimation_put_ContentTranslationDirection(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitCloseThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -21707,7 +21707,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int SplitCloseThemeAnimation_put_ContentTargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitCloseThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -21776,7 +21776,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int SplitCloseThemeAnimation_put_ContentTarget(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitCloseThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -21845,7 +21845,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int SplitCloseThemeAnimation_put_ClosedTargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitCloseThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -21914,7 +21914,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int SplitCloseThemeAnimation_put_ClosedTarget(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitCloseThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -21983,7 +21983,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int SplitCloseThemeAnimation_put_ClosedLength(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitCloseThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -22450,7 +22450,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_SplitOpenThemeAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -22517,7 +22517,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int SplitOpenThemeAnimation_put_OpenedTargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitOpenThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -22586,7 +22586,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int SplitOpenThemeAnimation_put_OpenedTarget(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitOpenThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -22655,7 +22655,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int SplitOpenThemeAnimation_put_OpenedLength(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitOpenThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -22724,7 +22724,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int SplitOpenThemeAnimation_put_OffsetFromCenter(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitOpenThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -22793,7 +22793,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int SplitOpenThemeAnimation_put_ContentTranslationOffset(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitOpenThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -22862,7 +22862,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int SplitOpenThemeAnimation_put_ContentTranslationDirection(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitOpenThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -22931,7 +22931,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int SplitOpenThemeAnimation_put_ContentTargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitOpenThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -23000,7 +23000,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int SplitOpenThemeAnimation_put_ContentTarget(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitOpenThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -23069,7 +23069,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int SplitOpenThemeAnimation_put_ClosedTargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitOpenThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -23138,7 +23138,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int SplitOpenThemeAnimation_put_ClosedTarget(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitOpenThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -23207,7 +23207,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int SplitOpenThemeAnimation_put_ClosedLength(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitOpenThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -23674,7 +23674,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_Storyboard(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -24481,7 +24481,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_SuppressNavigationTransitionInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -24569,7 +24569,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_SwipeBackThemeAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -24636,7 +24636,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int SwipeBackThemeAnimation_put_TargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::SwipeBackThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -24705,7 +24705,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int SwipeBackThemeAnimation_put_FromVerticalOffset(py::wrapper::Windows::UI::Xaml::Media::Animation::SwipeBackThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -24774,7 +24774,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int SwipeBackThemeAnimation_put_FromHorizontalOffset(py::wrapper::Windows::UI::Xaml::Media::Animation::SwipeBackThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -24985,7 +24985,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_SwipeHintThemeAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -25052,7 +25052,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int SwipeHintThemeAnimation_put_ToVerticalOffset(py::wrapper::Windows::UI::Xaml::Media::Animation::SwipeHintThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -25121,7 +25121,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int SwipeHintThemeAnimation_put_ToHorizontalOffset(py::wrapper::Windows::UI::Xaml::Media::Animation::SwipeHintThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -25190,7 +25190,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int SwipeHintThemeAnimation_put_TargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::SwipeHintThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -25475,7 +25475,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int Timeline_put_SpeedRatio(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -25544,7 +25544,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int Timeline_put_RepeatBehavior(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -25613,7 +25613,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int Timeline_put_FillBehavior(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -25682,7 +25682,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int Timeline_put_Duration(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -25751,7 +25751,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int Timeline_put_BeginTime(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -25820,7 +25820,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int Timeline_put_AutoReverse(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -25889,7 +25889,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int Timeline_put_AllowDependentAnimations(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -26264,7 +26264,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_TimelineCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -27155,7 +27155,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* _new_TransitionCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -27971,7 +27971,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -28036,7 +28036,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int KeyTime_set_TimeSpan(py::wrapper::Windows::UI::Xaml::Media::Animation::KeyTime* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -28143,7 +28143,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -28212,7 +28212,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int RepeatBehavior_set_Count(py::wrapper::Windows::UI::Xaml::Media::Animation::RepeatBehavior* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -28245,7 +28245,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int RepeatBehavior_set_Duration(py::wrapper::Windows::UI::Xaml::Media::Animation::RepeatBehavior* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -28278,7 +28278,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int RepeatBehavior_set_Type(py::wrapper::Windows::UI::Xaml::Media::Animation::RepeatBehavior* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

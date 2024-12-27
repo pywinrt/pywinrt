@@ -96,7 +96,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Resources
 
     static PyObject* _new_CustomXamlResourceLoader(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -238,7 +238,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Resources
 
     static int CustomXamlResourceLoader_put_Current(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

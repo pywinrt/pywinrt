@@ -3157,7 +3157,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* _new_InkAnalyzer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;

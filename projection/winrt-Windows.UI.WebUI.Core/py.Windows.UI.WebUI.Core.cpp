@@ -93,7 +93,7 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static int WebUICommandBar_put_Visible(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -162,7 +162,7 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static int WebUICommandBar_put_Opacity(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -231,7 +231,7 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static int WebUICommandBar_put_IsOpen(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -300,7 +300,7 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static int WebUICommandBar_put_ForegroundColor(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -369,7 +369,7 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static int WebUICommandBar_put_ClosedDisplayMode(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -438,7 +438,7 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static int WebUICommandBar_put_BackgroundColor(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -854,7 +854,7 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static PyObject* _new_WebUICommandBarBitmapIcon(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -936,7 +936,7 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static int WebUICommandBarBitmapIcon_put_Uri(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBarBitmapIcon* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1027,7 +1027,7 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static PyObject* _new_WebUICommandBarConfirmationButton(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1094,7 +1094,7 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static int WebUICommandBarConfirmationButton_put_Text(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBarConfirmationButton* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1252,7 +1252,7 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static PyObject* _new_WebUICommandBarIconButton(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1319,7 +1319,7 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static int WebUICommandBarIconButton_put_Label(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBarIconButton* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1388,7 +1388,7 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static int WebUICommandBarIconButton_put_IsToggleButton(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBarIconButton* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1457,7 +1457,7 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static int WebUICommandBarIconButton_put_IsChecked(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBarIconButton* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1526,7 +1526,7 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static int WebUICommandBarIconButton_put_Icon(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBarIconButton* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1595,7 +1595,7 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static int WebUICommandBarIconButton_put_Enabled(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBarIconButton* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1951,7 +1951,7 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static PyObject* _new_WebUICommandBarSymbolIcon(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2033,7 +2033,7 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static int WebUICommandBarSymbolIcon_put_Symbol(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBarSymbolIcon* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

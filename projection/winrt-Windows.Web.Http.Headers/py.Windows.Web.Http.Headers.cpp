@@ -728,7 +728,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpCacheDirectiveHeaderValueCollection_put_SharedMaxAge(py::wrapper::Windows::Web::Http::Headers::HttpCacheDirectiveHeaderValueCollection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -797,7 +797,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpCacheDirectiveHeaderValueCollection_put_MinFresh(py::wrapper::Windows::Web::Http::Headers::HttpCacheDirectiveHeaderValueCollection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -866,7 +866,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpCacheDirectiveHeaderValueCollection_put_MaxStale(py::wrapper::Windows::Web::Http::Headers::HttpCacheDirectiveHeaderValueCollection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -935,7 +935,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpCacheDirectiveHeaderValueCollection_put_MaxAge(py::wrapper::Windows::Web::Http::Headers::HttpCacheDirectiveHeaderValueCollection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1212,7 +1212,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* _new_HttpChallengeHeaderValue(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2519,7 +2519,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* _new_HttpConnectionOptionHeaderValue(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3748,7 +3748,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* _new_HttpContentCodingHeaderValue(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -4977,7 +4977,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* _new_HttpContentCodingWithQualityHeaderValue(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -6253,7 +6253,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* _new_HttpContentDispositionHeaderValue(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -6460,7 +6460,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpContentDispositionHeaderValue_put_Size(py::wrapper::Windows::Web::Http::Headers::HttpContentDispositionHeaderValue* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6529,7 +6529,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpContentDispositionHeaderValue_put_Name(py::wrapper::Windows::Web::Http::Headers::HttpContentDispositionHeaderValue* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6598,7 +6598,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpContentDispositionHeaderValue_put_FileNameStar(py::wrapper::Windows::Web::Http::Headers::HttpContentDispositionHeaderValue* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6667,7 +6667,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpContentDispositionHeaderValue_put_FileName(py::wrapper::Windows::Web::Http::Headers::HttpContentDispositionHeaderValue* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6736,7 +6736,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpContentDispositionHeaderValue_put_DispositionType(py::wrapper::Windows::Web::Http::Headers::HttpContentDispositionHeaderValue* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6908,7 +6908,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* _new_HttpContentHeaderCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -7423,7 +7423,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpContentHeaderCollection_put_LastModified(py::wrapper::Windows::Web::Http::Headers::HttpContentHeaderCollection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7492,7 +7492,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpContentHeaderCollection_put_Expires(py::wrapper::Windows::Web::Http::Headers::HttpContentHeaderCollection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7561,7 +7561,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpContentHeaderCollection_put_ContentType(py::wrapper::Windows::Web::Http::Headers::HttpContentHeaderCollection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7630,7 +7630,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpContentHeaderCollection_put_ContentRange(py::wrapper::Windows::Web::Http::Headers::HttpContentHeaderCollection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7699,7 +7699,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpContentHeaderCollection_put_ContentMD5(py::wrapper::Windows::Web::Http::Headers::HttpContentHeaderCollection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7768,7 +7768,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpContentHeaderCollection_put_ContentLocation(py::wrapper::Windows::Web::Http::Headers::HttpContentHeaderCollection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7837,7 +7837,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpContentHeaderCollection_put_ContentLength(py::wrapper::Windows::Web::Http::Headers::HttpContentHeaderCollection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7906,7 +7906,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpContentHeaderCollection_put_ContentDisposition(py::wrapper::Windows::Web::Http::Headers::HttpContentHeaderCollection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8110,7 +8110,8 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return self->obj.TryLookup(_key);
             }();
 
-            if (!value) {
+            if (!value)
+            {
                 if constexpr (std::is_base_of_v<winrt::Windows::Foundation::IUnknown, decltype(value)>)
                 {
                     auto has_key = [&]()
@@ -8144,13 +8145,15 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             auto _key = py::convert_to<winrt::hstring>(key);
 
-            if (value == nullptr) {
+            if (!value)
+            {
                 bool did_remove;
                 {
                     auto _gil = py::release_gil();
                     did_remove = self->obj.TryRemove(_key);
                 }
-                if (!did_remove) {
+                if (!did_remove)
+                {
                     PyErr_SetObject(PyExc_KeyError, key);
                     return -1;
                 }
@@ -8229,7 +8232,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* _new_HttpContentRangeHeaderValue(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -8469,7 +8472,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpContentRangeHeaderValue_put_Unit(py::wrapper::Windows::Web::Http::Headers::HttpContentRangeHeaderValue* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8699,7 +8702,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* _new_HttpCookiePairHeaderValue(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -8922,7 +8925,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpCookiePairHeaderValue_put_Value(py::wrapper::Windows::Web::Http::Headers::HttpCookiePairHeaderValue* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10014,7 +10017,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* _new_HttpCredentialsHeaderValue(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -10709,7 +10712,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* _new_HttpExpectationHeaderValue(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -10932,7 +10935,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpExpectationHeaderValue_put_Value(py::wrapper::Windows::Web::Http::Headers::HttpExpectationHeaderValue* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12979,7 +12982,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* _new_HttpLanguageRangeWithQualityHeaderValue(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -14255,7 +14258,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* _new_HttpMediaTypeHeaderValue(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -14462,7 +14465,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpMediaTypeHeaderValue_put_MediaType(py::wrapper::Windows::Web::Http::Headers::HttpMediaTypeHeaderValue* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14531,7 +14534,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpMediaTypeHeaderValue_put_CharSet(py::wrapper::Windows::Web::Http::Headers::HttpMediaTypeHeaderValue* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14700,7 +14703,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* _new_HttpMediaTypeWithQualityHeaderValue(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -14923,7 +14926,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpMediaTypeWithQualityHeaderValue_put_Quality(py::wrapper::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14992,7 +14995,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpMediaTypeWithQualityHeaderValue_put_MediaType(py::wrapper::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15061,7 +15064,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpMediaTypeWithQualityHeaderValue_put_CharSet(py::wrapper::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -17079,7 +17082,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* _new_HttpNameValueHeaderValue(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -17302,7 +17305,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpNameValueHeaderValue_put_Value(py::wrapper::Windows::Web::Http::Headers::HttpNameValueHeaderValue* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -17470,7 +17473,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* _new_HttpProductHeaderValue(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -17822,7 +17825,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* _new_HttpProductInfoHeaderValue(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -19591,7 +19594,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpRequestHeaderCollection_put_Referer(py::wrapper::Windows::Web::Http::Headers::HttpRequestHeaderCollection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19660,7 +19663,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpRequestHeaderCollection_put_ProxyAuthorization(py::wrapper::Windows::Web::Http::Headers::HttpRequestHeaderCollection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19729,7 +19732,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpRequestHeaderCollection_put_MaxForwards(py::wrapper::Windows::Web::Http::Headers::HttpRequestHeaderCollection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19798,7 +19801,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpRequestHeaderCollection_put_IfUnmodifiedSince(py::wrapper::Windows::Web::Http::Headers::HttpRequestHeaderCollection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19867,7 +19870,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpRequestHeaderCollection_put_IfModifiedSince(py::wrapper::Windows::Web::Http::Headers::HttpRequestHeaderCollection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19936,7 +19939,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpRequestHeaderCollection_put_Host(py::wrapper::Windows::Web::Http::Headers::HttpRequestHeaderCollection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -20005,7 +20008,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpRequestHeaderCollection_put_From(py::wrapper::Windows::Web::Http::Headers::HttpRequestHeaderCollection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -20074,7 +20077,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpRequestHeaderCollection_put_Date(py::wrapper::Windows::Web::Http::Headers::HttpRequestHeaderCollection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -20143,7 +20146,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpRequestHeaderCollection_put_Authorization(py::wrapper::Windows::Web::Http::Headers::HttpRequestHeaderCollection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -20557,7 +20560,8 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return self->obj.TryLookup(_key);
             }();
 
-            if (!value) {
+            if (!value)
+            {
                 if constexpr (std::is_base_of_v<winrt::Windows::Foundation::IUnknown, decltype(value)>)
                 {
                     auto has_key = [&]()
@@ -20591,13 +20595,15 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             auto _key = py::convert_to<winrt::hstring>(key);
 
-            if (value == nullptr) {
+            if (!value)
+            {
                 bool did_remove;
                 {
                     auto _gil = py::release_gil();
                     did_remove = self->obj.TryRemove(_key);
                 }
-                if (!did_remove) {
+                if (!did_remove)
+                {
                     PyErr_SetObject(PyExc_KeyError, key);
                     return -1;
                 }
@@ -21177,7 +21183,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpResponseHeaderCollection_put_RetryAfter(py::wrapper::Windows::Web::Http::Headers::HttpResponseHeaderCollection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -21246,7 +21252,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpResponseHeaderCollection_put_Location(py::wrapper::Windows::Web::Http::Headers::HttpResponseHeaderCollection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -21315,7 +21321,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpResponseHeaderCollection_put_Date(py::wrapper::Windows::Web::Http::Headers::HttpResponseHeaderCollection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -21384,7 +21390,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static int HttpResponseHeaderCollection_put_Age(py::wrapper::Windows::Web::Http::Headers::HttpResponseHeaderCollection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -21708,7 +21714,8 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return self->obj.TryLookup(_key);
             }();
 
-            if (!value) {
+            if (!value)
+            {
                 if constexpr (std::is_base_of_v<winrt::Windows::Foundation::IUnknown, decltype(value)>)
                 {
                     auto has_key = [&]()
@@ -21742,13 +21749,15 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             auto _key = py::convert_to<winrt::hstring>(key);
 
-            if (value == nullptr) {
+            if (!value)
+            {
                 bool did_remove;
                 {
                     auto _gil = py::release_gil();
                     did_remove = self->obj.TryRemove(_key);
                 }
-                if (!did_remove) {
+                if (!did_remove)
+                {
                     PyErr_SetObject(PyExc_KeyError, key);
                     return -1;
                 }
@@ -21827,7 +21836,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* _new_HttpTransferCodingHeaderValue(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;

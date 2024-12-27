@@ -259,7 +259,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int Accelerometer_put_ReportInterval(py::wrapper::Windows::Devices::Sensors::Accelerometer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -358,7 +358,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int Accelerometer_put_ReadingTransform(py::wrapper::Windows::Devices::Sensors::Accelerometer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -427,7 +427,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int Accelerometer_put_ReportLatency(py::wrapper::Windows::Devices::Sensors::Accelerometer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -854,7 +854,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int AccelerometerDataThreshold_put_ZAxisInGForce(py::wrapper::Windows::Devices::Sensors::AccelerometerDataThreshold* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -923,7 +923,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int AccelerometerDataThreshold_put_YAxisInGForce(py::wrapper::Windows::Devices::Sensors::AccelerometerDataThreshold* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -992,7 +992,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int AccelerometerDataThreshold_put_XAxisInGForce(py::wrapper::Windows::Devices::Sensors::AccelerometerDataThreshold* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2602,7 +2602,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int AdaptiveDimmingOptions_put_AllowWhenExternalDisplayConnected(py::wrapper::Windows::Devices::Sensors::AdaptiveDimmingOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2818,7 +2818,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int Altimeter_put_ReportInterval(py::wrapper::Windows::Devices::Sensors::Altimeter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2947,7 +2947,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int Altimeter_put_ReportLatency(py::wrapper::Windows::Devices::Sensors::Altimeter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3660,7 +3660,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int Barometer_put_ReportInterval(py::wrapper::Windows::Devices::Sensors::Barometer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3789,7 +3789,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int Barometer_put_ReportLatency(py::wrapper::Windows::Devices::Sensors::Barometer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4086,7 +4086,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int BarometerDataThreshold_put_Hectopascals(py::wrapper::Windows::Devices::Sensors::BarometerDataThreshold* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4671,7 +4671,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int Compass_put_ReportInterval(py::wrapper::Windows::Devices::Sensors::Compass* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4770,7 +4770,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int Compass_put_ReadingTransform(py::wrapper::Windows::Devices::Sensors::Compass* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4839,7 +4839,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int Compass_put_ReportLatency(py::wrapper::Windows::Devices::Sensors::Compass* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5167,7 +5167,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int CompassDataThreshold_put_Degrees(py::wrapper::Windows::Devices::Sensors::CompassDataThreshold* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6035,7 +6035,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int Gyrometer_put_ReportInterval(py::wrapper::Windows::Devices::Sensors::Gyrometer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6134,7 +6134,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int Gyrometer_put_ReadingTransform(py::wrapper::Windows::Devices::Sensors::Gyrometer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6203,7 +6203,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int Gyrometer_put_ReportLatency(py::wrapper::Windows::Devices::Sensors::Gyrometer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6531,7 +6531,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int GyrometerDataThreshold_put_ZAxisInDegreesPerSecond(py::wrapper::Windows::Devices::Sensors::GyrometerDataThreshold* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6600,7 +6600,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int GyrometerDataThreshold_put_YAxisInDegreesPerSecond(py::wrapper::Windows::Devices::Sensors::GyrometerDataThreshold* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6669,7 +6669,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int GyrometerDataThreshold_put_XAxisInDegreesPerSecond(py::wrapper::Windows::Devices::Sensors::GyrometerDataThreshold* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7807,7 +7807,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int HingeAngleSensor_put_ReportThresholdInDegrees(py::wrapper::Windows::Devices::Sensors::HingeAngleSensor* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9504,7 +9504,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* _new_HumanPresenceSensorReadingUpdate(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -9571,7 +9571,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int HumanPresenceSensorReadingUpdate_put_Timestamp(py::wrapper::Windows::Devices::Sensors::HumanPresenceSensorReadingUpdate* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9640,7 +9640,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int HumanPresenceSensorReadingUpdate_put_Presence(py::wrapper::Windows::Devices::Sensors::HumanPresenceSensorReadingUpdate* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9709,7 +9709,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int HumanPresenceSensorReadingUpdate_put_Engagement(py::wrapper::Windows::Devices::Sensors::HumanPresenceSensorReadingUpdate* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9778,7 +9778,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int HumanPresenceSensorReadingUpdate_put_DistanceInMillimeters(py::wrapper::Windows::Devices::Sensors::HumanPresenceSensorReadingUpdate* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10206,7 +10206,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int HumanPresenceSettings_put_WakeOnApproachDistanceInMillimeters(py::wrapper::Windows::Devices::Sensors::HumanPresenceSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10275,7 +10275,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int HumanPresenceSettings_put_SensorId(py::wrapper::Windows::Devices::Sensors::HumanPresenceSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10344,7 +10344,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int HumanPresenceSettings_put_LockOnLeaveTimeout(py::wrapper::Windows::Devices::Sensors::HumanPresenceSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10413,7 +10413,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int HumanPresenceSettings_put_LockOnLeaveDistanceInMillimeters(py::wrapper::Windows::Devices::Sensors::HumanPresenceSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10482,7 +10482,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int HumanPresenceSettings_put_IsWakeOnApproachEnabled(py::wrapper::Windows::Devices::Sensors::HumanPresenceSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10551,7 +10551,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int HumanPresenceSettings_put_IsLockOnLeaveEnabled(py::wrapper::Windows::Devices::Sensors::HumanPresenceSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10620,7 +10620,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int HumanPresenceSettings_put_IsAttentionAwareDimmingEnabled(py::wrapper::Windows::Devices::Sensors::HumanPresenceSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10689,7 +10689,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int HumanPresenceSettings_put_IsAdaptiveDimmingEnabled(py::wrapper::Windows::Devices::Sensors::HumanPresenceSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11270,7 +11270,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int Inclinometer_put_ReportInterval(py::wrapper::Windows::Devices::Sensors::Inclinometer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11369,7 +11369,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int Inclinometer_put_ReadingTransform(py::wrapper::Windows::Devices::Sensors::Inclinometer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11468,7 +11468,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int Inclinometer_put_ReportLatency(py::wrapper::Windows::Devices::Sensors::Inclinometer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11799,7 +11799,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int InclinometerDataThreshold_put_YawInDegrees(py::wrapper::Windows::Devices::Sensors::InclinometerDataThreshold* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11868,7 +11868,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int InclinometerDataThreshold_put_RollInDegrees(py::wrapper::Windows::Devices::Sensors::InclinometerDataThreshold* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11937,7 +11937,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int InclinometerDataThreshold_put_PitchInDegrees(py::wrapper::Windows::Devices::Sensors::InclinometerDataThreshold* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12617,7 +12617,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int LightSensor_put_ReportInterval(py::wrapper::Windows::Devices::Sensors::LightSensor* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12716,7 +12716,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int LightSensor_put_ReportLatency(py::wrapper::Windows::Devices::Sensors::LightSensor* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13043,7 +13043,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int LightSensorDataThreshold_put_LuxPercentage(py::wrapper::Windows::Devices::Sensors::LightSensorDataThreshold* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13112,7 +13112,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int LightSensorDataThreshold_put_AbsoluteLux(py::wrapper::Windows::Devices::Sensors::LightSensorDataThreshold* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13536,7 +13536,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int LockOnLeaveOptions_put_AllowWhenExternalDisplayConnected(py::wrapper::Windows::Devices::Sensors::LockOnLeaveOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13834,7 +13834,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int Magnetometer_put_ReportInterval(py::wrapper::Windows::Devices::Sensors::Magnetometer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13933,7 +13933,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int Magnetometer_put_ReadingTransform(py::wrapper::Windows::Devices::Sensors::Magnetometer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14002,7 +14002,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int Magnetometer_put_ReportLatency(py::wrapper::Windows::Devices::Sensors::Magnetometer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14330,7 +14330,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int MagnetometerDataThreshold_put_ZAxisMicroteslas(py::wrapper::Windows::Devices::Sensors::MagnetometerDataThreshold* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14399,7 +14399,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int MagnetometerDataThreshold_put_YAxisMicroteslas(py::wrapper::Windows::Devices::Sensors::MagnetometerDataThreshold* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14468,7 +14468,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int MagnetometerDataThreshold_put_XAxisMicroteslas(py::wrapper::Windows::Devices::Sensors::MagnetometerDataThreshold* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15318,7 +15318,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int OrientationSensor_put_ReportInterval(py::wrapper::Windows::Devices::Sensors::OrientationSensor* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15417,7 +15417,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int OrientationSensor_put_ReadingTransform(py::wrapper::Windows::Devices::Sensors::OrientationSensor* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15516,7 +15516,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int OrientationSensor_put_ReportLatency(py::wrapper::Windows::Devices::Sensors::OrientationSensor* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16456,7 +16456,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int Pedometer_put_ReportInterval(py::wrapper::Windows::Devices::Sensors::Pedometer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16739,7 +16739,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* _new_PedometerDataThreshold(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -17577,7 +17577,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* _new_ProximitySensorDataThreshold(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -18926,7 +18926,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int SimpleOrientationSensor_put_ReadingTransform(py::wrapper::Windows::Devices::Sensors::SimpleOrientationSensor* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19317,7 +19317,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int WakeOnApproachOptions_put_DisableWhenBatterySaverOn(py::wrapper::Windows::Devices::Sensors::WakeOnApproachOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19386,7 +19386,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int WakeOnApproachOptions_put_AllowWhenExternalDisplayConnected(py::wrapper::Windows::Devices::Sensors::WakeOnApproachOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

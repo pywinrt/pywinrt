@@ -8,7 +8,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* _new_UserDataTask(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -75,7 +75,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static int UserDataTask_put_RegenerationProperties(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTask* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -144,7 +144,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static int UserDataTask_put_Priority(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTask* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -213,7 +213,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static int UserDataTask_put_CompletedDate(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTask* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -282,7 +282,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static int UserDataTask_put_DueDate(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTask* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -351,7 +351,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static int UserDataTask_put_DetailsKind(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTask* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -420,7 +420,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static int UserDataTask_put_StartDate(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTask* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -489,7 +489,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static int UserDataTask_put_Details(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTask* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -558,7 +558,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static int UserDataTask_put_Subject(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTask* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -627,7 +627,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static int UserDataTask_put_Sensitivity(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTask* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -696,7 +696,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static int UserDataTask_put_RemoteId(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTask* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -765,7 +765,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static int UserDataTask_put_Reminder(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTask* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -834,7 +834,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static int UserDataTask_put_RecurrenceProperties(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTask* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1499,7 +1499,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static int UserDataTaskList_put_OtherAppWriteAccess(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskList* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1568,7 +1568,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static int UserDataTaskList_put_OtherAppReadAccess(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskList* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1637,7 +1637,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static int UserDataTaskList_put_DisplayName(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskList* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2216,7 +2216,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static int UserDataTaskListSyncManager_put_Status(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskListSyncManager* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2285,7 +2285,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static int UserDataTaskListSyncManager_put_LastSuccessfulSyncTime(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskListSyncManager* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2354,7 +2354,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static int UserDataTaskListSyncManager_put_LastAttemptedSyncTime(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskListSyncManager* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2764,7 +2764,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* _new_UserDataTaskQueryOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2831,7 +2831,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static int UserDataTaskQueryOptions_put_SortProperty(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskQueryOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2900,7 +2900,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static int UserDataTaskQueryOptions_put_Kind(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskQueryOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3099,7 +3099,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* _new_UserDataTaskRecurrenceProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3166,7 +3166,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static int UserDataTaskRecurrenceProperties_put_WeekOfMonth(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskRecurrenceProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3235,7 +3235,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static int UserDataTaskRecurrenceProperties_put_Until(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskRecurrenceProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3304,7 +3304,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static int UserDataTaskRecurrenceProperties_put_Unit(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskRecurrenceProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3373,7 +3373,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static int UserDataTaskRecurrenceProperties_put_Occurrences(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskRecurrenceProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3442,7 +3442,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static int UserDataTaskRecurrenceProperties_put_Month(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskRecurrenceProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3511,7 +3511,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static int UserDataTaskRecurrenceProperties_put_Interval(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskRecurrenceProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3580,7 +3580,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static int UserDataTaskRecurrenceProperties_put_DaysOfWeek(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskRecurrenceProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3649,7 +3649,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static int UserDataTaskRecurrenceProperties_put_Day(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskRecurrenceProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3747,7 +3747,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* _new_UserDataTaskRegenerationProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3814,7 +3814,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static int UserDataTaskRegenerationProperties_put_Until(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskRegenerationProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3883,7 +3883,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static int UserDataTaskRegenerationProperties_put_Unit(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskRegenerationProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3952,7 +3952,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static int UserDataTaskRegenerationProperties_put_Occurrences(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskRegenerationProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4021,7 +4021,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static int UserDataTaskRegenerationProperties_put_Interval(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskRegenerationProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

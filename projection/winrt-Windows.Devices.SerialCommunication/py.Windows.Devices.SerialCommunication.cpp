@@ -455,7 +455,7 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
     static int SerialDevice_put_IsDataTerminalReadyEnabled(py::wrapper::Windows::Devices::SerialCommunication::SerialDevice* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -524,7 +524,7 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
     static int SerialDevice_put_DataBits(py::wrapper::Windows::Devices::SerialCommunication::SerialDevice* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -593,7 +593,7 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
     static int SerialDevice_put_Handshake(py::wrapper::Windows::Devices::SerialCommunication::SerialDevice* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -662,7 +662,7 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
     static int SerialDevice_put_BreakSignalState(py::wrapper::Windows::Devices::SerialCommunication::SerialDevice* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -731,7 +731,7 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
     static int SerialDevice_put_BaudRate(py::wrapper::Windows::Devices::SerialCommunication::SerialDevice* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -800,7 +800,7 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
     static int SerialDevice_put_WriteTimeout(py::wrapper::Windows::Devices::SerialCommunication::SerialDevice* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -869,7 +869,7 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
     static int SerialDevice_put_StopBits(py::wrapper::Windows::Devices::SerialCommunication::SerialDevice* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -938,7 +938,7 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
     static int SerialDevice_put_ReadTimeout(py::wrapper::Windows::Devices::SerialCommunication::SerialDevice* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1007,7 +1007,7 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
     static int SerialDevice_put_Parity(py::wrapper::Windows::Devices::SerialCommunication::SerialDevice* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1076,7 +1076,7 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
     static int SerialDevice_put_IsRequestToSendEnabled(py::wrapper::Windows::Devices::SerialCommunication::SerialDevice* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

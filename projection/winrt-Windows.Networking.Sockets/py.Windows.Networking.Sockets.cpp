@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* _new_ControlChannelTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -301,7 +301,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static int ControlChannelTrigger_put_ServerKeepAliveIntervalInMinutes(py::wrapper::Windows::Networking::Sockets::ControlChannelTrigger* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -608,7 +608,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* _new_DatagramSocket(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1696,7 +1696,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static int DatagramSocketControl_put_QualityOfService(py::wrapper::Windows::Networking::Sockets::DatagramSocketControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1765,7 +1765,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static int DatagramSocketControl_put_OutboundUnicastHopLimit(py::wrapper::Windows::Networking::Sockets::DatagramSocketControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1834,7 +1834,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static int DatagramSocketControl_put_InboundBufferSizeInBytes(py::wrapper::Windows::Networking::Sockets::DatagramSocketControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1903,7 +1903,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static int DatagramSocketControl_put_DontFragment(py::wrapper::Windows::Networking::Sockets::DatagramSocketControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1972,7 +1972,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static int DatagramSocketControl_put_MulticastOnly(py::wrapper::Windows::Networking::Sockets::DatagramSocketControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2498,7 +2498,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* _new_MessageWebSocket(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3211,7 +3211,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static int MessageWebSocketControl_put_MessageType(py::wrapper::Windows::Networking::Sockets::MessageWebSocketControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3280,7 +3280,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static int MessageWebSocketControl_put_MaxMessageSize(py::wrapper::Windows::Networking::Sockets::MessageWebSocketControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3349,7 +3349,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static int MessageWebSocketControl_put_ReceiveMode(py::wrapper::Windows::Networking::Sockets::MessageWebSocketControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3418,7 +3418,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static int MessageWebSocketControl_put_DesiredUnsolicitedPongInterval(py::wrapper::Windows::Networking::Sockets::MessageWebSocketControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3487,7 +3487,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static int MessageWebSocketControl_put_ClientCertificate(py::wrapper::Windows::Networking::Sockets::MessageWebSocketControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3586,7 +3586,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static int MessageWebSocketControl_put_ServerCredential(py::wrapper::Windows::Networking::Sockets::MessageWebSocketControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3655,7 +3655,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static int MessageWebSocketControl_put_ProxyCredential(py::wrapper::Windows::Networking::Sockets::MessageWebSocketControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3724,7 +3724,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static int MessageWebSocketControl_put_OutboundBufferSizeInBytes(py::wrapper::Windows::Networking::Sockets::MessageWebSocketControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4828,7 +4828,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static int ServerMessageWebSocketControl_put_MessageType(py::wrapper::Windows::Networking::Sockets::ServerMessageWebSocketControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5575,7 +5575,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* _new_SocketActivityContext(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -6262,7 +6262,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* _new_StreamSocket(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -7231,7 +7231,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static int StreamSocketControl_put_QualityOfService(py::wrapper::Windows::Networking::Sockets::StreamSocketControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7300,7 +7300,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static int StreamSocketControl_put_OutboundUnicastHopLimit(py::wrapper::Windows::Networking::Sockets::StreamSocketControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7369,7 +7369,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static int StreamSocketControl_put_OutboundBufferSizeInBytes(py::wrapper::Windows::Networking::Sockets::StreamSocketControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7438,7 +7438,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static int StreamSocketControl_put_NoDelay(py::wrapper::Windows::Networking::Sockets::StreamSocketControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7507,7 +7507,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static int StreamSocketControl_put_KeepAlive(py::wrapper::Windows::Networking::Sockets::StreamSocketControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7606,7 +7606,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static int StreamSocketControl_put_SerializeConnectionAttempts(py::wrapper::Windows::Networking::Sockets::StreamSocketControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7675,7 +7675,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static int StreamSocketControl_put_ClientCertificate(py::wrapper::Windows::Networking::Sockets::StreamSocketControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7744,7 +7744,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static int StreamSocketControl_put_MinProtectionLevel(py::wrapper::Windows::Networking::Sockets::StreamSocketControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8343,7 +8343,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* _new_StreamSocketListener(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -9164,7 +9164,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static int StreamSocketListenerControl_put_QualityOfService(py::wrapper::Windows::Networking::Sockets::StreamSocketListenerControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9233,7 +9233,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static int StreamSocketListenerControl_put_OutboundUnicastHopLimit(py::wrapper::Windows::Networking::Sockets::StreamSocketListenerControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9302,7 +9302,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static int StreamSocketListenerControl_put_OutboundBufferSizeInBytes(py::wrapper::Windows::Networking::Sockets::StreamSocketListenerControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9371,7 +9371,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static int StreamSocketListenerControl_put_NoDelay(py::wrapper::Windows::Networking::Sockets::StreamSocketListenerControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9440,7 +9440,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static int StreamSocketListenerControl_put_KeepAlive(py::wrapper::Windows::Networking::Sockets::StreamSocketListenerControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9632,7 +9632,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* _new_StreamWebSocket(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -10223,7 +10223,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static int StreamWebSocketControl_put_NoDelay(py::wrapper::Windows::Networking::Sockets::StreamWebSocketControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10292,7 +10292,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static int StreamWebSocketControl_put_DesiredUnsolicitedPongInterval(py::wrapper::Windows::Networking::Sockets::StreamWebSocketControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10361,7 +10361,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static int StreamWebSocketControl_put_ClientCertificate(py::wrapper::Windows::Networking::Sockets::StreamWebSocketControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10460,7 +10460,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static int StreamWebSocketControl_put_ServerCredential(py::wrapper::Windows::Networking::Sockets::StreamWebSocketControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10529,7 +10529,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static int StreamWebSocketControl_put_ProxyCredential(py::wrapper::Windows::Networking::Sockets::StreamWebSocketControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10598,7 +10598,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static int StreamWebSocketControl_put_OutboundBufferSizeInBytes(py::wrapper::Windows::Networking::Sockets::StreamWebSocketControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11267,7 +11267,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* _new_WebSocketKeepAlive(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -12825,7 +12825,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static int IWebSocketControl_put_OutboundBufferSizeInBytes(py::wrapper::Windows::Networking::Sockets::IWebSocketControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12894,7 +12894,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static int IWebSocketControl_put_ProxyCredential(py::wrapper::Windows::Networking::Sockets::IWebSocketControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12963,7 +12963,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static int IWebSocketControl_put_ServerCredential(py::wrapper::Windows::Networking::Sockets::IWebSocketControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13373,7 +13373,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static int IWebSocketControl2_put_OutboundBufferSizeInBytes(py::wrapper::Windows::Networking::Sockets::IWebSocketControl2* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13442,7 +13442,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static int IWebSocketControl2_put_ProxyCredential(py::wrapper::Windows::Networking::Sockets::IWebSocketControl2* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13511,7 +13511,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static int IWebSocketControl2_put_ServerCredential(py::wrapper::Windows::Networking::Sockets::IWebSocketControl2* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14649,7 +14649,7 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -14724,7 +14724,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static int BandwidthStatistics_set_OutboundBitsPerSecond(py::wrapper::Windows::Networking::Sockets::BandwidthStatistics* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14757,7 +14757,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static int BandwidthStatistics_set_InboundBitsPerSecond(py::wrapper::Windows::Networking::Sockets::BandwidthStatistics* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14790,7 +14790,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static int BandwidthStatistics_set_OutboundBitsPerSecondInstability(py::wrapper::Windows::Networking::Sockets::BandwidthStatistics* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14823,7 +14823,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static int BandwidthStatistics_set_InboundBitsPerSecondInstability(py::wrapper::Windows::Networking::Sockets::BandwidthStatistics* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14856,7 +14856,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static int BandwidthStatistics_set_OutboundBandwidthPeaked(py::wrapper::Windows::Networking::Sockets::BandwidthStatistics* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14889,7 +14889,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static int BandwidthStatistics_set_InboundBandwidthPeaked(py::wrapper::Windows::Networking::Sockets::BandwidthStatistics* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15031,7 +15031,7 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -15102,7 +15102,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static int RoundTripTimeStatistics_set_Variance(py::wrapper::Windows::Networking::Sockets::RoundTripTimeStatistics* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15135,7 +15135,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static int RoundTripTimeStatistics_set_Max(py::wrapper::Windows::Networking::Sockets::RoundTripTimeStatistics* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15168,7 +15168,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static int RoundTripTimeStatistics_set_Min(py::wrapper::Windows::Networking::Sockets::RoundTripTimeStatistics* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15201,7 +15201,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static int RoundTripTimeStatistics_set_Sum(py::wrapper::Windows::Networking::Sockets::RoundTripTimeStatistics* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

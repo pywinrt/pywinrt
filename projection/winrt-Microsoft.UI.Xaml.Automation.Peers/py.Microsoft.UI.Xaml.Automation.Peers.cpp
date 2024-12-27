@@ -38,7 +38,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_AnimatedVisualPlayerAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -213,7 +213,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_AppBarAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -891,7 +891,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_AppBarButtonAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1181,7 +1181,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_AppBarToggleButtonAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1326,7 +1326,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_AutoSuggestBoxAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -7040,7 +7040,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static int AutomationPeer_put_EventsSource(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7259,7 +7259,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_AutomationPeerAnnotation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -7357,7 +7357,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static int AutomationPeerAnnotation_put_Type(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AutomationPeerAnnotation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7426,7 +7426,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static int AutomationPeerAnnotation_put_Peer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AutomationPeerAnnotation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7635,7 +7635,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_BreadcrumbBarItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -7852,7 +7852,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_ButtonAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -8189,7 +8189,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_CalendarDatePickerAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -8512,7 +8512,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_CheckBoxAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -8687,7 +8687,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_ColorPickerSliderAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -8862,7 +8862,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_ColorSpectrumAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -9037,7 +9037,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_ComboBoxAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -9748,7 +9748,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_ComboBoxItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -9923,7 +9923,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_ComboBoxItemDataAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -10141,7 +10141,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_DatePickerAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -10382,7 +10382,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_DropDownButtonAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -10672,7 +10672,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_ExpanderAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -10962,7 +10962,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_FlipViewAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -11137,7 +11137,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_FlipViewItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -11312,7 +11312,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_FlipViewItemDataAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -11530,7 +11530,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_FlyoutPresenterAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -11705,7 +11705,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_FrameworkElementAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -11997,7 +11997,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_GridViewAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -12172,7 +12172,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_GridViewHeaderItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -12347,7 +12347,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_GridViewItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -12522,7 +12522,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_GridViewItemDataAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -12740,7 +12740,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_GroupItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -12915,7 +12915,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_HubAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -13090,7 +13090,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_HubSectionAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -13307,7 +13307,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_HyperlinkButtonAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -13524,7 +13524,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_ImageAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -13699,7 +13699,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_InfoBarAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -13874,7 +13874,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_ItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -14154,7 +14154,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_ItemContainerAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -14593,7 +14593,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_ItemsControlAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -14899,7 +14899,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_ItemsViewAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -15177,7 +15177,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_ListBoxAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -15352,7 +15352,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_ListBoxItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -15527,7 +15527,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_ListBoxItemDataAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -15811,7 +15811,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_ListViewAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -15986,7 +15986,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_ListViewBaseAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -16343,7 +16343,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_ListViewHeaderItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -16518,7 +16518,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_ListViewItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -16693,7 +16693,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_ListViewItemDataAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -17805,7 +17805,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_MediaPlayerElementAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -17980,7 +17980,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_MediaTransportControlsAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -18155,7 +18155,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_MenuBarAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -18330,7 +18330,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_MenuBarItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -18662,7 +18662,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_MenuFlyoutItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -18879,7 +18879,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_MenuFlyoutPresenterAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -19054,7 +19054,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_NavigationViewAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -19229,7 +19229,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_NavigationViewItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -19519,7 +19519,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_NumberBoxAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -19694,7 +19694,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_PasswordBoxAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -19869,7 +19869,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_PersonPictureAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -20110,7 +20110,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_PipsPagerAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -20255,7 +20255,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_PivotAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -20724,7 +20724,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_PivotItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -20814,7 +20814,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_PivotItemDataAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -21207,7 +21207,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_ProgressBarAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -21382,7 +21382,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_ProgressRingAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -21787,7 +21787,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_RadioButtonAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -22150,7 +22150,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_RadioButtonsAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -22325,7 +22325,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_RangeBaseAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -22730,7 +22730,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_RatingControlAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -22905,7 +22905,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_RepeatButtonAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -23122,7 +23122,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_RepeaterAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -23297,7 +23297,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_RichEditBoxAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -23472,7 +23472,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_RichTextBlockAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -23647,7 +23647,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_RichTextBlockOverflowAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -23822,7 +23822,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_ScrollBarAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -23997,7 +23997,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_ScrollPresenterAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -24172,7 +24172,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_ScrollViewerAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -24623,7 +24623,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_SelectorAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -24901,7 +24901,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_SelectorBarItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -25076,7 +25076,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_SelectorItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -25440,7 +25440,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_SemanticZoomAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -25688,7 +25688,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_SliderAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -25863,7 +25863,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_SplitButtonAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -26195,7 +26195,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_TabViewAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -26370,7 +26370,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_TabViewItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -26545,7 +26545,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_TeachingTipAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -26720,7 +26720,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_TextBlockAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -26895,7 +26895,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_TextBoxAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -27070,7 +27070,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_ThumbAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -27245,7 +27245,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_TimePickerAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -27486,7 +27486,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_ToggleButtonAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -27734,7 +27734,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_ToggleMenuFlyoutItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -27982,7 +27982,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_ToggleSplitButtonAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -28345,7 +28345,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_ToggleSwitchAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -28593,7 +28593,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_TreeViewItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -28883,7 +28883,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_TreeViewItemDataAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -29174,7 +29174,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_TreeViewListAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -29349,7 +29349,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* _new_WebView2AutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -29510,7 +29510,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -29577,7 +29577,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static int RawElementProviderRuntimeId_set_Part1(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RawElementProviderRuntimeId* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -29610,7 +29610,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static int RawElementProviderRuntimeId_set_Part2(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RawElementProviderRuntimeId* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

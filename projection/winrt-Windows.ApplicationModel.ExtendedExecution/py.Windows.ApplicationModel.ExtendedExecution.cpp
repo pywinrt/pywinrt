@@ -105,7 +105,7 @@ namespace py::cpp::Windows::ApplicationModel::ExtendedExecution
 
     static PyObject* _new_ExtendedExecutionSession(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -253,7 +253,7 @@ namespace py::cpp::Windows::ApplicationModel::ExtendedExecution
 
     static int ExtendedExecutionSession_put_Reason(py::wrapper::Windows::ApplicationModel::ExtendedExecution::ExtendedExecutionSession* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -322,7 +322,7 @@ namespace py::cpp::Windows::ApplicationModel::ExtendedExecution
 
     static int ExtendedExecutionSession_put_PercentProgress(py::wrapper::Windows::ApplicationModel::ExtendedExecution::ExtendedExecutionSession* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -391,7 +391,7 @@ namespace py::cpp::Windows::ApplicationModel::ExtendedExecution
 
     static int ExtendedExecutionSession_put_Description(py::wrapper::Windows::ApplicationModel::ExtendedExecution::ExtendedExecutionSession* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

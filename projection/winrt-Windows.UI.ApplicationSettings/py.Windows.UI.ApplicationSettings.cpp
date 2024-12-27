@@ -502,7 +502,7 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     static int AccountsSettingsPaneCommandsRequestedEventArgs_put_HeaderText(py::wrapper::Windows::UI::ApplicationSettings::AccountsSettingsPaneCommandsRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -857,7 +857,7 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     static PyObject* _new_CredentialCommand(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1025,7 +1025,7 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     static PyObject* _new_SettingsCommand(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1096,7 +1096,7 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     static int SettingsCommand_put_Label(py::wrapper::Windows::UI::ApplicationSettings::SettingsCommand* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1165,7 +1165,7 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     static int SettingsCommand_put_Invoked(py::wrapper::Windows::UI::ApplicationSettings::SettingsCommand* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1234,7 +1234,7 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     static int SettingsCommand_put_Id(py::wrapper::Windows::UI::ApplicationSettings::SettingsCommand* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1849,7 +1849,7 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     static PyObject* _new_WebAccountCommand(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2131,7 +2131,7 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     static PyObject* _new_WebAccountProviderCommand(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;

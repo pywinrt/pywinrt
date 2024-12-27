@@ -364,7 +364,7 @@ namespace py::cpp::Windows::Security::Authorization::AppCapabilityAccess
 
     static int AppCapability_put_DisplayMessage(py::wrapper::Windows::Security::Authorization::AppCapabilityAccess::AppCapability* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

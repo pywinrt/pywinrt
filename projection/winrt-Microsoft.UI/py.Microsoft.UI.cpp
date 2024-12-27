@@ -5103,7 +5103,7 @@ namespace py::cpp::Microsoft::UI
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -5168,7 +5168,7 @@ namespace py::cpp::Microsoft::UI
 
     static int DisplayId_set_Value(py::wrapper::Microsoft::UI::DisplayId* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5275,7 +5275,7 @@ namespace py::cpp::Microsoft::UI
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -5340,7 +5340,7 @@ namespace py::cpp::Microsoft::UI
 
     static int IconId_set_Value(py::wrapper::Microsoft::UI::IconId* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5447,7 +5447,7 @@ namespace py::cpp::Microsoft::UI
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -5512,7 +5512,7 @@ namespace py::cpp::Microsoft::UI
 
     static int WindowId_set_Value(py::wrapper::Microsoft::UI::WindowId* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

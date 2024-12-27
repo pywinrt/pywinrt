@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* _new_Buffer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -161,7 +161,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static int Buffer_put_Length(py::wrapper::Windows::Storage::Streams::Buffer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -325,7 +325,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* _new_DataReader(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1246,7 +1246,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static int DataReader_put_UnicodeEncoding(py::wrapper::Windows::Storage::Streams::DataReader* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1315,7 +1315,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static int DataReader_put_InputStreamOptions(py::wrapper::Windows::Storage::Streams::DataReader* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1384,7 +1384,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static int DataReader_put_ByteOrder(py::wrapper::Windows::Storage::Streams::DataReader* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1836,7 +1836,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static int DataReaderLoadOperation_put_Completed(py::wrapper::Windows::Storage::Streams::DataReaderLoadOperation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1939,7 +1939,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* _new_DataWriter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2996,7 +2996,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static int DataWriter_put_UnicodeEncoding(py::wrapper::Windows::Storage::Streams::DataWriter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3065,7 +3065,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static int DataWriter_put_ByteOrder(py::wrapper::Windows::Storage::Streams::DataWriter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3493,7 +3493,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static int DataWriterStoreOperation_put_Completed(py::wrapper::Windows::Storage::Streams::DataWriterStoreOperation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4722,7 +4722,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static int FileRandomAccessStream_put_Size(py::wrapper::Windows::Storage::Streams::FileRandomAccessStream* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4972,7 +4972,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* _new_InMemoryRandomAccessStream(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -5373,7 +5373,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static int InMemoryRandomAccessStream_put_Size(py::wrapper::Windows::Storage::Streams::InMemoryRandomAccessStream* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6553,7 +6553,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static int RandomAccessStreamOverStream_put_Size(py::wrapper::Windows::Storage::Streams::RandomAccessStreamOverStream* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7106,7 +7106,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static int IBuffer_put_Length(py::wrapper::Windows::Storage::Streams::IBuffer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8331,7 +8331,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static int IDataReader_put_ByteOrder(py::wrapper::Windows::Storage::Streams::IDataReader* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8400,7 +8400,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static int IDataReader_put_InputStreamOptions(py::wrapper::Windows::Storage::Streams::IDataReader* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8499,7 +8499,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static int IDataReader_put_UnicodeEncoding(py::wrapper::Windows::Storage::Streams::IDataReader* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10318,7 +10318,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static int IDataWriter_put_ByteOrder(py::wrapper::Windows::Storage::Streams::IDataWriter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10387,7 +10387,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static int IDataWriter_put_UnicodeEncoding(py::wrapper::Windows::Storage::Streams::IDataWriter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12995,7 +12995,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static int IRandomAccessStream_put_Size(py::wrapper::Windows::Storage::Streams::IRandomAccessStream* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14203,7 +14203,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static int IRandomAccessStreamWithContentType_put_Size(py::wrapper::Windows::Storage::Streams::IRandomAccessStreamWithContentType* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

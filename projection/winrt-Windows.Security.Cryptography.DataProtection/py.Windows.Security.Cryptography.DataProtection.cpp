@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Security::Cryptography::DataProtection
 
     static PyObject* _new_DataProtectionProvider(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;

@@ -463,7 +463,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static int DocumentProperties_put_Title(py::wrapper::Windows::Storage::FileProperties::DocumentProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -532,7 +532,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static int DocumentProperties_put_Comment(py::wrapper::Windows::Storage::FileProperties::DocumentProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1045,7 +1045,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static int ImageProperties_put_Title(py::wrapper::Windows::Storage::FileProperties::ImageProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1114,7 +1114,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static int ImageProperties_put_Rating(py::wrapper::Windows::Storage::FileProperties::ImageProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1183,7 +1183,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static int ImageProperties_put_DateTaken(py::wrapper::Windows::Storage::FileProperties::ImageProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1252,7 +1252,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static int ImageProperties_put_CameraModel(py::wrapper::Windows::Storage::FileProperties::ImageProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1321,7 +1321,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static int ImageProperties_put_CameraManufacturer(py::wrapper::Windows::Storage::FileProperties::ImageProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1805,7 +1805,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static int MusicProperties_put_Year(py::wrapper::Windows::Storage::FileProperties::MusicProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1874,7 +1874,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static int MusicProperties_put_TrackNumber(py::wrapper::Windows::Storage::FileProperties::MusicProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1943,7 +1943,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static int MusicProperties_put_Title(py::wrapper::Windows::Storage::FileProperties::MusicProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2012,7 +2012,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static int MusicProperties_put_Subtitle(py::wrapper::Windows::Storage::FileProperties::MusicProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2081,7 +2081,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static int MusicProperties_put_Rating(py::wrapper::Windows::Storage::FileProperties::MusicProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2150,7 +2150,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static int MusicProperties_put_Publisher(py::wrapper::Windows::Storage::FileProperties::MusicProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2219,7 +2219,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static int MusicProperties_put_Artist(py::wrapper::Windows::Storage::FileProperties::MusicProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2288,7 +2288,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static int MusicProperties_put_AlbumArtist(py::wrapper::Windows::Storage::FileProperties::MusicProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2357,7 +2357,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static int MusicProperties_put_Album(py::wrapper::Windows::Storage::FileProperties::MusicProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3562,7 +3562,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static int StorageItemThumbnail_put_Size(py::wrapper::Windows::Storage::FileProperties::StorageItemThumbnail* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3953,7 +3953,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static int VideoProperties_put_Year(py::wrapper::Windows::Storage::FileProperties::VideoProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4022,7 +4022,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static int VideoProperties_put_Title(py::wrapper::Windows::Storage::FileProperties::VideoProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4091,7 +4091,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static int VideoProperties_put_Subtitle(py::wrapper::Windows::Storage::FileProperties::VideoProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4160,7 +4160,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static int VideoProperties_put_Rating(py::wrapper::Windows::Storage::FileProperties::VideoProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4229,7 +4229,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static int VideoProperties_put_Publisher(py::wrapper::Windows::Storage::FileProperties::VideoProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

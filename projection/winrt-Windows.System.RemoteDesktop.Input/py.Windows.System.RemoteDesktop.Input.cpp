@@ -8,7 +8,7 @@ namespace py::cpp::Windows::System::RemoteDesktop::Input
 
     static PyObject* _new_RemoteTextConnection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -309,7 +309,7 @@ namespace py::cpp::Windows::System::RemoteDesktop::Input
 
     static int RemoteTextConnection_put_IsEnabled(py::wrapper::Windows::System::RemoteDesktop::Input::RemoteTextConnection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

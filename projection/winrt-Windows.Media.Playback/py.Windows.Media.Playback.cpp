@@ -559,7 +559,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* _new_MediaBreak(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -644,7 +644,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static int MediaBreak_put_CanStart(py::wrapper::Windows::Media::Playback::MediaBreak* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1569,7 +1569,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static int MediaBreakSchedule_put_PrerollBreak(py::wrapper::Windows::Media::Playback::MediaBreakSchedule* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1638,7 +1638,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static int MediaBreakSchedule_put_PostrollBreak(py::wrapper::Windows::Media::Playback::MediaBreakSchedule* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2300,7 +2300,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static int MediaItemDisplayProperties_put_Type(py::wrapper::Windows::Media::Playback::MediaItemDisplayProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2369,7 +2369,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static int MediaItemDisplayProperties_put_Thumbnail(py::wrapper::Windows::Media::Playback::MediaItemDisplayProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2780,7 +2780,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static int MediaPlaybackAudioTrackList_put_SelectedIndex(py::wrapper::Windows::Media::Playback::MediaPlaybackAudioTrackList* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3109,7 +3109,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static int MediaPlaybackCommandManager_put_IsEnabled(py::wrapper::Windows::Media::Playback::MediaPlaybackCommandManager* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4296,7 +4296,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static int MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs_put_Handled(py::wrapper::Windows::Media::Playback::MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4464,7 +4464,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static int MediaPlaybackCommandManagerCommandBehavior_put_EnablingRule(py::wrapper::Windows::Media::Playback::MediaPlaybackCommandManagerCommandBehavior* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4769,7 +4769,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static int MediaPlaybackCommandManagerFastForwardReceivedEventArgs_put_Handled(py::wrapper::Windows::Media::Playback::MediaPlaybackCommandManagerFastForwardReceivedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4946,7 +4946,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static int MediaPlaybackCommandManagerNextReceivedEventArgs_put_Handled(py::wrapper::Windows::Media::Playback::MediaPlaybackCommandManagerNextReceivedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5123,7 +5123,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static int MediaPlaybackCommandManagerPauseReceivedEventArgs_put_Handled(py::wrapper::Windows::Media::Playback::MediaPlaybackCommandManagerPauseReceivedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5300,7 +5300,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static int MediaPlaybackCommandManagerPlayReceivedEventArgs_put_Handled(py::wrapper::Windows::Media::Playback::MediaPlaybackCommandManagerPlayReceivedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5477,7 +5477,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static int MediaPlaybackCommandManagerPositionReceivedEventArgs_put_Handled(py::wrapper::Windows::Media::Playback::MediaPlaybackCommandManagerPositionReceivedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5685,7 +5685,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static int MediaPlaybackCommandManagerPreviousReceivedEventArgs_put_Handled(py::wrapper::Windows::Media::Playback::MediaPlaybackCommandManagerPreviousReceivedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5862,7 +5862,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static int MediaPlaybackCommandManagerRateReceivedEventArgs_put_Handled(py::wrapper::Windows::Media::Playback::MediaPlaybackCommandManagerRateReceivedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6070,7 +6070,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static int MediaPlaybackCommandManagerRewindReceivedEventArgs_put_Handled(py::wrapper::Windows::Media::Playback::MediaPlaybackCommandManagerRewindReceivedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6247,7 +6247,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static int MediaPlaybackCommandManagerShuffleReceivedEventArgs_put_Handled(py::wrapper::Windows::Media::Playback::MediaPlaybackCommandManagerShuffleReceivedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6370,7 +6370,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* _new_MediaPlaybackItem(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -6717,7 +6717,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static int MediaPlaybackItem_put_CanSkip(py::wrapper::Windows::Media::Playback::MediaPlaybackItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6876,7 +6876,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static int MediaPlaybackItem_put_IsDisabledInPlaybackList(py::wrapper::Windows::Media::Playback::MediaPlaybackItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6945,7 +6945,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static int MediaPlaybackItem_put_AutoLoadedDisplayProperties(py::wrapper::Windows::Media::Playback::MediaPlaybackItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7658,7 +7658,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* _new_MediaPlaybackList(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -7890,7 +7890,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static int MediaPlaybackList_put_ShuffleEnabled(py::wrapper::Windows::Media::Playback::MediaPlaybackList* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7959,7 +7959,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static int MediaPlaybackList_put_AutoRepeatEnabled(py::wrapper::Windows::Media::Playback::MediaPlaybackList* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8118,7 +8118,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static int MediaPlaybackList_put_StartingItem(py::wrapper::Windows::Media::Playback::MediaPlaybackList* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8187,7 +8187,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static int MediaPlaybackList_put_MaxPrefetchTime(py::wrapper::Windows::Media::Playback::MediaPlaybackList* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8286,7 +8286,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static int MediaPlaybackList_put_MaxPlayedItemsToKeepOpen(py::wrapper::Windows::Media::Playback::MediaPlaybackList* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8838,7 +8838,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static int MediaPlaybackSession_put_StereoscopicVideoPackingMode(py::wrapper::Windows::Media::Playback::MediaPlaybackSession* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8907,7 +8907,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static int MediaPlaybackSession_put_Position(py::wrapper::Windows::Media::Playback::MediaPlaybackSession* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8976,7 +8976,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static int MediaPlaybackSession_put_PlaybackRate(py::wrapper::Windows::Media::Playback::MediaPlaybackSession* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9045,7 +9045,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static int MediaPlaybackSession_put_NormalizedSourceRect(py::wrapper::Windows::Media::Playback::MediaPlaybackSession* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9414,7 +9414,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static int MediaPlaybackSession_put_IsMirroring(py::wrapper::Windows::Media::Playback::MediaPlaybackSession* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9513,7 +9513,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static int MediaPlaybackSession_put_PlaybackRotation(py::wrapper::Windows::Media::Playback::MediaPlaybackSession* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10802,7 +10802,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static int MediaPlaybackSphericalVideoProjection_put_ViewOrientation(py::wrapper::Windows::Media::Playback::MediaPlaybackSphericalVideoProjection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10871,7 +10871,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static int MediaPlaybackSphericalVideoProjection_put_ProjectionMode(py::wrapper::Windows::Media::Playback::MediaPlaybackSphericalVideoProjection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10940,7 +10940,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static int MediaPlaybackSphericalVideoProjection_put_IsEnabled(py::wrapper::Windows::Media::Playback::MediaPlaybackSphericalVideoProjection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11009,7 +11009,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static int MediaPlaybackSphericalVideoProjection_put_HorizontalFieldOfViewInDegrees(py::wrapper::Windows::Media::Playback::MediaPlaybackSphericalVideoProjection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11078,7 +11078,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static int MediaPlaybackSphericalVideoProjection_put_FrameFormat(py::wrapper::Windows::Media::Playback::MediaPlaybackSphericalVideoProjection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11987,7 +11987,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static int MediaPlaybackVideoTrackList_put_SelectedIndex(py::wrapper::Windows::Media::Playback::MediaPlaybackVideoTrackList* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12271,7 +12271,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* _new_MediaPlayer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -13187,7 +13187,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static int MediaPlayer_put_Volume(py::wrapper::Windows::Media::Playback::MediaPlayer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13256,7 +13256,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static int MediaPlayer_put_Position(py::wrapper::Windows::Media::Playback::MediaPlayer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13325,7 +13325,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static int MediaPlayer_put_PlaybackRate(py::wrapper::Windows::Media::Playback::MediaPlayer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13394,7 +13394,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static int MediaPlayer_put_IsLoopingEnabled(py::wrapper::Windows::Media::Playback::MediaPlayer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13463,7 +13463,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static int MediaPlayer_put_IsMuted(py::wrapper::Windows::Media::Playback::MediaPlayer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13532,7 +13532,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static int MediaPlayer_put_AutoPlay(py::wrapper::Windows::Media::Playback::MediaPlayer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13811,7 +13811,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static int MediaPlayer_put_AudioDeviceType(py::wrapper::Windows::Media::Playback::MediaPlayer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13880,7 +13880,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static int MediaPlayer_put_AudioCategory(py::wrapper::Windows::Media::Playback::MediaPlayer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13979,7 +13979,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static int MediaPlayer_put_TimelineControllerPositionOffset(py::wrapper::Windows::Media::Playback::MediaPlayer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14048,7 +14048,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static int MediaPlayer_put_TimelineController(py::wrapper::Windows::Media::Playback::MediaPlayer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14117,7 +14117,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static int MediaPlayer_put_StereoscopicVideoRenderMode(py::wrapper::Windows::Media::Playback::MediaPlayer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14186,7 +14186,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static int MediaPlayer_put_RealTimePlayback(py::wrapper::Windows::Media::Playback::MediaPlayer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14255,7 +14255,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static int MediaPlayer_put_AudioDevice(py::wrapper::Windows::Media::Playback::MediaPlayer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14324,7 +14324,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static int MediaPlayer_put_AudioBalance(py::wrapper::Windows::Media::Playback::MediaPlayer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14483,7 +14483,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static int MediaPlayer_put_IsVideoFrameServerEnabled(py::wrapper::Windows::Media::Playback::MediaPlayer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14582,7 +14582,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static int MediaPlayer_put_ProtectionManager(py::wrapper::Windows::Media::Playback::MediaPlayer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14651,7 +14651,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static int MediaPlayer_put_Source(py::wrapper::Windows::Media::Playback::MediaPlayer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16332,7 +16332,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* _new_PlaybackMediaMarker(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;

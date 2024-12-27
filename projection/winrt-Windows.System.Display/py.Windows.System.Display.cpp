@@ -8,7 +8,7 @@ namespace py::cpp::Windows::System::Display
 
     static PyObject* _new_DisplayRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;

@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* _new_MidiActiveSensingMessage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -189,7 +189,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* _new_MidiChannelPressureMessage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -435,7 +435,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* _new_MidiContinueMessage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -616,7 +616,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* _new_MidiControlChangeMessage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1331,7 +1331,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* _new_MidiNoteOffMessage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1609,7 +1609,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* _new_MidiNoteOnMessage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2248,7 +2248,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* _new_MidiPitchBendChangeMessage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2494,7 +2494,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* _new_MidiPolyphonicKeyPressureMessage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2772,7 +2772,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* _new_MidiProgramChangeMessage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3018,7 +3018,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* _new_MidiSongPositionPointerMessage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3232,7 +3232,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* _new_MidiSongSelectMessage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3446,7 +3446,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* _new_MidiStartMessage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3627,7 +3627,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* _new_MidiStopMessage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -4134,7 +4134,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static int MidiSynthesizer_put_Volume(py::wrapper::Windows::Devices::Midi::MidiSynthesizer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4313,7 +4313,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* _new_MidiSystemExclusiveMessage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -4496,7 +4496,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* _new_MidiSystemResetMessage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -4677,7 +4677,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* _new_MidiTimeCodeMessage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -4923,7 +4923,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* _new_MidiTimingClockMessage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -5104,7 +5104,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* _new_MidiTuneRequestMessage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;

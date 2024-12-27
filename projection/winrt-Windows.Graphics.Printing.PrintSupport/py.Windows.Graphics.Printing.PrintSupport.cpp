@@ -947,7 +947,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static int PrintSupportIppCommunicationTimeouts_put_SendTimeout(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportIppCommunicationTimeouts* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1016,7 +1016,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static int PrintSupportIppCommunicationTimeouts_put_ReceiveTimeout(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportIppCommunicationTimeouts* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1085,7 +1085,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static int PrintSupportIppCommunicationTimeouts_put_ConnectTimeout(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportIppCommunicationTimeouts* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1223,7 +1223,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static int PrintSupportMxdcImageQualityConfiguration_put_TextOutputQuality(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportMxdcImageQualityConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1292,7 +1292,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static int PrintSupportMxdcImageQualityConfiguration_put_PhotographicOutputQuality(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportMxdcImageQualityConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1361,7 +1361,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static int PrintSupportMxdcImageQualityConfiguration_put_NormalOutputQuality(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportMxdcImageQualityConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1430,7 +1430,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static int PrintSupportMxdcImageQualityConfiguration_put_HighOutputQuality(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportMxdcImageQualityConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1499,7 +1499,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static int PrintSupportMxdcImageQualityConfiguration_put_FaxOutputQuality(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportMxdcImageQualityConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1568,7 +1568,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static int PrintSupportMxdcImageQualityConfiguration_put_DraftOutputQuality(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportMxdcImageQualityConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1637,7 +1637,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static int PrintSupportMxdcImageQualityConfiguration_put_AutomaticOutputQuality(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportMxdcImageQualityConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2369,7 +2369,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static PyObject* _new_PrintSupportPrintTicketElement(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2436,7 +2436,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static int PrintSupportPrintTicketElement_put_NamespaceUri(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintTicketElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2505,7 +2505,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static int PrintSupportPrintTicketElement_put_LocalName(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintTicketElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2993,7 +2993,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static int PrintSupportPrinterSelectedEventArgs_put_PrintTicket(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportPrinterSelectedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

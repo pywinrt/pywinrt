@@ -1003,7 +1003,7 @@ namespace py::cpp::Windows::Networking::PushNotifications
 
     static int PushNotificationReceivedEventArgs_put_Cancel(py::wrapper::Windows::Networking::PushNotifications::PushNotificationReceivedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

@@ -1949,7 +1949,7 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static int WiFiOnDemandHotspotNetworkProperties_put_Ssid(py::wrapper::Windows::Devices::WiFi::WiFiOnDemandHotspotNetworkProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2018,7 +2018,7 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static int WiFiOnDemandHotspotNetworkProperties_put_RemainingBatteryPercent(py::wrapper::Windows::Devices::WiFi::WiFiOnDemandHotspotNetworkProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2087,7 +2087,7 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static int WiFiOnDemandHotspotNetworkProperties_put_Password(py::wrapper::Windows::Devices::WiFi::WiFiOnDemandHotspotNetworkProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2156,7 +2156,7 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static int WiFiOnDemandHotspotNetworkProperties_put_IsMetered(py::wrapper::Windows::Devices::WiFi::WiFiOnDemandHotspotNetworkProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2225,7 +2225,7 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static int WiFiOnDemandHotspotNetworkProperties_put_DisplayName(py::wrapper::Windows::Devices::WiFi::WiFiOnDemandHotspotNetworkProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2294,7 +2294,7 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static int WiFiOnDemandHotspotNetworkProperties_put_CellularBars(py::wrapper::Windows::Devices::WiFi::WiFiOnDemandHotspotNetworkProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2363,7 +2363,7 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static int WiFiOnDemandHotspotNetworkProperties_put_Availability(py::wrapper::Windows::Devices::WiFi::WiFiOnDemandHotspotNetworkProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

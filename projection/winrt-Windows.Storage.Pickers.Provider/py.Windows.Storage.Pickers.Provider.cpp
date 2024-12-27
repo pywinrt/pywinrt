@@ -223,7 +223,7 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
     static int FileOpenPickerUI_put_Title(py::wrapper::Windows::Storage::Pickers::Provider::FileOpenPickerUI* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -729,7 +729,7 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
     static int FileSavePickerUI_put_Title(py::wrapper::Windows::Storage::Pickers::Provider::FileSavePickerUI* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1507,7 +1507,7 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
     static int TargetFileRequest_put_TargetFile(py::wrapper::Windows::Storage::Pickers::Provider::TargetFileRequest* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

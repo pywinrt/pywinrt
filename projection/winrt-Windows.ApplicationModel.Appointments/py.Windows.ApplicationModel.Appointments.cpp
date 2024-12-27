@@ -8,7 +8,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* _new_Appointment(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -75,7 +75,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static int Appointment_put_Location(py::wrapper::Windows::ApplicationModel::Appointments::Appointment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -144,7 +144,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static int Appointment_put_AllDay(py::wrapper::Windows::ApplicationModel::Appointments::Appointment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -213,7 +213,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static int Appointment_put_Organizer(py::wrapper::Windows::ApplicationModel::Appointments::Appointment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -282,7 +282,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static int Appointment_put_Duration(py::wrapper::Windows::ApplicationModel::Appointments::Appointment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -351,7 +351,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static int Appointment_put_Details(py::wrapper::Windows::ApplicationModel::Appointments::Appointment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -420,7 +420,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static int Appointment_put_BusyStatus(py::wrapper::Windows::ApplicationModel::Appointments::Appointment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -489,7 +489,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static int Appointment_put_Recurrence(py::wrapper::Windows::ApplicationModel::Appointments::Appointment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -558,7 +558,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static int Appointment_put_Subject(py::wrapper::Windows::ApplicationModel::Appointments::Appointment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -627,7 +627,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static int Appointment_put_Uri(py::wrapper::Windows::ApplicationModel::Appointments::Appointment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -696,7 +696,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static int Appointment_put_StartTime(py::wrapper::Windows::ApplicationModel::Appointments::Appointment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -765,7 +765,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static int Appointment_put_Sensitivity(py::wrapper::Windows::ApplicationModel::Appointments::Appointment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -834,7 +834,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static int Appointment_put_Reminder(py::wrapper::Windows::ApplicationModel::Appointments::Appointment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -933,7 +933,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static int Appointment_put_AllowNewTimeProposal(py::wrapper::Windows::ApplicationModel::Appointments::Appointment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1002,7 +1002,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static int Appointment_put_UserResponse(py::wrapper::Windows::ApplicationModel::Appointments::Appointment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1071,7 +1071,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static int Appointment_put_RoamingId(py::wrapper::Windows::ApplicationModel::Appointments::Appointment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1140,7 +1140,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static int Appointment_put_ReplyTime(py::wrapper::Windows::ApplicationModel::Appointments::Appointment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1209,7 +1209,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static int Appointment_put_IsResponseRequested(py::wrapper::Windows::ApplicationModel::Appointments::Appointment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1278,7 +1278,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static int Appointment_put_IsOrganizedByUser(py::wrapper::Windows::ApplicationModel::Appointments::Appointment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1347,7 +1347,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static int Appointment_put_IsCanceledMeeting(py::wrapper::Windows::ApplicationModel::Appointments::Appointment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1416,7 +1416,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static int Appointment_put_OnlineMeetingLink(py::wrapper::Windows::ApplicationModel::Appointments::Appointment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1605,7 +1605,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static int Appointment_put_RemoteChangeNumber(py::wrapper::Windows::ApplicationModel::Appointments::Appointment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1674,7 +1674,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static int Appointment_put_DetailsKind(py::wrapper::Windows::ApplicationModel::Appointments::Appointment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2725,7 +2725,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static int AppointmentCalendar_put_SummaryCardView(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentCalendar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2794,7 +2794,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static int AppointmentCalendar_put_OtherAppWriteAccess(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentCalendar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2863,7 +2863,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static int AppointmentCalendar_put_DisplayColor(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentCalendar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2932,7 +2932,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static int AppointmentCalendar_put_IsHidden(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentCalendar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3001,7 +3001,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static int AppointmentCalendar_put_DisplayName(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentCalendar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3070,7 +3070,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static int AppointmentCalendar_put_OtherAppReadAccess(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentCalendar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3199,7 +3199,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static int AppointmentCalendar_put_CanCancelMeetings(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentCalendar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3268,7 +3268,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static int AppointmentCalendar_put_CanNotifyInvitees(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentCalendar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3337,7 +3337,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static int AppointmentCalendar_put_RemoteId(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentCalendar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3406,7 +3406,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static int AppointmentCalendar_put_MustNofityInvitees(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentCalendar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3475,7 +3475,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static int AppointmentCalendar_put_CanUpdateMeetingResponses(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentCalendar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3544,7 +3544,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static int AppointmentCalendar_put_CanProposeNewTimeForMeetings(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentCalendar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3613,7 +3613,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static int AppointmentCalendar_put_CanCreateOrUpdateAppointments(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentCalendar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3682,7 +3682,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static int AppointmentCalendar_put_CanForwardMeetings(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentCalendar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3955,7 +3955,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static int AppointmentCalendarSyncManager_put_Status(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentCalendarSyncManager* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4024,7 +4024,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static int AppointmentCalendarSyncManager_put_LastSuccessfulSyncTime(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentCalendarSyncManager* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4093,7 +4093,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static int AppointmentCalendarSyncManager_put_LastAttemptedSyncTime(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentCalendarSyncManager* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4541,7 +4541,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* _new_AppointmentInvitee(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -4608,7 +4608,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static int AppointmentInvitee_put_Role(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentInvitee* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4677,7 +4677,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static int AppointmentInvitee_put_Response(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentInvitee* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4746,7 +4746,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static int AppointmentInvitee_put_DisplayName(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentInvitee* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4815,7 +4815,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static int AppointmentInvitee_put_Address(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentInvitee* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6263,7 +6263,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* _new_AppointmentOrganizer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -6330,7 +6330,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static int AppointmentOrganizer_put_DisplayName(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentOrganizer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6399,7 +6399,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static int AppointmentOrganizer_put_Address(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentOrganizer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7353,7 +7353,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* _new_AppointmentRecurrence(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -7420,7 +7420,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static int AppointmentRecurrence_put_Unit(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentRecurrence* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7489,7 +7489,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static int AppointmentRecurrence_put_Occurrences(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentRecurrence* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7558,7 +7558,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static int AppointmentRecurrence_put_Month(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentRecurrence* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7627,7 +7627,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static int AppointmentRecurrence_put_Interval(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentRecurrence* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7696,7 +7696,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static int AppointmentRecurrence_put_DaysOfWeek(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentRecurrence* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7765,7 +7765,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static int AppointmentRecurrence_put_Day(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentRecurrence* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7834,7 +7834,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static int AppointmentRecurrence_put_WeekOfMonth(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentRecurrence* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7903,7 +7903,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static int AppointmentRecurrence_put_Until(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentRecurrence* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7972,7 +7972,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static int AppointmentRecurrence_put_TimeZone(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentRecurrence* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10115,7 +10115,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* _new_FindAppointmentsOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -10182,7 +10182,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static int FindAppointmentsOptions_put_MaxCount(py::wrapper::Windows::ApplicationModel::Appointments::FindAppointmentsOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10251,7 +10251,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static int FindAppointmentsOptions_put_IncludeHidden(py::wrapper::Windows::ApplicationModel::Appointments::FindAppointmentsOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10450,7 +10450,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static int IAppointmentParticipant_put_Address(py::wrapper::Windows::ApplicationModel::Appointments::IAppointmentParticipant* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10519,7 +10519,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static int IAppointmentParticipant_put_DisplayName(py::wrapper::Windows::ApplicationModel::Appointments::IAppointmentParticipant* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

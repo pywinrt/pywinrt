@@ -38,7 +38,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* _new_AdaptiveTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -135,7 +135,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int AdaptiveTrigger_put_MinWindowWidth(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -204,7 +204,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int AdaptiveTrigger_put_MinWindowHeight(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -445,7 +445,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* _new_Application(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -758,7 +758,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int Application_put_Resources(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -827,7 +827,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int Application_put_RequestedTheme(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -896,7 +896,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int Application_put_HighContrastAdjustment(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -965,7 +965,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int Application_put_FocusVisualKind(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1064,7 +1064,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int Application_put_DispatcherShutdownMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1518,7 +1518,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* _new_BringIntoViewOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1585,7 +1585,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int BringIntoViewOptions_put_VerticalOffset(py::wrapper::Microsoft::UI::Xaml::BringIntoViewOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1654,7 +1654,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int BringIntoViewOptions_put_VerticalAlignmentRatio(py::wrapper::Microsoft::UI::Xaml::BringIntoViewOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1723,7 +1723,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int BringIntoViewOptions_put_TargetRect(py::wrapper::Microsoft::UI::Xaml::BringIntoViewOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1792,7 +1792,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int BringIntoViewOptions_put_HorizontalOffset(py::wrapper::Microsoft::UI::Xaml::BringIntoViewOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1861,7 +1861,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int BringIntoViewOptions_put_HorizontalAlignmentRatio(py::wrapper::Microsoft::UI::Xaml::BringIntoViewOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1930,7 +1930,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int BringIntoViewOptions_put_AnimationDesired(py::wrapper::Microsoft::UI::Xaml::BringIntoViewOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2071,7 +2071,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int BringIntoViewRequestedEventArgs_put_VerticalOffset(py::wrapper::Microsoft::UI::Xaml::BringIntoViewRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2140,7 +2140,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int BringIntoViewRequestedEventArgs_put_TargetRect(py::wrapper::Microsoft::UI::Xaml::BringIntoViewRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2209,7 +2209,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int BringIntoViewRequestedEventArgs_put_TargetElement(py::wrapper::Microsoft::UI::Xaml::BringIntoViewRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2278,7 +2278,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int BringIntoViewRequestedEventArgs_put_HorizontalOffset(py::wrapper::Microsoft::UI::Xaml::BringIntoViewRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2347,7 +2347,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int BringIntoViewRequestedEventArgs_put_Handled(py::wrapper::Microsoft::UI::Xaml::BringIntoViewRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2416,7 +2416,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int BringIntoViewRequestedEventArgs_put_AnimationDesired(py::wrapper::Microsoft::UI::Xaml::BringIntoViewRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2604,7 +2604,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* _new_BrushTransition(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2701,7 +2701,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int BrushTransition_put_Duration(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2847,7 +2847,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* _new_ColorPaletteResources(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2944,7 +2944,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ColorPaletteResources_put_ListMedium(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3013,7 +3013,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ColorPaletteResources_put_ListLow(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3082,7 +3082,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ColorPaletteResources_put_ErrorText(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3151,7 +3151,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ColorPaletteResources_put_ChromeWhite(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3220,7 +3220,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ColorPaletteResources_put_ChromeMediumLow(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3289,7 +3289,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ColorPaletteResources_put_ChromeMedium(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3358,7 +3358,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ColorPaletteResources_put_ChromeLow(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3427,7 +3427,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ColorPaletteResources_put_ChromeHigh(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3496,7 +3496,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ColorPaletteResources_put_ChromeGray(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3565,7 +3565,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ColorPaletteResources_put_ChromeDisabledLow(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3634,7 +3634,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ColorPaletteResources_put_ChromeDisabledHigh(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3703,7 +3703,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ColorPaletteResources_put_ChromeBlackMediumLow(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3772,7 +3772,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ColorPaletteResources_put_ChromeBlackMedium(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3841,7 +3841,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ColorPaletteResources_put_ChromeBlackLow(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3910,7 +3910,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ColorPaletteResources_put_ChromeBlackHigh(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3979,7 +3979,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ColorPaletteResources_put_ChromeAltLow(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4048,7 +4048,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ColorPaletteResources_put_BaseMediumLow(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4117,7 +4117,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ColorPaletteResources_put_BaseMediumHigh(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4186,7 +4186,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ColorPaletteResources_put_BaseMedium(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4255,7 +4255,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ColorPaletteResources_put_BaseLow(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4324,7 +4324,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ColorPaletteResources_put_BaseHigh(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4393,7 +4393,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ColorPaletteResources_put_AltMediumLow(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4462,7 +4462,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ColorPaletteResources_put_AltMediumHigh(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4531,7 +4531,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ColorPaletteResources_put_AltMedium(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4600,7 +4600,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ColorPaletteResources_put_AltLow(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4669,7 +4669,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ColorPaletteResources_put_AltHigh(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4738,7 +4738,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ColorPaletteResources_put_Accent(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5105,7 +5105,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int DataContextChangedEventArgs_put_Handled(py::wrapper::Microsoft::UI::Xaml::DataContextChangedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5257,7 +5257,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* _new_DataTemplate(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -5678,7 +5678,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* _new_DataTemplateKey(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -5813,7 +5813,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int DataTemplateKey_put_DataType(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5974,7 +5974,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int DebugSettings_put_IsTextPerformanceVisualizationEnabled(py::wrapper::Microsoft::UI::Xaml::DebugSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6043,7 +6043,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int DebugSettings_put_IsBindingTracingEnabled(py::wrapper::Microsoft::UI::Xaml::DebugSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6112,7 +6112,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int DebugSettings_put_FailFastOnErrors(py::wrapper::Microsoft::UI::Xaml::DebugSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6181,7 +6181,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int DebugSettings_put_EnableFrameRateCounter(py::wrapper::Microsoft::UI::Xaml::DebugSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6250,7 +6250,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int DebugSettings_put_IsXamlResourceReferenceTracingEnabled(py::wrapper::Microsoft::UI::Xaml::DebugSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6319,7 +6319,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int DebugSettings_put_LayoutCycleTracingLevel(py::wrapper::Microsoft::UI::Xaml::DebugSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6388,7 +6388,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int DebugSettings_put_LayoutCycleDebugBreakLevel(py::wrapper::Microsoft::UI::Xaml::DebugSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7138,7 +7138,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* _new_DependencyObjectCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -8506,7 +8506,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* _new_DispatcherTimer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -8685,7 +8685,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int DispatcherTimer_put_Interval(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9028,7 +9028,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int DragEventArgs_put_Handled(py::wrapper::Microsoft::UI::Xaml::DragEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9097,7 +9097,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int DragEventArgs_put_Data(py::wrapper::Microsoft::UI::Xaml::DragEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9166,7 +9166,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int DragEventArgs_put_AcceptedOperation(py::wrapper::Microsoft::UI::Xaml::DragEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9620,7 +9620,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int DragStartingEventArgs_put_Cancel(py::wrapper::Microsoft::UI::Xaml::DragStartingEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9689,7 +9689,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int DragStartingEventArgs_put_AllowedOperations(py::wrapper::Microsoft::UI::Xaml::DragStartingEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10391,7 +10391,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int DragUIOverride_put_IsGlyphVisible(py::wrapper::Microsoft::UI::Xaml::DragUIOverride* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10460,7 +10460,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int DragUIOverride_put_IsContentVisible(py::wrapper::Microsoft::UI::Xaml::DragUIOverride* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10529,7 +10529,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int DragUIOverride_put_IsCaptionVisible(py::wrapper::Microsoft::UI::Xaml::DragUIOverride* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10598,7 +10598,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int DragUIOverride_put_Caption(py::wrapper::Microsoft::UI::Xaml::DragUIOverride* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11429,7 +11429,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* _new_ElementFactoryGetArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -11526,7 +11526,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ElementFactoryGetArgs_put_Parent(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11595,7 +11595,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ElementFactoryGetArgs_put_Data(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11742,7 +11742,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* _new_ElementFactoryRecycleArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -11839,7 +11839,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ElementFactoryRecycleArgs_put_Parent(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11908,7 +11908,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ElementFactoryRecycleArgs_put_Element(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12113,7 +12113,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ElementSoundPlayer_put_Volume(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12182,7 +12182,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ElementSoundPlayer_put_State(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12251,7 +12251,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ElementSoundPlayer_put_SpatialAudioMode(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12370,7 +12370,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* _new_EventTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -12437,7 +12437,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int EventTrigger_put_RoutedEvent(py::wrapper::Microsoft::UI::Xaml::EventTrigger* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13275,7 +13275,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int FrameworkElement_put_Width(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13344,7 +13344,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int FrameworkElement_put_VerticalAlignment(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13413,7 +13413,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int FrameworkElement_put_Tag(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13482,7 +13482,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int FrameworkElement_put_Style(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13551,7 +13551,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int FrameworkElement_put_Resources(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13620,7 +13620,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int FrameworkElement_put_RequestedTheme(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13689,7 +13689,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int FrameworkElement_put_Name(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13758,7 +13758,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int FrameworkElement_put_MinWidth(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13827,7 +13827,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int FrameworkElement_put_MinHeight(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13896,7 +13896,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int FrameworkElement_put_MaxWidth(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13965,7 +13965,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int FrameworkElement_put_MaxHeight(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14034,7 +14034,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int FrameworkElement_put_Margin(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14103,7 +14103,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int FrameworkElement_put_Language(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14172,7 +14172,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int FrameworkElement_put_HorizontalAlignment(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14241,7 +14241,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int FrameworkElement_put_Height(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14310,7 +14310,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int FrameworkElement_put_FocusVisualSecondaryThickness(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14379,7 +14379,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int FrameworkElement_put_FocusVisualSecondaryBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14448,7 +14448,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int FrameworkElement_put_FocusVisualPrimaryThickness(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14517,7 +14517,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int FrameworkElement_put_FocusVisualPrimaryBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14586,7 +14586,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int FrameworkElement_put_FocusVisualMargin(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14655,7 +14655,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int FrameworkElement_put_FlowDirection(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14724,7 +14724,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int FrameworkElement_put_DataContext(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14793,7 +14793,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int FrameworkElement_put_AllowFocusWhenDisabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14862,7 +14862,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int FrameworkElement_put_AllowFocusOnInteraction(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16689,7 +16689,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* _new_FrameworkView(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -16993,7 +16993,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* _new_FrameworkViewSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -17895,7 +17895,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* _new_PropertyMetadata(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -18315,7 +18315,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* _new_PropertyPath(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -19157,7 +19157,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* _new_ResourceDictionary(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -19545,7 +19545,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ResourceDictionary_put_Source(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19762,7 +19762,8 @@ namespace py::cpp::Microsoft::UI::Xaml
                 return self->obj.try_as<winrt::Microsoft::UI::Xaml::ResourceDictionary>().TryLookup(_key);
             }();
 
-            if (!value) {
+            if (!value)
+            {
                 if constexpr (std::is_base_of_v<winrt::Windows::Foundation::IUnknown, decltype(value)>)
                 {
                     auto has_key = [&]()
@@ -19796,13 +19797,15 @@ namespace py::cpp::Microsoft::UI::Xaml
         {
             auto _key = py::convert_to<winrt::Windows::Foundation::IInspectable>(key);
 
-            if (value == nullptr) {
+            if (!value)
+            {
                 bool did_remove;
                 {
                     auto _gil = py::release_gil();
                     did_remove = self->obj.try_as<winrt::Microsoft::UI::Xaml::ResourceDictionary>().TryRemove(_key);
                 }
-                if (!did_remove) {
+                if (!did_remove)
+                {
                     PyErr_SetObject(PyExc_KeyError, key);
                     return -1;
                 }
@@ -19940,7 +19943,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ResourceManagerRequestedEventArgs_put_CustomResourceManager(py::wrapper::Microsoft::UI::Xaml::ResourceManagerRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -20127,7 +20130,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* _new_RoutedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -20331,7 +20334,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* _new_ScalarTransition(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -20428,7 +20431,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int ScalarTransition_put_Duration(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -20544,7 +20547,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* _new_Setter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -20627,7 +20630,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int Setter_put_Value(py::wrapper::Microsoft::UI::Xaml::Setter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -20696,7 +20699,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int Setter_put_Target(py::wrapper::Microsoft::UI::Xaml::Setter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -20765,7 +20768,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int Setter_put_Property(py::wrapper::Microsoft::UI::Xaml::Setter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -20980,7 +20983,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* _new_SetterBaseCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -22192,7 +22195,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* _new_StateTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -22259,7 +22262,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int StateTrigger_put_IsActive(py::wrapper::Microsoft::UI::Xaml::StateTrigger* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -22570,7 +22573,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* _new_Style(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -22693,7 +22696,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int Style_put_TargetType(py::wrapper::Microsoft::UI::Xaml::Style* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -22762,7 +22765,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int Style_put_BasedOn(py::wrapper::Microsoft::UI::Xaml::Style* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -22917,7 +22920,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* _new_TargetPropertyPath(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -22999,7 +23002,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int TargetPropertyPath_put_Target(py::wrapper::Microsoft::UI::Xaml::TargetPropertyPath* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -23068,7 +23071,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int TargetPropertyPath_put_Path(py::wrapper::Microsoft::UI::Xaml::TargetPropertyPath* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -23431,7 +23434,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* _new_TriggerActionCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -26454,7 +26457,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_KeyboardAcceleratorPlacementMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -26523,7 +26526,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_RotationTransition(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -26592,7 +26595,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_KeyTipTarget(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -26661,7 +26664,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_KeyTipPlacementMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -26730,7 +26733,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_KeyTipHorizontalOffset(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -26799,7 +26802,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_IsTapEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -26868,7 +26871,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_IsTabStop(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -26937,7 +26940,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_IsRightTapEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -27006,7 +27009,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_IsHoldingEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -27075,7 +27078,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_IsHitTestVisible(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -27144,7 +27147,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_IsDoubleTapEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -27213,7 +27216,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_AccessKey(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -27282,7 +27285,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_HighContrastAdjustment(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -27351,7 +27354,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_ManipulationMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -27420,7 +27423,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_ExitDisplayModeOnAccessKeyInvoked(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -27489,7 +27492,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_OpacityTransition(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -27558,7 +27561,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_ContextFlyout(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -27627,7 +27630,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_CompositeMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -27696,7 +27699,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_Clip(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -27765,7 +27768,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_Translation(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -27834,7 +27837,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_CanDrag(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -27903,7 +27906,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_CanBeScrollAnchor(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -27972,7 +27975,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_CacheMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -28041,7 +28044,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_AllowDrop(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -28110,7 +28113,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_Opacity(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -28179,7 +28182,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_KeyboardAcceleratorPlacementTarget(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -28248,7 +28251,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_AccessKeyScopeOwner(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -28317,7 +28320,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_IsAccessKeyScope(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -28386,7 +28389,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_KeyTipVerticalOffset(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -28455,7 +28458,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_XamlRoot(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -28524,7 +28527,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_XYFocusUpNavigationStrategy(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -28593,7 +28596,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_XYFocusUp(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -28662,7 +28665,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_XYFocusRightNavigationStrategy(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -28731,7 +28734,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_XYFocusRight(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -28800,7 +28803,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_XYFocusLeftNavigationStrategy(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -28869,7 +28872,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_CenterPoint(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -28938,7 +28941,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_XYFocusKeyboardNavigation(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -29007,7 +29010,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_XYFocusDownNavigationStrategy(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -29076,7 +29079,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_XYFocusDown(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -29145,7 +29148,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_Visibility(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -29214,7 +29217,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_UseSystemFocusVisuals(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -29283,7 +29286,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_UseLayoutRounding(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -29352,7 +29355,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_TranslationTransition(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -29421,7 +29424,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_XYFocusLeft(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -29490,7 +29493,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_Transitions(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -29559,7 +29562,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_TransformMatrix(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -29628,7 +29631,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_Rotation(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -29697,7 +29700,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_RenderTransformOrigin(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -29766,7 +29769,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_RenderTransform(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -29835,7 +29838,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_TabFocusNavigation(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -29904,7 +29907,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_RasterizationScale(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -29973,7 +29976,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_Projection(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -30042,7 +30045,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_Shadow(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -30111,7 +30114,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_ScaleTransition(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -30180,7 +30183,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_Scale(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -30249,7 +30252,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_TabIndex(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -30318,7 +30321,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_RotationAxis(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -30387,7 +30390,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UIElement_put_Transform3D(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -36029,7 +36032,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* _new_UIElementWeakCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -36929,7 +36932,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int UnhandledExceptionEventArgs_put_Handled(py::wrapper::Microsoft::UI::Xaml::UnhandledExceptionEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -37112,7 +37115,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* _new_Vector3Transition(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -37209,7 +37212,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int Vector3Transition_put_Duration(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -37278,7 +37281,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int Vector3Transition_put_Components(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -37395,7 +37398,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* _new_VisualState(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -37462,7 +37465,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int VisualState_put_Storyboard(py::wrapper::Microsoft::UI::Xaml::VisualState* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -37646,7 +37649,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* _new_VisualStateChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -37713,7 +37716,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int VisualStateChangedEventArgs_put_OldState(py::wrapper::Microsoft::UI::Xaml::VisualStateChangedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -37782,7 +37785,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int VisualStateChangedEventArgs_put_NewState(py::wrapper::Microsoft::UI::Xaml::VisualStateChangedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -37851,7 +37854,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int VisualStateChangedEventArgs_put_Control(py::wrapper::Microsoft::UI::Xaml::VisualStateChangedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -37944,7 +37947,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* _new_VisualStateGroup(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -38390,7 +38393,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* _new_VisualStateManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -38912,7 +38915,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* _new_VisualTransition(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -39009,7 +39012,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int VisualTransition_put_To(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -39078,7 +39081,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int VisualTransition_put_Storyboard(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -39147,7 +39150,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int VisualTransition_put_GeneratedEasingFunction(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -39216,7 +39219,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int VisualTransition_put_GeneratedDuration(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -39285,7 +39288,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int VisualTransition_put_From(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -39435,7 +39438,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyObject* _new_Window(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -39657,7 +39660,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int Window_put_Title(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -39726,7 +39729,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int Window_put_ExtendsContentIntoTitleBar(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -39795,7 +39798,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int Window_put_Content(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -40044,7 +40047,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int Window_put_SystemBackdrop(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -40547,7 +40550,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int WindowActivatedEventArgs_put_Handled(py::wrapper::Microsoft::UI::Xaml::WindowActivatedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -40714,7 +40717,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int WindowEventArgs_put_Handled(py::wrapper::Microsoft::UI::Xaml::WindowEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -40850,7 +40853,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int WindowSizeChangedEventArgs_put_Handled(py::wrapper::Microsoft::UI::Xaml::WindowSizeChangedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -41017,7 +41020,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int WindowVisibilityChangedEventArgs_put_Handled(py::wrapper::Microsoft::UI::Xaml::WindowVisibilityChangedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -42461,7 +42464,7 @@ namespace py::cpp::Microsoft::UI::Xaml
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -42532,7 +42535,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int CornerRadius_set_TopLeft(py::wrapper::Microsoft::UI::Xaml::CornerRadius* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -42565,7 +42568,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int CornerRadius_set_TopRight(py::wrapper::Microsoft::UI::Xaml::CornerRadius* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -42598,7 +42601,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int CornerRadius_set_BottomRight(py::wrapper::Microsoft::UI::Xaml::CornerRadius* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -42631,7 +42634,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int CornerRadius_set_BottomLeft(py::wrapper::Microsoft::UI::Xaml::CornerRadius* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -42759,7 +42762,7 @@ namespace py::cpp::Microsoft::UI::Xaml
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -42826,7 +42829,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int Duration_set_TimeSpan(py::wrapper::Microsoft::UI::Xaml::Duration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -42859,7 +42862,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int Duration_set_Type(py::wrapper::Microsoft::UI::Xaml::Duration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -42973,7 +42976,7 @@ namespace py::cpp::Microsoft::UI::Xaml
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -43040,7 +43043,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int GridLength_set_Value(py::wrapper::Microsoft::UI::Xaml::GridLength* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -43073,7 +43076,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int GridLength_set_GridUnitType(py::wrapper::Microsoft::UI::Xaml::GridLength* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -43187,7 +43190,7 @@ namespace py::cpp::Microsoft::UI::Xaml
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -43258,7 +43261,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int Thickness_set_Left(py::wrapper::Microsoft::UI::Xaml::Thickness* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -43291,7 +43294,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int Thickness_set_Top(py::wrapper::Microsoft::UI::Xaml::Thickness* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -43324,7 +43327,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int Thickness_set_Right(py::wrapper::Microsoft::UI::Xaml::Thickness* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -43357,7 +43360,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static int Thickness_set_Bottom(py::wrapper::Microsoft::UI::Xaml::Thickness* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

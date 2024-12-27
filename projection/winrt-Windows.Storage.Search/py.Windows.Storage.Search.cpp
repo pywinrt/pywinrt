@@ -914,7 +914,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* _new_IndexableContent(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -981,7 +981,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static int IndexableContent_put_StreamContentType(py::wrapper::Windows::Storage::Search::IndexableContent* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1050,7 +1050,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static int IndexableContent_put_Stream(py::wrapper::Windows::Storage::Search::IndexableContent* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1119,7 +1119,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static int IndexableContent_put_Id(py::wrapper::Windows::Storage::Search::IndexableContent* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1243,7 +1243,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* _new_QueryOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1513,7 +1513,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static int QueryOptions_put_UserSearchFilter(py::wrapper::Windows::Storage::Search::QueryOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1582,7 +1582,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static int QueryOptions_put_Language(py::wrapper::Windows::Storage::Search::QueryOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1651,7 +1651,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static int QueryOptions_put_IndexerOption(py::wrapper::Windows::Storage::Search::QueryOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1720,7 +1720,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static int QueryOptions_put_FolderDepth(py::wrapper::Windows::Storage::Search::QueryOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1789,7 +1789,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static int QueryOptions_put_ApplicationSearchFilter(py::wrapper::Windows::Storage::Search::QueryOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4587,7 +4587,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* _new_ValueAndLanguage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -4654,7 +4654,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static int ValueAndLanguage_put_Value(py::wrapper::Windows::Storage::Search::ValueAndLanguage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4723,7 +4723,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static int ValueAndLanguage_put_Language(py::wrapper::Windows::Storage::Search::ValueAndLanguage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4860,7 +4860,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static int IIndexableContent_put_Id(py::wrapper::Windows::Storage::Search::IIndexableContent* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4959,7 +4959,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static int IIndexableContent_put_Stream(py::wrapper::Windows::Storage::Search::IIndexableContent* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5028,7 +5028,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static int IIndexableContent_put_StreamContentType(py::wrapper::Windows::Storage::Search::IIndexableContent* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7493,7 +7493,7 @@ namespace py::cpp::Windows::Storage::Search
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -7560,7 +7560,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static int SortEntry_set_PropertyName(py::wrapper::Windows::Storage::Search::SortEntry* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7593,7 +7593,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static int SortEntry_set_AscendingOrder(py::wrapper::Windows::Storage::Search::SortEntry* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

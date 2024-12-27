@@ -8,7 +8,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static PyObject* _new_InjectedInputGamepadInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -90,7 +90,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputGamepadInfo_put_RightTrigger(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputGamepadInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -159,7 +159,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputGamepadInfo_put_RightThumbstickY(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputGamepadInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -228,7 +228,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputGamepadInfo_put_RightThumbstickX(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputGamepadInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -297,7 +297,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputGamepadInfo_put_LeftTrigger(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputGamepadInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -366,7 +366,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputGamepadInfo_put_LeftThumbstickY(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputGamepadInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -435,7 +435,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputGamepadInfo_put_LeftThumbstickX(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputGamepadInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -504,7 +504,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputGamepadInfo_put_Buttons(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputGamepadInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -601,7 +601,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static PyObject* _new_InjectedInputKeyboardInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -668,7 +668,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputKeyboardInfo_put_VirtualKey(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputKeyboardInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -737,7 +737,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputKeyboardInfo_put_ScanCode(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputKeyboardInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -806,7 +806,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputKeyboardInfo_put_KeyOptions(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputKeyboardInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -899,7 +899,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static PyObject* _new_InjectedInputMouseInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -966,7 +966,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputMouseInfo_put_TimeOffsetInMilliseconds(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputMouseInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1035,7 +1035,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputMouseInfo_put_MouseOptions(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputMouseInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1104,7 +1104,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputMouseInfo_put_MouseData(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputMouseInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1173,7 +1173,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputMouseInfo_put_DeltaY(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputMouseInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1242,7 +1242,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputMouseInfo_put_DeltaX(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputMouseInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1337,7 +1337,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static PyObject* _new_InjectedInputPenInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1404,7 +1404,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputPenInfo_put_TiltY(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPenInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1473,7 +1473,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputPenInfo_put_TiltX(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPenInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1542,7 +1542,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputPenInfo_put_Rotation(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPenInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1611,7 +1611,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputPenInfo_put_Pressure(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPenInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1680,7 +1680,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputPenInfo_put_PointerInfo(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPenInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1749,7 +1749,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputPenInfo_put_PenParameters(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPenInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1818,7 +1818,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputPenInfo_put_PenButtons(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPenInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1915,7 +1915,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static PyObject* _new_InjectedInputTouchInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1982,7 +1982,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputTouchInfo_put_TouchParameters(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputTouchInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2051,7 +2051,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputTouchInfo_put_Pressure(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputTouchInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2120,7 +2120,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputTouchInfo_put_PointerInfo(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputTouchInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2189,7 +2189,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputTouchInfo_put_Orientation(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputTouchInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2258,7 +2258,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputTouchInfo_put_Contact(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputTouchInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3062,7 +3062,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -3129,7 +3129,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputPoint_set_PositionX(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPoint* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3162,7 +3162,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputPoint_set_PositionY(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPoint* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3276,7 +3276,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -3349,7 +3349,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputPointerInfo_set_PointerId(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3382,7 +3382,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputPointerInfo_set_PointerOptions(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3415,7 +3415,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputPointerInfo_set_PixelLocation(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3448,7 +3448,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputPointerInfo_set_TimeOffsetInMilliseconds(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3481,7 +3481,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputPointerInfo_set_PerformanceCount(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3616,7 +3616,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -3687,7 +3687,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputRectangle_set_Left(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputRectangle* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3720,7 +3720,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputRectangle_set_Top(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputRectangle* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3753,7 +3753,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputRectangle_set_Bottom(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputRectangle* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3786,7 +3786,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static int InjectedInputRectangle_set_Right(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputRectangle* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

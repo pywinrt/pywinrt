@@ -1619,7 +1619,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* _new_RemoteSystemAuthorizationKindFilter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1905,7 +1905,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* _new_RemoteSystemConnectionRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2243,7 +2243,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* _new_RemoteSystemDiscoveryTypeFilter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2430,7 +2430,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* _new_RemoteSystemKindFilter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3492,7 +3492,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* _new_RemoteSystemSessionController(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -4271,7 +4271,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* _new_RemoteSystemSessionInvitationListener(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -4928,7 +4928,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* _new_RemoteSystemSessionMessageChannel(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -5265,7 +5265,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* _new_RemoteSystemSessionOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -5332,7 +5332,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static int RemoteSystemSessionOptions_put_IsInviteOnly(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6841,7 +6841,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* _new_RemoteSystemStatusTypeFilter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -7672,7 +7672,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* _new_RemoteSystemWebAccountFilter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;

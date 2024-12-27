@@ -343,7 +343,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
 
     static PyObject* _new_ResourceCandidate(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -670,7 +670,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
 
     static PyObject* _new_ResourceLoader(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -941,7 +941,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
 
     static PyObject* _new_ResourceManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;

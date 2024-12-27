@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
     static PyObject* _new_DnssdRegistrationResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -248,7 +248,7 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
     static PyObject* _new_DnssdServiceInstance(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -529,7 +529,7 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
     static int DnssdServiceInstance_put_Weight(py::wrapper::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -598,7 +598,7 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
     static int DnssdServiceInstance_put_Priority(py::wrapper::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -667,7 +667,7 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
     static int DnssdServiceInstance_put_Port(py::wrapper::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -736,7 +736,7 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
     static int DnssdServiceInstance_put_HostName(py::wrapper::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -805,7 +805,7 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
     static int DnssdServiceInstance_put_DnssdServiceInstanceName(py::wrapper::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

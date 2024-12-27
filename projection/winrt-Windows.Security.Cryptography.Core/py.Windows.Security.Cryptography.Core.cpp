@@ -5398,7 +5398,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static int KeyDerivationParameters_put_KdfGenericBinary(py::wrapper::Windows::Security::Cryptography::Core::KeyDerivationParameters* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5497,7 +5497,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static int KeyDerivationParameters_put_Capi1KdfTargetAlgorithm(py::wrapper::Windows::Security::Cryptography::Core::KeyDerivationParameters* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

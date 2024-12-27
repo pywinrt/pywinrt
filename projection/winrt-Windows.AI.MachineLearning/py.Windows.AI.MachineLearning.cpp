@@ -1303,7 +1303,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* _new_LearningModelBinding(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1769,7 +1769,8 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return self->obj.TryLookup(_key);
             }();
 
-            if (!value) {
+            if (!value)
+            {
                 if constexpr (std::is_base_of_v<winrt::Windows::Foundation::IUnknown, decltype(value)>)
                 {
                     auto has_key = [&]()
@@ -1838,7 +1839,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* _new_LearningModelDevice(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2248,7 +2249,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* _new_LearningModelSession(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2707,7 +2708,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* _new_LearningModelSessionOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2818,7 +2819,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static int LearningModelSessionOptions_put_BatchSizeOverride(py::wrapper::Windows::AI::MachineLearning::LearningModelSessionOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2887,7 +2888,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static int LearningModelSessionOptions_put_CloseModelOnSessionCreation(py::wrapper::Windows::AI::MachineLearning::LearningModelSessionOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

@@ -555,7 +555,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static int HtmlPrintDocumentSource_put_TopMargin(py::wrapper::Windows::UI::WebUI::HtmlPrintDocumentSource* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -624,7 +624,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static int HtmlPrintDocumentSource_put_ShrinkToFit(py::wrapper::Windows::UI::WebUI::HtmlPrintDocumentSource* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -693,7 +693,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static int HtmlPrintDocumentSource_put_RightMargin(py::wrapper::Windows::UI::WebUI::HtmlPrintDocumentSource* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -762,7 +762,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static int HtmlPrintDocumentSource_put_PercentScale(py::wrapper::Windows::UI::WebUI::HtmlPrintDocumentSource* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -831,7 +831,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static int HtmlPrintDocumentSource_put_LeftMargin(py::wrapper::Windows::UI::WebUI::HtmlPrintDocumentSource* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -900,7 +900,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static int HtmlPrintDocumentSource_put_EnableHeaderFooter(py::wrapper::Windows::UI::WebUI::HtmlPrintDocumentSource* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -969,7 +969,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static int HtmlPrintDocumentSource_put_Content(py::wrapper::Windows::UI::WebUI::HtmlPrintDocumentSource* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1038,7 +1038,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static int HtmlPrintDocumentSource_put_BottomMargin(py::wrapper::Windows::UI::WebUI::HtmlPrintDocumentSource* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4247,7 +4247,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static int WebUIBackgroundTaskInstanceRuntimeClass_put_Progress(py::wrapper::Windows::UI::WebUI::WebUIBackgroundTaskInstanceRuntimeClass* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4436,7 +4436,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static int WebUIBackgroundTaskInstanceRuntimeClass_put_Succeeded(py::wrapper::Windows::UI::WebUI::WebUIBackgroundTaskInstanceRuntimeClass* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15732,7 +15732,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static int WebUIView_put_IgnoreApplicationContentUriRulesNavigationRestrictions(py::wrapper::Windows::UI::WebUI::WebUIView* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15831,7 +15831,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static int WebUIView_put_Source(py::wrapper::Windows::UI::WebUI::WebUIView* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15900,7 +15900,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static int WebUIView_put_DefaultBackgroundColor(py::wrapper::Windows::UI::WebUI::WebUIView* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -18757,7 +18757,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static int IWebUIBackgroundTaskInstance_put_Succeeded(py::wrapper::Windows::UI::WebUI::IWebUIBackgroundTaskInstance* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

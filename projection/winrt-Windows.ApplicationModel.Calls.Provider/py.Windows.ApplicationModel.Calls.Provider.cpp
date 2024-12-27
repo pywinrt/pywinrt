@@ -8,7 +8,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
 
     static PyObject* _new_PhoneCallOrigin(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -75,7 +75,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
 
     static int PhoneCallOrigin_put_Location(py::wrapper::Windows::ApplicationModel::Calls::Provider::PhoneCallOrigin* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -144,7 +144,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
 
     static int PhoneCallOrigin_put_CategoryDescription(py::wrapper::Windows::ApplicationModel::Calls::Provider::PhoneCallOrigin* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -213,7 +213,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
 
     static int PhoneCallOrigin_put_Category(py::wrapper::Windows::ApplicationModel::Calls::Provider::PhoneCallOrigin* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -282,7 +282,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
 
     static int PhoneCallOrigin_put_DisplayName(py::wrapper::Windows::ApplicationModel::Calls::Provider::PhoneCallOrigin* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -351,7 +351,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
 
     static int PhoneCallOrigin_put_DisplayPicture(py::wrapper::Windows::ApplicationModel::Calls::Provider::PhoneCallOrigin* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

@@ -8,7 +8,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* _new_ActivitySensorTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -360,7 +360,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* _new_AppBroadcastTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -429,7 +429,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static int AppBroadcastTrigger_put_ProviderInfo(py::wrapper::Windows::ApplicationModel::Background::AppBroadcastTrigger* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -565,7 +565,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static int AppBroadcastTriggerProviderInfo_put_VideoKeyFrameInterval(py::wrapper::Windows::ApplicationModel::Background::AppBroadcastTriggerProviderInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -634,7 +634,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static int AppBroadcastTriggerProviderInfo_put_MaxVideoWidth(py::wrapper::Windows::ApplicationModel::Background::AppBroadcastTriggerProviderInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -703,7 +703,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static int AppBroadcastTriggerProviderInfo_put_MaxVideoHeight(py::wrapper::Windows::ApplicationModel::Background::AppBroadcastTriggerProviderInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -772,7 +772,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static int AppBroadcastTriggerProviderInfo_put_MaxVideoBitrate(py::wrapper::Windows::ApplicationModel::Background::AppBroadcastTriggerProviderInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -841,7 +841,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static int AppBroadcastTriggerProviderInfo_put_LogoResource(py::wrapper::Windows::ApplicationModel::Background::AppBroadcastTriggerProviderInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -910,7 +910,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static int AppBroadcastTriggerProviderInfo_put_DisplayNameResource(py::wrapper::Windows::ApplicationModel::Background::AppBroadcastTriggerProviderInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1006,7 +1006,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* _new_ApplicationTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1275,7 +1275,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* _new_AppointmentStoreNotificationTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1845,7 +1845,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* _new_BackgroundTaskBuilder(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2152,7 +2152,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static int BackgroundTaskBuilder_put_TaskEntryPoint(py::wrapper::Windows::ApplicationModel::Background::BackgroundTaskBuilder* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2221,7 +2221,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static int BackgroundTaskBuilder_put_Name(py::wrapper::Windows::ApplicationModel::Background::BackgroundTaskBuilder* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2290,7 +2290,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static int BackgroundTaskBuilder_put_CancelOnConditionLoss(py::wrapper::Windows::ApplicationModel::Background::BackgroundTaskBuilder* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2359,7 +2359,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static int BackgroundTaskBuilder_put_IsNetworkRequested(py::wrapper::Windows::ApplicationModel::Background::BackgroundTaskBuilder* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2428,7 +2428,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static int BackgroundTaskBuilder_put_TaskGroup(py::wrapper::Windows::ApplicationModel::Background::BackgroundTaskBuilder* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2497,7 +2497,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static int BackgroundTaskBuilder_put_AllowRunningTaskInStandby(py::wrapper::Windows::ApplicationModel::Background::BackgroundTaskBuilder* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3589,7 +3589,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* _new_BackgroundTaskRegistrationGroup(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -4035,7 +4035,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* _new_BluetoothLEAdvertisementPublisherTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -4132,7 +4132,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static int BluetoothLEAdvertisementPublisherTrigger_put_UseExtendedFormat(py::wrapper::Windows::ApplicationModel::Background::BluetoothLEAdvertisementPublisherTrigger* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4201,7 +4201,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static int BluetoothLEAdvertisementPublisherTrigger_put_PreferredTransmitPowerLevelInDBm(py::wrapper::Windows::ApplicationModel::Background::BluetoothLEAdvertisementPublisherTrigger* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4270,7 +4270,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static int BluetoothLEAdvertisementPublisherTrigger_put_IsAnonymous(py::wrapper::Windows::ApplicationModel::Background::BluetoothLEAdvertisementPublisherTrigger* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4339,7 +4339,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static int BluetoothLEAdvertisementPublisherTrigger_put_IncludeTransmitPowerLevel(py::wrapper::Windows::ApplicationModel::Background::BluetoothLEAdvertisementPublisherTrigger* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4434,7 +4434,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* _new_BluetoothLEAdvertisementWatcherTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -4501,7 +4501,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static int BluetoothLEAdvertisementWatcherTrigger_put_SignalStrengthFilter(py::wrapper::Windows::ApplicationModel::Background::BluetoothLEAdvertisementWatcherTrigger* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4570,7 +4570,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static int BluetoothLEAdvertisementWatcherTrigger_put_AdvertisementFilter(py::wrapper::Windows::ApplicationModel::Background::BluetoothLEAdvertisementWatcherTrigger* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4759,7 +4759,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static int BluetoothLEAdvertisementWatcherTrigger_put_AllowExtendedAdvertisements(py::wrapper::Windows::ApplicationModel::Background::BluetoothLEAdvertisementWatcherTrigger* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4856,7 +4856,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* _new_CachedFileUpdaterTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -5103,7 +5103,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* _new_ChatMessageNotificationTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -5191,7 +5191,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* _new_ChatMessageReceivedNotificationTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -5279,7 +5279,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* _new_CommunicationBlockingAppSetAsActiveTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -5367,7 +5367,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* _new_ContactStoreNotificationTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -5455,7 +5455,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* _new_ContentPrefetchTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -5589,7 +5589,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* _new_ConversationalAgentTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -5677,7 +5677,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* _new_CustomSystemEventTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -5917,7 +5917,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static int DeviceConnectionChangeTrigger_put_MaintainConnection(py::wrapper::Windows::ApplicationModel::Background::DeviceConnectionChangeTrigger* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6096,7 +6096,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* _new_DeviceManufacturerNotificationTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -6249,7 +6249,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* _new_DeviceServicingTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -6426,7 +6426,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* _new_DeviceUseTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -6667,7 +6667,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* _new_EmailStoreNotificationTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -6755,7 +6755,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* _new_GattCharacteristicNotificationTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -7011,7 +7011,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static int GattServiceProviderTrigger_put_AdvertisingParameters(py::wrapper::Windows::ApplicationModel::Background::GattServiceProviderTrigger* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7318,7 +7318,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* _new_GeovisitTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -7385,7 +7385,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static int GeovisitTrigger_put_MonitoringScope(py::wrapper::Windows::ApplicationModel::Background::GeovisitTrigger* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7476,7 +7476,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* _new_LocationTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -7597,7 +7597,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* _new_MaintenanceTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -7750,7 +7750,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* _new_MediaProcessingTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -7922,7 +7922,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* _new_MobileBroadbandDeviceServiceNotificationTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -8010,7 +8010,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* _new_MobileBroadbandPcoDataChangeTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -8098,7 +8098,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* _new_MobileBroadbandPinLockStateChangeTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -8186,7 +8186,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* _new_MobileBroadbandRadioStateChangeTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -8274,7 +8274,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* _new_MobileBroadbandRegistrationStateChangeTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -8362,7 +8362,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* _new_NetworkOperatorDataUsageTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -8450,7 +8450,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* _new_NetworkOperatorHotspotAuthenticationTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -8538,7 +8538,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* _new_NetworkOperatorNotificationTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -8659,7 +8659,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* _new_PaymentAppCanMakePaymentTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -8747,7 +8747,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* _new_PhoneTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -8900,7 +8900,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* _new_PushNotificationTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -9003,7 +9003,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* _new_RcsEndUserMessageAvailableTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -9091,7 +9091,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* _new_RfcommConnectionTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -9158,7 +9158,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static int RfcommConnectionTrigger_put_RemoteHostName(py::wrapper::Windows::ApplicationModel::Background::RfcommConnectionTrigger* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9227,7 +9227,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static int RfcommConnectionTrigger_put_ProtectionLevel(py::wrapper::Windows::ApplicationModel::Background::RfcommConnectionTrigger* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9296,7 +9296,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static int RfcommConnectionTrigger_put_AllowMultipleConnections(py::wrapper::Windows::ApplicationModel::Background::RfcommConnectionTrigger* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9451,7 +9451,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* _new_SecondaryAuthenticationFactorAuthenticationTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -9539,7 +9539,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* _new_SensorDataThresholdTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -9629,7 +9629,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* _new_SmartCardTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -9750,7 +9750,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* _new_SmsMessageReceivedTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -9840,7 +9840,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* _new_SocketActivityTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -9959,7 +9959,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* _new_StorageLibraryChangeTrackerTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -10226,7 +10226,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* _new_SystemCondition(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -10347,7 +10347,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* _new_SystemTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -10500,7 +10500,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* _new_TetheringEntitlementCheckTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -10588,7 +10588,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* _new_TimeTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -10741,7 +10741,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* _new_ToastNotificationActionTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -10844,7 +10844,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* _new_ToastNotificationHistoryChangedTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -10947,7 +10947,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* _new_UserNotificationChangedTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -11037,7 +11037,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* _new_WiFiOnDemandHotspotConnectTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -11125,7 +11125,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* _new_WiFiOnDemandHotspotUpdateMetadataTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -11658,7 +11658,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static int IBackgroundTaskInstance_put_Progress(py::wrapper::Windows::ApplicationModel::Background::IBackgroundTaskInstance* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12341,7 +12341,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static int IBackgroundTaskInstance2_put_Progress(py::wrapper::Windows::ApplicationModel::Background::IBackgroundTaskInstance2* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13045,7 +13045,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static int IBackgroundTaskInstance4_put_Progress(py::wrapper::Windows::ApplicationModel::Background::IBackgroundTaskInstance4* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

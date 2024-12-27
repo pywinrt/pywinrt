@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static PyObject* _new_OnlineIdAuthenticator(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -200,7 +200,7 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static int OnlineIdAuthenticator_put_ApplicationId(py::wrapper::Windows::Security::Authentication::OnlineId::OnlineIdAuthenticator* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -515,7 +515,7 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static PyObject* _new_OnlineIdServiceTicketRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -900,7 +900,7 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static int OnlineIdSystemAuthenticatorForUser_put_ApplicationId(py::wrapper::Windows::Security::Authentication::OnlineId::OnlineIdSystemAuthenticatorForUser* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1568,7 +1568,7 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static int SignOutUserOperation_put_Completed(py::wrapper::Windows::Security::Authentication::OnlineId::SignOutUserOperation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1928,7 +1928,7 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static int UserAuthenticationOperation_put_Completed(py::wrapper::Windows::Security::Authentication::OnlineId::UserAuthenticationOperation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

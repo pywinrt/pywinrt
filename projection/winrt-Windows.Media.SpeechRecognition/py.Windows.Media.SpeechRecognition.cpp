@@ -490,7 +490,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static int SpeechContinuousRecognitionSession_put_AutoStopSilenceTimeout(py::wrapper::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionSession* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -818,7 +818,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static PyObject* _new_SpeechRecognitionGrammarFileConstraint(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -903,7 +903,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static int SpeechRecognitionGrammarFileConstraint_put_Tag(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognitionGrammarFileConstraint* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -972,7 +972,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static int SpeechRecognitionGrammarFileConstraint_put_Probability(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognitionGrammarFileConstraint* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1041,7 +1041,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static int SpeechRecognitionGrammarFileConstraint_put_IsEnabled(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognitionGrammarFileConstraint* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1390,7 +1390,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static PyObject* _new_SpeechRecognitionListConstraint(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1475,7 +1475,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static int SpeechRecognitionListConstraint_put_Tag(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognitionListConstraint* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1544,7 +1544,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static int SpeechRecognitionListConstraint_put_Probability(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognitionListConstraint* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1613,7 +1613,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static int SpeechRecognitionListConstraint_put_IsEnabled(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognitionListConstraint* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2350,7 +2350,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static PyObject* _new_SpeechRecognitionTopicConstraint(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2437,7 +2437,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static int SpeechRecognitionTopicConstraint_put_Tag(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognitionTopicConstraint* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2506,7 +2506,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static int SpeechRecognitionTopicConstraint_put_Probability(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognitionTopicConstraint* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2575,7 +2575,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static int SpeechRecognitionTopicConstraint_put_IsEnabled(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognitionTopicConstraint* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2806,7 +2806,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static int SpeechRecognitionVoiceCommandDefinitionConstraint_put_Tag(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognitionVoiceCommandDefinitionConstraint* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2875,7 +2875,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static int SpeechRecognitionVoiceCommandDefinitionConstraint_put_Probability(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognitionVoiceCommandDefinitionConstraint* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2944,7 +2944,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static int SpeechRecognitionVoiceCommandDefinitionConstraint_put_IsEnabled(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognitionVoiceCommandDefinitionConstraint* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3068,7 +3068,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static PyObject* _new_SpeechRecognizer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -4092,7 +4092,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static int SpeechRecognizerTimeouts_put_InitialSilenceTimeout(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognizerTimeouts* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4161,7 +4161,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static int SpeechRecognizerTimeouts_put_EndSilenceTimeout(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognizerTimeouts* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4230,7 +4230,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static int SpeechRecognizerTimeouts_put_BabbleTimeout(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognizerTimeouts* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4368,7 +4368,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static int SpeechRecognizerUIOptions_put_ShowConfirmation(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognizerUIOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4437,7 +4437,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static int SpeechRecognizerUIOptions_put_IsReadBackEnabled(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognizerUIOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4506,7 +4506,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static int SpeechRecognizerUIOptions_put_ExampleText(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognizerUIOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4575,7 +4575,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static int SpeechRecognizerUIOptions_put_AudiblePrompt(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognizerUIOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5016,7 +5016,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static int ISpeechRecognitionConstraint_put_IsEnabled(py::wrapper::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5085,7 +5085,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static int ISpeechRecognitionConstraint_put_Probability(py::wrapper::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5154,7 +5154,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static int ISpeechRecognitionConstraint_put_Tag(py::wrapper::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

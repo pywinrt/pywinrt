@@ -8,7 +8,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* _new_EmailAttachment(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -108,7 +108,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailAttachment_put_FileName(py::wrapper::Windows::ApplicationModel::Email::EmailAttachment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -177,7 +177,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailAttachment_put_Data(py::wrapper::Windows::ApplicationModel::Email::EmailAttachment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -246,7 +246,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailAttachment_put_MimeType(py::wrapper::Windows::ApplicationModel::Email::EmailAttachment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -315,7 +315,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailAttachment_put_IsInline(py::wrapper::Windows::ApplicationModel::Email::EmailAttachment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -384,7 +384,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailAttachment_put_EstimatedDownloadSizeInBytes(py::wrapper::Windows::ApplicationModel::Email::EmailAttachment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -453,7 +453,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailAttachment_put_DownloadState(py::wrapper::Windows::ApplicationModel::Email::EmailAttachment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -522,7 +522,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailAttachment_put_ContentLocation(py::wrapper::Windows::ApplicationModel::Email::EmailAttachment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -591,7 +591,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailAttachment_put_ContentId(py::wrapper::Windows::ApplicationModel::Email::EmailAttachment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2119,7 +2119,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailFolder_put_RemoteId(py::wrapper::Windows::ApplicationModel::Email::EmailFolder* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2188,7 +2188,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailFolder_put_LastSuccessfulSyncTime(py::wrapper::Windows::ApplicationModel::Email::EmailFolder* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2257,7 +2257,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailFolder_put_IsSyncEnabled(py::wrapper::Windows::ApplicationModel::Email::EmailFolder* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2326,7 +2326,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailFolder_put_DisplayName(py::wrapper::Windows::ApplicationModel::Email::EmailFolder* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2557,7 +2557,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* _new_EmailIrmInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2640,7 +2640,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailIrmInfo_put_CanRemoveIrmOnResponse(py::wrapper::Windows::ApplicationModel::Email::EmailIrmInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2709,7 +2709,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailIrmInfo_put_CanPrintData(py::wrapper::Windows::ApplicationModel::Email::EmailIrmInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2778,7 +2778,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailIrmInfo_put_CanModifyRecipientsOnResponse(py::wrapper::Windows::ApplicationModel::Email::EmailIrmInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2847,7 +2847,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailIrmInfo_put_CanForward(py::wrapper::Windows::ApplicationModel::Email::EmailIrmInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2916,7 +2916,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailIrmInfo_put_CanExtractData(py::wrapper::Windows::ApplicationModel::Email::EmailIrmInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2985,7 +2985,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailIrmInfo_put_CanReply(py::wrapper::Windows::ApplicationModel::Email::EmailIrmInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3054,7 +3054,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailIrmInfo_put_CanEdit(py::wrapper::Windows::ApplicationModel::Email::EmailIrmInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3123,7 +3123,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailIrmInfo_put_Template(py::wrapper::Windows::ApplicationModel::Email::EmailIrmInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3192,7 +3192,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailIrmInfo_put_IsProgramaticAccessAllowed(py::wrapper::Windows::ApplicationModel::Email::EmailIrmInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3261,7 +3261,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailIrmInfo_put_IsIrmOriginator(py::wrapper::Windows::ApplicationModel::Email::EmailIrmInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3330,7 +3330,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailIrmInfo_put_ExpirationDate(py::wrapper::Windows::ApplicationModel::Email::EmailIrmInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3399,7 +3399,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailIrmInfo_put_CanReplyAll(py::wrapper::Windows::ApplicationModel::Email::EmailIrmInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3501,7 +3501,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* _new_EmailIrmTemplate(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3585,7 +3585,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailIrmTemplate_put_Name(py::wrapper::Windows::ApplicationModel::Email::EmailIrmTemplate* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3654,7 +3654,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailIrmTemplate_put_Id(py::wrapper::Windows::ApplicationModel::Email::EmailIrmTemplate* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3723,7 +3723,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailIrmTemplate_put_Description(py::wrapper::Windows::ApplicationModel::Email::EmailIrmTemplate* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5621,7 +5621,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMailbox_put_OtherAppWriteAccess(py::wrapper::Windows::ApplicationModel::Email::EmailMailbox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5690,7 +5690,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMailbox_put_MailAddress(py::wrapper::Windows::ApplicationModel::Email::EmailMailbox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5759,7 +5759,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMailbox_put_OtherAppReadAccess(py::wrapper::Windows::ApplicationModel::Email::EmailMailbox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5828,7 +5828,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMailbox_put_DisplayName(py::wrapper::Windows::ApplicationModel::Email::EmailMailbox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6602,7 +6602,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMailboxAutoReply_put_Response(py::wrapper::Windows::ApplicationModel::Email::EmailMailboxAutoReply* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6671,7 +6671,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMailboxAutoReply_put_IsEnabled(py::wrapper::Windows::ApplicationModel::Email::EmailMailboxAutoReply* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6763,7 +6763,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* _new_EmailMailboxAutoReplySettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -6830,7 +6830,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMailboxAutoReplySettings_put_StartTime(py::wrapper::Windows::ApplicationModel::Email::EmailMailboxAutoReplySettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6899,7 +6899,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMailboxAutoReplySettings_put_ResponseKind(py::wrapper::Windows::ApplicationModel::Email::EmailMailboxAutoReplySettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6968,7 +6968,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMailboxAutoReplySettings_put_IsEnabled(py::wrapper::Windows::ApplicationModel::Email::EmailMailboxAutoReplySettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7037,7 +7037,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMailboxAutoReplySettings_put_EndTime(py::wrapper::Windows::ApplicationModel::Email::EmailMailboxAutoReplySettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7269,7 +7269,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMailboxCapabilities_put_CanSmartSend(py::wrapper::Windows::ApplicationModel::Email::EmailMailboxCapabilities* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7338,7 +7338,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMailboxCapabilities_put_CanUpdateMeetingResponses(py::wrapper::Windows::ApplicationModel::Email::EmailMailboxCapabilities* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7407,7 +7407,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMailboxCapabilities_put_CanServerSearchMailbox(py::wrapper::Windows::ApplicationModel::Email::EmailMailboxCapabilities* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7476,7 +7476,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMailboxCapabilities_put_CanServerSearchFolders(py::wrapper::Windows::ApplicationModel::Email::EmailMailboxCapabilities* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7545,7 +7545,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMailboxCapabilities_put_CanForwardMeetings(py::wrapper::Windows::ApplicationModel::Email::EmailMailboxCapabilities* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7614,7 +7614,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMailboxCapabilities_put_CanProposeNewTimeForMeetings(py::wrapper::Windows::ApplicationModel::Email::EmailMailboxCapabilities* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7683,7 +7683,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMailboxCapabilities_put_CanGetAndSetInternalAutoReplies(py::wrapper::Windows::ApplicationModel::Email::EmailMailboxCapabilities* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7752,7 +7752,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMailboxCapabilities_put_CanGetAndSetExternalAutoReplies(py::wrapper::Windows::ApplicationModel::Email::EmailMailboxCapabilities* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7821,7 +7821,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMailboxCapabilities_put_CanValidateCertificates(py::wrapper::Windows::ApplicationModel::Email::EmailMailboxCapabilities* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7890,7 +7890,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMailboxCapabilities_put_CanResolveRecipients(py::wrapper::Windows::ApplicationModel::Email::EmailMailboxCapabilities* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7959,7 +7959,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMailboxCapabilities_put_CanMoveFolder(py::wrapper::Windows::ApplicationModel::Email::EmailMailboxCapabilities* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8028,7 +8028,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMailboxCapabilities_put_CanEmptyFolder(py::wrapper::Windows::ApplicationModel::Email::EmailMailboxCapabilities* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8097,7 +8097,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMailboxCapabilities_put_CanDeleteFolder(py::wrapper::Windows::ApplicationModel::Email::EmailMailboxCapabilities* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8166,7 +8166,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMailboxCapabilities_put_CanCreateFolder(py::wrapper::Windows::ApplicationModel::Email::EmailMailboxCapabilities* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9263,7 +9263,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMailboxPolicies_put_RequiredSmimeSigningAlgorithm(py::wrapper::Windows::ApplicationModel::Email::EmailMailboxPolicies* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9332,7 +9332,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMailboxPolicies_put_RequiredSmimeEncryptionAlgorithm(py::wrapper::Windows::ApplicationModel::Email::EmailMailboxPolicies* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9401,7 +9401,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMailboxPolicies_put_AllowedSmimeEncryptionAlgorithmNegotiation(py::wrapper::Windows::ApplicationModel::Email::EmailMailboxPolicies* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9470,7 +9470,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMailboxPolicies_put_AllowSmimeSoftCertificates(py::wrapper::Windows::ApplicationModel::Email::EmailMailboxPolicies* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9539,7 +9539,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMailboxPolicies_put_MustSignSmimeMessages(py::wrapper::Windows::ApplicationModel::Email::EmailMailboxPolicies* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9608,7 +9608,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMailboxPolicies_put_MustEncryptSmimeMessages(py::wrapper::Windows::ApplicationModel::Email::EmailMailboxPolicies* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9789,7 +9789,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMailboxSyncManager_put_Status(py::wrapper::Windows::ApplicationModel::Email::EmailMailboxSyncManager* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9858,7 +9858,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMailboxSyncManager_put_LastSuccessfulSyncTime(py::wrapper::Windows::ApplicationModel::Email::EmailMailboxSyncManager* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9927,7 +9927,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMailboxSyncManager_put_LastAttemptedSyncTime(py::wrapper::Windows::ApplicationModel::Email::EmailMailboxSyncManager* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10456,7 +10456,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* _new_EmailMeetingInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -10523,7 +10523,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMeetingInfo_put_Location(py::wrapper::Windows::ApplicationModel::Email::EmailMeetingInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10592,7 +10592,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMeetingInfo_put_IsResponseRequested(py::wrapper::Windows::ApplicationModel::Email::EmailMeetingInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10661,7 +10661,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMeetingInfo_put_IsAllDay(py::wrapper::Windows::ApplicationModel::Email::EmailMeetingInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10730,7 +10730,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMeetingInfo_put_AllowNewTimeProposal(py::wrapper::Windows::ApplicationModel::Email::EmailMeetingInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10799,7 +10799,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMeetingInfo_put_Duration(py::wrapper::Windows::ApplicationModel::Email::EmailMeetingInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10868,7 +10868,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMeetingInfo_put_AppointmentRoamingId(py::wrapper::Windows::ApplicationModel::Email::EmailMeetingInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10937,7 +10937,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMeetingInfo_put_AppointmentOriginalStartTime(py::wrapper::Windows::ApplicationModel::Email::EmailMeetingInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11006,7 +11006,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMeetingInfo_put_ProposedDuration(py::wrapper::Windows::ApplicationModel::Email::EmailMeetingInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11075,7 +11075,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMeetingInfo_put_RemoteChangeNumber(py::wrapper::Windows::ApplicationModel::Email::EmailMeetingInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11144,7 +11144,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMeetingInfo_put_StartTime(py::wrapper::Windows::ApplicationModel::Email::EmailMeetingInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11213,7 +11213,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMeetingInfo_put_RecurrenceStartTime(py::wrapper::Windows::ApplicationModel::Email::EmailMeetingInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11282,7 +11282,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMeetingInfo_put_Recurrence(py::wrapper::Windows::ApplicationModel::Email::EmailMeetingInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11351,7 +11351,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMeetingInfo_put_ProposedStartTime(py::wrapper::Windows::ApplicationModel::Email::EmailMeetingInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11485,7 +11485,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* _new_EmailMessage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -11638,7 +11638,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMessage_put_Subject(py::wrapper::Windows::ApplicationModel::Email::EmailMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11707,7 +11707,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMessage_put_Body(py::wrapper::Windows::ApplicationModel::Email::EmailMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11896,7 +11896,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMessage_put_AllowInternetImages(py::wrapper::Windows::ApplicationModel::Email::EmailMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11965,7 +11965,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMessage_put_FlagState(py::wrapper::Windows::ApplicationModel::Email::EmailMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12034,7 +12034,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMessage_put_EstimatedDownloadSizeInBytes(py::wrapper::Windows::ApplicationModel::Email::EmailMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12103,7 +12103,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMessage_put_DownloadState(py::wrapper::Windows::ApplicationModel::Email::EmailMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12172,7 +12172,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMessage_put_Importance(py::wrapper::Windows::ApplicationModel::Email::EmailMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12241,7 +12241,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMessage_put_IrmInfo(py::wrapper::Windows::ApplicationModel::Email::EmailMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12310,7 +12310,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMessage_put_OriginalCodePage(py::wrapper::Windows::ApplicationModel::Email::EmailMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12379,7 +12379,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMessage_put_SentTime(py::wrapper::Windows::ApplicationModel::Email::EmailMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12448,7 +12448,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMessage_put_Sender(py::wrapper::Windows::ApplicationModel::Email::EmailMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12517,7 +12517,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMessage_put_RemoteId(py::wrapper::Windows::ApplicationModel::Email::EmailMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12586,7 +12586,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMessage_put_Preview(py::wrapper::Windows::ApplicationModel::Email::EmailMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12655,7 +12655,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMessage_put_MessageClass(py::wrapper::Windows::ApplicationModel::Email::EmailMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12724,7 +12724,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMessage_put_MeetingInfo(py::wrapper::Windows::ApplicationModel::Email::EmailMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12793,7 +12793,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMessage_put_LastResponseKind(py::wrapper::Windows::ApplicationModel::Email::EmailMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12862,7 +12862,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMessage_put_IsSeen(py::wrapper::Windows::ApplicationModel::Email::EmailMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12931,7 +12931,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMessage_put_IsRead(py::wrapper::Windows::ApplicationModel::Email::EmailMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13330,7 +13330,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMessage_put_SmimeKind(py::wrapper::Windows::ApplicationModel::Email::EmailMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13399,7 +13399,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMessage_put_SmimeData(py::wrapper::Windows::ApplicationModel::Email::EmailMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13468,7 +13468,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailMessage_put_SentRepresenting(py::wrapper::Windows::ApplicationModel::Email::EmailMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13862,7 +13862,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* _new_EmailQueryOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -13960,7 +13960,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailQueryOptions_put_SortProperty(py::wrapper::Windows::ApplicationModel::Email::EmailQueryOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14029,7 +14029,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailQueryOptions_put_SortDirection(py::wrapper::Windows::ApplicationModel::Email::EmailQueryOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14098,7 +14098,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailQueryOptions_put_Kind(py::wrapper::Windows::ApplicationModel::Email::EmailQueryOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14298,7 +14298,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailQueryTextSearch_put_Text(py::wrapper::Windows::ApplicationModel::Email::EmailQueryTextSearch* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14367,7 +14367,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailQueryTextSearch_put_SearchScope(py::wrapper::Windows::ApplicationModel::Email::EmailQueryTextSearch* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14436,7 +14436,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailQueryTextSearch_put_Fields(py::wrapper::Windows::ApplicationModel::Email::EmailQueryTextSearch* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14529,7 +14529,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* _new_EmailRecipient(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -14627,7 +14627,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailRecipient_put_Name(py::wrapper::Windows::ApplicationModel::Email::EmailRecipient* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14696,7 +14696,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailRecipient_put_Address(py::wrapper::Windows::ApplicationModel::Email::EmailRecipient* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14788,7 +14788,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* _new_EmailRecipientResolutionResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -14898,7 +14898,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static int EmailRecipientResolutionResult_put_Status(py::wrapper::Windows::ApplicationModel::Email::EmailRecipientResolutionResult* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

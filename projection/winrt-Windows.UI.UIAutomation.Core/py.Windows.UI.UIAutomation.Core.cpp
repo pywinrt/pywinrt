@@ -396,7 +396,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     static PyObject* _new_CoreAutomationRemoteOperation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -949,7 +949,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     static PyObject* _new_RemoteAutomationClientSession(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2304,7 +2304,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -2369,7 +2369,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     static int AutomationAnnotationTypeRegistration_set_LocalId(py::wrapper::Windows::UI::UIAutomation::Core::AutomationAnnotationTypeRegistration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2476,7 +2476,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -2541,7 +2541,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     static int AutomationRemoteOperationOperandId_set_Value(py::wrapper::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

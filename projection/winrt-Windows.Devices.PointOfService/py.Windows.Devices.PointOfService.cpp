@@ -1394,7 +1394,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* _new_BarcodeScannerReport(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -4765,7 +4765,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int BarcodeSymbologyAttributes_put_IsCheckDigitValidationEnabled(py::wrapper::Windows::Devices::PointOfService::BarcodeSymbologyAttributes* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4834,7 +4834,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int BarcodeSymbologyAttributes_put_IsCheckDigitTransmissionEnabled(py::wrapper::Windows::Devices::PointOfService::BarcodeSymbologyAttributes* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4903,7 +4903,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int BarcodeSymbologyAttributes_put_DecodeLengthKind(py::wrapper::Windows::Devices::PointOfService::BarcodeSymbologyAttributes* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4972,7 +4972,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int BarcodeSymbologyAttributes_put_DecodeLength2(py::wrapper::Windows::Devices::PointOfService::BarcodeSymbologyAttributes* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5041,7 +5041,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int BarcodeSymbologyAttributes_put_DecodeLength1(py::wrapper::Windows::Devices::PointOfService::BarcodeSymbologyAttributes* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6241,7 +6241,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int CashDrawerCloseAlarm_put_BeepFrequency(py::wrapper::Windows::Devices::PointOfService::CashDrawerCloseAlarm* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6310,7 +6310,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int CashDrawerCloseAlarm_put_BeepDuration(py::wrapper::Windows::Devices::PointOfService::CashDrawerCloseAlarm* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6379,7 +6379,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int CashDrawerCloseAlarm_put_BeepDelay(py::wrapper::Windows::Devices::PointOfService::CashDrawerCloseAlarm* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6448,7 +6448,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int CashDrawerCloseAlarm_put_AlarmTimeout(py::wrapper::Windows::Devices::PointOfService::CashDrawerCloseAlarm* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7850,7 +7850,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int ClaimedBarcodeScanner_put_IsDisabledOnDataReceived(py::wrapper::Windows::Devices::PointOfService::ClaimedBarcodeScanner* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7919,7 +7919,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int ClaimedBarcodeScanner_put_IsDecodeDataEnabled(py::wrapper::Windows::Devices::PointOfService::ClaimedBarcodeScanner* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8048,7 +8048,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int ClaimedBarcodeScanner_put_IsVideoPreviewShownOnEnable(py::wrapper::Windows::Devices::PointOfService::ClaimedBarcodeScanner* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9551,7 +9551,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int ClaimedJournalPrinter_put_LineSpacing(py::wrapper::Windows::Devices::PointOfService::ClaimedJournalPrinter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9620,7 +9620,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int ClaimedJournalPrinter_put_LineHeight(py::wrapper::Windows::Devices::PointOfService::ClaimedJournalPrinter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9689,7 +9689,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int ClaimedJournalPrinter_put_IsLetterQuality(py::wrapper::Windows::Devices::PointOfService::ClaimedJournalPrinter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9758,7 +9758,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int ClaimedJournalPrinter_put_ColorCartridge(py::wrapper::Windows::Devices::PointOfService::ClaimedJournalPrinter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9827,7 +9827,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int ClaimedJournalPrinter_put_CharactersPerLine(py::wrapper::Windows::Devices::PointOfService::ClaimedJournalPrinter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12113,7 +12113,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int ClaimedMagneticStripeReader_put_TracksToRead(py::wrapper::Windows::Devices::PointOfService::ClaimedMagneticStripeReader* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12182,7 +12182,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int ClaimedMagneticStripeReader_put_IsTransmitSentinelsEnabled(py::wrapper::Windows::Devices::PointOfService::ClaimedMagneticStripeReader* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12251,7 +12251,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int ClaimedMagneticStripeReader_put_IsDisabledOnDataReceived(py::wrapper::Windows::Devices::PointOfService::ClaimedMagneticStripeReader* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12320,7 +12320,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int ClaimedMagneticStripeReader_put_IsDecodeDataEnabled(py::wrapper::Windows::Devices::PointOfService::ClaimedMagneticStripeReader* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12389,7 +12389,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int ClaimedMagneticStripeReader_put_DataEncryptionAlgorithm(py::wrapper::Windows::Devices::PointOfService::ClaimedMagneticStripeReader* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13371,7 +13371,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int ClaimedPosPrinter_put_MapMode(py::wrapper::Windows::Devices::PointOfService::ClaimedPosPrinter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13440,7 +13440,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int ClaimedPosPrinter_put_IsCharacterSetMappingEnabled(py::wrapper::Windows::Devices::PointOfService::ClaimedPosPrinter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13509,7 +13509,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int ClaimedPosPrinter_put_CharacterSet(py::wrapper::Windows::Devices::PointOfService::ClaimedPosPrinter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14296,7 +14296,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int ClaimedReceiptPrinter_put_LineSpacing(py::wrapper::Windows::Devices::PointOfService::ClaimedReceiptPrinter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14365,7 +14365,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int ClaimedReceiptPrinter_put_LineHeight(py::wrapper::Windows::Devices::PointOfService::ClaimedReceiptPrinter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14434,7 +14434,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int ClaimedReceiptPrinter_put_IsLetterQuality(py::wrapper::Windows::Devices::PointOfService::ClaimedReceiptPrinter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14503,7 +14503,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int ClaimedReceiptPrinter_put_ColorCartridge(py::wrapper::Windows::Devices::PointOfService::ClaimedReceiptPrinter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14572,7 +14572,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int ClaimedReceiptPrinter_put_CharactersPerLine(py::wrapper::Windows::Devices::PointOfService::ClaimedReceiptPrinter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15468,7 +15468,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int ClaimedSlipPrinter_put_LineSpacing(py::wrapper::Windows::Devices::PointOfService::ClaimedSlipPrinter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15537,7 +15537,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int ClaimedSlipPrinter_put_LineHeight(py::wrapper::Windows::Devices::PointOfService::ClaimedSlipPrinter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15606,7 +15606,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int ClaimedSlipPrinter_put_IsLetterQuality(py::wrapper::Windows::Devices::PointOfService::ClaimedSlipPrinter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15675,7 +15675,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int ClaimedSlipPrinter_put_ColorCartridge(py::wrapper::Windows::Devices::PointOfService::ClaimedSlipPrinter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15744,7 +15744,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int ClaimedSlipPrinter_put_CharactersPerLine(py::wrapper::Windows::Devices::PointOfService::ClaimedSlipPrinter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -17815,7 +17815,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int LineDisplayAttributes_put_ScreenSizeInCharacters(py::wrapper::Windows::Devices::PointOfService::LineDisplayAttributes* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -17884,7 +17884,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int LineDisplayAttributes_put_IsPowerNotifyEnabled(py::wrapper::Windows::Devices::PointOfService::LineDisplayAttributes* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -17953,7 +17953,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int LineDisplayAttributes_put_IsCharacterSetMappingEnabled(py::wrapper::Windows::Devices::PointOfService::LineDisplayAttributes* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -18022,7 +18022,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int LineDisplayAttributes_put_CurrentWindow(py::wrapper::Windows::Devices::PointOfService::LineDisplayAttributes* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -18091,7 +18091,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int LineDisplayAttributes_put_CharacterSet(py::wrapper::Windows::Devices::PointOfService::LineDisplayAttributes* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -18160,7 +18160,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int LineDisplayAttributes_put_Brightness(py::wrapper::Windows::Devices::PointOfService::LineDisplayAttributes* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -18229,7 +18229,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int LineDisplayAttributes_put_BlinkRate(py::wrapper::Windows::Devices::PointOfService::LineDisplayAttributes* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19362,7 +19362,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int LineDisplayCursorAttributes_put_Position(py::wrapper::Windows::Devices::PointOfService::LineDisplayCursorAttributes* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19431,7 +19431,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int LineDisplayCursorAttributes_put_IsBlinkEnabled(py::wrapper::Windows::Devices::PointOfService::LineDisplayCursorAttributes* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19500,7 +19500,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int LineDisplayCursorAttributes_put_IsAutoAdvanceEnabled(py::wrapper::Windows::Devices::PointOfService::LineDisplayCursorAttributes* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19569,7 +19569,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int LineDisplayCursorAttributes_put_CursorType(py::wrapper::Windows::Devices::PointOfService::LineDisplayCursorAttributes* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19962,7 +19962,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int LineDisplayMarquee_put_ScrollWaitInterval(py::wrapper::Windows::Devices::PointOfService::LineDisplayMarquee* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -20031,7 +20031,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int LineDisplayMarquee_put_RepeatWaitInterval(py::wrapper::Windows::Devices::PointOfService::LineDisplayMarquee* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -20100,7 +20100,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int LineDisplayMarquee_put_Format(py::wrapper::Windows::Devices::PointOfService::LineDisplayMarquee* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -21227,7 +21227,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int LineDisplayWindow_put_InterCharacterWaitInterval(py::wrapper::Windows::Devices::PointOfService::LineDisplayWindow* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -26285,7 +26285,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* _new_PosPrinterPrintOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -26352,7 +26352,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int PosPrinterPrintOptions_put_Underline(py::wrapper::Windows::Devices::PointOfService::PosPrinterPrintOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -26421,7 +26421,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int PosPrinterPrintOptions_put_TypeFace(py::wrapper::Windows::Devices::PointOfService::PosPrinterPrintOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -26490,7 +26490,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int PosPrinterPrintOptions_put_Superscript(py::wrapper::Windows::Devices::PointOfService::PosPrinterPrintOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -26559,7 +26559,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int PosPrinterPrintOptions_put_Subscript(py::wrapper::Windows::Devices::PointOfService::PosPrinterPrintOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -26628,7 +26628,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int PosPrinterPrintOptions_put_Strikethrough(py::wrapper::Windows::Devices::PointOfService::PosPrinterPrintOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -26697,7 +26697,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int PosPrinterPrintOptions_put_ReverseVideo(py::wrapper::Windows::Devices::PointOfService::PosPrinterPrintOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -26766,7 +26766,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int PosPrinterPrintOptions_put_Italic(py::wrapper::Windows::Devices::PointOfService::PosPrinterPrintOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -26835,7 +26835,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int PosPrinterPrintOptions_put_DoubleWide(py::wrapper::Windows::Devices::PointOfService::PosPrinterPrintOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -26904,7 +26904,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int PosPrinterPrintOptions_put_DoubleHigh(py::wrapper::Windows::Devices::PointOfService::PosPrinterPrintOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -26973,7 +26973,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int PosPrinterPrintOptions_put_CharacterSet(py::wrapper::Windows::Devices::PointOfService::PosPrinterPrintOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -27042,7 +27042,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int PosPrinterPrintOptions_put_CharacterHeight(py::wrapper::Windows::Devices::PointOfService::PosPrinterPrintOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -27111,7 +27111,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int PosPrinterPrintOptions_put_Bold(py::wrapper::Windows::Devices::PointOfService::PosPrinterPrintOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -27180,7 +27180,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int PosPrinterPrintOptions_put_Alignment(py::wrapper::Windows::Devices::PointOfService::PosPrinterPrintOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -31867,7 +31867,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* _new_UnifiedPosErrorData(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -32350,7 +32350,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int ICommonClaimedPosPrinterStation_put_CharactersPerLine(py::wrapper::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -32419,7 +32419,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int ICommonClaimedPosPrinterStation_put_ColorCartridge(py::wrapper::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -32608,7 +32608,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int ICommonClaimedPosPrinterStation_put_IsLetterQuality(py::wrapper::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -32767,7 +32767,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int ICommonClaimedPosPrinterStation_put_LineHeight(py::wrapper::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -32836,7 +32836,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int ICommonClaimedPosPrinterStation_put_LineSpacing(py::wrapper::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -37713,7 +37713,7 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -37780,7 +37780,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int SizeUInt32_set_Width(py::wrapper::Windows::Devices::PointOfService::SizeUInt32* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -37813,7 +37813,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static int SizeUInt32_set_Height(py::wrapper::Windows::Devices::PointOfService::SizeUInt32* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

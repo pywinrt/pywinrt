@@ -708,7 +708,7 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
 
     static PyObject* _new_SpatialSurfaceMeshOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -775,7 +775,7 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
 
     static int SpatialSurfaceMeshOptions_put_VertexPositionFormat(py::wrapper::Windows::Perception::Spatial::Surfaces::SpatialSurfaceMeshOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -844,7 +844,7 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
 
     static int SpatialSurfaceMeshOptions_put_VertexNormalFormat(py::wrapper::Windows::Perception::Spatial::Surfaces::SpatialSurfaceMeshOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -913,7 +913,7 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
 
     static int SpatialSurfaceMeshOptions_put_TriangleIndexFormat(py::wrapper::Windows::Perception::Spatial::Surfaces::SpatialSurfaceMeshOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -982,7 +982,7 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
 
     static int SpatialSurfaceMeshOptions_put_IncludeVertexNormals(py::wrapper::Windows::Perception::Spatial::Surfaces::SpatialSurfaceMeshOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1194,7 +1194,7 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
 
     static PyObject* _new_SpatialSurfaceObserver(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;

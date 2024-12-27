@@ -1628,7 +1628,7 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
 
     static int CoreInputViewAnimationStartingEventArgs_put_Handled(py::wrapper::Windows::UI::ViewManagement::Core::CoreInputViewAnimationStartingEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2061,7 +2061,7 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
 
     static int CoreInputViewOcclusionsChangedEventArgs_put_Handled(py::wrapper::Windows::UI::ViewManagement::Core::CoreInputViewOcclusionsChangedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2335,7 +2335,7 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
 
     static int CoreInputViewTransferringXYFocusEventArgs_put_TransferHandled(py::wrapper::Windows::UI::ViewManagement::Core::CoreInputViewTransferringXYFocusEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2404,7 +2404,7 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
 
     static int CoreInputViewTransferringXYFocusEventArgs_put_KeepPrimaryViewVisible(py::wrapper::Windows::UI::ViewManagement::Core::CoreInputViewTransferringXYFocusEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

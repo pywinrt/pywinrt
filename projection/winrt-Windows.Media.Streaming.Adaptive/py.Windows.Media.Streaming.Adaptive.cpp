@@ -350,7 +350,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static int AdaptiveMediaSource_put_InitialBitrate(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -419,7 +419,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static int AdaptiveMediaSource_put_InboundBitsPerSecondWindow(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -488,7 +488,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static int AdaptiveMediaSource_put_DesiredMaxBitrate(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -557,7 +557,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static int AdaptiveMediaSource_put_DesiredLiveOffset(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -626,7 +626,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static int AdaptiveMediaSource_put_DesiredMinBitrate(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -905,7 +905,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static int AdaptiveMediaSource_put_DesiredSeekableWindowSize(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1538,7 +1538,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static int AdaptiveMediaSourceAdvancedSettings_put_DesiredBitrateHeadroomRatio(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceAdvancedSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1607,7 +1607,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static int AdaptiveMediaSourceAdvancedSettings_put_BitrateDowngradeTriggerRatio(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceAdvancedSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1676,7 +1676,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static int AdaptiveMediaSourceAdvancedSettings_put_AllSegmentsIndependent(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceAdvancedSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4170,7 +4170,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static int AdaptiveMediaSourceDownloadResult_put_ResourceUri(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadResult* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4239,7 +4239,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static int AdaptiveMediaSourceDownloadResult_put_InputStream(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadResult* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4308,7 +4308,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static int AdaptiveMediaSourceDownloadResult_put_ExtendedStatus(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadResult* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4377,7 +4377,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static int AdaptiveMediaSourceDownloadResult_put_ContentType(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadResult* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4446,7 +4446,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static int AdaptiveMediaSourceDownloadResult_put_Buffer(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadResult* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4515,7 +4515,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static int AdaptiveMediaSourceDownloadResult_put_ResourceByteRangeOffset(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadResult* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4584,7 +4584,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static int AdaptiveMediaSourceDownloadResult_put_ResourceByteRangeLength(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadResult* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

@@ -1074,7 +1074,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
 
     static int RfcommInboundConnectionInformation_put_ServiceCapabilities(py::wrapper::Windows::Devices::Bluetooth::Background::RfcommInboundConnectionInformation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1143,7 +1143,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
 
     static int RfcommInboundConnectionInformation_put_SdpRecord(py::wrapper::Windows::Devices::Bluetooth::Background::RfcommInboundConnectionInformation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1212,7 +1212,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
 
     static int RfcommInboundConnectionInformation_put_LocalServiceId(py::wrapper::Windows::Devices::Bluetooth::Background::RfcommInboundConnectionInformation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1350,7 +1350,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
 
     static int RfcommOutboundConnectionInformation_put_RemoteServiceId(py::wrapper::Windows::Devices::Bluetooth::Background::RfcommOutboundConnectionInformation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

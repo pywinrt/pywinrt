@@ -8,7 +8,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* _new_Class(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -155,7 +155,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* _new_Composable(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -530,7 +530,7 @@ namespace py::cpp::TestComponent
 
     static int Composable_put_Value(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -672,7 +672,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* _new_Derived(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -921,7 +921,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* _new_OverloadClass(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1245,7 +1245,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* _new_Override(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -11718,7 +11718,7 @@ namespace py::cpp::TestComponent
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -11801,7 +11801,7 @@ namespace py::cpp::TestComponent
 
     static int Blittable_set_A(py::wrapper::TestComponent::Blittable* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11834,7 +11834,7 @@ namespace py::cpp::TestComponent
 
     static int Blittable_set_B(py::wrapper::TestComponent::Blittable* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11867,7 +11867,7 @@ namespace py::cpp::TestComponent
 
     static int Blittable_set_C(py::wrapper::TestComponent::Blittable* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11900,7 +11900,7 @@ namespace py::cpp::TestComponent
 
     static int Blittable_set_D(py::wrapper::TestComponent::Blittable* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11933,7 +11933,7 @@ namespace py::cpp::TestComponent
 
     static int Blittable_set_E(py::wrapper::TestComponent::Blittable* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11966,7 +11966,7 @@ namespace py::cpp::TestComponent
 
     static int Blittable_set_F(py::wrapper::TestComponent::Blittable* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11999,7 +11999,7 @@ namespace py::cpp::TestComponent
 
     static int Blittable_set_G(py::wrapper::TestComponent::Blittable* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12032,7 +12032,7 @@ namespace py::cpp::TestComponent
 
     static int Blittable_set_H(py::wrapper::TestComponent::Blittable* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12065,7 +12065,7 @@ namespace py::cpp::TestComponent
 
     static int Blittable_set_I(py::wrapper::TestComponent::Blittable* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12098,7 +12098,7 @@ namespace py::cpp::TestComponent
 
     static int Blittable_set_J(py::wrapper::TestComponent::Blittable* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12268,7 +12268,7 @@ namespace py::cpp::TestComponent
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -12335,7 +12335,7 @@ namespace py::cpp::TestComponent
 
     static int Nested_set_Blittable(py::wrapper::TestComponent::Nested* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12368,7 +12368,7 @@ namespace py::cpp::TestComponent
 
     static int Nested_set_NonBlittable(py::wrapper::TestComponent::Nested* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12482,7 +12482,7 @@ namespace py::cpp::TestComponent
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -12553,7 +12553,7 @@ namespace py::cpp::TestComponent
 
     static int NonBlittable_set_A(py::wrapper::TestComponent::NonBlittable* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12586,7 +12586,7 @@ namespace py::cpp::TestComponent
 
     static int NonBlittable_set_B(py::wrapper::TestComponent::NonBlittable* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12619,7 +12619,7 @@ namespace py::cpp::TestComponent
 
     static int NonBlittable_set_C(py::wrapper::TestComponent::NonBlittable* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12652,7 +12652,7 @@ namespace py::cpp::TestComponent
 
     static int NonBlittable_set_D(py::wrapper::TestComponent::NonBlittable* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

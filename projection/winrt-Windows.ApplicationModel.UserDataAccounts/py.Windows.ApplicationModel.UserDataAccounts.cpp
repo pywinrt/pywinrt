@@ -413,7 +413,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
     static int UserDataAccount_put_UserDisplayName(py::wrapper::Windows::ApplicationModel::UserDataAccounts::UserDataAccount* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -482,7 +482,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
     static int UserDataAccount_put_OtherAppReadAccess(py::wrapper::Windows::ApplicationModel::UserDataAccounts::UserDataAccount* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -551,7 +551,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
     static int UserDataAccount_put_Icon(py::wrapper::Windows::ApplicationModel::UserDataAccounts::UserDataAccount* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -710,7 +710,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
     static int UserDataAccount_put_IsProtectedUnderLock(py::wrapper::Windows::ApplicationModel::UserDataAccounts::UserDataAccount* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -809,7 +809,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
     static int UserDataAccount_put_DisplayName(py::wrapper::Windows::ApplicationModel::UserDataAccounts::UserDataAccount* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -908,7 +908,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
     static int UserDataAccount_put_CanShowCreateContactGroup(py::wrapper::Windows::ApplicationModel::UserDataAccounts::UserDataAccount* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

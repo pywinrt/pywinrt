@@ -599,7 +599,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static int ImageScannerAutoConfiguration_put_Format(py::wrapper::Windows::Devices::Scanners::ImageScannerAutoConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -936,7 +936,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static int ImageScannerFeederConfiguration_put_ScanAhead(py::wrapper::Windows::Devices::Scanners::ImageScannerFeederConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1005,7 +1005,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static int ImageScannerFeederConfiguration_put_AutoDetectPageSize(py::wrapper::Windows::Devices::Scanners::ImageScannerFeederConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1074,7 +1074,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static int ImageScannerFeederConfiguration_put_Duplex(py::wrapper::Windows::Devices::Scanners::ImageScannerFeederConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1143,7 +1143,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static int ImageScannerFeederConfiguration_put_MaxNumberOfPages(py::wrapper::Windows::Devices::Scanners::ImageScannerFeederConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1212,7 +1212,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static int ImageScannerFeederConfiguration_put_PageOrientation(py::wrapper::Windows::Devices::Scanners::ImageScannerFeederConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1281,7 +1281,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static int ImageScannerFeederConfiguration_put_PageSize(py::wrapper::Windows::Devices::Scanners::ImageScannerFeederConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1470,7 +1470,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static int ImageScannerFeederConfiguration_put_Format(py::wrapper::Windows::Devices::Scanners::ImageScannerFeederConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1569,7 +1569,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static int ImageScannerFeederConfiguration_put_DesiredResolution(py::wrapper::Windows::Devices::Scanners::ImageScannerFeederConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1638,7 +1638,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static int ImageScannerFeederConfiguration_put_Contrast(py::wrapper::Windows::Devices::Scanners::ImageScannerFeederConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1707,7 +1707,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static int ImageScannerFeederConfiguration_put_ColorMode(py::wrapper::Windows::Devices::Scanners::ImageScannerFeederConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1776,7 +1776,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static int ImageScannerFeederConfiguration_put_AutoCroppingMode(py::wrapper::Windows::Devices::Scanners::ImageScannerFeederConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1845,7 +1845,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static int ImageScannerFeederConfiguration_put_Brightness(py::wrapper::Windows::Devices::Scanners::ImageScannerFeederConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1914,7 +1914,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static int ImageScannerFeederConfiguration_put_SelectedScanRegion(py::wrapper::Windows::Devices::Scanners::ImageScannerFeederConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2662,7 +2662,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static int ImageScannerFlatbedConfiguration_put_Format(py::wrapper::Windows::Devices::Scanners::ImageScannerFlatbedConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2761,7 +2761,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static int ImageScannerFlatbedConfiguration_put_SelectedScanRegion(py::wrapper::Windows::Devices::Scanners::ImageScannerFlatbedConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2830,7 +2830,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static int ImageScannerFlatbedConfiguration_put_DesiredResolution(py::wrapper::Windows::Devices::Scanners::ImageScannerFlatbedConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2899,7 +2899,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static int ImageScannerFlatbedConfiguration_put_Contrast(py::wrapper::Windows::Devices::Scanners::ImageScannerFlatbedConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2968,7 +2968,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static int ImageScannerFlatbedConfiguration_put_Brightness(py::wrapper::Windows::Devices::Scanners::ImageScannerFlatbedConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3037,7 +3037,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static int ImageScannerFlatbedConfiguration_put_AutoCroppingMode(py::wrapper::Windows::Devices::Scanners::ImageScannerFlatbedConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3106,7 +3106,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static int ImageScannerFlatbedConfiguration_put_ColorMode(py::wrapper::Windows::Devices::Scanners::ImageScannerFlatbedConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4014,7 +4014,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static int IImageScannerFormatConfiguration_put_Format(py::wrapper::Windows::Devices::Scanners::IImageScannerFormatConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4465,7 +4465,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static int IImageScannerSourceConfiguration_put_AutoCroppingMode(py::wrapper::Windows::Devices::Scanners::IImageScannerSourceConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4534,7 +4534,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static int IImageScannerSourceConfiguration_put_Brightness(py::wrapper::Windows::Devices::Scanners::IImageScannerSourceConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4633,7 +4633,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static int IImageScannerSourceConfiguration_put_ColorMode(py::wrapper::Windows::Devices::Scanners::IImageScannerSourceConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4702,7 +4702,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static int IImageScannerSourceConfiguration_put_Contrast(py::wrapper::Windows::Devices::Scanners::IImageScannerSourceConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4891,7 +4891,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static int IImageScannerSourceConfiguration_put_DesiredResolution(py::wrapper::Windows::Devices::Scanners::IImageScannerSourceConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5230,7 +5230,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static int IImageScannerSourceConfiguration_put_SelectedScanRegion(py::wrapper::Windows::Devices::Scanners::IImageScannerSourceConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5329,7 +5329,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static int IImageScannerSourceConfiguration_put_Format(py::wrapper::Windows::Devices::Scanners::IImageScannerSourceConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6240,7 +6240,7 @@ namespace py::cpp::Windows::Devices::Scanners
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -6307,7 +6307,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static int ImageScannerResolution_set_DpiX(py::wrapper::Windows::Devices::Scanners::ImageScannerResolution* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6340,7 +6340,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static int ImageScannerResolution_set_DpiY(py::wrapper::Windows::Devices::Scanners::ImageScannerResolution* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* _new_NDClient(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -609,7 +609,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* _new_NDCustomData(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -762,7 +762,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* _new_NDDownloadEngineNotifier(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1109,7 +1109,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* _new_NDLicenseFetchDescriptor(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1180,7 +1180,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static int NDLicenseFetchDescriptor_put_LicenseFetchChallengeCustomData(py::wrapper::Windows::Media::Protection::PlayReady::NDLicenseFetchDescriptor* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1333,7 +1333,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* _new_NDStorageFileHelper(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1464,7 +1464,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* _new_NDStreamParserNotifier(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1736,7 +1736,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* _new_NDTCPMessenger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2007,7 +2007,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* _new_PlayReadyContentHeader(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2861,7 +2861,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* _new_PlayReadyDomainIterable(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3255,7 +3255,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* _new_PlayReadyDomainJoinServiceRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3544,7 +3544,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static int PlayReadyDomainJoinServiceRequest_put_DomainServiceId(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyDomainJoinServiceRequest* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3613,7 +3613,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static int PlayReadyDomainJoinServiceRequest_put_DomainFriendlyName(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyDomainJoinServiceRequest* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3682,7 +3682,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static int PlayReadyDomainJoinServiceRequest_put_DomainAccountId(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyDomainJoinServiceRequest* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3751,7 +3751,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static int PlayReadyDomainJoinServiceRequest_put_Uri(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyDomainJoinServiceRequest* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3820,7 +3820,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static int PlayReadyDomainJoinServiceRequest_put_ChallengeCustomData(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyDomainJoinServiceRequest* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3952,7 +3952,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* _new_PlayReadyDomainLeaveServiceRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -4241,7 +4241,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static int PlayReadyDomainLeaveServiceRequest_put_DomainServiceId(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyDomainLeaveServiceRequest* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4310,7 +4310,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static int PlayReadyDomainLeaveServiceRequest_put_DomainAccountId(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyDomainLeaveServiceRequest* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4379,7 +4379,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static int PlayReadyDomainLeaveServiceRequest_put_Uri(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyDomainLeaveServiceRequest* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4448,7 +4448,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static int PlayReadyDomainLeaveServiceRequest_put_ChallengeCustomData(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyDomainLeaveServiceRequest* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4579,7 +4579,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* _new_PlayReadyITADataGenerator(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -4713,7 +4713,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* _new_PlayReadyIndividualizationServiceRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -5002,7 +5002,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static int PlayReadyIndividualizationServiceRequest_put_Uri(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyIndividualizationServiceRequest* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5071,7 +5071,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static int PlayReadyIndividualizationServiceRequest_put_ChallengeCustomData(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyIndividualizationServiceRequest* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5619,7 +5619,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* _new_PlayReadyLicenseAcquisitionServiceRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -5951,7 +5951,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static int PlayReadyLicenseAcquisitionServiceRequest_put_DomainServiceId(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyLicenseAcquisitionServiceRequest* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6020,7 +6020,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static int PlayReadyLicenseAcquisitionServiceRequest_put_ContentHeader(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyLicenseAcquisitionServiceRequest* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6119,7 +6119,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static int PlayReadyLicenseAcquisitionServiceRequest_put_Uri(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyLicenseAcquisitionServiceRequest* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6188,7 +6188,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static int PlayReadyLicenseAcquisitionServiceRequest_put_ChallengeCustomData(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyLicenseAcquisitionServiceRequest* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6321,7 +6321,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* _new_PlayReadyLicenseIterable(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -6828,7 +6828,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* _new_PlayReadyLicenseSession(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -7047,7 +7047,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* _new_PlayReadyMeteringReportServiceRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -7336,7 +7336,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static int PlayReadyMeteringReportServiceRequest_put_MeteringCertificate(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyMeteringReportServiceRequest* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7405,7 +7405,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static int PlayReadyMeteringReportServiceRequest_put_Uri(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyMeteringReportServiceRequest* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7474,7 +7474,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static int PlayReadyMeteringReportServiceRequest_put_ChallengeCustomData(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyMeteringReportServiceRequest* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7604,7 +7604,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* _new_PlayReadyRevocationServiceRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -7893,7 +7893,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static int PlayReadyRevocationServiceRequest_put_Uri(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyRevocationServiceRequest* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7962,7 +7962,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static int PlayReadyRevocationServiceRequest_put_ChallengeCustomData(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyRevocationServiceRequest* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8091,7 +8091,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* _new_PlayReadySecureStopIterable(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -8485,7 +8485,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* _new_PlayReadySecureStopServiceRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -8942,7 +8942,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static int PlayReadySecureStopServiceRequest_put_Uri(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadySecureStopServiceRequest* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9011,7 +9011,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static int PlayReadySecureStopServiceRequest_put_ChallengeCustomData(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadySecureStopServiceRequest* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11939,7 +11939,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static int INDLicenseFetchDescriptor_put_LicenseFetchChallengeCustomData(py::wrapper::Windows::Media::Protection::PlayReady::INDLicenseFetchDescriptor* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13119,7 +13119,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static int INDRegistrationCompletedEventArgs_put_TransmitterCertificateAccepted(py::wrapper::Windows::Media::Protection::PlayReady::INDRegistrationCompletedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16714,7 +16714,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static int IPlayReadyLicenseAcquisitionServiceRequest_put_ContentHeader(py::wrapper::Windows::Media::Protection::PlayReady::IPlayReadyLicenseAcquisitionServiceRequest* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16783,7 +16783,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static int IPlayReadyLicenseAcquisitionServiceRequest_put_DomainServiceId(py::wrapper::Windows::Media::Protection::PlayReady::IPlayReadyLicenseAcquisitionServiceRequest* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16852,7 +16852,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static int IPlayReadyLicenseAcquisitionServiceRequest_put_ChallengeCustomData(py::wrapper::Windows::Media::Protection::PlayReady::IPlayReadyLicenseAcquisitionServiceRequest* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16951,7 +16951,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static int IPlayReadyLicenseAcquisitionServiceRequest_put_Uri(py::wrapper::Windows::Media::Protection::PlayReady::IPlayReadyLicenseAcquisitionServiceRequest* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -18499,7 +18499,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static int IPlayReadySecureStopServiceRequest_put_ChallengeCustomData(py::wrapper::Windows::Media::Protection::PlayReady::IPlayReadySecureStopServiceRequest* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -18598,7 +18598,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static int IPlayReadySecureStopServiceRequest_put_Uri(py::wrapper::Windows::Media::Protection::PlayReady::IPlayReadySecureStopServiceRequest* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19388,7 +19388,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static int IPlayReadyServiceRequest_put_ChallengeCustomData(py::wrapper::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19487,7 +19487,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static int IPlayReadyServiceRequest_put_Uri(py::wrapper::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

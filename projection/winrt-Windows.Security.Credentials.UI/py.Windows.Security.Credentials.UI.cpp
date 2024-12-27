@@ -196,7 +196,7 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
     static PyObject* _new_CredentialPickerOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -263,7 +263,7 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
     static int CredentialPickerOptions_put_TargetName(py::wrapper::Windows::Security::Credentials::UI::CredentialPickerOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -332,7 +332,7 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
     static int CredentialPickerOptions_put_PreviousCredential(py::wrapper::Windows::Security::Credentials::UI::CredentialPickerOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -401,7 +401,7 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
     static int CredentialPickerOptions_put_Message(py::wrapper::Windows::Security::Credentials::UI::CredentialPickerOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -470,7 +470,7 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
     static int CredentialPickerOptions_put_ErrorCode(py::wrapper::Windows::Security::Credentials::UI::CredentialPickerOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -539,7 +539,7 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
     static int CredentialPickerOptions_put_CustomAuthenticationProtocol(py::wrapper::Windows::Security::Credentials::UI::CredentialPickerOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -608,7 +608,7 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
     static int CredentialPickerOptions_put_CredentialSaveOption(py::wrapper::Windows::Security::Credentials::UI::CredentialPickerOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -677,7 +677,7 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
     static int CredentialPickerOptions_put_Caption(py::wrapper::Windows::Security::Credentials::UI::CredentialPickerOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -746,7 +746,7 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
     static int CredentialPickerOptions_put_CallerSavesCredential(py::wrapper::Windows::Security::Credentials::UI::CredentialPickerOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -815,7 +815,7 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
     static int CredentialPickerOptions_put_AuthenticationProtocol(py::wrapper::Windows::Security::Credentials::UI::CredentialPickerOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -884,7 +884,7 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
     static int CredentialPickerOptions_put_AlwaysDisplayDialog(py::wrapper::Windows::Security::Credentials::UI::CredentialPickerOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

@@ -266,7 +266,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int DeleteSmsMessageOperation_put_Completed(py::wrapper::Windows::Devices::Sms::DeleteSmsMessageOperation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -627,7 +627,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int DeleteSmsMessagesOperation_put_Completed(py::wrapper::Windows::Devices::Sms::DeleteSmsMessagesOperation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -987,7 +987,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int GetSmsDeviceOperation_put_Completed(py::wrapper::Windows::Devices::Sms::GetSmsDeviceOperation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1347,7 +1347,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int GetSmsMessageOperation_put_Completed(py::wrapper::Windows::Devices::Sms::GetSmsMessageOperation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1707,7 +1707,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int GetSmsMessagesOperation_put_Progress(py::wrapper::Windows::Devices::Sms::GetSmsMessagesOperation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1776,7 +1776,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int GetSmsMessagesOperation_put_Completed(py::wrapper::Windows::Devices::Sms::GetSmsMessagesOperation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2138,7 +2138,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int SendSmsMessageOperation_put_Completed(py::wrapper::Windows::Devices::Sms::SendSmsMessageOperation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2241,7 +2241,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* _new_SmsAppMessage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2308,7 +2308,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int SmsAppMessage_put_ProtocolId(py::wrapper::Windows::Devices::Sms::SmsAppMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2377,7 +2377,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int SmsAppMessage_put_PortNumber(py::wrapper::Windows::Devices::Sms::SmsAppMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2446,7 +2446,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int SmsAppMessage_put_IsDeliveryNotificationEnabled(py::wrapper::Windows::Devices::Sms::SmsAppMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2515,7 +2515,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int SmsAppMessage_put_RetryAttemptCount(py::wrapper::Windows::Devices::Sms::SmsAppMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2584,7 +2584,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int SmsAppMessage_put_Encoding(py::wrapper::Windows::Devices::Sms::SmsAppMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2653,7 +2653,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int SmsAppMessage_put_Body(py::wrapper::Windows::Devices::Sms::SmsAppMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2722,7 +2722,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int SmsAppMessage_put_CallbackNumber(py::wrapper::Windows::Devices::Sms::SmsAppMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2791,7 +2791,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int SmsAppMessage_put_BinaryBody(py::wrapper::Windows::Devices::Sms::SmsAppMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2860,7 +2860,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int SmsAppMessage_put_To(py::wrapper::Windows::Devices::Sms::SmsAppMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2929,7 +2929,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int SmsAppMessage_put_TeleserviceId(py::wrapper::Windows::Devices::Sms::SmsAppMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3246,7 +3246,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* _new_SmsBinaryMessage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3396,7 +3396,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int SmsBinaryMessage_put_Format(py::wrapper::Windows::Devices::Sms::SmsBinaryMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4978,7 +4978,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int SmsDevice2_put_SmscAddress(py::wrapper::Windows::Devices::Sms::SmsDevice2* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5591,7 +5591,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* _new_SmsFilterRule(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -5660,7 +5660,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int SmsFilterRule_put_CellularClass(py::wrapper::Windows::Devices::Sms::SmsFilterRule* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6123,7 +6123,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* _new_SmsFilterRules(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -7987,7 +7987,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* _new_SmsTextMessage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -8241,7 +8241,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int SmsTextMessage_put_To(py::wrapper::Windows::Devices::Sms::SmsTextMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8310,7 +8310,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int SmsTextMessage_put_From(py::wrapper::Windows::Devices::Sms::SmsTextMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8379,7 +8379,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int SmsTextMessage_put_Encoding(py::wrapper::Windows::Devices::Sms::SmsTextMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8448,7 +8448,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int SmsTextMessage_put_Body(py::wrapper::Windows::Devices::Sms::SmsTextMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8696,7 +8696,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* _new_SmsTextMessage2(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -8913,7 +8913,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int SmsTextMessage2_put_RetryAttemptCount(py::wrapper::Windows::Devices::Sms::SmsTextMessage2* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8982,7 +8982,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int SmsTextMessage2_put_To(py::wrapper::Windows::Devices::Sms::SmsTextMessage2* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9051,7 +9051,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int SmsTextMessage2_put_IsDeliveryNotificationEnabled(py::wrapper::Windows::Devices::Sms::SmsTextMessage2* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9120,7 +9120,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int SmsTextMessage2_put_Encoding(py::wrapper::Windows::Devices::Sms::SmsTextMessage2* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9189,7 +9189,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int SmsTextMessage2_put_CallbackNumber(py::wrapper::Windows::Devices::Sms::SmsTextMessage2* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9258,7 +9258,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int SmsTextMessage2_put_Body(py::wrapper::Windows::Devices::Sms::SmsTextMessage2* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10394,7 +10394,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int ISmsBinaryMessage_put_Format(py::wrapper::Windows::Devices::Sms::ISmsBinaryMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12191,7 +12191,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int ISmsTextMessage_put_Body(py::wrapper::Windows::Devices::Sms::ISmsTextMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12260,7 +12260,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int ISmsTextMessage_put_Encoding(py::wrapper::Windows::Devices::Sms::ISmsTextMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12329,7 +12329,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int ISmsTextMessage_put_From(py::wrapper::Windows::Devices::Sms::ISmsTextMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12518,7 +12518,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int ISmsTextMessage_put_To(py::wrapper::Windows::Devices::Sms::ISmsTextMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13081,7 +13081,7 @@ namespace py::cpp::Windows::Devices::Sms
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -13154,7 +13154,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int SmsEncodedLength_set_SegmentCount(py::wrapper::Windows::Devices::Sms::SmsEncodedLength* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13187,7 +13187,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int SmsEncodedLength_set_CharacterCountLastSegment(py::wrapper::Windows::Devices::Sms::SmsEncodedLength* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13220,7 +13220,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int SmsEncodedLength_set_CharactersPerSegment(py::wrapper::Windows::Devices::Sms::SmsEncodedLength* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13253,7 +13253,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int SmsEncodedLength_set_ByteCountLastSegment(py::wrapper::Windows::Devices::Sms::SmsEncodedLength* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13286,7 +13286,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static int SmsEncodedLength_set_BytesPerSegment(py::wrapper::Windows::Devices::Sms::SmsEncodedLength* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

@@ -173,7 +173,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int JumpList_put_SystemGroupKind(py::wrapper::Windows::UI::StartScreen::JumpList* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -451,7 +451,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int JumpListItem_put_Logo(py::wrapper::Windows::UI::StartScreen::JumpListItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -520,7 +520,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int JumpListItem_put_GroupName(py::wrapper::Windows::UI::StartScreen::JumpListItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -589,7 +589,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int JumpListItem_put_DisplayName(py::wrapper::Windows::UI::StartScreen::JumpListItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -658,7 +658,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int JumpListItem_put_Description(py::wrapper::Windows::UI::StartScreen::JumpListItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -872,7 +872,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* _new_SecondaryTile(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1552,7 +1552,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int SecondaryTile_put_ShortName(py::wrapper::Windows::UI::StartScreen::SecondaryTile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1621,7 +1621,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int SecondaryTile_put_Logo(py::wrapper::Windows::UI::StartScreen::SecondaryTile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1690,7 +1690,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int SecondaryTile_put_TileId(py::wrapper::Windows::UI::StartScreen::SecondaryTile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1759,7 +1759,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int SecondaryTile_put_LockScreenDisplayBadgeAndTileText(py::wrapper::Windows::UI::StartScreen::SecondaryTile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1828,7 +1828,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int SecondaryTile_put_LockScreenBadgeLogo(py::wrapper::Windows::UI::StartScreen::SecondaryTile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1897,7 +1897,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int SecondaryTile_put_Arguments(py::wrapper::Windows::UI::StartScreen::SecondaryTile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1966,7 +1966,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int SecondaryTile_put_ForegroundText(py::wrapper::Windows::UI::StartScreen::SecondaryTile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2035,7 +2035,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int SecondaryTile_put_DisplayName(py::wrapper::Windows::UI::StartScreen::SecondaryTile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2104,7 +2104,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int SecondaryTile_put_BackgroundColor(py::wrapper::Windows::UI::StartScreen::SecondaryTile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2173,7 +2173,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int SecondaryTile_put_WideLogo(py::wrapper::Windows::UI::StartScreen::SecondaryTile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2242,7 +2242,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int SecondaryTile_put_TileOptions(py::wrapper::Windows::UI::StartScreen::SecondaryTile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2311,7 +2311,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int SecondaryTile_put_SmallLogo(py::wrapper::Windows::UI::StartScreen::SecondaryTile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2380,7 +2380,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int SecondaryTile_put_RoamingEnabled(py::wrapper::Windows::UI::StartScreen::SecondaryTile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2449,7 +2449,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int SecondaryTile_put_PhoneticName(py::wrapper::Windows::UI::StartScreen::SecondaryTile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2734,7 +2734,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int SecondaryTileVisualElements_put_Square150x150Logo(py::wrapper::Windows::UI::StartScreen::SecondaryTileVisualElements* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2803,7 +2803,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int SecondaryTileVisualElements_put_ShowNameOnWide310x150Logo(py::wrapper::Windows::UI::StartScreen::SecondaryTileVisualElements* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2872,7 +2872,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int SecondaryTileVisualElements_put_ShowNameOnSquare310x310Logo(py::wrapper::Windows::UI::StartScreen::SecondaryTileVisualElements* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2941,7 +2941,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int SecondaryTileVisualElements_put_ShowNameOnSquare150x150Logo(py::wrapper::Windows::UI::StartScreen::SecondaryTileVisualElements* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3010,7 +3010,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int SecondaryTileVisualElements_put_ForegroundText(py::wrapper::Windows::UI::StartScreen::SecondaryTileVisualElements* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3079,7 +3079,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int SecondaryTileVisualElements_put_BackgroundColor(py::wrapper::Windows::UI::StartScreen::SecondaryTileVisualElements* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3148,7 +3148,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int SecondaryTileVisualElements_put_Wide310x150Logo(py::wrapper::Windows::UI::StartScreen::SecondaryTileVisualElements* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3217,7 +3217,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int SecondaryTileVisualElements_put_Square70x70Logo(py::wrapper::Windows::UI::StartScreen::SecondaryTileVisualElements* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3286,7 +3286,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int SecondaryTileVisualElements_put_Square310x310Logo(py::wrapper::Windows::UI::StartScreen::SecondaryTileVisualElements* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3355,7 +3355,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int SecondaryTileVisualElements_put_Square30x30Logo(py::wrapper::Windows::UI::StartScreen::SecondaryTileVisualElements* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3424,7 +3424,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int SecondaryTileVisualElements_put_Square71x71Logo(py::wrapper::Windows::UI::StartScreen::SecondaryTileVisualElements* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3493,7 +3493,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int SecondaryTileVisualElements_put_Square44x44Logo(py::wrapper::Windows::UI::StartScreen::SecondaryTileVisualElements* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4092,7 +4092,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int TileMixedRealityModel_put_Uri(py::wrapper::Windows::UI::StartScreen::TileMixedRealityModel* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4161,7 +4161,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int TileMixedRealityModel_put_BoundingBox(py::wrapper::Windows::UI::StartScreen::TileMixedRealityModel* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4230,7 +4230,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int TileMixedRealityModel_put_ActivationBehavior(py::wrapper::Windows::UI::StartScreen::TileMixedRealityModel* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

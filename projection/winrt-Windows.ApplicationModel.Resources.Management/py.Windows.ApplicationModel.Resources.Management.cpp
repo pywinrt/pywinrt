@@ -400,7 +400,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Management
 
     static PyObject* _new_ResourceIndexer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;

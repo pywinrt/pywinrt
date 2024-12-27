@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Media::Transcoding
 
     static PyObject* _new_MediaTranscoder(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -424,7 +424,7 @@ namespace py::cpp::Windows::Media::Transcoding
 
     static int MediaTranscoder_put_TrimStopTime(py::wrapper::Windows::Media::Transcoding::MediaTranscoder* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -493,7 +493,7 @@ namespace py::cpp::Windows::Media::Transcoding
 
     static int MediaTranscoder_put_TrimStartTime(py::wrapper::Windows::Media::Transcoding::MediaTranscoder* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -562,7 +562,7 @@ namespace py::cpp::Windows::Media::Transcoding
 
     static int MediaTranscoder_put_HardwareAccelerationEnabled(py::wrapper::Windows::Media::Transcoding::MediaTranscoder* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -631,7 +631,7 @@ namespace py::cpp::Windows::Media::Transcoding
 
     static int MediaTranscoder_put_AlwaysReencode(py::wrapper::Windows::Media::Transcoding::MediaTranscoder* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -700,7 +700,7 @@ namespace py::cpp::Windows::Media::Transcoding
 
     static int MediaTranscoder_put_VideoProcessingAlgorithm(py::wrapper::Windows::Media::Transcoding::MediaTranscoder* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

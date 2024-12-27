@@ -197,7 +197,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int CachedFileUpdaterUI_put_Title(py::wrapper::Windows::Storage::Provider::CachedFileUpdaterUI* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -644,7 +644,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int FileUpdateRequest_put_Status(py::wrapper::Windows::Storage::Provider::FileUpdateRequest* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -773,7 +773,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int FileUpdateRequest_put_UserInputNeededMessage(py::wrapper::Windows::Storage::Provider::FileUpdateRequest* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1074,7 +1074,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* _new_StorageProviderFileTypeInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1227,7 +1227,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* _new_StorageProviderGetContentInfoForPathResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1294,7 +1294,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderGetContentInfoForPathResult_put_Status(py::wrapper::Windows::Storage::Provider::StorageProviderGetContentInfoForPathResult* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1363,7 +1363,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderGetContentInfoForPathResult_put_ContentUri(py::wrapper::Windows::Storage::Provider::StorageProviderGetContentInfoForPathResult* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1432,7 +1432,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderGetContentInfoForPathResult_put_ContentId(py::wrapper::Windows::Storage::Provider::StorageProviderGetContentInfoForPathResult* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1525,7 +1525,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* _new_StorageProviderGetPathForContentUriResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1592,7 +1592,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderGetPathForContentUriResult_put_Status(py::wrapper::Windows::Storage::Provider::StorageProviderGetPathForContentUriResult* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1661,7 +1661,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderGetPathForContentUriResult_put_Path(py::wrapper::Windows::Storage::Provider::StorageProviderGetPathForContentUriResult* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1853,7 +1853,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* _new_StorageProviderItemProperty(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1920,7 +1920,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderItemProperty_put_Value(py::wrapper::Windows::Storage::Provider::StorageProviderItemProperty* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1989,7 +1989,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderItemProperty_put_Id(py::wrapper::Windows::Storage::Provider::StorageProviderItemProperty* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2058,7 +2058,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderItemProperty_put_IconResource(py::wrapper::Windows::Storage::Provider::StorageProviderItemProperty* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2151,7 +2151,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* _new_StorageProviderItemPropertyDefinition(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2218,7 +2218,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderItemPropertyDefinition_put_Id(py::wrapper::Windows::Storage::Provider::StorageProviderItemPropertyDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2287,7 +2287,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderItemPropertyDefinition_put_DisplayNameResource(py::wrapper::Windows::Storage::Provider::StorageProviderItemPropertyDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2379,7 +2379,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* _new_StorageProviderKnownFolderEntry(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2446,7 +2446,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderKnownFolderEntry_put_Status(py::wrapper::Windows::Storage::Provider::StorageProviderKnownFolderEntry* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2515,7 +2515,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderKnownFolderEntry_put_KnownFolderId(py::wrapper::Windows::Storage::Provider::StorageProviderKnownFolderEntry* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2607,7 +2607,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* _new_StorageProviderKnownFolderSyncInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2674,7 +2674,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderKnownFolderSyncInfo_put_SyncRequested(py::wrapper::Windows::Storage::Provider::StorageProviderKnownFolderSyncInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2743,7 +2743,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderKnownFolderSyncInfo_put_ProviderDisplayName(py::wrapper::Windows::Storage::Provider::StorageProviderKnownFolderSyncInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2994,7 +2994,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* _new_StorageProviderMoreInfoUI(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3061,7 +3061,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderMoreInfoUI_put_Message(py::wrapper::Windows::Storage::Provider::StorageProviderMoreInfoUI* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3130,7 +3130,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderMoreInfoUI_put_Command(py::wrapper::Windows::Storage::Provider::StorageProviderMoreInfoUI* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3222,7 +3222,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* _new_StorageProviderQuotaUI(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3289,7 +3289,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderQuotaUI_put_QuotaUsedLabel(py::wrapper::Windows::Storage::Provider::StorageProviderQuotaUI* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3358,7 +3358,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderQuotaUI_put_QuotaUsedInBytes(py::wrapper::Windows::Storage::Provider::StorageProviderQuotaUI* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3427,7 +3427,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderQuotaUI_put_QuotaUsedColor(py::wrapper::Windows::Storage::Provider::StorageProviderQuotaUI* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3496,7 +3496,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderQuotaUI_put_QuotaTotalInBytes(py::wrapper::Windows::Storage::Provider::StorageProviderQuotaUI* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3590,7 +3590,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* _new_StorageProviderStatusUI(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3657,7 +3657,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderStatusUI_put_SyncStatusCommand(py::wrapper::Windows::Storage::Provider::StorageProviderStatusUI* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3726,7 +3726,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderStatusUI_put_QuotaUI(py::wrapper::Windows::Storage::Provider::StorageProviderStatusUI* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3795,7 +3795,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderStatusUI_put_ProviderStateLabel(py::wrapper::Windows::Storage::Provider::StorageProviderStatusUI* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3864,7 +3864,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderStatusUI_put_ProviderStateIcon(py::wrapper::Windows::Storage::Provider::StorageProviderStatusUI* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3933,7 +3933,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderStatusUI_put_ProviderState(py::wrapper::Windows::Storage::Provider::StorageProviderStatusUI* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4002,7 +4002,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderStatusUI_put_ProviderSecondaryCommands(py::wrapper::Windows::Storage::Provider::StorageProviderStatusUI* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4071,7 +4071,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderStatusUI_put_ProviderPrimaryCommand(py::wrapper::Windows::Storage::Provider::StorageProviderStatusUI* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4140,7 +4140,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderStatusUI_put_MoreInfoUI(py::wrapper::Windows::Storage::Provider::StorageProviderStatusUI* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4238,7 +4238,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyObject* _new_StorageProviderSyncRootInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -4305,7 +4305,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderSyncRootInfo_put_Version(py::wrapper::Windows::Storage::Provider::StorageProviderSyncRootInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4374,7 +4374,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderSyncRootInfo_put_ShowSiblingsAsGroup(py::wrapper::Windows::Storage::Provider::StorageProviderSyncRootInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4443,7 +4443,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderSyncRootInfo_put_RecycleBinUri(py::wrapper::Windows::Storage::Provider::StorageProviderSyncRootInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4512,7 +4512,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderSyncRootInfo_put_ProtectionMode(py::wrapper::Windows::Storage::Provider::StorageProviderSyncRootInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4581,7 +4581,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderSyncRootInfo_put_PopulationPolicy(py::wrapper::Windows::Storage::Provider::StorageProviderSyncRootInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4650,7 +4650,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderSyncRootInfo_put_Path(py::wrapper::Windows::Storage::Provider::StorageProviderSyncRootInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4719,7 +4719,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderSyncRootInfo_put_InSyncPolicy(py::wrapper::Windows::Storage::Provider::StorageProviderSyncRootInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4788,7 +4788,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderSyncRootInfo_put_Id(py::wrapper::Windows::Storage::Provider::StorageProviderSyncRootInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4857,7 +4857,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderSyncRootInfo_put_IconResource(py::wrapper::Windows::Storage::Provider::StorageProviderSyncRootInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4926,7 +4926,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderSyncRootInfo_put_HydrationPolicyModifier(py::wrapper::Windows::Storage::Provider::StorageProviderSyncRootInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4995,7 +4995,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderSyncRootInfo_put_HydrationPolicy(py::wrapper::Windows::Storage::Provider::StorageProviderSyncRootInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5064,7 +5064,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderSyncRootInfo_put_HardlinkPolicy(py::wrapper::Windows::Storage::Provider::StorageProviderSyncRootInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5133,7 +5133,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderSyncRootInfo_put_DisplayNameResource(py::wrapper::Windows::Storage::Provider::StorageProviderSyncRootInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5202,7 +5202,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderSyncRootInfo_put_Context(py::wrapper::Windows::Storage::Provider::StorageProviderSyncRootInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5271,7 +5271,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderSyncRootInfo_put_AllowPinning(py::wrapper::Windows::Storage::Provider::StorageProviderSyncRootInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5370,7 +5370,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     static int StorageProviderSyncRootInfo_put_ProviderId(py::wrapper::Windows::Storage::Provider::StorageProviderSyncRootInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

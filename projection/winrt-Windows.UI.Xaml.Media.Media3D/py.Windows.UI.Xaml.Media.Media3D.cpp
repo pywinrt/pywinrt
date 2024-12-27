@@ -8,7 +8,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
     static PyObject* _new_CompositeTransform3D(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -75,7 +75,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
     static int CompositeTransform3D_put_TranslateZ(py::wrapper::Windows::UI::Xaml::Media::Media3D::CompositeTransform3D* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -144,7 +144,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
     static int CompositeTransform3D_put_TranslateY(py::wrapper::Windows::UI::Xaml::Media::Media3D::CompositeTransform3D* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -213,7 +213,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
     static int CompositeTransform3D_put_TranslateX(py::wrapper::Windows::UI::Xaml::Media::Media3D::CompositeTransform3D* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -282,7 +282,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
     static int CompositeTransform3D_put_ScaleZ(py::wrapper::Windows::UI::Xaml::Media::Media3D::CompositeTransform3D* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -351,7 +351,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
     static int CompositeTransform3D_put_ScaleY(py::wrapper::Windows::UI::Xaml::Media::Media3D::CompositeTransform3D* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -420,7 +420,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
     static int CompositeTransform3D_put_ScaleX(py::wrapper::Windows::UI::Xaml::Media::Media3D::CompositeTransform3D* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -489,7 +489,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
     static int CompositeTransform3D_put_RotationZ(py::wrapper::Windows::UI::Xaml::Media::Media3D::CompositeTransform3D* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -558,7 +558,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
     static int CompositeTransform3D_put_RotationY(py::wrapper::Windows::UI::Xaml::Media::Media3D::CompositeTransform3D* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -627,7 +627,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
     static int CompositeTransform3D_put_RotationX(py::wrapper::Windows::UI::Xaml::Media::Media3D::CompositeTransform3D* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -696,7 +696,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
     static int CompositeTransform3D_put_CenterZ(py::wrapper::Windows::UI::Xaml::Media::Media3D::CompositeTransform3D* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -765,7 +765,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
     static int CompositeTransform3D_put_CenterY(py::wrapper::Windows::UI::Xaml::Media::Media3D::CompositeTransform3D* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -834,7 +834,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
     static int CompositeTransform3D_put_CenterX(py::wrapper::Windows::UI::Xaml::Media::Media3D::CompositeTransform3D* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1686,7 +1686,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
     static PyObject* _new_PerspectiveTransform3D(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1753,7 +1753,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
     static int PerspectiveTransform3D_put_OffsetY(py::wrapper::Windows::UI::Xaml::Media::Media3D::PerspectiveTransform3D* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1822,7 +1822,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
     static int PerspectiveTransform3D_put_OffsetX(py::wrapper::Windows::UI::Xaml::Media::Media3D::PerspectiveTransform3D* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1891,7 +1891,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
     static int PerspectiveTransform3D_put_Depth(py::wrapper::Windows::UI::Xaml::Media::Media3D::PerspectiveTransform3D* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2238,7 +2238,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -2333,7 +2333,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
     static int Matrix3D_set_M11(py::wrapper::Windows::UI::Xaml::Media::Media3D::Matrix3D* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2366,7 +2366,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
     static int Matrix3D_set_M12(py::wrapper::Windows::UI::Xaml::Media::Media3D::Matrix3D* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2399,7 +2399,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
     static int Matrix3D_set_M13(py::wrapper::Windows::UI::Xaml::Media::Media3D::Matrix3D* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2432,7 +2432,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
     static int Matrix3D_set_M14(py::wrapper::Windows::UI::Xaml::Media::Media3D::Matrix3D* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2465,7 +2465,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
     static int Matrix3D_set_M21(py::wrapper::Windows::UI::Xaml::Media::Media3D::Matrix3D* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2498,7 +2498,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
     static int Matrix3D_set_M22(py::wrapper::Windows::UI::Xaml::Media::Media3D::Matrix3D* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2531,7 +2531,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
     static int Matrix3D_set_M23(py::wrapper::Windows::UI::Xaml::Media::Media3D::Matrix3D* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2564,7 +2564,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
     static int Matrix3D_set_M24(py::wrapper::Windows::UI::Xaml::Media::Media3D::Matrix3D* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2597,7 +2597,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
     static int Matrix3D_set_M31(py::wrapper::Windows::UI::Xaml::Media::Media3D::Matrix3D* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2630,7 +2630,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
     static int Matrix3D_set_M32(py::wrapper::Windows::UI::Xaml::Media::Media3D::Matrix3D* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2663,7 +2663,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
     static int Matrix3D_set_M33(py::wrapper::Windows::UI::Xaml::Media::Media3D::Matrix3D* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2696,7 +2696,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
     static int Matrix3D_set_M34(py::wrapper::Windows::UI::Xaml::Media::Media3D::Matrix3D* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2729,7 +2729,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
     static int Matrix3D_set_OffsetX(py::wrapper::Windows::UI::Xaml::Media::Media3D::Matrix3D* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2762,7 +2762,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
     static int Matrix3D_set_OffsetY(py::wrapper::Windows::UI::Xaml::Media::Media3D::Matrix3D* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2795,7 +2795,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
     static int Matrix3D_set_OffsetZ(py::wrapper::Windows::UI::Xaml::Media::Media3D::Matrix3D* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2828,7 +2828,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
     static int Matrix3D_set_M44(py::wrapper::Windows::UI::Xaml::Media::Media3D::Matrix3D* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

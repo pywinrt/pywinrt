@@ -176,7 +176,7 @@ namespace py::cpp::Windows::Media::Casting
 
     static int CastingConnection_put_Source(py::wrapper::Windows::Media::Casting::CastingConnection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1057,7 +1057,7 @@ namespace py::cpp::Windows::Media::Casting
 
     static PyObject* _new_CastingDevicePicker(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1517,7 +1517,7 @@ namespace py::cpp::Windows::Media::Casting
 
     static int CastingDevicePickerFilter_put_SupportsVideo(py::wrapper::Windows::Media::Casting::CastingDevicePickerFilter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1586,7 +1586,7 @@ namespace py::cpp::Windows::Media::Casting
 
     static int CastingDevicePickerFilter_put_SupportsPictures(py::wrapper::Windows::Media::Casting::CastingDevicePickerFilter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1655,7 +1655,7 @@ namespace py::cpp::Windows::Media::Casting
 
     static int CastingDevicePickerFilter_put_SupportsAudio(py::wrapper::Windows::Media::Casting::CastingDevicePickerFilter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1921,7 +1921,7 @@ namespace py::cpp::Windows::Media::Casting
 
     static int CastingSource_put_PreferredSourceUri(py::wrapper::Windows::Media::Casting::CastingSource* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

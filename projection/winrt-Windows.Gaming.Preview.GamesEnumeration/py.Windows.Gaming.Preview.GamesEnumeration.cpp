@@ -1049,7 +1049,7 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static int GameModeConfiguration_put_PercentGpuTimeAllocatedToGame(py::wrapper::Windows::Gaming::Preview::GamesEnumeration::GameModeConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1118,7 +1118,7 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static int GameModeConfiguration_put_PercentGpuMemoryAllocatedToSystemCompositor(py::wrapper::Windows::Gaming::Preview::GamesEnumeration::GameModeConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1187,7 +1187,7 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static int GameModeConfiguration_put_PercentGpuMemoryAllocatedToGame(py::wrapper::Windows::Gaming::Preview::GamesEnumeration::GameModeConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1256,7 +1256,7 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static int GameModeConfiguration_put_MaxCpuCount(py::wrapper::Windows::Gaming::Preview::GamesEnumeration::GameModeConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1325,7 +1325,7 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static int GameModeConfiguration_put_IsEnabled(py::wrapper::Windows::Gaming::Preview::GamesEnumeration::GameModeConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1394,7 +1394,7 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static int GameModeConfiguration_put_CpuExclusivityMaskLow(py::wrapper::Windows::Gaming::Preview::GamesEnumeration::GameModeConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1463,7 +1463,7 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static int GameModeConfiguration_put_CpuExclusivityMaskHigh(py::wrapper::Windows::Gaming::Preview::GamesEnumeration::GameModeConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1532,7 +1532,7 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static int GameModeConfiguration_put_AffinitizeToExclusiveCpus(py::wrapper::Windows::Gaming::Preview::GamesEnumeration::GameModeConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

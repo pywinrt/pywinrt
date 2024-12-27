@@ -681,7 +681,7 @@ namespace py::impl::Windows::Foundation
         }
         int put_Progress(PyObject* arg) noexcept override
         {
-            if (arg == nullptr)
+            if (!arg)
             {
                 PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
                 return -1;
@@ -722,7 +722,7 @@ namespace py::impl::Windows::Foundation
         }
         int put_Completed(PyObject* arg) noexcept override
         {
-            if (arg == nullptr)
+            if (!arg)
             {
                 PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
                 return -1;
@@ -939,7 +939,7 @@ namespace py::impl::Windows::Foundation
         }
         int put_Progress(PyObject* arg) noexcept override
         {
-            if (arg == nullptr)
+            if (!arg)
             {
                 PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
                 return -1;
@@ -980,7 +980,7 @@ namespace py::impl::Windows::Foundation
         }
         int put_Completed(PyObject* arg) noexcept override
         {
-            if (arg == nullptr)
+            if (!arg)
             {
                 PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
                 return -1;
@@ -1197,7 +1197,7 @@ namespace py::impl::Windows::Foundation
         }
         int put_Completed(PyObject* arg) noexcept override
         {
-            if (arg == nullptr)
+            if (!arg)
             {
                 PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
                 return -1;

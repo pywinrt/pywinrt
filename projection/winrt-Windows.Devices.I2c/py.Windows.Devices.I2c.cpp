@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Devices::I2c
 
     static PyObject* _new_I2cConnectionSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -77,7 +77,7 @@ namespace py::cpp::Windows::Devices::I2c
 
     static int I2cConnectionSettings_put_SlaveAddress(py::wrapper::Windows::Devices::I2c::I2cConnectionSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -146,7 +146,7 @@ namespace py::cpp::Windows::Devices::I2c
 
     static int I2cConnectionSettings_put_SharingMode(py::wrapper::Windows::Devices::I2c::I2cConnectionSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -215,7 +215,7 @@ namespace py::cpp::Windows::Devices::I2c
 
     static int I2cConnectionSettings_put_BusSpeed(py::wrapper::Windows::Devices::I2c::I2cConnectionSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1511,7 +1511,7 @@ namespace py::cpp::Windows::Devices::I2c
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -1578,7 +1578,7 @@ namespace py::cpp::Windows::Devices::I2c
 
     static int I2cTransferResult_set_Status(py::wrapper::Windows::Devices::I2c::I2cTransferResult* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1611,7 +1611,7 @@ namespace py::cpp::Windows::Devices::I2c
 
     static int I2cTransferResult_set_BytesTransferred(py::wrapper::Windows::Devices::I2c::I2cTransferResult* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

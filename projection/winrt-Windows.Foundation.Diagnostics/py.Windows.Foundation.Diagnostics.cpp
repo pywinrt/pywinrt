@@ -597,7 +597,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* _new_FileLoggingSession(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1123,7 +1123,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* _new_LoggingActivity(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2014,7 +2014,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* _new_LoggingChannel(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3063,7 +3063,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* _new_LoggingChannelOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3145,7 +3145,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static int LoggingChannelOptions_put_Group(py::wrapper::Windows::Foundation::Diagnostics::LoggingChannelOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3236,7 +3236,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* _new_LoggingFields(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -8600,7 +8600,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* _new_LoggingOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -8682,7 +8682,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static int LoggingOptions_put_Task(py::wrapper::Windows::Foundation::Diagnostics::LoggingOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8751,7 +8751,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static int LoggingOptions_put_Tags(py::wrapper::Windows::Foundation::Diagnostics::LoggingOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8820,7 +8820,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static int LoggingOptions_put_RelatedActivityId(py::wrapper::Windows::Foundation::Diagnostics::LoggingOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8889,7 +8889,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static int LoggingOptions_put_Opcode(py::wrapper::Windows::Foundation::Diagnostics::LoggingOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8958,7 +8958,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static int LoggingOptions_put_Keywords(py::wrapper::Windows::Foundation::Diagnostics::LoggingOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9027,7 +9027,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static int LoggingOptions_put_ActivityId(py::wrapper::Windows::Foundation::Diagnostics::LoggingOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9123,7 +9123,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* _new_LoggingSession(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -9488,7 +9488,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* _new_RuntimeBrokerErrorSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;

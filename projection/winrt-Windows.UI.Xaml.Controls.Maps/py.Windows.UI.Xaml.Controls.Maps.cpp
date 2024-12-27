@@ -38,7 +38,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* _new_CustomMapTileDataSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -279,7 +279,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* _new_HttpMapTileDataSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -414,7 +414,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int HttpMapTileDataSource_put_UriFormatString(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -483,7 +483,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int HttpMapTileDataSource_put_AllowCaching(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -729,7 +729,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* _new_LocalMapTileDataSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -864,7 +864,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int LocalMapTileDataSource_put_UriFormatString(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1047,7 +1047,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* _new_MapActualCameraChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1197,7 +1197,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* _new_MapActualCameraChangingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1347,7 +1347,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* _new_MapBillboard(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1416,7 +1416,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapBillboard_put_NormalizedAnchorPoint(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapBillboard* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1485,7 +1485,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapBillboard_put_Location(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapBillboard* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1554,7 +1554,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapBillboard_put_Image(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapBillboard* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1623,7 +1623,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapBillboard_put_CollisionBehaviorDesired(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapBillboard* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1866,7 +1866,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* _new_MapCamera(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1987,7 +1987,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapCamera_put_Roll(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapCamera* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2056,7 +2056,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapCamera_put_Pitch(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapCamera* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2125,7 +2125,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapCamera_put_Location(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapCamera* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2194,7 +2194,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapCamera_put_Heading(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapCamera* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2263,7 +2263,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapCamera_put_FieldOfView(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapCamera* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2358,7 +2358,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* _new_MapContextRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2539,7 +2539,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* _new_MapControl(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -4236,7 +4236,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapControl_put_ZoomLevel(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4305,7 +4305,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapControl_put_WatermarkMode(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4374,7 +4374,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapControl_put_TransformOrigin(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4443,7 +4443,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapControl_put_TrafficFlowVisible(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4512,7 +4512,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapControl_put_Style(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4581,7 +4581,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapControl_put_PedestrianFeaturesVisible(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4650,7 +4650,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapControl_put_MapServiceToken(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4719,7 +4719,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapControl_put_Center(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4788,7 +4788,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapControl_put_Heading(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4857,7 +4857,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapControl_put_DesiredPitch(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4926,7 +4926,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapControl_put_ColorScheme(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4995,7 +4995,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapControl_put_LandmarksVisible(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5304,7 +5304,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapControl_put_RotateInteractionMode(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5373,7 +5373,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapControl_put_ZoomInteractionMode(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5442,7 +5442,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapControl_put_TransitFeaturesVisible(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5511,7 +5511,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapControl_put_TiltInteractionMode(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5580,7 +5580,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapControl_put_Scene(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5649,7 +5649,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapControl_put_BusinessLandmarksVisible(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5718,7 +5718,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapControl_put_PanInteractionMode(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5787,7 +5787,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapControl_put_CustomExperience(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5976,7 +5976,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapControl_put_TransitFeaturesEnabled(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6045,7 +6045,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapControl_put_BusinessLandmarksEnabled(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6114,7 +6114,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapControl_put_ViewPadding(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6183,7 +6183,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapControl_put_StyleSheet(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6252,7 +6252,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapControl_put_MapProjection(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6321,7 +6321,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapControl_put_Layers(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6390,7 +6390,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapControl_put_Region(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9151,7 +9151,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* _new_MapControlBusinessLandmarkClickEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -9270,7 +9270,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* _new_MapControlBusinessLandmarkPointerEnteredEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -9389,7 +9389,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* _new_MapControlBusinessLandmarkPointerExitedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -9508,7 +9508,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* _new_MapControlBusinessLandmarkRightTappedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -9627,7 +9627,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* _new_MapControlDataHelper(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -10321,7 +10321,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* _new_MapControlTransitFeatureClickEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -10502,7 +10502,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* _new_MapControlTransitFeaturePointerEnteredEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -10683,7 +10683,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* _new_MapControlTransitFeaturePointerExitedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -10864,7 +10864,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* _new_MapControlTransitFeatureRightTappedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -11075,7 +11075,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* _new_MapCustomExperience(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -11218,7 +11218,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* _new_MapCustomExperienceChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -11336,7 +11336,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* _new_MapElement(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -11433,7 +11433,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapElement_put_ZIndex(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11502,7 +11502,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapElement_put_Visible(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11571,7 +11571,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapElement_put_MapTabIndex(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11640,7 +11640,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapElement_put_Tag(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11709,7 +11709,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapElement_put_MapStyleSheetEntryState(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11778,7 +11778,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapElement_put_MapStyleSheetEntry(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11847,7 +11847,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapElement_put_IsEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12186,7 +12186,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* _new_MapElement3D(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -12253,7 +12253,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapElement3D_put_Scale(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElement3D* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12322,7 +12322,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapElement3D_put_Roll(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElement3D* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12391,7 +12391,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapElement3D_put_Pitch(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElement3D* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12460,7 +12460,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapElement3D_put_Model(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElement3D* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12529,7 +12529,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapElement3D_put_Location(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElement3D* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12598,7 +12598,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapElement3D_put_Heading(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElement3D* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12874,7 +12874,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* _new_MapElementClickEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -13055,7 +13055,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* _new_MapElementPointerEnteredEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -13236,7 +13236,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* _new_MapElementPointerExitedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -13417,7 +13417,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* _new_MapElementsLayer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -13484,7 +13484,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapElementsLayer_put_MapElements(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElementsLayer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13899,7 +13899,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* _new_MapElementsLayerClickEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -14080,7 +14080,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* _new_MapElementsLayerContextRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -14261,7 +14261,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* _new_MapElementsLayerPointerEnteredEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -14442,7 +14442,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* _new_MapElementsLayerPointerExitedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -14623,7 +14623,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* _new_MapIcon(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -14690,7 +14690,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapIcon_put_Title(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapIcon* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14759,7 +14759,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapIcon_put_NormalizedAnchorPoint(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapIcon* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14828,7 +14828,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapIcon_put_Location(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapIcon* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14897,7 +14897,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapIcon_put_Image(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapIcon* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14966,7 +14966,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapIcon_put_CollisionBehaviorDesired(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapIcon* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15210,7 +15210,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* _new_MapInputEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -15360,7 +15360,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* _new_MapItemsControl(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -15427,7 +15427,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapItemsControl_put_ItemsSource(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapItemsControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15496,7 +15496,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapItemsControl_put_ItemTemplate(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapItemsControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15767,7 +15767,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* _new_MapLayer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -15864,7 +15864,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapLayer_put_ZIndex(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15933,7 +15933,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapLayer_put_Visible(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16002,7 +16002,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapLayer_put_MapTabIndex(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16243,7 +16243,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* _new_MapModel3D(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -16473,7 +16473,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* _new_MapPolygon(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -16540,7 +16540,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapPolygon_put_StrokeThickness(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapPolygon* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16609,7 +16609,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapPolygon_put_StrokeDashed(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapPolygon* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16678,7 +16678,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapPolygon_put_StrokeColor(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapPolygon* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16747,7 +16747,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapPolygon_put_Path(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapPolygon* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16816,7 +16816,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapPolygon_put_FillColor(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapPolygon* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -17060,7 +17060,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* _new_MapPolyline(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -17127,7 +17127,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapPolyline_put_StrokeThickness(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapPolyline* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -17196,7 +17196,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapPolyline_put_StrokeDashed(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapPolyline* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -17265,7 +17265,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapPolyline_put_StrokeColor(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapPolyline* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -17334,7 +17334,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapPolyline_put_Path(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapPolyline* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -17515,7 +17515,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* _new_MapRightTappedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -17695,7 +17695,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* _new_MapRouteView(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -17794,7 +17794,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapRouteView_put_RouteColor(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -17863,7 +17863,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapRouteView_put_OutlineColor(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -21266,7 +21266,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* _new_MapTargetCameraChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -21416,7 +21416,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* _new_MapTileBitmapRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -21523,7 +21523,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapTileBitmapRequest_put_PixelData(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileBitmapRequest* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -21615,7 +21615,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* _new_MapTileBitmapRequestDeferral(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -21745,7 +21745,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* _new_MapTileBitmapRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -22018,7 +22018,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* _new_MapTileDataSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -22195,7 +22195,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* _new_MapTileSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -22573,7 +22573,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapTileSource_put_ZoomLevelRange(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -22642,7 +22642,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapTileSource_put_ZIndex(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -22711,7 +22711,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapTileSource_put_Visible(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -22780,7 +22780,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapTileSource_put_TilePixelSize(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -22849,7 +22849,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapTileSource_put_Layer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -22918,7 +22918,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapTileSource_put_IsTransparencyEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -22987,7 +22987,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapTileSource_put_IsRetryEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -23056,7 +23056,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapTileSource_put_IsFadingEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -23125,7 +23125,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapTileSource_put_DataSource(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -23194,7 +23194,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapTileSource_put_Bounds(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -23263,7 +23263,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapTileSource_put_AllowOverstretch(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -23332,7 +23332,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapTileSource_put_FrameDuration(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -23401,7 +23401,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapTileSource_put_FrameCount(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -23470,7 +23470,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapTileSource_put_AutoPlay(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -24098,7 +24098,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* _new_MapTileUriRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -24205,7 +24205,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapTileUriRequest_put_Uri(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileUriRequest* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -24297,7 +24297,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* _new_MapTileUriRequestDeferral(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -24427,7 +24427,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* _new_MapTileUriRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -24670,7 +24670,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* _new_StreetsideExperience(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -24757,7 +24757,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int StreetsideExperience_put_ZoomButtonsVisible(py::wrapper::Windows::UI::Xaml::Controls::Maps::StreetsideExperience* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -24826,7 +24826,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int StreetsideExperience_put_StreetLabelsVisible(py::wrapper::Windows::UI::Xaml::Controls::Maps::StreetsideExperience* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -24895,7 +24895,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int StreetsideExperience_put_OverviewMapVisible(py::wrapper::Windows::UI::Xaml::Controls::Maps::StreetsideExperience* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -24964,7 +24964,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int StreetsideExperience_put_ExitButtonVisible(py::wrapper::Windows::UI::Xaml::Controls::Maps::StreetsideExperience* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -25033,7 +25033,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int StreetsideExperience_put_CursorVisible(py::wrapper::Windows::UI::Xaml::Controls::Maps::StreetsideExperience* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -25102,7 +25102,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int StreetsideExperience_put_AddressTextVisible(py::wrapper::Windows::UI::Xaml::Controls::Maps::StreetsideExperience* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -25423,7 +25423,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -25490,7 +25490,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapZoomLevelRange_set_Min(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapZoomLevelRange* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -25523,7 +25523,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static int MapZoomLevelRange_set_Max(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapZoomLevelRange* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

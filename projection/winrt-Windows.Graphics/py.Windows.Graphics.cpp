@@ -152,7 +152,7 @@ namespace py::cpp::Windows::Graphics
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -219,7 +219,7 @@ namespace py::cpp::Windows::Graphics
 
     static int DisplayAdapterId_set_LowPart(py::wrapper::Windows::Graphics::DisplayAdapterId* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -252,7 +252,7 @@ namespace py::cpp::Windows::Graphics
 
     static int DisplayAdapterId_set_HighPart(py::wrapper::Windows::Graphics::DisplayAdapterId* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -366,7 +366,7 @@ namespace py::cpp::Windows::Graphics
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -431,7 +431,7 @@ namespace py::cpp::Windows::Graphics
 
     static int DisplayId_set_Value(py::wrapper::Windows::Graphics::DisplayId* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -538,7 +538,7 @@ namespace py::cpp::Windows::Graphics
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -605,7 +605,7 @@ namespace py::cpp::Windows::Graphics
 
     static int PointInt32_set_X(py::wrapper::Windows::Graphics::PointInt32* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -638,7 +638,7 @@ namespace py::cpp::Windows::Graphics
 
     static int PointInt32_set_Y(py::wrapper::Windows::Graphics::PointInt32* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -752,7 +752,7 @@ namespace py::cpp::Windows::Graphics
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -823,7 +823,7 @@ namespace py::cpp::Windows::Graphics
 
     static int RectInt32_set_X(py::wrapper::Windows::Graphics::RectInt32* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -856,7 +856,7 @@ namespace py::cpp::Windows::Graphics
 
     static int RectInt32_set_Y(py::wrapper::Windows::Graphics::RectInt32* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -889,7 +889,7 @@ namespace py::cpp::Windows::Graphics
 
     static int RectInt32_set_Width(py::wrapper::Windows::Graphics::RectInt32* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -922,7 +922,7 @@ namespace py::cpp::Windows::Graphics
 
     static int RectInt32_set_Height(py::wrapper::Windows::Graphics::RectInt32* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1050,7 +1050,7 @@ namespace py::cpp::Windows::Graphics
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -1117,7 +1117,7 @@ namespace py::cpp::Windows::Graphics
 
     static int SizeInt32_set_Width(py::wrapper::Windows::Graphics::SizeInt32* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1150,7 +1150,7 @@ namespace py::cpp::Windows::Graphics
 
     static int SizeInt32_set_Height(py::wrapper::Windows::Graphics::SizeInt32* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

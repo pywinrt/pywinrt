@@ -8,7 +8,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Notifications
 
     static PyObject* _new_FeedAnnouncement(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -81,7 +81,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Notifications
 
     static int FeedAnnouncement_put_ShowBadgeIfUserNotEngaged(py::wrapper::Microsoft::Windows::Widgets::Notifications::FeedAnnouncement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -150,7 +150,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Notifications
 
     static int FeedAnnouncement_put_SecondaryTextColor(py::wrapper::Microsoft::Windows::Widgets::Notifications::FeedAnnouncement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -219,7 +219,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Notifications
 
     static int FeedAnnouncement_put_SecondaryText(py::wrapper::Microsoft::Windows::Widgets::Notifications::FeedAnnouncement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -288,7 +288,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Notifications
 
     static int FeedAnnouncement_put_PrimaryTextColor(py::wrapper::Microsoft::Windows::Widgets::Notifications::FeedAnnouncement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -357,7 +357,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Notifications
 
     static int FeedAnnouncement_put_PrimaryText(py::wrapper::Microsoft::Windows::Widgets::Notifications::FeedAnnouncement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -426,7 +426,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Notifications
 
     static int FeedAnnouncement_put_LightModeIconUri(py::wrapper::Microsoft::Windows::Widgets::Notifications::FeedAnnouncement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -495,7 +495,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Notifications
 
     static int FeedAnnouncement_put_IsSecondaryTextSubtle(py::wrapper::Microsoft::Windows::Widgets::Notifications::FeedAnnouncement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -564,7 +564,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Notifications
 
     static int FeedAnnouncement_put_Id(py::wrapper::Microsoft::Windows::Widgets::Notifications::FeedAnnouncement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -633,7 +633,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Notifications
 
     static int FeedAnnouncement_put_ExpirationTime(py::wrapper::Microsoft::Windows::Widgets::Notifications::FeedAnnouncement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -702,7 +702,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Notifications
 
     static int FeedAnnouncement_put_Duration(py::wrapper::Microsoft::Windows::Widgets::Notifications::FeedAnnouncement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -771,7 +771,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Notifications
 
     static int FeedAnnouncement_put_DarkModeIconUri(py::wrapper::Microsoft::Windows::Widgets::Notifications::FeedAnnouncement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -840,7 +840,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Notifications
 
     static int FeedAnnouncement_put_CustomAccessibilityText(py::wrapper::Microsoft::Windows::Widgets::Notifications::FeedAnnouncement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

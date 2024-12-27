@@ -293,7 +293,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* _new_Contact(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -360,7 +360,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int Contact_put_Thumbnail(py::wrapper::Windows::ApplicationModel::Contacts::Contact* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -429,7 +429,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int Contact_put_Name(py::wrapper::Windows::ApplicationModel::Contacts::Contact* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -528,7 +528,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int Contact_put_Id(py::wrapper::Windows::ApplicationModel::Contacts::Contact* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -597,7 +597,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int Contact_put_Notes(py::wrapper::Windows::ApplicationModel::Contacts::Contact* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -966,7 +966,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int Contact_put_SourceDisplayPicture(py::wrapper::Windows::ApplicationModel::Contacts::Contact* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1035,7 +1035,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int Contact_put_TextToneToken(py::wrapper::Windows::ApplicationModel::Contacts::Contact* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1104,7 +1104,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int Contact_put_DisplayNameOverride(py::wrapper::Windows::ApplicationModel::Contacts::Contact* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1173,7 +1173,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int Contact_put_DisplayPictureUserUpdateTime(py::wrapper::Windows::ApplicationModel::Contacts::Contact* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1242,7 +1242,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int Contact_put_Nickname(py::wrapper::Windows::ApplicationModel::Contacts::Contact* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1311,7 +1311,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int Contact_put_RemoteId(py::wrapper::Windows::ApplicationModel::Contacts::Contact* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1380,7 +1380,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int Contact_put_RingToneToken(py::wrapper::Windows::ApplicationModel::Contacts::Contact* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1719,7 +1719,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int Contact_put_YomiGivenName(py::wrapper::Windows::ApplicationModel::Contacts::Contact* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1788,7 +1788,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int Contact_put_HonorificNameSuffix(py::wrapper::Windows::ApplicationModel::Contacts::Contact* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1857,7 +1857,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int Contact_put_YomiFamilyName(py::wrapper::Windows::ApplicationModel::Contacts::Contact* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1926,7 +1926,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int Contact_put_MiddleName(py::wrapper::Windows::ApplicationModel::Contacts::Contact* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1995,7 +1995,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int Contact_put_LastName(py::wrapper::Windows::ApplicationModel::Contacts::Contact* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2064,7 +2064,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int Contact_put_HonorificNamePrefix(py::wrapper::Windows::ApplicationModel::Contacts::Contact* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2133,7 +2133,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int Contact_put_FirstName(py::wrapper::Windows::ApplicationModel::Contacts::Contact* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2323,7 +2323,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* _new_ContactAddress(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2390,7 +2390,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactAddress_put_StreetAddress(py::wrapper::Windows::ApplicationModel::Contacts::ContactAddress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2459,7 +2459,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactAddress_put_Region(py::wrapper::Windows::ApplicationModel::Contacts::ContactAddress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2528,7 +2528,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactAddress_put_PostalCode(py::wrapper::Windows::ApplicationModel::Contacts::ContactAddress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2597,7 +2597,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactAddress_put_Locality(py::wrapper::Windows::ApplicationModel::Contacts::ContactAddress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2666,7 +2666,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactAddress_put_Kind(py::wrapper::Windows::ApplicationModel::Contacts::ContactAddress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2735,7 +2735,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactAddress_put_Description(py::wrapper::Windows::ApplicationModel::Contacts::ContactAddress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2804,7 +2804,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactAddress_put_Country(py::wrapper::Windows::ApplicationModel::Contacts::ContactAddress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2901,7 +2901,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* _new_ContactAnnotation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2968,7 +2968,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactAnnotation_put_SupportedOperations(py::wrapper::Windows::ApplicationModel::Contacts::ContactAnnotation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3037,7 +3037,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactAnnotation_put_RemoteId(py::wrapper::Windows::ApplicationModel::Contacts::ContactAnnotation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3106,7 +3106,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactAnnotation_put_ContactId(py::wrapper::Windows::ApplicationModel::Contacts::ContactAnnotation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3295,7 +3295,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactAnnotation_put_ContactListId(py::wrapper::Windows::ApplicationModel::Contacts::ContactAnnotation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4560,7 +4560,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* _new_ContactCardOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -4627,7 +4627,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactCardOptions_put_InitialTabKind(py::wrapper::Windows::ApplicationModel::Contacts::ContactCardOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4696,7 +4696,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactCardOptions_put_HeaderKind(py::wrapper::Windows::ApplicationModel::Contacts::ContactCardOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5577,7 +5577,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* _new_ContactConnectedServiceAccount(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -5644,7 +5644,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactConnectedServiceAccount_put_ServiceName(py::wrapper::Windows::ApplicationModel::Contacts::ContactConnectedServiceAccount* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5713,7 +5713,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactConnectedServiceAccount_put_Id(py::wrapper::Windows::ApplicationModel::Contacts::ContactConnectedServiceAccount* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5805,7 +5805,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* _new_ContactDate(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -5872,7 +5872,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactDate_put_Year(py::wrapper::Windows::ApplicationModel::Contacts::ContactDate* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5941,7 +5941,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactDate_put_Month(py::wrapper::Windows::ApplicationModel::Contacts::ContactDate* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6010,7 +6010,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactDate_put_Kind(py::wrapper::Windows::ApplicationModel::Contacts::ContactDate* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6079,7 +6079,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactDate_put_Description(py::wrapper::Windows::ApplicationModel::Contacts::ContactDate* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6148,7 +6148,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactDate_put_Day(py::wrapper::Windows::ApplicationModel::Contacts::ContactDate* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6243,7 +6243,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* _new_ContactEmail(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -6310,7 +6310,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactEmail_put_Kind(py::wrapper::Windows::ApplicationModel::Contacts::ContactEmail* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6379,7 +6379,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactEmail_put_Description(py::wrapper::Windows::ApplicationModel::Contacts::ContactEmail* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6448,7 +6448,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactEmail_put_Address(py::wrapper::Windows::ApplicationModel::Contacts::ContactEmail* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6541,7 +6541,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* _new_ContactField(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -6791,7 +6791,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* _new_ContactFieldFactory(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -7686,7 +7686,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* _new_ContactInstantMessageField(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -8059,7 +8059,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* _new_ContactJobInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -8126,7 +8126,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactJobInfo_put_Title(py::wrapper::Windows::ApplicationModel::Contacts::ContactJobInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8195,7 +8195,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactJobInfo_put_Office(py::wrapper::Windows::ApplicationModel::Contacts::ContactJobInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8264,7 +8264,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactJobInfo_put_Manager(py::wrapper::Windows::ApplicationModel::Contacts::ContactJobInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8333,7 +8333,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactJobInfo_put_Description(py::wrapper::Windows::ApplicationModel::Contacts::ContactJobInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8402,7 +8402,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactJobInfo_put_Department(py::wrapper::Windows::ApplicationModel::Contacts::ContactJobInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8471,7 +8471,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactJobInfo_put_CompanyYomiName(py::wrapper::Windows::ApplicationModel::Contacts::ContactJobInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8540,7 +8540,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactJobInfo_put_CompanyName(py::wrapper::Windows::ApplicationModel::Contacts::ContactJobInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8609,7 +8609,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactJobInfo_put_CompanyAddress(py::wrapper::Windows::ApplicationModel::Contacts::ContactJobInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9415,7 +9415,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactList_put_SupportsServerSearch(py::wrapper::Windows::ApplicationModel::Contacts::ContactList* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9484,7 +9484,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactList_put_IsHidden(py::wrapper::Windows::ApplicationModel::Contacts::ContactList* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9553,7 +9553,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactList_put_OtherAppWriteAccess(py::wrapper::Windows::ApplicationModel::Contacts::ContactList* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9622,7 +9622,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactList_put_DisplayName(py::wrapper::Windows::ApplicationModel::Contacts::ContactList* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9691,7 +9691,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactList_put_OtherAppReadAccess(py::wrapper::Windows::ApplicationModel::Contacts::ContactList* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10278,7 +10278,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactListSyncConstraints_put_CanSyncDescriptions(py::wrapper::Windows::ApplicationModel::Contacts::ContactListSyncConstraints* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10347,7 +10347,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactListSyncConstraints_put_MaxCompanyPhoneNumbers(py::wrapper::Windows::ApplicationModel::Contacts::ContactListSyncConstraints* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10416,7 +10416,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactListSyncConstraints_put_MaxChildRelationships(py::wrapper::Windows::ApplicationModel::Contacts::ContactListSyncConstraints* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10485,7 +10485,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactListSyncConstraints_put_MaxBusinessFaxPhoneNumbers(py::wrapper::Windows::ApplicationModel::Contacts::ContactListSyncConstraints* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10554,7 +10554,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactListSyncConstraints_put_MaxBirthdayDates(py::wrapper::Windows::ApplicationModel::Contacts::ContactListSyncConstraints* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10623,7 +10623,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactListSyncConstraints_put_MaxAssistantPhoneNumbers(py::wrapper::Windows::ApplicationModel::Contacts::ContactListSyncConstraints* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10692,7 +10692,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactListSyncConstraints_put_MaxOtherAddresses(py::wrapper::Windows::ApplicationModel::Contacts::ContactListSyncConstraints* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10761,7 +10761,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactListSyncConstraints_put_MaxAnniversaryDates(py::wrapper::Windows::ApplicationModel::Contacts::ContactListSyncConstraints* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10830,7 +10830,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactListSyncConstraints_put_MaxHomeAddresses(py::wrapper::Windows::ApplicationModel::Contacts::ContactListSyncConstraints* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10899,7 +10899,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactListSyncConstraints_put_MaxOtherDates(py::wrapper::Windows::ApplicationModel::Contacts::ContactListSyncConstraints* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10968,7 +10968,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactListSyncConstraints_put_MaxMobilePhoneNumbers(py::wrapper::Windows::ApplicationModel::Contacts::ContactListSyncConstraints* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11037,7 +11037,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactListSyncConstraints_put_MaxJobInfo(py::wrapper::Windows::ApplicationModel::Contacts::ContactListSyncConstraints* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11106,7 +11106,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactListSyncConstraints_put_MaxHomePhoneNumbers(py::wrapper::Windows::ApplicationModel::Contacts::ContactListSyncConstraints* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11175,7 +11175,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactListSyncConstraints_put_MaxHomeFaxPhoneNumbers(py::wrapper::Windows::ApplicationModel::Contacts::ContactListSyncConstraints* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11244,7 +11244,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactListSyncConstraints_put_MaxOtherEmailAddresses(py::wrapper::Windows::ApplicationModel::Contacts::ContactListSyncConstraints* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11313,7 +11313,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactListSyncConstraints_put_MaxPersonalEmailAddresses(py::wrapper::Windows::ApplicationModel::Contacts::ContactListSyncConstraints* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11382,7 +11382,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactListSyncConstraints_put_MaxPartnerRelationships(py::wrapper::Windows::ApplicationModel::Contacts::ContactListSyncConstraints* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11451,7 +11451,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactListSyncConstraints_put_MaxParentRelationships(py::wrapper::Windows::ApplicationModel::Contacts::ContactListSyncConstraints* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11520,7 +11520,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactListSyncConstraints_put_MaxPagerPhoneNumbers(py::wrapper::Windows::ApplicationModel::Contacts::ContactListSyncConstraints* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11589,7 +11589,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactListSyncConstraints_put_MaxOtherRelationships(py::wrapper::Windows::ApplicationModel::Contacts::ContactListSyncConstraints* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11658,7 +11658,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactListSyncConstraints_put_MaxOtherPhoneNumbers(py::wrapper::Windows::ApplicationModel::Contacts::ContactListSyncConstraints* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11727,7 +11727,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactListSyncConstraints_put_MaxRadioPhoneNumbers(py::wrapper::Windows::ApplicationModel::Contacts::ContactListSyncConstraints* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11796,7 +11796,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactListSyncConstraints_put_MaxWorkPhoneNumbers(py::wrapper::Windows::ApplicationModel::Contacts::ContactListSyncConstraints* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11865,7 +11865,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactListSyncConstraints_put_MaxWorkEmailAddresses(py::wrapper::Windows::ApplicationModel::Contacts::ContactListSyncConstraints* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11934,7 +11934,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactListSyncConstraints_put_MaxWorkAddresses(py::wrapper::Windows::ApplicationModel::Contacts::ContactListSyncConstraints* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12003,7 +12003,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactListSyncConstraints_put_MaxWebsites(py::wrapper::Windows::ApplicationModel::Contacts::ContactListSyncConstraints* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12072,7 +12072,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactListSyncConstraints_put_MaxSpouseRelationships(py::wrapper::Windows::ApplicationModel::Contacts::ContactListSyncConstraints* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12141,7 +12141,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactListSyncConstraints_put_MaxSiblingRelationships(py::wrapper::Windows::ApplicationModel::Contacts::ContactListSyncConstraints* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12344,7 +12344,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactListSyncManager_put_Status(py::wrapper::Windows::ApplicationModel::Contacts::ContactListSyncManager* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12413,7 +12413,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactListSyncManager_put_LastSuccessfulSyncTime(py::wrapper::Windows::ApplicationModel::Contacts::ContactListSyncManager* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12482,7 +12482,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactListSyncManager_put_LastAttemptedSyncTime(py::wrapper::Windows::ApplicationModel::Contacts::ContactListSyncManager* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12643,7 +12643,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* _new_ContactLocationField(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -13798,7 +13798,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactManager_put_SystemSortOrder(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13867,7 +13867,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactManager_put_SystemDisplayNameOrder(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13936,7 +13936,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactManager_put_IncludeMiddleNameInSystemDisplayAndSort(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14343,7 +14343,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactManagerForUser_put_SystemSortOrder(py::wrapper::Windows::ApplicationModel::Contacts::ContactManagerForUser* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14412,7 +14412,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactManagerForUser_put_SystemDisplayNameOrder(py::wrapper::Windows::ApplicationModel::Contacts::ContactManagerForUser* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14786,7 +14786,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactPanel_put_HeaderColor(py::wrapper::Windows::ApplicationModel::Contacts::ContactPanel* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15164,7 +15164,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactPanelLaunchFullAppRequestedEventArgs_put_Handled(py::wrapper::Windows::ApplicationModel::Contacts::ContactPanelLaunchFullAppRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15255,7 +15255,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* _new_ContactPhone(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -15322,7 +15322,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactPhone_put_Number(py::wrapper::Windows::ApplicationModel::Contacts::ContactPhone* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15391,7 +15391,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactPhone_put_Kind(py::wrapper::Windows::ApplicationModel::Contacts::ContactPhone* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15460,7 +15460,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactPhone_put_Description(py::wrapper::Windows::ApplicationModel::Contacts::ContactPhone* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15553,7 +15553,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* _new_ContactPicker(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -15862,7 +15862,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactPicker_put_SelectionMode(py::wrapper::Windows::ApplicationModel::Contacts::ContactPicker* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15931,7 +15931,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactPicker_put_CommitButtonText(py::wrapper::Windows::ApplicationModel::Contacts::ContactPicker* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16147,7 +16147,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* _new_ContactQueryOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -16245,7 +16245,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactQueryOptions_put_IncludeContactsFromHiddenLists(py::wrapper::Windows::ApplicationModel::Contacts::ContactQueryOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16314,7 +16314,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactQueryOptions_put_DesiredOperations(py::wrapper::Windows::ApplicationModel::Contacts::ContactQueryOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16383,7 +16383,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactQueryOptions_put_DesiredFields(py::wrapper::Windows::ApplicationModel::Contacts::ContactQueryOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16614,7 +16614,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactQueryTextSearch_put_Text(py::wrapper::Windows::ApplicationModel::Contacts::ContactQueryTextSearch* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16683,7 +16683,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactQueryTextSearch_put_SearchScope(py::wrapper::Windows::ApplicationModel::Contacts::ContactQueryTextSearch* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16752,7 +16752,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactQueryTextSearch_put_Fields(py::wrapper::Windows::ApplicationModel::Contacts::ContactQueryTextSearch* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16995,7 +16995,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* _new_ContactSignificantOther(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -17062,7 +17062,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactSignificantOther_put_Name(py::wrapper::Windows::ApplicationModel::Contacts::ContactSignificantOther* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -17131,7 +17131,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactSignificantOther_put_Description(py::wrapper::Windows::ApplicationModel::Contacts::ContactSignificantOther* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -17200,7 +17200,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactSignificantOther_put_Relationship(py::wrapper::Windows::ApplicationModel::Contacts::ContactSignificantOther* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -18020,7 +18020,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* _new_ContactWebsite(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -18087,7 +18087,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactWebsite_put_Uri(py::wrapper::Windows::ApplicationModel::Contacts::ContactWebsite* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -18156,7 +18156,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactWebsite_put_Description(py::wrapper::Windows::ApplicationModel::Contacts::ContactWebsite* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -18225,7 +18225,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int ContactWebsite_put_RawValue(py::wrapper::Windows::ApplicationModel::Contacts::ContactWebsite* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -18318,7 +18318,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* _new_FullContactCardOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -18385,7 +18385,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static int FullContactCardOptions_put_DesiredRemainingView(py::wrapper::Windows::ApplicationModel::Contacts::FullContactCardOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

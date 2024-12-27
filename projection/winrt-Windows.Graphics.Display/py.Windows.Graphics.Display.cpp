@@ -1820,7 +1820,7 @@ namespace py::cpp::Windows::Graphics::Display
 
     static int DisplayEnhancementOverride_put_ColorOverrideSettings(py::wrapper::Windows::Graphics::Display::DisplayEnhancementOverride* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1889,7 +1889,7 @@ namespace py::cpp::Windows::Graphics::Display
 
     static int DisplayEnhancementOverride_put_BrightnessOverrideSettings(py::wrapper::Windows::Graphics::Display::DisplayEnhancementOverride* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3034,7 +3034,7 @@ namespace py::cpp::Windows::Graphics::Display
 
     static int DisplayInformation_put_AutoRotationPreferences(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3643,7 +3643,7 @@ namespace py::cpp::Windows::Graphics::Display
 
     static int DisplayProperties_put_AutoRotationPreferences(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4371,7 +4371,7 @@ namespace py::cpp::Windows::Graphics::Display
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -4440,7 +4440,7 @@ namespace py::cpp::Windows::Graphics::Display
 
     static int NitRange_set_MinNits(py::wrapper::Windows::Graphics::Display::NitRange* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4473,7 +4473,7 @@ namespace py::cpp::Windows::Graphics::Display
 
     static int NitRange_set_MaxNits(py::wrapper::Windows::Graphics::Display::NitRange* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4506,7 +4506,7 @@ namespace py::cpp::Windows::Graphics::Display
 
     static int NitRange_set_StepSizeNits(py::wrapper::Windows::Graphics::Display::NitRange* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
