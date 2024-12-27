@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Devices::Gpio
 
     static PyObject* _new_GpioChangeCounter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -280,7 +280,7 @@ namespace py::cpp::Windows::Devices::Gpio
 
     static int GpioChangeCounter_put_Polarity(py::wrapper::Windows::Devices::Gpio::GpioChangeCounter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -432,7 +432,7 @@ namespace py::cpp::Windows::Devices::Gpio
 
     static PyObject* _new_GpioChangeReader(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -843,7 +843,7 @@ namespace py::cpp::Windows::Devices::Gpio
 
     static int GpioChangeReader_put_Polarity(py::wrapper::Windows::Devices::Gpio::GpioChangeReader* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1814,7 +1814,7 @@ namespace py::cpp::Windows::Devices::Gpio
 
     static int GpioPin_put_DebounceTimeout(py::wrapper::Windows::Devices::Gpio::GpioPin* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2178,7 +2178,7 @@ namespace py::cpp::Windows::Devices::Gpio
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -2245,7 +2245,7 @@ namespace py::cpp::Windows::Devices::Gpio
 
     static int GpioChangeCount_set_Count(py::wrapper::Windows::Devices::Gpio::GpioChangeCount* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2278,7 +2278,7 @@ namespace py::cpp::Windows::Devices::Gpio
 
     static int GpioChangeCount_set_RelativeTime(py::wrapper::Windows::Devices::Gpio::GpioChangeCount* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2392,7 +2392,7 @@ namespace py::cpp::Windows::Devices::Gpio
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -2459,7 +2459,7 @@ namespace py::cpp::Windows::Devices::Gpio
 
     static int GpioChangeRecord_set_RelativeTime(py::wrapper::Windows::Devices::Gpio::GpioChangeRecord* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2492,7 +2492,7 @@ namespace py::cpp::Windows::Devices::Gpio
 
     static int GpioChangeRecord_set_Edge(py::wrapper::Windows::Devices::Gpio::GpioChangeRecord* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

@@ -1015,7 +1015,7 @@ namespace py::cpp::Windows::Data::Pdf
 
     static PyObject* _new_PdfPageRenderOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1082,7 +1082,7 @@ namespace py::cpp::Windows::Data::Pdf
 
     static int PdfPageRenderOptions_put_SourceRect(py::wrapper::Windows::Data::Pdf::PdfPageRenderOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1151,7 +1151,7 @@ namespace py::cpp::Windows::Data::Pdf
 
     static int PdfPageRenderOptions_put_IsIgnoringHighContrast(py::wrapper::Windows::Data::Pdf::PdfPageRenderOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1220,7 +1220,7 @@ namespace py::cpp::Windows::Data::Pdf
 
     static int PdfPageRenderOptions_put_DestinationWidth(py::wrapper::Windows::Data::Pdf::PdfPageRenderOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1289,7 +1289,7 @@ namespace py::cpp::Windows::Data::Pdf
 
     static int PdfPageRenderOptions_put_DestinationHeight(py::wrapper::Windows::Data::Pdf::PdfPageRenderOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1358,7 +1358,7 @@ namespace py::cpp::Windows::Data::Pdf
 
     static int PdfPageRenderOptions_put_BitmapEncoderId(py::wrapper::Windows::Data::Pdf::PdfPageRenderOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1427,7 +1427,7 @@ namespace py::cpp::Windows::Data::Pdf
 
     static int PdfPageRenderOptions_put_BackgroundColor(py::wrapper::Windows::Data::Pdf::PdfPageRenderOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

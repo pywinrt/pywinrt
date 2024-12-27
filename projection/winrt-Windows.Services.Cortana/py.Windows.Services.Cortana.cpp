@@ -516,7 +516,7 @@ namespace py::cpp::Windows::Services::Cortana
 
     static PyObject* _new_CortanaActionableInsightsOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -583,7 +583,7 @@ namespace py::cpp::Windows::Services::Cortana
 
     static int CortanaActionableInsightsOptions_put_SurroundingText(py::wrapper::Windows::Services::Cortana::CortanaActionableInsightsOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -652,7 +652,7 @@ namespace py::cpp::Windows::Services::Cortana
 
     static int CortanaActionableInsightsOptions_put_ContentSourceWebLink(py::wrapper::Windows::Services::Cortana::CortanaActionableInsightsOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1171,7 +1171,7 @@ namespace py::cpp::Windows::Services::Cortana
 
     static int CortanaSettings_put_IsVoiceActivationEnabled(py::wrapper::Windows::Services::Cortana::CortanaSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

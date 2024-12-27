@@ -167,7 +167,7 @@ namespace py::cpp::Windows::Media::ContentRestrictions
 
     static PyObject* _new_RatedContentDescription(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -238,7 +238,7 @@ namespace py::cpp::Windows::Media::ContentRestrictions
 
     static int RatedContentDescription_put_Title(py::wrapper::Windows::Media::ContentRestrictions::RatedContentDescription* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -307,7 +307,7 @@ namespace py::cpp::Windows::Media::ContentRestrictions
 
     static int RatedContentDescription_put_Ratings(py::wrapper::Windows::Media::ContentRestrictions::RatedContentDescription* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -376,7 +376,7 @@ namespace py::cpp::Windows::Media::ContentRestrictions
 
     static int RatedContentDescription_put_Image(py::wrapper::Windows::Media::ContentRestrictions::RatedContentDescription* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -445,7 +445,7 @@ namespace py::cpp::Windows::Media::ContentRestrictions
 
     static int RatedContentDescription_put_Id(py::wrapper::Windows::Media::ContentRestrictions::RatedContentDescription* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -514,7 +514,7 @@ namespace py::cpp::Windows::Media::ContentRestrictions
 
     static int RatedContentDescription_put_Category(py::wrapper::Windows::Media::ContentRestrictions::RatedContentDescription* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -609,7 +609,7 @@ namespace py::cpp::Windows::Media::ContentRestrictions
 
     static PyObject* _new_RatedContentRestrictions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;

@@ -3318,7 +3318,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* _new_AppUriHandlerHost(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3400,7 +3400,7 @@ namespace py::cpp::Windows::System
 
     static int AppUriHandlerHost_put_Name(py::wrapper::Windows::System::AppUriHandlerHost* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3469,7 +3469,7 @@ namespace py::cpp::Windows::System
 
     static int AppUriHandlerHost_put_IsEnabled(py::wrapper::Windows::System::AppUriHandlerHost* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5219,7 +5219,7 @@ namespace py::cpp::Windows::System
 
     static int DispatcherQueueTimer_put_IsRepeating(py::wrapper::Windows::System::DispatcherQueueTimer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5288,7 +5288,7 @@ namespace py::cpp::Windows::System
 
     static int DispatcherQueueTimer_put_Interval(py::wrapper::Windows::System::DispatcherQueueTimer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5480,7 +5480,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* _new_FolderLauncherOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -5577,7 +5577,7 @@ namespace py::cpp::Windows::System
 
     static int FolderLauncherOptions_put_DesiredRemainingView(py::wrapper::Windows::System::FolderLauncherOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7452,7 +7452,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* _new_LauncherOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -7519,7 +7519,7 @@ namespace py::cpp::Windows::System
 
     static int LauncherOptions_put_TreatAsUntrusted(py::wrapper::Windows::System::LauncherOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7588,7 +7588,7 @@ namespace py::cpp::Windows::System
 
     static int LauncherOptions_put_PreferredApplicationPackageFamilyName(py::wrapper::Windows::System::LauncherOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7657,7 +7657,7 @@ namespace py::cpp::Windows::System
 
     static int LauncherOptions_put_PreferredApplicationDisplayName(py::wrapper::Windows::System::LauncherOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7726,7 +7726,7 @@ namespace py::cpp::Windows::System
 
     static int LauncherOptions_put_FallbackUri(py::wrapper::Windows::System::LauncherOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7795,7 +7795,7 @@ namespace py::cpp::Windows::System
 
     static int LauncherOptions_put_DisplayApplicationPicker(py::wrapper::Windows::System::LauncherOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7864,7 +7864,7 @@ namespace py::cpp::Windows::System
 
     static int LauncherOptions_put_ContentType(py::wrapper::Windows::System::LauncherOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7963,7 +7963,7 @@ namespace py::cpp::Windows::System
 
     static int LauncherOptions_put_TargetApplicationPackageFamilyName(py::wrapper::Windows::System::LauncherOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8032,7 +8032,7 @@ namespace py::cpp::Windows::System
 
     static int LauncherOptions_put_NeighboringFilesQuery(py::wrapper::Windows::System::LauncherOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8101,7 +8101,7 @@ namespace py::cpp::Windows::System
 
     static int LauncherOptions_put_IgnoreAppUriHandlers(py::wrapper::Windows::System::LauncherOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8170,7 +8170,7 @@ namespace py::cpp::Windows::System
 
     static int LauncherOptions_put_LimitPickerToCurrentAppAndAppUriHandlers(py::wrapper::Windows::System::LauncherOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8239,7 +8239,7 @@ namespace py::cpp::Windows::System
 
     static int LauncherOptions_put_DesiredRemainingView(py::wrapper::Windows::System::LauncherOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8386,7 +8386,7 @@ namespace py::cpp::Windows::System
 
     static int LauncherUIOptions_put_SelectionRect(py::wrapper::Windows::System::LauncherUIOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8455,7 +8455,7 @@ namespace py::cpp::Windows::System
 
     static int LauncherUIOptions_put_PreferredPlacement(py::wrapper::Windows::System::LauncherUIOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8524,7 +8524,7 @@ namespace py::cpp::Windows::System
 
     static int LauncherUIOptions_put_InvocationPoint(py::wrapper::Windows::System::LauncherUIOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9268,7 +9268,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* _new_ProcessLauncherOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -9335,7 +9335,7 @@ namespace py::cpp::Windows::System
 
     static int ProcessLauncherOptions_put_WorkingDirectory(py::wrapper::Windows::System::ProcessLauncherOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9404,7 +9404,7 @@ namespace py::cpp::Windows::System
 
     static int ProcessLauncherOptions_put_StandardOutput(py::wrapper::Windows::System::ProcessLauncherOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9473,7 +9473,7 @@ namespace py::cpp::Windows::System
 
     static int ProcessLauncherOptions_put_StandardInput(py::wrapper::Windows::System::ProcessLauncherOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9542,7 +9542,7 @@ namespace py::cpp::Windows::System
 
     static int ProcessLauncherOptions_put_StandardError(py::wrapper::Windows::System::ProcessLauncherOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10162,7 +10162,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* _new_RemoteLauncherOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -10229,7 +10229,7 @@ namespace py::cpp::Windows::System
 
     static int RemoteLauncherOptions_put_FallbackUri(py::wrapper::Windows::System::RemoteLauncherOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12232,7 +12232,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* _new_UserPicker(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -12379,7 +12379,7 @@ namespace py::cpp::Windows::System
 
     static int UserPicker_put_SuggestedSelectedUser(py::wrapper::Windows::System::UserPicker* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12448,7 +12448,7 @@ namespace py::cpp::Windows::System
 
     static int UserPicker_put_AllowGuestAccounts(py::wrapper::Windows::System::UserPicker* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13262,7 +13262,7 @@ namespace py::cpp::Windows::System
 
     static int ILauncherViewOptions_put_DesiredRemainingView(py::wrapper::Windows::System::ILauncherViewOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

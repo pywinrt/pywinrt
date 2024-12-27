@@ -326,7 +326,7 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
 
     static PyObject* _new_SearchSuggestionManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -696,7 +696,7 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
 
     static int SearchSuggestionManager_put_SearchHistoryEnabled(py::wrapper::Windows::ApplicationModel::Search::Core::SearchSuggestionManager* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -765,7 +765,7 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
 
     static int SearchSuggestionManager_put_SearchHistoryContext(py::wrapper::Windows::ApplicationModel::Search::Core::SearchSuggestionManager* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

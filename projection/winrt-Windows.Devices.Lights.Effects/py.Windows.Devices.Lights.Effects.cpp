@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyObject* _new_LampArrayBitmapEffect(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -78,7 +78,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static int LampArrayBitmapEffect_put_UpdateInterval(py::wrapper::Windows::Devices::Lights::Effects::LampArrayBitmapEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -147,7 +147,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static int LampArrayBitmapEffect_put_StartDelay(py::wrapper::Windows::Devices::Lights::Effects::LampArrayBitmapEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -216,7 +216,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static int LampArrayBitmapEffect_put_Duration(py::wrapper::Windows::Devices::Lights::Effects::LampArrayBitmapEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -315,7 +315,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static int LampArrayBitmapEffect_put_ZIndex(py::wrapper::Windows::Devices::Lights::Effects::LampArrayBitmapEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -618,7 +618,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyObject* _new_LampArrayBlinkEffect(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -688,7 +688,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static int LampArrayBlinkEffect_put_SustainDuration(py::wrapper::Windows::Devices::Lights::Effects::LampArrayBlinkEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -757,7 +757,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static int LampArrayBlinkEffect_put_StartDelay(py::wrapper::Windows::Devices::Lights::Effects::LampArrayBlinkEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -826,7 +826,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static int LampArrayBlinkEffect_put_RepetitionMode(py::wrapper::Windows::Devices::Lights::Effects::LampArrayBlinkEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -895,7 +895,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static int LampArrayBlinkEffect_put_RepetitionDelay(py::wrapper::Windows::Devices::Lights::Effects::LampArrayBlinkEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -964,7 +964,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static int LampArrayBlinkEffect_put_Occurrences(py::wrapper::Windows::Devices::Lights::Effects::LampArrayBlinkEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1033,7 +1033,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static int LampArrayBlinkEffect_put_DecayDuration(py::wrapper::Windows::Devices::Lights::Effects::LampArrayBlinkEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1102,7 +1102,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static int LampArrayBlinkEffect_put_Color(py::wrapper::Windows::Devices::Lights::Effects::LampArrayBlinkEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1171,7 +1171,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static int LampArrayBlinkEffect_put_AttackDuration(py::wrapper::Windows::Devices::Lights::Effects::LampArrayBlinkEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1240,7 +1240,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static int LampArrayBlinkEffect_put_ZIndex(py::wrapper::Windows::Devices::Lights::Effects::LampArrayBlinkEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1339,7 +1339,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyObject* _new_LampArrayColorRampEffect(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1409,7 +1409,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static int LampArrayColorRampEffect_put_StartDelay(py::wrapper::Windows::Devices::Lights::Effects::LampArrayColorRampEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1478,7 +1478,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static int LampArrayColorRampEffect_put_RampDuration(py::wrapper::Windows::Devices::Lights::Effects::LampArrayColorRampEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1547,7 +1547,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static int LampArrayColorRampEffect_put_CompletionBehavior(py::wrapper::Windows::Devices::Lights::Effects::LampArrayColorRampEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1616,7 +1616,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static int LampArrayColorRampEffect_put_Color(py::wrapper::Windows::Devices::Lights::Effects::LampArrayColorRampEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1685,7 +1685,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static int LampArrayColorRampEffect_put_ZIndex(py::wrapper::Windows::Devices::Lights::Effects::LampArrayColorRampEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1780,7 +1780,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyObject* _new_LampArrayCustomEffect(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1850,7 +1850,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static int LampArrayCustomEffect_put_UpdateInterval(py::wrapper::Windows::Devices::Lights::Effects::LampArrayCustomEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1919,7 +1919,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static int LampArrayCustomEffect_put_Duration(py::wrapper::Windows::Devices::Lights::Effects::LampArrayCustomEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1988,7 +1988,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static int LampArrayCustomEffect_put_ZIndex(py::wrapper::Windows::Devices::Lights::Effects::LampArrayCustomEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2148,7 +2148,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyObject* _new_LampArrayEffectPlaylist(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2734,7 +2734,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static int LampArrayEffectPlaylist_put_RepetitionMode(py::wrapper::Windows::Devices::Lights::Effects::LampArrayEffectPlaylist* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2803,7 +2803,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static int LampArrayEffectPlaylist_put_Occurrences(py::wrapper::Windows::Devices::Lights::Effects::LampArrayEffectPlaylist* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2872,7 +2872,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static int LampArrayEffectPlaylist_put_EffectStartMode(py::wrapper::Windows::Devices::Lights::Effects::LampArrayEffectPlaylist* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3154,7 +3154,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyObject* _new_LampArraySolidEffect(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3224,7 +3224,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static int LampArraySolidEffect_put_ZIndex(py::wrapper::Windows::Devices::Lights::Effects::LampArraySolidEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3293,7 +3293,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static int LampArraySolidEffect_put_StartDelay(py::wrapper::Windows::Devices::Lights::Effects::LampArraySolidEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3362,7 +3362,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static int LampArraySolidEffect_put_Duration(py::wrapper::Windows::Devices::Lights::Effects::LampArraySolidEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3431,7 +3431,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static int LampArraySolidEffect_put_CompletionBehavior(py::wrapper::Windows::Devices::Lights::Effects::LampArraySolidEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3500,7 +3500,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static int LampArraySolidEffect_put_Color(py::wrapper::Windows::Devices::Lights::Effects::LampArraySolidEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3916,7 +3916,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static int ILampArrayEffect_put_ZIndex(py::wrapper::Windows::Devices::Lights::Effects::ILampArrayEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

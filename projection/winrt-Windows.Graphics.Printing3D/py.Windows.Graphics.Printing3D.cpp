@@ -1089,7 +1089,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* _new_Printing3D3MFPackage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1322,7 +1322,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3D3MFPackage_put_Thumbnail(py::wrapper::Windows::Graphics::Printing3D::Printing3D3MFPackage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1391,7 +1391,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3D3MFPackage_put_PrintTicket(py::wrapper::Windows::Graphics::Printing3D::Printing3D3MFPackage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1460,7 +1460,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3D3MFPackage_put_ModelPart(py::wrapper::Windows::Graphics::Printing3D::Printing3D3MFPackage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1559,7 +1559,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3D3MFPackage_put_Compression(py::wrapper::Windows::Graphics::Printing3D::Printing3D3MFPackage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1683,7 +1683,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* _new_Printing3DBaseMaterial(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1750,7 +1750,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DBaseMaterial_put_Name(py::wrapper::Windows::Graphics::Printing3D::Printing3DBaseMaterial* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1819,7 +1819,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DBaseMaterial_put_Color(py::wrapper::Windows::Graphics::Printing3D::Printing3DBaseMaterial* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1998,7 +1998,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* _new_Printing3DBaseMaterialGroup(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2150,7 +2150,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* _new_Printing3DColorMaterial(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2217,7 +2217,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DColorMaterial_put_Value(py::wrapper::Windows::Graphics::Printing3D::Printing3DColorMaterial* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2286,7 +2286,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DColorMaterial_put_Color(py::wrapper::Windows::Graphics::Printing3D::Printing3DColorMaterial* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2378,7 +2378,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* _new_Printing3DColorMaterialGroup(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2530,7 +2530,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* _new_Printing3DComponent(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2597,7 +2597,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DComponent_put_Type(py::wrapper::Windows::Graphics::Printing3D::Printing3DComponent* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2666,7 +2666,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DComponent_put_Thumbnail(py::wrapper::Windows::Graphics::Printing3D::Printing3DComponent* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2735,7 +2735,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DComponent_put_PartNumber(py::wrapper::Windows::Graphics::Printing3D::Printing3DComponent* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2804,7 +2804,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DComponent_put_Name(py::wrapper::Windows::Graphics::Printing3D::Printing3DComponent* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2873,7 +2873,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DComponent_put_Mesh(py::wrapper::Windows::Graphics::Printing3D::Printing3DComponent* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2999,7 +2999,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* _new_Printing3DComponentWithMatrix(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3066,7 +3066,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DComponentWithMatrix_put_Matrix(py::wrapper::Windows::Graphics::Printing3D::Printing3DComponentWithMatrix* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3135,7 +3135,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DComponentWithMatrix_put_Component(py::wrapper::Windows::Graphics::Printing3D::Printing3DComponentWithMatrix* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3227,7 +3227,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* _new_Printing3DCompositeMaterial(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3346,7 +3346,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* _new_Printing3DCompositeMaterialGroup(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3505,7 +3505,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DCompositeMaterialGroup_put_BaseMaterialGroup(py::wrapper::Windows::Graphics::Printing3D::Printing3DCompositeMaterialGroup* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3599,7 +3599,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* _new_Printing3DFaceReductionOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3666,7 +3666,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DFaceReductionOptions_put_TargetTriangleCount(py::wrapper::Windows::Graphics::Printing3D::Printing3DFaceReductionOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3735,7 +3735,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DFaceReductionOptions_put_MaxReductionArea(py::wrapper::Windows::Graphics::Printing3D::Printing3DFaceReductionOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3804,7 +3804,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DFaceReductionOptions_put_MaxEdgeLength(py::wrapper::Windows::Graphics::Printing3D::Printing3DFaceReductionOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3897,7 +3897,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* _new_Printing3DMaterial(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -4140,7 +4140,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* _new_Printing3DMesh(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -4581,7 +4581,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DMesh_put_VertexPositionsDescription(py::wrapper::Windows::Graphics::Printing3D::Printing3DMesh* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4650,7 +4650,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DMesh_put_VertexNormalsDescription(py::wrapper::Windows::Graphics::Printing3D::Printing3DMesh* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4719,7 +4719,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DMesh_put_VertexCount(py::wrapper::Windows::Graphics::Printing3D::Printing3DMesh* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4788,7 +4788,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DMesh_put_TriangleMaterialIndicesDescription(py::wrapper::Windows::Graphics::Printing3D::Printing3DMesh* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4857,7 +4857,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DMesh_put_TriangleIndicesDescription(py::wrapper::Windows::Graphics::Printing3D::Printing3DMesh* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4926,7 +4926,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DMesh_put_IndexCount(py::wrapper::Windows::Graphics::Printing3D::Printing3DMesh* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5252,7 +5252,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* _new_Printing3DModel(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -5646,7 +5646,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DModel_put_Version(py::wrapper::Windows::Graphics::Printing3D::Printing3DModel* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5715,7 +5715,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DModel_put_Unit(py::wrapper::Windows::Graphics::Printing3D::Printing3DModel* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5784,7 +5784,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DModel_put_Material(py::wrapper::Windows::Graphics::Printing3D::Printing3DModel* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5853,7 +5853,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DModel_put_Build(py::wrapper::Windows::Graphics::Printing3D::Printing3DModel* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6110,7 +6110,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* _new_Printing3DModelTexture(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -6177,7 +6177,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DModelTexture_put_TileStyleV(py::wrapper::Windows::Graphics::Printing3D::Printing3DModelTexture* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6246,7 +6246,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DModelTexture_put_TileStyleU(py::wrapper::Windows::Graphics::Printing3D::Printing3DModelTexture* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6315,7 +6315,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DModelTexture_put_TextureResource(py::wrapper::Windows::Graphics::Printing3D::Printing3DModelTexture* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6408,7 +6408,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* _new_Printing3DMultiplePropertyMaterial(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -6527,7 +6527,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* _new_Printing3DMultiplePropertyMaterialGroup(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -6710,7 +6710,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* _new_Printing3DTexture2CoordMaterial(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -6777,7 +6777,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DTexture2CoordMaterial_put_V(py::wrapper::Windows::Graphics::Printing3D::Printing3DTexture2CoordMaterial* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6846,7 +6846,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DTexture2CoordMaterial_put_U(py::wrapper::Windows::Graphics::Printing3D::Printing3DTexture2CoordMaterial* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6915,7 +6915,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DTexture2CoordMaterial_put_Texture(py::wrapper::Windows::Graphics::Printing3D::Printing3DTexture2CoordMaterial* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7008,7 +7008,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* _new_Printing3DTexture2CoordMaterialGroup(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -7137,7 +7137,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DTexture2CoordMaterialGroup_put_Texture(py::wrapper::Windows::Graphics::Printing3D::Printing3DTexture2CoordMaterialGroup* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7230,7 +7230,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* _new_Printing3DTextureResource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -7297,7 +7297,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DTextureResource_put_TextureData(py::wrapper::Windows::Graphics::Printing3D::Printing3DTextureResource* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7366,7 +7366,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DTextureResource_put_Name(py::wrapper::Windows::Graphics::Printing3D::Printing3DTextureResource* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7474,7 +7474,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -7541,7 +7541,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DBufferDescription_set_Format(py::wrapper::Windows::Graphics::Printing3D::Printing3DBufferDescription* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7574,7 +7574,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static int Printing3DBufferDescription_set_Stride(py::wrapper::Windows::Graphics::Printing3D::Printing3DBufferDescription* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

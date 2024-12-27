@@ -3788,7 +3788,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* _new_StorePackageInstallOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3855,7 +3855,7 @@ namespace py::cpp::Windows::Services::Store
 
     static int StorePackageInstallOptions_put_AllowForcedAppRestart(py::wrapper::Windows::Services::Store::StorePackageInstallOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5538,7 +5538,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* _new_StoreProductOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -6113,7 +6113,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* _new_StorePurchaseProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -6195,7 +6195,7 @@ namespace py::cpp::Windows::Services::Store
 
     static int StorePurchaseProperties_put_Name(py::wrapper::Windows::Services::Store::StorePurchaseProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6264,7 +6264,7 @@ namespace py::cpp::Windows::Services::Store
 
     static int StorePurchaseProperties_put_ExtendedJsonData(py::wrapper::Windows::Services::Store::StorePurchaseProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8982,7 +8982,7 @@ namespace py::cpp::Windows::Services::Store
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -9057,7 +9057,7 @@ namespace py::cpp::Windows::Services::Store
 
     static int StorePackageUpdateStatus_set_PackageFamilyName(py::wrapper::Windows::Services::Store::StorePackageUpdateStatus* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9090,7 +9090,7 @@ namespace py::cpp::Windows::Services::Store
 
     static int StorePackageUpdateStatus_set_PackageDownloadSizeInBytes(py::wrapper::Windows::Services::Store::StorePackageUpdateStatus* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9123,7 +9123,7 @@ namespace py::cpp::Windows::Services::Store
 
     static int StorePackageUpdateStatus_set_PackageBytesDownloaded(py::wrapper::Windows::Services::Store::StorePackageUpdateStatus* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9156,7 +9156,7 @@ namespace py::cpp::Windows::Services::Store
 
     static int StorePackageUpdateStatus_set_PackageDownloadProgress(py::wrapper::Windows::Services::Store::StorePackageUpdateStatus* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9189,7 +9189,7 @@ namespace py::cpp::Windows::Services::Store
 
     static int StorePackageUpdateStatus_set_TotalDownloadProgress(py::wrapper::Windows::Services::Store::StorePackageUpdateStatus* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9222,7 +9222,7 @@ namespace py::cpp::Windows::Services::Store
 
     static int StorePackageUpdateStatus_set_PackageUpdateState(py::wrapper::Windows::Services::Store::StorePackageUpdateStatus* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

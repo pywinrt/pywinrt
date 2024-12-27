@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* _new_AudioEncodingProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -515,7 +515,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static int AudioEncodingProperties_put_SampleRate(py::wrapper::Windows::Media::MediaProperties::AudioEncodingProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -584,7 +584,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static int AudioEncodingProperties_put_ChannelCount(py::wrapper::Windows::Media::MediaProperties::AudioEncodingProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -653,7 +653,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static int AudioEncodingProperties_put_BitsPerSample(py::wrapper::Windows::Media::MediaProperties::AudioEncodingProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -722,7 +722,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static int AudioEncodingProperties_put_Bitrate(py::wrapper::Windows::Media::MediaProperties::AudioEncodingProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -821,7 +821,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static int AudioEncodingProperties_put_Subtype(py::wrapper::Windows::Media::MediaProperties::AudioEncodingProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1442,7 +1442,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* _new_ContainerEncodingProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1549,7 +1549,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static int ContainerEncodingProperties_put_Subtype(py::wrapper::Windows::Media::MediaProperties::ContainerEncodingProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2807,7 +2807,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* _new_ImageEncodingProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3156,7 +3156,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static int ImageEncodingProperties_put_Width(py::wrapper::Windows::Media::MediaProperties::ImageEncodingProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3225,7 +3225,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static int ImageEncodingProperties_put_Height(py::wrapper::Windows::Media::MediaProperties::ImageEncodingProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3294,7 +3294,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static int ImageEncodingProperties_put_Subtype(py::wrapper::Windows::Media::MediaProperties::ImageEncodingProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3481,7 +3481,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* _new_MediaEncodingProfile(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -4385,7 +4385,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static int MediaEncodingProfile_put_Video(py::wrapper::Windows::Media::MediaProperties::MediaEncodingProfile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4454,7 +4454,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static int MediaEncodingProfile_put_Container(py::wrapper::Windows::Media::MediaProperties::MediaEncodingProfile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4523,7 +4523,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static int MediaEncodingProfile_put_Audio(py::wrapper::Windows::Media::MediaProperties::MediaEncodingProfile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6360,7 +6360,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* _new_MediaPropertySet(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -6806,7 +6806,8 @@ namespace py::cpp::Windows::Media::MediaProperties
                 return self->obj.TryLookup(_key);
             }();
 
-            if (!value) {
+            if (!value)
+            {
                 if constexpr (std::is_base_of_v<winrt::Windows::Foundation::IUnknown, decltype(value)>)
                 {
                     auto has_key = [&]()
@@ -6840,13 +6841,15 @@ namespace py::cpp::Windows::Media::MediaProperties
         {
             auto _key = py::convert_to<winrt::guid>(key);
 
-            if (value == nullptr) {
+            if (!value)
+            {
                 bool did_remove;
                 {
                     auto _gil = py::release_gil();
                     did_remove = self->obj.TryRemove(_key);
                 }
-                if (!did_remove) {
+                if (!did_remove)
+                {
                     PyErr_SetObject(PyExc_KeyError, key);
                     return -1;
                 }
@@ -6956,7 +6959,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static int MediaRatio_put_Numerator(py::wrapper::Windows::Media::MediaProperties::MediaRatio* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7025,7 +7028,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static int MediaRatio_put_Denominator(py::wrapper::Windows::Media::MediaProperties::MediaRatio* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7328,7 +7331,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* _new_TimedMetadataEncodingProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -7691,7 +7694,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static int TimedMetadataEncodingProperties_put_Subtype(py::wrapper::Windows::Media::MediaProperties::TimedMetadataEncodingProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7876,7 +7879,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* _new_VideoEncodingProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -8319,7 +8322,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static int VideoEncodingProperties_put_Subtype(py::wrapper::Windows::Media::MediaProperties::VideoEncodingProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8448,7 +8451,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static int VideoEncodingProperties_put_Width(py::wrapper::Windows::Media::MediaProperties::VideoEncodingProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8517,7 +8520,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static int VideoEncodingProperties_put_Height(py::wrapper::Windows::Media::MediaProperties::VideoEncodingProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8586,7 +8589,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static int VideoEncodingProperties_put_Bitrate(py::wrapper::Windows::Media::MediaProperties::VideoEncodingProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8715,7 +8718,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static int VideoEncodingProperties_put_ProfileId(py::wrapper::Windows::Media::MediaProperties::VideoEncodingProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9134,7 +9137,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static int IMediaEncodingProperties_put_Subtype(py::wrapper::Windows::Media::MediaProperties::IMediaEncodingProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

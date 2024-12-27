@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* _new_Deferral(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -379,7 +379,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* _new_MemoryBuffer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2308,7 +2308,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* _new_Uri(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3197,7 +3197,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* _new_WwwFormUrlDecoder(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3963,7 +3963,7 @@ namespace py::cpp::Windows::Foundation
 
     static int IAsyncAction_put_Completed(py::wrapper::Windows::Foundation::IAsyncAction* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4450,7 +4450,7 @@ namespace py::cpp::Windows::Foundation
 
     static int IAsyncActionWithProgress_put_Progress(py::wrapper::Windows::Foundation::IAsyncActionWithProgress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4508,7 +4508,7 @@ namespace py::cpp::Windows::Foundation
 
     static int IAsyncActionWithProgress_put_Completed(py::wrapper::Windows::Foundation::IAsyncActionWithProgress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5182,7 +5182,7 @@ namespace py::cpp::Windows::Foundation
 
     static int IAsyncOperationWithProgress_put_Progress(py::wrapper::Windows::Foundation::IAsyncOperationWithProgress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5240,7 +5240,7 @@ namespace py::cpp::Windows::Foundation
 
     static int IAsyncOperationWithProgress_put_Completed(py::wrapper::Windows::Foundation::IAsyncOperationWithProgress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5501,7 +5501,7 @@ namespace py::cpp::Windows::Foundation
 
     static int IAsyncOperation_put_Completed(py::wrapper::Windows::Foundation::IAsyncOperation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10982,7 +10982,7 @@ namespace py::cpp::Windows::Foundation
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -11047,7 +11047,7 @@ namespace py::cpp::Windows::Foundation
 
     static int EventRegistrationToken_set_Value(py::wrapper::Windows::Foundation::EventRegistrationToken* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11154,7 +11154,7 @@ namespace py::cpp::Windows::Foundation
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -11219,7 +11219,7 @@ namespace py::cpp::Windows::Foundation
 
     static int HResult_set_Value(py::wrapper::Windows::Foundation::HResult* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11326,7 +11326,7 @@ namespace py::cpp::Windows::Foundation
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -11393,7 +11393,7 @@ namespace py::cpp::Windows::Foundation
 
     static int Point_set_X(py::wrapper::Windows::Foundation::Point* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11426,7 +11426,7 @@ namespace py::cpp::Windows::Foundation
 
     static int Point_set_Y(py::wrapper::Windows::Foundation::Point* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11540,7 +11540,7 @@ namespace py::cpp::Windows::Foundation
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -11611,7 +11611,7 @@ namespace py::cpp::Windows::Foundation
 
     static int Rect_set_X(py::wrapper::Windows::Foundation::Rect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11644,7 +11644,7 @@ namespace py::cpp::Windows::Foundation
 
     static int Rect_set_Y(py::wrapper::Windows::Foundation::Rect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11677,7 +11677,7 @@ namespace py::cpp::Windows::Foundation
 
     static int Rect_set_Width(py::wrapper::Windows::Foundation::Rect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11710,7 +11710,7 @@ namespace py::cpp::Windows::Foundation
 
     static int Rect_set_Height(py::wrapper::Windows::Foundation::Rect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11838,7 +11838,7 @@ namespace py::cpp::Windows::Foundation
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -11905,7 +11905,7 @@ namespace py::cpp::Windows::Foundation
 
     static int Size_set_Width(py::wrapper::Windows::Foundation::Size* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11938,7 +11938,7 @@ namespace py::cpp::Windows::Foundation
 
     static int Size_set_Height(py::wrapper::Windows::Foundation::Size* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

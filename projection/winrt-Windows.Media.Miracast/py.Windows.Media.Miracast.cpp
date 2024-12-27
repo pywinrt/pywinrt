@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* _new_MiracastReceiver(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1804,7 +1804,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static int MiracastReceiverCursorImageChannelSettings_put_MaxImageSize(py::wrapper::Windows::Media::Miracast::MiracastReceiverCursorImageChannelSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1873,7 +1873,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static int MiracastReceiverCursorImageChannelSettings_put_IsEnabled(py::wrapper::Windows::Media::Miracast::MiracastReceiverCursorImageChannelSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2107,7 +2107,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static int MiracastReceiverGameControllerDevice_put_TransmitInput(py::wrapper::Windows::Media::Miracast::MiracastReceiverGameControllerDevice* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2176,7 +2176,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static int MiracastReceiverGameControllerDevice_put_Mode(py::wrapper::Windows::Media::Miracast::MiracastReceiverGameControllerDevice* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2570,7 +2570,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static int MiracastReceiverKeyboardDevice_put_TransmitInput(py::wrapper::Windows::Media::Miracast::MiracastReceiverKeyboardDevice* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3156,7 +3156,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static int MiracastReceiverSession_put_MaxSimultaneousConnections(py::wrapper::Windows::Media::Miracast::MiracastReceiverSession* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3225,7 +3225,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static int MiracastReceiverSession_put_AllowConnectionTakeover(py::wrapper::Windows::Media::Miracast::MiracastReceiverSession* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3719,7 +3719,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static int MiracastReceiverSettings_put_RequireAuthorizationFromKnownTransmitters(py::wrapper::Windows::Media::Miracast::MiracastReceiverSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3788,7 +3788,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static int MiracastReceiverSettings_put_ModelNumber(py::wrapper::Windows::Media::Miracast::MiracastReceiverSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3857,7 +3857,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static int MiracastReceiverSettings_put_ModelName(py::wrapper::Windows::Media::Miracast::MiracastReceiverSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3926,7 +3926,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static int MiracastReceiverSettings_put_FriendlyName(py::wrapper::Windows::Media::Miracast::MiracastReceiverSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3995,7 +3995,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static int MiracastReceiverSettings_put_AuthorizationMethod(py::wrapper::Windows::Media::Miracast::MiracastReceiverSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4521,7 +4521,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static int MiracastReceiverStreamControl_put_MuteAudio(py::wrapper::Windows::Media::Miracast::MiracastReceiverStreamControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4661,7 +4661,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static int MiracastReceiverVideoStreamSettings_put_Size(py::wrapper::Windows::Media::Miracast::MiracastReceiverVideoStreamSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4730,7 +4730,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static int MiracastReceiverVideoStreamSettings_put_Bitrate(py::wrapper::Windows::Media::Miracast::MiracastReceiverVideoStreamSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4907,7 +4907,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static int MiracastTransmitter_put_Name(py::wrapper::Windows::Media::Miracast::MiracastTransmitter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4976,7 +4976,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static int MiracastTransmitter_put_AuthorizationStatus(py::wrapper::Windows::Media::Miracast::MiracastTransmitter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

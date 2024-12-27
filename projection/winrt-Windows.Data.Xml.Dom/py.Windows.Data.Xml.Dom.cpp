@@ -646,7 +646,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int DtdEntity_put_Prefix(py::wrapper::Windows::Data::Xml::Dom::DtdEntity* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -715,7 +715,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int DtdEntity_put_NodeValue(py::wrapper::Windows::Data::Xml::Dom::DtdEntity* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1144,7 +1144,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int DtdEntity_put_InnerText(py::wrapper::Windows::Data::Xml::Dom::DtdEntity* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1872,7 +1872,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int DtdNotation_put_Prefix(py::wrapper::Windows::Data::Xml::Dom::DtdNotation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1941,7 +1941,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int DtdNotation_put_NodeValue(py::wrapper::Windows::Data::Xml::Dom::DtdNotation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2370,7 +2370,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int DtdNotation_put_InnerText(py::wrapper::Windows::Data::Xml::Dom::DtdNotation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3037,7 +3037,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlAttribute_put_Value(py::wrapper::Windows::Data::Xml::Dom::XmlAttribute* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3166,7 +3166,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlAttribute_put_Prefix(py::wrapper::Windows::Data::Xml::Dom::XmlAttribute* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3235,7 +3235,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlAttribute_put_NodeValue(py::wrapper::Windows::Data::Xml::Dom::XmlAttribute* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3664,7 +3664,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlAttribute_put_InnerText(py::wrapper::Windows::Data::Xml::Dom::XmlAttribute* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4593,7 +4593,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlCDataSection_put_Data(py::wrapper::Windows::Data::Xml::Dom::XmlCDataSection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4692,7 +4692,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlCDataSection_put_Prefix(py::wrapper::Windows::Data::Xml::Dom::XmlCDataSection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4761,7 +4761,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlCDataSection_put_NodeValue(py::wrapper::Windows::Data::Xml::Dom::XmlCDataSection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5190,7 +5190,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlCDataSection_put_InnerText(py::wrapper::Windows::Data::Xml::Dom::XmlCDataSection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6082,7 +6082,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlComment_put_Data(py::wrapper::Windows::Data::Xml::Dom::XmlComment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6181,7 +6181,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlComment_put_Prefix(py::wrapper::Windows::Data::Xml::Dom::XmlComment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6250,7 +6250,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlComment_put_NodeValue(py::wrapper::Windows::Data::Xml::Dom::XmlComment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6679,7 +6679,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlComment_put_InnerText(py::wrapper::Windows::Data::Xml::Dom::XmlComment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6803,7 +6803,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* _new_XmlDocument(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -8427,7 +8427,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlDocument_put_Prefix(py::wrapper::Windows::Data::Xml::Dom::XmlDocument* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8496,7 +8496,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlDocument_put_NodeValue(py::wrapper::Windows::Data::Xml::Dom::XmlDocument* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8925,7 +8925,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlDocument_put_InnerText(py::wrapper::Windows::Data::Xml::Dom::XmlDocument* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9641,7 +9641,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlDocumentFragment_put_Prefix(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentFragment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9710,7 +9710,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlDocumentFragment_put_NodeValue(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentFragment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10139,7 +10139,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlDocumentFragment_put_InnerText(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentFragment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10894,7 +10894,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlDocumentType_put_Prefix(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentType* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10963,7 +10963,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlDocumentType_put_NodeValue(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentType* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11392,7 +11392,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlDocumentType_put_InnerText(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentType* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12714,7 +12714,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlElement_put_Prefix(py::wrapper::Windows::Data::Xml::Dom::XmlElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12783,7 +12783,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlElement_put_NodeValue(py::wrapper::Windows::Data::Xml::Dom::XmlElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13212,7 +13212,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlElement_put_InnerText(py::wrapper::Windows::Data::Xml::Dom::XmlElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13890,7 +13890,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlEntityReference_put_Prefix(py::wrapper::Windows::Data::Xml::Dom::XmlEntityReference* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13959,7 +13959,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlEntityReference_put_NodeValue(py::wrapper::Windows::Data::Xml::Dom::XmlEntityReference* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14388,7 +14388,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlEntityReference_put_InnerText(py::wrapper::Windows::Data::Xml::Dom::XmlEntityReference* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14505,7 +14505,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* _new_XmlLoadSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -14572,7 +14572,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlLoadSettings_put_ValidateOnParse(py::wrapper::Windows::Data::Xml::Dom::XmlLoadSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14641,7 +14641,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlLoadSettings_put_ResolveExternals(py::wrapper::Windows::Data::Xml::Dom::XmlLoadSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14710,7 +14710,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlLoadSettings_put_ProhibitDtd(py::wrapper::Windows::Data::Xml::Dom::XmlLoadSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14779,7 +14779,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlLoadSettings_put_MaxElementDepth(py::wrapper::Windows::Data::Xml::Dom::XmlLoadSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14848,7 +14848,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlLoadSettings_put_ElementContentWhiteSpace(py::wrapper::Windows::Data::Xml::Dom::XmlLoadSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16705,7 +16705,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlProcessingInstruction_put_Prefix(py::wrapper::Windows::Data::Xml::Dom::XmlProcessingInstruction* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16774,7 +16774,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlProcessingInstruction_put_NodeValue(py::wrapper::Windows::Data::Xml::Dom::XmlProcessingInstruction* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -17203,7 +17203,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlProcessingInstruction_put_InnerText(py::wrapper::Windows::Data::Xml::Dom::XmlProcessingInstruction* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -17272,7 +17272,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlProcessingInstruction_put_Data(py::wrapper::Windows::Data::Xml::Dom::XmlProcessingInstruction* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -18230,7 +18230,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlText_put_Data(py::wrapper::Windows::Data::Xml::Dom::XmlText* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -18329,7 +18329,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlText_put_Prefix(py::wrapper::Windows::Data::Xml::Dom::XmlText* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -18398,7 +18398,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlText_put_NodeValue(py::wrapper::Windows::Data::Xml::Dom::XmlText* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -18827,7 +18827,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int XmlText_put_InnerText(py::wrapper::Windows::Data::Xml::Dom::XmlText* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19719,7 +19719,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int IXmlCharacterData_put_Data(py::wrapper::Windows::Data::Xml::Dom::IXmlCharacterData* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -20088,7 +20088,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int IXmlCharacterData_put_NodeValue(py::wrapper::Windows::Data::Xml::Dom::IXmlCharacterData* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -20217,7 +20217,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int IXmlCharacterData_put_Prefix(py::wrapper::Windows::Data::Xml::Dom::IXmlCharacterData* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -20316,7 +20316,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int IXmlCharacterData_put_InnerText(py::wrapper::Windows::Data::Xml::Dom::IXmlCharacterData* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -22370,7 +22370,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int IXmlNode_put_NodeValue(py::wrapper::Windows::Data::Xml::Dom::IXmlNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -22499,7 +22499,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int IXmlNode_put_Prefix(py::wrapper::Windows::Data::Xml::Dom::IXmlNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -22598,7 +22598,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int IXmlNode_put_InnerText(py::wrapper::Windows::Data::Xml::Dom::IXmlNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -24097,7 +24097,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int IXmlNodeSerializer_put_InnerText(py::wrapper::Windows::Data::Xml::Dom::IXmlNodeSerializer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -25129,7 +25129,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int IXmlText_put_Data(py::wrapper::Windows::Data::Xml::Dom::IXmlText* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -25498,7 +25498,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int IXmlText_put_NodeValue(py::wrapper::Windows::Data::Xml::Dom::IXmlText* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -25627,7 +25627,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int IXmlText_put_Prefix(py::wrapper::Windows::Data::Xml::Dom::IXmlText* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -25726,7 +25726,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static int IXmlText_put_InnerText(py::wrapper::Windows::Data::Xml::Dom::IXmlText* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

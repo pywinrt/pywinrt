@@ -609,7 +609,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments::Provider
 
     static int PaymentTransaction_put_PayerPhoneNumber(py::wrapper::Windows::ApplicationModel::Payments::Provider::PaymentTransaction* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -678,7 +678,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments::Provider
 
     static int PaymentTransaction_put_PayerName(py::wrapper::Windows::ApplicationModel::Payments::Provider::PaymentTransaction* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -747,7 +747,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments::Provider
 
     static int PaymentTransaction_put_PayerEmail(py::wrapper::Windows::ApplicationModel::Payments::Provider::PaymentTransaction* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

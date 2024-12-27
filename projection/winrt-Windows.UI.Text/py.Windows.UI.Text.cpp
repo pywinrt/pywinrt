@@ -8,7 +8,7 @@ namespace py::cpp::Windows::UI::Text
 
     static PyObject* _new_ContentLinkInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -75,7 +75,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ContentLinkInfo_put_Uri(py::wrapper::Windows::UI::Text::ContentLinkInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -144,7 +144,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ContentLinkInfo_put_SecondaryText(py::wrapper::Windows::UI::Text::ContentLinkInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -213,7 +213,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ContentLinkInfo_put_LinkContentKind(py::wrapper::Windows::UI::Text::ContentLinkInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -282,7 +282,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ContentLinkInfo_put_Id(py::wrapper::Windows::UI::Text::ContentLinkInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -351,7 +351,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ContentLinkInfo_put_DisplayText(py::wrapper::Windows::UI::Text::ContentLinkInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1937,7 +1937,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int RichEditTextDocument_put_UndoLimit(py::wrapper::Windows::UI::Text::RichEditTextDocument* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2006,7 +2006,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int RichEditTextDocument_put_DefaultTabStop(py::wrapper::Windows::UI::Text::RichEditTextDocument* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2075,7 +2075,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int RichEditTextDocument_put_CaretType(py::wrapper::Windows::UI::Text::RichEditTextDocument* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2174,7 +2174,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int RichEditTextDocument_put_IgnoreTrailingCharacterSpacing(py::wrapper::Windows::UI::Text::RichEditTextDocument* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2243,7 +2243,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int RichEditTextDocument_put_AlignmentIncludesTrailingWhitespace(py::wrapper::Windows::UI::Text::RichEditTextDocument* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3819,7 +3819,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int RichEditTextRange_put_ContentLinkInfo(py::wrapper::Windows::UI::Text::RichEditTextRange* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3888,7 +3888,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int RichEditTextRange_put_Text(py::wrapper::Windows::UI::Text::RichEditTextRange* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3957,7 +3957,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int RichEditTextRange_put_StartPosition(py::wrapper::Windows::UI::Text::RichEditTextRange* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4026,7 +4026,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int RichEditTextRange_put_ParagraphFormat(py::wrapper::Windows::UI::Text::RichEditTextRange* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4095,7 +4095,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int RichEditTextRange_put_Link(py::wrapper::Windows::UI::Text::RichEditTextRange* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4164,7 +4164,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int RichEditTextRange_put_Gravity(py::wrapper::Windows::UI::Text::RichEditTextRange* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4233,7 +4233,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int RichEditTextRange_put_FormattedText(py::wrapper::Windows::UI::Text::RichEditTextRange* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4302,7 +4302,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int RichEditTextRange_put_EndPosition(py::wrapper::Windows::UI::Text::RichEditTextRange* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4371,7 +4371,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int RichEditTextRange_put_CharacterFormat(py::wrapper::Windows::UI::Text::RichEditTextRange* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4440,7 +4440,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int RichEditTextRange_put_Character(py::wrapper::Windows::UI::Text::RichEditTextRange* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5108,7 +5108,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ITextCharacterFormat_put_AllCaps(py::wrapper::Windows::UI::Text::ITextCharacterFormat* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5177,7 +5177,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ITextCharacterFormat_put_BackgroundColor(py::wrapper::Windows::UI::Text::ITextCharacterFormat* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5246,7 +5246,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ITextCharacterFormat_put_Bold(py::wrapper::Windows::UI::Text::ITextCharacterFormat* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5315,7 +5315,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ITextCharacterFormat_put_FontStretch(py::wrapper::Windows::UI::Text::ITextCharacterFormat* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5384,7 +5384,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ITextCharacterFormat_put_FontStyle(py::wrapper::Windows::UI::Text::ITextCharacterFormat* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5453,7 +5453,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ITextCharacterFormat_put_ForegroundColor(py::wrapper::Windows::UI::Text::ITextCharacterFormat* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5522,7 +5522,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ITextCharacterFormat_put_Hidden(py::wrapper::Windows::UI::Text::ITextCharacterFormat* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5591,7 +5591,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ITextCharacterFormat_put_Italic(py::wrapper::Windows::UI::Text::ITextCharacterFormat* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5660,7 +5660,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ITextCharacterFormat_put_Kerning(py::wrapper::Windows::UI::Text::ITextCharacterFormat* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5729,7 +5729,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ITextCharacterFormat_put_LanguageTag(py::wrapper::Windows::UI::Text::ITextCharacterFormat* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5828,7 +5828,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ITextCharacterFormat_put_Name(py::wrapper::Windows::UI::Text::ITextCharacterFormat* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5897,7 +5897,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ITextCharacterFormat_put_Outline(py::wrapper::Windows::UI::Text::ITextCharacterFormat* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5966,7 +5966,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ITextCharacterFormat_put_Position(py::wrapper::Windows::UI::Text::ITextCharacterFormat* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6035,7 +6035,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ITextCharacterFormat_put_ProtectedText(py::wrapper::Windows::UI::Text::ITextCharacterFormat* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6104,7 +6104,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ITextCharacterFormat_put_Size(py::wrapper::Windows::UI::Text::ITextCharacterFormat* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6173,7 +6173,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ITextCharacterFormat_put_SmallCaps(py::wrapper::Windows::UI::Text::ITextCharacterFormat* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6242,7 +6242,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ITextCharacterFormat_put_Spacing(py::wrapper::Windows::UI::Text::ITextCharacterFormat* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6311,7 +6311,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ITextCharacterFormat_put_Strikethrough(py::wrapper::Windows::UI::Text::ITextCharacterFormat* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6380,7 +6380,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ITextCharacterFormat_put_Subscript(py::wrapper::Windows::UI::Text::ITextCharacterFormat* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6449,7 +6449,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ITextCharacterFormat_put_Superscript(py::wrapper::Windows::UI::Text::ITextCharacterFormat* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6518,7 +6518,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ITextCharacterFormat_put_TextScript(py::wrapper::Windows::UI::Text::ITextCharacterFormat* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6587,7 +6587,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ITextCharacterFormat_put_Underline(py::wrapper::Windows::UI::Text::ITextCharacterFormat* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6656,7 +6656,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ITextCharacterFormat_put_Weight(py::wrapper::Windows::UI::Text::ITextCharacterFormat* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8815,7 +8815,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ITextDocument_put_CaretType(py::wrapper::Windows::UI::Text::ITextDocument* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8884,7 +8884,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ITextDocument_put_DefaultTabStop(py::wrapper::Windows::UI::Text::ITextDocument* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8983,7 +8983,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ITextDocument_put_UndoLimit(py::wrapper::Windows::UI::Text::ITextDocument* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10368,7 +10368,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ITextParagraphFormat_put_Alignment(py::wrapper::Windows::UI::Text::ITextParagraphFormat* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10467,7 +10467,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ITextParagraphFormat_put_KeepTogether(py::wrapper::Windows::UI::Text::ITextParagraphFormat* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10536,7 +10536,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ITextParagraphFormat_put_KeepWithNext(py::wrapper::Windows::UI::Text::ITextParagraphFormat* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10695,7 +10695,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ITextParagraphFormat_put_ListAlignment(py::wrapper::Windows::UI::Text::ITextParagraphFormat* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10764,7 +10764,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ITextParagraphFormat_put_ListLevelIndex(py::wrapper::Windows::UI::Text::ITextParagraphFormat* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10833,7 +10833,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ITextParagraphFormat_put_ListStart(py::wrapper::Windows::UI::Text::ITextParagraphFormat* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10902,7 +10902,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ITextParagraphFormat_put_ListStyle(py::wrapper::Windows::UI::Text::ITextParagraphFormat* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10971,7 +10971,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ITextParagraphFormat_put_ListTab(py::wrapper::Windows::UI::Text::ITextParagraphFormat* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11040,7 +11040,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ITextParagraphFormat_put_ListType(py::wrapper::Windows::UI::Text::ITextParagraphFormat* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11109,7 +11109,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ITextParagraphFormat_put_NoLineNumber(py::wrapper::Windows::UI::Text::ITextParagraphFormat* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11178,7 +11178,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ITextParagraphFormat_put_PageBreakBefore(py::wrapper::Windows::UI::Text::ITextParagraphFormat* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11247,7 +11247,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ITextParagraphFormat_put_RightIndent(py::wrapper::Windows::UI::Text::ITextParagraphFormat* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11316,7 +11316,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ITextParagraphFormat_put_RightToLeft(py::wrapper::Windows::UI::Text::ITextParagraphFormat* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11385,7 +11385,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ITextParagraphFormat_put_SpaceAfter(py::wrapper::Windows::UI::Text::ITextParagraphFormat* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11454,7 +11454,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ITextParagraphFormat_put_SpaceBefore(py::wrapper::Windows::UI::Text::ITextParagraphFormat* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11523,7 +11523,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ITextParagraphFormat_put_Style(py::wrapper::Windows::UI::Text::ITextParagraphFormat* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11622,7 +11622,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ITextParagraphFormat_put_WidowControl(py::wrapper::Windows::UI::Text::ITextParagraphFormat* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14408,7 +14408,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ITextRange_put_Character(py::wrapper::Windows::UI::Text::ITextRange* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14477,7 +14477,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ITextRange_put_CharacterFormat(py::wrapper::Windows::UI::Text::ITextRange* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14546,7 +14546,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ITextRange_put_EndPosition(py::wrapper::Windows::UI::Text::ITextRange* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14615,7 +14615,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ITextRange_put_FormattedText(py::wrapper::Windows::UI::Text::ITextRange* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14684,7 +14684,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ITextRange_put_Gravity(py::wrapper::Windows::UI::Text::ITextRange* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14783,7 +14783,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ITextRange_put_Link(py::wrapper::Windows::UI::Text::ITextRange* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14852,7 +14852,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ITextRange_put_ParagraphFormat(py::wrapper::Windows::UI::Text::ITextRange* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14921,7 +14921,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ITextRange_put_StartPosition(py::wrapper::Windows::UI::Text::ITextRange* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15020,7 +15020,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ITextRange_put_Text(py::wrapper::Windows::UI::Text::ITextRange* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -18605,7 +18605,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ITextSelection_put_Options(py::wrapper::Windows::UI::Text::ITextSelection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -18704,7 +18704,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ITextSelection_put_Character(py::wrapper::Windows::UI::Text::ITextSelection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -18773,7 +18773,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ITextSelection_put_CharacterFormat(py::wrapper::Windows::UI::Text::ITextSelection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -18842,7 +18842,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ITextSelection_put_EndPosition(py::wrapper::Windows::UI::Text::ITextSelection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -18911,7 +18911,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ITextSelection_put_FormattedText(py::wrapper::Windows::UI::Text::ITextSelection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -18980,7 +18980,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ITextSelection_put_Gravity(py::wrapper::Windows::UI::Text::ITextSelection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19079,7 +19079,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ITextSelection_put_Link(py::wrapper::Windows::UI::Text::ITextSelection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19148,7 +19148,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ITextSelection_put_ParagraphFormat(py::wrapper::Windows::UI::Text::ITextSelection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19217,7 +19217,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ITextSelection_put_StartPosition(py::wrapper::Windows::UI::Text::ITextSelection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19316,7 +19316,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int ITextSelection_put_Text(py::wrapper::Windows::UI::Text::ITextSelection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -21546,7 +21546,7 @@ namespace py::cpp::Windows::UI::Text
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -21611,7 +21611,7 @@ namespace py::cpp::Windows::UI::Text
 
     static int FontWeight_set_Weight(py::wrapper::Windows::UI::Text::FontWeight* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

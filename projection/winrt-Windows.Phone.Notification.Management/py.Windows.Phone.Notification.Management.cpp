@@ -2182,7 +2182,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static int AccessoryManager_put_PhoneMute(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2251,7 +2251,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static int AccessoryManager_put_PhoneCallAudioEndpoint(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2715,7 +2715,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static int AlarmNotificationTriggerDetails_put_StartedProcessing(py::wrapper::Windows::Phone::Notification::Management::AlarmNotificationTriggerDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3386,7 +3386,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static int CalendarChangedNotificationTriggerDetails_put_StartedProcessing(py::wrapper::Windows::Phone::Notification::Management::CalendarChangedNotificationTriggerDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3708,7 +3708,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static int CortanaTileNotificationTriggerDetails_put_StartedProcessing(py::wrapper::Windows::Phone::Notification::Management::CortanaTileNotificationTriggerDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4534,7 +4534,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static int EmailNotificationTriggerDetails_put_StartedProcessing(py::wrapper::Windows::Phone::Notification::Management::EmailNotificationTriggerDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5011,7 +5011,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static int EmailReadNotificationTriggerDetails_put_StartedProcessing(py::wrapper::Windows::Phone::Notification::Management::EmailReadNotificationTriggerDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5395,7 +5395,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static int MediaControlsTriggerDetails_put_StartedProcessing(py::wrapper::Windows::Phone::Notification::Management::MediaControlsTriggerDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6721,7 +6721,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static int PhoneNotificationTriggerDetails_put_StartedProcessing(py::wrapper::Windows::Phone::Notification::Management::PhoneNotificationTriggerDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7074,7 +7074,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static int ReminderNotificationTriggerDetails_put_StartedProcessing(py::wrapper::Windows::Phone::Notification::Management::ReminderNotificationTriggerDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7869,7 +7869,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static int ToastNotificationTriggerDetails_put_StartedProcessing(py::wrapper::Windows::Phone::Notification::Management::ToastNotificationTriggerDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8626,7 +8626,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static int IAccessoryNotificationTriggerDetails_put_StartedProcessing(py::wrapper::Windows::Phone::Notification::Management::IAccessoryNotificationTriggerDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

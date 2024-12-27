@@ -293,7 +293,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static int UsbBulkInPipe_put_ReadOptions(py::wrapper::Windows::Devices::Usb::UsbBulkInPipe* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -723,7 +723,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static int UsbBulkOutPipe_put_WriteOptions(py::wrapper::Windows::Devices::Usb::UsbBulkOutPipe* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1351,7 +1351,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* _new_UsbControlRequestType(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1418,7 +1418,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static int UsbControlRequestType_put_Recipient(py::wrapper::Windows::Devices::Usb::UsbControlRequestType* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1487,7 +1487,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static int UsbControlRequestType_put_Direction(py::wrapper::Windows::Devices::Usb::UsbControlRequestType* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1556,7 +1556,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static int UsbControlRequestType_put_ControlTransferType(py::wrapper::Windows::Devices::Usb::UsbControlRequestType* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1625,7 +1625,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static int UsbControlRequestType_put_AsByte(py::wrapper::Windows::Devices::Usb::UsbControlRequestType* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2534,7 +2534,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* _new_UsbDeviceClass(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2601,7 +2601,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static int UsbDeviceClass_put_SubclassCode(py::wrapper::Windows::Devices::Usb::UsbDeviceClass* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2670,7 +2670,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static int UsbDeviceClass_put_ProtocolCode(py::wrapper::Windows::Devices::Usb::UsbDeviceClass* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2739,7 +2739,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static int UsbDeviceClass_put_ClassCode(py::wrapper::Windows::Devices::Usb::UsbDeviceClass* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5582,7 +5582,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static int UsbInterruptOutPipe_put_WriteOptions(py::wrapper::Windows::Devices::Usb::UsbInterruptOutPipe* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5736,7 +5736,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* _new_UsbSetupPacket(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -5818,7 +5818,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static int UsbSetupPacket_put_Value(py::wrapper::Windows::Devices::Usb::UsbSetupPacket* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5887,7 +5887,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static int UsbSetupPacket_put_RequestType(py::wrapper::Windows::Devices::Usb::UsbSetupPacket* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5956,7 +5956,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static int UsbSetupPacket_put_Request(py::wrapper::Windows::Devices::Usb::UsbSetupPacket* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6025,7 +6025,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static int UsbSetupPacket_put_Length(py::wrapper::Windows::Devices::Usb::UsbSetupPacket* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6094,7 +6094,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static int UsbSetupPacket_put_Index(py::wrapper::Windows::Devices::Usb::UsbSetupPacket* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

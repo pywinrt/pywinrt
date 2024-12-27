@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
 
     static PyObject* _new_ConditionForceEffect(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -238,7 +238,7 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
 
     static int ConditionForceEffect_put_Gain(py::wrapper::Windows::Gaming::Input::ForceFeedback::ConditionForceEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -364,7 +364,7 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
 
     static PyObject* _new_ConstantForceEffect(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -608,7 +608,7 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
 
     static int ConstantForceEffect_put_Gain(py::wrapper::Windows::Gaming::Input::ForceFeedback::ConstantForceEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1106,7 +1106,7 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
 
     static int ForceFeedbackMotor_put_MasterGain(py::wrapper::Windows::Gaming::Input::ForceFeedback::ForceFeedbackMotor* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1298,7 +1298,7 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
 
     static PyObject* _new_PeriodicForceEffect(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1550,7 +1550,7 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
 
     static int PeriodicForceEffect_put_Gain(py::wrapper::Windows::Gaming::Input::ForceFeedback::PeriodicForceEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1707,7 +1707,7 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
 
     static PyObject* _new_RampForceEffect(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1953,7 +1953,7 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
 
     static int RampForceEffect_put_Gain(py::wrapper::Windows::Gaming::Input::ForceFeedback::RampForceEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2206,7 +2206,7 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
 
     static int IForceFeedbackEffect_put_Gain(py::wrapper::Windows::Gaming::Input::ForceFeedback::IForceFeedbackEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

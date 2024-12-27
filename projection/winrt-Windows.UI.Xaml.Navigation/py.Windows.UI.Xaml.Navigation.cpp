@@ -38,7 +38,7 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
 
     static PyObject* _new_FrameNavigationOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -135,7 +135,7 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
 
     static int FrameNavigationOptions_put_TransitionInfoOverride(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -204,7 +204,7 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
 
     static int FrameNavigationOptions_put_IsNavigationStackEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -366,7 +366,7 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
 
     static int NavigatingCancelEventArgs_put_Cancel(py::wrapper::Windows::UI::Xaml::Navigation::NavigatingCancelEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -626,7 +626,7 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
 
     static int NavigationEventArgs_put_Uri(py::wrapper::Windows::UI::Xaml::Navigation::NavigationEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -917,7 +917,7 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
 
     static int NavigationFailedEventArgs_put_Handled(py::wrapper::Windows::UI::Xaml::Navigation::NavigationFailedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1070,7 +1070,7 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
 
     static PyObject* _new_PageStackEntry(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;

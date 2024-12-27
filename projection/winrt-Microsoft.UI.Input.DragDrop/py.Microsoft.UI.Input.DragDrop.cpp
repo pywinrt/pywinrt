@@ -136,7 +136,7 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
 
     static int DragDropManager_put_AreConcurrentOperationsEnabled(py::wrapper::Microsoft::UI::Input::DragDrop::DragDropManager* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -536,7 +536,7 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
 
     static PyObject* _new_DragOperation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -774,7 +774,7 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
 
     static int DragOperation_put_DragUIContentMode(py::wrapper::Microsoft::UI::Input::DragDrop::DragOperation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -843,7 +843,7 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
 
     static int DragOperation_put_AllowedOperations(py::wrapper::Microsoft::UI::Input::DragDrop::DragOperation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1168,7 +1168,7 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
 
     static int DragUIOverride_put_IsGlyphVisible(py::wrapper::Microsoft::UI::Input::DragDrop::DragUIOverride* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1237,7 +1237,7 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
 
     static int DragUIOverride_put_IsContentVisible(py::wrapper::Microsoft::UI::Input::DragDrop::DragUIOverride* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1306,7 +1306,7 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
 
     static int DragUIOverride_put_IsCaptionVisible(py::wrapper::Microsoft::UI::Input::DragDrop::DragUIOverride* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1375,7 +1375,7 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
 
     static int DragUIOverride_put_Caption(py::wrapper::Microsoft::UI::Input::DragDrop::DragUIOverride* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

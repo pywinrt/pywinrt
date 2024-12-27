@@ -100,7 +100,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
 
     static PyObject* _new_MarkupExtension(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -327,7 +327,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
 
     static PyObject* _new_ProvideValueTargetProperty(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -5899,7 +5899,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -5968,7 +5968,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
 
     static int XamlBinaryWriterErrorInformation_set_InputStreamIndex(py::wrapper::Microsoft::UI::Xaml::Markup::XamlBinaryWriterErrorInformation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6001,7 +6001,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
 
     static int XamlBinaryWriterErrorInformation_set_LineNumber(py::wrapper::Microsoft::UI::Xaml::Markup::XamlBinaryWriterErrorInformation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6034,7 +6034,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
 
     static int XamlBinaryWriterErrorInformation_set_LinePosition(py::wrapper::Microsoft::UI::Xaml::Markup::XamlBinaryWriterErrorInformation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6155,7 +6155,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -6222,7 +6222,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
 
     static int XmlnsDefinition_set_XmlNamespace(py::wrapper::Microsoft::UI::Xaml::Markup::XmlnsDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6255,7 +6255,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
 
     static int XmlnsDefinition_set_Namespace(py::wrapper::Microsoft::UI::Xaml::Markup::XmlnsDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

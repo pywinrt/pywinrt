@@ -1126,7 +1126,7 @@ static class WriterExtensions
         );
         w.WriteBlock(() =>
         {
-            w.WriteLine("if (arg == nullptr)");
+            w.WriteLine("if (!arg)");
             w.WriteBlock(() =>
             {
                 w.WriteLine("PyErr_SetString(PyExc_AttributeError, \"can't delete attribute\");");
@@ -1418,7 +1418,7 @@ static class WriterExtensions
             }
             else
             {
-                w.WriteLine("if (kwds != nullptr)");
+                w.WriteLine("if (kwds)");
                 w.WriteBlock(() =>
                 {
                     w.WriteLine("py::set_invalid_kwd_args_error();");
@@ -1919,7 +1919,7 @@ static class WriterExtensions
                         w.WriteLine($"int put_{prop.Name}(PyObject* arg) noexcept override");
                         w.WriteBlock(() =>
                         {
-                            w.WriteLine("if (arg == nullptr)");
+                            w.WriteLine("if (!arg)");
                             w.WriteBlock(() =>
                             {
                                 w.WriteLine(

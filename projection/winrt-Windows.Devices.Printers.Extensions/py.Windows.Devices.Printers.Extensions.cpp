@@ -93,7 +93,7 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
     static int Print3DWorkflow_put_IsPrintReady(py::wrapper::Windows::Devices::Printers::Extensions::Print3DWorkflow* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -820,7 +820,7 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
     static int PrintNotificationEventDetails_put_EventData(py::wrapper::Windows::Devices::Printers::Extensions::PrintNotificationEventDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

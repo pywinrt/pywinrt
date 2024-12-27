@@ -1130,7 +1130,7 @@ namespace py::cpp::Windows::Gaming::Input::Preview
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -1203,7 +1203,7 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
     static int HeadsetGeqGains_set_band1Gain(py::wrapper::Windows::Gaming::Input::Preview::HeadsetGeqGains* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1236,7 +1236,7 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
     static int HeadsetGeqGains_set_band2Gain(py::wrapper::Windows::Gaming::Input::Preview::HeadsetGeqGains* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1269,7 +1269,7 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
     static int HeadsetGeqGains_set_band3Gain(py::wrapper::Windows::Gaming::Input::Preview::HeadsetGeqGains* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1302,7 +1302,7 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
     static int HeadsetGeqGains_set_band4Gain(py::wrapper::Windows::Gaming::Input::Preview::HeadsetGeqGains* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1335,7 +1335,7 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
     static int HeadsetGeqGains_set_band5Gain(py::wrapper::Windows::Gaming::Input::Preview::HeadsetGeqGains* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

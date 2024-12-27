@@ -1883,7 +1883,7 @@ namespace py::cpp::Windows::ApplicationModel
 
     static PyObject* _new_FindRelatedPackagesOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1952,7 +1952,7 @@ namespace py::cpp::Windows::ApplicationModel
 
     static int FindRelatedPackagesOptions_put_Relationship(py::wrapper::Windows::ApplicationModel::FindRelatedPackagesOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2021,7 +2021,7 @@ namespace py::cpp::Windows::ApplicationModel
 
     static int FindRelatedPackagesOptions_put_IncludeResources(py::wrapper::Windows::ApplicationModel::FindRelatedPackagesOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2090,7 +2090,7 @@ namespace py::cpp::Windows::ApplicationModel
 
     static int FindRelatedPackagesOptions_put_IncludeOptionals(py::wrapper::Windows::ApplicationModel::FindRelatedPackagesOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2159,7 +2159,7 @@ namespace py::cpp::Windows::ApplicationModel
 
     static int FindRelatedPackagesOptions_put_IncludeHostRuntimes(py::wrapper::Windows::ApplicationModel::FindRelatedPackagesOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2228,7 +2228,7 @@ namespace py::cpp::Windows::ApplicationModel
 
     static int FindRelatedPackagesOptions_put_IncludeFrameworks(py::wrapper::Windows::ApplicationModel::FindRelatedPackagesOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10493,7 +10493,7 @@ namespace py::cpp::Windows::ApplicationModel
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -10558,7 +10558,7 @@ namespace py::cpp::Windows::ApplicationModel
 
     static int PackageInstallProgress_set_PercentComplete(py::wrapper::Windows::ApplicationModel::PackageInstallProgress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10665,7 +10665,7 @@ namespace py::cpp::Windows::ApplicationModel
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -10736,7 +10736,7 @@ namespace py::cpp::Windows::ApplicationModel
 
     static int PackageVersion_set_Major(py::wrapper::Windows::ApplicationModel::PackageVersion* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10769,7 +10769,7 @@ namespace py::cpp::Windows::ApplicationModel
 
     static int PackageVersion_set_Minor(py::wrapper::Windows::ApplicationModel::PackageVersion* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10802,7 +10802,7 @@ namespace py::cpp::Windows::ApplicationModel
 
     static int PackageVersion_set_Build(py::wrapper::Windows::ApplicationModel::PackageVersion* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10835,7 +10835,7 @@ namespace py::cpp::Windows::ApplicationModel
 
     static int PackageVersion_set_Revision(py::wrapper::Windows::ApplicationModel::PackageVersion* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

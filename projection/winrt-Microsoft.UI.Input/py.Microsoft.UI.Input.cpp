@@ -53,7 +53,7 @@ namespace py::cpp::Microsoft::UI::Input
 
     static int CharacterReceivedEventArgs_put_Handled(py::wrapper::Microsoft::UI::Input::CharacterReceivedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -251,7 +251,7 @@ namespace py::cpp::Microsoft::UI::Input
 
     static int ContextMenuKeyEventArgs_put_Handled(py::wrapper::Microsoft::UI::Input::ContextMenuKeyEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -833,7 +833,7 @@ namespace py::cpp::Microsoft::UI::Input
 
     static int EnteringMoveSizeEventArgs_put_MoveSizeWindowId(py::wrapper::Microsoft::UI::Input::EnteringMoveSizeEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1159,7 +1159,7 @@ namespace py::cpp::Microsoft::UI::Input
 
     static int FocusChangedEventArgs_put_Handled(py::wrapper::Microsoft::UI::Input::FocusChangedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1611,7 +1611,7 @@ namespace py::cpp::Microsoft::UI::Input
 
     static int FocusNavigationRequestEventArgs_put_Result(py::wrapper::Microsoft::UI::Input::FocusNavigationRequestEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1733,7 +1733,7 @@ namespace py::cpp::Microsoft::UI::Input
 
     static PyObject* _new_GestureRecognizer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2098,7 +2098,7 @@ namespace py::cpp::Microsoft::UI::Input
 
     static int GestureRecognizer_put_ShowGestureFeedback(py::wrapper::Microsoft::UI::Input::GestureRecognizer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2167,7 +2167,7 @@ namespace py::cpp::Microsoft::UI::Input
 
     static int GestureRecognizer_put_PivotRadius(py::wrapper::Microsoft::UI::Input::GestureRecognizer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2236,7 +2236,7 @@ namespace py::cpp::Microsoft::UI::Input
 
     static int GestureRecognizer_put_PivotCenter(py::wrapper::Microsoft::UI::Input::GestureRecognizer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2305,7 +2305,7 @@ namespace py::cpp::Microsoft::UI::Input
 
     static int GestureRecognizer_put_ManipulationExact(py::wrapper::Microsoft::UI::Input::GestureRecognizer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2374,7 +2374,7 @@ namespace py::cpp::Microsoft::UI::Input
 
     static int GestureRecognizer_put_InertiaTranslationDisplacement(py::wrapper::Microsoft::UI::Input::GestureRecognizer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2443,7 +2443,7 @@ namespace py::cpp::Microsoft::UI::Input
 
     static int GestureRecognizer_put_InertiaTranslationDeceleration(py::wrapper::Microsoft::UI::Input::GestureRecognizer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2512,7 +2512,7 @@ namespace py::cpp::Microsoft::UI::Input
 
     static int GestureRecognizer_put_InertiaRotationDeceleration(py::wrapper::Microsoft::UI::Input::GestureRecognizer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2581,7 +2581,7 @@ namespace py::cpp::Microsoft::UI::Input
 
     static int GestureRecognizer_put_InertiaRotationAngle(py::wrapper::Microsoft::UI::Input::GestureRecognizer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2650,7 +2650,7 @@ namespace py::cpp::Microsoft::UI::Input
 
     static int GestureRecognizer_put_InertiaExpansionDeceleration(py::wrapper::Microsoft::UI::Input::GestureRecognizer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2719,7 +2719,7 @@ namespace py::cpp::Microsoft::UI::Input
 
     static int GestureRecognizer_put_InertiaExpansion(py::wrapper::Microsoft::UI::Input::GestureRecognizer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2788,7 +2788,7 @@ namespace py::cpp::Microsoft::UI::Input
 
     static int GestureRecognizer_put_GestureSettings(py::wrapper::Microsoft::UI::Input::GestureRecognizer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2857,7 +2857,7 @@ namespace py::cpp::Microsoft::UI::Input
 
     static int GestureRecognizer_put_CrossSlideThresholds(py::wrapper::Microsoft::UI::Input::GestureRecognizer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2926,7 +2926,7 @@ namespace py::cpp::Microsoft::UI::Input
 
     static int GestureRecognizer_put_CrossSlideHorizontally(py::wrapper::Microsoft::UI::Input::GestureRecognizer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2995,7 +2995,7 @@ namespace py::cpp::Microsoft::UI::Input
 
     static int GestureRecognizer_put_CrossSlideExact(py::wrapper::Microsoft::UI::Input::GestureRecognizer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3064,7 +3064,7 @@ namespace py::cpp::Microsoft::UI::Input
 
     static int GestureRecognizer_put_AutoProcessInertia(py::wrapper::Microsoft::UI::Input::GestureRecognizer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8153,7 +8153,7 @@ namespace py::cpp::Microsoft::UI::Input
 
     static int InputPointerSource_put_Cursor(py::wrapper::Microsoft::UI::Input::InputPointerSource* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9315,7 +9315,7 @@ namespace py::cpp::Microsoft::UI::Input
 
     static int KeyEventArgs_put_Handled(py::wrapper::Microsoft::UI::Input::KeyEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10335,7 +10335,7 @@ namespace py::cpp::Microsoft::UI::Input
 
     static int MouseWheelParameters_put_PageTranslation(py::wrapper::Microsoft::UI::Input::MouseWheelParameters* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10404,7 +10404,7 @@ namespace py::cpp::Microsoft::UI::Input
 
     static int MouseWheelParameters_put_DeltaScale(py::wrapper::Microsoft::UI::Input::MouseWheelParameters* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10473,7 +10473,7 @@ namespace py::cpp::Microsoft::UI::Input
 
     static int MouseWheelParameters_put_DeltaRotationAngle(py::wrapper::Microsoft::UI::Input::MouseWheelParameters* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10542,7 +10542,7 @@ namespace py::cpp::Microsoft::UI::Input
 
     static int MouseWheelParameters_put_CharTranslation(py::wrapper::Microsoft::UI::Input::MouseWheelParameters* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11178,7 +11178,7 @@ namespace py::cpp::Microsoft::UI::Input
 
     static int PointerEventArgs_put_Handled(py::wrapper::Microsoft::UI::Input::PointerEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12546,7 +12546,7 @@ namespace py::cpp::Microsoft::UI::Input
 
     static int PointerPredictor_put_PredictionTime(py::wrapper::Microsoft::UI::Input::PointerPredictor* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13212,7 +13212,7 @@ namespace py::cpp::Microsoft::UI::Input
 
     static int WindowRectChangingEventArgs_put_ShowWindow(py::wrapper::Microsoft::UI::Input::WindowRectChangingEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13281,7 +13281,7 @@ namespace py::cpp::Microsoft::UI::Input
 
     static int WindowRectChangingEventArgs_put_NewWindowRect(py::wrapper::Microsoft::UI::Input::WindowRectChangingEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13350,7 +13350,7 @@ namespace py::cpp::Microsoft::UI::Input
 
     static int WindowRectChangingEventArgs_put_AllowRectChange(py::wrapper::Microsoft::UI::Input::WindowRectChangingEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13913,7 +13913,7 @@ namespace py::cpp::Microsoft::UI::Input
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -13984,7 +13984,7 @@ namespace py::cpp::Microsoft::UI::Input
 
     static int CrossSlideThresholds_set_SelectionStart(py::wrapper::Microsoft::UI::Input::CrossSlideThresholds* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14017,7 +14017,7 @@ namespace py::cpp::Microsoft::UI::Input
 
     static int CrossSlideThresholds_set_SpeedBumpStart(py::wrapper::Microsoft::UI::Input::CrossSlideThresholds* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14050,7 +14050,7 @@ namespace py::cpp::Microsoft::UI::Input
 
     static int CrossSlideThresholds_set_SpeedBumpEnd(py::wrapper::Microsoft::UI::Input::CrossSlideThresholds* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14083,7 +14083,7 @@ namespace py::cpp::Microsoft::UI::Input
 
     static int CrossSlideThresholds_set_RearrangeStart(py::wrapper::Microsoft::UI::Input::CrossSlideThresholds* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14211,7 +14211,7 @@ namespace py::cpp::Microsoft::UI::Input
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -14282,7 +14282,7 @@ namespace py::cpp::Microsoft::UI::Input
 
     static int ManipulationDelta_set_Translation(py::wrapper::Microsoft::UI::Input::ManipulationDelta* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14315,7 +14315,7 @@ namespace py::cpp::Microsoft::UI::Input
 
     static int ManipulationDelta_set_Scale(py::wrapper::Microsoft::UI::Input::ManipulationDelta* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14348,7 +14348,7 @@ namespace py::cpp::Microsoft::UI::Input
 
     static int ManipulationDelta_set_Rotation(py::wrapper::Microsoft::UI::Input::ManipulationDelta* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14381,7 +14381,7 @@ namespace py::cpp::Microsoft::UI::Input
 
     static int ManipulationDelta_set_Expansion(py::wrapper::Microsoft::UI::Input::ManipulationDelta* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14509,7 +14509,7 @@ namespace py::cpp::Microsoft::UI::Input
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -14578,7 +14578,7 @@ namespace py::cpp::Microsoft::UI::Input
 
     static int ManipulationVelocities_set_Linear(py::wrapper::Microsoft::UI::Input::ManipulationVelocities* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14611,7 +14611,7 @@ namespace py::cpp::Microsoft::UI::Input
 
     static int ManipulationVelocities_set_Angular(py::wrapper::Microsoft::UI::Input::ManipulationVelocities* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14644,7 +14644,7 @@ namespace py::cpp::Microsoft::UI::Input
 
     static int ManipulationVelocities_set_Expansion(py::wrapper::Microsoft::UI::Input::ManipulationVelocities* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14765,7 +14765,7 @@ namespace py::cpp::Microsoft::UI::Input
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -14840,7 +14840,7 @@ namespace py::cpp::Microsoft::UI::Input
 
     static int PhysicalKeyStatus_set_RepeatCount(py::wrapper::Microsoft::UI::Input::PhysicalKeyStatus* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14873,7 +14873,7 @@ namespace py::cpp::Microsoft::UI::Input
 
     static int PhysicalKeyStatus_set_ScanCode(py::wrapper::Microsoft::UI::Input::PhysicalKeyStatus* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14906,7 +14906,7 @@ namespace py::cpp::Microsoft::UI::Input
 
     static int PhysicalKeyStatus_set_IsExtendedKey(py::wrapper::Microsoft::UI::Input::PhysicalKeyStatus* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14939,7 +14939,7 @@ namespace py::cpp::Microsoft::UI::Input
 
     static int PhysicalKeyStatus_set_IsMenuKeyDown(py::wrapper::Microsoft::UI::Input::PhysicalKeyStatus* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14972,7 +14972,7 @@ namespace py::cpp::Microsoft::UI::Input
 
     static int PhysicalKeyStatus_set_WasKeyDown(py::wrapper::Microsoft::UI::Input::PhysicalKeyStatus* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15005,7 +15005,7 @@ namespace py::cpp::Microsoft::UI::Input
 
     static int PhysicalKeyStatus_set_IsKeyReleased(py::wrapper::Microsoft::UI::Input::PhysicalKeyStatus* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

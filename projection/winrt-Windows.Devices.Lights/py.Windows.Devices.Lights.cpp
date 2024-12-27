@@ -216,7 +216,7 @@ namespace py::cpp::Windows::Devices::Lights
 
     static int Lamp_put_IsEnabled(py::wrapper::Windows::Devices::Lights::Lamp* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -285,7 +285,7 @@ namespace py::cpp::Windows::Devices::Lights
 
     static int Lamp_put_Color(py::wrapper::Windows::Devices::Lights::Lamp* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -354,7 +354,7 @@ namespace py::cpp::Windows::Devices::Lights
 
     static int Lamp_put_BrightnessLevel(py::wrapper::Windows::Devices::Lights::Lamp* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1275,7 +1275,7 @@ namespace py::cpp::Windows::Devices::Lights
 
     static int LampArray_put_IsEnabled(py::wrapper::Windows::Devices::Lights::LampArray* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1344,7 +1344,7 @@ namespace py::cpp::Windows::Devices::Lights
 
     static int LampArray_put_BrightnessLevel(py::wrapper::Windows::Devices::Lights::LampArray* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

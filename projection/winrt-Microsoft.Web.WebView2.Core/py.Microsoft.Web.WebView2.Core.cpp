@@ -1356,7 +1356,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2_put_MemoryUsageTargetLevel(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1467,7 +1467,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2_put_IsMuted(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1527,7 +1527,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2_put_DefaultDownloadDialogMargin(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1570,7 +1570,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2_put_DefaultDownloadDialogCornerAlignment(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3065,7 +3065,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2AcceleratorKeyPressedEventArgs_put_Handled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2AcceleratorKeyPressedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3176,7 +3176,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2AcceleratorKeyPressedEventArgs_put_IsBrowserAcceleratorKeyEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2AcceleratorKeyPressedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3318,7 +3318,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2BasicAuthenticationRequestedEventArgs_put_Cancel(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2BasicAuthenticationRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3483,7 +3483,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2BasicAuthenticationResponse_put_UserName(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2BasicAuthenticationResponse* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3526,7 +3526,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2BasicAuthenticationResponse_put_Password(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2BasicAuthenticationResponse* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4458,7 +4458,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2ClientCertificateRequestedEventArgs_put_SelectedCertificate(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ClientCertificateRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4501,7 +4501,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2ClientCertificateRequestedEventArgs_put_Handled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ClientCertificateRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4544,7 +4544,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2ClientCertificateRequestedEventArgs_put_Cancel(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ClientCertificateRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4986,7 +4986,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2CompositionController_put_RootVisualTarget(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CompositionController* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5306,7 +5306,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2ContextMenuItem_put_IsEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ContextMenuItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5349,7 +5349,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2ContextMenuItem_put_IsChecked(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ContextMenuItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5654,7 +5654,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2ContextMenuRequestedEventArgs_put_SelectedCommandId(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ContextMenuRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5697,7 +5697,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2ContextMenuRequestedEventArgs_put_Handled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ContextMenuRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6280,7 +6280,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Controller_put_ZoomFactor(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6323,7 +6323,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Controller_put_ParentWindow(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6366,7 +6366,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Controller_put_IsVisible(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6409,7 +6409,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Controller_put_Bounds(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6469,7 +6469,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Controller_put_DefaultBackgroundColor(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6512,7 +6512,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Controller_put_ShouldDetectMonitorScaleChanges(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6555,7 +6555,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Controller_put_RasterizationScale(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6598,7 +6598,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Controller_put_BoundsMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6641,7 +6641,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Controller_put_AllowExternalDrop(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7053,7 +7053,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2ControllerOptions_put_ProfileName(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ControllerOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7096,7 +7096,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2ControllerOptions_put_IsInPrivateModeEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ControllerOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7139,7 +7139,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2ControllerOptions_put_ScriptLocale(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ControllerOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7438,7 +7438,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Cookie_put_Value(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Cookie* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7481,7 +7481,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Cookie_put_SameSite(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Cookie* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7524,7 +7524,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Cookie_put_IsSecure(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Cookie* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7567,7 +7567,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Cookie_put_IsHttpOnly(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Cookie* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7610,7 +7610,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Cookie_put_Expires(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Cookie* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8079,7 +8079,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* _new_CoreWebView2CustomSchemeRegistration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -8135,7 +8135,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2CustomSchemeRegistration_put_TreatAsSecure(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CustomSchemeRegistration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8178,7 +8178,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2CustomSchemeRegistration_put_HasAuthorityComponent(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CustomSchemeRegistration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9101,7 +9101,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2DownloadStartingEventArgs_put_ResultFilePath(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2DownloadStartingEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9144,7 +9144,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2DownloadStartingEventArgs_put_Handled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2DownloadStartingEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9187,7 +9187,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2DownloadStartingEventArgs_put_Cancel(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2DownloadStartingEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10162,7 +10162,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* _new_CoreWebView2EnvironmentOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -10216,7 +10216,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2EnvironmentOptions_put_TargetCompatibleBrowserVersion(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2EnvironmentOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10259,7 +10259,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2EnvironmentOptions_put_Language(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2EnvironmentOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10302,7 +10302,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2EnvironmentOptions_put_AllowSingleSignOnUsingOSPrimaryAccount(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2EnvironmentOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10345,7 +10345,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2EnvironmentOptions_put_AdditionalBrowserArguments(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2EnvironmentOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10388,7 +10388,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2EnvironmentOptions_put_CustomSchemeRegistrations(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2EnvironmentOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10431,7 +10431,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2EnvironmentOptions_put_ExclusiveUserDataFolderAccess(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2EnvironmentOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10474,7 +10474,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2EnvironmentOptions_put_IsCustomCrashReportingEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2EnvironmentOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10517,7 +10517,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2EnvironmentOptions_put_EnableTrackingPrevention(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2EnvironmentOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10560,7 +10560,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2EnvironmentOptions_put_AreBrowserExtensionsEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2EnvironmentOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10603,7 +10603,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2EnvironmentOptions_put_ReleaseChannels(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2EnvironmentOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10646,7 +10646,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2EnvironmentOptions_put_ChannelSearchKind(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2EnvironmentOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10689,7 +10689,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2EnvironmentOptions_put_ScrollBarStyle(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2EnvironmentOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12750,7 +12750,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2LaunchingExternalUriSchemeEventArgs_put_Cancel(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2LaunchingExternalUriSchemeEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12915,7 +12915,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2MoveFocusRequestedEventArgs_put_Handled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2MoveFocusRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13181,7 +13181,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2NavigationStartingEventArgs_put_Cancel(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2NavigationStartingEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13309,7 +13309,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2NavigationStartingEventArgs_put_AdditionalAllowedFrameAncestors(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2NavigationStartingEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13470,7 +13470,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2NewWindowRequestedEventArgs_put_NewWindow(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2NewWindowRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13513,7 +13513,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2NewWindowRequestedEventArgs_put_Handled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2NewWindowRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14254,7 +14254,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2NotificationReceivedEventArgs_put_Handled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2NotificationReceivedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14428,7 +14428,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PermissionRequestedEventArgs_put_State(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PermissionRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14522,7 +14522,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PermissionRequestedEventArgs_put_Handled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PermissionRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14565,7 +14565,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PermissionRequestedEventArgs_put_SavesInProfile(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PermissionRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14801,7 +14801,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PointerInfo_put_TouchPressure(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14844,7 +14844,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PointerInfo_put_TouchOrientation(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14887,7 +14887,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PointerInfo_put_TouchMask(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14930,7 +14930,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PointerInfo_put_TouchFlags(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14973,7 +14973,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PointerInfo_put_TouchContactRaw(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15016,7 +15016,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PointerInfo_put_TouchContact(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15059,7 +15059,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PointerInfo_put_Time(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15102,7 +15102,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PointerInfo_put_PointerKind(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15145,7 +15145,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PointerInfo_put_PointerId(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15188,7 +15188,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PointerInfo_put_PointerFlags(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15231,7 +15231,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PointerInfo_put_PointerDeviceRect(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15274,7 +15274,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PointerInfo_put_PixelLocationRaw(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15317,7 +15317,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PointerInfo_put_PixelLocation(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15360,7 +15360,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PointerInfo_put_PerformanceCount(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15403,7 +15403,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PointerInfo_put_PenTiltY(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15446,7 +15446,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PointerInfo_put_PenTiltX(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15489,7 +15489,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PointerInfo_put_PenRotation(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15532,7 +15532,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PointerInfo_put_PenPressure(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15575,7 +15575,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PointerInfo_put_PenMask(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15618,7 +15618,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PointerInfo_put_PenFlags(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15661,7 +15661,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PointerInfo_put_KeyStates(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15704,7 +15704,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PointerInfo_put_InputData(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15747,7 +15747,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PointerInfo_put_HistoryCount(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15790,7 +15790,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PointerInfo_put_HimetricLocationRaw(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15833,7 +15833,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PointerInfo_put_HimetricLocation(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15876,7 +15876,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PointerInfo_put_FrameId(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15919,7 +15919,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PointerInfo_put_DisplayRect(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15962,7 +15962,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PointerInfo_put_ButtonChangeKind(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16099,7 +16099,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PrintSettings_put_ShouldPrintSelectionOnly(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16142,7 +16142,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PrintSettings_put_ShouldPrintHeaderAndFooter(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16185,7 +16185,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PrintSettings_put_ShouldPrintBackgrounds(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16228,7 +16228,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PrintSettings_put_ScaleFactor(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16271,7 +16271,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PrintSettings_put_PageWidth(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16314,7 +16314,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PrintSettings_put_PageHeight(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16357,7 +16357,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PrintSettings_put_Orientation(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16400,7 +16400,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PrintSettings_put_MarginTop(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16443,7 +16443,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PrintSettings_put_MarginRight(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16486,7 +16486,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PrintSettings_put_MarginLeft(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16529,7 +16529,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PrintSettings_put_MarginBottom(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16572,7 +16572,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PrintSettings_put_HeaderTitle(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16615,7 +16615,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PrintSettings_put_FooterUri(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16658,7 +16658,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PrintSettings_put_PrinterName(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16701,7 +16701,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PrintSettings_put_PagesPerSide(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16744,7 +16744,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PrintSettings_put_PageRanges(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16787,7 +16787,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PrintSettings_put_MediaSize(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16830,7 +16830,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PrintSettings_put_Duplex(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16873,7 +16873,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PrintSettings_put_Copies(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16916,7 +16916,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PrintSettings_put_ColorMode(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16959,7 +16959,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PrintSettings_put_Collation(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -17685,7 +17685,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Profile_put_PreferredColorScheme(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Profile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -17728,7 +17728,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Profile_put_DefaultDownloadFolderPath(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Profile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -17822,7 +17822,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Profile_put_PreferredTrackingPreventionLevel(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Profile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -17882,7 +17882,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Profile_put_IsPasswordAutosaveEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Profile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -17925,7 +17925,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Profile_put_IsGeneralAutofillEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Profile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -18118,7 +18118,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2SaveAsUIShowingEventArgs_put_SuppressDefaultDialog(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2SaveAsUIShowingEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -18161,7 +18161,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2SaveAsUIShowingEventArgs_put_SaveAsFilePath(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2SaveAsUIShowingEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -18204,7 +18204,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2SaveAsUIShowingEventArgs_put_Kind(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2SaveAsUIShowingEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -18247,7 +18247,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2SaveAsUIShowingEventArgs_put_Cancel(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2SaveAsUIShowingEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -18290,7 +18290,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2SaveAsUIShowingEventArgs_put_AllowReplace(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2SaveAsUIShowingEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -18478,7 +18478,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2ScriptDialogOpeningEventArgs_put_ResultText(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ScriptDialogOpeningEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -18845,7 +18845,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2ServerCertificateErrorDetectedEventArgs_put_Action(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ServerCertificateErrorDetectedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19010,7 +19010,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Settings_put_IsZoomControlEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Settings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19053,7 +19053,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Settings_put_IsWebMessageEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Settings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19096,7 +19096,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Settings_put_IsStatusBarEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Settings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19139,7 +19139,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Settings_put_IsScriptEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Settings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19182,7 +19182,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Settings_put_IsBuiltInErrorPageEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Settings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19225,7 +19225,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Settings_put_AreHostObjectsAllowed(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Settings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19268,7 +19268,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Settings_put_AreDevToolsEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Settings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19311,7 +19311,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Settings_put_AreDefaultScriptDialogsEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Settings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19354,7 +19354,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Settings_put_AreDefaultContextMenusEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Settings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19397,7 +19397,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Settings_put_HostObjectDispatchAdapter(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Settings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19440,7 +19440,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Settings_put_UserAgent(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Settings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19483,7 +19483,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Settings_put_AreBrowserAcceleratorKeysEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Settings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19526,7 +19526,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Settings_put_IsPasswordAutosaveEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Settings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19569,7 +19569,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Settings_put_IsGeneralAutofillEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Settings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19612,7 +19612,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Settings_put_IsPinchZoomEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Settings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19655,7 +19655,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Settings_put_IsSwipeNavigationEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Settings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19698,7 +19698,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Settings_put_HiddenPdfToolbarItems(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Settings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19741,7 +19741,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Settings_put_IsReputationCheckingRequired(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Settings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19784,7 +19784,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2Settings_put_IsNonClientRegionSupportEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Settings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -20328,7 +20328,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2WebResourceRequest_put_Uri(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceRequest* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -20371,7 +20371,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2WebResourceRequest_put_Method(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceRequest* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -20414,7 +20414,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2WebResourceRequest_put_Content(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceRequest* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -20571,7 +20571,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2WebResourceRequestedEventArgs_put_Response(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -20736,7 +20736,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2WebResourceResponse_put_StatusCode(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceResponse* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -20779,7 +20779,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2WebResourceResponse_put_ReasonPhrase(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceResponse* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -20822,7 +20822,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2WebResourceResponse_put_Content(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceResponse* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -21825,7 +21825,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -21900,7 +21900,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PhysicalKeyStatus_set_RepeatCount(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PhysicalKeyStatus* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -21933,7 +21933,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PhysicalKeyStatus_set_ScanCode(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PhysicalKeyStatus* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -21966,7 +21966,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PhysicalKeyStatus_set_IsExtendedKey(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PhysicalKeyStatus* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -21999,7 +21999,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PhysicalKeyStatus_set_IsMenuKeyDown(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PhysicalKeyStatus* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -22032,7 +22032,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PhysicalKeyStatus_set_WasKeyDown(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PhysicalKeyStatus* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -22065,7 +22065,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static int CoreWebView2PhysicalKeyStatus_set_IsKeyReleased(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PhysicalKeyStatus* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

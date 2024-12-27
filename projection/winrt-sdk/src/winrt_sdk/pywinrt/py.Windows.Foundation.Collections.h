@@ -804,7 +804,8 @@ namespace py::impl::Windows::Foundation::Collections
                     return _obj.TryLookup(_key);
                 }();
 
-                if (!value) {
+                if (!value)
+                {
                     if constexpr (std::is_base_of_v<winrt::Windows::Foundation::IUnknown, decltype(value)>)
                     {
                         auto has_key = [&]()
@@ -1202,7 +1203,8 @@ namespace py::impl::Windows::Foundation::Collections
                     return _obj.TryLookup(_key);
                 }();
 
-                if (!value) {
+                if (!value)
+                {
                     if constexpr (std::is_base_of_v<winrt::Windows::Foundation::IUnknown, decltype(value)>)
                     {
                         auto has_key = [&]()
@@ -1235,13 +1237,15 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 auto _key = py::convert_to<K>(key);
 
-                if (value == nullptr) {
+                if (!value)
+                {
                     bool did_remove;
                     {
                         auto _gil = py::release_gil();
                         did_remove = _obj.TryRemove(_key);
                     }
-                    if (!did_remove) {
+                    if (!did_remove)
+                    {
                         PyErr_SetObject(PyExc_KeyError, key);
                         return -1;
                     }
@@ -1671,7 +1675,8 @@ namespace py::impl::Windows::Foundation::Collections
                     return _obj.TryLookup(_key);
                 }();
 
-                if (!value) {
+                if (!value)
+                {
                     if constexpr (std::is_base_of_v<winrt::Windows::Foundation::IUnknown, decltype(value)>)
                     {
                         auto has_key = [&]()
@@ -1704,13 +1709,15 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 auto _key = py::convert_to<K>(key);
 
-                if (value == nullptr) {
+                if (!value)
+                {
                     bool did_remove;
                     {
                         auto _gil = py::release_gil();
                         did_remove = _obj.TryRemove(_key);
                     }
-                    if (!did_remove) {
+                    if (!did_remove)
+                    {
                         PyErr_SetObject(PyExc_KeyError, key);
                         return -1;
                     }

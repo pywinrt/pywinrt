@@ -87,7 +87,7 @@ namespace py::cpp::Windows::Globalization
 
     static int ApplicationLanguages_put_PrimaryLanguageOverride(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -239,7 +239,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* _new_Calendar(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2598,7 +2598,7 @@ namespace py::cpp::Windows::Globalization
 
     static int Calendar_put_Year(py::wrapper::Windows::Globalization::Calendar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2667,7 +2667,7 @@ namespace py::cpp::Windows::Globalization
 
     static int Calendar_put_Second(py::wrapper::Windows::Globalization::Calendar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2736,7 +2736,7 @@ namespace py::cpp::Windows::Globalization
 
     static int Calendar_put_Period(py::wrapper::Windows::Globalization::Calendar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2805,7 +2805,7 @@ namespace py::cpp::Windows::Globalization
 
     static int Calendar_put_Nanosecond(py::wrapper::Windows::Globalization::Calendar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2874,7 +2874,7 @@ namespace py::cpp::Windows::Globalization
 
     static int Calendar_put_Month(py::wrapper::Windows::Globalization::Calendar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2943,7 +2943,7 @@ namespace py::cpp::Windows::Globalization
 
     static int Calendar_put_Minute(py::wrapper::Windows::Globalization::Calendar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3012,7 +3012,7 @@ namespace py::cpp::Windows::Globalization
 
     static int Calendar_put_NumeralSystem(py::wrapper::Windows::Globalization::Calendar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3081,7 +3081,7 @@ namespace py::cpp::Windows::Globalization
 
     static int Calendar_put_Era(py::wrapper::Windows::Globalization::Calendar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3150,7 +3150,7 @@ namespace py::cpp::Windows::Globalization
 
     static int Calendar_put_Hour(py::wrapper::Windows::Globalization::Calendar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3219,7 +3219,7 @@ namespace py::cpp::Windows::Globalization
 
     static int Calendar_put_Day(py::wrapper::Windows::Globalization::Calendar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4880,7 +4880,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* _new_CurrencyAmount(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -10111,7 +10111,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* _new_GeographicRegion(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -10801,7 +10801,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* _new_Language(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;

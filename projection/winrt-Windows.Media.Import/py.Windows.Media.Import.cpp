@@ -2231,7 +2231,7 @@ namespace py::cpp::Windows::Media::Import
 
     static int PhotoImportItem_put_IsSelected(py::wrapper::Windows::Media::Import::PhotoImportItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3417,7 +3417,7 @@ namespace py::cpp::Windows::Media::Import
 
     static int PhotoImportSession_put_SubfolderCreationMode(py::wrapper::Windows::Media::Import::PhotoImportSession* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3486,7 +3486,7 @@ namespace py::cpp::Windows::Media::Import
 
     static int PhotoImportSession_put_DestinationFolder(py::wrapper::Windows::Media::Import::PhotoImportSession* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3555,7 +3555,7 @@ namespace py::cpp::Windows::Media::Import
 
     static int PhotoImportSession_put_DestinationFileNamePrefix(py::wrapper::Windows::Media::Import::PhotoImportSession* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3624,7 +3624,7 @@ namespace py::cpp::Windows::Media::Import
 
     static int PhotoImportSession_put_AppendSessionDateToDestinationFolder(py::wrapper::Windows::Media::Import::PhotoImportSession* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3753,7 +3753,7 @@ namespace py::cpp::Windows::Media::Import
 
     static int PhotoImportSession_put_SubfolderDateFormat(py::wrapper::Windows::Media::Import::PhotoImportSession* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3822,7 +3822,7 @@ namespace py::cpp::Windows::Media::Import
 
     static int PhotoImportSession_put_RememberDeselectedItems(py::wrapper::Windows::Media::Import::PhotoImportSession* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5382,7 +5382,7 @@ namespace py::cpp::Windows::Media::Import
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -5455,7 +5455,7 @@ namespace py::cpp::Windows::Media::Import
 
     static int PhotoImportProgress_set_ItemsImported(py::wrapper::Windows::Media::Import::PhotoImportProgress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5488,7 +5488,7 @@ namespace py::cpp::Windows::Media::Import
 
     static int PhotoImportProgress_set_TotalItemsToImport(py::wrapper::Windows::Media::Import::PhotoImportProgress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5521,7 +5521,7 @@ namespace py::cpp::Windows::Media::Import
 
     static int PhotoImportProgress_set_BytesImported(py::wrapper::Windows::Media::Import::PhotoImportProgress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5554,7 +5554,7 @@ namespace py::cpp::Windows::Media::Import
 
     static int PhotoImportProgress_set_TotalBytesToImport(py::wrapper::Windows::Media::Import::PhotoImportProgress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5587,7 +5587,7 @@ namespace py::cpp::Windows::Media::Import
 
     static int PhotoImportProgress_set_ImportProgress(py::wrapper::Windows::Media::Import::PhotoImportProgress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

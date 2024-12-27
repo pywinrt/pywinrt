@@ -1223,7 +1223,7 @@ namespace py::cpp::Windows::Graphics::Capture
 
     static PyObject* _new_GraphicsCapturePicker(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1519,7 +1519,7 @@ namespace py::cpp::Windows::Graphics::Capture
 
     static int GraphicsCaptureSession_put_IsCursorCaptureEnabled(py::wrapper::Windows::Graphics::Capture::GraphicsCaptureSession* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1588,7 +1588,7 @@ namespace py::cpp::Windows::Graphics::Capture
 
     static int GraphicsCaptureSession_put_IsBorderRequired(py::wrapper::Windows::Graphics::Capture::GraphicsCaptureSession* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1657,7 +1657,7 @@ namespace py::cpp::Windows::Graphics::Capture
 
     static int GraphicsCaptureSession_put_DirtyRegionMode(py::wrapper::Windows::Graphics::Capture::GraphicsCaptureSession* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1726,7 +1726,7 @@ namespace py::cpp::Windows::Graphics::Capture
 
     static int GraphicsCaptureSession_put_MinUpdateInterval(py::wrapper::Windows::Graphics::Capture::GraphicsCaptureSession* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1795,7 +1795,7 @@ namespace py::cpp::Windows::Graphics::Capture
 
     static int GraphicsCaptureSession_put_IncludeSecondaryWindows(py::wrapper::Windows::Graphics::Capture::GraphicsCaptureSession* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

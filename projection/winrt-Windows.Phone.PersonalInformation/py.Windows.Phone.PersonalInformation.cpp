@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* _new_ContactAddress(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -75,7 +75,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static int ContactAddress_put_StreetAddress(py::wrapper::Windows::Phone::PersonalInformation::ContactAddress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -144,7 +144,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static int ContactAddress_put_Region(py::wrapper::Windows::Phone::PersonalInformation::ContactAddress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -213,7 +213,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static int ContactAddress_put_PostalCode(py::wrapper::Windows::Phone::PersonalInformation::ContactAddress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -282,7 +282,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static int ContactAddress_put_Locality(py::wrapper::Windows::Phone::PersonalInformation::ContactAddress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -351,7 +351,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static int ContactAddress_put_Country(py::wrapper::Windows::Phone::PersonalInformation::ContactAddress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -636,7 +636,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* _new_ContactInformation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -949,7 +949,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static int ContactInformation_put_HonorificSuffix(py::wrapper::Windows::Phone::PersonalInformation::ContactInformation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1018,7 +1018,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static int ContactInformation_put_HonorificPrefix(py::wrapper::Windows::Phone::PersonalInformation::ContactInformation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1087,7 +1087,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static int ContactInformation_put_GivenName(py::wrapper::Windows::Phone::PersonalInformation::ContactInformation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1156,7 +1156,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static int ContactInformation_put_FamilyName(py::wrapper::Windows::Phone::PersonalInformation::ContactInformation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1225,7 +1225,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static int ContactInformation_put_DisplayName(py::wrapper::Windows::Phone::PersonalInformation::ContactInformation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1382,7 +1382,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* _new_ContactQueryOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1449,7 +1449,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static int ContactQueryOptions_put_OrderBy(py::wrapper::Windows::Phone::PersonalInformation::ContactQueryOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3576,7 +3576,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* _new_StoredContact(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3987,7 +3987,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static int StoredContact_put_HonorificSuffix(py::wrapper::Windows::Phone::PersonalInformation::StoredContact* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4056,7 +4056,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static int StoredContact_put_HonorificPrefix(py::wrapper::Windows::Phone::PersonalInformation::StoredContact* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4125,7 +4125,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static int StoredContact_put_GivenName(py::wrapper::Windows::Phone::PersonalInformation::StoredContact* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4194,7 +4194,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static int StoredContact_put_FamilyName(py::wrapper::Windows::Phone::PersonalInformation::StoredContact* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4263,7 +4263,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static int StoredContact_put_DisplayName(py::wrapper::Windows::Phone::PersonalInformation::StoredContact* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4362,7 +4362,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static int StoredContact_put_DisplayPictureDate(py::wrapper::Windows::Phone::PersonalInformation::StoredContact* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4431,7 +4431,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static int StoredContact_put_RemoteId(py::wrapper::Windows::Phone::PersonalInformation::StoredContact* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4848,7 +4848,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static int IContactInformation_put_DisplayName(py::wrapper::Windows::Phone::PersonalInformation::IContactInformation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4947,7 +4947,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static int IContactInformation_put_FamilyName(py::wrapper::Windows::Phone::PersonalInformation::IContactInformation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5016,7 +5016,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static int IContactInformation_put_GivenName(py::wrapper::Windows::Phone::PersonalInformation::IContactInformation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5085,7 +5085,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static int IContactInformation_put_HonorificPrefix(py::wrapper::Windows::Phone::PersonalInformation::IContactInformation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5154,7 +5154,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static int IContactInformation_put_HonorificSuffix(py::wrapper::Windows::Phone::PersonalInformation::IContactInformation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5739,7 +5739,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static int IContactInformation2_put_DisplayPictureDate(py::wrapper::Windows::Phone::PersonalInformation::IContactInformation2* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

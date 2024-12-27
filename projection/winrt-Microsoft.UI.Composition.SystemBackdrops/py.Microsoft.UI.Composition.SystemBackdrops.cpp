@@ -8,7 +8,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyObject* _new_DesktopAcrylicController(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -451,7 +451,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static int DesktopAcrylicController_put_TintOpacity(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::DesktopAcrylicController* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -520,7 +520,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static int DesktopAcrylicController_put_TintColor(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::DesktopAcrylicController* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -589,7 +589,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static int DesktopAcrylicController_put_LuminosityOpacity(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::DesktopAcrylicController* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -658,7 +658,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static int DesktopAcrylicController_put_FallbackColor(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::DesktopAcrylicController* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -727,7 +727,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static int DesktopAcrylicController_put_Kind(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::DesktopAcrylicController* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1144,7 +1144,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyObject* _new_MicaController(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1587,7 +1587,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static int MicaController_put_TintOpacity(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::MicaController* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1656,7 +1656,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static int MicaController_put_TintColor(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::MicaController* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1725,7 +1725,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static int MicaController_put_LuminosityOpacity(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::MicaController* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1794,7 +1794,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static int MicaController_put_FallbackColor(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::MicaController* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1863,7 +1863,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static int MicaController_put_Kind(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::MicaController* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2280,7 +2280,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyObject* _new_SystemBackdropConfiguration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2347,7 +2347,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static int SystemBackdropConfiguration_put_Theme(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::SystemBackdropConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2416,7 +2416,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static int SystemBackdropConfiguration_put_IsInputActive(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::SystemBackdropConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2485,7 +2485,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static int SystemBackdropConfiguration_put_IsHighContrast(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::SystemBackdropConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2554,7 +2554,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static int SystemBackdropConfiguration_put_HighContrastBackgroundColor(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::SystemBackdropConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

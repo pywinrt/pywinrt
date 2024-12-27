@@ -526,7 +526,7 @@ namespace py::cpp::Windows::Media::Effects
 
     static PyObject* _new_AudioEffectDefinition(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1664,7 +1664,7 @@ namespace py::cpp::Windows::Media::Effects
 
     static PyObject* _new_SlowMotionEffectDefinition(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1731,7 +1731,7 @@ namespace py::cpp::Windows::Media::Effects
 
     static int SlowMotionEffectDefinition_put_TimeStretchRate(py::wrapper::Windows::Media::Effects::SlowMotionEffectDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1884,7 +1884,7 @@ namespace py::cpp::Windows::Media::Effects
 
     static PyObject* _new_VideoCompositorDefinition(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2052,7 +2052,7 @@ namespace py::cpp::Windows::Media::Effects
 
     static PyObject* _new_VideoEffectDefinition(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2220,7 +2220,7 @@ namespace py::cpp::Windows::Media::Effects
 
     static PyObject* _new_VideoTransformEffectDefinition(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2347,7 +2347,7 @@ namespace py::cpp::Windows::Media::Effects
 
     static int VideoTransformEffectDefinition_put_Rotation(py::wrapper::Windows::Media::Effects::VideoTransformEffectDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2416,7 +2416,7 @@ namespace py::cpp::Windows::Media::Effects
 
     static int VideoTransformEffectDefinition_put_ProcessingAlgorithm(py::wrapper::Windows::Media::Effects::VideoTransformEffectDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2485,7 +2485,7 @@ namespace py::cpp::Windows::Media::Effects
 
     static int VideoTransformEffectDefinition_put_PaddingColor(py::wrapper::Windows::Media::Effects::VideoTransformEffectDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2554,7 +2554,7 @@ namespace py::cpp::Windows::Media::Effects
 
     static int VideoTransformEffectDefinition_put_OutputSize(py::wrapper::Windows::Media::Effects::VideoTransformEffectDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2623,7 +2623,7 @@ namespace py::cpp::Windows::Media::Effects
 
     static int VideoTransformEffectDefinition_put_Mirror(py::wrapper::Windows::Media::Effects::VideoTransformEffectDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2692,7 +2692,7 @@ namespace py::cpp::Windows::Media::Effects
 
     static int VideoTransformEffectDefinition_put_CropRectangle(py::wrapper::Windows::Media::Effects::VideoTransformEffectDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2866,7 +2866,7 @@ namespace py::cpp::Windows::Media::Effects
 
     static int VideoTransformSphericalProjection_put_ViewOrientation(py::wrapper::Windows::Media::Effects::VideoTransformSphericalProjection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2935,7 +2935,7 @@ namespace py::cpp::Windows::Media::Effects
 
     static int VideoTransformSphericalProjection_put_ProjectionMode(py::wrapper::Windows::Media::Effects::VideoTransformSphericalProjection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3004,7 +3004,7 @@ namespace py::cpp::Windows::Media::Effects
 
     static int VideoTransformSphericalProjection_put_IsEnabled(py::wrapper::Windows::Media::Effects::VideoTransformSphericalProjection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3073,7 +3073,7 @@ namespace py::cpp::Windows::Media::Effects
 
     static int VideoTransformSphericalProjection_put_HorizontalFieldOfViewInDegrees(py::wrapper::Windows::Media::Effects::VideoTransformSphericalProjection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3142,7 +3142,7 @@ namespace py::cpp::Windows::Media::Effects
 
     static int VideoTransformSphericalProjection_put_FrameFormat(py::wrapper::Windows::Media::Effects::VideoTransformSphericalProjection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

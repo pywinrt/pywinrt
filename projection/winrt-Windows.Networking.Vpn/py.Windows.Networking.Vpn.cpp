@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* _new_VpnAppId(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -78,7 +78,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnAppId_put_Value(py::wrapper::Windows::Networking::Vpn::VpnAppId* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -147,7 +147,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnAppId_put_Type(py::wrapper::Windows::Networking::Vpn::VpnAppId* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1618,7 +1618,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnChannel_put_PlugInContext(py::wrapper::Windows::Networking::Vpn::VpnChannel* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2596,7 +2596,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* _new_VpnCustomCheckBox(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2663,7 +2663,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomCheckBox_put_InitialCheckState(py::wrapper::Windows::Networking::Vpn::VpnCustomCheckBox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2762,7 +2762,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomCheckBox_put_Label(py::wrapper::Windows::Networking::Vpn::VpnCustomCheckBox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2831,7 +2831,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomCheckBox_put_Compulsory(py::wrapper::Windows::Networking::Vpn::VpnCustomCheckBox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2900,7 +2900,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomCheckBox_put_Bordered(py::wrapper::Windows::Networking::Vpn::VpnCustomCheckBox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2995,7 +2995,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* _new_VpnCustomComboBox(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3062,7 +3062,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomComboBox_put_OptionsText(py::wrapper::Windows::Networking::Vpn::VpnCustomComboBox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3161,7 +3161,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomComboBox_put_Label(py::wrapper::Windows::Networking::Vpn::VpnCustomComboBox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3230,7 +3230,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomComboBox_put_Compulsory(py::wrapper::Windows::Networking::Vpn::VpnCustomComboBox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3299,7 +3299,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomComboBox_put_Bordered(py::wrapper::Windows::Networking::Vpn::VpnCustomComboBox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3394,7 +3394,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* _new_VpnCustomEditBox(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3461,7 +3461,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomEditBox_put_NoEcho(py::wrapper::Windows::Networking::Vpn::VpnCustomEditBox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3530,7 +3530,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomEditBox_put_DefaultText(py::wrapper::Windows::Networking::Vpn::VpnCustomEditBox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3629,7 +3629,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomEditBox_put_Label(py::wrapper::Windows::Networking::Vpn::VpnCustomEditBox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3698,7 +3698,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomEditBox_put_Compulsory(py::wrapper::Windows::Networking::Vpn::VpnCustomEditBox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3767,7 +3767,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomEditBox_put_Bordered(py::wrapper::Windows::Networking::Vpn::VpnCustomEditBox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3863,7 +3863,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* _new_VpnCustomErrorBox(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3930,7 +3930,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomErrorBox_put_Label(py::wrapper::Windows::Networking::Vpn::VpnCustomErrorBox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3999,7 +3999,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomErrorBox_put_Compulsory(py::wrapper::Windows::Networking::Vpn::VpnCustomErrorBox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4068,7 +4068,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomErrorBox_put_Bordered(py::wrapper::Windows::Networking::Vpn::VpnCustomErrorBox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4161,7 +4161,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* _new_VpnCustomPromptBooleanInput(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -4228,7 +4228,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomPromptBooleanInput_put_InitialValue(py::wrapper::Windows::Networking::Vpn::VpnCustomPromptBooleanInput* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4327,7 +4327,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomPromptBooleanInput_put_Emphasized(py::wrapper::Windows::Networking::Vpn::VpnCustomPromptBooleanInput* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4396,7 +4396,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomPromptBooleanInput_put_DisplayName(py::wrapper::Windows::Networking::Vpn::VpnCustomPromptBooleanInput* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4465,7 +4465,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomPromptBooleanInput_put_Compulsory(py::wrapper::Windows::Networking::Vpn::VpnCustomPromptBooleanInput* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4560,7 +4560,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* _new_VpnCustomPromptOptionSelector(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -4627,7 +4627,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomPromptOptionSelector_put_Emphasized(py::wrapper::Windows::Networking::Vpn::VpnCustomPromptOptionSelector* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4696,7 +4696,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomPromptOptionSelector_put_DisplayName(py::wrapper::Windows::Networking::Vpn::VpnCustomPromptOptionSelector* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4765,7 +4765,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomPromptOptionSelector_put_Compulsory(py::wrapper::Windows::Networking::Vpn::VpnCustomPromptOptionSelector* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4920,7 +4920,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* _new_VpnCustomPromptText(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -4987,7 +4987,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomPromptText_put_Emphasized(py::wrapper::Windows::Networking::Vpn::VpnCustomPromptText* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5056,7 +5056,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomPromptText_put_DisplayName(py::wrapper::Windows::Networking::Vpn::VpnCustomPromptText* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5125,7 +5125,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomPromptText_put_Compulsory(py::wrapper::Windows::Networking::Vpn::VpnCustomPromptText* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5194,7 +5194,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomPromptText_put_Text(py::wrapper::Windows::Networking::Vpn::VpnCustomPromptText* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5288,7 +5288,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* _new_VpnCustomPromptTextInput(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -5355,7 +5355,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomPromptTextInput_put_Emphasized(py::wrapper::Windows::Networking::Vpn::VpnCustomPromptTextInput* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5424,7 +5424,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomPromptTextInput_put_DisplayName(py::wrapper::Windows::Networking::Vpn::VpnCustomPromptTextInput* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5493,7 +5493,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomPromptTextInput_put_Compulsory(py::wrapper::Windows::Networking::Vpn::VpnCustomPromptTextInput* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5562,7 +5562,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomPromptTextInput_put_PlaceholderText(py::wrapper::Windows::Networking::Vpn::VpnCustomPromptTextInput* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5631,7 +5631,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomPromptTextInput_put_IsTextHidden(py::wrapper::Windows::Networking::Vpn::VpnCustomPromptTextInput* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5757,7 +5757,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* _new_VpnCustomTextBox(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -5824,7 +5824,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomTextBox_put_Label(py::wrapper::Windows::Networking::Vpn::VpnCustomTextBox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5893,7 +5893,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomTextBox_put_Compulsory(py::wrapper::Windows::Networking::Vpn::VpnCustomTextBox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5962,7 +5962,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomTextBox_put_Bordered(py::wrapper::Windows::Networking::Vpn::VpnCustomTextBox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6031,7 +6031,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomTextBox_put_DisplayText(py::wrapper::Windows::Networking::Vpn::VpnCustomTextBox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6125,7 +6125,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* _new_VpnDomainNameAssignment(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -6192,7 +6192,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnDomainNameAssignment_put_ProxyAutoConfigurationUri(py::wrapper::Windows::Networking::Vpn::VpnDomainNameAssignment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6314,7 +6314,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* _new_VpnDomainNameInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -6386,7 +6386,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnDomainNameInfo_put_DomainNameType(py::wrapper::Windows::Networking::Vpn::VpnDomainNameInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6455,7 +6455,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnDomainNameInfo_put_DomainName(py::wrapper::Windows::Networking::Vpn::VpnDomainNameInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7033,7 +7033,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* _new_VpnInterfaceId(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -7173,7 +7173,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* _new_VpnManagementAgent(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -7647,7 +7647,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* _new_VpnNamespaceAssignment(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -7714,7 +7714,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnNamespaceAssignment_put_ProxyAutoConfigUri(py::wrapper::Windows::Networking::Vpn::VpnNamespaceAssignment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7783,7 +7783,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnNamespaceAssignment_put_NamespaceList(py::wrapper::Windows::Networking::Vpn::VpnNamespaceAssignment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7875,7 +7875,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* _new_VpnNamespaceInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -7946,7 +7946,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnNamespaceInfo_put_WebProxyServers(py::wrapper::Windows::Networking::Vpn::VpnNamespaceInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8015,7 +8015,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnNamespaceInfo_put_Namespace(py::wrapper::Windows::Networking::Vpn::VpnNamespaceInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8084,7 +8084,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnNamespaceInfo_put_DnsServers(py::wrapper::Windows::Networking::Vpn::VpnNamespaceInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8177,7 +8177,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* _new_VpnNativeProfile(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -8244,7 +8244,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnNativeProfile_put_UserAuthenticationMethod(py::wrapper::Windows::Networking::Vpn::VpnNativeProfile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8313,7 +8313,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnNativeProfile_put_TunnelAuthenticationMethod(py::wrapper::Windows::Networking::Vpn::VpnNativeProfile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8382,7 +8382,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnNativeProfile_put_RoutingPolicyType(py::wrapper::Windows::Networking::Vpn::VpnNativeProfile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8451,7 +8451,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnNativeProfile_put_EapConfiguration(py::wrapper::Windows::Networking::Vpn::VpnNativeProfile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8520,7 +8520,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnNativeProfile_put_NativeProtocolType(py::wrapper::Windows::Networking::Vpn::VpnNativeProfile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8619,7 +8619,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnNativeProfile_put_RequireVpnClientAppUI(py::wrapper::Windows::Networking::Vpn::VpnNativeProfile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8718,7 +8718,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnNativeProfile_put_ProfileName(py::wrapper::Windows::Networking::Vpn::VpnNativeProfile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8787,7 +8787,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnNativeProfile_put_RememberCredentials(py::wrapper::Windows::Networking::Vpn::VpnNativeProfile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8856,7 +8856,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnNativeProfile_put_AlwaysOn(py::wrapper::Windows::Networking::Vpn::VpnNativeProfile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9081,7 +9081,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* _new_VpnPacketBuffer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -9152,7 +9152,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnPacketBuffer_put_TransportAffinity(py::wrapper::Windows::Networking::Vpn::VpnPacketBuffer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9221,7 +9221,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnPacketBuffer_put_Status(py::wrapper::Windows::Networking::Vpn::VpnPacketBuffer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9350,7 +9350,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnPacketBuffer_put_TransportContext(py::wrapper::Windows::Networking::Vpn::VpnPacketBuffer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9737,7 +9737,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnPacketBufferList_put_Status(py::wrapper::Windows::Networking::Vpn::VpnPacketBufferList* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10042,7 +10042,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* _new_VpnPlugInProfile(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -10109,7 +10109,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnPlugInProfile_put_VpnPluginPackageFamilyName(py::wrapper::Windows::Networking::Vpn::VpnPlugInProfile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10178,7 +10178,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnPlugInProfile_put_CustomConfiguration(py::wrapper::Windows::Networking::Vpn::VpnPlugInProfile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10277,7 +10277,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnPlugInProfile_put_RequireVpnClientAppUI(py::wrapper::Windows::Networking::Vpn::VpnPlugInProfile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10376,7 +10376,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnPlugInProfile_put_ProfileName(py::wrapper::Windows::Networking::Vpn::VpnPlugInProfile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10445,7 +10445,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnPlugInProfile_put_RememberCredentials(py::wrapper::Windows::Networking::Vpn::VpnPlugInProfile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10514,7 +10514,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnPlugInProfile_put_AlwaysOn(py::wrapper::Windows::Networking::Vpn::VpnPlugInProfile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10736,7 +10736,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* _new_VpnRoute(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -10806,7 +10806,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnRoute_put_PrefixSize(py::wrapper::Windows::Networking::Vpn::VpnRoute* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10875,7 +10875,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnRoute_put_Address(py::wrapper::Windows::Networking::Vpn::VpnRoute* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10967,7 +10967,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* _new_VpnRouteAssignment(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -11034,7 +11034,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnRouteAssignment_put_Ipv6InclusionRoutes(py::wrapper::Windows::Networking::Vpn::VpnRouteAssignment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11103,7 +11103,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnRouteAssignment_put_Ipv6ExclusionRoutes(py::wrapper::Windows::Networking::Vpn::VpnRouteAssignment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11172,7 +11172,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnRouteAssignment_put_Ipv4InclusionRoutes(py::wrapper::Windows::Networking::Vpn::VpnRouteAssignment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11241,7 +11241,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnRouteAssignment_put_Ipv4ExclusionRoutes(py::wrapper::Windows::Networking::Vpn::VpnRouteAssignment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11310,7 +11310,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnRouteAssignment_put_ExcludeLocalSubnets(py::wrapper::Windows::Networking::Vpn::VpnRouteAssignment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11502,7 +11502,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* _new_VpnTrafficFilter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -11571,7 +11571,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnTrafficFilter_put_RoutingPolicyType(py::wrapper::Windows::Networking::Vpn::VpnTrafficFilter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11640,7 +11640,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnTrafficFilter_put_Protocol(py::wrapper::Windows::Networking::Vpn::VpnTrafficFilter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11709,7 +11709,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnTrafficFilter_put_AppId(py::wrapper::Windows::Networking::Vpn::VpnTrafficFilter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11957,7 +11957,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* _new_VpnTrafficFilterAssignment(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -12024,7 +12024,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnTrafficFilterAssignment_put_AllowOutbound(py::wrapper::Windows::Networking::Vpn::VpnTrafficFilterAssignment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12093,7 +12093,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnTrafficFilterAssignment_put_AllowInbound(py::wrapper::Windows::Networking::Vpn::VpnTrafficFilterAssignment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12808,7 +12808,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int IVpnCustomPrompt_put_Bordered(py::wrapper::Windows::Networking::Vpn::IVpnCustomPrompt* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12877,7 +12877,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int IVpnCustomPrompt_put_Compulsory(py::wrapper::Windows::Networking::Vpn::IVpnCustomPrompt* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12946,7 +12946,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int IVpnCustomPrompt_put_Label(py::wrapper::Windows::Networking::Vpn::IVpnCustomPrompt* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13275,7 +13275,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int IVpnCustomPromptElement_put_Compulsory(py::wrapper::Windows::Networking::Vpn::IVpnCustomPromptElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13344,7 +13344,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int IVpnCustomPromptElement_put_DisplayName(py::wrapper::Windows::Networking::Vpn::IVpnCustomPromptElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13413,7 +13413,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int IVpnCustomPromptElement_put_Emphasized(py::wrapper::Windows::Networking::Vpn::IVpnCustomPromptElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15390,7 +15390,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int IVpnProfile_put_AlwaysOn(py::wrapper::Windows::Networking::Vpn::IVpnProfile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15519,7 +15519,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int IVpnProfile_put_ProfileName(py::wrapper::Windows::Networking::Vpn::IVpnProfile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15588,7 +15588,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int IVpnProfile_put_RememberCredentials(py::wrapper::Windows::Networking::Vpn::IVpnProfile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

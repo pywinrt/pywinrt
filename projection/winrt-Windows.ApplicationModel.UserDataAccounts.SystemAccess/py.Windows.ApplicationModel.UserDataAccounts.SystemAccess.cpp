@@ -8,7 +8,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
     static PyObject* _new_DeviceAccountConfiguration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -75,7 +75,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
     static int DeviceAccountConfiguration_put_EmailAddress(py::wrapper::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -144,7 +144,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
     static int DeviceAccountConfiguration_put_Domain(py::wrapper::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -213,7 +213,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
     static int DeviceAccountConfiguration_put_DeviceAccountTypeId(py::wrapper::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -282,7 +282,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
     static int DeviceAccountConfiguration_put_OutgoingServerAddress(py::wrapper::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -351,7 +351,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
     static int DeviceAccountConfiguration_put_ContactsSyncEnabled(py::wrapper::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -420,7 +420,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
     static int DeviceAccountConfiguration_put_CalendarSyncEnabled(py::wrapper::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -489,7 +489,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
     static int DeviceAccountConfiguration_put_AccountName(py::wrapper::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -558,7 +558,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
     static int DeviceAccountConfiguration_put_IncomingServerUsername(py::wrapper::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -627,7 +627,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
     static int DeviceAccountConfiguration_put_IncomingServerRequiresSsl(py::wrapper::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -696,7 +696,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
     static int DeviceAccountConfiguration_put_IncomingServerPort(py::wrapper::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -765,7 +765,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
     static int DeviceAccountConfiguration_put_IncomingServerAddress(py::wrapper::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -834,7 +834,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
     static int DeviceAccountConfiguration_put_EmailSyncEnabled(py::wrapper::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -903,7 +903,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
     static int DeviceAccountConfiguration_put_ServerType(py::wrapper::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -972,7 +972,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
     static int DeviceAccountConfiguration_put_OutgoingServerUsername(py::wrapper::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1041,7 +1041,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
     static int DeviceAccountConfiguration_put_OutgoingServerRequiresSsl(py::wrapper::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1110,7 +1110,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
     static int DeviceAccountConfiguration_put_OutgoingServerPort(py::wrapper::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1179,7 +1179,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
     static int DeviceAccountConfiguration_put_AccountIconId(py::wrapper::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1248,7 +1248,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
     static int DeviceAccountConfiguration_put_CalDavServerUrl(py::wrapper::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1317,7 +1317,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
     static int DeviceAccountConfiguration_put_CalDavRequiresSsl(py::wrapper::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1386,7 +1386,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
     static int DeviceAccountConfiguration_put_AutoSelectAuthenticationCertificate(py::wrapper::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1455,7 +1455,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
     static int DeviceAccountConfiguration_put_AuthenticationType(py::wrapper::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1524,7 +1524,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
     static int DeviceAccountConfiguration_put_AuthenticationCertificateId(py::wrapper::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1593,7 +1593,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
     static int DeviceAccountConfiguration_put_IsOutgoingServerAuthenticationEnabled(py::wrapper::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1662,7 +1662,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
     static int DeviceAccountConfiguration_put_IsClientAuthenticationCertificateRequired(py::wrapper::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1731,7 +1731,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
     static int DeviceAccountConfiguration_put_IncomingServerCredential(py::wrapper::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1800,7 +1800,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
     static int DeviceAccountConfiguration_put_IsOutgoingServerAuthenticationRequired(py::wrapper::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1869,7 +1869,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
     static int DeviceAccountConfiguration_put_CardDavSyncScheduleKind(py::wrapper::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1938,7 +1938,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
     static int DeviceAccountConfiguration_put_AlwaysDownloadFullMessage(py::wrapper::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2007,7 +2007,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
     static int DeviceAccountConfiguration_put_CardDavServerUrl(py::wrapper::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2076,7 +2076,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
     static int DeviceAccountConfiguration_put_CardDavRequiresSsl(py::wrapper::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2145,7 +2145,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
     static int DeviceAccountConfiguration_put_CalDavSyncScheduleKind(py::wrapper::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2214,7 +2214,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
     static int DeviceAccountConfiguration_put_IncomingServerCertificateHash(py::wrapper::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2283,7 +2283,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
     static int DeviceAccountConfiguration_put_WasOutgoingServerCertificateHashConfirmed(py::wrapper::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2352,7 +2352,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
     static int DeviceAccountConfiguration_put_WasModifiedByUser(py::wrapper::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2421,7 +2421,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
     static int DeviceAccountConfiguration_put_SyncScheduleKind(py::wrapper::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2490,7 +2490,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
     static int DeviceAccountConfiguration_put_SsoAccountId(py::wrapper::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2559,7 +2559,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
     static int DeviceAccountConfiguration_put_WasIncomingServerCertificateHashConfirmed(py::wrapper::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2628,7 +2628,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
     static int DeviceAccountConfiguration_put_OAuthRefreshToken(py::wrapper::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2697,7 +2697,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
     static int DeviceAccountConfiguration_put_IsExternallyManaged(py::wrapper::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2766,7 +2766,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
     static int DeviceAccountConfiguration_put_MailAgeFilter(py::wrapper::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2835,7 +2835,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
     static int DeviceAccountConfiguration_put_IsSyncScheduleManagedBySystem(py::wrapper::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2904,7 +2904,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
     static int DeviceAccountConfiguration_put_OutgoingServerCertificateHash(py::wrapper::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2973,7 +2973,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
     static int DeviceAccountConfiguration_put_OutgoingServerCredential(py::wrapper::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

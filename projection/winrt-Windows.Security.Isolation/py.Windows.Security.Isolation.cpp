@@ -1722,7 +1722,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* _new_IsolatedWindowsEnvironmentOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1833,7 +1833,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static int IsolatedWindowsEnvironmentOptions_put_PersistUserProfile(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1902,7 +1902,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static int IsolatedWindowsEnvironmentOptions_put_EnvironmentOwnerId(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1971,7 +1971,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static int IsolatedWindowsEnvironmentOptions_put_ClipboardCopyPasteDirections(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2040,7 +2040,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static int IsolatedWindowsEnvironmentOptions_put_AvailablePrinters(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2109,7 +2109,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static int IsolatedWindowsEnvironmentOptions_put_AllowedClipboardFormats(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2178,7 +2178,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static int IsolatedWindowsEnvironmentOptions_put_AllowGraphicsHardwareAcceleration(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2247,7 +2247,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static int IsolatedWindowsEnvironmentOptions_put_AllowCameraAndMicrophoneAccess(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2376,7 +2376,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static int IsolatedWindowsEnvironmentOptions_put_WindowAnnotationOverride(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2445,7 +2445,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static int IsolatedWindowsEnvironmentOptions_put_CreationPriority(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2514,7 +2514,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static int IsolatedWindowsEnvironmentOptions_put_AllowedClipboardFormatsToHost(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2583,7 +2583,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static int IsolatedWindowsEnvironmentOptions_put_AllowedClipboardFormatsToEnvironment(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2831,7 +2831,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* _new_IsolatedWindowsEnvironmentOwnerRegistrationData(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3554,7 +3554,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* _new_IsolatedWindowsEnvironmentShareFileRequestOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3621,7 +3621,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static int IsolatedWindowsEnvironmentShareFileRequestOptions_put_AllowWrite(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFileRequestOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3871,7 +3871,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* _new_IsolatedWindowsEnvironmentShareFolderRequestOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3938,7 +3938,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static int IsolatedWindowsEnvironmentShareFolderRequestOptions_put_AllowWrite(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFolderRequestOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4316,7 +4316,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* _new_IsolatedWindowsEnvironmentTelemetryParameters(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -4383,7 +4383,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static int IsolatedWindowsEnvironmentTelemetryParameters_put_CorrelationId(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentTelemetryParameters* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4933,7 +4933,7 @@ namespace py::cpp::Windows::Security::Isolation
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -5000,7 +5000,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static int IsolatedWindowsEnvironmentCreateProgress_set_State(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreateProgress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5033,7 +5033,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static int IsolatedWindowsEnvironmentCreateProgress_set_PercentComplete(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreateProgress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

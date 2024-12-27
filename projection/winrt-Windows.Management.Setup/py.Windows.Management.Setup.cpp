@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Management::Setup
 
     static PyObject* _new_AgentProvisioningProgressReport(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -75,7 +75,7 @@ namespace py::cpp::Windows::Management::Setup
 
     static int AgentProvisioningProgressReport_put_State(py::wrapper::Windows::Management::Setup::AgentProvisioningProgressReport* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -144,7 +144,7 @@ namespace py::cpp::Windows::Management::Setup
 
     static int AgentProvisioningProgressReport_put_ProgressPercentage(py::wrapper::Windows::Management::Setup::AgentProvisioningProgressReport* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -213,7 +213,7 @@ namespace py::cpp::Windows::Management::Setup
 
     static int AgentProvisioningProgressReport_put_EstimatedTimeRemaining(py::wrapper::Windows::Management::Setup::AgentProvisioningProgressReport* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -282,7 +282,7 @@ namespace py::cpp::Windows::Management::Setup
 
     static int AgentProvisioningProgressReport_put_DisplayProgressSecondary(py::wrapper::Windows::Management::Setup::AgentProvisioningProgressReport* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -351,7 +351,7 @@ namespace py::cpp::Windows::Management::Setup
 
     static int AgentProvisioningProgressReport_put_DisplayProgress(py::wrapper::Windows::Management::Setup::AgentProvisioningProgressReport* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -420,7 +420,7 @@ namespace py::cpp::Windows::Management::Setup
 
     static int AgentProvisioningProgressReport_put_CurrentBatchIndex(py::wrapper::Windows::Management::Setup::AgentProvisioningProgressReport* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -720,7 +720,7 @@ namespace py::cpp::Windows::Management::Setup
 
     static int DeploymentSessionHeartbeatRequestedEventArgs_put_Handled(py::wrapper::Windows::Management::Setup::DeploymentSessionHeartbeatRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -939,7 +939,7 @@ namespace py::cpp::Windows::Management::Setup
 
     static PyObject* _new_DeploymentWorkload(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1008,7 +1008,7 @@ namespace py::cpp::Windows::Management::Setup
 
     static int DeploymentWorkload_put_StateDetails(py::wrapper::Windows::Management::Setup::DeploymentWorkload* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1077,7 +1077,7 @@ namespace py::cpp::Windows::Management::Setup
 
     static int DeploymentWorkload_put_State(py::wrapper::Windows::Management::Setup::DeploymentWorkload* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1146,7 +1146,7 @@ namespace py::cpp::Windows::Management::Setup
 
     static int DeploymentWorkload_put_StartTime(py::wrapper::Windows::Management::Setup::DeploymentWorkload* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1215,7 +1215,7 @@ namespace py::cpp::Windows::Management::Setup
 
     static int DeploymentWorkload_put_PossibleResolution(py::wrapper::Windows::Management::Setup::DeploymentWorkload* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1284,7 +1284,7 @@ namespace py::cpp::Windows::Management::Setup
 
     static int DeploymentWorkload_put_PossibleCause(py::wrapper::Windows::Management::Setup::DeploymentWorkload* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1353,7 +1353,7 @@ namespace py::cpp::Windows::Management::Setup
 
     static int DeploymentWorkload_put_ErrorMessage(py::wrapper::Windows::Management::Setup::DeploymentWorkload* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1422,7 +1422,7 @@ namespace py::cpp::Windows::Management::Setup
 
     static int DeploymentWorkload_put_ErrorCode(py::wrapper::Windows::Management::Setup::DeploymentWorkload* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1491,7 +1491,7 @@ namespace py::cpp::Windows::Management::Setup
 
     static int DeploymentWorkload_put_EndTime(py::wrapper::Windows::Management::Setup::DeploymentWorkload* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1560,7 +1560,7 @@ namespace py::cpp::Windows::Management::Setup
 
     static int DeploymentWorkload_put_DisplayFriendlyName(py::wrapper::Windows::Management::Setup::DeploymentWorkload* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1690,7 +1690,7 @@ namespace py::cpp::Windows::Management::Setup
 
     static PyObject* _new_DeploymentWorkloadBatch(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1759,7 +1759,7 @@ namespace py::cpp::Windows::Management::Setup
 
     static int DeploymentWorkloadBatch_put_DisplayCategoryTitle(py::wrapper::Windows::Management::Setup::DeploymentWorkloadBatch* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

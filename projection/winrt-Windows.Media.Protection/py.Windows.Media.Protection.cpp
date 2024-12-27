@@ -235,7 +235,7 @@ namespace py::cpp::Windows::Media::Protection
 
     static PyObject* _new_HdcpSession(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -584,7 +584,7 @@ namespace py::cpp::Windows::Media::Protection
 
     static PyObject* _new_MediaProtectionManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -904,7 +904,7 @@ namespace py::cpp::Windows::Media::Protection
 
     static PyObject* _new_MediaProtectionPMPServer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1135,7 +1135,7 @@ namespace py::cpp::Windows::Media::Protection
 
     static PyObject* _new_ProtectionCapabilities(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;

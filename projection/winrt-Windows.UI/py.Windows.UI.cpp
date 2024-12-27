@@ -4829,7 +4829,7 @@ namespace py::cpp::Windows::UI
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -4900,7 +4900,7 @@ namespace py::cpp::Windows::UI
 
     static int Color_set_A(py::wrapper::Windows::UI::Color* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4933,7 +4933,7 @@ namespace py::cpp::Windows::UI
 
     static int Color_set_R(py::wrapper::Windows::UI::Color* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4966,7 +4966,7 @@ namespace py::cpp::Windows::UI
 
     static int Color_set_G(py::wrapper::Windows::UI::Color* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4999,7 +4999,7 @@ namespace py::cpp::Windows::UI
 
     static int Color_set_B(py::wrapper::Windows::UI::Color* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5127,7 +5127,7 @@ namespace py::cpp::Windows::UI
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -5192,7 +5192,7 @@ namespace py::cpp::Windows::UI
 
     static int WindowId_set_Value(py::wrapper::Windows::UI::WindowId* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

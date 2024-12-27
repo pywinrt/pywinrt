@@ -598,7 +598,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
 
     static PyObject* _new_WebAuthenticationAddAccountResponse(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1620,7 +1620,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
 
     static PyObject* _new_WebAuthenticationTransferTokenRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1707,7 +1707,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
 
     static int WebAuthenticationTransferTokenRequest_put_TransferToken(py::wrapper::Windows::Security::Authentication::Web::Core::WebAuthenticationTransferTokenRequest* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1776,7 +1776,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
 
     static int WebAuthenticationTransferTokenRequest_put_CorrelationId(py::wrapper::Windows::Security::Authentication::Web::Core::WebAuthenticationTransferTokenRequest* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1930,7 +1930,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
 
     static PyObject* _new_WebProviderError(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2114,7 +2114,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
 
     static PyObject* _new_WebTokenRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2414,7 +2414,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
 
     static int WebTokenRequest_put_CorrelationId(py::wrapper::Windows::Security::Authentication::Web::Core::WebTokenRequest* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2711,7 +2711,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
 
     static PyObject* _new_WebTokenResponse(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;

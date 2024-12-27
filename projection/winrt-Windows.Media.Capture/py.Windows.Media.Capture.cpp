@@ -612,7 +612,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastBackgroundService_put_ViewerCount(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundService* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -681,7 +681,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastBackgroundService_put_StreamInfo(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundService* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -750,7 +750,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastBackgroundService_put_SignInInfo(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundService* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -819,7 +819,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastBackgroundService_put_PlugInState(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundService* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -888,7 +888,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastBackgroundService_put_BroadcastTitle(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundService* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1017,7 +1017,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastBackgroundService_put_BroadcastLanguage(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundService* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1086,7 +1086,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastBackgroundService_put_BroadcastChannel(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundService* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1499,7 +1499,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastBackgroundServiceSignInInfo_put_UserName(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundServiceSignInInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1568,7 +1568,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastBackgroundServiceSignInInfo_put_OAuthRequestUri(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundServiceSignInInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1637,7 +1637,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastBackgroundServiceSignInInfo_put_OAuthCallbackUri(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundServiceSignInInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2012,7 +2012,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastBackgroundServiceStreamInfo_put_DesiredVideoEncodingBitrate(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundServiceStreamInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2081,7 +2081,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastBackgroundServiceStreamInfo_put_BandwidthTestBitrate(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundServiceStreamInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2150,7 +2150,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastBackgroundServiceStreamInfo_put_AudioCodec(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundServiceStreamInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2680,7 +2680,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastGlobalSettings_put_SystemAudioGain(py::wrapper::Windows::Media::Capture::AppBroadcastGlobalSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2749,7 +2749,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastGlobalSettings_put_SelectedCameraId(py::wrapper::Windows::Media::Capture::AppBroadcastGlobalSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2818,7 +2818,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastGlobalSettings_put_MicrophoneGain(py::wrapper::Windows::Media::Capture::AppBroadcastGlobalSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2887,7 +2887,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastGlobalSettings_put_IsMicrophoneCaptureEnabledByDefault(py::wrapper::Windows::Media::Capture::AppBroadcastGlobalSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2956,7 +2956,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastGlobalSettings_put_IsEchoCancellationEnabled(py::wrapper::Windows::Media::Capture::AppBroadcastGlobalSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3025,7 +3025,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastGlobalSettings_put_IsCursorImageCaptureEnabled(py::wrapper::Windows::Media::Capture::AppBroadcastGlobalSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3094,7 +3094,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastGlobalSettings_put_IsCameraCaptureEnabledByDefault(py::wrapper::Windows::Media::Capture::AppBroadcastGlobalSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3163,7 +3163,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastGlobalSettings_put_IsAudioCaptureEnabled(py::wrapper::Windows::Media::Capture::AppBroadcastGlobalSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3232,7 +3232,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastGlobalSettings_put_CameraOverlaySize(py::wrapper::Windows::Media::Capture::AppBroadcastGlobalSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3301,7 +3301,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastGlobalSettings_put_CameraOverlayLocation(py::wrapper::Windows::Media::Capture::AppBroadcastGlobalSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3570,7 +3570,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastHeartbeatRequestedEventArgs_put_Handled(py::wrapper::Windows::Media::Capture::AppBroadcastHeartbeatRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4332,7 +4332,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastPlugInManager_put_DefaultPlugIn(py::wrapper::Windows::Media::Capture::AppBroadcastPlugInManager* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5697,7 +5697,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastProviderSettings_put_VideoEncodingResolutionMode(py::wrapper::Windows::Media::Capture::AppBroadcastProviderSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5766,7 +5766,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastProviderSettings_put_VideoEncodingBitrateMode(py::wrapper::Windows::Media::Capture::AppBroadcastProviderSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5835,7 +5835,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastProviderSettings_put_DefaultBroadcastTitle(py::wrapper::Windows::Media::Capture::AppBroadcastProviderSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5904,7 +5904,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastProviderSettings_put_CustomVideoEncodingWidth(py::wrapper::Windows::Media::Capture::AppBroadcastProviderSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5973,7 +5973,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastProviderSettings_put_CustomVideoEncodingHeight(py::wrapper::Windows::Media::Capture::AppBroadcastProviderSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6042,7 +6042,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastProviderSettings_put_CustomVideoEncodingBitrate(py::wrapper::Windows::Media::Capture::AppBroadcastProviderSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6111,7 +6111,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastProviderSettings_put_AudioEncodingBitrate(py::wrapper::Windows::Media::Capture::AppBroadcastProviderSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6503,7 +6503,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastServices_put_CaptureTargetType(py::wrapper::Windows::Media::Capture::AppBroadcastServices* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6572,7 +6572,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastServices_put_BroadcastTitle(py::wrapper::Windows::Media::Capture::AppBroadcastServices* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6641,7 +6641,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastServices_put_BroadcastLanguage(py::wrapper::Windows::Media::Capture::AppBroadcastServices* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7088,7 +7088,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastState_put_SignInState(py::wrapper::Windows::Media::Capture::AppBroadcastState* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7157,7 +7157,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastState_put_ShouldCaptureMicrophone(py::wrapper::Windows::Media::Capture::AppBroadcastState* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7226,7 +7226,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastState_put_ShouldCaptureCamera(py::wrapper::Windows::Media::Capture::AppBroadcastState* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7295,7 +7295,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppBroadcastState_put_AuthenticationResult(py::wrapper::Windows::Media::Capture::AppBroadcastState* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10064,7 +10064,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureAlternateShortcutKeys_put_ToggleRecordingKeyModifiers(py::wrapper::Windows::Media::Capture::AppCaptureAlternateShortcutKeys* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10133,7 +10133,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureAlternateShortcutKeys_put_ToggleRecordingKey(py::wrapper::Windows::Media::Capture::AppCaptureAlternateShortcutKeys* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10202,7 +10202,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureAlternateShortcutKeys_put_ToggleRecordingIndicatorKeyModifiers(py::wrapper::Windows::Media::Capture::AppCaptureAlternateShortcutKeys* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10271,7 +10271,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureAlternateShortcutKeys_put_ToggleRecordingIndicatorKey(py::wrapper::Windows::Media::Capture::AppCaptureAlternateShortcutKeys* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10340,7 +10340,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureAlternateShortcutKeys_put_ToggleGameBarKeyModifiers(py::wrapper::Windows::Media::Capture::AppCaptureAlternateShortcutKeys* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10409,7 +10409,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureAlternateShortcutKeys_put_ToggleGameBarKey(py::wrapper::Windows::Media::Capture::AppCaptureAlternateShortcutKeys* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10478,7 +10478,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureAlternateShortcutKeys_put_TakeScreenshotKeyModifiers(py::wrapper::Windows::Media::Capture::AppCaptureAlternateShortcutKeys* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10547,7 +10547,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureAlternateShortcutKeys_put_TakeScreenshotKey(py::wrapper::Windows::Media::Capture::AppCaptureAlternateShortcutKeys* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10616,7 +10616,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureAlternateShortcutKeys_put_SaveHistoricalVideoKeyModifiers(py::wrapper::Windows::Media::Capture::AppCaptureAlternateShortcutKeys* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10685,7 +10685,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureAlternateShortcutKeys_put_SaveHistoricalVideoKey(py::wrapper::Windows::Media::Capture::AppCaptureAlternateShortcutKeys* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10754,7 +10754,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureAlternateShortcutKeys_put_ToggleMicrophoneCaptureKeyModifiers(py::wrapper::Windows::Media::Capture::AppCaptureAlternateShortcutKeys* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10823,7 +10823,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureAlternateShortcutKeys_put_ToggleMicrophoneCaptureKey(py::wrapper::Windows::Media::Capture::AppCaptureAlternateShortcutKeys* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10892,7 +10892,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureAlternateShortcutKeys_put_ToggleCameraCaptureKeyModifiers(py::wrapper::Windows::Media::Capture::AppCaptureAlternateShortcutKeys* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10961,7 +10961,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureAlternateShortcutKeys_put_ToggleCameraCaptureKey(py::wrapper::Windows::Media::Capture::AppCaptureAlternateShortcutKeys* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11030,7 +11030,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureAlternateShortcutKeys_put_ToggleBroadcastKeyModifiers(py::wrapper::Windows::Media::Capture::AppCaptureAlternateShortcutKeys* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11099,7 +11099,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureAlternateShortcutKeys_put_ToggleBroadcastKey(py::wrapper::Windows::Media::Capture::AppCaptureAlternateShortcutKeys* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11540,7 +11540,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* _new_AppCaptureMetadataWriter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -13133,7 +13133,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureSettings_put_IsHistoricalCaptureOnWirelessDisplayAllowed(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13202,7 +13202,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureSettings_put_VideoEncodingBitrateMode(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13271,7 +13271,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureSettings_put_IsHistoricalCaptureOnBatteryAllowed(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13340,7 +13340,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureSettings_put_IsAudioCaptureEnabled(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13409,7 +13409,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureSettings_put_IsAppCaptureEnabled(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13478,7 +13478,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureSettings_put_AppCaptureDestinationFolder(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13547,7 +13547,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureSettings_put_HistoricalBufferLength(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13616,7 +13616,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureSettings_put_IsHistoricalCaptureEnabled(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13685,7 +13685,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureSettings_put_CustomVideoEncodingWidth(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13754,7 +13754,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureSettings_put_CustomVideoEncodingHeight(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13823,7 +13823,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureSettings_put_CustomVideoEncodingBitrate(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13892,7 +13892,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureSettings_put_AudioEncodingBitrate(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13961,7 +13961,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureSettings_put_HistoricalBufferLengthUnit(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14030,7 +14030,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureSettings_put_VideoEncodingResolutionMode(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14099,7 +14099,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureSettings_put_ScreenshotDestinationFolder(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14168,7 +14168,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureSettings_put_MaximumRecordLength(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14417,7 +14417,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureSettings_put_IsMicrophoneCaptureEnabled(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14486,7 +14486,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureSettings_put_VideoEncodingFrameRateMode(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14555,7 +14555,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureSettings_put_SystemAudioGain(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14624,7 +14624,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureSettings_put_MicrophoneGain(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14693,7 +14693,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureSettings_put_IsMicrophoneCaptureEnabledByDefault(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14762,7 +14762,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureSettings_put_IsEchoCancellationEnabled(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14831,7 +14831,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureSettings_put_IsCursorImageCaptureEnabled(py::wrapper::Windows::Media::Capture::AppCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15036,7 +15036,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int AppCaptureState_put_ShouldCaptureMicrophone(py::wrapper::Windows::Media::Capture::AppCaptureState* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15386,7 +15386,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* _new_CameraCaptureUI(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -15624,7 +15624,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int CameraCaptureUIPhotoCaptureSettings_put_MaxResolution(py::wrapper::Windows::Media::Capture::CameraCaptureUIPhotoCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15693,7 +15693,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int CameraCaptureUIPhotoCaptureSettings_put_Format(py::wrapper::Windows::Media::Capture::CameraCaptureUIPhotoCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15762,7 +15762,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int CameraCaptureUIPhotoCaptureSettings_put_CroppedSizeInPixels(py::wrapper::Windows::Media::Capture::CameraCaptureUIPhotoCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15831,7 +15831,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int CameraCaptureUIPhotoCaptureSettings_put_CroppedAspectRatio(py::wrapper::Windows::Media::Capture::CameraCaptureUIPhotoCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15900,7 +15900,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int CameraCaptureUIPhotoCaptureSettings_put_AllowCropping(py::wrapper::Windows::Media::Capture::CameraCaptureUIPhotoCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16040,7 +16040,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int CameraCaptureUIVideoCaptureSettings_put_MaxResolution(py::wrapper::Windows::Media::Capture::CameraCaptureUIVideoCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16109,7 +16109,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int CameraCaptureUIVideoCaptureSettings_put_MaxDurationInSeconds(py::wrapper::Windows::Media::Capture::CameraCaptureUIVideoCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16178,7 +16178,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int CameraCaptureUIVideoCaptureSettings_put_Format(py::wrapper::Windows::Media::Capture::CameraCaptureUIVideoCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16247,7 +16247,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int CameraCaptureUIVideoCaptureSettings_put_AllowTrimming(py::wrapper::Windows::Media::Capture::CameraCaptureUIVideoCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -17000,7 +17000,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int CapturedFrame_put_Size(py::wrapper::Windows::Media::Capture::CapturedFrame* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19598,7 +19598,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* _new_MediaCapture(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -22948,7 +22948,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* _new_MediaCaptureInitializationSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -23015,7 +23015,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int MediaCaptureInitializationSettings_put_VideoDeviceId(py::wrapper::Windows::Media::Capture::MediaCaptureInitializationSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -23084,7 +23084,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int MediaCaptureInitializationSettings_put_StreamingCaptureMode(py::wrapper::Windows::Media::Capture::MediaCaptureInitializationSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -23153,7 +23153,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int MediaCaptureInitializationSettings_put_PhotoCaptureSource(py::wrapper::Windows::Media::Capture::MediaCaptureInitializationSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -23222,7 +23222,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int MediaCaptureInitializationSettings_put_AudioDeviceId(py::wrapper::Windows::Media::Capture::MediaCaptureInitializationSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -23291,7 +23291,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int MediaCaptureInitializationSettings_put_MediaCategory(py::wrapper::Windows::Media::Capture::MediaCaptureInitializationSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -23360,7 +23360,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int MediaCaptureInitializationSettings_put_AudioProcessing(py::wrapper::Windows::Media::Capture::MediaCaptureInitializationSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -23429,7 +23429,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int MediaCaptureInitializationSettings_put_VideoSource(py::wrapper::Windows::Media::Capture::MediaCaptureInitializationSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -23498,7 +23498,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int MediaCaptureInitializationSettings_put_AudioSource(py::wrapper::Windows::Media::Capture::MediaCaptureInitializationSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -23567,7 +23567,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int MediaCaptureInitializationSettings_put_VideoProfile(py::wrapper::Windows::Media::Capture::MediaCaptureInitializationSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -23636,7 +23636,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int MediaCaptureInitializationSettings_put_RecordMediaDescription(py::wrapper::Windows::Media::Capture::MediaCaptureInitializationSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -23705,7 +23705,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int MediaCaptureInitializationSettings_put_PreviewMediaDescription(py::wrapper::Windows::Media::Capture::MediaCaptureInitializationSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -23774,7 +23774,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int MediaCaptureInitializationSettings_put_PhotoMediaDescription(py::wrapper::Windows::Media::Capture::MediaCaptureInitializationSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -23843,7 +23843,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int MediaCaptureInitializationSettings_put_SourceGroup(py::wrapper::Windows::Media::Capture::MediaCaptureInitializationSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -23912,7 +23912,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int MediaCaptureInitializationSettings_put_SharingMode(py::wrapper::Windows::Media::Capture::MediaCaptureInitializationSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -23981,7 +23981,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int MediaCaptureInitializationSettings_put_MemoryPreference(py::wrapper::Windows::Media::Capture::MediaCaptureInitializationSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -24050,7 +24050,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int MediaCaptureInitializationSettings_put_AlwaysPlaySystemShutterSound(py::wrapper::Windows::Media::Capture::MediaCaptureInitializationSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -24119,7 +24119,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int MediaCaptureInitializationSettings_put_DeviceUriPasswordCredential(py::wrapper::Windows::Media::Capture::MediaCaptureInitializationSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -24188,7 +24188,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int MediaCaptureInitializationSettings_put_DeviceUri(py::wrapper::Windows::Media::Capture::MediaCaptureInitializationSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -27118,7 +27118,7 @@ namespace py::cpp::Windows::Media::Capture
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -27187,7 +27187,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int WhiteBalanceGain_set_R(py::wrapper::Windows::Media::Capture::WhiteBalanceGain* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -27220,7 +27220,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int WhiteBalanceGain_set_G(py::wrapper::Windows::Media::Capture::WhiteBalanceGain* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -27253,7 +27253,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static int WhiteBalanceGain_set_B(py::wrapper::Windows::Media::Capture::WhiteBalanceGain* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

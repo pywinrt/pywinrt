@@ -1381,7 +1381,7 @@ namespace py::cpp::Windows::Media::Capture::Frames
 
     static int MediaFrameReader_put_AcquisitionMode(py::wrapper::Windows::Media::Capture::Frames::MediaFrameReader* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3754,7 +3754,7 @@ namespace py::cpp::Windows::Media::Capture::Frames
 
     static int MultiSourceMediaFrameReader_put_AcquisitionMode(py::wrapper::Windows::Media::Capture::Frames::MultiSourceMediaFrameReader* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

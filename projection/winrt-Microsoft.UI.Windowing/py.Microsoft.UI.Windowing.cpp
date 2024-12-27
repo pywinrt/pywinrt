@@ -1027,7 +1027,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static int AppWindow_put_Title(py::wrapper::Microsoft::UI::Windowing::AppWindow* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1096,7 +1096,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static int AppWindow_put_IsShownInSwitchers(py::wrapper::Microsoft::UI::Windowing::AppWindow* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2075,7 +2075,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static int AppWindowClosingEventArgs_put_Cancel(py::wrapper::Microsoft::UI::Windowing::AppWindowClosingEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2457,7 +2457,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static int AppWindowTitleBar_put_InactiveForegroundColor(py::wrapper::Microsoft::UI::Windowing::AppWindowTitleBar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2526,7 +2526,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static int AppWindowTitleBar_put_InactiveBackgroundColor(py::wrapper::Microsoft::UI::Windowing::AppWindowTitleBar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2595,7 +2595,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static int AppWindowTitleBar_put_IconShowOptions(py::wrapper::Microsoft::UI::Windowing::AppWindowTitleBar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2664,7 +2664,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static int AppWindowTitleBar_put_ForegroundColor(py::wrapper::Microsoft::UI::Windowing::AppWindowTitleBar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2733,7 +2733,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static int AppWindowTitleBar_put_ExtendsContentIntoTitleBar(py::wrapper::Microsoft::UI::Windowing::AppWindowTitleBar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2802,7 +2802,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static int AppWindowTitleBar_put_ButtonPressedForegroundColor(py::wrapper::Microsoft::UI::Windowing::AppWindowTitleBar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2871,7 +2871,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static int AppWindowTitleBar_put_ButtonPressedBackgroundColor(py::wrapper::Microsoft::UI::Windowing::AppWindowTitleBar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2940,7 +2940,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static int AppWindowTitleBar_put_ButtonInactiveForegroundColor(py::wrapper::Microsoft::UI::Windowing::AppWindowTitleBar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3009,7 +3009,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static int AppWindowTitleBar_put_ButtonInactiveBackgroundColor(py::wrapper::Microsoft::UI::Windowing::AppWindowTitleBar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3078,7 +3078,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static int AppWindowTitleBar_put_ButtonHoverForegroundColor(py::wrapper::Microsoft::UI::Windowing::AppWindowTitleBar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3147,7 +3147,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static int AppWindowTitleBar_put_ButtonHoverBackgroundColor(py::wrapper::Microsoft::UI::Windowing::AppWindowTitleBar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3216,7 +3216,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static int AppWindowTitleBar_put_ButtonForegroundColor(py::wrapper::Microsoft::UI::Windowing::AppWindowTitleBar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3285,7 +3285,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static int AppWindowTitleBar_put_ButtonBackgroundColor(py::wrapper::Microsoft::UI::Windowing::AppWindowTitleBar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3354,7 +3354,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static int AppWindowTitleBar_put_BackgroundColor(py::wrapper::Microsoft::UI::Windowing::AppWindowTitleBar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3513,7 +3513,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static int AppWindowTitleBar_put_PreferredHeightOption(py::wrapper::Microsoft::UI::Windowing::AppWindowTitleBar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3734,7 +3734,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static int CompactOverlayPresenter_put_InitialSize(py::wrapper::Microsoft::UI::Windowing::CompactOverlayPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5460,7 +5460,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static int OverlappedPresenter_put_IsResizable(py::wrapper::Microsoft::UI::Windowing::OverlappedPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5529,7 +5529,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static int OverlappedPresenter_put_IsModal(py::wrapper::Microsoft::UI::Windowing::OverlappedPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5598,7 +5598,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static int OverlappedPresenter_put_IsMinimizable(py::wrapper::Microsoft::UI::Windowing::OverlappedPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5667,7 +5667,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static int OverlappedPresenter_put_IsMaximizable(py::wrapper::Microsoft::UI::Windowing::OverlappedPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5736,7 +5736,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static int OverlappedPresenter_put_IsAlwaysOnTop(py::wrapper::Microsoft::UI::Windowing::OverlappedPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

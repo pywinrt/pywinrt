@@ -8,7 +8,7 @@ namespace py::cpp::Windows::UI::Xaml::Printing
 
     static PyObject* _new_AddPagesEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -127,7 +127,7 @@ namespace py::cpp::Windows::UI::Xaml::Printing
 
     static PyObject* _new_GetPreviewPageEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -246,7 +246,7 @@ namespace py::cpp::Windows::UI::Xaml::Printing
 
     static PyObject* _new_PaginateEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -426,7 +426,7 @@ namespace py::cpp::Windows::UI::Xaml::Printing
 
     static PyObject* _new_PrintDocument(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;

@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* _new_JsonArray(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1583,7 +1583,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* _new_JsonObject(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3008,7 +3008,8 @@ namespace py::cpp::Windows::Data::Json
                 return self->obj.TryLookup(_key);
             }();
 
-            if (!value) {
+            if (!value)
+            {
                 if constexpr (std::is_base_of_v<winrt::Windows::Foundation::IUnknown, decltype(value)>)
                 {
                     auto has_key = [&]()
@@ -3042,13 +3043,15 @@ namespace py::cpp::Windows::Data::Json
         {
             auto _key = py::convert_to<winrt::hstring>(key);
 
-            if (value == nullptr) {
+            if (!value)
+            {
                 bool did_remove;
                 {
                     auto _gil = py::release_gil();
                     did_remove = self->obj.TryRemove(_key);
                 }
-                if (!did_remove) {
+                if (!did_remove)
+                {
                     PyErr_SetObject(PyExc_KeyError, key);
                     return -1;
                 }

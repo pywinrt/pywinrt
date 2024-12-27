@@ -8,7 +8,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static PyObject* _new_AccessKeyDisplayDismissedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -96,7 +96,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static PyObject* _new_AccessKeyDisplayRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -215,7 +215,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static PyObject* _new_AccessKeyInvokedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -282,7 +282,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static int AccessKeyInvokedEventArgs_put_Handled(py::wrapper::Microsoft::UI::Xaml::Input::AccessKeyInvokedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -502,7 +502,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static int AccessKeyManager_put_AreKeyTipsEnabled(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -763,7 +763,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static int CanExecuteRequestedEventArgs_put_CanExecute(py::wrapper::Microsoft::UI::Xaml::Input::CanExecuteRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -930,7 +930,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static int CharacterReceivedRoutedEventArgs_put_Handled(py::wrapper::Microsoft::UI::Xaml::Input::CharacterReceivedRoutedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1083,7 +1083,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static PyObject* _new_ContextRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1206,7 +1206,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static int ContextRequestedEventArgs_put_Handled(py::wrapper::Microsoft::UI::Xaml::Input::ContextRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1298,7 +1298,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static PyObject* _new_DoubleTappedRoutedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1407,7 +1407,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static int DoubleTappedRoutedEventArgs_put_Handled(py::wrapper::Microsoft::UI::Xaml::Input::DoubleTappedRoutedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1627,7 +1627,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static PyObject* _new_FindNextElementOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1694,7 +1694,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static int FindNextElementOptions_put_XYFocusNavigationStrategyOverride(py::wrapper::Microsoft::UI::Xaml::Input::FindNextElementOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1763,7 +1763,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static int FindNextElementOptions_put_SearchRoot(py::wrapper::Microsoft::UI::Xaml::Input::FindNextElementOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1832,7 +1832,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static int FindNextElementOptions_put_HintRect(py::wrapper::Microsoft::UI::Xaml::Input::FindNextElementOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1901,7 +1901,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static int FindNextElementOptions_put_ExclusionRect(py::wrapper::Microsoft::UI::Xaml::Input::FindNextElementOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3396,7 +3396,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static int GettingFocusEventArgs_put_NewFocusedElement(py::wrapper::Microsoft::UI::Xaml::Input::GettingFocusEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3465,7 +3465,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static int GettingFocusEventArgs_put_Handled(py::wrapper::Microsoft::UI::Xaml::Input::GettingFocusEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3534,7 +3534,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static int GettingFocusEventArgs_put_Cancel(py::wrapper::Microsoft::UI::Xaml::Input::GettingFocusEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3784,7 +3784,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static PyObject* _new_HoldingRoutedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3893,7 +3893,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static int HoldingRoutedEventArgs_put_Handled(py::wrapper::Microsoft::UI::Xaml::Input::HoldingRoutedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4092,7 +4092,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static int InertiaExpansionBehavior_put_DesiredExpansion(py::wrapper::Microsoft::UI::Xaml::Input::InertiaExpansionBehavior* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4161,7 +4161,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static int InertiaExpansionBehavior_put_DesiredDeceleration(py::wrapper::Microsoft::UI::Xaml::Input::InertiaExpansionBehavior* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4298,7 +4298,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static int InertiaRotationBehavior_put_DesiredRotation(py::wrapper::Microsoft::UI::Xaml::Input::InertiaRotationBehavior* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4367,7 +4367,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static int InertiaRotationBehavior_put_DesiredDeceleration(py::wrapper::Microsoft::UI::Xaml::Input::InertiaRotationBehavior* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4504,7 +4504,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static int InertiaTranslationBehavior_put_DesiredDisplacement(py::wrapper::Microsoft::UI::Xaml::Input::InertiaTranslationBehavior* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4573,7 +4573,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static int InertiaTranslationBehavior_put_DesiredDeceleration(py::wrapper::Microsoft::UI::Xaml::Input::InertiaTranslationBehavior* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4665,7 +4665,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static PyObject* _new_InputScope(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -4784,7 +4784,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static PyObject* _new_InputScopeName(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -4866,7 +4866,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static int InputScopeName_put_NameValue(py::wrapper::Microsoft::UI::Xaml::Input::InputScopeName* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5002,7 +5002,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static int KeyRoutedEventArgs_put_Handled(py::wrapper::Microsoft::UI::Xaml::Input::KeyRoutedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5247,7 +5247,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static PyObject* _new_KeyboardAccelerator(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -5344,7 +5344,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static int KeyboardAccelerator_put_ScopeOwner(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5413,7 +5413,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static int KeyboardAccelerator_put_Modifiers(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5482,7 +5482,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static int KeyboardAccelerator_put_Key(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5551,7 +5551,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static int KeyboardAccelerator_put_IsEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5906,7 +5906,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static int KeyboardAcceleratorInvokedEventArgs_put_Handled(py::wrapper::Microsoft::UI::Xaml::Input::KeyboardAcceleratorInvokedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6186,7 +6186,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static int LosingFocusEventArgs_put_NewFocusedElement(py::wrapper::Microsoft::UI::Xaml::Input::LosingFocusEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6255,7 +6255,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static int LosingFocusEventArgs_put_Handled(py::wrapper::Microsoft::UI::Xaml::Input::LosingFocusEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6324,7 +6324,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static int LosingFocusEventArgs_put_Cancel(py::wrapper::Microsoft::UI::Xaml::Input::LosingFocusEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6574,7 +6574,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static PyObject* _new_ManipulationCompletedRoutedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -6641,7 +6641,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static int ManipulationCompletedRoutedEventArgs_put_Handled(py::wrapper::Microsoft::UI::Xaml::Input::ManipulationCompletedRoutedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6918,7 +6918,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static PyObject* _new_ManipulationDeltaRoutedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -7026,7 +7026,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static int ManipulationDeltaRoutedEventArgs_put_Handled(py::wrapper::Microsoft::UI::Xaml::Input::ManipulationDeltaRoutedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7335,7 +7335,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static PyObject* _new_ManipulationInertiaStartingRoutedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -7402,7 +7402,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static int ManipulationInertiaStartingRoutedEventArgs_put_TranslationBehavior(py::wrapper::Microsoft::UI::Xaml::Input::ManipulationInertiaStartingRoutedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7471,7 +7471,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static int ManipulationInertiaStartingRoutedEventArgs_put_RotationBehavior(py::wrapper::Microsoft::UI::Xaml::Input::ManipulationInertiaStartingRoutedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7540,7 +7540,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static int ManipulationInertiaStartingRoutedEventArgs_put_Handled(py::wrapper::Microsoft::UI::Xaml::Input::ManipulationInertiaStartingRoutedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7609,7 +7609,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static int ManipulationInertiaStartingRoutedEventArgs_put_ExpansionBehavior(py::wrapper::Microsoft::UI::Xaml::Input::ManipulationInertiaStartingRoutedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7858,7 +7858,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static PyObject* _new_ManipulationPivot(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -7941,7 +7941,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static int ManipulationPivot_put_Radius(py::wrapper::Microsoft::UI::Xaml::Input::ManipulationPivot* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8010,7 +8010,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static int ManipulationPivot_put_Center(py::wrapper::Microsoft::UI::Xaml::Input::ManipulationPivot* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8132,7 +8132,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static PyObject* _new_ManipulationStartedRoutedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -8270,7 +8270,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static int ManipulationStartedRoutedEventArgs_put_Handled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8511,7 +8511,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static PyObject* _new_ManipulationStartingRoutedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -8578,7 +8578,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static int ManipulationStartingRoutedEventArgs_put_Pivot(py::wrapper::Microsoft::UI::Xaml::Input::ManipulationStartingRoutedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8647,7 +8647,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static int ManipulationStartingRoutedEventArgs_put_Mode(py::wrapper::Microsoft::UI::Xaml::Input::ManipulationStartingRoutedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8716,7 +8716,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static int ManipulationStartingRoutedEventArgs_put_Handled(py::wrapper::Microsoft::UI::Xaml::Input::ManipulationStartingRoutedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8785,7 +8785,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static int ManipulationStartingRoutedEventArgs_put_Container(py::wrapper::Microsoft::UI::Xaml::Input::ManipulationStartingRoutedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8924,7 +8924,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static int NoFocusCandidateFoundEventArgs_put_Handled(py::wrapper::Microsoft::UI::Xaml::Input::NoFocusCandidateFoundEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9396,7 +9396,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static int PointerRoutedEventArgs_put_Handled(py::wrapper::Microsoft::UI::Xaml::Input::PointerRoutedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9627,7 +9627,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static int ProcessKeyboardAcceleratorEventArgs_put_Handled(py::wrapper::Microsoft::UI::Xaml::Input::ProcessKeyboardAcceleratorEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9780,7 +9780,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static PyObject* _new_RightTappedRoutedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -9889,7 +9889,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static int RightTappedRoutedEventArgs_put_Handled(py::wrapper::Microsoft::UI::Xaml::Input::RightTappedRoutedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10043,7 +10043,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static PyObject* _new_StandardUICommand(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -10178,7 +10178,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static int StandardUICommand_put_Kind(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10325,7 +10325,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static PyObject* _new_TappedRoutedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -10434,7 +10434,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static int TappedRoutedEventArgs_put_Handled(py::wrapper::Microsoft::UI::Xaml::Input::TappedRoutedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10587,7 +10587,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static PyObject* _new_XamlUICommand(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -10810,7 +10810,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static int XamlUICommand_put_Label(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10879,7 +10879,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static int XamlUICommand_put_IconSource(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10948,7 +10948,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static int XamlUICommand_put_Description(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11017,7 +11017,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static int XamlUICommand_put_Command(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11086,7 +11086,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
 
     static int XamlUICommand_put_AccessKey(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

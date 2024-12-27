@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* _new_SyndicationAttribute(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -92,7 +92,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationAttribute_put_Value(py::wrapper::Windows::Web::Syndication::SyndicationAttribute* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -161,7 +161,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationAttribute_put_Namespace(py::wrapper::Windows::Web::Syndication::SyndicationAttribute* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -230,7 +230,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationAttribute_put_Name(py::wrapper::Windows::Web::Syndication::SyndicationAttribute* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -323,7 +323,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* _new_SyndicationCategory(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -464,7 +464,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationCategory_put_Term(py::wrapper::Windows::Web::Syndication::SyndicationCategory* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -533,7 +533,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationCategory_put_Scheme(py::wrapper::Windows::Web::Syndication::SyndicationCategory* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -602,7 +602,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationCategory_put_Label(py::wrapper::Windows::Web::Syndication::SyndicationCategory* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -671,7 +671,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationCategory_put_NodeValue(py::wrapper::Windows::Web::Syndication::SyndicationCategory* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -740,7 +740,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationCategory_put_NodeNamespace(py::wrapper::Windows::Web::Syndication::SyndicationCategory* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -809,7 +809,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationCategory_put_NodeName(py::wrapper::Windows::Web::Syndication::SyndicationCategory* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -878,7 +878,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationCategory_put_Language(py::wrapper::Windows::Web::Syndication::SyndicationCategory* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -947,7 +947,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationCategory_put_BaseUri(py::wrapper::Windows::Web::Syndication::SyndicationCategory* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1108,7 +1108,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* _new_SyndicationClient(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1276,7 +1276,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationClient_put_Timeout(py::wrapper::Windows::Web::Syndication::SyndicationClient* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1345,7 +1345,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationClient_put_ServerCredential(py::wrapper::Windows::Web::Syndication::SyndicationClient* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1414,7 +1414,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationClient_put_ProxyCredential(py::wrapper::Windows::Web::Syndication::SyndicationClient* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1483,7 +1483,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationClient_put_MaxResponseBufferSize(py::wrapper::Windows::Web::Syndication::SyndicationClient* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1552,7 +1552,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationClient_put_BypassCacheOnRetrieve(py::wrapper::Windows::Web::Syndication::SyndicationClient* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1649,7 +1649,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* _new_SyndicationContent(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1789,7 +1789,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationContent_put_SourceUri(py::wrapper::Windows::Web::Syndication::SyndicationContent* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1858,7 +1858,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationContent_put_NodeValue(py::wrapper::Windows::Web::Syndication::SyndicationContent* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1927,7 +1927,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationContent_put_BaseUri(py::wrapper::Windows::Web::Syndication::SyndicationContent* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1996,7 +1996,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationContent_put_Language(py::wrapper::Windows::Web::Syndication::SyndicationContent* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2065,7 +2065,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationContent_put_NodeName(py::wrapper::Windows::Web::Syndication::SyndicationContent* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2134,7 +2134,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationContent_put_NodeNamespace(py::wrapper::Windows::Web::Syndication::SyndicationContent* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2263,7 +2263,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationContent_put_Text(py::wrapper::Windows::Web::Syndication::SyndicationContent* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2332,7 +2332,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationContent_put_Type(py::wrapper::Windows::Web::Syndication::SyndicationContent* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2401,7 +2401,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationContent_put_Xml(py::wrapper::Windows::Web::Syndication::SyndicationContent* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2602,7 +2602,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* _new_SyndicationFeed(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2814,7 +2814,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationFeed_put_Title(py::wrapper::Windows::Web::Syndication::SyndicationFeed* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2883,7 +2883,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationFeed_put_Subtitle(py::wrapper::Windows::Web::Syndication::SyndicationFeed* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2952,7 +2952,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationFeed_put_Rights(py::wrapper::Windows::Web::Syndication::SyndicationFeed* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3021,7 +3021,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationFeed_put_Generator(py::wrapper::Windows::Web::Syndication::SyndicationFeed* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3090,7 +3090,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationFeed_put_LastUpdatedTime(py::wrapper::Windows::Web::Syndication::SyndicationFeed* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3159,7 +3159,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationFeed_put_ImageUri(py::wrapper::Windows::Web::Syndication::SyndicationFeed* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3228,7 +3228,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationFeed_put_IconUri(py::wrapper::Windows::Web::Syndication::SyndicationFeed* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3297,7 +3297,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationFeed_put_Id(py::wrapper::Windows::Web::Syndication::SyndicationFeed* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3666,7 +3666,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationFeed_put_NodeValue(py::wrapper::Windows::Web::Syndication::SyndicationFeed* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3735,7 +3735,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationFeed_put_NodeNamespace(py::wrapper::Windows::Web::Syndication::SyndicationFeed* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3804,7 +3804,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationFeed_put_NodeName(py::wrapper::Windows::Web::Syndication::SyndicationFeed* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3873,7 +3873,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationFeed_put_Language(py::wrapper::Windows::Web::Syndication::SyndicationFeed* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3942,7 +3942,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationFeed_put_BaseUri(py::wrapper::Windows::Web::Syndication::SyndicationFeed* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4120,7 +4120,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* _new_SyndicationGenerator(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -4244,7 +4244,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationGenerator_put_Version(py::wrapper::Windows::Web::Syndication::SyndicationGenerator* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4313,7 +4313,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationGenerator_put_Uri(py::wrapper::Windows::Web::Syndication::SyndicationGenerator* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4382,7 +4382,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationGenerator_put_Text(py::wrapper::Windows::Web::Syndication::SyndicationGenerator* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4451,7 +4451,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationGenerator_put_NodeValue(py::wrapper::Windows::Web::Syndication::SyndicationGenerator* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4520,7 +4520,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationGenerator_put_NodeNamespace(py::wrapper::Windows::Web::Syndication::SyndicationGenerator* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4589,7 +4589,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationGenerator_put_NodeName(py::wrapper::Windows::Web::Syndication::SyndicationGenerator* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4658,7 +4658,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationGenerator_put_Language(py::wrapper::Windows::Web::Syndication::SyndicationGenerator* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4727,7 +4727,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationGenerator_put_BaseUri(py::wrapper::Windows::Web::Syndication::SyndicationGenerator* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4888,7 +4888,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* _new_SyndicationItem(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -5100,7 +5100,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationItem_put_Title(py::wrapper::Windows::Web::Syndication::SyndicationItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5169,7 +5169,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationItem_put_Source(py::wrapper::Windows::Web::Syndication::SyndicationItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5238,7 +5238,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationItem_put_Rights(py::wrapper::Windows::Web::Syndication::SyndicationItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5307,7 +5307,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationItem_put_Summary(py::wrapper::Windows::Web::Syndication::SyndicationItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5376,7 +5376,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationItem_put_PublishedDate(py::wrapper::Windows::Web::Syndication::SyndicationItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5445,7 +5445,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationItem_put_CommentsUri(py::wrapper::Windows::Web::Syndication::SyndicationItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5514,7 +5514,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationItem_put_Id(py::wrapper::Windows::Web::Syndication::SyndicationItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5583,7 +5583,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationItem_put_LastUpdatedTime(py::wrapper::Windows::Web::Syndication::SyndicationItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5652,7 +5652,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationItem_put_Content(py::wrapper::Windows::Web::Syndication::SyndicationItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5961,7 +5961,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationItem_put_NodeValue(py::wrapper::Windows::Web::Syndication::SyndicationItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6030,7 +6030,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationItem_put_NodeNamespace(py::wrapper::Windows::Web::Syndication::SyndicationItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6099,7 +6099,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationItem_put_NodeName(py::wrapper::Windows::Web::Syndication::SyndicationItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6168,7 +6168,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationItem_put_Language(py::wrapper::Windows::Web::Syndication::SyndicationItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6237,7 +6237,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationItem_put_BaseUri(py::wrapper::Windows::Web::Syndication::SyndicationItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6414,7 +6414,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* _new_SyndicationLink(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -6557,7 +6557,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationLink_put_Uri(py::wrapper::Windows::Web::Syndication::SyndicationLink* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6626,7 +6626,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationLink_put_Title(py::wrapper::Windows::Web::Syndication::SyndicationLink* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6695,7 +6695,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationLink_put_ResourceLanguage(py::wrapper::Windows::Web::Syndication::SyndicationLink* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6764,7 +6764,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationLink_put_Relationship(py::wrapper::Windows::Web::Syndication::SyndicationLink* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6833,7 +6833,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationLink_put_MediaType(py::wrapper::Windows::Web::Syndication::SyndicationLink* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6902,7 +6902,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationLink_put_Length(py::wrapper::Windows::Web::Syndication::SyndicationLink* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6971,7 +6971,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationLink_put_NodeValue(py::wrapper::Windows::Web::Syndication::SyndicationLink* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7040,7 +7040,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationLink_put_NodeNamespace(py::wrapper::Windows::Web::Syndication::SyndicationLink* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7109,7 +7109,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationLink_put_NodeName(py::wrapper::Windows::Web::Syndication::SyndicationLink* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7178,7 +7178,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationLink_put_Language(py::wrapper::Windows::Web::Syndication::SyndicationLink* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7247,7 +7247,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationLink_put_BaseUri(py::wrapper::Windows::Web::Syndication::SyndicationLink* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7411,7 +7411,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* _new_SyndicationNode(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -7537,7 +7537,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationNode_put_NodeValue(py::wrapper::Windows::Web::Syndication::SyndicationNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7606,7 +7606,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationNode_put_NodeNamespace(py::wrapper::Windows::Web::Syndication::SyndicationNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7675,7 +7675,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationNode_put_NodeName(py::wrapper::Windows::Web::Syndication::SyndicationNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7744,7 +7744,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationNode_put_Language(py::wrapper::Windows::Web::Syndication::SyndicationNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7813,7 +7813,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationNode_put_BaseUri(py::wrapper::Windows::Web::Syndication::SyndicationNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7971,7 +7971,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* _new_SyndicationPerson(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -8112,7 +8112,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationPerson_put_NodeValue(py::wrapper::Windows::Web::Syndication::SyndicationPerson* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8181,7 +8181,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationPerson_put_NodeNamespace(py::wrapper::Windows::Web::Syndication::SyndicationPerson* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8250,7 +8250,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationPerson_put_NodeName(py::wrapper::Windows::Web::Syndication::SyndicationPerson* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8319,7 +8319,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationPerson_put_Language(py::wrapper::Windows::Web::Syndication::SyndicationPerson* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8388,7 +8388,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationPerson_put_BaseUri(py::wrapper::Windows::Web::Syndication::SyndicationPerson* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8517,7 +8517,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationPerson_put_Uri(py::wrapper::Windows::Web::Syndication::SyndicationPerson* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8586,7 +8586,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationPerson_put_Name(py::wrapper::Windows::Web::Syndication::SyndicationPerson* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8655,7 +8655,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationPerson_put_Email(py::wrapper::Windows::Web::Syndication::SyndicationPerson* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8756,7 +8756,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* _new_SyndicationText(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -8896,7 +8896,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationText_put_NodeValue(py::wrapper::Windows::Web::Syndication::SyndicationText* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8965,7 +8965,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationText_put_NodeNamespace(py::wrapper::Windows::Web::Syndication::SyndicationText* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9034,7 +9034,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationText_put_NodeName(py::wrapper::Windows::Web::Syndication::SyndicationText* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9103,7 +9103,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationText_put_Language(py::wrapper::Windows::Web::Syndication::SyndicationText* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9172,7 +9172,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationText_put_BaseUri(py::wrapper::Windows::Web::Syndication::SyndicationText* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9301,7 +9301,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationText_put_Xml(py::wrapper::Windows::Web::Syndication::SyndicationText* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9370,7 +9370,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationText_put_Type(py::wrapper::Windows::Web::Syndication::SyndicationText* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9439,7 +9439,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int SyndicationText_put_Text(py::wrapper::Windows::Web::Syndication::SyndicationText* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9671,7 +9671,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int ISyndicationClient_put_BypassCacheOnRetrieve(py::wrapper::Windows::Web::Syndication::ISyndicationClient* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9740,7 +9740,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int ISyndicationClient_put_MaxResponseBufferSize(py::wrapper::Windows::Web::Syndication::ISyndicationClient* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9809,7 +9809,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int ISyndicationClient_put_ProxyCredential(py::wrapper::Windows::Web::Syndication::ISyndicationClient* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9878,7 +9878,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int ISyndicationClient_put_ServerCredential(py::wrapper::Windows::Web::Syndication::ISyndicationClient* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9947,7 +9947,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int ISyndicationClient_put_Timeout(py::wrapper::Windows::Web::Syndication::ISyndicationClient* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10512,7 +10512,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int ISyndicationNode_put_BaseUri(py::wrapper::Windows::Web::Syndication::ISyndicationNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10611,7 +10611,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int ISyndicationNode_put_Language(py::wrapper::Windows::Web::Syndication::ISyndicationNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10680,7 +10680,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int ISyndicationNode_put_NodeName(py::wrapper::Windows::Web::Syndication::ISyndicationNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10749,7 +10749,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int ISyndicationNode_put_NodeNamespace(py::wrapper::Windows::Web::Syndication::ISyndicationNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10818,7 +10818,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int ISyndicationNode_put_NodeValue(py::wrapper::Windows::Web::Syndication::ISyndicationNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11352,7 +11352,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int ISyndicationText_put_Text(py::wrapper::Windows::Web::Syndication::ISyndicationText* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11421,7 +11421,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int ISyndicationText_put_Type(py::wrapper::Windows::Web::Syndication::ISyndicationText* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11490,7 +11490,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int ISyndicationText_put_Xml(py::wrapper::Windows::Web::Syndication::ISyndicationText* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11589,7 +11589,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int ISyndicationText_put_BaseUri(py::wrapper::Windows::Web::Syndication::ISyndicationText* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11688,7 +11688,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int ISyndicationText_put_Language(py::wrapper::Windows::Web::Syndication::ISyndicationText* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11757,7 +11757,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int ISyndicationText_put_NodeName(py::wrapper::Windows::Web::Syndication::ISyndicationText* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11826,7 +11826,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int ISyndicationText_put_NodeNamespace(py::wrapper::Windows::Web::Syndication::ISyndicationText* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11895,7 +11895,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int ISyndicationText_put_NodeValue(py::wrapper::Windows::Web::Syndication::ISyndicationText* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12490,7 +12490,7 @@ namespace py::cpp::Windows::Web::Syndication
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -12557,7 +12557,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int RetrievalProgress_set_BytesRetrieved(py::wrapper::Windows::Web::Syndication::RetrievalProgress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12590,7 +12590,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int RetrievalProgress_set_TotalBytesToRetrieve(py::wrapper::Windows::Web::Syndication::RetrievalProgress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12704,7 +12704,7 @@ namespace py::cpp::Windows::Web::Syndication
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -12775,7 +12775,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int TransferProgress_set_BytesSent(py::wrapper::Windows::Web::Syndication::TransferProgress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12808,7 +12808,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int TransferProgress_set_TotalBytesToSend(py::wrapper::Windows::Web::Syndication::TransferProgress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12841,7 +12841,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int TransferProgress_set_BytesRetrieved(py::wrapper::Windows::Web::Syndication::TransferProgress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12874,7 +12874,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static int TransferProgress_set_TotalBytesToRetrieve(py::wrapper::Windows::Web::Syndication::TransferProgress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

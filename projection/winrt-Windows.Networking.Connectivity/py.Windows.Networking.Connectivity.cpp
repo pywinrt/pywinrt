@@ -229,7 +229,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* _new_CellularApnContext(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -296,7 +296,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static int CellularApnContext_put_UserName(py::wrapper::Windows::Networking::Connectivity::CellularApnContext* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -365,7 +365,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static int CellularApnContext_put_ProviderId(py::wrapper::Windows::Networking::Connectivity::CellularApnContext* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -434,7 +434,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static int CellularApnContext_put_Password(py::wrapper::Windows::Networking::Connectivity::CellularApnContext* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -503,7 +503,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static int CellularApnContext_put_IsCompressionEnabled(py::wrapper::Windows::Networking::Connectivity::CellularApnContext* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -572,7 +572,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static int CellularApnContext_put_AuthenticationType(py::wrapper::Windows::Networking::Connectivity::CellularApnContext* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -641,7 +641,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static int CellularApnContext_put_AccessPointName(py::wrapper::Windows::Networking::Connectivity::CellularApnContext* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -710,7 +710,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static int CellularApnContext_put_ProfileName(py::wrapper::Windows::Networking::Connectivity::CellularApnContext* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1973,7 +1973,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* _new_ConnectionProfileFilter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2040,7 +2040,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static int ConnectionProfileFilter_put_ServiceProviderGuid(py::wrapper::Windows::Networking::Connectivity::ConnectionProfileFilter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2109,7 +2109,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static int ConnectionProfileFilter_put_NetworkCostType(py::wrapper::Windows::Networking::Connectivity::ConnectionProfileFilter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2178,7 +2178,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static int ConnectionProfileFilter_put_IsWwanConnectionProfile(py::wrapper::Windows::Networking::Connectivity::ConnectionProfileFilter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2247,7 +2247,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static int ConnectionProfileFilter_put_IsWlanConnectionProfile(py::wrapper::Windows::Networking::Connectivity::ConnectionProfileFilter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2316,7 +2316,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static int ConnectionProfileFilter_put_IsConnected(py::wrapper::Windows::Networking::Connectivity::ConnectionProfileFilter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2385,7 +2385,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static int ConnectionProfileFilter_put_IsRoaming(py::wrapper::Windows::Networking::Connectivity::ConnectionProfileFilter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2454,7 +2454,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static int ConnectionProfileFilter_put_IsOverDataLimit(py::wrapper::Windows::Networking::Connectivity::ConnectionProfileFilter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2523,7 +2523,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static int ConnectionProfileFilter_put_IsBackgroundDataUsageRestricted(py::wrapper::Windows::Networking::Connectivity::ConnectionProfileFilter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2622,7 +2622,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static int ConnectionProfileFilter_put_PurposeGuid(py::wrapper::Windows::Networking::Connectivity::ConnectionProfileFilter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5829,7 +5829,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* _new_RoutePolicy(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -6409,7 +6409,7 @@ namespace py::cpp::Windows::Networking::Connectivity
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -6476,7 +6476,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static int NetworkUsageStates_set_Roaming(py::wrapper::Windows::Networking::Connectivity::NetworkUsageStates* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6509,7 +6509,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static int NetworkUsageStates_set_Shared(py::wrapper::Windows::Networking::Connectivity::NetworkUsageStates* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

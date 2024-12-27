@@ -540,7 +540,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* _new_SmartCardAppletIdGroup(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -625,7 +625,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static int SmartCardAppletIdGroup_put_SmartCardEmulationType(py::wrapper::Windows::Devices::SmartCards::SmartCardAppletIdGroup* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -694,7 +694,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static int SmartCardAppletIdGroup_put_SmartCardEmulationCategory(py::wrapper::Windows::Devices::SmartCards::SmartCardAppletIdGroup* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -763,7 +763,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static int SmartCardAppletIdGroup_put_DisplayName(py::wrapper::Windows::Devices::SmartCards::SmartCardAppletIdGroup* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -832,7 +832,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static int SmartCardAppletIdGroup_put_AutomaticEnablement(py::wrapper::Windows::Devices::SmartCards::SmartCardAppletIdGroup* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -931,7 +931,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static int SmartCardAppletIdGroup_put_SecureUserAuthenticationRequired(py::wrapper::Windows::Devices::SmartCards::SmartCardAppletIdGroup* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1000,7 +1000,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static int SmartCardAppletIdGroup_put_Logo(py::wrapper::Windows::Devices::SmartCards::SmartCardAppletIdGroup* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1069,7 +1069,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static int SmartCardAppletIdGroup_put_Description(py::wrapper::Windows::Devices::SmartCards::SmartCardAppletIdGroup* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1573,7 +1573,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* _new_SmartCardAutomaticResponseApdu(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1643,7 +1643,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static int SmartCardAutomaticResponseApdu_put_ShouldMatchLength(py::wrapper::Windows::Devices::SmartCards::SmartCardAutomaticResponseApdu* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1712,7 +1712,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static int SmartCardAutomaticResponseApdu_put_ResponseApdu(py::wrapper::Windows::Devices::SmartCards::SmartCardAutomaticResponseApdu* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1781,7 +1781,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static int SmartCardAutomaticResponseApdu_put_CommandApduBitMask(py::wrapper::Windows::Devices::SmartCards::SmartCardAutomaticResponseApdu* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1850,7 +1850,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static int SmartCardAutomaticResponseApdu_put_CommandApdu(py::wrapper::Windows::Devices::SmartCards::SmartCardAutomaticResponseApdu* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1919,7 +1919,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static int SmartCardAutomaticResponseApdu_put_AppletId(py::wrapper::Windows::Devices::SmartCards::SmartCardAutomaticResponseApdu* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1988,7 +1988,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static int SmartCardAutomaticResponseApdu_put_OutputState(py::wrapper::Windows::Devices::SmartCards::SmartCardAutomaticResponseApdu* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2057,7 +2057,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static int SmartCardAutomaticResponseApdu_put_InputState(py::wrapper::Windows::Devices::SmartCards::SmartCardAutomaticResponseApdu* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2126,7 +2126,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static int SmartCardAutomaticResponseApdu_put_AllowWhenCryptogramGeneratorNotPrepared(py::wrapper::Windows::Devices::SmartCards::SmartCardAutomaticResponseApdu* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3595,7 +3595,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* _new_SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3745,7 +3745,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* _new_SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3895,7 +3895,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* _new_SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -4045,7 +4045,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* _new_SmartCardCryptogramMaterialCharacteristics(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -4381,7 +4381,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* _new_SmartCardCryptogramMaterialPackageCharacteristics(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -4721,7 +4721,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* _new_SmartCardCryptogramPlacementStep(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -4788,7 +4788,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static int SmartCardCryptogramPlacementStep_put_TemplateOffset(py::wrapper::Windows::Devices::SmartCards::SmartCardCryptogramPlacementStep* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4857,7 +4857,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static int SmartCardCryptogramPlacementStep_put_SourceData(py::wrapper::Windows::Devices::SmartCards::SmartCardCryptogramPlacementStep* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4926,7 +4926,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static int SmartCardCryptogramPlacementStep_put_CryptogramPlacementOptions(py::wrapper::Windows::Devices::SmartCards::SmartCardCryptogramPlacementStep* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4995,7 +4995,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static int SmartCardCryptogramPlacementStep_put_CryptogramOffset(py::wrapper::Windows::Devices::SmartCards::SmartCardCryptogramPlacementStep* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5064,7 +5064,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static int SmartCardCryptogramPlacementStep_put_CryptogramMaterialPackageName(py::wrapper::Windows::Devices::SmartCards::SmartCardCryptogramPlacementStep* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5133,7 +5133,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static int SmartCardCryptogramPlacementStep_put_CryptogramMaterialName(py::wrapper::Windows::Devices::SmartCards::SmartCardCryptogramPlacementStep* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5202,7 +5202,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static int SmartCardCryptogramPlacementStep_put_CryptogramLength(py::wrapper::Windows::Devices::SmartCards::SmartCardCryptogramPlacementStep* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5271,7 +5271,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static int SmartCardCryptogramPlacementStep_put_ChainedOutputStep(py::wrapper::Windows::Devices::SmartCards::SmartCardCryptogramPlacementStep* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5340,7 +5340,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static int SmartCardCryptogramPlacementStep_put_Algorithm(py::wrapper::Windows::Devices::SmartCards::SmartCardCryptogramPlacementStep* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5439,7 +5439,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* _new_SmartCardCryptogramStorageKeyCharacteristics(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -7166,7 +7166,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* _new_SmartCardPinPolicy(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -7233,7 +7233,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static int SmartCardPinPolicy_put_UppercaseLetters(py::wrapper::Windows::Devices::SmartCards::SmartCardPinPolicy* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7302,7 +7302,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static int SmartCardPinPolicy_put_SpecialCharacters(py::wrapper::Windows::Devices::SmartCards::SmartCardPinPolicy* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7371,7 +7371,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static int SmartCardPinPolicy_put_MinLength(py::wrapper::Windows::Devices::SmartCards::SmartCardPinPolicy* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7440,7 +7440,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static int SmartCardPinPolicy_put_MaxLength(py::wrapper::Windows::Devices::SmartCards::SmartCardPinPolicy* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7509,7 +7509,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static int SmartCardPinPolicy_put_LowercaseLetters(py::wrapper::Windows::Devices::SmartCards::SmartCardPinPolicy* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7578,7 +7578,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static int SmartCardPinPolicy_put_Digits(py::wrapper::Windows::Devices::SmartCards::SmartCardPinPolicy* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

@@ -38,7 +38,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* _new_ColorPickerSlider(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -135,7 +135,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ColorPickerSlider_put_ColorChannel(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -312,7 +312,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* _new_TabViewListView(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;

@@ -1296,7 +1296,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* _new_ApplicationDataCompositeValue(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1807,7 +1807,8 @@ namespace py::cpp::Windows::Storage
                 return self->obj.TryLookup(_key);
             }();
 
-            if (!value) {
+            if (!value)
+            {
                 if constexpr (std::is_base_of_v<winrt::Windows::Foundation::IUnknown, decltype(value)>)
                 {
                     auto has_key = [&]()
@@ -1841,13 +1842,15 @@ namespace py::cpp::Windows::Storage
         {
             auto _key = py::convert_to<winrt::hstring>(key);
 
-            if (value == nullptr) {
+            if (!value)
+            {
                 bool did_remove;
                 {
                     auto _gil = py::release_gil();
                     did_remove = self->obj.TryRemove(_key);
                 }
-                if (!did_remove) {
+                if (!did_remove)
+                {
                     PyErr_SetObject(PyExc_KeyError, key);
                     return -1;
                 }
@@ -2748,7 +2751,8 @@ namespace py::cpp::Windows::Storage
                 return self->obj.TryLookup(_key);
             }();
 
-            if (!value) {
+            if (!value)
+            {
                 if constexpr (std::is_base_of_v<winrt::Windows::Foundation::IUnknown, decltype(value)>)
                 {
                     auto has_key = [&]()
@@ -2782,13 +2786,15 @@ namespace py::cpp::Windows::Storage
         {
             auto _key = py::convert_to<winrt::hstring>(key);
 
-            if (value == nullptr) {
+            if (!value)
+            {
                 bool did_remove;
                 {
                     auto _gil = py::release_gil();
                     did_remove = self->obj.TryRemove(_key);
                 }
-                if (!did_remove) {
+                if (!did_remove)
+                {
                     PyErr_SetObject(PyExc_KeyError, key);
                     return -1;
                 }
@@ -11199,7 +11205,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* _new_StorageLibraryChangeTrackerOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -11266,7 +11272,7 @@ namespace py::cpp::Windows::Storage
 
     static int StorageLibraryChangeTrackerOptions_put_TrackChangeDetails(py::wrapper::Windows::Storage::StorageLibraryChangeTrackerOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

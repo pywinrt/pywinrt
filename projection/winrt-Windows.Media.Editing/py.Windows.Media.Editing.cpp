@@ -217,7 +217,7 @@ namespace py::cpp::Windows::Media::Editing
 
     static int BackgroundAudioTrack_put_Volume(py::wrapper::Windows::Media::Editing::BackgroundAudioTrack* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -286,7 +286,7 @@ namespace py::cpp::Windows::Media::Editing
 
     static int BackgroundAudioTrack_put_TrimTimeFromStart(py::wrapper::Windows::Media::Editing::BackgroundAudioTrack* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -355,7 +355,7 @@ namespace py::cpp::Windows::Media::Editing
 
     static int BackgroundAudioTrack_put_TrimTimeFromEnd(py::wrapper::Windows::Media::Editing::BackgroundAudioTrack* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -424,7 +424,7 @@ namespace py::cpp::Windows::Media::Editing
 
     static int BackgroundAudioTrack_put_Delay(py::wrapper::Windows::Media::Editing::BackgroundAudioTrack* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1074,7 +1074,7 @@ namespace py::cpp::Windows::Media::Editing
 
     static int MediaClip_put_SelectedEmbeddedAudioTrackIndex(py::wrapper::Windows::Media::Editing::MediaClip* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1143,7 +1143,7 @@ namespace py::cpp::Windows::Media::Editing
 
     static int MediaClip_put_TrimTimeFromEnd(py::wrapper::Windows::Media::Editing::MediaClip* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1212,7 +1212,7 @@ namespace py::cpp::Windows::Media::Editing
 
     static int MediaClip_put_Volume(py::wrapper::Windows::Media::Editing::MediaClip* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1281,7 +1281,7 @@ namespace py::cpp::Windows::Media::Editing
 
     static int MediaClip_put_TrimTimeFromStart(py::wrapper::Windows::Media::Editing::MediaClip* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1654,7 +1654,7 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyObject* _new_MediaComposition(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2442,7 +2442,7 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyObject* _new_MediaOverlay(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2568,7 +2568,7 @@ namespace py::cpp::Windows::Media::Editing
 
     static int MediaOverlay_put_Position(py::wrapper::Windows::Media::Editing::MediaOverlay* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2637,7 +2637,7 @@ namespace py::cpp::Windows::Media::Editing
 
     static int MediaOverlay_put_Opacity(py::wrapper::Windows::Media::Editing::MediaOverlay* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2706,7 +2706,7 @@ namespace py::cpp::Windows::Media::Editing
 
     static int MediaOverlay_put_Delay(py::wrapper::Windows::Media::Editing::MediaOverlay* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2775,7 +2775,7 @@ namespace py::cpp::Windows::Media::Editing
 
     static int MediaOverlay_put_AudioEnabled(py::wrapper::Windows::Media::Editing::MediaOverlay* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2901,7 +2901,7 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyObject* _new_MediaOverlayLayer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;

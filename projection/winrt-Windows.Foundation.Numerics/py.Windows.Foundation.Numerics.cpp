@@ -24,7 +24,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -463,7 +463,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static int Matrix3x2_set_M11(py::wrapper::Windows::Foundation::Numerics::Matrix3x2* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -496,7 +496,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static int Matrix3x2_set_M12(py::wrapper::Windows::Foundation::Numerics::Matrix3x2* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -529,7 +529,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static int Matrix3x2_set_M21(py::wrapper::Windows::Foundation::Numerics::Matrix3x2* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -562,7 +562,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static int Matrix3x2_set_M22(py::wrapper::Windows::Foundation::Numerics::Matrix3x2* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -595,7 +595,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static int Matrix3x2_set_M31(py::wrapper::Windows::Foundation::Numerics::Matrix3x2* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -628,7 +628,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static int Matrix3x2_set_M32(py::wrapper::Windows::Foundation::Numerics::Matrix3x2* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -918,7 +918,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -1921,7 +1921,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static int Matrix4x4_set_M11(py::wrapper::Windows::Foundation::Numerics::Matrix4x4* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1954,7 +1954,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static int Matrix4x4_set_M12(py::wrapper::Windows::Foundation::Numerics::Matrix4x4* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1987,7 +1987,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static int Matrix4x4_set_M13(py::wrapper::Windows::Foundation::Numerics::Matrix4x4* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2020,7 +2020,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static int Matrix4x4_set_M14(py::wrapper::Windows::Foundation::Numerics::Matrix4x4* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2053,7 +2053,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static int Matrix4x4_set_M21(py::wrapper::Windows::Foundation::Numerics::Matrix4x4* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2086,7 +2086,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static int Matrix4x4_set_M22(py::wrapper::Windows::Foundation::Numerics::Matrix4x4* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2119,7 +2119,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static int Matrix4x4_set_M23(py::wrapper::Windows::Foundation::Numerics::Matrix4x4* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2152,7 +2152,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static int Matrix4x4_set_M24(py::wrapper::Windows::Foundation::Numerics::Matrix4x4* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2185,7 +2185,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static int Matrix4x4_set_M31(py::wrapper::Windows::Foundation::Numerics::Matrix4x4* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2218,7 +2218,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static int Matrix4x4_set_M32(py::wrapper::Windows::Foundation::Numerics::Matrix4x4* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2251,7 +2251,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static int Matrix4x4_set_M33(py::wrapper::Windows::Foundation::Numerics::Matrix4x4* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2284,7 +2284,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static int Matrix4x4_set_M34(py::wrapper::Windows::Foundation::Numerics::Matrix4x4* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2317,7 +2317,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static int Matrix4x4_set_M41(py::wrapper::Windows::Foundation::Numerics::Matrix4x4* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2350,7 +2350,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static int Matrix4x4_set_M42(py::wrapper::Windows::Foundation::Numerics::Matrix4x4* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2383,7 +2383,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static int Matrix4x4_set_M43(py::wrapper::Windows::Foundation::Numerics::Matrix4x4* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2416,7 +2416,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static int Matrix4x4_set_M44(py::wrapper::Windows::Foundation::Numerics::Matrix4x4* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2791,7 +2791,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -3007,7 +3007,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static int Plane_set_Normal(py::wrapper::Windows::Foundation::Numerics::Plane* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3040,7 +3040,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static int Plane_set_D(py::wrapper::Windows::Foundation::Numerics::Plane* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3180,7 +3180,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -3484,7 +3484,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static int Quaternion_set_X(py::wrapper::Windows::Foundation::Numerics::Quaternion* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3517,7 +3517,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static int Quaternion_set_Y(py::wrapper::Windows::Foundation::Numerics::Quaternion* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3550,7 +3550,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static int Quaternion_set_Z(py::wrapper::Windows::Foundation::Numerics::Quaternion* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3583,7 +3583,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static int Quaternion_set_W(py::wrapper::Windows::Foundation::Numerics::Quaternion* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3904,7 +3904,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -3971,7 +3971,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static int Rational_set_Numerator(py::wrapper::Windows::Foundation::Numerics::Rational* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4004,7 +4004,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static int Rational_set_Denominator(py::wrapper::Windows::Foundation::Numerics::Rational* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4118,7 +4118,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -4496,7 +4496,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static int Vector2_set_X(py::wrapper::Windows::Foundation::Numerics::Vector2* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4529,7 +4529,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static int Vector2_set_Y(py::wrapper::Windows::Foundation::Numerics::Vector2* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4869,7 +4869,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -5247,7 +5247,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static int Vector3_set_X(py::wrapper::Windows::Foundation::Numerics::Vector3* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5280,7 +5280,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static int Vector3_set_Y(py::wrapper::Windows::Foundation::Numerics::Vector3* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5313,7 +5313,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static int Vector3_set_Z(py::wrapper::Windows::Foundation::Numerics::Vector3* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5661,7 +5661,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -5955,7 +5955,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static int Vector4_set_X(py::wrapper::Windows::Foundation::Numerics::Vector4* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5988,7 +5988,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static int Vector4_set_Y(py::wrapper::Windows::Foundation::Numerics::Vector4* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6021,7 +6021,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static int Vector4_set_Z(py::wrapper::Windows::Foundation::Numerics::Vector4* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6054,7 +6054,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static int Vector4_set_W(py::wrapper::Windows::Foundation::Numerics::Vector4* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

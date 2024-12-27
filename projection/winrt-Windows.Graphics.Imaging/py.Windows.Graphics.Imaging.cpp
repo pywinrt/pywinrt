@@ -2142,7 +2142,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static int BitmapEncoder_put_IsThumbnailGenerated(py::wrapper::Windows::Graphics::Imaging::BitmapEncoder* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2211,7 +2211,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static int BitmapEncoder_put_GeneratedThumbnailWidth(py::wrapper::Windows::Graphics::Imaging::BitmapEncoder* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2280,7 +2280,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static int BitmapEncoder_put_GeneratedThumbnailHeight(py::wrapper::Windows::Graphics::Imaging::BitmapEncoder* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3616,7 +3616,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* _new_BitmapPropertySet(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -4062,7 +4062,8 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return self->obj.TryLookup(_key);
             }();
 
-            if (!value) {
+            if (!value)
+            {
                 if constexpr (std::is_base_of_v<winrt::Windows::Foundation::IUnknown, decltype(value)>)
                 {
                     auto has_key = [&]()
@@ -4096,13 +4097,15 @@ namespace py::cpp::Windows::Graphics::Imaging
         {
             auto _key = py::convert_to<winrt::hstring>(key);
 
-            if (value == nullptr) {
+            if (!value)
+            {
                 bool did_remove;
                 {
                     auto _gil = py::release_gil();
                     did_remove = self->obj.TryRemove(_key);
                 }
-                if (!did_remove) {
+                if (!did_remove)
+                {
                     PyErr_SetObject(PyExc_KeyError, key);
                     return -1;
                 }
@@ -4167,7 +4170,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* _new_BitmapTransform(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -4234,7 +4237,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static int BitmapTransform_put_ScaledWidth(py::wrapper::Windows::Graphics::Imaging::BitmapTransform* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4303,7 +4306,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static int BitmapTransform_put_ScaledHeight(py::wrapper::Windows::Graphics::Imaging::BitmapTransform* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4372,7 +4375,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static int BitmapTransform_put_Rotation(py::wrapper::Windows::Graphics::Imaging::BitmapTransform* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4441,7 +4444,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static int BitmapTransform_put_InterpolationMode(py::wrapper::Windows::Graphics::Imaging::BitmapTransform* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4510,7 +4513,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static int BitmapTransform_put_Flip(py::wrapper::Windows::Graphics::Imaging::BitmapTransform* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4579,7 +4582,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static int BitmapTransform_put_Bounds(py::wrapper::Windows::Graphics::Imaging::BitmapTransform* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4675,7 +4678,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* _new_BitmapTypedValue(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -5237,7 +5240,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static int ImageStream_put_Size(py::wrapper::Windows::Graphics::Imaging::ImageStream* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5562,7 +5565,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* _new_SoftwareBitmap(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -6208,7 +6211,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static int SoftwareBitmap_put_DpiY(py::wrapper::Windows::Graphics::Imaging::SoftwareBitmap* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6277,7 +6280,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static int SoftwareBitmap_put_DpiX(py::wrapper::Windows::Graphics::Imaging::SoftwareBitmap* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8730,7 +8733,7 @@ namespace py::cpp::Windows::Graphics::Imaging
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -8801,7 +8804,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static int BitmapBounds_set_X(py::wrapper::Windows::Graphics::Imaging::BitmapBounds* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8834,7 +8837,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static int BitmapBounds_set_Y(py::wrapper::Windows::Graphics::Imaging::BitmapBounds* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8867,7 +8870,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static int BitmapBounds_set_Width(py::wrapper::Windows::Graphics::Imaging::BitmapBounds* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8900,7 +8903,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static int BitmapBounds_set_Height(py::wrapper::Windows::Graphics::Imaging::BitmapBounds* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9028,7 +9031,7 @@ namespace py::cpp::Windows::Graphics::Imaging
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -9099,7 +9102,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static int BitmapPlaneDescription_set_StartIndex(py::wrapper::Windows::Graphics::Imaging::BitmapPlaneDescription* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9132,7 +9135,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static int BitmapPlaneDescription_set_Width(py::wrapper::Windows::Graphics::Imaging::BitmapPlaneDescription* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9165,7 +9168,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static int BitmapPlaneDescription_set_Height(py::wrapper::Windows::Graphics::Imaging::BitmapPlaneDescription* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9198,7 +9201,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static int BitmapPlaneDescription_set_Stride(py::wrapper::Windows::Graphics::Imaging::BitmapPlaneDescription* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9326,7 +9329,7 @@ namespace py::cpp::Windows::Graphics::Imaging
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -9393,7 +9396,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static int BitmapSize_set_Width(py::wrapper::Windows::Graphics::Imaging::BitmapSize* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9426,7 +9429,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static int BitmapSize_set_Height(py::wrapper::Windows::Graphics::Imaging::BitmapSize* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

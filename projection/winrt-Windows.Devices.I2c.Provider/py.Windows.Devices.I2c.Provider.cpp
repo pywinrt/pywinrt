@@ -53,7 +53,7 @@ namespace py::cpp::Windows::Devices::I2c::Provider
 
     static int ProviderI2cConnectionSettings_put_SlaveAddress(py::wrapper::Windows::Devices::I2c::Provider::ProviderI2cConnectionSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -122,7 +122,7 @@ namespace py::cpp::Windows::Devices::I2c::Provider
 
     static int ProviderI2cConnectionSettings_put_SharingMode(py::wrapper::Windows::Devices::I2c::Provider::ProviderI2cConnectionSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -191,7 +191,7 @@ namespace py::cpp::Windows::Devices::I2c::Provider
 
     static int ProviderI2cConnectionSettings_put_BusSpeed(py::wrapper::Windows::Devices::I2c::Provider::ProviderI2cConnectionSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1441,7 +1441,7 @@ namespace py::cpp::Windows::Devices::I2c::Provider
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -1508,7 +1508,7 @@ namespace py::cpp::Windows::Devices::I2c::Provider
 
     static int ProviderI2cTransferResult_set_Status(py::wrapper::Windows::Devices::I2c::Provider::ProviderI2cTransferResult* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1541,7 +1541,7 @@ namespace py::cpp::Windows::Devices::I2c::Provider
 
     static int ProviderI2cTransferResult_set_BytesTransferred(py::wrapper::Windows::Devices::I2c::Provider::ProviderI2cTransferResult* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

@@ -8,7 +8,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyObject* _new_WalletBarcode(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -217,7 +217,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyObject* _new_WalletItem(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -287,7 +287,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletItem_put_DisplayName(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -356,7 +356,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletItem_put_DisplayMessage(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -425,7 +425,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletItem_put_LogoText(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -494,7 +494,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletItem_put_BodyFontColor(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -563,7 +563,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletItem_put_BodyColor(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -632,7 +632,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletItem_put_BodyBackgroundImage(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -701,7 +701,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletItem_put_IsDisplayMessageLaunchable(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -770,7 +770,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletItem_put_IsAcknowledged(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -839,7 +839,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletItem_put_IsMoreTransactionHistoryLaunchable(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -908,7 +908,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletItem_put_HeaderFontColor(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -977,7 +977,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletItem_put_HeaderColor(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1046,7 +1046,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletItem_put_HeaderBackgroundImage(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1115,7 +1115,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletItem_put_ExpirationDate(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1184,7 +1184,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletItem_put_Logo99x99(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1253,7 +1253,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletItem_put_LogoImage(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1322,7 +1322,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletItem_put_PromotionalImage(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1391,7 +1391,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletItem_put_Logo159x159(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1460,7 +1460,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletItem_put_LastUpdated(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1529,7 +1529,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletItem_put_IssuerDisplayName(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1598,7 +1598,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletItem_put_Barcode(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1667,7 +1667,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletItem_put_RelevantDateDisplayMessage(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1736,7 +1736,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletItem_put_RelevantDate(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1805,7 +1805,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletItem_put_Logo336x336(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2104,7 +2104,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyObject* _new_WalletItemCustomProperty(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2174,7 +2174,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletItemCustomProperty_put_Value(py::wrapper::Windows::ApplicationModel::Wallet::WalletItemCustomProperty* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2243,7 +2243,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletItemCustomProperty_put_SummaryViewPosition(py::wrapper::Windows::ApplicationModel::Wallet::WalletItemCustomProperty* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2312,7 +2312,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletItemCustomProperty_put_Name(py::wrapper::Windows::ApplicationModel::Wallet::WalletItemCustomProperty* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2381,7 +2381,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletItemCustomProperty_put_DetailViewPosition(py::wrapper::Windows::ApplicationModel::Wallet::WalletItemCustomProperty* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2450,7 +2450,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletItemCustomProperty_put_AutoDetectLinks(py::wrapper::Windows::ApplicationModel::Wallet::WalletItemCustomProperty* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3133,7 +3133,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyObject* _new_WalletRelevantLocation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3200,7 +3200,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletRelevantLocation_put_Position(py::wrapper::Windows::ApplicationModel::Wallet::WalletRelevantLocation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3269,7 +3269,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletRelevantLocation_put_DisplayMessage(py::wrapper::Windows::ApplicationModel::Wallet::WalletRelevantLocation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3361,7 +3361,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyObject* _new_WalletTransaction(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3428,7 +3428,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletTransaction_put_TransactionDate(py::wrapper::Windows::ApplicationModel::Wallet::WalletTransaction* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3497,7 +3497,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletTransaction_put_IsLaunchable(py::wrapper::Windows::ApplicationModel::Wallet::WalletTransaction* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3566,7 +3566,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletTransaction_put_IgnoreTimeOfDay(py::wrapper::Windows::ApplicationModel::Wallet::WalletTransaction* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3635,7 +3635,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletTransaction_put_DisplayLocation(py::wrapper::Windows::ApplicationModel::Wallet::WalletTransaction* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3704,7 +3704,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletTransaction_put_DisplayAmount(py::wrapper::Windows::ApplicationModel::Wallet::WalletTransaction* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3773,7 +3773,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletTransaction_put_Description(py::wrapper::Windows::ApplicationModel::Wallet::WalletTransaction* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3869,7 +3869,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyObject* _new_WalletVerb(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3938,7 +3938,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static int WalletVerb_put_Name(py::wrapper::Windows::ApplicationModel::Wallet::WalletVerb* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

@@ -389,7 +389,7 @@ namespace py::cpp::Windows::Networking::Proximity
 
     static int PeerFinder_put_DisplayName(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -458,7 +458,7 @@ namespace py::cpp::Windows::Networking::Proximity
 
     static int PeerFinder_put_AllowWiFiDirect(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -527,7 +527,7 @@ namespace py::cpp::Windows::Networking::Proximity
 
     static int PeerFinder_put_AllowInfrastructure(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -596,7 +596,7 @@ namespace py::cpp::Windows::Networking::Proximity
 
     static int PeerFinder_put_AllowBluetooth(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -725,7 +725,7 @@ namespace py::cpp::Windows::Networking::Proximity
 
     static int PeerFinder_put_Role(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -794,7 +794,7 @@ namespace py::cpp::Windows::Networking::Proximity
 
     static int PeerFinder_put_DiscoveryData(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

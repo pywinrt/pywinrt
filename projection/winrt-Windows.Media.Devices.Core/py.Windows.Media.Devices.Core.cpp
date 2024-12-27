@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Media::Devices::Core
 
     static PyObject* _new_CameraIntrinsics(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1239,7 +1239,7 @@ namespace py::cpp::Windows::Media::Devices::Core
 
     static PyObject* _new_FrameController(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1306,7 +1306,7 @@ namespace py::cpp::Windows::Media::Devices::Core
 
     static int FrameController_put_PhotoConfirmationEnabled(py::wrapper::Windows::Media::Devices::Core::FrameController* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1977,7 +1977,7 @@ namespace py::cpp::Windows::Media::Devices::Core
 
     static int FrameExposureCompensationControl_put_Value(py::wrapper::Windows::Media::Devices::Core::FrameExposureCompensationControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2113,7 +2113,7 @@ namespace py::cpp::Windows::Media::Devices::Core
 
     static int FrameExposureControl_put_Value(py::wrapper::Windows::Media::Devices::Core::FrameExposureControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2182,7 +2182,7 @@ namespace py::cpp::Windows::Media::Devices::Core
 
     static int FrameExposureControl_put_Auto(py::wrapper::Windows::Media::Devices::Core::FrameExposureControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2478,7 +2478,7 @@ namespace py::cpp::Windows::Media::Devices::Core
 
     static int FrameFlashControl_put_RedEyeReduction(py::wrapper::Windows::Media::Devices::Core::FrameFlashControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2547,7 +2547,7 @@ namespace py::cpp::Windows::Media::Devices::Core
 
     static int FrameFlashControl_put_PowerPercent(py::wrapper::Windows::Media::Devices::Core::FrameFlashControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2616,7 +2616,7 @@ namespace py::cpp::Windows::Media::Devices::Core
 
     static int FrameFlashControl_put_Mode(py::wrapper::Windows::Media::Devices::Core::FrameFlashControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2685,7 +2685,7 @@ namespace py::cpp::Windows::Media::Devices::Core
 
     static int FrameFlashControl_put_Auto(py::wrapper::Windows::Media::Devices::Core::FrameFlashControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3014,7 +3014,7 @@ namespace py::cpp::Windows::Media::Devices::Core
 
     static int FrameFocusControl_put_Value(py::wrapper::Windows::Media::Devices::Core::FrameFocusControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3340,7 +3340,7 @@ namespace py::cpp::Windows::Media::Devices::Core
 
     static int FrameIsoSpeedControl_put_Value(py::wrapper::Windows::Media::Devices::Core::FrameIsoSpeedControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3409,7 +3409,7 @@ namespace py::cpp::Windows::Media::Devices::Core
 
     static int FrameIsoSpeedControl_put_Auto(py::wrapper::Windows::Media::Devices::Core::FrameIsoSpeedControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3628,7 +3628,7 @@ namespace py::cpp::Windows::Media::Devices::Core
 
     static int VariablePhotoSequenceController_put_PhotosPerSecondLimit(py::wrapper::Windows::Media::Devices::Core::VariablePhotoSequenceController* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

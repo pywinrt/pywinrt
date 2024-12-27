@@ -253,7 +253,7 @@ namespace py::cpp::Windows::Devices::Adc::Provider
 
     static int IAdcControllerProvider_put_ChannelMode(py::wrapper::Windows::Devices::Adc::Provider::IAdcControllerProvider* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

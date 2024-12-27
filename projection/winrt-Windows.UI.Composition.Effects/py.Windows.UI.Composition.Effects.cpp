@@ -8,7 +8,7 @@ namespace py::cpp::Windows::UI::Composition::Effects
 
     static PyObject* _new_SceneLightingEffect(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -75,7 +75,7 @@ namespace py::cpp::Windows::UI::Composition::Effects
 
     static int SceneLightingEffect_put_Name(py::wrapper::Windows::UI::Composition::Effects::SceneLightingEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -144,7 +144,7 @@ namespace py::cpp::Windows::UI::Composition::Effects
 
     static int SceneLightingEffect_put_SpecularShine(py::wrapper::Windows::UI::Composition::Effects::SceneLightingEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -213,7 +213,7 @@ namespace py::cpp::Windows::UI::Composition::Effects
 
     static int SceneLightingEffect_put_SpecularAmount(py::wrapper::Windows::UI::Composition::Effects::SceneLightingEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -282,7 +282,7 @@ namespace py::cpp::Windows::UI::Composition::Effects
 
     static int SceneLightingEffect_put_NormalMapSource(py::wrapper::Windows::UI::Composition::Effects::SceneLightingEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -351,7 +351,7 @@ namespace py::cpp::Windows::UI::Composition::Effects
 
     static int SceneLightingEffect_put_DiffuseAmount(py::wrapper::Windows::UI::Composition::Effects::SceneLightingEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -420,7 +420,7 @@ namespace py::cpp::Windows::UI::Composition::Effects
 
     static int SceneLightingEffect_put_AmbientAmount(py::wrapper::Windows::UI::Composition::Effects::SceneLightingEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -489,7 +489,7 @@ namespace py::cpp::Windows::UI::Composition::Effects
 
     static int SceneLightingEffect_put_ReflectanceModel(py::wrapper::Windows::UI::Composition::Effects::SceneLightingEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

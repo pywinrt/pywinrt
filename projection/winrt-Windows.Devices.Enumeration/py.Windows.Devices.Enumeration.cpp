@@ -3990,7 +3990,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyObject* _new_DevicePicker(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -4681,7 +4681,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static int DevicePickerAppearance_put_Title(py::wrapper::Windows::Devices::Enumeration::DevicePickerAppearance* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4750,7 +4750,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static int DevicePickerAppearance_put_SelectedForegroundColor(py::wrapper::Windows::Devices::Enumeration::DevicePickerAppearance* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4819,7 +4819,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static int DevicePickerAppearance_put_SelectedBackgroundColor(py::wrapper::Windows::Devices::Enumeration::DevicePickerAppearance* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4888,7 +4888,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static int DevicePickerAppearance_put_SelectedAccentColor(py::wrapper::Windows::Devices::Enumeration::DevicePickerAppearance* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4957,7 +4957,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static int DevicePickerAppearance_put_ForegroundColor(py::wrapper::Windows::Devices::Enumeration::DevicePickerAppearance* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5026,7 +5026,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static int DevicePickerAppearance_put_BackgroundColor(py::wrapper::Windows::Devices::Enumeration::DevicePickerAppearance* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5095,7 +5095,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static int DevicePickerAppearance_put_AccentColor(py::wrapper::Windows::Devices::Enumeration::DevicePickerAppearance* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5826,7 +5826,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static int DeviceThumbnail_put_Size(py::wrapper::Windows::Devices::Enumeration::DeviceThumbnail* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

@@ -137,7 +137,7 @@ static class StructWriterExtensions
         {
             w.WriteLine("auto tuple_size = PyTuple_Size(args);");
             w.WriteBlankLine();
-            w.WriteLine("if ((tuple_size == 0) && (kwds == nullptr))");
+            w.WriteLine("if ((tuple_size == 0) && (!kwds))");
             w.WriteBlock(() =>
             {
                 w.WriteLine("self->obj = {};");
@@ -200,7 +200,7 @@ static class StructWriterExtensions
         );
         w.WriteBlock(() =>
         {
-            w.WriteLine("if (arg == nullptr)");
+            w.WriteLine("if (!arg)");
             w.WriteBlock(() =>
             {
                 w.WriteLine("PyErr_SetString(PyExc_AttributeError, \"can't delete attribute\");");

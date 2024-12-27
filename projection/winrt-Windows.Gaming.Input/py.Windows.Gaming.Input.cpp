@@ -1774,7 +1774,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static int Gamepad_put_Vibration(py::wrapper::Windows::Gaming::Input::Gamepad* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6020,7 +6020,7 @@ namespace py::cpp::Windows::Gaming::Input
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -6087,7 +6087,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static int ArcadeStickReading_set_Timestamp(py::wrapper::Windows::Gaming::Input::ArcadeStickReading* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6120,7 +6120,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static int ArcadeStickReading_set_Buttons(py::wrapper::Windows::Gaming::Input::ArcadeStickReading* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6234,7 +6234,7 @@ namespace py::cpp::Windows::Gaming::Input
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -6311,7 +6311,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static int FlightStickReading_set_Timestamp(py::wrapper::Windows::Gaming::Input::FlightStickReading* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6344,7 +6344,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static int FlightStickReading_set_Buttons(py::wrapper::Windows::Gaming::Input::FlightStickReading* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6377,7 +6377,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static int FlightStickReading_set_HatSwitch(py::wrapper::Windows::Gaming::Input::FlightStickReading* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6410,7 +6410,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static int FlightStickReading_set_Roll(py::wrapper::Windows::Gaming::Input::FlightStickReading* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6443,7 +6443,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static int FlightStickReading_set_Pitch(py::wrapper::Windows::Gaming::Input::FlightStickReading* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6476,7 +6476,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static int FlightStickReading_set_Yaw(py::wrapper::Windows::Gaming::Input::FlightStickReading* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6509,7 +6509,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static int FlightStickReading_set_Throttle(py::wrapper::Windows::Gaming::Input::FlightStickReading* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6658,7 +6658,7 @@ namespace py::cpp::Windows::Gaming::Input
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -6737,7 +6737,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static int GamepadReading_set_Timestamp(py::wrapper::Windows::Gaming::Input::GamepadReading* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6770,7 +6770,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static int GamepadReading_set_Buttons(py::wrapper::Windows::Gaming::Input::GamepadReading* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6803,7 +6803,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static int GamepadReading_set_LeftTrigger(py::wrapper::Windows::Gaming::Input::GamepadReading* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6836,7 +6836,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static int GamepadReading_set_RightTrigger(py::wrapper::Windows::Gaming::Input::GamepadReading* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6869,7 +6869,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static int GamepadReading_set_LeftThumbstickX(py::wrapper::Windows::Gaming::Input::GamepadReading* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6902,7 +6902,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static int GamepadReading_set_LeftThumbstickY(py::wrapper::Windows::Gaming::Input::GamepadReading* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6935,7 +6935,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static int GamepadReading_set_RightThumbstickX(py::wrapper::Windows::Gaming::Input::GamepadReading* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6968,7 +6968,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static int GamepadReading_set_RightThumbstickY(py::wrapper::Windows::Gaming::Input::GamepadReading* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7124,7 +7124,7 @@ namespace py::cpp::Windows::Gaming::Input
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -7195,7 +7195,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static int GamepadVibration_set_LeftMotor(py::wrapper::Windows::Gaming::Input::GamepadVibration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7228,7 +7228,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static int GamepadVibration_set_RightMotor(py::wrapper::Windows::Gaming::Input::GamepadVibration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7261,7 +7261,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static int GamepadVibration_set_LeftTrigger(py::wrapper::Windows::Gaming::Input::GamepadVibration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7294,7 +7294,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static int GamepadVibration_set_RightTrigger(py::wrapper::Windows::Gaming::Input::GamepadVibration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7422,7 +7422,7 @@ namespace py::cpp::Windows::Gaming::Input
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -7501,7 +7501,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static int RacingWheelReading_set_Timestamp(py::wrapper::Windows::Gaming::Input::RacingWheelReading* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7534,7 +7534,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static int RacingWheelReading_set_Buttons(py::wrapper::Windows::Gaming::Input::RacingWheelReading* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7567,7 +7567,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static int RacingWheelReading_set_PatternShifterGear(py::wrapper::Windows::Gaming::Input::RacingWheelReading* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7600,7 +7600,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static int RacingWheelReading_set_Wheel(py::wrapper::Windows::Gaming::Input::RacingWheelReading* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7633,7 +7633,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static int RacingWheelReading_set_Throttle(py::wrapper::Windows::Gaming::Input::RacingWheelReading* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7666,7 +7666,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static int RacingWheelReading_set_Brake(py::wrapper::Windows::Gaming::Input::RacingWheelReading* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7699,7 +7699,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static int RacingWheelReading_set_Clutch(py::wrapper::Windows::Gaming::Input::RacingWheelReading* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7732,7 +7732,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static int RacingWheelReading_set_Handbrake(py::wrapper::Windows::Gaming::Input::RacingWheelReading* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7888,7 +7888,7 @@ namespace py::cpp::Windows::Gaming::Input
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -7957,7 +7957,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static int UINavigationReading_set_Timestamp(py::wrapper::Windows::Gaming::Input::UINavigationReading* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7990,7 +7990,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static int UINavigationReading_set_RequiredButtons(py::wrapper::Windows::Gaming::Input::UINavigationReading* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8023,7 +8023,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static int UINavigationReading_set_OptionalButtons(py::wrapper::Windows::Gaming::Input::UINavigationReading* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

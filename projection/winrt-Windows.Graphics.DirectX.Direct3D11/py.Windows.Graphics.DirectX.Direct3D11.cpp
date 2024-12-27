@@ -579,7 +579,7 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -646,7 +646,7 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
 
     static int Direct3DMultisampleDescription_set_Count(py::wrapper::Windows::Graphics::DirectX::Direct3D11::Direct3DMultisampleDescription* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -679,7 +679,7 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
 
     static int Direct3DMultisampleDescription_set_Quality(py::wrapper::Windows::Graphics::DirectX::Direct3D11::Direct3DMultisampleDescription* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -793,7 +793,7 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -864,7 +864,7 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
 
     static int Direct3DSurfaceDescription_set_Width(py::wrapper::Windows::Graphics::DirectX::Direct3D11::Direct3DSurfaceDescription* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -897,7 +897,7 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
 
     static int Direct3DSurfaceDescription_set_Height(py::wrapper::Windows::Graphics::DirectX::Direct3D11::Direct3DSurfaceDescription* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -930,7 +930,7 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
 
     static int Direct3DSurfaceDescription_set_Format(py::wrapper::Windows::Graphics::DirectX::Direct3D11::Direct3DSurfaceDescription* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -963,7 +963,7 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
 
     static int Direct3DSurfaceDescription_set_MultisampleDescription(py::wrapper::Windows::Graphics::DirectX::Direct3D11::Direct3DSurfaceDescription* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* _new_BackgroundDownloader(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -431,7 +431,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int BackgroundDownloader_put_FailureToastNotification(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloader* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -500,7 +500,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int BackgroundDownloader_put_SuccessTileNotification(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloader* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -569,7 +569,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int BackgroundDownloader_put_SuccessToastNotification(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloader* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -638,7 +638,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int BackgroundDownloader_put_TransferGroup(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloader* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -707,7 +707,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int BackgroundDownloader_put_FailureTileNotification(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloader* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -806,7 +806,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int BackgroundDownloader_put_CostPolicy(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloader* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -875,7 +875,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int BackgroundDownloader_put_Group(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloader* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -944,7 +944,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int BackgroundDownloader_put_Method(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloader* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1013,7 +1013,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int BackgroundDownloader_put_ProxyCredential(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloader* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1082,7 +1082,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int BackgroundDownloader_put_ServerCredential(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloader* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1216,7 +1216,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* _new_BackgroundTransferCompletionGroup(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1536,7 +1536,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* _new_BackgroundTransferContentPart(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1974,7 +1974,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int BackgroundTransferGroup_put_TransferBehavior(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundTransferGroup* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2291,7 +2291,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* _new_BackgroundUploader(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2801,7 +2801,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int BackgroundUploader_put_ServerCredential(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploader* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2870,7 +2870,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int BackgroundUploader_put_ProxyCredential(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploader* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2939,7 +2939,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int BackgroundUploader_put_Method(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploader* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3008,7 +3008,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int BackgroundUploader_put_Group(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploader* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3077,7 +3077,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int BackgroundUploader_put_CostPolicy(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploader* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3146,7 +3146,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int BackgroundUploader_put_FailureTileNotification(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploader* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3215,7 +3215,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int BackgroundUploader_put_TransferGroup(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploader* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3284,7 +3284,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int BackgroundUploader_put_SuccessToastNotification(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploader* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3353,7 +3353,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int BackgroundUploader_put_SuccessTileNotification(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploader* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3422,7 +3422,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int BackgroundUploader_put_FailureToastNotification(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploader* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3625,7 +3625,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int ContentPrefetcher_put_IndirectContentUri(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4273,7 +4273,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int DownloadOperation_put_CostPolicy(py::wrapper::Windows::Networking::BackgroundTransfer::DownloadOperation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4342,7 +4342,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int DownloadOperation_put_RequestedUri(py::wrapper::Windows::Networking::BackgroundTransfer::DownloadOperation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4501,7 +4501,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int DownloadOperation_put_Priority(py::wrapper::Windows::Networking::BackgroundTransfer::DownloadOperation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4660,7 +4660,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int DownloadOperation_put_IsRandomAccessRequired(py::wrapper::Windows::Networking::BackgroundTransfer::DownloadOperation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5522,7 +5522,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int UploadOperation_put_CostPolicy(py::wrapper::Windows::Networking::BackgroundTransfer::UploadOperation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5711,7 +5711,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int UploadOperation_put_Priority(py::wrapper::Windows::Networking::BackgroundTransfer::UploadOperation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5996,7 +5996,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int IBackgroundTransferBase_put_CostPolicy(py::wrapper::Windows::Networking::BackgroundTransfer::IBackgroundTransferBase* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6065,7 +6065,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int IBackgroundTransferBase_put_Group(py::wrapper::Windows::Networking::BackgroundTransfer::IBackgroundTransferBase* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6134,7 +6134,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int IBackgroundTransferBase_put_Method(py::wrapper::Windows::Networking::BackgroundTransfer::IBackgroundTransferBase* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6203,7 +6203,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int IBackgroundTransferBase_put_ProxyCredential(py::wrapper::Windows::Networking::BackgroundTransfer::IBackgroundTransferBase* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6272,7 +6272,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int IBackgroundTransferBase_put_ServerCredential(py::wrapper::Windows::Networking::BackgroundTransfer::IBackgroundTransferBase* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7105,7 +7105,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int IBackgroundTransferOperation_put_CostPolicy(py::wrapper::Windows::Networking::BackgroundTransfer::IBackgroundTransferOperation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7610,7 +7610,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int IBackgroundTransferOperationPriority_put_Priority(py::wrapper::Windows::Networking::BackgroundTransfer::IBackgroundTransferOperationPriority* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7822,7 +7822,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -7895,7 +7895,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int BackgroundDownloadProgress_set_BytesReceived(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloadProgress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7928,7 +7928,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int BackgroundDownloadProgress_set_TotalBytesToReceive(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloadProgress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7961,7 +7961,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int BackgroundDownloadProgress_set_Status(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloadProgress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7994,7 +7994,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int BackgroundDownloadProgress_set_HasResponseChanged(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloadProgress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8027,7 +8027,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int BackgroundDownloadProgress_set_HasRestarted(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloadProgress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8162,7 +8162,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -8229,7 +8229,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int BackgroundTransferFileRange_set_Offset(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundTransferFileRange* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8262,7 +8262,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int BackgroundTransferFileRange_set_Length(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundTransferFileRange* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8376,7 +8376,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -8453,7 +8453,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int BackgroundUploadProgress_set_BytesReceived(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploadProgress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8486,7 +8486,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int BackgroundUploadProgress_set_BytesSent(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploadProgress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8519,7 +8519,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int BackgroundUploadProgress_set_TotalBytesToReceive(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploadProgress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8552,7 +8552,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int BackgroundUploadProgress_set_TotalBytesToSend(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploadProgress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8585,7 +8585,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int BackgroundUploadProgress_set_Status(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploadProgress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8618,7 +8618,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int BackgroundUploadProgress_set_HasResponseChanged(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploadProgress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8651,7 +8651,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int BackgroundUploadProgress_set_HasRestarted(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploadProgress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

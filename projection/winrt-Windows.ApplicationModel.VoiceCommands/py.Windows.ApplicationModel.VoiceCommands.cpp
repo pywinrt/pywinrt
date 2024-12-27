@@ -361,7 +361,7 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static PyObject* _new_VoiceCommandContentTile(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -428,7 +428,7 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static int VoiceCommandContentTile_put_Title(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -497,7 +497,7 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static int VoiceCommandContentTile_put_TextLine3(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -566,7 +566,7 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static int VoiceCommandContentTile_put_TextLine2(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -635,7 +635,7 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static int VoiceCommandContentTile_put_TextLine1(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -704,7 +704,7 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static int VoiceCommandContentTile_put_Image(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -773,7 +773,7 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static int VoiceCommandContentTile_put_ContentTileType(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -842,7 +842,7 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static int VoiceCommandContentTile_put_AppLaunchArgument(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -911,7 +911,7 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static int VoiceCommandContentTile_put_AppContext(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1625,7 +1625,7 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static int VoiceCommandResponse_put_RepeatMessage(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1694,7 +1694,7 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static int VoiceCommandResponse_put_Message(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1763,7 +1763,7 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static int VoiceCommandResponse_put_AppLaunchArgument(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2478,7 +2478,7 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static PyObject* _new_VoiceCommandUserMessage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2545,7 +2545,7 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static int VoiceCommandUserMessage_put_SpokenMessage(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandUserMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2614,7 +2614,7 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static int VoiceCommandUserMessage_put_DisplayMessage(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandUserMessage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

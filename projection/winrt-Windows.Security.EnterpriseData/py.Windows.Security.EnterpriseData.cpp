@@ -1585,7 +1585,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* _new_FileUnprotectOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1654,7 +1654,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static int FileUnprotectOptions_put_Audit(py::wrapper::Windows::Security::EnterpriseData::FileUnprotectOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2523,7 +2523,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* _new_ProtectionPolicyAuditInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2611,7 +2611,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static int ProtectionPolicyAuditInfo_put_TargetDescription(py::wrapper::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2680,7 +2680,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static int ProtectionPolicyAuditInfo_put_SourceDescription(py::wrapper::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2749,7 +2749,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static int ProtectionPolicyAuditInfo_put_DataDescription(py::wrapper::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2818,7 +2818,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static int ProtectionPolicyAuditInfo_put_Action(py::wrapper::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4256,7 +4256,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static int ProtectionPolicyManager_put_Identity(py::wrapper::Windows::Security::EnterpriseData::ProtectionPolicyManager* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4325,7 +4325,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static int ProtectionPolicyManager_put_ShowEnterpriseIndicator(py::wrapper::Windows::Security::EnterpriseData::ProtectionPolicyManager* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

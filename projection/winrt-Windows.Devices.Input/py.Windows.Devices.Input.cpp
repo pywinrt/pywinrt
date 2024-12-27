@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyObject* _new_KeyboardCapabilities(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -127,7 +127,7 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyObject* _new_MouseCapabilities(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2399,7 +2399,7 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyObject* _new_TouchCapabilities(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2565,7 +2565,7 @@ namespace py::cpp::Windows::Devices::Input
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -2632,7 +2632,7 @@ namespace py::cpp::Windows::Devices::Input
 
     static int MouseDelta_set_X(py::wrapper::Windows::Devices::Input::MouseDelta* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2665,7 +2665,7 @@ namespace py::cpp::Windows::Devices::Input
 
     static int MouseDelta_set_Y(py::wrapper::Windows::Devices::Input::MouseDelta* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2779,7 +2779,7 @@ namespace py::cpp::Windows::Devices::Input
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -2858,7 +2858,7 @@ namespace py::cpp::Windows::Devices::Input
 
     static int PointerDeviceUsage_set_UsagePage(py::wrapper::Windows::Devices::Input::PointerDeviceUsage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2891,7 +2891,7 @@ namespace py::cpp::Windows::Devices::Input
 
     static int PointerDeviceUsage_set_Usage(py::wrapper::Windows::Devices::Input::PointerDeviceUsage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2924,7 +2924,7 @@ namespace py::cpp::Windows::Devices::Input
 
     static int PointerDeviceUsage_set_MinLogical(py::wrapper::Windows::Devices::Input::PointerDeviceUsage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2957,7 +2957,7 @@ namespace py::cpp::Windows::Devices::Input
 
     static int PointerDeviceUsage_set_MaxLogical(py::wrapper::Windows::Devices::Input::PointerDeviceUsage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2990,7 +2990,7 @@ namespace py::cpp::Windows::Devices::Input
 
     static int PointerDeviceUsage_set_MinPhysical(py::wrapper::Windows::Devices::Input::PointerDeviceUsage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3023,7 +3023,7 @@ namespace py::cpp::Windows::Devices::Input
 
     static int PointerDeviceUsage_set_MaxPhysical(py::wrapper::Windows::Devices::Input::PointerDeviceUsage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3056,7 +3056,7 @@ namespace py::cpp::Windows::Devices::Input
 
     static int PointerDeviceUsage_set_Unit(py::wrapper::Windows::Devices::Input::PointerDeviceUsage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3089,7 +3089,7 @@ namespace py::cpp::Windows::Devices::Input
 
     static int PointerDeviceUsage_set_PhysicalMultiplier(py::wrapper::Windows::Devices::Input::PointerDeviceUsage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

@@ -795,7 +795,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* _new_ClipboardContentOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -862,7 +862,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static int ClipboardContentOptions_put_IsRoamable(py::wrapper::Windows::ApplicationModel::DataTransfer::ClipboardContentOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -931,7 +931,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static int ClipboardContentOptions_put_IsAllowedInHistory(py::wrapper::Windows::ApplicationModel::DataTransfer::ClipboardContentOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1438,7 +1438,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* _new_DataPackage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2021,7 +2021,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static int DataPackage_put_RequestedOperation(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2790,7 +2790,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static int DataPackagePropertySet_put_Title(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackagePropertySet* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2859,7 +2859,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static int DataPackagePropertySet_put_Thumbnail(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackagePropertySet* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2928,7 +2928,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static int DataPackagePropertySet_put_Description(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackagePropertySet* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2997,7 +2997,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static int DataPackagePropertySet_put_ApplicationName(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackagePropertySet* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3066,7 +3066,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static int DataPackagePropertySet_put_ApplicationListingUri(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackagePropertySet* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3165,7 +3165,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static int DataPackagePropertySet_put_Square30x30Logo(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackagePropertySet* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3234,7 +3234,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static int DataPackagePropertySet_put_PackageFamilyName(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackagePropertySet* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3303,7 +3303,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static int DataPackagePropertySet_put_LogoBackgroundColor(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackagePropertySet* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3372,7 +3372,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static int DataPackagePropertySet_put_ContentSourceWebLink(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackagePropertySet* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3441,7 +3441,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static int DataPackagePropertySet_put_ContentSourceApplicationLink(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackagePropertySet* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3510,7 +3510,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static int DataPackagePropertySet_put_EnterpriseId(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackagePropertySet* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3579,7 +3579,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static int DataPackagePropertySet_put_ContentSourceUserActivityJson(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackagePropertySet* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3736,7 +3736,8 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return self->obj.TryLookup(_key);
             }();
 
-            if (!value) {
+            if (!value)
+            {
                 if constexpr (std::is_base_of_v<winrt::Windows::Foundation::IUnknown, decltype(value)>)
                 {
                     auto has_key = [&]()
@@ -3770,13 +3771,15 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         {
             auto _key = py::convert_to<winrt::hstring>(key);
 
-            if (value == nullptr) {
+            if (!value)
+            {
                 bool did_remove;
                 {
                     auto _gil = py::release_gil();
                     did_remove = self->obj.TryRemove(_key);
                 }
-                if (!did_remove) {
+                if (!did_remove)
+                {
                     PyErr_SetObject(PyExc_KeyError, key);
                     return -1;
                 }
@@ -4586,7 +4589,8 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return self->obj.TryLookup(_key);
             }();
 
-            if (!value) {
+            if (!value)
+            {
                 if constexpr (std::is_base_of_v<winrt::Windows::Foundation::IUnknown, decltype(value)>)
                 {
                     auto has_key = [&]()
@@ -5985,7 +5989,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static int DataRequest_put_Data(py::wrapper::Windows::ApplicationModel::DataTransfer::DataRequest* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7141,7 +7145,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* _new_ShareProvider(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -7213,7 +7217,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static int ShareProvider_put_Tag(py::wrapper::Windows::ApplicationModel::DataTransfer::ShareProvider* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7864,7 +7868,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* _new_ShareUIOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -7931,7 +7935,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static int ShareUIOptions_put_Theme(py::wrapper::Windows::ApplicationModel::DataTransfer::ShareUIOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8000,7 +8004,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static int ShareUIOptions_put_SelectionRect(py::wrapper::Windows::ApplicationModel::DataTransfer::ShareUIOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

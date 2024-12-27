@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Networking
 
     static PyObject* _new_EndpointPair(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -80,7 +80,7 @@ namespace py::cpp::Windows::Networking
 
     static int EndpointPair_put_RemoteServiceName(py::wrapper::Windows::Networking::EndpointPair* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -149,7 +149,7 @@ namespace py::cpp::Windows::Networking
 
     static int EndpointPair_put_RemoteHostName(py::wrapper::Windows::Networking::EndpointPair* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -218,7 +218,7 @@ namespace py::cpp::Windows::Networking
 
     static int EndpointPair_put_LocalServiceName(py::wrapper::Windows::Networking::EndpointPair* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -287,7 +287,7 @@ namespace py::cpp::Windows::Networking
 
     static int EndpointPair_put_LocalHostName(py::wrapper::Windows::Networking::EndpointPair* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -381,7 +381,7 @@ namespace py::cpp::Windows::Networking
 
     static PyObject* _new_HostName(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;

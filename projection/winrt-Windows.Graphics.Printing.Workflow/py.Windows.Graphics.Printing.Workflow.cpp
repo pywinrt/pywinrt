@@ -1803,7 +1803,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static int PrintWorkflowJobIssueDetectedEventArgs_put_SkipSystemErrorToast(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowJobIssueDetectedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2446,7 +2446,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static int PrintWorkflowJobStartingEventArgs_put_SkipSystemFaxUI(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowJobStartingEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3010,7 +3010,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* _new_PrintWorkflowObjectModelSourceFileContent(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;

@@ -8,7 +8,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
 
     static PyObject* _new_BitmapImage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -172,7 +172,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
 
     static int BitmapImage_put_UriSource(py::wrapper::Microsoft::UI::Xaml::Media::Imaging::BitmapImage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -241,7 +241,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
 
     static int BitmapImage_put_DecodePixelWidth(py::wrapper::Microsoft::UI::Xaml::Media::Imaging::BitmapImage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -310,7 +310,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
 
     static int BitmapImage_put_DecodePixelType(py::wrapper::Microsoft::UI::Xaml::Media::Imaging::BitmapImage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -379,7 +379,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
 
     static int BitmapImage_put_DecodePixelHeight(py::wrapper::Microsoft::UI::Xaml::Media::Imaging::BitmapImage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -448,7 +448,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
 
     static int BitmapImage_put_CreateOptions(py::wrapper::Microsoft::UI::Xaml::Media::Imaging::BitmapImage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -517,7 +517,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
 
     static int BitmapImage_put_AutoPlay(py::wrapper::Microsoft::UI::Xaml::Media::Imaging::BitmapImage* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1527,7 +1527,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
 
     static int DownloadProgressEventArgs_put_Progress(py::wrapper::Microsoft::UI::Xaml::Media::Imaging::DownloadProgressEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1618,7 +1618,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
 
     static PyObject* _new_RenderTargetBitmap(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1984,7 +1984,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
 
     static PyObject* _new_SoftwareBitmapSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2213,7 +2213,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
 
     static PyObject* _new_SurfaceImageSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2430,7 +2430,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
 
     static PyObject* _new_SvgImageSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2607,7 +2607,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
 
     static int SvgImageSource_put_UriSource(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2676,7 +2676,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
 
     static int SvgImageSource_put_RasterizePixelWidth(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2745,7 +2745,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
 
     static int SvgImageSource_put_RasterizePixelHeight(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3254,7 +3254,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
 
     static PyObject* _new_VirtualSurfaceImageSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3362,7 +3362,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
 
     static PyObject* _new_WriteableBitmap(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;

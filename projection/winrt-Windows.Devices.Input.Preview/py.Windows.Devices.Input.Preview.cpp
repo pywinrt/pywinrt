@@ -1081,7 +1081,7 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
     static int GazeEnteredPreviewEventArgs_put_Handled(py::wrapper::Windows::Devices::Input::Preview::GazeEnteredPreviewEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1248,7 +1248,7 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
     static int GazeExitedPreviewEventArgs_put_Handled(py::wrapper::Windows::Devices::Input::Preview::GazeExitedPreviewEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1829,7 +1829,7 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
     static int GazeMovedPreviewEventArgs_put_Handled(py::wrapper::Windows::Devices::Input::Preview::GazeMovedPreviewEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

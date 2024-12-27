@@ -8,7 +8,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* _new_AdaptiveNotificationText(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -135,7 +135,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static int AdaptiveNotificationText_put_Text(py::wrapper::Windows::UI::Notifications::AdaptiveNotificationText* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -204,7 +204,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static int AdaptiveNotificationText_put_Language(py::wrapper::Windows::UI::Notifications::AdaptiveNotificationText* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -298,7 +298,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* _new_BadgeNotification(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -367,7 +367,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static int BadgeNotification_put_ExpirationTime(py::wrapper::Windows::UI::Notifications::BadgeNotification* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2241,7 +2241,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* _new_Notification(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2308,7 +2308,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static int Notification_put_Visual(py::wrapper::Windows::UI::Notifications::Notification* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2377,7 +2377,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static int Notification_put_ExpirationTime(py::wrapper::Windows::UI::Notifications::Notification* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2554,7 +2554,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static int NotificationBinding_put_Template(py::wrapper::Windows::UI::Notifications::NotificationBinding* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2623,7 +2623,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static int NotificationBinding_put_Language(py::wrapper::Windows::UI::Notifications::NotificationBinding* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2747,7 +2747,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* _new_NotificationData(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2845,7 +2845,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static int NotificationData_put_SequenceNumber(py::wrapper::Windows::UI::Notifications::NotificationData* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3054,7 +3054,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static int NotificationVisual_put_Language(py::wrapper::Windows::UI::Notifications::NotificationVisual* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3177,7 +3177,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* _new_ScheduledTileNotification(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3247,7 +3247,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static int ScheduledTileNotification_put_Tag(py::wrapper::Windows::UI::Notifications::ScheduledTileNotification* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3316,7 +3316,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static int ScheduledTileNotification_put_Id(py::wrapper::Windows::UI::Notifications::ScheduledTileNotification* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3385,7 +3385,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static int ScheduledTileNotification_put_ExpirationTime(py::wrapper::Windows::UI::Notifications::ScheduledTileNotification* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3540,7 +3540,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* _new_ScheduledToastNotification(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3628,7 +3628,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static int ScheduledToastNotification_put_Id(py::wrapper::Windows::UI::Notifications::ScheduledToastNotification* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3817,7 +3817,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static int ScheduledToastNotification_put_Tag(py::wrapper::Windows::UI::Notifications::ScheduledToastNotification* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3886,7 +3886,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static int ScheduledToastNotification_put_SuppressPopup(py::wrapper::Windows::UI::Notifications::ScheduledToastNotification* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3955,7 +3955,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static int ScheduledToastNotification_put_Group(py::wrapper::Windows::UI::Notifications::ScheduledToastNotification* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4024,7 +4024,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static int ScheduledToastNotification_put_RemoteId(py::wrapper::Windows::UI::Notifications::ScheduledToastNotification* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4093,7 +4093,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static int ScheduledToastNotification_put_NotificationMirroring(py::wrapper::Windows::UI::Notifications::ScheduledToastNotification* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4162,7 +4162,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static int ScheduledToastNotification_put_ExpirationTime(py::wrapper::Windows::UI::Notifications::ScheduledToastNotification* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4348,7 +4348,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static int ScheduledToastNotificationShowingEventArgs_put_Cancel(py::wrapper::Windows::UI::Notifications::ScheduledToastNotificationShowingEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4568,7 +4568,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* _new_TileFlyoutNotification(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -4637,7 +4637,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static int TileFlyoutNotification_put_ExpirationTime(py::wrapper::Windows::UI::Notifications::TileFlyoutNotification* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5301,7 +5301,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* _new_TileNotification(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -5370,7 +5370,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static int TileNotification_put_Tag(py::wrapper::Windows::UI::Notifications::TileNotification* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5439,7 +5439,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static int TileNotification_put_ExpirationTime(py::wrapper::Windows::UI::Notifications::TileNotification* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6895,7 +6895,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* _new_ToastCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -6967,7 +6967,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static int ToastCollection_put_LaunchArgs(py::wrapper::Windows::UI::Notifications::ToastCollection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7036,7 +7036,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static int ToastCollection_put_Icon(py::wrapper::Windows::UI::Notifications::ToastCollection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7105,7 +7105,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static int ToastCollection_put_DisplayName(py::wrapper::Windows::UI::Notifications::ToastCollection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7762,7 +7762,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* _new_ToastNotification(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -7831,7 +7831,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static int ToastNotification_put_ExpirationTime(py::wrapper::Windows::UI::Notifications::ToastNotification* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7930,7 +7930,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static int ToastNotification_put_Tag(py::wrapper::Windows::UI::Notifications::ToastNotification* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7999,7 +7999,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static int ToastNotification_put_SuppressPopup(py::wrapper::Windows::UI::Notifications::ToastNotification* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8068,7 +8068,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static int ToastNotification_put_Group(py::wrapper::Windows::UI::Notifications::ToastNotification* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8137,7 +8137,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static int ToastNotification_put_RemoteId(py::wrapper::Windows::UI::Notifications::ToastNotification* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8206,7 +8206,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static int ToastNotification_put_NotificationMirroring(py::wrapper::Windows::UI::Notifications::ToastNotification* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8275,7 +8275,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static int ToastNotification_put_Priority(py::wrapper::Windows::UI::Notifications::ToastNotification* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8344,7 +8344,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static int ToastNotification_put_Data(py::wrapper::Windows::UI::Notifications::ToastNotification* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8413,7 +8413,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static int ToastNotification_put_ExpiresOnReboot(py::wrapper::Windows::UI::Notifications::ToastNotification* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

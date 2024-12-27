@@ -8,7 +8,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* _new_InkDrawingAttributes(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -115,7 +115,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkDrawingAttributes_put_Size(py::wrapper::Windows::UI::Input::Inking::InkDrawingAttributes* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -184,7 +184,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkDrawingAttributes_put_PenTip(py::wrapper::Windows::UI::Input::Inking::InkDrawingAttributes* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -253,7 +253,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkDrawingAttributes_put_IgnorePressure(py::wrapper::Windows::UI::Input::Inking::InkDrawingAttributes* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -322,7 +322,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkDrawingAttributes_put_FitToCurve(py::wrapper::Windows::UI::Input::Inking::InkDrawingAttributes* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -391,7 +391,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkDrawingAttributes_put_Color(py::wrapper::Windows::UI::Input::Inking::InkDrawingAttributes* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -460,7 +460,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkDrawingAttributes_put_PenTipTransform(py::wrapper::Windows::UI::Input::Inking::InkDrawingAttributes* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -529,7 +529,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkDrawingAttributes_put_DrawAsHighlighter(py::wrapper::Windows::UI::Input::Inking::InkDrawingAttributes* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -658,7 +658,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkDrawingAttributes_put_IgnoreTilt(py::wrapper::Windows::UI::Input::Inking::InkDrawingAttributes* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -860,7 +860,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkDrawingAttributesPencilProperties_put_Opacity(py::wrapper::Windows::UI::Input::Inking::InkDrawingAttributesPencilProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -996,7 +996,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkInputConfiguration_put_IsPrimaryBarrelButtonInputEnabled(py::wrapper::Windows::UI::Input::Inking::InkInputConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1065,7 +1065,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkInputConfiguration_put_IsEraserInputEnabled(py::wrapper::Windows::UI::Input::Inking::InkInputConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1134,7 +1134,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkInputConfiguration_put_IsPenHapticFeedbackEnabled(py::wrapper::Windows::UI::Input::Inking::InkInputConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1272,7 +1272,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkInputProcessingConfiguration_put_RightDragAction(py::wrapper::Windows::UI::Input::Inking::InkInputProcessingConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1341,7 +1341,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkInputProcessingConfiguration_put_Mode(py::wrapper::Windows::UI::Input::Inking::InkInputProcessingConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1433,7 +1433,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* _new_InkManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2378,7 +2378,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkManager_put_Mode(py::wrapper::Windows::UI::Input::Inking::InkManager* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2566,7 +2566,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkModelerAttributes_put_ScalingFactor(py::wrapper::Windows::UI::Input::Inking::InkModelerAttributes* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2635,7 +2635,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkModelerAttributes_put_PredictionTime(py::wrapper::Windows::UI::Input::Inking::InkModelerAttributes* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2704,7 +2704,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkModelerAttributes_put_UseVelocityBasedPressure(py::wrapper::Windows::UI::Input::Inking::InkModelerAttributes* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2797,7 +2797,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* _new_InkPoint(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3273,7 +3273,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkPresenter_put_StrokeContainer(py::wrapper::Windows::UI::Input::Inking::InkPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3342,7 +3342,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkPresenter_put_IsInputEnabled(py::wrapper::Windows::UI::Input::Inking::InkPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3411,7 +3411,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkPresenter_put_InputDeviceTypes(py::wrapper::Windows::UI::Input::Inking::InkPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3570,7 +3570,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkPresenter_put_HighContrastAdjustment(py::wrapper::Windows::UI::Input::Inking::InkPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3836,7 +3836,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* _new_InkPresenterProtractor(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3905,7 +3905,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkPresenterProtractor_put_Radius(py::wrapper::Windows::UI::Input::Inking::InkPresenterProtractor* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3974,7 +3974,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkPresenterProtractor_put_IsResizable(py::wrapper::Windows::UI::Input::Inking::InkPresenterProtractor* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4043,7 +4043,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkPresenterProtractor_put_IsCenterMarkerVisible(py::wrapper::Windows::UI::Input::Inking::InkPresenterProtractor* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4112,7 +4112,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkPresenterProtractor_put_IsAngleReadoutVisible(py::wrapper::Windows::UI::Input::Inking::InkPresenterProtractor* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4181,7 +4181,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkPresenterProtractor_put_AreTickMarksVisible(py::wrapper::Windows::UI::Input::Inking::InkPresenterProtractor* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4250,7 +4250,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkPresenterProtractor_put_AreRaysVisible(py::wrapper::Windows::UI::Input::Inking::InkPresenterProtractor* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4319,7 +4319,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkPresenterProtractor_put_AccentColor(py::wrapper::Windows::UI::Input::Inking::InkPresenterProtractor* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4388,7 +4388,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkPresenterProtractor_put_Transform(py::wrapper::Windows::UI::Input::Inking::InkPresenterProtractor* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4457,7 +4457,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkPresenterProtractor_put_IsVisible(py::wrapper::Windows::UI::Input::Inking::InkPresenterProtractor* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4526,7 +4526,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkPresenterProtractor_put_ForegroundColor(py::wrapper::Windows::UI::Input::Inking::InkPresenterProtractor* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4595,7 +4595,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkPresenterProtractor_put_BackgroundColor(py::wrapper::Windows::UI::Input::Inking::InkPresenterProtractor* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4727,7 +4727,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* _new_InkPresenterRuler(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -4796,7 +4796,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkPresenterRuler_put_Width(py::wrapper::Windows::UI::Input::Inking::InkPresenterRuler* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4865,7 +4865,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkPresenterRuler_put_Length(py::wrapper::Windows::UI::Input::Inking::InkPresenterRuler* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4934,7 +4934,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkPresenterRuler_put_IsCompassVisible(py::wrapper::Windows::UI::Input::Inking::InkPresenterRuler* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5003,7 +5003,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkPresenterRuler_put_AreTickMarksVisible(py::wrapper::Windows::UI::Input::Inking::InkPresenterRuler* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5072,7 +5072,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkPresenterRuler_put_Transform(py::wrapper::Windows::UI::Input::Inking::InkPresenterRuler* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5141,7 +5141,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkPresenterRuler_put_IsVisible(py::wrapper::Windows::UI::Input::Inking::InkPresenterRuler* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5210,7 +5210,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkPresenterRuler_put_ForegroundColor(py::wrapper::Windows::UI::Input::Inking::InkPresenterRuler* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5279,7 +5279,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkPresenterRuler_put_BackgroundColor(py::wrapper::Windows::UI::Input::Inking::InkPresenterRuler* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5684,7 +5684,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* _new_InkRecognizerContainer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -6066,7 +6066,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkStroke_put_Selected(py::wrapper::Windows::UI::Input::Inking::InkStroke* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6135,7 +6135,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkStroke_put_DrawingAttributes(py::wrapper::Windows::UI::Input::Inking::InkStroke* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6264,7 +6264,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkStroke_put_PointTransform(py::wrapper::Windows::UI::Input::Inking::InkStroke* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6333,7 +6333,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkStroke_put_StrokeStartedTime(py::wrapper::Windows::UI::Input::Inking::InkStroke* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6402,7 +6402,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkStroke_put_StrokeDuration(py::wrapper::Windows::UI::Input::Inking::InkStroke* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6564,7 +6564,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* _new_InkStrokeBuilder(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -6947,7 +6947,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* _new_InkStrokeContainer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -10175,7 +10175,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int IInkPresenterStencil_put_BackgroundColor(py::wrapper::Windows::UI::Input::Inking::IInkPresenterStencil* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10244,7 +10244,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int IInkPresenterStencil_put_ForegroundColor(py::wrapper::Windows::UI::Input::Inking::IInkPresenterStencil* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10313,7 +10313,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int IInkPresenterStencil_put_IsVisible(py::wrapper::Windows::UI::Input::Inking::IInkPresenterStencil* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10412,7 +10412,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int IInkPresenterStencil_put_Transform(py::wrapper::Windows::UI::Input::Inking::IInkPresenterStencil* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

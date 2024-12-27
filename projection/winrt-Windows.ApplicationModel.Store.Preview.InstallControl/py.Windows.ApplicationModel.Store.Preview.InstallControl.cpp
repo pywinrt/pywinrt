@@ -525,7 +525,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static int AppInstallItem_put_LaunchAfterInstall(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -594,7 +594,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static int AppInstallItem_put_PinToTaskbarAfterInstall(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -663,7 +663,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static int AppInstallItem_put_PinToStartAfterInstall(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -732,7 +732,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static int AppInstallItem_put_PinToDesktopAfterInstall(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -801,7 +801,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static int AppInstallItem_put_InstallInProgressToastNotificationMode(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -870,7 +870,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static int AppInstallItem_put_CompletedInstallToastNotificationMode(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1113,7 +1113,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* _new_AppInstallManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2825,7 +2825,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static int AppInstallManager_put_AutoUpdateSetting(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2894,7 +2894,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static int AppInstallManager_put_AcquisitionIdentity(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3347,7 +3347,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* _new_AppInstallOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3414,7 +3414,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static int AppInstallOptions_put_TargetVolume(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3483,7 +3483,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static int AppInstallOptions_put_Repair(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3552,7 +3552,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static int AppInstallOptions_put_LaunchAfterInstall(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3621,7 +3621,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static int AppInstallOptions_put_ForceUseOfNonRemovableStorage(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3690,7 +3690,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static int AppInstallOptions_put_CatalogId(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3759,7 +3759,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static int AppInstallOptions_put_AllowForcedAppRestart(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3828,7 +3828,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static int AppInstallOptions_put_StageButDoNotInstall(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3897,7 +3897,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static int AppInstallOptions_put_PinToTaskbarAfterInstall(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3966,7 +3966,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static int AppInstallOptions_put_PinToStartAfterInstall(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4035,7 +4035,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static int AppInstallOptions_put_PinToDesktopAfterInstall(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4104,7 +4104,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static int AppInstallOptions_put_InstallInProgressToastNotificationMode(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4173,7 +4173,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static int AppInstallOptions_put_InstallForAllUsers(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4242,7 +4242,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static int AppInstallOptions_put_ExtendedCampaignId(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4311,7 +4311,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static int AppInstallOptions_put_CompletedInstallToastNotificationMode(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4380,7 +4380,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static int AppInstallOptions_put_CampaignId(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4799,7 +4799,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* _new_AppUpdateOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -4866,7 +4866,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static int AppUpdateOptions_put_CatalogId(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppUpdateOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4935,7 +4935,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static int AppUpdateOptions_put_AllowForcedAppRestart(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppUpdateOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5004,7 +5004,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static int AppUpdateOptions_put_AutomaticallyDownloadAndInstallUpdateIfFound(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppUpdateOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

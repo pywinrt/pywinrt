@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
 
     static PyObject* _new_EasClientDeviceInformation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -344,7 +344,7 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
 
     static PyObject* _new_EasClientSecurityPolicy(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -491,7 +491,7 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
 
     static int EasClientSecurityPolicy_put_RequireEncryption(py::wrapper::Windows::Security::ExchangeActiveSyncProvisioning::EasClientSecurityPolicy* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -560,7 +560,7 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
 
     static int EasClientSecurityPolicy_put_PasswordHistory(py::wrapper::Windows::Security::ExchangeActiveSyncProvisioning::EasClientSecurityPolicy* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -629,7 +629,7 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
 
     static int EasClientSecurityPolicy_put_PasswordExpiration(py::wrapper::Windows::Security::ExchangeActiveSyncProvisioning::EasClientSecurityPolicy* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -698,7 +698,7 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
 
     static int EasClientSecurityPolicy_put_MinPasswordLength(py::wrapper::Windows::Security::ExchangeActiveSyncProvisioning::EasClientSecurityPolicy* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -767,7 +767,7 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
 
     static int EasClientSecurityPolicy_put_MinPasswordComplexCharacters(py::wrapper::Windows::Security::ExchangeActiveSyncProvisioning::EasClientSecurityPolicy* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -836,7 +836,7 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
 
     static int EasClientSecurityPolicy_put_MaxPasswordFailedAttempts(py::wrapper::Windows::Security::ExchangeActiveSyncProvisioning::EasClientSecurityPolicy* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -905,7 +905,7 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
 
     static int EasClientSecurityPolicy_put_MaxInactivityTimeLock(py::wrapper::Windows::Security::ExchangeActiveSyncProvisioning::EasClientSecurityPolicy* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -974,7 +974,7 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
 
     static int EasClientSecurityPolicy_put_DisallowConvenienceLogon(py::wrapper::Windows::Security::ExchangeActiveSyncProvisioning::EasClientSecurityPolicy* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

@@ -720,7 +720,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static int GattCharacteristic_put_ProtectionLevel(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristic* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4274,7 +4274,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static int GattDescriptor_put_ProtectionLevel(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptor* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7086,7 +7086,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* _new_GattLocalCharacteristicParameters(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -7153,7 +7153,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static int GattLocalCharacteristicParameters_put_WriteProtectionLevel(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalCharacteristicParameters* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7222,7 +7222,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static int GattLocalCharacteristicParameters_put_UserDescription(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalCharacteristicParameters* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7291,7 +7291,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static int GattLocalCharacteristicParameters_put_StaticValue(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalCharacteristicParameters* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7360,7 +7360,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static int GattLocalCharacteristicParameters_put_ReadProtectionLevel(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalCharacteristicParameters* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7429,7 +7429,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static int GattLocalCharacteristicParameters_put_CharacteristicProperties(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalCharacteristicParameters* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8007,7 +8007,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* _new_GattLocalDescriptorParameters(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -8074,7 +8074,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static int GattLocalDescriptorParameters_put_WriteProtectionLevel(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalDescriptorParameters* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8143,7 +8143,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static int GattLocalDescriptorParameters_put_StaticValue(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalDescriptorParameters* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8212,7 +8212,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static int GattLocalDescriptorParameters_put_ReadProtectionLevel(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalDescriptorParameters* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11216,7 +11216,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* _new_GattReliableWriteTransaction(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -12078,7 +12078,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* _new_GattServiceProviderAdvertisingParameters(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -12145,7 +12145,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static int GattServiceProviderAdvertisingParameters_put_IsDiscoverable(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderAdvertisingParameters* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12214,7 +12214,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static int GattServiceProviderAdvertisingParameters_put_IsConnectable(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderAdvertisingParameters* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12283,7 +12283,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static int GattServiceProviderAdvertisingParameters_put_ServiceData(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderAdvertisingParameters* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13370,7 +13370,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static int GattSession_put_MaintainConnection(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattSession* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

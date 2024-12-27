@@ -477,7 +477,7 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
     static int SpeechSynthesisStream_put_Size(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesisStream* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -697,7 +697,7 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
     static PyObject* _new_SpeechSynthesizer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -931,7 +931,7 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
     static int SpeechSynthesizer_put_Voice(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesizer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1214,7 +1214,7 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
     static int SpeechSynthesizerOptions_put_IncludeWordBoundaryMetadata(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesizerOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1283,7 +1283,7 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
     static int SpeechSynthesizerOptions_put_IncludeSentenceBoundaryMetadata(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesizerOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1352,7 +1352,7 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
     static int SpeechSynthesizerOptions_put_SpeakingRate(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesizerOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1421,7 +1421,7 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
     static int SpeechSynthesizerOptions_put_AudioVolume(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesizerOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1490,7 +1490,7 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
     static int SpeechSynthesizerOptions_put_AudioPitch(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesizerOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1559,7 +1559,7 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
     static int SpeechSynthesizerOptions_put_PunctuationSilence(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesizerOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1628,7 +1628,7 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
     static int SpeechSynthesizerOptions_put_AppendedSilence(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesizerOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

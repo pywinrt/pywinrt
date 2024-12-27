@@ -699,7 +699,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static int CoreTextEditContext_put_Name(py::wrapper::Windows::UI::Text::Core::CoreTextEditContext* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -768,7 +768,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static int CoreTextEditContext_put_IsReadOnly(py::wrapper::Windows::UI::Text::Core::CoreTextEditContext* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -837,7 +837,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static int CoreTextEditContext_put_InputScope(py::wrapper::Windows::UI::Text::Core::CoreTextEditContext* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -906,7 +906,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static int CoreTextEditContext_put_InputPaneDisplayPolicy(py::wrapper::Windows::UI::Text::Core::CoreTextEditContext* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1760,7 +1760,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static int CoreTextFormatUpdatingEventArgs_put_Result(py::wrapper::Windows::UI::Text::Core::CoreTextFormatUpdatingEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2114,7 +2114,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static int CoreTextLayoutBounds_put_TextBounds(py::wrapper::Windows::UI::Text::Core::CoreTextLayoutBounds* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2183,7 +2183,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static int CoreTextLayoutBounds_put_ControlBounds(py::wrapper::Windows::UI::Text::Core::CoreTextLayoutBounds* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2688,7 +2688,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static int CoreTextSelectionRequest_put_Selection(py::wrapper::Windows::UI::Text::Core::CoreTextSelectionRequest* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2993,7 +2993,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static int CoreTextSelectionUpdatingEventArgs_put_Result(py::wrapper::Windows::UI::Text::Core::CoreTextSelectionUpdatingEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3590,7 +3590,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static int CoreTextTextRequest_put_Text(py::wrapper::Windows::UI::Text::Core::CoreTextTextRequest* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3926,7 +3926,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static int CoreTextTextUpdatingEventArgs_put_Result(py::wrapper::Windows::UI::Text::Core::CoreTextTextUpdatingEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4189,7 +4189,7 @@ namespace py::cpp::Windows::UI::Text::Core
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -4256,7 +4256,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static int CoreTextRange_set_StartCaretPosition(py::wrapper::Windows::UI::Text::Core::CoreTextRange* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4289,7 +4289,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static int CoreTextRange_set_EndCaretPosition(py::wrapper::Windows::UI::Text::Core::CoreTextRange* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

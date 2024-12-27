@@ -956,7 +956,7 @@ namespace py::cpp::Windows::Security::Credentials
 
     static PyObject* _new_PasswordCredential(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1081,7 +1081,7 @@ namespace py::cpp::Windows::Security::Credentials
 
     static int PasswordCredential_put_UserName(py::wrapper::Windows::Security::Credentials::PasswordCredential* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1150,7 +1150,7 @@ namespace py::cpp::Windows::Security::Credentials
 
     static int PasswordCredential_put_Resource(py::wrapper::Windows::Security::Credentials::PasswordCredential* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1219,7 +1219,7 @@ namespace py::cpp::Windows::Security::Credentials
 
     static int PasswordCredential_put_Password(py::wrapper::Windows::Security::Credentials::PasswordCredential* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1344,7 +1344,7 @@ namespace py::cpp::Windows::Security::Credentials
 
     static PyObject* _new_PasswordCredentialPropertyStore(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1855,7 +1855,8 @@ namespace py::cpp::Windows::Security::Credentials
                 return self->obj.TryLookup(_key);
             }();
 
-            if (!value) {
+            if (!value)
+            {
                 if constexpr (std::is_base_of_v<winrt::Windows::Foundation::IUnknown, decltype(value)>)
                 {
                     auto has_key = [&]()
@@ -1889,13 +1890,15 @@ namespace py::cpp::Windows::Security::Credentials
         {
             auto _key = py::convert_to<winrt::hstring>(key);
 
-            if (value == nullptr) {
+            if (!value)
+            {
                 bool did_remove;
                 {
                     auto _gil = py::release_gil();
                     did_remove = self->obj.TryRemove(_key);
                 }
-                if (!did_remove) {
+                if (!did_remove)
+                {
                     PyErr_SetObject(PyExc_KeyError, key);
                     return -1;
                 }
@@ -1962,7 +1965,7 @@ namespace py::cpp::Windows::Security::Credentials
 
     static PyObject* _new_PasswordVault(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2309,7 +2312,7 @@ namespace py::cpp::Windows::Security::Credentials
 
     static PyObject* _new_WebAccount(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2683,7 +2686,7 @@ namespace py::cpp::Windows::Security::Credentials
 
     static PyObject* _new_WebAccountProvider(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;

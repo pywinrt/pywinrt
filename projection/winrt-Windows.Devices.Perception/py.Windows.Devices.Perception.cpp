@@ -1820,7 +1820,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static int PerceptionColorFrameReader_put_IsPaused(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameReader* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5161,7 +5161,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static int PerceptionDepthFrameReader_put_IsPaused(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameReader* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8024,7 +8024,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static int PerceptionInfraredFrameReader_put_IsPaused(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameReader* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

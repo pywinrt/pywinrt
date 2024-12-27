@@ -1194,7 +1194,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static int ContentIsland_put_SystemBackdrop(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1263,7 +1263,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static int ContentIsland_put_IsIslandVisible(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1332,7 +1332,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static int ContentIsland_put_IsIslandEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1401,7 +1401,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static int ContentIsland_put_IsHitTestVisibleWhenTransparent(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1470,7 +1470,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static int ContentIsland_put_AppData(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2309,7 +2309,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static int ContentIslandAutomationProviderRequestedEventArgs_put_Handled(py::wrapper::Microsoft::UI::Content::ContentIslandAutomationProviderRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2378,7 +2378,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static int ContentIslandAutomationProviderRequestedEventArgs_put_AutomationProvider(py::wrapper::Microsoft::UI::Content::ContentIslandAutomationProviderRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3104,7 +3104,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static int ContentSite_put_ShouldApplyRasterizationScale(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3173,7 +3173,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static int ContentSite_put_ParentScale(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3242,7 +3242,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static int ContentSite_put_OverrideScale(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3311,7 +3311,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static int ContentSite_put_LayoutDirection(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3380,7 +3380,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static int ContentSite_put_IsSiteVisible(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3449,7 +3449,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static int ContentSite_put_IsSiteEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3518,7 +3518,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static int ContentSite_put_ClientSize(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3587,7 +3587,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static int ContentSite_put_ActualSize(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4274,7 +4274,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static int ContentSiteEnvironment_put_DisplayId(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4343,7 +4343,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static int ContentSiteEnvironment_put_AppWindowId(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5355,7 +5355,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static int DesktopChildSiteBridge_put_ResizePolicy(py::wrapper::Microsoft::UI::Content::DesktopChildSiteBridge* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6004,7 +6004,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static int DesktopSiteBridge_put_OverrideScale(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6073,7 +6073,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static int DesktopSiteBridge_put_LayoutDirectionOverride(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6631,7 +6631,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static int IContentSiteBridge_put_LayoutDirectionOverride(py::wrapper::Microsoft::UI::Content::IContentSiteBridge* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6700,7 +6700,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static int IContentSiteBridge_put_OverrideScale(py::wrapper::Microsoft::UI::Content::IContentSiteBridge* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

@@ -8,7 +8,7 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
     static PyObject* _new_DispatcherExitDeferral(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1389,7 +1389,7 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
     static int DispatcherQueueTimer_put_IsRepeating(py::wrapper::Microsoft::UI::Dispatching::DispatcherQueueTimer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1458,7 +1458,7 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
     static int DispatcherQueueTimer_put_Interval(py::wrapper::Microsoft::UI::Dispatching::DispatcherQueueTimer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

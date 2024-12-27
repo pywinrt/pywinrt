@@ -8,7 +8,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* _new_AppNotificationBuilder(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1419,7 +1419,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* _new_AppNotificationButton(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1917,7 +1917,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static int AppNotificationButton_put_ToolTip(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationButton* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1986,7 +1986,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static int AppNotificationButton_put_TargetAppId(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationButton* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2055,7 +2055,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static int AppNotificationButton_put_InvokeUri(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationButton* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2124,7 +2124,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static int AppNotificationButton_put_InputId(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationButton* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2193,7 +2193,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static int AppNotificationButton_put_Icon(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationButton* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2262,7 +2262,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static int AppNotificationButton_put_ContextMenuPlacement(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationButton* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2331,7 +2331,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static int AppNotificationButton_put_Content(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationButton* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2400,7 +2400,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static int AppNotificationButton_put_ButtonStyle(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationButton* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2469,7 +2469,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static int AppNotificationButton_put_Arguments(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationButton* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2603,7 +2603,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* _new_AppNotificationComboBox(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2799,7 +2799,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static int AppNotificationComboBox_put_Title(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationComboBox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2868,7 +2868,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static int AppNotificationComboBox_put_SelectedItem(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationComboBox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2937,7 +2937,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static int AppNotificationComboBox_put_Items(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationComboBox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3033,7 +3033,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* _new_AppNotificationProgressBar(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3428,7 +3428,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static int AppNotificationProgressBar_put_ValueStringOverride(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationProgressBar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3497,7 +3497,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static int AppNotificationProgressBar_put_Value(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationProgressBar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3566,7 +3566,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static int AppNotificationProgressBar_put_Title(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationProgressBar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3635,7 +3635,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static int AppNotificationProgressBar_put_Status(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationProgressBar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3737,7 +3737,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* _new_AppNotificationTextProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3928,7 +3928,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static int AppNotificationTextProperties_put_MaxLines(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationTextProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3997,7 +3997,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static int AppNotificationTextProperties_put_Language(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationTextProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4066,7 +4066,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static int AppNotificationTextProperties_put_IncomingCallAlignment(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationTextProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

@@ -786,7 +786,7 @@ namespace py::cpp::Windows::Storage::Pickers
 
     static PyObject* _new_FileOpenPicker(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1128,7 +1128,7 @@ namespace py::cpp::Windows::Storage::Pickers
 
     static int FileOpenPicker_put_ViewMode(py::wrapper::Windows::Storage::Pickers::FileOpenPicker* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1197,7 +1197,7 @@ namespace py::cpp::Windows::Storage::Pickers
 
     static int FileOpenPicker_put_SuggestedStartLocation(py::wrapper::Windows::Storage::Pickers::FileOpenPicker* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1266,7 +1266,7 @@ namespace py::cpp::Windows::Storage::Pickers
 
     static int FileOpenPicker_put_SettingsIdentifier(py::wrapper::Windows::Storage::Pickers::FileOpenPicker* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1335,7 +1335,7 @@ namespace py::cpp::Windows::Storage::Pickers
 
     static int FileOpenPicker_put_CommitButtonText(py::wrapper::Windows::Storage::Pickers::FileOpenPicker* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1977,7 +1977,8 @@ namespace py::cpp::Windows::Storage::Pickers
                 return self->obj.TryLookup(_key);
             }();
 
-            if (!value) {
+            if (!value)
+            {
                 if constexpr (std::is_base_of_v<winrt::Windows::Foundation::IUnknown, decltype(value)>)
                 {
                     auto has_key = [&]()
@@ -2011,13 +2012,15 @@ namespace py::cpp::Windows::Storage::Pickers
         {
             auto _key = py::convert_to<winrt::hstring>(key);
 
-            if (value == nullptr) {
+            if (!value)
+            {
                 bool did_remove;
                 {
                     auto _gil = py::release_gil();
                     did_remove = self->obj.TryRemove(_key);
                 }
-                if (!did_remove) {
+                if (!did_remove)
+                {
                     PyErr_SetObject(PyExc_KeyError, key);
                     return -1;
                 }
@@ -2485,7 +2488,7 @@ namespace py::cpp::Windows::Storage::Pickers
 
     static PyObject* _new_FileSavePicker(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2675,7 +2678,7 @@ namespace py::cpp::Windows::Storage::Pickers
 
     static int FileSavePicker_put_SuggestedStartLocation(py::wrapper::Windows::Storage::Pickers::FileSavePicker* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2744,7 +2747,7 @@ namespace py::cpp::Windows::Storage::Pickers
 
     static int FileSavePicker_put_SuggestedSaveFile(py::wrapper::Windows::Storage::Pickers::FileSavePicker* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2813,7 +2816,7 @@ namespace py::cpp::Windows::Storage::Pickers
 
     static int FileSavePicker_put_SuggestedFileName(py::wrapper::Windows::Storage::Pickers::FileSavePicker* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2882,7 +2885,7 @@ namespace py::cpp::Windows::Storage::Pickers
 
     static int FileSavePicker_put_SettingsIdentifier(py::wrapper::Windows::Storage::Pickers::FileSavePicker* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2951,7 +2954,7 @@ namespace py::cpp::Windows::Storage::Pickers
 
     static int FileSavePicker_put_DefaultFileExtension(py::wrapper::Windows::Storage::Pickers::FileSavePicker* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3020,7 +3023,7 @@ namespace py::cpp::Windows::Storage::Pickers
 
     static int FileSavePicker_put_CommitButtonText(py::wrapper::Windows::Storage::Pickers::FileSavePicker* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3149,7 +3152,7 @@ namespace py::cpp::Windows::Storage::Pickers
 
     static int FileSavePicker_put_EnterpriseId(py::wrapper::Windows::Storage::Pickers::FileSavePicker* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3307,7 +3310,7 @@ namespace py::cpp::Windows::Storage::Pickers
 
     static PyObject* _new_FolderPicker(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3497,7 +3500,7 @@ namespace py::cpp::Windows::Storage::Pickers
 
     static int FolderPicker_put_ViewMode(py::wrapper::Windows::Storage::Pickers::FolderPicker* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3566,7 +3569,7 @@ namespace py::cpp::Windows::Storage::Pickers
 
     static int FolderPicker_put_SuggestedStartLocation(py::wrapper::Windows::Storage::Pickers::FolderPicker* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3635,7 +3638,7 @@ namespace py::cpp::Windows::Storage::Pickers
 
     static int FolderPicker_put_SettingsIdentifier(py::wrapper::Windows::Storage::Pickers::FolderPicker* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3704,7 +3707,7 @@ namespace py::cpp::Windows::Storage::Pickers
 
     static int FolderPicker_put_CommitButtonText(py::wrapper::Windows::Storage::Pickers::FolderPicker* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

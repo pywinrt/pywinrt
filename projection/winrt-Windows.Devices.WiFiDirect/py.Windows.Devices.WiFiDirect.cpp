@@ -53,7 +53,7 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static int WiFiDirectAdvertisement_put_ListenStateDiscoverability(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectAdvertisement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -122,7 +122,7 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static int WiFiDirectAdvertisement_put_IsAutonomousGroupOwnerEnabled(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectAdvertisement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -191,7 +191,7 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static int WiFiDirectAdvertisement_put_InformationElements(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectAdvertisement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -346,7 +346,7 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static PyObject* _new_WiFiDirectAdvertisementPublisher(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -775,7 +775,7 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static PyObject* _new_WiFiDirectConnectionListener(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -930,7 +930,7 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static PyObject* _new_WiFiDirectConnectionParameters(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1039,7 +1039,7 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static int WiFiDirectConnectionParameters_put_GroupOwnerIntent(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectConnectionParameters* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1108,7 +1108,7 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static int WiFiDirectConnectionParameters_put_PreferredPairingProcedure(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectConnectionParameters* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2003,7 +2003,7 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static PyObject* _new_WiFiDirectInformationElement(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2154,7 +2154,7 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static int WiFiDirectInformationElement_put_Value(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectInformationElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2223,7 +2223,7 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static int WiFiDirectInformationElement_put_OuiType(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectInformationElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2292,7 +2292,7 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static int WiFiDirectInformationElement_put_Oui(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectInformationElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2457,7 +2457,7 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static int WiFiDirectLegacySettings_put_Ssid(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectLegacySettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2526,7 +2526,7 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static int WiFiDirectLegacySettings_put_Passphrase(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectLegacySettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2595,7 +2595,7 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static int WiFiDirectLegacySettings_put_IsEnabled(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectLegacySettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

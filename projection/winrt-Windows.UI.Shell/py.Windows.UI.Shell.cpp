@@ -676,7 +676,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* _new_SecurityAppManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -948,7 +948,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static int ShareWindowCommandEventArgs_put_Command(py::wrapper::Windows::UI::Shell::ShareWindowCommandEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1953,7 +1953,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* _new_WindowTab(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2061,7 +2061,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static int WindowTab_put_TreatAsSecondaryTileId(py::wrapper::Windows::UI::Shell::WindowTab* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2130,7 +2130,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static int WindowTab_put_Title(py::wrapper::Windows::UI::Shell::WindowTab* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2199,7 +2199,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static int WindowTab_put_Tag(py::wrapper::Windows::UI::Shell::WindowTab* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2268,7 +2268,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static int WindowTab_put_Icon(py::wrapper::Windows::UI::Shell::WindowTab* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2337,7 +2337,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static int WindowTab_put_Group(py::wrapper::Windows::UI::Shell::WindowTab* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3353,7 +3353,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* _new_WindowTabGroup(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3420,7 +3420,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static int WindowTabGroup_put_Title(py::wrapper::Windows::UI::Shell::WindowTabGroup* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3489,7 +3489,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static int WindowTabGroup_put_Icon(py::wrapper::Windows::UI::Shell::WindowTabGroup* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4545,7 +4545,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static int WindowTabTearOutRequestedEventArgs_put_WindowId(py::wrapper::Windows::UI::Shell::WindowTabTearOutRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4753,7 +4753,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static int WindowTabThumbnailRequestedEventArgs_put_Image(py::wrapper::Windows::UI::Shell::WindowTabThumbnailRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

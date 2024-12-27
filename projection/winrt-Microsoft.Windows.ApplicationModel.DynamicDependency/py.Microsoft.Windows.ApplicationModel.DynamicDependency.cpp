@@ -8,7 +8,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
 
     static PyObject* _new_AddPackageDependencyOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -75,7 +75,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
 
     static int AddPackageDependencyOptions_put_Rank(py::wrapper::Microsoft::Windows::ApplicationModel::DynamicDependency::AddPackageDependencyOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -144,7 +144,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
 
     static int AddPackageDependencyOptions_put_PrependIfRankCollision(py::wrapper::Microsoft::Windows::ApplicationModel::DynamicDependency::AddPackageDependencyOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -236,7 +236,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
 
     static PyObject* _new_CreatePackageDependencyOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -303,7 +303,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
 
     static int CreatePackageDependencyOptions_put_VerifyDependencyResolution(py::wrapper::Microsoft::Windows::ApplicationModel::DynamicDependency::CreatePackageDependencyOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -372,7 +372,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
 
     static int CreatePackageDependencyOptions_put_LifetimeArtifactKind(py::wrapper::Microsoft::Windows::ApplicationModel::DynamicDependency::CreatePackageDependencyOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -441,7 +441,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
 
     static int CreatePackageDependencyOptions_put_LifetimeArtifact(py::wrapper::Microsoft::Windows::ApplicationModel::DynamicDependency::CreatePackageDependencyOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -510,7 +510,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
 
     static int CreatePackageDependencyOptions_put_Architectures(py::wrapper::Microsoft::Windows::ApplicationModel::DynamicDependency::CreatePackageDependencyOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1134,7 +1134,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
 
     static PyObject* _new_PackageDependencyContext(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1462,7 +1462,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -1527,7 +1527,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
 
     static int PackageDependencyContextId_set_Id(py::wrapper::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependencyContextId* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

@@ -93,7 +93,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
 
     static int SocialDashboardItemUpdater_put_Timestamp(py::wrapper::Windows::ApplicationModel::SocialInfo::Provider::SocialDashboardItemUpdater* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -162,7 +162,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
 
     static int SocialDashboardItemUpdater_put_Thumbnail(py::wrapper::Windows::ApplicationModel::SocialInfo::Provider::SocialDashboardItemUpdater* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -231,7 +231,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
 
     static int SocialDashboardItemUpdater_put_TargetUri(py::wrapper::Windows::ApplicationModel::SocialInfo::Provider::SocialDashboardItemUpdater* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

@@ -95,7 +95,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintBindingOptionDetails_put_WarningText(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintBindingOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -164,7 +164,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintBindingOptionDetails_put_Description(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintBindingOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -263,7 +263,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintBindingOptionDetails_put_State(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintBindingOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -332,7 +332,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintBindingOptionDetails_put_ErrorText(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintBindingOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -608,7 +608,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintBorderingOptionDetails_put_WarningText(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintBorderingOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -677,7 +677,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintBorderingOptionDetails_put_Description(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintBorderingOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -776,7 +776,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintBorderingOptionDetails_put_State(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintBorderingOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -845,7 +845,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintBorderingOptionDetails_put_ErrorText(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintBorderingOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1121,7 +1121,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintCollationOptionDetails_put_WarningText(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintCollationOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1190,7 +1190,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintCollationOptionDetails_put_Description(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintCollationOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1289,7 +1289,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintCollationOptionDetails_put_State(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintCollationOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1358,7 +1358,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintCollationOptionDetails_put_ErrorText(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintCollationOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1634,7 +1634,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintColorModeOptionDetails_put_WarningText(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintColorModeOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1703,7 +1703,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintColorModeOptionDetails_put_Description(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintColorModeOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1802,7 +1802,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintColorModeOptionDetails_put_State(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintColorModeOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1871,7 +1871,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintColorModeOptionDetails_put_ErrorText(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintColorModeOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2147,7 +2147,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintCopiesOptionDetails_put_WarningText(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintCopiesOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2216,7 +2216,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintCopiesOptionDetails_put_Description(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintCopiesOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2345,7 +2345,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintCopiesOptionDetails_put_State(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintCopiesOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2414,7 +2414,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintCopiesOptionDetails_put_ErrorText(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintCopiesOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2649,7 +2649,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintCustomItemDetails_put_ItemDisplayName(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintCustomItemDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2937,7 +2937,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintCustomItemListOptionDetails_put_WarningText(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintCustomItemListOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3006,7 +3006,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintCustomItemListOptionDetails_put_Description(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintCustomItemListOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3075,7 +3075,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintCustomItemListOptionDetails_put_DisplayName(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintCustomItemListOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3174,7 +3174,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintCustomItemListOptionDetails_put_State(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintCustomItemListOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3243,7 +3243,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintCustomItemListOptionDetails_put_ErrorText(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintCustomItemListOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3521,7 +3521,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintCustomTextOptionDetails_put_DisplayName(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintCustomTextOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3590,7 +3590,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintCustomTextOptionDetails_put_MaxCharacters(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintCustomTextOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3659,7 +3659,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintCustomTextOptionDetails_put_WarningText(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintCustomTextOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3728,7 +3728,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintCustomTextOptionDetails_put_Description(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintCustomTextOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3797,7 +3797,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintCustomTextOptionDetails_put_State(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintCustomTextOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3866,7 +3866,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintCustomTextOptionDetails_put_ErrorText(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintCustomTextOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4143,7 +4143,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintCustomToggleOptionDetails_put_DisplayName(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintCustomToggleOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4212,7 +4212,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintCustomToggleOptionDetails_put_WarningText(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintCustomToggleOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4281,7 +4281,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintCustomToggleOptionDetails_put_Description(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintCustomToggleOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4350,7 +4350,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintCustomToggleOptionDetails_put_State(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintCustomToggleOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4419,7 +4419,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintCustomToggleOptionDetails_put_ErrorText(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintCustomToggleOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4695,7 +4695,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintDuplexOptionDetails_put_WarningText(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintDuplexOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4764,7 +4764,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintDuplexOptionDetails_put_Description(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintDuplexOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4863,7 +4863,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintDuplexOptionDetails_put_State(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintDuplexOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4932,7 +4932,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintDuplexOptionDetails_put_ErrorText(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintDuplexOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5208,7 +5208,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintHolePunchOptionDetails_put_WarningText(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintHolePunchOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5277,7 +5277,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintHolePunchOptionDetails_put_Description(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintHolePunchOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5376,7 +5376,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintHolePunchOptionDetails_put_State(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintHolePunchOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5445,7 +5445,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintHolePunchOptionDetails_put_ErrorText(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintHolePunchOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5751,7 +5751,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintMediaSizeOptionDetails_put_WarningText(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintMediaSizeOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5820,7 +5820,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintMediaSizeOptionDetails_put_Description(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintMediaSizeOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5889,7 +5889,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintMediaSizeOptionDetails_put_State(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintMediaSizeOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5958,7 +5958,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintMediaSizeOptionDetails_put_ErrorText(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintMediaSizeOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6264,7 +6264,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintMediaTypeOptionDetails_put_WarningText(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintMediaTypeOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6333,7 +6333,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintMediaTypeOptionDetails_put_Description(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintMediaTypeOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6402,7 +6402,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintMediaTypeOptionDetails_put_State(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintMediaTypeOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6471,7 +6471,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintMediaTypeOptionDetails_put_ErrorText(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintMediaTypeOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6777,7 +6777,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintOrientationOptionDetails_put_State(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintOrientationOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6846,7 +6846,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintOrientationOptionDetails_put_ErrorText(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintOrientationOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7005,7 +7005,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintOrientationOptionDetails_put_WarningText(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintOrientationOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7074,7 +7074,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintOrientationOptionDetails_put_Description(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintOrientationOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7260,7 +7260,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintPageRangeOptionDetails_put_State(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintPageRangeOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7329,7 +7329,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintPageRangeOptionDetails_put_ErrorText(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintPageRangeOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7488,7 +7488,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintPageRangeOptionDetails_put_WarningText(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintPageRangeOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7557,7 +7557,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintPageRangeOptionDetails_put_Description(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintPageRangeOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7772,7 +7772,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintQualityOptionDetails_put_State(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintQualityOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7841,7 +7841,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintQualityOptionDetails_put_ErrorText(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintQualityOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8000,7 +8000,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintQualityOptionDetails_put_WarningText(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintQualityOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8069,7 +8069,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintQualityOptionDetails_put_Description(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintQualityOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8285,7 +8285,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintStapleOptionDetails_put_State(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintStapleOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8354,7 +8354,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintStapleOptionDetails_put_ErrorText(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintStapleOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8513,7 +8513,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintStapleOptionDetails_put_WarningText(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintStapleOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8582,7 +8582,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int PrintStapleOptionDetails_put_Description(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintStapleOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9370,7 +9370,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int IPrintCustomOptionDetails_put_DisplayName(py::wrapper::Windows::Graphics::Printing::OptionDetails::IPrintCustomOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9439,7 +9439,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int IPrintCustomOptionDetails_put_ErrorText(py::wrapper::Windows::Graphics::Printing::OptionDetails::IPrintCustomOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9568,7 +9568,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int IPrintCustomOptionDetails_put_State(py::wrapper::Windows::Graphics::Printing::OptionDetails::IPrintCustomOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10095,7 +10095,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int IPrintItemListOptionDetails_put_ErrorText(py::wrapper::Windows::Graphics::Printing::OptionDetails::IPrintItemListOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10224,7 +10224,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int IPrintItemListOptionDetails_put_State(py::wrapper::Windows::Graphics::Printing::OptionDetails::IPrintItemListOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10758,7 +10758,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int IPrintNumberOptionDetails_put_ErrorText(py::wrapper::Windows::Graphics::Printing::OptionDetails::IPrintNumberOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10887,7 +10887,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int IPrintNumberOptionDetails_put_State(py::wrapper::Windows::Graphics::Printing::OptionDetails::IPrintNumberOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11382,7 +11382,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int IPrintOptionDetails_put_ErrorText(py::wrapper::Windows::Graphics::Printing::OptionDetails::IPrintOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11511,7 +11511,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int IPrintOptionDetails_put_State(py::wrapper::Windows::Graphics::Printing::OptionDetails::IPrintOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11994,7 +11994,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int IPrintTextOptionDetails_put_ErrorText(py::wrapper::Windows::Graphics::Printing::OptionDetails::IPrintTextOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12123,7 +12123,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static int IPrintTextOptionDetails_put_State(py::wrapper::Windows::Graphics::Printing::OptionDetails::IPrintTextOptionDetails* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

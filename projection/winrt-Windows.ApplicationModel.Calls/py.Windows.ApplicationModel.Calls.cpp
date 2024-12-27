@@ -8,7 +8,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* _new_AcceptedVoipPhoneCallOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -90,7 +90,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static int AcceptedVoipPhoneCallOptions_put_ServiceName(py::wrapper::Windows::ApplicationModel::Calls::AcceptedVoipPhoneCallOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -159,7 +159,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static int AcceptedVoipPhoneCallOptions_put_Media(py::wrapper::Windows::ApplicationModel::Calls::AcceptedVoipPhoneCallOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -228,7 +228,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static int AcceptedVoipPhoneCallOptions_put_Context(py::wrapper::Windows::ApplicationModel::Calls::AcceptedVoipPhoneCallOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -297,7 +297,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static int AcceptedVoipPhoneCallOptions_put_ContactNumber(py::wrapper::Windows::ApplicationModel::Calls::AcceptedVoipPhoneCallOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -366,7 +366,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static int AcceptedVoipPhoneCallOptions_put_ContactName(py::wrapper::Windows::ApplicationModel::Calls::AcceptedVoipPhoneCallOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -492,7 +492,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* _new_AppInitiatedVoipPhoneCallOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -574,7 +574,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static int AppInitiatedVoipPhoneCallOptions_put_ServiceName(py::wrapper::Windows::ApplicationModel::Calls::AppInitiatedVoipPhoneCallOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -643,7 +643,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static int AppInitiatedVoipPhoneCallOptions_put_Media(py::wrapper::Windows::ApplicationModel::Calls::AppInitiatedVoipPhoneCallOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -712,7 +712,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static int AppInitiatedVoipPhoneCallOptions_put_Context(py::wrapper::Windows::ApplicationModel::Calls::AppInitiatedVoipPhoneCallOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -781,7 +781,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static int AppInitiatedVoipPhoneCallOptions_put_ContactNumber(py::wrapper::Windows::ApplicationModel::Calls::AppInitiatedVoipPhoneCallOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -850,7 +850,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static int AppInitiatedVoipPhoneCallOptions_put_ContactName(py::wrapper::Windows::ApplicationModel::Calls::AppInitiatedVoipPhoneCallOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1298,7 +1298,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* _new_IncomingVoipPhoneCallOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1380,7 +1380,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static int IncomingVoipPhoneCallOptions_put_ServiceName(py::wrapper::Windows::ApplicationModel::Calls::IncomingVoipPhoneCallOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1449,7 +1449,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static int IncomingVoipPhoneCallOptions_put_Ringtone(py::wrapper::Windows::ApplicationModel::Calls::IncomingVoipPhoneCallOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1518,7 +1518,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static int IncomingVoipPhoneCallOptions_put_RingTimeout(py::wrapper::Windows::ApplicationModel::Calls::IncomingVoipPhoneCallOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1587,7 +1587,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static int IncomingVoipPhoneCallOptions_put_Media(py::wrapper::Windows::ApplicationModel::Calls::IncomingVoipPhoneCallOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1656,7 +1656,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static int IncomingVoipPhoneCallOptions_put_Context(py::wrapper::Windows::ApplicationModel::Calls::IncomingVoipPhoneCallOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1725,7 +1725,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static int IncomingVoipPhoneCallOptions_put_ContactRemoteId(py::wrapper::Windows::ApplicationModel::Calls::IncomingVoipPhoneCallOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1794,7 +1794,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static int IncomingVoipPhoneCallOptions_put_ContactNumber(py::wrapper::Windows::ApplicationModel::Calls::IncomingVoipPhoneCallOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1863,7 +1863,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static int IncomingVoipPhoneCallOptions_put_ContactName(py::wrapper::Windows::ApplicationModel::Calls::IncomingVoipPhoneCallOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1932,7 +1932,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static int IncomingVoipPhoneCallOptions_put_ContactImage(py::wrapper::Windows::ApplicationModel::Calls::IncomingVoipPhoneCallOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2001,7 +2001,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static int IncomingVoipPhoneCallOptions_put_CallDetails(py::wrapper::Windows::ApplicationModel::Calls::IncomingVoipPhoneCallOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2070,7 +2070,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static int IncomingVoipPhoneCallOptions_put_BrandingImage(py::wrapper::Windows::ApplicationModel::Calls::IncomingVoipPhoneCallOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2534,7 +2534,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static int LockScreenCallUI_put_CallTitle(py::wrapper::Windows::ApplicationModel::Calls::LockScreenCallUI* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2857,7 +2857,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* _new_OutgoingVoipPhoneCallOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2939,7 +2939,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static int OutgoingVoipPhoneCallOptions_put_ServiceName(py::wrapper::Windows::ApplicationModel::Calls::OutgoingVoipPhoneCallOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3008,7 +3008,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static int OutgoingVoipPhoneCallOptions_put_Media(py::wrapper::Windows::ApplicationModel::Calls::OutgoingVoipPhoneCallOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3077,7 +3077,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static int OutgoingVoipPhoneCallOptions_put_Context(py::wrapper::Windows::ApplicationModel::Calls::OutgoingVoipPhoneCallOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3146,7 +3146,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static int OutgoingVoipPhoneCallOptions_put_ContactName(py::wrapper::Windows::ApplicationModel::Calls::OutgoingVoipPhoneCallOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4639,7 +4639,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static int PhoneCallBlocking_put_BlockUnknownNumbers(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4708,7 +4708,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static int PhoneCallBlocking_put_BlockPrivateNumbers(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4799,7 +4799,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* _new_PhoneCallHistoryEntry(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -4866,7 +4866,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static int PhoneCallHistoryEntry_put_Media(py::wrapper::Windows::ApplicationModel::Calls::PhoneCallHistoryEntry* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4935,7 +4935,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static int PhoneCallHistoryEntry_put_IsMissed(py::wrapper::Windows::ApplicationModel::Calls::PhoneCallHistoryEntry* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5004,7 +5004,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static int PhoneCallHistoryEntry_put_IsIncoming(py::wrapper::Windows::ApplicationModel::Calls::PhoneCallHistoryEntry* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5073,7 +5073,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static int PhoneCallHistoryEntry_put_IsCallerIdBlocked(py::wrapper::Windows::ApplicationModel::Calls::PhoneCallHistoryEntry* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5142,7 +5142,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static int PhoneCallHistoryEntry_put_IsSeen(py::wrapper::Windows::ApplicationModel::Calls::PhoneCallHistoryEntry* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5211,7 +5211,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static int PhoneCallHistoryEntry_put_Duration(py::wrapper::Windows::ApplicationModel::Calls::PhoneCallHistoryEntry* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5280,7 +5280,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static int PhoneCallHistoryEntry_put_IsEmergency(py::wrapper::Windows::ApplicationModel::Calls::PhoneCallHistoryEntry* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5349,7 +5349,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static int PhoneCallHistoryEntry_put_IsSuppressed(py::wrapper::Windows::ApplicationModel::Calls::PhoneCallHistoryEntry* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5418,7 +5418,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static int PhoneCallHistoryEntry_put_StartTime(py::wrapper::Windows::ApplicationModel::Calls::PhoneCallHistoryEntry* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5487,7 +5487,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static int PhoneCallHistoryEntry_put_SourceIdKind(py::wrapper::Windows::ApplicationModel::Calls::PhoneCallHistoryEntry* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5556,7 +5556,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static int PhoneCallHistoryEntry_put_Address(py::wrapper::Windows::ApplicationModel::Calls::PhoneCallHistoryEntry* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5625,7 +5625,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static int PhoneCallHistoryEntry_put_SourceId(py::wrapper::Windows::ApplicationModel::Calls::PhoneCallHistoryEntry* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5694,7 +5694,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static int PhoneCallHistoryEntry_put_RemoteId(py::wrapper::Windows::ApplicationModel::Calls::PhoneCallHistoryEntry* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5763,7 +5763,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static int PhoneCallHistoryEntry_put_OtherAppReadAccess(py::wrapper::Windows::ApplicationModel::Calls::PhoneCallHistoryEntry* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5832,7 +5832,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static int PhoneCallHistoryEntry_put_IsRinging(py::wrapper::Windows::ApplicationModel::Calls::PhoneCallHistoryEntry* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5901,7 +5901,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static int PhoneCallHistoryEntry_put_IsVoicemail(py::wrapper::Windows::ApplicationModel::Calls::PhoneCallHistoryEntry* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6069,7 +6069,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* _new_PhoneCallHistoryEntryAddress(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -6152,7 +6152,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static int PhoneCallHistoryEntryAddress_put_RawAddressKind(py::wrapper::Windows::ApplicationModel::Calls::PhoneCallHistoryEntryAddress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6221,7 +6221,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static int PhoneCallHistoryEntryAddress_put_RawAddress(py::wrapper::Windows::ApplicationModel::Calls::PhoneCallHistoryEntryAddress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6290,7 +6290,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static int PhoneCallHistoryEntryAddress_put_DisplayName(py::wrapper::Windows::ApplicationModel::Calls::PhoneCallHistoryEntryAddress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6359,7 +6359,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static int PhoneCallHistoryEntryAddress_put_ContactId(py::wrapper::Windows::ApplicationModel::Calls::PhoneCallHistoryEntryAddress* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6453,7 +6453,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* _new_PhoneCallHistoryEntryQueryOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -6520,7 +6520,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static int PhoneCallHistoryEntryQueryOptions_put_DesiredMedia(py::wrapper::Windows::ApplicationModel::Calls::PhoneCallHistoryEntryQueryOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8687,7 +8687,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* _new_PhoneDialOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -8754,7 +8754,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static int PhoneDialOptions_put_Number(py::wrapper::Windows::ApplicationModel::Calls::PhoneDialOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8823,7 +8823,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static int PhoneDialOptions_put_Media(py::wrapper::Windows::ApplicationModel::Calls::PhoneDialOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8892,7 +8892,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static int PhoneDialOptions_put_DisplayName(py::wrapper::Windows::ApplicationModel::Calls::PhoneDialOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8961,7 +8961,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static int PhoneDialOptions_put_ContactPhone(py::wrapper::Windows::ApplicationModel::Calls::PhoneDialOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9030,7 +9030,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static int PhoneDialOptions_put_Contact(py::wrapper::Windows::ApplicationModel::Calls::PhoneDialOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9099,7 +9099,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static int PhoneDialOptions_put_AudioEndpoint(py::wrapper::Windows::ApplicationModel::Calls::PhoneDialOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13817,7 +13817,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static int VoipPhoneCall_put_StartTime(py::wrapper::Windows::ApplicationModel::Calls::VoipPhoneCall* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13886,7 +13886,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static int VoipPhoneCall_put_ContactName(py::wrapper::Windows::ApplicationModel::Calls::VoipPhoneCall* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13955,7 +13955,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static int VoipPhoneCall_put_CallMedia(py::wrapper::Windows::ApplicationModel::Calls::VoipPhoneCall* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

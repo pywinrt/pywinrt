@@ -105,7 +105,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
     static PyObject* _new_DesignerAppManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -780,7 +780,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
     static PyObject* _new_DesktopWindowXamlSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -960,7 +960,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
     static int DesktopWindowXamlSource_put_Content(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2192,7 +2192,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
     static PyObject* _new_XamlSourceFocusNavigationRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2408,7 +2408,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
     static PyObject* _new_XamlSourceFocusNavigationResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2908,7 +2908,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
     static int XamlUIPresenter_put_ThemeResourcesXaml(py::wrapper::Windows::UI::Xaml::Hosting::XamlUIPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2977,7 +2977,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
     static int XamlUIPresenter_put_ThemeKey(py::wrapper::Windows::UI::Xaml::Hosting::XamlUIPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3046,7 +3046,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
     static int XamlUIPresenter_put_RootElement(py::wrapper::Windows::UI::Xaml::Hosting::XamlUIPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3115,7 +3115,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
     static int XamlUIPresenter_put_CompleteTimelinesAutomatically(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
     static PyObject* _new_BluetoothLEAdvertisement(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -159,7 +159,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
     static int BluetoothLEAdvertisement_put_LocalName(py::wrapper::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -228,7 +228,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
     static int BluetoothLEAdvertisement_put_Flags(py::wrapper::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -415,7 +415,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
     static PyObject* _new_BluetoothLEAdvertisementBytePattern(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -499,7 +499,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
     static int BluetoothLEAdvertisementBytePattern_put_Offset(py::wrapper::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementBytePattern* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -568,7 +568,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
     static int BluetoothLEAdvertisementBytePattern_put_DataType(py::wrapper::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementBytePattern* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -637,7 +637,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
     static int BluetoothLEAdvertisementBytePattern_put_Data(py::wrapper::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementBytePattern* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -730,7 +730,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
     static PyObject* _new_BluetoothLEAdvertisementDataSection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -813,7 +813,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
     static int BluetoothLEAdvertisementDataSection_put_DataType(py::wrapper::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementDataSection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -882,7 +882,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
     static int BluetoothLEAdvertisementDataSection_put_Data(py::wrapper::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementDataSection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1712,7 +1712,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
     static PyObject* _new_BluetoothLEAdvertisementFilter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1779,7 +1779,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
     static int BluetoothLEAdvertisementFilter_put_Advertisement(py::wrapper::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementFilter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1901,7 +1901,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
     static PyObject* _new_BluetoothLEAdvertisementPublisher(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2125,7 +2125,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
     static int BluetoothLEAdvertisementPublisher_put_UseExtendedAdvertisement(py::wrapper::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementPublisher* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2194,7 +2194,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
     static int BluetoothLEAdvertisementPublisher_put_PreferredTransmitPowerLevelInDBm(py::wrapper::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementPublisher* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2263,7 +2263,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
     static int BluetoothLEAdvertisementPublisher_put_IsAnonymous(py::wrapper::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementPublisher* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2332,7 +2332,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
     static int BluetoothLEAdvertisementPublisher_put_IncludeTransmitPowerLevel(py::wrapper::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementPublisher* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3094,7 +3094,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
     static PyObject* _new_BluetoothLEAdvertisementWatcher(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3258,7 +3258,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
     static int BluetoothLEAdvertisementWatcher_put_SignalStrengthFilter(py::wrapper::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementWatcher* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3327,7 +3327,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
     static int BluetoothLEAdvertisementWatcher_put_ScanningMode(py::wrapper::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementWatcher* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3396,7 +3396,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
     static int BluetoothLEAdvertisementWatcher_put_AdvertisementFilter(py::wrapper::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementWatcher* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3615,7 +3615,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
     static int BluetoothLEAdvertisementWatcher_put_AllowExtendedAdvertisements(py::wrapper::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementWatcher* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3947,7 +3947,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
     static PyObject* _new_BluetoothLEManufacturerData(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -4030,7 +4030,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
     static int BluetoothLEManufacturerData_put_Data(py::wrapper::Windows::Devices::Bluetooth::Advertisement::BluetoothLEManufacturerData* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4099,7 +4099,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
     static int BluetoothLEManufacturerData_put_CompanyId(py::wrapper::Windows::Devices::Bluetooth::Advertisement::BluetoothLEManufacturerData* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

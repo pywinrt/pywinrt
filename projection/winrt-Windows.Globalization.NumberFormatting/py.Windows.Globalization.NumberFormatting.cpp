@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* _new_CurrencyFormatter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -389,7 +389,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int CurrencyFormatter_put_Currency(py::wrapper::Windows::Globalization::NumberFormatting::CurrencyFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -458,7 +458,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int CurrencyFormatter_put_Mode(py::wrapper::Windows::Globalization::NumberFormatting::CurrencyFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -527,7 +527,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int CurrencyFormatter_put_NumeralSystem(py::wrapper::Windows::Globalization::NumberFormatting::CurrencyFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -596,7 +596,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int CurrencyFormatter_put_IsGrouped(py::wrapper::Windows::Globalization::NumberFormatting::CurrencyFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -665,7 +665,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int CurrencyFormatter_put_IsDecimalPointAlwaysDisplayed(py::wrapper::Windows::Globalization::NumberFormatting::CurrencyFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -734,7 +734,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int CurrencyFormatter_put_IntegerDigits(py::wrapper::Windows::Globalization::NumberFormatting::CurrencyFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -803,7 +803,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int CurrencyFormatter_put_FractionDigits(py::wrapper::Windows::Globalization::NumberFormatting::CurrencyFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -992,7 +992,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int CurrencyFormatter_put_NumberRounder(py::wrapper::Windows::Globalization::NumberFormatting::CurrencyFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1061,7 +1061,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int CurrencyFormatter_put_IsZeroSigned(py::wrapper::Windows::Globalization::NumberFormatting::CurrencyFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1130,7 +1130,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int CurrencyFormatter_put_SignificantDigits(py::wrapper::Windows::Globalization::NumberFormatting::CurrencyFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1241,7 +1241,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* _new_DecimalFormatter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1576,7 +1576,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int DecimalFormatter_put_IsDecimalPointAlwaysDisplayed(py::wrapper::Windows::Globalization::NumberFormatting::DecimalFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1645,7 +1645,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int DecimalFormatter_put_IntegerDigits(py::wrapper::Windows::Globalization::NumberFormatting::DecimalFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1714,7 +1714,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int DecimalFormatter_put_IsGrouped(py::wrapper::Windows::Globalization::NumberFormatting::DecimalFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1783,7 +1783,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int DecimalFormatter_put_NumeralSystem(py::wrapper::Windows::Globalization::NumberFormatting::DecimalFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1852,7 +1852,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int DecimalFormatter_put_FractionDigits(py::wrapper::Windows::Globalization::NumberFormatting::DecimalFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2041,7 +2041,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int DecimalFormatter_put_NumberRounder(py::wrapper::Windows::Globalization::NumberFormatting::DecimalFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2110,7 +2110,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int DecimalFormatter_put_IsZeroSigned(py::wrapper::Windows::Globalization::NumberFormatting::DecimalFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2179,7 +2179,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int DecimalFormatter_put_SignificantDigits(py::wrapper::Windows::Globalization::NumberFormatting::DecimalFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2287,7 +2287,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* _new_IncrementNumberRounder(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2606,7 +2606,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int IncrementNumberRounder_put_RoundingAlgorithm(py::wrapper::Windows::Globalization::NumberFormatting::IncrementNumberRounder* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2675,7 +2675,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int IncrementNumberRounder_put_Increment(py::wrapper::Windows::Globalization::NumberFormatting::IncrementNumberRounder* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2773,7 +2773,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* _new_NumeralSystemTranslator(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2897,7 +2897,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int NumeralSystemTranslator_put_NumeralSystem(py::wrapper::Windows::Globalization::NumberFormatting::NumeralSystemTranslator* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3051,7 +3051,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* _new_PercentFormatter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3386,7 +3386,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int PercentFormatter_put_IsDecimalPointAlwaysDisplayed(py::wrapper::Windows::Globalization::NumberFormatting::PercentFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3455,7 +3455,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int PercentFormatter_put_IntegerDigits(py::wrapper::Windows::Globalization::NumberFormatting::PercentFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3524,7 +3524,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int PercentFormatter_put_IsGrouped(py::wrapper::Windows::Globalization::NumberFormatting::PercentFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3593,7 +3593,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int PercentFormatter_put_NumeralSystem(py::wrapper::Windows::Globalization::NumberFormatting::PercentFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3662,7 +3662,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int PercentFormatter_put_FractionDigits(py::wrapper::Windows::Globalization::NumberFormatting::PercentFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3851,7 +3851,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int PercentFormatter_put_NumberRounder(py::wrapper::Windows::Globalization::NumberFormatting::PercentFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3920,7 +3920,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int PercentFormatter_put_IsZeroSigned(py::wrapper::Windows::Globalization::NumberFormatting::PercentFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3989,7 +3989,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int PercentFormatter_put_SignificantDigits(py::wrapper::Windows::Globalization::NumberFormatting::PercentFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4097,7 +4097,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* _new_PermilleFormatter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -4432,7 +4432,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int PermilleFormatter_put_IsDecimalPointAlwaysDisplayed(py::wrapper::Windows::Globalization::NumberFormatting::PermilleFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4501,7 +4501,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int PermilleFormatter_put_IntegerDigits(py::wrapper::Windows::Globalization::NumberFormatting::PermilleFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4570,7 +4570,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int PermilleFormatter_put_IsGrouped(py::wrapper::Windows::Globalization::NumberFormatting::PermilleFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4639,7 +4639,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int PermilleFormatter_put_NumeralSystem(py::wrapper::Windows::Globalization::NumberFormatting::PermilleFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4708,7 +4708,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int PermilleFormatter_put_FractionDigits(py::wrapper::Windows::Globalization::NumberFormatting::PermilleFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4897,7 +4897,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int PermilleFormatter_put_NumberRounder(py::wrapper::Windows::Globalization::NumberFormatting::PermilleFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4966,7 +4966,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int PermilleFormatter_put_IsZeroSigned(py::wrapper::Windows::Globalization::NumberFormatting::PermilleFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5035,7 +5035,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int PermilleFormatter_put_SignificantDigits(py::wrapper::Windows::Globalization::NumberFormatting::PermilleFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5143,7 +5143,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* _new_SignificantDigitsNumberRounder(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -5462,7 +5462,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int SignificantDigitsNumberRounder_put_SignificantDigits(py::wrapper::Windows::Globalization::NumberFormatting::SignificantDigitsNumberRounder* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5531,7 +5531,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int SignificantDigitsNumberRounder_put_RoundingAlgorithm(py::wrapper::Windows::Globalization::NumberFormatting::SignificantDigitsNumberRounder* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6380,7 +6380,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int INumberFormatterOptions_put_FractionDigits(py::wrapper::Windows::Globalization::NumberFormatting::INumberFormatterOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6479,7 +6479,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int INumberFormatterOptions_put_IntegerDigits(py::wrapper::Windows::Globalization::NumberFormatting::INumberFormatterOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6548,7 +6548,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int INumberFormatterOptions_put_IsDecimalPointAlwaysDisplayed(py::wrapper::Windows::Globalization::NumberFormatting::INumberFormatterOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6617,7 +6617,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int INumberFormatterOptions_put_IsGrouped(py::wrapper::Windows::Globalization::NumberFormatting::INumberFormatterOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6716,7 +6716,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int INumberFormatterOptions_put_NumeralSystem(py::wrapper::Windows::Globalization::NumberFormatting::INumberFormatterOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8208,7 +8208,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int INumberRounderOption_put_NumberRounder(py::wrapper::Windows::Globalization::NumberFormatting::INumberRounderOption* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8449,7 +8449,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int ISignedZeroOption_put_IsZeroSigned(py::wrapper::Windows::Globalization::NumberFormatting::ISignedZeroOption* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8690,7 +8690,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int ISignificantDigitsOption_put_SignificantDigits(py::wrapper::Windows::Globalization::NumberFormatting::ISignificantDigitsOption* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

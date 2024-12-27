@@ -2416,7 +2416,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static int BarcodeScannerProviderConnection_put_Version(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2485,7 +2485,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static int BarcodeScannerProviderConnection_put_Name(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2554,7 +2554,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static int BarcodeScannerProviderConnection_put_CompanyName(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5249,7 +5249,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* _new_BarcodeSymbologyAttributesBuilder(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -5356,7 +5356,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static int BarcodeSymbologyAttributesBuilder_put_IsDecodeLengthSupported(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeSymbologyAttributesBuilder* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5425,7 +5425,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static int BarcodeSymbologyAttributesBuilder_put_IsCheckDigitValidationSupported(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeSymbologyAttributesBuilder* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5494,7 +5494,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static int BarcodeSymbologyAttributesBuilder_put_IsCheckDigitTransmissionSupported(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeSymbologyAttributesBuilder* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

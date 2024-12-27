@@ -1324,7 +1324,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static int StoreConfiguration_put_PurchasePromptingPolicy(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

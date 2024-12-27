@@ -139,7 +139,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static int HolographicCamera_put_ViewportScaleFactor(py::wrapper::Windows::Graphics::Holographic::HolographicCamera* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -388,7 +388,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static int HolographicCamera_put_IsPrimaryLayerEnabled(py::wrapper::Windows::Graphics::Holographic::HolographicCamera* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -547,7 +547,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static int HolographicCamera_put_IsHardwareContentProtectionEnabled(py::wrapper::Windows::Graphics::Holographic::HolographicCamera* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1480,7 +1480,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static int HolographicCameraRenderingParameters_put_ReprojectionMode(py::wrapper::Windows::Graphics::Holographic::HolographicCameraRenderingParameters* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1549,7 +1549,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static int HolographicCameraRenderingParameters_put_IsContentProtectionEnabled(py::wrapper::Windows::Graphics::Holographic::HolographicCameraRenderingParameters* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1618,7 +1618,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static int HolographicCameraRenderingParameters_put_DepthReprojectionMethod(py::wrapper::Windows::Graphics::Holographic::HolographicCameraRenderingParameters* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3851,7 +3851,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static PyObject* _new_HolographicQuadLayer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -5624,7 +5624,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static int HolographicViewConfiguration_put_PixelFormat(py::wrapper::Windows::Graphics::Holographic::HolographicViewConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5693,7 +5693,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static int HolographicViewConfiguration_put_IsEnabled(py::wrapper::Windows::Graphics::Holographic::HolographicViewConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6050,7 +6050,7 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -6117,7 +6117,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static int HolographicAdapterId_set_LowPart(py::wrapper::Windows::Graphics::Holographic::HolographicAdapterId* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6150,7 +6150,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static int HolographicAdapterId_set_HighPart(py::wrapper::Windows::Graphics::Holographic::HolographicAdapterId* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6264,7 +6264,7 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -6329,7 +6329,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static int HolographicFrameId_set_Value(py::wrapper::Windows::Graphics::Holographic::HolographicFrameId* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6436,7 +6436,7 @@ namespace py::cpp::Windows::Graphics::Holographic
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -6503,7 +6503,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static int HolographicStereoTransform_set_Left(py::wrapper::Windows::Graphics::Holographic::HolographicStereoTransform* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6536,7 +6536,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static int HolographicStereoTransform_set_Right(py::wrapper::Windows::Graphics::Holographic::HolographicStereoTransform* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

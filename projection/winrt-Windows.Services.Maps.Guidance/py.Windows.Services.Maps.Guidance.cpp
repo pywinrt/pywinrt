@@ -1462,7 +1462,7 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static int GuidanceNavigator_put_AudioNotifications(py::wrapper::Windows::Services::Maps::Guidance::GuidanceNavigator* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1531,7 +1531,7 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static int GuidanceNavigator_put_AudioMeasurementSystem(py::wrapper::Windows::Services::Maps::Guidance::GuidanceNavigator* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1600,7 +1600,7 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static int GuidanceNavigator_put_IsGuidanceAudioMuted(py::wrapper::Windows::Services::Maps::Guidance::GuidanceNavigator* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3520,7 +3520,7 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static int GuidanceTelemetryCollector_put_UploadFrequency(py::wrapper::Windows::Services::Maps::Guidance::GuidanceTelemetryCollector* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3589,7 +3589,7 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static int GuidanceTelemetryCollector_put_SpeedTrigger(py::wrapper::Windows::Services::Maps::Guidance::GuidanceTelemetryCollector* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3658,7 +3658,7 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static int GuidanceTelemetryCollector_put_Enabled(py::wrapper::Windows::Services::Maps::Guidance::GuidanceTelemetryCollector* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

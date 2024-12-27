@@ -1219,7 +1219,7 @@ namespace py::cpp::Windows::Perception::People
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -1286,7 +1286,7 @@ namespace py::cpp::Windows::Perception::People
 
     static int HandMeshVertex_set_Position(py::wrapper::Windows::Perception::People::HandMeshVertex* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1319,7 +1319,7 @@ namespace py::cpp::Windows::Perception::People
 
     static int HandMeshVertex_set_Normal(py::wrapper::Windows::Perception::People::HandMeshVertex* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1433,7 +1433,7 @@ namespace py::cpp::Windows::Perception::People
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -1504,7 +1504,7 @@ namespace py::cpp::Windows::Perception::People
 
     static int JointPose_set_Orientation(py::wrapper::Windows::Perception::People::JointPose* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1537,7 +1537,7 @@ namespace py::cpp::Windows::Perception::People
 
     static int JointPose_set_Position(py::wrapper::Windows::Perception::People::JointPose* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1570,7 +1570,7 @@ namespace py::cpp::Windows::Perception::People
 
     static int JointPose_set_Radius(py::wrapper::Windows::Perception::People::JointPose* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1603,7 +1603,7 @@ namespace py::cpp::Windows::Perception::People
 
     static int JointPose_set_Accuracy(py::wrapper::Windows::Perception::People::JointPose* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

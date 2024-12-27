@@ -2766,7 +2766,7 @@ namespace py::cpp::Windows::ApplicationModel::Store
 
     static PyObject* _new_ProductPurchaseDisplayProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2848,7 +2848,7 @@ namespace py::cpp::Windows::ApplicationModel::Store
 
     static int ProductPurchaseDisplayProperties_put_Name(py::wrapper::Windows::ApplicationModel::Store::ProductPurchaseDisplayProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2917,7 +2917,7 @@ namespace py::cpp::Windows::ApplicationModel::Store
 
     static int ProductPurchaseDisplayProperties_put_Image(py::wrapper::Windows::ApplicationModel::Store::ProductPurchaseDisplayProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2986,7 +2986,7 @@ namespace py::cpp::Windows::ApplicationModel::Store
 
     static int ProductPurchaseDisplayProperties_put_Description(py::wrapper::Windows::ApplicationModel::Store::ProductPurchaseDisplayProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

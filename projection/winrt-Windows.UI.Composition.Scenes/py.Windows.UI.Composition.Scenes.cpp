@@ -1443,7 +1443,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
     static int SceneMesh_put_PrimitiveTopology(py::wrapper::Windows::UI::Composition::Scenes::SceneMesh* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2016,7 +2016,8 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 return self->obj.TryLookup(_key);
             }();
 
-            if (!value) {
+            if (!value)
+            {
                 if constexpr (std::is_base_of_v<winrt::Windows::Foundation::IUnknown, decltype(value)>)
                 {
                     auto has_key = [&]()
@@ -2050,13 +2051,15 @@ namespace py::cpp::Windows::UI::Composition::Scenes
         {
             auto _key = py::convert_to<winrt::hstring>(key);
 
-            if (value == nullptr) {
+            if (!value)
+            {
                 bool did_remove;
                 {
                     auto _gil = py::release_gil();
                     did_remove = self->obj.TryRemove(_key);
                 }
-                if (!did_remove) {
+                if (!did_remove)
+                {
                     PyErr_SetObject(PyExc_KeyError, key);
                     return -1;
                 }
@@ -2208,7 +2211,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
     static int SceneMeshRendererComponent_put_Mesh(py::wrapper::Windows::UI::Composition::Scenes::SceneMeshRendererComponent* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2277,7 +2280,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
     static int SceneMeshRendererComponent_put_Material(py::wrapper::Windows::UI::Composition::Scenes::SceneMeshRendererComponent* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2513,7 +2516,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
     static int SceneMetallicRoughnessMaterial_put_RoughnessFactor(py::wrapper::Windows::UI::Composition::Scenes::SceneMetallicRoughnessMaterial* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2582,7 +2585,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
     static int SceneMetallicRoughnessMaterial_put_MetallicRoughnessInput(py::wrapper::Windows::UI::Composition::Scenes::SceneMetallicRoughnessMaterial* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2651,7 +2654,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
     static int SceneMetallicRoughnessMaterial_put_MetallicFactor(py::wrapper::Windows::UI::Composition::Scenes::SceneMetallicRoughnessMaterial* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2720,7 +2723,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
     static int SceneMetallicRoughnessMaterial_put_BaseColorInput(py::wrapper::Windows::UI::Composition::Scenes::SceneMetallicRoughnessMaterial* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2789,7 +2792,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
     static int SceneMetallicRoughnessMaterial_put_BaseColorFactor(py::wrapper::Windows::UI::Composition::Scenes::SceneMetallicRoughnessMaterial* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2955,7 +2958,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
     static int SceneModelTransform_put_Translation(py::wrapper::Windows::UI::Composition::Scenes::SceneModelTransform* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3024,7 +3027,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
     static int SceneModelTransform_put_Scale(py::wrapper::Windows::UI::Composition::Scenes::SceneModelTransform* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3093,7 +3096,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
     static int SceneModelTransform_put_RotationAxis(py::wrapper::Windows::UI::Composition::Scenes::SceneModelTransform* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3162,7 +3165,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
     static int SceneModelTransform_put_RotationAngleInDegrees(py::wrapper::Windows::UI::Composition::Scenes::SceneModelTransform* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3231,7 +3234,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
     static int SceneModelTransform_put_RotationAngle(py::wrapper::Windows::UI::Composition::Scenes::SceneModelTransform* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3300,7 +3303,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
     static int SceneModelTransform_put_Orientation(py::wrapper::Windows::UI::Composition::Scenes::SceneModelTransform* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4611,7 +4614,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
     static int ScenePbrMaterial_put_OcclusionStrength(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4680,7 +4683,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
     static int ScenePbrMaterial_put_OcclusionInput(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4749,7 +4752,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
     static int ScenePbrMaterial_put_NormalScale(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4818,7 +4821,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
     static int ScenePbrMaterial_put_NormalInput(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4887,7 +4890,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
     static int ScenePbrMaterial_put_IsDoubleSided(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4956,7 +4959,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
     static int ScenePbrMaterial_put_EmissiveInput(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5025,7 +5028,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
     static int ScenePbrMaterial_put_EmissiveFactor(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5094,7 +5097,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
     static int ScenePbrMaterial_put_AlphaMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5163,7 +5166,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
     static int ScenePbrMaterial_put_AlphaCutoff(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5465,7 +5468,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
     static int SceneSurfaceMaterialInput_put_WrappingVMode(py::wrapper::Windows::UI::Composition::Scenes::SceneSurfaceMaterialInput* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5534,7 +5537,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
     static int SceneSurfaceMaterialInput_put_WrappingUMode(py::wrapper::Windows::UI::Composition::Scenes::SceneSurfaceMaterialInput* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5603,7 +5606,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
     static int SceneSurfaceMaterialInput_put_Surface(py::wrapper::Windows::UI::Composition::Scenes::SceneSurfaceMaterialInput* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5672,7 +5675,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
     static int SceneSurfaceMaterialInput_put_BitmapInterpolationMode(py::wrapper::Windows::UI::Composition::Scenes::SceneSurfaceMaterialInput* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5879,7 +5882,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
     static int SceneVisual_put_Root(py::wrapper::Windows::UI::Composition::Scenes::SceneVisual* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

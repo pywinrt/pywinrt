@@ -8,7 +8,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
 
     static PyObject* _new_AnimatedAcceptVisualSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -229,7 +229,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
 
     static PyObject* _new_AnimatedBackVisualSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -450,7 +450,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
 
     static PyObject* _new_AnimatedChevronDownSmallVisualSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -671,7 +671,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
 
     static PyObject* _new_AnimatedChevronRightDownSmallVisualSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -892,7 +892,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
 
     static PyObject* _new_AnimatedChevronUpDownSmallVisualSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1113,7 +1113,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
 
     static PyObject* _new_AnimatedFindVisualSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1334,7 +1334,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
 
     static PyObject* _new_AnimatedGlobalNavigationButtonVisualSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1555,7 +1555,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
 
     static PyObject* _new_AnimatedSettingsVisualSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;

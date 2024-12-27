@@ -2074,7 +2074,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static int DisplayManagerChangedEventArgs_put_Handled(py::wrapper::Windows::Devices::Display::Core::DisplayManagerChangedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2251,7 +2251,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static int DisplayManagerDisabledEventArgs_put_Handled(py::wrapper::Windows::Devices::Display::Core::DisplayManagerDisabledEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2428,7 +2428,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static int DisplayManagerEnabledEventArgs_put_Handled(py::wrapper::Windows::Devices::Display::Core::DisplayManagerEnabledEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2605,7 +2605,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static int DisplayManagerPathsFailedOrInvalidatedEventArgs_put_Handled(py::wrapper::Windows::Devices::Display::Core::DisplayManagerPathsFailedOrInvalidatedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3975,7 +3975,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static int DisplayPath_put_WireFormat(py::wrapper::Windows::Devices::Display::Core::DisplayPath* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4044,7 +4044,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static int DisplayPath_put_TargetResolution(py::wrapper::Windows::Devices::Display::Core::DisplayPath* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4113,7 +4113,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static int DisplayPath_put_SourceResolution(py::wrapper::Windows::Devices::Display::Core::DisplayPath* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4182,7 +4182,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static int DisplayPath_put_SourcePixelFormat(py::wrapper::Windows::Devices::Display::Core::DisplayPath* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4251,7 +4251,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static int DisplayPath_put_Scaling(py::wrapper::Windows::Devices::Display::Core::DisplayPath* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4320,7 +4320,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static int DisplayPath_put_Rotation(py::wrapper::Windows::Devices::Display::Core::DisplayPath* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4389,7 +4389,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static int DisplayPath_put_PresentationRate(py::wrapper::Windows::Devices::Display::Core::DisplayPath* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4458,7 +4458,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static int DisplayPath_put_IsStereo(py::wrapper::Windows::Devices::Display::Core::DisplayPath* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4527,7 +4527,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static int DisplayPath_put_IsInterlaced(py::wrapper::Windows::Devices::Display::Core::DisplayPath* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4716,7 +4716,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static int DisplayPath_put_PhysicalPresentationRate(py::wrapper::Windows::Devices::Display::Core::DisplayPath* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4822,7 +4822,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* _new_DisplayPrimaryDescription(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -7521,7 +7521,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static int DisplayView_put_ContentResolution(py::wrapper::Windows::Devices::Display::Core::DisplayView* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7675,7 +7675,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* _new_DisplayWireFormat(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -8044,7 +8044,7 @@ namespace py::cpp::Windows::Devices::Display::Core
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -8111,7 +8111,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static int DisplayPresentationRate_set_VerticalSyncRate(py::wrapper::Windows::Devices::Display::Core::DisplayPresentationRate* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8144,7 +8144,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static int DisplayPresentationRate_set_VerticalSyncsPerPresentation(py::wrapper::Windows::Devices::Display::Core::DisplayPresentationRate* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

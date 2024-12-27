@@ -53,7 +53,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int AmbientLight_put_Color(py::wrapper::Microsoft::UI::Composition::AmbientLight* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -122,7 +122,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int AmbientLight_put_Intensity(py::wrapper::Microsoft::UI::Composition::AmbientLight* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -341,7 +341,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int AnimationController_put_ProgressBehavior(py::wrapper::Microsoft::UI::Composition::AnimationController* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -410,7 +410,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int AnimationController_put_Progress(py::wrapper::Microsoft::UI::Composition::AnimationController* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -479,7 +479,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int AnimationController_put_PlaybackRate(py::wrapper::Microsoft::UI::Composition::AnimationController* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -786,7 +786,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int AnimationPropertyInfo_put_AccessMode(py::wrapper::Microsoft::UI::Composition::AnimationPropertyInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1322,7 +1322,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int BounceScalarNaturalMotionAnimation_put_Restitution(py::wrapper::Microsoft::UI::Composition::BounceScalarNaturalMotionAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1391,7 +1391,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int BounceScalarNaturalMotionAnimation_put_Acceleration(py::wrapper::Microsoft::UI::Composition::BounceScalarNaturalMotionAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1528,7 +1528,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int BounceVector2NaturalMotionAnimation_put_Restitution(py::wrapper::Microsoft::UI::Composition::BounceVector2NaturalMotionAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1597,7 +1597,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int BounceVector2NaturalMotionAnimation_put_Acceleration(py::wrapper::Microsoft::UI::Composition::BounceVector2NaturalMotionAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1734,7 +1734,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int BounceVector3NaturalMotionAnimation_put_Restitution(py::wrapper::Microsoft::UI::Composition::BounceVector3NaturalMotionAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1803,7 +1803,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int BounceVector3NaturalMotionAnimation_put_Acceleration(py::wrapper::Microsoft::UI::Composition::BounceVector3NaturalMotionAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2126,7 +2126,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int ColorKeyFrameAnimation_put_InterpolationColorSpace(py::wrapper::Microsoft::UI::Composition::ColorKeyFrameAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2832,7 +2832,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionAnimation_put_Target(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3588,7 +3588,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* _new_CompositionCapabilities(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3870,7 +3870,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionClip_put_TransformMatrix(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3939,7 +3939,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionClip_put_Scale(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4008,7 +4008,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionClip_put_RotationAngleInDegrees(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4077,7 +4077,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionClip_put_RotationAngle(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4146,7 +4146,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionClip_put_Offset(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4215,7 +4215,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionClip_put_CenterPoint(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4284,7 +4284,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionClip_put_AnchorPoint(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4451,7 +4451,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionColorBrush_put_Color(py::wrapper::Microsoft::UI::Composition::CompositionColorBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4587,7 +4587,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionColorGradientStop_put_Offset(py::wrapper::Microsoft::UI::Composition::CompositionColorGradientStop* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4656,7 +4656,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionColorGradientStop_put_Color(py::wrapper::Microsoft::UI::Composition::CompositionColorGradientStop* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7161,7 +7161,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* _new_CompositionEffectSourceParameter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -7327,7 +7327,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionEllipseGeometry_put_Radius(py::wrapper::Microsoft::UI::Composition::CompositionEllipseGeometry* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7396,7 +7396,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionEllipseGeometry_put_Center(py::wrapper::Microsoft::UI::Composition::CompositionEllipseGeometry* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7533,7 +7533,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionGeometricClip_put_ViewBox(py::wrapper::Microsoft::UI::Composition::CompositionGeometricClip* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7602,7 +7602,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionGeometricClip_put_Geometry(py::wrapper::Microsoft::UI::Composition::CompositionGeometricClip* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7739,7 +7739,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionGeometry_put_TrimStart(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7808,7 +7808,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionGeometry_put_TrimOffset(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7877,7 +7877,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionGeometry_put_TrimEnd(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8040,7 +8040,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionGradientBrush_put_TransformMatrix(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8109,7 +8109,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionGradientBrush_put_Scale(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8178,7 +8178,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionGradientBrush_put_RotationAngleInDegrees(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8247,7 +8247,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionGradientBrush_put_RotationAngle(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8316,7 +8316,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionGradientBrush_put_Offset(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8385,7 +8385,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionGradientBrush_put_InterpolationSpace(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8454,7 +8454,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionGradientBrush_put_ExtendMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8523,7 +8523,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionGradientBrush_put_CenterPoint(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8592,7 +8592,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionGradientBrush_put_AnchorPoint(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8691,7 +8691,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionGradientBrush_put_MappingMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9324,7 +9324,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionLight_put_IsEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9487,7 +9487,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionLineGeometry_put_Start(py::wrapper::Microsoft::UI::Composition::CompositionLineGeometry* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9556,7 +9556,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionLineGeometry_put_End(py::wrapper::Microsoft::UI::Composition::CompositionLineGeometry* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9693,7 +9693,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionLinearGradientBrush_put_StartPoint(py::wrapper::Microsoft::UI::Composition::CompositionLinearGradientBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9762,7 +9762,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionLinearGradientBrush_put_EndPoint(py::wrapper::Microsoft::UI::Composition::CompositionLinearGradientBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9899,7 +9899,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionMaskBrush_put_Source(py::wrapper::Microsoft::UI::Composition::CompositionMaskBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9968,7 +9968,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionMaskBrush_put_Mask(py::wrapper::Microsoft::UI::Composition::CompositionMaskBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10516,7 +10516,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionNineGridBrush_put_TopInsetScale(py::wrapper::Microsoft::UI::Composition::CompositionNineGridBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10585,7 +10585,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionNineGridBrush_put_TopInset(py::wrapper::Microsoft::UI::Composition::CompositionNineGridBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10654,7 +10654,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionNineGridBrush_put_Source(py::wrapper::Microsoft::UI::Composition::CompositionNineGridBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10723,7 +10723,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionNineGridBrush_put_RightInsetScale(py::wrapper::Microsoft::UI::Composition::CompositionNineGridBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10792,7 +10792,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionNineGridBrush_put_RightInset(py::wrapper::Microsoft::UI::Composition::CompositionNineGridBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10861,7 +10861,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionNineGridBrush_put_LeftInsetScale(py::wrapper::Microsoft::UI::Composition::CompositionNineGridBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10930,7 +10930,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionNineGridBrush_put_LeftInset(py::wrapper::Microsoft::UI::Composition::CompositionNineGridBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10999,7 +10999,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionNineGridBrush_put_IsCenterHollow(py::wrapper::Microsoft::UI::Composition::CompositionNineGridBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11068,7 +11068,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionNineGridBrush_put_BottomInsetScale(py::wrapper::Microsoft::UI::Composition::CompositionNineGridBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11137,7 +11137,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionNineGridBrush_put_BottomInset(py::wrapper::Microsoft::UI::Composition::CompositionNineGridBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11780,7 +11780,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionObject_put_ImplicitAnimations(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11849,7 +11849,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionObject_put_Comment(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12034,7 +12034,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* _new_CompositionPath(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -12169,7 +12169,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionPathGeometry_put_Path(py::wrapper::Microsoft::UI::Composition::CompositionPathGeometry* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12305,7 +12305,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionProjectedShadow_put_MinBlurRadius(py::wrapper::Microsoft::UI::Composition::CompositionProjectedShadow* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12374,7 +12374,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionProjectedShadow_put_MaxBlurRadius(py::wrapper::Microsoft::UI::Composition::CompositionProjectedShadow* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12443,7 +12443,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionProjectedShadow_put_LightSource(py::wrapper::Microsoft::UI::Composition::CompositionProjectedShadow* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12512,7 +12512,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionProjectedShadow_put_BlurRadiusMultiplier(py::wrapper::Microsoft::UI::Composition::CompositionProjectedShadow* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12713,7 +12713,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionProjectedShadowCaster_put_CastingVisual(py::wrapper::Microsoft::UI::Composition::CompositionProjectedShadowCaster* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12782,7 +12782,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionProjectedShadowCaster_put_Brush(py::wrapper::Microsoft::UI::Composition::CompositionProjectedShadowCaster* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13395,7 +13395,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionProjectedShadowReceiver_put_ReceivingVisual(py::wrapper::Microsoft::UI::Composition::CompositionProjectedShadowReceiver* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14801,7 +14801,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionRadialGradientBrush_put_GradientOriginOffset(py::wrapper::Microsoft::UI::Composition::CompositionRadialGradientBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14870,7 +14870,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionRadialGradientBrush_put_EllipseRadius(py::wrapper::Microsoft::UI::Composition::CompositionRadialGradientBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14939,7 +14939,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionRadialGradientBrush_put_EllipseCenter(py::wrapper::Microsoft::UI::Composition::CompositionRadialGradientBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15077,7 +15077,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionRectangleGeometry_put_Size(py::wrapper::Microsoft::UI::Composition::CompositionRectangleGeometry* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15146,7 +15146,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionRectangleGeometry_put_Offset(py::wrapper::Microsoft::UI::Composition::CompositionRectangleGeometry* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15283,7 +15283,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionRoundedRectangleGeometry_put_Size(py::wrapper::Microsoft::UI::Composition::CompositionRoundedRectangleGeometry* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15352,7 +15352,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionRoundedRectangleGeometry_put_Offset(py::wrapper::Microsoft::UI::Composition::CompositionRoundedRectangleGeometry* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15421,7 +15421,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionRoundedRectangleGeometry_put_CornerRadius(py::wrapper::Microsoft::UI::Composition::CompositionRoundedRectangleGeometry* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15971,7 +15971,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionShape_put_TransformMatrix(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16040,7 +16040,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionShape_put_Scale(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16109,7 +16109,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionShape_put_RotationAngleInDegrees(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16178,7 +16178,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionShape_put_RotationAngle(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16247,7 +16247,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionShape_put_Offset(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16316,7 +16316,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionShape_put_CenterPoint(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -17260,7 +17260,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionSpriteShape_put_StrokeThickness(py::wrapper::Microsoft::UI::Composition::CompositionSpriteShape* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -17329,7 +17329,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionSpriteShape_put_StrokeStartCap(py::wrapper::Microsoft::UI::Composition::CompositionSpriteShape* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -17398,7 +17398,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionSpriteShape_put_StrokeMiterLimit(py::wrapper::Microsoft::UI::Composition::CompositionSpriteShape* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -17467,7 +17467,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionSpriteShape_put_StrokeLineJoin(py::wrapper::Microsoft::UI::Composition::CompositionSpriteShape* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -17536,7 +17536,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionSpriteShape_put_StrokeEndCap(py::wrapper::Microsoft::UI::Composition::CompositionSpriteShape* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -17605,7 +17605,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionSpriteShape_put_StrokeDashOffset(py::wrapper::Microsoft::UI::Composition::CompositionSpriteShape* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -17674,7 +17674,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionSpriteShape_put_StrokeDashCap(py::wrapper::Microsoft::UI::Composition::CompositionSpriteShape* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -17743,7 +17743,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionSpriteShape_put_StrokeBrush(py::wrapper::Microsoft::UI::Composition::CompositionSpriteShape* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -17812,7 +17812,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionSpriteShape_put_IsStrokeNonScaling(py::wrapper::Microsoft::UI::Composition::CompositionSpriteShape* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -17881,7 +17881,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionSpriteShape_put_Geometry(py::wrapper::Microsoft::UI::Composition::CompositionSpriteShape* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -17950,7 +17950,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionSpriteShape_put_FillBrush(py::wrapper::Microsoft::UI::Composition::CompositionSpriteShape* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -18905,7 +18905,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionSurfaceBrush_put_VerticalAlignmentRatio(py::wrapper::Microsoft::UI::Composition::CompositionSurfaceBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -18974,7 +18974,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionSurfaceBrush_put_Surface(py::wrapper::Microsoft::UI::Composition::CompositionSurfaceBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19043,7 +19043,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionSurfaceBrush_put_Stretch(py::wrapper::Microsoft::UI::Composition::CompositionSurfaceBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19112,7 +19112,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionSurfaceBrush_put_HorizontalAlignmentRatio(py::wrapper::Microsoft::UI::Composition::CompositionSurfaceBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19181,7 +19181,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionSurfaceBrush_put_BitmapInterpolationMode(py::wrapper::Microsoft::UI::Composition::CompositionSurfaceBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19250,7 +19250,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionSurfaceBrush_put_TransformMatrix(py::wrapper::Microsoft::UI::Composition::CompositionSurfaceBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19319,7 +19319,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionSurfaceBrush_put_Scale(py::wrapper::Microsoft::UI::Composition::CompositionSurfaceBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19388,7 +19388,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionSurfaceBrush_put_RotationAngleInDegrees(py::wrapper::Microsoft::UI::Composition::CompositionSurfaceBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19457,7 +19457,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionSurfaceBrush_put_RotationAngle(py::wrapper::Microsoft::UI::Composition::CompositionSurfaceBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19526,7 +19526,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionSurfaceBrush_put_Offset(py::wrapper::Microsoft::UI::Composition::CompositionSurfaceBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19595,7 +19595,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionSurfaceBrush_put_CenterPoint(py::wrapper::Microsoft::UI::Composition::CompositionSurfaceBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19664,7 +19664,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionSurfaceBrush_put_AnchorPoint(py::wrapper::Microsoft::UI::Composition::CompositionSurfaceBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19733,7 +19733,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionSurfaceBrush_put_SnapToPixels(py::wrapper::Microsoft::UI::Composition::CompositionSurfaceBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19972,7 +19972,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionViewBox_put_VerticalAlignmentRatio(py::wrapper::Microsoft::UI::Composition::CompositionViewBox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -20041,7 +20041,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionViewBox_put_Stretch(py::wrapper::Microsoft::UI::Composition::CompositionViewBox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -20110,7 +20110,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionViewBox_put_Size(py::wrapper::Microsoft::UI::Composition::CompositionViewBox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -20179,7 +20179,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionViewBox_put_Offset(py::wrapper::Microsoft::UI::Composition::CompositionViewBox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -20248,7 +20248,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionViewBox_put_HorizontalAlignmentRatio(py::wrapper::Microsoft::UI::Composition::CompositionViewBox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -20523,7 +20523,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionVisualSurface_put_SourceVisual(py::wrapper::Microsoft::UI::Composition::CompositionVisualSurface* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -20592,7 +20592,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionVisualSurface_put_SourceSize(py::wrapper::Microsoft::UI::Composition::CompositionVisualSurface* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -20661,7 +20661,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionVisualSurface_put_SourceOffset(py::wrapper::Microsoft::UI::Composition::CompositionVisualSurface* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -20754,7 +20754,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* _new_Compositor(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -23832,7 +23832,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int Compositor_put_GlobalPlaybackRate(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -23901,7 +23901,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int Compositor_put_Comment(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -24505,7 +24505,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int DistantLight_put_Direction(py::wrapper::Microsoft::UI::Composition::DistantLight* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -24574,7 +24574,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int DistantLight_put_CoordinateSpace(py::wrapper::Microsoft::UI::Composition::DistantLight* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -24643,7 +24643,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int DistantLight_put_Color(py::wrapper::Microsoft::UI::Composition::DistantLight* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -24712,7 +24712,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int DistantLight_put_Intensity(py::wrapper::Microsoft::UI::Composition::DistantLight* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -24851,7 +24851,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int DropShadow_put_Opacity(py::wrapper::Microsoft::UI::Composition::DropShadow* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -24920,7 +24920,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int DropShadow_put_Offset(py::wrapper::Microsoft::UI::Composition::DropShadow* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -24989,7 +24989,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int DropShadow_put_Mask(py::wrapper::Microsoft::UI::Composition::DropShadow* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -25058,7 +25058,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int DropShadow_put_Color(py::wrapper::Microsoft::UI::Composition::DropShadow* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -25127,7 +25127,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int DropShadow_put_BlurRadius(py::wrapper::Microsoft::UI::Composition::DropShadow* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -25196,7 +25196,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int DropShadow_put_SourcePolicy(py::wrapper::Microsoft::UI::Composition::DropShadow* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -25624,7 +25624,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int ExpressionAnimation_put_Expression(py::wrapper::Microsoft::UI::Composition::ExpressionAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -26139,7 +26139,8 @@ namespace py::cpp::Microsoft::UI::Composition
                 return self->obj.TryLookup(_key);
             }();
 
-            if (!value) {
+            if (!value)
+            {
                 if constexpr (std::is_base_of_v<winrt::Windows::Foundation::IUnknown, decltype(value)>)
                 {
                     auto has_key = [&]()
@@ -26173,13 +26174,15 @@ namespace py::cpp::Microsoft::UI::Composition
         {
             auto _key = py::convert_to<winrt::hstring>(key);
 
-            if (value == nullptr) {
+            if (!value)
+            {
                 bool did_remove;
                 {
                     auto _gil = py::release_gil();
                     did_remove = self->obj.TryRemove(_key);
                 }
-                if (!did_remove) {
+                if (!did_remove)
+                {
                     PyErr_SetObject(PyExc_KeyError, key);
                     return -1;
                 }
@@ -26668,7 +26671,8 @@ namespace py::cpp::Microsoft::UI::Composition
                 return self->obj.TryLookup(_key);
             }();
 
-            if (!value) {
+            if (!value)
+            {
                 if constexpr (std::is_base_of_v<winrt::Windows::Foundation::IUnknown, decltype(value)>)
                 {
                     auto has_key = [&]()
@@ -26702,13 +26706,15 @@ namespace py::cpp::Microsoft::UI::Composition
         {
             auto _key = py::convert_to<winrt::hstring>(key);
 
-            if (value == nullptr) {
+            if (!value)
+            {
                 bool did_remove;
                 {
                     auto _gil = py::release_gil();
                     did_remove = self->obj.TryRemove(_key);
                 }
-                if (!did_remove) {
+                if (!did_remove)
+                {
                     PyErr_SetObject(PyExc_KeyError, key);
                     return -1;
                 }
@@ -26818,7 +26824,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int InsetClip_put_TopInset(py::wrapper::Microsoft::UI::Composition::InsetClip* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -26887,7 +26893,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int InsetClip_put_RightInset(py::wrapper::Microsoft::UI::Composition::InsetClip* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -26956,7 +26962,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int InsetClip_put_LeftInset(py::wrapper::Microsoft::UI::Composition::InsetClip* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -27025,7 +27031,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int InsetClip_put_BottomInset(py::wrapper::Microsoft::UI::Composition::InsetClip* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -27253,7 +27259,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int KeyFrameAnimation_put_StopBehavior(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -27322,7 +27328,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int KeyFrameAnimation_put_IterationCount(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -27391,7 +27397,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int KeyFrameAnimation_put_IterationBehavior(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -27460,7 +27466,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int KeyFrameAnimation_put_Duration(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -27529,7 +27535,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int KeyFrameAnimation_put_DelayTime(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -27628,7 +27634,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int KeyFrameAnimation_put_Direction(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -27697,7 +27703,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int KeyFrameAnimation_put_DelayBehavior(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -27867,7 +27873,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int LayerVisual_put_Effect(py::wrapper::Microsoft::UI::Composition::LayerVisual* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -27936,7 +27942,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int LayerVisual_put_Shadow(py::wrapper::Microsoft::UI::Composition::LayerVisual* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -28139,7 +28145,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int NaturalMotionAnimation_put_StopBehavior(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -28208,7 +28214,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int NaturalMotionAnimation_put_DelayTime(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -28277,7 +28283,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int NaturalMotionAnimation_put_DelayBehavior(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -28597,7 +28603,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int PointLight_put_QuadraticAttenuation(py::wrapper::Microsoft::UI::Composition::PointLight* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -28666,7 +28672,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int PointLight_put_Offset(py::wrapper::Microsoft::UI::Composition::PointLight* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -28735,7 +28741,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int PointLight_put_LinearAttenuation(py::wrapper::Microsoft::UI::Composition::PointLight* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -28804,7 +28810,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int PointLight_put_CoordinateSpace(py::wrapper::Microsoft::UI::Composition::PointLight* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -28873,7 +28879,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int PointLight_put_ConstantAttenuation(py::wrapper::Microsoft::UI::Composition::PointLight* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -28942,7 +28948,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int PointLight_put_Color(py::wrapper::Microsoft::UI::Composition::PointLight* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -29011,7 +29017,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int PointLight_put_Intensity(py::wrapper::Microsoft::UI::Composition::PointLight* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -29080,7 +29086,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int PointLight_put_MinAttenuationCutoff(py::wrapper::Microsoft::UI::Composition::PointLight* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -29149,7 +29155,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int PointLight_put_MaxAttenuationCutoff(py::wrapper::Microsoft::UI::Composition::PointLight* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -29578,7 +29584,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int RectangleClip_put_TopRightRadius(py::wrapper::Microsoft::UI::Composition::RectangleClip* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -29647,7 +29653,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int RectangleClip_put_TopLeftRadius(py::wrapper::Microsoft::UI::Composition::RectangleClip* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -29716,7 +29722,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int RectangleClip_put_Top(py::wrapper::Microsoft::UI::Composition::RectangleClip* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -29785,7 +29791,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int RectangleClip_put_Right(py::wrapper::Microsoft::UI::Composition::RectangleClip* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -29854,7 +29860,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int RectangleClip_put_Left(py::wrapper::Microsoft::UI::Composition::RectangleClip* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -29923,7 +29929,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int RectangleClip_put_BottomRightRadius(py::wrapper::Microsoft::UI::Composition::RectangleClip* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -29992,7 +29998,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int RectangleClip_put_BottomLeftRadius(py::wrapper::Microsoft::UI::Composition::RectangleClip* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -30061,7 +30067,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int RectangleClip_put_Bottom(py::wrapper::Microsoft::UI::Composition::RectangleClip* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -30204,7 +30210,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int RedirectVisual_put_Source(py::wrapper::Microsoft::UI::Composition::RedirectVisual* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -30594,7 +30600,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int ScalarNaturalMotionAnimation_put_InitialVelocity(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -30663,7 +30669,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int ScalarNaturalMotionAnimation_put_InitialValue(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -30732,7 +30738,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int ScalarNaturalMotionAnimation_put_FinalValue(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -30895,7 +30901,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int ShapeVisual_put_ViewBox(py::wrapper::Microsoft::UI::Composition::ShapeVisual* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -31159,7 +31165,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int SpotLight_put_QuadraticAttenuation(py::wrapper::Microsoft::UI::Composition::SpotLight* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -31228,7 +31234,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int SpotLight_put_OuterConeColor(py::wrapper::Microsoft::UI::Composition::SpotLight* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -31297,7 +31303,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int SpotLight_put_OuterConeAngleInDegrees(py::wrapper::Microsoft::UI::Composition::SpotLight* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -31366,7 +31372,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int SpotLight_put_OuterConeAngle(py::wrapper::Microsoft::UI::Composition::SpotLight* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -31435,7 +31441,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int SpotLight_put_Offset(py::wrapper::Microsoft::UI::Composition::SpotLight* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -31504,7 +31510,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int SpotLight_put_LinearAttenuation(py::wrapper::Microsoft::UI::Composition::SpotLight* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -31573,7 +31579,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int SpotLight_put_InnerConeColor(py::wrapper::Microsoft::UI::Composition::SpotLight* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -31642,7 +31648,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int SpotLight_put_InnerConeAngleInDegrees(py::wrapper::Microsoft::UI::Composition::SpotLight* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -31711,7 +31717,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int SpotLight_put_InnerConeAngle(py::wrapper::Microsoft::UI::Composition::SpotLight* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -31780,7 +31786,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int SpotLight_put_Direction(py::wrapper::Microsoft::UI::Composition::SpotLight* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -31849,7 +31855,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int SpotLight_put_CoordinateSpace(py::wrapper::Microsoft::UI::Composition::SpotLight* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -31918,7 +31924,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int SpotLight_put_ConstantAttenuation(py::wrapper::Microsoft::UI::Composition::SpotLight* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -31987,7 +31993,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int SpotLight_put_OuterConeIntensity(py::wrapper::Microsoft::UI::Composition::SpotLight* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -32056,7 +32062,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int SpotLight_put_InnerConeIntensity(py::wrapper::Microsoft::UI::Composition::SpotLight* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -32125,7 +32131,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int SpotLight_put_MinAttenuationCutoff(py::wrapper::Microsoft::UI::Composition::SpotLight* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -32194,7 +32200,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int SpotLight_put_MaxAttenuationCutoff(py::wrapper::Microsoft::UI::Composition::SpotLight* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -32345,7 +32351,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int SpringScalarNaturalMotionAnimation_put_Period(py::wrapper::Microsoft::UI::Composition::SpringScalarNaturalMotionAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -32414,7 +32420,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int SpringScalarNaturalMotionAnimation_put_DampingRatio(py::wrapper::Microsoft::UI::Composition::SpringScalarNaturalMotionAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -32551,7 +32557,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int SpringVector2NaturalMotionAnimation_put_Period(py::wrapper::Microsoft::UI::Composition::SpringVector2NaturalMotionAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -32620,7 +32626,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int SpringVector2NaturalMotionAnimation_put_DampingRatio(py::wrapper::Microsoft::UI::Composition::SpringVector2NaturalMotionAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -32757,7 +32763,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int SpringVector3NaturalMotionAnimation_put_Period(py::wrapper::Microsoft::UI::Composition::SpringVector3NaturalMotionAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -32826,7 +32832,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int SpringVector3NaturalMotionAnimation_put_DampingRatio(py::wrapper::Microsoft::UI::Composition::SpringVector3NaturalMotionAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -32963,7 +32969,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int SpriteVisual_put_Brush(py::wrapper::Microsoft::UI::Composition::SpriteVisual* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -33032,7 +33038,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int SpriteVisual_put_Shadow(py::wrapper::Microsoft::UI::Composition::SpriteVisual* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -33169,7 +33175,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int StepEasingFunction_put_StepCount(py::wrapper::Microsoft::UI::Composition::StepEasingFunction* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -33238,7 +33244,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int StepEasingFunction_put_IsInitialStepSingleFrame(py::wrapper::Microsoft::UI::Composition::StepEasingFunction* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -33307,7 +33313,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int StepEasingFunction_put_IsFinalStepSingleFrame(py::wrapper::Microsoft::UI::Composition::StepEasingFunction* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -33376,7 +33382,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int StepEasingFunction_put_InitialStep(py::wrapper::Microsoft::UI::Composition::StepEasingFunction* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -33445,7 +33451,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int StepEasingFunction_put_FinalStep(py::wrapper::Microsoft::UI::Composition::StepEasingFunction* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -33742,7 +33748,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int Vector2NaturalMotionAnimation_put_InitialVelocity(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -33811,7 +33817,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int Vector2NaturalMotionAnimation_put_InitialValue(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -33880,7 +33886,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int Vector2NaturalMotionAnimation_put_FinalValue(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -34200,7 +34206,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int Vector3NaturalMotionAnimation_put_InitialVelocity(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -34269,7 +34275,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int Vector3NaturalMotionAnimation_put_InitialValue(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -34338,7 +34344,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int Vector3NaturalMotionAnimation_put_FinalValue(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -34658,7 +34664,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int Visual_put_TransformMatrix(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -34727,7 +34733,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int Visual_put_Size(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -34796,7 +34802,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int Visual_put_Scale(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -34865,7 +34871,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int Visual_put_RotationAxis(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -34934,7 +34940,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int Visual_put_RotationAngleInDegrees(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -35003,7 +35009,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int Visual_put_RotationAngle(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -35072,7 +35078,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int Visual_put_Orientation(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -35141,7 +35147,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int Visual_put_Opacity(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -35210,7 +35216,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int Visual_put_Offset(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -35279,7 +35285,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int Visual_put_IsVisible(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -35348,7 +35354,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int Visual_put_CompositeMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -35417,7 +35423,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int Visual_put_Clip(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -35486,7 +35492,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int Visual_put_CenterPoint(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -35555,7 +35561,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int Visual_put_BorderMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -35624,7 +35630,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int Visual_put_BackfaceVisibility(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -35693,7 +35699,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int Visual_put_AnchorPoint(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -35792,7 +35798,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int Visual_put_RelativeSizeAdjustment(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -35861,7 +35867,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int Visual_put_RelativeOffsetAdjustment(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -35930,7 +35936,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int Visual_put_ParentForTransform(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -35999,7 +36005,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int Visual_put_IsHitTestVisible(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -36068,7 +36074,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int Visual_put_IsPixelSnappingEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -37299,7 +37305,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int ICompositionSupportsSystemBackdrop_put_SystemBackdrop(py::wrapper::Microsoft::UI::Composition::ICompositionSupportsSystemBackdrop* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

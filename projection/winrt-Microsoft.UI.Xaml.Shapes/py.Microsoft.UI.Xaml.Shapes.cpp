@@ -8,7 +8,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
     static PyObject* _new_Ellipse(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -96,7 +96,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
     static PyObject* _new_Line(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -163,7 +163,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
     static int Line_put_Y2(py::wrapper::Microsoft::UI::Xaml::Shapes::Line* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -232,7 +232,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
     static int Line_put_Y1(py::wrapper::Microsoft::UI::Xaml::Shapes::Line* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -301,7 +301,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
     static int Line_put_X2(py::wrapper::Microsoft::UI::Xaml::Shapes::Line* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -370,7 +370,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
     static int Line_put_X1(py::wrapper::Microsoft::UI::Xaml::Shapes::Line* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -643,7 +643,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
     static PyObject* _new_Path(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -740,7 +740,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
     static int Path_put_Data(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -887,7 +887,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
     static PyObject* _new_Polygon(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -954,7 +954,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
     static int Polygon_put_Points(py::wrapper::Microsoft::UI::Xaml::Shapes::Polygon* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1023,7 +1023,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
     static int Polygon_put_FillRule(py::wrapper::Microsoft::UI::Xaml::Shapes::Polygon* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1202,7 +1202,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
     static PyObject* _new_Polyline(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1269,7 +1269,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
     static int Polyline_put_Points(py::wrapper::Microsoft::UI::Xaml::Shapes::Polyline* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1338,7 +1338,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
     static int Polyline_put_FillRule(py::wrapper::Microsoft::UI::Xaml::Shapes::Polyline* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1517,7 +1517,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
     static PyObject* _new_Rectangle(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1584,7 +1584,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
     static int Rectangle_put_RadiusY(py::wrapper::Microsoft::UI::Xaml::Shapes::Rectangle* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1653,7 +1653,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
     static int Rectangle_put_RadiusX(py::wrapper::Microsoft::UI::Xaml::Shapes::Rectangle* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1946,7 +1946,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
     static int Shape_put_StrokeThickness(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2015,7 +2015,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
     static int Shape_put_StrokeStartLineCap(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2084,7 +2084,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
     static int Shape_put_StrokeMiterLimit(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2153,7 +2153,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
     static int Shape_put_StrokeLineJoin(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2222,7 +2222,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
     static int Shape_put_StrokeEndLineCap(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2291,7 +2291,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
     static int Shape_put_StrokeDashOffset(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2360,7 +2360,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
     static int Shape_put_StrokeDashCap(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2429,7 +2429,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
     static int Shape_put_StrokeDashArray(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2498,7 +2498,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
     static int Shape_put_Stroke(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2567,7 +2567,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
     static int Shape_put_Stretch(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2636,7 +2636,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
     static int Shape_put_Fill(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

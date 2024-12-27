@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
 
     static PyObject* _new_PhoneNumberFormatter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -518,7 +518,7 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
 
     static PyObject* _new_PhoneNumberInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;

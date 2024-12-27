@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* _new_EnhancedWaypoint(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1948,7 +1948,7 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* _new_MapRouteDrivingOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2015,7 +2015,7 @@ namespace py::cpp::Windows::Services::Maps
 
     static int MapRouteDrivingOptions_put_RouteRestrictions(py::wrapper::Windows::Services::Maps::MapRouteDrivingOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2084,7 +2084,7 @@ namespace py::cpp::Windows::Services::Maps
 
     static int MapRouteDrivingOptions_put_RouteOptimization(py::wrapper::Windows::Services::Maps::MapRouteDrivingOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2153,7 +2153,7 @@ namespace py::cpp::Windows::Services::Maps
 
     static int MapRouteDrivingOptions_put_MaxAlternateRouteCount(py::wrapper::Windows::Services::Maps::MapRouteDrivingOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2222,7 +2222,7 @@ namespace py::cpp::Windows::Services::Maps
 
     static int MapRouteDrivingOptions_put_InitialHeading(py::wrapper::Windows::Services::Maps::MapRouteDrivingOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2291,7 +2291,7 @@ namespace py::cpp::Windows::Services::Maps
 
     static int MapRouteDrivingOptions_put_DepartureTime(py::wrapper::Windows::Services::Maps::MapRouteDrivingOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3876,7 +3876,7 @@ namespace py::cpp::Windows::Services::Maps
 
     static int MapService_put_ServiceToken(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4005,7 +4005,7 @@ namespace py::cpp::Windows::Services::Maps
 
     static int MapService_put_DataUsagePreference(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4737,7 +4737,7 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* _new_PlaceInfoCreateOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -4804,7 +4804,7 @@ namespace py::cpp::Windows::Services::Maps
 
     static int PlaceInfoCreateOptions_put_DisplayName(py::wrapper::Windows::Services::Maps::PlaceInfoCreateOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4873,7 +4873,7 @@ namespace py::cpp::Windows::Services::Maps
 
     static int PlaceInfoCreateOptions_put_DisplayAddress(py::wrapper::Windows::Services::Maps::PlaceInfoCreateOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

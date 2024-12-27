@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static PyObject* _new_AtomPubClient(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -645,7 +645,7 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static int AtomPubClient_put_Timeout(py::wrapper::Windows::Web::AtomPub::AtomPubClient* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -714,7 +714,7 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static int AtomPubClient_put_ServerCredential(py::wrapper::Windows::Web::AtomPub::AtomPubClient* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -783,7 +783,7 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static int AtomPubClient_put_ProxyCredential(py::wrapper::Windows::Web::AtomPub::AtomPubClient* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -852,7 +852,7 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static int AtomPubClient_put_MaxResponseBufferSize(py::wrapper::Windows::Web::AtomPub::AtomPubClient* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -921,7 +921,7 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static int AtomPubClient_put_BypassCacheOnRetrieve(py::wrapper::Windows::Web::AtomPub::AtomPubClient* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1236,7 +1236,7 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static int ResourceCollection_put_BaseUri(py::wrapper::Windows::Web::AtomPub::ResourceCollection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1305,7 +1305,7 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static int ResourceCollection_put_NodeValue(py::wrapper::Windows::Web::AtomPub::ResourceCollection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1374,7 +1374,7 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static int ResourceCollection_put_NodeNamespace(py::wrapper::Windows::Web::AtomPub::ResourceCollection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1443,7 +1443,7 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static int ResourceCollection_put_NodeName(py::wrapper::Windows::Web::AtomPub::ResourceCollection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1512,7 +1512,7 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static int ResourceCollection_put_Language(py::wrapper::Windows::Web::AtomPub::ResourceCollection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1791,7 +1791,7 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static int ServiceDocument_put_NodeValue(py::wrapper::Windows::Web::AtomPub::ServiceDocument* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1860,7 +1860,7 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static int ServiceDocument_put_NodeNamespace(py::wrapper::Windows::Web::AtomPub::ServiceDocument* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1929,7 +1929,7 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static int ServiceDocument_put_NodeName(py::wrapper::Windows::Web::AtomPub::ServiceDocument* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1998,7 +1998,7 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static int ServiceDocument_put_Language(py::wrapper::Windows::Web::AtomPub::ServiceDocument* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2067,7 +2067,7 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static int ServiceDocument_put_BaseUri(py::wrapper::Windows::Web::AtomPub::ServiceDocument* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2373,7 +2373,7 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static int Workspace_put_NodeValue(py::wrapper::Windows::Web::AtomPub::Workspace* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2442,7 +2442,7 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static int Workspace_put_NodeNamespace(py::wrapper::Windows::Web::AtomPub::Workspace* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2511,7 +2511,7 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static int Workspace_put_NodeName(py::wrapper::Windows::Web::AtomPub::Workspace* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2580,7 +2580,7 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static int Workspace_put_Language(py::wrapper::Windows::Web::AtomPub::Workspace* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2649,7 +2649,7 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static int Workspace_put_BaseUri(py::wrapper::Windows::Web::AtomPub::Workspace* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

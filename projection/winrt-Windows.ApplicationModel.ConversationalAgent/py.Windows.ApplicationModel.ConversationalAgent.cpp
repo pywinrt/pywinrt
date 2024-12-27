@@ -4633,7 +4633,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static int ConversationalAgentSignal_put_SignalStart(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSignal* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4702,7 +4702,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static int ConversationalAgentSignal_put_SignalName(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSignal* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4771,7 +4771,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static int ConversationalAgentSignal_put_SignalId(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSignal* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4840,7 +4840,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static int ConversationalAgentSignal_put_SignalEnd(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSignal* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4909,7 +4909,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static int ConversationalAgentSignal_put_SignalContext(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSignal* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4978,7 +4978,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static int ConversationalAgentSignal_put_IsSignalVerificationRequired(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSignal* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

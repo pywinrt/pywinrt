@@ -53,7 +53,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static int HidBooleanControl_put_IsActive(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidBooleanControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1982,7 +1982,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static int HidFeatureReport_put_Data(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidFeatureReport* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2614,7 +2614,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static int HidNumericControl_put_Value(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidNumericControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2683,7 +2683,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static int HidNumericControl_put_ScaledValue(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidNumericControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3707,7 +3707,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static int HidOutputReport_put_Data(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidOutputReport* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

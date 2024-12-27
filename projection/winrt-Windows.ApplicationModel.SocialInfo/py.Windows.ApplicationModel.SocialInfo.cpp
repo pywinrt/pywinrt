@@ -8,7 +8,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static PyObject* _new_SocialFeedChildItem(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -75,7 +75,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static int SocialFeedChildItem_put_Timestamp(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedChildItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -144,7 +144,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static int SocialFeedChildItem_put_TargetUri(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedChildItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -213,7 +213,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static int SocialFeedChildItem_put_SharedItem(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedChildItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -475,7 +475,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static int SocialFeedContent_put_Title(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedContent* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -544,7 +544,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static int SocialFeedContent_put_TargetUri(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedContent* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -613,7 +613,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static int SocialFeedContent_put_Message(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedContent* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -706,7 +706,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static PyObject* _new_SocialFeedItem(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -773,7 +773,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static int SocialFeedItem_put_Timestamp(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -842,7 +842,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static int SocialFeedItem_put_TargetUri(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -911,7 +911,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static int SocialFeedItem_put_Style(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -980,7 +980,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static int SocialFeedItem_put_SharedItem(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1049,7 +1049,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static int SocialFeedItem_put_RemoteId(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1118,7 +1118,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static int SocialFeedItem_put_ChildItem(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1187,7 +1187,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static int SocialFeedItem_put_BadgeStyle(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1256,7 +1256,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static int SocialFeedItem_put_BadgeCountValue(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1478,7 +1478,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static PyObject* _new_SocialFeedSharedItem(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1545,7 +1545,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static int SocialFeedSharedItem_put_Timestamp(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedSharedItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1614,7 +1614,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static int SocialFeedSharedItem_put_Thumbnail(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedSharedItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1683,7 +1683,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static int SocialFeedSharedItem_put_TargetUri(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedSharedItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1752,7 +1752,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static int SocialFeedSharedItem_put_OriginalSource(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedSharedItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1877,7 +1877,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static PyObject* _new_SocialItemThumbnail(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1986,7 +1986,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static int SocialItemThumbnail_put_TargetUri(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialItemThumbnail* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2055,7 +2055,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static int SocialItemThumbnail_put_ImageUri(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialItemThumbnail* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2124,7 +2124,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static int SocialItemThumbnail_put_BitmapSize(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialItemThumbnail* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2263,7 +2263,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static int SocialUserInfo_put_UserName(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialUserInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2332,7 +2332,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static int SocialUserInfo_put_TargetUri(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialUserInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2401,7 +2401,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static int SocialUserInfo_put_RemoteId(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialUserInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2470,7 +2470,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static int SocialUserInfo_put_DisplayName(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialUserInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

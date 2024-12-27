@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Web::Http::Filters
 
     static PyObject* _new_HttpBaseProtocolFilter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -241,7 +241,7 @@ namespace py::cpp::Windows::Web::Http::Filters
 
     static int HttpBaseProtocolFilter_put_UseProxy(py::wrapper::Windows::Web::Http::Filters::HttpBaseProtocolFilter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -310,7 +310,7 @@ namespace py::cpp::Windows::Web::Http::Filters
 
     static int HttpBaseProtocolFilter_put_ServerCredential(py::wrapper::Windows::Web::Http::Filters::HttpBaseProtocolFilter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -379,7 +379,7 @@ namespace py::cpp::Windows::Web::Http::Filters
 
     static int HttpBaseProtocolFilter_put_ProxyCredential(py::wrapper::Windows::Web::Http::Filters::HttpBaseProtocolFilter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -448,7 +448,7 @@ namespace py::cpp::Windows::Web::Http::Filters
 
     static int HttpBaseProtocolFilter_put_MaxConnectionsPerServer(py::wrapper::Windows::Web::Http::Filters::HttpBaseProtocolFilter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -517,7 +517,7 @@ namespace py::cpp::Windows::Web::Http::Filters
 
     static int HttpBaseProtocolFilter_put_ClientCertificate(py::wrapper::Windows::Web::Http::Filters::HttpBaseProtocolFilter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -586,7 +586,7 @@ namespace py::cpp::Windows::Web::Http::Filters
 
     static int HttpBaseProtocolFilter_put_AutomaticDecompression(py::wrapper::Windows::Web::Http::Filters::HttpBaseProtocolFilter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -655,7 +655,7 @@ namespace py::cpp::Windows::Web::Http::Filters
 
     static int HttpBaseProtocolFilter_put_AllowUI(py::wrapper::Windows::Web::Http::Filters::HttpBaseProtocolFilter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -724,7 +724,7 @@ namespace py::cpp::Windows::Web::Http::Filters
 
     static int HttpBaseProtocolFilter_put_AllowAutoRedirect(py::wrapper::Windows::Web::Http::Filters::HttpBaseProtocolFilter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -883,7 +883,7 @@ namespace py::cpp::Windows::Web::Http::Filters
 
     static int HttpBaseProtocolFilter_put_MaxVersion(py::wrapper::Windows::Web::Http::Filters::HttpBaseProtocolFilter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -952,7 +952,7 @@ namespace py::cpp::Windows::Web::Http::Filters
 
     static int HttpBaseProtocolFilter_put_CookieUsageBehavior(py::wrapper::Windows::Web::Http::Filters::HttpBaseProtocolFilter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1252,7 +1252,7 @@ namespace py::cpp::Windows::Web::Http::Filters
 
     static int HttpCacheControl_put_WriteBehavior(py::wrapper::Windows::Web::Http::Filters::HttpCacheControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1321,7 +1321,7 @@ namespace py::cpp::Windows::Web::Http::Filters
 
     static int HttpCacheControl_put_ReadBehavior(py::wrapper::Windows::Web::Http::Filters::HttpCacheControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

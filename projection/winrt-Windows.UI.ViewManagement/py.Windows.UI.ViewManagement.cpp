@@ -8,7 +8,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyObject* _new_AccessibilitySettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -1168,7 +1168,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static int ApplicationView_put_IsScreenCaptureEnabled(py::wrapper::Windows::UI::ViewManagement::ApplicationView* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1237,7 +1237,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static int ApplicationView_put_Title(py::wrapper::Windows::UI::ViewManagement::ApplicationView* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1486,7 +1486,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static int ApplicationView_put_SuppressSystemOverlays(py::wrapper::Windows::UI::ViewManagement::ApplicationView* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1615,7 +1615,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static int ApplicationView_put_FullScreenSystemOverlayMode(py::wrapper::Windows::UI::ViewManagement::ApplicationView* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1774,7 +1774,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static int ApplicationView_put_PersistedStateId(py::wrapper::Windows::UI::ViewManagement::ApplicationView* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1933,7 +1933,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static int ApplicationView_put_TerminateAppOnFinalViewClose(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2002,7 +2002,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static int ApplicationView_put_PreferredLaunchWindowingMode(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2071,7 +2071,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static int ApplicationView_put_PreferredLaunchViewSize(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3236,7 +3236,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static int ApplicationViewTitleBar_put_InactiveForegroundColor(py::wrapper::Windows::UI::ViewManagement::ApplicationViewTitleBar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3305,7 +3305,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static int ApplicationViewTitleBar_put_InactiveBackgroundColor(py::wrapper::Windows::UI::ViewManagement::ApplicationViewTitleBar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3374,7 +3374,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static int ApplicationViewTitleBar_put_ForegroundColor(py::wrapper::Windows::UI::ViewManagement::ApplicationViewTitleBar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3443,7 +3443,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static int ApplicationViewTitleBar_put_ButtonPressedForegroundColor(py::wrapper::Windows::UI::ViewManagement::ApplicationViewTitleBar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3512,7 +3512,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static int ApplicationViewTitleBar_put_ButtonPressedBackgroundColor(py::wrapper::Windows::UI::ViewManagement::ApplicationViewTitleBar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3581,7 +3581,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static int ApplicationViewTitleBar_put_ButtonInactiveForegroundColor(py::wrapper::Windows::UI::ViewManagement::ApplicationViewTitleBar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3650,7 +3650,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static int ApplicationViewTitleBar_put_ButtonInactiveBackgroundColor(py::wrapper::Windows::UI::ViewManagement::ApplicationViewTitleBar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3719,7 +3719,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static int ApplicationViewTitleBar_put_ButtonHoverForegroundColor(py::wrapper::Windows::UI::ViewManagement::ApplicationViewTitleBar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3788,7 +3788,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static int ApplicationViewTitleBar_put_ButtonHoverBackgroundColor(py::wrapper::Windows::UI::ViewManagement::ApplicationViewTitleBar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3857,7 +3857,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static int ApplicationViewTitleBar_put_ButtonForegroundColor(py::wrapper::Windows::UI::ViewManagement::ApplicationViewTitleBar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3926,7 +3926,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static int ApplicationViewTitleBar_put_ButtonBackgroundColor(py::wrapper::Windows::UI::ViewManagement::ApplicationViewTitleBar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3995,7 +3995,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static int ApplicationViewTitleBar_put_BackgroundColor(py::wrapper::Windows::UI::ViewManagement::ApplicationViewTitleBar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4097,7 +4097,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyObject* _new_ApplicationViewTransferContext(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -4164,7 +4164,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static int ApplicationViewTransferContext_put_ViewId(py::wrapper::Windows::UI::ViewManagement::ApplicationViewTransferContext* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4548,7 +4548,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static int InputPane_put_Visible(py::wrapper::Windows::UI::ViewManagement::InputPane* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4848,7 +4848,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static int InputPaneVisibilityEventArgs_put_EnsuredFocusedElementInView(py::wrapper::Windows::UI::ViewManagement::InputPaneVisibilityEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5598,7 +5598,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static int StatusBar_put_ForegroundColor(py::wrapper::Windows::UI::ViewManagement::StatusBar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5667,7 +5667,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static int StatusBar_put_BackgroundOpacity(py::wrapper::Windows::UI::ViewManagement::StatusBar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5736,7 +5736,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static int StatusBar_put_BackgroundColor(py::wrapper::Windows::UI::ViewManagement::StatusBar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6178,7 +6178,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static int StatusBarProgressIndicator_put_Text(py::wrapper::Windows::UI::ViewManagement::StatusBarProgressIndicator* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6247,7 +6247,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static int StatusBarProgressIndicator_put_ProgressValue(py::wrapper::Windows::UI::ViewManagement::StatusBarProgressIndicator* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -6341,7 +6341,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyObject* _new_UISettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -7830,7 +7830,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static int ViewModePreferences_put_ViewSizePreference(py::wrapper::Windows::UI::ViewManagement::ViewModePreferences* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7899,7 +7899,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static int ViewModePreferences_put_CustomSize(py::wrapper::Windows::UI::ViewManagement::ViewModePreferences* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

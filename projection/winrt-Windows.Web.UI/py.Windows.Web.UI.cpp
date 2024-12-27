@@ -490,7 +490,7 @@ namespace py::cpp::Windows::Web::UI
 
     static int WebViewControlLongRunningScriptDetectedEventArgs_put_StopPageScriptExecution(py::wrapper::Windows::Web::UI::WebViewControlLongRunningScriptDetectedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -816,7 +816,7 @@ namespace py::cpp::Windows::Web::UI
 
     static int WebViewControlNavigationStartingEventArgs_put_Cancel(py::wrapper::Windows::Web::UI::WebViewControlNavigationStartingEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1023,7 +1023,7 @@ namespace py::cpp::Windows::Web::UI
 
     static int WebViewControlNewWindowRequestedEventArgs_put_Handled(py::wrapper::Windows::Web::UI::WebViewControlNewWindowRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1152,7 +1152,7 @@ namespace py::cpp::Windows::Web::UI
 
     static int WebViewControlNewWindowRequestedEventArgs_put_NewWindow(py::wrapper::Windows::Web::UI::WebViewControlNewWindowRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1833,7 +1833,7 @@ namespace py::cpp::Windows::Web::UI
 
     static int WebViewControlSettings_put_IsScriptNotifyAllowed(py::wrapper::Windows::Web::UI::WebViewControlSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1902,7 +1902,7 @@ namespace py::cpp::Windows::Web::UI
 
     static int WebViewControlSettings_put_IsJavaScriptEnabled(py::wrapper::Windows::Web::UI::WebViewControlSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1971,7 +1971,7 @@ namespace py::cpp::Windows::Web::UI
 
     static int WebViewControlSettings_put_IsIndexedDBEnabled(py::wrapper::Windows::Web::UI::WebViewControlSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2109,7 +2109,7 @@ namespace py::cpp::Windows::Web::UI
 
     static int WebViewControlUnsupportedUriSchemeIdentifiedEventArgs_put_Handled(py::wrapper::Windows::Web::UI::WebViewControlUnsupportedUriSchemeIdentifiedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2475,7 +2475,7 @@ namespace py::cpp::Windows::Web::UI
 
     static int WebViewControlWebResourceRequestedEventArgs_put_Response(py::wrapper::Windows::Web::UI::WebViewControlWebResourceRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3288,7 +3288,7 @@ namespace py::cpp::Windows::Web::UI
 
     static int IWebViewControl_put_DefaultBackgroundColor(py::wrapper::Windows::Web::UI::IWebViewControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3447,7 +3447,7 @@ namespace py::cpp::Windows::Web::UI
 
     static int IWebViewControl_put_Source(py::wrapper::Windows::Web::UI::IWebViewControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

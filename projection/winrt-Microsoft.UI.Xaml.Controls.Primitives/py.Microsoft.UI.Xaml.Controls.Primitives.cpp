@@ -862,7 +862,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ButtonBase_put_CommandParameter(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -931,7 +931,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ButtonBase_put_Command(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1000,7 +1000,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ButtonBase_put_ClickMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -1402,7 +1402,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* _new_CalendarPanel(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2051,7 +2051,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* _new_CarouselPanel(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -2869,7 +2869,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int CarouselPanel_put_ScrollOwner(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -2938,7 +2938,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int CarouselPanel_put_CanVerticallyScroll(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3007,7 +3007,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int CarouselPanel_put_CanHorizontallyScroll(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3554,7 +3554,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* _new_ColorSpectrum(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -3651,7 +3651,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ColorSpectrum_put_Shape(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3720,7 +3720,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ColorSpectrum_put_MinValue(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3789,7 +3789,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ColorSpectrum_put_MinSaturation(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3858,7 +3858,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ColorSpectrum_put_MinHue(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3927,7 +3927,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ColorSpectrum_put_MaxValue(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -3996,7 +3996,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ColorSpectrum_put_MaxSaturation(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4065,7 +4065,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ColorSpectrum_put_MaxHue(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4134,7 +4134,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ColorSpectrum_put_HsvColor(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4203,7 +4203,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ColorSpectrum_put_Components(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4272,7 +4272,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ColorSpectrum_put_Color(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4804,7 +4804,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* _new_ColumnMajorUniformToLargestGridLayout(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -4901,7 +4901,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ColumnMajorUniformToLargestGridLayout_put_RowSpacing(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -4970,7 +4970,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ColumnMajorUniformToLargestGridLayout_put_MaxColumns(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5039,7 +5039,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ColumnMajorUniformToLargestGridLayout_put_ColumnSpacing(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -5711,7 +5711,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* _new_CommandBarFlyoutCommandBar(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -5838,7 +5838,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int CommandBarFlyoutCommandBar_put_SystemBackdrop(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7285,7 +7285,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* _new_CornerRadiusFilterConverter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -7442,7 +7442,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int CornerRadiusFilterConverter_put_Scale(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::CornerRadiusFilterConverter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7511,7 +7511,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int CornerRadiusFilterConverter_put_Filter(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::CornerRadiusFilterConverter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7692,7 +7692,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* _new_CornerRadiusToThicknessConverter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -7849,7 +7849,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int CornerRadiusToThicknessConverter_put_Multiplier(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::CornerRadiusToThicknessConverter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -7918,7 +7918,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int CornerRadiusToThicknessConverter_put_ConversionKind(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::CornerRadiusToThicknessConverter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -8129,7 +8129,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* _new_DragCompletedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -8399,7 +8399,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* _new_DragDeltaEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -8637,7 +8637,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* _new_DragStartedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -9362,7 +9362,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int FlyoutBase_put_XamlRoot(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9431,7 +9431,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int FlyoutBase_put_ShowMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9500,7 +9500,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int FlyoutBase_put_ShouldConstrainToRootBounds(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9569,7 +9569,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int FlyoutBase_put_Placement(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9638,7 +9638,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int FlyoutBase_put_OverlayInputPassThroughElement(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9707,7 +9707,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int FlyoutBase_put_LightDismissOverlayMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9776,7 +9776,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int FlyoutBase_put_ElementSoundMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9845,7 +9845,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int FlyoutBase_put_AreOpenCloseAnimationsEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9914,7 +9914,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int FlyoutBase_put_AllowFocusWhenDisabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -9983,7 +9983,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int FlyoutBase_put_AllowFocusOnInteraction(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -10172,7 +10172,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int FlyoutBase_put_SystemBackdrop(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11058,7 +11058,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int FlyoutBaseClosingEventArgs_put_Cancel(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBaseClosingEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11179,7 +11179,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* _new_FlyoutShowOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -11276,7 +11276,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int FlyoutShowOptions_put_ShowMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11345,7 +11345,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int FlyoutShowOptions_put_Position(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11414,7 +11414,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int FlyoutShowOptions_put_Placement(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11483,7 +11483,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int FlyoutShowOptions_put_ExclusionRect(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11767,7 +11767,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* _new_GridViewItemPresenter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -11864,7 +11864,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int GridViewItemPresenter_put_SelectionCheckMarkVisualEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -11933,7 +11933,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int GridViewItemPresenter_put_SelectedPointerOverBorderBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12002,7 +12002,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int GridViewItemPresenter_put_SelectedPointerOverBackground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12071,7 +12071,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int GridViewItemPresenter_put_SelectedForeground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12140,7 +12140,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int GridViewItemPresenter_put_SelectedBorderThickness(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12209,7 +12209,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int GridViewItemPresenter_put_SelectedBackground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12278,7 +12278,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int GridViewItemPresenter_put_ReorderHintOffset(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12347,7 +12347,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int GridViewItemPresenter_put_PointerOverBackgroundMargin(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12416,7 +12416,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int GridViewItemPresenter_put_PointerOverBackground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12485,7 +12485,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int GridViewItemPresenter_put_PlaceholderBackground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12554,7 +12554,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int GridViewItemPresenter_put_GridViewItemPresenterVerticalContentAlignment(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12623,7 +12623,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int GridViewItemPresenter_put_GridViewItemPresenterPadding(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12692,7 +12692,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int GridViewItemPresenter_put_GridViewItemPresenterHorizontalContentAlignment(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12761,7 +12761,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int GridViewItemPresenter_put_FocusBorderBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12830,7 +12830,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int GridViewItemPresenter_put_DragOpacity(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12899,7 +12899,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int GridViewItemPresenter_put_DragForeground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -12968,7 +12968,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int GridViewItemPresenter_put_DragBackground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13037,7 +13037,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int GridViewItemPresenter_put_DisabledOpacity(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13106,7 +13106,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int GridViewItemPresenter_put_ContentMargin(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13175,7 +13175,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int GridViewItemPresenter_put_CheckSelectingBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13244,7 +13244,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int GridViewItemPresenter_put_CheckHintBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -13313,7 +13313,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int GridViewItemPresenter_put_CheckBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14259,7 +14259,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* _new_InfoBarPanel(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -14528,7 +14528,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int InfoBarPanel_put_VerticalOrientationPadding(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -14597,7 +14597,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int InfoBarPanel_put_HorizontalOrientationPadding(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15063,7 +15063,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* _new_JumpListItemBackgroundConverter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -15220,7 +15220,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int JumpListItemBackgroundConverter_put_Enabled(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::JumpListItemBackgroundConverter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15289,7 +15289,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int JumpListItemBackgroundConverter_put_Disabled(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::JumpListItemBackgroundConverter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15470,7 +15470,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* _new_JumpListItemForegroundConverter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -15627,7 +15627,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int JumpListItemForegroundConverter_put_Enabled(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::JumpListItemForegroundConverter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -15696,7 +15696,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int JumpListItemForegroundConverter_put_Disabled(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::JumpListItemForegroundConverter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16127,7 +16127,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* _new_ListViewItemPresenter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -16224,7 +16224,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_ListViewItemPresenterVerticalContentAlignment(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16293,7 +16293,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_ListViewItemPresenterPadding(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16362,7 +16362,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_ListViewItemPresenterHorizontalContentAlignment(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16431,7 +16431,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_FocusSecondaryBorderBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16500,7 +16500,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_FocusBorderBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16569,7 +16569,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_DragOpacity(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16638,7 +16638,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_RevealBackground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16707,7 +16707,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_DragBackground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16776,7 +16776,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_DisabledOpacity(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16845,7 +16845,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_ContentMargin(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16914,7 +16914,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_CheckSelectingBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -16983,7 +16983,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_CheckPressedBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -17052,7 +17052,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_CheckMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -17121,7 +17121,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_CheckHintBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -17190,7 +17190,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_CheckBoxBorderBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -17259,7 +17259,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_CheckBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -17328,7 +17328,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_CheckBoxSelectedPressedBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -17397,7 +17397,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_CheckBoxSelectedPointerOverBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -17466,7 +17466,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_CheckBoxSelectedDisabledBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -17535,7 +17535,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_CheckBoxSelectedBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -17604,7 +17604,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_CheckBoxPressedBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -17673,7 +17673,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_SelectionCheckMarkVisualEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -17742,7 +17742,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_CheckBoxPointerOverBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -17811,7 +17811,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_CheckBoxPointerOverBorderBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -17880,7 +17880,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_CheckBoxDisabledBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -17949,7 +17949,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_CheckBoxDisabledBorderBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -18018,7 +18018,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_CheckBoxCornerRadius(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -18087,7 +18087,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_CheckBoxBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -18156,7 +18156,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_CheckDisabledBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -18225,7 +18225,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_PlaceholderBackground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -18294,7 +18294,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_SelectedDisabledBorderBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -18363,7 +18363,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_SelectionIndicatorPressedBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -18432,7 +18432,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_SelectionIndicatorPointerOverBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -18501,7 +18501,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_SelectionIndicatorMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -18570,7 +18570,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_SelectionIndicatorDisabledBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -18639,7 +18639,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_SelectionIndicatorCornerRadius(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -18708,7 +18708,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_SelectionIndicatorBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -18777,7 +18777,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_CheckBoxPressedBorderBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -18846,7 +18846,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_SelectedPressedBorderBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -18915,7 +18915,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_SelectedPressedBackground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -18984,7 +18984,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_SelectedPointerOverBorderBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19053,7 +19053,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_SelectedPointerOverBackground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19122,7 +19122,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_SelectedInnerBorderBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19191,7 +19191,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_SelectedForeground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19260,7 +19260,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_SelectionIndicatorVisualEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19329,7 +19329,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_SelectedDisabledBackground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19398,7 +19398,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_SelectedBorderThickness(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19467,7 +19467,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_SelectedBorderBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19536,7 +19536,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_SelectedBackground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19605,7 +19605,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_RevealBorderThickness(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19674,7 +19674,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_RevealBorderBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19743,7 +19743,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_RevealBackgroundShowsAboveContent(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19812,7 +19812,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_DragForeground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19881,7 +19881,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_ReorderHintOffset(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -19950,7 +19950,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_PressedBackground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -20019,7 +20019,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_PointerOverForeground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -20088,7 +20088,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_PointerOverBorderBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -20157,7 +20157,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_PointerOverBackgroundMargin(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -20226,7 +20226,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_PointerOverBackground(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -22371,7 +22371,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int LoopingSelector_put_ShouldLoop(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::LoopingSelector* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -22440,7 +22440,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int LoopingSelector_put_SelectedItem(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::LoopingSelector* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -22509,7 +22509,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int LoopingSelector_put_SelectedIndex(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::LoopingSelector* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -22578,7 +22578,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int LoopingSelector_put_Items(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::LoopingSelector* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -22647,7 +22647,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int LoopingSelector_put_ItemWidth(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::LoopingSelector* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -22716,7 +22716,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int LoopingSelector_put_ItemTemplate(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::LoopingSelector* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -22785,7 +22785,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int LoopingSelector_put_ItemHeight(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::LoopingSelector* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -23845,7 +23845,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* _new_MonochromaticOverlayPresenter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -23942,7 +23942,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int MonochromaticOverlayPresenter_put_SourceElement(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -24011,7 +24011,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int MonochromaticOverlayPresenter_put_ReplacementColor(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -24220,7 +24220,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* _new_NavigationViewItemPresenter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -24317,7 +24317,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int NavigationViewItemPresenter_put_Icon(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -24416,7 +24416,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int NavigationViewItemPresenter_put_InfoBadge(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -24657,7 +24657,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* _new_NavigationViewItemPresenterTemplateSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -25746,7 +25746,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int OrientedVirtualizingPanel_put_ScrollOwner(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -25815,7 +25815,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int OrientedVirtualizingPanel_put_CanVerticallyScroll(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -25884,7 +25884,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int OrientedVirtualizingPanel_put_CanHorizontallyScroll(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -26808,7 +26808,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* _new_PivotHeaderItem(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -26951,7 +26951,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* _new_PivotHeaderPanel(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -27039,7 +27039,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* _new_PivotPanel(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -27425,7 +27425,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* _new_Popup(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -27492,7 +27492,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int Popup_put_VerticalOffset(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::Popup* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -27561,7 +27561,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int Popup_put_ShouldConstrainToRootBounds(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::Popup* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -27630,7 +27630,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int Popup_put_LightDismissOverlayMode(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::Popup* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -27699,7 +27699,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int Popup_put_IsOpen(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::Popup* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -27768,7 +27768,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int Popup_put_IsLightDismissEnabled(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::Popup* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -27837,7 +27837,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int Popup_put_HorizontalOffset(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::Popup* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -27906,7 +27906,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int Popup_put_ChildTransitions(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::Popup* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -27975,7 +27975,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int Popup_put_Child(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::Popup* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -28074,7 +28074,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int Popup_put_PlacementTarget(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::Popup* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -28143,7 +28143,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int Popup_put_DesiredPlacement(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::Popup* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -28242,7 +28242,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int Popup_put_SystemBackdrop(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::Popup* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -29250,7 +29250,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int RangeBase_put_Value(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -29319,7 +29319,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int RangeBase_put_SmallChange(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -29388,7 +29388,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int RangeBase_put_Minimum(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -29457,7 +29457,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int RangeBase_put_Maximum(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -29526,7 +29526,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int RangeBase_put_LargeChange(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -29999,7 +29999,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* _new_RepeatButton(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -30066,7 +30066,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int RepeatButton_put_Interval(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::RepeatButton* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -30135,7 +30135,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int RepeatButton_put_Delay(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::RepeatButton* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -30344,7 +30344,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* _new_RepeatedScrollSnapPoint(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -30647,7 +30647,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* _new_RepeatedZoomSnapPoint(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -30919,7 +30919,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* _new_ScrollBar(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -30986,7 +30986,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ScrollBar_put_ViewportSize(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollBar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -31055,7 +31055,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ScrollBar_put_Orientation(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollBar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -31124,7 +31124,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ScrollBar_put_IndicatorMode(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollBar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -31402,7 +31402,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* _new_ScrollControllerAddScrollVelocityRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -31472,7 +31472,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ScrollControllerAddScrollVelocityRequestedEventArgs_put_CorrelationId(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollControllerAddScrollVelocityRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -31625,7 +31625,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* _new_ScrollControllerPanRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -31694,7 +31694,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ScrollControllerPanRequestedEventArgs_put_Handled(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollControllerPanRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -31816,7 +31816,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* _new_ScrollControllerScrollByRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -31886,7 +31886,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ScrollControllerScrollByRequestedEventArgs_put_CorrelationId(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollControllerScrollByRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -32039,7 +32039,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* _new_ScrollControllerScrollToRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -32109,7 +32109,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ScrollControllerScrollToRequestedEventArgs_put_CorrelationId(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollControllerScrollToRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -32262,7 +32262,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* _new_ScrollEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -32442,7 +32442,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* _new_ScrollPresenter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -33090,7 +33090,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ScrollPresenter_put_IgnoredInputKinds(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -33159,7 +33159,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ScrollPresenter_put_HorizontalAnchorRatio(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -33228,7 +33228,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ScrollPresenter_put_MaxZoomFactor(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -33297,7 +33297,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ScrollPresenter_put_HorizontalScrollRailMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -33366,7 +33366,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ScrollPresenter_put_HorizontalScrollMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -33435,7 +33435,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ScrollPresenter_put_ContentOrientation(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -33504,7 +33504,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ScrollPresenter_put_Content(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -33573,7 +33573,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ScrollPresenter_put_HorizontalScrollController(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -33642,7 +33642,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ScrollPresenter_put_HorizontalScrollChainMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -33711,7 +33711,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ScrollPresenter_put_MinZoomFactor(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -33780,7 +33780,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ScrollPresenter_put_Background(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -33849,7 +33849,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ScrollPresenter_put_ZoomMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -33918,7 +33918,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ScrollPresenter_put_ZoomChainMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -33987,7 +33987,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ScrollPresenter_put_VerticalScrollRailMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -34056,7 +34056,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ScrollPresenter_put_VerticalScrollMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -34125,7 +34125,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ScrollPresenter_put_VerticalScrollController(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -34194,7 +34194,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ScrollPresenter_put_VerticalScrollChainMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -34263,7 +34263,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ScrollPresenter_put_VerticalAnchorRatio(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -36096,7 +36096,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* _new_ScrollSnapPoint(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -36482,7 +36482,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int Selector_put_SelectedValuePath(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -36551,7 +36551,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int Selector_put_SelectedValue(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -36620,7 +36620,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int Selector_put_SelectedItem(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -36689,7 +36689,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int Selector_put_SelectedIndex(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -36758,7 +36758,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int Selector_put_IsSynchronizedWithCurrentItem(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -37175,7 +37175,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int SelectorItem_put_IsSelected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -37665,7 +37665,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* _new_Thumb(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -38083,7 +38083,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* _new_TickBar(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -38150,7 +38150,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int TickBar_put_Fill(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::TickBar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -38353,7 +38353,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* _new_ToggleButton(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -38491,7 +38491,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ToggleButton_put_IsThreeState(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -38560,7 +38560,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int ToggleButton_put_IsChecked(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -39413,7 +39413,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* _new_ZoomSnapPoint(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        if (kwds != nullptr)
+        if (kwds)
         {
             py::set_invalid_kwd_args_error();
             return nullptr;
@@ -42300,7 +42300,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     {
         auto tuple_size = PyTuple_Size(args);
 
-        if ((tuple_size == 0) && (kwds == nullptr))
+        if ((tuple_size == 0) && (!kwds))
         {
             self->obj = {};
             return 0;
@@ -42367,7 +42367,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int GeneratorPosition_set_Index(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::GeneratorPosition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -42400,7 +42400,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static int GeneratorPosition_set_Offset(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::GeneratorPosition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;

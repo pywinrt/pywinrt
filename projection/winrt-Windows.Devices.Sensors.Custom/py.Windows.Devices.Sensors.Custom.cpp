@@ -177,7 +177,7 @@ namespace py::cpp::Windows::Devices::Sensors::Custom
 
     static int CustomSensor_put_ReportInterval(py::wrapper::Windows::Devices::Sensors::Custom::CustomSensor* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
@@ -306,7 +306,7 @@ namespace py::cpp::Windows::Devices::Sensors::Custom
 
     static int CustomSensor_put_ReportLatency(py::wrapper::Windows::Devices::Sensors::Custom::CustomSensor* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (arg == nullptr)
+        if (!arg)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
             return -1;
